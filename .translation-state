@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "79e9bbc2e098f3d58648bb4b91aee54f85da447e",
+  "LastProcessedCommit": "4b07fc04058c01133a936bfbc661d24841fde4c0",
   "LastTranslatedCommit": null,
   "Items": {
     "2ed3bf162e9cbb06230b3bd9c0bd960c5c36049a": {
@@ -22951,8 +22951,8 @@
         "Azure-RMSDocs\\deploy-use\\logging-and-analyzing-azure-rights-management-usage.md"
       ],
       "HandoffFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.pt-pt\\master\\logging-and-analyzing-azure-rights-management-usage.db37b0b3f53c9e3b8ae4aba997d656a29ef1b6c7.pt-pt.xlf",
-      "HandoffFileCommit": "547fa9b1864a043d16ca420c19b7e43af75f61fb",
-      "HandoffDateTime": "2016-04-01T19:25:57.0316205Z",
+      "HandoffFileCommit": "d436782d9e5cf428beff3c06635240005393b084",
+      "HandoffDateTime": "2016-04-01T21:53:29.4381644Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,

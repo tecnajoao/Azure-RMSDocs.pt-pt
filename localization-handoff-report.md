@@ -6,15 +6,15 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [Azure-RMSDocs\develop\adal-auth.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/77b14101d610f207e6502146605e713267825214/Azure-RMSDocs/develop/adal-auth.md) | HandedOffSuccess | [Details](#2c603b1160d8e1acf4ba859ea4b71d3219bb0bba43)
- [Azure-RMSDocs\develop\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/77b14101d610f207e6502146605e713267825214/Azure-RMSDocs/develop/TOC.md) | HandedOffSuccess | [Details](#0053e83abdbd6fa2dd2397d81d69fe7811a22f25101)
+ [Azure-RMSDocs\get-started\faqs.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ea7b7d9359d04f36b518f3ff38cfa6001096110c/Azure-RMSDocs/get-started/faqs.md) | HandedOffSuccess | [Details](#0e909b0f972fd597e60abea04b476d9a956886f3110)
+ [Azure-RMSDocs\get-started\requirements-applications.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ea7b7d9359d04f36b518f3ff38cfa6001096110c/Azure-RMSDocs/get-started/requirements-applications.md) | HandedOffSuccess | [Details](#9739df74a999efef879fb537eee730af7520b0fa115)
 
 ## Item Details
-##### <a name='2c603b1160d8e1acf4ba859ea4b71d3219bb0bba43'></a> Source: [Azure-RMSDocs\develop\adal-auth.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/77b14101d610f207e6502146605e713267825214/Azure-RMSDocs/develop/adal-auth.md)
+##### <a name='0e909b0f972fd597e60abea04b476d9a956886f3110'></a> Source: [Azure-RMSDocs\get-started\faqs.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ea7b7d9359d04f36b518f3ff38cfa6001096110c/Azure-RMSDocs/get-started/faqs.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [adal-auth.84b9f2d9ce36c657e4594523b7e0a1f1d74c114f.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/5057b040a44499bc3a23d593a2adcfa8c8a6e970/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/adal-auth.84b9f2d9ce36c657e4594523b7e0a1f1d74c114f.pt-pt.xlf)
-* Handoff Datetime: 2016-05-13 01:58:45
+* Handoff File: [faqs.026f9abe86913a512f64fd2a67018fda479e9cd0.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/57661b6468c5f520d068a0d15156c56056459bf8/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/faqs.026f9abe86913a512f64fd2a67018fda479e9cd0.pt-pt.xlf)
+* Handoff Datetime: 2016-05-13 15:57:46
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -22,11 +22,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='0053e83abdbd6fa2dd2397d81d69fe7811a22f25101'></a> Source: [Azure-RMSDocs\develop\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/77b14101d610f207e6502146605e713267825214/Azure-RMSDocs/develop/TOC.md)
+##### <a name='9739df74a999efef879fb537eee730af7520b0fa115'></a> Source: [Azure-RMSDocs\get-started\requirements-applications.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ea7b7d9359d04f36b518f3ff38cfa6001096110c/Azure-RMSDocs/get-started/requirements-applications.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [TOC.13a398ad10575ec470dbe9e6b9feae83865839a4.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/5057b040a44499bc3a23d593a2adcfa8c8a6e970/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/TOC.13a398ad10575ec470dbe9e6b9feae83865839a4.pt-pt.xlf)
-* Handoff Datetime: 2016-05-13 01:58:45
+* Handoff File: [requirements-applications.0609c293c5627771667916524593402b34fff036.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/57661b6468c5f520d068a0d15156c56056459bf8/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/requirements-applications.0609c293c5627771667916524593402b34fff036.pt-pt.xlf)
+* Handoff Datetime: 2016-05-13 15:57:46
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00

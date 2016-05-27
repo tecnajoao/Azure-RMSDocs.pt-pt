@@ -7,10 +7,10 @@
 [ Handoff Failed Files ](#handoff-failed-list)| 0
 [ Handoff Success Files ](#handoff-success-list)| 126
 [ Archive Failed Files ](#archive-failed-list)| 0
-[ Archive Success Files ](#archive-success-list)| 6
+[ Archive Success Files ](#archive-success-list)| 2
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 23
-[ In Sync Handback Files ](#insync-handback-success-list)| 183
+[ In Sync Handback Files ](#insync-handback-success-list)| 187
 [ Ignored Files ](#ignored-list)| 66
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -150,10 +150,6 @@
 ## <a name='archive-success-list'></a> Archive Success File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [Azure-RMSDocs\includes\firstref_server_7.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/firstref_server_7.md) | ArchivedSuccess | [Details](#0fd063f373c94e1805b6c6c7d80b6664c5867093143)
- [Azure-RMSDocs\includes\firstref_server_7_md.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/firstref_server_7_md.md) | ArchivedSuccess | [Details](#eda6e9dec94ebd345581fbfb1331182fa2cc2ebc144)
- [Azure-RMSDocs\includes\firstref_vista.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/firstref_vista.md) | ArchivedSuccess | [Details](#13ff460ac519f9cd49ce1cf25a819cea78e2772f145)
- [Azure-RMSDocs\includes\firstref_vista_md.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/firstref_vista_md.md) | ArchivedSuccess | [Details](#da178e2adfef6403babbf2628c7511519b7833d6146)
  [Azure-RMSDocs\includes\rms-quickstart-intro-include.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/5b56229ad5e234663a23812b09a7f934d6738e5a/Azure-RMSDocs/includes/rms-quickstart-intro-include.md) | ArchivedSuccess | [Details](#20715a7298d29bcf817ddbfc809eb84ead8d97ef153)
  [Azure-RMSDocs\scratch.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/4aa72824efd231285a1941ff1335437d24c83233/Azure-RMSDocs/scratch.md) | ArchivedSuccess | [Details](#47e2d48aeba95aba232a1c8a7f02df31d2604a6e379)
 
@@ -305,6 +301,10 @@
  [Azure-RMSDocs\includes\firstref_client_7_md.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/firstref_client_7_md.md) | InSyncHandedBackSuccess | [Details](#8d825513a8fcd30c0e610859192ef20fa89ebad2140)
  [Azure-RMSDocs\includes\firstref_longhorn.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/firstref_longhorn.md) | InSyncHandedBackSuccess | [Details](#06b6a1589ec4350b6c89fec1cc3a11f4364d49e9141)
  [Azure-RMSDocs\includes\firstref_longhorn_md.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/firstref_longhorn_md.md) | InSyncHandedBackSuccess | [Details](#c5456d365be5ae6d523692438b3eca61b7f8a397142)
+ [Azure-RMSDocs\includes\firstref_server_7.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/firstref_server_7.md) | InSyncHandedBackSuccess | [Details](#0fd063f373c94e1805b6c6c7d80b6664c5867093143)
+ [Azure-RMSDocs\includes\firstref_server_7_md.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/firstref_server_7_md.md) | InSyncHandedBackSuccess | [Details](#eda6e9dec94ebd345581fbfb1331182fa2cc2ebc144)
+ [Azure-RMSDocs\includes\firstref_vista.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/firstref_vista.md) | InSyncHandedBackSuccess | [Details](#13ff460ac519f9cd49ce1cf25a819cea78e2772f145)
+ [Azure-RMSDocs\includes\firstref_vista_md.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/firstref_vista_md.md) | InSyncHandedBackSuccess | [Details](#da178e2adfef6403babbf2628c7511519b7833d6146)
  [Azure-RMSDocs\includes\nextref_server_7.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/nextref_server_7.md) | InSyncHandedBackSuccess | [Details](#828296e06647ff317702e90cf789b2d22668f849147)
  [Azure-RMSDocs\includes\nextref_server_7_md.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/nextref_server_7_md.md) | InSyncHandedBackSuccess | [Details](#36e6ed3e58966398a0757e85465c1835ee9e91c5148)
  [Azure-RMSDocs\includes\o365_1.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/o365_1.md) | InSyncHandedBackSuccess | [Details](#d697f565046a9fb63f1ab57b882ccb6053c0f841149)
@@ -2209,51 +2209,51 @@
 * [Back to Top](#report-top)
 
 ##### <a name='0fd063f373c94e1805b6c6c7d80b6664c5867093143'></a> Source: [Azure-RMSDocs\includes\firstref_server_7.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/firstref_server_7.md)
-* Status: ArchivedSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [Azure-RMSDocs\includes\firstref_server_7.md](https://github.com/Microsoft/Azure-RMSDocs-pr.pt-pt/blob/57b0b1dcb2576fa9ecfbdb7a34d2b7c6f9550b7d/Azure-RMSDocs/includes/firstref_server_7.md)
 * Handoff File: [firstref_server_7.30bdb0e65b1100ec6c91784d4960e2ba61b4e75c.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/8f046308335f6a978934e7ce64541f9546347700/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/firstref_server_7.30bdb0e65b1100ec6c91784d4960e2ba61b4e75c.pt-pt.xlf)
 * Handoff Datetime: 2016-03-04 19:05:05
 * Handoff Reason: Include
 * Archive File: [firstref_server_7.30bdb0e65b1100ec6c91784d4960e2ba61b4e75c.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/eb6eeb3d3486b2d158a512df83905b62500570ed/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/archive/firstref_server_7.30bdb0e65b1100ec6c91784d4960e2ba61b4e75c.pt-pt.xlf)
 * Archive Datetime: 2016-05-12 02:21:58
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [firstref_server_7.30bdb0e65b1100ec6c91784d4960e2ba61b4e75c.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/668c612927796ebc52664f8120deb3b21ef70ad3/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/firstref_server_7.30bdb0e65b1100ec6c91784d4960e2ba61b4e75c.pt-pt.xlf)
+* Handback Datetime: 2016-05-27 19:36:35
 * [Back to Top](#report-top)
 
 ##### <a name='eda6e9dec94ebd345581fbfb1331182fa2cc2ebc144'></a> Source: [Azure-RMSDocs\includes\firstref_server_7_md.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/firstref_server_7_md.md)
-* Status: ArchivedSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [Azure-RMSDocs\includes\firstref_server_7_md.md](https://github.com/Microsoft/Azure-RMSDocs-pr.pt-pt/blob/57b0b1dcb2576fa9ecfbdb7a34d2b7c6f9550b7d/Azure-RMSDocs/includes/firstref_server_7_md.md)
 * Handoff File: [firstref_server_7_md.5101efc237d9b814ce5ebaee334b2aafffb40b01.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/8f046308335f6a978934e7ce64541f9546347700/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/firstref_server_7_md.5101efc237d9b814ce5ebaee334b2aafffb40b01.pt-pt.xlf)
 * Handoff Datetime: 2016-03-04 19:05:05
 * Handoff Reason: Include
 * Archive File: [firstref_server_7_md.5101efc237d9b814ce5ebaee334b2aafffb40b01.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/eb6eeb3d3486b2d158a512df83905b62500570ed/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/archive/firstref_server_7_md.5101efc237d9b814ce5ebaee334b2aafffb40b01.pt-pt.xlf)
 * Archive Datetime: 2016-05-12 02:21:58
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [firstref_server_7_md.5101efc237d9b814ce5ebaee334b2aafffb40b01.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/668c612927796ebc52664f8120deb3b21ef70ad3/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/firstref_server_7_md.5101efc237d9b814ce5ebaee334b2aafffb40b01.pt-pt.xlf)
+* Handback Datetime: 2016-05-27 19:36:35
 * [Back to Top](#report-top)
 
 ##### <a name='13ff460ac519f9cd49ce1cf25a819cea78e2772f145'></a> Source: [Azure-RMSDocs\includes\firstref_vista.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/firstref_vista.md)
-* Status: ArchivedSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [Azure-RMSDocs\includes\firstref_vista.md](https://github.com/Microsoft/Azure-RMSDocs-pr.pt-pt/blob/57b0b1dcb2576fa9ecfbdb7a34d2b7c6f9550b7d/Azure-RMSDocs/includes/firstref_vista.md)
 * Handoff File: [firstref_vista.b310c28c1ca2cc1d43bdfad3aca084ff9d8ee472.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/8f046308335f6a978934e7ce64541f9546347700/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/firstref_vista.b310c28c1ca2cc1d43bdfad3aca084ff9d8ee472.pt-pt.xlf)
 * Handoff Datetime: 2016-03-04 19:05:05
 * Handoff Reason: Include
 * Archive File: [firstref_vista.b310c28c1ca2cc1d43bdfad3aca084ff9d8ee472.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/eb6eeb3d3486b2d158a512df83905b62500570ed/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/archive/firstref_vista.b310c28c1ca2cc1d43bdfad3aca084ff9d8ee472.pt-pt.xlf)
 * Archive Datetime: 2016-05-12 02:21:58
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [firstref_vista.b310c28c1ca2cc1d43bdfad3aca084ff9d8ee472.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/668c612927796ebc52664f8120deb3b21ef70ad3/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/firstref_vista.b310c28c1ca2cc1d43bdfad3aca084ff9d8ee472.pt-pt.xlf)
+* Handback Datetime: 2016-05-27 19:36:35
 * [Back to Top](#report-top)
 
 ##### <a name='da178e2adfef6403babbf2628c7511519b7833d6146'></a> Source: [Azure-RMSDocs\includes\firstref_vista_md.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/firstref_vista_md.md)
-* Status: ArchivedSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [Azure-RMSDocs\includes\firstref_vista_md.md](https://github.com/Microsoft/Azure-RMSDocs-pr.pt-pt/blob/57b0b1dcb2576fa9ecfbdb7a34d2b7c6f9550b7d/Azure-RMSDocs/includes/firstref_vista_md.md)
 * Handoff File: [firstref_vista_md.b4e881a4e5465b1f74a9c333d941aaca20fa26e3.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/8f046308335f6a978934e7ce64541f9546347700/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/firstref_vista_md.b4e881a4e5465b1f74a9c333d941aaca20fa26e3.pt-pt.xlf)
 * Handoff Datetime: 2016-03-04 19:05:05
 * Handoff Reason: Include
 * Archive File: [firstref_vista_md.b4e881a4e5465b1f74a9c333d941aaca20fa26e3.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/eb6eeb3d3486b2d158a512df83905b62500570ed/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/archive/firstref_vista_md.b4e881a4e5465b1f74a9c333d941aaca20fa26e3.pt-pt.xlf)
 * Archive Datetime: 2016-05-12 02:21:58
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [firstref_vista_md.b4e881a4e5465b1f74a9c333d941aaca20fa26e3.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/668c612927796ebc52664f8120deb3b21ef70ad3/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/firstref_vista_md.b4e881a4e5465b1f74a9c333d941aaca20fa26e3.pt-pt.xlf)
+* Handback Datetime: 2016-05-27 19:36:35
 * [Back to Top](#report-top)
 
 ##### <a name='828296e06647ff317702e90cf789b2d22668f849147'></a> Source: [Azure-RMSDocs\includes\nextref_server_7.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/nextref_server_7.md)

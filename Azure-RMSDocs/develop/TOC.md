@@ -54,7 +54,7 @@
 #### [Assinar a aplicação para produção](signing-your-application-for-production.md)
 #### [Implementar a aplicação](deploying-your-application.md)
 ### [Notas do programador](Developer-notes.md)
-####[Autenticação ADAL para a aplicação com suporte RMS](ADAL-authentication.md)
+####[Autenticação ADAL para a aplicação com suporte RMS](adal-auth.md)
 #### [Adicionar direitos de proprietário explícitos](add-explicit-owner-rights.md)
 #### [Condições de erro comuns e soluções](common-error-conditions-and-solutions.md)
 #### [Permitir notificação por e-mail](how-to-enable-email-notification.md)

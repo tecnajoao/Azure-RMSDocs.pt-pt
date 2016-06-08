@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Este conteúdo do SDK não está atualizado. Durante um curto período de tempo, pode encontrar a [versão atual](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) da documentação no MSDN. **
 # Compreender as cadeias de certificados
 
 A programação de uma aplicação com capacidade para direitos requer um par de chaves públicas e uma cadeia de certificados que reconduz a um certificado da Microsoft na raiz da fidedignidade.
@@ -57,6 +57,6 @@ Para obter mais informações acerca de como trabalhar com cadeias de certificad
  
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

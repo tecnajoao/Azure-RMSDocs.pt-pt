@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -47,8 +47,7 @@ Em seguida, pode utilizar estes registos do Azure Rights Management para ajudar 
 
     Se ocorrer uma fuga de informações, é provável que lhe seja pedido para indicar quem acedeu recentemente a documentos específicos e a que tipo de informações uma pessoa suspeita acedeu recentemente. Se utilizar o Azure Rights Management e os registos, poderá responder a este tipo de questões, porque as pessoas que utilizam conteúdos protegidos têm sempre de obter uma licença de Rights Management para abrir documentos e imagens protegidos pelo Azure Rights Management, mesmo que estes ficheiros sejam movidos por e-mail ou copiados para unidades USB ou para outros dispositivos de armazenamento. Isto significa que, se proteger os seus dados com o Azure Rights Management, pode utilizar os registos do mesmo como fonte definitiva de informações para análises forenses.
 
-> [!NOTE]
-> Caso só esteja interessado no registo de tarefas administrativas para o Azure Rights Management e não queira controlar a forma como os utilizadores estão a utilizar o Rights Management, pode utilizar o cmdlet [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) do Windows PowerShell para o Azure Rights Management.
+> [!NOTE] Caso só esteja interessado no registo de tarefas administrativas para o Azure Rights Management e não queira controlar a forma como os utilizadores estão a utilizar o Rights Management, pode utilizar o cmdlet [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) do Windows PowerShell para o Azure Rights Management.
 > 
 > Também pode utilizar o portal clássico do Azure para relatórios gerais de utilização que incluam **Resumo do RMS**, **Utilizadores ativos do RMS**, **Plataformas de dispositivos do RMS** e **Utilização da aplicação do RMS**. Para aceder a estes relatórios a partir do portal clássico do Azure, clique em **Active Directory**, selecione e abra um diretório e, em seguida, clique em **RELATÓRIOS**.
 
@@ -57,8 +56,7 @@ Utilize as seguintes secções para obter mais informações sobre o registo de 
 ## Como ativar o registo de utilização do Azure Rights Management
 A partir de fevereiro de 2016, o registo de utilização do Azure Rights Management passou a ser ativado por predefinição para todos os clientes. Isto aplica-se aos clientes que ativaram o serviço Azure RMS antes e após fevereiro de 2016. 
 
-> [!NOTE]
-> Não existem custos adicionais associados ao armazenamento dos registos nem à funcionalidade do registo.
+> [!NOTE] Não existem custos adicionais associados ao armazenamento dos registos nem à funcionalidade do registo.
 > 
 > Se utilizava o registo de utilização para o Azure RMS antes de fevereiro de 2016, precisava de uma subscrição do Azure e de espaço de armazenamento suficiente no Azure, o que já não é o caso.
 
@@ -154,7 +152,7 @@ Cada uma das linhas subsequentes é um registo. Os valores dos campos estão na 
 |owner-email|Cadeia|Endereço de e-mail do proprietário do documento.|ines@contoso.com|
 |issuer|Cadeia|Endereço de e-mail do emissor do documento.|ines@contoso.com (ou) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
 |Template-id|Cadeia|ID do modelo utilizado para proteger o documento.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|File-name|Cadeia|Nome de ficheiro do documento que foi protegido.|DocumentoConfidencial.docx|
+|File-name|Cadeia|Nome de ficheiro do documento que foi protegido. <br /><br />Atualmente, alguns ficheiros (como documentos do Office) são apresentados como GUIDs em vez do nome de ficheiro real.|DocumentoConfidencial.docx|
 |Date-published|Data|Data em que o ficheiro foi protegido.|2015-10-15T21:37:00|
 |c-info|Cadeia|Informações sobre a plataforma de cliente que está a efetuar o pedido.<br /><br />A cadeia específica varia em função da aplicação (por exemplo, do sistema operativo ou do browser).|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|Endereço|Endereço IP do cliente que efetua o pedido.|64.51.202.144|
@@ -225,12 +223,12 @@ Antes desta alteração, para os registos de utilização do Azure RMS, eram nec
 
 Se, no seu armazenamento do Azure, tiver registos criados em datas anteriores à da alteração do registo do Azure RMS, pode transferi-los com os cmdlets mais antigos Get-AadrmUsageLog e Get-AadrmUsageLogLastCounterValue, tal como faria anteriormente. No entanto, todos os novos registos de utilização escreverão no novo armazenamento do Azure RMS e têm de ser transferidos com o cmdlet Get-AadrmUserLog.
 
-Para mais informações sobre como utilizar o Windows PowerShell para o Azure Rights Management, consulte [Administering Azure Rights Management by Using Windows PowerShell (Administrar o Azure Rights Management através do Windows PowerShell – em inglês)](administer-powershell.md).
+Para mais informações sobre como utilizar o Windows PowerShell para o Azure Rights Management, consulte [Administrar o Azure Rights Management através do Windows PowerShell](administer-powershell.md).
 
 
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

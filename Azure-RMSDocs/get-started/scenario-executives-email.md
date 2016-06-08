@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -44,17 +44,17 @@ As instruções aplicam-se às seguintes circunstâncias:
 ## Instruções de Implementação
 ![Instruções do administrador para a Implementação Rápida do Azure RMS](../media/AzRMS_AdminBanner.png)
 
-Certifique-se de que os seguintes requisitos estão em vigor e, em seguida, siga as instruções dos procedimentos de suporte antes de avançar para a documentação do utilizador.
+Certifique-se de que os seguintes requisitos são cumpridos e, em seguida, siga as instruções dos procedimentos de suporte antes de avançar para a documentação do utilizador.
 
 ## Requisitos para este cenário
-Para que as instruções deste cenário funcionem, é necessário que os seguintes aspetos estejam implementados:
+Para que as instruções para este cenário funcionem, é necessário o seguinte:
 
 |Requisito|Se precisar de mais informações|
 |---------------|--------------------------------|
-|Preparou contas e grupos para o Office 365 ou o Azure Active Directory:<br /><br />Um grupo com capacidade de correio com o nome **Executivos** e todos os executivos são membros deste grupo<br /><br />Um grupo com capacidade de correio com o nome **Administradores de RMS** e todos os administradores que irão configurar o Azure RMS são membros deste grupo|[Preparar para o Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|A chave de inquilino do Azure Rights Management é gerida pela Microsoft; não está a utilizar BYOK|[Planear e implementar a chave de inquilino do Azure Rights Management](https://technet.microsoft.com/library/dn440580.aspx)|
+|Preparou contas e grupos para o Office 365 ou o Azure Active Directory:<br /><br />- Um grupo com capacidade de correio com o nome **Executivos** e todos os executivos são membros deste grupo<br /><br />- Um grupo com capacidade de correio com o nome **Administradores de RMS** e todos os administradores que irão configurar o Azure RMS são membros deste grupo|[Preparar para o Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
+|A chave de inquilino do Azure Rights Management é gerida pela Microsoft; não está a utilizar o BYOK|[Planear e implementar a chave de inquilino do Azure Rights Management](https://technet.microsoft.com/library/dn440580.aspx)|
 |O Azure Rights Management está ativado|[Ativar o Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|Uma das seguintes configurações:<br /><br />O Exchange Online está ativado para o Azure Rights Management<br /><br />O conector RMS está instalado e configurado para o Exchange no local|Para o Exchange Online: consulte a secção **Exchange Online: Configuração de IRM** em [Configurar aplicações do Azure Rights Management](https://technet.microsoft.com/library/jj585031.aspx).<br /><br />Para o Exchange no local: [Implementar o conector Azure Rights Management](https://technet.microsoft.com/library/dn375964.aspx)|
+|Uma das seguintes configurações:<br /><br />- O Exchange Online está ativado para o Azure Rights Management<br /><br />- O conetor RMS está instalado e configurado para o Exchange no local|Para o Exchange Online: consulte a secção **Exchange Online: Configuração de IRM** em [Configurar aplicações do Azure Rights Management](https://technet.microsoft.com/library/jj585031.aspx).<br /><br />Para o Exchange no local: [Implementar o conector Azure Rights Management](https://technet.microsoft.com/library/dn375964.aspx)|
 |Configurou um modelo personalizado, tal como descrito a seguir|[Configurar modelos personalizados para o Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
 |Configurou uma regra de proteção de transporte para IRM, conforme descrito mais à frente neste artigo|Para o Exchange Online: [Criar uma Regra de Proteção de Transporte](https://technet.microsoft.com/library/dd302432.aspx)<br /><br />Para o Exchange 2013: [Criar uma Regra de Proteção de Transporte](https://technet.microsoft.com/en-us/library/dd302432%28v=exchg.150%29.asp)<br /><br />Para o Exchange 2010: [Criar uma Regra de Proteção de Transporte](https://technet.microsoft.com/en-us/library/dd302432%28v=exchg.141%29.aspx)|
 
@@ -138,6 +138,6 @@ Ao enviar informações confidenciais da empresa para outro executivo da VanArsd
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

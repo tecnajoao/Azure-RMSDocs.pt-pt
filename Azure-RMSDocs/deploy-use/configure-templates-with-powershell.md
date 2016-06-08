@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -35,12 +35,11 @@ Tudo o que consegue fazer no portal clássico do Azure para criar e gerir modelo
 
 Também pode utilizar a exportação e importação para criar uma cópia de segurança e restaurar os modelos personalizados. De acordo com as melhores práticas, crie uma cópia de segurança dos seus modelos personalizados regularmente, pois se fizer uma alteração que não pretendia, pode facilmente reverter para uma versão anterior.
 
-> [!IMPORTANT]
-> Para utilizar o Windows PowerShell para criar e gerir modelos de política de direitos do Azure RMS, tem de ter, pelo menos, a versão 2.0.0.0 do [módulo do Windows PowerShell para o Azure RMS](http://go.microsoft.com/fwlink/?LinkId=257721)..
+> [!IMPORTANT] Para utilizar o Windows PowerShell para criar e gerir modelos de política de direitos do Azure RMS, tem de ter, pelo menos, a versão 2.0.0.0 do [módulo do Windows PowerShell para o Azure RMS](http://go.microsoft.com/fwlink/?LinkId=257721).
 > 
 > Se já tiver instalado este módulo do PowerShell, execute o seguinte comando numa janela do PowerShell para verificar o número da versão: `(Get-Module aadrm -ListAvailable).Version`
 
-Para obter instruções de instalação, consulte [Instalar o Windows PowerShell para o Azure Rights Management](install-powershell.md).
+Para obter instruções de instalação, consulte [Installing Windows PowerShell for Azure Rights Management (Instalar o Windows PowerShell para o Azure Rights Management – em inglês)](install-powershell.md).
 
 Os cmdlets que suportam a criação e gestão de modelos:
 
@@ -63,8 +62,8 @@ Os cmdlets que suportam a criação e gestão de modelos:
 
 
 ## Consulte Também
-[Configurar Modelos Personalizados para o Azure Rights Management](configure-custom-templates.md)
+[Configurar modelos personalizados para o Azure Rights Management](configure-custom-templates.md)
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

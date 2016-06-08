@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -59,7 +59,7 @@ Para que as instruções para este cenário funcionem, é necessário o seguinte
 |Preparou contas e grupos para o Office 365 ou o Azure Active Directory|[Preparar para o Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
 |A chave de inquilino do Azure Rights Management é gerida pela Microsoft; não está a utilizar o BYOK|[Planear e implementar a chave de inquilino do Azure Rights Management](https://technet.microsoft.com/library/dn440580.aspx)|
 |O Azure Rights Management está ativado|[Ativar o Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|Um dos seguintes:<br /><br />O Exchange Online está ativado para o Azure Rights Management<br /><br />O conetor RMS está instalado e configurado para o Exchange no local|Para o Exchange Online: consulte a secção **Exchange Online: configuração de IRM** em [Configurar aplicações do Azure Rights Management](https://technet.microsoft.com/library/jj585031.aspx).<br /><br />Para o Exchange no local: [Implementar o conetor Azure Rights Management](https://technet.microsoft.com/library/dn375964.aspx)|
+|Um dos seguintes:<br /><br />- O Exchange Online está ativado para o Azure Rights Management<br /><br />- O conetor RMS está instalado e configurado para o Exchange no local|Para o Exchange Online: consulte a secção **Exchange Online: configuração de IRM** em [Configurar aplicações do Azure Rights Management](https://technet.microsoft.com/library/jj585031.aspx).<br /><br />Para o Exchange no local: [Implementar o conetor Azure Rights Management](https://technet.microsoft.com/library/dn375964.aspx)|
 |Não arquivou o modelo do Azure Rights Management predefinido **&lt;organização&gt; – Confidencial**. Ou configurou um modelo personalizado para este fim porque precisa de definições mais restritivas ou apenas um subconjunto de utilizadores da organização deve ter capacidade para ler os e-mails protegidos.|[Configurar modelos personalizados para o Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)<br /><br />Sugestão: se forem necessárias definições de política de utilização mais restritivas, mas para todos os utilizadores na organização, copie e edite um dos modelos predefinidos, em vez de criar um modelo do zero.<br /><br />Os modelos atualizados não são imediatamente atualizados para os clientes de e-mail neste cenário. Consulte a secção [Atualizar modelos para utilizadores](https://technet.microsoft.com/library/dn642472.aspx) no artigo de configuração de modelos para obter informações.|
 |Os utilizadores que enviem o e-mail protegido têm o Outlook 2013, o Outlook 2016 ou o Outlook Web Access.<br /><br />Os utilizadores que recebem o e-mail têm um cliente de e-mail que suporta o Azure Rights Management.|Pode utilizar o Outlook 2010, mas tem de [instalar a aplicação de partilha Rights Management para Windows](https://technet.microsoft.com/library/dn339003.aspx) e ajustar as instruções de utilizador em conformidade.<br /><br />Para obter uma lista de clientes de e-mail que suportam o Azure Rights Management, consulte a coluna **E-mail** na tabela [Capacidade dos dispositivos cliente](https://technet.microsoft.com/library/dn655136.aspx) de [Requisitos do Azure Rights Management](https://technet.microsoft.com/library/dn655136.aspx)|
 
@@ -163,6 +163,6 @@ As pessoas a quem enviar o e-mail poderão reencaminhá-lo para outras pessoas, 
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

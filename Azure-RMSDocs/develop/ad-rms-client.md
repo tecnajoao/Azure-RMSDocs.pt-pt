@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Este conteúdo do SDK não está atualizado. Durante um curto período de tempo, pode encontrar a [versão atual](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) da documentação no MSDN. **
 # Cliente
 
 Este tópico descreve a finalidade e a função do Cliente dos Serviços de Gestão de Direitos do Active Directory 2.1.
@@ -51,6 +51,6 @@ Para obter mais informações, consulte a [Documentação da TechNet acerca do C
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

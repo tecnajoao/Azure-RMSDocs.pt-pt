@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/19/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -51,8 +51,6 @@ Permite ao utilizador modificar, reorganizar, formatar ou filtrar o conteúdo de
 
 **Constante ou valor de API**: *Não aplicável*
 
-Nas aplicações do Office, este direito também permite que o utilizador guarde o documento.
-
 ---
 
 ### Guardar
@@ -93,7 +91,7 @@ Este direito está disponível no SDK, disponível como uma política ad hoc no 
 
 ### Guardar Como, Exportar
 
-Ativa a opção para guardar o conteúdo com um nome de ficheiro diferente (Guardar Como). Dependendo da aplicação, o ficheiro pode ser guardado sem proteção.
+Ativa a opção para guardar o conteúdo com um nome de ficheiro diferente (Guardar Como). Para documentos do Office, é possível guardar o ficheiro sem proteção.
 
 **Codificação na política:** EXPORT
 
@@ -111,7 +109,7 @@ Este direito também permite que o utilizador efetue outras opções de exporta�
 
 ### Reencaminhar
 
-Ativa a opção para reencaminhar uma mensagem de e-mail e para adicionar destinatários às linhas *Para* e *Cc*.
+Ativa a opção para reencaminhar uma mensagem de e-mail e para adicionar destinatários às linhas *Para* e *Cc*. Este direito não se aplica a documentos; apenas a mensagens de e-mail.
 
 **Codificação na política:** FORWARD
 
@@ -155,7 +153,7 @@ Ativa as opções para imprimir o conteúdo.
 
 **Nome no portal clássico do Azure:** *Imprimir*
 
-**Nome em modelos de AD RMS** *Imprimir*
+**Nome em modelos de AD RMS:** *Imprimir*
 
 **Constante ou valor de API:** IPC_GENERIC_PRINTL"PRINT
 
@@ -209,55 +207,24 @@ Permite que o utilizador abra o documento e veja o conteúdo.
 
 ---
 
-### Ver Direitos
+### Copiar
 
-Permite que o utilizador veja a política que é aplicada ao documento.
+Ativa opções para copiar dados (incluindo capturas de ecrã) do documento para o mesmo ou outro documento.
 
-**Codificação na política:** VIEWRIGHTSDATA
+**Codificação na política:** EXTRACT
 
-**Direitos personalizados de implementação no Office:** não implementados.
+**Direitos personalizados de implementação no Office:** Como a opção da política personalizada *Permitir que os utilizadores com acesso de Leitura copiem conteúdo*.
 
-**Nome no portal clássico do Azure:** *Ver Direitos Atribuídos*
+**Nome no portal clássico do Azure:** *Copiar e Extrair Conteúdo*
 
-**Nome em modelos de AD RMS:** *Ver Direitos*
+**Nome em modelos de AD RMS:** *Extrair*
 
-**Constante ou valor de API:** IPC_READ_RIGHTSL"VIEWRIGHTSDATA"
+**Constante ou valor de API:** IPC_GENERIC_EXTRACTL"EXTRACT"
 
----
-
-### Nome comum: Ver Direitos
-
-Permite que o utilizador veja a política que é aplicada ao documento.
-
-**Codificação na política:** VIEWRIGHTSDATA
-
-**Direitos personalizados de implementação no Office:** não implementados.
-
-**Nome no portal clássico do Azure:** *Ver Direitos Atribuídos*
-
-**Nome em modelos de AD RMS:** *Ver Direitos*
-
-**Constante ou valor de API:** IPC_READ_RIGHTSL"VIEWRIGHTSDATA"
-
-Ignorado por algumas aplicações.
+Em certas aplicações, também permite que todo o documento seja guardado numa forma não protegida.
 
 ---
 
-### Alterar Direitos
-
-Permite que o utilizador altere a política que é aplicada ao documento. Inclui a remoção da proteção.
-
-**Codificação na política**: EDITRIGHTSDATA
-
-**Direitos personalizados de implementação no Office:** não implementados.
-
-**Nome no portal clássico do Azure:** *Alterar Direitos*
-
-**Nome em modelos de AD RMS:** *Editar Direitos*
-
-**Constante ou valor de API:** IPC_WRITE_RIGHTSL"EDITRIGHTSDATA"
-
----
 
 ### Permitir Macros
 
@@ -297,14 +264,14 @@ Os direitos incluídos com os modelos predefinidos são os seguintes:
 
 |Nome a Apresentar|Direitos incluídos (nome comum)|
 |----------------|---------------------------------|
-|&lt;*nome da organização*&gt; *– Apenas Visualização Confidencial*|Ver, Abrir, Ler|
-|&lt;*nome da organização*&gt; *– Confidencial*|Ver, Abrir, Ler; Guardar; Editar Conteúdos, Editar; Ver Direitos; Permitir Macros; Reencaminhar; Responder; Responder a Todos|
+|&lt;*nome da organização*&gt;* – Apenas Visualização Confidencial*|Ver, Abrir, Ler|
+|&lt;*nome da organização*&gt;* – Confidencial*|Ver, Abrir, Ler; Guardar; Editar Conteúdos, Editar; Ver Direitos; Permitir Macros; Reencaminhar; Responder; Responder a Todos|
 
 ## Consulte Também
 [Configurar modelos personalizados para o Azure Rights Management](configure-custom-templates.md)
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

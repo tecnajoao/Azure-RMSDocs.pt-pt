@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Este conteúdo do SDK não está atualizado. Durante um curto período de tempo, pode encontrar a [versão atual](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) da documentação no MSDN. **
 # Introdução
 
 A plataforma do SDK Rights Management Services 2.1 permite aos programadores criarem aplicações que tiram partido da proteção de informações do RMS. A plataforma processa práticas de segurança complexas tais como a gestão de chaves, o processamento de encriptação e desencriptação e oferece uma API simplificada para a programação de aplicações fácil.
@@ -78,6 +78,6 @@ O SDK RMS 2.1 suporta uma gama de plataformas de clientes e servidores importa
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

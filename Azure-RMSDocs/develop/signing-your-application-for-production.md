@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Este conteúdo do SDK não está atualizado. Durante um curto período de tempo, pode encontrar a [versão atual](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) da documentação no MSDN. **
 # Assinar a aplicação para produção
 
 Este tópico descreve o processo de assinatura da aplicação para o modo de produção.
@@ -77,6 +77,6 @@ Coloque-os no mesmo diretório com o *GenManifest.exe* e o binário da aplicaç�
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

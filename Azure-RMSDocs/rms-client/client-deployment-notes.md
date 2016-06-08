@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -42,8 +42,7 @@ O cliente do RMS pode ser livremente redistribuído e incluído com outras aplic
 ## Instalar o cliente do RMS
 O cliente do RMS está contido num ficheiro executável do instalador denominado **setup_msipc_***<arch>***.exe**, em que *<arch>* corresponde à versão **x86** (computadores cliente de 32 bits) ou **x64** (computadores cliente de 64 bits). O pacote do instalador de 64 bits (x64) instala um executável de 32 bits, para compatibilidade com aplicações de 32 bits executadas numa instalação de sistema operativo de 64 bits, e um executável de 64 bits, para suportar aplicações de 64 bits nativas. O instalador de 32 bits (x86) não irá funcionar numa instalação do Windows de 64 bits.
 
-> [!NOTE]
-> São necessários privilégios elevados para instalar o cliente do RMS, por exemplo enquanto membro do grupo Administradores no computador local.
+> [!NOTE] São necessários privilégios elevados para instalar o cliente do RMS, por exemplo enquanto membro do grupo Administradores no computador local.
 
 Pode instalar o cliente do RMS através de um dos seguintes métodos de instalação:
 
@@ -117,10 +116,10 @@ Pode utilizar as chaves do registo do Windows para definir ou modificar algumas 
 |--------|------------|
 |Apenas AD RMS: para atualizar a localização de serviço da empresa de um computador cliente|Atualize as seguintes chaves do registo:<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterpriseCertification<br />REG_SZ: default<br /><br />**Valor:**<http or https>:// *Nome_do_Cluster_do_RMS*/_wmcs/Certification<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterprisePublishing<br />REG_SZ: default<br /><br />**Valor:** <http or https>:// *Nome_do_Cluster_do_RMS*/_wmcs/Licensing|
 |Para ativar e desativar o rastreio|Atualize a seguinte chave do registo:<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC<br />REG_DWORD: Trace<br /><br />**Valor:** 1 para ativar o rastreio, 0 para desativar o rastreio (predefinição)|
-|Para alterar a frequência de atualização dos modelos em dias|Os seguintes valores do registo especificam a frequência de atualização dos modelos no computador do utilizador, se o valor de TemplateUpdateFrequencyInSeconds não estiver definido.  Se nenhum destes valores estiver definido, o intervalo de atualização predefinido para que as aplicações com o cliente do RMS (versão 1.0.1784.0) transfiram modelos é de 1 dia. As versões anteriores a esta têm o valor predefinido de 7 dias.<br /><br />**Modo de Cliente:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Valor:** um valor inteiro que especifica o número de dias (mínimo de 1) entre transferências.<br /><br />**Modo de Servidor:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\*<SID>*<br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Valor:** um valor inteiro que especifica o número de dias (mínimo de 1) entre transferências.|
-|Para alterar a frequência de atualização dos modelos em segundos<br /><br />Importante: se esta definição for especificada, o valor de atualização dos modelos em dias será ignorado. Especifique uma das definições, não ambas.|Os seguintes valores de registo especificam a frequência de atualização dos modelos no computador do utilizador. Se este valor ou o valor para alterar a frequência em dias (TemplateUpdateFrequency) não for definido, o intervalo de atualização predefinido para que as aplicações com o cliente do RMS (versão 1.0.1784.0) transfiram modelos é de 1 dia. As versões anteriores a esta têm o valor predefinido de 7 dias.<br /><br />**Modo de Cliente:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: TemplateUpdateFrequencyInSeconds<br /><br />**Valor:** um valor inteiro que especifica o número de segundos (mínimo de 1) entre transferências.<br /><br />**Modo de Servidor:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\*<SID>*<br />REG_DWORD: TemplateUpdateFrequencyInSeconds<br /><br />**Valor:** um valor inteiro que especifica o número de segundos (mínimo de 1) entre transferências.|
+|Para alterar a frequência de atualização dos modelos em dias|Os seguintes valores do registo especificam a frequência de atualização dos modelos no computador do utilizador, se o valor de TemplateUpdateFrequencyInSeconds não estiver definido.  Se nenhum destes valores estiver definido, o intervalo de atualização predefinido para que as aplicações com o cliente do RMS (versão 1.0.1784.0) transfiram modelos é de 1 dia. As versões anteriores a esta têm o valor predefinido de 7 dias.<br /><br />**Modo de Cliente:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Valor:** um valor inteiro que especifica o número de dias (mínimo de 1) entre transferências.<br /><br />**Modo de Servidor:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\\*\<SID\>\*<br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Valor:** um valor inteiro que especifica o número de dias (mínimo de 1) entre transferências.|
+|Para alterar a frequência de atualização dos modelos em segundos<br /><br />Importante: se esta definição for especificada, o valor de atualização dos modelos em dias será ignorado. Especifique uma das definições, não ambas.|Os seguintes valores de registo especificam a frequência de atualização dos modelos no computador do utilizador. Se este valor ou o valor para alterar a frequência em dias (TemplateUpdateFrequency) não for definido, o intervalo de atualização predefinido para que as aplicações com o cliente do RMS (versão 1.0.1784.0) transfiram modelos é de 1 dia. As versões anteriores a esta têm o valor predefinido de 7 dias.<br /><br />**Modo de Cliente:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: TemplateUpdateFrequencyInSeconds<br /><br />**Valor:** um valor inteiro que especifica o número de segundos (mínimo de 1) entre transferências.<br /><br />**Modo de Servidor:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\\*\<SID\>\*<br />REG_DWORD: TemplateUpdateFrequencyInSeconds<br /><br />**Valor:** um valor inteiro que especifica o número de segundos (mínimo de 1) entre transferências.|
 |Apenas AD RMS: para transferir modelos imediatamente no próximo pedido de publicação|No decorrer de testes e avaliações, poderá querer que o cliente do RMS transfira modelos logo que seja possível. Para o fazer, remova a seguinte chave do registo para que o cliente do RMS transfira modelos imediatamente no próximo pedido de publicação, em vez de aguardar a hora especificada pela definição do registo TemplateUpdateFrequency:<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\<Nome do Servidor>\Template<br /><br />**Nota**: <Server Name> é possível ter URLs externos (corprights.contoso.com) e internos (corprights) e, por conseguinte, duas entradas diferentes.|
-|Apenas AD RMS: para ativar o suporte para a autenticação federada|Se o computador do cliente do RMS estiver ligado a um cluster do AD RMS, através de uma fidedignidade federada, é necessário configurar o realm inicial da federação.<br /><br />HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\Federation<br />REG_SZ: FederationHomeRealm<br /><br />**Valor:** o valor desta entrada do registo é o identificador de recurso uniforme (URI) do serviço de federação (por exemplo, "https://fs-01.contoso.com").|
+|Apenas AD RMS: para ativar o suporte para a autenticação federada|Se o computador do cliente do RMS estiver ligado a um cluster do AD RMS, através de uma fidedignidade federada, é necessário configurar o realm inicial da federação.<br /><br />HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\Federation<br />REG_SZ: FederationHomeRealm<br /><br />**Valor:** o valor desta entrada do registo é o identificador de recurso uniforme (URI) do serviço de federação (por exemplo, "http://TreyADFS.trey.net/adfs/services/trust").<br /><br /> **Nota**: é importante que especifique http e não https para este valor. Além disso, se a aplicação baseada em MSIPC de 32 bits estiver a ser executada numa versão de 64 bits do Windows, a localização será HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC\Federation. Para uma configuração de exemplo, consulte [Implementar os Serviços de Gestão de Direitos do Active Directory com os Serviços de Federação do Active Directory](https://technet.microsoft.com/library/dn758110.aspx).|
 |Apenas AD RMS: para suportar servidores de federação parceiros que exigem autenticação baseada em formulários, para a introdução de dados pelo utilizador|Por predefinição, o cliente do RMS funciona em modo silencioso e não é necessária a introdução de dados pelo utilizador. No entanto, os servidores de federação parceiros poderão ser configurados para exigir a introdução de dados pelo utilizador, através, por exemplo, da autenticação baseada em formulários. Neste caso, é necessário configurar o cliente do RMS para ignorar o modo silencioso, para que o formulário de autenticação federada seja apresentado numa janela do browser e seja pedida autenticação ao utilizador.<br /><br />HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\Federation<br />REG_DWORD: EnableBrowser<br /><br />**Nota**: se o servidor de federação estiver configurado para utilizar a autenticação baseada em formulários, esta chave é necessária. Se o servidor de federação estiver configurado para utilizar a autenticação integrada do Windows, esta chave não é necessária.|
 |Apenas AD RMS: para bloquear o consumo do serviço ILS|Por predefinição, o cliente do RMS ativa o consumo de conteúdos protegidos pelo serviço ILS, mas é possível configurar o cliente para bloquear este serviço ao definir a seguinte chave do registo. Se esta chave do registo estiver definida para bloquear o serviço ILS, todas as tentativas para abrir e consumir conteúdos protegidos pelo serviço ILS irão devolver o seguinte erro:<br />HRESULT_FROM_WIN32(ERROR_ACCESS_DISABLED_BY_POLICY)<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: **DisablePassportCertification**<br /><br />**Valor:** 1 para bloquear o consumo de ILS, 0 para permitir o consumo de ILS (predefinição)|
 
@@ -129,7 +128,7 @@ Os modelos fazem com que seja mais fácil para os utilizadores e administradores
 
 **Modo de Cliente:** %localappdata%\Microsoft\MSIPC\UnmanagedTemplates
 
-**Modo de Servidor:** %allusersprofile%\Microsoft\MSIPC\Server\UnmanagedTemplates\*<SID>*
+**Modo de Servidor:** %allusersprofile%\Microsoft\MSIPC\Server\UnmanagedTemplates\\*\<SID\>\*
 
 Ao utilizar esta pasta, não é necessária qualquer convenção de nomenclatura especial, embora os modelos devam ser emitidos pelo servidor ou serviço RMS e tenham de ter a extensão de nome de ficheiro .xml. Por exemplo, Contoso–Confidencial.xml ou Contoso–ApenasLeitura.xml são nomes válidos.
 
@@ -170,7 +169,7 @@ Pode registar e eliminar um SCP após a instalação do AD RMS, através do segu
 
 1.  Abra a consola dos Serviços de Gestão do Active Directory no servidor do AD RMS:
 
-    -   Se estiver a utilizar o Windows Server 2008 R2 ou o Windows Server 2008, clique em **Iniciar**, **Ferramentas Administrativas** e **Serviços do Active Directory Rights Management**.
+    -   Se estiver a utilizar o Windows Server 2008 R2 ou o Windows Server 2008, clique em **Iniciar**, **Ferramentas Administrativas** e em **Serviços do Active Directory Rights Management**.
 
     -   Se estiver a utilizar o Windows Server 2012 R2 ou o Windows Server 2012, no Gestor de Servidor, clique em **Ferramentas** e em **Serviços do Active Directory Rights Management**.
 
@@ -193,19 +192,17 @@ Como alternativa à utilização de um SCP, ou caso não exista um SCP, pode con
 
 2.  No Editor de Registo, navegue até **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC**.
 
-    > [!IMPORTANT]
-    > Se estiver a executar uma aplicação de 32 bits num computador de 64 bits, o caminho será o seguinte: 
-    > **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC**
+    > [!IMPORTANT] Se estiver a executar uma aplicação de 32 bits num computador de 64 bits, o caminho será o seguinte: **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC**
 
 3.  Para criar a subchave ServiceLocation, clique com o botão direito do rato em **MSIPC**, aponte para **Novo**, clique em **Chave** e escreva **ServiceLocation**.
 
 4.  Para criar a subchave EnterpriseCertification, clique com o botão direito do rato em **ServiceLocation**, aponte para **Novo**, clique em **Chave** e escreva **EnterpriseCertification**.
 
-5.  Para definir o URL de certificação da empresa, faça duplo clique no valor **(Default)** na subchave **EnterpriseCertification** e, quando a caixa de diálogo **Editar Cadeia** for apresentada, para **Dados do valor**, escreva <http or https>://*Nome_do_cluster_do_AD RMS*/_wmcs/Certification e clique em **OK**.
+5.  Para definir o URL de certificação da empresa, faça duplo clique no valor **(Default)** na subchave **EnterpriseCertification** e, quando a caixa de diálogo **Editar Cadeia** for apresentada, para **Dados do valor**, escreva <http or https>://*nome_do_cluster_do_AD RMS*/_wmcs/Certification e, em seguida, clique em **OK**.
 
 6.  Para criar a subchave EnterprisePublishing, clique com o botão direito do rato em **ServiceLocation**, aponte para **Novo**, clique em **Chave** e escreva EnterprisePublishing.
 
-7.  Para definir o URL de publicação da empresa, faça duplo clique em **(Default)** na subchave **EnterprisePublishing** e, quando a caixa de diálogo **Editar Cadeia** for apresentada, para **Dados do valor**, escreva o seguinte <http or https>://*Nome_do_cluster_do_AD RMS*/_wmcs/Licensing e clique em **OK**.
+7.  Para definir o URL de publicação da empresa, faça duplo clique em **(Default)** na subchave **EnterprisePublishing** e, quando a caixa de diálogo **Editar Cadeia** for apresentada, para **Dados do valor**, escreva o seguinte <http or https>://*nome_do_cluster_do_AD RMS*/_wmcs/Licensing e, em seguida, clique em **OK**.
 
 8.  Feche o Editor de Registo.
 
@@ -236,8 +233,7 @@ Em alguns casos, poderá ser necessário redirecionar o tráfego durante a dete�
 
     **Valor:** https://fabrikam.com/_wmcs/licensing
 
-    > [!NOTE]
-    > Se o servidor de licenciamento antigo tiver URLs da intranet e da extranet, especifique um novo nome e defina o mapeamento de valores para os dois URLs na chave LicensingRedirection.
+    > [!NOTE] Se o servidor de licenciamento antigo tiver URLs da intranet e da extranet, especifique um novo nome e defina o mapeamento de valores para os dois URLs na chave LicensingRedirection.
 
 5.  Repita o passo anterior para todos os servidores que precisem de ser redirecionados.
 
@@ -245,6 +241,6 @@ Em alguns casos, poderá ser necessário redirecionar o tráfego durante a dete�
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO3-->
 
 

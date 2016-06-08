@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -42,7 +42,7 @@ Se implementar o Azure RMS com uma chave de inquilino gerida pela Microsoft, pod
 |------------------------|-----------------------------------|
 |Implementar o Azure RMS rapidamente e sem necessitar de hardware especial|Gerida pela Microsoft|
 |Necessita da funcionalidade IRM completa no Exchange Online com o Azure RMS|Gerida pela Microsoft|
-|As suas chaves são criadas por si e protegidas num módulo de hardware de segurança (HSM)|BYOK<br /><br />Atualmente, esta configuração resultará na redução da funcionalidade IRM no Exchange Online. Para mais informações, consulte [BYOK pricing and restrictions (Preços e restrições do BYOK – em inglês)](byok-price-restrictions.md).|
+|As suas chaves são criadas por si e protegidas num módulo de hardware de segurança (HSM)|BYOK<br /><br />Atualmente, esta configuração resultará na redução da funcionalidade IRM no Exchange Online. Para mais informações, consulte [Preços e restrições do BYOK](byok-price-restrictions.md).|
 
 ## Selecione a sua topologia de chaves de inquilino: gerida pela Microsoft (predefinição) ou gerida por si (BYOK)
 Decida que topologia de chaves de inquilino é melhor para a sua organização. Por predefinição, o Azure RMS gera a sua chave de inquilino e gere a maioria dos aspetos do ciclo de vida da chave de inquilino. Esta é a opção mais simples e com menos tarefas administrativas adicionais. Na maioria dos casos, nem precisa de saber que tem uma chave de inquilino. Basta inscrever-se no Azure RMS e o processo de gestão de chaves restante é processado pela Microsoft.
@@ -90,10 +90,10 @@ Consulte a seguinte tabela para obter uma lista de pré-requisitos para o BYOK (
 
 |Requisito|Mais informações|
 |---------------|--------------------|
-|Uma subscrição que suporta Azure RMS.|Para mais informações sobre as subscrições disponíveis, consulte [Cloud subscriptions that support Azure RMS (Subscrições na nuvem que suportam o Azure RMS – em inglês)](../get-started/requirements-subscriptions.md).|
-|Não utilizar o RMS para utilizadores autónomos ou para o Exchange Online. Em alternativa, se utilizar o Exchange Online, compreender e aceitar as limitações da utilização do BYOK com esta configuração.|Para mais informações sobre as restrições e limitações atuais do BYOK, consulte [BYOK pricing and restrictions (Preços e restrições do BYOK – em inglês)](byok-price-restrictions.md).<br /><br />**Importante**: o BYOK não é atualmente compatível com o Exchange Online.|
+|Uma subscrição que suporta Azure RMS.|Para mais informações sobre as subscrições disponíveis, consulte [Subscrições na nuvem que suportam o Azure RMS](../get-started/requirements-subscriptions.md).|
+|Não utilizar o RMS para utilizadores autónomos ou para o Exchange Online. Em alternativa, se utilizar o Exchange Online, compreender e aceitar as limitações da utilização do BYOK com esta configuração.|Para mais informações sobre as restrições e limitações atuais do BYOK, consulte [Preços e restrições do BYOK](byok-price-restrictions.md).<br /><br />**Importante**: o BYOK não é atualmente compatível com o Exchange Online.|
 |HMS da Thales, smart cards e software de suporte.<br /><br />**Nota**: se estiver a migrar do AD RMS para o Azure RMS através da utilização de chave de software para chave de hardware, tem de ter uma versão de controladores da Thales igual ou posterior à 11.62.|Tem de ter acesso a um Módulo de Hardware de Segurança da Thales e conhecimentos operacionais básicos dos HMSs da Thales. Consulte [Thales Hardware Security Module (Módulo de Hardware de Segurança da Thales – em inglês)](http://www.thales-esecurity.com/msrms/buy) para conhecer a lista de modelos compatíveis ou para comprar um HSM caso não tenha um.|
-|Se quiser transferir a sua chave de inquilino através da Internet em vez de a transferir pessoalmente em Redmond, EUA, existem 3 requisitos:<br /><br />Requisito 1: uma estação de trabalho offline x64, com o sistema operativo Windows 7 ou posterior e a versão 11.62 ou posterior do software nShield da Thales.<br /><br />Se esta estação de trabalho utilizar o Windows 7, tem de [instalar o Microsoft .NET Framework 4.5](http://go.microsoft.com/fwlink/?LinkId=225702).<br /><br />Requisito 2: uma estação de trabalho que está ligada à Internet e com o sistema operativo Windows 7 ou posterior.<br /><br />Requisito 3: uma unidade USB ou outro dispositivo de armazenamento portátil que tenha pelo menos 16 MB de espaço livre.|Estes pré-requisitos não são necessários se viajar até Redmond e transferir a sua chave de inquilino pessoalmente.<br /><br />Por motivos de segurança, recomendamos que a primeira estação de trabalho não esteja ligada a uma rede. Contudo, isto não é imposto a nível de programação.<br /><br />Nota: nas instruções que se seguem, esta primeira estação de trabalho é referida como a **estação de trabalho desligada**..<br /><br />Além disso, se a chave de inquilino se destinar a uma rede de produção, recomendamos que utilize uma segunda estação de trabalho separada para transferir o conjunto de ferramentas e carregar a chave de inquilino. Contudo, para fins de teste, pode utilizar a mesma estação de trabalho.<br /><br />Nota: nas instruções que se seguem, esta segunda estação de trabalho é referida como a **estação de trabalho ligada à Internet**.|
+|Se quiser transferir a sua chave de inquilino através da Internet em vez de a transferir pessoalmente em Redmond, EUA, existem 3 requisitos:<br /><br />1: uma estação de trabalho offline x64, com o sistema operativo Windows 7 ou posterior e a versão 11.62 ou posterior do software nShield da Thales.<br /><br />Se esta estação de trabalho executar o Windows 7, tem de [instalar o Microsoft .NET Framework 4.5](http://go.microsoft.com/fwlink/?LinkId=225702).<br /><br />2: uma estação de trabalho que está ligada à Internet e com o sistema operativo Windows 7 ou posterior.<br /><br />3: uma unidade USB ou outro dispositivo de armazenamento portátil que tenha pelo menos 16 MB de espaço livre.|Estes pré-requisitos não são necessários se viajar até Redmond e transferir a sua chave de inquilino pessoalmente.<br /><br />Por motivos de segurança, recomendamos que a primeira estação de trabalho não esteja ligada a uma rede. Contudo, isto não é imposto a nível de programação.<br /><br />Nota: nas instruções que se seguem, esta primeira estação de trabalho é referida como a **estação de trabalho desligada**.<br /><br />Além disso, se a chave de inquilino se destinar a uma rede de produção, recomendamos que utilize uma segunda estação de trabalho separada para transferir o conjunto de ferramentas e carregar a chave de inquilino. Contudo, para fins de teste, pode utilizar a mesma estação de trabalho.<br /><br />Nota: nas instruções que se seguem, esta segunda estação de trabalho é referida como a **estação de trabalho ligada à Internet**.|
 
 Os procedimentos para gerar e utilizar a sua própria chave de inquilino são diferentes consoante queira fazê-lo através da Internet ou pessoalmente:
 
@@ -112,7 +112,7 @@ Os procedimentos para gerar e utilizar a sua própria chave de inquilino são di
     -   A Microsoft utiliza KEKs separadas, bem como Universos de Segurança separados em cada região geográfica, garantindo que a sua chave de inquilino só pode ser utilizada nos centros de dados da região na qual a encriptou. Por exemplo, não é possível utilizar uma chave de inquilino de um cliente europeu nos centros de dados da América do Norte ou da Ásia.
 
     > [!NOTE]
-    > A sua chave de inquilino pode ser movida com segurança através de computadores e redes não fidedignos, dado que está encriptada e protegida com permissões de controlo de acesso, o que faz com que só possa ser utilizada nos seus HSMs e nos HSMs da Microsoft para o Azure RMS. Pode utilizar os scripts que são fornecidos no conjunto de ferramentas para verificar as medidas de segurança e ler mais informações sobre como isto funciona a partir da Thales: [Hardware Key management in the RMS Cloud (Gestão de Chaves de Hardware na Nuvem do RMS – em inglês)](https://www.thales-esecurity.com/knowledge-base/white-papers/hardware-key-management-in-the-rms-cloud).
+    > A sua chave de inquilino pode ser movida com segurança através de computadores e redes não fidedignos, dado que está encriptada e protegida com permissões de controlo de acesso, o que faz com que só possa ser utilizada nos seus HSMs e nos HSMs da Microsoft para o Azure RMS. Pode utilizar os scripts que são fornecidos no conjunto de ferramentas para verificar as medidas de segurança e ler mais informações sobre como isto funciona a partir da Thales em [Hardware Key management in the RMS Cloud (Gestão de Chaves de Hardware na Nuvem do RMS – em inglês)](https://www.thales-esecurity.com/knowledge-base/white-papers/hardware-key-management-in-the-rms-cloud).
 
 -   **Pessoalmente:** terá de contactar o Suporte ao Cliente da Microsoft (CSS) para agendar uma sessão de transferência da chave para o Azure RMS. Tem de se deslocar até aos escritórios da Microsoft em Redmond, Washington, Estados Unidos da América, para transferir a sua chave de inquilino para o universo de segurança do Azure RMS.
 
@@ -130,7 +130,7 @@ Agora que já planeou e, se necessário, gerou a chave do inquilino, faça o seg
 
     -   Se ainda não o fez, tem agora de ativar o Rights Management para que a sua organização possa começar a utilizar o RMS. Os utilizadores começam a utilizar de imediato a sua chave de inquilino (gerida pela Microsoft ou por si).
 
-        Para mais informações sobre a ativação, consulte [Activating Azure Rights Management (Ativar o Azure Rights Management – em inglês)](../deploy-use/activate-service.md)..
+        Para mais informações sobre a ativação, consulte [Ativar o Azure Rights Management](../deploy-use/activate-service.md).
 
     -   Se já tinha ativado o Rights Management e depois decidiu gerir a sua própria chave de inquilino, a transição dos utilizadores da chave de inquilino antiga para a nova chave de inquilino será efetuada gradualmente. A conclusão desta transição escalonada poderá demorar algumas semanas. Os documentos e ficheiros que foram protegidos com a chave de inquilino antiga permanecem acessíveis aos utilizadores autorizados.
 
@@ -144,10 +144,10 @@ Agora que já planeou e, se necessário, gerou a chave do inquilino, faça o seg
 
 3.  Guarde a sua chave de inquilino.
 
-    Para mais informações, consulte [Operations for your Azure Rights Management tenant key (Operações para a sua chave de inquilino do Azure Rights Management – em inglês)](../deploy-use/operations-tenant-key.md).
+    Para mais informações, consulte [Operações para a sua chave de inquilino do Azure Rights Management](../deploy-use/operations-tenant-key.md).
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

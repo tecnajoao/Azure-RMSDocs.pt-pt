@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Este conteúdo do SDK não está atualizado. Durante um curto período de tempo, pode encontrar a [versão atual](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) da documentação no MSDN. **
 # Instalar e configurar o servidor
 
 Este tópico inclui os passos para instalar e configurar o Servidor RMS para testar a sua aplicação com capacidade para direitos.
@@ -103,6 +103,6 @@ Se estiver a utilizar o AD RMS v1.0 SP2, é possível registar o servidor onl
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

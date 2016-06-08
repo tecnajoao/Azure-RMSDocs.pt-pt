@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Este conteúdo do SDK não está atualizado. Durante um curto período de tempo, pode encontrar a [versão atual](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) da documentação no MSDN. **
 # Conceitos do programador
 
 Os tópicos nesta secção incluem os conceitos fundamentais do RMS.
@@ -46,6 +46,6 @@ Os tópicos nesta secção incluem os conceitos fundamentais do RMS.
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

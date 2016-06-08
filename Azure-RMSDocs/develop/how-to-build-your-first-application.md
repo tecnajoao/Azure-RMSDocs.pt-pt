@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Este conteúdo do SDK não está atualizado. Durante um curto período de tempo, pode encontrar a [versão atual](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) da documentação no MSDN. **
 # IPCHelloWorld – uma aplicação de exemplo
 
 Este tópico contém instruções para criar uma aplicação com capacidade para direitos.
@@ -71,7 +71,7 @@ O recorte de código seguinte enumera os modelos de RMS disponíveis no servidor
 
 
 
-Esta chamada irá obter modelos de RMS instalados no servidor predefinido e carregar os resultados na estrutura [**IPC\_TIL**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize) indicada pela variável *pcTil* e, em seguida, apresentar os modelos de apresentação.
+Esta chamada irá obter modelos de RMS instalados no servidor predefinido e carregar os resultados na estrutura [**IPC\_TIL** ](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize) indicada pela variável *pcTil* e, em seguida, apresentar os modelos.
 
 
 
@@ -222,6 +222,6 @@ Antes de terminar, também tem de libertar todos os recursos atribuídos.
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

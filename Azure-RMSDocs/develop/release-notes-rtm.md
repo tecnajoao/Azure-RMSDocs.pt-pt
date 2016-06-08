@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Este conteúdo do SDK não está atualizado. Durante um curto período de tempo, pode encontrar a [versão atual](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) da documentação no MSDN. **
 # Notas de versão
 
 Este tópico contém informações importantes sobre isto e sobre versões anteriores do SDK RMS 2.1.
@@ -32,7 +32,7 @@ Este tópico contém informações importantes sobre isto e sobre versões anter
 
 >[!Note]  As atualizações da documentação da funcionalidade nesta secção aplicam-se à transferência do SDK com a data de 11/12/2015.
 
-- **Fluxo de autenticação melhorado** – utilizar a autenticação com base no token OAuth2 através da [Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-libraries/). Para obter mais informações sobre este processo e as extensões da API para o mesmo, consulte [Autenticação da ADAL para a aplicação com suporte RMS](https://msdn.microsoft.com/en-us/library/windows/desktop/mt661865(v=vs.85).aspx).
+- **Fluxo de autenticação melhorado** – utilizar a autenticação com base no token OAuth2 através da [Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-libraries/). Para mais informações sobre este processo e as extensões da API para o mesmo, consulte [Autenticação da ADAL para a aplicação com suporte RMS](https://msdn.microsoft.com/en-us/library/windows/desktop/mt661865(v=vs.85).aspx).
 - **Atualizar para a ADAL** – ao atualizar a sua aplicação para utilizar a autenticação ADAL em vez do Assistente de Início de Sessão Online da Microsoft, o utilizador e os seus clientes poderão:
 
  - Utilizar a autenticação multifator
@@ -55,24 +55,24 @@ Este tópico contém informações importantes sobre isto e sobre versões anter
 
 ## Atualização de maio de 2015
 
--   **Aplicações do serviço e RMS baseado na nuvem** - [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key) precisa de três de informações: a chave simétrica, **AppPrincipalId** e **TenantBposId**. O tópico relativo a isto foi atualizado para fornecer orientações sobre o processamento destas informações de aquisição. Para esta atualização, consulte a versão atualizada de [Permitir que a aplicação do serviço funcione com o RMS baseado na nuvem](how-to-use-file-api-with-aadrm-cloud.md).
+-   **Aplicações do serviço e RMS baseado na nuvem** - [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key) precisa de três tipos de informações: a chave simétrica, **AppPrincipalId** e **TenantBposId**. O tópico relativo a isto foi atualizado para fornecer orientações sobre o processamento destas informações de aquisição. Para esta atualização, consulte a versão atualizada de [Permitir que a aplicação do serviço funcione com o RMS baseado na nuvem](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## Atualização de abril de 2015
 
--   O **controlo de documentos** é agora possível através de um conjunto de APIs novas. Para obter mais informações, consulte [Controlar Conteúdo](tracking-content.md).
--   **Tipo de encriptação** – agora suportamos o controlo de nível da API para a seleção do pacote de encriptação. Para obter mais informações, consulte [Trabalhar com a encriptação](working-with-encryption.md).
+-   O **controlo de documentos** é agora possível através de um conjunto de APIs novas. Para mais informações, consulte [Controlar Conteúdo](tracking-content.md).
+-   **Tipo de encriptação** – agora suportamos o controlo de nível da API para a seleção do pacote de encriptação. Para mais informações, consulte [Trabalhar com a encriptação](working-with-encryption.md).
 
-    **Nota** Já não  expomos o sinalizador **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** na nossa API. Isto significa que as aplicações futuras vão deixar de compilar se fizerem referência a este sinalizador, mas as aplicações já criadas vão continuar a funcionar, uma vez que respeitamos o sinalizador em privado no código da API. Para aproveitar ainda as vantagens do sinalizador de algoritmos de encriptação preterido antigo, basta alterar um sinalizador. Para obter mais informações, consulte [Trabalhar com a encriptação](working-with-encryption.md).
+    **Nota** Já não expomos o sinalizador **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** na nossa API. Isto significa que as aplicações futuras vão deixar de compilar se fizerem referência a este sinalizador, mas as aplicações já criadas vão continuar a funcionar, uma vez que respeitamos o sinalizador em privado no código da API. Para aproveitar ainda as vantagens do sinalizador de algoritmos de encriptação preterido antigo, basta alterar um sinalizador. Para mais informações, consulte [Trabalhar com a encriptação](working-with-encryption.md).
 
      
 
--   **Aplicações de Modo de Servidor**, quem utilizar um [**Valor de modo de API**](/rights-management/sdk/2.1/api/win/api%20mode%20values#msipc_api_mode_values_IPC_API_MODE_SERVER) de **IPC\_API\_MODE\_SERVER** já não necessita de um manifesto da aplicação. Pode testar a aplicação relativamente a um servidor RMS de produção e não é necessário obter uma licença de produção quando mudar para um ambiente de produção. Para obter mais informações sobre as aplicações do modo de servidor, consulte [Tipos de aplicação](application-types.md).
+-   **Aplicações de Modo de Servidor**, quem utilizar um [**Valor de modo de API**](/rights-management/sdk/2.1/api/win/api%20mode%20values#msipc_api_mode_values_IPC_API_MODE_SERVER) de **IPC\_API\_MODE\_SERVER**, já não necessita de um manifesto da aplicação. Pode testar a aplicação relativamente a um servidor RMS de produção e não é necessário obter uma licença de produção quando mudar para um ambiente de produção. Para obter mais informações sobre as aplicações do modo de servidor, consulte [Tipos de aplicação](application-types.md).
 -   O **registo** é agora implementado através dos métodos Rastreio de Eventos e ficheiros do Windows.
 -   Se estiver a utilizar um **computador Windows 7 SP1 ou Windows Server 2008 R2**, consulte a nota em “Notas importantes do programador” a seguir.
 
 ## Atualização de janeiro de 2015
 
--   **Aumento do tamanho do ficheiro protegido (pfile)** – agora suporta tamanhos de pfile maiores do que um gigabyte (1 GB). Para obter mais informações sobre pfiles, consulte [Formatos de Ficheiro Suportados](supported-file-formats.md).
+-   **Aumento do tamanho do ficheiro protegido (pfile)** – agora suporta tamanhos de pfile maiores do que um gigabyte (1 GB). Para mais informações sobre pfiles, consulte [Formatos de Ficheiro Suportados](supported-file-formats.md).
 -   **Registo melhorado para um melhor diagnóstico** –os níveis de registo apresentarão um **ERRO** ou **AVISO** nas mensagens que devem ser revistas. Todas as outras mensagens, incluindo as exceções que ainda são apresentadas, serão registadas como **INFORMAÇÕES**.
 
     Escolhemos esta abordagem para nenhum detalhe seja perdido. Agora, apenas as mensagens importantes são apresentadas com o nível de AVISO.
@@ -82,7 +82,7 @@ Este tópico contém informações importantes sobre isto e sobre versões anter
 
 ## Atualização de outubro de 2014
 
--   Foram atualizados os comportamentos predefinidos do componente da API de Ficheiros do SDK. Para obter mais informações, consulte [Configuração da API de Ficheiros](file-api-configuration.md).
+-   Foram atualizados os comportamentos predefinidos do componente da API de Ficheiros do SDK. Para mais informações, consulte [Configuração da API de Ficheiros](file-api-configuration.md).
 -   A nova funcionalidade de notificação por e-mail é descrita no tópico Notas do programador, [Permitir notificação por e-mail](how-to-enable-email-notification.md).
 
 ## Atualização de julho de 2014
@@ -109,13 +109,13 @@ Os componentes da API de Ficheiros do SDK foram expandidos e oferecem as seguint
 ## Atualização de abril de 2014
 
 -   A **utilização da memória da API de Ficheiros**, especialmente para PFiles grandes, foi significativamente melhorada.
--   O **ID de conteúdo** agora é gravável através da propriedade **IPC\_LI\_CONTENT\_ID**. Para obter mais informações, consulte [**Tipos de propriedade de licença**](/rights-management/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA)..
+-   O **ID de conteúdo** agora é gravável através da propriedade **IPC\_LI\_CONTENT\_ID**. Para mais informações, consulte [**Tipos de propriedade de licença**](/rights-management/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA).
 -   **Requisito de manifesto de produção** – quando o serviço/aplicação com suporte RMS está a ser executado no modo de servidor, deixará de ser necessário um manifesto. Para mais informações, consulte [Tipos de aplicações](application-types.md).
 -   **Atualizações da documentação**
 
     **Reorganizado** - [Como utilizar](how-to-use-msipc.md) para esclarecer a ordem dos passos da configuração do ambiente e os testes de aplicações.
 
-    **Testar a melhor prática** – orientações adicionadas para a utilização do servidor no local antes de testar com o Azure RMS. Para obter mais informações, consulte [Permitir que a aplicação do serviço funcione com o RMS baseado na nuvem](how-to-use-file-api-with-aadrm-cloud.md).
+    **Testar a melhor prática** – orientações adicionadas para a utilização do servidor no local antes de testar com o Azure RMS. Para mais informações, consulte [Permitir que a aplicação do serviço funcione com o RMS baseado na nuvem](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## Notas importantes do programador
 
@@ -123,7 +123,7 @@ Os componentes da API de Ficheiros do SDK foram expandidos e oferecem as seguint
 
     É possível adicionar suporte nativo para qualquer tipo de ficheiro (extensão) com esta versão do SDK Rights Management Services 2.1. Por exemplo, para qualquer extensão &lt;ext&gt; (não Office e pdf), \*.p&lt;ext&gt; será utilizado se a configuração de administração para essa extensão for “NATIVO”.
 
-    Para obter mais informações sobre tipos de ficheiro suportados, consulte [Configuração da API de Ficheiros](file-api-configuration.md).
+    Para mais informações sobre tipos de ficheiro suportados, consulte [Configuração da API de Ficheiros](file-api-configuration.md).
 
 -   Os **computadores Windows 7 SP1 e Windows Server 2008 R2 SP1** sem a atualização [KB2533623](https://support.microsoft.com/en-us/kb/2533623) poderão apresentar o seguinte erro ao proteger um ficheiro do Office: “O parâmetro está incorreto. Código de erro 0x80070057”. Se vir isto, instale a atualização e tente novamente. Se os problemas persistirem, contacte o alias de Comentários Beta do SDK RMS <rmcstbeta@microsoft.com>.
 
@@ -143,7 +143,7 @@ Os componentes da API de Ficheiros do SDK foram expandidos e oferecem as seguint
 
 -   **Problema**: ao criar uma licença do zero, os direitos de propriedade têm de ser concedidos explicitamente.
 
-    **Solução**: a aplicação tem de adicionar explicitamente direitos de **Proprietário** ao proprietário da licença ao criar uma licença do zero através de [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch). Para obter mais informações, consulte [Adicionar direitos de proprietário explícitos](add-explicit-owner-rights.md).
+    **Solução**: a aplicação tem de adicionar explicitamente direitos de **Proprietário** ao proprietário da licença ao criar uma licença do zero através de [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch). Para mais informações, consulte [Adicionar direitos de proprietário explícitos](add-explicit-owner-rights.md).
 
 -   **Problema**: se uma aplicação chamar [**IpcProtectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcprotectwindow) ou [**IpcUnprotectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcunprotectwindow) duas vezes para a mesma janela utilizando o respetivo identificador, o SDK RMS 2.1 devolve uma falha no **HRESULT**.
 
@@ -181,6 +181,6 @@ Se não for possível obter um nome e uma descrição, é devolvido um erro. Ape
  
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Este conteúdo do SDK não está atualizado. Durante um curto período de tempo, pode encontrar a [versão atual](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) da documentação no MSDN. **
 # Configuração da API de Ficheiros
 
 
@@ -89,7 +89,7 @@ Se a encriptação for tentada num tipo de ficheiro que está bloqueado, ocorre 
 
 ### API de Ficheiros – Detalhes de Suporte de Ficheiros
 
-É possível adicionar suporte nativo a qualquer tipo de ficheiro (extensão). Por exemplo, qualquer extensão &lt;ext&gt; (não Office), \*.p&lt;ext&gt; será utilizado se a configuração de administração para essa extensão for “NATIVO”.
+É possível adicionar suporte nativo a qualquer tipo de ficheiro (extensão). Por exemplo, para qualquer extensão &lt;ext&gt; (não Office), \*.p&lt;ext&gt; será utilizado se a configuração de administração para essa extensão for “NATIVO”.
 
 **Ficheiros do Office**
 
@@ -161,6 +161,6 @@ HKEY_LOCAL_MACHINE
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

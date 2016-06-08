@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Este conteúdo do SDK não está atualizado. Durante um curto período de tempo, pode encontrar a [versão atual](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) da documentação no MSDN. **
 # Configurar o Visual Studio
 
 Este tópico contém instruções sobre como configurar um projeto do Visual Studio para utilizar o SDK Rights Management Services 2.1.
@@ -42,7 +42,7 @@ Estas instruções aplicam-se à criação de uma aplicação de 32 bits nativa
 
 1.  Adicione o diretório de inclusão do SDK RMS 2.1 ao projeto do Visual Studio 2010.
 
-    Em **Propriedades de Configuração**, selecione **VC++ Directories** e adicione o diretório de inclusão do SDK RMS 2.1, **$(MSIPCSDKDIR)\\inc**, ao campo **Incluir Diretórios**.
+    Em **Propriedades de Configuração**, selecione **VC++ Directories** e adicione o diretório de inclusão do SDK RMS 2.1, **$(MSIPCSDKDIR)\\inc** ao campo **Incluir Diretórios**.
 
     ![Campo de diretórios de inclusão das propriedades de configuração](../media/include_directories.png)
 
@@ -85,6 +85,6 @@ Estas instruções aplicam-se à criação de uma aplicação de 32 bits nativa
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

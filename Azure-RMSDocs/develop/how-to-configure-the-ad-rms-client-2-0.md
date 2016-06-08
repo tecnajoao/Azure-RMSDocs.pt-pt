@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Este conteúdo do SDK não está atualizado. Durante um curto período de tempo, pode encontrar a [versão atual](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) da documentação no MSDN. **
 # Configurar o cliente
 
 Este tópico contém instruções sobre como configurar o Cliente dos Serviços de Gestão de Direitos do Active Directory 2.1.
@@ -55,7 +55,7 @@ Os passos seguintes descrevem como instalar o tempo de execução do programador
 
 1.  Copie o tempo de execução do programador, Ipcsecproc\_isv.dll, de %MSIPCSDKDIR%\\bin\\x86 (para versões de 32 bits do Windows) ou %MSIPCSDKDIR\\bin\\x64 (para versões de 64 bits do Windows) para C:\\Programas\\Active Directory Rights Management Services Client 2.1.
 
-    **Importante** se estiver a executar uma aplicação de 32 bits numa versão de 64 bits do Windows, terá de copiar Ipcsecproc\_isv.dll de %MSIPCSDKDIR%\\bin\\x86 para C:\\Programas(x86)\\Active Directory Rights Management Services Client 2.1.
+    **Importante** Se estiver a executar uma aplicação de 32 bits numa versão de 64 bits do Windows, terá de copiar Ipcsecproc\_isv.dll de %MSIPCSDKDIR%\\bin\\x86 para C:\\Programas(x86)\\Active Directory Rights Management Services Client 2.1.
 
      
 
@@ -129,6 +129,6 @@ As orientações neste tópico não são abrangentes. Para obter informações d
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

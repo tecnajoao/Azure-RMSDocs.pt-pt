@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Este conteúdo do SDK não está atualizado. Durante um curto período de tempo, pode encontrar a [versão atual](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) da documentação no MSDN. **
 # Permitir que a aplicação do serviço funcione com o RMS baseado na nuvem
 
 Este tópico descreve os passos para configurar a aplicação do serviço para utilizar o Azure Rights Management. Para obter mais informações, consulte [Introdução ao Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx).
@@ -44,15 +44,14 @@ Para utilizar a aplicação do serviço SDK RMS 2.1 com o Azure RMS, terá de s
 -   Defina [**IpcSetGlobalProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty).
 
 
-    int mode = IPC_API_MODE_SERVER;
-    IpcSetGlobalProperty(IPC_EI_API_MODE, &(mode));
+    int mode = IPC_API_MODE_SERVER; IpcSetGlobalProperty(IPC_EI_API_MODE, &(mode));
 
 
 **Nota** Para obter mais informações, consulte [Definir o modo de segurança de API](setting-the-api-security-mode-api-mode.md)
 
      
 
--   Os seguintes passos são a configuração para a criação de uma instância de uma estrutura [**IPC\_PROMPT\_CTX**](/rights-management/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx) com o membro **pcCredential** ([**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential)) preenchido com as informações de ligação do Serviço Azure Rights Management.
+-   Os seguintes passos são a configuração para a criação de uma instância de uma estrutura [**IPC\_PROMPT\_CTX**](/rights-management/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx) com o membro **pcCredential** ([**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential)) preenchido com as informações de ligação do serviço Azure Rights Management.
 -   Utilize as informações da criação da identidade do serviço de chave simétrica (consulte os pré-requisitos listados anteriormente neste tópico) para definir os parâmetros **wszServicePrincipal**, **wszBposTenantId** e **cbKey** quando cria uma instância de uma estrutura [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key).
 
 **Nota** Devido a uma condição existente no nosso serviço de deteção, se não estiver na América do Norte, as credenciais da chave simétrica não serão aceites a partir de outras regiões, como tal, tem de especificar os URLs do inquilino diretamente. Isto é feito através do parâmetro [**IPC\_CONNECTION\_INFO**](/rights-management/sdk/2.1/api/win/ipc_connection_info#msipc_ipc_connection_info) de [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) ou [**IpcGetTemplateIssuerList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist).
@@ -67,21 +66,15 @@ Para utilizar a aplicação do serviço SDK RMS 2.1 com o Azure RMS, terá de s
 **Nota** Tem de ser um administrador inquilino para utilizar cmdlets do Powershell.
 
 
--   Inicie o Powershell e execute os seguintes comandos para gerar uma chave
-            `Import-Module MSOnline`
-            `Connect-MsolService` (introduza as credenciais de administrador)
-            `New-MsolServicePrincipal` (introduza um nome a apresentar)
+-   Inicie o Powershell e execute os seguintes comandos para gerar uma chave         `Import-Module MSOnline`
+            `Connect-MsolService` (introduza as credenciais de administrador)         `New-MsolServicePrincipal` (introduza um nome a apresentar)
 -   Depois de gerar uma chave simétrica, transmitirá informações sobre a chave, incluindo a própria chave, e **AppPrincipalId**.
 
 
 
-    The following symmetric key was created as one was not supplied
-    ZYbF/lTtwE28qplQofCpi2syWd11D83+A3DRlb2Jnv8=
+    Foi criada a seguinte chave simétrica, porque não foi fornecido ZYbF/lTtwE28qplQofCpi2syWd11D83+A3DRlb2Jnv8=
 
-    DisplayName : RMSTestApp
-    ServicePrincipalNames : {7d9c1f38-600c-4b4d-8249-22427f016963}
-    ObjectId : 0ee53770-ec86-409e-8939-6d8239880518
-    AppPrincipalId : 7d9c1f38-600c-4b4d-8249-22427f016963
+    DisplayName : RMSTestApp ServicePrincipalNames : {7d9c1f38-600c-4b4d-8249-22427f016963} ObjectId : 0ee53770-ec86-409e-8939-6d8239880518 AppPrincipalId : 7d9c1f38-600c-4b4d-8249-22427f016963
 
 
 
@@ -103,12 +96,10 @@ Para utilizar a aplicação do serviço SDK RMS 2.1 com o Azure RMS, terá de s
     IPC_CREDENTIAL_SYMMETRIC_KEY symKey = {0};
 
     // Defina cada membro com informações da criação do serviço.
-    symKey.wszBase64Key = "a chave principal do serviço";
-    symKey.wszAppPrincipalId = "o identificador principal da aplicação";
-    symKey.wszBposTenantId = "o identificador de inquilino";
+    symKey.wszBase64Key = "a chave principal do serviço"; symKey.wszAppPrincipalId = "o identificador principal da aplicação"; symKey.wszBposTenantId = "o identificador do inquilino";
 
 
-Para obter mais informações, consulte [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key).
+Para mais informações, consulte [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key).
 
 -   Crie uma instância de uma estrutura [**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential) que contém a instância [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key).
 
@@ -141,15 +132,9 @@ Para obter mais informações, consulte [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/r
     Chame [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) passando na mesma instância de [**IPC\_PROMPT\_CTX**](/rights-management/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx).
 
 
-    PCIPC_TIL pTemplates = NULL;
-    IPC_TEMPLATE_ISSUER templateIssuer = (pTemplateIssuerList->aTi)[0];
+    PCIPC_TIL pTemplates = NULL; IPC_TEMPLATE_ISSUER templateIssuer = (pTemplateIssuerList->aTi)[0];
 
-    hr = IpcGetTemplateList(&(templateIssuer.connectionInfo),
-           IPC_GTL_FLAG_FORCE_DOWNLOAD,
-           0,
-           &promptCtx,
-           NULL,
-           &pTemplates);
+    hr = IpcGetTemplateList(&(templateIssuer.connectionInfo),        IPC_GTL_FLAG_FORCE_DOWNLOAD,        0,        &promptCtx,        NULL,        &pTemplates);
 
 
 -   Com o modelo anterior deste tópico, chame [**IpcfEncrcyptFile**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfile), passando na mesma instância de [**IPC\_PROMPT\_CTX**](/rights-management/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx).
@@ -197,6 +182,6 @@ Concluiu os passos necessários para permitir que a sua aplicação utilize o Az
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

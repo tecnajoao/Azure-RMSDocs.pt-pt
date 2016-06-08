@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Este conteúdo do SDK não está atualizado. Durante um curto período de tempo, pode encontrar a [versão atual](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) da documentação no MSDN. **
 # Controlar conteúdo
 
 Este tópico abrange orientações básicas para implementar o controlo de documentos de conteúdo protegido com o SDK Rights Management Services 2.1.
@@ -134,6 +134,6 @@ Veja a seguir um fragmento de código que mostra um exemplo de definição de me
  
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

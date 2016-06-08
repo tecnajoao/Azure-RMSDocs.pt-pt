@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -44,16 +44,16 @@ As instruções aplicam-se às seguintes circunstâncias:
 ## Instruções de implementação
 ![Instruções do administrador para a Implementação Rápida do Azure RMS](../media/AzRMS_AdminBanner.png)
 
-Certifique-se de que os seguintes requisitos estão em vigor e, em seguida, siga as instruções dos procedimentos de suporte antes de avançar para a documentação do utilizador.
+Certifique-se de que os seguintes requisitos são cumpridos e, em seguida, siga as instruções dos procedimentos de suporte antes de avançar para a documentação do utilizador.
 
 ## Requisitos para este cenário
-Para que as instruções deste cenário funcionem, é necessário que os seguintes aspetos estejam implementados:
+Para que as instruções para este cenário funcionem, é necessário o seguinte:
 
 |Requisito|Se precisar de mais informações|
 |---------------|--------------------------------|
-|O Azure Rights Management está ativado|[Ativar o Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
+|O Azure Rights Management está ativado|[Activating Azure Rights Management (Ativar o Azure Rights Management – em inglês)](https://technet.microsoft.com/library/jj658941.aspx)|
 |Sincronizou as suas contas de utilizador do Active Directory no local com o Azure Active Directory ou o Office 365, incluindo o respetivo endereço de e-mail. Isto é necessário para todos os utilizadores que possam necessitar de aceder a ficheiros depois de estarem protegidos pela FCI e pelo Azure Rights Management.|[Preparar para o Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|Um dos seguintes:<br /><br />Para utilizar um modelo predefinido para todos os utilizadores: o modelo predefinido não está arquivado, &lt;nome da organização&gt; – Confidencial<br /><br />Para utilizar um modelo personalizado para utilizadores específicos: criou e publicou este modelo personalizado|[Configurar modelos personalizados para o Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
+|Um dos seguintes:<br /><br />- Para utilizar um modelo predefinido para todos os utilizadores: o modelo predefinido não está arquivado, &lt;nome da organização&gt; – Confidencial<br /><br />- Para utilizar um modelo personalizado para utilizadores específicos: criou e publicou este modelo personalizado|[Configurar modelos personalizados para o Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
 |A aplicação de partilha Rights Management está implementada nos computadores dos utilizadores que executam o Windows|[Implementação automática da aplicação de partilha Microsoft Rights Management](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
 |Transferiu a ferramenta de Proteção RMS e configurou os pré-requisitos do Azure RMS|Para obter instruções para transferir a ferramenta e os pré-requisitos: [Cmdlets de Proteção RMS](https://msdn.microsoft.com/library/mt433195.aspx)<br /><br />Para configurar os pré-requisitos adicionais do Azure RMS, tal como a conta do principal de serviço: [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)|
 
@@ -161,6 +161,6 @@ Os ficheiros serão protegidos novamente de forma periódica. Esta operação vo
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

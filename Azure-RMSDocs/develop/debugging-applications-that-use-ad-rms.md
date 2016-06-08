@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Este conteúdo do SDK não está atualizado. Durante um curto período de tempo, pode encontrar a [versão atual](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) da documentação no MSDN. **
 # Depurar uma aplicação com capacidade para direitos
 
 O tópico seguinte mostra como depurar a aplicação e utilizar o Registo de Eventos do Windows.
@@ -81,6 +81,6 @@ Por exemplo, o comando seguinte ativa o registo de eventos MSIPC e define o nív
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

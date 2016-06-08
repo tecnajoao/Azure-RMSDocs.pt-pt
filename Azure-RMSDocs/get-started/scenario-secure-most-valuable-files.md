@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -48,14 +48,14 @@ As instruções aplicam-se às seguintes circunstâncias:
 ## Instruções de implementação
 ![Instruções do administrador para a Implementação Rápida do Azure RMS](../media/AzRMS_AdminBanner.png)
 
-Certifique-se de que os seguintes requisitos estão em vigor e, em seguida, siga as instruções dos procedimentos de suporte antes de avançar para a documentação do utilizador.
+Certifique-se de que os seguintes requisitos são cumpridos e, em seguida, siga as instruções dos procedimentos de suporte antes de avançar para a documentação do utilizador.
 
 ## Requisitos para este cenário
 Para este cenário, é necessário que os seguintes aspetos estejam implementados:
 
 |Requisito|Se precisar de mais informações|
 |---------------|--------------------------------|
-|Preparou contas e grupos para o Office 365 ou o Azure Active Directory:<br /><br />Um grupo com capacidade de correio com o nome **Acesso privilegiado**, que inclui as poucas pessoas que devem ter acesso a estes documentos altamente confidenciais<br /><br />Um grupo com capacidade de correio com o nome **Gestores de Conformidade de TI**, que inclui as pessoas cujo trabalho inclui a Deteção de Dados Eletrónicos, a monitorização e a auditoria<br /><br />Um grupo com capacidade de correio com o nome **Administradores de RMS** e todos os administradores que irão configurar o Azure RMS são membros deste grupo|[Preparar para o Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
+|Preparou contas e grupos para o Office 365 ou o Azure Active Directory:<br /><br />- Um grupo com capacidade de correio com o nome **Acesso privilegiado**, que inclui as poucas pessoas que devem ter acesso a estes documentos altamente confidenciais<br /><br />- Um grupo com capacidade de correio com o nome **Gestores de Conformidade de TI**, que inclui as pessoas cujo trabalho inclui a Deteção de Dados Eletrónicos, a monitorização e a auditoria<br /><br />- Um grupo com capacidade de correio com o nome **Administradores de RMS** e todos os administradores que irão configurar o Azure RMS são membros deste grupo|[Preparar para o Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
 |O Azure Rights Management está ativado|[Ativar o Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |Configurou um modelo personalizado, tal como descrito a seguir|[Configurar modelos personalizados para o Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
 |A aplicação de partilha Rights Management está implementada no seu computador Windows, para que possa proteger estes ficheiros no local, conforme descrito na secção seguinte|[Transferir e instalar a aplicação de partilha Rights Management](https://technet.microsoft.com/library/dn574734%28v=ws.10%29.aspx)|
@@ -152,6 +152,6 @@ Os ficheiros seguintes estão agora sujeitos a um nível muito elevado de prote�
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

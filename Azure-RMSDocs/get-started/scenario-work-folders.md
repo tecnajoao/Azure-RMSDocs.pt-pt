@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -60,7 +60,7 @@ Para que as instruções para este cenário funcionem, é necessário o seguinte
 |---------------|--------------------------------|
 |O Azure Rights Management está ativado|[Activating Azure Rights Management (Ativar o Azure Rights Management – em inglês)](https://technet.microsoft.com/library/jj658941.aspx)|
 |Sincronizou as suas contas de utilizador do Active Directory no local com o Azure Active Directory ou o Office 365, incluindo os respetivos endereços de e-mail. Isto é necessário para todos os utilizadores que utilizam Pastas de Trabalho.|[Preparing for Azure Rights Management (Preparar para o Azure Rights Management – em inglês)](https://technet.microsoft.com/library/jj585029.aspx)|
-|Um dos seguintes:<br /><br />Para utilizar um modelo predefinido para todos os utilizadores que não permita que os utilizadores apliquem uma nova política de direitos: o modelo predefinido não está arquivado, **&lt;nome da organização&gt; – Confidencial**<br /><br />Para utilizar um modelo personalizado adequado para os utilizadores aplicarem uma nova política de direitos: utilize as instruções que se seguem para criar um modelo personalizado|[Configuring custom templates for Azure Rights Management (Configurar modelos personalizados para o Azure Rights Management – em inglês)](https://technet.microsoft.com/library/dn642472.aspx)|
+|Um dos seguintes:<br /><br />- Para utilizar um modelo predefinido para todos os utilizadores que não permita que os utilizadores apliquem uma nova política de direitos: o modelo predefinido não está arquivado, **&lt;nome da organização&gt; – Confidencial**<br /><br />- Para utilizar um modelo personalizado adequado para os utilizadores aplicarem uma nova política de direitos: utilize as instruções que se seguem para criar um modelo personalizado|[Configurar modelos personalizados para o Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
 |O conector Rights Management está instalado, autorizado para o computador Windows Server e configurado para a função **Servidor FCI**.|[Deploying the Azure Rights Management connector (Implementar o conector Azure Rights Management – em inglês)](https://technet.microsoft.com/library/dn375964.aspx)|
 |A aplicação de partilha Rights Management está implementada nos computadores dos utilizadores que utilizam o Windows|[Automatic deployment for the Microsoft Rights Management sharing application (Implementação automática da aplicação de partilha Microsoft Rights Management – em inglês)](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
 
@@ -128,6 +128,6 @@ Se tiver configurado o modelo personalizado conforme indicado neste cenário, os
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

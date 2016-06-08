@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Este conteúdo do SDK não está atualizado. Durante um curto período de tempo, pode encontrar a [versão atual](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) da documentação no MSDN. **
 # Trabalhar com encriptação
 
 Este tópico descreve os nossos pacotes de encriptação e mostra como é possível utilizar alguns recortes de código.
@@ -106,6 +106,6 @@ Este exemplo mostra também a nova forma de suportar *algoritmos preteridos*.
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Este conteúdo do SDK não está atualizado. Durante um curto período de tempo, pode encontrar a [versão atual](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) da documentação no MSDN. **
 # Configurar o ambiente de desenvolvimento de pré-produção
 
 Esta secção descreve o processo de configuração e execução da aplicação com capacidade para direitos num ambiente de pré-produção/teste. Os tópicos seguintes debatem como configurar o ambiente de desenvolvimento de pré-produção e são apresentados na ordem em que pode realizar as tarefas.
@@ -48,6 +48,6 @@ Esta secção descreve o processo de configuração e execução da aplicação 
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

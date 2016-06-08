@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Este conteúdo do SDK não está atualizado. Durante um curto período de tempo, pode encontrar a [versão atual](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) da documentação no MSDN. **
 # Testar a aplicação com capacidade para direitos
 
 Este tópico descreve os passos necessários para testar a aplicação com capacidade para direitos SDK Rights Management Services 2.1.
@@ -77,7 +77,7 @@ Para gerar o manifesto de aplicação utilizando a cadeia de certificados de pr�
 
     %MSIPCSdkDir%\\bin\\Isvtier5appsignsdk\_client.xml
 
-    %MSIPCSdkDir%\\bin\\YourAppName.isv.mcf
+    %MSIPCSdkDir%\\bin\\ONomeDaSuaAplicação.isv.mcf
 
 2.  Na pasta de aplicação, mude o nome do ficheiro de configuração do manifesto ONomeDaSuaAplicação.isv.mcf para o nome da sua aplicação com a extensão de nome de ficheiro .mcf acrescentada. Por exemplo, se a aplicação tiver o nome AMinhaAplicação.exe, mude o nome ONomeDaSuaAplicação.isv.mcf para AMinhaAplicação.exe.mcf.
 
@@ -123,6 +123,6 @@ Pode executar a aplicação a partir de qualquer diretório, mas o manifesto de 
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

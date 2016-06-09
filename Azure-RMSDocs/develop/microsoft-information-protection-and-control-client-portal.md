@@ -49,9 +49,7 @@ Para obter informações sobre os requisitos de tempo de execução para um dete
 |[Introdução](getting-started-with-ad-rms-2-0.md)|A plataforma SDK RMS 2.1 permite aos programadores criarem aplicações que tiram partido da proteção de informações do RMS.|
 |[Notas de versão](release-notes-rtm.md)|Este tópico contém informações importantes sobre isto e sobre versões anteriores do SDK RMS 2.1.|
 |[Exemplos de código](samples.md)|Este tópico indica um conjunto de exemplos utilizando o SDK RMS 2.1, disponível no Centro de Transferências MSDN.|
-|[Como utilizar](how-to-use-msipc.md)|Orientação passo a passo para cenários e tarefas utilizando o SDK RMS 2.1.|
 |[Notas do programador](developer-notes.md)|Esta secção inclui orientações específicas para vários cenários de desenvolvimento importantes.|
-|[Conceitos do programador](ad-rms-concepts-nav.md)|Os tópicos nesta secção abrangem os conceitos fundamentais do RMS.|
 |[Referência da API](/rights-management/sdk/2.1/api/win/constants)|Esta secção contém tópicos que abrangem o material de referência de todos os elementos da API.|
 
  
@@ -66,6 +64,6 @@ Para obter informações sobre os requisitos de tempo de execução para um dete
  
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

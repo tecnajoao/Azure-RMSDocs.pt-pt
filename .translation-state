@@ -75648,9 +75648,9 @@
       "ArchiveFileCommit": "99247399862ab460f138dcd292fd4c2e5c1bd478",
       "ArchiveFileDateTime": "2016-06-16T13:18:10.576612Z",
       "ArchiveException": null,
-      "BilingualFilePath": null,
-      "BilingualFileCommit": null,
-      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.pt-pt\\master\\microsoft-information-protection-and-control-client-portal.716a21a0b760ecc96fbadc26dd1499abe0e5480c.pt-pt.xlf",
+      "BilingualFileCommit": "b27661c8b33d7a207b89c6108fddc13add739ce1",
+      "BilingualDateTime": "2016-06-16T16:11:40.9192468Z",
       "BilingualException": null
     },
     "a33b18035f5553e0a3c43c521ad49d8ac173a68d": {

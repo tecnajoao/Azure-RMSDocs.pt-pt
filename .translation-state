@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "6200c8da7c04f0ee2c962986c142da12f29e2248",
-  "LastTranslatedCommit": "295f34665ffa2d6d5c65f522031a20d8c730f76f",
+  "LastTranslatedCommit": "566a8fa507e380fa5a019fda54f9f615207049a5",
   "Items": {
     "2ed3bf162e9cbb06230b3bd9c0bd960c5c36049a": {
       "FileHash": "2ed3bf162e9cbb06230b3bd9c0bd960c5c36049a",
@@ -75636,14 +75636,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": null,
-      "TargetFilePath": null,
-      "HandbackFilePath": null,
-      "HandbackFileCommit": null,
-      "HandbackDateTime": "0001-01-01T00:00:00",
+      "TargetFileCommit": "566a8fa507e380fa5a019fda54f9f615207049a5",
+      "TargetFilePath": "Azure-RMSDocs\\develop\\microsoft-information-protection-and-control-client-portal.md",
+      "HandbackFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.pt-pt\\master\\microsoft-information-protection-and-control-client-portal.716a21a0b760ecc96fbadc26dd1499abe0e5480c.pt-pt.xlf",
+      "HandbackFileCommit": "b27661c8b33d7a207b89c6108fddc13add739ce1",
+      "HandbackDateTime": "2016-06-16T16:03:51.7790859Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "UpdatedDateTime": "2016-06-16T16:03:51.7790859Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.pt-pt\\master\\archive\\microsoft-information-protection-and-control-client-portal.716a21a0b760ecc96fbadc26dd1499abe0e5480c.pt-pt.xlf",
       "ArchiveFileCommit": "99247399862ab460f138dcd292fd4c2e5c1bd478",
       "ArchiveFileDateTime": "2016-06-16T13:18:10.576612Z",

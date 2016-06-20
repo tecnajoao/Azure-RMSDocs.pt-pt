@@ -67,14 +67,14 @@ Defina o valor de **Encriptação** na chave para especificar o comportamento de
 
 - **Desativar**: a encriptação está desativada.
 
-> [AZURE.NOTE] Esta definição não tem efeito na desencriptação. Qualquer ficheiro encriptado, seja ele encriptado com a proteção nativa ou Pfile, pode ser desencriptado, desde que o utilizador tenha o direito **EXTRAIR**.
+> [!Note] Esta definição não tem efeito na desencriptação. Qualquer ficheiro encriptado, seja ele encriptado com a proteção nativa ou Pfile, pode ser desencriptado, desde que o utilizador tenha o direito **EXTRAIR**.
 
 - **Nativa**: a encriptação nativa é utilizada. Para ficheiros do Office, o ficheiro encriptado terá a mesma extensão que o ficheiro original. Por exemplo, um ficheiro com a extensão de ficheiro .docx será encriptado para um ficheiro com uma extensão .docx. Para outros ficheiros que podem ter a proteção nativa aplicada, o ficheiro será encriptado para um ficheiro com uma extensão no formato p*zzz*, em que *zzz* é a extensão do ficheiro original. Por exemplo, os ficheiros .txt serão encriptados para um ficheiro com a extensão .ptxt. Consulte abaixo a lista de extensões de ficheiros que podem ter a proteção nativa aplicada.
 
 - **Pfile**: a encriptação PFile é utilizada. O ficheiro encriptado terá .pfile anexado à extensão original. Por exemplo, depois da encriptação, um ficheiro .txt terá uma extensão .txt.pfile.
 
 
-> [AZURE.NOTE] Esta definição não tem efeito em formatos de ficheiros do Office. Por exemplo, se o valor `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` estiver definido para &quot;Pfile”, os ficheiros .docx ainda serão encriptados com a proteção nativa e o ficheiro encriptado continuará a ter uma extensão de ficheiro .docx.
+> [!Note] Esta definição não tem efeito em formatos de ficheiros do Office. Por exemplo, se o valor `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` estiver definido para &quot;Pfile”, os ficheiros .docx ainda serão encriptados com a proteção nativa e o ficheiro encriptado continuará a ter uma extensão de ficheiro .docx.
 
 A definição de qualquer outro valor ou nenhum valor resulta no comportamento predefinido.
 

@@ -158,9 +158,6 @@
   "5db86aa5914b66d010bb03783200e8988ad38208": [
     "Azure-RMSDocs\\develop\\release-notes-rtm.md"
   ],
-  "43263ed51886b013525f7e00c272c5ef0a9e9e64": [
-    "Azure-RMSDocs\\develop\\release-notes-rtm.md"
-  ],
   "61f70a7b4a85c0ab6f0a2732fcf9d314a230e769": [
     "Azure-RMSDocs\\develop\\tracking-content.md"
   ],
@@ -224,9 +221,6 @@
   "e5f0b1eacae24de3bd859de868b9c158e4eb20e0": [
     "Azure-RMSDocs\\develop\\ad-rms-server.md"
   ],
-  "52c2ec7f89a72e375a3431ec5cb5b638cfb10a94": [
-    "Azure-RMSDocs\\develop\\ad-rms-server.md"
-  ],
   "acd0692102c43baff0a92360e0ddbe1259ad9b4f": [
     "Azure-RMSDocs\\develop\\android-code.md"
   ],
@@ -284,16 +278,7 @@
   "902721ae3e69afd144c552b8ee0a916958e80afc": [
     "Azure-RMSDocs\\develop\\deploying-your-application.md"
   ],
-  "f4ef711085d2a029ab951b30b4929358e774028d": [
-    "Azure-RMSDocs\\develop\\deploying-your-application.md"
-  ],
   "2f2323f32327324611df2b2e8a8824e6896546aa": [
-    "Azure-RMSDocs\\develop\\developer-notes.md"
-  ],
-  "6dab30ad0317a8fa40ca5d3fbf65d547a8346510": [
-    "Azure-RMSDocs\\develop\\developer-notes.md"
-  ],
-  "d3a8f5f2a97920f35e261bf6f444a1ecce4c5302": [
     "Azure-RMSDocs\\develop\\developer-notes.md"
   ],
   "5faea360de8aa9ecb82abf25b5c1392d52d0afad": [
@@ -335,9 +320,6 @@
   "1a255629c8ced8cbc5f5e2d94b00e9cb1be3223f": [
     "Azure-RMSDocs\\develop\\how-to-install-and-configure-an-rms-server.md"
   ],
-  "3d3c24401249ddaf7522468e3d24abac66773276": [
-    "Azure-RMSDocs\\develop\\how-to-install-and-configure-an-rms-server.md"
-  ],
   "4c273efa683827dc8f731a6dadb3f50bf53ea616": [
     "Azure-RMSDocs\\develop\\how-to-set-up-your-test-environment.md"
   ],
@@ -363,9 +345,6 @@
     "Azure-RMSDocs\\develop\\how-to-use-file-api-with-aadrm-cloud.md"
   ],
   "aee0f209ef36d436b09f38d9f1ef358320cb1fa8": [
-    "Azure-RMSDocs\\develop\\how-to-use-file-api-with-aadrm-cloud.md"
-  ],
-  "25eb5342687a44d5f80ed8a06d83f1c5cfc1e24e": [
     "Azure-RMSDocs\\develop\\how-to-use-file-api-with-aadrm-cloud.md"
   ],
   "98a2220c1b2d2f7c62673b8d860962d8c208c5ae": [
@@ -408,9 +387,6 @@
     "Azure-RMSDocs\\develop\\setting-the-api-security-mode-api-mode.md"
   ],
   "52ed1c7aea4369d7c81ea2b4d73c5455c979171e": [
-    "Azure-RMSDocs\\develop\\setting-the-api-security-mode-api-mode.md"
-  ],
-  "3e65513314fbdd1b5c62859725efeb14074ef7ce": [
     "Azure-RMSDocs\\develop\\setting-the-api-security-mode-api-mode.md"
   ],
   "4bb013f420b02a10e306d92624683c48ceb2582f": [
@@ -609,12 +585,6 @@
     "Azure-RMSDocs\\get-started\\faqs.md"
   ],
   "7af7b3698ddf75573dc4712ef335b25378ba2290": [
-    "Azure-RMSDocs\\get-started\\faqs.md"
-  ],
-  "f7c946f6d20805f4cfe7385fa6eedbf3a1f7e097": [
-    "Azure-RMSDocs\\get-started\\faqs.md"
-  ],
-  "0e909b0f972fd597e60abea04b476d9a956886f3": [
     "Azure-RMSDocs\\get-started\\faqs.md"
   ],
   "8141a46e90bfd48562302f1707704104ead82aef": [

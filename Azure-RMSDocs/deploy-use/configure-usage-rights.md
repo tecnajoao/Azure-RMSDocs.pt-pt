@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/19/2016
+ms.date: 06/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -43,7 +43,7 @@ Permite ao utilizador modificar, reorganizar, formatar ou filtrar o conteúdo de
 
 **Codificação na política**: DOCEDIT
 
-**Direitos personalizados de implementação no Office**: como parte das opções *Alterar* e *Controlo Total*.**
+**Direitos personalizados de implementação no Office**: como parte das opções *Alterar* e *Controlo Total*.
 
 **Nome no portal clássico do Azure**: *Editar Conteúdo*
 
@@ -267,11 +267,32 @@ Os direitos incluídos com os modelos predefinidos são os seguintes:
 |&lt;*nome da organização*&gt;* – Apenas Visualização Confidencial*|Ver, Abrir, Ler|
 |&lt;*nome da organização*&gt;* – Confidencial*|Ver, Abrir, Ler; Guardar; Editar Conteúdos, Editar; Ver Direitos; Permitir Macros; Reencaminhar; Responder; Responder a Todos|
 
+## Opção Não Reencaminhar para e-mails
+
+Os clientes e serviços do Exchange (por exemplo, o cliente Outlook, a aplicação Outlook Web Access e as regras de transporte do Exchange) têm a sua própria opção de proteção dos direitos de informação para e-mails: **Não Reencaminhar**. 
+
+Embora esta opção seja apresentada ao utilizadores (e os administradores do Exchange) como se fosse um modelo de Gestão de Direitos predefinido que podem selecionar, **Não Reencaminhar** não é um modelo. Isto explica por que motivo não é possível vê-lo no portal clássico do Azure quando visualiza e gere modelos para o Azure RMS. Em vez disso, a opção **Não Reencaminhar** é um conjunto de direitos aplicados dinamicamente por utilizadores aos seus destinatários de e-mail.
+
+Quando a opção **Não Reencaminhar** é aplicada a um e-mail, os destinatários não podem reencaminhá-lo, imprimi-lo, copiá-lo ou guardar anexos ou guardar com um nome diferente. Por exemplo, no cliente Outlook, o botão Reencaminhar não está disponível, as opções de menu **Guardar Como**, **Guardar Anexo** e **Imprimir** não estão disponíveis e não é possível adicionar ou alterar os destinatários nas caixas **Para**, **Cc** ou **Bcc**.
+
+Existe uma diferença importante entre aplicar a opção **Não Reencaminhar** e aplicar um modelo que não conceda o direito de Reencaminhar a um e-mail: a opção **Não Reencaminhar** utiliza uma lista dinâmica de utilizadores autorizados que se baseia nos destinatários escolhidos pelo utilizador do e-mail original; enquanto os direitos no modelo têm uma lista estática de utilizadores autorizados especificados anteriormente pelo administrador. Qual a diferença? Vejamos um exemplo: 
+
+Um utilizador pretende enviar algumas informações por e-mail a pessoas específicas no departamento de Marketing que não devem ser partilhadas com outras pessoas. Deverá proteger o e-mail com um modelo que restringe direitos (ver, responder e guardar) para o departamento de Marketing?  Ou deverá escolher a opção **Não Reencaminhar**? Ambas as escolhas impedem os destinatários de reencaminhar o e-mail. 
+
+- Se aplicar o modelo, os destinatários continuam a poder partilhar as informações com outras pessoas no departamento de marketing. Por exemplo, um destinatário poderia utilizar o Explorador para arrastar e largar o e-mail numa localização partilhada ou numa unidade USB. Assim, qualquer pessoa do departamento de marketing (e o proprietário do e-mail) com acesso a esta localização pode ver as informações do e-mail.
+ 
+- Se aplicar a opção **Não Reencaminhar**, os destinatários não conseguirão partilhar as informações com qualquer pessoa do outro departamento de marketing movendo o e-mail para outra localização. Neste cenário, apenas os destinatários originais (e o proprietário do e-mail) poderão ver as informações do e-mail.
+
+> [!NOTE] Utilize **Não Reencaminhar** quando for importante que restringir o acesso às informações do e-mail apenas os destinatários escolhidos pelo remetente. Utilize um modelo para e-mails para restringir os direitos a um grupo de pessoas especificadas anteriormente pelo administrador, independentemente dos destinatários escolhidos pelo remetente.
+
+
+
+
 ## Consulte Também
 [Configurar modelos personalizados para o Azure Rights Management](configure-custom-templates.md)
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO2-->
 
 

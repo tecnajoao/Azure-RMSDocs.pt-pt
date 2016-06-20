@@ -1,30 +1,20 @@
 ---
-# required metadata
+# metadados obrigatórios
 
-title: Depurar uma aplicação com capacidade para direitos | Azure RMS
-description: O tópico seguinte mostra como depurar a aplicação e utilizar o Registo de Eventos do Windows.
-keywords:
-author: bruceperlerms
-manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
-ms.prod: azure
-ms.service: rights-management
-ms.technology: techgroup-identity
-ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
-# optional metadata
+título: Procedimentos: depurar uma aplicação com permissão para direitos | Descrição do Azure RMS: O tópico seguinte mostra como depurar a aplicação e utilizar o Registo de Eventos do Windows.
+palavras-chave: autor: gestor bruceperlerms: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
+# metadados opcionais
 
 #ROBOTS:
-audience: developer
+audiência: programador
 #ms.devlang:
-ms.reviewer: shubhamp
-ms.suite: ems
+ms.reviewer: shubhamp ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
 ---
-** Este conteúdo do SDK não está atualizado. Durante um curto período de tempo, pode encontrar a [versão atual](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) da documentação no MSDN. **
-# Depurar uma aplicação com capacidade para direitos
+
+# Procedimentos: depurar uma aplicação com permissão para direitos
 
 O tópico seguinte mostra como depurar a aplicação e utilizar o Registo de Eventos do Windows.
 
@@ -33,6 +23,7 @@ O tópico seguinte mostra como depurar a aplicação e utilizar o Registo de Eve
 No SDK Rights Management Services 2.1, as verificações antidepuração na versão de programador do nosso tempo de execução estão desativadas.
 
 Pode ativar o rastreio de depuração utilizando a seguinte chave de registo. (Para desativar o rastreio de depuração, altere o valor para 0.) Não é necessário mais nada para a depuração nesta versão.
+
 
 ```
 HKEY_LOCAL_MACHINE
@@ -72,15 +63,11 @@ Por exemplo, o comando seguinte ativa o registo de eventos MSIPC e define o nív
 
 ## Tópicos relacionados
 
-* [Como utilizar](how-to-use-msipc.md)
  
 
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

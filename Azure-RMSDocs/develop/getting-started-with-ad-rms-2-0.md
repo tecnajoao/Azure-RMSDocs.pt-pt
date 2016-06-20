@@ -23,25 +23,33 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** Este conteúdo do SDK não está atualizado. Durante um curto período de tempo, pode encontrar a [versão atual](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) da documentação no MSDN. **
 # Introdução
 
-A plataforma do SDK Rights Management Services 2.1 permite aos programadores criarem aplicações que tiram partido da proteção de informações do RMS. A plataforma processa práticas de segurança complexas tais como a gestão de chaves, o processamento de encriptação e desencriptação e oferece uma API simplificada para a programação de aplicações fácil.
+A plataforma do SDK Rights Management Services 2.1 permite aos programadores criar aplicações que tiram partido da proteção de informações do RMS através de um RMS Server ou do Azure RMS. A plataforma processa práticas de segurança complexas tais como a gestão de chaves, o processamento de encriptação e desencriptação e oferece uma API simplificada para a programação de aplicações fácil.
 
 ## Introdução ao SDK RMS 2.1
 
-Leia estas secções (abaixo):
+Este tópico descreve o processo de configuração e execução da aplicação com permissão para direitos num ambiente de teste. Os tópicos seguintes analisam como configurar o ambiente de desenvolvimento, sendo listados pela ordem de execução das tarefas.
 
--   Por que motivo deve utilizar o SDK RMS 2.1 para proteger o seu conteúdo
--   Princípios fundamentais
+## Nestas secções
+
+| Tópico | Descrição |
+|-------|-------------|
+| [Release Notes (Notas de Lançamento)](release-notes-rtm.md) | Este tópico contém informações importantes sobre isto e sobre versões anteriores do SDK RMS 2.1.|
+| [Instalar o SDK](install-the-rms-sdk.md) | Este tópico descreve o processo de instalação das ferramentas de programação.|
+| [Configurar o Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md) | Este tópico contém instruções sobre como configurar um projeto do Visual Studio para utilizar o SDK RMS 2.1.|
+| [Desenvolver a sua aplicação](developing-your-application.md) | Este tópico contém documentação de orientação essencial sobre os aspetos base de uma aplicação com permissão para RMS e pode servir de ponto de partida para o desenvolvimento da sua aplicação.|
+| [Testar a sua aplicação](running-your-first-application.md) |Este tópico contém instruções sobre como configurar o teste de aplicações.|
+| [Implementar em produção](deploying-your-application.md) |Este tópico descreve as opções de implementação da sua aplicação com permissão para direitos.|
+
+Assim que tiver iniciado, veja algumas das nossas outras [amostras do RMS](samples.md). Em seguida, mantenha-se atualizado através da nossa [Área para Programadores do RMS](http://blogs.msdn.com/b/rms/).
+
 
 Tente utilizar o SDK RMS 2.1 ao seguir as orientações nos seguintes tópicos:
 
--   [Instalar o SDK](create-your-first-rights-aware-application.md)
+-   [Instalar o SDK](install-the-rms-sdk.md)
 -   [Testar a aplicação com capacidade para direitos](running-your-first-application.md)
 -   [IPCHelloWorld – uma aplicação de exemplo](how-to-build-your-first-application.md)
-
-Assim que tiver iniciado, veja algumas das nossas outras [amostras do RMS](samples.md). Em seguida, mantenha-se atualizado através da nossa [Área para Programadores do RMS](http://blogs.msdn.com/b/rms/).
 
 ### Por que motivo deve utilizar o SDK RMS 2.1 para proteger o seu conteúdo
 
@@ -65,19 +73,15 @@ O SDK RMS 2.1 suporta uma gama de plataformas de clientes e servidores importa
 
 * [Amostras do AD RMS](samples.md)
 * [Área para Programadores do AD RMS](http://blogs.msdn.com/b/rms/)
-* [Instalar o SDK](create-your-first-rights-aware-application.md)
+* [Instalar o SDK](install-the-rms-sdk.md)
 * [IPCHelloWorld – uma aplicação de exemplo](how-to-build-your-first-application.md)
 * [Descrição Geral](ad-rms-overview.md)
 * [Plataformas suportadas](supported-platforms.md)
-* [Testar a aplicação com capacidade para direitos](running-your-first-application.md)
  
 
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

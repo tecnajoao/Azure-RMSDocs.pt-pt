@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/03/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -54,7 +54,7 @@ Pode exportar a configuração do Azure RMS e a chave de inquilino ao seguir as 
 
 ### Passo 1: iniciar a exportação
 
--   Para o fazer, contacte o Suporte ao Cliente da Microsoft (CSS). Tem de provar que é um administrador do seu inquilino do Azure RMS.
+-   Para tal, contacte o Suporte ao Cliente da Microsoft (CSS) para abrir um **Incidente de suporte do Azure Rights Management com um pedido de exportação de chave do Azure RMS**. Tem de provar que é um administrador do inquilino do Azure RMS e compreender que este processo demorará alguns dias a ser confirmado. São aplicáveis encargos de suporte padrão; a exportação da chave do inquilino não é um serviço de suporte gratuito.
 
 ### Passo 2: aguardar pela verificação
 
@@ -86,7 +86,7 @@ Pode exportar a configuração do Azure RMS e a chave de inquilino ao seguir as 
 
 -   Depois de receber a chave de inquilino, mantenha-a bem protegida, uma vez que se alguém obter acesso à mesma, pode desencriptar todos os documentos que estão protegidos através dessa chave.
 
-    Se o motivo para exportar a chave de inquilino se prender com facto de não pretender utilizar mais o Azure RMS, como melhor prática, desative o inquilino do RMS. Não adie esta ação depois de receber a sua chave de inquilino porque esta precaução ajuda a minimizar as consequências se a sua chave de inquilino for acedida por alguém que não a deve ter. Para obter mais informações, consulte [Encerrar e Desativar o Azure Rights Management](decommission-deactivate.md).
+    Se o motivo para exportar a chave de inquilino se prender com facto de não pretender utilizar mais o Azure RMS, como melhor prática, desative o inquilino do RMS. Não adie esta ação depois de receber a sua chave de inquilino porque esta precaução ajuda a minimizar as consequências se a sua chave de inquilino for acedida por alguém que não a deve ter. Para obter mais informações, consulte [Desativar o Azure Rights Management](decommission-deactivate.md).
 
 ## Responder a uma violação
 Nenhum sistema de segurança, por mais forte que seja, está completo sem um processo de resposta a violações. A sua chave de inquilino pode estar comprometida ou ter sido roubada. Mesmo quando está bem protegida, podem existir vulnerabilidades na tecnologia HSM da geração atual ou nos algoritmos e comprimentos de chaves atuais.
@@ -104,6 +104,6 @@ Se ocorrer uma violação, a melhor ação que o utilizador ou a Microsoft pode 
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

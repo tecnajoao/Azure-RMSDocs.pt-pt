@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** Este conteúdo do SDK não está atualizado. Durante um curto período de tempo, pode encontrar a [versão atual](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) da documentação no MSDN. **
+
 # Configuração da API de Ficheiros
 
 
@@ -40,46 +40,45 @@ Para obter mais informações sobre formatos de ficheiro suportados, consulte **
 
 As secções seguintes descrevem as chaves e os valores de chave que controlam a encriptação.
 
-
 ### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection
 
-*Tipo*: chave
+**Tipo**: Chave
 
-*Descrição*: contém a configuração geral da API de Ficheiros.
+**Descrição**: contém a configuração geral da API de Ficheiros.
 
 ### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;
 
-*Tipo: chave
+**Tipo**: Chave
 
-*Descrição: especifica as informações de configuração de uma extensão de ficheiro específica. Por exemplo, TXT, JPG, entre outras.
+**Descrição**: especifica as informações de configuração de uma extensão de ficheiro específica. Por exemplo, TXT, JPG, entre outras.
 
 - O caráter universal (*) é permitido. No entanto, uma definição para uma extensão específica tem prioridade sobre a definição da condição universal. O caráter universal não afeta as definições de ficheiros do Microsoft Office. Estas devem ser explicitamente desativadas por tipo de ficheiro.
 - Para especificar os ficheiros que não tenham uma extensão, utilize '.'
 - Não especifique o caráter '.' quando especificar a chave para uma extensão de ficheiro específica. Utilize, por exemplo, `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\TXT` para especificar definições para os ficheiros .txt. (Não utilize `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\.TXT`).
 
-Defina o valor de *Encriptação* na chave para especificar o comportamento de proteção. Se o valor de *Encriptação* não for definido, é respeitado o comportamento predefinido para o tipo de ficheiro.
+Defina o valor de **Encriptação** na chave para especificar o comportamento de proteção. Se o valor de **Encriptação** não for definido, é aplicado o comportamento predefinido para o tipo de ficheiro.
 
 
 ### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;\Encryption*
 
-*Tipo: REG_SZ*
+**Tipo**: REG_SZ
 
-*Descrição: contém um de três valores:
+**Descrição**: contém um de três valores:
 
-- *Desativar*: a encriptação está desativada.
+- **Desativar**: a encriptação está desativada.
 
-> [AZURE.NOTE] Esta definição não tem efeito na desencriptação. Qualquer ficheiro encriptado, seja ele encriptado com a proteção nativa ou Pfile, pode ser desencriptado, desde que o utilizador tenha o direito EXTRAIR.
+> [AZURE.NOTE] Esta definição não tem efeito na desencriptação. Qualquer ficheiro encriptado, seja ele encriptado com a proteção nativa ou Pfile, pode ser desencriptado, desde que o utilizador tenha o direito **EXTRAIR**.
 
-- *Nativa*: a encriptação nativa é utilizada. Para ficheiros do Office, o ficheiro encriptado terá a mesma extensão que o ficheiro original. Por exemplo, um ficheiro com a extensão de ficheiro .docx será encriptado para um ficheiro com uma extensão .docx. Para outros ficheiros que podem ter a proteção nativa aplicada, o ficheiro será encriptado para um ficheiro com uma extensão no formato p**zzz**, em que **zzz** é a extensão do ficheiro original. Por exemplo, os ficheiros .txt serão encriptados para um ficheiro com a extensão .ptxt. Consulte abaixo a lista de extensões de ficheiros que podem ter a proteção nativa aplicada.
+- **Nativa**: a encriptação nativa é utilizada. Para ficheiros do Office, o ficheiro encriptado terá a mesma extensão que o ficheiro original. Por exemplo, um ficheiro com a extensão de ficheiro .docx será encriptado para um ficheiro com uma extensão .docx. Para outros ficheiros que podem ter a proteção nativa aplicada, o ficheiro será encriptado para um ficheiro com uma extensão no formato p*zzz*, em que *zzz* é a extensão do ficheiro original. Por exemplo, os ficheiros .txt serão encriptados para um ficheiro com a extensão .ptxt. Consulte abaixo a lista de extensões de ficheiros que podem ter a proteção nativa aplicada.
 
-- *Pfile*: a encriptação PFile é utilizada. O ficheiro encriptado terá .pfile anexado à extensão original. Por exemplo, depois da encriptação, um ficheiro .txt terá uma extensão .txt.pfile.
+- **Pfile**: a encriptação PFile é utilizada. O ficheiro encriptado terá .pfile anexado à extensão original. Por exemplo, depois da encriptação, um ficheiro .txt terá uma extensão .txt.pfile.
 
 
 > [AZURE.NOTE] Esta definição não tem efeito em formatos de ficheiros do Office. Por exemplo, se o valor `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` estiver definido para &quot;Pfile”, os ficheiros .docx ainda serão encriptados com a proteção nativa e o ficheiro encriptado continuará a ter uma extensão de ficheiro .docx.
 
 A definição de qualquer outro valor ou nenhum valor resulta no comportamento predefinido.
 
-## Comportamento predefinido para formatos de ficheiro diferentes**
+## Comportamento predefinido para formatos de ficheiro diferentes
 
 -   **Ficheiros do Office** A encriptação nativa está ativada.
 -   **Ficheiros txt, xml, jpg, jpeg, pdf, png, tiff, bmp, gif, giff, jpe, jfif, jif** A encriptação nativa está ativada (xxx torna-se pxxx)
@@ -89,7 +88,7 @@ Se a encriptação for tentada num tipo de ficheiro que está bloqueado, ocorre 
 
 ### API de Ficheiros – Detalhes de Suporte de Ficheiros
 
-É possível adicionar suporte nativo a qualquer tipo de ficheiro (extensão). Por exemplo, para qualquer extensão &lt;ext&gt; (não Office), \*.p&lt;ext&gt; será utilizado se a configuração de administração para essa extensão for “NATIVO”.
+É possível adicionar suporte nativo a qualquer tipo de ficheiro (extensão). Por exemplo, para qualquer extensão &lt;ext&gt; (não Ooffice), \*.p&lt;ext&gt; será utilizado se a configuração de administração para essa extensão for "NATIVO".
 
 **Ficheiros do Office**
 
@@ -106,7 +105,7 @@ Se a encriptação for tentada num tipo de ficheiro que está bloqueado, ocorre 
 
 **Todos os outros formatos de ficheiros**
 
--   Tipo de proteção = Pfile: exemplo.*zzz* é encriptado e é-lhe atribuído o nome exemplo.*zzz*.pfile; em que zzz é a extensão de ficheiro original.
+-   Tipo de proteção = Pfile: exemplo.*zzz* é encriptado e é-lhe atribuído o nome exemplo.*zzz*.pfile; em que *zzz* é a extensão de ficheiro original.
 -   Desativar: desativa a encriptação.
 
 ### Exemplos
@@ -158,9 +157,6 @@ HKEY_LOCAL_MACHINE
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

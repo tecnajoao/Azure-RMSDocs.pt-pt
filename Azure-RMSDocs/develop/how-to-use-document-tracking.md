@@ -1,75 +1,158 @@
 ---
-# required metadata
+# metadados obrigatórios
 
-title: Como&#58; utilizar o controlo de documentos | Azure RMS
-description: A funcionalidade de controlo de documentos requer alguns conhecimentos simples sobre a gestão dos metadados associados e o registo do serviço.
-keywords:
-author: bruceperlerms
-manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
-ms.prod: azure
-ms.service: rights-management
-ms.technology: techgroup-identity
-ms.assetid: 70E10936-7953-49B0-B0DC-A5E7C4772E60
-# optional metadata
+título: procedimentos: ativar o controlo e a revogação de documentos | Descrição do Azure RMS: a funcionalidade de controlo de documentos necessita que alguns conhecimentos simples sobre a gestão dos metadados associados e o registo do serviço.
+palavras-chave: autor: gestor bruceperlerms: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: 70E10936-7953-49B0-B0DC-A5E7C4772E60
+# metadados opcionais
 
 #ROBOTS:
-audience: developer
+audiência: programador
 #ms.devlang:
-ms.reviewer: shubhamp
-ms.suite: ems
+ms.reviewer: shubhamp ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
 ---
 
-# Como: utilizar o controlo de documentos
+# Procedimentos: ativar o controlo e a revogação de documentos
 
-A utilização da funcionalidade de controlo de documentos requer alguns conhecimentos simples sobre a gestão dos metadados associados e o registo do serviço.
+Este tópico inclui a documentação de orientação básica para implementação do controlo de documento do conteúdo, bem como código de exemplo para atualizações de metadados e criação de um botão **Controlar Utilização** para a sua aplicação.
 
-## Gerir metadados de controlo de documentos
+## Passos para implementar o controlo de documento
 
-Todos os sistemas operativos que suportam o controlo de documentos têm implementações semelhantes. Estes incluem um conjunto de propriedades que representam os metadados, um novo parâmetro adicionado aos métodos de criação de políticas de utilizador e um método para registar a política a controlar com o serviço de controlo de documentos.
+Os passos 1 e 2 ativam o controlo de documento. O Passo 3 permite que os utilizadores de aplicação acedam ao site de controlo de documentos para controlarem e revogarem os seus documentos protegidos.
+
+1. Adicionar metadados de controlo de documento
+2. Registar o documento no serviço RMS
+3. Adicionar o botão Controlar Utilização à sua aplicação
+
+Os detalhes de implementação para estes passos são descritos em seguida.
+
+## 1. Adicionar metadados de controlo de documento
+
+O controlo de documentos é uma funcionalidade do sistema Rights Management. Ao adicionar metadados específicos durante o processo de proteção de documentos, um documento pode ser registado com o portal do serviço de controlo que fornece várias opções de controlo.
+
+Utilize estas APIs para adicionar/atualizar uma licença de conteúdo com os metadados de controlo de documentos.
+
 
 Operacionalmente, apenas as propriedades **nome do conteúdo** e **tipo de notificação** são necessárias para o controlo de documentos.
 
-A sequência de passos que irá utilizar para configurar o controlo de documentos para um determinado conteúdo é a seguinte:
 
--   Crie um objeto **metadados de licença**.
+- [IpcCreateLicenseMetadataHandle](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
+- [IpcSetLicenseMetadataProperty](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
 
-    Consulte [**LicenseMetadata**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_licensemetadata_interface_java) ou [**MSLicenseMetadata**](/rights-management/sdk/4.2/api/iOS/mslicensemetadata#msipcthin2_mslicensemetadata_class_objc) para obter mais informações.
+  Esperamos que defina todas as propriedades de metadados. Aqui estão, listadas por tipo.
 
--   Defina o **nome do conteúdo** e o **tipo de notificação**. Estas são as únicas propriedades necessárias.
+  Para obter mais informações, consulte [Tipos de propriedade de metadados de licença](/rights-management/sdk/2.1/api/win/constants#msipc_license_metadata_property_types).
 
-    Para obter mais informações, consulte os métodos de acesso às propriedades da classe de metadados de licença adequada da plataforma, seja [**LicenseMetadata**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_licensemetadata_interface_java) ou [**MSLicenseMetadata**](/rights-management/sdk/4.2/api/iOS/mslicensemetadata#msipcthin2_mslicensemetadata_class_objc).
+  - **IPC_MD_CONTENT_PATH**
 
--   Por tipo de política, modelo ou ad hoc:
+    Utilize para identificar o documento controlado. Nos casos em que um caminho completo não seja possível, basta indicar o nome do ficheiro.
 
-    -   Para o controlo de documentos com base em modelos, crie um objeto **política de utilizador** passando os metadados de licença como um parâmetro.
+  - **IPC_MD_CONTENT_NAME**
 
-        Para obter mais informações, consulte [**UserPolicy.create**](/rights-management/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_class_java) e [**MSUserPolicy.userPolicyWithTemplateDescriptor**](/rights-management/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_templatedescriptor_property_objc).
+    Utilize para identificar o nome do documento controlado.
 
-    -   Para o controlo de documentos com base em ad hoc, defina a propriedade **metadados de licença** no objeto **descritor de política**.
+  - **IPC_MD_NOTIFICATION_TYPE**
 
-        Para obter mais informações, consulte [**PolicyDescriptor.getLicenseMetadata**](/rights-management/sdk/4.2/api/android/policydescriptor#msipcthin2_policydescriptor_interface_java), [**PolicyDescriptor.setLicenseMetadata**](/rights-management/sdk/4.2/api/android/policydescriptor#msipcthin2_policydescriptor_setlicensemetadata_java) e [**MSPolicyDescriptor.licenseMetadata**](/rights-management/sdk/4.2/api/iOS/mspolicydescriptor#msipcthin2_mspolicydescriptor_licensemetadata_property_objc).
+    Utilize para especificar quando a notificação será enviada. Para obter mais informações, consulte Tipo de notificação.
 
-    **Nota** O objeto de metadados de licença só é acessível diretamente durante o processo de configuração do controlo de documentos da política de utilizador especificada. Quando o objeto de política de utilizador tiver sido criado, os metadados de licença associados não estão acessíveis, ou seja, alterar os valores dos metadados de licença não tem qualquer efeito.
+  - **IPC_MD_NOTIFICATION_PREFERENCE**
 
-     
+    Utilize para especificar o tipo de notificação. Para obter mais informações, consulte Preferência de notificação.
 
--   Chame o método de registo de plataforma para o controlo de documentos.
+  - **IPC_MD_DATE_MODIFIED**
 
-    Consulte [**MSUserPolicy.registerForDocTracking**](/rights-management/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_registerfordoctracking_userid_authenticationcallback_completionblock_method_objc) ou [**UserPolicy.registerForDocTracking**](/rights-management/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_registerfordoctracking_userid_authenticationcallback_completionblock_method_objc).
+    Sugerimos que defina esta data sempre que o utilizador clicar em Guardar.
 
- 
+  - **IPC_MD_DATE_CREATED**
 
- 
+    Utilize para definir a data de origem do ficheiro
+
+- [IpcSerializeLicenseWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
+
+Utilize a API adequada das apresentadas para adicionar os metadados ao seu ficheiro ou fluxo.
+
+- [IpcfEncryptFileWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
+- [IpcfEncryptFileStreamWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
+
+Por último, utilize esta API para registar o documento controlado com o sistema de controlo.
+
+- [IpcRegisterLicense](/rights-management/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
 
 
+## 2. Registar o documento no serviço RMS
+
+Veja a seguir um fragmento de código que mostra um exemplo de definição de metadados de controlo de documentos e a chamada para registar com o sistema de controlo.
+
+      C++
+      HRESULT hr = S_OK;
+      LPCWSTR wszOutputFile = NULL;
+      wstring wszWorkingFile;
+      IPC_LICENSE_METADATA md = {0};
+
+      md.cbSize = sizeof(IPC_LICENSE_METADATA);
+      md.dwNotificationType = IPCD_CT_NOTIFICATION_TYPE_ENABLED;
+      md.dwNotificationPreference = IPCD_CT_NOTIFICATION_PREF_DIGEST;
+      //file origination date, current time for this example
+      md.ftDateCreated = GetCurrentTime();
+      md.ftDateModified = GetCurrentTime();
+
+      LOGSTATUS_EX(L"Encrypt file with official template...");
+
+      hr =IpcfEncryptFileWithMetadata( wszWorkingFile.c_str(),
+                               m_wszTestTemplateID.c_str(),
+                               IPCF_EF_TEMPLATE_ID,
+                               0,
+                               NULL,
+                               NULL,
+                               &md,
+                               &wszOutputFile);
+
+     /* This will contain the serialized license */
+     PIPC_BUFFER pSerializedLicense;
+
+     /* the context to use for the call */
+     PCIPC_PROMPT_CTX pContext;
+
+     wstring wstrContentName(“MyDocument.txt”);
+     bool sendLicenseRegistrationNotificationEmail = FALSE;
+
+     hr = IpcRegisterLicense( pSerializedLicense,
+                        0,
+                        pContext,
+                        wstrContentName.c_str(),
+                        sendLicenseRegistrationNotificationEmail);
+
+## Adicionar um botão **Controlar Utilização** à sua aplicação
+
+Adicionar um item de IU **Controlar Utilização** à sua aplicação é tão simples quanto utilizar um dos seguintes formatos de URL:
+
+- Utilizar ID de Conteúdo
+  - Obtenha o ID de conteúdo utilizando [IpcGetLicenseProperty](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgetlicenseproperty) ou [IpcGetSerializedLicenseProperty](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgetserializedlicenseproperty), se a licença for serializada e utilize a propriedade de licença **IPC_LI_CONTENT_ID**. Para mais informações, consulte [Tipos de propriedade de licença](/rights-management/sdk/2.1/api/win/constants#msipc_license_property_types).
+  - Com os metadados **ContentId** e **Issuer**, utilize o seguinte formato: `https://track.azurerms.com/#/{ContentId}/{Issuer}`
+
+    Exemplo: - `https://track.azurerms.com/#/summary/05405df5-8ad6-4905-9f15-fc2ecbd8d0f7/janedoe@microsoft.com`
+
+- Se não tiver acesso a esses metadados (ou seja, está a examinar a versão não protegida do documento), pode utilizar **Content_Name** no seguinte formato: `https://track.azurerms.com/#/?q={ContentName}`
+
+  Exemplo - https://track.azurerms.com/#/?q=Secret!.txt
+
+O cliente só tem de abrir um browser com o URL adequado. O portal de Controlo de Documento RMS processará a autenticação e qualquer redirecionamento necessário.
+
+## Tópicos relacionados
+
+* [Tipos de propriedade de metadados de licença](/rights-management/sdk/2.1/api/win/constants#msipc_license_metadata_property_types)
+* [Preferência de notificação](/rights-management/sdk/2.1/api/win/constants#msipc_notification_preference)
+* [Tipo de notificação](/rights-management/sdk/2.1/api/win/constants#msipc_notification_type)
+* [IpcCreateLicenseMetadataHandle](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
+* [IpcSetLicenseMetadataProperty](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
+* [IpcSerializeLicenseWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
+* [IpcfEncryptFileWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
+* [IpcfEncryptFileStreamWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
+* [IpcRegisterLicense](/rights-management/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
 
 
-
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO2-->
 
 

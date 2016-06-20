@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/02/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -66,7 +66,7 @@ Como as chaves criptográficas são armazenadas e protegidas:
 
 - A chave de conteúdo é protegida pela chave RSA da organização (a "chave de inquilino do Azure RMS") como parte da política no documento. Além disso, a política também é assinada pelo autor do documento. Esta chave de inquilino é comum a todos os documentos e e-mails protegidos pelo Azure RMS da organização e só pode ser alterada por um administrador do Azure RMS se a organização estiver a utilizar uma chave de inquilino gerida pelo cliente, conhecida como BYOK (Bring Your Own Key – Traga a Sua Própria Chave). 
 
-    Esta chave de inquilino está protegida nos serviços online da Microsoft, num ambiente altamente controlado e sob monitorização rigorosa. Quando utiliza uma chave de inquilino gerida pelo cliente (BYOK), esta segurança é melhorada pela utilização de uma matriz de módulos de segurança de hardware de ponta (HSMs) em cada região do Azure, impossibilitando completamente a extração, exportação ou partilha das chaves. Para obter mais informações sobre a chave de inquilino e a BYOK, consulte [Planning and implementing your Azure Rights Management tenant key (Planear e implementar a sua chave de inquilino do Azure Rights Management – em inglês)](../plan-design/plan-implement-tenant-key.md).
+    Esta chave de inquilino está protegida nos serviços online da Microsoft, num ambiente altamente controlado e sob monitorização rigorosa. Quando utiliza uma chave de inquilino gerida pelo cliente (BYOK), esta segurança é melhorada pela utilização de uma matriz de módulos de segurança de hardware de ponta (HSMs) em cada região do Azure, impossibilitando completamente a extração, exportação ou partilha das chaves. Para obter mais informações sobre a chave de inquilino e a BYOK, consulte [Planear e implementar a sua chave de inquilino do Azure Rights Management](../plan-design/plan-implement-tenant-key.md).
 
 - As licenças e certificados enviados para um dispositivo Windows estão protegidos pela chave privada do dispositivo do cliente, que é criada quando um utilizador usa o Azure RMS pela primeira vez num dispositivo. Por sua vez, esta chave privada está protegida com a DPAPI do cliente, que protege estes segredos com uma chave derivada da palavra-passe do utilizador. Em dispositivos móveis, as chaves são utilizadas apenas uma vez, pois como não estão armazenadas nos clientes, não precisam de ser protegidas no dispositivo. 
 
@@ -77,8 +77,7 @@ Para compreender melhor como funciona o Azure RMS, vamos mostrar-lhe um fluxo t�
 
 Após o ambiente de utilizador ser iniciado, esse utilizador pode proteger documentos ou consumir documentos protegidos nesse computador.
 
-> [!NOTE]
-> Se o utilizador mudar de computador Windows ou outro utilizador usar este computador Windows, o processo de iniciação é repetido.
+> [!NOTE] Se o utilizador mudar de computador Windows ou outro utilizador usar este computador Windows, o processo de iniciação é repetido.
 
 ### Inicializar o ambiente de utilizador
 Antes de um utilizador poder proteger conteúdos ou consumir conteúdos protegidos num computador Windows, o ambiente de utilizador tem de ser preparado no dispositivo. Este é um processo único e ocorre automaticamente sem a intervenção do utilizador quando este tenta proteger ou consumir conteúdos protegidos:
@@ -87,7 +86,7 @@ Antes de um utilizador poder proteger conteúdos ou consumir conteúdos protegid
 
 **O que acontece no passo 1**: primeiro, o cliente de RMS no computador liga-se ao Azure RMS e autentica o utilizador ao utilizar a sua conta do Azure Active Directory.
 
-Quando a conta do utilizador está federada com o Azure Active Directory, esta autenticação é automática e não serão pedidas ao utilizador as suas credenciais.|
+Quando a conta do utilizador está federada com o Azure Active Directory, esta autenticação é automática e não serão pedidas ao utilizador as suas credenciais.
 
 ![Ativação do Cliente de RMS – passo 2](../media/AzRMS_useractivation2.png)
 
@@ -106,7 +105,7 @@ Quando um utilizador protege um documento, o cliente de RMS efetua as seguintes 
 
 **O que acontece no passo 2**: em seguida, o cliente de RMS cria um certificado que inclui uma política para o documento, baseada num modelo ou ao especificar direitos para o documento. Esta política inclui os direitos para diferentes utilizadores ou grupos e outras restrições, como uma data de expiração.
 
-Em seguida, o cliente de RMS utiliza a chave da organização obtida quando o ambiente de utilizador foi inicializado para encriptar a política e a chave de conteúdo simétrica. O cliente de RMS também assina a política com o certificado do utilizador obtido quando o ambiente do utilizador foi inicializado.|
+Em seguida, o cliente de RMS utiliza a chave da organização obtida quando o ambiente de utilizador foi inicializado para encriptar a política e a chave de conteúdo simétrica. O cliente RMS também assina a política com o certificado do utilizador obtido quando o ambiente do utilizador foi inicializado.
 
 ![Proteção de documentos pelo RMS – passo 3](../media/AzRMS_documentprotection3.png)
 
@@ -148,14 +147,13 @@ Os passos anteriores abrangem os cenários padrão, mas existem algumas variaç�
 
 Para obter mais informações sobre o Azure RMS, utilize os outros artigos na secção **Compreender e Explorar**, por exemplo [How applications support Azure Rights Management (Como é que as aplicações suportam o Azure Rights Management – em inglês)](applications-support.md) para saber como é que as suas aplicações existentes se podem integrar com o Azure RMS para fornecer uma solução de proteção de informações. 
 
-Consulte a [Terminology for Azure Rights Management (Terminologia do Azure Rights Management – em inglês)](../get-started/terminology.md) para estar familiarizado com os termos que possam ser apresentados quando estiver a configurar e utilizar o Azure RMS e certifique-se de que também consulta os [Requirements for Azure Rights Management (Requisitos para o Azure Rights Management– em inglês)](../get-started/requirements-azure-rms.md) antes de iniciar a implementação. Se quiser começar já e experimentar, utilize o [Quick start tutorial for Azure Rights Management (Tutorial do guia de introdução ao Azure Rights Management – em inglês)](../get-started/quick-start-tutorial.md).
+Consulte a [Terminology for Azure Rights Management (Terminologia do Azure Rights Management – em inglês)](../get-started/terminology.md) para estar familiarizado com os termos que possam ser apresentados quando estiver a configurar e utilizar o Azure RMS e certifique-se de que também consulta os [Requirements for Azure Rights Management (Requisitos para o Azure Rights Management– em inglês)](../get-started/requirements-azure-rms.md) antes de iniciar a implementação. Se quiser começar já a experimentá-lo, utilize o [Tutorial do guia de introdução ao Azure Rights Management](../get-started/quick-start-tutorial.md).
 
 Se estiver pronto para iniciar a implementação do Azure RMS na sua organização, utilize as [Azure Rights Management deployment roadmap (Informações gerais de implementação do Azure Rights Management – em inglês)](../plan-design/deployment-roadmap.md) para obter os passos da sua implementação e ligações para instruções sobre como proceder.
 
-> [!TIP]
-> Para obter ajuda e informações adicionais, utilize os recursos e ligações em [Information and support for Azure Rights Management (Informações e suporte do Azure Rights Management)](../get-started/information-support.md).
+> [!TIP] Para obter ajuda e informações adicionais, utilize os recursos e as ligações em [Informações e suporte do Azure Rights Management](../get-started/information-support.md).
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

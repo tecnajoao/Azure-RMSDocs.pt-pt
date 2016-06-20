@@ -1,30 +1,20 @@
 ---
-# required metadata
+# metadados obrigatórios
 
-title: Definir o modo de segurança de API | Azure RMS
-description: Escolha o modo de segurança em que é executada a sua aplicação de API de Ficheiros.
-keywords:
-author: bruceperlerms
-manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
-ms.prod: azure
-ms.service: rights-management
-ms.technology: techgroup-identity
-ms.assetid: 3B088F14-81C5-4C78-8DED-F5F153353EE0
-# optional metadata
+título: Procedimentos: definir o modo de segurança de API | Descrição do Azure RMS: Escolher o modo de segurança no qual a aplicação da API de Ficheiro é executada.
+palavras-chave: autor: gestor bruceperlerms: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: 3B088F14-81C5-4C78-8DED-F5F153353EE0
+# metadados opcionais
 
 #ROBOTS:
-audience: developer
+audiência: programador
 #ms.devlang:
-ms.reviewer: shubhamp
-ms.suite: ems
+ms.reviewer: shubhamp ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
 ---
-** Este conteúdo do SDK não está atualizado. Durante um curto período de tempo, pode encontrar a [versão atual](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) da documentação no MSDN. **
-# Definir o modo de segurança de API
+
+# Procedimentos: definir o modo de segurança da API
 
 Pode escolher em que modo de segurança a sua aplicação de API de Ficheiros é executada ao utilizar a função [**IpcSetGlobalProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty).
 
@@ -34,12 +24,9 @@ Para obter mais informações sobre o *modo de servidor*, consulte [Tipos de apl
 
 **Importante** O modo de segurança deve ser definido antes de ser chamada qualquer outra função do SDK Rights Management Services 2.1. Depois de definir o modo de segurança, não o pode alterar para o processo atual.
 
- 
-
 ## Tópicos relacionados
 
 * [Tipos de aplicações](application-types.md)
-* [Conceitos do programador](ad-rms-concepts-nav.md)
 * [**Valores do modo de API**](/rights-management/sdk/2.1/api/win/api%20mode%20values#msipc_api_mode_values_IPC_API_MODE_SERVER)
 * [**IpcSetGlobalProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty)
  
@@ -47,9 +34,6 @@ Para obter mais informações sobre o *modo de servidor*, consulte [Tipos de apl
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

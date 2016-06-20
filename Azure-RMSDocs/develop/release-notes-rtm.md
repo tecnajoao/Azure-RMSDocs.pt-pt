@@ -23,16 +23,28 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** Este conteúdo do SDK não está atualizado. Durante um curto período de tempo, pode encontrar a [versão atual](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) da documentação no MSDN. **
+
 # Notas de versão
 
 Este tópico contém informações importantes sobre isto e sobre versões anteriores do SDK RMS 2.1.
+
+- [Novo na atualização da documentação do SDK de fevereiro de 2016](#new-for-the-february-2016-sdk-documentation-update)
+- [Atualização de dezembro de 2015](#december-2015-update)
+- [Atualização de maio de 2015](#may-2015-update)
+- [Atualização de abril de 2015](#april-2015-update)
+- [Atualização de janeiro de 2015](#january-2015-update)
+- [Atualização de outubro de 2014](#october-2014-update)
+- [Atualização de julho de 2014](#july-2014-update)
+- [Notas importantes do programador](#important-developer-notes)
+- [Perguntas mais frequentes](#frequently-asked-questions)
+- [Tópicos relacionados](#related-topics)
 
 ## Novo na atualização da documentação do SDK de fevereiro de 2016
 
 >[!Note]  As atualizações da documentação da funcionalidade nesta secção aplicam-se à transferência do SDK com a data de 11/12/2015.
 
-- **Fluxo de autenticação melhorado** – utilizar a autenticação com base no token OAuth2 através da [Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-libraries/). Para mais informações sobre este processo e as extensões da API para o mesmo, consulte [Autenticação da ADAL para a aplicação com suporte RMS](https://msdn.microsoft.com/en-us/library/windows/desktop/mt661865(v=vs.85).aspx).
+- **Fluxo de autenticação melhorado** – utilizar a autenticação com base no token OAuth2 através da [Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-libraries/). Para mais informações sobre este processo e as extensões da API para o mesmo, consulte [Autenticação ADAL para a aplicação com permissão para RMS](how-to-use-adal-authentication.md).
+
 - **Atualizar para a ADAL** – ao atualizar a sua aplicação para utilizar a autenticação ADAL em vez do Assistente de Início de Sessão Online da Microsoft, o utilizador e os seus clientes poderão:
 
  - Utilizar a autenticação multifator
@@ -44,14 +56,13 @@ Este tópico contém informações importantes sobre isto e sobre versões anter
 
 ## Atualização de dezembro de 2015
 
--   As melhorias de desempenho têm sido implementadas em várias áreas, incluindo:
+- As melhorias de desempenho têm sido implementadas em várias áreas, incluindo:
+    - A publicação a partir do servidor de licenciamento principal quando utilizar servidores só de licenciamento.
+    - O SDK RMS 2.1 falha mais rapidamente quando não existe qualquer ligação de rede.
 
-    A publicação a partir do servidor de licenciamento principal quando utilizar servidores só de licenciamento.
-
-    O SDK RMS 2.1 falha mais rapidamente quando não existe qualquer ligação de rede.
-
--   Muitas atualizações para melhorar a experiência de resolução de problemas e de mensagens de erro.
--   Note também que a lista das [Plataformas suportadas](supported-platforms.md) também está atualizada.
+- Muitas atualizações para melhorar a experiência de resolução de problemas e de mensagens de erro.
+- Note também que a lista das [Plataformas suportadas](supported-platforms.md) também está atualizada.
+- A necessidade para o ambiente de pré-produção e a utilização de manifestos de aplicação foi removida a partir do SDK RMS 2.1. Estas secções deste conjunto de documentação para programadores foram removidas e a documentação geral simplificada e reorganizada.
 
 ## Atualização de maio de 2015
 
@@ -63,8 +74,6 @@ Este tópico contém informações importantes sobre isto e sobre versões anter
 -   **Tipo de encriptação** – agora suportamos o controlo de nível da API para a seleção do pacote de encriptação. Para mais informações, consulte [Trabalhar com a encriptação](working-with-encryption.md).
 
     **Nota** Já não expomos o sinalizador **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** na nossa API. Isto significa que as aplicações futuras vão deixar de compilar se fizerem referência a este sinalizador, mas as aplicações já criadas vão continuar a funcionar, uma vez que respeitamos o sinalizador em privado no código da API. Para aproveitar ainda as vantagens do sinalizador de algoritmos de encriptação preterido antigo, basta alterar um sinalizador. Para mais informações, consulte [Trabalhar com a encriptação](working-with-encryption.md).
-
-     
 
 -   **Aplicações de Modo de Servidor**, quem utilizar um [**Valor de modo de API**](/rights-management/sdk/2.1/api/win/api%20mode%20values#msipc_api_mode_values_IPC_API_MODE_SERVER) de **IPC\_API\_MODE\_SERVER**, já não necessita de um manifesto da aplicação. Pode testar a aplicação relativamente a um servidor RMS de produção e não é necessário obter uma licença de produção quando mudar para um ambiente de produção. Para obter mais informações sobre as aplicações do modo de servidor, consulte [Tipos de aplicação](application-types.md).
 -   O **registo** é agora implementado através dos métodos Rastreio de Eventos e ficheiros do Windows.
@@ -96,8 +105,6 @@ Os componentes da API de Ficheiros do SDK foram expandidos e oferecem as seguint
 
     **Nota** Foram adicionadas estruturas e tipos de dados de suporte, não listados aqui, às extensões da API de Ficheiros. Todos os tópicos atualizados nesta versão estão marcados como **preliminares e estão sujeitos a alterações**.
 
-     
-
     -   [**IpcfOpenFileOnHandle**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfopenfileonhandle)
     -   [**IpcfOpenFileOnILockBytes**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfopenfileonilockbytes)
     -   [**IpcfGetFileProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfgetfileproperty)
@@ -112,8 +119,6 @@ Os componentes da API de Ficheiros do SDK foram expandidos e oferecem as seguint
 -   O **ID de conteúdo** agora é gravável através da propriedade **IPC\_LI\_CONTENT\_ID**. Para mais informações, consulte [**Tipos de propriedade de licença**](/rights-management/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA).
 -   **Requisito de manifesto de produção** – quando o serviço/aplicação com suporte RMS está a ser executado no modo de servidor, deixará de ser necessário um manifesto. Para mais informações, consulte [Tipos de aplicações](application-types.md).
 -   **Atualizações da documentação**
-
-    **Reorganizado** - [Como utilizar](how-to-use-msipc.md) para esclarecer a ordem dos passos da configuração do ambiente e os testes de aplicações.
 
     **Testar a melhor prática** – orientações adicionadas para a utilização do servidor no local antes de testar com o Azure RMS. Para mais informações, consulte [Permitir que a aplicação do serviço funcione com o RMS baseado na nuvem](how-to-use-file-api-with-aadrm-cloud.md).
 
@@ -135,11 +140,15 @@ Os componentes da API de Ficheiros do SDK foram expandidos e oferecem as seguint
 
     A API de Ficheiros dos Serviços de Gestão de Direitos do Active Directory, com a adição da API de Ficheiros, fornece as seguintes vantagens e capacidades.
 
-    Pode proteger dados confidenciais de uma forma automática sem necessitar de saber os detalhes sobre a implementação da Gestão de Direitos de Informação (IRM) utilizada por vários formatos de ficheiro.
+      - Pode proteger dados confidenciais de uma forma automática sem necessitar de saber os detalhes sobre a implementação da Gestão de Direitos de Informação (IRM) utilizada por vários formatos de ficheiro.
 
-    É possível proteger ficheiros do Microsoft Office, Portable Document Format (PDF) e outros tipos de ficheiros selecionados através da proteção nativa. Para obter uma lista completa dos tipos de ficheiro que podem ser protegidos com a proteção nativa, consulte [Configuração da API de Ficheiros](file-api-configuration.md).
+      - É possível proteger ficheiros do Microsoft Office, Portable Document Format (PDF) e outros tipos de ficheiros selecionados através da proteção nativa. Para obter uma lista completa dos tipos de ficheiro que podem ser protegidos com a proteção nativa, consulte [Configuração da API de Ficheiros](file-api-configuration.md).
 
-    Todos os ficheiros, exceto ficheiros do sistema e ficheiros do Office, podem ser protegidos através do formato de Ficheiro Protegido (PFile) do RMS.
+      - Todos os ficheiros, exceto ficheiros do sistema e ficheiros do Office, podem ser protegidos através do formato de Ficheiro Protegido (PFile) do RMS.
+
+    A API de ficheiro é implementada através das seguintes quatro novas funções: [IpcfDecryptFile](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfdecryptfile), [IpcfEncryptFile](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfile), [IpcfGetSerializedLicenseFromFile](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfgetserializedlicensefromfile) e [IpcfIsFileEncrypted](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfisfileencrypted).
+
+    A API de Ficheiro necessita que o Rights Management Service Client 2.1 seja instalado no computador cliente e que o computador tenha conectividade com um servidor RMS. Para obter mais informações sobre o servidor RMS, o cliente RMS e a respetiva funcionalidade, consulte o conteúdo do TechNet relativo à [Documentação do RMS para Profissionais de TI](https://technet.microsoft.com/en-us/library/cc771234(v=ws.10).aspx).
 
 -   **Problema**: ao criar uma licença do zero, os direitos de propriedade têm de ser concedidos explicitamente.
 
@@ -159,9 +168,10 @@ Os componentes da API de Ficheiros do SDK foram expandidos e oferecem as seguint
 
 **R**: utilize 0 para a região predefinida. Neste caso, o Cliente de AD RMS 2.1 procura nomes e descrições na seguinte sequência e obtém o primeiro disponível:
 
-1 – LCID preferido do utilizador.
-2 – LCID da região do sistema.
-3 – O primeiro idioma disponível especificado no modelo do Servidor de Gestão de Direitos (RMS).
+    1 - User preferred LCID.
+    2 - System locale LCID.
+    3 - The first available language specified in the Rights Management Server (RMS) template.
+
 Se não for possível obter um nome e uma descrição, é devolvido um erro. Apenas pode existir um nome e descrição para um LCID específico.
 
 ## Tópicos relacionados
@@ -181,6 +191,6 @@ Se não for possível obter um nome e uma descrição, é devolvido um erro. Ape
  
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

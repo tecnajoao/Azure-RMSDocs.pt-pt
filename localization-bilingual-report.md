@@ -1,43 +1,11 @@
 # <a name='report-top'></a> Localization Bilingual Report
 
 ## Summary
- Total Files | 2
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [Azure-RMSDocs\develop\file-api-configuration.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/bb6927bb82f1bbfcd63b5b8d02d7aa6c7feee8cd/Azure-RMSDocs/develop/file-api-configuration.md) | InSyncHandedBackSuccess | [Details](#88a911b25c268c54e55bd5bc90ff3e946a9203ee64)
- [Azure-RMSDocs\develop\how-to-use-adal-authentication.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/bb6927bb82f1bbfcd63b5b8d02d7aa6c7feee8cd/Azure-RMSDocs/develop/how-to-use-adal-authentication.md) | InSyncHandedBackSuccess | [Details](#0513f183df2ca950cbee89d451f1532f8569aad773)
 
 ## Item Details
-##### <a name='88a911b25c268c54e55bd5bc90ff3e946a9203ee64'></a> Source: [Azure-RMSDocs\develop\file-api-configuration.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/bb6927bb82f1bbfcd63b5b8d02d7aa6c7feee8cd/Azure-RMSDocs/develop/file-api-configuration.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [Azure-RMSDocs\develop\file-api-configuration.md](https://github.com/Microsoft/Azure-RMSDocs-pr.pt-pt/blob/d120e513df9715f8e67f138e602ba6fccf7cab03/Azure-RMSDocs/develop/file-api-configuration.md)
-* Handoff File: [file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/de162f353a84fa724b2365e543f56ea6cb772ac8/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.pt-pt.xlf)
-* Handoff Datetime: 2016-06-10 01:46:44
-* Handoff Reason: Include
-* Archive File: [file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/99247399862ab460f138dcd292fd4c2e5c1bd478/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/archive/file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.pt-pt.xlf)
-* Archive Datetime: 2016-06-16 13:18:10
-* Handback File: [file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/21583118f1020f658e660fb59b7bfe4f34db93a8/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.pt-pt.xlf)
-* Handback Datetime: 2016-06-20 14:14:28
-* Bilingual File: [file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/21583118f1020f658e660fb59b7bfe4f34db93a8/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.pt-pt.xlf)
-* Bilingual Datetime: 2016-06-20 14:16:18
-* [Back to Top](#report-top)
-
-##### <a name='0513f183df2ca950cbee89d451f1532f8569aad773'></a> Source: [Azure-RMSDocs\develop\how-to-use-adal-authentication.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/bb6927bb82f1bbfcd63b5b8d02d7aa6c7feee8cd/Azure-RMSDocs/develop/how-to-use-adal-authentication.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [Azure-RMSDocs\develop\how-to-use-adal-authentication.md](https://github.com/Microsoft/Azure-RMSDocs-pr.pt-pt/blob/d120e513df9715f8e67f138e602ba6fccf7cab03/Azure-RMSDocs/develop/how-to-use-adal-authentication.md)
-* Handoff File: [how-to-use-adal-authentication.c4db17b2d45abcad3a630251a689204c2a8c1ef2.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/de162f353a84fa724b2365e543f56ea6cb772ac8/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/how-to-use-adal-authentication.c4db17b2d45abcad3a630251a689204c2a8c1ef2.pt-pt.xlf)
-* Handoff Datetime: 2016-06-10 01:46:44
-* Handoff Reason: Include
-* Archive File: [how-to-use-adal-authentication.c4db17b2d45abcad3a630251a689204c2a8c1ef2.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/99247399862ab460f138dcd292fd4c2e5c1bd478/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/archive/how-to-use-adal-authentication.c4db17b2d45abcad3a630251a689204c2a8c1ef2.pt-pt.xlf)
-* Archive Datetime: 2016-06-16 13:18:10
-* Handback File: [how-to-use-adal-authentication.c4db17b2d45abcad3a630251a689204c2a8c1ef2.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/21583118f1020f658e660fb59b7bfe4f34db93a8/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/how-to-use-adal-authentication.c4db17b2d45abcad3a630251a689204c2a8c1ef2.pt-pt.xlf)
-* Handback Datetime: 2016-06-20 14:14:28
-* Bilingual File: [how-to-use-adal-authentication.c4db17b2d45abcad3a630251a689204c2a8c1ef2.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/21583118f1020f658e660fb59b7bfe4f34db93a8/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/how-to-use-adal-authentication.c4db17b2d45abcad3a630251a689204c2a8c1ef2.pt-pt.xlf)
-* Bilingual Datetime: 2016-06-20 14:16:18
-* [Back to Top](#report-top)
-
 
 ## Error Details
 

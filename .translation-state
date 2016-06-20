@@ -74762,9 +74762,9 @@
       "ArchiveFileCommit": "99247399862ab460f138dcd292fd4c2e5c1bd478",
       "ArchiveFileDateTime": "2016-06-16T13:18:10.576612Z",
       "ArchiveException": null,
-      "BilingualFilePath": null,
-      "BilingualFileCommit": null,
-      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.pt-pt\\master\\file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.pt-pt.xlf",
+      "BilingualFileCommit": "21583118f1020f658e660fb59b7bfe4f34db93a8",
+      "BilingualDateTime": "2016-06-20T14:16:18.6814344Z",
       "BilingualException": null
     },
     "bedfc76557112e469688fdc6e546f4911961821c": {
@@ -74830,9 +74830,9 @@
       "ArchiveFileCommit": "99247399862ab460f138dcd292fd4c2e5c1bd478",
       "ArchiveFileDateTime": "2016-06-16T13:18:10.576612Z",
       "ArchiveException": null,
-      "BilingualFilePath": null,
-      "BilingualFileCommit": null,
-      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.pt-pt\\master\\how-to-use-adal-authentication.c4db17b2d45abcad3a630251a689204c2a8c1ef2.pt-pt.xlf",
+      "BilingualFileCommit": "21583118f1020f658e660fb59b7bfe4f34db93a8",
+      "BilingualDateTime": "2016-06-20T14:16:18.6814344Z",
       "BilingualException": null
     },
     "e8b2d466224fcbf431859eebed04866544633402": {

@@ -28,17 +28,6 @@ ms.suite: ems
 
 Este tópico contém informações importantes sobre isto e sobre versões anteriores do SDK RMS 2.1.
 
-- [Novo na atualização da documentação do SDK de fevereiro de 2016](#new-for-the-february-2016-sdk-documentation-update)
-- [Atualização de dezembro de 2015](#december-2015-update)
-- [Atualização de maio de 2015](#may-2015-update)
-- [Atualização de abril de 2015](#april-2015-update)
-- [Atualização de janeiro de 2015](#january-2015-update)
-- [Atualização de outubro de 2014](#october-2014-update)
-- [Atualização de julho de 2014](#july-2014-update)
-- [Notas importantes do programador](#important-developer-notes)
-- [Perguntas mais frequentes](#frequently-asked-questions)
-- [Tópicos relacionados](#related-topics)
-
 ## Novo na atualização da documentação do SDK de fevereiro de 2016
 
 >[!Note]  As atualizações da documentação da funcionalidade nesta secção aplicam-se à transferência do SDK com a data de 11/12/2015.

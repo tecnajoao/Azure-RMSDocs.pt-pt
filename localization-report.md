@@ -9,8 +9,8 @@
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 1
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 36
-[ In Sync Handback Files ](#insync-handback-success-list)| 168
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 34
+[ In Sync Handback Files ](#insync-handback-success-list)| 170
 [ Ignored Files ](#ignored-list)| 66
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -164,7 +164,6 @@
  [Azure-RMSDocs\deploy-use\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/b6dcd8bb1091e9c484e02042adbf993381581a9d/Azure-RMSDocs/deploy-use/TOC.md) | OutofSyncHandedBackSuccess | [Details](#6bf11174aad9b6e54becf682e0b684c407c0343937)
  [Azure-RMSDocs\develop\adal-auth.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0bb1879eb9f9579cfe77ca8766b550d7a68d944d/Azure-RMSDocs/develop/adal-auth.md) | OutofSyncHandedBackSuccess | [Details](#8b398b1dcd6054437e58ee4abe900d8662ab4fbf43)
  [Azure-RMSDocs\develop\add-explicit-owner-rights.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/29e856e3e9990f81a791c533ddad5a332093d5d3/Azure-RMSDocs/develop/add-explicit-owner-rights.md) | OutofSyncHandedBackSuccess | [Details](#c3b40e57dadfacca62f2bd74e605a9a9959bb6e244)
- [Azure-RMSDocs\develop\ad-rms-server.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/bb6927bb82f1bbfcd63b5b8d02d7aa6c7feee8cd/Azure-RMSDocs/develop/ad-rms-server.md) | OutofSyncHandedBackSuccess | [Details](#685079958d71d8c681d9150aadcbbc4bfedd15ad42)
  [Azure-RMSDocs\develop\api-reference-2-1.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/74e200dcf65a7a1749f586421eb6ad30f3332d6b/Azure-RMSDocs/develop/api-reference-2-1.md) | OutofSyncHandedBackSuccess | [Details](#18f8958985043609a89171cd86771b922cf43daa48)
  [Azure-RMSDocs\develop\authentication-integration.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/79caad4a917216bbd838e4701f6c78973cfafac4/Azure-RMSDocs/develop/authentication-integration.md) | OutofSyncHandedBackSuccess | [Details](#b6e30ce14c5eb5f387a65d7f78fbb1c3abcabd1a52)
  [Azure-RMSDocs\develop\core-concepts.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/466db75b55164b638a269816f434cf027ce666a5/Azure-RMSDocs/develop/core-concepts.md) | OutofSyncHandedBackSuccess | [Details](#ebb08fbea18473cccca5897372b97f192200acca56)
@@ -177,7 +176,6 @@
  [Azure-RMSDocs\develop\how-to-use-document-tracking.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ca4982cc86d9c006486540055de7c165adca21da/Azure-RMSDocs/develop/how-to-use-document-tracking.md) | OutofSyncHandedBackSuccess | [Details](#9872317c2d5f5f56f28ed2683d7ebc9743041a3774)
  [Azure-RMSDocs\develop\how-to-use-file-api-with-aadrm-cloud.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/29e856e3e9990f81a791c533ddad5a332093d5d3/Azure-RMSDocs/develop/how-to-use-file-api-with-aadrm-cloud.md) | OutofSyncHandedBackSuccess | [Details](#4fc722907339137a752b701d5be09a7da66f4e8975)
  [Azure-RMSDocs\develop\release-notes.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/254cdd130357db2fe2aa2c90d63ae5d23ec4227c/Azure-RMSDocs/develop/release-notes.md) | OutofSyncHandedBackSuccess | [Details](#c1e99075297f2bc4c5f913ecbdb080887613332887)
- [Azure-RMSDocs\develop\release-notes-rtm.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/91d16ec6e9f9bb359a76562dee7fcb81aac2b44d/Azure-RMSDocs/develop/release-notes-rtm.md) | OutofSyncHandedBackSuccess | [Details](#c90b1d2257bcf3fd355e810e5f9654683c69345486)
  [Azure-RMSDocs\develop\setting-the-api-security-mode-api-mode.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/11b998addd14fdde0592ed948b956ddb2ed6e570/Azure-RMSDocs/develop/setting-the-api-security-mode-api-mode.md) | OutofSyncHandedBackSuccess | [Details](#2be40c9caf33f391f8be9fe116d3473ce995613b90)
  [Azure-RMSDocs\develop\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/466db75b55164b638a269816f434cf027ce666a5/Azure-RMSDocs/develop/TOC.md) | OutofSyncHandedBackSuccess | [Details](#bf36217b4e3e59a6590e0f8cb21cfa9c28ec628d95)
  [Azure-RMSDocs\develop\tracking-content.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/aa4b1b0aee246b32d5214e2587ac5d291a682fe7/Azure-RMSDocs/develop/tracking-content.md) | OutofSyncHandedBackSuccess | [Details](#61f70a7b4a85c0ab6f0a2732fcf9d314a230e76996)
@@ -226,6 +224,7 @@
  [Azure-RMSDocs\develop\active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/bf22d0b3c574ff1472df8428f6a39c359e0e95e1/Azure-RMSDocs/develop/active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) | InSyncHandedBackSuccess | [Details](#be2774ba361c478fa20faa1490bb4e5ead90b8af39)
  [Azure-RMSDocs\develop\ad-rms-client.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ad47143f61ca7bee2e6905637ebd0d1a827846b8/Azure-RMSDocs/develop/ad-rms-client.md) | InSyncHandedBackSuccess | [Details](#85613d5444bcba3c0d3f1dc808fa16f5a84c7e6d40)
  [Azure-RMSDocs\develop\ad-rms-overview.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/563028055e6e8ecec2a229712adda9ba4cf474b6/Azure-RMSDocs/develop/ad-rms-overview.md) | InSyncHandedBackSuccess | [Details](#4183dfdb17479baf3e4494bd3566d7a8cf68eb0841)
+ [Azure-RMSDocs\develop\ad-rms-server.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/bb6927bb82f1bbfcd63b5b8d02d7aa6c7feee8cd/Azure-RMSDocs/develop/ad-rms-server.md) | InSyncHandedBackSuccess | [Details](#685079958d71d8c681d9150aadcbbc4bfedd15ad42)
  [Azure-RMSDocs\develop\android-code.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/acc140931b5f834ce1d70c851d90c334a03010dc/Azure-RMSDocs/develop/android-code.md) | InSyncHandedBackSuccess | [Details](#acd0692102c43baff0a92360e0ddbe1259ad9b4f45)
  [Azure-RMSDocs\develop\android-namespaces.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/4e30a62ecbd1ca4576be6d017bc8d1f501e33989/Azure-RMSDocs/develop/android-namespaces.md) | InSyncHandedBackSuccess | [Details](#55f17d42165d2b6b5e1765a81bf7d799a14e996a46)
  [Azure-RMSDocs\develop\android-sdk.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6bfe923868b9ad648386c5ce2786b3beb1e9fc0c/Azure-RMSDocs/develop/android-sdk.md) | InSyncHandedBackSuccess | [Details](#a13d8ce327f15f4b94162770b7a881e1a6746a2b47)
@@ -253,6 +252,7 @@
  [Azure-RMSDocs\develop\linux-setup.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6b5bc9612ac17a2d6905200383d9b8df4c504efe/Azure-RMSDocs/develop/linux-setup.md) | InSyncHandedBackSuccess | [Details](#d6920b8ce09b39d98da9e9c197b17a1f13d21c8e82)
  [Azure-RMSDocs\develop\microsoft-information-protection-and-control-client-portal.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/82632b7d9ca6d59ae3f033ca872567c1f0f50188/Azure-RMSDocs/develop/microsoft-information-protection-and-control-client-portal.md) | InSyncHandedBackSuccess | [Details](#866a8f1ec80ecb5b91fcc2915d11f5ef61543c3284)
  [Azure-RMSDocs\develop\overview.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6b5bc9612ac17a2d6905200383d9b8df4c504efe/Azure-RMSDocs/develop/overview.md) | InSyncHandedBackSuccess | [Details](#e9a3f95c8ff289380dc62994e4f719bc174c490085)
+ [Azure-RMSDocs\develop\release-notes-rtm.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/91d16ec6e9f9bb359a76562dee7fcb81aac2b44d/Azure-RMSDocs/develop/release-notes-rtm.md) | InSyncHandedBackSuccess | [Details](#c90b1d2257bcf3fd355e810e5f9654683c69345486)
  [Azure-RMSDocs\develop\samples.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ac6afddc2b39d6209ef1b89d8d84011942cdba5a/Azure-RMSDocs/develop/samples.md) | InSyncHandedBackSuccess | [Details](#9c1eb2122e2237a895ed931561ead754c328724488)
  [Azure-RMSDocs\develop\sdk-elements.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6b5bc9612ac17a2d6905200383d9b8df4c504efe/Azure-RMSDocs/develop/sdk-elements.md) | InSyncHandedBackSuccess | [Details](#3d6e7c2b40ba80988e93186fd68a12e6216b477d89)
  [Azure-RMSDocs\develop\setup-developer-environment.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6b5bc9612ac17a2d6905200383d9b8df4c504efe/Azure-RMSDocs/develop/setup-developer-environment.md) | InSyncHandedBackSuccess | [Details](#4bb013f420b02a10e306d92624683c48ceb2582f91)
@@ -1059,18 +1059,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='685079958d71d8c681d9150aadcbbc4bfedd15ad42'></a> Source: [Azure-RMSDocs\develop\ad-rms-server.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/bb6927bb82f1bbfcd63b5b8d02d7aa6c7feee8cd/Azure-RMSDocs/develop/ad-rms-server.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [Azure-RMSDocs\develop\ad-rms-server.md](https://github.com/Microsoft/Azure-RMSDocs-pr.pt-pt/blob/d990f1c0fd1886a8a0c922fac1e9439567136b21/Azure-RMSDocs/develop/ad-rms-server.md)
 * Handoff File: [ad-rms-server.fa059ee846c5974ee9338f46379d36401b59c9e4.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/de162f353a84fa724b2365e543f56ea6cb772ac8/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/ad-rms-server.fa059ee846c5974ee9338f46379d36401b59c9e4.pt-pt.xlf)
 * Handoff Datetime: 2016-06-10 01:46:44
 * Handoff Reason: Include
 * Archive File: [ad-rms-server.fa059ee846c5974ee9338f46379d36401b59c9e4.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/99247399862ab460f138dcd292fd4c2e5c1bd478/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/archive/ad-rms-server.fa059ee846c5974ee9338f46379d36401b59c9e4.pt-pt.xlf)
 * Archive Datetime: 2016-06-16 13:18:10
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [Azure-RMSDocs\develop\ad-rms-server.md](https://github.com/Microsoft/Azure-RMSDocs-pr.pt-pt/blob/78f5e9bac86d117e7c36c2e83b27416f0bb67b26/Azure-RMSDocs/develop/ad-rms-server.md)
-* Current Handback File: [ad-rms-server.fa059ee846c5974ee9338f46379d36401b59c9e4.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/632530e6da6afce6712fd14e0aae561c1e22e435/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/ad-rms-server.fa059ee846c5974ee9338f46379d36401b59c9e4.pt-pt.xlf)
-* Current Handback Datetime: 2016-06-20 12:41:14
+* Handback File: [ad-rms-server.fa059ee846c5974ee9338f46379d36401b59c9e4.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/1ed66fb01417a62cea81575791fc3cd7da67d5e9/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/ad-rms-server.fa059ee846c5974ee9338f46379d36401b59c9e4.pt-pt.xlf)
+* Handback Datetime: 2016-06-20 13:46:43
 * Bilingual File: [ad-rms-server.fa059ee846c5974ee9338f46379d36401b59c9e4.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/632530e6da6afce6712fd14e0aae561c1e22e435/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/ad-rms-server.fa059ee846c5974ee9338f46379d36401b59c9e4.pt-pt.xlf)
 * Bilingual Datetime: 2016-06-20 12:43:32
 * [Back to Top](#report-top)
@@ -1285,14 +1282,14 @@
 
 ##### <a name='2f2323f32327324611df2b2e8a8824e6896546aa59'></a> Source: [Azure-RMSDocs\develop\developer-notes.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/91d16ec6e9f9bb359a76562dee7fcb81aac2b44d/Azure-RMSDocs/develop/developer-notes.md)
 * Status: InSyncHandedBackSuccess
-* Target File: [Azure-RMSDocs\develop\developer-notes.md](https://github.com/Microsoft/Azure-RMSDocs-pr.pt-pt/blob/78f5e9bac86d117e7c36c2e83b27416f0bb67b26/Azure-RMSDocs/develop/developer-notes.md)
+* Target File: [Azure-RMSDocs\develop\developer-notes.md](https://github.com/Microsoft/Azure-RMSDocs-pr.pt-pt/blob/d990f1c0fd1886a8a0c922fac1e9439567136b21/Azure-RMSDocs/develop/developer-notes.md)
 * Handoff File: [developer-notes.ea2fa661b8042fcb35d82351408f0e24b8841d69.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/de62017b83e6ce22bb3cb0a0a49ee099783cdbdc/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/developer-notes.ea2fa661b8042fcb35d82351408f0e24b8841d69.pt-pt.xlf)
 * Handoff Datetime: 2016-06-10 20:44:16
 * Handoff Reason: Include
 * Archive File: [developer-notes.ea2fa661b8042fcb35d82351408f0e24b8841d69.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/99247399862ab460f138dcd292fd4c2e5c1bd478/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/archive/developer-notes.ea2fa661b8042fcb35d82351408f0e24b8841d69.pt-pt.xlf)
 * Archive Datetime: 2016-06-16 13:18:10
-* Handback File: [developer-notes.ea2fa661b8042fcb35d82351408f0e24b8841d69.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/632530e6da6afce6712fd14e0aae561c1e22e435/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/developer-notes.ea2fa661b8042fcb35d82351408f0e24b8841d69.pt-pt.xlf)
-* Handback Datetime: 2016-06-20 12:41:14
+* Handback File: [developer-notes.ea2fa661b8042fcb35d82351408f0e24b8841d69.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/1ed66fb01417a62cea81575791fc3cd7da67d5e9/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/developer-notes.ea2fa661b8042fcb35d82351408f0e24b8841d69.pt-pt.xlf)
+* Handback Datetime: 2016-06-20 13:46:43
 * Bilingual File: [developer-notes.ea2fa661b8042fcb35d82351408f0e24b8841d69.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/632530e6da6afce6712fd14e0aae561c1e22e435/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/developer-notes.ea2fa661b8042fcb35d82351408f0e24b8841d69.pt-pt.xlf)
 * Bilingual Datetime: 2016-06-20 12:43:32
 * [Back to Top](#report-top)
@@ -1694,18 +1691,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='c90b1d2257bcf3fd355e810e5f9654683c69345486'></a> Source: [Azure-RMSDocs\develop\release-notes-rtm.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/91d16ec6e9f9bb359a76562dee7fcb81aac2b44d/Azure-RMSDocs/develop/release-notes-rtm.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [Azure-RMSDocs\develop\release-notes-rtm.md](https://github.com/Microsoft/Azure-RMSDocs-pr.pt-pt/blob/d990f1c0fd1886a8a0c922fac1e9439567136b21/Azure-RMSDocs/develop/release-notes-rtm.md)
 * Handoff File: [release-notes-rtm.bc511e4b6981ff54f9feec8388e0594bf79d6770.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/de62017b83e6ce22bb3cb0a0a49ee099783cdbdc/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/release-notes-rtm.bc511e4b6981ff54f9feec8388e0594bf79d6770.pt-pt.xlf)
 * Handoff Datetime: 2016-06-10 20:44:16
 * Handoff Reason: Include
 * Archive File: [release-notes-rtm.bc511e4b6981ff54f9feec8388e0594bf79d6770.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/99247399862ab460f138dcd292fd4c2e5c1bd478/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/archive/release-notes-rtm.bc511e4b6981ff54f9feec8388e0594bf79d6770.pt-pt.xlf)
 * Archive Datetime: 2016-06-16 13:18:10
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [Azure-RMSDocs\develop\release-notes-rtm.md](https://github.com/Microsoft/Azure-RMSDocs-pr.pt-pt/blob/78f5e9bac86d117e7c36c2e83b27416f0bb67b26/Azure-RMSDocs/develop/release-notes-rtm.md)
-* Current Handback File: [release-notes-rtm.bc511e4b6981ff54f9feec8388e0594bf79d6770.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/632530e6da6afce6712fd14e0aae561c1e22e435/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/release-notes-rtm.bc511e4b6981ff54f9feec8388e0594bf79d6770.pt-pt.xlf)
-* Current Handback Datetime: 2016-06-20 12:41:14
+* Handback File: [release-notes-rtm.bc511e4b6981ff54f9feec8388e0594bf79d6770.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/1ed66fb01417a62cea81575791fc3cd7da67d5e9/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/release-notes-rtm.bc511e4b6981ff54f9feec8388e0594bf79d6770.pt-pt.xlf)
+* Handback Datetime: 2016-06-20 13:46:43
 * Bilingual File: [release-notes-rtm.bc511e4b6981ff54f9feec8388e0594bf79d6770.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/632530e6da6afce6712fd14e0aae561c1e22e435/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/release-notes-rtm.bc511e4b6981ff54f9feec8388e0594bf79d6770.pt-pt.xlf)
 * Bilingual Datetime: 2016-06-20 12:43:32
 * [Back to Top](#report-top)

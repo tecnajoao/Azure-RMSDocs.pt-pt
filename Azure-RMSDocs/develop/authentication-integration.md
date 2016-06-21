@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Como&#58; adicionar autenticação à sua aplicação | Azure RMS
+title: Como registar-se e ativar o RMS na aplicação com o Azure AD | Azure RMS
 description: Descreve as noções básicas da autenticação de utilizador para a sua aplicação com capacidade para RMS.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/15/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -24,29 +24,28 @@ ms.suite: ems
 
 ---
 
-# Como: adicionar autenticação à sua aplicação
+# Como registar-se e ativar o RMS na aplicação com o Azure AD
 
-Este tópico descreve as noções básicas da autenticação de utilizador para a sua aplicação com capacidade para RMS.
+Este tópico irá guiá-lo sobre as noções básicas de registo da aplicação e de ativação do RMS através do portal do Azure, seguido da autenticação de utilizador com a Azure Active Directory Authentication Library (ADAL).
 
 ## O que é a autenticação de utilizador
-A autenticação de utilizador é um passo essencial para estabelecer a comunicação entre a aplicação do dispositivo e a infraestrutura de RMS. Este processo de autenticação utiliza o protocolo OAuth 2.0 padrão que requer as seguintes informações acerca do utilizador atual e do seu pedido de autenticação; **authority**, **resource** e **userId**.
+A autenticação de utilizador é um passo essencial para estabelecer a comunicação entre a aplicação do dispositivo e a infraestrutura de RMS. Este processo de autenticação utiliza o protocolo OAuth 2.0 padrão que requer peças chave de informação acerca do utilizador atual e do pedido de autenticação.
 
-**Nota** O âmbito não é utilizado atualmente mas poderá ser e, por isso, está reservado para utilização futura.
+## Registo através do portal do Azure
+Comece por seguir este guia para configurar o registo da aplicação através do portal do Azure, [Configurar o Azure RMS para a autenticação da ADAL](adal-auth.md). Certifique-se de que copia e guarda o **ID de cliente** e **Redireciona o URI** a partir deste processo para uma utilização posterior.
 
- 
+## Implementar a autenticação de utilizador para a aplicação
+Cada uma das APIs do RMS tem uma chamada de retorno que tem de ser implementada para ativar a autenticação do utilizador. O SDK RMS 4.2 utilizará, em seguida, a implementação de uma chamada de retorno quando o utilizador não fornecer um token de acesso, quando o seu token de acesso necessitar de ser atualizado ou quando o token de acesso tiver expirado.
 
-**Chamada de retorno de autenticação de utilizador** – O SDK Microsoft Rights Management 4.2 utilizará a sua implementação de uma chamada de retorno de autenticação quando o utilizador não fornecer um token de acesso, quando o seu token de acesso necessitar de ser atualizado ou quando o token de acesso tiver expirado.
+- Android - [AuthenticationRequestCallback](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) e [AuthenticationCompletionCallback](/rights-management/sdk/4.2/api/android/authenticationcompletioncallback#msipcthin2_authenticationcompletioncallback_interface_java).
+- iOS/OS X - [MSAuthenticationCallback](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc).
+-  Windows Phone/Windows RT -  interface [IAuthenticationCallback](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_iauthenticationcallback).
+- Linux - interface [IAuthenticationCallback](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html).
 
-Cada uma das APIs do RMS da plataforma tem uma chamada de retorno que tem de implementar para ativar a autenticação do utilizador.
+### Qual biblioteca utilizar para a autenticação
+Para poder implementar a sua chamada de retorno de autenticação, terá de transferir uma biblioteca adequada e configurar o ambiente de desenvolvimento para utilizá-la. Poderá encontrar no GitHub, as bibliotecas ADAL para estas plataformas.
 
--   A API do Android utiliza as interfaces [**AuthenticationRequestCallback**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) e [**AuthenticationCompletionCallback**](/rights-management/sdk/4.2/api/android/authenticationcompletioncallback#msipcthin2_authenticationcompletioncallback_interface_java).
--   A API do iOS/OS X utiliza o protocolo [**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc).
--   A API do WinPhone utiliza a interface [**IAuthenticationCallback**](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_iauthenticationcallback).
--   A API do Linux utiliza a interface [IAuthenticationCallback](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html).
-
-## Qual biblioteca utilizar para a autenticação
-
-Para poder implementar a sua chamada de retorno de autenticação, terá de transferir uma biblioteca adequada e configurar o ambiente de desenvolvimento para utilizá-la. Poderá encontrar no GitHub, as bibliotecas ADAL para estas plataformas. Cada um dos seguintes recursos contém orientações sobre a configuração do ambiente e a utilização da biblioteca.
+Cada um dos seguintes recursos contém orientações sobre a configuração do ambiente e a utilização da biblioteca.
 
 -   [Windows Azure Active Directory Authentication Library (ADAL) para iOS](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios/)
 -   [Windows Azure Active Directory Authentication Library (ADAL) para Mac](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios/)
@@ -54,28 +53,28 @@ Para poder implementar a sua chamada de retorno de autenticação, terá de tran
 -   [Windows Azure Active Directory Authentication Library (ADAL) para dotnet](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet)
 -   Para o SDK Linux, a biblioteca ADAL é compactada com a origem do SDK, disponível através do [Github](https://github.com/AzureAD/rms-sdk-for-cpp).
 
-**Nota** Recomendamos que utilize uma das bibliotecas Active Directory Authentication Library (ADAL) acima, embora possa utilizar outras bibliotecas de autenticação.
+>[!NOTE]  Recomendamos que utilize uma das ADAL, embora possa utilizar outras bibliotecas de autenticação.
 
-## Entradas de autenticação com Azure Active Director Authentication Library (ADAL)
+### Parâmetros de autenticação
 
-A ADAL requer vários parâmetros para autenticar com êxito um utilizador no Azure RMS (ou AD RMS). Estes são os parâmetros OAuth 2.0 padrão que normalmente são necessários em qualquer aplicação Azure AD, tal como em aplicações com capacidade para RMS. Pode encontrar as diretrizes atuais para a utilização da ADAL no ficheiro LEIA-ME dos repositórios do Github correspondentes, listados anteriormente.
+A ADAL requer várias informações para autenticar com êxito um utilizador no Azure RMS (ou AD RMS). Estes são os parâmetros OAuth 2.0 padrão e normalmente são necessários em qualquer aplicação Azure AD. Encontrará as diretrizes atuais para a utilização da ADAL no ficheiro LEIA-ME dos repositórios do Github correspondentes, listados anteriormente.
 
-Estes parâmetros e diretrizes são necessários para os fluxos de trabalho do RMS:
+- **Autoridade** – o URL para o ponto final de autenticação, normalmente AAD ou ADFS.
+- **Recurso** – o URL/URI da aplicação de serviço à qual está a tentar aceder, normalmente, o Azure RMS ou o AD RMS.
+- **ID de Utilizador** – o UPN, normalmente o endereço de e-mail do utilizador que pretende aceder à aplicação. Este parâmetro pode estar vazio se o utilizador ainda não for conhecido e também é utilizado para colocar em cache o token de utilizador ou pedir um token a partir da cache. Também é geralmente utilizado como uma *sugestão* para consultar o utilizador.
+- **ID de Cliente** – a ID da aplicação de cliente. Tem de ser uma ID da aplicação válida do Azure AD.
+e provém do passo de registo anterior através do portal do Azure.
+- **URI de Redirecionamento** – fornece a biblioteca de autenticação com um destino URI para o código de autenticação. São necessários formatos específicos para iOS e para Android. Estes são explicados nos ficheiros LEIA-ME dos repositórios do GitHub correspondentes da ADAL. Este valor provém do passo de registo anterior através do portal do Azure.
 
--   **Autoridade** – o URL para o ponto final de autenticação, normalmente AAD ou ADFS. Este parâmetro é fornecido para a sua aplicação através da chamada de retorno de autenticação do SDK RMS.
--   **Recurso** – o URL/URI da aplicação de serviço à qual está a tentar aceder, normalmente, o Azure RMS ou o AD RMS. Este parâmetro é fornecido para a sua aplicação através da chamada de retorno de autenticação do SDK RMS.
--   **ID de Utilizador** – o UPN, normalmente o endereço de e-mail do utilizador que pretende aceder à aplicação. Este parâmetro pode estar vazio se o utilizador ainda não for conhecido e também é utilizado para colocar em cache o token de utilizador ou pedir um token a partir da cache. Isto também é geralmente utilizado como uma “sugestão” para consultar o utilizador.
--   **ID de Cliente** – a ID da aplicação de cliente. Tem de ser uma ID da aplicação válida do Azure AD. Para obter mais informações, consulte Como: obter uma ID da Aplicação Azure.
--   **URI de Redirecionamento** – fornece a biblioteca de autenticação com um destino URI para o código de autenticação. Tenha em atenção que são necessários formatos específicos para iOS e Android (explicados nos ficheiros LEIA-ME dos repositórios de GitHub correspondentes da ADAL).
+>[!NOTE] O **âmbito** não é utilizado atualmente mas poderá ser e, por isso, está reservado para utilização futura.
 
     Android: `msauth://packagename/Base64UrlencodedSignature`
 
-    iOS. `<app-scheme>://<bundle-id>`
+    iOS: `<app-scheme>://<bundle-id>`
 
-**Nota** Se a aplicação não seguir estas diretrizes, é provável que os fluxos de trabalho do Azure RMS e do Azure AD falhem e não sejam suportados pela Microsoft.com. Além disso, o Contrato de Licença de Rights Management (RMLA) pode ser violado se uma ID de Cliente inválida for utilizada numa aplicação de produção.
+>[!NOTE] Se a aplicação não seguir estas diretrizes, é provável que os fluxos de trabalho do Azure RMS e do Azure AD falhem e não sejam suportados pela Microsoft.com. Além disso, o Contrato de Licença de Rights Management (RMLA) pode ser violado se uma ID de Cliente inválida for utilizada numa aplicação de produção.
 
-## Qual deverá ser o aspeto de uma implementação de chamada de retorno de autenticação
-
+### Qual deverá ser o aspeto de uma implementação de chamada de retorno de autenticação
 **Exemplos de Código de Autenticação** – Este SDK tem o código de exemplo que mostra a utilização de chamadas de retorno de autenticação. Para comodidade do utilizador, estes exemplos de código são representados aqui, bem como em cada um dos seguintes tópicos relacionados.
 
 **Autenticação de utilizador do Android** – para obter mais informações, consulte [Exemplos de código do Android](android-code.md), **Passo 2** do primeiro cenário, “Consumir um ficheiro protegido por RMS”.
@@ -153,9 +152,7 @@ Estes parâmetros e diretrizes são necessários para os fluxos de trabalho do R
                          }
 
 
-**Autenticação de utilizador do iOS/OS X** – para obter mais informações, consulte [Exemplos de código do iOS/OS X](ios-os-x-code-examples.md),
-
-**Passo 2** do primeiro cenário, “Consumir um ficheiro protegido por RMS”.
+**Autenticação de utilizador do iOS/OS X** – para obter mais informações, consulte [Exemplos de código do iOS/OS X](ios-os-x-code-examples.md), *Passo 2 do primeiro cenário, “Consumir um ficheiro protegido por RMS”.*
 
 
     // AuthenticationCallback holds the necessary information to retrieve an access token.
@@ -203,7 +200,7 @@ Estes parâmetros e diretrizes são necessários para os fluxos de trabalho do R
 
 
 
-**Autenticação de utilizador do Linux / C++** – para obter mais informações, consulte [Exemplos de código do Linux](linux-c-code-examples.md).
+**Autenticação de utilizador do Linux** – para obter mais informações, consulte [Exemplos de código do Linux](linux-c-code-examples.md).
 
 
 
@@ -274,6 +271,6 @@ Estes parâmetros e diretrizes são necessários para os fluxos de trabalho do R
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO3-->
 
 

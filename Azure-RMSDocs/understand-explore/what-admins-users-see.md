@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/09/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -32,8 +32,7 @@ ms.suite: ems
 
 Este artigo mostra alguns exemplos típicos de como os administradores e utilizadores veem e podem utilizar o Azure Rights Management (Azure RMS) para ajudar a proteger as informações confidenciais.
 
-> [!NOTE]
-> Em todos estes exemplos, nos quais o Azure RMS protege os dados, o proprietário dos conteúdos continua a ter acesso total aos dados (ficheiro ou e-mail), mesmo que a proteção aplicada conceda permissões a um grupo a que o proprietário não pertença como membro ou mesmo que a proteção aplicada inclua uma data de expiração.
+> [!NOTE] Em todos estes exemplos, nos quais o Azure RMS protege os dados, o proprietário dos conteúdos continua a ter acesso total aos dados (ficheiro ou e-mail), mesmo que a proteção aplicada conceda permissões a um grupo a que o proprietário não pertença como membro ou mesmo que a proteção aplicada inclua uma data de expiração.
 >
 > Da mesma forma, a equipa de TI pode aceder sempre aos dados protegidos sem restrições, através da funcionalidade de superutilizador do Rights Management que concede acesso de delegado aos utilizadores ou serviços autorizados especificados por si. Além disso, a equipa de TI pode controlar e monitorizar a utilização dos dados protegidos; por exemplo, quem está a aceder aos dados e quando.
 
@@ -51,7 +50,7 @@ Apesar de poder utilizar o Windows PowerShell para ativar e configurar o Azure R
 
 ![O QUE VEEM OS ADMINISTRADORES NO PASSO 2](../media/AzRMS_TemplatesPortal_small.png)
 
-**O QUE VEEM OS ADMINISTRADORES NO PASSO 2:** após a ativação, são automaticamente disponibilizados dois modelos de política de direitos para a sua organização. Um modelo permite o acesso só de leitura (inclui a designação **Apenas Visualização Confidencial** no nome), o outro concede acesso de leitura e modificação (**Confidencial**)).
+**O QUE VEEM OS ADMINISTRADORES NO PASSO 2:** após a ativação, são automaticamente disponibilizados dois modelos de política de direitos para a sua organização. Um modelo permite o acesso só de leitura (inclui a designação **Apenas Visualização Confidencial** no nome), o outro concede acesso de leitura e modificação (**Confidencial**).
 
 Quando estes modelos são aplicados a ficheiros ou mensagens de e-mail, restringem o acesso aos utilizadores da sua organização. Esta é uma forma muito rápida e fácil de ajudar a impedir a fuga de dados da sua empresa para pessoas fora da sua organização.
 
@@ -134,6 +133,9 @@ Neste exemplo, o administrador configura uma política para ajudar a manter a or
 As regras são configuradas de modo a que a proteção de direitos seja automaticamente aplicada às mensagens de e-mail que contêm estas informações e que são enviadas para fora da organização, através de um modelo de RMS que restringe o acesso exclusivamente aos funcionários da empresa.
 
 Aqui, a regra está configurada para utilizar um dos modelos predefinidos, **VanArsdel, Ltd – Confidencial**, do primeiro exemplo. Porém, também pode ver que o leque de modelos inclui todos os modelos personalizados que criou, bem como uma opção **Não Reencaminhar** específica do Exchange.
+
+> [!NOTE]
+> Se as opções de configuração que vê são ligeiramente diferentes da imagem, poderá ter de selecionar primeiro **Mais opções** ao configurar a regra. Em seguida, pode selecionar **Modificar a mensagem segurança** > **Aplicar proteção de direitos** e, em seguida, selecione o modelo do RMS.
 
 ---
 
@@ -244,6 +246,6 @@ Se o Artur reencaminhar a mensagem de e-mail com o anexo, se a guardar num local
 Agora que viu alguns exemplos das capacidades do Azure RMS, poderá estar interessado na aplicação prática das mesmas. Para obter informações técnicas sobre o funcionamento do Azure RMS, consulte [How does Azure RMS work? (Como funciona o Azure RMS? – em inglês)](how-does-it-work.md)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO2-->
 
 

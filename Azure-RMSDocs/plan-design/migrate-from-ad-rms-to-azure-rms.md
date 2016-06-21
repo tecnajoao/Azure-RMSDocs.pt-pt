@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/06/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -68,7 +68,7 @@ Antes de iniciar a migração para o Azure RMS, certifique-se de que os seguinte
 
     Consulte [Requisitos do Azure Rights Management](../get-started/requirements-azure-rms.md).
 
-    Embora tenha de possuir um inquilino do Azure RMS antes de poder migrar do AD RMS, recomendamos que não ative o serviço Rights Management antes da migração. O processo de migração inclui este passo após a exportação de chaves e modelos do AD RMS e respetiva importação para o Azure RMS. No entanto, se o Azure RMS já estiver ativado, ainda pode migrar a partir do AD RMS.
+    Embora tenha de possuir um inquilino do Azure RMS para poder migrar do AD RMS, recomendamos que não ative o serviço Rights Management antes da migração. O processo de migração inclui este passo após a exportação de chaves e modelos do AD RMS e respetiva importação para o Azure RMS. No entanto, se o Azure RMS já estiver ativado, ainda pode migrar a partir do AD RMS.
 
 
 - **Preparação para o Azure RMS:**
@@ -101,7 +101,7 @@ Limitações:
 
 -   Se colaborar com parceiros externos (por exemplo, através da utilização de domínios ou federações de utilizadores fidedignos), estes também devem migrar para o Azure RMS em simultâneo com a sua migração ou logo que seja possível posteriormente. Para continuarem a aceder a conteúdo que a sua organização protegia anteriormente ao utilizar o AD RMS, têm de efetuar alterações na configuração de clientes semelhantes àquelas que o utilizador efetuou e que estão incluídas neste documento.
 
-    Devido às possíveis variações de configuração que os seus parceiros possam ter, as instruções exatas para esta reconfiguração não estão incluídas neste documento. Para obter ajuda, contacte o Suporte ao Cliente da Microsoft (CSS).
+    Devido às possíveis variações de configuração que os seus parceiros possam ter, as instruções exatas para esta reconfiguração não estão incluídas neste documento. Para ajuda, [contacte o Suporte da Microsoft](../get-started/information-support#support-options-and-community-resources).
 
 ## Visão geral dos passos para migrar o AD RMS para o Azure RMS
 
@@ -185,6 +185,6 @@ Para iniciar a migração, aceda a [Fase 1 – configuração do lado do servido
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -33,8 +33,7 @@ Utilize este artigo para obter instruções e um script para utilizar o cliente 
 
 Esta solução permite-lhe proteger automaticamente todos os ficheiros numa pasta num servidor de ficheiros com o Windows Server ou proteger automaticamente ficheiros que cumpram critérios específicos. Por exemplo, ficheiros que tenham sido classificados como contendo informações confidenciais. Esta solução utiliza o Azure Rights Management (Azure RMS) para proteger os ficheiros, pelo que esta tecnologia tem de estar implementada na sua organização.
 
-> [!NOTE]
-> Embora o Azure RMS inclua um [conector](../deploy-use/deploy-rms-connector.md) que suporta a infraestrutura de classificação de ficheiros, essa solução só suporta a proteção nativa — por exemplo, ficheiros do Office.
+> [!NOTE] Embora o Azure RMS inclua um [conector](../deploy-use/deploy-rms-connector.md) que suporta a infraestrutura de classificação de ficheiros, essa solução só suporta a proteção nativa — por exemplo, ficheiros do Office.
 > 
 > Para suportar todos os tipos de ficheiro com a infraestrutura de classificação de ficheiros, tem de utilizar o módulo **Proteção RMS** do Windows PowerShell, conforme documentado neste artigo. Os cmdlets da Proteção RMS, como a aplicação de partilha RMS, suportam a proteção genérica, bem como a proteção nativa, o que significa que todos os ficheiros podem ser protegidos. Para mais informações sobre estes níveis de proteção diferentes, consulte a secção [Níveis de proteção – nativa e genérica](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) no [Rights Management sharing application administrator guide (Guia do administrador da aplicação de partilha Rights Management – em inglês)](sharing-app-admin-guide.md).
 
@@ -49,7 +48,7 @@ Pré-requisitos para estas instruções:
 
     -   Identificou uma pasta local que contém ficheiros que pretende proteger com a Rights Management. Por exemplo, C:\FileShare.
 
-    -   Instalou a ferramenta RMS Protection, incluindo os pré-requisitos da ferramenta (por exemplo, o cliente RMS) e do Azure RMS (por exemplo, a conta do principal de serviço). Para mais informações, consulte [RMS Protection Cmdlets (Cmdlets da Proteção RMS – em inglês)](https://msdn.microsoft.com/library/azure/mt433195.aspx)..
+    -   Instalou a ferramenta RMS Protection, incluindo os pré-requisitos da ferramenta (por exemplo, o cliente RMS) e do Azure RMS (por exemplo, a conta do principal de serviço). Para mais informações, consulte [Cmdlets da Proteção RMS](https://msdn.microsoft.com/library/azure/mt433195.aspx).
 
     -   Se quiser alterar o nível predefinido da proteção RMS (nativo ou genérico) para extensões de nome de ficheiro específicas e tiver editado o registo, conforme descrito na página [File API configuration (Configuração da API de Ficheiros – em inglês)](https://msdn.microsoft.com/library/dn197834%28v=vs.85%29.aspx).
 
@@ -129,7 +128,7 @@ No final destas instruções, todos os ficheiros na sua pasta selecionada serão
         Import-Module "C:\Program Files\WindowsPowerShell\Modules\RMSProtection\RMSProtection.dll"
         ```
 
-3.  Assine o script. Se não assinar o script (mais seguro), tem de configurar o Windows PowerShell nos servidores que o executam. Por exemplo, execute uma sessão do Windows PowerShell com a opção **Executar como Administrador** e escreva: **Set-ExecutionPolicy Unrestricted**. No entanto, esta configuração permite executar todos os scripts não assinados (menos seguro).
+3.  Assine o script. Se não assinar o script (mais seguro), tem de configurar o Windows PowerShell nos servidores que o executam. Por exemplo, execute uma sessão do Windows PowerShell com a opção **Executar como Administrador** e escreva: **Set-ExecutionPolicy RemoteSigned**. No entanto, esta configuração permite executar todos os scripts não assinados quando estes estão armazenados neste servidor (menos seguro).
 
     Para mais informações sobre como assinar os scripts do Windows PowerShell, consulte [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) na biblioteca de documentação do PowerShell.
 
@@ -279,8 +278,7 @@ Agora que concluiu a configuração de classificação, está pronto para config
     ```
     foreach ($file in (Get-ChildItem -Path C:\FileShare -Force | where {!$_.PSIsContainer})) {Get-RMSFileStatus -f $file.PSPath}
     ```
-    > [!TIP]
-    > Algumas dicas para a resolução de problemas:
+    > [!TIP] Algumas dicas para a resolução de problemas:
     > 
     > -   Se vir **0** no relatório, em vez do número de ficheiros na sua pasta, isto indica que o script não foi executado. Em primeiro lugar, verifique o próprio script ao carregá-lo no ISE do Windows PowerShell para validar os conteúdos do script e tente executá-lo para ver se são apresentados erros. Sem especificar argumentos, o script irá tentar estabelecer ligação e autenticar para o Azure RMS.
     > 
@@ -302,12 +300,12 @@ Após confirmar que estas tarefas foram executadas com êxito, pode fechar o Ges
 ## Modificar as instruções para proteger ficheiros de forma seletiva
 Quando tiver implementado as instruções anteriores, será muito fácil modificá-las para uma configuração mais complexa. Por exemplo, pode proteger ficheiros com o mesmo script, mas apenas para ficheiros que contenham informações pessoais, e talvez selecionar um modelo que possua direitos mais restritivos.
 
-Para tal, utilize uma das propriedades de classificação incorporadas (por exemplo, **Informações Pessoais**) ou crie uma nova propriedade. Em seguida, crie uma nova regra que utilize esta propriedade. Por exemplo, poderá selecionar o **Classificador de Conteúdos**, selecionar a propriedade **Informações Pessoais** com o valor **Elevado** e configurar o padrão de expressão ou cadeia que identifica o ficheiro a ser configurado para esta propriedade (tais como a cadeia "**Data de Nascimento**").").
+Para tal, utilize uma das propriedades de classificação incorporadas (por exemplo, **Informações Pessoais**) ou crie uma nova propriedade. Em seguida, crie uma nova regra que utilize esta propriedade. Por exemplo, poderá selecionar o **Classificador de Conteúdos**, selecionar a propriedade **Informações Pessoais** com o valor **Elevado** e configurar o padrão de expressão ou cadeia que identifica o ficheiro a ser configurado para esta propriedade (tais como a cadeia "**Data de Nascimento**").
 
-Agora, tudo o que precisa de fazer é criar uma nova tarefa de gestão de ficheiros que utilize o mesmo script, mas talvez com um modelo diferente, e configurar a condição da propriedade de classificação que acabou de configurar. Por exemplo, em vez da condição que configurámos anteriormente (propriedade **RMS**, **Igual**, **Sim**), selecione a propriedade **Informações Pessoais** com o valor **Operador** definido como **Igual** e o **Valor** **Elevado**..
+Agora, tudo o que precisa de fazer é criar uma nova tarefa de gestão de ficheiros que utilize o mesmo script, mas talvez com um modelo diferente, e configurar a condição da propriedade de classificação que acabou de configurar. Por exemplo, em vez da condição que configurámos anteriormente (propriedade **RMS**, **Igual**, **Sim**), selecione a propriedade **Informações Pessoais** com o valor **Operador** definido como **Igual** e o **Valor** **Elevado**.
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO2-->
 
 

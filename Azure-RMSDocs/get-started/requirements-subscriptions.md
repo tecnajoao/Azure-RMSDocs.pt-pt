@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/25/2016
+ms.date: 06/09/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -49,6 +49,8 @@ Tem mais dúvidas sobre o licenciamento do Azure RMS? Transfira as **FAQ de Lice
 ## Subscrição do Office 365
 [Avaliação gratuita de 30 dias: Enterprise E3](http://go.microsoft.com/fwlink/p/?LinkID=403802)
 
+[Avaliação gratuita de 30 dias: Enterprise E5](https://go.microsoft.com/fwlink/p/?LinkID=698279)
+
 Esta subscrição foi concebida para organizações que pretendem utilizar os serviços online do Office e utilizar a funcionalidade de Gestão de Direitos de Informação (IRM), que utiliza o Azure RMS. No entanto, nem todas as subscrições do Office 365 incluem o Azure RMS.
 
 Subscrição  |Inclui IRM 
@@ -84,7 +86,7 @@ Se a sua subscrição de avaliação expirar, perderá o acesso a conteúdo que 
 Existe uma exceção à perda de acesso após a expiração: se a sua organização tiver utilizado o Azure RMS com a subscrição do RMS para indivíduos antes de ter adquirido a subscrição de avaliação. Nesse caso, o acesso ao conteúdo anteriormente protegido mantém-se, mesmo depois de a subscrição de avaliação expirar.
 
 ## Subscrição do Enterprise Mobility Suite
-[Avaliação gratuita de 30 dias](http://go.microsoft.com/fwlink/?LinkId=615385)
+[Avaliação gratuita de 30 dias](https://portal.office.com/Signup/Signup.aspx?OfferId=2E63A04D-BE0B-4A0F-A8CF-407C1C299221&dl=EMS)
 
 Esta subscrição foi concebida para as organizações que pretendem utilizar uma combinação do Azure Active Directory Premium, do Windows Intune e do Azure Rights Management. O suporte para a utilização do Azure Rights Management com o Office é igual a utilizar a subscrição do Azure Rights Management Premium. Para obter mais informações sobre a subscrição do Enterprise Mobility Suite, consulte a [Descrição Geral do Microsoft Enterprise Mobility](http://go.microsoft.com/fwlink/?LinkId=615386).
 
@@ -98,6 +100,6 @@ Para mais informações, consulte [RMS para indivíduos e Azure Rights Managemen
 ## Passos seguintes
 Para verificar outros requisitos, consulte [Requisitos do Azure Rights Management](requirements-azure-rms.md).
 
-<!--HONumber=May16_HO5-->
+<!--HONumber=Jun16_HO2-->
 
 

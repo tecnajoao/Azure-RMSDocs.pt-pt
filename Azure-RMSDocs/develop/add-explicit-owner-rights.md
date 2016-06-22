@@ -1,14 +1,25 @@
 ---
-# metadados obrigatórios
+# required metadata
 
-Título: Procedimentos: adicionar direitos de proprietário explícitos | Descrição do Azure RMS: A aplicação deve adicionar explicitamente direitos de "Proprietário" durante a criação de uma licença de raiz.
-palavras-chave: autor: gestor bruceperlerms: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: EF43FAC4-ABB4-459D-B173-972B5716F816
-# metadados opcionais
+title:
+How-to: add explicit owner rights | Azure RMS
+description: Your application should explicitly add "Owner" rights when creating a license from scratch.
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: EF43FAC4-ABB4-459D-B173-972B5716F816
+# optional metadata
 
 #ROBOTS:
-audiência: programador
+audience: developer
 #ms.devlang:
-ms.reviewer: shubhamp ms.suite: ems
+ms.reviewer: shubhamp
+ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 

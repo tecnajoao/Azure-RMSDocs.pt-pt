@@ -1,14 +1,25 @@
 ---
-# metadados obrigatórios
+# required metadata
 
-título: procedimentos: ativar o controlo e a revogação de documentos | Descrição do Azure RMS: a funcionalidade de controlo de documentos necessita que alguns conhecimentos simples sobre a gestão dos metadados associados e o registo do serviço.
-palavras-chave: autor: gestor bruceperlerms: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: 70E10936-7953-49B0-B0DC-A5E7C4772E60
-# metadados opcionais
+title:
+How-to: enable document tracking and revocation | Azure RMS
+description: The document tracking feature requires some simple understandings about managing the associated metadata and registration with the service.
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 70E10936-7953-49B0-B0DC-A5E7C4772E60
+# optional metadata
 
 #ROBOTS:
-audiência: programador
+audience: developer
 #ms.devlang:
-ms.reviewer: shubhamp ms.suite: ems
+ms.reviewer: shubhamp
+ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 

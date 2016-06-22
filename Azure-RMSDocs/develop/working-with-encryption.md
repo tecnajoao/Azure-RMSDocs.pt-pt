@@ -1,13 +1,25 @@
 ---
-# metadados obrigatórios
+# required metadata
 
-título: procedimentos: trabalhar com definições de encriptação | Descrição do Azure RMS: Este artigo dá prientação sobre as nossas palavras-chave de pacotes de encriptação: autor: gestor bruceperlerms: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
-# metadados opcionais
+title:
+How-to: work with encryption settings | Azure RMS
+description: This article orients you to our encryption packages
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
+# optional metadata
 
 #ROBOTS:
-audiência: programador
+audience: developer
 #ms.devlang:
-ms.reviewer: shubhamp ms.suite: ems
+ms.reviewer: shubhamp
+ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 

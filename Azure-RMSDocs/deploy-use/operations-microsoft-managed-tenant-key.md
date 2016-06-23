@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/03/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -42,7 +42,7 @@ O rechaveamento também é conhecido como implementar a chave. Não efetue o rec
 
 -   Considera que a cópia principal da sua chave de inquilino (a cópia na sua posse) foi comprometida.
 
-Pode efetuar o rechaveamento da chave de inquilino ao chamar o Suporte ao Cliente da Microsoft (CSS) e comprovar que é o administrador de inquilinos.
+Pode executar o rechaveamento da chave do inquilino [contactando o Suporte da Microsoft](../get-started/information-support#to-contact-microsoft-support) para abrir um **caso de suporte do Azure Rights Management com um pedido de rechaveamento da chave de inquilino do Azure RMS**. Tem de provar que é um administrador do inquilino do Azure RMS e compreender que este processo demorará alguns dias a ser confirmado. São aplicáveis encargos de suporte padrão; o rechaveamento da chave de inquilino não é um serviço de suporte gratuito.
 
 Quando efetua o rechaveamento da chave de inquilino, o novo conteúdo é protegido através da utilização da nova chave de inquilino. Isto acontece de forma faseada, pelo que, durante um período de tempo, algum conteúdo novo irá continuar a ser protegido com a chave de inquilino antiga. O conteúdo previamente protegido permanece protegido para a sua chave de inquilino antiga. Para suportar este cenário, o Azure RMS retém a chave de inquilino antiga para poder emitir licenças para o conteúdo antigo.
 
@@ -54,7 +54,7 @@ Pode exportar a configuração do Azure RMS e a chave de inquilino ao seguir as 
 
 ### Passo 1: iniciar a exportação
 
--   Para tal, contacte o Suporte ao Cliente da Microsoft (CSS) para abrir um **Incidente de suporte do Azure Rights Management com um pedido de exportação de chave do Azure RMS**. Tem de provar que é um administrador do inquilino do Azure RMS e compreender que este processo demorará alguns dias a ser confirmado. São aplicáveis encargos de suporte padrão; a exportação da chave do inquilino não é um serviço de suporte gratuito.
+-   Para tal, [contacte o Suporte da Microsoft](../get-started/information-support#to-contact-microsoft-support) para abrir um **Incidente de suporte do Azure Rights Management com um pedido de exportação de chave do Azure RMS**. Tem de provar que é um administrador do inquilino do Azure RMS e compreender que este processo demorará alguns dias a ser confirmado. São aplicáveis encargos de suporte padrão; a exportação da chave do inquilino não é um serviço de suporte gratuito.
 
 ### Passo 2: aguardar pela verificação
 
@@ -97,13 +97,13 @@ Se ocorrer uma violação, a melhor ação que o utilizador ou a Microsoft pode 
 
 |Descrição do incidente|Resposta provável|
 |------------------------|-------------------|
-|Ocorreu uma fuga da chave de inquilino.|Efetue o rechaveamento da chave de inquilino. Consulte a secção [Efetuar o rechaveamento da chave de inquilino](operations-tenant-key.md#re-key-your-tenant-key) neste artigo.|
+|Ocorreu uma fuga da chave de inquilino.|Efetue o rechaveamento da chave de inquilino. Consulte a secção [Efetuar o rechaveamento da chave de inquilino](operations-tenant-key#re-key-your-tenant-key) neste artigo.|
 |Um indivíduo não autorizado ou um software maligno obteve direitos para utilizar a sua chave de inquilino, mas não houve uma fuga da própria chave.|Efetuar o rechaveamento da chave de inquilino não ajuda neste caso e requer a análise da causa raiz. Se um erro no processo ou software tiver sido responsável pelo acesso que o indivíduo não autorizado obteve, essa situação tem de ser resolvida.|
 |Foi detetada uma vulnerabilidade no algoritmo RSA, ou no comprimento da chave, ou ataques de força bruta tornaram-se exequíveis a nível informático.|A Microsoft tem de atualizar o Azure RMS para suportar os novos algoritmos e maiores comprimentos de chaves para serem resilientes e instruir todos os clientes a renovarem as respetivas chaves de inquilino.|
 
 
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -1,9 +1,8 @@
 ---
 # required metadata
 
-title:
-How-to: set the API security mode | Azure RMS
-description: Choose which security mode your File API application runs.
+title: Procedimentos para definir o modo de segurança da API | Azure RMS
+description: Escolha o modo de segurança em que é executada a sua aplicação de API de Ficheiros.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

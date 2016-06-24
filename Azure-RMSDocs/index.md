@@ -21,7 +21,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
     <section id="hero-content">
       <h1>Documentação do Azure Rights Management</h1>
       <h2>Saiba como implementar e gerir o Azure Rights Management (Azure RMS). Comece rapidamente a utilizar o Rights Management para aplicar a proteção de informações ao e-mail, aos documentos e a outros dados confidenciais.</h2>
-      <h3>Novo no Azure RMS? <a href="http://www.microsoft.com/en-us/server-cloud/products/azure-rights-management/" target="_blank">Visite o nosso site do produto &rarr;</a></h3>
+      <h3>Novo no Azure RMS? <a href="http://go.microsoft.com/fwlink/?LinkId=816857" target="_blank">Visite o nosso site do produto &rarr;</a></h3>
     </section>
     <aside class="alert section-border">
         <p>Está pronto para praticar?</p>
@@ -224,6 +224,6 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
 </article>
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

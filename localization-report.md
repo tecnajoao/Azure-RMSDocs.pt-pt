@@ -5497,8 +5497,8 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [sharing-app-view-use-files.14145eb3fbee2618bd134969eefdf42303c26dcc.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/28a3b025cb8c6b469a02b3de96ea4c7fab6d3273/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/sharing-app-view-use-files.14145eb3fbee2618bd134969eefdf42303c26dcc.pt-pt.xlf)
 * Handback Datetime: 2016-06-30 22:00:49
-* Bilingual File: [sharing-app-view-use-files.14145eb3fbee2618bd134969eefdf42303c26dcc.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3259bebedbfc5f73f147ca44b85d5957c0d4d693/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/sharing-app-view-use-files.14145eb3fbee2618bd134969eefdf42303c26dcc.pt-pt.xlf)
-* Bilingual Datetime: 2016-06-16 10:23:52
+* Bilingual File: [sharing-app-view-use-files.14145eb3fbee2618bd134969eefdf42303c26dcc.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/28a3b025cb8c6b469a02b3de96ea4c7fab6d3273/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/sharing-app-view-use-files.14145eb3fbee2618bd134969eefdf42303c26dcc.pt-pt.xlf)
+* Bilingual Datetime: 2016-06-30 22:02:57
 * [Back to Top](#report-top)
 
 ##### <a name='39eebe7e99fce0eae612f87726764c6810351b77369'></a> Source: [Azure-RMSDocs\rms-client\sharing-app-windows.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/rms-client/sharing-app-windows.md)

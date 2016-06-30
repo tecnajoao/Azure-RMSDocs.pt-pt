@@ -1,11 +1,28 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [Azure-RMSDocs\rms-client\sharing-app-view-use-files.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c611fa8a846612fed238e59e5077be67f6f9531a/Azure-RMSDocs/rms-client/sharing-app-view-use-files.md) | InSyncHandedBackSuccess | [Details](#c243ad02bdbd5bd46ba1b2a4818839df8a7deb7b368)
 
 ## Item Details
+##### <a name='c243ad02bdbd5bd46ba1b2a4818839df8a7deb7b368'></a> Source: [Azure-RMSDocs\rms-client\sharing-app-view-use-files.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c611fa8a846612fed238e59e5077be67f6f9531a/Azure-RMSDocs/rms-client/sharing-app-view-use-files.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [Azure-RMSDocs\rms-client\sharing-app-view-use-files.md](https://github.com/Microsoft/Azure-RMSDocs-pr.pt-pt/blob/9e77f64e29bd3cfd46cf06ca6e75b29a058ef145/Azure-RMSDocs/rms-client/sharing-app-view-use-files.md)
+* Handoff File: [sharing-app-view-use-files.14145eb3fbee2618bd134969eefdf42303c26dcc.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/82517af242e4c76f080c8247416b384f31c536e9/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/sharing-app-view-use-files.14145eb3fbee2618bd134969eefdf42303c26dcc.pt-pt.xlf)
+* Handoff Datetime: 2016-06-27 13:18:08
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [sharing-app-view-use-files.14145eb3fbee2618bd134969eefdf42303c26dcc.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/28a3b025cb8c6b469a02b3de96ea4c7fab6d3273/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/sharing-app-view-use-files.14145eb3fbee2618bd134969eefdf42303c26dcc.pt-pt.xlf)
+* Handback Datetime: 2016-06-30 22:00:49
+* Bilingual File: [sharing-app-view-use-files.14145eb3fbee2618bd134969eefdf42303c26dcc.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3259bebedbfc5f73f147ca44b85d5957c0d4d693/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/sharing-app-view-use-files.14145eb3fbee2618bd134969eefdf42303c26dcc.pt-pt.xlf)
+* Bilingual Datetime: 2016-06-16 10:23:52
+* [Back to Top](#report-top)
+
 
 ## Error Details
 

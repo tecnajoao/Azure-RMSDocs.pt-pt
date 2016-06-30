@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "7e08dccfdab54373cb9114c26ec55c32fdbf539c",
-  "LastTranslatedCommit": "17614b8f9024e64a459729746efa50a4fe47e8bd",
+  "LastTranslatedCommit": "9e77f64e29bd3cfd46cf06ca6e75b29a058ef145",
   "Items": {
     "2ed3bf162e9cbb06230b3bd9c0bd960c5c36049a": {
       "FileHash": "2ed3bf162e9cbb06230b3bd9c0bd960c5c36049a",
@@ -71458,14 +71458,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": "a440369afbc3a30d95e59478e5337cb0fa08d1c9",
+      "TargetFileCommit": "9e77f64e29bd3cfd46cf06ca6e75b29a058ef145",
       "TargetFilePath": "Azure-RMSDocs\\rms-client\\sharing-app-view-use-files.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.pt-pt\\master\\sharing-app-view-use-files.14145eb3fbee2618bd134969eefdf42303c26dcc.pt-pt.xlf",
-      "HandbackFileCommit": "3259bebedbfc5f73f147ca44b85d5957c0d4d693",
-      "HandbackDateTime": "2016-05-27T17:19:02.1201826Z",
+      "HandbackFileCommit": "28a3b025cb8c6b469a02b3de96ea4c7fab6d3273",
+      "HandbackDateTime": "2016-06-30T22:00:49.6410084Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "2016-05-27T17:19:02.1201826Z",
+      "UpdatedDateTime": "2016-06-30T22:00:49.6410084Z",
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",

@@ -6,24 +6,24 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [Azure-RMSDocs\get-started\faqs.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/64b9cf141b755e4d54907424a7dcbd4ee14fadd7/Azure-RMSDocs/get-started/faqs.md) | OutofSyncHandedBackSuccess | [Details](#758a603dde2c185767ba85229a397fd6e77b1c5b102)
+ [Azure-RMSDocs\understand-explore\office-apps-services-support.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/99eb67f6296ad1782c787aabb73a28458c02f367/Azure-RMSDocs/understand-explore/office-apps-services-support.md) | OutofSyncHandedBackSuccess | [Details](#affb37cc3b991609f5de51370485b10fed932421381)
 
 ## Item Details
-##### <a name='758a603dde2c185767ba85229a397fd6e77b1c5b102'></a> Source: [Azure-RMSDocs\get-started\faqs.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/64b9cf141b755e4d54907424a7dcbd4ee14fadd7/Azure-RMSDocs/get-started/faqs.md)
+##### <a name='affb37cc3b991609f5de51370485b10fed932421381'></a> Source: [Azure-RMSDocs\understand-explore\office-apps-services-support.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/99eb67f6296ad1782c787aabb73a28458c02f367/Azure-RMSDocs/understand-explore/office-apps-services-support.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [faqs.026f9abe86913a512f64fd2a67018fda479e9cd0.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/7a619f82ac7dd86b3bfc0751f4972ea26e60b202/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/faqs.026f9abe86913a512f64fd2a67018fda479e9cd0.pt-pt.xlf)
-* Handoff Datetime: 2016-06-30 18:35:51
+* Handoff File: [office-apps-services-support.d312c71892f658fba6ad726f29f646550317b03b.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/17463a798bc9d6f7ac66b31bed55b2e8ee5f5c29/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/office-apps-services-support.d312c71892f658fba6ad726f29f646550317b03b.pt-pt.xlf)
+* Handoff Datetime: 2016-07-01 00:28:15
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [Azure-RMSDocs\get-started\faqs.md](https://github.com/Microsoft/Azure-RMSDocs-pr.pt-pt/blob/78f5e9bac86d117e7c36c2e83b27416f0bb67b26/Azure-RMSDocs/get-started/faqs.md)
-* Current Handback File: [faqs.026f9abe86913a512f64fd2a67018fda479e9cd0.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/632530e6da6afce6712fd14e0aae561c1e22e435/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/faqs.026f9abe86913a512f64fd2a67018fda479e9cd0.pt-pt.xlf)
-* Current Handback Datetime: 2016-06-20 12:41:14
-* Bilingual File: [faqs.026f9abe86913a512f64fd2a67018fda479e9cd0.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/632530e6da6afce6712fd14e0aae561c1e22e435/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/faqs.026f9abe86913a512f64fd2a67018fda479e9cd0.pt-pt.xlf)
-* Bilingual Datetime: 2016-06-20 12:43:32
+* Current Target File: [Azure-RMSDocs\understand-explore\office-apps-services-support.md](https://github.com/Microsoft/Azure-RMSDocs-pr.pt-pt/blob/a440369afbc3a30d95e59478e5337cb0fa08d1c9/Azure-RMSDocs/understand-explore/office-apps-services-support.md)
+* Current Handback File: [office-apps-services-support.d312c71892f658fba6ad726f29f646550317b03b.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3259bebedbfc5f73f147ca44b85d5957c0d4d693/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/office-apps-services-support.d312c71892f658fba6ad726f29f646550317b03b.pt-pt.xlf)
+* Current Handback Datetime: 2016-05-27 17:19:02
+* Bilingual File: [office-apps-services-support.d312c71892f658fba6ad726f29f646550317b03b.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3259bebedbfc5f73f147ca44b85d5957c0d4d693/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/office-apps-services-support.d312c71892f658fba6ad726f29f646550317b03b.pt-pt.xlf)
+* Bilingual Datetime: 2016-06-16 10:23:52
 * [Back to Top](#report-top)
 
 

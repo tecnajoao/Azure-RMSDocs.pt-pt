@@ -1,12 +1,13 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
  [Azure-RMSDocs\deploy-use\configure-office-apps.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/deploy-use/configure-office-apps.md) | InSyncHandedBackSuccess | [Details](#607de5e4699d654a4b7895bacde8f18a9707f8a112)
+ [Azure-RMSDocs\develop\release-notes.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f7dd88d90357c99c69fe4fdde67c1544595e02f8/Azure-RMSDocs/develop/release-notes.md) | InSyncHandedBackSuccess | [Details](#eccc0ba9c13e0c35c8d0c8877ce92f9b99e8383586)
 
 ## Item Details
 ##### <a name='607de5e4699d654a4b7895bacde8f18a9707f8a112'></a> Source: [Azure-RMSDocs\deploy-use\configure-office-apps.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/deploy-use/configure-office-apps.md)
@@ -18,10 +19,24 @@
 * Archive File: [configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/47ce470116c42c5df24289687acbc026313cb314/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/archive/configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.pt-pt.xlf)
 * Archive Datetime: 2016-07-02 00:07:19
 * Handback File: [configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/066683d74937934a21b502eb35da22519d269284/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.pt-pt.xlf)
-* Handback Datetime: 2016-07-07 17:47:20
+* Handback Datetime: 2016-07-07 19:16:56
 * Handback Error: [handback_transform_failed](#607de5e4699d654a4b7895bacde8f18a9707f8a112handback_transform_failed)
 * Bilingual File: [configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/066683d74937934a21b502eb35da22519d269284/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.pt-pt.xlf)
 * Bilingual Datetime: 2016-06-22 12:25:13
+* [Back to Top](#report-top)
+
+##### <a name='eccc0ba9c13e0c35c8d0c8877ce92f9b99e8383586'></a> Source: [Azure-RMSDocs\develop\release-notes.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f7dd88d90357c99c69fe4fdde67c1544595e02f8/Azure-RMSDocs/develop/release-notes.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [Azure-RMSDocs\develop\release-notes.md](https://github.com/Microsoft/Azure-RMSDocs-pr.pt-pt/blob/0d2d3d5612134f9f3005711962a05d696b2a31ef/Azure-RMSDocs/develop/release-notes.md)
+* Handoff File: [release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/df40df7dbe4219f4dfa3cedab5b1e5282e6ba194/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.pt-pt.xlf)
+* Handoff Datetime: 2016-06-23 21:07:20
+* Handoff Reason: Include
+* Archive File: [release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/47ce470116c42c5df24289687acbc026313cb314/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/archive/release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.pt-pt.xlf)
+* Archive Datetime: 2016-07-02 00:07:19
+* Handback File: [release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/e9491369b9bae70b9b00a68178f7130fcd243611/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.pt-pt.xlf)
+* Handback Datetime: 2016-07-07 19:16:56
+* Bilingual File: [release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3259bebedbfc5f73f147ca44b85d5957c0d4d693/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.pt-pt.xlf)
+* Bilingual Datetime: 2016-06-16 10:23:52
 * [Back to Top](#report-top)
 
 

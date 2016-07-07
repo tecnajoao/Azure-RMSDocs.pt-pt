@@ -1626,8 +1626,8 @@
 * Archive Datetime: 2016-07-02 00:07:19
 * Handback File: [release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/e9491369b9bae70b9b00a68178f7130fcd243611/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.pt-pt.xlf)
 * Handback Datetime: 2016-07-07 19:16:56
-* Bilingual File: [release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3259bebedbfc5f73f147ca44b85d5957c0d4d693/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.pt-pt.xlf)
-* Bilingual Datetime: 2016-06-16 10:23:52
+* Bilingual File: [release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/e9491369b9bae70b9b00a68178f7130fcd243611/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-07 19:18:33
 * [Back to Top](#report-top)
 
 ##### <a name='61df64691ac3f4d7e871043767444ea64dfe1ef385'></a> Source: [Azure-RMSDocs\develop\release-notes-rtm.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/56d0538243af49580f24c701ad5097b30f3059b0/Azure-RMSDocs/develop/release-notes-rtm.md)

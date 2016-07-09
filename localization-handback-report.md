@@ -1,28 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [Azure-RMSDocs\develop\terms.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f7dd88d90357c99c69fe4fdde67c1544595e02f8/Azure-RMSDocs/develop/terms.md) | InSyncHandedBackSuccess | [Details](#5779cc10503ad7afe997e031a467021b513fc51092)
 
 ## Item Details
-##### <a name='5779cc10503ad7afe997e031a467021b513fc51092'></a> Source: [Azure-RMSDocs\develop\terms.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f7dd88d90357c99c69fe4fdde67c1544595e02f8/Azure-RMSDocs/develop/terms.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [Azure-RMSDocs\develop\terms.md](https://github.com/Microsoft/Azure-RMSDocs-pr.pt-pt/blob/31263634c3c22d67e743de6c1636ddc6be1be6c6/Azure-RMSDocs/develop/terms.md)
-* Handoff File: [terms.ac772ab1b278e2aa6b141e2a7ade485fe26fe47f.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/71c868c217d92069fa1b2975264effce1dc91a83/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/terms.ac772ab1b278e2aa6b141e2a7ade485fe26fe47f.pt-pt.xlf)
-* Handoff Datetime: 2016-07-08 07:24:16
-* Handoff Reason: Include
-* Archive File: [terms.ac772ab1b278e2aa6b141e2a7ade485fe26fe47f.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/ff833abd381d321fdea27df5ddb7070f09564466/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/archive/terms.ac772ab1b278e2aa6b141e2a7ade485fe26fe47f.pt-pt.xlf)
-* Archive Datetime: 2016-07-08 23:46:52
-* Handback File: [terms.ac772ab1b278e2aa6b141e2a7ade485fe26fe47f.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/f084478480db6fb15cc53482f8e09bafa494b9ae/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/terms.ac772ab1b278e2aa6b141e2a7ade485fe26fe47f.pt-pt.xlf)
-* Handback Datetime: 2016-07-09 08:54:52
-* Bilingual File: [terms.ac772ab1b278e2aa6b141e2a7ade485fe26fe47f.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3748fdf629af119e20ef91666736ad2edea25681/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/terms.ac772ab1b278e2aa6b141e2a7ade485fe26fe47f.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-07 13:15:24
-* [Back to Top](#report-top)
-
 
 ## Error Details
 

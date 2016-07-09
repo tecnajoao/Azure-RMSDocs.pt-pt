@@ -687,8 +687,8 @@
 * Archive Datetime: 2016-07-08 23:46:52
 * Handback File: [configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.pt-pt.xlf)
 * Handback Datetime: 2016-07-09 02:02:31
-* Bilingual File: [configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3748fdf629af119e20ef91666736ad2edea25681/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-07 13:15:24
+* Bilingual File: [configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-09 02:10:50
 * [Back to Top](#report-top)
 
 ##### <a name='87d712bbda11a4cfdfb2f3b3e9a549bca977afd619'></a> Source: [Azure-RMSDocs\deploy-use\copy-template.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/332e102cb27854314b93a71bfeae82a95c9a7812/Azure-RMSDocs/deploy-use/copy-template.md)
@@ -1022,8 +1022,8 @@
 * Archive Datetime: 2016-07-08 23:46:52
 * Handback File: [ad-rms-client.11dca0848083258df6dedace95b6817391b6833e.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/ad-rms-client.11dca0848083258df6dedace95b6817391b6833e.pt-pt.xlf)
 * Handback Datetime: 2016-07-09 02:02:31
-* Bilingual File: [ad-rms-client.11dca0848083258df6dedace95b6817391b6833e.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3748fdf629af119e20ef91666736ad2edea25681/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/ad-rms-client.11dca0848083258df6dedace95b6817391b6833e.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-07 13:15:24
+* Bilingual File: [ad-rms-client.11dca0848083258df6dedace95b6817391b6833e.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/ad-rms-client.11dca0848083258df6dedace95b6817391b6833e.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-09 02:10:50
 * [Back to Top](#report-top)
 
 ##### <a name='37f3bc2308caaa8fd5e5c7fc8c56b6dc4d076b9741'></a> Source: [Azure-RMSDocs\develop\ad-rms-overview.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f7dd88d90357c99c69fe4fdde67c1544595e02f8/Azure-RMSDocs/develop/ad-rms-overview.md)
@@ -1036,8 +1036,8 @@
 * Archive Datetime: 2016-07-08 23:46:52
 * Handback File: [ad-rms-overview.da33ed4cf79ed381a6c86754c03e4ed7bc62077a.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/ad-rms-overview.da33ed4cf79ed381a6c86754c03e4ed7bc62077a.pt-pt.xlf)
 * Handback Datetime: 2016-07-09 02:02:31
-* Bilingual File: [ad-rms-overview.da33ed4cf79ed381a6c86754c03e4ed7bc62077a.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3748fdf629af119e20ef91666736ad2edea25681/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/ad-rms-overview.da33ed4cf79ed381a6c86754c03e4ed7bc62077a.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-07 13:15:24
+* Bilingual File: [ad-rms-overview.da33ed4cf79ed381a6c86754c03e4ed7bc62077a.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/ad-rms-overview.da33ed4cf79ed381a6c86754c03e4ed7bc62077a.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-09 02:10:50
 * [Back to Top](#report-top)
 
 ##### <a name='2b7c99e3adafde7140d7997364ec2643ba79a2ac42'></a> Source: [Azure-RMSDocs\develop\ad-rms-server.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/56d0538243af49580f24c701ad5097b30f3059b0/Azure-RMSDocs/develop/ad-rms-server.md)
@@ -1064,8 +1064,8 @@
 * Archive Datetime: 2016-07-08 23:46:52
 * Handback File: [android-code.c54575560080707a5280400f481eb7b21c40af20.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/android-code.c54575560080707a5280400f481eb7b21c40af20.pt-pt.xlf)
 * Handback Datetime: 2016-07-09 02:02:31
-* Bilingual File: [android-code.c54575560080707a5280400f481eb7b21c40af20.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3748fdf629af119e20ef91666736ad2edea25681/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/android-code.c54575560080707a5280400f481eb7b21c40af20.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-07 13:15:24
+* Bilingual File: [android-code.c54575560080707a5280400f481eb7b21c40af20.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/android-code.c54575560080707a5280400f481eb7b21c40af20.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-09 02:10:50
 * [Back to Top](#report-top)
 
 ##### <a name='55f17d42165d2b6b5e1765a81bf7d799a14e996a46'></a> Source: [Azure-RMSDocs\develop\android-namespaces.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/4e30a62ecbd1ca4576be6d017bc8d1f501e33989/Azure-RMSDocs/develop/android-namespaces.md)
@@ -1092,8 +1092,8 @@
 * Archive Datetime: 2016-07-08 23:46:52
 * Handback File: [android-sdk.11c01dde37b53adb51792e58d71e80dc1af71b8f.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/android-sdk.11c01dde37b53adb51792e58d71e80dc1af71b8f.pt-pt.xlf)
 * Handback Datetime: 2016-07-09 02:02:31
-* Bilingual File: [android-sdk.11c01dde37b53adb51792e58d71e80dc1af71b8f.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3748fdf629af119e20ef91666736ad2edea25681/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/android-sdk.11c01dde37b53adb51792e58d71e80dc1af71b8f.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-07 13:15:24
+* Bilingual File: [android-sdk.11c01dde37b53adb51792e58d71e80dc1af71b8f.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/android-sdk.11c01dde37b53adb51792e58d71e80dc1af71b8f.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-09 02:10:50
 * [Back to Top](#report-top)
 
 ##### <a name='18f8958985043609a89171cd86771b922cf43daa48'></a> Source: [Azure-RMSDocs\develop\api-reference-2-1.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/74e200dcf65a7a1749f586421eb6ad30f3332d6b/Azure-RMSDocs/develop/api-reference-2-1.md)
@@ -1232,8 +1232,8 @@
 * Archive Datetime: 2016-07-08 23:46:52
 * Handback File: [deploying-your-application.3864e91a1ee9e182dd8ff5b23cd391c156cc4e29.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/deploying-your-application.3864e91a1ee9e182dd8ff5b23cd391c156cc4e29.pt-pt.xlf)
 * Handback Datetime: 2016-07-09 02:02:31
-* Bilingual File: [deploying-your-application.3864e91a1ee9e182dd8ff5b23cd391c156cc4e29.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/2f610a3a4f0bca48e1fdd40e3ad177c679085dc2/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/deploying-your-application.3864e91a1ee9e182dd8ff5b23cd391c156cc4e29.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-02 07:31:40
+* Bilingual File: [deploying-your-application.3864e91a1ee9e182dd8ff5b23cd391c156cc4e29.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/deploying-your-application.3864e91a1ee9e182dd8ff5b23cd391c156cc4e29.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-09 02:10:50
 * [Back to Top](#report-top)
 
 ##### <a name='2f2323f32327324611df2b2e8a8824e6896546aa58'></a> Source: [Azure-RMSDocs\develop\developer-notes.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/91d16ec6e9f9bb359a76562dee7fcb81aac2b44d/Azure-RMSDocs/develop/developer-notes.md)
@@ -1260,8 +1260,8 @@
 * Archive Datetime: 2016-07-08 23:46:52
 * Handback File: [developers-guide.0ccf7302c782a322ae1f0e93452446d73bcd4df3.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/developers-guide.0ccf7302c782a322ae1f0e93452446d73bcd4df3.pt-pt.xlf)
 * Handback Datetime: 2016-07-09 02:02:31
-* Bilingual File: [developers-guide.0ccf7302c782a322ae1f0e93452446d73bcd4df3.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/2f610a3a4f0bca48e1fdd40e3ad177c679085dc2/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/developers-guide.0ccf7302c782a322ae1f0e93452446d73bcd4df3.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-02 07:31:40
+* Bilingual File: [developers-guide.0ccf7302c782a322ae1f0e93452446d73bcd4df3.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/developers-guide.0ccf7302c782a322ae1f0e93452446d73bcd4df3.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-09 02:10:50
 * [Back to Top](#report-top)
 
 ##### <a name='5dcb3fe88cced7945591a08c492b32bdc889516260'></a> Source: [Azure-RMSDocs\develop\developing-your-application.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/cb1a4dfa4465e8f4798866c95d8965eec1b68f6b/Azure-RMSDocs/develop/developing-your-application.md)
@@ -1274,8 +1274,8 @@
 * Archive Datetime: 2016-07-08 23:46:52
 * Handback File: [developing-your-application.8fd29906a628e7dc3c644e93f1a14b01523f9aa6.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/developing-your-application.8fd29906a628e7dc3c644e93f1a14b01523f9aa6.pt-pt.xlf)
 * Handback Datetime: 2016-07-09 02:02:31
-* Bilingual File: [developing-your-application.8fd29906a628e7dc3c644e93f1a14b01523f9aa6.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/5c7705ab08b92144df77f184b6122ac6ba7b78ee/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/developing-your-application.8fd29906a628e7dc3c644e93f1a14b01523f9aa6.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-02 22:01:51
+* Bilingual File: [developing-your-application.8fd29906a628e7dc3c644e93f1a14b01523f9aa6.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/developing-your-application.8fd29906a628e7dc3c644e93f1a14b01523f9aa6.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-09 02:10:50
 * [Back to Top](#report-top)
 
 ##### <a name='1817ca056f9a0b0e6aed85bf04892c3f633079d161'></a> Source: [Azure-RMSDocs\develop\docfx.json](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/9099dcd4908c43e10d1f0f050b813c9b22842785/Azure-RMSDocs/develop/docfx.json)
@@ -1482,8 +1482,8 @@
 * Archive Datetime: 2016-07-08 23:46:52
 * Handback File: [index.a61cb583487d493a2f466b67dabd23a946990ed9.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/index.a61cb583487d493a2f466b67dabd23a946990ed9.pt-pt.xlf)
 * Handback Datetime: 2016-07-09 02:02:31
-* Bilingual File: [index.a61cb583487d493a2f466b67dabd23a946990ed9.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/2f610a3a4f0bca48e1fdd40e3ad177c679085dc2/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/index.a61cb583487d493a2f466b67dabd23a946990ed9.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-02 07:31:40
+* Bilingual File: [index.a61cb583487d493a2f466b67dabd23a946990ed9.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/index.a61cb583487d493a2f466b67dabd23a946990ed9.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-09 02:10:50
 * [Back to Top](#report-top)
 
 ##### <a name='839094716fa39957fbcbcdc4812d99fd742e439376'></a> Source: [Azure-RMSDocs\develop\install-the-rms-sdk.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/872bb0c20db2ef8d661d321598a2b1fe61d69316/Azure-RMSDocs/develop/install-the-rms-sdk.md)
@@ -1527,8 +1527,8 @@
 * Archive Datetime: 2016-07-08 23:46:52
 * Handback File: [ios-sdk.04f8a23860188d2f8bee6a412cd6aa5accbf4161.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/ios-sdk.04f8a23860188d2f8bee6a412cd6aa5accbf4161.pt-pt.xlf)
 * Handback Datetime: 2016-07-09 02:02:31
-* Bilingual File: [ios-sdk.04f8a23860188d2f8bee6a412cd6aa5accbf4161.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3748fdf629af119e20ef91666736ad2edea25681/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/ios-sdk.04f8a23860188d2f8bee6a412cd6aa5accbf4161.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-07 13:15:24
+* Bilingual File: [ios-sdk.04f8a23860188d2f8bee6a412cd6aa5accbf4161.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/ios-sdk.04f8a23860188d2f8bee6a412cd6aa5accbf4161.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-09 02:10:50
 * [Back to Top](#report-top)
 
 ##### <a name='1695dc0db8940423fc85484d18e9a80868911e6f79'></a> Source: [Azure-RMSDocs\develop\linux-c-api-reference.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6b5bc9612ac17a2d6905200383d9b8df4c504efe/Azure-RMSDocs/develop/linux-c-api-reference.md)
@@ -1609,8 +1609,8 @@
 * Archive Datetime: 2016-07-08 23:46:52
 * Handback File: [overview.6e2f032650d36c4e8bc88afe03974bb08b242502.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/overview.6e2f032650d36c4e8bc88afe03974bb08b242502.pt-pt.xlf)
 * Handback Datetime: 2016-07-09 02:02:31
-* Bilingual File: [overview.6e2f032650d36c4e8bc88afe03974bb08b242502.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3748fdf629af119e20ef91666736ad2edea25681/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/overview.6e2f032650d36c4e8bc88afe03974bb08b242502.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-07 13:15:24
+* Bilingual File: [overview.6e2f032650d36c4e8bc88afe03974bb08b242502.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/overview.6e2f032650d36c4e8bc88afe03974bb08b242502.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-09 02:10:50
 * [Back to Top](#report-top)
 
 ##### <a name='eccc0ba9c13e0c35c8d0c8877ce92f9b99e8383586'></a> Source: [Azure-RMSDocs\develop\release-notes.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f7dd88d90357c99c69fe4fdde67c1544595e02f8/Azure-RMSDocs/develop/release-notes.md)
@@ -1623,8 +1623,8 @@
 * Archive Datetime: 2016-07-08 23:46:52
 * Handback File: [release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.pt-pt.xlf)
 * Handback Datetime: 2016-07-09 02:02:31
-* Bilingual File: [release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/e9491369b9bae70b9b00a68178f7130fcd243611/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-07 19:18:33
+* Bilingual File: [release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-09 02:10:50
 * [Back to Top](#report-top)
 
 ##### <a name='61df64691ac3f4d7e871043767444ea64dfe1ef385'></a> Source: [Azure-RMSDocs\develop\release-notes-rtm.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/56d0538243af49580f24c701ad5097b30f3059b0/Azure-RMSDocs/develop/release-notes-rtm.md)
@@ -1805,8 +1805,8 @@
 * Archive Datetime: 2016-07-08 23:46:52
 * Handback File: [winrt-sdk.02e6d262a96a9158a66f51de86aff650672298a4.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/winrt-sdk.02e6d262a96a9158a66f51de86aff650672298a4.pt-pt.xlf)
 * Handback Datetime: 2016-07-09 02:02:31
-* Bilingual File: [winrt-sdk.02e6d262a96a9158a66f51de86aff650672298a4.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3748fdf629af119e20ef91666736ad2edea25681/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/winrt-sdk.02e6d262a96a9158a66f51de86aff650672298a4.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-07 13:15:24
+* Bilingual File: [winrt-sdk.02e6d262a96a9158a66f51de86aff650672298a4.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/winrt-sdk.02e6d262a96a9158a66f51de86aff650672298a4.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-09 02:10:50
 * [Back to Top](#report-top)
 
 ##### <a name='82903eff43ee2dee7ef64e618171225a06013d9999'></a> Source: [Azure-RMSDocs\develop\working-with-encryption.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/29e856e3e9990f81a791c533ddad5a332093d5d3/Azure-RMSDocs/develop/working-with-encryption.md)
@@ -1946,8 +1946,8 @@
 * Archive Datetime: 2016-07-08 23:46:52
 * Handback File: [requirements-azure-rms.91ef1526b60553f7a78b9162acbc860f2a8791a9.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/requirements-azure-rms.91ef1526b60553f7a78b9162acbc860f2a8791a9.pt-pt.xlf)
 * Handback Datetime: 2016-07-09 02:02:31
-* Bilingual File: [requirements-azure-rms.91ef1526b60553f7a78b9162acbc860f2a8791a9.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3748fdf629af119e20ef91666736ad2edea25681/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/requirements-azure-rms.91ef1526b60553f7a78b9162acbc860f2a8791a9.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-07 13:15:24
+* Bilingual File: [requirements-azure-rms.91ef1526b60553f7a78b9162acbc860f2a8791a9.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/requirements-azure-rms.91ef1526b60553f7a78b9162acbc860f2a8791a9.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-09 02:10:50
 * [Back to Top](#report-top)
 
 ##### <a name='933394c943763b010ac707384918eff86ea33388109'></a> Source: [Azure-RMSDocs\get-started\requirements-client-devices.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ed50d87138c428fadfd22cd5b3ef3c7f7e421848/Azure-RMSDocs/get-started/requirements-client-devices.md)
@@ -2016,8 +2016,8 @@
 * Archive Datetime: 2016-07-08 23:46:52
 * Handback File: [scenario-executives-email.02fb32c7a1e5b62754681e4d720db2d250184079.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/scenario-executives-email.02fb32c7a1e5b62754681e4d720db2d250184079.pt-pt.xlf)
 * Handback Datetime: 2016-07-09 02:02:31
-* Bilingual File: [scenario-executives-email.02fb32c7a1e5b62754681e4d720db2d250184079.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3748fdf629af119e20ef91666736ad2edea25681/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/scenario-executives-email.02fb32c7a1e5b62754681e4d720db2d250184079.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-07 13:15:24
+* Bilingual File: [scenario-executives-email.02fb32c7a1e5b62754681e4d720db2d250184079.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/scenario-executives-email.02fb32c7a1e5b62754681e4d720db2d250184079.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-09 02:10:50
 * [Back to Top](#report-top)
 
 ##### <a name='c16098a2d0fe41748280704716a2eeef8921a6fa114'></a> Source: [Azure-RMSDocs\get-started\scenario-fci.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/332e102cb27854314b93a71bfeae82a95c9a7812/Azure-RMSDocs/get-started/scenario-fci.md)
@@ -4909,8 +4909,8 @@
 * Archive Datetime: 2016-07-08 23:46:52
 * Handback File: [migrate-from-ad-rms-phase1.bc5aedb6121a7b8c22df639eda41dcc7e7be9c8f.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/migrate-from-ad-rms-phase1.bc5aedb6121a7b8c22df639eda41dcc7e7be9c8f.pt-pt.xlf)
 * Handback Datetime: 2016-07-09 02:02:31
-* Bilingual File: [migrate-from-ad-rms-phase1.bc5aedb6121a7b8c22df639eda41dcc7e7be9c8f.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3748fdf629af119e20ef91666736ad2edea25681/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/migrate-from-ad-rms-phase1.bc5aedb6121a7b8c22df639eda41dcc7e7be9c8f.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-07 13:15:24
+* Bilingual File: [migrate-from-ad-rms-phase1.bc5aedb6121a7b8c22df639eda41dcc7e7be9c8f.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/migrate-from-ad-rms-phase1.bc5aedb6121a7b8c22df639eda41dcc7e7be9c8f.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-09 02:10:50
 * [Back to Top](#report-top)
 
 ##### <a name='1016ecdd77e818840f2a2cfab8212e908291bb89337'></a> Source: [Azure-RMSDocs\plan-design\migrate-from-ad-rms-phase2.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a9dc45fb5146b0a4d2f013bff9d090723ce95ee5/Azure-RMSDocs/plan-design/migrate-from-ad-rms-phase2.md)
@@ -4923,8 +4923,8 @@
 * Archive Datetime: 2016-07-08 23:46:52
 * Handback File: [migrate-from-ad-rms-phase2.318d35db066c49206b0ca3bcb905627474043548.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/migrate-from-ad-rms-phase2.318d35db066c49206b0ca3bcb905627474043548.pt-pt.xlf)
 * Handback Datetime: 2016-07-09 02:02:31
-* Bilingual File: [migrate-from-ad-rms-phase2.318d35db066c49206b0ca3bcb905627474043548.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3748fdf629af119e20ef91666736ad2edea25681/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/migrate-from-ad-rms-phase2.318d35db066c49206b0ca3bcb905627474043548.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-07 13:15:24
+* Bilingual File: [migrate-from-ad-rms-phase2.318d35db066c49206b0ca3bcb905627474043548.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/migrate-from-ad-rms-phase2.318d35db066c49206b0ca3bcb905627474043548.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-09 02:10:50
 * [Back to Top](#report-top)
 
 ##### <a name='75cce1d0e5a1cff0d4f6609d0f084fda1af62951338'></a> Source: [Azure-RMSDocs\plan-design\migrate-from-ad-rms-phase3.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f7dd88d90357c99c69fe4fdde67c1544595e02f8/Azure-RMSDocs/plan-design/migrate-from-ad-rms-phase3.md)
@@ -4937,8 +4937,8 @@
 * Archive Datetime: 2016-07-08 23:46:52
 * Handback File: [migrate-from-ad-rms-phase3.d217f8acdd7175366a6360bf8f9a10435e95745a.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/migrate-from-ad-rms-phase3.d217f8acdd7175366a6360bf8f9a10435e95745a.pt-pt.xlf)
 * Handback Datetime: 2016-07-09 02:02:31
-* Bilingual File: [migrate-from-ad-rms-phase3.d217f8acdd7175366a6360bf8f9a10435e95745a.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3748fdf629af119e20ef91666736ad2edea25681/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/migrate-from-ad-rms-phase3.d217f8acdd7175366a6360bf8f9a10435e95745a.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-07 13:15:24
+* Bilingual File: [migrate-from-ad-rms-phase3.d217f8acdd7175366a6360bf8f9a10435e95745a.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/migrate-from-ad-rms-phase3.d217f8acdd7175366a6360bf8f9a10435e95745a.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-09 02:10:50
 * [Back to Top](#report-top)
 
 ##### <a name='7ed3569475362272ace055862fe8bb3ee072036a339'></a> Source: [Azure-RMSDocs\plan-design\migrate-from-ad-rms-phase4.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ea4dd88ed749092fd02135d8ca25b621f74fe72f/Azure-RMSDocs/plan-design/migrate-from-ad-rms-phase4.md)
@@ -5199,8 +5199,8 @@
 * Archive Datetime: 2016-07-08 23:46:52
 * Handback File: [sharing-app-admin-guide.a9c407820bfd3970390e4d18934868be65839fc1.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/sharing-app-admin-guide.a9c407820bfd3970390e4d18934868be65839fc1.pt-pt.xlf)
 * Handback Datetime: 2016-07-09 02:02:31
-* Bilingual File: [sharing-app-admin-guide.a9c407820bfd3970390e4d18934868be65839fc1.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3748fdf629af119e20ef91666736ad2edea25681/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/sharing-app-admin-guide.a9c407820bfd3970390e4d18934868be65839fc1.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-07 13:15:24
+* Bilingual File: [sharing-app-admin-guide.a9c407820bfd3970390e4d18934868be65839fc1.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/sharing-app-admin-guide.a9c407820bfd3970390e4d18934868be65839fc1.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-09 02:10:50
 * [Back to Top](#report-top)
 
 ##### <a name='4f63cb7911661104113d19ecd84ef7c80a874408357'></a> Source: [Azure-RMSDocs\rms-client\sharing-app-admin-guide-technical.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/332e102cb27854314b93a71bfeae82a95c9a7812/Azure-RMSDocs/rms-client/sharing-app-admin-guide-technical.md)

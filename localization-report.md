@@ -1823,8 +1823,8 @@
 * Archive Datetime: 2016-07-02 00:07:19
 * Handback File: [windows-phone-apps.9c8662d9cb263a7405d6cd1ce1113b424a277fc7.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/deac7fb81a757caed5c29db01fd80a40d52d8ce3/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/windows-phone-apps.9c8662d9cb263a7405d6cd1ce1113b424a277fc7.pt-pt.xlf)
 * Handback Datetime: 2016-07-15 10:48:47
-* Bilingual File: [windows-phone-apps.9c8662d9cb263a7405d6cd1ce1113b424a277fc7.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3748fdf629af119e20ef91666736ad2edea25681/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/windows-phone-apps.9c8662d9cb263a7405d6cd1ce1113b424a277fc7.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-07 13:15:24
+* Bilingual File: [windows-phone-apps.9c8662d9cb263a7405d6cd1ce1113b424a277fc7.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/deac7fb81a757caed5c29db01fd80a40d52d8ce3/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/windows-phone-apps.9c8662d9cb263a7405d6cd1ce1113b424a277fc7.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-15 11:04:59
 * [Back to Top](#report-top)
 
 ##### <a name='0b8e0fb6d872506ac3529bd137286f0e8fa562ee97'></a> Source: [Azure-RMSDocs\develop\winrt-sdk.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f7dd88d90357c99c69fe4fdde67c1544595e02f8/Azure-RMSDocs/develop/winrt-sdk.md)
@@ -5778,8 +5778,8 @@
 * Archive Datetime: 2016-07-02 00:07:19
 * Handback File: [azure-rights-management.d8af87cfd773f296eb41dc199896fb308b1ba8fd.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/deac7fb81a757caed5c29db01fd80a40d52d8ce3/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/azure-rights-management.d8af87cfd773f296eb41dc199896fb308b1ba8fd.pt-pt.xlf)
 * Handback Datetime: 2016-07-15 10:48:47
-* Bilingual File: [azure-rights-management.d8af87cfd773f296eb41dc199896fb308b1ba8fd.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3748fdf629af119e20ef91666736ad2edea25681/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/azure-rights-management.d8af87cfd773f296eb41dc199896fb308b1ba8fd.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-07 13:15:24
+* Bilingual File: [azure-rights-management.d8af87cfd773f296eb41dc199896fb308b1ba8fd.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/deac7fb81a757caed5c29db01fd80a40d52d8ce3/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/azure-rights-management.d8af87cfd773f296eb41dc199896fb308b1ba8fd.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-15 11:04:59
 * [Back to Top](#report-top)
 
 ##### <a name='45e5660703efdbbc298fb08cc15db176500549e7395'></a> Source: [Azure-RMSDocs\understand-explore\azure-rms-aka.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/bf8629651780438c8a2ededbe1e761455cfce94a/Azure-RMSDocs/understand-explore/azure-rms-aka.md)
@@ -5882,8 +5882,8 @@
 * Archive Datetime: 2016-07-02 00:07:19
 * Handback File: [rms-for-individuals.0951e682afe9e7d147e7732b5e7731d5fa9a6099.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/deac7fb81a757caed5c29db01fd80a40d52d8ce3/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/rms-for-individuals.0951e682afe9e7d147e7732b5e7731d5fa9a6099.pt-pt.xlf)
 * Handback Datetime: 2016-07-15 10:48:47
-* Bilingual File: [rms-for-individuals.0951e682afe9e7d147e7732b5e7731d5fa9a6099.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/3748fdf629af119e20ef91666736ad2edea25681/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/rms-for-individuals.0951e682afe9e7d147e7732b5e7731d5fa9a6099.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-07 13:15:24
+* Bilingual File: [rms-for-individuals.0951e682afe9e7d147e7732b5e7731d5fa9a6099.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/deac7fb81a757caed5c29db01fd80a40d52d8ce3/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/rms-for-individuals.0951e682afe9e7d147e7732b5e7731d5fa9a6099.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-15 11:04:59
 * [Back to Top](#report-top)
 
 ##### <a name='e577366be26f7296079751e72fb6531b9e28c504401'></a> Source: [Azure-RMSDocs\understand-explore\rms-for-individuals-identify-sign-up.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/understand-explore/rms-for-individuals-identify-sign-up.md)

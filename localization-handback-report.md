@@ -18,7 +18,7 @@
 * Archive File: [configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/47ce470116c42c5df24289687acbc026313cb314/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/archive/configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.pt-pt.xlf)
 * Archive Datetime: 2016-07-02 00:07:19
 * Handback File: [configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/066683d74937934a21b502eb35da22519d269284/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.pt-pt.xlf)
-* Handback Datetime: 2016-07-16 03:32:40
+* Handback Datetime: 2016-07-16 05:32:35
 * Handback Error: [handback_transform_failed](#607de5e4699d654a4b7895bacde8f18a9707f8a111handback_transform_failed)
 * Bilingual File: [configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/066683d74937934a21b502eb35da22519d269284/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.pt-pt.xlf)
 * Bilingual Datetime: 2016-06-22 12:25:13

@@ -1,29 +1,55 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 3
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [Azure-RMSDocs\index.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/e5a1860afff2682cce093523b33c9e99b93d446d/Azure-RMSDocs/index.md) | OutofSyncHandedBackSuccess | [Details](#57b04bccfd2f650c24875d20baf89040c69ab0f6153)
+ [Azure-RMSDocs\deploy-use\configure-usage-rights.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/4d6e0af200410b5af4e290ee0e6f94725916ecde/Azure-RMSDocs/deploy-use/configure-usage-rights.md) | OutofSyncHandedBackSuccess | [Details](#e9f2fe16494af2286d8ed77d0894bb5229e7c24617)
+ [Azure-RMSDocs\information-protection\faq.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/172dcd427339fa6e3a24a6243cec18e7063047be/Azure-RMSDocs/information-protection/faq.md) | HandedOffSuccess | [Details](#ad87be4dd1cd1c7b31419cc47511b6cf64087a44154)
+ [Azure-RMSDocs\information-protection\infoprotect-quick-start-tutorial.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/cac95dec84f99d2e6caa3458dc8284defe2324bc/Azure-RMSDocs/information-protection/infoprotect-quick-start-tutorial.md) | HandedOffSuccess | [Details](#7dc988365c1fa86827d1a7edc33c0a2eb6180f0e155)
 
 ## Item Details
-##### <a name='57b04bccfd2f650c24875d20baf89040c69ab0f6153'></a> Source: [Azure-RMSDocs\index.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/e5a1860afff2682cce093523b33c9e99b93d446d/Azure-RMSDocs/index.md)
+##### <a name='e9f2fe16494af2286d8ed77d0894bb5229e7c24617'></a> Source: [Azure-RMSDocs\deploy-use\configure-usage-rights.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/4d6e0af200410b5af4e290ee0e6f94725916ecde/Azure-RMSDocs/deploy-use/configure-usage-rights.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [index.a68f40487a64012c94076ad9808d6bc7b03e9c0e.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/964518d199a2378639e532c19a466645216925e8/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/index.a68f40487a64012c94076ad9808d6bc7b03e9c0e.pt-pt.xlf)
-* Handoff Datetime: 2016-07-16 01:58:23
+* Handoff File: [configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/5375eda09eca9c04fcc6ad9aeee40184df4a10e6/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.pt-pt.xlf)
+* Handoff Datetime: 2016-07-18 16:04:27
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [Azure-RMSDocs\index.md](https://github.com/Microsoft/Azure-RMSDocs-pr.pt-pt/blob/041f01d0b64f95cc4bf2a620507d3d52f2b1e0fb/Azure-RMSDocs/index.md)
-* Current Handback File: [index.a68f40487a64012c94076ad9808d6bc7b03e9c0e.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/6409d4515264bb5f16cfb93866977f302c751cae/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/index.a68f40487a64012c94076ad9808d6bc7b03e9c0e.pt-pt.xlf)
-* Current Handback Datetime: 2016-07-16 00:41:38
-* Bilingual File: [index.a68f40487a64012c94076ad9808d6bc7b03e9c0e.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/88777c8d2852c9fe2e1a367e564deb0cd81278f5/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/index.a68f40487a64012c94076ad9808d6bc7b03e9c0e.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-04 11:03:43
+* Current Target File: [Azure-RMSDocs\deploy-use\configure-usage-rights.md](https://github.com/Microsoft/Azure-RMSDocs-pr.pt-pt/blob/c147fcda8154cf025589fb9908646d19b3aac97f/Azure-RMSDocs/deploy-use/configure-usage-rights.md)
+* Current Handback File: [configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.pt-pt.xlf)
+* Current Handback Datetime: 2016-07-09 02:02:31
+* Bilingual File: [configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-09 02:10:50
+* [Back to Top](#report-top)
+
+##### <a name='ad87be4dd1cd1c7b31419cc47511b6cf64087a44154'></a> Source: [Azure-RMSDocs\information-protection\faq.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/172dcd427339fa6e3a24a6243cec18e7063047be/Azure-RMSDocs/information-protection/faq.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [faq.b147013c6b8c2df0f18408c2316c67980bca10e5.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/5375eda09eca9c04fcc6ad9aeee40184df4a10e6/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/faq.b147013c6b8c2df0f18408c2316c67980bca10e5.pt-pt.xlf)
+* Handoff Datetime: 2016-07-18 16:04:27
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='7dc988365c1fa86827d1a7edc33c0a2eb6180f0e155'></a> Source: [Azure-RMSDocs\information-protection\infoprotect-quick-start-tutorial.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/cac95dec84f99d2e6caa3458dc8284defe2324bc/Azure-RMSDocs/information-protection/infoprotect-quick-start-tutorial.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [infoprotect-quick-start-tutorial.2b82e7233bd20712415e16d00ec21857eb05a5ed.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/5375eda09eca9c04fcc6ad9aeee40184df4a10e6/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/infoprotect-quick-start-tutorial.2b82e7233bd20712415e16d00ec21857eb05a5ed.pt-pt.xlf)
+* Handoff Datetime: 2016-07-18 16:04:27
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
 

@@ -1233,8 +1233,8 @@
 * Archive Datetime: 2016-07-02 00:07:19
 * Handback File: [core-concepts.cf3c6b10cad0c516a67317d3de287400bee412e6.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/03350caf9705cf2d592bc24b0749ca32c75da16d/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/core-concepts.cf3c6b10cad0c516a67317d3de287400bee412e6.pt-pt.xlf)
 * Handback Datetime: 2016-07-19 18:05:54
-* Bilingual File: [core-concepts.cf3c6b10cad0c516a67317d3de287400bee412e6.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/d3f2b5849ed147594a71b86b56350ac47041212d/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/core-concepts.cf3c6b10cad0c516a67317d3de287400bee412e6.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-02 08:25:46
+* Bilingual File: [core-concepts.cf3c6b10cad0c516a67317d3de287400bee412e6.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/03350caf9705cf2d592bc24b0749ca32c75da16d/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/core-concepts.cf3c6b10cad0c516a67317d3de287400bee412e6.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-19 18:08:15
 * [Back to Top](#report-top)
 
 ##### <a name='c00ce9829ce4150cfef74ecd972450b3d787f31255'></a> Source: [Azure-RMSDocs\develop\debugging-applications-that-use-ad-rms.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/29e856e3e9990f81a791c533ddad5a332093d5d3/Azure-RMSDocs/develop/debugging-applications-that-use-ad-rms.md)

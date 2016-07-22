@@ -56,6 +56,6 @@ Para esta versão do SDK Microsoft Rights Management 4.2, a abordagem de iníci
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -69,6 +69,6 @@ Agora está pronto para ir para o [Passo 3. Ativar o seu inquilino do RMS](migra
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -60,6 +60,6 @@ Estão alojados no Github dois tópicos de orientação para este SDK para obter
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

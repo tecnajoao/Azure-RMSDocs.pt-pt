@@ -132,6 +132,6 @@ Redirect_OnPrem.cmd:
 Para continuar a migração, consulte a [fase 3 – suportar a configuração de serviços](migrate-from-ad-rms-phase3.md).
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 

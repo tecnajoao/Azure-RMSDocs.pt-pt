@@ -241,6 +241,6 @@ Se ainda não tiver transferido estes ficheiros, pode fazê-lo no [Centro de Tra
 Agora que o conector RMS está instalado e configurado, está pronto para configurar os seus servidores no local para utilizá-lo. Aceda a [Configuring servers for the Azure Rights Management connector](configure-servers-rms-connector.md) (Configurar servidores para o conector Azure Rights Management – em inglês).
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

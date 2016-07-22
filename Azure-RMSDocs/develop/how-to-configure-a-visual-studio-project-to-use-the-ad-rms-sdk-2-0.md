@@ -78,6 +78,6 @@ Estas instruções aplicam-se à criação de uma aplicação de 32 bits nativa
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

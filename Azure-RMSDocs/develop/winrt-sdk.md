@@ -86,6 +86,6 @@ Agora, está pronto para criar as suas novas aplicações da Loja Windows.
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 

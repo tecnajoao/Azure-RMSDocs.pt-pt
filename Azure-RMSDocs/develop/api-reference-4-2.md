@@ -45,6 +45,6 @@ O SDK do Microsoft Rights Management 4.2 suporta vários sistemas operativos. P
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

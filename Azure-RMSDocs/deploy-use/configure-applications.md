@@ -75,6 +75,6 @@ Depois de configurar as suas aplicações para suportar o Azure Rights Managemen
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

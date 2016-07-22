@@ -40,6 +40,6 @@ Se estiver pronto para implementar o Azure RMS na sua organização, utilize o [
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

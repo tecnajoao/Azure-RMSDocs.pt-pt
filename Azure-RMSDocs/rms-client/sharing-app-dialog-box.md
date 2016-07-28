@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
-ms.openlocfilehash: 771a80843ca5ab01cd06bd4e76c827469b0e9f00
+ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
+ms.openlocfilehash: ed2ab42174ce5d83fd60ace1c394515db1450e3d
 
 
 ---
@@ -32,14 +32,14 @@ Utilize estas informações para ajudar a especificar as opções na caixa de di
 
 Além das opções que pode escolher, poderá também estar a perguntar-se:
 
--   [O que é o ficheiro .ppdf criado automaticamente?](#what-s-the-ppdf-file-that-s-automatically-created-)
+-   [O que é o ficheiro .ppdf criado automaticamente?](#what-s-the-ppdf-file-that-s-automatically-created)
 
--   [Qual é a diferença entre proteção genérica e proteção incorporada (nativa)?](#what-s-the-difference-between-generic-protection-and-built-in-native-protection-)
+-   [Qual é a diferença entre proteção genérica e proteção incorporada (nativa)?](#what-s-the-difference-between-generic-protection-and-built-in-native-protection)
 
 |Opção|Descrição|
 |----------|---------------|
 |**UTILIZADORES**|Se ainda não tiver especificado um endereço de e-mail no Outlook, escreva os endereços de e-mail das pessoas que pretende que consigam abrir o ficheiro.<br /><br />Tenha em atenção que a aplicação de partilha RMS não suporta todos os endereços de e-mail.<br /><br />Se a sua organização utilizar a versão no local do Rights Management (AD RMS), os endereços de e-mail que pode especificar estão limitados às pessoas da sua organização. Quando isto se aplicar e tentar especificar endereços de e-mail externos, verá uma mensagem a indicar que a configuração da empresa permite a partilha de conteúdo protegido apenas dentro da empresa. <br /><br /> Se a sua organização utilizar o Azure RMS, os endereços de e-mail que especificar podem ser de pessoas da sua organização ou de pessoas noutra organização.<br /><br />Por exemplo: **juliam@contoso.com; p.barbosa@fabrikam.com**<br /><br />Atualmente, a aplicação de partilha RMS não suporta endereços de e-mail pessoais.|
-|**Proteção genérica**|Se esta opção estiver selecionada, significa que o ficheiro que selecionou não pode ser protegido nativamente. Para obter mais informações, consulte: [Qual é a diferença entre proteção genérica e proteção incorporada (nativa)?](#what-s-the-difference-between-generic-protection-and-built-in-native-protection-) nesta página.|
+|**Proteção genérica**|Se esta opção estiver selecionada, significa que o ficheiro que selecionou não pode ser protegido nativamente. Para obter mais informações, consulte: [Qual é a diferença entre proteção genérica e proteção incorporada (nativa)?](#what-s-the-difference-between-generic-protection-and-built-in-native-protection) nesta página.|
 |**Visualizador – Ver Apenas**<br /><br />**Revisor – Ver e Editar**<br /><br />**Coautor – Ver, Editar, Copiar e Imprimir**<br /><br />**Coproprietário – Todas as Permissões**<br /><br />Nota: todas estas opções têm um ícone redondo antes do nome, que representa um globo do mundo. Este ícone é utilizado porque, normalmente, seleciona uma destas opções quando envia o anexo para alguém numa organização diferente.|Selecione uma destas opções se pretender definir os direitos para o seu documento protegido. Clique em cada uma das opções para ver uma descrição.<br /><br />Quando escolhe uma destas opções, apenas as pessoas que especifica em **UTILIZADORES** têm os direitos especificados por si para abrir e utilizar o documento. Por exemplo, se reencaminharem o documento para outra pessoa, este não abre.|
 |Modelos de política que o administrador configura.<br /><br />Por exemplo, se o nome da sua empresa for Contoso, Lda.: **Contoso, Lda. – Apenas Visualização Confidencial**<br /><br />Nota: todas estas opções têm um ícone quadrado antes do nome, que representa um edifício de escritórios. Este ícone é utilizado porque, normalmente, seleciona uma destas opções quando envia o anexo para alguém na sua organização.|Quando partilha um documento com pessoas que trabalham na sua organização, são apresentados os modelos de política disponíveis que o seu administrador configura. Escolha um deles quando o documento não deve ser partilhado fora da sua organização.<br /><br />Ao escolher uma destas opções, o administrador define os direitos para o documento e quem o pode abrir.|
 |**Expirar estes documentos em**|Selecione esta opção apenas para ficheiros sensíveis ao tempo que os utilizadores que selecionou não devem poder abrir após uma data especificada por si. Ainda poderá abrir o ficheiro original, mas, após a meia-noite (o seu fuso horário atual), no dia em que especificou, as outras pessoas não poderão abrir o ficheiro.<br /><br />Esta opção não está disponível se selecionar um modelo de política que o seu administrador configura.|
@@ -71,7 +71,7 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 -   [Exemplos de utilização da aplicação de partilha RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [O que pretende fazer?](sharing-app-user-guide.md#what-do-you-want-to-do-)
+-   [O que pretende fazer?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## Consulte Também
 [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md)
@@ -79,6 +79,6 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

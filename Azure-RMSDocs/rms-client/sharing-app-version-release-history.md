@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/17/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -12,8 +12,9 @@ ms.technology: techgroup-identity
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
-ms.sourcegitcommit: b19eadd408837ebcd77b3ae2f9520f5286fcf41f
-ms.openlocfilehash: cad9d01735d8e649875bc6bba73d29573891e1d8
+translationtype: Human Translation
+ms.sourcegitcommit: e1b7dedd8556f3ccdb1642681cc4e1e5b1d09ccf
+ms.openlocfilehash: ee2860da964b52bc41c0aea219110453f024b954
 
 
 ---
@@ -26,7 +27,18 @@ A equipa do Rights Management atualiza regularmente a aplicação de partilha Ri
 
 As versões anteriores a 1 de janeiro de 2015 não estão listadas.
 
-> [!NOTE] Se tiver comentários ou uma pergunta sobre a aplicação de partilha RMS, envie uma mensagem de e-mail para [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question).
+> [!NOTE]
+> Se tiver comentários ou uma pergunta sobre a aplicação de partilha RMS, envie uma mensagem de e-mail para [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question).
+
+## Versão 1.0.2217.0
+
+**Lançada**: 13/07/2016
+
+**Correções**:
+
+- Os utilizadores em organizações com federação e a autenticação multifator já não recebem o erro 0x800704DC quando protegem conteúdo.
+
+
 
 ## Versão 1.0.2191.0
 **Lançamento**: 16/06/2016
@@ -120,6 +132,6 @@ As versões anteriores a 1 de janeiro de 2015 não estão listadas.
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: ff90f009f9fda90171bbeeb2a7bb421376d4695c
+ms.sourcegitcommit: 935c354f9bcd3be23a953cdeb08c7860257637d6
+ms.openlocfilehash: 5099a10a183f1c78595794511654226265e740c8
 
 
 ---
@@ -43,7 +43,7 @@ Instruções ao utilizar estas definições:
 
 -   *ConnectorFQDN* é o nome de balanceamento de carga que definiu no DNS para o conetor. Por exemplo, **rmsconnector.contoso.com**.
 
--   Utilize o prefixo HTTPS para o URL do conetor se configurou o conetor para utilizar o HTTPS para comunicar com os servidores no local. Para obter mais informações, consulte a secção [Configurar o conetor RMS para utilizar HTTPS](deploy-rms-connector.md#BKMK_ConfiguringHTTPS) deste tópico. Os URLs do Microsoft RMS utilizam sempre HTTPS.
+-   Utilize o prefixo HTTPS para o URL do conetor se configurou o conetor para utilizar o HTTPS para comunicar com os servidores no local. Para obter mais informações, veja a secção [Configurar o conetor RMS para utilizar HTTPS](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https) das instruções principais. Os URLs do Microsoft RMS utilizam sempre HTTPS.
 
 
 ## Definições de registo do Exchange 2016 ou Exchange 2013
@@ -217,6 +217,6 @@ Instruções ao utilizar estas definições:
 Voltar a [Implementar o conetor Azure Rights Management](deploy-rms-connector.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

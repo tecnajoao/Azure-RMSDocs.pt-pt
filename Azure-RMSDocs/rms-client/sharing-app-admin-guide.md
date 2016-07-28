@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: e67d0ab5537aa7444940a5e7ce3a653cc6e66993
+ms.sourcegitcommit: a58d50b33db95570b43fe1ec0f76bdf490ddd024
+ms.openlocfilehash: 164df467632b38f179d1c1192835f919641331a5
 
 
 ---
@@ -28,6 +28,8 @@ ms.openlocfilehash: e67d0ab5537aa7444940a5e7ce3a653cc6e66993
 Utilize as seguintes informações se for o responsável pela aplicação de partilha Microsoft Rights Management numa rede empresarial ou se quiser obter mais informações técnicas além das que se encontram no [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md) ou nas [FAQ sobre a Aplicação de Partilha Microsoft Rights Management do Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
 
 A aplicação de partilha RMS funciona melhor com o Azure RMS, porque esta configuração de implementação suporta o envio de anexos protegidos para utilizadores de outra organização e opções como notificações por e-mail e o controlo de documentos com revogação.  No entanto, a aplicação também funciona com a versão no local, o AD RMS, embora com algumas limitações. Para ver uma comparação detalhada das funcionalidades suportadas pelo Azure RMS e pelo AD RMS, consulte [Comparing Azure Rights Management and AD RMS (Comparação entre o Azure Rights Management e o AD RMS – em inglês)](../understand-explore/compare-azure-rms-ad-rms.md). Se tiver o AD RMS e quiser migrar para o Azure RMS, consulte [Migrar do AD RMS para o Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+
+Para obter uma descrição geral técnica da aplicação Rights Management, informações sobre a proteção nativa e genérica, e os tipos de ficheiro suportados, as extensões de nome de ficheiro e como pode alterar o nível de proteção predefinido, consulte [Descrição geral técnica e detalhes de proteção da aplicação de partilha Rights Management](sharing-app-admin-guide-technical.md). 
 
 ## Implementação automática da aplicação de partilha Microsoft Rights Management
 A versão para Windows da aplicação de partilha RMS suporta uma instalação com script, o que a torna adequada para implementações empresariais.
@@ -116,13 +118,13 @@ Para confirmar o êxito da operação, consulte a secção [Confirmar o êxito d
         > [!NOTE]
         > Este comando poderá pedir-lhe para introduzir as suas credenciais do Azure. Se o computador não estiver associado a um domínio, o pedido será apresentado. Se o computador estiver associado a um domínio, a ferramenta poderá utilizar credenciais em cache.
 
-2.  Nos computadores em que pretende instalar a aplicação de partilha RMS, execute o seguinte comando com privilégios elevados:
+2.  Nos computadores em que pretende instalar a aplicação de partilha RMS, execute o seguinte comando uma vez com privilégios elevados:
 
     ```
     setup.exe /s /configureO2010Admin /certificationUrl <certification_url>
     ```
 
-3.  Nos computadores em que pretende instalar a aplicação de partilha RMS, os utilizadores têm de executar o seguinte comando (não são necessários privilégios elevados). Existem várias formas de realizar esta operação. Pode pedir aos utilizadores para executarem o comando (por exemplo, através de uma ligação numa mensagem de e-mail ou de uma ligação no portal de suporte técnico) ou pode adicioná-lo ao script de início de sessão dos mesmos:
+3.  Nos computadores em que pretende instalar a aplicação de partilha RMS, cada utilizador tem de executar o seguinte comando (não são necessários privilégios elevados). Existem várias formas de realizar esta operação. Pode pedir aos utilizadores para executarem o comando (por exemplo, através de uma ligação numa mensagem de e-mail ou de uma ligação no portal de suporte técnico) ou pode adicioná-lo ao script de início de sessão dos mesmos:
 
     ```
     bin\RMSSetup.exe /configureO2010Only
@@ -367,6 +369,6 @@ Para obter informações técnicas adicionais com explicações sobre os diferen
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 

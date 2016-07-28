@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -12,8 +12,9 @@ ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
-ms.openlocfilehash: c243ad02bdbd5bd46ba1b2a4818839df8a7deb7b
+translationtype: Human Translation
+ms.sourcegitcommit: 06f615c993d54ab1e8e4a94d7414302481d919b4
+ms.openlocfilehash: cd19be1c0319a3d2a4609030c0114b07b461c1d8
 
 
 ---
@@ -29,10 +30,10 @@ Quando a [Aplicação de partilha Rights Management (RMS) está instalada no com
 >
 > Se a sua organização não utilizar o Azure Rights Management (Azure RMS) nem o AD RMS, pode candidatar-se a uma conta gratuita que aceitará as suas credenciais para que possa abrir ficheiros que estão protegidos pelo RMS:
 >
-> -   Para se candidatar a esta conta, clique na ligação para aderir ao [RMS para indivíduos](http://go.microsoft.com/fwlink/?LinkId=309469)
+> -   Para se candidatar a esta conta, clique na ligação para aderir ao [RMS para indivíduos](http://go.microsoft.com/fwlink/?LinkId=309469).
 >
 >     Quando se inscrever, utilize o seu endereço de e-mail da empresa em vez de um endereço de e-mail pessoal. Caso se esteja a inscrever porque recebeu um anexo protegido, utilize o mesmo endereço de e-mail que foi utilizado para lhe enviar a mensagem de e-mail.
-> -   Para mais informações, veja [RMS para indivíduos e Azure Rights Management](../understand-explore/rms-for-individuals.md)
+> -   Para mais informações, consulte [RMS para indivíduos e Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
 ## Para ver um ficheiro protegido
 Ao utilizar o Explorador de Ficheiros ou a mensagem de e-mail que contém o anexo, faça duplo clique no ficheiro protegido e introduza as suas credenciais, se lhe for pedido.
@@ -40,7 +41,7 @@ Ao utilizar o Explorador de Ficheiros ou a mensagem de e-mail que contém o anex
 Se vir duas versões do ficheiro, mas com extensões de nome de ficheiro diferentes, abra o ficheiro com a extensão de ficheiro .ppdf apenas se o outro ficheiro não abrir. Se também não conseguir abrir a versão .ppdf, instale primeiro a [Aplicação de partilha RMS](install-sharing-app.md), que sabe como abrir ficheiros com uma extensão de nome de ficheiro .ppdf.
 
 > [!NOTE]
-> Para obter mais informações, veja “[O que é o ficheiro .ppdf criado automaticamente?](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created-)”.
+> Para obter mais informações, veja «[O que é o ficheiro .ppdf criado automaticamente?](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created)».
 
 O modo como o ficheiro abre depende da forma como foi protegido, o que pode descobrir ao observar a extensão de nome de ficheiro. Em qualquer um dos casos, a abertura do ficheiro pode estar sujeita a auditoria e permanece auditada enquanto este estiver protegido. Além disso, se o ficheiro tiver sido enviado como um anexo de e-mail, o remetente poderá ser notificado por e-mail sempre que abrir o ficheiro.
 
@@ -52,7 +53,7 @@ O modo como o ficheiro abre depende da forma como foi protegido, o que pode desc
 
     ![Caixa de diálogo para um ficheiro .pfile partilhado por e-mail ao utilizar a aplicação de partilha RMS](../media/ADRMS_MSRMSApp_PfilePermission.png)
 
-- **O ficheiro tem uma extensão de nome de ficheiro *.ppdf* ou é um ficheiro de texto ou de imagem protegido (tal como *.ptxt* ou *.pjpg*
+- **O ficheiro tem uma extensão de nome de ficheiro *.ppdf* ou é um ficheiro de texto ou de imagem protegido (tal como *.ptxt* ou *.pjpg*)**
 
     O ficheiro foi protegido nativamente como uma cópia só de leitura.
 
@@ -82,9 +83,9 @@ Se pretender efetuar outras ações além da leitura (por exemplo, editar, copia
 
     Por exemplo, se um ficheiro tiver sido protegido com o nome de ficheiro documento.vsdx.pfile, visualize o ficheiro e, no Explorador de Ficheiros, guarde-o como documento.vsdx.
 
-    O novo ficheiro já não está protegido. Se pretender protegê-lo, tem de o fazer manualmente. Para obter instruções, veja [Proteger um ficheiro num dispositivo (proteger no local) ao utilizar a aplicação de partilha Rights Management](sharing-app-protect-in-place.md)
+    O novo ficheiro já não está protegido. Se pretender protegê-lo, tem de o fazer manualmente. Para obter instruções, veja [Proteger um ficheiro num dispositivo (proteger no local) ao utilizar a aplicação de partilha Rights Management](sharing-app-protect-in-place.md).
 
-- **O ficheiro tem uma extensão de nome de ficheiro *.ppdf* ou é um ficheiro de texto ou de imagem protegido (tal como *.ptxt* ou *.pjpg*
+- **O ficheiro tem uma extensão de nome de ficheiro *.ppdf* ou é um ficheiro de texto ou de imagem protegido (tal como *.ptxt* ou *.pjpg*)**
 
     Só pode ver o ficheiro e, se o mover ou mudar o nome, a proteção permanece aplicada ao ficheiro.
 
@@ -100,13 +101,13 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 -   [Exemplos de utilização da aplicação de partilha RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [O que pretende fazer?](sharing-app-user-guide.md#what-do-you-want-to-do-)
+-   [O que pretende fazer?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## Consulte Também
 [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

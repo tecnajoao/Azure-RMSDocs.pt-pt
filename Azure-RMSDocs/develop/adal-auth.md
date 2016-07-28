@@ -1,7 +1,7 @@
 ---
 title: "Configurar o Azure RMS para autenticação ADAL | Azure RMS"
 description: "Descreve os passos para configurar a autenticação baseada no Azure ADAL"
-keywords: authentication, RMS, ADAL
+keywords: "autenticação, RMS, ADAL"
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 06/28/2016
@@ -20,7 +20,7 @@ ms.openlocfilehash: 9b912a2a66838dc6e6a3b227bcfe4ac589fe06c1
 
 ---
 
-# Configurar o Azure RMS para autenticação ADAL
+# Configurar o Azure RMS para a autenticação ADAL
 
 Este tópico descreve os passos para configurar a autenticação baseada no Azure ADAL.
 
@@ -109,6 +109,6 @@ Após a inscrição no Microsoft Azure:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

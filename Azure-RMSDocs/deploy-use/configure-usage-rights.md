@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/16/2016
+ms.date: 07/16/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3883a46440f016138dd50d061a58089253721719
-ms.openlocfilehash: 21b92fae5fd00d80f9afd2e80d21c08bfa47b7b2
+ms.sourcegitcommit: 4d6e0af200410b5af4e290ee0e6f94725916ecde
+ms.openlocfilehash: e9f2fe16494af2286d8ed77d0894bb5229e7c246
 
 
 ---
@@ -245,8 +245,8 @@ Utilize a tabela seguinte para obter uma lista destes níveis de permissões e u
 |---------------------|----------------|---------------------------------|
 |Visualizador|Portal clássico do Azure<br /><br />Aplicação de partilha Rights Management para Windows|Ver, Abrir, Ler; Responder; Responder a Todos|
 |Revisor|Portal clássico do Azure<br /><br />Aplicação de partilha Rights Management para Windows|Ver, Abrir, Ler; Guardar; Editar Conteúdo, Editar; Responder [[1]](#footnote-1); Responder a Todos [[1]](#footnote-1); Reencaminhar [[1]](#footnote-1)|
-|Coautor|Portal clássico do Azure<br /><br />Aplicação de partilha Rights Management para Windows|Ver, Abrir, Ler; Guardar; Editar Conteúdo, Editar; Copiar; Ver Direitos; Alterar Direitos; Permitir Macros; Guardar Como, Exportar; Imprimir; Responder [[1]](#footnote-1); Responder a Todos [[1]](#footnote-1); Reencaminhar [[1]](#footnote-1)|
-|Coproprietário|Portal clássico do Azure<br /><br />Aplicação de partilha Rights Management para Windows|Ver, Abrir, Ler; Guardar; Editar Conteúdo, Editar; Copiar; Ver Direitos; Alterar Direitos; Permitir Macros; Guardar Como, Exportar; Imprimir; Responder [[1]](#footnote-1); Responder a Todos [[1]](#footnote-1); Reencaminhar [[1]](#footnote-1); Controlo Total|
+|Coautor|Portal clássico do Azure<br /><br />Aplicação de partilha Rights Management para Windows|Ver, Abrir, Ler; Guardar; Editar Conteúdo, Editar; Copiar; Ver Direitos; Permitir Macros; Guardar Como, Exportar; Imprimir; Responder [[1]](#footnote-1); Responder a Todos [[1]](#footnote-1); Reencaminhar [[1]](#footnote-1)|
+|Coproprietário|Portal clássico do Azure<br /><br />Aplicação de partilha Rights Management para Windows|Ver, Abrir, Ler; Guardar; Editar Conteúdo, Editar; Copiar; Ver Direitos; Permitir Macros; Guardar Como, Exportar; Imprimir; Responder [[1]](#footnote-1); Responder a Todos [[1]](#footnote-1); Reencaminhar [[1]](#footnote-1) Controlo Total|
 
 ----
 
@@ -289,6 +289,6 @@ Um utilizador pretende enviar algumas informações por e-mail a pessoas especí
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 

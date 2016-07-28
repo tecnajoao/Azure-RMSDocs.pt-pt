@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 7a2436a6ebb17e4336f1321b8f3742e34ea59689
+ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
+ms.openlocfilehash: 3592fb7c386eaeddc839c11a494f94d9b7564472
 
 
 ---
@@ -559,7 +559,7 @@ Embora não possa configurar a IRM para o OneDrive para Empresas dos utilizadore
 
     3.  Procure os `$webUrls` e substitua os valores de exemplo pelos URLs da Web do OneDrive para Empresas dos seus utilizadores, adicionando ou eliminando tantas entradas quantas for necessário.
 
-        Em alternativa, veja os comentários no script sobre como substituir esta matriz ao importar um ficheiro .CSV que contenha todos os URLs que tem de configurar.  Fornecemos outro script de exemplo que permite procurar e extrair automaticamente os URLs para popular este ficheiro .CSV. Quando estiver pronto para efetuar este procedimento, expanda a secção [Script adicional para exportar todos os URLs do OneDrive para Empresas para um ficheiro .CSV](#BKMK_Script_OD4B_URLS) imediatamente após estes passos.
+        Em alternativa, veja os comentários no script sobre como substituir esta matriz ao importar um ficheiro .CSV que contenha todos os URLs que tem de configurar.  Fornecemos outro script de exemplo que permite procurar e extrair automaticamente os URLs para popular este ficheiro .CSV. Quando estiver pronto para efetuar este procedimento, veja a secção [Script adicional para exportar todos os URLs do OneDrive para Empresas para um ficheiro .CSV](#additional-script-to-output-all-onedrive-for-business-urls-to-a-csv-file) imediatamente após estes passos.
 
         O URL da Web do OneDrive para Empresas do utilizador tem o seguinte formato: https://*&lt;nome do inquilino&gt;*-my.sharepoint.com/personal/*&lt;nome_de_utilizador&gt;*_*&lt;nome do inquilino&gt;*_com
 
@@ -1106,6 +1106,6 @@ Disconnect-SPOService -ErrorAction SilentlyContinue
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

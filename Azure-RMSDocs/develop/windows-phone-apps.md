@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 90552435666b8f25c893fcffe8c8cf3355a5942d
-ms.openlocfilehash: 136d6e9d0c45a9779f87e32eed8288fe8ee3a622
+ms.sourcegitcommit: 79397c82d9478cbd55630a376fe2d12f3873ebc4
+ms.openlocfilehash: 1728a094dfaa869ae490e86d10ffe5ebcf4bfa5d
 
 
 ---
@@ -28,8 +28,8 @@ As aplicações do Windows Phone podem utilizar o SDK Microsoft Rights Managemen
 Este tópico descreve como configurar o ambiente para criar as suas novas aplicações.
 
 -   [Pré-requisitos](#prerequisites)
--   [Configurar o ambiente de desenvolvimento](#configuring_your_development_environment)
--   [Consulte Também](#see_also)
+-   [Configurar o ambiente de desenvolvimento](#configuring-your-development-environment)
+-   [Consulte Também](#see-also)
 
 ## Pré-requisitos
 
@@ -93,6 +93,6 @@ Agora, está pronto para criar as suas novas aplicações do Windows Phone.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

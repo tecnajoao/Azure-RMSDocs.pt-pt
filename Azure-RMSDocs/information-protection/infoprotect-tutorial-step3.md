@@ -3,22 +3,24 @@ title: "Tutorial de início rápido do Azure Information Protection, passo 3 | A
 description: "Passo 3 de um tutorial de apresentação para experimentar rapidamente o Microsoft Azure Information Protection na sua organização com apenas 4 passos que devem demorar menos de 15 minutos."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 translationtype: Human Translation
-ms.sourcegitcommit: 7f85c673cd1e8055d6a27dcc49b5da18a7e12f98
-ms.openlocfilehash: 41ebf56c55d94e9aecf9538d474c8fa2c77ae83e
+ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
+ms.openlocfilehash: 65596a71b07e830377c55dc04b7187251315a634
 
 
 ---
 
 # Passo 3: instalar o cliente do Azure Information Protection 
 
-*Aplica-se a: pré-visualização do Azure Information Protection*
+>*Aplica-se a: pré-visualização do Azure Information Protection*
+
+**[Estas informações são preliminares e estão sujeitas a alterações. ]**
 
 Neste passo, irá instalar o cliente Azure Information Protection, para que a política que acabou de configurar seja transferida para um PC com Windows e apresentar as etiquetas em aplicações do Office. 
 
@@ -41,11 +43,16 @@ Neste passo, irá instalar o cliente Azure Information Protection, para que a po
 
 Está pronto para o passo final, ver a classificação, etiquetagem e proteção em ação.
 
+|Se pretender mais informações|Informações adicionais|
+|--------------------------------|--------------------------|
+|Sobre o software de cliente|[Instalar o cliente do Azure Information Protection](info-protect-client.md)|
+
+
 >[!div class="step-by-step"]
 [&#171; Passo 2](infoprotect-tutorial-step2.md)
 [Passo 4 &#187;](infoprotect-tutorial-step4.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO5-->
 
 

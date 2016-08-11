@@ -3,22 +3,24 @@ title: "Tutorial de início rápido do Azure Information Protection, passo 4 | A
 description: "Passo 4 de um tutorial de apresentação para experimentar rapidamente o Microsoft Azure Information Protection na sua organização com apenas 4 passos que devem demorar menos de 15 minutos."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/15/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 translationtype: Human Translation
-ms.sourcegitcommit: e80ea074fb1f6e571b846969b15c08cf7108b11c
-ms.openlocfilehash: dcb34eb8bfee6232d32245634dc56f717257b644
+ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
+ms.openlocfilehash: cdd8dee1837c34caaeb0f8a1947dea37504e422a
 
 
 ---
 
 # Passo 4: ver classificação, etiquetas e proteção em ação 
 
-*Aplica-se a: pré-visualização do Azure Information Protection*
+>*Aplica-se a: pré-visualização do Azure Information Protection*
+
+**[Estas informações são preliminares e estão sujeitas a alterações. ]**
 
 Agora que já tem um documento do Word aberto com o cliente Azure Information Protection instalado, está pronto para ver como é fácil iniciar a etiquetagem e proteger o seu documento, utilizando a política que configurámos.
 
@@ -75,6 +77,6 @@ Quando tiver terminado o seu teste, poderá ser útil ver as [perguntas mais fre
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO5-->
 
 

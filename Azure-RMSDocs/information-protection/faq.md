@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/20/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,15 +13,17 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e60cd910a8e995a2681d7eb87a13f815183d9124
-ms.openlocfilehash: 846578a84df383821a64d32ce6dd69290a5fdee9
+ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
+ms.openlocfilehash: 7d5b58efb4b789ba4f3d897ae3a475cbd2c679e5
 
 
 ---
 
 # Perguntas mais frequentes sobre a pré-visualização do Azure Information Protection
 
-*Aplica-se a: pré-visualização do Azure Information Protection*
+>*Aplica-se a: pré-visualização do Azure Information Protection*
+
+**[Estas informações são preliminares e estão sujeitas a alterações. ]**
 
 Tem alguma pergunta sobre a versão de pré-visualização do Azure Information Protection?  Verifique se a resposta está aqui. 
 
@@ -61,12 +63,6 @@ Tem de ter uma subscrição do Azure para configurar as políticas do Azure Info
 
 Quaisquer alterações aos requisitos da subscrição serão comunicadas no [Blogue Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
 
-## Se o Azure Information Protection está agora disponível para pré-visualização pública, por que motivo não consigo encontrá-lo no portal do Azure?
-
-De momento, tem de utilizar esta ligação para ver o Azure Information Protection no portal: https://portal.azure.com/?Microsoft_Azure_InformationProtection=true
-
-Em seguida, no menu Hub, clique em **Procurar** e escreva "Information Protection" na caixa Filtro. Na lista de resultados, selecione **Azure Information Protection**.
-
 ## É necessário ser um administrador global para experimentar a pré-visualização do Azure Information Protection?
 
 Para a versão só de pré-visualização, qualquer utilizador autenticado pelo Azure pode ver e configurar a política do Azure Information Protection do respetivo inquilino no portal do Azure.
@@ -89,7 +85,7 @@ Isto está documentado e será atualizado em [Requisitos do Azure Information Pr
 
 Sempre que um utilizador abre uma aplicação do Office, o cliente Azure Information Protection verifica se existe uma versão posterior da política do Azure Information Protection. Se houver uma versão posterior, o cliente transfere-a utilizando uma ligação HTTPS para proteger os dados. 
 
-Se a aplicação já estiver carregada quando uma política de Azure Information Protection for atualizada, tem de fechar e reabrir a aplicação para obter a versão mais recente da política.
+Se várias instâncias da aplicação Office forem carregado quando uma nova política do Azure Information Protection é publicada, deve fechar todas as instâncias para obter a versão mais recente da política. Por exemplo, se tiver dois documentos do Word abertos e pretende testar a política do Azure Information Protection num único documento: feche ambos documentos do Word e reabra o documento que pretende utilizar com a política mais recente.
 
 ## Onde podem ser armazenados os ficheiros para utilizar o Azure Information Protection? 
 
@@ -113,7 +109,7 @@ No portal do Azure, pode utilizar padrões predefinidos, como "Números de cart�
 
 Irá ver um exemplo desta situação no [Tutorial de início rápido do Azure Information Protection](infoprotect-quick-start-tutorial.md). 
 
-A precisão da classificação depende da forma como configurar a regra de classificação, que se baseia em condições. Atualmente, as condições suportam padrões de texto e expressões regulares. Para obter uma explicação de cada uma das opções disponíveis durante a pré-visualização, com algumas sugestões de exemplos que pode testar, consulte a mensagem do Yammer, [Descrição da correspondência de conteúdo para os nossos tipos de informação predefinidos](https://www.yammer.com/askipteam/#/Threads/show?threadId=737163344). A deteção é executada quando o documento é guardado ou um e-mail é enviado.
+A precisão da classificação depende da forma como configurar a regra de classificação, que se baseia em condições. Atualmente, as condições suportam padrões de texto e expressões regulares. Para obter uma explicação sobre cada uma das opções disponíveis durante a pré-visualização, com algumas sugestões de exemplos para testar, consulte [Como configurar condições para classificação automática e recomendada para o Azure Information Protection](configure-policy-classification.md). A deteção é executada quando o documento é guardado ou um e-mail é enviado.
 
 Para a melhor experiência de utilizador e para assegurar a continuidade do negócio, recomendamos que comece por ações de recomendação do utilizador em vez de ações totalmente automáticas. Isto permite aos utilizadores aceitar a ação de etiquetagem ou proteção ou substituir estas sugestões.   
 
@@ -121,7 +117,7 @@ Para a melhor experiência de utilizador e para assegurar a continuidade do neg�
 
 Sim. Utilize o portal do Azure para configurar se pretende utilizar a classificação automática ou fazer uma recomendação aos utilizadores, definindo a opção **Selecione a forma como esta etiqueta é aplicada: automaticamente ou recomendada para o utilizador** como **Recomendada**.
 
-Irá ver um exemplo desta situação no [Tutorial de início rápido do Azure Information Protection](infoprotect-quick-start-tutorial.md).
+Irá ver um exemplo desta situação no [Tutorial de início rápido do Azure Information Protection](infoprotect-quick-start-tutorial.md).  
 
 ## Posso impor a classificação de todos os documentos?
 
@@ -140,7 +136,7 @@ Sim. Para se certificar de que os utilizadores justificam as suas alterações d
 
 No portal do Azure, pode selecionar um modelo do Azure Rights Management para proteger automaticamente o conteúdo, de acordo com o nível de classificação que especificar.
 
-Irá ver um exemplo desta situação no [Tutorial de início rápido do Azure Information Protection](infoprotect-quick-start-tutorial.md).
+Irá ver um exemplo desta situação no [Tutorial de início rápido do Azure Information Protection](infoprotect-quick-start-tutorial.md). Para mais informações, consulte [Como configurar uma etiqueta para aplicar proteção Rights Management](configure-policy-protection.md).
 
 ## Um ficheiro pode ser classificado com duas classificações diferentes?
 
@@ -188,6 +184,6 @@ Em seguida, visite o nosso [site Yammer](https://www.yammer.com/askipteam/#/thre
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO5-->
 
 

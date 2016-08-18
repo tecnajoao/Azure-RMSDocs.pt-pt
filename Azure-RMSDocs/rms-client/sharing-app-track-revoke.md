@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
-ms.openlocfilehash: 9d5c9558e809779940fac095a789730d5e5924e6
+ms.sourcegitcommit: e9ad2e518b4a7dac608572eb5eb2d99bbda4754e
+ms.openlocfilehash: 4c757494a1fe948ed26b32f86844f7b5896c919b
 
 
 ---
@@ -33,9 +33,11 @@ Ao aceder a este site, inicie sessão para controlar os seus documentos. Desde q
 
 -   Se precisar deixar de partilhar um documento: clique em **Revogar acesso**, tome nota do período de tempo durante o qual o documento continuará disponível, decida se pretende informar as pessoas de que está a revogar o acesso ao documento partilhado anteriormente e forneça uma mensagem personalizada. Ao revogar um documento, não elimina o documento que partilhou, mas os utilizadores autorizados deixam de o poder abrir.
 
--   Se pretender exportar para Excel: clique em **Abrir no Excel**, para que possa modificar os dados e criar as suas próprias vistas e gráficos.
+-   Se pretender exportar para Excel: clique em **Exportar para CSV**, para que possa modificar os dados e criar as suas próprias vistas e gráficos.
 
 -   Se pretender configurar notificações por e-mail: clique em **Definições** e selecione como e se deve receber um e-mail quando alguém aceder ao documento.
+
+- Se pretender controlar e revogar documentos partilhados para outras pessoas: os administradores do Azure RMS podem controlar e revogar documentos para outras pessoas clicando no ícone de Administração. Apenas os administradores veem este ícone.
 
 -   Se tiver dúvidas ou quiser fornecer comentários sobre o site de controlo de documentos: clique no ícone de Ajuda para aceder às [FAQ acerca do Controlo de Documentos](http://go.microsoft.com/fwlink/?LinkId=523977).
 
@@ -50,6 +52,11 @@ Ao aceder a este site, inicie sessão para controlar os seus documentos. Desde q
     ![Selecionar Controlar a Utilização do Outlook ao utilizar a aplicação de partilha RMS ](../media/ADRMS_MSRMSApp_OutlookTrackUsage.png)
 
 Se não vir estas opções do RMS, é provável que a aplicação de partilha RMS não esteja instalada no seu computador, que a versão mais recente não esteja instalada ou que seja necessário reiniciar o computador para concluir a instalação. Para obter mais informações sobre como instalar a aplicação de partilha, consulte [Transferir e instalar a aplicação de partilha Rights Management](install-sharing-app.md).
+
+> [!NOTE] 
+> Se tiver instalado a versão de pré-visualização do [cliente do Azure Information Protection](../information-protection/info-protect-client.md), versão 1.0.233 ou posterior, também pode aceder ao site de controlo de documentos utilizando o botão **Proteger**: 
+> 
+> - Numa aplicação do Office, no separador **Base**, no grupo **Proteção**, clique em **Proteger** e, em seguida, clique em  > **Controlar utilização**. 
 
 ### Outras formas de controlar e revogar os documentos
 Além de controlar os seus documentos em computadores com o Windows através da utilização de aplicações do Office, também pode utilizar estas alternativas:
@@ -93,13 +100,13 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 -   [Exemplos de utilização da aplicação de partilha RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [O que pretende fazer?](sharing-app-user-guide.md#what-do-you-want-to-do-)
+-   [O que pretende fazer?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## Consulte Também
 [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

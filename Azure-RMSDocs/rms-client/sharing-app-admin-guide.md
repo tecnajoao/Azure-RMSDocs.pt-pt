@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/21/2016
+ms.date: 08/05/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0ac4264f20208f999c9ad9bdd2c4759e65ae021b
-ms.openlocfilehash: 5344c38a31aa0ceb894f330f363442bd2c0d9375
+ms.sourcegitcommit: f7cf74355aa39928fd66a4be13a9b65428da7480
+ms.openlocfilehash: 08226cd930f90bc7c9cda4c65315ee6472fbcf52
 
 
 ---
@@ -351,6 +351,33 @@ Os URLs seguintes são utilizados para o controlo de documentos e têm de ser pe
 
 -   https://&#42;.microsoftonline-p.com
 
+### Controlar e revogar documentos para utilizadores
+
+Quando os utilizadores iniciam sessão no site de controlo de documentos, podem controlar e revogar documentos que partilharam utilizando a aplicação de partilha RMS. Quando iniciar sessão como administrador do Azure RMS (administrador global), pode clicar no ícone de Administração na parte superior direita da página, o que muda para o modo de Administrador para que possa ver os documentos que foram partilhados pelos utilizadores na sua organização.
+
+As ações que executar no modo de Administrador são auditadas e registadas nos ficheiros de registo de utilização e tem de confirmar para continuar. Para obter mais informações sobre este registo, veja a secção seguinte.
+
+Quando estiver no modo de Administrador, pode procurar por utilizador ou documento. Se procurar por utilizador, verá todos os documentos partilhados pelo utilizador especificado. Se procurar por documento, verá todos os utilizadores na sua organização que partilharam esse documento. Em seguida, pode explorar os resultados da pesquisa para controlar os documentos que os utilizadores partilharam e revogar estes documentos, se necessário. 
+
+Para sair do modo de Administrador, clique em **X** junto a **Sair do modo de administrador**.
+
+Para obter instruções sobre como utilizar o site de controlo de documentos, veja [Controlar e revogar documentos](sharing-app-track-revoke.md) no guia de utilizador.
+
+
+
+### Registo de utilização para o site de controlo de documentos
+
+São aplicáveis dois campos nos ficheiros de registo de utilização ao controlo de documentos: **AdminAction** e **ActingAsUser**.
+
+**AdminAction** - Este campo tem um valor de true quando um administrador utiliza o site de controlo de documentos no modo de Administrador, por exemplo, para revogar um documento em nome de um utilizador ou para ver quando foi partilhado. Este campo está vazio quando um utilizador inicia sessão no site de controlo de documentos.
+
+**ActingAsUser** - Quando o campo AdminAction tiver o valor de true, este campo contém o nome do utilizador sobre o qual o administrador está a agir quando procurar por utilizador ou proprietário do documento. Este campo está vazio quando um utilizador inicia sessão no site de controlo de documentos. 
+
+Também existem tipos de pedido que registam a forma como os utilizadores e os administradores estão a utilizar o site de controlo de documentos. Por exemplo, **RevokeAccess** é o tipo de pedido quando um utilizador ou um administrador em nome de um utilizador revogou um documento no site de controlo de documentos. Utilize este tipo de pedido juntamente com o campo AdminAction para determinar se o utilizador revogou o seu próprio documento (o campo AdminAction está vazio) ou um administrador revogou um documento em nome de um utilizador (AdminAction é true).
+
+
+Para mais informações sobre o registo de utilização, consulte [Registo e análise da utilização do Azure Rights Management](../deploy-use/log-analyze-usage.md)
+
 ## Apenas AD RMS: suporte para múltiplos domínios de e-mail dentro da sua organização
 Se utilizar o AD RMS e os utilizadores da sua organização tiverem múltiplos domínios de e-mail, possivelmente como resultado de uma fusão ou aquisição, tem de criar a seguinte edição de registo:
 
@@ -369,6 +396,6 @@ Para obter informações técnicas adicionais com explicações sobre os diferen
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

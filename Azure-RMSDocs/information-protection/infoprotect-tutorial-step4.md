@@ -3,15 +3,15 @@ title: "Tutorial de início rápido do Azure Information Protection, passo 4 | A
 description: "Passo 4 de um tutorial de apresentação para experimentar rapidamente o Microsoft Azure Information Protection na sua organização com apenas 4 passos que devem demorar menos de 15 minutos."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: cdd8dee1837c34caaeb0f8a1947dea37504e422a
+ms.sourcegitcommit: d17bacf8e148622db0e2393f40d3fd37c8f086eb
+ms.openlocfilehash: a36433167462275e91059f9eb3a2141ffa2797d5
 
 
 ---
@@ -28,7 +28,7 @@ A classificação e a proteção ocorrem quando guarda o documento, mas antes de
 
 ### Para alterar manualmente a nossa etiqueta predefinida:
 
-- Na barra do Information Protection, clique no ícone Editar etiqueta junto de **Interna**. Esta ação apresenta as etiquetas disponíveis. Se escolher **Pessoal**, ser-lhe-á pedido para indicar a razão pela qual está a reduzir o nível de classificação. Selecione **Este ficheiro já não necessita dessa classificação**, e clique em **Confirmar**.  
+- Na barra do Information Protection, selecione a etiqueta **Pessoal**ser-lhe-á pedido para indicar a razão pela qual está a reduzir o nível de classificação. Selecione **Este ficheiro já não necessita dessa classificação**, e clique em **Confirmar**.  
 
     O valor **Sensibilidade** é alterado para **Pessoal**.
 
@@ -36,7 +36,7 @@ A classificação e a proteção ocorrem quando guarda o documento, mas antes de
 
 ### Para remover a classificação por completo:
 
-- Na barra do Information Protection, clique no ícone Editar etiqueta junto de **Pessoal**. Esta ação apresenta as etiquetas disponíveis. Mas em vez de selecionar uma das etiquetas, desta vez, clique no ícone Remover etiqueta. Clique em **OK** para confirmar e fornecer a justificação para esta ação.  
+- Na barra do Information Protection, clique no ícone **Editar etiqueta** junto a **Pessoal**. Esta ação apresenta as etiquetas disponíveis. No entanto, em vez de selecionar uma das etiquetas, desta vez, clique no ícone **Remover etiqueta**. Clique em **OK** para confirmar e fornecer a justificação para esta ação.  
 
     Verá que o valor **Sensibilidade** apresenta **Não definido**, a opção visualizada pelos utilizadores inicialmente se não definir uma etiqueta predefinida.
 
@@ -77,6 +77,6 @@ Quando tiver terminado o seu teste, poderá ser útil ver as [perguntas mais fre
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

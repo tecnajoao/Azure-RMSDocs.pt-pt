@@ -3,15 +3,15 @@ title: "Tutorial de início rápido do Azure Information Protection | Azure Righ
 description: "Um tutorial de apresentação para experimentar rapidamente o Microsoft Azure Information Protection na sua organização com apenas 4 passos que devem demorar menos de 15 minutos."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 17670eadc7cbf6111ab7fd0a9322e51d401b86e1
+ms.sourcegitcommit: 7d599aef75272eff5527294141bb0eb98d041b1b
+ms.openlocfilehash: 419bfcde6915bd6c8db9cf5ddb268f6d70c83768
 
 
 ---
@@ -38,11 +38,9 @@ Para concluir este tutorial, terá de ter o seguinte:
   > [!TIP] 
   > Se precisar de obter uma ou ambas as subscrições, faça o seguinte com antecedência porque este processo pode, por vezes, demorar algum tempo a concluir.
 
-- Uma conta de administrador global para iniciar sessão no centro de administração do Office 365 ou no portal clássico do Azure se necessitar de ativar o serviço Rights Management. Esta conta também tem de ter um endereço de e-mail e um serviço de e-mail a funcionar (por exemplo, Exchange Online ou Exchange Server).
+- Uma conta de administrador global para iniciar sessão no centro de administração do Office 365 ou no portal clássico do Azure se necessitar de ativar o serviço Rights Management ou selecionar modelos do Azure RMS no portal do Azure. Esta conta também tem de ter um endereço de e-mail e um serviço de e-mail a funcionar (por exemplo, Exchange Online ou Exchange Server).
 
 - Um computador que execute o Windows (no mínimo, o Windows 7 com o Service Pack 1) e que tenha instalado o Office Professional Plus 2016, o Office Professional Plus 2013 com o Service Pack 1 ou o Office Professional Plus 2010. 
-
-- Se tiver o Active Directory Rights Management Services (AD RMS) implementado na sua organização: o computador tem de ser um computador de grupo de trabalho que não tenha utilizado anteriormente AD RMS. Isto é necessário se quiser proteger documentos e assegura que o computador transfere modelos apenas a partir do Azure Rights Management. Um computador não pode ligar ao AD RMS e ao Azure RMS ao mesmo tempo. Se estiver interessado em informações sobre migração, veja [Migrar do AD RMS para o Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md).   
 
 Vamos começar.
 
@@ -53,6 +51,6 @@ Vamos começar.
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

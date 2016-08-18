@@ -3,15 +3,15 @@ title: Como configurar uma etiqueta para marcas visuais para o Azure Information
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 9f2d28e4f162891497a7b0518322338628118b9d
+ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
+ms.openlocfilehash: 78b68c7a502776c6492437e9b8a5c3f1ebf27f95
 
 
 ---
@@ -36,23 +36,41 @@ Informações adicionais sobre este marcadores visuais:
 
     - PowerPoint: as arcas d'água são aplicadas ao diapositivo principal, como uma imagem de fundo.
 
+- Pode especificar apenas uma cadeia de texto ou utilizar [variáveis](#using-variables-in-the-text-string) para criar dinamicamente a cadeia de texto quando o cabeçalho, rodapé ou marca d'água for aplicada. 
+
 Utilize as seguintes instruções para configurar marcas visuais para uma etiqueta.
 
-1. Inicie sessão no [portal do Azure](https://portal.azure.com).
- 
-2. No menu Hub, clique em **Procurar** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
+1. Se ainda não o fez, inicie sessão no [portal do Azure](https://portal.azure.com) e, em seguida, navegue para o painel **Azure Information Protection**. 
+    
+    Por exemplo, no menu do hub, clique em **Procurar** e comece a escrever **Information** na caixa Filtro. Selecione **Azure Information Protection**.
 
-3. No painel do **Azure Information Protection**, selecione a etiqueta que pretende configurar com marcas visuais.
+2. No painel do **Azure Information Protection**, selecione a etiqueta que pretende configurar com marcas visuais.
 
-4. No painel **Etiqueta**, na secção **Definir marcas visuais (como o cabeçalho ou o rodapé)** configure as definições para as marcas visuais que pretende e, em seguida, clique em **Guardar**:
+3. No painel **Etiqueta**, na secção **Definir marcas visuais (como o cabeçalho ou o rodapé)** configure as definições para as marcas visuais que pretende e, em seguida, clique em **Guardar**:
 
     - Para configurar um cabeçalho: para **Documentos com esta etiqueta têm um cabeçalho**, selecione **Ativado** se pretender um cabeçalho e, caso contrário, clique em **Desativado**. Se selecionar **Ativado**, em seguida, especifique o texto do cabeçalho, o tamanho, a cor e o alinhamento para o cabeçalho.
-
+    
     - Para configurar um rodapé: para **Documentos com esta etiqueta têm um rodapé**, selecione **Ativado** se pretender um rodapé e, caso contrário, clique em **Desativar**. Se selecionar **Ativado**, em seguida, especifique o texto do rodapé, o tamanho, a cor e o alinhamento para o cabeçalho.
+    
+    - Para configurar uma marca d’água: para **Documentos com esta etiqueta têm uma marca d’água**, selecione **Ativado** se pretender uma marca d’água e, caso contrário, clique em **Desativado**. Se selecionar **Ativado**, em seguida, especifique o texto da marca d’água, o tamanho, a cor e o modelo para o cabeçalho. 
 
-    - Para configurar uma marca d’água: para **Documentos com esta etiqueta têm uma marca d’água**, selecione **Ativado** se pretender uma marca d’água e, caso contrário, clique em **Desativado**. Se selecionar **Ativado**, em seguida, especifique o texto da marca d’água, o tamanho, a cor e o modelo para o cabeçalho.
+4. Para disponibilizar as alterações aos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
 
-5. Para disponibilizar as alterações aos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
+## Utilizar variáveis na cadeia de texto
+
+Pode utilizar as seguintes variáveis na cadeia de texto para o seu cabeçalho, rodapé ou marca d'água:
+
+- `${Item.Label}` para a etiqueta selecionada
+
+- `${Item.Name}` para o nome de ficheiro ou assunto de e-mail
+
+- `${Item.Location}` para o caminho de ficheiro
+
+- `${User.Name}` para o proprietário do documento ou e-mail
+
+- `${Event.DateTime}` para a data e hora quando a etiqueta selecionada foi definida 
+    
+Exemplo: se especificar a cadeia `Document: ${item.name} Sensitivity: ${item.label}` para o rodapé de etiqueta Secreto, o texto do rodapé aplicado a um project.docx documentado será **Documento: project.docx Sensibilidade: Secreto**.
 
 ## Passos seguintes
 
@@ -62,6 +80,6 @@ Para mais informações sobre como configurar a política do Azure Information P
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

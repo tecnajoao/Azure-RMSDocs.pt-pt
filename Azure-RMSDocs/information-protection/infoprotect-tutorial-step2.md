@@ -3,15 +3,15 @@ title: "Tutorial de início rápido do Azure Information Protection, passo 2 | A
 description: "Passo 2 de um tutorial de apresentação para experimentar rapidamente o Microsoft Azure Information Protection na sua organização com apenas 4 passos que devem demorar menos de 15 minutos."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: cab45baf19af4ab548f5f112946d168d93a95d49
-ms.openlocfilehash: fa17a5b18162ca7ca1ac0cf9a1052dd01d2057aa
+ms.sourcegitcommit: 09cb56aaa0d7d97073623c518aa331d591a376e3
+ms.openlocfilehash: 65d758635b77ee7d6c423a1400a7621e8e05b14d
 
 
 ---
@@ -24,13 +24,20 @@ ms.openlocfilehash: fa17a5b18162ca7ca1ac0cf9a1052dd01d2057aa
 
 Apesar do Azure Information Protection ser fornecido com uma política predefinida que pode utilizar sem configuração, vamos ver essa política e efetuar algumas alterações.
 
-1. Inicie sessão no [portal do Azure](https://portal.azure.com).
+1. Inicie sessão no [portal do Azure](https://portal.azure.com). Se pretender testar a proteção, bem como a classificação e a etiquetagem, inicie sessão como administrador global para que possa obter os modelos do Azure Rights Management.
  
-2. No menu Hub, clique em **Procurar** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
+2. No menu do hub: clique em **Novo** > **Segurança + Identidade** > **Azure Information Protection (pré-visualização)** > **Criar**.
 
-- Agora verá a lâmina principal **Azure Information Protection**, que mostra a política de Information Protection predefinida que é criada automaticamente. Esta política predefinida contém as seguintes etiquetas para classificação: **Pessoal**, **Público**, **Internas**, **Confidencial**, e **Segredo**. Leia a descrição de cada etiqueta para compreender como devem ser utilizadas. Tenha em atenção que **Segredo** tem duas etiquetas secundárias: **Todos os Funcionários** e **O Meu Grupo**, que fornece um exemplo de como uma classificação pode ter subcategorias.
+    Esta ação cria o painel **Azure Information Protection** para que, da próxima vez que iniciar sessão no portal, possa selecionar o serviço a partir da lista **Procurar** do hub. 
 
-- Com as respetivas predefinições, **Interna**, **Confidencial**, e **Segredo** têm marcas visuais configuradas (por exemplo, rodapé, cabeçalho, marca d'água) e nenhuma das etiquetas têm a proteção definida. Além disso, as três definições globais não estão definidas para que todos os documentos e e-mails não necessitem de uma etiqueta, não há qualquer etiqueta predefinida e os utilizadores não têm de indicar uma justificação quando reduzirem o nível de sensibilidade.
+    > [!TIP] 
+    > Selecione **Afixar ao dashboard** para criar um mosaico **Azure Information Protection** no seu dashboard, para que possa ignorar o passo de procura da próxima vez que iniciar sessão no portal.
+
+3.  Explore o painel principal **Azure Information Protection**, que mostra a política do Information Protection predefinida criada automaticamente:
+    
+    - Etiquetas para classificação: **Pessoal**, **Público**, **Interno**, **Confidencial** e **Secreto**. Leia a descrição de cada etiqueta para compreender como devem ser utilizadas. Tenha em atenção que **Segredo** tem duas etiquetas secundárias: **Todos os Funcionários** e **O Meu Grupo**, que fornece um exemplo de como uma classificação pode ter subcategorias.
+
+    - Com as predefinições, as etiquetas **Interno**, **Confidencial** e **Secreto** têm marcas visuais configuradas (por exemplo, rodapé, cabeçalho, marca d'água) e nenhuma das etiquetas tem a proteção definida. Além disso, as três definições globais não estão definidas para que todos os documentos e e-mails não necessitem de uma etiqueta, não há qualquer etiqueta predefinida e os utilizadores não têm de indicar uma justificação quando reduzirem o nível de sensibilidade.
 
     ![Tutorial de início rápido do Azure Information Protection, passo 3 - política predefinida](../media/info-protect-policy.png)
 
@@ -42,7 +49,7 @@ Para o nosso tutorial, vamos alterar algumas dessas definições globais para qu
 
 Agora vamos alterar as definições de uma das etiquetas, **Confidencial**:
 
-1. Clique na entrada de etiqueta **Confidencial**.
+1. Clique na etiqueta **Confidencial**.
 
 2. Na lâmina **Etiqueta: confidencial**, pode ver as definições disponíveis para cada etiqueta. Efetue as seguintes alterações:
 
@@ -90,6 +97,6 @@ Agora que conhece o que é a política predefinida e efetuou algumas alteraçõe
 [Passo 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

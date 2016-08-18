@@ -3,15 +3,15 @@ title: Como alterar ou personalizar uma etiqueta existente para o Azure Informat
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 translationtype: Human Translation
-ms.sourcegitcommit: d0d926bc7b06c1136ceb2964d1e62a350a73fc56
-ms.openlocfilehash: 39d83b42ace06e6e42ad50fee90b26a2f51a142e
+ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
+ms.openlocfilehash: 49f08d4180d74375a31136f7fc0c77437bcf84d5
 
 
 ---
@@ -29,17 +29,17 @@ Por exemplo, pode alterar um nome de etiqueta ou de uma etiqueta secundária, a 
 Para alterar uma etiqueta, utilize as instruções seguintes.
 
 
-1. Inicie sessão no [portal do Azure](https://portal.azure.com).
- 
-2. No menu Hub, clique em **Procurar** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
+1. Se ainda não o fez, inicie sessão no [portal do Azure](https://portal.azure.com) e, em seguida, navegue para o painel **Azure Information Protection**. 
+    
+    Por exemplo, no menu do hub, clique em **Procurar** e comece a escrever **Information** na caixa Filtro. Selecione **Azure Information Protection**.
 
-3. No painel **Azure Information Protection**, selecione a etiqueta a alterar e, em seguida, efetue as alterações no painel **Etiqueta** e em quaisquer painéis subsequentes, conforme necessário.
+2. No painel **Azure Information Protection**, selecione a etiqueta a alterar e, em seguida, efetue as alterações no painel **Etiqueta** e em quaisquer painéis subsequentes, conforme necessário.
 
     A exceção é se pretende reordenar uma etiqueta, que é efetuada no mesmo painel **Azure Information Protection**: clique com o botão direito do rato na etiqueta ou selecione o menu de contexto para a etiqueta e, em seguida, selecione as opções **Mover para cima** ou **Mover para baixo**.
 
-4. Sempre que efetuar alterações num painel, caso pretenda manter as alterações, clique em **Guardar** nesse mesmo painel.
+3. Sempre que efetuar alterações num painel, caso pretenda manter as alterações, clique em **Guardar** nesse mesmo painel.
 
-5. Para disponibilizar as alterações aos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
+4. Para disponibilizar as alterações aos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
 
 > [!TIP]
 >Se pretender regressar a um dos rótulos predefinidos para os valores predefinidos, utilize as informações em [Política do Information Protection predefinida](configure-policy-default.md).
@@ -53,6 +53,6 @@ Para mais informações sobre como configurar as opções que pode efetuar em re
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

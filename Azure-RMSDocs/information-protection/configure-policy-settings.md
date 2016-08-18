@@ -3,15 +3,15 @@ title: "Como configurar as definições globais da política do Azure Informatio
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 3b22cf76f03a4d36281db7e705359402dcbbde0e
+ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
+ms.openlocfilehash: 508161474bf6fd7406668de3976206947de254de
 
 
 ---
@@ -29,11 +29,11 @@ Existem 3 definições da política de proteção de informações do Azure que 
 
 Configurar estas definições:
 
-1. Inicie sessão no [portal do Azure](https://portal.azure.com).
- 
-2. No menu Hub, clique em **Procurar** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
+1. Se ainda não o fez, inicie sessão no [portal do Azure](https://portal.azure.com) e, em seguida, navegue para o painel **Azure Information Protection**. 
+    
+    Por exemplo, no menu do hub, clique em **Procurar** e comece a escrever **Information** na caixa Filtro. Selecione **Azure Information Protection**.
 
-3. No painel **Azure Information Protection**, configure estas definições globais:
+2. No painel **Azure Information Protection**, configure estas definições globais:
 
     - **Todos os documentos e e-mails devem ter uma etiqueta**: quando configurar esta opção como **Ativado**, todos os todos os documentos guardado e e-mails enviados devem ter uma etiqueta aplicada. As etiquetas podem ser atribuídas manualmente por um utilizador, automaticamente como resultado de uma [Condição](configure-policy-classification.md) ou pode ser atribuída por predefinição (definindo opção **Selecionar etiqueta predefinida**). 
 
@@ -49,9 +49,9 @@ Configurar estas definições:
 
     Esta opção não é aplicável a etiquetas secundárias.
 
-4. Para guardar as alterações, clique em **Guardar**.
+3. Para guardar as alterações, clique em **Guardar**.
 
-5. Para disponibilizar as alterações aos utilizadores, clique em **ublicar**.
+4. Para disponibilizar as alterações aos utilizadores, clique em **ublicar**.
 
 ## Passos seguintes
 
@@ -68,6 +68,6 @@ Para mais informações sobre como configurar a política do Azure Information P
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

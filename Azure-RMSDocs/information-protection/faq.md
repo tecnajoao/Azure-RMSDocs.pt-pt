@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 7d5b58efb4b789ba4f3d897ae3a475cbd2c679e5
+ms.sourcegitcommit: d17bacf8e148622db0e2393f40d3fd37c8f086eb
+ms.openlocfilehash: c61e299cac50069afc119d37fd461cda88a2afd3
 
 
 ---
@@ -39,11 +39,11 @@ Experimente o nosso tutorial de início rápido para ver isto em funcionamento e
 
 Tenha em atenção que a pré-visualização permite-lhe experimentar o novo **Plano de serviço Premium P2** e que algumas funcionalidades avançadas, como a etiquetagem automática e recomendada, poderão não estar disponíveis para si no seu plano atual para disponibilidade geral. Para obter informações sobre os diferentes planos de serviços (Azure Information Protection Premium P1 e Azure Information Protection Premium P2), veja o seguinte artigo de blogue: [Introdução ao Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/07/introducing-enterprise-mobility-security/).
 
-Esta versão de pré-visualização tem as seguintes limitações. Procure anúncios no [Blogue Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) e no nosso [site Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) quando estiverem disponíveis funcionalidades e capacidades adicionais:
+Esta versão de pré-visualização tem as seguintes limitações. Procure anúncios no [Blogue Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) e no nosso [site Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) quando estiverem disponíveis funcionalidades e capacidades adicionais:
 
 - Não existe nenhum registo centralizado para classificação e etiquetagem.
 
-- Os nomes das etiquetas e descrições estão apenas em inglês.
+- Os nomes das etiquetas e descrições são suportadas apenas num idioma.
 
 - As condições para classificação automática têm de ser expressões ou padrões.
 
@@ -61,11 +61,11 @@ Para a versão de pré-visualização, pode utilizar qualquer subscrição que i
 
 Tem de ter uma subscrição do Azure para configurar as políticas do Azure Information Protection no portal do Azure. Se ainda não tiver uma subscrição do Azure para a sua organização, pode obter uma inscrevendo-se para uma versão de avaliação gratuita. Aceda à página [Introdução ao Azure](https://account.windowsazure.com/organization) e siga as instruções.
 
-Quaisquer alterações aos requisitos da subscrição serão comunicadas no [Blogue Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
+Quaisquer alterações aos requisitos da subscrição serão comunicadas no [Blogue Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection).
 
 ## É necessário ser um administrador global para experimentar a pré-visualização do Azure Information Protection?
 
-Para a versão só de pré-visualização, qualquer utilizador autenticado pelo Azure pode ver e configurar a política do Azure Information Protection do respetivo inquilino no portal do Azure.
+Para a versão só de pré-visualização, qualquer utilizador autenticado pelo Azure pode ver e configurar a política do Azure Information Protection do respetivo inquilino para classificação e etiquetagem no portal do Azure. No entanto, para configurar uma etiqueta para aplicar um modelo do Azure Rights Management, deve ter a sessão iniciada como administrador global do Azure Active Directory.
 
 Se selecionar a opção para instalar a política de demonstração quando instala o [cliente Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018), não precisa sequer de iniciar sessão no portal para experimentar a pré-visualização. A política de demonstração instala localmente a política predefinida do Azure Information Protection, pelo que pode tentar etiquetar documentos e e-mails, mas não pode alterar ou adicionar novas etiquetas sem iniciar sessão no portal do Azure. 
 
@@ -74,7 +74,7 @@ Se quiser proteger os documentos e e-mails que classifica e etiqueta e, ainda n�
 
 ## O Azure Information Protection suporta cenários no local e híbridos?
 
-O Azure Information Protection é uma solução baseada na nuvem. Se estiver interessado em cenários híbridos, contacte a equipa do Information Protection, enviando um e-mail para askipteam@microsoft.com.
+O Azure Information Protection é uma solução baseada na nuvem. Se estiver interessado em implementar o Azure Information Protection num cenário híbrido, contacte a equipa do Information Protection, enviando um e-mail para askipteam@microsoft.com.
 
 ## Que plataformas de clientes e aplicações são suportadas pelo Azure Information Protection?
 
@@ -85,7 +85,7 @@ Isto está documentado e será atualizado em [Requisitos do Azure Information Pr
 
 Sempre que um utilizador abre uma aplicação do Office, o cliente Azure Information Protection verifica se existe uma versão posterior da política do Azure Information Protection. Se houver uma versão posterior, o cliente transfere-a utilizando uma ligação HTTPS para proteger os dados. 
 
-Se várias instâncias da aplicação Office forem carregado quando uma nova política do Azure Information Protection é publicada, deve fechar todas as instâncias para obter a versão mais recente da política. Por exemplo, se tiver dois documentos do Word abertos e pretende testar a política do Azure Information Protection num único documento: feche ambos documentos do Word e reabra o documento que pretende utilizar com a política mais recente.
+Se várias instâncias da aplicação Office forem carregadas quando uma nova política do Azure Information Protection é publicada, deve fechar todas as instâncias para obter a versão mais recente da política. Por exemplo, se tiver dois documentos do Word abertos e pretende testar a política do Azure Information Protection num único documento: feche ambos documentos do Word e reabra o documento que pretende utilizar com a política mais recente.
 
 ## Onde podem ser armazenados os ficheiros para utilizar o Azure Information Protection? 
 
@@ -150,7 +150,11 @@ Uma vez que o Azure Information Protection utiliza metadados persistentes para c
 
 ## Como funciona o controlo de documentos e a revogação em relação ao Azure Information Protection?
 
-O controlo de documentos relativo a ficheiros que classifica e protege utilizando o Azure Information Protection funciona tal como sucede para o Azure Rights Management. Para obter mais informações, veja [Controlar e revogar os documentos quando utiliza a aplicação de partilha RMS](../rms-client/sharing-app-track-revoke.md).
+O controlo de documentos relativo a ficheiros que classifica e protege utilizando o Azure Information Protection funciona tal como sucede para o Azure Rights Management e a aplicação de partilha RMS. Também pode aceder ao site de controlo de documentos utilizando o cliente do Azure Information Protection (versão 1.0.233 ou posterior): 
+
+- Numa aplicação do Office, no separador **Base**, no grupo **Proteção**, clique em **Proteger** e, em seguida, clique em  > **Controlar utilização**. 
+
+Para obter mais informações, veja [Controlar e revogar os documentos quando utiliza a aplicação de partilha RMS](../rms-client/sharing-app-track-revoke.md).
 
 ## Como é que o Azure Information Protection impõe as políticas que eu configuro?
 
@@ -184,6 +188,6 @@ Em seguida, visite o nosso [site Yammer](https://www.yammer.com/askipteam/#/thre
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

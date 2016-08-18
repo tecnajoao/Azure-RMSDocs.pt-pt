@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/30/2016
+ms.date: 08/05/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5ab8d4ef132eec9991c0ff789f2b2dfa7bdf2cd8
-ms.openlocfilehash: 845a47f526754f291c27a3c2bbd80af736b44992
+ms.sourcegitcommit: 2082620eb152aa88af4141b88985adce22769168
+ms.openlocfilehash: fbf614bf7b30165a78f6312267243ad6fdb81435
 
 
 ---
@@ -131,7 +131,7 @@ A primeira linha indica que estes são registos do Azure Rights Management. A se
 
 A terceira linha apresenta uma lista composta por nomes de campos que são separados por tabulações:
 
-**#Fields: date            time            row-id        request-type           user-id       result          correlation-id          content-id                owner-email           issuer                     template-id             file-name                  date-published      c-info         c-ip**
+**#Fields: date            time            row-id        request-type           user-id       result          correlation-id          content-id                owner-email           issuer                     template-id             file-name                  date-published      c-info         c-ip            admin-action            acting-as-user**
 
 Cada uma das linhas subsequentes é um registo. Os valores dos campos estão na mesma ordem da linha anterior e são separados por tabulações. Utilize a seguinte tabela para interpretar os campos.
 
@@ -152,6 +152,7 @@ Cada uma das linhas subsequentes é um registo. Os valores dos campos estão na 
 |date-published|Data|Data em que o ficheiro foi protegido.|2015-10-15T21:37:00|
 |c-info|Cadeia|Informações sobre a plataforma de cliente que está a efetuar o pedido.<br /><br />A cadeia específica varia em função da aplicação (por exemplo, do sistema operativo ou do browser).|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|Endereço|Endereço IP do cliente que efetua o pedido.|64.51.202.144|
+
 
 #### Exceções para o campo user-id
 Apesar de o campo user-id indicar geralmente o utilizador que efetuou o pedido, existem duas exceções onde o valor não é mapeado para um utilizador real:
@@ -174,29 +175,42 @@ Há muitos tipos de pedido para o Azure Rights Management, mas a seguinte tabela
 |AcquireTemplates|Foi efetuada uma chamada para adquirir modelos com base em IDs de modelo|
 |AcquireTemplateInformation|Foi efetuada uma chamada para obter as ID do modelo a partir do serviço.|
 |AddTemplate|É efetuada uma chamada a partir do portal clássico do Azure para adicionar um modelo.|
+|AllDocsCsv|É feita uma chamada a partir do site de controlo de documentos para transferir o ficheiro CSV a partir da página **Todos os Documentos**.|
 |BECreateEndUserLicenseV1|É efetuada uma chamada a partir de um dispositivo móvel para criar uma licença de utilizador final.|
 |BEGetAllTemplatesV1|É efetuada uma chamada a partir de um dispositivo móvel (back-end) para obter todos os modelos.|
 |Certify|O cliente está a certificar os conteúdos para proteção.|
 |KMSPDecrypt|O cliente está a tentar desencriptar os conteúdos protegidos pelo RMS. Aplicável apenas para uma chave de inquilino gerida pelo cliente (BYOK).|
 |DeleteTemplateById|É efetuada uma chamada a partir do portal clássico do Azure para eliminar um modelo por ID de modelo.|
+|DocumentEventsCsv|É feita uma chamada a partir do site de controlo de documentos para transferir o ficheiro .CSV para um único documento.|
 |ExportTemplateById|É efetuada uma chamada a partir do portal clássico do Azure para exportar um modelo baseado num ID de modelo.|
 |FECreateEndUserLicenseV1|É semelhante ao pedido AcquireLicense, mas este pedido é efetuado a partir de dispositivos móveis.|
 |FECreatePublishingLicenseV1|É igual à combinação dos pedidos Certify e GetClientLicensorCert, feito a partir de clientes móveis.|
 |FEGetAllTemplates|É efetuada uma chamada a partir de um dispositivo móvel (front-end) para obter os modelos.|
+|GetAllDocs|É feita uma chamada a partir do site de controlo de documentos para carregar a página **todos os documentos** para um utilizador ou procurar todos os documentos para o inquilino. Utilize este valor com os campos admin-action e acting-as-admin:<br /><br />- admin-action está vazio: um utilizador vê a página **todos os documentos** para os seus próprios documentos.<br /><br />- admin-action é verdadeiro e acting-as-user está vazio: um administrador vê todos os documentos para o respetivo inquilino.<br /><br />- admin-action é verdadeiro e acting-as-user não está vazio: um administrador vê **todos os documentos** para um utilizador.|
 |GetAllTemplates|É efetuada uma chamada a partir do portal clássico do Azure para obter todos os modelos.|
 |GetClientLicensorCert|O cliente está a pedir um certificado de publicação (que é posteriormente utilizado para proteger conteúdos) a partir de um computador baseado no Windows.|
 |GetConfiguration|É chamado um cmdlet do PowerShell do Azure para obter a configuração do inquilino do Azure RMS.|
 |GetConnectorAuthorizations|É efetuada uma chamada a partir dos conectores do RMS para obter a configuração destes a partir da nuvem.|
+|GetRecipients|É feita uma chamada a partir do site de controlo de documentos para navegar para a vista de lista para um único documento.|
+|GetSingle|É feita uma chamada a partir do site de controlo de documentos para navegar para uma página de um **único documento**.|
 |GetTenantFunctionalState|O portal clássico do Azure está a verificar se o Azure RMS está ativado.|
 |GetTemplateById|É efetuada uma chamada a partir do portal clássico do Azure para obter um modelo através da especificação de um ID de modelo.|
 |ExportTemplateById|Está a ser efetuada uma chamada a partir do portal clássico do Azure para exportar um modelo através da especificação de um ID de modelo.|
 |FindServiceLocationsForUser|É efetuada uma chamada de consulta de URL, que é utilizada para chamar o pedido Certify ou AcquireLicense.|
+|LoadEventsForMap|É feita uma chamada a partir do site de controlo de documentos para navegar para a vista de mapa de um único documento.|
+|LoadEventsForSummary|É feita uma chamada a partir do site de controlo de documentos para navegar para a vista de linha de tempo de um único documento.|
+|LoadEventsForTimeline|É feita uma chamada a partir do site de controlo de documentos para navegar para a vista de mapa de um único documento.|
 |ImportTemplate|É efetuada uma chamada a partir do portal clássico do Azure para importar um modelo.|
+|RevokeAccess|É feita uma chamada a partir do site de controlo de documentos para revogar um documento.|
+|SearchUsers |É feita uma chamada a partir do site de controlo de documentos para procurar todos os utilizadores num inquilino.|
 |ServerCertify|É efetuada uma chamada a partir de um cliente com RMS ativado (tal como o SharePoint) para certificar o servidor.|
 |SetUsageLogFeatureState|É efetuada uma chamada para ativar o registo de utilização.|
 |SetUsageLogStorageAccount|É efetuada uma chamada para especificar a localização dos registos do Azure RMS.|
-|KMSPSignDigest|É feita uma chamada quando uma chave gerida pelo cliente (BYOK) é utilizada para fins de assinatura. Esta opção é normalmente chamada uma vez por cada pedido AcquireLicence (ou FECreateEndUserLicenseV1), Certify e GetClientLicensorCert (ou FECreatePublishingLicenseV1).|
+|SignDigest|É efetuada uma chamada quando é utilizada uma chave para fins de assinatura. Esta opção é normalmente chamada uma vez por cada pedido AcquireLicence (ou FECreateEndUserLicenseV1), Certify e GetClientLicensorCert (ou FECreatePublishingLicenseV1).|
+|UpdateNotificationSettings|É feita uma chamada a partir do site de controlo de documentos para alterar as definições de notificação de um único documento.|
 |UpdateTemplate|É efetuada uma chamada a partir do portal clássico do Azure para atualizar um modelo existente.|
+
+
 
 ## Referência do Windows PowerShell
 A partir de fevereiro de 2016, o único cmdlet do Windows PowerShell de que necessita para o registo de utilização do Azure RMS é o [Get-AadrmUserLog](https://msdn.microsoft.com/library/azure/mt653941.aspx). 
@@ -226,6 +240,6 @@ Para mais informações sobre como utilizar o Windows PowerShell para o Azure Ri
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO1-->
 
 

@@ -3,15 +3,15 @@ title: Como criar uma nova etiqueta para o Azure Information Protection | Azure 
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 26f22fb616f66332abf87501f782f1f8e8f0c013
+ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
+ms.openlocfilehash: c2f8f3204e3d5947137e7e9111ba4eba2628293b
 
 
 ---
@@ -28,22 +28,22 @@ Pode adicionar uma nova etiqueta ou adicionar uma nova etiqueta secundária a um
 
 Utilize as seguintes instruções para adicionar uma nova etiqueta à política do Azure Information Protection.
 
-1. Inicie sessão no [portal do Azure](https://portal.azure.com).
- 
-2. No menu Hub, clique em **Procurar** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
+1. Se ainda não o fez, inicie sessão no [portal do Azure](https://portal.azure.com) e, em seguida, navegue para o painel **Azure Information Protection**. 
+    
+    Por exemplo, no menu do hub, clique em **Procurar** e comece a escrever **Information** na caixa Filtro. Selecione **Azure Information Protection**.
 
-3. No painel **Azure Information Protection**, efetue um dos seguintes procedimentos:
+2. No painel **Azure Information Protection**, efetue um dos seguintes procedimentos:
 
     - Para criar uma nova etiqueta: clique em **Adicionar uma nova etiqueta**.
 
     - Para criar uma nova etiqueta secundária: faça duplo clique ou selecione o menu de contexto (**…**) da etiqueta para a qual pretende criar uma etiqueta secundária e, em seguida, clique em **Adicionar uma etiqueta secundária**.
 
-4. No painel **Etiqueta** ou **Etiqueta secundária**, selecione as opções que pretende para esta nova etiqueta e, em seguida, clique em **Guardar**.
+3. No painel **Etiqueta** ou **Etiqueta secundária**, selecione as opções que pretende para esta nova etiqueta e, em seguida, clique em **Guardar**.
 
     > [!NOTE]
     >Para informações sobre proteção de definições, consulte [Como configurar uma etiqueta para aplicar proteção](configure-policy-protection.md).
 
-5. Para disponibilizar as alterações aos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
+4. Para disponibilizar as alterações aos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
 
 ## Passos seguintes
 
@@ -53,6 +53,6 @@ Para mais informações sobre como configurar a política do Azure Information P
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

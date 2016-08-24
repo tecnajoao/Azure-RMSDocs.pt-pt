@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/05/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2082620eb152aa88af4141b88985adce22769168
-ms.openlocfilehash: fbf614bf7b30165a78f6312267243ad6fdb81435
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: 28fed61b674112d2ebeb30a15a6f6217647e0b5f
 
 
 ---
@@ -179,13 +179,13 @@ Há muitos tipos de pedido para o Azure Rights Management, mas a seguinte tabela
 |BECreateEndUserLicenseV1|É efetuada uma chamada a partir de um dispositivo móvel para criar uma licença de utilizador final.|
 |BEGetAllTemplatesV1|É efetuada uma chamada a partir de um dispositivo móvel (back-end) para obter todos os modelos.|
 |Certify|O cliente está a certificar os conteúdos para proteção.|
-|KMSPDecrypt|O cliente está a tentar desencriptar os conteúdos protegidos pelo RMS. Aplicável apenas para uma chave de inquilino gerida pelo cliente (BYOK).|
 |DeleteTemplateById|É efetuada uma chamada a partir do portal clássico do Azure para eliminar um modelo por ID de modelo.|
 |DocumentEventsCsv|É feita uma chamada a partir do site de controlo de documentos para transferir o ficheiro .CSV para um único documento.|
 |ExportTemplateById|É efetuada uma chamada a partir do portal clássico do Azure para exportar um modelo baseado num ID de modelo.|
 |FECreateEndUserLicenseV1|É semelhante ao pedido AcquireLicense, mas este pedido é efetuado a partir de dispositivos móveis.|
 |FECreatePublishingLicenseV1|É igual à combinação dos pedidos Certify e GetClientLicensorCert, feito a partir de clientes móveis.|
 |FEGetAllTemplates|É efetuada uma chamada a partir de um dispositivo móvel (front-end) para obter os modelos.|
+|FindServiceLocationsForUser|É efetuada uma chamada de consulta de URL, que é utilizada para chamar o pedido Certify ou AcquireLicense.|
 |GetAllDocs|É feita uma chamada a partir do site de controlo de documentos para carregar a página **todos os documentos** para um utilizador ou procurar todos os documentos para o inquilino. Utilize este valor com os campos admin-action e acting-as-admin:<br /><br />- admin-action está vazio: um utilizador vê a página **todos os documentos** para os seus próprios documentos.<br /><br />- admin-action é verdadeiro e acting-as-user está vazio: um administrador vê todos os documentos para o respetivo inquilino.<br /><br />- admin-action é verdadeiro e acting-as-user não está vazio: um administrador vê **todos os documentos** para um utilizador.|
 |GetAllTemplates|É efetuada uma chamada a partir do portal clássico do Azure para obter todos os modelos.|
 |GetClientLicensorCert|O cliente está a pedir um certificado de publicação (que é posteriormente utilizado para proteger conteúdos) a partir de um computador baseado no Windows.|
@@ -195,8 +195,11 @@ Há muitos tipos de pedido para o Azure Rights Management, mas a seguinte tabela
 |GetSingle|É feita uma chamada a partir do site de controlo de documentos para navegar para uma página de um **único documento**.|
 |GetTenantFunctionalState|O portal clássico do Azure está a verificar se o Azure RMS está ativado.|
 |GetTemplateById|É efetuada uma chamada a partir do portal clássico do Azure para obter um modelo através da especificação de um ID de modelo.|
-|ExportTemplateById|Está a ser efetuada uma chamada a partir do portal clássico do Azure para exportar um modelo através da especificação de um ID de modelo.|
-|FindServiceLocationsForUser|É efetuada uma chamada de consulta de URL, que é utilizada para chamar o pedido Certify ou AcquireLicense.|
+|KeyVaultDecryptRequest|O cliente está a tentar desencriptar os conteúdos protegidos pelo RMS. Aplicável apenas para uma chave de inquilino gerida pelo cliente (BYOK) no Cofre de Chaves do Azure.|
+|KeyVaultGetKeyInfoRequest|É feita uma chamada para verificar se a chave especificada para ser utilizada no Cofre de Chaves do Azure para a chave de inquilino do Azure RMS está acessível e ainda não em utilização.|
+|KeyVaultSignDigest|É feita uma chamada quando uma chave gerida pelo cliente (BYOK) no Cofre de Chaves do Azure é utilizada para fins de assinatura. Esta opção é normalmente chamada uma vez por cada pedido AcquireLicence (ou FECreateEndUserLicenseV1), Certify e GetClientLicensorCert (ou FECreatePublishingLicenseV1).|
+|KMSPDecrypt|O cliente está a tentar desencriptar os conteúdos protegidos pelo RMS. Aplicável apenas para uma chave de inquilino gerida pelo cliente (BYOK) antiga.|
+|KMSPSignDigest|É feita uma chamada quando uma chave gerida pelo cliente (BYOK) antiga é utilizada para fins de assinatura. Esta opção é normalmente chamada uma vez por cada pedido AcquireLicence (ou FECreateEndUserLicenseV1), Certify e GetClientLicensorCert (ou FECreatePublishingLicenseV1).|
 |LoadEventsForMap|É feita uma chamada a partir do site de controlo de documentos para navegar para a vista de mapa de um único documento.|
 |LoadEventsForSummary|É feita uma chamada a partir do site de controlo de documentos para navegar para a vista de linha de tempo de um único documento.|
 |LoadEventsForTimeline|É feita uma chamada a partir do site de controlo de documentos para navegar para a vista de mapa de um único documento.|
@@ -206,10 +209,8 @@ Há muitos tipos de pedido para o Azure Rights Management, mas a seguinte tabela
 |ServerCertify|É efetuada uma chamada a partir de um cliente com RMS ativado (tal como o SharePoint) para certificar o servidor.|
 |SetUsageLogFeatureState|É efetuada uma chamada para ativar o registo de utilização.|
 |SetUsageLogStorageAccount|É efetuada uma chamada para especificar a localização dos registos do Azure RMS.|
-|SignDigest|É efetuada uma chamada quando é utilizada uma chave para fins de assinatura. Esta opção é normalmente chamada uma vez por cada pedido AcquireLicence (ou FECreateEndUserLicenseV1), Certify e GetClientLicensorCert (ou FECreatePublishingLicenseV1).|
 |UpdateNotificationSettings|É feita uma chamada a partir do site de controlo de documentos para alterar as definições de notificação de um único documento.|
 |UpdateTemplate|É efetuada uma chamada a partir do portal clássico do Azure para atualizar um modelo existente.|
-
 
 
 ## Referência do Windows PowerShell
@@ -240,6 +241,6 @@ Para mais informações sobre como utilizar o Windows PowerShell para o Azure Ri
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

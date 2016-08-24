@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: 75cce1d0e5a1cff0d4f6609d0f084fda1af62951
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: 6d3cb53fb199bb880a0e61d2b964f297e547a027
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 75cce1d0e5a1cff0d4f6609d0f084fda1af62951
 Utilize as seguintes informações para a Fase 3 da migração do AD RMS para o Azure Rights Management (Azure RMS). Estes procedimentos incluem os passos de 6 a 7 da secção [Migrar do AD RMS para o Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md).
 
 
-## Passo 6. Configurar a integração de IRM para o Exchange Online
+## Passo 6. Configurar a integração de IRM para o Exchange Online
 
 Se tiver importado anteriormente o TDP do AD RMS para o Exchange Online, tem de remover este TDP para evitar modelos e políticas em conflito após a migração para o Azure RMS. Para tal, utilize o cmdlet [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx) do Exchange Online.
 
@@ -42,7 +42,7 @@ Se optou por uma topologia de chave de inquilino do Azure RMS **gerida pelo clie
 ## Passo 7. Implementar o conetor RMS
 Se tiver utilizado a funcionalidade de Gestão de Direitos de Informação (IRM) do Exchange Server ou o SharePoint Server com o AD RMS, tem primeiro de desativar a IRM nestes servidores e remover a configuração do AD RMS. Em seguida, implemente o conetor Rights Management (RMS), que funciona como uma interface de comunicações (um reencaminhamento) entre os servidores no local e o Azure RMS.
 
-Por fim, para este passo, se tiver importado vários TPD para o Azure RMS que foram utilizados para proteger mensagens de e-mail, tem de editar manualmente o registo nos computadores do Exchange Server para redirecionar todos os URLs de TPD para o conetor RMS.
+Por fim, para este passo, se tiver importado vários ficheiros de configuração de dados do AD RMS (.xml) para o Azure RMS que foram utilizados para proteger mensagens de e-mail, tem de editar manualmente o registo nos computadores do Exchange Server para redirecionar todos os URLs de domínio de publicação fidedigno para o conetor RMS.
 
 > [!NOTE]
 > Antes de começar, verifique as versões dos servidores no local que o Azure RMS suporta em [Servidores no local que suportam o Azure RMS](../get-started/requirements-servers.md).
@@ -95,7 +95,7 @@ Por fim, para este passo, se tiver importado vários TPD para o Azure RMS que fo
 
 #### Apenas para o Exchange e vários TPD: editar o registo
 
--   Em cada Exchange Server, adicione manualmente as chaves do registo seguintes para cada TPD adicional que tenha importado para redirecionar os URLs de TPD para o conetor RMS. Estas entradas do registo são específicas da migração e não são adicionadas pela ferramenta de configuração do servidor para o conetor Microsoft RMS.
+-   Em cada Exchange Server, adicione manualmente as chaves do registo seguintes para cada ficheiro de dados de configuração (.xml) adicional que tenha importado para redirecionar os URLs de domínio de publicação fidedigno para o conetor RMS. Estas entradas do registo são específicas da migração e não são adicionadas pela ferramenta de configuração do servidor para o conetor Microsoft RMS.
 
     Quando efetuar estas edições de registo, utilize as instruções seguintes:
 
@@ -215,6 +215,6 @@ Depois de concluir estes procedimentos, está pronto para ler a secção **Passo
 Para continuar a migração, consulte a [fase 4 – tarefas de pós-migração](migrate-from-ad-rms-phase4.md).
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bb152f428c8e0b9a065035aaad2de6353265a562
-ms.openlocfilehash: a739da3fbebc8dfa4c6715fd64ccd72f87d2a686
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: 9cd66efad548a4ddef4e6032b0ce7fc817a95c31
 
 
 ---
@@ -33,12 +33,12 @@ Utilize o seguinte procedimento para importar a configuração do AD RMS para o 
 
 ## Para importar os dados de configuração para o Azure RMS
 
-1.  Numa estação de trabalho com ligação à Internet, transfira e instale o módulo do Windows PowerShell para o Azure RMS (versão mínima 2.1.0.0), que inclui o cmdlet [Import-AadrmTpd](http://msdn.microsoft.com/library/azure/dn857523.aspx).
+1.  Numa estação de trabalho com ligação à Internet, transfira e instale o módulo do Windows PowerShell para o Azure RMS (versão mínima 2.5.0.0), que inclui o cmdlet [Import-AadrmTpd](http://msdn.microsoft.com/library/azure/dn857523.aspx).
 
     > [!TIP]
-    > Se anteriormente tiver transferido e instalado o módulo, verifique o número da versão ao executar: `(Get-Module aadrm -ListAvailable).Version`
+    > Se já transferiu e instalou o módulo anteriormente, verifique o número da versão ao executar: `(Get-Module aadrm -ListAvailable).Version`
 
-    Para obter instruções de instalação, consulte [Instalar o Windows PowerShell para o Azure Rights Management](../deploy-use/install-powershell.md).
+    Para obter instruções de instalação, consulte [Installing Windows PowerShell for Azure Rights Management (Instalar o Windows PowerShell para o Azure Rights Management – em inglês)](../deploy-use/install-powershell.md).
 
 2.  Inicie o Windows PowerShell com a opção **Executar como administrador** e utilize o cmdlet [Connect-AadrmService](http://msdn.microsoft.com/library/azure/dn629415.aspx) para efetuar uma ligação ao serviço do Azure RMS:
 
@@ -64,11 +64,13 @@ Utilize o seguinte procedimento para importar a configuração do AD RMS para o 
     Disconnect-AadrmService
     ```
 
+
 Agora está pronto para ir para o [Passo 3. Ativar o seu inquilino do RMS](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant).
 
 
 
 
-<!--HONumber=Jul16_HO3-->
+
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,15 +3,15 @@ title: Como configurar uma etiqueta para marcas visuais para o Azure Information
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 translationtype: Human Translation
-ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
-ms.openlocfilehash: 78b68c7a502776c6492437e9b8a5c3f1ebf27f95
+ms.sourcegitcommit: b5e7fecca7aeb61221dc1f61aa3e202936b8c042
+ms.openlocfilehash: 2b4f464fa51e0743cb1ce0726c7feb31146b5128
 
 
 ---
@@ -60,17 +60,19 @@ Utilize as seguintes instruções para configurar marcas visuais para uma etique
 
 Pode utilizar as seguintes variáveis na cadeia de texto para o seu cabeçalho, rodapé ou marca d'água:
 
-- `${Item.Label}` para a etiqueta selecionada
+- `${Item.Label}` para a etiqueta selecionada. Por exemplo: Interno
 
-- `${Item.Name}` para o nome de ficheiro ou assunto de e-mail
+- `${Item.Name}` para o nome de ficheiro ou assunto de e-mail. Por exemplo: VendasJulho.docx
 
-- `${Item.Location}` para o caminho de ficheiro
+- `${Item.Location}` para o nome de ficheiro e caminho para os documentos, e o assunto de e-mail para os e-mails. Por exemplo: \\\Vendas\2016\T3\RelatórioJulho.docx
 
-- `${User.Name}` para o proprietário do documento ou e-mail
+- `${User.Name}` para o proprietário do documento ou e-mail, por nome de utilizador com sessão iniciada no Windows. Por exemplo: rsimone
 
-- `${Event.DateTime}` para a data e hora quando a etiqueta selecionada foi definida 
+- `${User.PrincipalName}` para o proprietário do documento ou e-mail, por endereço de e-mail com sessão iniciada no cliente do Azure Information Protection (UPN). Por exemplo: rsimone@vanarsdelltd.com
+
+- `${Event.DateTime}` para a data e hora quando a etiqueta selecionada foi definida. Por exemplo: 16/8/2016 13:30
     
-Exemplo: se especificar a cadeia `Document: ${item.name} Sensitivity: ${item.label}` para o rodapé de etiqueta Secreto, o texto do rodapé aplicado a um project.docx documentado será **Documento: project.docx Sensibilidade: Secreto**.
+Exemplo: se especificar a cadeia `Document: ${item.name}  Classification: ${item.label}` para o rodapé de etiqueta Secreto, o texto do rodapé aplicado a um project.docx documentado será **Documento: project.docx Classificação: Secreto**.
 
 ## Passos seguintes
 
@@ -80,6 +82,6 @@ Para mais informações sobre como configurar a política do Azure Information P
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -14,15 +14,15 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 79397c82d9478cbd55630a376fe2d12f3873ebc4
-ms.openlocfilehash: ae1af4a1cddc904fd4800f1a3900e3c7c4d073ed
+ms.sourcegitcommit: a0659fda129f6de5e7b52c89f4d1f9d73d11df45
+ms.openlocfilehash: bdc173fb9cb9b749d75b08df3cc9554acd6f6386
 
 
 ---
 
 # Configuração do iOS e OS X
 
-As aplicações iOS e OS X podem utilizar o SDK Microsoft Rights Management 4.2 para ativar a proteção de informações integrada na respetiva aplicação utilizando o Azure Active Directory Rights Management (AAD RM).
+As aplicações iOS e OS X podem utilizar o SDK Microsoft Rights Management 4.2 para ativar a proteção de informações integrada na respetiva aplicação utilizando o Azure Rights Management (Azure RMS).
 
 Este tópico descreve como configurar o ambiente para criar as suas novas aplicações.
 
@@ -119,6 +119,6 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

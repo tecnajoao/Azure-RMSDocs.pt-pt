@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7a9c8b531ec342e7d5daf0cbcacd6597a79e6a55
-ms.openlocfilehash: 7b531ebba1923653cb37c70a02fa888a40e96528
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: 86f7bd025824b23c8eecdb05b62d83204ae1ccb4
 
 
 ---
@@ -24,41 +24,62 @@ ms.openlocfilehash: 7b531ebba1923653cb37c70a02fa888a40e96528
 *Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Rights Management*
 
 
-Estas instruções fazem parte do [caminho de migração do AD RMS para o Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md) e são aplicáveis apenas se a sua chave do AD RMS estiver protegida por HSM e pretender migrar para o Azure Rights Management com uma chave de inquilino protegida por HSM. 
+Estas instruções fazem parte do [caminho de migração do AD RMS para o Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md) e são aplicáveis apenas se a sua chave de AD RMS estiver protegida por HSM e pretender migrar para o Azure Rights Management com uma chave de inquilino protegida por HSM no Cofre de Chaves do Azure. 
 
 Se este não for o cenário de configuração escolhido, volte ao [Passo 2. Exporte os dados de configuração do AD RMS, importe-os para o Azure RMS](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms) e escolha uma configuração diferente.
 
 > [!NOTE]
-> Estas instruções partem do princípio de que a sua chave do AD RMS está protegida por um módulo. Este é o caso comum. Se a sua chave do AD RMS estiver protegida por OCS, contacte [AskIPTeam@microsoft.com](mailto: askipteam@microsoft.com?subject=AD%20RMS%20migration%20with%20OCS-protected%20key) antes de aplicar estas instruções.
+> Estas instruções partem do princípio de que a sua chave do AD RMS está protegida por um módulo. Este é o caso mais habitual. 
 
 Trata-se de um procedimento de duas partes para importar a sua chave HSM e a configuração do AD RMS para o Azure RMS, que resultará na sua chave de inquilino do Azure RMS que é gerida por si (BYOK).
 
-Primeiro, tem de compactar a sua chave HSM para que fique pronta a transferir para o Azure RMS e, em seguida, importá-la com os dados de configuração.
+Uma vez que a chave de inquilino do Azure RMS irá ser armazenada e gerida pelo Cofre de Chaves do Azure, esta parte da migração requer administração no Cofre de Chaves do Azure, além do Azure RMS. Se o Cofre de Chaves do Azure for gerido por um administrador diferente de si para a sua organização, irá precisar de coordenar e trabalhar com esse administrador para concluir estes procedimentos.
 
-## Parte 1: compactar a sua chave HSM para que fique pronta a transferir para o Azure RMS
+Antes de começar, certifique-se de que a sua organização tem um cofre de chaves criado no Cofre de Chaves do Azure e que suporta chaves protegidas por HSM. Embora não seja necessário, recomendamos que tenha um cofre de chaves dedicado para o Azure RMS. Este cofre de chaves será configurado para permitir ao Azure RMS aceder ao mesmo, pelo que as chaves armazenadas por este cofre de chaves devem estar limitadas apenas às chaves do Azure RMS.
 
-1.  Siga os passos na secção [Implementar BYOK (traga a sua própria chave)](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) de [Planear e implementar a chave de inquilino do Azure Rights Management](plan-implement-tenant-key.md), utilizando o procedimento **Gerar e transferir a chave de inquilino – através da Internet** com as seguintes exceções:
 
-    -   Não siga os passos para **Gerar a chave de inquilino**, porque já tem o equivalente da sua implementação do AD RMS. Tem de identificar a chave utilizada pelo seu servidor AD RMS na instalação da Thales e utilizar esta chave durante a migração. Os ficheiros de chave encriptados da Thales são normalmente denominados **key_(keyAppName)_(keyIdentifier)** localmente no servidor.
+> [!TIP]
+> Se for efetuar os passos de configuração do Cofre de Chaves do Azure e não estiver familiarizado com este serviço do Azure, poderá considerar útil primeiro rever [Introdução ao Cofre de Chaves do Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/). 
 
-    -   Não siga os passos para **Transferir a chave de inquilino para o Azure RMS**, que utiliza o comando Add-AadrmKey.  Em vez disso, transfira a chave HSM preparada quando carregar o domínio de publicação fidedigno exportado, utilizando o comando Import-AadrmTpd.
 
-2.  Na estação de trabalho com ligação à Internet, numa sessão do Windows PowerShell, volte a ligar-se ao serviço do Azure RMS.
+## Parte 1: transferir a chave HSM para o Cofre de Chaves do Azure
 
-Agora que já preparou a chave HSM para o Azure RMS, está pronto para importar o ficheiro da chave HSM e os dados de configuração do AD RMS.
+Estes procedimentos são efetuados pelo administrador para o Cofre de Chaves do Azure.
 
-## Parte 2: importar a chave HSM e os dados de configuração para o Azure RMS
+1.  Siga as instruções da documentação do Cofre de Chaves do Azure, utilizando [Implementar o BYOK (Bring Your Own Key – Traga a Sua Própria Chave)](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) com a seguinte exceção:
 
-1.  Ainda na estação de trabalho com ligação à Internet e na sessão do Windows PowerShell, carregue o primeiro ficheiro de domínio de publicação fidedigno (.xml) exportado. Se tiver mais do que um ficheiro .xml, porque tinha vários domínios de publicação fidedignos, escolha o ficheiro que contém o domínio de publicação fidedigno exportado que corresponde à chave de HSM que pretende utilizar no Azure RMS para proteger o conteúdo após a migração. Utilize o seguinte comando:
+    - Não efetue os passos para **Gerar a chave de inquilino**, porque já tem o equivalente da sua implementação do AD RMS. Em vez disso, identifique a chave utilizada pelo servidor do AD RMS na instalação da Thales e utilize esta chave durante a migração. Os ficheiros de chave encriptados da Thales são normalmente denominados **key<*keyAppName*><*keyIdentifier*>** localmente no servidor.
 
+    Quando a chave é carregada para o Cofre de Chaves do Azure, pode ver as respetivas propriedades apresentadas, incluindo o ID da chave. Terá um aspeto semelhante a https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Tome nota deste URL, porque o administrador do Azure RMS irá precisar dele para indicar ao Azure RMS que utilize esta chave para a respetiva chave de inquilino.
+
+2. Na estação de trabalho ligada à Internet, numa sessão do PowerShell, utilize o cmdlet [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx ) para autorizar o principal do serviço Azure RMS (Microsoft.Azure.RMS) para aceder ao cofre de chaves que armazenará a chave de inquilino do Azure RMS. As permissões necessárias são decrypt, encrypt, unwrapkey, wrapkey, verify e sign.
+    
+    Por exemplo, se o cofre de chaves que criou para o Azure RMS tiver o nome contoso-byok-ky e o grupo de recursos tiver o nome contoso-byok-rg, execute o seguinte comando:
+    
+        Set-AzureRmKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign
+
+
+Agora que já preparou a chave HSM no Cofre de Chaves do Azure para o Azure RMS, está pronto para importar os dados de configuração do AD RMS.
+
+## Parte 2: importar os dados de configuração para o Azure RMS
+
+Estes procedimentos são efetuados pelo administrador para o Azure RMS.
+
+1.  Na estação de trabalho ligada à Internet e na sessão do PowerShell, ligue ao Azure RMS utilizando o cmdlet [Connnect AadrmService](https://msdn.microsoft.com/library/dn629415.aspx ).
+    
+    Em seguida, carregue o primeiro ficheiro de domínio de publicação fidedigno exportado (.xml) utilizando o cmdlet [Import-AadrmTpd](https://msdn.microsoft.com/library/dn857523.aspx). Se tiver mais do que um ficheiro .xml, porque tinha vários domínios de publicação fidedignos, escolha o ficheiro que contém o domínio de publicação fidedigno exportado que corresponde à chave de HSM que pretende utilizar no Azure RMS para proteger o conteúdo após a migração. 
+    
+    Para executar este cmdlet, precisará do URL para a chave identificada no passo anterior.
+    
+    Por exemplo, utilizando o nosso valor de URL da chave do passo anterior e um ficheiro TDP de C:\contoso-tpd1.xml, executaria:
+    
     ```
-    Import-AadrmTpd -TpdFile <PathToTpdPackageFile> -ProtectionPassword -HsmKeyFile <PathToBYOKPackage> -Active $True -Verbose
+    Import-AadrmTpd -TpdFile "C:\contoso-tpd1.xml" -ProtectionPassword –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Active $True -Verbose
     ```
-    Por exemplo: **Import -TpdFile E:\no_key_tpd_contosokey1.xml -HsmKeyFile E:\KeyTransferPackage-contosokey.byok -ProtectionPassword -Active $true -Verbose**
-
+    
     Quando for solicitado, introduza a palavra-passe que especificou anteriormente e confirme que pretende efetuar esta ação.
 
-2.  Quando o comando for concluído, repita o passo 1 para cada ficheiro .xml restante que criou ao exportar os seus domínios de publicação fidedignos. No entanto, para esses ficheiros, defina **-Active** para **false** ao executar o comando Import.  Por exemplo: **Import -TpdFile E:\contosokey2.xml -HsmKeyFile E:\KeyTransferPackage-contosokey.byok -ProtectionPassword -Active $false -Verbose**
+2.  Quando o comando for concluído, repita o passo 1 para cada ficheiro .xml restante que criou ao exportar os seus domínios de publicação fidedignos. No entanto, para esses ficheiros, defina **-Active** para **false** ao executar o comando Import.  
 
 3.  Utilize o cmdlet [Disconnect-AadrmService](http://msdn.microsoft.com/library/windowsazure/dn629416.aspx) para desligar do serviço do Azure RMS:
 
@@ -66,11 +87,14 @@ Agora que já preparou a chave HSM para o Azure RMS, está pronto para importar 
     Disconnect-AadrmService
     ```
 
+    > [!NOTE]
+    > Se tiver de confirmar mais tarde qual a chave de inquilino do Azure RMS utilizada no Cofre de Chaves do Azure, utilize o cmdlet do Azure RMS [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx).
+
 Agora está pronto para ir para o [Passo 3. Ativar o seu inquilino do RMS](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant).
 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

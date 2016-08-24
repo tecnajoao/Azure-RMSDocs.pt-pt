@@ -3,15 +3,15 @@ title: "Como configurar uma etiqueta para aplicar a proteção Rights Management
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/15/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
-ms.openlocfilehash: 798fb423ff8dab3e9777a33e7b2c483bceb81016
+ms.sourcegitcommit: e11a5a836d6a410ba49ac17cfe95d8530ecb785f
+ms.openlocfilehash: 60738c310a3e7c734bfe3e48e16535ed3be05bb4
 
 
 ---
@@ -63,11 +63,15 @@ Para mais informações sobre o Azure Rights Management e para saber como funcio
     > [!NOTE] 
     > Se criar um novo modelo depois de abrir o painel **Etiqueta**, feche este painel e volte ao passo 2, para que o modelo criado recentemente seja obtido a partir do Azure de modo a poder selecioná-lo.
     
-5. Se tiver selecionado o AD RMS: forneça o GUID do modelo e o URL de licenciamento do cluster do AD RMS.
+    Tenha em atenção que, se selecionar um modelo departamental ou se tiver configurado [controlos de inclusão](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment):
+    
+    - Os utilizadores que estão fora do âmbito configurado do modelo ou que estão excluídos de aplicarem a proteção do Azure Rights Management continuarão a ver a etiqueta mas não poderão aplicá-la. Se selecionarem a etiqueta, verão a seguinte mensagem: **O Azure Information Protection não pode aplicar esta etiqueta. Se este problema persistir, contacte o seu administrador.**
+    
+5. Se tiver selecionado o AD RMS: forneça o GUID do modelo e o URL de licenciamento do cluster do AD RMS. [Mais informações](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label)
 
-5. Clique em **Guardar**.
+6. Clique em **Guardar**.
 
-6. Para disponibilizar as alterações aos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
+7. Para disponibilizar as alterações aos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
 
 ## Passos seguintes
 
@@ -75,6 +79,6 @@ Para mais informações sobre como configurar a política do Azure Information P
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

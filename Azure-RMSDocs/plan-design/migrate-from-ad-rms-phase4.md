@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/29/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea4dd88ed749092fd02135d8ca25b621f74fe72f
-ms.openlocfilehash: 7ed3569475362272ace055862fe8bb3ee072036a
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: 21fac7d684f2d544ab97f5ca6eb7faaaca3e9d26
 
 
 ---
@@ -36,25 +36,24 @@ Monitorize a atividade dos seus servidores do AD RMS, por exemplo, ao verificar 
 Após a desativação dos servidores AD RMS, pode aproveitar a oportunidade para rever os modelos no portal clássico do Azure e consolidá-los para que os utilizadores tenham menos por onde escolher, reconfigurá-los ou até adicionar novos modelos. É também uma boa altura para publicar os modelos predefinidos. Para mais informações, consulte [Configurar modelos personalizados para o Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
 ## Passo 9. Recodificar a chave de inquilino do Azure RMS
-Este passo é obrigatório quando a migração estiver concluída se a sua implementação do AD RMS estava a utilizar o Modo Criptográfico 1 do RMS, pois o rechaveamento cria uma nova chave de inquilino que utiliza o Modo Criptográfico 2 do RMS. A utilização do Azure RMS com o Modo Criptográfico 1 é suportada apenas durante o processo de migração.
+Este passo é aplicável apenas se a topologia de chave de inquilino escolhida for gerida pela Microsoft e não pelo cliente (BYOK com o Cofre de Chaves do Azure).
 
-Este passo é opcional, mas recomendado, quando a migração estiver concluída, mesmo se estivesse a executar no Modo Criptográfico 2 do RMS, pois ajuda a proteger a sua chave de inquilino do Azure RMS contra potenciais falhas de segurança na chave do AD RMS. Quando efetuar o rechaveamento da chave de inquilino do Azure RMS (também conhecido como “implementar a chave”), é criada uma nova chave e a chave original é arquivada. No entanto, uma vez que mover de uma chave para outra não ocorre imediatamente mas ao longo de algumas semanas, não espere até suspeitar que existe uma falha na chave original e efetue o rechaveamento da chave de inquilino do Azure RMS assim que a migração estiver concluída.
+Este passo é opcional mas recomendado quando a sua chave de inquilino do Azure RMS for gerida pela Microsoft e tiver sido migrada a partir do AD RMS. A recodificação neste cenário ajuda a proteger a sua chave de inquilino do Azure RMS contra potenciais falhas de segurança na chave do AD RMS.
 
-Para efetuar o rechaveamento da chave de inquilino do Azure RMS:
+Quando efetuar o rechaveamento da chave de inquilino do Azure RMS (também conhecido como “implementar a chave”), é criada uma nova chave e a chave original é arquivada. No entanto, uma vez que mover de uma chave para outra não ocorre imediatamente mas ao longo de algumas semanas, não espere até suspeitar que existe uma falha na chave original e efetue o rechaveamento da chave de inquilino do Azure RMS assim que a migração estiver concluída.
 
--   Se a sua chave de inquilino do Azure RMS for gerida pela Microsoft: para fazer isto, [contacte o Suporte da Microsoft](../get-started/information-support.md#to-contact-microsoft-support) para abrir um **caso de suporte do Azure Rights Management com um pedido de rechaveamento da chave de inquilino do Azure RMS**. Tem de provar que é um administrador do inquilino do Azure RMS e compreender que este processo demorará alguns dias a ser confirmado. São aplicáveis encargos de suporte padrão; o rechaveamento da chave de inquilino não é um serviço de suporte gratuito.
+Para recodificar a chave de inquilino do Azure RMS gerida pela Microsoft, [contacte o Suporte da Microsoft](../get-started/information-support.md#to-contact-microsoft-support) e abra um **caso de suporte do Azure Rights Management com um pedido de recodificação da chave de inquilino do Azure RMS após a migração a partir do AD RMS**. Tem de provar que é um administrador do inquilino do Azure RMS e compreender que este processo demorará alguns dias a ser confirmado. São aplicáveis encargos de suporte padrão; o rechaveamento da chave de inquilino não é um serviço de suporte gratuito.
 
--   Se a chave inquilino do Azure RMS for gerida por si (BYOK): repita o procedimento BYOK para gerar e criar uma nova chave através da Internet ou pessoalmente.
-
-Para obter mais informações acerca da gestão da sua chave de inquilino do Azure RMS, consulte [Operações para a chave de inquilino do Azure Rights Management](../deploy-use/operations-tenant-key.md).
 
 ## Passos seguintes
+
+Para obter mais informações acerca da gestão da sua chave de inquilino do RMS, veja [Operações para a chave de inquilino do Azure Rights Management](../deploy-use/operations-tenant-key.md).
 
 Agora que concluiu a migração, consulte o [plano de implementação](deployment-roadmap.md) para identificar quaisquer outras tarefas de implementação que tenha de efetuar.
 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,15 +3,15 @@ title: "Restrições de HYOK | Azure Rights Management"
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/11/2016
+ms.date: 08/18/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 translationtype: Human Translation
-ms.sourcegitcommit: cfab76a97034b58eec8dfdbdc82cc1037a647d11
-ms.openlocfilehash: 95f64c00c28fb52a0bd7d78a997705f7ed515557
+ms.sourcegitcommit: a80866576dc7d6400bcebc2fc1c37bc0367bcdf3
+ms.openlocfilehash: 1cbf6bd6c209a8aafd1db61422ce03b628aaec07
 
 
 ---
@@ -51,9 +51,13 @@ Verifique se a sua implementação do AD RMS cumpre os requisitos seguintes para
 
 - Configuração do AD RMS:
     
+    - Versão mínima do Windows Server 2012 R2: necessária para ambientes de produção, mas para fins de teste ou avaliação, pode utilizar uma versão mínima do Windows Server 2008 R2 com o Service Pack 1.
+    
     - Cluster de raiz única do AD RMS.
     
-    - [Modo Criptográfico 2](https://technet.microsoft.com/library/hh867439.aspx).
+    - [Modo Criptográfico 2](https://technet.microsoft.com/library/hh867439.aspx): pode confirmar a versão do modo criptográfico do cluster do AD RMS e o respetivo estado de funcionamento global utilizando a [ferramenta RMS Analyser](https://www.microsoft.com/en-us/download/details.aspx?id=46437).   
+    
+    - Os servidores do AD RMS estão configurados para utilizar SSL/TLS com um certificado x.509 válido que seja considerado fidedigno pelos clientes ligados: necessários para ambientes de produção, mas não para fins de teste ou avaliação.
     
     - Modelos de direitos configurados.
 
@@ -66,7 +70,9 @@ Verifique se a sua implementação do AD RMS cumpre os requisitos seguintes para
 - O [cliente do Azure Information Protection](info-protect-client.md) tem a versão **1.0.233.0** ou posterior.
 
 > [!IMPORTANT]
-> Para cumprir a certeza elevada oferecida por este cenário, recomendamos que os servidores do AD RMS não estejam localizados no seu DMZ e sejam utilizados apenas por computadores bem geridos (por exemplo, sem ser dispositivos móveis ou computadores de grupo de trabalho).
+> Para cumprir a certeza elevada oferecida por este cenário, recomendamos que os servidores do AD RMS não estejam localizados na sua rede de perímetro e sejam utilizados apenas por computadores bem geridos (por exemplo, sem ser dispositivos móveis ou computadores de grupo de trabalho). 
+> 
+> Recomendamos também que o cluster do AD RMS utilize um módulo de segurança de hardware (HSM), para que a chave privada do Certificado de Licenciante para Servidor (SLC) não possa ser exposta ou roubada caso a sua implementação do AD RMS seja alguma vez violada ou comprometida. 
 
 Para obter informações de implementação e instruções para o AD RMS, veja [Serviços de Gestão de Direitos do Active Directory](https://technet.microsoft.com/library/hh831364.aspx) na biblioteca do Windows Server. 
 
@@ -89,6 +95,6 @@ Para configurar uma etiqueta para a proteção do AD RMS, veja [Como configurar 
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,27 +1,26 @@
 ---
 title: "Proteger um ficheiro que partilha por e-mail ao utilizar a aplicação de partilha Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "Quando protege um ficheiro que partilha por e-mail, cria uma nova versão do ficheiro original. O ficheiro original permanece desprotegido e a nova versão é protegida e automaticamente anexada a uma mensagem de e-mail que envia em seguida."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
-ms.openlocfilehash: 13f44e93ee9c1c0583bd75121aec638fee09b748
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 9becbab6612e49e285774e2e8742d6448b11a041
 
 
 ---
 
 # Proteger um ficheiro que partilha por e-mail ao utilizar a aplicação de partilha Rights Management
 
-*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Rights Management, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Rights Management, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 Quando protege um ficheiro que partilha por e-mail, cria uma nova versão do ficheiro original. O ficheiro original permanece desprotegido e a nova versão é protegida e automaticamente anexada a uma mensagem de e-mail que envia em seguida.
 
@@ -31,7 +30,7 @@ Se a sua organização utilizar o Azure RMS, pode controlar os ficheiros que pro
 
 -   Selecione uma opção para receber e-mails quando alguém tentar abrir estes anexos protegidos. Sempre que alguém aceder ao ficheiro, será notificado sobre quem tentou abrir o ficheiro e quando o fez, bem como se teve êxito (se a autenticação foi efetuada com êxito) ou não.
 
--   Utilize o site de controlo de documentação. Pode, inclusive, deixar de partilhar o ficheiro ao revogar o acesso ao mesmo no site de controlo de documentos. Para obter mais informações, consulte [Controlar e revogar os documentos quando utiliza a aplicação de partilha RMS](sharing-app-track-revoke.md).
+-   Utilize o site de controlo de documentação. Pode, inclusive, deixar de partilhar o ficheiro ao revogar o acesso ao mesmo no site de controlo de documentos. Para obter mais informações, veja [Controlar e revogar os documentos quando utiliza a aplicação de partilha RMS](sharing-app-track-revoke.md).
 
 ## Utilizar o Outlook: para proteger um ficheiro que partilha por e-mail
 
@@ -93,6 +92,6 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

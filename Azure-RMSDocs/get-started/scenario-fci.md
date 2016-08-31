@@ -1,27 +1,26 @@
 ---
 title: "Cenário – Proteger ficheiros numa partilha de servidor de ficheiros | Azure RMS"
-description: 
-keywords: 
+description: "Este cenário e a documentação do utilizador associada utilizam o Azure Rights Management para a proteção em volume de todos os ficheiros que pretende proteger num servidor de ficheiros, de modo a garantir que apenas os funcionários da sua organização podem aceder aos mesmos, mesmo que sejam copiados e guardados num armazenamento que não está sob o controlo do seu departamento de TI ou enviados por e-mail para outras pessoas."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 283c7db3-5730-439e-a215-40a1088ed506
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: c16098a2d0fe41748280704716a2eeef8921a6fa
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: adc8ebd3063d8ac4b3710c517f0177fc25a16845
 
 
 ---
 
 # Cenário – Proteger ficheiros numa partilha de servidor de ficheiros
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Rights Management, Office 365*
 
 Este cenário e a documentação do utilizador associada utilizam o Azure Rights Management para a proteção em volume de todos os ficheiros que pretende proteger num servidor de ficheiros, de modo a garantir que apenas os funcionários da sua organização podem aceder aos mesmos, mesmo que sejam copiados e guardados num armazenamento que não está sob o controlo do seu departamento de TI ou enviados por e-mail para outras pessoas.
 
@@ -156,6 +155,6 @@ Os ficheiros serão protegidos novamente de forma periódica. Esta operação vo
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

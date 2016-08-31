@@ -4,9 +4,9 @@ description: "O quarto passo de um tutorial para experimentar rapidamente o Micr
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/13/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: 
 ms.assetid: f8340056-87a1-4daa-8b63-3d95fc381b9c
@@ -18,8 +18,8 @@ ms.suite: ems
 ms.tgt_pltfrm: 
 ms.custom: 
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: 19f536e8d0353c7b0ccbd4de3df646352dc2d748
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 0287f1408c7cd22d0254d135aaa267ec77246e45
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 19f536e8d0353c7b0ccbd4de3df646352dc2d748
 
 # Passo 4 do início rápido do Azure RMS: pedir aos destinatários para abrir o documento enviado por e-mail
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Rights Management, Office 365*
 
 
 Passar para: 
@@ -71,7 +71,7 @@ Agora que o destinatário abriu o anexo e, opcionalmente, o reencaminhou para ou
 |--------------------------------|--------------------------|
 |Instruções completas para visualizar ficheiros que estão protegidos pelo Azure Rights Management|[Ver e utilizar ficheiros que foram protegidos pelo Rights Management](../rms-client/sharing-app-view-use-files.md)|
 |Acerca da subscrição gratuita, RMS para indivíduos|[RMS para Indivíduos e Azure Rights Management](../understand-explore/rms-for-individuals.md)|
-|Acerca das duas versões do ficheiro que vê anexado à mensagem de e-mail|[O que é o ficheiro .ppdf criado automaticamente?](../rms-client/sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created-)|
+|Acerca das duas versões do ficheiro que vê anexado à mensagem de e-mail|[O que é o ficheiro .ppdf criado automaticamente?](../rms-client/sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created)|
 
 
 >[!div class="step-by-step"]
@@ -79,6 +79,6 @@ Agora que o destinatário abriu o anexo e, opcionalmente, o reencaminhou para ou
 [Passo 5 »](tutorial-step5.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

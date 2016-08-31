@@ -1,27 +1,26 @@
 ---
 title: "Proteção RMS com Infraestrutura de Classificação de Ficheiros (FCI) do Windows Server | Azure RMS"
-description: 
-keywords: 
+description: "Utilize este artigo para obter instruções e um script para utilizar o cliente de Rights Management (RMS) com a ferramenta RMS Protection para configurar o Gestor de Recursos do Servidor de Ficheiros e a infraestrutura de classificação de ficheiros (FCI)."
 author: cabailey
 manager: mbaldwin
 ms.date: 06/14/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1fc1835b60c4c75b81f106011849940ba2e77164
-ms.openlocfilehash: afb00e010df25dea5f3c3cad23824f773de59b18
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 431eb994070391a78b0b8e34b1afb668f0981f0f
 
 
 ---
 
 # Proteção RMS com Infraestrutura de Classificação de Ficheiros (FCI) do Windows Server
 
-*Aplica-se a: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*Aplica-se a: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
 
 Utilize este artigo para obter instruções e um script para utilizar o cliente de Rights Management (RMS) com a ferramenta RMS Protection para configurar o Gestor de Recursos do Servidor de Ficheiros e a infraestrutura de classificação de ficheiros (FCI).
 
@@ -303,6 +302,6 @@ Agora, tudo o que precisa de fazer é criar uma nova tarefa de gestão de fichei
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

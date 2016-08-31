@@ -1,27 +1,26 @@
 ---
 title: "Cenário – Proteger alguns dos seus ficheiros mais importantes | Azure RMS"
-description: 
-keywords: 
+description: "Este cenário e a documentação do utilizador associada utilizam o Azure Rights Management para proteger de forma manual e personalizada alguns ficheiros que tenha identificado como sendo os mais importantes e que requerem o mais elevado nível de proteção contra acesso não autorizado. Normalmente, são ficheiros a que apenas algumas pessoas devem conseguir aceder. Por exemplo, instruções da receita do produto alimentar de marca da sua empresa ou planos de aquisição que não devem ser tornados públicos antes de uma data especificada."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: d4325fb8a0b27d0a8d4fd7451b9d11d10153ed8d
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 5db916bc9eef927dc7d6a628808e9af79363e480
 
 
 ---
 
 # Cenário – Proteger alguns dos seus ficheiros mais importantes
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Rights Management, Office 365*
 
 Este cenário e a documentação do utilizador associada utilizam o Azure Rights Management para proteger de forma manual e personalizada alguns ficheiros que tenha identificado como sendo os mais importantes e que requerem o mais elevado nível de proteção contra acesso não autorizado. Normalmente, são ficheiros a que apenas algumas pessoas devem conseguir aceder. Por exemplo, instruções da receita do produto alimentar de marca da sua empresa ou planos de aquisição que não devem ser tornados públicos antes de uma data especificada.
 
@@ -148,6 +147,6 @@ Os ficheiros seguintes estão agora sujeitos a um nível muito elevado de prote�
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

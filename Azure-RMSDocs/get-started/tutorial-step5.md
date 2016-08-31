@@ -4,9 +4,9 @@ description: "O último passo de um tutorial para experimentar rapidamente o Mic
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: 
 ms.assetid: aa06826d-c227-449b-93ea-6ce394608997
@@ -18,8 +18,8 @@ ms.suite: ems
 ms.tgt_pltfrm: 
 ms.custom: 
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: 9c335e054d4aed1a8cca654420a580d02a4c849f
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 5884914e2ff69c4db40d4e874541f42b9a0e7df5
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 9c335e054d4aed1a8cca654420a580d02a4c849f
 
 # Passo 5 do início rápido do Azure RMS: controlar o seu documento protegido
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Rights Management, Office 365*
 
 
 Passar para: 
@@ -91,6 +91,6 @@ Ou, para ver uma lista de cenários específicos e passos de configuração asso
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

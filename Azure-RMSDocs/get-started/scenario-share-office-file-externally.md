@@ -1,27 +1,26 @@
 ---
 title: "Cenário – Partilhar um ficheiro do Office com os utilizadores noutra organização | Azure RMS"
-description: 
-keywords: 
+description: "Este cenário e a documentação do utilizador associada utilizam o Azure Rights Management para que os utilizadores possam enviar em segurança um ficheiro do Office por e-mail para pessoas noutra organização. Por exemplo, o ficheiro do Office poderá ser um documento do Word, uma folha de cálculo do Excel ou uma apresentação do PowerPoint com informações sobre a lista de preços de um parceiro, uma lista de produtos de um revendedor ou uma lista de prazos de entrega com potenciais clientes. Se os utilizadores seguirem as instruções, o ficheiro anexado à mensagem de e-mail será protegido pelo Azure Rights Management."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: 6a6f9d8c0a98752413a99d30926f2b5bc8af193d
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 9615e41666a08a1d66f4e0dbdedb06f02a8efd3e
 
 
 ---
 
 # Cenário – Partilhar um ficheiro do Office com os utilizadores noutra organização
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Rights Management, Office 365*
 
 Este cenário e a documentação do utilizador associada utilizam o Azure Rights Management para que os utilizadores possam enviar em segurança um ficheiro do Office por e-mail para pessoas noutra organização. Por exemplo, o ficheiro do Office poderá ser um documento do Word, uma folha de cálculo do Excel ou uma apresentação do PowerPoint com informações sobre a lista de preços de um parceiro, uma lista de produtos de um revendedor ou uma lista de prazos de entrega com potenciais clientes. Se os utilizadores seguirem as instruções, o ficheiro anexado à mensagem de e-mail será protegido pelo Azure Rights Management.
 
@@ -73,7 +72,7 @@ Utilizando o modelo seguinte, copie e cole as instruções de utilizador numa co
 
 4.  Efetue as modificações adicionais que pretender a este conjunto de instruções e, em seguida, envie-o para os utilizadores.
 
-A documentação de exemplo mostra que aspeto estas instruções poderão ter para os utilizadores depois das personalizações.
+A documentação de exemplo mostra o aspeto que estas instruções poderão ter para os utilizadores depois das personalizações.
 
 ![Modelo de documentação do utilizador para a Implementação Rápida do Azure RMS](../media/AzRMS_UsersBanner.png)
 
@@ -155,6 +154,6 @@ Utilize o [portal de controlo de documentos](https://track.azurerms.com/) para c
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

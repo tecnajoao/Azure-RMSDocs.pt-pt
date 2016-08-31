@@ -1,27 +1,26 @@
 ---
 title: "Cenário – Os executivos trocam informações privilegiadas em segurança | Azure RMS"
-description: 
-keywords: 
+description: "Este cenário e a documentação do utilizador associada utilizam o Azure Rights Management para que os executivos possam trocar em segurança e-mails e anexos por e-mail e as políticas restrinjam automaticamente o acesso dos executivos sem necessidade de ação especial por parte deles. Os e-mails e quaisquer anexos serão automaticamente protegidos pelo Azure Rights Management."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: def8b7e98fd55a3d028978ffc9f8e41e38a5622c
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 3c15175f26c5e3bc0ff824c284beedc639cf9309
 
 
 ---
 
 # Cenário – Os executivos trocam informações privilegiadas em segurança
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Rights Management, Office 365*
 
 Este cenário e a documentação do utilizador associada utilizam o Azure Rights Management para que os executivos possam trocar em segurança e-mails e anexos por e-mail e as políticas restrinjam automaticamente o acesso dos executivos sem necessidade de ação especial por parte deles. Os e-mails e quaisquer anexos serão automaticamente protegidos pelo Azure Rights Management.
 
@@ -97,7 +96,7 @@ Utilizando o modelo seguinte, copie e cole o anúncio numa comunicação destina
 
 3.  Substitua *&lt;domíniodee-mail&gt;* pelo nome de domínio de e-mail da sua organização.
 
-4.  Substitua *&lt;detalhes de contacto&gt;* por instruções sobre como os utilizadores podem contactar o suporte técnico, tais como uma ligação para um site, um endereço de e-mail ou um número de telefone.
+4.  Substitua os *&lt;detalhes de contacto&gt;* por instruções sobre como os utilizadores podem contactar o suporte técnico, tais como uma ligação para um Web site, um endereço de e-mail ou um número de telefone.
 
 5.  Efetue quaisquer modificações adicionais que pretenda ao anúncio e, em seguida, envie-o aos utilizadores.
 
@@ -133,6 +132,6 @@ Ao enviar informações confidenciais da empresa para outro executivo da VanArsd
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

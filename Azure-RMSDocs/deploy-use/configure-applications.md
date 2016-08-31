@@ -1,27 +1,26 @@
 ---
 title: "Configurar aplicações para o Azure Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "Depois de ter implementado o Azure Rights Management (Azure RMS) na sua organização, utilize as seguintes informações para configurar aplicações e serviços para suportar o Azure RMS. Incluem aplicações do Office como o Word 2013 e o Word 2010, bem como serviços como o Exchange Online (regras de transporte, prevenção de perda de dados, não reencaminhar e encriptação de mensagens) e o SharePoint Online (bibliotecas protegidas)."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 8fe934c51e852791d19fbb336deaf9cd7be9817b
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 7e592d99bcd2a143d63b35aa4afb92b1e45cb74a
 
 
 ---
 
 # Configurar aplicações para o Azure Rights Management
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Rights Management, Office 365*
 
 > [!NOTE]
 > Estas informações destinam-se aos administradores de TI e consultores que tenham implementado o Azure Rights Management. Se estiver à procura de ajuda de utilizador e de informações acerca de como utilizar o Rights Management para uma aplicação específica ou como abrir um ficheiro que está protegido por direitos, utilize a ajuda e as orientações incluídas com a sua aplicação.
@@ -33,7 +32,7 @@ Depois de ter implementado o Azure Rights Management (Azure RMS) na sua organiza
 > [!IMPORTANT]
 > Para obter informações sobre as versões suportadas e outros requisitos, consulte [Requisitos do Azure Rights Management](../get-started/requirements-azure-rms.md).
 
--   [Office 365: configuração para clientes e serviços online](configure-office365.md)
+-   [Office 365: Configuração para clientes e serviços online](configure-office365.md)
 
     -   [Exchange Online: configuração de IRM](configure-office365.md#exchange-online-irm-configuration)
 
@@ -75,6 +74,6 @@ Depois de configurar as suas aplicações para suportar o Azure Rights Managemen
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

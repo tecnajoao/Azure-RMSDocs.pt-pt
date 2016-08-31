@@ -6,22 +6,22 @@ author: cabailey
 manager: mbaldwin
 ms.date: 08/03/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ba029e48b540fda8474eba83322c531ff3daa7b3
-ms.openlocfilehash: a123338e34a8c4585a01782a473a400ecb58f166
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 214890cee5975c05798014ddb8d153faa9ca3998
 
 
 ---
 
 # Alterar permissões em ficheiros que tenham sido protegidos pela Rights Management
 
-*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Rights Management, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Rights Management, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 Se um ficheiro tiver sido protegido pela Rights Management, pode alterar as permissões voltando a protegê-lo e, em seguida, especificar todos os utilizadores que devem ter acesso à mesma e que permissões pretende conceder-lhes.
 
@@ -96,6 +96,6 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 

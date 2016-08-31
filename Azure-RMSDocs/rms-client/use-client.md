@@ -1,12 +1,11 @@
 ---
 title: Cliente Rights Management (RMS) | Azure RMS
-description: 
-keywords: 
+description: "Os serviços Microsoft Rights Management são uma solução de cliente-servidor, onde o cliente RMS está integrado em aplicações que são executadas em computadores e dispositivos móveis, sendo que o serviço RMS reside na nuvem (Azure RMS) ou no local (AD RMS). O cliente RMS é instalado automaticamente com algumas aplicações, como as aplicações do Office, a aplicação de partilha RMS e as aplicações suportadas por RMS de fornecedores de software. No entanto, também pode ser instalado sozinho, para suportar cenários tais como programadores que pretendam integrar a proteção RMS nas suas aplicações de linha de negócio e administradores ou utilizadores avançados que pretendam proteger os ficheiros em volume utilizando a Ferramenta de Proteção RMS."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
@@ -14,15 +13,15 @@ ROBOTS: noindex,nofollow
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 8c21202793dca90edda943082fcd718bdf7397ca
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 234095a733633462ba1a221a5ac6e1e1d47df12b
 
 
 ---
 
 # Cliente Rights Management (RMS)
 
-*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Rights Management, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Rights Management, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 Os serviços Microsoft Rights Management são uma solução de cliente-servidor, onde o cliente RMS está integrado em aplicações que são executadas em computadores e dispositivos móveis, sendo que o serviço RMS reside na nuvem (Azure RMS) ou no local (AD RMS). O cliente RMS é instalado automaticamente com algumas aplicações, como as aplicações do Office, a aplicação de partilha RMS e as aplicações suportadas por RMS de fornecedores de software. No entanto, também pode ser instalado sozinho, para suportar cenários tais como programadores que pretendam integrar a proteção RMS nas suas aplicações de linha de negócio e administradores ou utilizadores avançados que pretendam proteger os ficheiros em volume utilizando a Ferramenta de Proteção RMS.
 
@@ -44,6 +43,6 @@ Para obter recursos adicionais, incluindo as opções de comunidade e de suporte
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

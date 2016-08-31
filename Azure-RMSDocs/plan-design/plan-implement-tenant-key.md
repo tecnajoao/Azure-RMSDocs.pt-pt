@@ -1,27 +1,26 @@
 ---
 title: Planear e implementar a sua chave de inquilino do Azure Rights Management | Azure RMS
-description: 
-keywords: 
+description: "Utilize as informações deste artigo para o ajudar a planear e gerir a sua chave de inquilino do RMS (Rights Management) do Azure RMS. Por exemplo, em vez de a sua chave de inquilino ser gerida pela Microsoft (predefinição), poderá querer gerir a sua própria chave de inquilino para cumprir os regulamentos específicos que se aplicam à sua organização. A gestão da sua própria chave de inquilino também é referida como Bring Your Own Key (Traga a Sua Própria Chave) ou BYOK."
 author: cabailey
 manager: mbaldwin
 ms.date: 08/17/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a80866576dc7d6400bcebc2fc1c37bc0367bcdf3
-ms.openlocfilehash: ee7b9b5f251856f102651f1e8f379f7bbacea77e
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 3a45a12cba766fed074d8b5fcf861164802d2441
 
 
 ---
 
 # Planear e implementar a sua chave de inquilino do Azure Rights Management
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Rights Management, Office 365*
 
 Utilize as informações deste artigo para o ajudar a planear e gerir a sua chave de inquilino do RMS (Rights Management) do Azure RMS. Por exemplo, em vez de a sua chave de inquilino ser gerida pela Microsoft (predefinição), poderá querer gerir a sua própria chave de inquilino para cumprir os regulamentos específicos que se aplicam à sua organização.  A gestão da sua própria chave de inquilino também é referida como Bring Your Own Key (Traga a Sua Própria Chave) ou BYOK.
 
@@ -137,6 +136,6 @@ Agora que já planeou e, se necessário, gerou a chave do inquilino, faça o seg
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

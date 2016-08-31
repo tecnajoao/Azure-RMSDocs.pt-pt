@@ -1,27 +1,26 @@
 ---
 title: "Aplicação de partilha Rights Management&colon; instalação e configuração para clientes | Azure RMS"
-description: 
-keywords: 
+description: "A aplicação de partilha Rights Management (RMS) é necessária para os computadores cliente utilizarem o Azure RMS com Office 2010 e é recomendada para todos os computadores e dispositivos móveis que suportam o Azure RMS. A aplicação de partilha RMS integra-se com aplicações do Office através da instalação de um suplemento do Office para que os utilizadores possam facilmente proteger ficheiros e e-mails diretamente do friso. De igual modo, proporciona proteção genérica a tipos de ficheiros que não são suportados nativamente pelo Azure RMS e possibilita um site de controlo de documentos para os utilizadores controlarem e revogarem ficheiros protegidos por eles."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: b9af5dc3-73d4-4147-b7ef-f6803b0d5216
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: d3f923cf6f140c2caa75b7b0c8ac90a42be962a7
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: bf7cd8007b5423efaa13849101af5c4688cf0975
 
 
 ---
 
 # Aplicação de partilha Rights Management: instalação e configuração para clientes
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Rights Management, Office 365*
 
 A aplicação de partilha Rights Management (RMS) é necessária para os computadores cliente utilizarem o Azure RMS com Office 2010 e é recomendada para todos os computadores e dispositivos móveis que suportam o Azure RMS. A aplicação de partilha RMS integra-se com aplicações do Office através da instalação de um suplemento do Office para que os utilizadores possam facilmente proteger ficheiros e e-mails diretamente do friso. De igual modo, proporciona proteção genérica a tipos de ficheiros que não são suportados nativamente pelo Azure RMS e possibilita um site de controlo de documentos para os utilizadores controlarem e revogarem ficheiros protegidos por eles.
 
@@ -43,6 +42,6 @@ Para instalar a aplicação de partilha RMS para plataformas móveis, pode trans
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

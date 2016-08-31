@@ -4,17 +4,17 @@ description: "O segundo passo de um tutorial para experimentar rapidamente o Mic
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/13/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f32cf2f3-29e2-429c-a0fd-b16cc482484a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: da706bcaf52d0519706898501c563a9a03231dd9
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 19eb18599d9d084b40cfe746f01eb8ce463c47ab
 
 
 ---
@@ -23,7 +23,7 @@ ms.openlocfilehash: da706bcaf52d0519706898501c563a9a03231dd9
 
 # Passo 2 do início rápido do Azure RMS: instalar a aplicação de partilha Rights Management
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Rights Management, Office 365*
 
 
 Passar para: 
@@ -62,7 +62,7 @@ Agora, está pronto para começar a proteger ficheiros que contêm informações
 |--------------------------------|--------------------------|
 |Acerca de uma instalação local da aplicação de partilha Rights Management para o Windows e instruções de utilizador|[Guia do utilizador da aplicação de partilha Rights Management](../rms-client/sharing-app-user-guide.md)|
 |Acerca de uma instalação com script da aplicação de partilha Rights Management para Windows e mais informações técnicas|[Guia do administrador da aplicação de partilha Rights Management](../rms-client/sharing-app-admin-guide.md)|
-|Para compreender a diferença entre a proteção nativa e a proteção genérica|[Qual é a diferença entre proteção genérica e proteção incorporada (nativa)?](../rms-client/sharing-app-dialog-box.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection-)|
+|Para compreender a diferença entre a proteção nativa e a proteção genérica|[Qual é a diferença entre proteção genérica e proteção incorporada (nativa)?](../rms-client/sharing-app-dialog-box.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection)|
 
 
 >[!div class="step-by-step"]
@@ -70,6 +70,6 @@ Agora, está pronto para começar a proteger ficheiros que contêm informações
 [Passo 3 »](tutorial-step3.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

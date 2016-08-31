@@ -1,27 +1,26 @@
 ---
 title: "Cenário – Manter o controlo de documentos armazenados no SharePoint | Azure RMS"
-description: 
-keywords: 
+description: "Este cenário e a documentação do utilizador associada utilizam o Azure Rights Management para garantir que os documentos do Office armazenados no SharePoint permanecem sob o seu controlo através da utilização de bibliotecas protegidas. Por exemplo, os documentos são automaticamente protegidos contra fugas acidentais ou intencionais por parte dos utilizadores e pode bloquear o acesso ao conteúdo mesmo depois de este ser transferido ou sincronizado. Os ficheiros que pretende proteger podem destinar-se à colaboração interna em documentos ou planos de conceção ou podem ser outros tipos de material a entregar. Quando configura bibliotecas protegidas para o SharePoint, os ficheiros do Office armazenados nas mesmas são protegidos pelo Azure Rights Management."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1b6244c7-5ab9-4881-bc8f-6fa960390d89
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: cb028afcbfd9b59f134539c434f4f49efc5e9092
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: f0dfe895820d33eab1d3a69c92e881287072f554
 
 
 ---
 
 # Cenário – Manter o controlo de documentos armazenados no SharePoint
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Rights Management, Office 365*
 
 Este cenário e a documentação do utilizador associada utilizam o Azure Rights Management para garantir que os documentos do Office armazenados no SharePoint permanecem sob o seu controlo através da utilização de bibliotecas protegidas. Por exemplo, os documentos são automaticamente protegidos contra fugas acidentais ou intencionais por parte dos utilizadores e pode bloquear o acesso ao conteúdo mesmo depois de este ser transferido ou sincronizado. Os ficheiros que pretende proteger podem destinar-se à colaboração interna em documentos ou planos de conceção ou podem ser outros tipos de material a entregar. Quando configura bibliotecas protegidas para o SharePoint, os ficheiros do Office armazenados nas mesmas são protegidos pelo Azure Rights Management.
 
@@ -45,7 +44,7 @@ Para que este cenário funcione, é necessário que os seguintes aspetos estejam
 |---------------|--------------------------------|
 |Preparou contas e grupos para o Office 365 ou o Azure Active Directory|[Preparar para o Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
 |O Azure Rights Management está ativado|[Ativar o Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|Se pretender utilizar o SharePoint Server: implemente o conector RMS e configure-o para o SharePoint|[Implementar o conector Azure Rights Management](https://technet.microsoft.com/library/dn375964.aspx)|
+|Se pretender utilizar o SharePoint Server: implemente o conector RMS e configure-o para o SharePoint|[Implementar o conetor Azure Rights Management](https://technet.microsoft.com/library/dn375964.aspx)|
 |Configurar permissões para o site do SharePoint a proteger|[Gerir permissões para uma lista, biblioteca, pasta, documento ou item da lista](https://support.office.com/en-ca/article/Manage-permissions-for-a-list-library-folder-document-or-list-item-9d13e7df-a770-4646-91ab-e3c117fcef45)<br /><br />[Aplicar a Gestão de Direitos de Informação a uma lista ou biblioteca](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
 |Configurar o SharePoint para IRM e bibliotecas protegidas|[Configurar a Gestão de Direitos de Informação (IRM) no centro de administração do SharePoint](https://support.office.com/en-us/article/Set-up-Information-Rights-Management-IRM-in-SharePoint-admin-center-239ce6eb-4e81-42db-bf86-a01362fed65c)<br /><br />[Aplicar a Gestão de Direitos de Informação a uma lista ou biblioteca](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
 
@@ -70,7 +69,7 @@ Utilizando o modelo seguinte, copie e cole o anúncio numa comunicação destina
 
 2.  Se tiver configurado a opção **Permitir proteção de grupo. Grupo predefinido**, substitua *&lt;nome do grupo&gt;* pelo nome do grupo que configurou e forneça o motivo – &lt;motivo pelo qual este grupo tem permissões de acesso para colaborar nos ficheiros, mas não através da biblioteca do SharePoint&gt;. Se não tiver configurado esta opção, elimine esta frase.
 
-3.  Substitua *&lt;detalhes de contacto&gt;* por instruções sobre como os utilizadores podem contactar o suporte técnico, tais como uma ligação para um site, um endereço de e-mail ou um número de telefone.
+3.  Substitua os *&lt;detalhes de contacto&gt;* por instruções sobre como os utilizadores podem contactar o suporte técnico, tais como uma ligação para um Web site, um endereço de e-mail ou um número de telefone.
 
 4.  Efetue quaisquer modificações adicionais que pretenda ao anúncio e, em seguida, envie-o aos utilizadores.
 
@@ -106,6 +105,6 @@ Não poderá carregar documentos para o site Previsões de Vendas e Relatórios 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

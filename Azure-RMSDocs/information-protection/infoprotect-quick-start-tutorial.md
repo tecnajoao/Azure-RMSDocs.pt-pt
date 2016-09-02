@@ -3,15 +3,15 @@ title: "Tutorial de início rápido do Azure Information Protection | Azure Righ
 description: "Um tutorial de apresentação para experimentar rapidamente o Microsoft Azure Information Protection na sua organização com apenas 4 passos que devem demorar menos de 15 minutos."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/22/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: 7d599aef75272eff5527294141bb0eb98d041b1b
-ms.openlocfilehash: 419bfcde6915bd6c8db9cf5ddb268f6d70c83768
+ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
+ms.openlocfilehash: 6fbe4bd32f1aef57b3bf42aeedea46f618fb5540
 
 
 ---
@@ -31,7 +31,7 @@ Se tiver algum problema quando concluir este tutorial, utilizando a versão de p
 ## Pré-requisitos 
 Para concluir este tutorial, terá de ter o seguinte:
 
-- Qualquer subscrição que inclua a Azure Rights Management, irá dar-lhe acesso à versão de pré-visualização do Azure Information Protection. O Azure Information Protection está disponível em todas as regiões que suportam a Azure Rights Management. Para obter mais informações sobre as subscrições e ligações disponíveis para as versões de avaliação gratuitas, veja [Requisitos do Azure RMS: subscrições na nuvem que suportam o Azure RMS](../get-started/requirements-subscriptions.md).
+- Uma subscrição do Office 365 que inclua a proteção de e-mails e documentos do Office através do Azure RMS. Para obter mais informações sobre as subscrições e ligações disponíveis para as versões de avaliação gratuitas, veja a secção [Subscrição do Office 365](../get-started/requirements-subscriptions.md#office-365-subscription) da documentação de requisitos do Azure RMS.
 
 - Uma subscrição do Azure, para que possa aceder ao portal do Azure, para configurar a política do Azure Information Protection. Se ainda não tem uma subscrição do Azure para a sua organização, pode obter uma inscrevendo-se numa versão de avaliação gratuita: aceda à [página Introdução ao Azure](https://account.windowsazure.com/organization) e siga as instruções.
 
@@ -51,6 +51,6 @@ Vamos começar.
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

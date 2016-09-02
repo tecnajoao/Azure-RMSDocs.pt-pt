@@ -1,27 +1,26 @@
 ---
 title: "Preços e restrições de BYOK | Azure RMS"
-description: 
-keywords: 
+description: "As organizações que tenham uma subscrição que inclua o Azure Rights Management podem utilizar chaves geridas pelo cliente (BYOK) no Cofre de Chaves do Azure e registar a respetiva utilização sem qualquer custo adicional. No entanto, para utilizar o Cofre de Chaves do Azure, é necessário ter uma subscrição do Azure que suporte o Cofre de Chaves com chaves protegidas por HSM. A utilização de uma chave no Cofre de Chaves do Azure implica uma cobrança mensal. Para obter mais informações, veja a página Preços do Cofre de Chaves do Azure."
 author: cabailey
 manager: mbaldwin
 ms.date: 08/17/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
-ms.openlocfilehash: ece615912d69eda78107c60245620ed36c0affd2
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 8505032a2a12f84c245e834e71d0b7b0d12e894f
 
 
 ---
 
 # Preços e restrições de BYOK
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Rights Management, Office 365*
 
 
 As organizações que tenham uma subscrição que inclua o Azure Rights Management podem utilizar chaves geridas pelo cliente (BYOK) no Cofre de Chaves do Azure e registar a respetiva utilização sem qualquer custo adicional. No entanto, para utilizar o Cofre de Chaves do Azure, é necessário ter uma subscrição do Azure que suporte o Cofre de Chaves com chaves protegidas por HSM. A utilização de uma chave no Cofre de Chaves do Azure implica uma cobrança mensal. Para obter mais informações, veja a [página de Preços do Cofre de Chaves do Azure](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
@@ -63,6 +62,6 @@ Se tiver decidido manter a configuração predefinida, em que a Microsoft gere a
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

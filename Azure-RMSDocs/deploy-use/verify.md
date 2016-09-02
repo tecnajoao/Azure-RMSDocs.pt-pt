@@ -1,27 +1,26 @@
 ---
 title: Verificar o Azure Rights Management | Azure RMS
-description: 
-keywords: 
+description: "Depois de ter ativado o Azure RMS e executado quaisquer passos de configuração adicionais que sejam necessários para a sua organização, pode verificar se o serviço está a funcionar conforme o esperado protegendo um ficheiro ou uma mensagem de e-mail ao utilizar uma conta de utilizador e, em seguida, tentar abrir e utilizar esse conteúdo protegido a partir de outra conta de utilizador."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bb152f428c8e0b9a065035aaad2de6353265a562
-ms.openlocfilehash: afa1fb35110918b9b97f91534616e1933e13b149
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: b24fa3540e4e9b9cc02ba3bcd83f5864ce8674d6
 
 
 ---
 
 # Verificar o Azure Rights Management
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Rights Management, Office 365*
 
 Depois de ter ativado o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) e executado quaisquer passos de configuração adicionais que sejam necessários para a sua organização, pode verificar se o serviço está a funcionar conforme o esperado protegendo um ficheiro ou uma mensagem de e-mail ao utilizar uma conta de utilizador e, em seguida, tentar abrir e utilizar esse conteúdo protegido a partir de outra conta de utilizador.
 
@@ -41,6 +40,6 @@ Pode monitorizar a forma como a sua organização está a utilizar a proteção 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

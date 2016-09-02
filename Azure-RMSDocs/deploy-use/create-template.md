@@ -1,20 +1,19 @@
 ---
 title: Criar, configurar e publicar um modelo personalizado | Azure RMS
-description: 
-keywords: 
+description: "Criar e gerir modelos personalizados no portal clássico do Azure. Pode fazê-lo diretamente no Portal Clássico do Azure ou pode iniciar sessão no Centro de Administração do Office 365 e escolher as funcionalidades avançadas do Rights Management que, em seguida, redireciona para o Portal Clássico do Azure."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5737594c679be0702761014425e104e5eade59f3
-ms.openlocfilehash: c240502f2e88ec61bcbee6be778e77a0d5aee66b
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 64beb891fda54da3718a322f6628a2987ff35111
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: c240502f2e88ec61bcbee6be778e77a0d5aee66b
 
 # Criar, configurar e publicar um modelo personalizado
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Rights Management, Office 365*
 
 
 Criar e gerir modelos personalizados no portal clássico do Azure. Pode fazê-lo diretamente a partir do portal clássico do Azure ou pode iniciar sessão no centro de administração do Office 365 e escolher as **funcionalidades avançadas** do Rights Management que, em seguida, redireciona para o portal clássico do Azure.
@@ -56,7 +55,7 @@ Utilize os seguintes procedimentos para criar, configurar e publicar modelos per
 
         1.  No painel esquerdo, clique em **ACTIVE DIRECTORY**.
 
-        2.  Na página **active directory**, clique em **GESTÃO DE DIREITOS**.
+        2.  Na página **active directory**, clique em **RIGHTS MANAGEMENT**.
 
         3.  Selecione o diretório em que pretende gerir o Rights Management.
 
@@ -167,6 +166,6 @@ Para fazer alterações ao seu modelo, selecione-o e, em seguida, utilize os pas
 [Configurar modelos personalizados para o Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

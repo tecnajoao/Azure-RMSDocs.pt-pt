@@ -1,27 +1,26 @@
 ---
 title: Preparar para o Azure Rights Management | Azure RMS
-description: 
-keywords: 
+description: "Depois de se inscrever numa subscrição na nuvem e criar uma conta do Microsoft Office 365 ou do Azure Active Directory para a sua organização, estará pronto para ativar o serviço Rights Management."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 55f092ede1f003c700cb58359bab264772702c39
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 4ebdb8a75b135f4f252d640e4f16da1ea7a1ed04
 
 
 ---
 
 # Preparar para o Azure Rights Management
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Rights Management, Office 365*
 
 Depois de se inscrever numa subscrição na nuvem e criar uma conta do [!INCLUDE[o365_1](../includes/o365_1_md.md)] ou do Azure Active Directory para a sua organização, está pronto para ativar o serviço [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
 
@@ -43,6 +42,6 @@ Por predefinição, o [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsma
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

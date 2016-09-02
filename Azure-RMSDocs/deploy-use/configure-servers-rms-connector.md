@@ -1,30 +1,29 @@
 ---
 title: Configurar servidores para o conector Azure Rights Management | Azure RMS
-description: 
-keywords: 
+description: "Utilize as seguintes informações para ajudar a configurar os servidores no local que irão utilizar o conector Azure Rights Management (RMS). Estes procedimentos inclui o passo 5 do artigo Implementar o conector Azure Rights Management."
 author: cabailey
 manager: mbaldwin
 ms.date: 06/08/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0b07ecc88b1d2d344f0984d4a805cc033996cc4d
-ms.openlocfilehash: 79171b5931b69ca18d2a2cbe321d5d5887903da2
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: d2b15dac1f2b2163ff72d80c97ca0d5da44fd13c
 
 
 ---
 
 # Configurar servidores para o conector Azure Rights Management
 
-*Aplica-se a: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*Aplica-se a: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
 
 
-Utilize as seguintes informações para ajudar a configurar os servidores no local que irão utilizar o conector Azure Rights Management (RMS). Estes procedimentos abrangem o passo 5 do artigo [Deploying the Azure Rights Management connector (Implementar o conector Azure Rights Management – em inglês)](deploy-rms-connector.md).
+Utilize as seguintes informações para ajudar a configurar os servidores no local que irão utilizar o conector Azure Rights Management (RMS). Estes procedimentos inclui o passo 5 do artigo [Implementar o conector Azure Rights Management](deploy-rms-connector.md).
 
 Antes de começar, certifique-se de que instalou e configurou o conetor RMS e de que verificou todos os [pré-requisitos](deploy-rms-connector.md#prerequisites-for-the-rms-connector) aplicáveis aos servidores que irão utilizar o conector.
 
@@ -118,7 +117,7 @@ Utilize as secções que se seguem para obter informações específicas para ca
 
 -   [Configurar um servidor SharePoint para utilizar o conector](#configuring-a-sharepoint-server-to-use-the-connector)
 
--   [Configurar um servidor de ficheiros para a Infraestrutura de Classificação de Ficheiros para utilizar o conector](#configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector)
+-   [Configurar um servidor de ficheiros da Infraestrutura de Classificação de Ficheiros para utilizar o conector](#configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector)
 
 > [!NOTE]
 > É possível que, depois de estes servidores serem configurados para utilizarem o conector, as aplicações cliente instaladas localmente não funcionem com o RMS. Quando isto acontece, é porque as aplicações tentam utilizar o conector em vez de utilizarem o RMS diretamente, o que não é suportado.
@@ -219,9 +218,9 @@ Os servidores com o SharePoint 2010 têm de ter instalada uma versão do cliente
 ## Configurar um servidor de ficheiros para a Infraestrutura de Classificação de Ficheiros para utilizar o conector
 Para utilizar o conector RMS e a Infraestrutura de Classificação de Ficheiros para proteger documentos do Office, o servidor de ficheiros tem de ter um dos seguintes sistemas operativos em execução:
 
--   Windows Server 2012 R2
+-   Windows Server 2012 R2
 
--   Windows Server 2012
+-   Windows Server 2012
 
 ### Para configurar servidores de ficheiros para utilizarem o conector
 
@@ -250,6 +249,6 @@ Para monitorizar o conector RMS, consulte o artigo [Monitorizar o conector do Az
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

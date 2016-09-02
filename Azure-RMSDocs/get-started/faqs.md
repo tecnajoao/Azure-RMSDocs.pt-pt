@@ -1,27 +1,26 @@
 ---
 title: Perguntas mais frequentes sobre o Azure Rights Management | Azure RMS
-description: 
-keywords: 
+description: "Algumas perguntas mais frequentes do Microsoft Azure Rights Management, também conhecido como Azure RMS."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e89c59716eef7fbdea415b41b1adfa54b0c16689
-ms.openlocfilehash: bd53b73452f444ac8529a8b8b613e76d8cc234a1
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 906e544cc3c9be6ba475502e3cdb93f2e047da7f
 
 
 ---
 
 # Perguntas mais frequentes sobre o Azure Rights Management
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Rights Management, Office 365*
 
 Algumas perguntas mais frequentes sobre o Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], também conhecido como Azure RMS:
 
@@ -207,7 +206,7 @@ Esta funcionalidade, no Azure Information Protection, está agora disponível em
 
 A documentação técnica não contêm informações sobre os lançamentos futuros. Para obter este tipo de informação e ter acesso aos anúncios de lançamento, leia o [Blogue Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) e obter as atualizações mais recentes através de [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) no Twitter. Se estiver interessado numa versão do Office, certifique-se de que vê também o [blogue do Office](https://blogs.office.com/).
 
-## O que posso fazer se a minha pergunta não estiver aqui?
+## O que posso fazer se a minha pergunta não constar aqui?
 Utilize as ligações e os recursos indicados em [Informações e suporte para o Azure Rights Management](information-support.md).
 
 Além disso, existem FAQs criadas para utilizadores finais:
@@ -224,6 +223,6 @@ Esta página de FAQ será atualizada regularmente, com novas adições indicadas
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

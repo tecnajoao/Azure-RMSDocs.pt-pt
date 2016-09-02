@@ -1,27 +1,26 @@
 ---
 title: Encerrar e desativar o Azure Rights Management | Azure RMS
-description: 
-keywords: 
+description: "Pode sempre controlar se a organização protege conteúdo através do (Azure RMS) e, se decidir que já não pretende utilizar esta solução de proteção de informações, tem a garantia de que não ficará impedido de aceder ao conteúdo que foi protegido anteriormente. Se não necessitar de acesso contínuo ao conteúdo anteriormente protegido, basta desativar o serviço e pode deixar que a sua subscrição do Azure Rights Management expire. Por exemplo, isto poderá ser adequado para quando terminar de o testar antes de o implementar num ambiente de produção."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 8c114336551417fdbf1503ffc8350e3fc28e9c95
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 40e4997f67a078ec781f1e7800599554858777a8
 
 
 ---
 
 # Encerrar e desativar o Azure Rights Management
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Rights Management, Office 365*
 
 Pode sempre controlar se a organização protege conteúdo utilizando o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) e, se decidir que já não pretende utilizar esta solução de proteção de informações, tem a garantia de que não ficará impedido de aceder ao conteúdo que foi protegido anteriormente. Se não necessitar de acesso contínuo ao conteúdo anteriormente protegido, basta desativar o serviço e pode deixar que a sua subscrição do Azure Rights Management expire. Por exemplo, isto poderá ser adequado para quando terminar de testar o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] antes de o implementar num ambiente de produção.
 
@@ -92,6 +91,6 @@ O **ESTADO DO RIGHTS MANAGEMENT** deverá agora apresentar **Inativo** e a opç�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

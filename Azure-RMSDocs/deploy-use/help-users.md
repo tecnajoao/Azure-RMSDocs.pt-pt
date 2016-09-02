@@ -1,27 +1,26 @@
 ---
 title: Ajudar os utilizadores a proteger ficheiros ao utilizar o Azure Rights Management | Azure RMS
-description: 
-keywords: 
+description: "Após ter implementado e configurado o Azure Rights Management (Azure RMS) para a sua organização, forneça ajuda e orientação para utilizadores, administradores e o suporte técnico."
 author: cabailey
 manager: mbaldwin
 ms.date: 06/09/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6dcd8bb1091e9c484e02042adbf993381581a9d
-ms.openlocfilehash: d48616cb638522e6cda61e7ae96db9480fc14099
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 329b9cb2fd6507638924f836eb6dffe8ffca43d1
 
 
 ---
 
 # Ajudar os utilizadores a proteger ficheiros ao utilizar o Azure Rights Management
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Rights Management, Office 365*
 
 Após ter implementado e configurado o Azure Rights Management (Azure RMS) para a sua organização, forneça ajuda e orientação para utilizadores, administradores e o suporte técnico:
 
@@ -116,6 +115,6 @@ Tal como na visualização de um documento protegido, quando os destinatários r
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

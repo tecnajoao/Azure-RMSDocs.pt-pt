@@ -1,27 +1,26 @@
 ---
 title: "Como os utilizadores se inscrevem no RMS para indivíduos | Azure RMS"
-description: 
-keywords: 
+description: "Para se inscrever nesta conta gratuita, os utilizadores efetuam o pedido ao visitar a página Microsoft Rights Management e fornecem o seu endereço de e-mail profissional ou escolar."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 19252180802c69d6e5d6bf22c71ff3bcba96fb36
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: a31005f3dce927db917cb0f2851916b8946da4ee
 
 
 ---
 
 # Como os utilizadores se inscrevem no RMS para indivíduos
 
-*Aplica-se a: Azure Rights Management*
+>*Aplica-se a: Azure Rights Management*
 
 Para se inscrever nesta conta gratuita, os utilizadores efetuam o pedido ao visitar a [página Microsoft Rights Management](https://portal.aadrm.com/) e fornecem o seu endereço de e-mail profissional ou escolar. 
 
@@ -102,6 +101,6 @@ Consulte [Como os administradores podem controlar as contas criadas para o RMS p
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

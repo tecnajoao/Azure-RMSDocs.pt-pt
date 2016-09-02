@@ -1,20 +1,19 @@
 ---
 title: "Perguntas mais frequentes sobre a pré-visualização do Azure Information Protection | Azure Information Protection"
-description: 
-keywords: 
+description: "Tem alguma pergunta sobre a versão de pré-visualização do Azure Information Protection? Verifique se a resposta está aqui."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/22/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d17bacf8e148622db0e2393f40d3fd37c8f086eb
-ms.openlocfilehash: c61e299cac50069afc119d37fd461cda88a2afd3
+ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
+ms.openlocfilehash: 55d56786150d38b36ae8185c4a7ac4c8a5c51ba4
 
 
 ---
@@ -57,7 +56,7 @@ Esta versão de pré-visualização tem as seguintes limitações. Procure anún
 
 ## Que subscrição é necessária para experimentar o Azure Information Protection?
 
-Para a versão de pré-visualização, pode utilizar qualquer subscrição que inclua o Azure Rights Management. O Azure Information Protection está disponível em todas as regiões. Para obter mais informações sobre as subscrições e ligações disponíveis para as versões de avaliação gratuitas, veja [Requisitos do Azure RMS: subscrições na nuvem que suportam o Azure RMS](../get-started/requirements-subscriptions.md).
+Para a versão de pré-visualização, pode utilizar qualquer subscrição do Office 365 que inclua proteção de e-mails e documentos do Office através do Azure Rights Management. O Azure Information Protection está disponível em todas as regiões. Para obter mais informações sobre as subscrições e ligações disponíveis para as versões de avaliação gratuitas, veja a secção [Subscrição do Office 365](../get-started/requirements-subscriptions.md#office-365-subscription) da documentação de requisitos do Azure RMS.
 
 Tem de ter uma subscrição do Azure para configurar as políticas do Azure Information Protection no portal do Azure. Se ainda não tiver uma subscrição do Azure para a sua organização, pode obter uma inscrevendo-se para uma versão de avaliação gratuita. Aceda à página [Introdução ao Azure](https://account.windowsazure.com/organization) e siga as instruções.
 
@@ -188,6 +187,6 @@ Em seguida, visite o nosso [site Yammer](https://www.yammer.com/askipteam/#/thre
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

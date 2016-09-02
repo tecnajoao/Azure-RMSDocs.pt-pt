@@ -1,20 +1,19 @@
 ---
 title: "Aplicações e serviços do Office | Azure RMS"
-description: 
-keywords: 
+description: "As aplicações do Office para o utilizador final (tais como o Word, Excel, PowerPoint e Outlook) e os serviços do Office (tais como o Exchange e SharePoint) podem utilizar o Microsoft Azure Rights Management para ajudar a proteger os dados da sua organização."
 author: cabailey
 manager: mbaldwin
 ms.date: 06/30/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 99eb67f6296ad1782c787aabb73a28458c02f367
-ms.openlocfilehash: affb37cc3b991609f5de51370485b10fed932421
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 93dde9494a430526ebd26e1d5123ad44901ffcbb
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: affb37cc3b991609f5de51370485b10fed932421
 
 # Aplicações e serviços do Office
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Rights Management, Office 365*
 
 As aplicações do Office para o utilizador final (tais como o Word, Excel, PowerPoint e Outlook) e os serviços do Office (tais como o Exchange e SharePoint) podem utilizar o Microsoft Azure Rights Management para ajudar a proteger os dados da sua organização.
 
@@ -73,6 +72,6 @@ Para obter mais informações sobre como utilizar o Azure RMS com o SharePoint, 
 Para ver como outras aplicações e serviços suportam o Azure Rights Management, consulte [Como as aplicações suportam o Azure Rights Management](applications-support.md).
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

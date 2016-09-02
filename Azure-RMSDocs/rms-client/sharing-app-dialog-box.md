@@ -1,27 +1,26 @@
 ---
 title: "Opções da caixa de diálogo para a aplicação de partilha Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "Utilize estas informações para ajudar a especificar as opções na caixa de diálogo Adicionar proteção da aplicação de partilha RMS ou na caixa de diálogo Partilhar protegido. Irá ver esta caixa de diálogo quando proteger um ficheiro a partilhar ou quando proteger um ficheiro no local e escolher permissões personalizadas."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
-ms.openlocfilehash: ed2ab42174ce5d83fd60ace1c394515db1450e3d
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: aa0f5456d17564183317e3e693ae63adb8c597c5
 
 
 ---
 
 # Opções da caixa de diálogo para a aplicação de partilha Rights Management
 
-*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Rights Management, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Rights Management, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 Utilize estas informações para ajudar a especificar as opções na caixa de diálogo **adicionar proteção** da aplicação de partilha RMS ou na caixa de diálogo **partilhar protegido**. Irá ver esta caixa de diálogo quando [proteger um ficheiro para partilhar](sharing-app-protect-by-email.md) ou [proteger um ficheiro no local](sharing-app-protect-in-place.md) e escolher permissões personalizadas.
 
@@ -79,6 +78,6 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

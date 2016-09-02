@@ -1,27 +1,26 @@
 ---
 title: "Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados | Azure RMS"
-description: 
-keywords: 
+description: "A funcionalidade de superutilizador do Microsoft Azure RMS assegura que as pessoas e os serviços autorizados podem sempre ler e inspecionar os dados que o Azure RMS protege na sua organização. E, se for necessário, remove a proteção ou altera a proteção que estava anteriormente aplicada. Um superutilizador tem sempre direitos de proprietário completos para todas as licenças de utilização que foram atribuídas pelo inquilino de RMS da organização. Esta capacidade é por vezes referida como “raciocínio através de dados” e é um elemento fundamental na manutenção do controlo dos dados da organização."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 0ca9b8d9643f5489c100fa3aa614e89cd396df52
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 32da3f280b7dc8fa0655ae65d904864d80b9a035
 
 
 ---
 
 # Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Rights Management, Office 365*
 
 A funcionalidade de superutilizador do Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) assegura que as pessoas e os serviços autorizados podem sempre ler e inspecionar os dados que o Azure RMS protege na sua organização. E, se for necessário, remove a proteção ou altera a proteção que estava anteriormente aplicada. Um superutilizador tem sempre direitos de proprietário completos para todas as licenças de utilização que foram atribuídas pelo inquilino de RMS da organização. Esta capacidade é por vezes referida como “raciocínio através de dados” e é um elemento fundamental na manutenção do controlo dos dados da sua organização. Por exemplo, utilizaria esta funcionalidade para qualquer um dos seguintes cenários:
 
@@ -72,6 +71,6 @@ Para obter mais informações acerca destes cmdlets, consulte [Cmdlets da Prote�
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

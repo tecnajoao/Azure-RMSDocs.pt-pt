@@ -1,20 +1,19 @@
 ---
 title: "Descrição geral técnica da aplicação de partilha Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "A aplicação de partilha Microsoft Rights Management é uma aplicação transferível e opcional do Microsoft Windows e outras plataformas que fornece o seguinte."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 09effc3dfb238370563981defdcf3c3b4cffcaae
-ms.openlocfilehash: 2f249996b9b912f744754357423a0c4f134ec094
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: d5e1c7969d2125c4f66d6dcea3bde0c81a7de1f3
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: 2f249996b9b912f744754357423a0c4f134ec094
 
 # Descrição geral técnica e detalhes de proteção da aplicação de partilha Microsoft Rights Management
 
-*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Rights Management, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Rights Management, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 
 A aplicação de partilha Microsoft Rights Management é uma aplicação transferível e opcional para o Microsoft Windows e outras plataformas que fornece o seguinte:
@@ -140,6 +139,6 @@ Pode efetuar edições de registo semelhantes para outros cenários ao alterar o
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

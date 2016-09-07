@@ -1,9 +1,9 @@
 ---
 title: "Cenário – Partilhar um ficheiro do Office com os utilizadores noutra organização | Azure RMS"
-description: "Este cenário e a documentação do utilizador associada utilizam o Azure Rights Management para que os utilizadores possam enviar em segurança um ficheiro do Office por e-mail para pessoas noutra organização. Por exemplo, o ficheiro do Office poderá ser um documento do Word, uma folha de cálculo do Excel ou uma apresentação do PowerPoint com informações sobre a lista de preços de um parceiro, uma lista de produtos de um revendedor ou uma lista de prazos de entrega com potenciais clientes. Se os utilizadores seguirem as instruções, o ficheiro anexado à mensagem de e-mail será protegido pelo Azure Rights Management."
+description: "Este cenário e a documentação do utilizador associada utilizam o Azure Rights Management para que os utilizadores possam enviar em segurança um ficheiro do Office por e-mail para pessoas noutra organização."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 9615e41666a08a1d66f4e0dbdedb06f02a8efd3e
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: 26e81330c58057aac9629690f1d4fe85e56a64f8
 
 
 ---

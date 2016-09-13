@@ -12,8 +12,8 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
-ms.openlocfilehash: 52a76105b182c7fe6aa9a648d1a5d7ae4e4a1a20
+ms.sourcegitcommit: 79d098e47cdfe608bc62ed385a5c8236fb7c6d3c
+ms.openlocfilehash: 15be32e029637321bf8e4f7c1a53f918efda7f23
 
 
 ---
@@ -29,7 +29,7 @@ Estes utilizadores podem inscrever-se numa conta escolar ou profissional gratuit
 Ao utilizar a aplicação de partilha Rights Management em computadores Windows, estes utilizadores também podem proteger ficheiros no local ou enviar ficheiros protegidos por e-mail para as pessoas dentro ou fora da sua organização. Se os destinatários do e-mail enviado estiverem numa organização que também não gere contas de utilizadores no Azure, também podem inscrever-se numa conta do RMS para indivíduos para ler o anexo de e-mail protegido.
 
 > [!IMPORTANT]
-> Esta subscrição gratuita garante que as pessoas autorizadas podem sempre ler ficheiros que foram protegidos. Atualmente, também pode utilizar esta subscrição gratuita para proteger documentos e criar novas mensagens de e-mail protegidas, mas a capacidade de criar novo conteúdo protegido destina-se apenas a uma utilização de avaliação e poderá ser removida no futuro. Para obter mais informações e as alterações feitas à utilização do RMS para indivíduos para proteger conteúdo, consulte os [Termos do Serviço do Microsoft Rights Management](https://portal.aadrm.com/Legal/Service).
+> Esta subscrição gratuita garante que as pessoas autorizadas podem sempre ler ficheiros que foram protegidos. Atualmente, também pode utilizar esta subscrição gratuita para proteger documentos e criar novas mensagens de e-mail protegidas, mas a capacidade de criar novo conteúdo protegido destina-se apenas a uma utilização de avaliação e poderá ser removida no futuro. 
 
 Para obter mais informações sobre como pode proteger ficheiros com a aplicação de partilha Rights Management gratuita, consulte o [Guia da aplicação de partilha Rights Management para utilizadores](../rms-client/sharing-app-user-guide.md).
 
@@ -41,6 +41,6 @@ Consulte [Como os utilizadores se inscrevem no RMS para indivíduos](rms-for-ind
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

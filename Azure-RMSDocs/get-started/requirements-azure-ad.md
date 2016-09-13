@@ -1,9 +1,9 @@
 ---
 title: "Requisitos do Azure RMS&#58; Diretório do Azure AD | Azure RMS"
-description: "Para utilizar o Azure Rights Management (Azure RMS), é necessário ter um diretório do Azure AD. A conta da sua organização é utilizada para este diretório de modo a iniciar sessão no portal clássico do Azure onde, por exemplo, pode configurar e gerir modelos de Rights Management."
+description: "Conheça os requisitos do Azure AD para utilizar o Azure Rights Management (Azure RMS), para que os utilizadores possam ser autenticados com êxito."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 8083c2f7e4cfdbf65748007ae21a48a49a56599f
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: b4ac71492ba9ad883d481149a248b919973d7386
 
 
 ---

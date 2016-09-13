@@ -1,9 +1,9 @@
 ---
 title: "Registo e análise da utilização do Azure Rights Management | Azure RMS"
-description: "Utilize as informações deste tópico para o ajudar a compreender como pode utilizar o registo da utilização com o Azure Rights Management (RMS do Azure). O serviço Azure Rights Management pode registar cada pedido que faz para a sua organização, incluindo pedidos de utilizadores, ações realizadas por administradores de Gestão de Direitos na sua organização e ações realizadas por operadores da Microsoft relacionadas com a sua implementação do Azure Rights Management."
+description: "Informações e instruções sobre como utilizar os registos de utilização com o Azure Rights Management (Azure RMS)."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c7b194493073bcd76fa7a7d06bb31a7811e8cc3e
-ms.openlocfilehash: 868656f84f39db20f0aee8d148b00af15849fda5
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: c1727f1a5d6747977da7113b6dc0ac37ebefe386
 
 
 ---

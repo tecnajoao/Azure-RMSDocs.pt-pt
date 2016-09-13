@@ -1,9 +1,9 @@
 ---
 title: "Controlar e revogar os documentos quando utiliza a aplicação de partilha RMS | Azure RMS"
-description: "Depois de proteger os documentos com a aplicação de partilha RMS, se a sua organização utilizar o Azure Rights Management em vez dos Serviços de Gestão de Direitos do Active Directory, pode controlar a forma como as pessoas utilizam os documentos protegidos. Se necessário, também pode revogar o acesso a esses documentos quando pretender deixar de os partilhar. Para tal, utilize o site de controlo de documentos, ao qual pode aceder a partir de computadores Windows, computadores Mac e até mesmo de telemóveis e tablets."
+description: "Após proteger os seus documentos utilizando a aplicação de partilha RMS, pode controlar como as pessoas utilizam os seus documentos protegidos. Se necessário, também pode revogar o acesso a esses documentos quando pretender deixar de os partilhar."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: d27a516339a9687cb5ce117b6a2aa93730863c2d
+ms.sourcegitcommit: 44541b6fe2567d23174b26cb42fec0731f5d3f58
+ms.openlocfilehash: 2117291a7204dae86b3a6d378ab6af4d84435417
 
 
 ---

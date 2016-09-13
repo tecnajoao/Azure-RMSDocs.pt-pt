@@ -1,9 +1,9 @@
 ---
 title: "Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados | Azure RMS"
-description: "A funcionalidade de superutilizador do Microsoft Azure RMS assegura que as pessoas e os serviços autorizados podem sempre ler e inspecionar os dados que o Azure RMS protege na sua organização. E, se for necessário, remove a proteção ou altera a proteção que estava anteriormente aplicada. Um superutilizador tem sempre direitos de proprietário completos para todas as licenças de utilização que foram atribuídas pelo inquilino de RMS da organização. Esta capacidade é por vezes referida como “raciocínio através de dados” e é um elemento fundamental na manutenção do controlo dos dados da organização."
+description: "Conheça e implemente a funcionalidade de superutilizador do Microsoft Azure RMS para que as pessoas e os serviços autorizados possam sempre ler e inspecionar os dados que o Azure RMS protege na sua organização. Esta capacidade é por vezes referida como “raciocínio através de dados” e é um elemento fundamental na manutenção do controlo dos dados da organização."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 32da3f280b7dc8fa0655ae65d904864d80b9a035
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: ac0d2c991bdd13c31c46a9579ac1a6d2150557b6
 
 
 ---

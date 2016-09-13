@@ -1,9 +1,9 @@
 ---
 title: Criar, configurar e publicar um modelo personalizado | Azure RMS
-description: "Criar e gerir modelos personalizados no portal clássico do Azure. Pode fazê-lo diretamente no Portal Clássico do Azure ou pode iniciar sessão no Centro de Administração do Office 365 e escolher as funcionalidades avançadas do Rights Management que, em seguida, redireciona para o Portal Clássico do Azure."
+description: "Instruções para criar e gerir modelos personalizados no portal clássico do Azure. Os modelos facilitam a aplicação de políticas adequadas para proteger documentos e e-mails por parte de utilizadores finais e outros administradores."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/15/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 64beb891fda54da3718a322f6628a2987ff35111
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: 6875d8d4755dc791879838d1f46be87e2e043a3b
 
 
 ---

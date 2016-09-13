@@ -1,9 +1,9 @@
 ---
 title: "Definições de registo para o conetor RMS | Azure RMS"
-description: "Utilize as tabelas nas secções seguintes apenas se pretender adicionar manualmente ou verificar as definições de registo nos servidores a executar o Exchange, o SharePoint ou o Windows Server, que configura os servidores a utilizar o conector RMS. O método recomendado para configurar estes servidores é utilizar a ferramenta de configuração do servidor do conetor Microsoft RMS."
+description: "Informações sobre as definições de registo em servidores que utilizam o conector RMS. O método recomendado para configurar estas definições é utilizar a ferramenta de configuração do servidor do conetor Microsoft RMS."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 49fff7c2e0c06d26751136b681022f221f80d6cd
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: 5ff109543685049be5e89a12ea037de941736547
 
 
 ---

@@ -1,9 +1,9 @@
 ---
 title: Requisitos do Azure RMS&#58; servidores no local que suportem o Azure Rights Management | Azure RMS
-description: "Os seguintes produtos de servidor no local são suportados com o Azure RMS quando utiliza o conector Azure RMS, que funciona como uma interface de comunicações (um reencaminhamento) entre os servidores no local e o Azure RMS. Além disso, esta configuração requer que configure a sincronização de diretórios entre as suas florestas do Active Directory e o Azure Active Directory."
+description: "Conheça os produtos de servidores no local suportados no Azure RMS quando utiliza o conector Azure RMS."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: e7d91f2d-d6a7-4c7e-821f-c94e4be9967d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: cd8b8d18e146fcc0864565a603b47b2b074af2b2
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: 0f9f1dc09d1b0d831b1c96d25b7bb763086aa9c9
 
 
 ---

@@ -1,9 +1,9 @@
 ---
 title: "Guia do administrador da aplicação de partilha Rights Management|Azure RMS"
-description: "Utilize as seguintes informações se for o responsável pela aplicação de partilha Microsoft Rights Management numa rede empresarial ou se quiser obter mais informações técnicas além das que se encontram no guia do utilizador da aplicação de partilha Rights Management ou nas FAQ da Aplicação de Partilha Microsoft Rights Management do Windows."
+description: "Instruções e informações para administradores numa rede empresarial responsáveis por implementar a aplicação de partilha Microsoft Rights Management para Windows."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/05/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 9b0c608ac30e2a93b898dcc1de9ccfa4cdeedcb4
+ms.sourcegitcommit: 575d52efb788956b0a711e908a730b677e1f7f9c
+ms.openlocfilehash: 113a49586b4582ec984678df6730c6b554ff6a75
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: 9b0c608ac30e2a93b898dcc1de9ccfa4cdeedcb4
 
 Utilize as seguintes informações se for o responsável pela aplicação de partilha Microsoft Rights Management numa rede empresarial ou se quiser obter mais informações técnicas além das que se encontram no [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md) ou nas [FAQ sobre a Aplicação de Partilha Microsoft Rights Management do Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
 
-A aplicação de partilha RMS funciona melhor com o Azure RMS, porque esta configuração de implementação suporta o envio de anexos protegidos para utilizadores de outra organização e opções como notificações por e-mail e o controlo de documentos com revogação.  No entanto, a aplicação também funciona com a versão no local, o AD RMS, embora com algumas limitações. Para ver uma comparação detalhada das funcionalidades suportadas pelo Azure RMS e pelo AD RMS, consulte [Comparing Azure Rights Management and AD RMS (Comparação entre o Azure Rights Management e o AD RMS – em inglês)](../understand-explore/compare-azure-rms-ad-rms.md). Se tiver o AD RMS e quiser migrar para o Azure RMS, consulte [Migrar do AD RMS para o Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+A aplicação de partilha RMS funciona melhor com o Azure RMS, porque esta configuração de implementação suporta o envio de anexos protegidos para utilizadores de outra organização e opções como notificações por e-mail e o controlo de documentos com revogação. No entanto, a aplicação também funciona com a versão no local, o AD RMS, embora com algumas limitações. Para ver uma comparação detalhada das funcionalidades suportadas pelo Azure RMS e pelo AD RMS, consulte [Comparing Azure Rights Management and AD RMS (Comparação entre o Azure Rights Management e o AD RMS – em inglês)](../understand-explore/compare-azure-rms-ad-rms.md). Se tiver o AD RMS e quiser migrar para o Azure RMS, consulte [Migrar do AD RMS para o Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
 Para obter uma descrição geral técnica da aplicação Rights Management, informações sobre a proteção nativa e genérica, e os tipos de ficheiro suportados, as extensões de nome de ficheiro e como pode alterar o nível de proteção predefinido, consulte [Descrição geral técnica e detalhes de proteção da aplicação de partilha Rights Management](sharing-app-admin-guide-technical.md). 
 
@@ -139,7 +139,7 @@ Para confirmar o êxito da operação, consulte a secção [Confirmar o êxito d
     setup.exe /s /configureO2010Admin
     ```
 
-2.  Nos computadores em que pretende instalar a aplicação de partilha RMS, os utilizadores têm de executar o seguinte comando (não são necessários privilégios elevados). Existem várias formas de realizar esta operação. Pode pedir aos utilizadores para executarem o comando (por exemplo, através de uma ligação numa mensagem de e-mail ou de uma ligação no portal de suporte técnico) ou pode adicioná-lo ao script de início de sessão dos mesmos:
+2.  Nos computadores em que pretende instalar a aplicação de partilha RMS, os utilizadores têm de executar os seguintes comandos (não são necessários privilégios elevados). Existem várias formas de realizar esta operação. Pode pedir aos utilizadores para executarem os comandos (por exemplo, através de uma ligação numa mensagem de e-mail ou de uma ligação no portal de suporte técnico) ou pode adicioná-lo ao script de início de sessão dos mesmos:
 
     -   Para o Windows 10, Windows 8.1 e Windows 8 de 64 bits:
 
@@ -155,9 +155,16 @@ Para confirmar o êxito da operação, consulte a secção [Confirmar o êxito d
 
     -   Para o Windows 7 de 64 bits:
 
-        ```
-        x64\win7\aadrmpep.exe /configureO2010
-        ```
+            pushd x64\win7
+            aadrmpep.exe /configureO2010
+            popd
+
+    -   Para o Windows 7 de 32 bits:
+
+            pushd x86\win7
+            aadrmpep.exe /configureO2010
+            popd
+
 
 Para confirmar o êxito da operação, consulte a secção [Confirmar o êxito da instalação](#verifying-installation-success) neste artigo.
 
@@ -395,6 +402,6 @@ Para obter informações técnicas adicionais com explicações sobre os diferen
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

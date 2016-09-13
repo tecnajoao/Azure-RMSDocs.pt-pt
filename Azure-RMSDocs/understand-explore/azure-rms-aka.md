@@ -1,9 +1,9 @@
 ---
 title: "Azure Rights Management também conhecido como | Azure RMS"
-description: "O Azure Rights Management também é conhecido como serviço Azure Rights Management, mas uma vez que é executado como um serviço no Azure, o termo “serviço” é frequentemente omitido do nome. É a versão de nuvem dos Serviços de Gestão de Direitos do Active Directory (AD RMS), inicialmente lançada como Windows Rights Management Services (Windows RMS)."
+description: "O Azure Rights Management sofreu muitas alterações de nome, pelo que pode conhecê-lo por um dos nomes anteriores."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 0af1b2ff-46a7-4a38-803c-5a730e4ff56d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 3e9ecf77ec3e8e5c1246f587cdb583b7631d634e
+ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
+ms.openlocfilehash: d6092d48475c70cbf25efa709c6d572584a41462
 
 
 ---

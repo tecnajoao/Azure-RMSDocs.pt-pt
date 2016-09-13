@@ -1,9 +1,9 @@
 ---
 title: Planear e implementar a sua chave de inquilino do Azure Rights Management | Azure RMS
-description: "Utilize as informações deste artigo para o ajudar a planear e gerir a sua chave de inquilino do RMS (Rights Management) do Azure RMS. Por exemplo, em vez de a sua chave de inquilino ser gerida pela Microsoft (predefinição), poderá querer gerir a sua própria chave de inquilino para cumprir os regulamentos específicos que se aplicam à sua organização. A gestão da sua própria chave de inquilino também é referida como Bring Your Own Key (Traga a Sua Própria Chave) ou BYOK."
+description: "Informações para o ajudar a planear e gerir a sua chave de inquilino do RMS (Rights Management) do Azure RMS. Por exemplo, em vez de a sua chave de inquilino ser gerida pela Microsoft (predefinição), poderá querer gerir a sua própria chave de inquilino para cumprir os regulamentos específicos que se aplicam à sua organização. A gestão da sua própria chave de inquilino também é referida como Bring Your Own Key (Traga a Sua Própria Chave) ou BYOK."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 09/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 3a45a12cba766fed074d8b5fcf861164802d2441
+ms.sourcegitcommit: eec7cc8b20435df11d7b8f89c4b9e9d0f039dc55
+ms.openlocfilehash: 25d47ab488474ed756b3139bb9d42d420cea25f7
 
 
 ---
@@ -64,7 +64,7 @@ O segundo diagrama mostra os passos adicionais necessários quando gere a sua pr
 
 ![Ciclo de vida da chave de inquilino do Azure RMS – gerida por si (BYOK)](../media/RMS_BYOK_onprem4.png)
 
-Se decidir deixar que a sua chave de inquilino seja gerida pela Microsoft, não precisa de tomar medidas adicionais para a gerar e pode ir diretamente para [Passos seguintes](plan-implement-tenant-key.md#next-steps).
+Se decidir deixar que a sua chave de inquilino seja gerida pela Microsoft, não precisa de tomar medidas adicionais para a gerar e pode ir diretamente para [Passos seguintes](plan-implement-tenant-key.md#next-steps).  
 
 Se optar por gerir a sua chave de inquilino, leia as secções seguintes para obter mais informações.
 
@@ -74,7 +74,7 @@ Utilize as informações e os procedimentos desta secção, se tiver decidido ge
 
 
 > [!IMPORTANT]
-> Se já começou a utilizar o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (o serviço está ativado) e tem utilizadores que utilizam o Office 2010, [contacte o Suporte da Microsoft](../get-started/information-support.md#to-contact-microsoft-support) antes de executar estes procedimentos. Dependendo do cenário e dos requisitos, continua a poder utilizar o BYOK, mas com algumas restrições ou passos adicionais.
+> Se tiver começado a utilizar o Azure RMS com uma chave de inquilino gerida pela Microsoft e pretender agora gerir a sua chave de inquilino (mudar para BYOK), os seus documentos e e-mails anteriormente protegidos continuarão acessíveis através da utilização de uma chave arquivada. No entanto, se tiver utilizadores com o Office 2010, [contacte o Suporte da Microsoft](../get-started/information-support.md#to-contact-microsoft-support) antes de executar estes procedimentos. Este computadores requerem passos de configuração adicionais.
 > 
 > Também pode [contactar o Suporte da Microsoft](../get-started/information-support.md#to-contact-microsoft-support) caso a sua organização disponha de políticas para processar chaves específicas.
 
@@ -136,6 +136,6 @@ Agora que já planeou e, se necessário, gerou a chave do inquilino, faça o seg
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

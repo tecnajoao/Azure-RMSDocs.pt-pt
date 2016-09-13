@@ -3,15 +3,15 @@ title: "Tutorial de início rápido do Azure Information Protection, passo 3 | A
 description: "Passo 3 de um tutorial de apresentação para experimentar rapidamente o Microsoft Azure Information Protection na sua organização com apenas 4 passos que devem demorar menos de 15 minutos."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 320cd688ba5aabcb966009907d568033149953e3
+ms.sourcegitcommit: ba6887a5c9bab18867d07cfc98e8416bf102c211
+ms.openlocfilehash: 83ee0eef8262cc1fe4d18e9d183509847adddd97
 
 
 ---
@@ -26,7 +26,7 @@ Neste passo, irá instalar o cliente Azure Information Protection, para que a po
 
 1. Num PC com o Office instalado (mas sem o Word aberto), [transfira o cliente Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018) a partir do Centro de transferências da Microsoft. 
 
-2. Execute **AZInfoProtection.exe** e siga as instruções para instalar o cliente.
+2. Execute **AzInfoProtection_v233.exe** e siga as instruções para instalar o cliente.
 
     Para este tutorial, não interessa se selecionou a opção para instalar uma política de demonstração, porque a nossa política que transferimos vai ser transferida do Azure e substituir a política de demonstração, caso esteja instalada. No entanto, pode utilizar a opção de política de demonstração caso pretenda experimentar as etiquetas predefinidas sem ligar ao Azure Information Protection. 
 
@@ -52,6 +52,6 @@ Está pronto para o passo final, ver a classificação, etiquetagem e proteção
 [Passo 4 &#187;](infoprotect-tutorial-step4.md)
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

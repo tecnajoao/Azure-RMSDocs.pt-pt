@@ -1,9 +1,9 @@
 ---
 title: "Requisitos do Azure RMS&#58; subscrições na nuvem | Azure RMS"
-description: "Para utilizar o Azure Rights Management (Azure RMS), a sua organização tem de ter, pelo menos, uma das seguintes subscrições com um número suficiente de licenças para utilizadores e serviços que irão proteger ficheiros e mensagens de e-mail. Se tiver um serviço que aplicará proteção aos utilizadores (proprietários dos ficheiros ou mensagens de e-mail), esses utilizadores necessitam de uma destas licenças. Os utilizadores que apenas irão consumir (por exemplo, ler e editar) estes dados protegidos não necessitam de uma licença."
+description: "Conheça as subscrições que pode utilizar para implementar o Azure Rights Management (Azure RMS) na sua organização."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/22/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 6a16e890-3c3e-4f47-80ca-176a34bdf8bc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 4cac0f039e69e31943bb8773d0761f7e654cc940
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: 5c0597ee3882c25fd5c04fbd89990806754bda1a
 
 
 ---

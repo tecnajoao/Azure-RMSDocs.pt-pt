@@ -1,9 +1,9 @@
 ---
 title: "Aplicação de partilha Rights Management&colon; instalação e configuração para clientes | Azure RMS"
-description: "A aplicação de partilha Rights Management (RMS) é necessária para os computadores cliente utilizarem o Azure RMS com Office 2010 e é recomendada para todos os computadores e dispositivos móveis que suportam o Azure RMS. A aplicação de partilha RMS integra-se com aplicações do Office através da instalação de um suplemento do Office para que os utilizadores possam facilmente proteger ficheiros e e-mails diretamente do friso. De igual modo, proporciona proteção genérica a tipos de ficheiros que não são suportados nativamente pelo Azure RMS e possibilita um site de controlo de documentos para os utilizadores controlarem e revogarem ficheiros protegidos por eles."
+description: "Informações para administradores sobre como implementar a aplicação de partilha Rights Management (RMS) em dispositivos móveis e computadores Windows."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: b9af5dc3-73d4-4147-b7ef-f6803b0d5216
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: bf7cd8007b5423efaa13849101af5c4688cf0975
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: c73529b39f31fc6d819a3123bbdc2416f2d996f4
 
 
 ---

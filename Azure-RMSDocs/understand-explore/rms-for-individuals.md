@@ -1,6 +1,6 @@
 ---
 title: "RMS para indivíduos e Azure Rights Management | Azure RMS"
-description: "O RMS para indivíduos é uma subscrição self-service gratuita para os utilizadores numa organização aos quais foram enviados ficheiros confidenciais que foram protegidos pelo Microsoft Azure Rights Management (Azure RMS), mas que não podem ser autenticados porque o respetivo departamento de TI não gere uma conta para os mesmos no Azure. Por exemplo, o departamento de TI não tem o Office 365 nem utiliza os serviços do Azure."
+description: "Informações sobre o RMS para indivíduos, uma subscrição self-service gratuita para os utilizadores numa organização aos quais foram enviados ficheiros confidenciais que foram protegidos pelo Microsoft Azure Rights Management (Azure RMS), mas que não podem ser autenticados porque o respetivo departamento de TI não gere uma conta para os mesmos no Azure."
 author: cabailey
 manager: mbaldwin
 ms.date: 08/24/2016
@@ -12,8 +12,8 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 2e80c1e02e47d07678b38f6d6cb229a9db8307d4
+ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
+ms.openlocfilehash: 52a76105b182c7fe6aa9a648d1a5d7ae4e4a1a20
 
 
 ---

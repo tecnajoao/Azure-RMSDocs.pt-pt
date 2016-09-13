@@ -1,16 +1,16 @@
 ---
 title: Instalar o cliente do Azure Information Protection | Azure Rights Management
-description: "Para classificar documentos e e-mails utilizando a Azure Information Protection, tem de instalar primeiro o cliente Azure Information Protection. Esta instalação adiciona uma barra Information Protection às aplicações do Office (Word, Excel, PowerPoint e Outlook) que apresenta as etiquetas de classificação da organização, para além de um novo grupo Proteção no separador Base (Word, Excel, PowerPoint), que tem um botão com o nome Proteger."
+description: "Instruções para instalar o cliente que adiciona uma barra de Proteção de Informações às suas aplicações do Office, para que possa selecionar etiquetas de classificação para documentos e e-mails."
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: ab8388e03803d32a6891785f905a1ddef796bc25
+ms.sourcegitcommit: 15ca59f34847d20413fbfa7973567cf5ca66db96
+ms.openlocfilehash: c245d542d237216c84941f8718cb9a0cafb44a70
 
 
 ---
@@ -34,7 +34,7 @@ Antes de instalar o cliente, verifique se tem as versões de sistema operativo e
 
 ## Para instalar o cliente Azure Information Protection manualmente
 
-1. Depois de [ter transferido o cliente](https://www.microsoft.com/en-us/download/details.aspx?id=53018), execute o **AZInfoProtection.exe** e siga as instruções para instalar o cliente. Esta instalação requer permissões administrativas locais.
+1. Depois de [ter transferido o cliente](https://www.microsoft.com/en-us/download/details.aspx?id=53018), execute o **AzInfoProtection_v233.exe** e siga as instruções para instalar o cliente. Esta instalação requer permissões administrativas locais.
 
     Selecione a opção para instalar uma política de demonstração se não puder ligar-se ao Office 365 ou ao Azure Active Directory e pretender ver e experimentar o lado do cliente Azure Information Protection utilizando uma política local para efeitos de demonstração. Quando o cliente se liga a um serviço do Azure Information Protection, esta política de demonstração é substituída pela política do Azure Information Protection da organização. 
 
@@ -42,9 +42,9 @@ Antes de instalar o cliente, verifique se tem as versões de sistema operativo e
 
 ## Para instalar o cliente Azure Information Protection para os utilizadores
 
-- Pode criar scripts e automatizar a instalação do cliente Azure Information Protection empacotando o AZInfoProtection.exe e utilizando as [Opções de linha de comandos do Windows Installer (msiexec)](https://technet.microsoft.com/library/cc759262(v=ws.10).aspx).
+- Pode executar scripts e automatizar a instalação do cliente Azure Information Protection ao utilizar as opções da linha de comandos. Para ver as opções de instalação, execute `AzInfoProtection_v233.exe /help`.
 
-    Por exemplo, se a versão empacotada que criar for denominada InfoProtect.msi e pretender instalar o cliente de forma silenciosa: `msiexec /qn InfoProtection.msi`
+    Por exemplo, para instalar o cliente automaticamente: `AzInfoProtection_v233.exe /passive | quiet`
 
 
 ## Para instalar o cliente Azure Information Protection
@@ -88,6 +88,6 @@ Para obter um exemplo de como personalizar a política predefinida e ver o compo
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

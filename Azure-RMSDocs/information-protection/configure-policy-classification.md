@@ -2,15 +2,15 @@
 title: "Como configurar as condições para classificação automática e recomendada para o Azure Information Protection| Azure Rights Management"
 description: "Quando configurar as condições para uma etiqueta, pode atribuir automaticamente uma etiqueta a um documento ou a um e-mail. Em alternativa, pode pedir aos utilizadores que selecionem a etiqueta recomendada."
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 0e6baca43c7a4f2e91f45222f5f6f233b3eeb438
+ms.sourcegitcommit: 87069b73e5f8959955b9967070bd3bcb5e7dc196
+ms.openlocfilehash: 357b012bd8679d7e24bfe3ae40c3160e4b69c01f
 
 
 ---
@@ -27,7 +27,7 @@ Quando configurar as condições para uma etiqueta, pode atribuir automaticament
  
 - A classificação recomendada aplica-se ao Word, ao Excel e ao PowerPoint quando os ficheiros são guardados.
 
-Ao configurar as condições pode utilizar padrões predefinidos, como "Números de cartão de crédito" ou "Número de Segurança Social dos E.U.A.". Em alternativa, pode definir uma cadeia personalizada ou um padrão como condição para classificação automática. Para mais informações sobre as condições, consulte a secção [Informações sobre as condições incorporadas](#information-about-the-built-in-conditions).
+Ao configurar as condições pode utilizar padrões predefinidos, como "Números de cartão de crédito" ou "Número de Segurança Social dos E.U.A.". Em alternativa, pode definir uma cadeia personalizada ou um padrão como condição para classificação automática. Estas condições aplicam-se ao corpo de texto em documentos e e-mails, bem como a cabeçalhos e rodapés. Para mais informações sobre as condições, consulte a secção [Informações sobre as condições incorporadas](#information-about-the-built-in-conditions).
 
 Como são avaliadas várias condições quando estas são aplicadas a mais do que uma etiqueta:
 
@@ -224,6 +224,6 @@ Para mais informações sobre como configurar a política do Azure Information P
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

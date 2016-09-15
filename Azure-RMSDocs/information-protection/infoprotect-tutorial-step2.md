@@ -1,17 +1,17 @@
 ---
-title: "Tutorial de início rápido do Azure Information Protection, passo 2 | Azure Rights Management"
+title: "Passo 2 do tutorial de introdução do Azure Information Protection | Azure Information Protection"
 description: "Passo 2 de um tutorial de apresentação para experimentar rapidamente o Microsoft Azure Information Protection na sua organização com apenas 4 passos que devem demorar menos de 15 minutos."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/08/2016
+ms.date: 09/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 679d03c499ccdd044444c73ebef8f59b281278cd
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: 9125757ba2cce865d73acab341d3e3b6ff36ba57
 
 
 ---
@@ -37,7 +37,7 @@ Apesar do Azure Information Protection ser fornecido com uma política predefini
     
     - Etiquetas para classificação: **Pessoal**, **Público**, **Interno**, **Confidencial** e **Secreto**. Leia a descrição de cada etiqueta para compreender como devem ser utilizadas. Tenha em atenção que **Segredo** tem duas etiquetas secundárias: **Todos os Funcionários** e **O Meu Grupo**, que fornece um exemplo de como uma classificação pode ter subcategorias.
 
-    - Com as predefinições, as etiquetas **Interno**, **Confidencial** e **Secreto** têm marcas visuais configuradas (por exemplo, rodapé, cabeçalho, marca d'água) e nenhuma das etiquetas tem a proteção definida. Além disso, as três definições globais não estão definidas para que todos os documentos e e-mails não necessitem de uma etiqueta, não há qualquer etiqueta predefinida e os utilizadores não têm de indicar uma justificação quando reduzirem o nível de sensibilidade.
+    - Com as predefinições, as etiquetas **Interno**, **Confidencial** e **Secreto** têm marcas visuais configuradas (por exemplo, rodapé, cabeçalho, marca d'água) e nenhuma das etiquetas tem a proteção definida. Além disso, as três definições globais não estão definidas para que todos os documentos e e-mails não precisem de uma etiqueta, não existem etiquetas predefinidas e os utilizadores não têm de fornecer uma justificação ao reduzir o nível de classificação.
 
     ![Tutorial de início rápido do Azure Information Protection, passo 3 - política predefinida](../media/info-protect-policy.png)
 
@@ -45,7 +45,7 @@ Para o nosso tutorial, vamos alterar algumas dessas definições globais para qu
 
 -  **Selecione a etiqueta predefinida**: defina esta opção como **Interna**.
 
-- **Os utilizadores têm de fornecer justificação quando reduzirem o nível de sensibilidade**: defina esta opção como **Ligado**.
+- **Os utilizadores têm de fornecer uma justificação para reduzir a etiqueta de classificação, remover uma etiqueta ou remover a proteção**: defina esta opção como **Ativado**.
 
 Agora vamos alterar as definições de uma das etiquetas, **Confidencial**:
 
@@ -97,6 +97,6 @@ Agora que conhece o que é a política predefinida e efetuou algumas alteraçõe
 [Passo 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

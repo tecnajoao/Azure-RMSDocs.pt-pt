@@ -3,7 +3,7 @@ title: "Perguntas mais frequentes sobre a pré-visualização do Azure Informati
 description: "Tem alguma pergunta sobre a versão de pré-visualização do Azure Information Protection? Verifique se a resposta está aqui."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/22/2016
+ms.date: 09/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 55d56786150d38b36ae8185c4a7ac4c8a5c51ba4
+ms.sourcegitcommit: 0a66851beeedecc3bda92f840f06b56f40c0c4c1
+ms.openlocfilehash: 427b783b41d8977ff07b0fbc929bf0d7afd0721d
 
 
 ---
@@ -82,7 +82,7 @@ Isto está documentado e será atualizado em [Requisitos do Azure Information Pr
 
 ## Como é que os computadores obtêm informações de política do Azure Information Protection e com que frequência são atualizados?
 
-Sempre que um utilizador abre uma aplicação do Office, o cliente Azure Information Protection verifica se existe uma versão posterior da política do Azure Information Protection. Se houver uma versão posterior, o cliente transfere-a utilizando uma ligação HTTPS para proteger os dados. 
+Sempre que um utilizador abre uma aplicação do Office, o cliente Azure Information Protection verifica se existe uma versão posterior da política do Azure Information Protection. Além disso, as aplicações do Office são automaticamente verificadas a cada 24 horas. Se houver uma versão posterior, o cliente transfere-a utilizando uma ligação HTTPS para proteger os dados. 
 
 Se várias instâncias da aplicação Office forem carregadas quando uma nova política do Azure Information Protection é publicada, deve fechar todas as instâncias para obter a versão mais recente da política. Por exemplo, se tiver dois documentos do Word abertos e pretende testar a política do Azure Information Protection num único documento: feche ambos documentos do Word e reabra o documento que pretende utilizar com a política mais recente.
 
@@ -129,7 +129,7 @@ Sim. Para remover a classificação de um ficheiro, abra-o na aplicação do Off
 
 ## Posso solicitar aos utilizadores que indiquem a razão pela qual pretendem alterar o nível de classificação?
 
-Sim. Para se certificar de que os utilizadores justificam as suas alterações de classificação, no portal do Azure, defina a opção **Os utilizadores têm de fornecer justificação quando reduzirem o nível de sensibilidade** como **Ligado**. Ao fazerem-no, a ação e a justificação são registadas no registo de eventos do Windows local: **Aplicação** > **Proteção do Microsoft Azure Information Protection**.
+Sim. Para se certificar de que os utilizadores justificam as suas alterações de classificação, no portal do Azure, defina a opção **Os utilizadores têm de fornecer uma justificação para reduzir a etiqueta de classificação, remover uma etiqueta ou remover a proteção** como **Ativado**. Ao fazerem-no, a ação e a justificação são registadas no registo de eventos do Windows local: **Aplicação** > **Proteção do Microsoft Azure Information Protection**.
 
 ## Como posso proteger automaticamente o conteúdo depois de ter sido classificado?
 
@@ -187,6 +187,6 @@ Em seguida, visite o nosso [site Yammer](https://www.yammer.com/askipteam/#/thre
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

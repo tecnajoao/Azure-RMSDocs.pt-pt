@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d2339ece646fc51410186d43facdea28ac8fdfe
-ms.openlocfilehash: 0dcaf13afb1802c2301c9516b2602aa2f6b7ce7e
+ms.sourcegitcommit: 4141cadf67dc479116c802f9340ba222140194a3
+ms.openlocfilehash: 2d965086fa44d98e8236a6bbd2515fb3afac3f05
 
 
 ---
@@ -26,10 +26,12 @@ Este tópico contém documentação de orientação essencial sobre os aspetos b
 
 ## Introdução
 
-A documentação de orientação incluída neste tópico baseia-se na aplicação de amostra IPCHelloWorld que o ajudará com os conceitos básicos e o código de uma aplicação com permissão para direitos. Pode transferir a aplicação de amostra IPCHellowWorld completa como [Webinar\_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440) em Microsoft Connect.
+A documentação de orientação incluída neste tópico baseia-se na aplicação de amostra *IPCHelloWorld* que o ajudará com os conceitos básicos e o código de uma aplicação com permissão para direitos. O projeto *IPCHelloWorld* já está configurado para o SDK Rights Management Services 2.1. Para obter informações sobre como configurar um novo projeto para utilizar o SDK RMS 2.1, consulte [Configurar o Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md).
 
-> [!Note] 
-> O projeto IPCHelloWorld já está configurado para o SDK Rights Management Services 2.1. Para obter informações sobre como configurar um novo projeto para utilizar o SDK RMS 2.1, consulte [Configurar o Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md).
+Pode transferir a aplicação de exemplo *IPCHellowWorld* completa como [Webinar_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440) a partir do Microsoft Connect.
+> [!Note]
+> Se obtiver um erro ao aceder ao Microsoft Connect, é possível que não esteja registado. Para se registar: aceda a [Connect](http://connect.microsoft.com), inicie sessão com a sua Conta Microsoft > Diretório > Procurar Serviços de Gestão de Direitos > Aderir.
+
 
 ## Carregar o MSIPC.dll
 
@@ -185,6 +187,6 @@ Antes de terminar, também tem de libertar todos os recursos atribuídos.
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

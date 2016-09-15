@@ -1,5 +1,5 @@
 ---
-title: "Como configurar uma etiqueta para aplicar a proteção Rights Management | Azure Rights Management"
+title: "Como configurar uma etiqueta para aplicar a proteção Rights Management | Azure Information Protection"
 description: "Pode proteger os seus documentos e e-mails mais confidenciais utilizando um serviço de Gestão de Direitos, que utiliza políticas de encriptação, identidade e autorização para ajudar a evitar perda de dados. Esta proteção é aplicada ao configurar uma etiqueta para utilizar um modelo do Rights Management."
 manager: mbaldwin
 ms.date: 08/15/2016
@@ -9,8 +9,8 @@ ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 23e62c82a38e696b0708f3b599d24f3a0f337fd8
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: 9cf13b5b795fc5e236ee3f48914cbbd406ad3e7e
 
 
 ---
@@ -57,7 +57,7 @@ Para mais informações sobre o Azure Rights Management e para saber como funcio
     
     Na maioria dos casos, irá selecionar **Azure RMS**. Não selecione AD RMS, a menos que tenha lido e compreendido os pré-requisitos e as restrições que acompanham esta configuração, por vezes referido como "*tenha a sua própria chave*" (HYOK). Para obter mais informações, veja [Requisitos e restrições de Tenha a sua própria chave (HYOK) para proteção do AD RMS](configure-adrms-restrictions.md).
     
-4. Se tiver selecionado o Azure RMS: para **Selecionar modelo RMS**, clique na caixa pendente e selecione o modelo que pretende utilizar para proteger os documentos e os e-mails com esta etiqueta.
+4. Se tiver selecionado o Azure RMS: para **Selecionar modelo RMS**, clique na caixa pendente e selecione o modelo ou a opção de gestão de direitos que pretende utilizar para proteger os documentos e os e-mails com esta etiqueta.
 
     > [!NOTE] 
     > Se criar um novo modelo depois de abrir o painel **Etiqueta**, feche este painel e volte ao passo 2, para que o modelo criado recentemente seja obtido a partir do Azure de modo a poder selecioná-lo.
@@ -78,6 +78,6 @@ Para mais informações sobre como configurar a política do Azure Information P
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

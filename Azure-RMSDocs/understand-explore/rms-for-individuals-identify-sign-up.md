@@ -1,9 +1,9 @@
 ---
 title: "Como saber se os utilizadores se inscreveram no RMS para indivíduos | Azure RMS"
-description: "Como administrador, como sabe se os seus utilizadores se inscreveram no RMS para indivíduos? Pode utilizar qualquer um ou uma combinação dos métodos descritos neste artigo."
+description: "Enquanto administrador, poderá utilizar todos os métodos descritos neste artigo ou uma combinação dos mesmos para verificar se os seus utilizadores se inscreveram ou não no RMS para indivíduos."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: a36c3d99-a794-4f7a-aafb-64a950f1fcf9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
-ms.openlocfilehash: fb9331686f5b04ba7aea8653c412127fd6913033
+ms.sourcegitcommit: 79d098e47cdfe608bc62ed385a5c8236fb7c6d3c
+ms.openlocfilehash: 6a8a6ac7aae7c8e370af47e1d39a9f69acc1e12c
 
 
 ---
@@ -36,6 +36,6 @@ Como administrador, como sabe se os seus utilizadores se inscreveram no RMS para
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

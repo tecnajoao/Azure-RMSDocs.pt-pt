@@ -3,7 +3,7 @@ title: "Como os administradores podem controlar as contas criadas para o RMS par
 description: "Como pode controlar as contas de utilizador no Azure Active Directory se não pretender converter a subscrição do RMS para indivíduos da sua organização para uma subscrição paga."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: a83880d0-f0f9-4a32-9e00-2f6635d7cc8d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
-ms.openlocfilehash: eb86c9e4f83fcf42599145b10ad8f021e40c208f
+ms.sourcegitcommit: 79d098e47cdfe608bc62ed385a5c8236fb7c6d3c
+ms.openlocfilehash: 6383c1d583eb45973750305e709d8f5d792892b5
 
 
 ---
@@ -31,9 +31,9 @@ Se não pretender converter a subscrição do RMS para indivíduos da sua organi
 
 -   Pode impedir que os utilizadores se inscrevam para utilizar o Azure Rights Management com a subscrição do RMS para indivíduos. Na maioria dos casos, esta ação não traz grandes vantagens porque os utilizadores partilharão ficheiros sem proteção (o que pode colocar a sua empresa em risco) ou utilizarão outro mecanismo de proteção de ficheiros que não proporciona ao departamento de TI a opção de aceder aos dados. No entanto, se pretender impedir que os utilizadores se inscrevam para utilizar o RMS para indivíduos, efetue uma das seguintes ações depois de se tornar o proprietário do diretório da sua organização no Azure:
 
-    -   Impeça todos os utilizadores de se inscreverem em subscrições self-service, incluindo o RMS para indivíduos.  Atualmente, não é possível configurar esta opção por serviço; a definição aplica-se a todas as subscrições do Azure que utilizam o processo self-service. Para o fazer, defina o parâmetro **AllowAdHocSubscriptions** como false com o cmdlet [Set-MsolCompanySettings](http://technet.microsoft.com/library/dn194127.aspx) do módulo do Windows PowerShell para o Azure Active Directory. Por exemplo: **Set-MsolCompanySettings -AllowAdHocSubscriptions $false**
+    -   Impeça todos os utilizadores de se inscreverem em subscrições self-service, incluindo o RMS para indivíduos.  Atualmente, não é possível configurar esta opção por serviço; a definição aplica-se a todas as subscrições do Azure que utilizam o processo self-service. Para fazê-lo, defina o parâmetro **AllowAdHocSubscriptions** como false com o cmdlet [Set-MsolCompanySettings](http://technet.microsoft.com/library/dn194127.aspx) do módulo PowerShell para Azure Active Directory. Por exemplo: **Set-MsolCompanySettings -AllowAdHocSubscriptions $false**
 
-    -   Impeça que os utilizadores criem uma nova conta no Azure, o que significa que apenas os utilizadores que já têm uma conta no Azure podem inscrever-se em subscrições self-service, incluindo o RMS para indivíduos.  Para o fazer, defina o parâmetro **AllowEmailVerifiedUsers** como false com o cmdlet [Set-MsolCompanySettings](http://technet.microsoft.com/library/dn194127.aspx) do módulo do Windows PowerShell para o Azure Active Directory. Por exemplo: **Set-MsolCompanySettings -AllowEmailVerifiedUsers $false -AllowAdHocSubscriptions $true**
+    -   Impeça que os utilizadores criem uma nova conta no Azure, o que significa que apenas os utilizadores que já têm uma conta no Azure podem inscrever-se em subscrições self-service, incluindo o RMS para indivíduos.  Para fazê-lo, defina o parâmetro **AllowEmailVerifiedUsers** como false com o cmdlet [Set-MsolCompanySettings](http://technet.microsoft.com/library/dn194127.aspx) do módulo PowerShell para Azure Active Directory. Por exemplo: **Set-MsolCompanySettings -AllowEmailVerifiedUsers $false -AllowAdHocSubscriptions $true**
 
     -   Sincronize a sua infraestrutura dos Serviços de Domínio do Active Directory com o Azure Active Directory. Esta ação impede que novas contas sejam criadas quando os utilizadores se inscrevem em subscrições self-service, tais como o RMS para indivíduos, e pode eliminar ou desativar contas que foram anteriormente criadas no diretório do Azure.
 
@@ -46,6 +46,6 @@ Se os utilizadores, em vez dos administradores, puderem criar as respetivas cont
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

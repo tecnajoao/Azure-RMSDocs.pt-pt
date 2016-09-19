@@ -3,7 +3,7 @@ title: Perguntas mais frequentes sobre o Azure Rights Management | Azure RMS
 description: "Algumas perguntas mais frequentes do Microsoft Azure Rights Management, também conhecido como Azure RMS."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/29/2016
+ms.date: 09/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 47328bc0c3cc66e99a98b7c8abc553f25d956404
-ms.openlocfilehash: e485286a0bd42bbcfb46a8aabe4d2ee66d65b4a1
+ms.sourcegitcommit: 79d098e47cdfe608bc62ed385a5c8236fb7c6d3c
+ms.openlocfilehash: e0529126fefc9dec6aaa490538971a7573f79431
 
 
 ---
@@ -143,10 +143,10 @@ Como o Azure RMS suporta a partilha segura com todas as pessoas, pode ser ambici
 ## Que funcionalidades podem ou não ser utilizadas com as diferentes subscrições do Azure RMS?
 Para as subscrições pagas que suportam o Azure RMS (Office 365, Azure RMS Premium e Enterprise Mobility Suite), existem algumas diferenças nas funcionalidades do RMS que são suportadas. Para obter uma lista, consulte [Comparação de Ofertas de Rights Management Services (RMS)](http://technet.microsoft.com/dn858608).
 
-A subscrição gratuita que suporta o Azure RMS (RMS para utilizadores autónomos) suporta o consumo de conteúdos protegidos pelo Azure RMS. Para mais informações, consulte [RMS para indivíduos e Azure Rights Management](../understand-explore/rms-for-individuals.md).
+A subscrição gratuita que suporta o Azure RMS (RMS para indivíduos) suporta o consumo de conteúdos protegidos pelo Azure RMS. Para mais informações, consulte [RMS para indivíduos e Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-## Onde posso obter informações técnicas sobre a subscrição gratuita do Azure RMS (RMS para utilizadores autónomos), por exemplo, como funciona realmente, como assumir o controlo das contas e que domínios não podem ser utilizados?
-Encontrará as respostas a estas perguntas em [RMS for individuals and Azure Rights Management (RMS para utilizadores autónomos e Azure Rights Management – em inglês)](../understand-explore/rms-for-individuals.md) e artigos relacionados.
+## Onde posso obter informações técnicas sobre a subscrição gratuita do Azure RMS (RMS para indivíduos), tais como a forma como o processo funciona e de que forma um administrador pode controlar as contas que foram criadas?
+Encontrará as respostas a estas perguntas em [RMS for individuals and Azure Rights Management (RMS para indivíduos e Azure Rights Management – em inglês)](../understand-explore/rms-for-individuals.md) e artigos relacionados.
 
 ## Como recuperamos o acesso a ficheiros que foram protegidos por um funcionário que saiu da organização?
 Utilize a funcionalidade de superutilizador do Azure RMS, que permite que os utilizadores autorizados tenham direitos de proprietário totais para todas as licenças de utilização que foram concedidas pelo inquilino do RMS da sua organização. Esta mesma funcionalidade permite que os serviços autorizados indexem e inspecionem ficheiros, conforme necessário.
@@ -223,6 +223,6 @@ Esta página de FAQ será atualizada regularmente, com novas adições indicadas
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO1-->
 
 

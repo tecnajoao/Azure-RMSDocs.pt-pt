@@ -1,5 +1,5 @@
 ---
-title: "Tutorial de início rápido do Azure Information Protection, passo 1 | Azure Rights Management"
+title: "Passo 1 do tutorial de introdução do Azure Information Protection | Azure Information Protection"
 description: "Passo 1 de um tutorial de apresentação para experimentar rapidamente o Microsoft Azure Information Protection na sua organização com apenas 4 passos que devem demorar menos de 15 minutos."
 author: cabailey
 manager: mbaldwin
@@ -10,8 +10,8 @@ ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 translationtype: Human Translation
-ms.sourcegitcommit: da0145444a7d0abb6407ed2ccbb581d4dcdd10d6
-ms.openlocfilehash: 38bc0f85acad64d56ef92078ded37a3367c72f10
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: 96b5d2e53d2d1460a97a87f4037cab79b8586244
 
 
 ---
@@ -86,6 +86,6 @@ Para uma implementação de produção, provavelmente, será útil configurar mo
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

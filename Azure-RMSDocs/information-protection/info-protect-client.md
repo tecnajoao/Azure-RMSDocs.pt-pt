@@ -1,5 +1,5 @@
 ---
-title: Instalar o cliente do Azure Information Protection | Azure Rights Management
+title: Instalar o cliente do Azure Information Protection | Azure Information Protection
 description: "Instruções para instalar o cliente que adiciona uma barra de Proteção de Informações às suas aplicações do Office, para que possa selecionar etiquetas de classificação para documentos e e-mails."
 manager: mbaldwin
 ms.date: 08/29/2016
@@ -9,8 +9,8 @@ ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 translationtype: Human Translation
-ms.sourcegitcommit: 15ca59f34847d20413fbfa7973567cf5ca66db96
-ms.openlocfilehash: c245d542d237216c84941f8718cb9a0cafb44a70
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: f8d4b7f154ab8b47cded0dd2f315dba33664c7ff
 
 
 ---
@@ -34,7 +34,7 @@ Antes de instalar o cliente, verifique se tem as versões de sistema operativo e
 
 ## Para instalar o cliente Azure Information Protection manualmente
 
-1. Depois de [ter transferido o cliente](https://www.microsoft.com/en-us/download/details.aspx?id=53018), execute o **AzInfoProtection_v233.exe** e siga as instruções para instalar o cliente. Esta instalação requer permissões administrativas locais.
+1. Depois de ter [transferido o cliente](https://www.microsoft.com/en-us/download/details.aspx?id=53018), execute o ficheiro **AzInfoProtection.exe** e siga as instruções para instalar o cliente. Esta instalação requer permissões administrativas locais.
 
     Selecione a opção para instalar uma política de demonstração se não puder ligar-se ao Office 365 ou ao Azure Active Directory e pretender ver e experimentar o lado do cliente Azure Information Protection utilizando uma política local para efeitos de demonstração. Quando o cliente se liga a um serviço do Azure Information Protection, esta política de demonstração é substituída pela política do Azure Information Protection da organização. 
 
@@ -42,14 +42,21 @@ Antes de instalar o cliente, verifique se tem as versões de sistema operativo e
 
 ## Para instalar o cliente Azure Information Protection para os utilizadores
 
-- Pode executar scripts e automatizar a instalação do cliente Azure Information Protection ao utilizar as opções da linha de comandos. Para ver as opções de instalação, execute `AzInfoProtection_v233.exe /help`.
+- Pode executar scripts e automatizar a instalação do cliente Azure Information Protection ao utilizar as opções da linha de comandos. Para ver as opções de instalação, execute `AzInfoProtection.exe /help`.
 
-    Por exemplo, para instalar o cliente automaticamente: `AzInfoProtection_v233.exe /passive | quiet`
+    Por exemplo, para instalar o cliente automaticamente: `AzInfoProtection.exe /passive | quiet`
 
 
 ## Para instalar o cliente Azure Information Protection
 
+Pode utilizar uma das seguintes opções:
+
 - Utilize o Painel de Controlo para desinstalar um programa: clique em **Microsoft Azure Information Protection** > **Desinstalar**
+
+- Volte a executar o ficheiro **AzInfoProtection.exe** e, na página **Modificar Configuração**, clique em **Desinstalar**. 
+
+- Executar `AzInfoProtection.exe /uninstall`
+
 
 ## Para verificar a instalação, o estado da ligação ou comunicar um problema
 
@@ -88,6 +95,6 @@ Para obter um exemplo de como personalizar a política predefinida e ver o compo
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO1-->
 
 

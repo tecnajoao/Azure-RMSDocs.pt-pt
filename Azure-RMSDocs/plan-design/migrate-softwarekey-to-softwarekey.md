@@ -3,7 +3,7 @@ title: "Passo 2&colon; Migração de chave protegida por software para chave pro
 description: "Instruções que fazem parte do caminho de migração do AD RMS para o Azure Rights Management e são aplicáveis apenas se a sua chave do AD RMS estiver protegida por software e pretender migrar para o Azure Rights Management com uma chave de inquilino protegida por software."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ada00b6f6298e7d359c73eb38dfdac169eacb708
-ms.openlocfilehash: 5ec3d2b275521807c6fd8f9ccfe1136db97d5d79
+ms.sourcegitcommit: 459cbe65741ea415defced844034f62cfd4654ed
+ms.openlocfilehash: 2bd9abcac99a06a29e5dacdd014e660358840adc
 
 
 ---
@@ -49,13 +49,13 @@ Utilize o seguinte procedimento para importar a configuração do AD RMS para o 
 3.  Utilize o cmdlet [Import-AadrmTpd](http://msdn.microsoft.com/library/azure/dn857523.aspx) para carregar o primeiro ficheiro de domínio de publicação fidedigno exportado (.xml). Se tiver mais do que um ficheiro .xml, porque tinha vários domínios de publicação fidedignos, escolha o ficheiro que contém o domínio de publicação fidedigno exportado que pretende utilizar no Azure RMS para proteger conteúdo após a migração. Utilize o seguinte comando:
 
     ```
-    Import-AadrmTpd -TpdFile <PathToTpdPackageFile> -ProtectionPassword -Active $True -Verbose
+    Import-AadrmTpd -TpdFile <PathToTpdPackageFile> -ProtectionPassword <secure string> -Active $True -Verbose
     ```
-    Por exemplo: **Import-AadrmTpd -TpdFile E:\contosokey1.xml -ProtectionPassword -Active $true -Verbose**
-
-    Quando for solicitado, introduza a palavra-passe que especificou anteriormente e confirme que pretende efetuar esta ação.
-
-4.  Quando o comando for concluído, repita o passo 3 para cada ficheiro .xml restante que criou ao exportar os seus domínios de publicação fidedignos. No entanto, para esses ficheiros, defina **-Active** para **false** ao executar o comando Import. Por exemplo: **Import-AadrmTpd -TpdFile E:\contosokey2.xml -ProtectionPassword -Active $false -Verbose**
+    Pode utilizar [ConvertTo-SecureString -AsPlaintext](https://technet.microsoft.com/library/hh849818.aspx) ou [Read-Host](https://technet.microsoft.com/library/hh849945.aspx) para especificar a palavra-passe como uma cadeia segura. Quando utilizar ConvertTo-SecureString e a palavra-passe tiver carateres especiais, introduza a palavra-passe entre plicas ou remova os carateres especiais.
+    
+    Por exemplo: primeiro, execute **$TPD_Password = Read-Host -AsSecureString** e introduza a palavra-passe que especificou anteriormente. Em seguida, execute **Import-AadrmTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Active $true -Verbose**. Quando lhe for pedido, confirme que pretende efetuar esta ação.
+    
+4.  Quando o comando for concluído, repita o passo 3 para cada ficheiro .xml restante que criou ao exportar os seus domínios de publicação fidedignos. No entanto, para esses ficheiros, defina **-Active** para **false** ao executar o comando Import. Por exemplo: **Import-AadrmTpd -TpdFile E:\contosokey2.xml -ProtectionPassword $TPD_Password -Active $false -Verbose**
 
 5.  Utilize o cmdlet [Disconnect-AadrmService](http://msdn.microsoft.com/library/azure/dn629416.aspx) para desligar do serviço do Azure RMS:
 
@@ -70,6 +70,6 @@ Agora está pronto para ir para o [Passo 3. Ativar o seu inquilino do RMS](migra
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

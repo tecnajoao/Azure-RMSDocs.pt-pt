@@ -2,15 +2,15 @@
 title: "Como configurar uma etiqueta para aplicar a proteção Rights Management | Azure Information Protection"
 description: "Pode proteger os seus documentos e e-mails mais confidenciais utilizando um serviço de Gestão de Direitos, que utiliza políticas de encriptação, identidade e autorização para ajudar a evitar perda de dados. Esta proteção é aplicada ao configurar uma etiqueta para utilizar um modelo do Rights Management."
 manager: mbaldwin
-ms.date: 08/15/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
-ms.openlocfilehash: 9cf13b5b795fc5e236ee3f48914cbbd406ad3e7e
+ms.sourcegitcommit: fc390680918a08405e914a858c64bb723efa5580
+ms.openlocfilehash: ca1534801facc6273d481cc99f23ec8acd5341d1
 
 
 ---
@@ -47,9 +47,9 @@ Para mais informações sobre o Azure Rights Management e para saber como funcio
 
 ## Para configurar uma etiqueta de modo a aplicar a proteção Rights Management
 
-1. Se ainda não o fez, inicie sessão no [portal do Azure](https://portal.azure.com) como administrador global para que possa obter os modelos do Azure Rights Management. Em seguida, navegue para o painel **Azure Information Protection**. 
+1. Se ainda não o fez, abra uma nova janela de browser e inicie sessão no [portal do Azure](https://portal.azure.com) como administrador global para que possa obter os modelos do Azure Rights Management. Em seguida, navegue para o painel **Azure Information Protection**. 
 
-    Por exemplo, no menu do hub, clique em **Procurar** e comece a escrever **Information** na caixa Filtro. Selecione **Azure Information Protection**.
+    Por exemplo, no menu hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
 2. No painel do **Azure Information Protection**, selecione a etiqueta que pretende configurar para aplicar a proteção Rights Management.
 
@@ -57,15 +57,22 @@ Para mais informações sobre o Azure Rights Management e para saber como funcio
     
     Na maioria dos casos, irá selecionar **Azure RMS**. Não selecione AD RMS, a menos que tenha lido e compreendido os pré-requisitos e as restrições que acompanham esta configuração, por vezes referido como "*tenha a sua própria chave*" (HYOK). Para obter mais informações, veja [Requisitos e restrições de Tenha a sua própria chave (HYOK) para proteção do AD RMS](configure-adrms-restrictions.md).
     
-4. Se tiver selecionado o Azure RMS: para **Selecionar modelo RMS**, clique na caixa pendente e selecione o modelo ou a opção de gestão de direitos que pretende utilizar para proteger os documentos e os e-mails com esta etiqueta.
+4. Se tiver selecionado o Azure RMS: em **Selecionar modelo RMS**, clique na caixa pendente e selecione o [modelo](../deploy-use/configure-custom-templates.md) ou a opção de gestão de direitos que pretende utilizar para proteger os documentos e os e-mails com esta etiqueta.
+    
+    Mais informações sobre as opções:
+    
+    - Criou um novo modelo após abrir o painel **Etiqueta**? Feche este painel e regresse ao passo 2. Desta forma, o modelo que criou recentemente será obtido a partir do Azure para que o possa selecionar.
+    
+    - Se selecionar um **modelo departamental** ou se tiver configurado [controlos de inclusão](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment):
+    
+        - Os utilizadores que estão fora do âmbito configurado do modelo ou que estão excluídos de aplicarem a proteção do Azure Rights Management continuarão a ver a etiqueta mas não poderão aplicá-la. Se selecionarem a etiqueta, verão a seguinte mensagem: **O Azure Information Protection não pode aplicar esta etiqueta. Se este problema persistir, contacte o seu administrador.**
+        
+    - Se selecionar **Remover Proteção**:
+        
+        - Os utilizadores têm de ter permissões para remover a proteção do Rights Management para aplicar uma etiqueta que tenha esta opção. Esta opção requer que os utilizadores tenham o [direito de utilização](../deploy-use/configure-usage-rights.md) **Exportar** (para documentos do Office) ou **Controlo Total**, que sejam os proprietários do Rights Management (concede automaticamente o direito de utilização Controlo Total) ou que sejam [superutilizadores do Azure Rights Management](../deploy-use/configure-super-users.md). Os modelos de gestão de direitos predefinidos não incluem os direitos de utilização que permitem que os utilizadores removam a proteção. 
 
-    > [!NOTE] 
-    > Se criar um novo modelo depois de abrir o painel **Etiqueta**, feche este painel e volte ao passo 2, para que o modelo criado recentemente seja obtido a partir do Azure de modo a poder selecioná-lo.
-    
-    Tenha em atenção que, se selecionar um modelo departamental ou se tiver configurado [controlos de inclusão](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment):
-    
-    - Os utilizadores que estão fora do âmbito configurado do modelo ou que estão excluídos de aplicarem a proteção do Azure Rights Management continuarão a ver a etiqueta mas não poderão aplicá-la. Se selecionarem a etiqueta, verão a seguinte mensagem: **O Azure Information Protection não pode aplicar esta etiqueta. Se este problema persistir, contacte o seu administrador.**
-    
+            Se os utilizadores não tiverem permissões para remover a proteção do Rights Management e selecionarem esta etiqueta com a opção **Remover Proteção**, verão a seguinte mensagem: **O Azure Information Protection não pode aplicar esta etiqueta. Se este problema persistir, contacte o seu administrador.**
+
 5. Se tiver selecionado o AD RMS: forneça o GUID do modelo e o URL de licenciamento do cluster do AD RMS. [Mais informações](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label)
 
 6. Clique em **Guardar**.
@@ -78,6 +85,6 @@ Para mais informações sobre como configurar a política do Azure Information P
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 

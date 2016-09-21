@@ -2,15 +2,15 @@
 title: Como alterar ou personalizar uma etiqueta existente para o Azure Information Protection | Azure Information Protection
 description: "Pode alterar ou refinar qualquer uma das etiquetas que os utilizadores veem na barra Information Protection, configurando-os na política do Azure Information Protection."
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 translationtype: Human Translation
-ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
-ms.openlocfilehash: 61ceff2fb2a964495d16bb5e801a5ee7bfa60832
+ms.sourcegitcommit: 801ca11da602d4acb9c398c9a89aeb33e45cb0f4
+ms.openlocfilehash: 2ee4f945307744678df8b842aab2be219f8ef582
 
 
 ---
@@ -28,9 +28,9 @@ Por exemplo, pode alterar um nome de etiqueta ou de uma etiqueta secundária, a 
 Para alterar uma etiqueta, utilize as instruções seguintes.
 
 
-1. Se ainda não o fez, inicie sessão no [portal do Azure](https://portal.azure.com) e, em seguida, navegue para o painel **Azure Information Protection**. 
+1. Se ainda não o fez, numa nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com) e, em seguida, navegue para o painel **Azure Information Protection**. 
     
-    Por exemplo, no menu do hub, clique em **Procurar** e comece a escrever **Information** na caixa Filtro. Selecione **Azure Information Protection**.
+    Por exemplo, no menu hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
 2. No painel **Azure Information Protection**, selecione a etiqueta a alterar e, em seguida, efetue as alterações no painel **Etiqueta** e em quaisquer painéis subsequentes, conforme necessário.
 
@@ -52,6 +52,6 @@ Para mais informações sobre como configurar as opções que pode efetuar em re
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 

@@ -3,15 +3,15 @@ title: "Passo 2 do tutorial de introdução do Azure Information Protection | Az
 description: "Passo 2 de um tutorial de apresentação para experimentar rapidamente o Microsoft Azure Information Protection na sua organização com apenas 4 passos que devem demorar menos de 15 minutos."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
-ms.openlocfilehash: 9125757ba2cce865d73acab341d3e3b6ff36ba57
+ms.sourcegitcommit: ba0f05619e1d13e16b8d4f6d86231b89e9326726
+ms.openlocfilehash: 9dfbeb4c887c619d07b11be0da304ac4f4e7d4a9
 
 
 ---
@@ -24,14 +24,14 @@ ms.openlocfilehash: 9125757ba2cce865d73acab341d3e3b6ff36ba57
 
 Apesar do Azure Information Protection ser fornecido com uma política predefinida que pode utilizar sem configuração, vamos ver essa política e efetuar algumas alterações.
 
-1. Inicie sessão no [portal do Azure](https://portal.azure.com). Se pretender testar a proteção, bem como a classificação e a etiquetagem, inicie sessão como administrador global para que possa obter os modelos do Azure Rights Management.
+1. Numa nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com). Se pretender testar a proteção, bem como a classificação e a etiquetagem, inicie sessão como administrador global para que possa obter os modelos do Azure Rights Management.
  
-2. No menu do hub: clique em **Novo** > **Segurança + Identidade** > **Azure Information Protection (pré-visualização)** > **Criar**.
+2. No menu hub: clique em **Novo** > **Segurança + Identidade** > **Azure Information Protection (pré-visualização)** > **Criar**.
 
-    Esta ação cria o painel **Azure Information Protection** para que, da próxima vez que iniciar sessão no portal, possa selecionar o serviço a partir da lista **Procurar** do hub. 
+    Esta ação cria o painel **Azure Information Protection** para que, da próxima vez que iniciar sessão no portal, possa selecionar o serviço a partir da lista **Mais serviços** do hub. 
 
     > [!TIP] 
-    > Selecione **Afixar ao dashboard** para criar um mosaico **Azure Information Protection** no seu dashboard, para que possa ignorar o passo de procura da próxima vez que iniciar sessão no portal.
+    > Selecione **Afixar ao dashboard** para criar um mosaico do **Azure Information Protection** no seu dashboard. Assim, não terá de procurar o serviço da próxima vez que iniciar sessão no portal.
 
 3.  Explore o painel principal **Azure Information Protection**, que mostra a política do Information Protection predefinida criada automaticamente:
     
@@ -53,7 +53,7 @@ Agora vamos alterar as definições de uma das etiquetas, **Confidencial**:
 
 2. Na lâmina **Etiqueta: confidencial**, pode ver as definições disponíveis para cada etiqueta. Efetue as seguintes alterações:
 
-    a. Se tiver ativado o Azure Rights Managment: na secção **RMS para proteger documentos e e-mails que contém esta etiqueta**, se vir **Selecionar modelo RMS a partir de**, mantenha a predefinição **Azure RMS**. Em seguida, para **Selecionar modelo RMS**clique na caixa pendente e selecione o modelo predefinido **\<o nome da organização > - Confidencial**. Por exemplo, se o nome de organização for VanArsdel, Lda., verá e selecione **VanArsdel, Lda. - Confidencial**. Se tiver desativado este modelo da Azure Rights Management predefinido, selecione um modelo alternativo. No entanto, se selecionar um modelo departamental, certifique-se de que a sua conta está incluída no âmbito.
+    a. Se tiver ativado o Azure Rights Managment: na secção **Definir modelo RMS para proteger documentos e e-mails que contêm esta etiqueta**, se vir **Selecionar modelo RMS a partir de**, mantenha a predefinição **Azure RMS**. Em seguida, para **Selecionar modelo RMS**clique na caixa pendente e selecione o modelo predefinido **\<o nome da organização > - Confidencial**. Por exemplo, se o nome de organização for VanArsdel, Lda., verá e selecione **VanArsdel, Lda. - Confidencial**. Se tiver desativado este modelo da Azure Rights Management predefinido, selecione um modelo alternativo. No entanto, se selecionar um modelo departamental, certifique-se de que a sua conta está incluída no âmbito.
     
     Se não tiver ativado a Azure Rights Management, não é possível utilizar esta opção.
     
@@ -97,6 +97,6 @@ Agora que conhece o que é a política predefinida e efetuou algumas alteraçõe
 [Passo 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 

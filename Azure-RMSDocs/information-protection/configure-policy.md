@@ -12,8 +12,8 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
-ms.openlocfilehash: 1dd3c09f5bf6a38eb3d82bfa3f7a756f5237eab6
+ms.sourcegitcommit: 801ca11da602d4acb9c398c9a89aeb33e45cb0f4
+ms.openlocfilehash: ba7acf835439d059874e0512997b2b591193f0c3
 
 
 ---
@@ -28,9 +28,9 @@ Para configurar a classificação, a etiquetagem e a proteção, tem de configur
 
 Para configurar a política do Azure Information Protection durante o lançamento de pré-visualização do Azure Information Protection:
 
-1. Inicie sessão no [portal do Azure](https://portal.azure.com).
+1. Numa nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com).
 
-2. Navegue para o painel **Azure Information Protection**: por exemplo, no menu do hub, clique em **Procurar** e comece a escrever **Information Protection** na caixa Filtro. Na lista de resultados, selecione **Azure Information Protection**. 
+2. Navegue para o painel **Azure Information Protection**: por exemplo, no menu hub, clique em **Mais serviços** e comece a escrever **Information Protection** na caixa Filtro. Na lista de resultados, selecione **Azure Information Protection**. 
 
     Em seguida, irá ver o painel do **Azure Information Protection** onde pode configurar a política do Azure Information Protection, que contém os elementos seguintes:
 
@@ -80,6 +80,6 @@ Para obter um exemplo de como personalizar a política predefinida e ver o compo
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 

@@ -3,7 +3,7 @@ title: "Perguntas mais frequentes sobre a pré-visualização do Azure Informati
 description: "Tem alguma pergunta sobre a versão de pré-visualização do Azure Information Protection? Verifique se a resposta está aqui."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0a66851beeedecc3bda92f840f06b56f40c0c4c1
-ms.openlocfilehash: 427b783b41d8977ff07b0fbc929bf0d7afd0721d
+ms.sourcegitcommit: 459cbe65741ea415defced844034f62cfd4654ed
+ms.openlocfilehash: 39334a5cc18f1b45eabd7cf5b4f9b891fb10a5e6
 
 
 ---
@@ -143,6 +143,10 @@ Se necessário, pode criar subetiquetas que melhor descrevam subcategorias para 
 
 Embora possa definir marcações visuais, proteção e condições em ambos os níveis, quando utiliza subníveis, configure estas definições apenas no subnível. Se configurar as mesmas definições na etiqueta principal e no respetivo subnível, as definições do subnível têm precedência.
 
+## Quando um e-mail tem uma etiqueta, os anexos também recebem a mesma etiqueta automaticamente?
+
+Não. Quando coloca uma etiqueta numa mensagem de e-mail com anexos, esses anexos não herdam a mesma etiqueta. Os anexos permanecem sem uma etiqueta ou retêm uma etiqueta aplicada separadamente. No entanto, se a etiqueta do e-mail aplicar proteção, essa proteção é aplicada aos anexos.
+
 ## Como podem as soluções DLP e outras aplicações ser integradas com o Azure Information Protection?
 
 Uma vez que o Azure Information Protection utiliza metadados persistentes para classificação, que incluem uma etiqueta de texto não encriptado, estas informações podem ser lidas por soluções DLP e outras aplicações. Nos ficheiros, estes metadados são armazenados em propriedades personalizadas; nos e-mails, estas informações estão indicadas nos cabeçalhos de e-mail.
@@ -187,6 +191,6 @@ Em seguida, visite o nosso [site Yammer](https://www.yammer.com/askipteam/#/thre
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 

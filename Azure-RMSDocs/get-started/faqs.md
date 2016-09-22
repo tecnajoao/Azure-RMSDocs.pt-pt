@@ -3,7 +3,7 @@ title: Perguntas mais frequentes sobre o Azure Rights Management | Azure RMS
 description: "Algumas perguntas mais frequentes do Microsoft Azure Rights Management, também conhecido como Azure RMS."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/01/2016
+ms.date: 09/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 79d098e47cdfe608bc62ed385a5c8236fb7c6d3c
-ms.openlocfilehash: e0529126fefc9dec6aaa490538971a7573f79431
+ms.sourcegitcommit: 62b72d2debef3421fea4f0e70beed67e5364d7d3
+ms.openlocfilehash: 99b5e4ea74cd6f76a2409d89c3db5d8672b63055
 
 
 ---
@@ -165,37 +165,8 @@ Conforme estes exemplos demonstram, mesmo que todas as plataformas e todos os so
 Apesar do nome e do aspeto, **Não Reencaminhar** não é o oposto do direito de Reencaminhar nem um modelo. Na realidade, é um conjunto de direitos que incluem restringir a cópia, impressão e gravação de anexos, para além de restringir o reencaminhamento de e-mails. Os direitos são aplicados dinamicamente aos utilizadores através de destinatários escolhidos e não estaticamente atribuídos pelo administrador. Para obter mais informações, consulte a secção [Opção Não Reencaminhar para e-mails](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) em [Configurar os direitos de utilização do Azure Rights Management](../deploy-use/configure-usage-rights.md).
 
 ## Onde posso encontrar informações de suporte para o Azure RMS, como informações legais, sobre conformidade e SLAs?
-O Azure RMS suporta outros serviços e também depende de outros serviços. Se estiver à procura de informações relacionadas com o Azure RMS mas não sobre como utilizar o serviço Azure RMS, consulte os seguintes recursos:
 
-**Informações legais e privacidade:**
-
--   Para obter informações sobre o contrato do Microsoft Azure: [Contrato do Microsoft Azure](http://azure.microsoft.com/support/legal/subscription-agreement/)
-
--   Para obter informações sobre a privacidade do Microsoft Azure: [Declaração de Privacidade do Microsoft Azure](http://azure.microsoft.com/support/legal/privacy-statement/)
-
-**Segurança, conformidade e auditoria:**
-
-Consulte a secção [Requisitos de segurança, conformidade e regulamentação](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements) no artigo [Que problemas resolve o Azure RMS?](../understand-explore/azure-rms-problems-it-solves.md). Além disso:
-
--   Para obter certificados externos para o Azure RMS: [Centro de Fidedignidade do Microsoft Azure](http://azure.microsoft.com/support/trust-center/)
-
--   Para obter informações sobre a norma FIPS 140: [FIPS 140 Validation (Validação da Norma FIPS 140 – em inglês)](https://technet.microsoft.com/library/security/cc750357.aspx)
-
-**Contratos de nível de serviço:**
-
--   Contrato de nível de serviço para o Azure RMS, por região selecionada: [Transferir a partir da página Pesquisa de Licenciamento de Produtos](http://microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&amp;DocumentTypeId=37)
-
-    - Por exemplo, clique em **OnlineSvcsConsolidatedSLA(WW)(inglês)(março de2016)** para transferir o contrato de nível de serviço de março de 2016 da América do Norte.
-
--   Contrato de nível de serviço para o Azure Active Directory: [Contratos de Nível de Serviço](http://azure.microsoft.com/support/legal/sla/)
-
-**Documentação:**
-
--   Site de Documentação do Azure Active Directory: [Azure Active Directory](http://azure.microsoft.com/documentation/services/active-directory/)
-
--   Biblioteca do Azure Active Directory: [Azure Active Directory](https://msdn.microsoft.com/library/azure/mt168838.aspx)
-
--   Biblioteca do Office 365: [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
+Consulte [Informações de suporte e conformidade do Azure Rights Management](../understand-explore/compliance.md).
 
 ## Qual é a versão mais recente na nova classificação e funcionalidade de etiquetagem?
 
@@ -223,6 +194,6 @@ Esta página de FAQ será atualizada regularmente, com novas adições indicadas
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 

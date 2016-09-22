@@ -2,15 +2,15 @@
 title: "Como configurar as condições de classificação automática e recomendada do Azure Information Protection | Azure Information Protection"
 description: "Quando configurar as condições para uma etiqueta, pode atribuir automaticamente uma etiqueta a um documento ou a um e-mail. Em alternativa, pode pedir aos utilizadores que selecionem a etiqueta recomendada."
 manager: mbaldwin
-ms.date: 08/29/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
-ms.openlocfilehash: ea69e955e4ba5facb1a8f21a90592c0eaae5425e
+ms.sourcegitcommit: 801ca11da602d4acb9c398c9a89aeb33e45cb0f4
+ms.openlocfilehash: 98e8efd574d7e9689da426028d26f528cd6042a4
 
 
 ---
@@ -48,9 +48,9 @@ Neste exemplo, o utilizador pode clicar em **Alterar agora** para aplicar a etiq
 
 ## Para configurar a classificação recomendada ou automática para uma etiqueta
 
-1. Se ainda não o fez, inicie sessão no [portal do Azure](https://portal.azure.com) e, em seguida, navegue para o painel **Azure Information Protection**. 
+1. Caso ainda não o tenha feito, numa nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com) e navegue para o painel **Azure Information Protection**. 
     
-    Por exemplo, no menu do hub, clique em **Procurar** e comece a escrever **Information** na caixa Filtro. Selecione **Azure Information Protection**.
+    Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
 2. No painel do **Azure Information Protection**, selecione a etiqueta que pretende configurar para a classificação automática ou recomendada.
 
@@ -224,6 +224,6 @@ Para mais informações sobre como configurar a política do Azure Information P
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 

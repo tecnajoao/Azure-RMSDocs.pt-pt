@@ -3,7 +3,7 @@ title: "Passo 2&colon; Migração de chave protegida por HSM para chave protegid
 description: "Instruções que fazem parte do caminho de migração do AD RMS para o Azure Rights Management e são aplicáveis apenas se a sua chave do AD RMS estiver protegida por HSM e pretender migrar para o Azure Rights Management com uma chave de inquilino protegida por HSM no Cofre de Chaves do Azure."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ada00b6f6298e7d359c73eb38dfdac169eacb708
-ms.openlocfilehash: 32cedc573aa6d14c4897642789c8e58b788279f2
+ms.sourcegitcommit: df79a02238c7cbadaae450ad8dabc03478de27e9
+ms.openlocfilehash: 539ad9db29f7795d3f56655a64f49532ef6ff6e8
 
 
 ---
@@ -55,7 +55,7 @@ Estes procedimentos são efetuados pelo administrador para o Cofre de Chaves do 
     
     Por exemplo, se o cofre de chaves que criou para o Azure RMS tiver o nome contoso-byok-ky e o grupo de recursos tiver o nome contoso-byok-rg, execute o seguinte comando:
     
-        Set-AzureRmKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign
+        Set-AzureRmKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
 
 
 Agora que já preparou a chave HSM no Cofre de Chaves do Azure para o Azure RMS, está pronto para importar os dados de configuração do AD RMS.
@@ -94,6 +94,6 @@ Agora está pronto para ir para o [Passo 3. Ativar o seu inquilino do RMS](migra
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

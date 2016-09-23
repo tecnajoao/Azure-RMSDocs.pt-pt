@@ -3,7 +3,7 @@ title: Planear e implementar a sua chave de inquilino do Azure Rights Management
 description: "Informações para o ajudar a planear e gerir a sua chave de inquilino do RMS (Rights Management) do Azure RMS. Por exemplo, em vez de a sua chave de inquilino ser gerida pela Microsoft (predefinição), poderá querer gerir a sua própria chave de inquilino para cumprir os regulamentos específicos que se aplicam à sua organização. A gestão da sua própria chave de inquilino também é referida como Bring Your Own Key (Traga a Sua Própria Chave) ou BYOK."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/01/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eec7cc8b20435df11d7b8f89c4b9e9d0f039dc55
-ms.openlocfilehash: 25d47ab488474ed756b3139bb9d42d420cea25f7
+ms.sourcegitcommit: df79a02238c7cbadaae450ad8dabc03478de27e9
+ms.openlocfilehash: 0e3e77073898e2ae9f84f555183fb6fcbc7d2d8a
 
 
 ---
@@ -96,7 +96,7 @@ Quando a chave é transferida para o Cofre de Chaves, é fornecido um ID de chav
 
 No entanto, antes de o Azure RMS poder utilizar a chave, o Azure RMS tem de estar autorizado a utilizar a chave no cofre de chaves da sua organização. Para tal, o administrador do Cofre de Chaves do Azure utiliza o cmdlet PowerShell do Cofre de Chaves, [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx) e concede permissões ao principal do serviço Azure RMS, **Microsoft.Azure.RMS**. Por exemplo:
 
-    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign 
+    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
 
 Agora, está pronto para configurar o Azure RMS para utilizar esta chave como chave de inquilino do Azure RMS da sua organização. Utilizando os cmdlets do Azure RMS, ligue primeiro ao Azure RMS e inicie sessão:
 
@@ -136,6 +136,6 @@ Agora que já planeou e, se necessário, gerou a chave do inquilino, faça o seg
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 

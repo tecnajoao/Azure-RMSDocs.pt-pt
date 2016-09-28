@@ -3,7 +3,7 @@ title: Migrar do AD RMS para o Azure Rights Management | Azure RMS
 description: "Instruções para migrar a implementação dos Serviços de Gestão de Direitos do Active Directory (AD RMS) para o Azure Rights Management (Azure RMS). Após a migração, os utilizadores continuam a ter acesso a documentos e a mensagens de e-mail que a sua organização protegeu através da utilização do AD RMS, sendo que o conteúdo recentemente protegido utilizará o Azure RMS."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ada00b6f6298e7d359c73eb38dfdac169eacb708
-ms.openlocfilehash: 6aa75f5e6b326068951b3d4d65f337c15a475029
+ms.sourcegitcommit: 5c20772240961bdd3052e55a19eaca21ef7da003
+ms.openlocfilehash: 01c107979265abf0d34060eccf09ca32c0086ab8
 
 
 ---
@@ -46,7 +46,7 @@ Antes de iniciar a migração para o Azure RMS, certifique-se de que os seguinte
         
     - Modo Criptográfico 2:
     
-        - Os clientes e os servidores do AD RMS têm de estar em execução no Modo Criptográfico 2 antes de iniciar a migração para o Azure RMS. Para obter mais informações, veja [Modos Criptográficos do AD RMS](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
+        - Os clientes e os servidores do AD RMS têm de estar em execução no Modo Criptográfico 2 antes de iniciar a migração para o Azure RMS. Embora a chave do certificado de licenciante para servidor (SLC) atual tenha de utilizar o Modo Criptográfico 2, as chaves anteriores que foram configuradas para o Modo Criptográfico 1 são suportadas no Azure RMS como chaves arquivadas. Para obter mais informações sobre os modos criptográficos e como mudar para o Modo Criptográfico 2, consulte [Modos Criptográficos do AD RMS](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
         
     - Todas as topologias válidas do AD RMS são suportadas:
     
@@ -184,6 +184,6 @@ Para iniciar a migração, aceda a [Fase 1 – configuração do lado do servido
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

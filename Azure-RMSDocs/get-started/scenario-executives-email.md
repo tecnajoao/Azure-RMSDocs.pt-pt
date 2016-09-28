@@ -3,7 +3,7 @@ title: "Cenário – Os executivos trocam informações privilegiadas em seguran
 description: "Este cenário e a documentação do utilizador associada utilizam o Azure Rights Management para que os executivos possam trocar em segurança e-mails e anexos por e-mail e as políticas restrinjam automaticamente o acesso dos executivos sem necessidade de ação especial por parte deles."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/19/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: 1ec54b54197471f8cccaf6ae83ae8e592da30cae
+ms.sourcegitcommit: 3b0b165f594da47c090f7822afed2a80541b71e8
+ms.openlocfilehash: 511eb0b95039bb7ee1c4a4f06778a18c1cf6c542
 
 
 ---
@@ -49,7 +49,7 @@ Para que as instruções para este cenário funcionem, é necessário o seguinte
 |O Azure Rights Management está ativado|[Ativar o Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |Uma das seguintes configurações:<br /><br />- O Exchange Online está ativado para o Azure Rights Management<br /><br />- O conetor RMS está instalado e configurado para o Exchange no local|Para o Exchange Online: consulte a secção **Exchange Online: Configuração de IRM** em [Configurar aplicações do Azure Rights Management](https://technet.microsoft.com/library/jj585031.aspx).<br /><br />Para o Exchange no local: [Implementar o conector Azure Rights Management](https://technet.microsoft.com/library/dn375964.aspx)|
 |Configurou um modelo personalizado, tal como descrito a seguir|[Configurar modelos personalizados para o Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
-|Configurou uma regra de proteção de transporte para IRM, conforme descrito mais à frente neste artigo|Para o Exchange Online: [Criar uma Regra de Proteção de Transporte](https://technet.microsoft.com/library/dd302432.aspx)<br /><br />Para o Exchange 2013: [Criar uma Regra de Proteção de Transporte](https://technet.microsoft.com/library/dd302432%28v=exchg.150%29.asp)<br /><br />Para o Exchange 2010: [Criar uma Regra de Proteção de Transporte](https://technet.microsoft.com/en-us/library/dd302432%28v=exchg.141%29.aspx)|
+|Configurou uma regra de proteção de transporte para IRM, conforme descrito mais à frente neste artigo|Para o Exchange Online: [fluxo de correio ou regras de transporte](https://technet.microsoft.com/library/jj919238(v=exchg.150).aspx)<br /><br />Para o Exchange 2013: [criar uma Regra de Proteção de Transporte](https://technet.microsoft.com/en-us/library/dd302432(v=exchg.150))<br /><br />Para o Exchange 2010: [criar uma Regra de Proteção de Transporte](https://technet.microsoft.com/library/dd302432(v=exchg.141))|
 
 ### Para configurar o modelo personalizado para executivos
 
@@ -73,7 +73,7 @@ Para que as instruções para este cenário funcionem, é necessário o seguinte
 
 -   Utilize a documentação do Exchange referenciada na tabela para obter informações sobre os procedimentos para criar a regra de transporte com as seguintes definições:
 
-    -   Nome: **Aplicar os modelos Executivos a e-mail executivos**
+    -   Nome: **aplicar os modelos Executivos a e-mail executivos**
 
     -   Especifique o grupo **Executivos** como o remetente e o destinatário da regra e da condição adicional.
 
@@ -132,6 +132,6 @@ Ao enviar informações confidenciais da empresa para outro executivo da VanArsd
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

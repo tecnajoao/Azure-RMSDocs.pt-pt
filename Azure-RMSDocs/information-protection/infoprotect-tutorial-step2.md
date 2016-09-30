@@ -1,102 +1,13 @@
 ---
-title: "Passo 2 do tutorial de introdução do Azure Information Protection | Azure Information Protection"
-description: "Passo 2 de um tutorial de apresentação para experimentar rapidamente o Microsoft Azure Information Protection na sua organização com apenas 4 passos que devem demorar menos de 15 minutos."
-author: cabailey
-manager: mbaldwin
-ms.date: 09/14/2016
-ms.topic: article
-ms.prod: 
-ms.service: rights-management
-ms.technology: techgroup-identity
-ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
+redirect_url: /information-protection/get-started/infoprotect-tutorial-step2
 translationtype: Human Translation
-ms.sourcegitcommit: ba0f05619e1d13e16b8d4f6d86231b89e9326726
-ms.openlocfilehash: 9dfbeb4c887c619d07b11be0da304ac4f4e7d4a9
-
+ms.sourcegitcommit: 3336b75fbc2fce1c9260afb217d909b2b772ed03
+ms.openlocfilehash: 6cbc4cd9c210a09b498756dac63fa2e04bc3b0bf
 
 ---
 
-# Passo 2: configurar e publicar a política do Azure Information Protection
-
->*Aplica-se a: pré-visualização do Azure Information Protection*
-
-**[Estas informações são preliminares e estão sujeitas a alterações. ]**
-
-Apesar do Azure Information Protection ser fornecido com uma política predefinida que pode utilizar sem configuração, vamos ver essa política e efetuar algumas alterações.
-
-1. Numa nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com). Se pretender testar a proteção, bem como a classificação e a etiquetagem, inicie sessão como administrador global para que possa obter os modelos do Azure Rights Management.
- 
-2. No menu hub: clique em **Novo** > **Segurança + Identidade** > **Azure Information Protection (pré-visualização)** > **Criar**.
-
-    Esta ação cria o painel **Azure Information Protection** para que, da próxima vez que iniciar sessão no portal, possa selecionar o serviço a partir da lista **Mais serviços** do hub. 
-
-    > [!TIP] 
-    > Selecione **Afixar ao dashboard** para criar um mosaico do **Azure Information Protection** no seu dashboard. Assim, não terá de procurar o serviço da próxima vez que iniciar sessão no portal.
-
-3.  Explore o painel principal **Azure Information Protection**, que mostra a política do Information Protection predefinida criada automaticamente:
-    
-    - Etiquetas para classificação: **Pessoal**, **Público**, **Interno**, **Confidencial** e **Secreto**. Leia a descrição de cada etiqueta para compreender como devem ser utilizadas. Tenha em atenção que **Segredo** tem duas etiquetas secundárias: **Todos os Funcionários** e **O Meu Grupo**, que fornece um exemplo de como uma classificação pode ter subcategorias.
-
-    - Com as predefinições, as etiquetas **Interno**, **Confidencial** e **Secreto** têm marcas visuais configuradas (por exemplo, rodapé, cabeçalho, marca d'água) e nenhuma das etiquetas tem a proteção definida. Além disso, as três definições globais não estão definidas para que todos os documentos e e-mails não precisem de uma etiqueta, não existem etiquetas predefinidas e os utilizadores não têm de fornecer uma justificação ao reduzir o nível de classificação.
-
-    ![Tutorial de início rápido do Azure Information Protection, passo 3 - política predefinida](../media/info-protect-policy.png)
-
-Para o nosso tutorial, vamos alterar algumas dessas definições globais para que possa ver como funcionam:
-
--  **Selecione a etiqueta predefinida**: defina esta opção como **Interna**.
-
-- **Os utilizadores têm de fornecer uma justificação para reduzir a etiqueta de classificação, remover uma etiqueta ou remover a proteção**: defina esta opção como **Ativado**.
-
-Agora vamos alterar as definições de uma das etiquetas, **Confidencial**:
-
-1. Clique na etiqueta **Confidencial**.
-
-2. Na lâmina **Etiqueta: confidencial**, pode ver as definições disponíveis para cada etiqueta. Efetue as seguintes alterações:
-
-    a. Se tiver ativado o Azure Rights Managment: na secção **Definir modelo RMS para proteger documentos e e-mails que contêm esta etiqueta**, se vir **Selecionar modelo RMS a partir de**, mantenha a predefinição **Azure RMS**. Em seguida, para **Selecionar modelo RMS**clique na caixa pendente e selecione o modelo predefinido **\<o nome da organização > - Confidencial**. Por exemplo, se o nome de organização for VanArsdel, Lda., verá e selecione **VanArsdel, Lda. - Confidencial**. Se tiver desativado este modelo da Azure Rights Management predefinido, selecione um modelo alternativo. No entanto, se selecionar um modelo departamental, certifique-se de que a sua conta está incluída no âmbito.
-    
-    Se não tiver ativado a Azure Rights Management, não é possível utilizar esta opção.
-    
-    b. **Documentos com esta etiqueta têm uma marca d'água**: clique em **Ligado** e na caixa **Texto**, escreva o nome da organização. Por exemplo, **VanArsdel, Lda.**. 
-    
-    c. Clique em **Adicionar uma nova condição** e, em seguida, na lâmina **Condição**, selecione o seguinte:
-    
-    - **Escolha o tipo de condição**: **Incorporada**
-    
-    - **Selecione Incorporada**: **Número do cartão de crédito**
-    
-    - **Número mínimo de ocorrências:**: **1**
-    
-    - **Contagem de ocorrências com apenas valores exclusivos **: **ativado**
-    
-    - Clique em **Guardar** para voltar para a lâmina **Etiqueta: confidencial**.
-
-3. Na lâmina **Etiqueta: Confidencial** irá verificar que **Número do Cartão de Crédito** é apresentado como **NOME DA CONDIÇÃO**, com **1** **OCORRÊNCIAS**.
-
-4. Deixe **Selecione a forma como esta etiqueta é aplicada**: **Recomendado**
-
-5. Na caixa **introduzir notas para manutenção interna**, escreva **Apenas para fins de testes**.
-
-6. Clique em **Guardar** nesta lâmina **Etiqueta: Confidencial** e na lâmina principal **Azure Information Protection**, clique em **Guardar** novamente.
-
-7. Agora que fizemos as nossas alterações e guardámo-las, queremos disponibilizá-las aos utilizadores, por isso, clique em **Publicar** e clique em **Sim** para confirmar.
-
-![Tutorial de início rápido do Azure Information Protection, passo 3 - política predefinida configurada](../media/info-protect-policy-configured.png)
-
-Pode fechar o portal do Azure ou deixá-lo aberto para experimentar opções de configuração adicionais depois de concluir este tutorial.
-
-Agora que conhece o que é a política predefinida e efetuou algumas alterações, o próximo passo é instalar o cliente do Azure Information Protection.
-
-|Se pretender mais informações|Informações adicionais|
-|--------------------------------|--------------------------|
-|Sobre as opções de configuração para a política|[Configurar política do Azure Information Protection](configure-policy.md)|
 
 
->[!div class="step-by-step"]
-[&#171; Passo 1](infoprotect-tutorial-step1.md)
-[Passo 3 &#187;](infoprotect-tutorial-step3.md)
-
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 

@@ -4,18 +4,18 @@ description: "Este tópico mostra os ficheiros do ambiente de desenvolvimento e 
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: B57AC6F3-733C-42A8-AF83-0E15FBF27C99
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: a3f1e913c92dbee3b889a3d3c0bd6c97317112c9
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: fa85dde3f578f51efa57af78e211d3e712378b61
 
 
 ---
@@ -43,9 +43,9 @@ O SDK Rights Management Services 2.1 inclui os seguintes ficheiros, instalados 
 |Ipcerror.h|\inc|Contém os códigos de erro públicos exportados pelo SDK RMS 2.1.|
 |Ipcfile.h|\inc|Contém as interfaces da API de Ficheiros exportadas pelo SDK RMS 2.1.|
 |Msipc.lib|\lib|Biblioteca de ligação ao utilizar o SDK RMS 2.1 para criar aplicações x86.|
-|Msipc_s.lib|\lib|Fornece o ponto de entrada de [<strong>IpcInitialize</strong>](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize) para aplicações x86.|
+|Msipc_s.lib|\lib|Fornece o ponto de entrada de [<strong>IpcInitialize</strong>](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize) para aplicações x86.|
 |Msipc.lib|\lib\x64|Biblioteca de ligação ao utilizar o SDK RMS 2.1 para criar aplicações x64.|
-|Msipc_s.lib|\lib\x64|Fornece o ponto de entrada de [<strong>IpcInitialize</strong>](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize) para aplicações x64.|
+|Msipc_s.lib|\lib\x64|Fornece o ponto de entrada de [<strong>IpcInitialize</strong>](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize) para aplicações x64.|
 |Genmanifest.exe|\tools|Gera um manifesto para utilização durante o desenvolvimento de uma aplicação com capacidade para RMS.|
  
 
@@ -55,6 +55,6 @@ O SDK Rights Management Services 2.1 inclui os seguintes ficheiros, instalados 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

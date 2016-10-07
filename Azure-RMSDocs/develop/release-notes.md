@@ -3,18 +3,18 @@ title: "Novidades e notas de versão | Azure RMS"
 description: "Descreve as funcionalidades e alterações importantes nesta versão nova do SDK RMS."
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/16/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d2339ece646fc51410186d43facdea28ac8fdfe
-ms.openlocfilehash: 141e9c2315fb9fa7b3e8969b9076ab778b37bfe6
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: da4dce1c44cd79e90e7d232f74f194b734dea0f6
 
 
 ---
@@ -48,29 +48,29 @@ Com esta versão, o SDK RMS para dispositivos está agora na versão 4.2 e adici
 
 -   O controlo de documentos e o RMS apenas online para sistemas operativos Android e iOS/OS X.
 
-    Para obter detalhes e instruções de utilização no iOS/OS X, consulte a classe [**MSLicenseMetadata**](/rights-management/sdk/4.2/api/iOS/mslicensemetadata#msipcthin2_mslicensemetadata_class_objc), que fornece informações de controlo e o método adicional de registo de controlo de documentos [**MSUserPolicy**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc). Existem adições semelhantes para o Android em [**LicenseMetadata**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_licensemetadata_interface_java) e [**UserPolicy**](/rights-management/sdk/4.2/api/android/userpolicy).
+    Para obter detalhes e instruções de utilização no iOS/OS X, consulte a classe [**MSLicenseMetadata**](/information-protection/sdk/4.2/api/iOS/mslicensemetadata#msipcthin2_mslicensemetadata_class_objc), que fornece informações de controlo e o método adicional de registo de controlo de documentos [**MSUserPolicy**](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc). Existem adições semelhantes para o Android em [**LicenseMetadata**](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_licensemetadata_interface_java) e [**UserPolicy**](/information-protection/sdk/4.2/api/android/userpolicy).
 
     Para obter uma descrição detalhada da funcionalidade de controlo de documentos, consulte [**Como: utilizar o controlo de documentos**](how-to-use-document-tracking.md).
 
 -   Um conjunto de métodos síncronos paralelos às versões assíncronas para a API do Android:
 
-    [**Método síncrono CustomProtectedInputStream.create**](/rights-management/sdk/4.2/api/android/customprotectedinputstream#msipcthin2_customprotectedinputstream_create_synchronous_method_java)
+    [**Método síncrono CustomProtectedInputStream.create**](/information-protection/sdk/4.2/api/android/customprotectedinputstream#msipcthin2_customprotectedinputstream_create_synchronous_method_java)
 
-    [**Método síncrono CustomProtectedOutputStream.create**](/rights-management/sdk/4.2/api/android/customprotectedoutputstream#msipcthin2_customprotectedoutputstream_create_synchronous_method)
+    [**Método síncrono CustomProtectedOutputStream.create**](/information-protection/sdk/4.2/api/android/customprotectedoutputstream#msipcthin2_customprotectedoutputstream_create_synchronous_method)
 
-    [**Método síncrono ProtectedFileInputStream.create**](/rights-management/sdk/4.2/api/android/protectedfileinputstream#msipcthin2_protectedfileinputstream_create_synchronous_method)
+    [**Método síncrono ProtectedFileInputStream.create**](/information-protection/sdk/4.2/api/android/protectedfileinputstream#msipcthin2_protectedfileinputstream_create_synchronous_method)
 
-    [**Método síncrono ProtectedFileOutputStream.create**](/rights-management/sdk/4.2/api/android/customprotectedoutputstream#msipcthin2_customprotectedoutputstream_create_synchronous_method)
+    [**Método síncrono ProtectedFileOutputStream.create**](/information-protection/sdk/4.2/api/android/customprotectedoutputstream#msipcthin2_customprotectedoutputstream_create_synchronous_method)
 
-    [**Método síncrono TemplateDescriptor.getTemplates**](/rights-management/sdk/4.2/api/android/templatedescriptor#msipcthin2_templatedescriptor_gettemplates_synchronous_method_java)
+    [**Método síncrono TemplateDescriptor.getTemplates**](/information-protection/sdk/4.2/api/android/templatedescriptor#msipcthin2_templatedescriptor_gettemplates_synchronous_method_java)
 
-    [**Método síncrono UserPolicy.acquire**](/rights-management/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_acquire_synchronous_method_java)
+    [**Método síncrono UserPolicy.acquire**](/information-protection/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_acquire_synchronous_method_java)
 
-    [**Método síncrono UserPolicy.create (PolicyDescriptor…)**](/rights-management/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_create_policydescriptor_______synchronous_method_java)
+    [**Método síncrono UserPolicy.create (PolicyDescriptor…)**](/information-protection/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_create_policydescriptor_______synchronous_method_java)
 
-    [**Método síncrono UserPolicy.create (TempalteDescriptor…)**](/rights-management/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_create_templatedescriptor_______synchronous_method_java)
+    [**Método síncrono UserPolicy.create (TempalteDescriptor…)**](/information-protection/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_create_templatedescriptor_______synchronous_method_java)
 
--   Foi adicionada uma nova classe [**ProtectedBuffer**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_protectedbuffer_class) à API do Android.
+-   Foi adicionada uma nova classe [**ProtectedBuffer**](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_protectedbuffer_class) à API do Android.
 -   Atualizações para melhorar a experiência de resolução de problemas e de mensagens de erro.
 -   Melhorias de desempenho significativas para operações de criptografia.
 
@@ -90,7 +90,7 @@ Esta versão adiciona o suporte para o seguinte:
 
     A encriptação e a desencriptação de aplicações podem funcionar independentemente e em paralelo.
 
-    Para obter mais informações, consulte [**MSProtector**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msprotector_class_objc).
+    Para obter mais informações, consulte [**MSProtector**](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_msprotector_class_objc).
 
     Definições de controlo do nível de registo ativadas.
 
@@ -98,7 +98,7 @@ Esta versão adiciona o suporte para o seguinte:
 
     Suporte de limpeza da cache adicionado.
 
-    Para obter mais informações, consulte [**MSProtection:resetStateWithCompletionBlock**](/rights-management/sdk/4.2/api/iOS/msprotection#msipcthin2_msprotection_resetstatewithcompletionblock_method_objc).
+    Para obter mais informações, consulte [**MSProtection:resetStateWithCompletionBlock**](/information-protection/sdk/4.2/api/iOS/msprotection#msipcthin2_msprotection_resetstatewithcompletionblock_method_objc).
 
 ### Atualização de fevereiro de 2015 – adiciona o suporte para aplicações da Loja Windows
 
@@ -114,11 +114,11 @@ O lançamento da versão 4.1 do SDK RMS adiciona as seguintes funcionalidades no
 
 -   Extensões da API do SDK iOS/OS X para o processamento do *consentimento do utilizador*, permitindo a confirmação do utilizador de comportamentos do SDK. Atualmente, o controlo de documentos e o acesso a URLs desconhecidos do serviço AD RMS são os tipos de consentimento suportados.
 
-    Para obter mais informações, consulte, como exemplo, a versão da API do Android da [**interface ConsentCallback**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_consentcallback_interface_java).
+    Para obter mais informações, consulte, como exemplo, a versão da API do Android da [**interface ConsentCallback**](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_consentcallback_interface_java).
 
 -   O iOS 8 e o OS X 10.10 (Yosemite) já são suportados. De igual modo, houve algumas alterações de nomes de propriedades obrigatórias pelo Xcode 6.
 
-    Exemplo: alterou-se MSUserPolicy.name para [**MSUserPolicy.policyName**](/rights-management/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_name_property_objc).
+    Exemplo: alterou-se MSUserPolicy.name para [**MSUserPolicy.policyName**](/information-protection/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_name_property_objc).
 
 ## Notas de versão
 
@@ -146,9 +146,9 @@ Esta secção apresenta as informações sobre as versões atuais e anteriores d
 
     **Solução** – certifique-se de que a aplicação não permite chamadas de várias instâncias para a API do Android.
 
--   Quando utilizo o método [**ProtectedFileOutputStream**](/rights-management/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java)**.write(byte\[\] array, int offset, int length)** com um comprimento diferente do valor *array.length*, não consigo consumir o conteúdo posteriormente utilizando o SDK.
+-   Quando utilizo o método [**ProtectedFileOutputStream**](/information-protection/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java)**.write(byte\[\] array, int offset, int length)** com um comprimento diferente do valor *array.length*, não consigo consumir o conteúdo posteriormente utilizando o SDK.
 
-    **Solução** – isto é um problema conhecido. Para o resolver, transmita sempre uma matriz de **bytes \[\]** com o mesmo valor de comprimento que o parâmetro de comprimento ou utilize o método [**ProtectedFileOutputStream**](/rights-management/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java)**.write(byte\[\] array)**.
+    **Solução** – isto é um problema conhecido. Para o resolver, transmita sempre uma matriz de **bytes \[\]** com o mesmo valor de comprimento que o parâmetro de comprimento ou utilize o método [**ProtectedFileOutputStream**](/information-protection/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java)**.write(byte\[\] array)**.
 
 **iOS e OS X**
 
@@ -174,8 +174,8 @@ Esta secção apresenta as informações sobre as versões atuais e anteriores d
 
     Os seguintes métodos não podem ser executados em simultâneo. Para poder monitorizar a conclusão da execução, utilize a abordagem do bloco de conclusão, conforme indicado.
 
-    - [**protectedDataWithProtectedFile**](/rights-management/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc)
-    - [**customProtectedDataWithPolicy**](/rights-management/sdk/4.2/api/iOS/mscustomprotecteddata#msipcthin2_mscustomprotecteddata_customprotecteddatawithpolicy_protecteddata_contentstartposition_contentsize_completionblock_method_objc)
+    - [**protectedDataWithProtectedFile**](/information-protection/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc)
+    - [**customProtectedDataWithPolicy**](/information-protection/sdk/4.2/api/iOS/mscustomprotecteddata#msipcthin2_mscustomprotecteddata_customprotecteddatawithpolicy_protecteddata_contentstartposition_contentsize_completionblock_method_objc)
 
 
 
@@ -232,6 +232,6 @@ Esta secção apresenta as informações sobre as versões atuais e anteriores d
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

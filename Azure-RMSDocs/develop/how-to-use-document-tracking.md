@@ -4,18 +4,18 @@ description: "A funcionalidade de controlo de documentos requer alguns conhecime
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 70E10936-7953-49B0-B0DC-A5E7C4772E60
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 7afec3a7e0699d590e99dfbb95749f7093baff88
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 3d5d920f628bc39c4c280afa53be0b7199433803
 
 
 ---
@@ -34,21 +34,21 @@ A sequência de passos que irá utilizar para configurar o controlo de documento
 
 -   Crie um objeto **metadados de licença**.
 
-    Consulte [**LicenseMetadata**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_licensemetadata_interface_java) ou [**MSLicenseMetadata**](/rights-management/sdk/4.2/api/iOS/mslicensemetadata#msipcthin2_mslicensemetadata_class_objc) para obter mais informações.
+    Consulte [**LicenseMetadata**](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_licensemetadata_interface_java) ou [**MSLicenseMetadata**](/information-protection/sdk/4.2/api/iOS/mslicensemetadata#msipcthin2_mslicensemetadata_class_objc) para obter mais informações.
 
 -   Defina o **nome do conteúdo** e o **tipo de notificação**. Estas são as únicas propriedades necessárias.
 
-    Para obter mais informações, consulte os métodos de acesso às propriedades da classe de metadados de licença adequada da plataforma, seja [**LicenseMetadata**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_licensemetadata_interface_java) ou [**MSLicenseMetadata**](/rights-management/sdk/4.2/api/iOS/mslicensemetadata#msipcthin2_mslicensemetadata_class_objc).
+    Para obter mais informações, consulte os métodos de acesso às propriedades da classe de metadados de licença adequada da plataforma, seja [**LicenseMetadata**](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_licensemetadata_interface_java) ou [**MSLicenseMetadata**](/information-protection/sdk/4.2/api/iOS/mslicensemetadata#msipcthin2_mslicensemetadata_class_objc).
 
 -   Por tipo de política, modelo ou ad hoc:
 
     -   Para o controlo de documentos com base em modelos, crie um objeto **política de utilizador** passando os metadados de licença como um parâmetro.
 
-        Para obter mais informações, consulte [**UserPolicy.create**](/rights-management/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_class_java) e [**MSUserPolicy.userPolicyWithTemplateDescriptor**](/rights-management/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_templatedescriptor_property_objc).
+        Para obter mais informações, consulte [**UserPolicy.create**](/information-protection/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_class_java) e [**MSUserPolicy.userPolicyWithTemplateDescriptor**](/information-protection/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_templatedescriptor_property_objc).
 
     -   Para o controlo de documentos com base em ad hoc, defina a propriedade **metadados de licença** no objeto **descritor de política**.
 
-        Para obter mais informações, consulte [**PolicyDescriptor.getLicenseMetadata**](/rights-management/sdk/4.2/api/android/policydescriptor#msipcthin2_policydescriptor_interface_java), [**PolicyDescriptor.setLicenseMetadata**](/rights-management/sdk/4.2/api/android/policydescriptor#msipcthin2_policydescriptor_setlicensemetadata_java) e [**MSPolicyDescriptor.licenseMetadata**](/rights-management/sdk/4.2/api/iOS/mspolicydescriptor#msipcthin2_mspolicydescriptor_licensemetadata_property_objc).
+        Para obter mais informações, consulte [**PolicyDescriptor.getLicenseMetadata**](/information-protection/sdk/4.2/api/android/policydescriptor#msipcthin2_policydescriptor_interface_java), [**PolicyDescriptor.setLicenseMetadata**](/information-protection/sdk/4.2/api/android/policydescriptor#msipcthin2_policydescriptor_setlicensemetadata_java) e [**MSPolicyDescriptor.licenseMetadata**](/information-protection/sdk/4.2/api/iOS/mspolicydescriptor#msipcthin2_mspolicydescriptor_licensemetadata_property_objc).
 
     **Nota** O objeto de metadados de licença só é acessível diretamente durante o processo de configuração do controlo de documentos da política de utilizador especificada. Quando o objeto de política de utilizador tiver sido criado, os metadados de licença associados não estão acessíveis, ou seja, alterar os valores dos metadados de licença não tem qualquer efeito.
 
@@ -56,7 +56,7 @@ A sequência de passos que irá utilizar para configurar o controlo de documento
 
 -   Chame o método de registo de plataforma para o controlo de documentos.
 
-    Consulte [**MSUserPolicy.registerForDocTracking**](/rights-management/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_registerfordoctracking_userid_authenticationcallback_completionblock_method_objc) ou [**UserPolicy.registerForDocTracking**](/rights-management/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_registerfordoctracking_userid_authenticationcallback_completionblock_method_objc).
+    Consulte [**MSUserPolicy.registerForDocTracking**](/information-protection/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_registerfordoctracking_userid_authenticationcallback_completionblock_method_objc) ou [**UserPolicy.registerForDocTracking**](/information-protection/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_registerfordoctracking_userid_authenticationcallback_completionblock_method_objc).
 
  
 
@@ -64,6 +64,6 @@ A sequência de passos que irá utilizar para configurar o controlo de documento
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

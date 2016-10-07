@@ -3,7 +3,7 @@ title: "Cenário – Proteger ficheiros numa partilha de servidor de ficheiros |
 description: "Este cenário e a documentação do utilizador associada utilizam a proteção Azure Rights Management para a proteção em volume de todos os ficheiros que pretende proteger num servidor de ficheiros, de modo a garantir que apenas os funcionários da sua organização podem aceder aos mesmos, mesmo que sejam copiados e guardados num armazenamento que não esteja sob o controlo do seu departamento de TI ou enviados por e-mail para outras pessoas."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 283c7db3-5730-439e-a215-40a1088ed506
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b61b7068e67103c45aea139cf95dacb851fe70e2
-ms.openlocfilehash: a12276bcf2072ac812ae6b68d9e1cdacbe46adaa
+ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
+ms.openlocfilehash: 136cabfad5914fadf183e308c51b77e20f98ca4f
 
 
 ---
@@ -46,7 +46,7 @@ Para que as instruções para este cenário funcionem, é necessário o seguinte
 |---------------|--------------------------------|
 |O Azure Rights Management está ativado|[Activating Azure Rights Management (Ativar o Azure Rights Management – em inglês)](../deploy-use/activate-service.md)|
 |Sincronizou as suas contas de utilizador do Active Directory no local com o Azure Active Directory ou o Office 365, incluindo o respetivo endereço de e-mail. Isto é necessário para todos os utilizadores que possam necessitar de aceder a ficheiros depois de estarem protegidos pela FCI e pelo Azure Rights Management.|[Preparação para o Azure Information Protection](../plan-design/prepare.md)|
-|Um dos seguintes:<br /><br />- Para utilizar um modelo predefinido para todos os utilizadores: o modelo predefinido não está arquivado, &lt;nome da organização&gt; – Confidencial<br /><br />- Para utilizar um modelo personalizado para utilizadores específicos: criou e publicou este modelo personalizado|[Configurar modelos personalizados para o Azure Rights Management](../deploy-use/configure-custom-templates.md)|
+|Um dos seguintes:<br /><br />- Para utilizar um modelo predefinido para todos os utilizadores: o modelo predefinido não está arquivado, &lt;nome da organização&gt; – Confidencial<br /><br />- Para utilizar um modelo personalizado para utilizadores específicos: criou e publicou este modelo personalizado|[Configurar modelos personalizados para o serviço Azure Rights Management](../deploy-use/configure-custom-templates.md)|
 |A aplicação de partilha Rights Management está implementada nos computadores dos utilizadores que executam o Windows|[Implementação automática da aplicação de partilha Microsoft Rights Management](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 |Transferiu a ferramenta de Proteção RMS e configurou os pré-requisitos do Azure RMS|Para obter instruções para transferir a ferramenta e os pré-requisitos: [Cmdlets de Proteção RMS](https://msdn.microsoft.com/library/mt433195.aspx)<br /><br />Para configurar os pré-requisitos adicionais do Azure RMS, tal como a conta do principal de serviço: [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)|
 
@@ -155,6 +155,6 @@ Os ficheiros serão protegidos novamente de forma periódica. Esta operação vo
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

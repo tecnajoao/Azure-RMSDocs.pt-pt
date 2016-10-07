@@ -3,7 +3,7 @@ title: "Cenário – Os executivos trocam informações privilegiadas em seguran
 description: "Este cenário e a documentação do utilizador associada utilizam a proteção Azure Rights Management para que os executivos possam trocar em segurança e-mails e anexos por e-mail e as políticas restrinjam automaticamente o acesso dos executivos sem necessidade de ação especial por parte deles."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b61b7068e67103c45aea139cf95dacb851fe70e2
-ms.openlocfilehash: fb25a5f97580e7d912016bbeb304e6470f8cbba0
+ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
+ms.openlocfilehash: 8481c275609e74ff5e09a0397e0e3a0346aa4430
 
 
 ---
@@ -48,7 +48,7 @@ Para que as instruções para este cenário funcionem, é necessário o seguinte
 |A sua chave de inquilino do Azure Information Protection é gerida pela Microsoft; não está a utilizar o BYOK|[Planear e implementar a sua chave de inquilino do Azure Information Protection](../plan-design/plan-implement-tenant-key.md)|
 |O Azure Rights Management está ativado|[Ativar o Azure Rights Management](../deploy-use/activate-service.md)|
 |Uma das seguintes configurações:<br /><br />- O Exchange Online está ativado para o Azure Rights Management<br /><br />- O conetor RMS está instalado e configurado para o Exchange no local|Para o Exchange Online: consulte as informações de [Exchange Online: configuração do IRM](../deploy-use/configure-office365.md#exchange-online-irm-configuration).<br /><br />Para o Exchange no local: [Implementar o conector Azure Rights Management](../deploy-use/deploy-rms-connector.md)|
-|Configurou um modelo personalizado, tal como descrito a seguir|[Configurar modelos personalizados para o Azure Rights Management](../deploy-use/configure-custom-templates.md)|
+|Configurou um modelo personalizado, tal como descrito a seguir|[Configurar modelos personalizados para o serviço Azure Rights Management](../deploy-use/configure-custom-templates.md)|
 |Configurou uma regra de proteção de transporte para IRM, conforme descrito mais à frente neste artigo|Para o Exchange Online: [fluxo de correio ou regras de transporte](https://technet.microsoft.com/library/jj919238(v=exchg.150).aspx)<br /><br />Para o Exchange 2013: [criar uma Regra de Proteção de Transporte](https://technet.microsoft.com/en-us/library/dd302432(v=exchg.150))<br /><br />Para o Exchange 2010: [criar uma Regra de Proteção de Transporte](https://technet.microsoft.com/library/dd302432(v=exchg.141))|
 
 ### Para configurar o modelo personalizado para executivos
@@ -132,6 +132,6 @@ Ao enviar informações confidenciais da empresa para outro executivo da VanArsd
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

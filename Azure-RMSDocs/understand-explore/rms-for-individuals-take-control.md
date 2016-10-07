@@ -1,19 +1,19 @@
 ---
-title: "Como os administradores podem controlar as contas criadas para o RMS para indivíduos | Azure RMS"
+title: "Como os administradores podem controlar as contas criadas para o RMS para indivíduos | Azure Information Protection"
 description: "Como pode controlar as contas de utilizador no Azure Active Directory se não pretender converter a subscrição do RMS para indivíduos da sua organização para uma subscrição paga."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/01/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a83880d0-f0f9-4a32-9e00-2f6635d7cc8d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 79d098e47cdfe608bc62ed385a5c8236fb7c6d3c
-ms.openlocfilehash: 6383c1d583eb45973750305e709d8f5d792892b5
+ms.sourcegitcommit: 2fd29eb6dec94535d0358fe0a2d9c9285fcd7cd1
+ms.openlocfilehash: 6f26faf8a96c388a4640701a12a77e3b4ef60567
 
 
 ---
@@ -22,7 +22,7 @@ ms.openlocfilehash: 6383c1d583eb45973750305e709d8f5d792892b5
 
 # Como os administradores podem controlar as contas criadas para o RMS para indivíduos
 
->*Aplica-se a: Azure Rights Management*
+>*Aplica-se a: Azure Information Protection*
 
 
 Se não pretender converter a subscrição do RMS para indivíduos da sua organização para uma subscrição paga, pode continuar a controlar as contas de utilizadores no diretório do Azure que foi criado para a sua organização das seguintes formas:
@@ -46,6 +46,6 @@ Se os utilizadores, em vez dos administradores, puderem criar as respetivas cont
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO4-->
 
 

@@ -1,19 +1,19 @@
 ---
-title: "Definições de registo para o conetor RMS | Azure RMS"
+title: "Definições de registo para o conector RMS | Azure Information Protection"
 description: "Informações sobre as definições de registo em servidores que utilizam o conector RMS. O método recomendado para configurar estas definições é utilizar a ferramenta de configuração do servidor do conetor Microsoft RMS."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: 5ff109543685049be5e89a12ea037de941736547
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: 1dd1b26735732f4bef8cf73a566b0f26b7610a82
 
 
 ---
@@ -21,7 +21,7 @@ ms.openlocfilehash: 5ff109543685049be5e89a12ea037de941736547
 
 # Definição de registo para o conetor Rights Management
 
->*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Information Protection, Office 365*
 
 
 Utilize as tabelas nas secções seguintes apenas se pretender adicionar manualmente ou verificar as definições de registo nos servidores a executar o Exchange, o SharePoint ou o Windows Server, que configura os servidores a utilizar o [conetor RMS](deploy-rms-connector.md). O método recomendado para configurar estes servidores é utilizar a ferramenta de configuração do servidor do conetor Microsoft RMS.
@@ -216,6 +216,6 @@ Instruções ao utilizar estas definições:
 Voltar a [Implementar o conetor Azure Rights Management](deploy-rms-connector.md)
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

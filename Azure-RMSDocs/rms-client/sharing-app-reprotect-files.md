@@ -1,27 +1,27 @@
 ---
-title: "Alterar permissões em ficheiros que foram protegidos pela Rights Management | Azure RMS"
+title: "Alterar permissões em ficheiros que foram protegidos pelo Rights Management | Azure Information Protection"
 description: "Se um ficheiro tiver sido protegido pela Rights Management, pode alterar as permissões voltando a protegê-lo e, em seguida, especificar todos os utilizadores que devem ter acesso à mesma e que permissões pretende conceder-lhes."
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/03/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 214890cee5975c05798014ddb8d153faa9ca3998
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 99dcbeb68cbbe363cfd1e6ded07882f01621e438
 
 
 ---
 
 # Alterar permissões em ficheiros que tenham sido protegidos pela Rights Management
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Rights Management, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 Se um ficheiro tiver sido protegido pela Rights Management, pode alterar as permissões voltando a protegê-lo e, em seguida, especificar todos os utilizadores que devem ter acesso à mesma e que permissões pretende conceder-lhes.
 
@@ -62,9 +62,9 @@ Se quiser remover por completo todas as permissões de modo a que o ficheiro já
     Se tiver permissões para proteger de novo o ficheiro, poderá ver de imediato uma caixa de diálogo a indicar que o ficheiro está a ser protegido e, em seguida, o foco regressa para o Explorador de Ficheiros. O ficheiro ou ficheiros selecionados estão agora protegidos com as suas alterações. 
 
 > [!NOTE]
-> Antes de poder proteger de novo o ficheiro, o RMS tem de confirmar primeiro que tem autorização para fazê-lo para este ficheiro. Para tal, verifique o seu nome de utilizador e palavra-passe. Em alguns casos, estas informações podem estar em cache e não lhe são pedidas as suas credenciais. Noutros casos, ser-lhe-á pedido que forneça as credenciais.
+> Antes de poder proteger de novo o ficheiro, o serviço Rights Management tem de verificar o seu nome de utilizador e palavra-passe para confirmar que está autorizado a fazê-lo neste ficheiro. Em alguns casos, estas informações podem estar em cache e não lhe são pedidas as suas credenciais. Noutros casos, ser-lhe-á pedido que forneça as credenciais.
 >
-> Se a sua organização não utilizar o Azure Rights Management (Azure RMS) ou o AD RMS, pode candidatar-se a uma conta gratuita que aceitará as suas credenciais para que possa utilizar ficheiros protegidos por RMS:
+> Se a sua organização não utilizar o Azure Information Protection ou o AD RMS, pode candidatar-se a uma conta gratuita que aceitará as suas credenciais para que possa utilizar ficheiros protegidos por RMS:
 >
 > -   Para se candidatar a esta conta, clique na ligação para aderir ao [RMS para indivíduos](http://go.microsoft.com/fwlink/?LinkId=309469).
 >
@@ -96,6 +96,6 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

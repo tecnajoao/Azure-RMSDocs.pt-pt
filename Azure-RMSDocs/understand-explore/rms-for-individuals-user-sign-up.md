@@ -1,26 +1,26 @@
 ---
-title: "Como os utilizadores se inscrevem no RMS para indivíduos | Azure RMS"
-description: "Instruções de inscrição para esta conta gratuita e informações técnicas sobre como funciona o processo."
+title: "Como os utilizadores se inscrevem no RMS para indivíduos | Azure Information Protection"
+description: "Instruções de inscrição nesta conta gratuita e informações técnicas sobre o funcionamento deste processo."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/01/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0bd53bde0bfa9b44203b9d2f0f429265a013476c
-ms.openlocfilehash: 25c2ddac40c9eff78101cfaf42d4398be4e8a5cc
+ms.sourcegitcommit: 2fd29eb6dec94535d0358fe0a2d9c9285fcd7cd1
+ms.openlocfilehash: 362ea0d002e25c830c9e50ac7f1956f1e9ea8bb7
 
 
 ---
 
 # Como os utilizadores se inscrevem no RMS para indivíduos
 
->*Aplica-se a: Azure Rights Management*
+>*Aplica-se a: Azure Information Protection*
 
 Para se inscrever nesta conta gratuita, efetue o seu pedido ao aceder à [página do Microsoft Azure Rights Management](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload) e indicar o seu endereço de e-mail de trabalho. A forma mais comum de ser direcionado para esta página de inscrição é ao receber uma mensagem de e-mail com um anexo protegido que contém instruções de inscrição. Irá receber uma resposta por e-mail da Microsoft e, em seguida, poderá concluir o processo de inscrição ao introduzir detalhes para criar a sua conta. Quando o processo for concluído, irá ver uma página onde pode transferir a aplicação de partilha para vários dispositivos, uma ligação para o guia de utilizador e uma ligação para a lista atual de aplicações que suportam de forma nativa a proteção do Rights Management. 
 
@@ -97,6 +97,6 @@ Consulte [Como os administradores podem controlar as contas criadas para o RMS p
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Sep16_HO4-->
 
 

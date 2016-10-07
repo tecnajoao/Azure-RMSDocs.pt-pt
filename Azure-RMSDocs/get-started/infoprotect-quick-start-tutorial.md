@@ -1,0 +1,54 @@
+---
+title: "Tutorial de início rápido | Azure Information Protection"
+description: "Um tutorial de introdução, com uma duração de aproximadamente 30 minutos, para experimentar rapidamente o Microsoft Azure Information Protection na sua organização."
+author: cabailey
+manager: mbaldwin
+ms.date: 09/25/2016
+ms.topic: article
+ms.prod: 
+ms.service: information-protection
+ms.technology: techgroup-identity
+ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
+translationtype: Human Translation
+ms.sourcegitcommit: e67fe1e6b63be679ae62bb45359db98df59386da
+ms.openlocfilehash: 3022ef92a04351c76c370ed31b519425923cfa04
+
+
+---
+
+# Tutorial de início rápido do Azure Information Protection 
+
+>*Aplica-se a: Azure Information Protection*
+
+Utilize este tutorial, com uma duração de aproximadamente 30 minutos, para experimentar rapidamente o Azure Information Protection em apenas 5 passos. Este tutorial foi concebido para ser uma demonstração auto-configurada para mostrar rapidamente algumas das funcionalidades disponibilizadas pelo Azure Information Protection. Não inclui todas as funcionalidades disponíveis e não se destina a ser um guia de implementação para a sua organização. Se quiser implementar o Azure Information Protection na sua organização, consulte a [documentação com informações gerais sobre a implementação](../plan-design/deployment-roadmap.md). 
+
+Este tutorial destina-se a administradores de TI e consultores, para os ajudar a avaliar o Azure Information Protection como uma solução de proteção de informações empresariais para uma organização. Num ambiente de produção, os passos para configurar a política de Information Protection e instalar o cliente e as aplicações para os utilizadores teriam de ser feitos por um administrador. Os passos para etiquetar o documento, partilhá-lo em segurança por e-mail e controlá-lo seriam efetuados pelos utilizadores finais. Este tutorial inclui todos estes passos para demonstrar cenários comuns completos de classificação, etiquetagem e proteção dos dados da sua organização. 
+
+Se tiver alguma dificuldade em concluir este tutorial ou em utilizar o Azure Information Protection, ou se quiser ver o que tem sido dito sobre esta aplicação, aceda ao [site do Yammer do Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all).
+
+## Pré-requisitos 
+Para concluir este tutorial, terá de ter o seguinte:
+
+- Uma subscrição que inclui o Azure Information Protection para classificação, etiquetagem e proteção. Este tutorial inclui algumas das funcionalidades avançadas, tais como a classificação automática de dados com recomendações de utilizador e o site de controlo de documentos. Certifique-se de que a sua subscrição suporta estas funcionalidades. Para mais informações, consulte as informações da subscrição na [Página de preços](https://go.microsoft.com/fwlink/?LinkId=827589) do Azure Information Protection.
+
+- Uma subscrição do Azure, para que possa aceder ao portal do Azure, para configurar a política do Azure Information Protection. Se ainda não tem uma subscrição do Azure para a sua organização, pode obter uma inscrevendo-se numa versão de avaliação gratuita: aceda à [página Introdução ao Azure](https://account.windowsazure.com/organization) e siga as instruções.
+
+  > [!TIP] 
+  > Se precisar de obter uma ou mais destas subscrições, efetue este processo com antecedência porque o mesmo poderá demorar algum tempo a concluir.
+
+- Uma conta de administrador global para iniciar sessão no portal do Azure para configurar a política do Azure Information Protection. Esta conta também tem de ter um endereço de e-mail e um serviço de e-mail a funcionar (por exemplo, Exchange Online ou Exchange Server).
+
+- Um computador que execute o Windows (no mínimo, o Windows 7 com o Service Pack 1) e que tenha instalado o Office Professional Plus 2016, o Office Professional Plus 2013 com o Service Pack 1 ou o Office Professional Plus 2010. 
+
+Vamos começar.
+
+>[!div class="step-by-step"]
+[&#187; Passo 1](infoprotect-tutorial-step1.md)
+
+
+
+
+
+<!--HONumber=Sep16_HO4-->
+
+

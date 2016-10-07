@@ -1,28 +1,28 @@
 ---
-title: "Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados | Azure RMS"
-description: "Conheça e implemente a funcionalidade de superutilizador do Microsoft Azure RMS para que as pessoas e os serviços autorizados possam sempre ler e inspecionar os dados que o Azure RMS protege na sua organização. Esta capacidade é por vezes referida como “raciocínio através de dados” e é um elemento fundamental na manutenção do controlo dos dados da organização."
+title: "Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados | Azure Information Protection"
+description: "Conheça e implemente a funcionalidade de superutilizador do serviço Azure Rights Management do Azure Information Protection para que as pessoas e os serviços autorizados possam sempre ler e inspecionar os dados que o Azure Rights Management protege na sua organização. Esta capacidade é por vezes referida como &quot;raciocínio através de dados&quot; e é um elemento fundamental na manutenção do controlo dos dados da organização."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: ac0d2c991bdd13c31c46a9579ac1a6d2150557b6
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: d2ae8df5895b1cf1985420be25abac36fe2689b7
 
 
 ---
 
 # Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados
 
->*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Information Protection, Office 365*
 
-A funcionalidade de superutilizador do Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) assegura que as pessoas e os serviços autorizados podem sempre ler e inspecionar os dados que o Azure RMS protege na sua organização. E, se for necessário, remove a proteção ou altera a proteção que estava anteriormente aplicada. Um superutilizador tem sempre direitos de proprietário completos para todas as licenças de utilização que foram atribuídas pelo inquilino de RMS da organização. Esta capacidade é por vezes referida como “raciocínio através de dados” e é um elemento fundamental na manutenção do controlo dos dados da sua organização. Por exemplo, utilizaria esta funcionalidade para qualquer um dos seguintes cenários:
+A funcionalidade de superutilizador do serviço Azure Rights Management do Azure Information Protection assegura que as pessoas e os serviços autorizados possam sempre ler e inspecionar os dados que o Azure Rights Management protege na sua organização. E, se for necessário, remove a proteção ou altera a proteção que estava anteriormente aplicada. Um superutilizador tem sempre direitos de proprietário completos para todas as licenças de utilização que foram atribuídas pelo inquilino do Azure Information Protection da organização. Esta capacidade é por vezes referida como "raciocínio através de dados" e é um elemento fundamental na manutenção do controlo dos dados da sua organização. Por exemplo, utilizaria esta funcionalidade para qualquer um dos seguintes cenários:
 
 -   Um funcionário sai da organização e precisa de ler os ficheiros que ele protegeu.
 
@@ -43,13 +43,13 @@ Se precisar de ativar manualmente a funcionalidade de superutilizador, utilize o
 
 Melhores práticas de segurança para a funcionalidade de superutilizador:
 
--   Restrinja e monitorize os administradores a quem é atribuída a função de administrador global para o seu inquilino do Office 365 ou do Azure RMS ou a quem é atribuída a função GlobalAdministrator ao utilizar o cmdlet [Add-AadrmRoleBasedAdministrator](https://msdn.microsoft.com/library/azure/dn629417.aspx). Estes utilizadores podem ativar a funcionalidade de superutilizador e atribuir utilizadores (e os próprios) como superutilizadores, bem como desencriptar potencialmente todos os ficheiros que a sua organização protege.
+-   Restrinja e monitorize os administradores a quem é atribuída a função de administrador global para o seu inquilino do Office 365 ou do Azure Information Protection ou a quem é atribuída a função GlobalAdministrator através do cmdlet [Add-AadrmRoleBasedAdministrator](https://msdn.microsoft.com/library/azure/dn629417.aspx). Estes utilizadores podem ativar a funcionalidade de superutilizador e atribuir utilizadores (e os próprios) como superutilizadores, bem como desencriptar potencialmente todos os ficheiros que a sua organização protege.
 
 -   Para ver quais os utilizadores e as contas de serviço que são atribuídos individualmente como superutilizadores, utilize o cmdlet [Get-AadrmSuperUser](https://msdn.microsoft.com/library/azure/dn629408.aspx). Para ver se um grupo de superutilizadores está configurado, utilize o cmdlet [Get-AadrmSuperUser](https://msdn.microsoft.com/library/azure/mt653942.aspx) e as suas ferramentas padrão de gestão de utilizadores para verificar quais os utilizadores que são membros deste grupo. Como todas as ações de administração, ativar ou desativar a funcionalidade super e adicionar ou remover superutilizadores, são registadas e podem ser auditadas ao utilizar o comando [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx). Quando os superutilizadores desencriptam ficheiros, esta ação é registada e pode ser auditada com o [registo de utilização](log-analyze-usage.md).
 
 -   Se não necessitar da funcionalidade de superutilizador para os serviços diários, ative a funcionalidade apenas quando precisar dela e desative-a novamente ao utilizar o cmdlet [Disable-AadrmSuperUserFeature](https://msdn.microsoft.com/library/azure/dn629428.aspx).
 
-O seguinte extrato de registo mostra algumas entradas de exemplo ao utilizar o cmdlet Get-AadrmAdminLog. Neste exemplo, o administrador da Contoso Ltd confirma que a funcionalidade de superutilizador está desativada, adiciona Guilherme Sarmento como um superutilizador, verifica se o Guilherme é o único superutilizador configurado para o Azure RMS e, em seguida, ativa a funcionalidade de superutilizador para que o Guilherme já possa desencriptar alguns ficheiros que foram protegidos por um empregado que tenha saído da empresa.
+O seguinte extrato de registo mostra algumas entradas de exemplo ao utilizar o cmdlet Get-AadrmAdminLog. Neste exemplo, o administrador da Contoso Ltd confirma que a funcionalidade de superutilizador está desativada, adiciona Guilherme Sarmento como um superutilizador, verifica se o Guilherme é o único superutilizador configurado para o serviço Azure Rights Management e, em seguida, ativa a funcionalidade de superutilizador para que o Guilherme possa desencriptar alguns ficheiros que foram protegidos por um empregado que entretanto saiu da empresa.
 
 `2015-08-01T18:58:20    admin@contoso.com   GetSuperUserFeatureState    Passed  Disabled`
 
@@ -65,12 +65,12 @@ O seguinte extrato de registo mostra algumas entradas de exemplo ao utilizar o c
 Para obter mais informações acerca destes cmdlets, consulte [Cmdlets da Proteção RMS](https://msdn.microsoft.com/library/azure/mt433195.aspx).
 
 > [!NOTE]
-> O módulo do PowerShell de Proteção RMS que é fornecido com a Ferramenta de Proteção RMS é diferente do principal [módulo do Windows PowerShell para o Azure Rights Management](administer-powershell.md) e complementa-o. O módulo de Proteção RMS suporta o Azure RMS e o AD RMS.
+> O módulo do PowerShell de Proteção RMS que é fornecido com a Ferramenta de Proteção RMS é diferente do principal [módulo do Windows PowerShell para o Azure Rights Management](administer-powershell.md) e complementa-o. O módulo RMS Protection suporta o serviço Azure Rights Management (Azure RMS) para o Azure Information Protection e os Serviços de Gestão de Direitos do Active Directory (AD RMS).
 
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

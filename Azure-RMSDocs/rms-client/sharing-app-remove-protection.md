@@ -1,26 +1,26 @@
 ---
-title: "Remover a proteção de um ficheiro ao utilizar a aplicação de partilha Rights Management | Azure RMS"
+title: "Remover a proteção de um ficheiro com a aplicação de partilha Rights Management | Azure Information Protection"
 description: "Instruções para remover a proteção de um ficheiro (ou seja, desproteger um ficheiro) protegido anteriormente com a aplicação de partilha RMS."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: da95b938-eaad-4c83-a21e-ff1d4872aae4
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
-ms.openlocfilehash: 4400b09108851ad5776596b699db2fcb01bb0b70
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: ceb726e47c4eb9413b7d7eb5b1469e2a99992dda
 
 
 ---
 
-# Remover a proteção de um ficheiro ao utilizar a aplicação de partilha Rights Management
+# Remover a proteção de um ficheiro com a aplicação de partilha Rights Management
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Rights Management, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 Para remover a proteção de um ficheiro (ou seja, desproteger um ficheiro) protegido anteriormente ao utilizar a aplicação de partilha RMS, utilize a opção **Remover Proteção** do Explorador de Ficheiros.
 
@@ -51,6 +51,6 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

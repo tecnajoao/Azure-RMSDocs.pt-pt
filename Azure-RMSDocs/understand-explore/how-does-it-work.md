@@ -1,19 +1,19 @@
 ---
-title: Como Funciona o Azure RMS | Azure RMS
+title: Como Funciona o Azure RMS | Azure Information Protection
 description: "Descrição detalhada de como o Azure RMS funciona, os controlos criptográficos que utiliza e diagramas passo a passo sobre o funcionamento deste processo."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
-ms.openlocfilehash: 5fa410e2c2b84a3626cb06a85dc2511b17e085ae
+ms.sourcegitcommit: 2c0f3b58a2f1b5233c262bb67cc4a485557ba997
+ms.openlocfilehash: 5efa5bdf9e11e55ec190c3abe95b1bdc33026c63
 
 
 ---
@@ -21,7 +21,7 @@ ms.openlocfilehash: 5fa410e2c2b84a3626cb06a85dc2511b17e085ae
 
 # Como funciona o Azure RMS? Os bastidores
 
->*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Information Protection, Office 365*
 
 Um dos aspetos importantes que deve saber sobre o funcionamento do Azure RMS é que o serviço Rights Management (e a Microsoft) não visualizam nem armazenam os seus dados como parte do processo de proteção de informações. As informações que protege nunca são enviadas para ou armazenadas no Azure, a menos que as armazene explicitamente no Azure ou utilize outro serviço em nuvem que as armazene no Azure. O Azure RMS simplesmente torna os dados num documento ilegível para todas as pessoas que não sejam utilizadores e serviços autorizados:
 
@@ -150,6 +150,6 @@ Se estiver pronto para iniciar a implementação do Azure RMS na sua organizaç�
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

@@ -1,26 +1,26 @@
 ---
-title: "Como ativar o Azure Rights Management a partir do centro de administração clássico do Office 365 | Azure RMS"
-description: "Instruções de ativação do Azure RMS quando tem acesso à versão clássica (original) do centro de administração do Office 365."
+title: "Como ativar o Azure Rights Management a partir do centro de administração clássico do Office 365 | Azure Information Protection"
+description: "Instruções de ativação do serviço Azure Rights Management quando tem acesso à versão clássica (original) do centro de administração do Office 365."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: b6c42663-af01-49d5-94bc-98963c383379
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: e273e34c055846ee2aa4e5eb687592b23b9540b1
+ms.sourcegitcommit: 805644a7c6dacc00519ad9ac07f39367d0784745
+ms.openlocfilehash: 8e2b4befc9acd2f50472169b8195d2510fa22be8
 
 
 ---
 
 # Como ativar o Azure Rights Management a partir do centro de administração clássico do Office 365
 
->*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Information Protection, Office 365*
 
 
 Utilize estas instruções se estiver a utilizar a versão (original) clássica do centro de administração do Office 365.
@@ -37,9 +37,9 @@ Utilize estas instruções se estiver a utilizar a versão (original) clássica 
 4.  Clique em **Rights Management**.
 
     > [!NOTE]
-    >Se não vir esta opção, poderá ser porque a versão de produto ou plano de serviço não inclui o [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
+    >Se não vir esta opção, poderá dever-se ao facto de o seu plano de serviços ou versão de produtos não incluir o serviço Azure Rights Management para o Azure Information Protection.
     >
-    >Utilize as informações em [Subscrições na nuvem que suportam o Azure RMS](../get-started/requirements-subscriptions.md) para confirmar o suporte do RMS. Para obter ajuda com este problema, envie uma mensagem de e-mail para [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
+    >Utilize as [informações de subscrição](https://go.microsoft.com/fwlink/?LinkId=827589) para confirmar se a sua subscrição inclui o Azure Rights Management. Para obter ajuda com este problema, envie uma mensagem de e-mail para [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
 
 5. Na página **RIGHTS MANAGEMENT**, clique em **Gerir**.
 
@@ -53,6 +53,6 @@ Já deverá estar visível **O Rights Management encontra-se ativado** e a opç�
 Volte a [Ativar o Azure Rights Management](activate-service.md).
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

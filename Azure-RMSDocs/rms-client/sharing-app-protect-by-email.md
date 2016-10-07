@@ -1,32 +1,32 @@
 ---
-title: "Proteger um ficheiro que partilha por e-mail ao utilizar a aplicação de partilha Rights Management | Azure RMS"
+title: "Proteger um ficheiro que partilha por e-mail ao utilizar a aplicação de partilha Rights Management | Azure Information Protection"
 description: "Instruções sobre como partilhar um documento por e-mail de forma segura."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
-ms.openlocfilehash: ff5dd6afaa454c20f35c237e94947dcec9e737f6
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: b4467f73dd9d107681961f99ee038ed889e25b2d
 
 
 ---
 
 # Proteger um ficheiro que partilha por e-mail ao utilizar a aplicação de partilha Rights Management
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Rights Management, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 Quando protege um ficheiro que partilha por e-mail, cria uma nova versão do ficheiro original. O ficheiro original permanece desprotegido e a nova versão é protegida e automaticamente anexada a uma mensagem de e-mail que envia em seguida.
 
-Em alguns casos (para os ficheiros que são criados pelo Microsoft Word, Excel e PowerPoint), a aplicação de partilha RMS cria duas versões do ficheiro que anexa à mensagem de e-mail. A segunda versão do ficheiro tem uma extensão de nome de ficheiro **.ppdf** e é uma cópia sombra em PDF do ficheiro. Esta versão do ficheiro garante que os destinatários podem sempre ler o ficheiro, mesmo que não tenham instalada a mesma aplicação que utilizou para o criar. Isto acontece frequentemente quando as pessoas leem os e-mails nos seus dispositivos móveis e pretendem ver os respetivos anexos. Tudo o que precisam para abrir o ficheiro é da aplicação de partilha RMS. Em seguida, podem ler o ficheiro anexado, mas não o podem alterar até abrirem a outra versão do ficheiro com uma aplicação que suporte RMS.
+Em alguns casos (para os ficheiros que são criados pelo Microsoft Word, Excel e PowerPoint), a aplicação de partilha RMS cria duas versões do ficheiro que anexa à mensagem de e-mail. A segunda versão do ficheiro tem uma extensão de nome de ficheiro **.ppdf** e é uma cópia sombra em PDF do ficheiro. Esta versão do ficheiro garante que os destinatários podem sempre ler o ficheiro, mesmo que não tenham instalada a mesma aplicação que utilizou para o criar. Isto acontece frequentemente quando as pessoas leem os e-mails nos seus dispositivos móveis e pretendem ver os respetivos anexos. Tudo o que precisam para abrir o ficheiro é da aplicação de partilha RMS. Assim, podem ler o ficheiro anexado, mas não o podem alterar até abrirem a outra versão do ficheiro com uma aplicação que suporte o serviço Rights Management.
 
-Se a sua organização utilizar o Azure RMS, pode controlar os ficheiros que protege ao partilhar:
+Se a sua organização utilizar o Azure Information Protection, pode controlar os ficheiros que protege ao partilhar:
 
 -   Selecione uma opção para receber e-mails quando alguém tentar abrir estes anexos protegidos. Sempre que alguém aceder ao ficheiro, será notificado sobre quem tentou abrir o ficheiro e quando o fez, bem como se teve êxito (se a autenticação foi efetuada com êxito) ou não.
 
@@ -69,7 +69,7 @@ Além de partilhar um ficheiro protegido com o Outlook, também pode utilizar es
 
     Exemplo:
 
-    ![Mensagem de e-mail do Azure RMS](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
+    ![Mensagem de e-mail para o Azure Information Protection](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
 
     Está a perguntar-se: [o que é o ficheiro .ppdf criado automaticamente?](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created)
 
@@ -92,6 +92,6 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

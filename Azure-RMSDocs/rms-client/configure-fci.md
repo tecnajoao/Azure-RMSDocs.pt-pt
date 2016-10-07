@@ -1,39 +1,39 @@
 ---
-title: "Proteção RMS com Infraestrutura de Classificação de Ficheiros (FCI) do Windows Server | Azure RMS"
+title: "Proteção RMS com Infraestrutura de Classificação de Ficheiros (FCI) do Windows Server | Azure Information Protection"
 description: "Instruções para utilizar o cliente de Rights Management (RMS) com a ferramenta RMS Protection para configurar o Gestor de Recursos do Servidor de Ficheiros e a infraestrutura de classificação de ficheiros (FCI)."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/29/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b8a7a433652e76ff1069f0f0a7465483b13c065c
-ms.openlocfilehash: b350a35d44e743de94446409b1bba4256ca38728
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 7e0556e99aa09d4b6f2488cb866b57488a22cacd
 
 
 ---
 
 # Proteção RMS com Infraestrutura de Classificação de Ficheiros (FCI) do Windows Server
 
->*Aplica-se a: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*Aplica-se a: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
 
 Utilize este artigo para obter instruções e um script para utilizar o cliente de Rights Management (RMS) com a ferramenta RMS Protection para configurar o Gestor de Recursos do Servidor de Ficheiros e a infraestrutura de classificação de ficheiros (FCI).
 
-Esta solução permite-lhe proteger automaticamente todos os ficheiros numa pasta num servidor de ficheiros com o Windows Server ou proteger automaticamente ficheiros que cumpram critérios específicos. Por exemplo, ficheiros que tenham sido classificados como contendo informações confidenciais. Esta solução utiliza o Azure Rights Management (Azure RMS) para proteger os ficheiros, pelo que esta tecnologia tem de estar implementada na sua organização.
+Esta solução permite-lhe proteger automaticamente todos os ficheiros numa pasta num servidor de ficheiros com o Windows Server ou proteger automaticamente ficheiros que cumpram critérios específicos. Por exemplo, ficheiros que tenham sido classificados como contendo informações confidenciais. Esta solução utiliza o serviço Azure Rights Management do Azure Information Protection para proteger os ficheiros, pelo que esta tecnologia tem de estar implementada na sua organização.
 
 > [!NOTE]
-> Embora o Azure RMS inclua um [conector](../deploy-use/deploy-rms-connector.md) que suporta a infraestrutura de classificação de ficheiros, essa solução só suporta a proteção nativa — por exemplo, ficheiros do Office.
+> Embora o Azure Information Protection inclua um [conector](../deploy-use/deploy-rms-connector.md) que suporta a infraestrutura de classificação de ficheiros, essa solução só suporta a proteção nativa — por exemplo, ficheiros do Office.
 > 
 > Para suportar todos os tipos de ficheiro com a infraestrutura de classificação de ficheiros, tem de utilizar o módulo **Proteção RMS** do Windows PowerShell, conforme documentado neste artigo. Os cmdlets da Proteção RMS, como a aplicação de partilha RMS, suportam a proteção genérica, bem como a proteção nativa, o que significa que todos os ficheiros podem ser protegidos. Para mais informações sobre estes níveis de proteção diferentes, consulte a secção [Níveis de proteção – nativa e genérica](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) no [Rights Management sharing application administrator guide (Guia do administrador da aplicação de partilha Rights Management – em inglês)](sharing-app-admin-guide.md).
 
 As instruções que se seguem aplicam-se ao Windows Server 2012 R2 ou Windows Server 2012. Se utilizar outras versões suportadas do Windows, poderá ter de adaptar alguns dos passos devido às diferenças entre a versão do seu sistema operativo e a descrita neste artigo.
 
-## Pré-requisitos para a proteção Azure RMS com a FCI do Windows Server
+## Pré-requisitos para a proteção Azure Rights Management com a FCI do Windows Server
 Pré-requisitos para estas instruções:
 
 -   Nos servidores de ficheiros em que executará o Gestor de Recursos de Ficheiros com a infraestrutura de classificação de ficheiros:
@@ -48,7 +48,7 @@ Pré-requisitos para estas instruções:
 
     -   Tem uma ligação à Internet, com as definições de computador configuradas, se tal for necessário para um servidor proxy. Por exemplo: `netsh winhttp import proxy source=ie`
 
--   Configurou os pré-requisitos adicionais para a sua implementação do Azure Rights Management, conforme descrito em [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx). Especificamente, tem os seguintes valores para ligar ao Azure RMS através de um principal de serviço:
+-   Configurou os pré-requisitos adicionais para a sua implementação do Azure Information Protection, conforme descrito em [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx). Especificamente, tem os seguintes valores para ligar ao serviço Azure Rights Management através de um principal de serviço:
 
     -   BposTenantId
 
@@ -56,7 +56,7 @@ Pré-requisitos para estas instruções:
 
     -   Symmetric key
 
--   Sincronizou as suas contas de utilizador do Active Directory no local com o Azure Active Directory ou o Office 365, incluindo os respetivos endereços de e-mail. Isto é necessário para todos os utilizadores que possam precisar de aceder a ficheiros depois de estarem protegidos pela FCI e o Azure RMS. Se não efetuar este passo (por exemplo, num ambiente de teste), os utilizadores poderão ficar bloqueados de aceder a estes ficheiros. Se precisar de mais informações sobre esta configuração de conta, consulte [Preparing for Azure Rights Management (Preparar para o Azure Rights Management – em inglês)](../plan-design/prepare.md).
+-   Sincronizou as suas contas de utilizador do Active Directory no local com o Azure Active Directory ou o Office 365, incluindo os respetivos endereços de e-mail. Isto é necessário para todos os utilizadores que possam necessitar de aceder a ficheiros protegidos pela FCI e pelo serviço Azure Rights Management. Se não efetuar este passo (por exemplo, num ambiente de teste), os utilizadores poderão ficar bloqueados de aceder a estes ficheiros. Se precisar de mais informações sobre esta configuração de conta, consulte [Preparar para o serviço Azure Rights Management](../plan-design/prepare.md).
 
 -   Identificou o modelo de Rights Management a utilizar, o que irá proteger os ficheiros. Certifique-se de que sabe o ID deste modelo. Para esse efeito, utilize o cmdlet [Get-RMSTemplate](https://msdn.microsoft.com/library/azure/mt433197.aspx).
 
@@ -94,7 +94,7 @@ No final destas instruções, todos os ficheiros na sua pasta selecionada serão
 
         `[Parameter(Mandatory = $false)]             [string]$AppPrincipalId = "b5e3f76a-b5c2-4c96-a594-a0807f65bba4",`
 
-    -   Procure a seguinte cadeia e substitua-a pela sua chave simétrica, que utiliza com o cmdlet [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) para estabelecer ligação ao Azure RMS:
+    -   Procure a seguinte cadeia e substitua-a pela sua chave simétrica, que utiliza com o cmdlet [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) para ligar ao serviço Azure Rights Management:
 
         ```
         <enter your key here>
@@ -105,7 +105,7 @@ No final destas instruções, todos os ficheiros na sua pasta selecionada serão
 
         `[string]$SymmetricKey = "zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA="`
 
-    -   Procure a seguinte cadeia e substitua-a pelo seu BposTenantId (ID de inquilino), que utiliza com o cmdlet [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) para estabelecer ligação ao Azure RMS:
+    -   Procure a seguinte cadeia e substitua-a pelo seu BposTenantId (ID de inquilino) que utiliza com o cmdlet [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) para ligar ao serviço Azure Rights Management:
 
         ```
         <enter your BposTenantId here>
@@ -302,6 +302,6 @@ Agora, tudo o que precisa de fazer é criar uma nova tarefa de gestão de fichei
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 

@@ -1,34 +1,34 @@
 ---
-title: "Controlar e revogar os documentos quando utiliza a aplicação de partilha RMS | Azure RMS"
+title: "Controlar e revogar os seus documentos quando utiliza a aplicação de partilha RMS | Azure Information Protection"
 description: "Após proteger os seus documentos utilizando a aplicação de partilha RMS, pode controlar como as pessoas utilizam os seus documentos protegidos. Se necessário, também pode revogar o acesso a esses documentos quando pretender deixar de os partilhar."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 44541b6fe2567d23174b26cb42fec0731f5d3f58
-ms.openlocfilehash: 2117291a7204dae86b3a6d378ab6af4d84435417
+ms.sourcegitcommit: 805644a7c6dacc00519ad9ac07f39367d0784745
+ms.openlocfilehash: b8cc9dd2984f7853e1fbacebbb4f6934f918200e
 
 
 ---
 
 # Controlar e revogar os documentos quando utiliza a aplicação de partilha RMS
 
->*Aplica-se a: Azure Rights Management, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
-Depois de proteger os documentos com a aplicação de partilha RMS, se a sua organização utilizar o Azure Rights Management em vez dos Serviços de Gestão de Direitos do Active Directory, pode controlar a forma como as pessoas utilizam os documentos protegidos. Se necessário, também pode revogar o acesso a esses documentos quando pretender deixar de os partilhar. Para tal, utilize o **site de controlo de documentos**, ao qual pode aceder a partir de computadores com o Windows, computadores Mac e até mesmo telemóveis e tablets.
+Depois de proteger os documentos com a aplicação de partilha RMS, se a sua organização utilizar o Azure Information Protection em vez dos Serviços de Gestão de Direitos do Active Directory, pode controlar a forma como as pessoas utilizam os seus documentos protegidos. Se necessário, também pode revogar o acesso a esses documentos quando pretender deixar de os partilhar. Para tal, utilize o **site de controlo de documentos**, ao qual pode aceder a partir de computadores com o Windows, computadores Mac e até mesmo telemóveis e tablets.
 
 <div style="padding-top: 56.25%; position: relative; width: 100%;">
 <iframe style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;" width="100%" height="100%" src="https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation/player" frameborder="0" allowfullscreen></iframe>
 </div>
 
-Ao aceder a este site, inicie sessão para controlar os seus documentos. Desde que a sua organização tenha uma [subscrição que suporte a revogação e o controlo de documentos](https://technet.microsoft.com/dn858608.aspx) e lhe tenha sido atribuída uma licença para esta subscrição, pode ver quem tentou abrir os ficheiros que protegeu e se o fizeram com êxito (se a autenticação foi efetuada com êxito) ou não. Também pode ver todas as vezes que alguém tentou aceder ao documento e a respetiva localização nesse momento. Além disso:
+Ao aceder a este site, inicie sessão para controlar os seus documentos. Desde que a sua organização tenha uma [subscrição que suporte a revogação e o controlo de documentos](https://go.microsoft.com/fwlink/?LinkId=827589) e lhe tenha sido atribuída uma licença para esta subscrição, pode ver quem tentou abrir os ficheiros que protegeu e se o fizeram com êxito (se a autenticação foi efetuada com êxito) ou não. Também pode ver todas as vezes que alguém tentou aceder ao documento e a respetiva localização nesse momento. Além disso:
 
 -   Se precisar deixar de partilhar um documento: clique em **Revogar acesso**, tome nota do período de tempo durante o qual o documento continuará disponível, decida se pretende informar as pessoas de que está a revogar o acesso ao documento partilhado anteriormente e forneça uma mensagem personalizada. Ao revogar um documento, não elimina o documento que partilhou, mas os utilizadores autorizados deixam de o poder abrir.
 
@@ -36,7 +36,7 @@ Ao aceder a este site, inicie sessão para controlar os seus documentos. Desde q
 
 -   Se pretender configurar notificações por e-mail: clique em **Definições** e selecione como e se deve receber um e-mail quando alguém aceder ao documento.
 
-- Se pretender controlar e revogar documentos partilhados para outras pessoas: os administradores do Azure RMS podem controlar e revogar documentos para outras pessoas clicando no ícone de Administração. Apenas os administradores veem este ícone.
+- Se quiser controlar e revogar documentos partilhados para outras pessoas: os administradores do Azure Information Protection podem controlar e revogar documentos para outras pessoas ao clicar no ícone Administrador. Apenas os administradores veem este ícone.
 
 -   Se tiver dúvidas ou quiser fornecer comentários sobre o site de controlo de documentos: clique no ícone de Ajuda para aceder às [FAQ acerca do Controlo de Documentos](http://go.microsoft.com/fwlink/?LinkId=523977).
 
@@ -53,7 +53,7 @@ Ao aceder a este site, inicie sessão para controlar os seus documentos. Desde q
 Se não vir estas opções do RMS, é provável que a aplicação de partilha RMS não esteja instalada no seu computador, que a versão mais recente não esteja instalada ou que seja necessário reiniciar o computador para concluir a instalação. Para obter mais informações sobre como instalar a aplicação de partilha, consulte [Transferir e instalar a aplicação de partilha Rights Management](install-sharing-app.md).
 
 > [!NOTE] 
-> Se tiver instalado a versão de pré-visualização do [cliente do Azure Information Protection](../information-protection/info-protect-client.md), versão 1.0.233 ou posterior, também pode aceder ao site de controlo de documentos utilizando o botão **Proteger**: 
+> Se tiver instalado o [cliente do Azure Information Protection](../rms-client/info-protect-client.md), também pode aceder ao site de controlo de documentos através do botão **Proteger**: 
 > 
 > - Numa aplicação do Office, no separador **Base**, no grupo **Proteção**, clique em **Proteger** e, em seguida, clique em  > **Controlar utilização**. 
 
@@ -106,6 +106,6 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

@@ -1,28 +1,28 @@
 ---
-title: Monitorizar o conector Azure Rights Management | Azure RMS
-description: "Informações para o ajudar a monitorizar o conector e a utilização do Azure RMS pela sua organização."
+title: Monitorizar o conector Azure Rights Management | Azure Information Protection
+description: "Informações para ajudá-lo a monitorizar o conector e a utilização da organização do serviço Azure Rights Management do Azure Information Protection."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: 97b8107e1529271376c21837b3ac357dba9235d2
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: 954d8b7b62b35f5fdd29e115681d9d5c0da69a86
 
 
 ---
 
 # Monitorizar o conector Azure Rights Management
 
->*Aplica-se a: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*Aplica-se a: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
 
-Após ter instalado e configurado o conector RMS, pode utilizar os métodos e as informações seguintes para ajudar a monitorizar o conector e a utilização da organização do Azure RMS.
+Após ter instalado e configurado o conector RMS, pode utilizar os seguintes métodos e as informações para ajudar a monitorizar o conector e a utilização da organização do serviço Azure Rights Management do Azure Information Protection.
 
 ## Registo de eventos da aplicação
 
@@ -32,10 +32,10 @@ Por exemplo, eventos de Informação, tais como o ID 1000 confirmam que o servi�
 
 Se não tiver configurado o conector para utilizar HTTPS, espere ver um Aviso de ID 2002, que informa que um cliente está a utilizar uma ligação (HTTP) não segura.
 
-Se o conector não conseguir estabelece ligação ao Azure RMS, provavelmente verá erro 3001. Por exemplo, isto poderá dever-se a um problema DNS ou à falta de acesso à Internet para um ou mais servidores que executem o conector do RMS. 
+Se houver uma falha na ligação do conector ao serviço Azure Rights Management, é provável que lhe seja apresentado o Erro 3001. Por exemplo, isto poderá dever-se a um problema DNS ou à falta de acesso à Internet para um ou mais servidores que executem o conector do RMS. 
 
 > [!TIP]
-> Quando os servidores do conector do RMS não consegue ligar ao Azure RMS, as configurações de proxy Web são, muitas vezes, o motivo.
+> Quando os servidores do conector RMS não conseguem ligar ao serviço Azure Rights Management, as configurações de proxy Web são muitas vezes o motivo.
 
 Tal como acontece com todas as entradas de registo de eventos, explore a mensagem para mais detalhes.
 
@@ -83,7 +83,7 @@ Informações **1004**
 
 **A lista de contas autorizadas foi atualizada.**
 
-Este evento é registado quando o conector do RMS transferiu a lista mais recente de contas (contas existentes e quaisquer alterações) que estão autorizadas a utilizar o conector do RMS. Esta lista é transferida a cada quinze minutos, desde que o conector do RMS consiga comunicar com o Azure RMS.
+Este evento é registado quando o conector do RMS transferiu a lista mais recente de contas (contas existentes e quaisquer alterações) que estão autorizadas a utilizar o conector do RMS. Esta lista é transferida a cada quinze minutos, desde que o conector RMS consiga comunicar com o serviço Azure Rights Management.
 
 ----
 
@@ -99,9 +99,9 @@ Aviso **2001**
 
 **Tentativa de acesso não autorizado ao conector do Microsoft RMS.**
 
-Este evento é registado quando uma conta tenta ligar ao conector do RMS, mas falha. Normalmente, tal ocorre porque a conta que faz a ligação não está na lista transferida de contas autorizadas que o conector do RMS transfere a partir do Azure RMS. Por exemplo, a lista mais recente ainda não foi transferida (tal ocorre a cada 15 minutos) ou a conta está em falta na lista. 
+Este evento é registado quando uma conta tenta ligar ao conector do RMS, mas falha. Normalmente, tal ocorre porque a conta que faz a ligação não está na lista transferida de contas autorizadas que o conector RMS transfere a partir do serviço Azure Rights Management. Por exemplo, a lista mais recente ainda não foi transferida (tal ocorre a cada 15 minutos) ou a conta está em falta na lista. 
 
-Outra razão pode indicar que o conector do RMS foi instalado no mesmo servidor configurado para utilizar o conector. Por exemplo, instala o conector do RMS num servidor que executa o Exchange Server e está a autorizar a uma conta do Exchange para utilizar o conector. Esta configuração não é suportada porque o conector do RMS não consegue identificar corretamente a conta quando tenta ligar.
+Outra razão pode indicar que o conector do RMS foi instalado no mesmo servidor configurado para utilizar o conector. Por exemplo, instala o conector do RMS num servidor que executa o Exchange Server e está a autorizar a uma conta do Exchange para utilizar o conector. Esta configuração não é suportada porque o conector RMS não consegue identificar corretamente a conta quando tenta ligar.
 
 A mensagem de evento contém informações sobre a conta e o computador que está a tentar ligar ao conector do RMS:
 
@@ -155,9 +155,7 @@ Este evento é registado se o conector do RMS não conseguir a lista mais recent
 
 ## Contadores de desempenho
 
-Ao instalar o conector RMS, este cria automaticamente um contadores de desempenho do **conector Microsoft Rights Management** que poderão ser úteis para ajudar a monitorizar o desempenho de utilização do Azure RMS através do conector. 
-
-Por exemplo, se regularmente ocorrerem atrasos ao proteger documentos ou e-mails, ou ao abrir documentos ou e-mails protegidos, os contadores de desempenho podem ajudar a determinar se o atraso se deve ao tempo de processamento no conector, ao tempo de processamento a partir do Azure RMS ou a atrasos de rede. Para ajudar a identificar onde está a ocorrer o atraso, procure contadores que incluam contagens de média para o **Tempo de Processamento do Conector**, para o **Tempo de Resposta do Serviço**, e para o **Tempo de Resposta do Conector**. Por exemplo: **licenciamento com êxito do pedido em batch com tempo de resposta médio do conector**.
+Ao instalar o conector RMS, este cria automaticamente contadores de desempenho do **conector Microsoft Rights Management** que poderão ser úteis para ajudar a monitorizar o desempenho de utilização do serviço Azure Rights Management através do conector. Por exemplo, se ocorrerem regularmente atrasos ao proteger documentos ou e-mails ou ao abrir documentos ou e-mails protegidos, os contadores de desempenho podem ajudar a determinar se o atraso se deve ao tempo de processamento no conector, ao tempo de processamento a partir do serviço Azure Rights Management ou a atrasos de rede. Para ajudar a identificar onde está a ocorrer o atraso, procure contadores que incluam contagens de média para o **Tempo de Processamento do Conector**, para o **Tempo de Resposta do Serviço**, e para o **Tempo de Resposta do Conector**. Por exemplo: **licenciamento com êxito do pedido em batch com tempo de resposta médio do conector**.
 
 Se tiver adicionado recentemente novas contas de servidor para utilizar o conector, um com contador para verificar é o **Tempo desde a última atualização da política de autorização**, para confirmar que o conector transferiu a lista desde que a atualizou, ou se terá de aguardar um pouco mais (até 15 minutos).
 
@@ -194,6 +192,6 @@ Se necessitar de registos mais detalhados para fins de diagnóstico, pode utiliz
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

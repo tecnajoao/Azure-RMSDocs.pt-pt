@@ -1,39 +1,39 @@
 ---
-title: Requisitos do Azure Rights Management | Azure RMS
-description: "Conheça os pré-requisitos para implementar o Microsoft Azure Rights Management (Azure RMS) na sua organização."
+title: Requisitos do Azure Information Protection | Azure Information Protection
+description: "Identifique os pré-requisitos para implementar o Azure Information Protection para a sua organização."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: 9bd75b44541f51b39315a898417ebe5d3b562cf9
+ms.sourcegitcommit: a809edc63801912e836878e9205643d7d52188f1
+ms.openlocfilehash: 1239b1abe0ab720ef52ecce6c2bc948eb60fba18
 
 
 ---
 
-# Requisitos do Azure Rights Management
+# Requisitos para o Azure Information Protection
 
->*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Information Protection, Office 365*
 
 
-Para implementar o Microsoft Azure Rights Management (Azure RMS) na sua organização, certifique-se de que cumpre os seguintes pré-requisitos. Em seguida, pode utilizar o [Plano de implementação do Azure Rights Management](../plan-design/deployment-roadmap.md) para implementar o Rights Management para a sua organização.
+Antes de implementar o Azure Information Protection na sua organização, certifique-se de que cumpre os seguintes pré-requisitos. 
 
 |Requisito|Mais informações|
 |---------------|--------------------|
-|Uma subscrição na nuvem do RMS|A sua organização tem de ter uma subscrição na nuvem que suporte RMS.<br /><br />Para obter informações de licenciamento, consulte [Subscrições na nuvem que suportam o Azure RMS](requirements-subscriptions.md).|
-|Diretório do Azure AD|A sua organização tem de ter um diretório do Azure AD para suportar a autenticação de utilizador para RMS. Além disso, se pretender utilizar as contas de utilizador do seu diretório no local (AD DS), tem também de configurar a integração de diretórios.<br /><br />A Multi-Factor Authentication (MFA) é suportada com o Azure RMS quando tem o software de cliente necessário e a infraestrutura de suporte de MFA corretamente configurada.<br /><br />Para obter mais informações, consulte [Diretório do Azure AD](requirements-azure-ad.md).|
-|Dispositivos cliente|Os utilizadores têm de ter dispositivos cliente (computador ou dispositivo móvel) com um sistema operativo que suporte RMS.<br /><br />Para obter mais informações, consulte [Dispositivos cliente que suportam o Azure RMS](requirements-client-devices.md).|
-|Aplicações|Os utilizadores têm de executar aplicações que suportem RMS.<br /><br />Para obter mais informações, consulte [Aplicações que suportam o Azure RMS](requirements-applications.md).|
-|Infraestrutura que suporta a conetividade à Internet e a serviços em nuvem dependentes|Se tiver uma firewall ou um dispositivo interveniente semelhante que deve ser configurado para permitir ligações específicas, veja as informações do **Azure Rights Management (RMS)** na secção [Portal do Office 365 e partilhado](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#BKMK_Portal-identity) do seguinte artigo do Office: [URLs do Office 365 e intervalos de endereços IP](https://support.office.com/en-US/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2).<br /><br />Utilize as instruções neste artigo do Office para se manter atualizado em relação às alterações a estas informações ao subscrever um feed RSS.<br /><br />Além das informações no artigo do Office, específico para o Azure RMS:<br /><br />- Não termine a ligação cliente para serviço TLS (por exemplo, para fazer uma inspeção ao nível do pacote). Se o fizer, quebrará a afixação de certificado que os clientes de RMS utilizam com as AC geridas pela Microsoft para ajudar a proteger as comunicações com o Azure RMS.<br /><br />- Se utilizar um proxy Web que requer autenticação, tem de o configurar para utilizar a autenticação integrada do Windows com as credenciais de início de sessão do utilizador do Active Directory.|
+|Uma subscrição do Azure Information Protection|Reveja as informações de subscrição a partir da [Página de preços](https://go.microsoft.com/fwlink/?LinkId=827589) do Azure Information Protection para se certificar de que a subscrição da sua organização inclui as funcionalidades do Azure Information Protection que pretende utilizar.|
+|Diretório do Azure AD|A sua organização tem de ter um diretório do Azure AD para suportar a autenticação de utilizador para o Azure Information Protection. Além disso, se pretender utilizar as contas de utilizador do seu diretório no local (AD DS), tem também de configurar a integração de diretórios.<br /><br />A autenticação multifator (MFA) é suportada com o Azure Information Protection quando tem o software de cliente necessário e a infraestrutura de suporte de MFA corretamente configurada.<br /><br />Para mais informações, consulte [Requisitos do Azure Active Directory para o Azure Information Protection](requirements-azure-ad.md).|
+|Dispositivos cliente|Os utilizadores têm de ter dispositivos cliente (computador ou dispositivo móvel) com um sistema operativo que suporte o Azure Information Protection.<br /><br />Os seguintes dispositivos suportam o cliente do Azure Information Protection, o qual permite aos utilizadores classificar e etiquetar os documentos e e-mails do Office:<br /><br />- Windows 10 (x86, x64)<br /><br />- Windows 8.1 (x86, x64)<br /><br />- Windows 8 (x86, x64)<br /><br />- Windows 7 Service Pack 1 (x86, x64)<br /><br />Quando este cliente protege os dados através do serviço Azure Rights Management, estes podem ser consumidos pelos mesmos dispositivos (Windows, Mac, iOS, Android) que suportam o serviço Azure Rights Management. <br /><br />Para obter detalhes sobre os dispositivos que suportam o serviço Azure Rights Management, consulte [Dispositivos cliente que suportam a proteção de dados do Azure Rights Management](../get-started/requirements-client-devices.md).|
+|Aplicações|O cliente do Azure Information Protection suporta a etiquetagem e a proteção de ficheiros e e-mails criados pelas seguintes aplicações do Office: **Word**, **Excel**, **PowerPoint** e **Outlook** a partir dos seguintes conjuntos de aplicações do Office:<br /><br />- Office Professional Plus 2016<br /><br />- Office Professional Plus 2013 com o Service Pack 1<br /><br />- Office Professional Plus 2010<br /><br />Para obter informações sobre as aplicações que suportam o serviço Azure Rights Management, consulte [Aplicações que suportam a proteção de dados do Azure Rights Management](requirements-applications.md).|
+|Infraestrutura que suporta a conetividade à Internet e a serviços em nuvem dependentes|Se tiver uma firewall ou um dispositivo interveniente semelhante que deve ser configurado para permitir ligações específicas, veja as informações do **Azure Rights Management (RMS)** na secção [Portal do Office 365 e partilhado](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#BKMK_Portal-identity) do seguinte artigo do Office: [URLs do Office 365 e intervalos de endereços IP](https://support.office.com/en-US/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2).<br /><br />Utilize as instruções neste artigo do Office para se manter atualizado em relação às alterações a estas informações ao subscrever um feed RSS.<br /><br />Além das informações no artigo do Office, específico para o Azure Information Protection:<br /><br />- Permitir tráfego HTTPS em TCP 443 para **api.informationprotection.azure.com**.<br /><br />- Não termine a ligação cliente para serviço TLS (por exemplo, para fazer uma inspeção ao nível do pacote). Se o fizer, quebrará a afixação de certificado que os clientes de RMS utilizam com as AC geridas pela Microsoft para ajudar a proteger as comunicações com o Azure RMS.<br /><br />- Se utilizar um proxy Web que requer autenticação, tem de o configurar para utilizar a autenticação integrada do Windows com as credenciais de início de sessão do utilizador do Active Directory.|
 
-Se pretender utilizar o Azure RMS com servidores no local, são suportados os seguintes produtos:
+Se quiser utilizar o serviço Azure Rights Management a partir do Azure Information Protection com servidores no local, são suportados os seguintes produtos:
 
 -   Exchange Server
 
@@ -41,20 +41,20 @@ Se pretender utilizar o Azure RMS com servidores no local, são suportados os se
 
 -   Servidores de ficheiros do Windows Server que suportam a Infraestrutura de Classificação de Ficheiros
 
-Para obter informações acerca dos requisitos adicionais do Azure RMS para este cenário, consulte a secção [Servidores no local que suportam o Azure RMS](requirements-servers.md).
+Para obter informações sobre os requisitos adicionais para este cenário, consulte [Servidores no local que suportam a proteção de dados do Azure Rights Management](requirements-servers.md).
 
 > [!IMPORTANT]
-> O cenário de implementação seguinte não é suportado:
+> O seguinte cenário de implementação não é suportado, exceto se estiver a utilizar a proteção do AD RMS com o Azure Information Protection (configuração "tenha a sua própria chave" ou HYOK):
 > 
-> -   Executar o AD RMS e o Azure RMS lado a lado na mesma organização, exceto durante a migração, conforme descrito em [Migrar do AD RMS para o Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+> -   Executar o AD RMS e o Azure RMS lado a lado na mesma organização, exceto durante a migração, conforme descrito em [Migrar do AD RMS para o Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 > 
-> Existe um caminho de migração suportado do [AD RMS para o Azure RMS](http://technet.microsoft.com/library/Dn858447.aspx) e do [Azure RMS para o AD RMS](http://msdn.microsoft.com/library/azure/dn629429.aspx). Se implementar o Azure RMS e, em seguida, decidir que já não pretende utilizar este serviço em nuvem, consulte [Encerrar e Desativar o Azure Rights Management](../deploy-use/decommission-deactivate.md).
+> Existe um caminho de migração suportado [do AD RMS para o Azure Information Protection](http://technet.microsoft.com/library/Dn858447.aspx) e do [Azure Information Protection para o AD RMS](http://msdn.microsoft.com/library/azure/dn629429.aspx). Se implementar o Azure Information Protection e, em seguida, decidir que já não quer utilizar este serviço em nuvem, consulte [Encerrar e desativar o Azure Information Protection](../deploy-use/decommission-deactivate.md).
 
 
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

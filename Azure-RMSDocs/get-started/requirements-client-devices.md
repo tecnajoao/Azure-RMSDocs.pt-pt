@@ -1,32 +1,32 @@
 ---
-title: Requisitos do Azure RMS&#58; dispositivo cliente | Azure RMS
-description: "Conheça quais os dispositivos que suportam o Azure Rights Management (Azure RMS)."
+title: "Suporte de dispositivos cliente para proteção de dados | Azure Information Protection"
+description: "Identifique quais os dispositivos que suportam o serviço Azure Rights Management a partir do Azure Information Protection."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 93f8021d-43c5-47fe-ad63-8a1bacff9971
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: e52720c09e3541a16c2e234bbd336cc7916ccfe1
+ms.sourcegitcommit: 976281d2b1f9c87bbb0806fef98b2520772c507c
+ms.openlocfilehash: 3b9c126211389dfe14bb5f1cc4ec8be1213df49d
 
 
 ---
 
 
-# Requisitos do Azure RMS: dispositivos cliente que suportam o Azure RMS
+# Dispositivos cliente que suportam a proteção de dados do Azure Rights Management
 
->*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Information Protection, Office 365*
 
-Utilize as secções seguintes para identificar quais os dispositivos que suportam o Azure Rights Management (Azure RMS).
+Utilize as secções seguintes para identificar os dispositivos que suportam o serviço Azure Rights Management, que fornece proteção de dados para o Azure Information Protection.
 
 ## Computadores
-Os seguintes sistemas operativos de computador suportam o Azure Rights Management:
+Os seguintes sistemas operativos de computador suportam o serviço Azure Rights Management:
 
 -   **Windows 7** (x86, x64)
 
@@ -39,7 +39,7 @@ Os seguintes sistemas operativos de computador suportam o Azure Rights Managemen
 -   **Mac OS X**: versão mínima do Mac OS X 10.8 (Mountain Lion)
 
 ## Dispositivos móveis
-Os seguintes sistemas operativos de dispositivos móveis suportam o Azure Rights Management:
+Os seguintes sistemas operativos de dispositivo móvel suportam o serviço Azure Rights Management:
 
 -   **Windows Phone**: Windows Phone 8.1
 
@@ -51,11 +51,11 @@ Os seguintes sistemas operativos de dispositivos móveis suportam o Azure Rights
 
 
 ## Passos seguintes
-Para verificar outros requisitos, consulte [Requisitos do Azure Rights Management](requirements-azure-rms.md).
+Para verificar outros requisitos, consulte [Requisitos do Azure Information Protection](requirements-azure-rms.md).
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

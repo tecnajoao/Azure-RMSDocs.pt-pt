@@ -1,26 +1,26 @@
 ---
-title: Configurar servidores para o conector Azure Rights Management | Azure RMS
+title: Configurar servidores para o conector Azure Rights Management | Azure Information Protection
 description: "Informações para o ajudar a configurar os servidores no local que irão utilizar o conector Azure Rights Management (RMS). Estes procedimentos inclui o passo 5 do artigo Implementar o conector Azure Rights Management."
 author: cabailey
 manager: mbaldwin
-ms.date: 06/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: 67bf5f7b5a550e723ac16707c341f6b3af054b9a
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: 825103c8857d2db4f0a37570d10fd88361eae274
 
 
 ---
 
 # Configurar servidores para o conector Azure Rights Management
 
->*Aplica-se a: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*Aplica-se a: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
 
 
 Utilize as seguintes informações para ajudar a configurar os servidores no local que irão utilizar o conector Azure Rights Management (RMS). Estes procedimentos inclui o passo 5 do artigo [Implementar o conector Azure Rights Management](deploy-rms-connector.md).
@@ -29,7 +29,7 @@ Antes de começar, certifique-se de que instalou e configurou o conetor RMS e de
 
 
 ## Configurar servidores para utilizar o conector RMS
-Após instalar e configurar o conector RMS, estará pronto para configurar os servidores no local que irão utilizar o Rights Management e estabelecer ligação ao Azure RMS através do conector. Isto implica configurar os seguintes servidores:
+Após instalar e configurar o conector RMS, estará pronto para configurar os servidores no local que irão ligar ao serviço Azure Rights Management e utilizar esta tecnologia de proteção através do conector. Isto implica configurar os seguintes servidores:
 
 -   **Para o Exchange 2016 e Exchange 2013**: servidores de acesso de cliente e servidores de caixa de correio
 
@@ -249,6 +249,6 @@ Para monitorizar o conector RMS, consulte o artigo [Monitorizar o conector do Az
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

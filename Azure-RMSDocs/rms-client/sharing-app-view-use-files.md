@@ -1,33 +1,33 @@
 ---
-title: Ver e utilizar ficheiros que foram protegidos pelo Rights Management | Azure RMS
+title: Ver e utilizar ficheiros que foram protegidos pelo Rights Management | Azure Information Protection
 description: "Instruções de visualização e utilização de um ficheiro protegido, que requer a instalação da aplicação de partilha Rights Management (RMS)."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
-ms.openlocfilehash: 8d93968c51ad1037e5424df4ee9b724e0c1f89a2
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 3f906815da2acd8f52bd742306d9936a71229c97
 
 
 ---
 
 # Ver e utilizar ficheiros que foram protegidos pelo Rights Management
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Rights Management, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 Quando a [Aplicação de partilha Rights Management (RMS) está instalada no computador](install-sharing-app.md), basta fazer duplo clique num ficheiro protegido para o ver. O ficheiro pode ser um anexo numa mensagem de e-mail ou poderá vê-lo ao utilizar o Explorador de Ficheiros.
 
 > [!NOTE]
-> Antes de poder ver o ficheiro protegido, o RMS tem de confirmar que está autorizado a fazê-lo. Para tal, verifica o seu nome de utilizador e palavra-passe. Em alguns casos, estas informações podem estar em cache e não lhe são pedidas as suas credenciais. Noutros casos, ser-lhe-á pedido que forneça as credenciais.
+> Antes de poder ver o ficheiro protegido, o serviço Rights Management tem de verificar o seu nome de utilizador e palavra-passe para confirmar que está autorizado a vê-lo. Em alguns casos, estas informações podem estar em cache e não lhe são pedidas as suas credenciais. Noutros casos, ser-lhe-á pedido que forneça as credenciais.
 >
-> Se a sua organização não utilizar o Azure Rights Management (Azure RMS) nem o AD RMS, pode candidatar-se a uma conta gratuita que aceitará as suas credenciais para que possa abrir ficheiros que estão protegidos pelo RMS:
+> Se a sua organização não utiliza o Azure Information Protection nem o AD RMS, pode candidatar-se a uma conta gratuita que aceitará as suas credenciais para que possa abrir ficheiros protegidos pelo RMS:
 >
 > -   Para se candidatar a esta conta, clique na ligação para aderir ao [RMS para indivíduos](http://go.microsoft.com/fwlink/?LinkId=309469).
 >
@@ -68,7 +68,7 @@ O modo como o ficheiro abre depende da forma como foi protegido, o que pode desc
 
 
 
-Para obter uma lista completa das extensões de nome de ficheiro que o Rights Management suporta, veja a secção [Tipos de ficheiro suportados e extensões de nome de ficheiro](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) no [Guia do administrador da aplicação de partilha Rights Management](sharing-app-admin-guide.md). Se a sua extensão de nome de ficheiro não constar da lista, faça uma pesquisa na Web para ver se é uma extensão de nome de ficheiro suportada por outra aplicação.
+Para obter uma lista completa das extensões de nome de ficheiro que os serviços Rights Management suportam, consulte a secção [Tipos de ficheiro suportados e extensões de nome de ficheiro](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) no [Guia do administrador da aplicação de partilha Rights Management](sharing-app-admin-guide.md). Se a sua extensão de nome de ficheiro não constar da lista, faça uma pesquisa na Web para ver se é uma extensão de nome de ficheiro suportada por outra aplicação.
 
 > [!NOTE]
 > Se, depois de confirmar que o ficheiro está protegido pelo Rights Management, o ficheiro não abrir, transfira e utilize a [Ferramenta RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Siga as instruções na ferramenta para verificar se existem problemas no seu computador que possam impedir que um documento protegido seja aberto.
@@ -82,7 +82,7 @@ Se pretender efetuar outras ações além da leitura (por exemplo, editar, copia
 
     Por exemplo, se um ficheiro tiver sido protegido com o nome de ficheiro documento.vsdx.pfile, visualize o ficheiro e, no Explorador de Ficheiros, guarde-o como documento.vsdx.
 
-    O novo ficheiro já não está protegido. Se pretender protegê-lo, tem de o fazer manualmente. Para obter instruções, veja [Proteger um ficheiro num dispositivo (proteger no local) ao utilizar a aplicação de partilha Rights Management](sharing-app-protect-in-place.md).
+    O novo ficheiro já não está protegido. Se pretender protegê-lo, tem de o fazer manualmente. Para obter instruções, veja [Proteger um ficheiro num dispositivo (proteger no local) através da aplicação de partilha Rights Management](sharing-app-protect-in-place.md).
 
 - **O ficheiro tem uma extensão de nome de ficheiro *.ppdf* ou é um ficheiro de texto ou de imagem protegido (tal como *.ptxt* ou *.pjpg*)**
 
@@ -90,7 +90,7 @@ Se pretender efetuar outras ações além da leitura (por exemplo, editar, copia
 
 - **Outras extensões de nome de ficheiro**
 
-    O dispositivo tem de ter uma aplicação que suporte o Rights Management para utilizar estes ficheiros. Estas aplicações chamam-se aplicações otimizadas para o RMS. As aplicações do Office 2016, Office 2013 e Office 2010 (como o Word, Excel, PowerPoint e Outlook) são exemplos de aplicações que são otimizadas para o Rights Management. No entanto, as aplicações que não são da Microsoft, tais como as aplicações de outras empresas de software e as suas próprias aplicações de linha de negócio, também podem ser otimizadas para o Rights Management.
+    O dispositivo tem de ter uma aplicação que suporte a proteção Rights Management para utilizar estes ficheiros. Estas aplicações chamam-se aplicações otimizadas para o RMS. As aplicações do Office 2016, Office 2013 e Office 2010 (como o Word, Excel, PowerPoint e Outlook) são exemplos de aplicações que são otimizadas para o Rights Management. No entanto, as aplicações que não são da Microsoft, tais como as aplicações de outras empresas de software e as suas próprias aplicações de linha de negócio, também podem ser otimizadas para o Rights Management.
 
     As aplicações otimizadas para o Rights Management sabem como abrir ficheiros que foram protegidos por outras aplicações otimizadas para o Rights Management. Além disso, também mantêm a proteção que lhes é aplicada, mesmo que edite o ficheiro ou o guarde com outro nome de ficheiro ou noutra localização. Estas aplicações permitem-lhe utilizar o ficheiro de acordo com as permissões aplicadas atualmente ao mesmo, para que o possa utilizar se tiver permissões para o fazer. Por exemplo, poderá conseguir editar o ficheiro, mas não imprimi-lo.
 
@@ -107,6 +107,6 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

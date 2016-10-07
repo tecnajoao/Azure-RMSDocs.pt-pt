@@ -1,28 +1,28 @@
 ---
-title: "Cenário – Manter o controlo de documentos armazenados no SharePoint | Azure RMS"
-description: "Este cenário e a documentação do utilizador associada utilizam o Azure Rights Management para garantir que os documentos do Office armazenados no SharePoint permanecem sob o seu controlo através da utilização de bibliotecas protegidas."
+title: "Cenário – Manter o controlo de documentos armazenados no SharePoint | Azure Information Protection"
+description: "Este cenário e a documentação do utilizador associada utilizam a proteção do Azure Rights Management para garantir que os documentos do Office armazenados no SharePoint permanecem sob o seu controlo através da utilização de bibliotecas protegidas."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1b6244c7-5ab9-4881-bc8f-6fa960390d89
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: 048eafc41dcd03c708dca5befbef4e4b9e7113c4
+ms.sourcegitcommit: b61b7068e67103c45aea139cf95dacb851fe70e2
+ms.openlocfilehash: e0e6442e077d6899cbbf88ae2889908e93592815
 
 
 ---
 
 # Cenário – Manter o controlo de documentos armazenados no SharePoint
 
->*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Information Protection, Office 365*
 
-Este cenário e a documentação do utilizador associada utilizam o Azure Rights Management para garantir que os documentos do Office armazenados no SharePoint permanecem sob o seu controlo através da utilização de bibliotecas protegidas. Por exemplo, os documentos são automaticamente protegidos contra fugas acidentais ou intencionais por parte dos utilizadores e pode bloquear o acesso ao conteúdo mesmo depois de este ser transferido ou sincronizado. Os ficheiros que pretende proteger podem destinar-se à colaboração interna em documentos ou planos de conceção ou podem ser outros tipos de material a entregar. Quando configura bibliotecas protegidas para o SharePoint, os ficheiros do Office armazenados nas mesmas são protegidos pelo Azure Rights Management.
+Este cenário e a documentação do utilizador associada utilizam a tecnologia Azure Rights Management do Azure Information Protection para garantir que os documentos do Office armazenados no SharePoint permanecem sob o seu controlo através da utilização de bibliotecas protegidas. Por exemplo, os documentos são automaticamente protegidos contra fugas acidentais ou intencionais por parte dos utilizadores e pode bloquear o acesso ao conteúdo mesmo depois de este ser transferido ou sincronizado. Os ficheiros que pretende proteger podem destinar-se à colaboração interna em documentos ou planos de conceção ou podem ser outros tipos de material a entregar. Quando configura bibliotecas protegidas para o SharePoint, os ficheiros do Office armazenados nas mesmas são protegidos pelo Azure Rights Management.
 
 As instruções aplicam-se às seguintes circunstâncias:
 
@@ -42,9 +42,9 @@ Para que este cenário funcione, é necessário que os seguintes aspetos estejam
 
 |Requisito|Se precisar de mais informações|
 |---------------|--------------------------------|
-|Preparou contas e grupos para o Office 365 ou o Azure Active Directory|[Preparar para o Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|O Azure Rights Management está ativado|[Ativar o Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|Se pretender utilizar o SharePoint Server: implemente o conector RMS e configure-o para o SharePoint|[Implementar o conetor Azure Rights Management](https://technet.microsoft.com/library/dn375964.aspx)|
+|Preparou contas e grupos para o Office 365 ou o Azure Active Directory|[Preparação para o Azure Information Protection](../plan-design/prepare.md)|
+|O Azure Rights Management está ativado|[Ativar o Azure Rights Management](../deploy-use/activate-service.md)|
+|Se pretender utilizar o SharePoint Server: implemente o conector RMS e configure-o para o SharePoint|[Implementar o conetor Azure Rights Management](../deploy-use/deploy-rms-connector.md)|
 |Configurar permissões para o site do SharePoint a proteger|[Gerir permissões para uma lista, biblioteca, pasta, documento ou item da lista](https://support.office.com/en-ca/article/Manage-permissions-for-a-list-library-folder-document-or-list-item-9d13e7df-a770-4646-91ab-e3c117fcef45)<br /><br />[Aplicar a Gestão de Direitos de Informação a uma lista ou biblioteca](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
 |Configurar o SharePoint para IRM e bibliotecas protegidas|[Configurar a Gestão de Direitos de Informação (IRM) no centro de administração do SharePoint](https://support.office.com/en-us/article/Set-up-Information-Rights-Management-IRM-in-SharePoint-admin-center-239ce6eb-4e81-42db-bf86-a01362fed65c)<br /><br />[Aplicar a Gestão de Direitos de Informação a uma lista ou biblioteca](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
 
@@ -105,6 +105,6 @@ Não poderá carregar documentos para o site Previsões de Vendas e Relatórios 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

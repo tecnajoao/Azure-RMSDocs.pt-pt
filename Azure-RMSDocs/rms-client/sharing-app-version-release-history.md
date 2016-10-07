@@ -1,28 +1,28 @@
 ---
-title: "Aplicação de partilha Rights Management&colon; histórico de lançamento de versões | Azure RMS"
+title: "Aplicação de partilha Rights Management&colon; histórico de lançamento de versões | Azure Information Protection"
 description: "Veja as novidades ou alterações numa versão da aplicação de partilha Rights Management para Windows."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
-ms.openlocfilehash: 361fde97756c24fa46df6eda16d7506b4b8aaa3a
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 31b9ad27e1fc640f8fec29067794f952aa6031b6
 
 
 ---
 
 # Aplicação de partilha Rights Management: histórico de lançamento de versões
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Rights Management, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
-A equipa do Rights Management atualiza regularmente a aplicação de partilha Rights Management com correções e novas funcionalidades. Utilize as seguintes informações para ver o que há de novo ou o que foi alterado num lançamento. A versão mais atual aparece em primeiro na lista.
+A equipa do Azure Information Protection atualiza regularmente a aplicação de partilha Rights Management com correções e novas funcionalidades. Utilize as seguintes informações para ver o que há de novo ou o que foi alterado num lançamento. A versão mais atual aparece em primeiro na lista.
 
 As versões anteriores a 1 de janeiro de 2015 não estão listadas.
 
@@ -131,6 +131,6 @@ As versões anteriores a 1 de janeiro de 2015 não estão listadas.
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

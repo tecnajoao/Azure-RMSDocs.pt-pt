@@ -1,19 +1,19 @@
 ---
-title: Atualizar modelos | Azure RMS
-description: "Quando utiliza o Azure RMS, os modelos são automaticamente transferidos para computadores cliente para os utilizadores poderem selecioná-los a partir das suas aplicações. No entanto, poderá ter de efetuar passos adicionais se fizer alterações aos modelos."
+title: Atualizar modelos | Azure Information Protection
+description: "Quando utiliza o serviço Azure Rights Management, os modelos são automaticamente transferidos para computadores cliente para os utilizadores poderem selecioná-los a partir das suas aplicações. No entanto, poderá ter de efetuar passos adicionais se fizer alterações aos modelos."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 2339643120b9e9ee24d046bf5620f68fee88b7c9
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: 2870edc314f3ee6f6e3b8937cbe5b653092c5910
 
 
 ---
@@ -21,9 +21,9 @@ ms.openlocfilehash: 2339643120b9e9ee24d046bf5620f68fee88b7c9
 
 # Atualizar modelos para os utilizadores
 
->*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Information Protection, Office 365*
 
-Quando utiliza o Azure RMS, os modelos são automaticamente transferidos para computadores cliente para os utilizadores poderem selecioná-los a partir das suas aplicações. No entanto, poderá ter de efetuar passos adicionais se fizer alterações aos modelos:
+Quando utiliza o serviço Azure Rights Management do Azure Information Protection, os modelos são automaticamente transferidos para computadores cliente para os utilizadores poderem selecioná-los a partir das suas aplicações. No entanto, poderá ter de efetuar passos adicionais se fizer alterações aos modelos:
 
 |Aplicação ou serviço|Como os modelos são atualizados depois das alterações|
 |--------------------------|---------------------------------------------|
@@ -186,6 +186,6 @@ Ao editar o registo nos computadores ao executar o Office 2010, pode definir um 
 [Configurar modelos personalizados para o Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

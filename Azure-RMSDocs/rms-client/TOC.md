@@ -1,10 +1,11 @@
-# [Compreender e Explorar](/rights-management/understand-explore/azure-rights-management)
-# [Introdução](/rights-management/get-started/requirements-azure-rms)
-# [Planear e Estruturar](/rights-management/plan-design/deployment-roadmap)
-# [Implementar e Utilizar o Serviço](/rights-management/deploy-use/activate-service)
+# [Compreender e Explorar](/information-protection/understand-explore/what-is-information-protection)
+# [Introdução](/information-protection/get-started/requirements-azure-rms)
+# [Planear e Estruturar](/information-protection/plan-design/deployment-roadmap)
+# [Implementar e Utilizar o Serviço](/information-protection/deploy-use/activate-service)
 # [Implementar e Utilizar o Cliente](use-client.md)
 ## [Cliente de Gestão de Direitos](use-client.md)
-### [Notas de implementação do Cliente do RMS](client-deployment-notes.md)
+### [Instalar o cliente do Azure Information Protection](info-protect-client.md)
+### [Notas de implementação do cliente RMS](client-deployment-notes.md)
 ### [Proteção RMS com o Windows Server FCI](configure-fci.md)
 #### [Script do PowerShell](fci-script.md)
 ### [Aplicação de partilha Rights Management para Windows](sharing-app-windows.md)
@@ -21,10 +22,9 @@
 ##### [Remover proteção](sharing-app-remove-protection.md)
 ##### [Utilizar atalhos de teclado](sharing-app-keyboard-shortcuts.md)
 ##### [Opções da caixa de diálogo](sharing-app-dialog-box.md)
-# [Desenvolver e Personalizar Aplicações](/rights-management/develop/developers-guide)
-# [Azure Information Protection (pré-visualização)](/rights-management/information-protection/what-is-information-protection)
+# [Desenvolver e Personalizar Aplicações](/information-protection/develop/developers-guide)
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

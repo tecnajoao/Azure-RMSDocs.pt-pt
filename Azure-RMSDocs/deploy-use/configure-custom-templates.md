@@ -1,28 +1,28 @@
 ---
-title: Configurar modelos personalizados para o Azure Rights Management | Azure RMS
+title: "Configurar modelos personalizados para o serviço Azure Rights Management | Azure Information Protection"
 description: "Informações e instruções para os administradores configurarem e gerirem modelos de direitos de utilização. Os modelos permitem aos utilizadores e outros administradores aplicar facilmente políticas a ficheiros confidenciais que restringem o acesso a utilizadores autorizados."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: 4f04a8b892cfb1f1ab62d1810fae172ad8bc9747
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: d8db7f0346fad1b9c46423875d1e559d41987686
 
 
 ---
 
-# Configurar modelos personalizados para o Azure Rights Management
+# Configurar modelos personalizados para o serviço Azure Rights Management
 
->*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Information Protection, Office 365*
 
-Depois de [ativar o Azure Rights Management](activate-service.md) (Azure RMS), os utilizadores podem utilizar automaticamente dois modelos predefinidos que facilitam a aplicação de políticas a ficheiros confidenciais que restringem o acesso aos utilizadores autorizados na sua organização. Estes dois modelos têm as seguintes restrições de política de direitos:
+Quando o serviço Azure Rights Management tiver sido [ativado](activate-service.md), os utilizadores podem utilizar automaticamente dois modelos predefinidos que facilitam a aplicação de políticas de gestão de direitos a ficheiros confidenciais que restringem o acesso aos utilizadores autorizados na sua organização. Estes dois modelos têm as seguintes restrições de política de direitos:
 
 -   Visualização só de leitura dos conteúdos protegidos
 
@@ -66,6 +66,6 @@ Utilize as informações seguintes para configurar e utilizar modelos personaliz
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

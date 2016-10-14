@@ -3,7 +3,7 @@ title: Monitorizar o conector Azure Rights Management | Azure Information Protec
 description: "Informações para ajudá-lo a monitorizar o conector e a utilização da organização do serviço Azure Rights Management do Azure Information Protection."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 954d8b7b62b35f5fdd29e115681d9d5c0da69a86
+ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
+ms.openlocfilehash: af75705e8c256811d1816c2ad52e42e98b4db503
 
 
 ---
@@ -171,7 +171,7 @@ Para informação adicional e instruções, consulte os **Detalhes** e as **Inst
 
 O registo de utilização ajuda-o a identificar quando os e-mails e os documentos são protegidos e consumidos. Quando isto é feito com o conector do RMS, o campo de ID de utilizador nos registos contém o nome do principal do serviço de **Aadrm_S-1-7-0** que é criado automaticamente para o conector do RMS.
 
-Para obter mais informações sobre o registo de utilização, consulte [Registo e análise da utilização do Azure Rights Management](log-analyze-usage.md).
+Para mais informações sobre o registo de utilização, consulte [Registar e analisar a utilização do serviço Azure Rights Management](log-analyze-usage.md).
 
 Se necessitar de registos mais detalhados para fins de diagnóstico, pode utilizar a [Debugview](http://go.microsoft.com/fwlink/?LinkID=309277) a partir do Windows Sysinternals e ativar o rastreio para o conector de RMS, modificando o ficheiro web.config para o site predefinido no IIS. Para efetuar este procedimento:
 
@@ -192,6 +192,6 @@ Se necessitar de registos mais detalhados para fins de diagnóstico, pode utiliz
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

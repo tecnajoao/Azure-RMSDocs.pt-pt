@@ -3,7 +3,7 @@ title: "Como os utilizadores se inscrevem no RMS para indivíduos | Azure Inform
 description: "Instruções de inscrição nesta conta gratuita e informações técnicas sobre o funcionamento deste processo."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2fd29eb6dec94535d0358fe0a2d9c9285fcd7cd1
-ms.openlocfilehash: 362ea0d002e25c830c9e50ac7f1956f1e9ea8bb7
+ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
+ms.openlocfilehash: 093bce2835b0606c127d9bcecab5ec353160833c
 
 
 ---
@@ -83,7 +83,7 @@ Ao longo deste processo, não é cobrado qualquer valor à organização e não 
 
     -   Efetue a deteção de dados eletrónicos nos dados pertencentes à empresa para poder, se necessário, desencriptar ficheiros que foram protegidos através do Rights Management. Para mais informações, consulte [Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados](../deploy-use/configure-super-users.md).
 
-    -   Registe toda a atividade do Rights Management, conforme utilizado na sua organização. Isto é extremamente útil porque não só pode monitorizar os ficheiros que estão a ser protegidos e quem está a aceder a esses ficheiros protegidos com êxito, como também pode identificar comportamentos potencialmente suspeitos de pessoas não autorizadas que estão a tentar aceder a ficheiros protegidos. Para obter mais informações, consulte [Registo e análise da utilização do Azure Rights Management](../deploy-use/log-analyze-usage.md).
+    -   Registe toda a atividade do Rights Management, conforme utilizado na sua organização. Isto é extremamente útil porque não só pode monitorizar os ficheiros que estão a ser protegidos e quem está a aceder a esses ficheiros protegidos com êxito, como também pode identificar comportamentos potencialmente suspeitos de pessoas não autorizadas que estão a tentar aceder a ficheiros protegidos. Para mais informações, consulte [Registar e analisar a utilização do serviço Azure Rights Management](../deploy-use/log-analyze-usage.md).
 
     -   Forneça aos utilizadores a capacidade de controlar e revogar os seus documentos protegidos, se estas funcionalidades forem suportadas pela sua [Subscrição do Azure RMS](https://technet.microsoft.com/dn858608). Para obter mais informações, consulte [Controlar e revogar os ficheiros](../rms-client/sharing-app-track-revoke.md) no [Guia do utilizador da aplicação de partilha RMS](../rms-client/sharing-app-user-guide.md).
 
@@ -97,6 +97,6 @@ Consulte [Como os administradores podem controlar as contas criadas para o RMS p
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

@@ -3,7 +3,7 @@ title: "Preços e restrições de BYOK | Azure Information Protection"
 description: Understand the restrictions when you use customer-managed keys (known as "bring your own key", or BYOK) with Azure RMS.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/03/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 36e392d7e9a2fc8cec0419a3e66f92b42137bc72
-ms.openlocfilehash: 3ed4f3c770c1c34d2bda7481d8ca405c51d3fe8c
+ms.sourcegitcommit: d7dee4efcff4ccf76f08f9033fdaf89daf095d4e
+ms.openlocfilehash: 86e6ebac4ad8c0782fb27344c30ee1d044be33d0
 
 
 ---
@@ -23,9 +23,34 @@ ms.openlocfilehash: 3ed4f3c770c1c34d2bda7481d8ca405c51d3fe8c
 >*Aplica-se a: Azure Information Protection, Office 365*
 
 
-As organizações que tenham uma subscrição que inclua o Azure Rights Management podem utilizar chaves geridas pelo cliente (BYOK) no Cofre de Chaves do Azure e registar a respetiva utilização sem qualquer custo adicional. No entanto, para utilizar o Cofre de Chaves do Azure, é necessário ter uma subscrição do Azure que suporte o Cofre de Chaves com chaves protegidas por HSM. A utilização de uma chave no Cofre de Chaves do Azure implica uma cobrança mensal. Para obter mais informações, veja a [página de Preços do Cofre de Chaves do Azure](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
+As organizações que tenham uma subscrição que inclua o Azure Information Protection podem utilizar chaves geridas pelo cliente (BYOK) no Cofre de Chaves do Azure e [registar a respetiva utilização](../deploy-use/log-analyze-usage.md) sem qualquer custo adicional. 
 
-Se tiver utilizadores que se inscreveram numa conta gratuita utilizando o RMS para indivíduos, não pode utilizar o BYOK nem o registo de utilização porque esta configuração não tem um administrador inquilino para configurar estas funcionalidades.
+No entanto, para utilizar o Cofre de Chaves do Azure, é necessário ter uma subscrição do Azure que suporte o Cofre de Chaves com chaves protegidas por HSM. A utilização de uma chave no Cofre de Chaves do Azure implica uma cobrança mensal. Para obter mais informações, veja a [página de Preços do Cofre de Chaves do Azure](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
+
+Quando utilizar o Cofre de Chaves do Azure para a sua chave de inquilino do Azure Information Protection, recomendamos que tenha um cofre de chaves dedicado para esta chave com uma subscrição dedicada, para garantir que só é utilizada pelo serviço Azure Rights Management. 
+
+## Vantagens de utilizar o Cofre de Chaves do Azure
+
+Além de utilizar o registo de utilização do Azure Information Protection, para uma segurança adicional, pode utilizá-lo como referência cruzada com o [registo do Cofre de Chaves do Azure](https://azure.microsoft.com/documentation/articles/key-vault-logging/) para monitorizar de forma independente e certificar-se de que apenas o serviço Azure Rights Management está a utilizar esta chave. Se for necessário, pode revogar imediatamente o acesso à chave ao remover as permissões no cofre de chaves.
+
+Outras vantagens de utilizar o Cofre de Chaves do Azure para a sua chave de inquilino do Azure Information Protection:
+
+- O Cofre de Chaves do Azure fornece uma solução de gestão de chaves centralizada que proporciona uma solução de gestão consistente para muitos serviços baseados na nuvem e até serviços no local que utilizem encriptação.
+
+- O Cofre de Chaves do Azure suporta diversas interfaces incorporadas para a gestão de chaves, incluindo o PowerShell, a CLI, APIs REST e o portal do Azure. Foram integrados outros serviços e ferramentas com o Cofre de Chaves, para fornecer funcionalidades que sejam otimizadas para tarefas específicas, tais como a monitorização. Por exemplo, pode analisar os registos de utilização da sua chave através do Log Analytics do Operations Management Suite, definir alertas quando os critérios especificados forem correspondidos, entre outras tarefas.
+
+- O Cofre de Chaves do Azure proporciona uma separação de funções, como melhor prática de segurança comprovada. Os administradores do Azure Information Protection podem concentrar-se na gestão da proteção e classificação de dados e os administradores do Cofre de Chaves do Azure podem concentrar-se na gestão de chaves de encriptação e todas as políticas especiais que possam ser necessárias para a segurança ou conformidade.
+
+- Algumas organizações têm restrições relativamente ao local em que a chave mestra tem de ser armazenada. O Cofre de Chaves do Azure fornece um elevado nível de controlo sobre o local onde armazena a chave mestra, uma vez que o serviço se encontra disponível em muitas regiões do Azure. Neste momento, dispõe de 28 regiões à escolha [regiões do Azure e é provável que este número aumente. Para mais informações, consulte a página [Produtos disponíveis por região] (https://azure.microsoft.com/regions/services/) no site do Azure.
+
+Além da gestão de chaves, o Cofre de Chaves do Azure proporciona aos seus administradores de segurança a mesma experiência em gestão para armazenar, aceder e gerir certificados e segredos (por exemplo, palavras-passe) de outros serviços e aplicações que utilizam encriptação. 
+
+Para mais informações sobre o Cofre de Chaves do Azure, consulte [O que é o Cofre de Chaves do Azure?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) e aceda ao [blogue de equipa do Cofre de Chaves do Azure](https://blogs.technet.microsoft.com/kv/) para consultar as informações mais recentes e saber como os outros serviços utilizam esta tecnologia.
+
+
+## Restrições de utilização de BYOK
+
+Se tiver utilizadores que se inscreveram numa conta gratuita através do RMS para indivíduos, não pode utilizar o BYOK nem o registo de utilização porque esta configuração não tem um administrador inquilinos para configurar estas funcionalidades.
 
 
 > [!NOTE]
@@ -62,6 +87,6 @@ Se tiver decidido manter a configuração predefinida, em que a Microsoft gere a
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

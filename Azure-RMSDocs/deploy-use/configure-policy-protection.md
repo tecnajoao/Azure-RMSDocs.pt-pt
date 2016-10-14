@@ -2,15 +2,15 @@
 title: "Como configurar uma etiqueta para aplicar a proteção Rights Management | Azure Information Protection"
 description: "Pode proteger os seus documentos e e-mails mais confidenciais utilizando um serviço de Gestão de Direitos, que utiliza políticas de encriptação, identidade e autorização para ajudar a evitar perda de dados. Esta proteção é aplicada ao configurar uma etiqueta para utilizar um modelo do Rights Management."
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: 762ba3164c717a6c9836c4fdd383cf65ea42eac3
+ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
+ms.openlocfilehash: 830e982fc1f0443545942c1deb1a2fc93431be17
 
 
 ---
@@ -35,7 +35,7 @@ Quando um documento ou correio eletrónico está protegido pelo Azure Rights Man
 
 - A lista de preços atual enviada para os parceiros de negócios não pode ser aberta após uma data especificada.
 
-Para obter mais informações sobre os modelos do Azure Rights Management e como configurar estes direitos e restrições de utilização, veja [Configurar modelos personalizados para o Azure Rights Management](../deploy-use/configure-custom-templates.md).
+Para mais informações sobre os modelos do Azure Rights Management e como configurar estes direitos e restrições de utilização, consulte [Configurar modelos personalizados para o serviço Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
 Para mais informações sobre o Azure Rights Management e para saber como funciona, consulte [O que é o Azure Rights Management?](../understand-explore/what-is-azure-rms.md)
 
@@ -83,6 +83,6 @@ Para mais informações sobre como configurar a política do Azure Information P
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

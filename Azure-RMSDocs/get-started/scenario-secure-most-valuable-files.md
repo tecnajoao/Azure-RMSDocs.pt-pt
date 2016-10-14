@@ -3,7 +3,7 @@ title: "Cenário – Proteger alguns dos seus ficheiros mais importantes | Azure
 description: "Este cenário e a documentação do utilizador associada utilizam o Azure Rights Management para proteger de forma manual e personalizada alguns ficheiros que tenha identificado como sendo os mais importantes e que requerem o mais elevado nível de proteção contra acesso não autorizado."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea299f402e5e188b498bf6e3cacf9d4dc7e0f6e8
-ms.openlocfilehash: 2001b13c15ebfd1c1f939d342ac2a7006c18c0f8
+ms.sourcegitcommit: 0f5c138b7a27c7577e5bff23d521ba36264ecc2a
+ms.openlocfilehash: 6687ed42bca5e773d6bbc97285f12e3c91ff9f32
 
 
 ---
@@ -53,7 +53,7 @@ Para este cenário, é necessário que os seguintes aspetos estejam implementado
 |Configurou um modelo personalizado, tal como descrito a seguir|[Configurar modelos personalizados para o serviço Azure Rights Management](../deploy-use/configure-custom-templates.md)|
 |A aplicação de partilha Rights Management está implementada no seu computador Windows, para que possa proteger estes ficheiros no local, conforme descrito na secção seguinte|[Transferir e instalar a aplicação de partilha Rights Management](../rms-client/install-sharing-app.md)|
 |Os utilizadores autorizados têm o Office 2013 como a versão mínima|Se os utilizadores tiverem o Office 2010, também têm de instalar a aplicação de partilha Rights Management.|
-|A subscrição do Azure RMS inclui o controlo de documentos|Se a sua subscrição do Azure RMS não incluir o controlo de documentos e a revogação, não poderá utilizar o site de controlo de documentos para ver quem está a aceder a estes documentos e revogar o acesso, se necessário. Neste caso, compre uma subscrição que suporte o controlo de documentos ou aceite esta limitação. Também poderá considerar as capacidades de [registo de utilização](../deploy-use/log-analyze-usage.md) do Azure RMS, que podem fornecer informações tais como quem acedeu a cada ficheiro e quando o fez, para o ajudar a detetar um potencial comportamento suspeito.<br /><br />Consulte as informações de subscrição do Azure Information Protection na [Página de preços](https://go.microsoft.com/fwlink/?LinkId=827589) do Azure Information Protection.|
+|A sua subscrição do Azure Information Protection inclui controlo de documentos|Se a sua subscrição não incluir a revogação e o controlo de documentos, não poderá utilizar o site de controlo de documentos para ver quem está a aceder a estes documentos e revogar o acesso, se necessário. Neste caso, compre uma subscrição que suporte o controlo de documentos ou aceite esta limitação. Também poderá considerar as funcionalidades de [registo de utilização](../deploy-use/log-analyze-usage.md) do serviço Azure Rights Management, que podem fornecer informações tais como quem acedeu a cada ficheiro e quando o fez, para o ajudar a detetar um potencial comportamento suspeito.<br /><br />Consulte a [lista de funcionalidades](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) no site do Azure Information Protection.|
 
 ### Para configurar o modelo personalizado
 
@@ -147,6 +147,6 @@ Os ficheiros seguintes estão agora sujeitos a um nível muito elevado de prote�
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

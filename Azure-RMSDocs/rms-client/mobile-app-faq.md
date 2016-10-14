@@ -4,7 +4,7 @@ description:
 keywords: "Algumas perguntas mais frequentes para o ajudar a utilizar a aplicação Azure Information Protection para iOS e Android"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ac04af3b503bb7bb1d3c9f4bcee4aff163d73314
-ms.openlocfilehash: 42368b8ee50acf09c6af45182ace1f159a4e5f02
+ms.sourcegitcommit: fd11b55ec8ee11f594c33a5a46694d83b2db6953
+ms.openlocfilehash: ff2b28d9774682abbe77b484b097ea51709a3234
 
 
 ---
@@ -27,7 +27,7 @@ Esta página fornece respostas às perguntas mais frequentes sobre a aplicação
 
 ## O que posso fazer com a aplicação Azure Information Protection?
 
-Esta aplicação permite-lhe ver (mas não responder ou criar novas) mensagens de e-mail protegidas por direitos (ficheiros .rpmsg). Esta aplicação também lhe permite ver (mas não editar ou criar novos) ficheiros PDF protegidos por direitos, imagens, ficheiros de texto e qualquer outro formato de ficheiro protegido como .pfile. 
+Esta aplicação permite-lhe ver mensagens de e-mail protegidas por direitos (ficheiros .rpmsg). Esta aplicação permite-lhe ver ficheiros PDF, imagens, ficheiros de texto e outros formatos de ficheiro protegidos por direitos como .pfile. Atualmente, não pode utilizar esta aplicação para criar ou responder a mensagens de e-mail protegidas, nem para criar ou editar ficheiros protegidos.
 
 ## Posso abrir ficheiros PDF em bibliotecas protegidas do SharePoint e no OneDrive para Empresas?
 
@@ -64,6 +64,6 @@ Publique a sua pergunta no nosso [site do Yammer](http://www.yammer.com/AskIPTea
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

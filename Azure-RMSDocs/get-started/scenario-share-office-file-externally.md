@@ -3,7 +3,7 @@ title: "Cenário – Partilhar um ficheiro do Office com utilizadores noutra org
 description: "Este cenário e a documentação do utilizador associada utilizam a proteção Azure Rights Management para que os utilizadores possam enviar em segurança um ficheiro do Office por e-mail para pessoas noutra organização."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 03bd68b03d423908e7fbe89efb6aac6773283f2f
-ms.openlocfilehash: 1e8ba22c5fdcf3f17b3cec0a99444975c03ec008
+ms.sourcegitcommit: 0f5c138b7a27c7577e5bff23d521ba36264ecc2a
+ms.openlocfilehash: 2a03ae13b269b1a7352dd81fea52fc68bed17d99
 
 
 ---
@@ -48,7 +48,7 @@ Para que as instruções de utilizador para este cenário funcionem, é necessá
 |O Azure Rights Management está ativado|[Ativar o Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |A aplicação de partilha Rights Management está implementada nos computadores dos utilizadores que executam o Windows|[Implementação automática da aplicação de partilha Microsoft Rights Management](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 |Os utilizadores têm o Outlook do Office 2013|Se os utilizadores tiverem o Office 2016 ou o Office 2010, substitua a captura de ecrã por uma versão equivalente para que a imagem corresponda ao que os utilizadores veem.|
-|A sua subscrição do Azure Information Protection inclui controlo de documentos|Se a sua subscrição não incluir o controlo de documentos e a revogação, os utilizadores não conseguirão concluir todos os passos nas instruções de utilizador. Neste caso, compre uma subscrição que suporte estas funcionalidades ou modifique as instruções de utilizador para remover os passos que as utilizam.<br /><br />Consulte as informações de subscrição do Azure Information Protection na [Página de preços](https://go.microsoft.com/fwlink/?LinkId=827589) do Azure Information Protection.|
+|A sua subscrição do Azure Information Protection inclui controlo de documentos|Se a sua subscrição não incluir o controlo de documentos e a revogação, os utilizadores não conseguirão concluir todos os passos nas instruções de utilizador. Neste caso, compre uma subscrição que suporte estas funcionalidades ou modifique as instruções de utilizador para remover os passos que as utilizam.<br /><br />Consulte a [lista de funcionalidades](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) no site do Azure Information Protection.|
 
 ## Instruções da documentação do utilizador
 Utilizando o modelo seguinte, copie e cole as instruções de utilizador numa comunicação destinada aos utilizadores finais e efetue estas alterações para refletir o seu ambiente:
@@ -154,6 +154,6 @@ Utilize o [portal de controlo de documentos](https://track.azurerms.com/) para c
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

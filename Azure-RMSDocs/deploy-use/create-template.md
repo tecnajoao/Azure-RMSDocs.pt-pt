@@ -3,7 +3,7 @@ title: Criar, configurar e publicar um modelo personalizado | Azure Information 
 description: "Instruções para criar e gerir modelos personalizados no portal clássico do Azure. Os modelos facilitam a aplicação de políticas adequadas para proteger documentos e e-mails por parte de utilizadores finais e outros administradores."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/03/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 30cd611e128217b2760e66b3391a0702ae0ed7a6
+ms.sourcegitcommit: d205e63bdd8819177493837296259c5400a76503
+ms.openlocfilehash: 906bc1e97947cf32b102fdf484b86bc30b9a383d
 
 
 ---
@@ -68,11 +68,13 @@ Utilize os seguintes procedimentos para criar, configurar e publicar modelos per
 
     -   No portal clássico do Azure, a partir da página de início rápido **Introdução ao Rights Management**, clique em **Criar um novo modelo de política de direitos**.
 
-        Se não vir logo esta página depois de seguir as instruções do Office 365, utilize as instruções de navegação acima, para o portal clássico do Azure.
+        Se não vir logo esta página depois de seguir as instruções do Office 365, utilize as instruções de navegação acima para aceder ao portal clássico do Azure.
 
-3.  Na página **Adicionar um novo modelo de política de direitos**, selecione o idioma no qual irá escrever o nome do modelo e a descrição que será vista pelos utilizadores (pode adicionar mais idiomas posteriormente). Em seguida, escreva um nome exclusivo e uma descrição e clique no botão Concluir.
+3. Na página **Adicionar um novo modelo de política de direitos**, selecione o idioma no qual irá escrever o nome do modelo e a descrição que será vista pelos utilizadores (pode adicionar mais idiomas posteriormente). Em seguida, escreva um nome exclusivo e uma descrição e clique no botão Concluir.
 
-Na página de início rápido **Introdução ao Rights Management**, clique em **Gerir modelos de política de direitos**. Verá o modelo criado recentemente adicionado à lista de modelos, com o estado **Arquivado**. Nesta fase, o modelo é criado mas não é configurado nem é visível para os utilizadores.
+    Não inclua uma vírgula ou ponto e vírgula no nome ou descrição do seu modelo. Nem todos os serviços e aplicações que utilizam modelos do Rights Management conseguem suportar estes carateres para estes modelos. Neste cenário, estes serviços e aplicações poderão não conseguir obter ou utilizar estes modelos do Azure Rights Management.
+
+4. Na página de início rápido **Introdução ao Rights Management**, clique em **Gerir modelos de política de direitos**. Verá o modelo criado recentemente adicionado à lista de modelos, com o estado **Arquivado**. Nesta fase, o modelo é criado mas não é configurado nem é visível para os utilizadores.
 
 ## Para configurar e publicar um modelo personalizado
 
@@ -166,6 +168,6 @@ Para fazer alterações ao seu modelo, selecione-o e, em seguida, utilize os pas
 [Configurar modelos personalizados para o Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

@@ -1,28 +1,27 @@
 ---
-title: O Que Veem os Administradores e Utilizadores? | Azure RMS
-description: 
-keywords: 
+title: O Que Veem os Administradores e Utilizadores? | Azure Information Protection
+description: "Veja alguns exemplos típicos de como os administradores e utilizadores veem e podem utilizar a tecnologia Azure Rights Management (Azure RMS) para ajudar a proteger as informações confidenciais."
 author: cabailey
 manager: mbaldwin
-ms.date: 06/28/2016
+ms.date: 10/05/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 013e0eb4-49a7-4e81-9e4d-f56c0ceb017f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7a9c8b531ec342e7d5daf0cbcacd6597a79e6a55
-ms.openlocfilehash: 213d077a65abd5115b7e0491dfc9cd8145752b23
+ms.sourcegitcommit: 4a6d07e9a24293f054915b5598c63e118c9c1430
+ms.openlocfilehash: 4cc2522a03d1d6003d60e9c87fb8bab3c1454df4
 
 
 ---
 
 
-# O Azure RMS em ação: o que veem os administradores e utilizadores
+# O Azure RMS em ação: conteúdo visto pelos administradores e utilizadores
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Information Protection, Office 365*
 
 Este artigo mostra alguns exemplos típicos de como os administradores e utilizadores veem e podem utilizar o Azure Rights Management (Azure RMS) para ajudar a proteger as informações confidenciais.
 
@@ -74,9 +73,9 @@ Se não quiser que estes modelos sejam apresentados aos utilizadores ou preferir
 
 **Para mais informações relativas a este cenário:**
 
-- Para obter instruções passo a passo, consulte [Activating Azure Rights Management (Ativar o Azure Rights Management – em inglês)](../deploy-use/activate-service.md) e [Configuring custom templates for Azure Rights Management (Configurar modelos personalizados para o Azure Rights Management – em inglês)](../deploy-use/configure-custom-templates.md).
+- Para obter instruções passo a passo, consulte [Ativar o Azure Rights Management](../deploy-use/activate-service.md) e [Configurar modelos personalizados para o serviço Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
-- Para ajudar os utilizadores a proteger ficheiros importantes da empresa, consulte [Helping users to protect files by using Azure Rights Management (Ajudar os utilizadores a proteger ficheiros com o Azure Rights Management – em inglês)](../deploy-use/help-users.md).
+- Para ajudar os utilizadores a proteger ficheiros importantes da empresa, consulte [Ajudar os utilizadores a proteger ficheiros com o serviço Azure Rights Management](../deploy-use/help-users.md).
 
 Em seguida, veja alguns exemplos que ilustram a forma como os administradores podem aplicar os modelos para configurar automaticamente a proteção de informações de ficheiros e mensagens de e-mail.
 
@@ -150,7 +149,7 @@ A mensagem de e-mail é encriptada quando sai da infraestrutura da organização
 
 **Para mais informações relativas a este cenário:**
 
--   Para mais informações sobre a interação do Azure RMS com o Exchange Online, consulte a secção [Exchange Online e Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server) em [How applications support Azure Rights Managemen (Como é que as aplicações suportam o Azure Rights Management – em inglês)](applications-support.md).
+-   Para mais informações sobre a interação do Azure RMS com o Exchange Online, consulte a secção [Exchange Online e Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server) em [Como as aplicações suportam o serviço Azure Rights Management](applications-support.md).
 
 -   Para obter instruções passo a passo com vista à configuração do Exchange Online para o Azure RMS, consulte a secção [Exchange Online: IRM Configuration (Exchange Online: Configuração da IRM – em inglês)](../deploy-use/configure-office365.md#exchange-online-irm-configuration) em [Configuring applications for Azure Rights Management (Configurar aplicações para o Azure Rights Management – em inglês)](../deploy-use/configure-applications.md).
 
@@ -184,7 +183,7 @@ O documento permanece protegido mesmo que o utilizador lhe mude o nome, o guarde
 
 **Para mais informações relativas a este cenário:**
 
--   Para mais informações sobre a interação do Azure RMS com o SharePoint, consulte a secção [SharePoint Online and SharePoint Server (SharePoint Online e SharePoint Server – em inglês)](office-apps-services-support.md#sharepoint-online-and-sharepoint-server) em [How applications support Azure Rights Management (Como é que as aplicações suportam o Azure Rights Management – em inglês)](applications-support.md).
+-   Para mais informações sobre a interação do Azure RMS com o SharePoint, consulte a secção [SharePoint Online e SharePoint Server](office-apps-services-support.md#sharepoint-online-and-sharepoint-server) em [Como as aplicações suportam o serviço Azure Rights Management](applications-support.md).
 
 -   Para obter instruções passo a passo com vista à configuração do SharePoint para o Azure RMS, consulte a secção [SharePoint Online and OneDrive for Business: IRM Configuration (SharePoint Online e OneDrive para Empresas: Configuração da IRM – em inglês)](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) em [Configuring Applications for Azure Rights Management (Configurar Aplicações para o Azure Rights Management – em inglês)](../deploy-use/configure-applications.md).
 
@@ -242,6 +241,6 @@ Agora que viu alguns exemplos das capacidades do Azure RMS, poderá estar intere
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

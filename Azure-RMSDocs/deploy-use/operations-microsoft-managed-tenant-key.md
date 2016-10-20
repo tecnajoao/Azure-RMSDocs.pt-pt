@@ -1,20 +1,19 @@
 ---
-title: "Operações de ciclo de vida das chaves de inquilino – geridas pela Microsoft | Azure RMS"
-description: 
-keywords: 
+title: "Operações de ciclo de vida das chaves de inquilino geridas pela Microsoft | Azure Information Protection"
+description: "Informações sobre as operações de ciclo de vida relevantes se a Microsoft gerir a sua chave de inquilino do Azure Information Protection (a predefinição)."
 author: cabailey
 manager: mbaldwin
-ms.date: 06/14/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7a9c8b531ec342e7d5daf0cbcacd6597a79e6a55
-ms.openlocfilehash: feb41356a2ef074679e60ce4bb7b1d6ee910371c
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: 9c2a7d9e65dc860e0bd90789a412a8ef46f946ad
 
 
 ---
@@ -22,41 +21,41 @@ ms.openlocfilehash: feb41356a2ef074679e60ce4bb7b1d6ee910371c
 
 # Operações de ciclo de vida das chaves de inquilino: geridas pela Microsoft
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Information Protection, Office 365*
 
-Se a Microsoft gerir a sua chave de inquilino para o Azure Rights Management (a predefinição), utilize as secções seguintes para obter mais informações sobre as operações de ciclo de vida que são relevantes para esta topologia.
+Se a Microsoft gerir a sua chave de inquilino para o Azure Information Protection (a predefinição), utilize as secções seguintes para obter mais informações sobre as operações de ciclo de vida que são relevantes para esta topologia.
 
 ## Revogar a chave de inquilino
-Quando anular a subscrição do Azure RMS, o Azure RMS deixa de utilizar a chave de inquilino e não é necessária qualquer ação por parte do utilizador.
+Quando cancelar a sua subscrição do Azure Information Protection, o Azure Information Protection deixará de utilizar a sua chave de inquilino e não será necessário que faça mais nada.
 
-## Efetuar o rechaveamento da chave de inquilino
-O rechaveamento também é conhecido como implementar a chave. Não efetue o rechaveamento da chave de inquilino, a menos que seja realmente necessário. Os clientes antigos, tal como o Office 2010, não foram concebidos para processar alterações de chave corretamente. Neste cenário, tem de limpar o estado do RMS nos computadores utilizando a Política de Grupo ou um mecanismo equivalente. No entanto, existem alguns eventos legítimos que poderão forçá-lo a efetuar o rechaveamento da chave de inquilino. Por exemplo:
+## Efetuar a recodificação da chave de inquilino
+A recodificação também é conhecida como implementação da chave. Não efetue a recodificação da chave de inquilino, a menos que seja realmente necessário. Os clientes antigos, tal como o Office 2010, não foram concebidos para processar alterações de chave corretamente. Neste cenário, tem de limpar o estado do Rights Management nos computadores através da Política de Grupo ou um mecanismo equivalente. No entanto, existem alguns eventos legítimos que poderão forçá-lo a efetuar a recodificação da chave de inquilino. Por exemplo:
 
--   A sua empresa foi dividida em duas ou mais empresas. Quando efetua o rechaveamento da chave de inquilino, a nova empresa não terá acesso ao conteúdo novo que os seus funcionários publicam. Estes podem aceder ao conteúdo antigo se tiverem uma cópia da chave de inquilino antiga.
+-   A sua empresa foi dividida em duas ou mais empresas. Quando efetua a recodificação da chave de inquilino, a nova empresa não terá acesso ao conteúdo novo que os seus funcionários publicam. Estes podem aceder ao conteúdo antigo se tiverem uma cópia da chave de inquilino antiga.
 
 -   Considera que a cópia principal da sua chave de inquilino (a cópia na sua posse) foi comprometida.
 
-Pode executar o rechaveamento da chave do inquilino [contactando o Suporte da Microsoft](../get-started/information-support.md#to-contact-microsoft-support) para abrir um **caso de suporte do Azure Rights Management com um pedido de rechaveamento da chave de inquilino do Azure RMS**. Tem de provar que é um administrador do inquilino do Azure RMS e compreender que este processo demorará alguns dias a ser confirmado. São aplicáveis encargos de suporte padrão; o rechaveamento da chave de inquilino não é um serviço de suporte gratuito.
+Pode executar a recodificação da chave do inquilino ao [contactar o Suporte da Microsoft](../get-started/information-support.md#to-contact-microsoft-support) para abrir um **processo de suporte do Azure Information Protection com um pedido de recodificação da chave de inquilino do Azure Information Protection**. Tem de provar que é um administrador do inquilino do Azure Information Protection e compreender que este processo demorará vários dias a ser confirmado. São aplicáveis encargos de suporte padrão; a recodificação da chave de inquilino não é um serviço de suporte gratuito.
 
-Quando efetua o rechaveamento da chave de inquilino, o novo conteúdo é protegido através da utilização da nova chave de inquilino. Isto acontece de forma faseada, pelo que, durante um período de tempo, algum conteúdo novo irá continuar a ser protegido com a chave de inquilino antiga. O conteúdo previamente protegido permanece protegido para a sua chave de inquilino antiga. Para suportar este cenário, o Azure RMS retém a chave de inquilino antiga para poder emitir licenças para o conteúdo antigo.
+Quando efetua a recodificação da chave de inquilino, o novo conteúdo é protegido através da utilização da nova chave de inquilino. Isto acontece de forma faseada, pelo que, durante um período de tempo, algum conteúdo novo irá continuar a ser protegido com a chave de inquilino antiga. O conteúdo previamente protegido permanece protegido para a sua chave de inquilino antiga. Para suportar este cenário, o Azure Information Protection retém a chave de inquilino antiga para poder emitir licenças para os antigos conteúdos.
 
 ## Efetuar cópia de segurança e recuperar a chave de inquilino
 A Microsoft é responsável pela cópia de segurança da sua chave de inquilino e não é necessária qualquer ação da sua parte.
 
 ## Exportar a chave de inquilino
-Pode exportar a configuração do Azure RMS e a chave de inquilino ao seguir as instruções nestes três passos:
+Pode exportar a configuração do Azure Information Protection e a chave de inquilino ao seguir as instruções nestes três passos:
 
 ### Passo 1: iniciar a exportação
 
--   Para tal, [contacte o Suporte da Microsoft](../get-started/information-support.md#to-contact-microsoft-support) para abrir um **Incidente de suporte do Azure Rights Management com um pedido de exportação de chave do Azure RMS**. Tem de provar que é um administrador do inquilino do Azure RMS e compreender que este processo demorará alguns dias a ser confirmado. São aplicáveis encargos de suporte padrão; a exportação da chave do inquilino não é um serviço de suporte gratuito.
+-   Para tal, [contacte o Suporte da Microsoft](../get-started/information-support.md#to-contact-microsoft-support) para abrir um **processo de suporte do Azure Information Protection com um pedido de exportação de chave do Azure Information Protection**. Tem de provar que é um administrador do inquilino do Azure Information Protection e compreender que este processo demorará vários dias a ser confirmado. São aplicáveis encargos de suporte padrão; a exportação da chave do inquilino não é um serviço de suporte gratuito.
 
 ### Passo 2: aguardar pela verificação
 
--   A Microsoft verifica se o seu pedido para libertar a chave de inquilino do RMS é legítimo. Este processo pode demorar até 3 semanas.
+-   A Microsoft verifica se o seu pedido para libertar a chave de inquilino do Azure Information Protection é legítimo. Este processo pode demorar até 3 semanas.
 
 ### Passo 3: receber instruções relativamente à chave do CSS
 
--   O Suporte ao Cliente da Microsoft (CSS) enviar-lhe-á a configuração do Azure RMS e a chave de inquilino encriptadas num ficheiro protegido por palavra-passe que tem uma extensão de nome de ficheiro .tpd. Para o fazer, o CSS primeiro envia-lhe (como a pessoa que iniciou a exportação) uma ferramenta por e-mail. Tem de executar a ferramenta numa linha de comandos da seguinte forma:
+-   O Suporte ao Cliente da Microsoft (CSS) enviar-lhe-á a configuração do Azure Information Protection e a chave de inquilino encriptadas num ficheiro protegido por palavra-passe que tem uma extensão de nome de ficheiro .tpd. Para o fazer, o CSS primeiro envia-lhe (como a pessoa que iniciou a exportação) uma ferramenta por e-mail. Tem de executar a ferramenta numa linha de comandos da seguinte forma:
 
     ```
     AadrmTpd.exe -createkey
@@ -78,27 +77,27 @@ Pode exportar a configuração do Azure RMS e a chave de inquilino ao seguir as 
 
 ### Passo 4: em curso: proteger a chave de inquilino
 
--   Depois de receber a chave de inquilino, mantenha-a bem protegida, uma vez que se alguém obter acesso à mesma, pode desencriptar todos os documentos que estão protegidos através dessa chave.
+-   Depois de receber a chave de inquilino, mantenha-a bem protegida, uma vez que se alguém obtiver acesso à mesma, pode desencriptar todos os documentos que estão protegidos através dessa chave.
 
-    Se o motivo para exportar a chave de inquilino se prender com facto de não pretender utilizar mais o Azure RMS, como melhor prática, desative o inquilino do RMS. Não adie esta ação depois de receber a sua chave de inquilino porque esta precaução ajuda a minimizar as consequências se a sua chave de inquilino for acedida por alguém que não a deve ter. Para obter mais informações, consulte [Desativar o Azure Rights Management](decommission-deactivate.md).
+    Se o motivo para exportar sua a chave do inquilino for o facto de já não querer utilizar o Azure Information Protection, uma boa prática é desativar o serviço Azure Rights Management do inquilino do Azure Information Protection. Não adie esta ação depois de receber a sua chave de inquilino porque esta precaução ajuda a minimizar as consequências se a sua chave de inquilino for acedida por alguém que não a deve ter. Para obter mais informações, consulte [Desativar o Azure Rights Management](decommission-deactivate.md).
 
 ## Responder a uma violação
 Nenhum sistema de segurança, por mais forte que seja, está completo sem um processo de resposta a violações. A sua chave de inquilino pode estar comprometida ou ter sido roubada. Mesmo quando está bem protegida, podem existir vulnerabilidades na tecnologia HSM da geração atual ou nos algoritmos e comprimentos de chaves atuais.
 
-A Microsoft tem uma equipa dedicada para responder a incidentes de segurança nos seus produtos e serviços. Assim que existir um relatório credível de um incidente, esta equipa investiga o âmbito, a causa raiz e as resoluções. Se este incidente afetar os recursos, a Microsoft irá notificar os administradores de inquilinos do Azure RMS por e-mail utilizando o endereço que especificou aquando da subscrição.
+A Microsoft tem uma equipa dedicada para responder a incidentes de segurança nos seus produtos e serviços. Assim que existir um relatório credível de um incidente, esta equipa investiga o âmbito, a causa raiz e as resoluções. Se este incidente afetar os seus recursos, a Microsoft irá notificar os administradores de inquilinos do Azure Information Protection por e-mail através do endereço que especificou aquando da subscrição.
 
 Se ocorrer uma violação, a melhor ação que o utilizador ou a Microsoft pode efetuar depende do âmbito da violação; a Microsoft irá trabalhar consigo ao longo deste processo. A tabela seguinte mostra algumas situações típicas e a resposta provável, embora a resposta exata dependa de todas as informações que são reveladas durante a investigação.
 
 |Descrição do incidente|Resposta provável|
 |------------------------|-------------------|
-|Ocorreu uma fuga da chave de inquilino.|Efetue o rechaveamento da chave de inquilino. Consulte a secção [Efetuar o rechaveamento da chave de inquilino](operations-microsoft-managed-tenant-key.md#re-key-your-tenant-key) neste artigo.|
-|Um indivíduo não autorizado ou um software maligno obteve direitos para utilizar a sua chave de inquilino, mas não houve uma fuga da própria chave.|Efetuar o rechaveamento da chave de inquilino não ajuda neste caso e requer a análise da causa raiz. Se um erro no processo ou software tiver sido responsável pelo acesso que o indivíduo não autorizado obteve, essa situação tem de ser resolvida.|
-|Foi detetada uma vulnerabilidade no algoritmo RSA, ou no comprimento da chave, ou ataques de força bruta tornaram-se exequíveis a nível informático.|A Microsoft tem de atualizar o Azure RMS para suportar os novos algoritmos e maiores comprimentos de chaves para serem resilientes e instruir todos os clientes a renovarem as respetivas chaves de inquilino.|
+|Ocorreu uma fuga da chave de inquilino.|Efetue a recodificação da chave de inquilino. Consulte a secção [Efetuar a recodificação da chave de inquilino](operations-microsoft-managed-tenant-key.md#re-key-your-tenant-key) neste artigo.|
+|Um indivíduo não autorizado ou um software maligno obteve direitos para utilizar a sua chave de inquilino, mas não houve uma fuga da própria chave.|Efetuar a recodificação da chave de inquilino não ajuda neste caso e requer a análise da causa raiz. Se um erro no processo ou software tiver sido responsável pelo acesso que o indivíduo não autorizado obteve, essa situação tem de ser resolvida.|
+|Foi detetada uma vulnerabilidade no algoritmo RSA, ou no comprimento da chave, ou ataques de força bruta tornaram-se exequíveis a nível informático.|A Microsoft tem de atualizar o Azure Information Protection para suportar os novos algoritmos e maiores comprimentos de chaves para serem resilientes e instruir todos os clientes a renovarem as respetivas chaves de inquilino.|
 
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

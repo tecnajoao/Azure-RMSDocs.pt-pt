@@ -4,18 +4,18 @@ description: "Este tópico descreve e serve de orientação nas opções de impl
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 982021a2e972023b04e6483348a7c27aa029e198
-ms.openlocfilehash: 8308e2db84e13c6b8c85a1a3ae6c01fc0aabee75
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: e47c5331f49c62a00617f40b1af7ffdc4a89dcfd
 
 
 ---
@@ -28,10 +28,6 @@ Este tópico descreve e serve de orientação nas opções de implementação da
 ## Pedir um Contrato de Licença de Produção
 
  Para lançar uma aplicação desenvolvida utilizando o SDK Rights Management Services 2.1, tem de solicitar um Contrato de Licença de Produção para obter um certificado de produção.
-
-> [!IMPORTANT]
-> Se executar a aplicação cliente com o RMS baseado no Azure, terá de solicitar os seus próprios inquilinos. Para mais informações, consulte [Requisitos do Azure RMS: Subscrições na nuvem que suportam o Azure RMS](../get-started/requirements-subscriptions.md).
-> Para obter mais informações sobre a execução com o Azure RMS, consulte [Permitir que a aplicação do serviço funcione com o RMS baseado na nuvem](how-to-use-file-api-with-aadrm-cloud.md).
 
 Pode obter o certificado ao solicitar um Contrato de Licença de Produção.
 
@@ -116,7 +112,8 @@ Para o utilizador final tirar partido dos serviços de Gestão de Direitos do Az
 
 
 > [!IMPORTANT]
-> Executar a aplicação de cliente SDK RMS 2.1 com o Azure RMS exige a criação dos seus próprios inquilinos. Para mais informações, consulte [Requisitos do Azure RMS: Subscrições na nuvem que suportam o Azure RMS](../get-started/requirements-subscriptions.md).
+> Se executar a aplicação cliente com o RMS baseado no Azure, terá de solicitar os seus próprios inquilinos. Para mais informações, consulte [Requisitos do Azure RMS: Subscrições na nuvem que suportam o Azure RMS](../get-started/requirements-subscriptions.md).
+> Para obter mais informações sobre a execução com o Azure RMS, consulte [Permitir que a aplicação do serviço funcione com o RMS baseado na nuvem](how-to-use-file-api-with-aadrm-cloud.md).
 
 -   Transfira o [Assistente de Início de Sessão do Microsoft Online Services](http://www.microsoft.com/en-us/download/details.aspx?id=28177) do Centro de Transferências da Microsoft.
 -   Certifique-se de que a implementação de uma aplicação com capacidade para direitos inclui uma verificação de pré-requisitos para esta seleção de serviço.
@@ -135,6 +132,6 @@ Para obter mais informações sobre como permitir que a aplicação utilize o RM
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Oct16_HO1-->
 
 

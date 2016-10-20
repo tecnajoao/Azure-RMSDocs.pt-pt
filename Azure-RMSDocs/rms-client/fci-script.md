@@ -1,27 +1,26 @@
 ---
-title: "Script do Windows PowerShell para a proteção Azure RMS através do Gestor de Recursos do Servidor de Ficheiros (FCI) | Azure RMS"
-description: 
-keywords: 
+title: "Script do Windows PowerShell para a proteção Azure RMS através do Gestor de Recursos do Servidor de Ficheiros (FCI) | Azure Information Protection"
+description: "Script de amostra para copiar e editar, conforme descrito nas instruções de proteção RMS com Infraestrutura de Classificação de Ficheiros do Windows Server."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae6d8d0f-4ebc-43fe-a1f6-26b690fd83d0
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: a1771c37bffa2af60773a5befdd35c14f684c942
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: a857fd1b4f6779f6647ab122366122dbfbda7c33
 
 
 ---
 
 # Script do Windows PowerShell para a proteção Azure RMS através do Gestor de Recursos do Servidor de Ficheiros (FCI)
 
-*Aplica-se a: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*Aplica-se a: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
 
 Esta página contém o script de amostra para copiar e editar, conforme descrito em [Proteção RMS com Infraestrutura de Classificação de Ficheiros do Windows Server](configure-fci.md).
 
@@ -31,9 +30,9 @@ Esta página contém o script de amostra para copiar e editar, conforme descrito
 ```
 <#
 .SYNOPSIS 
-     Helper script to protect all file types with Azure RMS and FCI.
+     Helper script to protect all file types using the Azure Rights Management service and FCI.
 .DESCRIPTION
-     Protect files with Azure RMS and Windows Server FCI, using an RMS template ID.   
+     Protect files with the Azure Rights Management service and Windows Server FCI, using an RMS template ID.   
 #>
 param(
             [Parameter(Mandatory = $false)]
@@ -175,6 +174,6 @@ Volte à [Proteção RMS com Infraestrutura de Classificação de Ficheiros do W
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

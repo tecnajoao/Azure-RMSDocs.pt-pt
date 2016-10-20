@@ -1,27 +1,26 @@
 ---
-title: "Transferir e instalar a aplicação de partilha Rights Management | Azure RMS"
-description: 
-keywords: 
+title: "Transferir e instalar a aplicação de partilha Rights Management | Azure Information Protection"
+description: "Instruções para instalar interativamente a aplicação de partilha RMS para Windows, para que possa partilhar documentos com outras pessoas de forma segura."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
-ms.openlocfilehash: 5ec740b4de63c90c9713916dcf104316e727498b
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: c705bfec85bb93cb03d7e3edc9f3ce5949a8b61d
 
 
 ---
 
 # Transferir e instalar a aplicação de partilha Rights Management
 
-*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Rights Management, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 Não é necessário ser um administrador local para instalar a aplicação de partilha RMS. No entanto, se não for e utilizar o Office 2010, existem algumas limitações. Para obter mais informações, consulte a secção [Se não for um administrador local e utilizar o Office 2010](#if-you-are-not-a-local-administrator-and-use-office-2010) nesta página.
 
@@ -45,13 +44,13 @@ Agora, está pronto para começar a proteger os ficheiros ou ler ficheiros que o
 ## Se não for um administrador local e utilizar o Office 2010
 Se iniciar sessão no computador e não tiver direitos administrativos locais e a Configuração detetar que tem o Office 2010 instalado, verá uma mensagem de aviso a indicar que alguns cenários não funcionarão com esta configuração. Os cenários são:
 
--   Se a sua organização utilizar o Azure RMS em vez de uma versão no local do RMS:
+-   Se a sua organização utiliza o serviço Azure Rights Management do Azure Information Protection em vez de uma versão no local do Rights Management:
 
     -   As funcionalidades da Gestão de Direitos de Informação (IRM) do Office não estarão disponíveis. Por exemplo, a opção **Não Reencaminhar** para e-mails e as permissões **Restringir Acesso** que pode definir no menu **Ficheiro** no Word e Excel. Pode utilizar a opção Partilhar Protegido no friso e as opções de clique com o botão direito do rato do Explorador de Ficheiros.
 
--   Se a sua organização utilizar uma versão no local do RMS em vez do Azure RMS:
+-   Se a sua organização utiliza uma versão no local do Rights Management em vez do serviço Azure Rights Management do Azure Information Protection:
 
-    -   Não será possível ler um documento protegido que lhe foi enviado por alguém de outra organização que esteja a utilizar o Azure RMS.
+    -   Não poderá ler um documento protegido que lhe tenha sido enviado por alguém de outra organização que esteja a utilizar o serviço Azure Rights Management.
 
 Se não for um administrador local e utilizar o Office 365 ou Office 2013, não verá esta mensagem e estes cenários serão suportados.
 
@@ -62,7 +61,7 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 -   [Exemplos de utilização da aplicação de partilha RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [O que pretende fazer?](sharing-app-user-guide.md#what-do-you-want-to-do-)
+-   [O que pretende fazer?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## Consulte Também
 [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md)
@@ -70,6 +69,6 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

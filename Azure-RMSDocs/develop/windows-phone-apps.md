@@ -4,18 +4,18 @@ description: "As aplicações do Windows Phone podem utilizar o SDK Microsoft Ri
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e25a446e-b977-4736-9c65-7711171fb0e1
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 90552435666b8f25c893fcffe8c8cf3355a5942d
-ms.openlocfilehash: 136d6e9d0c45a9779f87e32eed8288fe8ee3a622
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 148cefbe973eadebf942c826ac19c0ee34823c89
 
 
 ---
@@ -28,8 +28,8 @@ As aplicações do Windows Phone podem utilizar o SDK Microsoft Rights Managemen
 Este tópico descreve como configurar o ambiente para criar as suas novas aplicações.
 
 -   [Pré-requisitos](#prerequisites)
--   [Configurar o ambiente de desenvolvimento](#configuring_your_development_environment)
--   [Consulte Também](#see_also)
+-   [Configurar o ambiente de desenvolvimento](#configuring-your-development-environment)
+-   [Consulte Também](#see-also)
 
 ## Pré-requisitos
 
@@ -78,7 +78,7 @@ Agora, está pronto para criar as suas novas aplicações do Windows Phone.
 
 [Desenvolvimento do Windows Phone](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx)
 
-[Referência da API do Windows](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement)
+[Referência da API do Windows](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement)
 
 [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
 
@@ -93,6 +93,6 @@ Agora, está pronto para criar as suas novas aplicações do Windows Phone.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

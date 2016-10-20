@@ -4,18 +4,18 @@ description: "O SDK Microsoft Rights Management 4.2 gere o carregamento de regi
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: F5AD3826-2292-4A25-AF5C-D17D083F5742
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 79e58b8092ea7cb057229d4c464d79f3694296e6
-ms.openlocfilehash: 5faea360de8aa9ecb82abf25b5c1392d52d0afad
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 118aa3e25c6be9d0bf43141585d79030fc79224a
 
 
 ---
@@ -79,7 +79,7 @@ Ativar o registo automático
 
     CustomerExperienceConfiguration::Option = CustomerExperienceOptions::LoggingEnabledNow;
 
-Para obter mais informações sobre definições opcionais, consulte [CustomerExperienceOptions](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_customerexperienceoptions).
+Para obter mais informações sobre definições opcionais, consulte [CustomerExperienceOptions](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_customerexperienceoptions).
 
 Obter a definição atual do sinalizador de controlo de registo
 
@@ -96,6 +96,6 @@ Obter a definição atual do sinalizador de controlo de registo
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

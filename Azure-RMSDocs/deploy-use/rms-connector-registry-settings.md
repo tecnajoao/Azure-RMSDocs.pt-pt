@@ -1,20 +1,19 @@
 ---
-title: "Definições de registo para o conetor RMS | Azure RMS"
-description: 
-keywords: 
+title: "Definições de registo para o conector RMS | Azure Information Protection"
+description: "Informações sobre as definições de registo em servidores que utilizam o conector RMS. O método recomendado para configurar estas definições é utilizar a ferramenta de configuração do servidor do conetor Microsoft RMS."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: ff90f009f9fda90171bbeeb2a7bb421376d4695c
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: 1dd1b26735732f4bef8cf73a566b0f26b7610a82
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: ff90f009f9fda90171bbeeb2a7bb421376d4695c
 
 # Definição de registo para o conetor Rights Management
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Information Protection, Office 365*
 
 
 Utilize as tabelas nas secções seguintes apenas se pretender adicionar manualmente ou verificar as definições de registo nos servidores a executar o Exchange, o SharePoint ou o Windows Server, que configura os servidores a utilizar o [conetor RMS](deploy-rms-connector.md). O método recomendado para configurar estes servidores é utilizar a ferramenta de configuração do servidor do conetor Microsoft RMS.
@@ -43,7 +42,7 @@ Instruções ao utilizar estas definições:
 
 -   *ConnectorFQDN* é o nome de balanceamento de carga que definiu no DNS para o conetor. Por exemplo, **rmsconnector.contoso.com**.
 
--   Utilize o prefixo HTTPS para o URL do conetor se configurou o conetor para utilizar o HTTPS para comunicar com os servidores no local. Para obter mais informações, consulte a secção [Configurar o conetor RMS para utilizar HTTPS](deploy-rms-connector.md#BKMK_ConfiguringHTTPS) deste tópico. Os URLs do Microsoft RMS utilizam sempre HTTPS.
+-   Utilize o prefixo HTTPS para o URL do conetor se configurou o conetor para utilizar o HTTPS para comunicar com os servidores no local. Para obter mais informações, veja a secção [Configurar o conetor RMS para utilizar HTTPS](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https) das instruções principais. Os URLs do Microsoft RMS utilizam sempre HTTPS.
 
 
 ## Definições de registo do Exchange 2016 ou Exchange 2013
@@ -217,6 +216,6 @@ Instruções ao utilizar estas definições:
 Voltar a [Implementar o conetor Azure Rights Management](deploy-rms-connector.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

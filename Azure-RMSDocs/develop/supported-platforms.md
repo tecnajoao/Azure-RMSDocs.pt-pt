@@ -4,18 +4,18 @@ description: "Este tópico identifica as plataformas de cliente e de servidor su
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4E46521F-8C2F-401A-A481-113CE130ACF0
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6b5bc9612ac17a2d6905200383d9b8df4c504efe
-ms.openlocfilehash: baf08d04f836e5aa406f125a7029bc43297f5df1
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: eb20483bd3a2be60e1b9fcee173ebeabcb5b6d93
 
 
 ---
@@ -27,7 +27,7 @@ Este tópico identifica as plataformas de cliente e de servidor suportadas pelo 
 ## Plataformas suportadas
 
 -   Windows 10
--   Windows Server 2012 R2
+-   Windows Server 2012 R2
 -   Windows Server 2012
 -   Windows 8
 -   Windows Server 2008 R2 SP1
@@ -46,6 +46,6 @@ Este tópico identifica as plataformas de cliente e de servidor suportadas pelo 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

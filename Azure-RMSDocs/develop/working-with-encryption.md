@@ -1,21 +1,21 @@
 ---
 title: "Procedimentos sobre como trabalhar com definições de encriptação | Azure RMS"
-description: "Este artigo descreve os nossos pacotes de encriptação"
+description: "Orientação para os pacotes de encriptação do Azure RMS e recortes de código para a respetiva utilização."
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 29e856e3e9990f81a791c533ddad5a332093d5d3
-ms.openlocfilehash: 82903eff43ee2dee7ef64e618171225a06013d99
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: bf27067f832f12ef66f6df92f4008a0d21cdf2aa
 
 
 ---
@@ -40,7 +40,7 @@ A partir da [atualização de março de 2015](release-notes-rtm.md), incorporamo
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_CBC4K
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_ECB (também conhecido como Algoritmos Preteridos)
 
-Os sinalizadores de pacote de encriptação (consulte [**Encriptação Preferencial**](/rights-management/sdk/2.1/api/win/constants#msipc_preferred_encryption)) podem ser utilizados em conjunto com o nosso novo sinalizador de Propriedade da Licença **IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE**.
+Os sinalizadores de pacote de encriptação (consulte [**Encriptação Preferencial**](/information-protection/sdk/2.1/api/win/constants#msipc_preferred_encryption)) podem ser utilizados em conjunto com o nosso novo sinalizador de Propriedade da Licença **IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE**.
 
 Seguem-se alguns fragmentos de código simples que demonstram como utilizar a nova propriedade de licença.
 
@@ -103,6 +103,6 @@ Este exemplo mostra também a nova forma de suportar *algoritmos preteridos*.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

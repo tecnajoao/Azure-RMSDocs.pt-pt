@@ -4,7 +4,7 @@ description: "O Microsoft Rights Management SDK 2.1 suporta ativação RMS de cl
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -23,11 +23,11 @@ ms.openlocfilehash: bb20d796e5a852aa9da224cbf218b9a166a9dbd8
 # Referência da API
 
 O Microsoft Rights Management SDK 2.1 suporta ativação RMS de clientes do Windows. Para obter mais informações acerca de informações específicas, consulte [Notas de versão](release-notes-rtm.md).
-- [Constantes](https://docs.microsoft.com/en-us/information-protection/sdk/2.1/api/win/constants)
-- [Tipos de dados](https://docs.microsoft.com/en-us/information-protection/sdk/2.1/api/win/data types)
-- [Funções](https://docs.microsoft.com/en-us/information-protection/sdk/2.1/api/win/functions)
-- [Estruturas](https://docs.microsoft.com/en-us/information-protection/sdk/2.1/api/win/structures)
-- [Códigos de erro](https://docs.microsoft.com/en-us/information-protection/sdk/2.1/api/win/Error codes)
+- [Constantes](https://msdn.microsoft.com/library/hh535291.aspx)
+- [Tipos de dados](https://msdn.microsoft.com/library/hh535288.aspx)
+- [Funções](https://msdn.microsoft.com/library/hh535289.aspx)
+- [Estruturas](https://msdn.microsoft.com/library/hh535294.aspx)
+- [Códigos de erro](https://msdn.microsoft.com/library/hh535248.aspx)
 
 
 

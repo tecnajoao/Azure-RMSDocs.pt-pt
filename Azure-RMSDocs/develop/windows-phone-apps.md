@@ -78,7 +78,7 @@ Agora, está pronto para criar as suas novas aplicações do Windows Phone.
 
 [Desenvolvimento do Windows Phone](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx)
 
-[Referência da API do Windows](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement)
+[Referência da API do Windows](https://msdn.microsoft.com/library/dn891914.aspx)
 
 [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
 

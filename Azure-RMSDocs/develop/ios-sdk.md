@@ -108,14 +108,11 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
 
 * [Conceitos e termos de programação](core-concepts.md)
 
-* [Referência da API do iOS/OS X](/information-protection/sdk/4.2/api/ios/ios)
+* [Referência da API do iOS/OS X](https://msdn.microsoft.com/library/dn758306.aspx)
 
  
 
  
-
-
-
 
 
 

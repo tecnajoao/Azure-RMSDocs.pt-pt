@@ -142,7 +142,7 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
 
 [Conceitos e termos de programação](core-concepts.md)
 
-[Referência da API do Android](android-namespaces.md)
+[Referência da API do Android](https://msdn.microsoft.com/library/dn758245.aspx)
 
  
 

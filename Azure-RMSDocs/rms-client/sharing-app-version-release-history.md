@@ -1,32 +1,43 @@
 ---
-title: "Aplicação de partilha Rights Management&colon; histórico de lançamento de versões | Azure RMS"
-description: 
-keywords: 
+title: "Aplicação de partilha Rights Management&colon; histórico de lançamento de versões | Azure Information Protection"
+description: "Veja as novidades ou alterações numa versão da aplicação de partilha Rights Management para Windows."
 author: cabailey
 manager: mbaldwin
-ms.date: 06/17/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
-ms.sourcegitcommit: b19eadd408837ebcd77b3ae2f9520f5286fcf41f
-ms.openlocfilehash: cad9d01735d8e649875bc6bba73d29573891e1d8
+translationtype: Human Translation
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 31b9ad27e1fc640f8fec29067794f952aa6031b6
 
 
 ---
 
 # Aplicação de partilha Rights Management: histórico de lançamento de versões
 
-*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Rights Management, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
-A equipa do Rights Management atualiza regularmente a aplicação de partilha Rights Management com correções e novas funcionalidades. Utilize as seguintes informações para ver o que há de novo ou o que foi alterado num lançamento. A versão mais atual aparece em primeiro na lista.
+A equipa do Azure Information Protection atualiza regularmente a aplicação de partilha Rights Management com correções e novas funcionalidades. Utilize as seguintes informações para ver o que há de novo ou o que foi alterado num lançamento. A versão mais atual aparece em primeiro na lista.
 
 As versões anteriores a 1 de janeiro de 2015 não estão listadas.
 
-> [!NOTE] Se tiver comentários ou uma pergunta sobre a aplicação de partilha RMS, envie uma mensagem de e-mail para [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question).
+> [!NOTE]
+> Se tiver comentários ou uma pergunta sobre a aplicação de partilha RMS, envie uma mensagem de e-mail para [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question).
+
+## Versão 1.0.2217.0
+
+**Lançada**: 13/07/2016
+
+**Correções**:
+
+- Os utilizadores em organizações com federação e a autenticação multifator já não recebem o erro 0x800704DC quando protegem conteúdo.
+
+
 
 ## Versão 1.0.2191.0
 **Lançamento**: 16/06/2016
@@ -120,6 +131,6 @@ As versões anteriores a 1 de janeiro de 2015 não estão listadas.
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 

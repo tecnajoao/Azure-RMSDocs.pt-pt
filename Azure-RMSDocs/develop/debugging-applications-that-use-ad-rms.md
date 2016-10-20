@@ -4,18 +4,18 @@ description: "O tópico seguinte mostra como depurar a aplicação e utilizar o 
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 29e856e3e9990f81a791c533ddad5a332093d5d3
-ms.openlocfilehash: c00ce9829ce4150cfef74ecd972450b3d787f312
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: cab6839a1911bb61185f2ef361b2040ac0d38a6e
 
 
 ---
@@ -75,6 +75,6 @@ Por exemplo, o comando seguinte ativa o registo de eventos MSIPC e define o nív
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

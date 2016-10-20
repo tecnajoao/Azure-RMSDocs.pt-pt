@@ -1,53 +1,52 @@
 ---
-title: "Migrar do AD RMS para o Azure Rights Management – Fase 2 | Azure RMS"
-description: 
-keywords: 
+title: "Migrar do AD RMS para o Azure Information Protection – Fase 2 | Azure Information Protection"
+description: "Fase 2 da migração do AD RMS para o Azure Information Protection, abrangendo o passo 5 de Migrar do AD RMS para o Azure Information Protection."
 author: cabailey
 manager: mbaldwin
-ms.date: 06/23/2016
+ms.date: 10/05/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a9dc45fb5146b0a4d2f013bff9d090723ce95ee5
-ms.openlocfilehash: 1016ecdd77e818840f2a2cfab8212e908291bb89
+ms.sourcegitcommit: 4a6d07e9a24293f054915b5598c63e118c9c1430
+ms.openlocfilehash: c10e8b46fae2158e561421e8e5090d0cd9edbb83
 
 
 ---
 # Fase 2 da migração – configuração do lado do cliente
 
-*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Rights Management*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Office 365*
 
-Utilize as seguintes informações para a Fase 2 da migração do AD RMS para o Azure Rights Management (Azure RMS). Estes procedimentos incluem o passo 5 do tópico [Migrar do AD RMS para o Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md).
+Utilize as seguintes informações para a Fase 2 da migração do AD RMS para o Azure Information Protection. Estes procedimentos incluem o passo 5 do tópico [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 
-## Passo 5. Reconfigurar clientes para utilizarem o Azure RMS
+## Passo 5. Reconfigurar os clientes para utilizar o Azure Information Protection
 Para clientes Windows:
 
-1.  [Transfira os scripts de migração](http://go.microsoft.com/fwlink/?LinkId=524619):
+1.  [Transfira os scripts de migração](https://go.microsoft.com/fwlink/?LinkId=524619):
 
     -   CleanUpRMS_RUN_Elevated.cmd
 
     -   Redirect_OnPrem.cmd
 
-    Estes scripts repõem a configuração em computadores Windows para que utilizem o serviço do Azure RMS em vez do AD RMS.
+    Estes scripts repõem a configuração em computadores Windows para que utilizem o serviço Azure Information Protection em vez do AD RMS.
 
-2.  Siga as instruções no script de redirecionamento (Redirect_OnPrem.cmd) para modificar o script para apontar para o novo inquilino do Azure RMS.
+2.  Siga as instruções no script de redirecionamento (Redirect_OnPrem.cmd) para modificar o script para apontar para o novo inquilino do Azure Information Protection.
 
     > [!IMPORTANT]
-    > As instruções incluem substituir endereços de exemplo de **adrms** e **adrms.contoso.com** pelos endereços dos seus próprios servidores AD RMS. Ao fazê-lo, certifique-se de que não existem sem espaços adicionais antes ou depois dos endereços, uma vez que estes interrompem o script de migração e são muito difícil identificar como a causa de raiz do problema. Algumas ferramentas de edição adicionam automaticamente um espaço depois do texto colado.
+    > As instruções incluem substituir endereços de exemplo de **adrms** e **adrms.contoso.com** pelos endereços dos seus próprios servidores AD RMS. Ao fazê-lo, certifique-se de que não existem espaços adicionais antes ou depois dos endereços, uma vez que estes interrompem o script de migração e são muito difíceis de identificar como a causa de raiz do problema. Algumas ferramentas de edição adicionam automaticamente um espaço depois do texto colado.
 
 3. Se os utilizadores tiverem o Office 2016: os scripts não foram ainda atualizados para incluir a configuração para o Office 2016, pelo que se os utilizadores tiverem esta versão do Office, têm de atualizar manualmente os scripts:
 
-    - Para **CleanUpRMS.cmd** - procure a linha `reg delete HKCU\Software\Microsoft\Office\15.0\Common\DRM /f` e, imediatamente abaixo desta, adicione a seguinte linha:
+    - Para **CleanUpRMS.cmd** – procure a linha `reg delete HKCU\Software\Microsoft\Office\15.0\Common\DRM /f` e, imediatamente abaixo desta, adicione a seguinte linha:
 
             reg delete HKCU\Software\Microsoft\Office\16.0\Common\DRM /f
 
-    - Para **Redirect_Onprem.cmd** - procure a linha `reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM" /t REG_SZ /v "DefaultServer" /d "%CloudRMS%" /F1` e, imediatamente abaixo desta, adicione a seguinte linha:
+    - Para **Redirect_Onprem.cmd** – procure a linha `reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM" /t REG_SZ /v "DefaultServer" /d "%CloudRMS%" /F` e, imediatamente abaixo desta, adicione a seguinte linha:
 
             reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\DRM" /t REG_SZ /v "DefaultServerUrl" /d "https://%CloudRMS%/_wmcs/licensing" /F 
 
@@ -132,6 +131,6 @@ Redirect_OnPrem.cmd:
 Para continuar a migração, consulte a [fase 3 – suportar a configuração de serviços](migrate-from-ad-rms-phase3.md).
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Oct16_HO1-->
 
 

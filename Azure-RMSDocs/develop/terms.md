@@ -4,18 +4,18 @@ description: "Uma coleção de definições terminológicas específicas dos Ser
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: adb1f868-0da7-431b-83d1-86f41c2da4ae
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: 5779cc10503ad7afe997e031a467021b513fc510
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: cf12a824d3d56ca2df234ba0732d0c4eaae6358e
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: 5779cc10503ad7afe997e031a467021b513fc510
 Uma coleção de definições terminológicas específicas dos Serviços de Gestão de Direitos.
 
 **Algoritmo Preterido**  
-Uma definição modal que implementa um esquema de proteção de conteúdo mais antigo, referenciando especificamente o modo de cifra do manual eletrónico (ECB). Neste SDK, a definição permite-lhe gerar licenças compatíveis com a biblioteca MSDRM utilizada pelo [SDK dos Serviços de Gestão de Direitos do AD](https://msdn.microsoft.com/library/windows/desktop/cc530379.aspx).
+Uma definição modal que implementa um esquema de proteção de conteúdo mais antigo, referenciando especificamente o modo de cifra ECB (Electronic Codebook). Neste SDK, a definição permite-lhe gerar licenças compatíveis com a biblioteca MSDRM utilizada pelo [SDK dos Serviços de Gestão de Direitos do AD](https://msdn.microsoft.com/library/windows/desktop/cc530379.aspx).
 
 Esta definição pode fazer com que a sua aplicação proteja conteúdo de uma forma que não esteja em conformidade com as normas dos seus clientes para proteção de conteúdo.
 
@@ -46,6 +46,6 @@ O formato PFile é transparente para o programador de aplicações, já que est�
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Oct16_HO1-->
 
 

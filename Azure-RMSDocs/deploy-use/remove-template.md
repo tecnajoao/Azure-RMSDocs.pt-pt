@@ -1,20 +1,19 @@
 ---
-title: Remover modelos | Azure RMS
-description: 
-keywords: 
+title: Remover modelos | Azure Information Protection
+description: "Os modelos predefinidos não podem ser eliminados, mas podem ser arquivados para que os utilizadores não os vejam."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 42935ce2-879c-4168-aef9-9a88f72b15b2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: f0e958c0fbae8dcf74761481c646c7aa837d5ebb
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: 2597df5b95bc1aaff345804e476f48d6436d9a32
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: f0e958c0fbae8dcf74761481c646c7aa837d5ebb
 
 # Remover modelos (arquivo)
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Information Protection, Office 365*
 
 Os modelos predefinidos não podem ser eliminados, mas podem ser arquivados para que os utilizadores não os vejam.
 
@@ -42,6 +41,6 @@ O estado é alterado de **Publicado** para **Arquivado**. Se mudar de ideias, se
 [Configurar modelos personalizados para o Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

@@ -4,18 +4,18 @@ description: "Agora, várias versões dos sistemas operativos Linux podem utiliz
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: A348541C-17E0-4024-BF97-84B0099B0E69
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6b5bc9612ac17a2d6905200383d9b8df4c504efe
-ms.openlocfilehash: d6920b8ce09b39d98da9e9c197b17a1f13d21c8e
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 561ed44582fe2c73cf40ac082bf67e91d37fb351
 
 
 ---
@@ -25,9 +25,9 @@ ms.openlocfilehash: d6920b8ce09b39d98da9e9c197b17a1f13d21c8e
 
 Agora, várias versões dos sistemas operativos Linux podem utilizar o SDK Microsoft Rights Management 4.2. para ativar a proteção de informações integrada na respetiva aplicação utilizando o Azure Active Directory Rights Management (AAD RM).
 
--   [Sistemas operativos suportados](#supported_operating_systems)
--   [Como criar e utilizar](#how_to_build_and_use)
--   [Consulte Também](#see_also)
+-   [Sistemas operativos suportados](#supported-operating-systems)
+-   [Como criar e utilizar](#how-to-build-and-use)
+-   [Consulte Também](#see-also)
 
 ## Sistemas operativos suportados
 
@@ -60,6 +60,6 @@ Estão alojados no Github dois tópicos de orientação para este SDK para obter
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

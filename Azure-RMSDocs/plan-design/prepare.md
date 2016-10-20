@@ -1,48 +1,45 @@
 ---
-title: Preparar para o Azure Rights Management | Azure RMS
-description: 
-keywords: 
+title: "Preparar-se para a solução de proteção Azure Rights Management| Azure Information Protection"
+description: "Verifique se preparou tudo para utilizar o Azure Rights Management, para que a sua organização possa proteger documentos e e-mails."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 55f092ede1f003c700cb58359bab264772702c39
+ms.sourcegitcommit: 46db6ef6f65a06c42909252cf99884cc5eaaefe4
+ms.openlocfilehash: 5a3df821c70b8cd308f8fb8cc94ee0cff069a3d9
 
 
 ---
 
-# Preparar para o Azure Rights Management
+# Preparação para o Azure Information Protection
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Information Protection, Office 365*
 
-Depois de se inscrever numa subscrição na nuvem e criar uma conta do [!INCLUDE[o365_1](../includes/o365_1_md.md)] ou do Azure Active Directory para a sua organização, está pronto para ativar o serviço [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
-
-No entanto, antes de o fazer, certifique-se de que o seguinte está correto:
+Antes de implementar o Azure Information Protection na sua organização, certifique-se de que preparou o seguinte:
 
 -   Grupos e contas de utilizadores na nuvem que pode criar manualmente ou que são automaticamente criados e sincronizados nos Serviços de Domínio do Active Directory (AD DS).
 
-    Quando sincroniza os seus grupos e contas no local, não é necessário sincronizar todos os atributos. Para obter uma lista dos atributos que têm de ser sincronizados com o Azure RMS, consulte a secção [Azure RMS](/active-directory/active-directory-aadconnectsync-attributes-synchronized#azure-rms) na documentação do Azure Active Directory. Para facilitar a implementação, recomendamos que utilize o [Azure AD Connect](/active-directory/active-directory-aadconnectsync-whatis) para ligar os seus diretórios no local ao Azure Active Directory, mas pode utilizar qualquer método de sincronização de diretórios que alcance o mesmo resultado.
+    Quando sincroniza os seus grupos e contas no local, não é necessário sincronizar todos os atributos. Para obter uma lista dos atributos utilizados pelo Azure Information Protection que têm de ser sincronizados com o serviço Azure Rights Management, consulte a [secção Azure RMS](/active-directory/active-directory-aadconnectsync-attributes-synchronized#azure-rms) na documentação do Azure Active Directory. Para facilitar a implementação, recomendamos que utilize o [Azure AD Connect](/active-directory/active-directory-aadconnectsync-whatis) para ligar os seus diretórios no local ao Azure Active Directory, mas pode utilizar qualquer método de sincronização de diretórios que alcance o mesmo resultado.
 
--   Os grupos com capacidade de correio na nuvem que irá utilizar com o Rights Management. Estes podem ser grupos incorporados ou grupos criados manualmente que contêm utilizadores que irão utilizar o Rights Management.
+-   Os grupos com capacidade de correio na nuvem que irá utilizar com o Azure Information Protection. Estes podem ser grupos incorporados ou grupos criados manualmente que contêm utilizadores que irão utilizar documentos e e-mails protegidos.
 
     Se tiver o Exchange Online, pode criar e utilizar grupos com capacidade de correio utilizando o centro de administração do Exchange. Se tiver o AD DS no local e estiver a sincronizar com o Azure AD, pode criar e utilizar grupos com capacidade de correio que são grupos de segurança ou grupos de distribuição.
 
-## Ativar o Rights Management
-Por predefinição, o [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] está desativado quando se inscreve no [!INCLUDE[o365_2](../includes/o365_2_md.md)] ou na conta do Azure AD. Para ativar o [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] para a sua organização, tem de ativar o serviço. Para obter mais informações, consulte [Ativar o Azure Rights Management](../deploy-use/activate-service.md).
+## Ativar o serviço Rights Management para a proteção de dados
+Quando estiver pronto para começar a proteger documentos e e-mails, ative o serviço Rights Management para ativar esta tecnologia. Para obter mais informações, consulte [Ativar o Azure Rights Management](../deploy-use/activate-service.md).
 
 
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

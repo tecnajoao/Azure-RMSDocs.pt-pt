@@ -4,25 +4,25 @@ description: "As aplicações iOS e OS X podem utilizar o SDK RMS 4.2 para ati
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: 821fe1c361dc38b1e33ac66208122de165d02020
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 80d79ead119b5dbe86d94f979742ecc2b62d1ef9
 
 
 ---
 
 # Configuração do iOS e OS X
 
-As aplicações iOS e OS X podem utilizar o SDK Microsoft Rights Management 4.2 para ativar a proteção de informações integrada na respetiva aplicação utilizando o Azure Active Directory Rights Management (AAD RM).
+As aplicações iOS e OS X podem utilizar o SDK Microsoft Rights Management 4.2 para ativar a proteção de informações integrada na respetiva aplicação utilizando o Azure Rights Management (Azure RMS).
 
 Este tópico descreve como configurar o ambiente para criar as suas novas aplicações.
 
@@ -31,8 +31,8 @@ Este tópico descreve como configurar o ambiente para criar as suas novas aplica
 
 -   [Pré-requisitos](#prerequisites)
 -   [Opcional](#optional)
--   [Configurar o ambiente de desenvolvimento](#configuring_your_development_environment)
--   [Consulte Também](#see_also)
+-   [Configurar o ambiente de desenvolvimento](#configuring-your-development-environment)
+-   [Consulte Também](#see-also)
 
 ## Pré-requisitos
 
@@ -108,7 +108,7 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
 
 * [Conceitos e termos de programação](core-concepts.md)
 
-* [Referência da API do iOS/OS X](/rights-management/sdk/4.2/api/ios/ios)
+* [Referência da API do iOS/OS X](/information-protection/sdk/4.2/api/ios/ios)
 
  
 
@@ -119,6 +119,6 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Oct16_HO1-->
 
 

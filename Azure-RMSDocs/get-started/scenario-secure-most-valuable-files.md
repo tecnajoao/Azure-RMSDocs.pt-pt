@@ -1,35 +1,34 @@
 ---
-title: "Cenário – Proteger alguns dos seus ficheiros mais importantes | Azure RMS"
-description: 
-keywords: 
+title: "Cenário – Proteger alguns dos seus ficheiros mais importantes | Azure Information Protection"
+description: "Este cenário e a documentação do utilizador associada utilizam o Azure Rights Management para proteger de forma manual e personalizada alguns ficheiros que tenha identificado como sendo os mais importantes e que requerem o mais elevado nível de proteção contra acesso não autorizado."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 10/05/2016
 ms.topic: get-started-article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: d4325fb8a0b27d0a8d4fd7451b9d11d10153ed8d
+ms.sourcegitcommit: 0f5c138b7a27c7577e5bff23d521ba36264ecc2a
+ms.openlocfilehash: 6687ed42bca5e773d6bbc97285f12e3c91ff9f32
 
 
 ---
 
 # Cenário – Proteger alguns dos seus ficheiros mais importantes
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Information Protection, Office 365*
 
-Este cenário e a documentação do utilizador associada utilizam o Azure Rights Management para proteger de forma manual e personalizada alguns ficheiros que tenha identificado como sendo os mais importantes e que requerem o mais elevado nível de proteção contra acesso não autorizado. Normalmente, são ficheiros a que apenas algumas pessoas devem conseguir aceder. Por exemplo, instruções da receita do produto alimentar de marca da sua empresa ou planos de aquisição que não devem ser tornados públicos antes de uma data especificada.
+Este cenário e a documentação do utilizador associada utilizam a tecnologia do Azure Rights Management do Azure Information Protection para proteger de forma manual e personalizada alguns ficheiros que tenha identificado como sendo os mais importantes e que requerem o mais elevado nível de proteção contra acesso não autorizado. Normalmente, são ficheiros a que apenas algumas pessoas devem conseguir aceder. Por exemplo, instruções da receita do produto alimentar de marca da sua empresa ou planos de aquisição que não devem ser tornados públicos antes de uma data especificada.
 
 As instruções aplicam-se às seguintes circunstâncias:
 
 -   Identificou o pequeno conjunto de ficheiros que pretende proteger.
 
--   Os ficheiros estão num dos formatos de ficheiro do Office que suportam o Rights Management. Se os ficheiros estiverem noutros formatos de ficheiro (por exemplo, ficheiros CAD), certifique-se de que esses formatos suportam o Azure RMS e de que implementa aplicações que suportam nativamente o Azure RMS. Para mais informações, consulte [Como é que as Aplicações Suportam o Azure Rights Management](https://technet.microsoft.com/library/jj585004.aspx).
+-   Os ficheiros estão num dos formatos de ficheiro do Office que suportam o Rights Management. Se os ficheiros estiverem noutros formatos de ficheiro (por exemplo, ficheiros CAD), certifique-se de que esses formatos suportam o Azure RMS e de que implementa aplicações que suportam nativamente o Azure RMS. Para mais informações, consulte [Como as Aplicações Suportam o serviço Azure Rights Management](../understand-explore/applications-support.md).
 
 -   Os ficheiros contêm informações delicadas e altamente confidenciais que devem estar acessíveis apenas para algumas pessoas.
 
@@ -49,12 +48,12 @@ Para este cenário, é necessário que os seguintes aspetos estejam implementado
 
 |Requisito|Se precisar de mais informações|
 |---------------|--------------------------------|
-|Preparou contas e grupos para o Office 365 ou o Azure Active Directory:<br /><br />- Um grupo com capacidade de correio com o nome **Acesso privilegiado**, que inclui as poucas pessoas que devem ter acesso a estes documentos altamente confidenciais<br /><br />- Um grupo com capacidade de correio com o nome **Gestores de Conformidade de TI**, que inclui as pessoas cujo trabalho inclui a Deteção de Dados Eletrónicos, a monitorização e a auditoria<br /><br />- Um grupo com capacidade de correio com o nome **Administradores de RMS** e todos os administradores que irão configurar o Azure RMS são membros deste grupo|[Preparar para o Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|O Azure Rights Management está ativado|[Ativar o Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|Configurou um modelo personalizado, tal como descrito a seguir|[Configurar modelos personalizados para o Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
-|A aplicação de partilha Rights Management está implementada no seu computador Windows, para que possa proteger estes ficheiros no local, conforme descrito na secção seguinte|[Transferir e instalar a aplicação de partilha Rights Management](https://technet.microsoft.com/library/dn574734%28v=ws.10%29.aspx)|
+|Preparou contas e grupos para o Office 365 ou o Azure Active Directory:<br /><br />- Um grupo com capacidade de correio com o nome **Acesso privilegiado**, que inclui as poucas pessoas que devem ter acesso a estes documentos altamente confidenciais<br /><br />- Um grupo com capacidade de correio com o nome **Gestores de Conformidade de TI**, que inclui as pessoas cujo trabalho inclui a Deteção de Dados Eletrónicos, a monitorização e a auditoria<br /><br />- Um grupo com capacidade de correio com o nome **Administradores de RMS** e todos os administradores que irão configurar o Azure RMS são membros deste grupo|[Preparação para o Azure Information Protection](../plan-design/deployment-roadmap.md)|
+|O Azure Rights Management está ativado|[Ativar o Azure Rights Management](../deploy-use/activate-service.md)|
+|Configurou um modelo personalizado, tal como descrito a seguir|[Configurar modelos personalizados para o serviço Azure Rights Management](../deploy-use/configure-custom-templates.md)|
+|A aplicação de partilha Rights Management está implementada no seu computador Windows, para que possa proteger estes ficheiros no local, conforme descrito na secção seguinte|[Transferir e instalar a aplicação de partilha Rights Management](../rms-client/install-sharing-app.md)|
 |Os utilizadores autorizados têm o Office 2013 como a versão mínima|Se os utilizadores tiverem o Office 2010, também têm de instalar a aplicação de partilha Rights Management.|
-|A subscrição do Azure RMS inclui o controlo de documentos|Se a sua subscrição do Azure RMS não incluir o controlo de documentos e a revogação, não poderá utilizar o site de controlo de documentos para ver quem está a aceder a estes documentos e revogar o acesso, se necessário. Neste caso, compre uma subscrição que suporte o controlo de documentos ou aceite esta limitação. Também poderá considerar as capacidades de [registo de utilização](https://technet.microsoft.com/library/dn529121.aspx) do Azure RMS, que podem fornecer informações tais como quem acedeu a cada ficheiro e quando o fez, para o ajudar a detetar um potencial comportamento suspeito.<br /><br />Para verificar o suporte da subscrição: [Comparação das Ofertas do Rights Management Services (RMS)](https://technet.microsoft.com/dn858608)|
+|A sua subscrição do Azure Information Protection inclui controlo de documentos|Se a sua subscrição não incluir a revogação e o controlo de documentos, não poderá utilizar o site de controlo de documentos para ver quem está a aceder a estes documentos e revogar o acesso, se necessário. Neste caso, compre uma subscrição que suporte o controlo de documentos ou aceite esta limitação. Também poderá considerar as funcionalidades de [registo de utilização](../deploy-use/log-analyze-usage.md) do serviço Azure Rights Management, que podem fornecer informações tais como quem acedeu a cada ficheiro e quando o fez, para o ajudar a detetar um potencial comportamento suspeito.<br /><br />Consulte a [lista de funcionalidades](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) no site do Azure Information Protection.|
 
 ### Para configurar o modelo personalizado
 
@@ -86,7 +85,7 @@ Para este cenário, é necessário que os seguintes aspetos estejam implementado
 
 5.  Se tiver mais ficheiros a proteger noutras pastas, repita os passos 1 a 4 para cada pasta.
 
-Para obter mais informações sobre como proteger ficheiros no local, consulte [Proteger um ficheiro num dispositivo (proteger no local) ao utilizar a aplicação de partilha Rights Management](https://technet.microsoft.com/library/dn574733%28v=ws.10%29.aspx)
+Para obter mais informações sobre como proteger ficheiros no local, consulte [Proteger um ficheiro num dispositivo (proteger no local) através da aplicação de partilha Rights Management](../rms-client/sharing-app-protect-in-place.md)
 
 > [!TIP]
 > Se o número de ficheiros que quer proteger for demasiado elevado para executar este processo manual, considere utilizar a [ferramenta de Proteção RMS](https://www.microsoft.com/en-us/download/details.aspx?id=47256) para proteger os ficheiros em volume com o modelo.
@@ -148,6 +147,6 @@ Os ficheiros seguintes estão agora sujeitos a um nível muito elevado de prote�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

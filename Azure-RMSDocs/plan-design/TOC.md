@@ -1,5 +1,5 @@
-# [Compreender e Explorar](/rights-management/understand-explore/azure-rights-management)
-# [Introdução](/rights-management/get-started/requirements-azure-rms)
+# [Compreender e Explorar](/information-protection/understand-explore/what-is-information-protection)
+# [Introdução](/information-protection/get-started/requirements-azure-rms)
 # [Planear e Estruturar](deployment-roadmap.md)
 ## [Plano de implementação](deployment-roadmap.md)
 ## [Migrar do AD RMS](migrate-from-ad-rms-to-azure-rms.md)
@@ -12,14 +12,12 @@
 ### [Tarefas pós-migração](migrate-from-ad-rms-phase4.md)
 ## [Planear e implementar a chave de inquilino](plan-implement-tenant-key.md)
 ### [Preços e restrições de BYOK](byok-price-restrictions.md)
-### [Acerca dos HSMs da Thales](thales-hsm.md)
-### [Através da Internet](generate-tenant-key-internet.md)
-### [Pessoalmente](generate-tenant-key-in-person.md)
-## [Preparação para o Azure RMS](prepare.md)
-# [Implementar e Utilizar o Serviço](/rights-management/deploy-use/activate-service)
-# [Implementar e Utilizar o Cliente](/rights-management/rms-client/use-client)
-# [Desenvolver e Personalizar Aplicações](/rights-management/develop/developers-guide)
+## [Preparação para o Azure Information Protection](prepare.md)
+# [Implementar e Utilizar o Serviço](/information-protection/deploy-use/activate-service)
+# [Implementar e Utilizar o Cliente](/information-protection/rms-client/use-client)
+# [Desenvolver e Personalizar Aplicações](/information-protection/develop/developers-guide)
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Sep16_HO4-->
 
 

@@ -4,18 +4,18 @@ description: "Todas as aplicações com suporte RMS têm de impor restrições d
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: E388B16C-ECDA-4696-A040-D457D3C96766
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 872bb0c20db2ef8d661d321598a2b1fe61d69316
-ms.openlocfilehash: 2d2cbe580349e1615371a6a76e78140f6577e890
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 1d1433eb4468fd74689243c1ca63134a406e0f96
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: 2d2cbe580349e1615371a6a76e78140f6577e890
 
 Todas as aplicações com suporte RMS têm de impor restrições de utilização. Uma restrição de utilização é uma condição que resulta quando um utilizador tenta executar uma ação (por exemplo, imprimir um documento), mas a política do RMS desse documento não lhes concede a permissão ou o direito de executar essa ação (por exemplo, o direito de IMPRIMIR).
 
-As permissões de um utilizador num documento podem ser consultadas ao utilizar a função [**IpcAccessCheck**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcaccesscheck).
+As permissões de um utilizador num documento podem ser consultadas ao utilizar a função [**IpcAccessCheck**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcaccesscheck).
 
 ## Compreender as restrições de utilização
 
@@ -48,7 +48,7 @@ As permissões de um utilizador num documento podem ser consultadas ao utilizar 
 
 ## Tópicos relacionados
 
-* [**IpcAccessCheck**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcaccesscheck)
+* [**IpcAccessCheck**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcaccesscheck)
 * [Referência das restrições de utilização](usage-restriction-reference.md)
  
 
@@ -56,6 +56,6 @@ As permissões de um utilizador num documento podem ser consultadas ao utilizar 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

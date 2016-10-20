@@ -1,29 +1,28 @@
 ---
-title: "Cenário – Configurar pastas de trabalho para proteção persistente | Azure RMS"
-description: 
-keywords: 
+title: "Cenário – Configurar pastas de trabalho para proteção persistente | Azure Information Protection"
+description: "Este cenário e a documentação de apoio do utilizador utilizam a proteção Azure Rights Management para aplicar proteção persistente aos documentos do Office contidos em Pastas de Trabalho."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1f189345-a69e-4bf5-8a45-eb0fe5bb542b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: 35ad445e229eac3feeca5522a41b9e3b25fd1180
+ms.sourcegitcommit: ea299f402e5e188b498bf6e3cacf9d4dc7e0f6e8
+ms.openlocfilehash: 966c1b109a02f8193de16eae6f2eacec757f533b
 
 
 ---
 
 # Cenário – Configurar pastas de trabalho para proteção persistente
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Information Protection, Office 365*
 
-Este cenário e a documentação de apoio do utilizador utilizam o Azure Rights Management para aplicar proteção persistente aos documentos do Office contidos em [Pastas de Trabalho](https://technet.microsoft.com/library/dn265974.aspx). As Pastas de Trabalho utilizam um serviço de função para servidores de ficheiros que utilizam o Windows Server que disponibiliza uma forma consistente de os utilizadores acederem aos seus ficheiros de trabalho a partir dos respetivos PCs e dispositivos. Apesar de as Pastas de Trabalho fornecerem a sua própria encriptação para proteger os ficheiros, esta proteção deixa de existir se os ficheiros forem movidos para fora do ambiente das Pastas de Trabalho. Por exemplo, os utilizadores copiam os ficheiros sincronizados e guardam-nos num local que não é controlado pelo seu departamento de TI ou os ficheiros são enviados para terceiros por e-mail.
+Este cenário e a documentação de apoio do utilizador utilizam a tecnologia do Azure Rights Management do Azure Information Protection para aplicar proteção persistente aos documentos do Office contidos em [Pastas de Trabalho](https://technet.microsoft.com/library/dn265974.aspx). As Pastas de Trabalho utilizam um serviço de função para servidores de ficheiros que utilizam o Windows Server que disponibiliza uma forma consistente de os utilizadores acederem aos seus ficheiros de trabalho a partir dos respetivos PCs e dispositivos. Apesar de as Pastas de Trabalho fornecerem a sua própria encriptação para proteger os ficheiros, esta proteção deixa de existir se os ficheiros forem movidos para fora do ambiente das Pastas de Trabalho. Por exemplo, os utilizadores copiam os ficheiros sincronizados e guardam-nos num local que não é controlado pelo seu departamento de TI ou os ficheiros são enviados para terceiros por e-mail.
 
 A proteção adicional fornecida pelo Azure Rights Management ajuda a evitar a perda acidental de dados, evitando que os ficheiros sejam vistos por pessoas externas à sua organização. Para tal, pode utilizar um dos modelos de política de direitos predefinidos e incorporados. No entanto, antes de implementar este cenário, tenha em atenção que os utilizadores poderão precisar de partilhar legitimamente um destes ficheiros com pessoas externas à organização. Por exemplo, depois de trabalharem no rascunho de uma lista de preços, os utilizadores enviam e-mails com a versão final para os respetivos clientes noutras organizações. Se utilizassem o modelo de Gestão de Direitos predefinido para Pastas de Trabalho, os clientes das outras organizações não conseguiriam ler esse documento enviado por e-mail. Para cumprir este requisito, pode criar um modelo personalizado que permite que os utilizadores apliquem uma nova política de direitos ao ficheiro, a qual irá substituir a restrição original de todos os funcionários pelas pessoas especificadas no e-mail.
 
@@ -52,11 +51,11 @@ Para que as instruções para este cenário funcionem, é necessário o seguinte
 
 |Requisito|Se precisar de mais informações|
 |---------------|--------------------------------|
-|O Azure Rights Management está ativado|[Activating Azure Rights Management (Ativar o Azure Rights Management – em inglês)](https://technet.microsoft.com/library/jj658941.aspx)|
-|Sincronizou as suas contas de utilizador do Active Directory no local com o Azure Active Directory ou o Office 365, incluindo os respetivos endereços de e-mail. Isto é necessário para todos os utilizadores que utilizam Pastas de Trabalho.|[Preparing for Azure Rights Management (Preparar para o Azure Rights Management – em inglês)](https://technet.microsoft.com/library/jj585029.aspx)|
-|Um dos seguintes:<br /><br />- Para utilizar um modelo predefinido para todos os utilizadores que não permita que os utilizadores apliquem uma nova política de direitos: o modelo predefinido não está arquivado, **&lt;nome da organização&gt; – Confidencial**<br /><br />- Para utilizar um modelo personalizado adequado para os utilizadores aplicarem uma nova política de direitos: utilize as instruções que se seguem para criar um modelo personalizado|[Configurar modelos personalizados para o Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
-|O conector Rights Management está instalado, autorizado para o computador Windows Server e configurado para a função **Servidor FCI**.|[Deploying the Azure Rights Management connector (Implementar o conector Azure Rights Management – em inglês)](https://technet.microsoft.com/library/dn375964.aspx)|
-|A aplicação de partilha Rights Management está implementada nos computadores dos utilizadores que utilizam o Windows|[Automatic deployment for the Microsoft Rights Management sharing application (Implementação automática da aplicação de partilha Microsoft Rights Management – em inglês)](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
+|O Azure Rights Management está ativado|[Activating Azure Rights Management (Ativar o Azure Rights Management – em inglês)](../deploy-use/activate-service.md)|
+|Sincronizou as suas contas de utilizador do Active Directory no local com o Azure Active Directory ou o Office 365, incluindo os respetivos endereços de e-mail. Isto é necessário para todos os utilizadores que utilizam Pastas de Trabalho.|[Preparação para o Azure Information Protection](../plan-design/prepare.md)|
+|Um dos seguintes:<br /><br />- Para utilizar um modelo predefinido para todos os utilizadores que não permita que os utilizadores apliquem uma nova política de direitos: o modelo predefinido não está arquivado, **&lt;nome da organização&gt; – Confidencial**<br /><br />- Para utilizar um modelo personalizado adequado para os utilizadores aplicarem uma nova política de direitos: utilize as instruções que se seguem para criar um modelo personalizado|[Configurar modelos personalizados para o serviço Azure Rights Management](../deploy-use/configure-custom-templates.md)|
+|O conector Rights Management está instalado, autorizado para o computador Windows Server e configurado para a função **Servidor FCI**.|[Deploying the Azure Rights Management connector (Implementar o conector Azure Rights Management – em inglês)](../deploy-use/deploy-rms-connector.md)|
+|A aplicação de partilha Rights Management está implementada nos computadores dos utilizadores que utilizam o Windows|[Automatic deployment for the Microsoft Rights Management sharing application (Implementação automática da aplicação de partilha Microsoft Rights Management – em inglês)](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 
 ### Configurar o modelo de política de direitos personalizado para que os utilizadores possam partilhar ficheiros de Pastas de Trabalho fora da organização
 
@@ -116,13 +115,13 @@ Se não for necessário partilhar os ficheiros que está a proteger através do 
 Se tiver configurado o modelo personalizado conforme indicado neste cenário, os utilizadores verão a descrição do modelo na barra de informações: **Estes conteúdos estão protegidos por Pastas de Trabalho e a sua utilização está restrita aos funcionários da empresa. Para partilhar estes conteúdos com pessoas externas à organização, anexe o documento a uma mensagem de e-mail e utilize a função Partilhar Protegido.** Embora esta descrição forneça um resumo de como partilhar o ficheiro fora da organização, os utilizadores provavelmente precisarão de instruções detalhadas para realizar esta ação, especialmente nas primeiras vezes que o fizerem. Para conseguir este cenário, utilize as instruções do administrador e do utilizador final em [Scenario – Share an Office file with users in another organization (Cenário – Partilhar um ficheiro do Office com os utilizadores de outra organização – em inglês)](scenario-share-office-file-externally.md).
 
 > [!TIP]
-> Se decidiu não utilizar o modelo personalizado nestas instruções porque não quer que os utilizadores possam partilhar estes ficheiros fora da organização sem supervisão do departamento de TI, informe o suporte técnico, para que, se o requisito de partilha for legítimo, este possa ser satisfeito através do mecanismo mais adequado para a sua empresa. Por exemplo, um [superutilizador](https://technet.microsoft.com/library/mt147272.aspx) poderia aplicar um novo modelo aos conteúdos que conceda direitos de Controlo Total ao utilizador requerente, para que este possa depois utilizar a função Partilhar Protegido.
+> Se decidiu não utilizar o modelo personalizado nestas instruções porque não quer que os utilizadores possam partilhar estes ficheiros fora da organização sem supervisão do departamento de TI, informe o suporte técnico, para que, se o requisito de partilha for legítimo, este possa ser satisfeito através do mecanismo mais adequado para a sua empresa. Por exemplo, um [superutilizador](../deploy-use/configure-super-users.md) poderia aplicar um novo modelo aos conteúdos que conceda direitos de Controlo Total ao utilizador requerente, para que este possa depois utilizar a função Partilhar Protegido.
 > 
-> Se, após algum tempo, descobrir que existem muitos pedidos deste tipo, pode optar por definir o seu próprio modelo personalizado para este cenário, de forma a conceder a opção de Coproprietário apenas a determinados utilizadores (tais como gestores ou o suporte técnico), ao passo que aos utilizadores padrão é concedida a opção Coautor ou os [direitos](https://technet.microsoft.com/library/mt169423.aspx) que considerar adequados.
+> Se, após algum tempo, descobrir que existem muitos pedidos deste tipo, pode optar por definir o seu próprio modelo personalizado para este cenário, de forma a conceder a opção de Coproprietário apenas a determinados utilizadores (tais como gestores ou o suporte técnico), ao passo que aos utilizadores padrão é concedida a opção Coautor ou os [direitos](../deploy-use/configure-usage-rights.md) que considerar adequados.
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

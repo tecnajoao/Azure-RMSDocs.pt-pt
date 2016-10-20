@@ -1,32 +1,41 @@
 ---
-title: Cliente Rights Management (RMS) | Azure RMS
-description: 
-keywords: 
+title: O cliente | Azure Information Protection
+description: "O Microsoft Azure Information Protection fornece uma solução de servidor cliente que ajuda a proteger os dados de uma organização. O cliente (o cliente do Azure Information Protection ou o cliente Rights Management) está integrado nas aplicações executadas em computadores e dispositivos móveis."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
 ROBOTS: noindex,nofollow
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 8c21202793dca90edda943082fcd718bdf7397ca
+ms.sourcegitcommit: 7c7945e9587990e2f2893ffb47bc2f2534d41a8f
+ms.openlocfilehash: 5685134a6da93e193a2f7dc67cba5f3dea7da6a9
 
 
 ---
 
-# Cliente Rights Management (RMS)
+# O lado do cliente do Azure Information Protection
 
-*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Rights Management, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Rights Management, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
-Os serviços Microsoft Rights Management são uma solução de cliente-servidor, onde o cliente RMS está integrado em aplicações que são executadas em computadores e dispositivos móveis, sendo que o serviço RMS reside na nuvem (Azure RMS) ou no local (AD RMS). O cliente RMS é instalado automaticamente com algumas aplicações, como as aplicações do Office, a aplicação de partilha RMS e as aplicações suportadas por RMS de fornecedores de software. No entanto, também pode ser instalado sozinho, para suportar cenários tais como programadores que pretendam integrar a proteção RMS nas suas aplicações de linha de negócio e administradores ou utilizadores avançados que pretendam proteger os ficheiros em volume utilizando a Ferramenta de Proteção RMS.
+O Azure Information Protection fornece uma solução de servidor cliente que ajuda a proteger os documentos e os e-mails de uma organização:
 
-Utilize a seguinte documentação quando precisar de mais informações acerca de como implementar e utilizar o cliente Rights Management (RMS), que pode ser utilizado com o Azure RMS ou o AD RMS para ajudar a proteger os dados da sua organização:
+- O cliente pode ser o cliente do Azure Information Protection ou do Rights Management e está integrado nas aplicações executadas em computadores e dispositivos móveis. 
+
+- O serviço reside na nuvem (Azure Information Protection, que utiliza o serviço Azure Rights Management para a proteção de dados) ou no local (Serviços de Gestão de Direitos do Active Directory). 
+
+O cliente do Azure Information Protection suporta classificação e etiquetagem, bem como proteção. Este cliente está integrado nas aplicações do Office e tem de ser instalado em separado.
+
+O cliente Rights Management (RMS) é instalado automaticamente com algumas aplicações, como as aplicações do Office, a aplicação de partilha RMS e as aplicações suportadas por RMS de fornecedores de software. No entanto, também pode ser instalado individualmente, para suportar cenários como programadores que pretendam integrar a proteção Rights Management nas suas aplicações de linha de negócio e administradores ou utilizadores avançados que procurem proteger ficheiros em volume com a Ferramenta de Proteção RMS.
+
+Utilize a seguinte documentação quando precisar de mais informações sobre como implementar e utilizar estes clientes, que podem ser utilizados com o Azure Information Protection e os Serviços de Gestão de Direitos do Active Directory para ajudar a proteger os dados da sua organização:
+
+- [Instalar o cliente do Azure Information Protection](info-protect-client.md)
 
 - [Notas de implementação do cliente RMS](client-deployment-notes.md)
 
@@ -34,16 +43,12 @@ Utilize a seguinte documentação quando precisar de mais informações acerca d
 
 - [Aplicação de partilha Rights Management para Windows](sharing-app-windows.md)
 
-- [Declaração de privacidade do Microsoft Rights Management em aplicações suportadas por RMS](privacy-statement-rms-enlightened-applications.md)
-
-
-Para obter recursos adicionais, incluindo as opções de comunidade e de suporte, visite o site dos [serviços Microsoft Rights Management](https://www.microsoft.com/rms).
 
 ## Consulte também
-[Comparar o Azure RMS e o AD RMS](../understand-explore/compare-azure-rms-ad-rms.md)
+[Comparar o Azure Information Protection e o AD RMS](../understand-explore/compare-azure-rms-ad-rms.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

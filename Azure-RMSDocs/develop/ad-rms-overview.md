@@ -1,30 +1,28 @@
 ---
-title: "Descrição geral | Azure RMS"
+title: "Descrição geral - RMS SDK 2.1 | Azure RMS"
 description: "O Rights Management Services (RMS) é uma tecnologia de proteção de informações que ajuda a salvaguardar as informações digitais contra a utilização não autorizada."
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: B546B6C1-ADC1-4EBD-95E2-B4A74E4E980B
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: 37f3bc2308caaa8fd5e5c7fc8c56b6dc4d076b97
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 82441858230e179a08bfa74e0f6aaf9ed17a62fb
 
 
 ---
 
 # Descrição Geral
 
-O Rights Management Services (RMS) é uma tecnologia de proteção de informações que ajuda a salvaguardar as informações digitais contra a utilização não autorizada. Através da aplicação com capacidade para direitos, os proprietários de conteúdo conseguirão definir quem pode abrir, modificar, imprimir, reencaminhar ou efetuar outras ações no conteúdo.
-
-## Descrição Geral
+O SDK Rights Management Services (RMS) 2.1 é uma tecnologia de proteção de informações que ajuda a salvaguardar as informações digitais contra utilização não autorizada. Através da aplicação com capacidade para direitos, os proprietários de conteúdo conseguirão definir quem pode abrir, modificar, imprimir, reencaminhar ou efetuar outras ações no conteúdo.
 
 O AD RMS consiste em componentes de [servidor](ad-rms-server.md) e de [cliente](ad-rms-client.md). O servidor, em execução no Azure ou no Windows Server, é constituído por vários serviços web.
 
@@ -63,6 +61,6 @@ Os tópicos restantes desta secção a Arquitetura RMS e as suas implementaçõe
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Oct16_HO1-->
 
 

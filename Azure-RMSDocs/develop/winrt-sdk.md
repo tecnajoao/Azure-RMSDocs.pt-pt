@@ -4,18 +4,18 @@ description: "As aplicações da Loja Windows podem utilizar o SDK Microsoft Rig
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: 0b8e0fb6d872506ac3529bd137286f0e8fa562ee
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 763e99e40bbe329305e97757e87d10b048cc62e9
 
 
 ---
@@ -82,10 +82,10 @@ Agora, está pronto para criar as suas novas aplicações da Loja Windows.
 
 [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
 
-[Referência da API do Windows](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement)
+[Referência da API do Windows](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Oct16_HO1-->
 
 

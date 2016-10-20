@@ -1,28 +1,27 @@
 ---
-title: "Descrição geral técnica da aplicação de partilha Rights Management | Azure RMS"
-description: 
-keywords: 
+title: "Descrição geral técnica da aplicação de partilha Rights Management | Azure Information Protection"
+description: "Informações técnicas para administradores em redes empresariais cuja responsabilidade é implementar a aplicação de partilha RMS para Windows."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: 4f63cb7911661104113d19ecd84ef7c80a874408
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 3b4cd04732e38da31bf31d899993c912694e3ee8
 
 
 ---
 
 
-# Descrição geral técnica da aplicação de partilha Microsoft Rights Management
+# Descrição geral técnica e detalhes de proteção da aplicação de partilha Microsoft Rights Management
 
-*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Rights Management, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 
 A aplicação de partilha Microsoft Rights Management é uma aplicação transferível e opcional para o Microsoft Windows e outras plataformas que fornece o seguinte:
@@ -37,9 +36,9 @@ A aplicação de partilha Microsoft Rights Management é uma aplicação transfe
 
 -   Interoperabilidade completa com ficheiros PDF protegidos através da Infraestrutura de Classificação de Ficheiros (FCI) e ferramentas de criação de PDFs suportadas.
 
-A aplicação de partilha Microsoft Rights Management utiliza o novo [runtime do Cliente de AD RMS 2.1](http://www.microsoft.com/download/details.aspx?id=38396). Ao utilizar a funcionalidade do AD RMS 2.1, a aplicação de partilha Microsoft Rights Management proporciona aos utilizadores finais uma experiência de proteção e consumo simples.
+A aplicação de partilha Microsoft Rights Management utiliza o [runtime do Cliente de AD RMS 2.1](http://www.microsoft.com/download/details.aspx?id=38396). Ao utilizar a funcionalidade do AD RMS 2.1, a aplicação de partilha Microsoft Rights Management proporciona aos utilizadores finais uma experiência de proteção e consumo simples.
 
-Com a versão de outubro de 2013 do RMS, pode proteger documentos nativamente com o Office 2010 e enviá-los para pessoas noutra empresa, que, depois, podem aceder aos mesmos através do Azure RMS. Além disso, com esta versão, se utilizar o AD RMS no Modo Criptográfico 2, pode utilizar RMS para utilizadores e consumir conteúdo de pessoas noutra empresa que utiliza o Azure RMS. Para mais informações sobre o Modo Criptográfico 2, consulte [Modos Criptográficos do AD RMS](http://technet.microsoft.com/library/hh867439%28v=ws.10%29.aspx).
+Com a versão de outubro de 2013 do RMS, pode proteger documentos nativamente com o Office 2010 e enviá-los para pessoas noutra empresa, que, depois, podem aceder aos mesmos através do serviço Azure Rights Management do Azure Information Protection. Além disso, com esta versão, se utilizar o AD RMS no Modo Criptográfico 2, pode utilizar o RMS para indivíduos e consumir conteúdos de pessoas noutra empresa que utilize o serviço Azure Rights Management. Para mais informações sobre o Modo Criptográfico 2, consulte [Modos Criptográficos do AD RMS](http://technet.microsoft.com/library/hh867439%28v=ws.10%29.aspx).
 
 Para obter mais informações sobre a implementação, consulte [Implementação automática da aplicação de partilha Microsoft Rights Management](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)
 
@@ -48,7 +47,7 @@ A aplicação de partilha Microsoft Rights Management suporta proteção a dois 
 
 |Tipo de proteção|Nativa|Genérico|
 |----------------------|----------|-----------|
-|Descrição|Para texto, imagem, ficheiros do Microsoft Office (Word, Excel, PowerPoint), ficheiros .pdf e outros tipos de ficheiro de aplicação que suportam o AD RMS, a proteção nativa fornece um elevado nível de proteção que inclui encriptação e imposição dos direitos (permissões).|Para todas as outras aplicações e tipos de ficheiro, a proteção genérica fornece um nível de segurança que inclui encapsulamento de ficheiro com o tipo de ficheiro .pfile e autenticação para verificar se um utilizador tem autorização para abrir o ficheiro.|
+|Descrição|Para texto, imagem, ficheiros do Microsoft Office (Word, Excel, PowerPoint), ficheiros .pdf e outros tipos de ficheiro de aplicação que suportam o serviço Rights Management, a proteção nativa fornece um elevado nível de proteção que inclui encriptação e imposição dos direitos (permissões).|Para todas as outras aplicações e tipos de ficheiro, a proteção genérica fornece um nível de segurança que inclui encapsulamento de ficheiro com o tipo de ficheiro .pfile e autenticação para verificar se um utilizador tem autorização para abrir o ficheiro.|
 |Protection|Os ficheiros são totalmente encriptados e a proteção é imposta das seguintes formas:<br /><br />- Antes da composição do conteúdo protegido, os utilizadores que recebem o ficheiro por e-mail ou aos quais é dado acesso ao mesmo através de permissões de ficheiro ou de partilha têm de se autenticar com êxito.<br /><br />- Além disso, a política e os direitos de utilização definidos pelo proprietário do conteúdo durante a proteção dos ficheiros são impostos na totalidade quando o conteúdo é composto no Visualizador de IP (para os ficheiros de texto e imagem protegidos) ou na aplicação associada (para todos os outros tipos de ficheiro suportados).|A proteção de ficheiros é imposta das seguintes formas:<br /><br />- Antes da composição do conteúdo protegido, os utilizadores com autorização para abrir o ficheiro e aos quais é dado acesso ao mesmo têm de se autenticar com êxito. Se a autorização falhar, o ficheiro não abre.<br /><br />- A política e os direitos de utilização definidos pelo proprietário do conteúdo são apresentados para informar os utilizadores autorizados acerca da política de utilização prevista.<br /><br />- Existe um registo de auditoria dos utilizadores autorizados que abrem e acedem aos ficheiros. No entanto, não são impostos direitos de utilização por aplicações sem suporte.|
 |Predefinição para tipos de ficheiro|Este é o nível de proteção predefinido para os seguintes tipos de ficheiro:<br /><br />- Ficheiros de texto e imagem<br /><br />- Ficheiros do Microsoft Office (Word, Excel, PowerPoint)<br /><br />- Formato Portable Document Dormat (.pdf)<br /><br />Para mais informações, consulte a secção seguinte [Tipos de ficheiro suportados e extensões de nome de ficheiro](#supported-file-types-and-file-name-extensions).|Esta é a proteção predefinida para todos os outros tipos de ficheiro (tal como .vsdx, .rtf e etc.) que não são suportados pela proteção completa.|
 Pode alterar o nível de proteção predefinido aplicado pela aplicação de partilha RMS. Pode alterar o nível predefinido de nativa para genérica, de genérica para nativa e até mesmo impedir que a aplicação de partilha RMS aplique proteção. Para obter mais informações, consulte a secção [Alterar o nível de proteção predefinido dos ficheiros](#changing-the-default-protection-level-of-files) neste artigo.
@@ -81,7 +80,7 @@ Para os ficheiros que são protegidos genericamente, a extensão de nome de fich
 |.jt|.pjt|
 ¹ Composição de PDF com tecnologia da Foxit. Copyright © 2003–2014 por Foxit Corporation.
 
-A tabela seguinte apresenta uma lista dos tipos de ficheiro que a aplicação de partilha Microsoft Rights Management suporta nativamente no Microsoft Office 2016, Office 2013 e Office 2010. Para estes ficheiros, a extensão de nome de ficheiro permanece igual depois de o ficheiro ser protegido pelo RMS.
+A tabela seguinte apresenta uma lista dos tipos de ficheiro que a aplicação de partilha Microsoft Rights Management suporta nativamente no Microsoft Office 2016, Office 2013 e Office 2010. Nestes ficheiros, a extensão de nome de ficheiro permanece igual depois de o ficheiro ser protegido pelo serviço Rights Management.
 
 |Tipos de ficheiro suportados pelo Office|Tipos de ficheiro suportados pelo Office|
 |----------------------------------|----------------------------------|
@@ -140,6 +139,6 @@ Pode efetuar edições de registo semelhantes para outros cenários ao alterar o
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

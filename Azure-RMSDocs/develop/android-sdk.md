@@ -4,18 +4,18 @@ description: "As aplicações Android podem utilizar o SDK Microsoft Rights Mana
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: 30fad88ff664e2df935c8f2cfd28f8b1fe251f67
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 90c8c97c720c624ba8f1ca7703b6c79a66f77d08
 
 
 ---
@@ -28,8 +28,8 @@ Este tópico descreve como configurar o ambiente para criar as suas novas aplica
 
 -   [Pré-requisitos](#prerequisites)
 -   [Opcional](#optional)
--   [Configurar o ambiente de desenvolvimento](#configuring_your_development_environment_)
--   [Consulte Também](#see_also)
+-   [Configurar o ambiente de desenvolvimento](#configuring-your-development-environment)
+-   [Consulte Também](#see-also)
 
 ## Pré-requisitos
 
@@ -150,6 +150,6 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Oct16_HO1-->
 
 

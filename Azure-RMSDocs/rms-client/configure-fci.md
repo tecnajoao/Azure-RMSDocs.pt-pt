@@ -1,40 +1,39 @@
 ---
-title: "Proteção RMS com Infraestrutura de Classificação de Ficheiros (FCI) do Windows Server | Azure RMS"
-description: 
-keywords: 
+title: "Proteção RMS com Infraestrutura de Classificação de Ficheiros (FCI) do Windows Server | Azure Information Protection"
+description: "Instruções para utilizar o cliente de Rights Management (RMS) com a ferramenta RMS Protection para configurar o Gestor de Recursos do Servidor de Ficheiros e a infraestrutura de classificação de ficheiros (FCI)."
 author: cabailey
 manager: mbaldwin
-ms.date: 06/14/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1fc1835b60c4c75b81f106011849940ba2e77164
-ms.openlocfilehash: afb00e010df25dea5f3c3cad23824f773de59b18
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 7e0556e99aa09d4b6f2488cb866b57488a22cacd
 
 
 ---
 
 # Proteção RMS com Infraestrutura de Classificação de Ficheiros (FCI) do Windows Server
 
-*Aplica-se a: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*Aplica-se a: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
 
 Utilize este artigo para obter instruções e um script para utilizar o cliente de Rights Management (RMS) com a ferramenta RMS Protection para configurar o Gestor de Recursos do Servidor de Ficheiros e a infraestrutura de classificação de ficheiros (FCI).
 
-Esta solução permite-lhe proteger automaticamente todos os ficheiros numa pasta num servidor de ficheiros com o Windows Server ou proteger automaticamente ficheiros que cumpram critérios específicos. Por exemplo, ficheiros que tenham sido classificados como contendo informações confidenciais. Esta solução utiliza o Azure Rights Management (Azure RMS) para proteger os ficheiros, pelo que esta tecnologia tem de estar implementada na sua organização.
+Esta solução permite-lhe proteger automaticamente todos os ficheiros numa pasta num servidor de ficheiros com o Windows Server ou proteger automaticamente ficheiros que cumpram critérios específicos. Por exemplo, ficheiros que tenham sido classificados como contendo informações confidenciais. Esta solução utiliza o serviço Azure Rights Management do Azure Information Protection para proteger os ficheiros, pelo que esta tecnologia tem de estar implementada na sua organização.
 
 > [!NOTE]
-> Embora o Azure RMS inclua um [conector](../deploy-use/deploy-rms-connector.md) que suporta a infraestrutura de classificação de ficheiros, essa solução só suporta a proteção nativa — por exemplo, ficheiros do Office.
+> Embora o Azure Information Protection inclua um [conector](../deploy-use/deploy-rms-connector.md) que suporta a infraestrutura de classificação de ficheiros, essa solução só suporta a proteção nativa — por exemplo, ficheiros do Office.
 > 
 > Para suportar todos os tipos de ficheiro com a infraestrutura de classificação de ficheiros, tem de utilizar o módulo **Proteção RMS** do Windows PowerShell, conforme documentado neste artigo. Os cmdlets da Proteção RMS, como a aplicação de partilha RMS, suportam a proteção genérica, bem como a proteção nativa, o que significa que todos os ficheiros podem ser protegidos. Para mais informações sobre estes níveis de proteção diferentes, consulte a secção [Níveis de proteção – nativa e genérica](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) no [Rights Management sharing application administrator guide (Guia do administrador da aplicação de partilha Rights Management – em inglês)](sharing-app-admin-guide.md).
 
 As instruções que se seguem aplicam-se ao Windows Server 2012 R2 ou Windows Server 2012. Se utilizar outras versões suportadas do Windows, poderá ter de adaptar alguns dos passos devido às diferenças entre a versão do seu sistema operativo e a descrita neste artigo.
 
-## Pré-requisitos para a proteção Azure RMS com a FCI do Windows Server
+## Pré-requisitos para a proteção Azure Rights Management com a FCI do Windows Server
 Pré-requisitos para estas instruções:
 
 -   Nos servidores de ficheiros em que executará o Gestor de Recursos de Ficheiros com a infraestrutura de classificação de ficheiros:
@@ -49,7 +48,7 @@ Pré-requisitos para estas instruções:
 
     -   Tem uma ligação à Internet, com as definições de computador configuradas, se tal for necessário para um servidor proxy. Por exemplo: `netsh winhttp import proxy source=ie`
 
--   Configurou os pré-requisitos adicionais para a sua implementação do Azure Rights Management, conforme descrito em [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx). Especificamente, tem os seguintes valores para ligar ao Azure RMS através de um principal de serviço:
+-   Configurou os pré-requisitos adicionais para a sua implementação do Azure Information Protection, conforme descrito em [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx). Especificamente, tem os seguintes valores para ligar ao serviço Azure Rights Management através de um principal de serviço:
 
     -   BposTenantId
 
@@ -57,7 +56,7 @@ Pré-requisitos para estas instruções:
 
     -   Symmetric key
 
--   Sincronizou as suas contas de utilizador do Active Directory no local com o Azure Active Directory ou o Office 365, incluindo os respetivos endereços de e-mail. Isto é necessário para todos os utilizadores que possam precisar de aceder a ficheiros depois de estarem protegidos pela FCI e o Azure RMS. Se não efetuar este passo (por exemplo, num ambiente de teste), os utilizadores poderão ficar bloqueados de aceder a estes ficheiros. Se precisar de mais informações sobre esta configuração de conta, consulte [Preparing for Azure Rights Management (Preparar para o Azure Rights Management – em inglês)](../plan-design/prepare.md).
+-   Sincronizou as suas contas de utilizador do Active Directory no local com o Azure Active Directory ou o Office 365, incluindo os respetivos endereços de e-mail. Isto é necessário para todos os utilizadores que possam necessitar de aceder a ficheiros protegidos pela FCI e pelo serviço Azure Rights Management. Se não efetuar este passo (por exemplo, num ambiente de teste), os utilizadores poderão ficar bloqueados de aceder a estes ficheiros. Se precisar de mais informações sobre esta configuração de conta, consulte [Preparar para o serviço Azure Rights Management](../plan-design/prepare.md).
 
 -   Identificou o modelo de Rights Management a utilizar, o que irá proteger os ficheiros. Certifique-se de que sabe o ID deste modelo. Para esse efeito, utilize o cmdlet [Get-RMSTemplate](https://msdn.microsoft.com/library/azure/mt433197.aspx).
 
@@ -95,7 +94,7 @@ No final destas instruções, todos os ficheiros na sua pasta selecionada serão
 
         `[Parameter(Mandatory = $false)]             [string]$AppPrincipalId = "b5e3f76a-b5c2-4c96-a594-a0807f65bba4",`
 
-    -   Procure a seguinte cadeia e substitua-a pela sua chave simétrica, que utiliza com o cmdlet [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) para estabelecer ligação ao Azure RMS:
+    -   Procure a seguinte cadeia e substitua-a pela sua chave simétrica, que utiliza com o cmdlet [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) para ligar ao serviço Azure Rights Management:
 
         ```
         <enter your key here>
@@ -106,7 +105,7 @@ No final destas instruções, todos os ficheiros na sua pasta selecionada serão
 
         `[string]$SymmetricKey = "zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA="`
 
-    -   Procure a seguinte cadeia e substitua-a pelo seu BposTenantId (ID de inquilino), que utiliza com o cmdlet [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) para estabelecer ligação ao Azure RMS:
+    -   Procure a seguinte cadeia e substitua-a pelo seu BposTenantId (ID de inquilino) que utiliza com o cmdlet [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) para ligar ao serviço Azure Rights Management:
 
         ```
         <enter your BposTenantId here>
@@ -127,7 +126,7 @@ No final destas instruções, todos os ficheiros na sua pasta selecionada serão
 
     Para mais informações sobre como assinar os scripts do Windows PowerShell, consulte [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) na biblioteca de documentação do PowerShell.
 
-4.  Guarde o ficheiro localmente em cada um dos servidores de ficheiros que irão executar o Gestor de Recursos de Ficheiros com a infraestrutura de classificação de ficheiros. Por exemplo, guarde o ficheiro em **C:\RMS-Protection**. Proteja este ficheiro com permissões NTFS para que os utilizadores não autorizados não o possam modificar.
+4.  Guarde o ficheiro localmente em cada um dos servidores de ficheiros que irão executar o Gestor de Recursos de Ficheiros com a infraestrutura de classificação de ficheiros. Por exemplo, guarde o ficheiro em **C:\RMS-Protection**. Se utilizar um caminho ou nome de pasta diferente, escolha um caminho e uma pasta que não incluam espaços. Proteja este ficheiro com permissões NTFS para que os utilizadores não autorizados não o possam modificar.
 
 Agora está pronto para iniciar a configuração do Gestor de Recursos do Servidor de Ficheiros.
 
@@ -228,11 +227,11 @@ Agora que concluiu a configuração de classificação, está pronto para config
             Neste comando, **[Source File Path]** e **[Source File Owner Email]** são ambas variáveis específicas da FCI, por isso escreva-as exatamente tal como aparecem no comando acima. A primeira é utilizada pela FCI para especificar automaticamente o ficheiro identificado na pasta e a segunda serve para que a FCI obtenha automaticamente o endereço de e-mail do Proprietário mencionado do ficheiro identificado. Este comando é repetido para cada ficheiro na pasta, o que, no nosso exemplo, significa cada ficheiro que se encontre na pasta C:\FileShare e tenha o RMS como uma propriedade de classificação de ficheiros.
 
             > [!NOTE]
-            > O valor e o parâmetro **-OwnerMail [Source File Owner Email] (E-mail do Proprietário do Ficheiro de Origem)** garantem que os direitos de proprietário de Rights Management do ficheiro são concedidos ao proprietário original do ficheiro após este ser protegido. Isto garante que o proprietário do ficheiro original tem todos os direitos de Rights Management dos seus ficheiros. Quando os ficheiros são criados por um utilizador de domínio, o endereço de e-mail é obtido automaticamente a partir do Active Directory através do nome de conta de utilizador na propriedade Proprietário do ficheiro. Para fazer isto, o servidor de ficheiros tem de se encontrar no mesmo domínio ou domínio fidedigno que o utilizador.
+            > O valor e o parâmetro **-OwnerMail [Source File Owner Email (E-mail do Proprietário do Ficheiro de Origem)]** garantem que os direitos de proprietário de Rights Management do ficheiro são concedidos ao proprietário original do ficheiro após este ser protegido. Isto garante que o proprietário do ficheiro original tem todos os direitos de Rights Management dos seus ficheiros. Quando os ficheiros são criados por um utilizador de domínio, o endereço de e-mail é obtido automaticamente a partir do Active Directory através do nome de conta de utilizador na propriedade Proprietário do ficheiro. Para fazer isto, o servidor de ficheiros tem de se encontrar no mesmo domínio ou domínio fidedigno que o utilizador.
             > 
-            > Sempre que possível, atribua os proprietários originais aos documentos protegidos, para garantir que estes utilizadores continuam a ter controlo total sobre os ficheiros que criaram. No entanto, se utilizar a variável [Source File Owner Email] (E-mail do Proprietário do Ficheiro de Origem) conforme apresentado acima e um ficheiro não tiver um utilizador de domínio definido como o proprietário (por exemplo, se tiver sido utilizada uma conta local para criar o ficheiro e, por isso, o nome de proprietário apresentado for SYSTEM), o script irá falhar.
+            > Sempre que possível, atribua os proprietários originais aos documentos protegidos, para garantir que estes utilizadores continuam a ter controlo total sobre os ficheiros que criaram. No entanto, se utilizar a variável [Source File Owner Email (E-mail do Proprietário do Ficheiro de Origem)] conforme apresentado acima e um ficheiro não tiver um utilizador de domínio definido como o proprietário (por exemplo, se tiver sido utilizada uma conta local para criar o ficheiro e, por isso, o nome de proprietário apresentado for SYSTEM), o script irá falhar.
             > 
-            > Para ficheiros que não dispõem de um utilizador de domínio como proprietário, pode copiar e guardá-los como um utilizador de domínio, de modo a ser o proprietário apenas destes ficheiros. Em alternativa, se tiver as permissões, pode alterar manualmente o proprietário.  Outra alternativa é fornecer um endereço de e-mail específico (tal como o seu próprio endereço ou um endereço de grupo do departamento de TI) em vez da variável [Source File Owner Email] (E-mail do Proprietário do Ficheiro de Origem), o que significa que todos os ficheiros que proteger com este script irão utilizar este endereço de e-mail para definir o novo proprietário.
+            > Para ficheiros que não dispõem de um utilizador de domínio como proprietário, pode copiar e guardá-los como um utilizador de domínio, de modo a ser o proprietário apenas destes ficheiros. Em alternativa, se tiver as permissões, pode alterar manualmente o proprietário.  Outra alternativa é fornecer um endereço de e-mail específico (tal como o seu próprio endereço ou um endereço de grupo do departamento de TI) em vez da variável [Source File Owner Email (E-mail do Proprietário do Ficheiro de Origem)], o que significa que todos os ficheiros que proteger com este script irão utilizar este endereço de e-mail para definir o novo proprietário.
 
     -   **Executar o comando como**: selecione **Sistema Local**
 
@@ -248,7 +247,7 @@ Agora que concluiu a configuração de classificação, está pronto para config
 
         -   **Executar em**: configure o horário da sua preferência.
 
-            Reserve bastante tempo para que o script seja concluído. Embora esta solução proteja todos os ficheiros na pasta, o script é executado uma vez para cada ficheiro, de cada vez. Apesar de este processo ser mais demorado do que proteger todos os ficheiros ao mesmo tempo, o que é suportado pela ferramenta RMS Protection, esta configuração ficheiro-a-ficheiro para a FCI é mais eficiente. Por exemplo, os ficheiros protegidos podem ter diferentes proprietários (manter o proprietário original) quando utiliza a variável [Source File Owner Email] (E-mail do Proprietário do Ficheiro de Origem) e esta ação ficheiro-a-ficheiro será necessária se posteriormente alterar a configuração para proteger ficheiros de forma seletiva, em vez de todos os ficheiros numa pasta.
+            Reserve bastante tempo para que o script seja concluído. Embora esta solução proteja todos os ficheiros na pasta, o script é executado uma vez para cada ficheiro, de cada vez. Apesar de este processo ser mais demorado do que proteger todos os ficheiros ao mesmo tempo, o que é suportado pela ferramenta RMS Protection, esta configuração ficheiro-a-ficheiro para a FCI é mais eficiente. Por exemplo, os ficheiros protegidos podem ter diferentes proprietários (manter o proprietário original) quando utiliza a variável [Source File Owner Email (E-mail do Proprietário do Ficheiro de Origem)] e esta ação ficheiro-a-ficheiro será necessária se posteriormente alterar a configuração para proteger ficheiros de forma seletiva, em vez de todos os ficheiros numa pasta.
 
         -   **Executar continuamente em ficheiros novos**: selecione esta caixa de verificação.
 
@@ -285,9 +284,9 @@ Agora que concluiu a configuração de classificação, está pronto para config
     >     ```
     >     powershell.exe -Noprofile -Command "<path>\RMS-Protect-FCI.ps1 -File '<full path and name of a file>' -TemplateID <template GUID>"
     >     ```
-    >     -   Se o script for executado com êxito nesta sessão do Windows PowerShell, verifique as suas entradas para **Executivo** e **Argumento** na ação de tarefa de gestão de ficheiros.  Se tiver especificado **-OwnerEmail [Source File Owner Email] (E-mail de Proprietário do Ficheiro de Origem)**, experimente remover este parâmetro.
+    >     -   Se o script for executado com êxito nesta sessão do Windows PowerShell, verifique as suas entradas para **Executivo** e **Argumento** na ação de tarefa de gestão de ficheiros.  Se tiver especificado **-OwnerEmail [Source File Owner Email (E-mail de Proprietário do Ficheiro de Origem)]**, experimente remover este parâmetro.
     > 
-    >         Se a tarefa de gestão de ficheiros funcionar com êxito sem **-OwnerEmail [Source File Owner Email] (E-mail de Proprietário do Ficheiro de Origem)**, verifique se os ficheiros não protegidos têm um utilizador de domínio listado como o proprietário do ficheiro, em vez de **SYSTEM**.  Para o fazer, utilize o separador **Segurança** nas propriedades do ficheiro e, em seguida, clique em **Avançadas**. O valor **Proprietário** é apresentado imediatamente a seguir ao **Nome** do ficheiro. Além disso, certifique-se de que o servidor de ficheiros está no mesmo domínio ou num domínio fidedigno para procurar o endereço de e-mail do utilizador a partir dos Serviços de Domínio do Active Directory.
+    >         Se a tarefa de gestão de ficheiros funcionar com êxito sem **-OwnerEmail [Source File Owner Email (E-mail de Proprietário do Ficheiro de Origem)]**, verifique se os ficheiros não protegidos têm um utilizador de domínio listado como o proprietário do ficheiro, em vez de **SYSTEM**.  Para o fazer, utilize o separador **Segurança** nas propriedades do ficheiro e, em seguida, clique em **Avançadas**. O valor **Proprietário** é apresentado imediatamente a seguir ao **Nome** do ficheiro. Além disso, certifique-se de que o servidor de ficheiros está no mesmo domínio ou num domínio fidedigno para procurar o endereço de e-mail do utilizador a partir dos Serviços de Domínio do Active Directory.
     > -   Se vir o número correto de ficheiros no relatório, mas os ficheiros não estiverem protegidos, experimente proteger os ficheiros manualmente com o cmdlet [Protect-RMSFile](https://msdn.microsoft.com/library/azure/mt433201.aspx), para ver se são apresentados erros.
 
 Após confirmar que estas tarefas foram executadas com êxito, pode fechar o Gestor de Recursos de Ficheiros. Os novos ficheiros serão protegidos automaticamente e todos os ficheiros serão protegidos novamente quando os agendamentos forem executados. Voltar a proteger os ficheiros garante que todas as alterações ao modelo são aplicadas aos ficheiros.
@@ -303,6 +302,6 @@ Agora, tudo o que precisa de fazer é criar uma nova tarefa de gestão de fichei
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

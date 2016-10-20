@@ -1,21 +1,21 @@
 ---
 title: "Utilize o Portal do Azure para configurar a autenticação RMS | Azure RMS"
 description: "Descreve o processo para a autenticação com a ADAL"
-keywords: authentication, RMS, ADAL
+keywords: "autenticação, RMS, ADAL"
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/14/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2680b399-febb-4bd6-b844-ac3d1e69aca4
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3f43f5605b1c341d7be618327038d1a86a305a5b
-ms.openlocfilehash: cb82f0333ed17ee2994608baa3bbb50d42f19073
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: eb9cea79d9e5a7902839d34d9b4f13bdefe5a5d3
 
 
 ---
@@ -58,10 +58,10 @@ Eis um recorte de código do maior exemplo para o código de cliente móvel para
 ## Tópicos relacionados
 
 - [MSIPCSampleApp](https://github.com/AzureAD/rms-sdk-ui-for-android/tree/master/samples/MsipcSampleApp)
-- [Configurar o Azure RMS para a autenticação ADAL](adal-auth.md)
+- [Configurar o Azure RMS para autenticação ADAL](adal-auth.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

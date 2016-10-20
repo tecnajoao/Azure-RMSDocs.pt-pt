@@ -1,43 +1,42 @@
 ---
-title: "Informações e suporte para o Azure Rights Management | Azure RMS"
-description: 
-keywords: 
+title: "Informações de administração e suporte do Azure Information Protection | Azure Information Protection"
+description: "Recursos para administradores que incluem informações sobre novas versões, opções de suporte e como contactar a Microsoft para reportar um problema."
 author: cabailey
 manager: mbaldwin
-ms.date: 06/29/2016
+ms.date: 10/04/2016
 ms.topic: get-started-article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6052afabe4894f8129e9eebc93705b219e6ed875
-ms.openlocfilehash: a8f5852d965abe2f2654aa236bfd9ea49a62aa84
+ms.sourcegitcommit: 13579b8cb5516a1d7390db81957c140b8e980982
+ms.openlocfilehash: 1ca9b1d4b3af81a892e001c639ad79ac931233be
 
 
 ---
 
-# Informações e suporte para o Azure Rights Management
+# Informações e suporte do Azure Information Protection
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Information Protection, Office 365*
 
-Utilize os recursos seguintes para obter informações adicionais sobre o Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS).
+Utilize os seguintes recursos para o ajudar a obter mais informações, implementar e suportar o Azure Information Protection para a sua organização.
 
-|Para efetuar este procedimento...|.. efetue o seguinte:|
+|Para...|... faça o seguinte:|
 |----------------|---------------|
-|… leia a mais recente documentação do produto [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] →|Utilize o site de documentação da Microsoft do [Azure Rights Management](../understand-explore/azure-rights-management.md)|
-|… forneça comentários sobre a documentação ou faça uma pergunta sobre a documentação →|Envie um e-mail para [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
-|… receba tweets sobre o Rights Management e anúncios sobre atualizações da documentação do grupo de produtos →|Siga Dan Plastina, que ajuda a liderar a Equipa do Microsoft Rights Management. Consulte [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy)|
-|… obtenha uma versão de avaliação do [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] →|Utilize as ligações para as avaliações gratuitas de 30 dias em [requisitos do Azure RMS: subscrições na nuvem que suportam o Azure RMS](requirements-subscriptions.md)|
+|… consultar a documentação recomendada para o serviço →|Utilize a página inicial da [Documentação do Azure Information Protection](https://docs.microsoft.com/information-protection/).|
+|… fornecer feedback sobre a documentação ou fazer uma pergunta sobre a documentação →|Envie um e-mail para [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
+|… receber tweets sobre o Information Protection e anúncios sobre atualizações da documentação do grupo de produtos →|Siga Dan Plastina, que ajuda a liderar a equipa do Microsoft Information Protection. Consulte [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy)|
+|… consultar as informações de subscrição e as funcionalidades suportadas →|Utilize as [informações da subscrição](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) e a [lista de funcionalidades](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) no site do Azure Information Protection.|
 
 
-## O blogue do grupo de produtos do Rights Management
-O grupo de produtos do Rights Management juntou-se com o [Blogue da Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) para lhe fornecer informações técnicas e outras novidades sobre o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], e tecnologias relacionadas. Estas publicações no blogue completam a documentação do produto e as informações de suporte.
+## Informações sobre novas versões
+O grupo de produtos do Information Protection publica anúncios sobre as novas versões e atualizações no [Blogue do Enterprise Mobility e Segurança](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services). Estas publicações no blogue completam a documentação do produto e as informações de suporte.
 
 > [!TIP]
-> Se estiver a desenvolver aplicações para o Azure RMS ou o AD RMS, poderá também estar interessado no [Blogue Área para Programadores dos Serviços de Gestão de Direitos do Active Directory (AD RMS)](https://blogs.msdn.microsoft.com/rms/).
+> Se estiver a desenvolver aplicações que utilizam os serviços do Microsoft Rights Management (Azure RMS ou AD RMS), poderá também estar interessado no [Active Directory Rights Management Services (AD RMS) Developer's Corner blog (blogue Área para Programadores dos Serviços de Gestão de Direitos do Active Directory (AD RMS) – em inglês)](https://blogs.msdn.microsoft.com/rms/).
 
 ## Opções de suporte e recursos da comunidade
 As secções seguintes fornecem informações sobre as opções de suporte e de resolução de problemas e os recursos da comunidade.
@@ -46,15 +45,17 @@ As secções seguintes fornecem informações sobre as opções de suporte e de 
 
 Se tiver Suporte Premier, visite o [portal clientes do Suporte Premier](https://premier.microsoft.com/) para submeter incidentes, procurar soluções e obter ajuda.
 
-Pode ser elegível para o **FastTrack**: pode utilizar o Benefício do FastTrack Center ao adquirir pelo menos 150 licenças do Azure RM num plano elegível. O Benefício do FastTrack Center permite-lhe trabalhar com especialistas da Microsoft para avaliar, corrigir e ativar serviços elegíveis. Para mais informações, consulte [Benefício do FastTrack Center do Azure Rights Management](https://technet.microsoft.com/library/mt607025.aspx).
+Pode ser elegível para o **FastTrack**: pode utilizar o Benefício do FastTrack Center ao adquirir pelo menos 150 licenças do Azure Information Protection num plano elegível. O Benefício do FastTrack Center permite-lhe trabalhar com especialistas da Microsoft para avaliar, corrigir e ativar serviços elegíveis. Para mais informações, consulte [Benefício do FastTrack Center do Azure Rights Management](https://technet.microsoft.com/library/mt607025.aspx).
 
-Para outros clientes, utilize os seguintes canais de suporte, consoante a forma como tiver obtido o Azure Rights Management:
+Para outros clientes, utilize os seguintes canais de suporte, consoante a forma como tiver obtido o Azure Information Protection:
 
-- **Azure Rights Management com uma subscrição do Office 365**: consulte [Contactar o Office 365 para suporte de negócio – Ajuda de Administração](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) para números de telefone e sobre como contactar o Suporte utilizando o portal de administração do Office 365. 
+- **Azure Information Protection Premium** (autónomo): abra um [pedido de suporte no portal do Azure](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade). Para utilizar esta opção, deve ter uma subscrição do Azure e um plano de suporte do Azure. Para obter mais informações, consulte [Suporte do Azure para Clientes](https://azure.microsoft.com/support/plans/). 
 
-- **Azure Rights Management com o Enterprise Mobility Suite**: se também tiver o Office 365, pode utilizar os [canais de suporte do Office 365](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).  Para obter mais informações, consulte a [Enterprise Mobility Suite: FAQ de Suporte](https://technet.microsoft.com/dn932057.aspx).
+- **Azure Information Protection com uma subscrição do Office 365**: consulte [Contactar o suporte do Office 365 para empresas – Ajuda para Administradores](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) para obter números de telefone e saber como contactar o Suporte através do portal de administração do Office 365. 
 
-- **Azure Rights Management Premium**: abrir um [pedido de suporte no portal do Azure](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade). Para utilizar esta opção, deve ter uma subscrição do Azure e um plano de suporte do Azure. Para obter mais informações, consulte [Suporte do Azure para Clientes](https://azure.microsoft.com/support/plans/). 
+- **Azure Information Protection com o Enterprise Mobility + Security (EMS)**: se também tiver o Office 365, pode utilizar os [canais de suporte do Office 365](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b). Para obter mais informações, consulte a [Enterprise Mobility Suite: FAQ de Suporte](https://technet.microsoft.com/dn932057.aspx).
+
+- **Azure Information Protection com Secure Productive Enterprise (SPE)**: utilize os [canais de suporte do Office 365](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).
 
 Para opções de suporte adicionais, peça ao seu contacto da Microsoft. 
 
@@ -68,17 +69,17 @@ Resolva os problemas:
 
 - Se tiver uma pergunta sobre como algo funciona: verifique se a sua pergunta já foi respondida na página [Perguntas mais frequentes](faqs.md).
 
-- Se tiver uma pergunta sobre uma declaração de suporte do Azure RMS: consulte as informações sobre [Requisitos](requirements-azure-rms.md) que são atualizadas regularmente.
+- Se tiver uma pergunta sobre uma declaração de suporte do Azure Information Protection: consulte as informações sobre [Requisitos](requirements-azure-rms.md) que são atualizadas regularmente.
 
-- Para obter informações para dar suporte aos seus utilizadores finais, suporte técnico e administradores que estão a configurar serviços e aplicações que utilizam o Azure RMS: consulte [Ajudar os utilizadores a proteger ficheiros](../deploy-use/help-users.md).
+- Para obter informações para dar suporte aos seus utilizadores finais, suporte técnico e administradores que estão a configurar serviços e aplicações que utilizam o Azure Information Protection: consulte [Ajudar os utilizadores a proteger ficheiros](../deploy-use/help-users.md).
 
-- Se tiver implementado o conector do RMS para os servidores no local: consulte as informações de [monitorização](../deploy-use/monitor-rms-connector.md) que incluem detalhes sobre as entradas do registo de eventos, contadores de desempenho e registo.
+- Se tiver implementado o conector do Rights Management para os servidores no local: consulte as informações de [monitorização](../deploy-use/monitor-rms-connector.md) que incluem detalhes sobre as entradas do registo de eventos, contadores de desempenho e registo.
 
 - Para verificações automatizadas, rastreio e remediação automática: transfira e execute a [ferramenta RMS Analyzer](http://www.microsoft.com/en-us/download/details.aspx?id=46437). Para mais informações sobre esta ferramenta, consulte os **Detalhes** e as **Instruções de Instalação** na página de transferência. 
 
 ### Recursos comunitários
 
--   [Yammer: Microsoft Rights Management (RMS)](http://www.yammer.com/AskIPTeam)
+-   [Yammer: Azure Information Protection](http://www.yammer.com/AskIPTeam)
 
 -   [Fórum: Microsoft RMS (Nuvem)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud)
 
@@ -87,6 +88,6 @@ Resolva os problemas:
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Oct16_HO1-->
 
 

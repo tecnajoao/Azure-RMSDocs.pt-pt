@@ -1,20 +1,19 @@
 ---
 title: "Requisitos do Azure RMS&#58; subscrições na nuvem | Azure RMS"
-description: 
-keywords: 
+description: "Conheça as subscrições que pode utilizar para implementar o Azure Rights Management (Azure RMS) na sua organização."
 author: cabailey
 manager: mbaldwin
-ms.date: 06/09/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 6a16e890-3c3e-4f47-80ca-176a34bdf8bc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6dcd8bb1091e9c484e02042adbf993381581a9d
-ms.openlocfilehash: 5e68ba6942b479e9dcbf0e9ac0a3bed0c2d1869d
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: e0c6c9300096a3130cc59406208d51bbafc9e35b
 
 
 ---
@@ -22,11 +21,11 @@ ms.openlocfilehash: 5e68ba6942b479e9dcbf0e9ac0a3bed0c2d1869d
 
 # Requisitos do Azure RMS: subscrições na nuvem que suportam o Azure RMS
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Rights Management, Office 365*
 
 Para utilizar o Azure Rights Management (Azure RMS), a sua organização tem de ter, pelo menos, uma das seguintes subscrições com um número suficiente de licenças para utilizadores e serviços que irão proteger ficheiros e mensagens de e-mail. Se tiver um serviço que aplicará proteção aos utilizadores (proprietários dos ficheiros ou mensagens de e-mail), esses utilizadores necessitam de uma destas licenças. Os utilizadores que apenas irão consumir (por exemplo, ler e editar) estes dados protegidos não necessitam de uma licença.
 
--   Office 365
+-   Office 365 (subscrições específicas)
 
 -   Azure Rights Management Premium (anteriormente denominado Azure RMS Standalone)
 
@@ -95,6 +94,6 @@ Para mais informações, consulte [RMS para indivíduos e Azure Rights Managemen
 Para verificar outros requisitos, consulte [Requisitos do Azure Rights Management](requirements-azure-rms.md).
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

@@ -1,20 +1,19 @@
 ---
-title: "Como saber se os utilizadores se inscreveram no RMS para indivíduos | Azure RMS"
-description: 
-keywords: 
+title: "Como saber se os utilizadores se inscreveram no RMS para indivíduos | Azure Information Protection"
+description: "Como administrador, como sabe se os seus utilizadores se inscreveram no RMS para indivíduos? Pode utilizar qualquer um ou uma combinação dos métodos descritos neste artigo."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a36c3d99-a794-4f7a-aafb-64a950f1fcf9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: e577366be26f7296079751e72fb6531b9e28c504
+ms.sourcegitcommit: 2fd29eb6dec94535d0358fe0a2d9c9285fcd7cd1
+ms.openlocfilehash: 9233952b6a707359c8f97516b57542e5d3d1744c
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: e577366be26f7296079751e72fb6531b9e28c504
 
 # Como saber se os utilizadores se inscreveram no RMS para indivíduos
 
-*Aplica-se a: Azure Rights Management*
+>*Aplica-se a: Azure Information Protection*
 
 Como administrador, como sabe se os seus utilizadores se inscreveram no RMS para indivíduos? Pode utilizar qualquer um ou uma combinação dos seguintes métodos:
 
@@ -37,6 +36,6 @@ Como administrador, como sabe se os seus utilizadores se inscreveram no RMS para
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

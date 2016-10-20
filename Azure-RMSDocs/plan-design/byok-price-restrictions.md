@@ -1,40 +1,66 @@
 ---
-title: "Preços e restrições de BYOK | Azure RMS"
-description: 
-keywords: 
+title: "Preços e restrições de BYOK | Azure Information Protection"
+description: Understand the restrictions when you use customer-managed keys (known as "bring your own key", or BYOK) with Azure RMS.
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 10/03/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 34d5ed8ca9f5b4556429a081718fc70a789590aa
+ms.sourcegitcommit: d7dee4efcff4ccf76f08f9033fdaf89daf095d4e
+ms.openlocfilehash: 86e6ebac4ad8c0782fb27344c30ee1d044be33d0
 
 
 ---
 
 # Preços e restrições de BYOK
 
-*Aplica-se a: Azure Rights Management, Office 365*
+>*Aplica-se a: Azure Information Protection, Office 365*
 
 
-As organizações com uma subscrição do Azure gerida pelo departamento de TI podem utilizar o BYOK e registar a sua utilização sem qualquer custo adicional. As organizações que utilizam o RMS para utilizadores autónomos não podem utilizar o BYOK e o registo, porque não têm um administrador de inquilinos para configurar estas funcionalidades.
+As organizações que tenham uma subscrição que inclua o Azure Information Protection podem utilizar chaves geridas pelo cliente (BYOK) no Cofre de Chaves do Azure e [registar a respetiva utilização](../deploy-use/log-analyze-usage.md) sem qualquer custo adicional. 
+
+No entanto, para utilizar o Cofre de Chaves do Azure, é necessário ter uma subscrição do Azure que suporte o Cofre de Chaves com chaves protegidas por HSM. A utilização de uma chave no Cofre de Chaves do Azure implica uma cobrança mensal. Para obter mais informações, veja a [página de Preços do Cofre de Chaves do Azure](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
+
+Quando utilizar o Cofre de Chaves do Azure para a sua chave de inquilino do Azure Information Protection, recomendamos que tenha um cofre de chaves dedicado para esta chave com uma subscrição dedicada, para garantir que só é utilizada pelo serviço Azure Rights Management. 
+
+## Vantagens de utilizar o Cofre de Chaves do Azure
+
+Além de utilizar o registo de utilização do Azure Information Protection, para uma segurança adicional, pode utilizá-lo como referência cruzada com o [registo do Cofre de Chaves do Azure](https://azure.microsoft.com/documentation/articles/key-vault-logging/) para monitorizar de forma independente e certificar-se de que apenas o serviço Azure Rights Management está a utilizar esta chave. Se for necessário, pode revogar imediatamente o acesso à chave ao remover as permissões no cofre de chaves.
+
+Outras vantagens de utilizar o Cofre de Chaves do Azure para a sua chave de inquilino do Azure Information Protection:
+
+- O Cofre de Chaves do Azure fornece uma solução de gestão de chaves centralizada que proporciona uma solução de gestão consistente para muitos serviços baseados na nuvem e até serviços no local que utilizem encriptação.
+
+- O Cofre de Chaves do Azure suporta diversas interfaces incorporadas para a gestão de chaves, incluindo o PowerShell, a CLI, APIs REST e o portal do Azure. Foram integrados outros serviços e ferramentas com o Cofre de Chaves, para fornecer funcionalidades que sejam otimizadas para tarefas específicas, tais como a monitorização. Por exemplo, pode analisar os registos de utilização da sua chave através do Log Analytics do Operations Management Suite, definir alertas quando os critérios especificados forem correspondidos, entre outras tarefas.
+
+- O Cofre de Chaves do Azure proporciona uma separação de funções, como melhor prática de segurança comprovada. Os administradores do Azure Information Protection podem concentrar-se na gestão da proteção e classificação de dados e os administradores do Cofre de Chaves do Azure podem concentrar-se na gestão de chaves de encriptação e todas as políticas especiais que possam ser necessárias para a segurança ou conformidade.
+
+- Algumas organizações têm restrições relativamente ao local em que a chave mestra tem de ser armazenada. O Cofre de Chaves do Azure fornece um elevado nível de controlo sobre o local onde armazena a chave mestra, uma vez que o serviço se encontra disponível em muitas regiões do Azure. Neste momento, dispõe de 28 regiões à escolha [regiões do Azure e é provável que este número aumente. Para mais informações, consulte a página [Produtos disponíveis por região] (https://azure.microsoft.com/regions/services/) no site do Azure.
+
+Além da gestão de chaves, o Cofre de Chaves do Azure proporciona aos seus administradores de segurança a mesma experiência em gestão para armazenar, aceder e gerir certificados e segredos (por exemplo, palavras-passe) de outros serviços e aplicações que utilizam encriptação. 
+
+Para mais informações sobre o Cofre de Chaves do Azure, consulte [O que é o Cofre de Chaves do Azure?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) e aceda ao [blogue de equipa do Cofre de Chaves do Azure](https://blogs.technet.microsoft.com/kv/) para consultar as informações mais recentes e saber como os outros serviços utilizam esta tecnologia.
+
+
+## Restrições de utilização de BYOK
+
+Se tiver utilizadores que se inscreveram numa conta gratuita através do RMS para indivíduos, não pode utilizar o BYOK nem o registo de utilização porque esta configuração não tem um administrador inquilinos para configurar estas funcionalidades.
 
 
 > [!NOTE]
-> Para obter mais informações sobre o RMS para utilizadores individuais, consulte [RMS para utilizadores individuais e Azure Rights Management](../understand-explore/rms-for-individuals.md).
+> Para obter mais informações sobre o RMS para indivíduos, consulte [RMS para indivíduos e Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
 ![O BYOK não suporta o Exchange Online](../media/RMS_BYOK_noExchange.png)
 
-O BYOK e o registo funcionam perfeitamente com todas as aplicações integradas no Azure RMS. Isto inclui serviços em nuvem como o SharePoint Online, servidores no local que executam o Exchange e SharePoint e que funcionam com o Azure RMS ao utilizar o conector RMS e aplicações de cliente como o Office 2013. Irá obter registos de utilização da chave, independentemente da aplicação que efetua os pedidos do Azure RMS.
+O BYOK e o registo de utilização funcionam perfeitamente com todas as aplicações integradas no serviço Azure Rights Management (Azure RMS) utilizado pelo Azure Information Protection. Isto inclui serviços em nuvem como o SharePoint Online, servidores no local que executam o Exchange e SharePoint e que funcionam com o Azure RMS ao utilizar o conector RMS e aplicações de cliente como o Office 2016 e o Office 2013. Irá obter registos de utilização da chave, independentemente da aplicação que efetua os pedidos do Azure RMS.
 
-Existe uma exceção: atualmente, o **BYOK do Azure RMS não é compatível com o Exchange Online**.  Se desejar utilizar o Exchange Online, recomendamos que implemente agora o Azure RMS no modo de gestão de chaves predefinido, em que a Microsoft gera e faz a gestão da sua chave. Pode mudar para o BYOK posteriormente, por exemplo, quando o Exchange Online suportar o BYOK do Azure RMS. No entanto, se não puder aguardar, pode implementar o Azure RMS com o BYOK agora, com a funcionalidade do RMS reduzida no Exchange Online (os e-mails e anexos desprotegidos permanecem totalmente funcionais):
+Existe uma exceção: atualmente, o **BYOK do Azure RMS não é compatível com o Exchange Online**. Se desejar utilizar o Exchange Online, recomendamos que implemente agora o Azure RMS no modo de gestão de chaves predefinido, em que a Microsoft gera e faz a gestão da sua chave. Pode mudar para o BYOK posteriormente, por exemplo, quando o Exchange Online suportar o BYOK do Azure RMS. No entanto, se não puder aguardar, pode implementar o Azure RMS com o BYOK agora, com a funcionalidade do RMS reduzida no Exchange Online (os e-mails e anexos desprotegidos permanecem totalmente funcionais):
 
 -   Os e-mails e anexos protegidos no Outlook Web Access não podem ser apresentados.
 
@@ -48,7 +74,7 @@ Existe uma exceção: atualmente, o **BYOK do Azure RMS não é compatível com 
 
 Quando utilizar o BYOK do Azure RMS com funcionalidade reduzida do RMS no Exchange Online, o RMS irá funcionar com os clientes de e-mail no Outlook, Windows e Mac e noutros clientes de e-mail que não utilizem a IRM do Exchange ActiveSync.
 
-Caso esteja a migrar para o Azure RMS a partir do AD RMS, pode ter importado a chave como um domínio de publicação fidedigno (TPD) para o Exchange Online (também denominado BYOK na terminologia de Exchange, que é diferente do BYOK do Azure RMS). Neste cenário, tem de remover o TPD do Exchange Online para evitar que os modelos e políticas entrem em conflito. Para mais informações, consulte [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx) na biblioteca de cmdlets do Exchange Online.
+Caso esteja a migrar para o Azure RMS a partir do AD RMS, pode ter importado a chave como um domínio de publicação fidedigno (TPD) para o Exchange Online (também denominado BYOK na terminologia do Exchange, que é diferente do BYOK do Cofre de Chaves do Azure). Neste cenário, tem de remover o TPD do Exchange Online para evitar que os modelos e políticas entrem em conflito. Para mais informações, consulte [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx) na biblioteca de cmdlets do Exchange Online.
 
 Por vezes, a exceção do BYOK do Azure RMS para o Exchange Online não é um problema a níveis práticos. Por exemplo, as organizações que precisam do BYOK e do registo executam as suas aplicações de dados (Exchange, SharePoint, Office) no local e utilizam o Azure RMS para obter funcionalidades que não estão facilmente disponíveis no AD RMS no local (por exemplo, a colaboração com outras empresas e o acesso a partir de clientes móveis). O BYOK e o registo funcionam bem neste cenário e permitem que a organização tenha um controlo total sobre a sua subscrição do Azure RMS.
 
@@ -61,6 +87,6 @@ Se tiver decidido manter a configuração predefinida, em que a Microsoft gere a
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

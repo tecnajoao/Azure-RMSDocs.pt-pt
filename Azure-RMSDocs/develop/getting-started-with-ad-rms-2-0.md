@@ -4,18 +4,18 @@ description: "A plataforma SDK RMS 2.1 permite aos programadores criarem aplica
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/28/2016
+ms.date: 09/25/2016
 ms.topic: article
-ms.prod: azure
-ms.service: rights-management
+ms.prod: 
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 728113C9-FCF9-4280-BE1D-6AF5C15E449E
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: cbdb969e9910142f49b078069fc578059f9d8785
-ms.openlocfilehash: 81541dbadabe3417299f47447384934373275e75
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 8c5b7d17b5feffa07028498e8d7f201b25626478
 
 
 ---
@@ -76,6 +76,6 @@ O SDK RMS 2.1 suporta uma gama de plataformas de clientes e servidores importa
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Oct16_HO1-->
 
 

@@ -3,7 +3,7 @@ title: "Administrar o serviço Azure Rights Management através do Windows Power
 description: "Saiba como pode utilizar o módulo do Windows PowerShell para o serviço Azure Rights Management (AADRM) para Azure Information Protection para administrar este serviço para a sua organização."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: dfd8a2716d60bb4ea466f4e3911e4ba9a0333241
+ms.sourcegitcommit: 3046fc94e92dfadd3158e2bdf0ed7eda51e8e8bc
+ms.openlocfilehash: c36a5a53f0a83afedb1e840a60a59d281a751f17
 
 
 ---
@@ -53,6 +53,6 @@ Também existe um módulo do Windows PowerShell suplementar, o **RMSProtection**
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 

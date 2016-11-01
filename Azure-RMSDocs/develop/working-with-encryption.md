@@ -4,7 +4,7 @@ description: "Orientação para os pacotes de encriptação do Azure RMS e recor
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: bf27067f832f12ef66f6df92f4008a0d21cdf2aa
+ms.sourcegitcommit: 37d9906b5df00b6ec6eeb6739766c00bd5cef37b
+ms.openlocfilehash: 0ad53fa82f288153f259870b0022378815f097a8
 
 
 ---
@@ -40,13 +40,13 @@ A partir da [atualização de março de 2015](release-notes-rtm.md), incorporamo
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_CBC4K
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_ECB (também conhecido como Algoritmos Preteridos)
 
-Os sinalizadores de pacote de encriptação (consulte [**Encriptação Preferencial**](/information-protection/sdk/2.1/api/win/constants#msipc_preferred_encryption)) podem ser utilizados em conjunto com o nosso novo sinalizador de Propriedade da Licença **IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE**.
+Os sinalizadores de pacote de encriptação (consulte [Encriptação preferencial](https://msdn.microsoft.com/library/dn974065.aspx)) podem ser utilizados em conjunto com o sinalizador Propriedade da Licença – *IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE*.
 
 Seguem-se alguns fragmentos de código simples que demonstram como utilizar a nova propriedade de licença.
 
 ## Algoritmos Preteridos
 
-Já não expomos o sinalizador **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** na nossa API. Isto significa que as aplicações futuras vão deixar de compilar se fizerem referência a este sinalizador, mas as aplicações já criadas que o utilizam vão continuar a funcionar, uma vez que respeitamos o sinalizador em privado no código de API.
+Já não expomos o sinalizador *IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS* na nossa API. Isto significa que as aplicações futuras vão deixar de compilar se fizerem referência a este sinalizador, mas as aplicações já criadas que o utilizam vão continuar a funcionar, uma vez que respeitamos o sinalizador em privado no código de API.
 
 Para aproveitar ainda as vantagens do sinalizador de algoritmos de encriptação preterido antigo, basta alterar um sinalizador. Consulte os seguintes fragmentos de código para obter exemplos.
 
@@ -84,7 +84,7 @@ Não são necessárias alterações no código, *AES 256* CBC4K é a predefini�
 Este exemplo mostra também a nova forma de suportar *algoritmos preteridos*.
 
     C++
-    
+
     hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
                                     0,
                                     NULL,
@@ -103,6 +103,6 @@ Este exemplo mostra também a nova forma de suportar *algoritmos preteridos*.
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO3-->
 
 

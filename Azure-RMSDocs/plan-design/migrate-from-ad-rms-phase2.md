@@ -3,7 +3,7 @@ title: "Migrar do AD RMS para o Azure Information Protection – Fase 2 | Azure 
 description: "Fase 2 da migração do AD RMS para o Azure Information Protection, abrangendo o passo 5 de Migrar do AD RMS para o Azure Information Protection."
 author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 10/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4a6d07e9a24293f054915b5598c63e118c9c1430
-ms.openlocfilehash: c10e8b46fae2158e561421e8e5090d0cd9edbb83
+ms.sourcegitcommit: 25f7c2e5eb226fcf7c30026a37a767e559a522ad
+ms.openlocfilehash: 810e540e02db0b4a142471dd89e30663bd61f22c
 
 
 ---
@@ -39,6 +39,8 @@ Para clientes Windows:
 
     > [!IMPORTANT]
     > As instruções incluem substituir endereços de exemplo de **adrms** e **adrms.contoso.com** pelos endereços dos seus próprios servidores AD RMS. Ao fazê-lo, certifique-se de que não existem espaços adicionais antes ou depois dos endereços, uma vez que estes interrompem o script de migração e são muito difíceis de identificar como a causa de raiz do problema. Algumas ferramentas de edição adicionam automaticamente um espaço depois do texto colado.
+    >
+    > Além disso, se os seus servidores do AD RMS utilizarem certificados de servidor SSL/TLS, verifique se os valores de URL de licenciamento incluem o número de porta **443** na cadeia. Por exemplo: https:// rms.treyresearch.net:443/_wmcs/licensing. Estas informações encontram-se na consola dos Serviços de Gestão de Direitos do Active Directory quando clica no nome do cluster e vê as informações de **Detalhes do Cluster**. Se vir o número de porta 443 incluído no URL, inclua este valor quando modificar o script. Por exemplo, https://rms.treyresearch.net**:443**.
 
 3. Se os utilizadores tiverem o Office 2016: os scripts não foram ainda atualizados para incluir a configuração para o Office 2016, pelo que se os utilizadores tiverem esta versão do Office, têm de atualizar manualmente os scripts:
 
@@ -131,6 +133,6 @@ Redirect_OnPrem.cmd:
 Para continuar a migração, consulte a [fase 3 – suportar a configuração de serviços](migrate-from-ad-rms-phase3.md).
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO2-->
 
 

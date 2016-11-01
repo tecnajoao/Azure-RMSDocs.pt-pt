@@ -3,7 +3,7 @@ title: "Passo 2&colon; migração de chave protegida por HSM para chave protegid
 description: "Instruções que fazem parte do caminho de migração do AD RMS para o Azure Information Protection e só são aplicáveis se a sua chave do AD RMS estiver protegida por HSM e quiser migrar para o Azure Information Protection com uma chave de inquilino protegida por HSM no Cofre de Chaves do Azure."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a61075eb555f6cec1572851bdde6fae85e6310ed
-ms.openlocfilehash: 7db4da1a48bb24ce7680c84fe586a3f96e61c0b7
+ms.sourcegitcommit: bad084502b9b7e55c6e80dccfbd66c3f34b63c7c
+ms.openlocfilehash: 8d9538cb2663edce5fc343ed9710032505c15293
 
 
 ---
@@ -51,7 +51,7 @@ Estes procedimentos são efetuados pelo administrador para o Cofre de Chaves do 
 
     Quando a chave é carregada para o Cofre de Chaves do Azure, pode ver as respetivas propriedades apresentadas, incluindo o ID da chave. Terá um aspeto semelhante a https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Tome nota deste URL, porque o administrador do Azure Information Protection irá precisar dele para indicar ao serviço Azure Rights Management que utilize esta chave para a respetiva chave de inquilino.
 
-2. Na estação de trabalho ligada à Internet, numa sessão do PowerShell, utilize o cmdlet [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/pt-pt/library/mt603625(v=azure.200\).aspx) para autorizar o principal do serviço com o nome Microsoft.Azure.RMS para aceder ao cofre de chaves que armazenará a chave de inquilino do Azure Information Protection. As permissões necessárias são decrypt, encrypt, unwrapkey, wrapkey, verify e sign.
+2. Na estação de trabalho ligada à Internet, numa sessão do PowerShell, utilize o cmdlet [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/pt-pt/library/mt603625(v=azure.300\).aspx) para autorizar o principal do serviço com o nome Microsoft.Azure.RMS para aceder ao cofre de chaves que armazenará a chave de inquilino do Azure Information Protection. As permissões necessárias são decrypt, encrypt, unwrapkey, wrapkey, verify e sign.
     
     Por exemplo, se o cofre de chaves que criou para o Azure Information Protection tiver o nome contoso-byok-ky e o grupo de recursos tiver o nome contoso-byok-rg, execute o seguinte comando:
     
@@ -64,7 +64,7 @@ Agora que já preparou a sua chave HSM no Cofre de Chaves do Azure para o servi�
 
 Estes procedimentos são efetuados pelo administrador para o Azure Information Protection.
 
-1.  Na estação de trabalho ligada à Internet e na sessão do PowerShell, ligue ao serviço Azure Rights Management com o cmdlet [Connnect AadrmService](https://msdn.microsoft.com/library/dn629415.aspx ).
+1.  Na estação de trabalho ligada à Internet e na sessão do PowerShell, ligue ao serviço Azure Rights Management com o cmdlet [Connnect AadrmService](https://msdn.microsoft.com/library/dn629415.aspx).
     
     Em seguida, carregue o primeiro ficheiro de domínio de publicação fidedigno exportado (.xml) utilizando o cmdlet [Import-AadrmTpd](https://msdn.microsoft.com/library/dn857523.aspx). Se tiver mais do que um ficheiro .xml, porque tinha vários domínios de publicação fidedignos, escolha o ficheiro que contém o domínio de publicação fidedigno exportado que corresponde à chave de HSM que pretende utilizar no Azure RMS para proteger o conteúdo após a migração. 
     
@@ -80,7 +80,7 @@ Estes procedimentos são efetuados pelo administrador para o Azure Information P
 
 2.  Quando o comando for concluído, repita o passo 1 para cada ficheiro .xml restante que criou ao exportar os seus domínios de publicação fidedignos. No entanto, para esses ficheiros, defina **-Active** para **false** ao executar o comando Import.  
 
-3.  Utilize o cmdlet [Disconnect-AadrmService](http://msdn.microsoft.com/library/windowsazure/dn629416.aspx) para desligar do serviço Azure Rights Management:
+3.  Utilize o cmdlet [Disconnect-AadrmService](https://msdn.microsoft.com/library/azure/dn629416.aspx) para desligar do serviço Azure Rights Management:
 
     ```
     Disconnect-AadrmService
@@ -94,6 +94,6 @@ Agora está pronto para ir para o [Passo 3. Ative o seu inquilino do Azure Infor
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 

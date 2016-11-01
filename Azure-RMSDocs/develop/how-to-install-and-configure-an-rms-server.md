@@ -14,15 +14,15 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: ea8ef9108afc01b5046d523cfc8394d81689638b
+ms.sourcegitcommit: b7ee098ceaa8ac6b1e0d5d6cbe090042510aa89b
+ms.openlocfilehash: ac7dd8592d6e11905744c4f4e0171fd5b5945c51
 
 
 ---
 
 # Procedimentos: instalar, configurar e testar com um servidor RMS
 
-Este tópico inclui os passos para ligação a um servidor RMS ou ao Azure RMS para fins de testar da sua aplicação com permissão para direitos.
+Este tópico inclui os passos para ligação a um servidor RMS ou ao Azure RMS para fins de testar da sua aplicação com capacidade para direitos.
  
 ## Instruções
 
@@ -70,12 +70,26 @@ Os seguintes passos descrevem a configuração do servidor RMS e incluem:
   Para configurar a deteção do lado do cliente, pode definir as seguintes chaves de registo para que apontem para o servidor RMS. Para obter informações sobre como configurar a deteção do lado do serviço, consulte as [Notas de Implementação do RMS Client 2.0](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
 
 1. **EnterpriseCertification**
-        HKEY_LOCAL_MACHINE        SOFTWARE          Microsoft            MSIPC              ServiceLocation                EnterpriseCertification
 
-  **Value**: (Predefinição): [**http|https**]://RMSClusterName/**_wmcs/Certification**
+        HKEY_LOCAL_MACHINE
+          SOFTWARE
+            Microsoft
+              MSIPC
+                ServiceLocation
+                  EnterpriseCertification
+
+   **Value**: (Predefinição): [**http|https**]://RMSClusterName/**_wmcs/Certification**
 
 2. **EnterprisePublishing**
-        HKEY_LOCAL_MACHINE        SOFTWARE          Microsoft            MSIPC              ServiceLocation                EnterprisePublishing **Value**: (Predefinição): [**http|https**]://RMSClusterName/**_wmcs/Licensing**
+
+        HKEY_LOCAL_MACHINE
+          SOFTWARE
+            Microsoft
+              MSIPC
+                ServiceLocation
+                  EnterprisePublishing
+                  
+   **Value**: (Predefinição): [**http|https**]://RMSClusterName/**_wmcs/Licensing**
 
 >[!NOTE] 
 > Por predefinição, estas chaves não existem no registo e têm de ser criadas.
@@ -96,6 +110,6 @@ Os seguintes passos descrevem a configuração do servidor RMS e incluem:
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO3-->
 
 

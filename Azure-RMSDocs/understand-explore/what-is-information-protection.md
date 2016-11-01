@@ -3,15 +3,15 @@ title: "O que é o Azure Information Protection? | Azure Information Protection"
 description: "Uma descrição geral sobre o serviço Azure Information Protection."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 translationtype: Human Translation
-ms.sourcegitcommit: 590f12e0c6c6122a6bc0a559940870c18f0e2d39
-ms.openlocfilehash: 350a3cb877674208b4c560bb841135904aee1136
+ms.sourcegitcommit: 0098fa28313561e99f39e2539e20c8a6bc0207f7
+ms.openlocfilehash: eaaa08a99b3c065422dd8b0bc01d89ead15e9d49
 
 
 ---
@@ -84,9 +84,21 @@ Quando os utilizadores partilharem os respetivos documentos protegidos por e-mai
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
 
-- Apresentação em vídeo:
+- Descrição geral em vídeo
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/N9Ip0m6d3G0" frameborder="0" allowfullscreen></iframe>
+
+    Além disso, o Microsoft Ignite 2016 oferece muitas sessões a pedido para Azure Information Protection:
+
+    - [BRK2127: adotar uma solução condicionada por identidade abrangente para proteger e partilhar dados de forma segura](https://myignite.microsoft.com/videos?q=BRK2127)
+    
+    - [THR2107: colaborar com segurança ao utilizar o Azure Information Protection](https://myignite.microsoft.com/videos?q=THR2107)
+    
+    - [THR2108: garantir proteção abrangente dos seus dados com o Azure Information Protection](https://myignite.microsoft.com/videos?q=THR2108)
+    
+    - [BRK3095: saber como a classificação, etiquetagem e proteção proporcionam uma proteção de dados persistente](https://myignite.microsoft.com/videos?q=BRK3095)
+    
+    - [BRK2128: enviar e-mails seguros a qualquer pessoa com a tecnologia do Microsoft Office 365 e do Azure Information Protection](https://myignite.microsoft.com/videos?q=BRK2128)
 
 
 ## Passos seguintes
@@ -96,6 +108,6 @@ Configure e veja o Azure Information Protection, com o nosso [Tutorial de iníci
 Conhece o Azure Information Protection ou Azure Rights Management por outro nome? Consulte a [nossa lista de termos alternativos para o serviço](azure-rms-aka.md).
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO2-->
 
 

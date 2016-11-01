@@ -3,7 +3,7 @@ title: "Cenário – enviar um e-mail confidencial da empresa | Azure Informatio
 description: "Este cenário e a documentação de apoio do utilizador utilizam a proteção do Azure Rights Management para que qualquer utilizador na organização possa enviar em segurança comunicações por e-mail que não podem ser lidas fora da organização."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/10/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 950799e9-2289-48c7-b95a-f54a8ead520a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea299f402e5e188b498bf6e3cacf9d4dc7e0f6e8
-ms.openlocfilehash: 9fafe78b8393ae36defeecccceb8f4a2d36a3b79
+ms.sourcegitcommit: 3b5f82e495291bd48d488f44bc72c1d478a879e0
+ms.openlocfilehash: 6ad18ba1035438af88f814689884f9873d75eea0
 
 
 ---
@@ -54,7 +54,7 @@ Para que as instruções para este cenário funcionem, é necessário o seguinte
 |O Azure Rights Management está ativado|[Ativar o Azure Rights Management](../deploy-use/activate-service.md)|
 |Um dos seguintes:<br /><br />- O Exchange Online está ativado para o Azure Rights Management<br /><br />- O conetor RMS está instalado e configurado para o Exchange no local|Para o Exchange Online: consulte a secção **Exchange Online: configuração do IRM** de [Office 365: configuração para clientes e serviços online](../deploy-use/configure-office365.md).<br /><br />Para o Exchange no local: [Implementar o conector Azure Rights Management](../deploy-use/deploy-rms-connector.md)|
 |Não arquivou o modelo do Azure Rights Management predefinido **&lt;organização&gt; – Confidencial**. Ou configurou um modelo personalizado para este fim porque precisa de definições mais restritivas ou apenas um subconjunto de utilizadores da organização deve ter capacidade para ler os e-mails protegidos.|[Configurar modelos personalizados para o serviço Azure Rights Management](../deploy-use/configure-custom-templates.md)<br /><br />Sugestão: se forem necessárias definições de política de utilização mais restritivas, mas para todos os utilizadores na organização, copie e edite um dos modelos predefinidos, em vez de criar um modelo do zero.<br /><br />Os modelos atualizados não são imediatamente atualizados para os clientes de e-mail neste cenário. Consulte o artigo [Atualizar modelos para os utilizadores](../deploy-use/refresh-templates.md) para obter informações.|
-|Os utilizadores que enviem o e-mail protegido têm o Outlook 2013, o Outlook 2016 ou o Outlook Web Access.<br /><br />Os utilizadores que recebem o e-mail têm um cliente de e-mail que suporta o Azure Rights Management.|Pode utilizar o Outlook 2010, mas tem de [instalar a aplicação de partilha Rights Management para Windows](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application) e ajustar as instruções de utilizador em conformidade.<br /><br />Para ver uma lista de clientes de e-mail que suportam o Azure Rights Management, consulte a coluna **E-mail** na tabela [Requisitos do Azure RMS: Aplicações](../get-started/requirements-applications.md).|
+|Os utilizadores que enviem o e-mail protegido têm o Outlook 2013, o Outlook 2016 ou o Outlook Web Access.<br /><br />Os utilizadores que recebem o e-mail têm um cliente de e-mail que suporta o Azure Rights Management.|Pode utilizar o Outlook 2010, mas tem de [instalar a aplicação de partilha Rights Management para Windows](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application) e ajustar as instruções de utilizador em conformidade.<br /><br />Para obter uma lista de clientes de e-mail que suportam o Azure Rights Management, consulte a coluna **E-mail** na tabela de [Aplicações que suportam a proteção de dados do Azure Rights Management](../get-started/requirements-applications.md).|
 
 ## Instruções da documentação do utilizador
 Utilizando o modelo seguinte, copie e cole as instruções de utilizador numa comunicação destinada aos utilizadores finais e efetue estas alterações para refletir o seu ambiente:
@@ -157,6 +157,6 @@ As pessoas a quem enviar o e-mail poderão reencaminhá-lo para outras pessoas, 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

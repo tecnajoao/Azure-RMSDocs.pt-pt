@@ -3,7 +3,7 @@ title: "Perguntas mais frequentes sobre o serviço de proteção de dados, o Azu
 description: "Algumas perguntas mais frequentes sobre o serviço de proteção de dados, o Azure Rights Management (Azure RMS), do Azure Information Protection."
 author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 10/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
-ms.openlocfilehash: 114dfd2a0f19205432771b5dc17ddcb60f7ec44b
+ms.sourcegitcommit: ec8609217db42a2cf0b3f89367cf4dee6ccb77de
+ms.openlocfilehash: ae25f5af9784b0de92626dbfe65d4358359b4bd9
 
 
 ---
@@ -94,7 +94,7 @@ Como a opção de nome mostra claramente, este novo tipo de grupo ainda está no
 
 
 ## Que dispositivos e que tipos de ficheiro são suportados pelo Azure RMS?
-Para obter uma lista dos dispositivos que suportam o serviço Azure Rights Management, consulte [Requisitos do Azure RMS: dispositivos cliente que suportam o Azure RMS](../get-started/requirements-client-devices.md). Uma vez que nem todos os dispositivos suportados conseguem atualmente suportar todas as funcionalidades de Rights Management, certifique-se de que também consulta a tabela [Requisitos do Azure RMS: Aplicações](../get-started/requirements-applications.md).
+Para obter uma lista dos dispositivos que suportam o serviço Azure Rights Management, consulte [Dispositivos cliente que suportam a proteção de dados do Azure Rights Management](../get-started/requirements-client-devices.md). Uma vez que nem todos os dispositivos suportados conseguem atualmente suportar todas as capacidades de Rights Management, certifique-se de que também consulta a tabela em [Aplicações que suportam a proteção de dados do Azure Rights Management](../get-started/requirements-applications.md).
 
 O serviço Azure Rights Management pode suportar todos os tipos de ficheiro. Para texto, imagem, ficheiros do Microsoft Office (Word, Excel, PowerPoint), ficheiros .pdf e outros tipos de ficheiro de aplicação, o Azure Rights Management fornece proteção nativa que inclui encriptação e imposição dos direitos (permissões). Para todas as outras aplicações e tipos de ficheiro, a proteção genérica fornece autenticação e encapsulamento de ficheiro para verificar se um utilizador tem autorização para abrir o ficheiro.
 
@@ -129,6 +129,18 @@ Utilize a funcionalidade de superutilizador do Azure RMS, que permite que os uti
 
 Para mais informações, consulte [Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados](../deploy-use/configure-super-users.md).
 
+## Quando testo a revogação no site de controlo do documento, vejo uma mensagem a indicar que as pessoas ainda podem aceder ao documento durante até 30 dias. Este período de tempo é configurável?
+
+Sim. Esta mensagem reflete a licença de utilização desse ficheiro específico. Uma licença de utilização é um certificado por documento que é concedido a um utilizador que abre um ficheiro ou uma mensagem de e-mail protegido. Este certificado contém direitos desse utilizador para o ficheiro ou a mensagem de e-mail e a chave de encriptação que foi utilizada para encriptar os conteúdos, bem como restrições de acesso adicionais definidas na política do documento. Quando o período de validade da licença de utilização expirar e o utilizador tentar abrir o ficheiro ou a mensagem de e-mail, as respetivas credenciais de utilizador têm de voltar a ser submetidas para o serviço Azure Rights Management. 
+
+Se revogar um ficheiro, essa ação só poderá ser aplicada quando o utilizador autenticar para o serviço Azure Rights Management. Por isso, se um ficheiro tiver um período de validade de licença de utilização de 30 dias e o utilizador já tiver aberto o documento, esse utilizador continuará a ter acesso ao documento enquanto a licença de utilização durar. Quando a licença de utilização expirar, o utilizador terá de ser novamente autenticado. Nessa altura, será rejeitado acesso ao utilizador porque o documento já estará revogado.
+
+O valor predefinido do período de validade da licença de utilização para um inquilino é de 30 dias e pode configurar este valor através do cmdlet do PowerShell [Set-AadrmMaxUseLicenseValidityTime](https://msdn.microsoft.com/library/azure/dn932063.aspx). Esta definição pode ser substituída por uma definição mais restritiva num modelo personalizado. 
+
+A definição de inquilino e a definição de modelo podem ser substituídas pelos utilizadores quando utilizarem a aplicação de partilha RMS e selecionarem a opção **Permitir a revogação instantânea do acesso a estes documentos**. Esta definição configura o período de validade da licença de utilização para 0. 
+
+Para mais informações e exemplos de como a licença funciona, consulte a descrição detalhada de [Set-AadrmMaxUseLicenseValidityTime](https://msdn.microsoft.com/library/azure/dn932063.aspx).
+
 ## O Rights Management pode impedir capturas de ecrã?
 Ao não conceder direitos de **cópia**[utilização](../deploy-use/configure-usage-rights.md), o Rights Management pode impedir capturas de ecrãs de muitas das ferramentas de captura de ecrã utilizadas normalmente em plataformas com Windows (Windows 7, Windows 8.1, Windows 10, Windows Phone) e Android. No entanto, os dispositivos iOS e Mac não permitem que as aplicações impeçam capturas de ecrã e os browsers (por exemplo, quando são utilizados com o Outlook Web App e o Office Online) também não podem impedir capturas de ecrã.
 
@@ -145,6 +157,6 @@ Apesar do nome e do aspeto, **Não Reencaminhar** não é o oposto do direito de
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO3-->
 
 

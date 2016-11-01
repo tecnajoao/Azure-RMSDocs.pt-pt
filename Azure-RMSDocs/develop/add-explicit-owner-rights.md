@@ -14,22 +14,22 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 22016f824263916f5f265d818c51975d42c35799
+ms.sourcegitcommit: 8be965d76578c28457eee207b56e5da83f7eb468
+ms.openlocfilehash: 36c0bece4fb99e4d92fcda0c57da1b3cee11e37a
 
 
 ---
 
 # Procedimentos: adicionar direitos de proprietário explícitos
 
-A aplicação deve adicionar explicitamente direitos de “Proprietário” quando criar uma licença a partir do zero ([**IpcCreateLicenseFromScratch**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)).
+A aplicação deve adicionar explicitamente direitos de "Proprietário" quando criar uma licença a partir do zero com [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx).
 
 ## Pré-requisitos
 
-Quando a aplicação estiver a criar um identificador de licença através de [**IpcCreateLicenseFromScratch**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch), tem também de conceder ao proprietário direitos completos (permissões) explicitamente.
+Quando a aplicação estiver a criar um identificador de licença através de [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx), tem também de conceder ao proprietário direitos completos (permissões) explicitamente.
 
 >[!NOTE] 
-> Definir um utilizador como “proprietário” através de [**IpcSetLicenseProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) com a propriedade **IPC\_LI\_OWNER** não concede ao proprietário permissões completas.
+> Definir um utilizador como "proprietário" através de [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx) com a propriedade **IPC\_LI\_OWNER** não concede ao proprietário permissões completas.
 
 O código de exemplo seguinte mostra apenas os passos envolvidos na criação e adição de direitos específicos a uma determinada licença.
 
@@ -37,7 +37,7 @@ O código de exemplo seguinte mostra apenas os passos envolvidos na criação e 
  
 ## Passo 1: Cenário de exemplo
 
-Neste exemplo, os direitos necessários são adicionados a uma licença criada com [**IpcCreateLicenseFromScratch**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch). O exemplo mostra a criação e a atribuição de direitos à licença através de uma lista de direitos.
+Neste exemplo, os direitos necessários são adicionados a uma licença criada com [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx). O exemplo mostra a criação e a atribuição de direitos à licença através de uma lista de direitos.
 
 Os dois direitos seguintes são adicionados a estes utilizadores:
 
@@ -107,15 +107,15 @@ Os dois direitos seguintes são adicionados a estes utilizadores:
 
 ## Tópicos relacionados
 
-* [Notas do programador](developer-notes.md)
-* [**IpcCreateLicenseFromScratch**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)
-* [**IpcSetLicenseProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty)
+- [Notas do programador](developer-notes.md)
+- [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
+- [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)
  
 
  
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO3-->
 
 

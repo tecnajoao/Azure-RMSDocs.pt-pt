@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: d949acd4281509bbed05a14e0e26d1549b52a33a
+ms.sourcegitcommit: 734ff9735adbf5aac5824b5c823a1fdcaf245d4e
+ms.openlocfilehash: 92df5a261565b83e71a6bfd1a2d432072815bd27
 
 
 ---
@@ -63,7 +63,7 @@ Defina o valor de **Encriptação** na chave para especificar o comportamento de
 
 - **Desativar**: a encriptação está desativada.
 
-> [!Note] 
+> [!Note]
 > Esta definição não tem efeito na desencriptação. Qualquer ficheiro encriptado, seja ele encriptado com a proteção nativa ou Pfile, pode ser desencriptado, desde que o utilizador tenha o direito **EXTRAIR**.
 
 - **Nativa**: a encriptação nativa é utilizada. Para ficheiros do Office, o ficheiro encriptado terá a mesma extensão que o ficheiro original. Por exemplo, um ficheiro com a extensão de ficheiro .docx será encriptado para um ficheiro com uma extensão .docx. Para outros ficheiros que podem ter a proteção nativa aplicada, o ficheiro será encriptado para um ficheiro com uma extensão no formato p*zzz*, em que *zzz* é a extensão do ficheiro original. Por exemplo, os ficheiros .txt serão encriptados para um ficheiro com a extensão .ptxt. Consulte abaixo a lista de extensões de ficheiros que podem ter a proteção nativa aplicada.
@@ -71,7 +71,7 @@ Defina o valor de **Encriptação** na chave para especificar o comportamento de
 - **Pfile**: a encriptação PFile é utilizada. O ficheiro encriptado terá .pfile anexado à extensão original. Por exemplo, depois da encriptação, um ficheiro .txt terá uma extensão .txt.pfile.
 
 
-> [!Note] 
+> [!Note]
 > Esta definição não tem efeito em formatos de ficheiros do Office. Por exemplo, se o valor `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` estiver definido para &quot;Pfile”, os ficheiros .docx ainda serão encriptados com a proteção nativa e o ficheiro encriptado continuará a ter uma extensão de ficheiro .docx.
 
 A definição de qualquer outro valor ou nenhum valor resulta no comportamento predefinido.
@@ -82,7 +82,7 @@ A definição de qualquer outro valor ou nenhum valor resulta no comportamento p
 -   **Ficheiros txt, xml, jpg, jpeg, pdf, png, tiff, bmp, gif, giff, jpe, jfif, jif** A encriptação nativa está ativada (xxx torna-se pxxx)
 -   **Todos os outros ficheiros** A encriptação ativada é a de ficheiro protegido (.pfile) (xxx torna-se xxx.pfile)
 
-Se a encriptação for tentada num tipo de ficheiro que está bloqueado, ocorre um erro [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/information-protection/sdk/2.1/api/win/error%20codes).
+Se a encriptação for tentada num tipo de ficheiro que está bloqueado, ocorre um erro [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx).
 
 ### API de Ficheiros – Detalhes de Suporte de Ficheiros
 
@@ -148,14 +148,14 @@ HKEY_LOCAL_MACHINE
 
 ## Tópicos relacionados
 
-* [Notas do programador](developer-notes.md)
-* [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/information-protection/sdk/2.1/api/win/error%20codes)
+- [Notas do programador](developer-notes.md)
+- [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
  
 
  
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO3-->
 
 

@@ -3,7 +3,7 @@ title: Planear e implementar a sua chave de inquilino do Azure Rights Management
 description: "Informações para o ajudar a planear e gerir a sua chave de inquilino do Azure Information Protection. Em vez de a sua chave de inquilino ser gerida pela Microsoft (predefinição), poderá querer gerir a sua própria chave de inquilino para cumprir os regulamentos específicos que se aplicam à sua organização. A gestão da sua própria chave de inquilino também é referida como Bring Your Own Key (Traga a Sua Própria Chave) ou BYOK."
 author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 10/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
-ms.openlocfilehash: 70f4b178d2814683551574f4e777213eea914477
+ms.sourcegitcommit: bad084502b9b7e55c6e80dccfbd66c3f34b63c7c
+ms.openlocfilehash: ed35e72a5dbe23aba0817640075d34fd01bd269d
 
 
 ---
@@ -94,7 +94,7 @@ Para gerar e transferir a sua própria chave de inquilino para o Cofre de Chaves
 
 Quando a chave é transferida para o Cofre de Chaves, é fornecido um ID de chave no Cofre de Chaves, que é um URL que contém o nome do cofre, o contentor de chaves, o nome da chave e a versão da chave. Por exemplo: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Terá de indicar ao serviço Azure Rights Management do Azure Information Protection que utilize esta chave ao especificar este URL.
 
-No entanto, antes de o Azure Information Protection poder utilizar a chave, o serviço Azure Rights Management tem de estar autorizado a utilizar a chave no cofre de chaves da sua organização. Para tal, o administrador do Cofre de Chaves do Azure utiliza o cmdlet PowerShell do Cofre de Chaves, [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/en-us/library/mt603625(v=azure.200\).aspx) e concede permissões ao principal do serviço Azure Rights Management, **Microsoft.Azure.RMS**. Por exemplo:
+No entanto, antes de o Azure Information Protection poder utilizar a chave, o serviço Azure Rights Management tem de estar autorizado a utilizar a chave no cofre de chaves da sua organização. Para tal, o administrador do Cofre de Chaves do Azure utiliza o cmdlet PowerShell do Cofre de Chaves, [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/pt-pt/library/mt603625(v=azure.300\).aspx) e concede permissões ao principal do serviço Azure Rights Management, **Microsoft.Azure.RMS**. Por exemplo:
 
     Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
 
@@ -106,7 +106,7 @@ Em seguida, execute o [cmdlet Use-AadrmKeyVaultKey](https://msdn.microsoft.com/l
 
     Use-AadrmKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333"
 
-Se tiver de confirmar que o URL da chave está definido corretamente no serviço Azure RMS, no Cofre de Chaves do Azure, pode executar [Get-AzureKeyVaultKey](https://msdn.microsoft.com/library/dn868053.aspx) para ver o URL da chave.
+Se tiver de confirmar que o URL da chave está definido corretamente no serviço Azure RMS, no Cofre de Chaves do Azure, pode executar [Get-AzureKeyVaultKey](https://msdn.microsoft.com/pt-pt/library/dn868053(v=azure.300\).aspx) para ver o URL da chave.
 
 
 ## Passos seguintes
@@ -136,6 +136,6 @@ Agora que já planeou e, se necessário, gerou a chave do inquilino, faça o seg
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO3-->
 
 

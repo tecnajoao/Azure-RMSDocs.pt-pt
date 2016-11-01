@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 1d1433eb4468fd74689243c1ca63134a406e0f96
+ms.sourcegitcommit: cb33a6c784a9b7efca0780771e764b984b51fedd
+ms.openlocfilehash: 3141c4131d83e043e987546900d433e43ee4c946
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: 1d1433eb4468fd74689243c1ca63134a406e0f96
 
 Todas as aplicações com suporte RMS têm de impor restrições de utilização. Uma restrição de utilização é uma condição que resulta quando um utilizador tenta executar uma ação (por exemplo, imprimir um documento), mas a política do RMS desse documento não lhes concede a permissão ou o direito de executar essa ação (por exemplo, o direito de IMPRIMIR).
 
-As permissões de um utilizador num documento podem ser consultadas ao utilizar a função [**IpcAccessCheck**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcaccesscheck).
+As permissões de um utilizador num documento podem ser consultadas ao utilizar a função [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx).
 
 ## Compreender as restrições de utilização
 
@@ -48,7 +48,7 @@ As permissões de um utilizador num documento podem ser consultadas ao utilizar 
 
 ## Tópicos relacionados
 
-* [**IpcAccessCheck**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcaccesscheck)
+* [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx)
 * [Referência das restrições de utilização](usage-restriction-reference.md)
  
 
@@ -56,6 +56,6 @@ As permissões de um utilizador num documento podem ser consultadas ao utilizar 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO3-->
 
 

@@ -4,7 +4,7 @@ description: "Este tópico inclui os tipos de aplicações que pode escolher par
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: dac322fedd1ac23660abb3b79261e8339ffd81ca
+ms.sourcegitcommit: 1ab93dc8f770e2e49b5846dd6c31f649a55175b0
+ms.openlocfilehash: 77bb95ae54ec0fb699d3b0dd2879bb14fdd3dd28
 
 
 ---
@@ -29,7 +29,7 @@ Os tipos de aplicações que se seguem são atualmente suportados pelo SDK Right
 
 ## Aplicações simples
 
-Uma aplicação simples pode ser uma ferramenta de linha de comandos criada para encriptar um ficheiro fornecido. Para obter um exemplo de uma aplicação simples e com capacidade para direitos, consulte [IPCHelloWorld – uma aplicação de exemplo](how-to-build-your-first-application.md).
+Uma aplicação simples pode ser uma ferramenta de linha de comandos criada para encriptar um ficheiro fornecido. Para obter um exemplo de uma aplicação simples e com capacidade para direitos, consulte a nossa implementação de *IPCHelloWorld*, descrita em [Desenvolver a sua aplicação](developing-your-application.md).
 
 ### Aplicações de modo de servidor
 
@@ -55,13 +55,13 @@ Para obter mais informações acerca de como proteger a sua aplicação, consult
 
 ## Tópicos relacionados
 
-* [Exemplo de IpcDlp](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
-* [IPCHelloWorld – uma aplicação de exemplo](how-to-build-your-first-application.md)
-* [Definir o modo de segurança de API](setting-the-api-security-mode-api-mode.md)
-* [Compreender as restrições de utilização](understanding-usage-restrictions.md)
+- [Exemplo de IpcDlp](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
+- [Desenvolver a sua aplicação](developing-your-application.md)
+- [Definir o modo de segurança de API](setting-the-api-security-mode-api-mode.md)
+- [Compreender as restrições de utilização](understanding-usage-restrictions.md)
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO3-->
 
 

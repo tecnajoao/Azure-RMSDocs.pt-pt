@@ -3,7 +3,7 @@ title: "Novidades e notas de versão | Azure RMS"
 description: "Descreve as funcionalidades e alterações importantes nesta versão nova do SDK RMS."
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 10/20/2016
+ms.date: 10/31/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,28 +13,18 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81cbe287b67e2a1598efdd2a816913f147c7ff7b
-ms.openlocfilehash: f3d4b1ba0da3530121aa81056238533f0dcbed2f
+ms.sourcegitcommit: 60e64b1fb1184aaa51b6664ecb5288d6ff861413
+ms.openlocfilehash: 04364bc5daec881fe3c55d5cd41e7be11ac91ae7
 
 
 ---
 
-# Novidades e Notas de versão
+# <a name="whats-new-and-release-notes"></a>Novidades e Notas de versão
 
-## Novidades
-O SDK Microsoft Rights Management 4.2 leva a aplicação RMS a um novo nível de facilidade e flexibilidade. Este tópico descreve as funcionalidades e alterações importantes nesta versão nova do SDK RMS.
+## <a name="whats-new"></a>Novidades
+O SDK Microsoft Rights Management 4.2 leva a aplicação RMS a um novo nível de facilidade e flexibilidade. Este tópico descreve as funcionalidades e alterações importantes nesta versão do SDK RMS.
 
--   [Novidades para junho de 2016](#new-for-June-2016)
--   [atualização de dezembro de 2015](#december-2015-update)
--   [Atualização de julho de 2015 – adiciona suporte para a programação em Linux/C++](#july-2015-update-adds-support-for-linux-c-developm)
--   [Atualização de maio de 2015 – adiciona o controlo de registo](#may-2015-update-adds-logging-control)
--   [Atualização de fevereiro de 2015 – adiciona o suporte para aplicações da Loja Windows](#february-2015-update-adds-windows-store-application-support)
--   [Atualização de janeiro de 2015 – adiciona o suporte da plataforma WinPhone](#january-2015-update-adds-winphone-platform-support)
--   [Atualização de outubro de 2014 – atualizar para o SDK Microsoft RMS 4.1](#october-2014-update-upgrade-to-microsoft-rms-sdk-4-1)
--   [Notas de versão](#release-notes)
--   [Perguntas mais frequentes](#frequently-asked-questions)
-
-### Novidades para junho de 2016
+### <a name="new-for-june-2016"></a>Novidades para junho de 2016
 
 - **Suporte para a Autenticação Moderna** - isto proporciona um início de sessão baseado em ADAL (Active Directory Authentication Library) para as aplicações com RMS. Permite funcionalidades de início de sessão como o Multi-Factor Authentication, Fornecedores de Identidade terceiros baseados em SAML com aplicações de cliente, autenticação baseada em smart card e em certificado e remove a necessidade de aplicações com RMS utilizarem o protocolo de autenticação básico.
 - **Suporte ao Controlo de Documentos** - os programadores agora podem ativar o controlo de documentos ao proteger um documento nas suas aplicações
@@ -42,7 +32,7 @@ O SDK Microsoft Rights Management 4.2 leva a aplicação RMS a um novo nível d
 - Correções
 
 
-### atualização de dezembro de 2015
+### <a name="december-2015-update"></a>atualização de dezembro de 2015
 
 Com esta versão, o SDK RMS para dispositivos está agora na versão 4.2 e adiciona:
 
@@ -74,7 +64,7 @@ Com esta versão, o SDK RMS para dispositivos está agora na versão 4.2 e adici
 -   Atualizações para melhorar a experiência de resolução de problemas e de mensagens de erro.
 -   Melhorias de desempenho significativas para operações de criptografia.
 
-### Atualização de julho de 2015 – adiciona suporte para a programação em Linux/C++
+### <a name="july-2015-update-adds-support-for-linux-c-development"></a>Atualização de julho de 2015 – adiciona suporte para a programação em Linux/C++
 
 Esta versão adiciona o seguinte:
 
@@ -82,7 +72,7 @@ Esta versão adiciona o seguinte:
 
     Para obter mais informações, consulte [Introdução](get-started.md).
 
-### Atualização de maio de 2015 – adiciona o controlo de registo
+### <a name="may-2015-update-adds-logging-control"></a>Atualização de maio de 2015 – adiciona o controlo de registo
 
 Esta versão adiciona o suporte para o seguinte:
 
@@ -100,15 +90,15 @@ Esta versão adiciona o suporte para o seguinte:
 
     Para mais informações, consulte [MSProtection:resetStateWithCompletionBlock](https://msdn.microsoft.com/library/mt210991.aspx).
 
-### Atualização de fevereiro de 2015 – adiciona o suporte para aplicações da Loja Windows
+### <a name="february-2015-update-adds-windows-store-application-support"></a>Atualização de fevereiro de 2015 – adiciona o suporte para aplicações da Loja Windows
 
 Esta versão adiciona o suporte para aplicações da Loja Windows e fornece paridade funcional com o lançamento para Windows Phone, Android e iOS/OS X do SDK RMS 4.1.
 
-### Atualização de janeiro de 2015 – adiciona o suporte da plataforma WinPhone
+### <a name="january-2015-update-adds-winphone-platform-support"></a>Atualização de janeiro de 2015 – adiciona o suporte da plataforma WinPhone
 
 Esta versão adiciona o suporte para o sistema operativo Windows Phone e fornece paridade funcional com o lançamento para Android e iOS/OS X do SDK RMS 4.1.
 
-### Atualização de outubro de 2014 – atualizar para o SDK Microsoft RMS 4.1
+### <a name="october-2014-update-upgrade-to-microsoft-rms-sdk-41"></a>Atualização de outubro de 2014 – atualizar para o SDK Microsoft RMS 4.1
 
 O lançamento da versão 4.1 do SDK RMS adiciona as seguintes funcionalidades novas para o Google Android e Apple iOS/OS X.
 
@@ -120,11 +110,11 @@ O lançamento da versão 4.1 do SDK RMS adiciona as seguintes funcionalidades no
 
     Exemplo: alterou-se MSUserPolicy.name para [MSUserPolicy.policyName](https://msdn.microsoft.com/library/dn790799.aspx).
 
-## Notas de versão
+## <a name="release-notes"></a>Notas de versão
 
 Esta secção apresenta as informações sobre as versões atuais e anteriores das APIs SDK Microsoft Rights Management 4. x que o programador deve ter em consideração.
 
-**SDK AD RMS 4.1 – Lançamento de Disponibilidade Global para as plataformas iOS/OS X e Android**
+**AD RMS SDK 4.1 – Lançamento de Disponibilidade Global para as plataformas iOS/OS X e Android**
 
 -   **Suporte do AD RMS** – os administradores de TI podem utilizar aplicações com suporte RMS em dispositivos móveis com as novas extensões para dispositivos móveis do servidor AD RMS.
 -   **Consumo offline** – os utilizadores finais podem aceder a dados protegidos por RMS offline.
@@ -148,7 +138,7 @@ Esta secção apresenta as informações sobre as versões atuais e anteriores d
 
 -   Quando utilizo o método [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array, int offset, int length) com um comprimento diferente do valor *array.length*, não consigo consumir os conteúdos posteriormente com o SDK.
 
-    **Solução** – isto é um problema conhecido. Para o resolver, transmita sempre uma matriz de *bytes \[\]* com o mesmo valor de comprimento que o parâmetro de comprimento ou utilize o método [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array).
+    **Solução** – isto é um problema conhecido. Para o resolver, transmita sempre uma matriz de *bytes \[\]* com o mesmo valor de comprimento que o parâmetro ou utilize o método [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array).
 
 **iOS e OS X**
 
@@ -181,7 +171,7 @@ Esta secção apresenta as informações sobre as versões atuais e anteriores d
 
 **Nota:** as aplicações MDI não são suportadas pela nossa API do iOS.
 
-## Perguntas mais frequentes
+## <a name="frequently-asked-questions"></a>Perguntas mais frequentes
 
 **Todas as plataformas**
 
@@ -191,7 +181,7 @@ Esta secção apresenta as informações sobre as versões atuais e anteriores d
 
 **P**: de que forma obtenho novos inquilinos organizacionais para experimentar o SDK e as aplicações de exemplo?
 
-**R**: para pedir credenciais para as organizações de teste do Azure AD RMS, envie um e-mail para <rmcstbeta@microsoft.com>.
+**R**: para solicitar credenciais para organizações de teste do Azure AD RMS, envie um e-mail para <rmcstbeta@microsoft.com>.
 
 **P**: não vejo qualquer debate sobre a hierarquia de testes aqui na documentação. Por que motivo?
 
@@ -220,7 +210,7 @@ Esta secção apresenta as informações sobre as versões atuais e anteriores d
 
 **Um**: nem todas as operações podem ser canceladas, pelo que uma operação de cancelamento é executada da melhor forma possível.
 
-**OS x**
+**OS X**
 
 **P**: a estrutura de aplicações de exemplo é adaptada para o Xcode 5, posso trabalhar com o Xcode 4.6?
 
@@ -232,6 +222,6 @@ Esta secção apresenta as informações sobre as versões atuais e anteriores d
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

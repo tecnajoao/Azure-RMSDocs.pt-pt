@@ -18,7 +18,7 @@ ms.openlocfilehash: fc30e58bb6702576988db0dcb4fd38a73d5591b1
 
 ---
 
-# Configurar servidores para o conector Azure Rights Management
+# <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configurar servidores para o conector Azure Rights Management
 
 >*Aplica-se a: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
 
@@ -28,7 +28,7 @@ Utilize as seguintes informações para ajudar a configurar os servidores no loc
 Antes de começar, certifique-se de que instalou e configurou o conetor RMS e de que verificou todos os [pré-requisitos](deploy-rms-connector.md#prerequisites-for-the-rms-connector) aplicáveis aos servidores que irão utilizar o conector.
 
 
-## Configurar servidores para utilizar o conector RMS
+## <a name="configuring-servers-to-use-the-rms-connector"></a>Configurar servidores para utilizar o conector RMS
 Após instalar e configurar o conector RMS, estará pronto para configurar os servidores no local que irão ligar ao serviço Azure Rights Management e utilizar esta tecnologia de proteção através do conector. Isto implica configurar os seguintes servidores:
 
 -   **Para o Exchange 2016 e Exchange 2013**: servidores de acesso de cliente e servidores de caixa de correio
@@ -83,7 +83,7 @@ Na maioria das organizações, a configuração automática com a ferramenta de 
 
 Depois de fazer as alterações de configuração nestes servidores, terá de os reiniciar se executarem o Exchange ou o SharePoint e se tiverem sido configurados anteriormente para utilizarem o AD RMS. Não é necessário reiniciar estes servidores se estiver a configurá-los para o Rights Management pela primeira vez. Após fazer estas alterações de configuração, tem sempre de reiniciar o servidor de ficheiros que está configurado para utilizar a Infraestrutura de Classificação de Ficheiros.
 
-### Como utilizar a ferramenta de configuração do servidor para o conector Microsoft RMS
+### <a name="how-to-use-the-server-configuration-tool-for-microsoft-rms-connector"></a>Como utilizar a ferramenta de configuração do servidor para o conector Microsoft RMS
 
 1.  Se ainda não tiver transferido o script da ferramenta de configuração do servidor para o conector Microsoft RMS (GenConnectorConfig.ps1), transfira-o a partir do [ Centro de Transferências da Microsoft](http://go.microsoft.com/fwlink/?LinkId=314106).
 
@@ -117,7 +117,7 @@ Utilize as secções que se seguem para obter informações específicas para ca
 
 -   [Configurar um servidor SharePoint para utilizar o conector](#configuring-a-sharepoint-server-to-use-the-connector)
 
--   [Configurar um servidor de ficheiros da Infraestrutura de Classificação de Ficheiros para utilizar o conector](#configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector)
+-   [Configurar um servidor de ficheiros para a Infraestrutura de Classificação de Ficheiros para utilizar o conector](#configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector)
 
 > [!NOTE]
 > É possível que, depois de estes servidores serem configurados para utilizarem o conector, as aplicações cliente instaladas localmente não funcionem com o RMS. Quando isto acontece, é porque as aplicações tentam utilizar o conector em vez de utilizarem o RMS diretamente, o que não é suportado.
@@ -126,7 +126,7 @@ Utilize as secções que se seguem para obter informações específicas para ca
 >
 > Em ambos os cenários, tem de instalar as aplicações cliente em computadores separados que não estejam configurados para utilizar o conector. Desse modo, utilizarão o RMS diretamente, como é suposto.
 
-## Configurar um servidor Exchange para utilizar o conector
+## <a name="configuring-an-exchange-server-to-use-the-connector"></a>Configurar um servidor Exchange para utilizar o conector
 As seguintes funções do Exchange comunicam com o conector RMS:
 
 -   Para o Exchange 2016 e Exchange 2013: servidor de acesso de cliente e servidor de caixa de correio
@@ -146,7 +146,7 @@ Nestes servidores, terá igualmente de instalar uma versão do cliente RMS que i
 > [!IMPORTANT]
 > Se estas versões ou versões posteriores do Exchange e do cliente RMS não estiverem instaladas, não conseguirá configurar o Exchange para utilizar o conector. Confirme que estas versões estão instaladas antes de continuar.
 
-### Para configurar servidores Exchange para utilizarem o conector
+### <a name="to-configure-exchange-servers-to-use-the-connector"></a>Para configurar servidores Exchange para utilizarem o conector
 
 1. Utilize a ferramenta de administração do conector RMS e as informações da secção [Autorizar os servidores a utilizar o conector RMS](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) para se certificar de que os servidores Exchange estão autorizados a utilizar o conector RMS. Esta configuração é necessária para que o Exchange possa utilizar o conector RMS.
 
@@ -168,7 +168,7 @@ Nestes servidores, terá igualmente de instalar uma versão do cliente RMS que i
     > Por predefinição, depois de executar **Set-IRMConfiguration -InternalLicensingEnabled $true**, a IRM é ativada automaticamente para o Outlook Web App e para dispositivos móveis, para além de ativar a IRM para caixas de correio. No entanto, os administradores podem desativar a IRM em níveis diferentes, por exemplo, para um Servidor de Acesso de Cliente, para o diretório virtual do Outlook Web App ou a política de caixa de correio do Outlook Web App e para uma política de caixa de correio de dispositivos móveis. Se os utilizadores não conseguirem ver modelos do Azure RMS no Outlook Web App (depois de aguardarem um dia) ou nos dispositivos móveis, mas conseguirem vê-los no cliente do Outlook, verifique as definições relevantes para se certificar de que a IRM não está desativada. Para mais informações, consulte o artigo [Enable or Disable Information Rights Management on Client Access Servers (Ativar ou Desativar a Gestão de Direitos de Informação nos Servidores de Acesso de Cliente – em inglês)](https://technet.microsoft.com/library/dd876938(v=exchg.150).aspx) na documentação do Exchange. 
 
 
-## Configurar um servidor SharePoint para utilizar o conector
+## <a name="configuring-a-sharepoint-server-to-use-the-connector"></a>Configurar um servidor SharePoint para utilizar o conector
 As seguintes funções do SharePoint comunicam com o conector RMS:
 
 -   Servidores Web front-end do SharePoint, incluindo os que alojam o servidor de Administração Central
@@ -190,7 +190,7 @@ Um servidor com o SharePoint 2016 ou SharePoint 2013 também tem de ter em execu
 
 Os servidores com o SharePoint 2010 têm de ter instalada uma versão do cliente MSDRM que inclua suporte para o Modo Criptográfico 2 do RMS. A versão mínima suportada no Windows Server 2008 está incluída na correção que pode transferir a partir da página [RSA key length is increased to 2048 bits for AD RMS in Windows Server 2008 R2 and in Windows Server 2008 (O comprimento de chave RSA é aumentado para 2048 bits para o AD RMS no Windows Server 2008 R2 e no Windows Server 2008 – em inglês)](http://support.microsoft.com/kb/2627272) e a versão mínima do Windows Server 2008 R2 pode ser transferida a partir da página [RSA key length is increased to 2048 bits for AD RMS in Windows 7 or in Windows Server 2008 R2 (O comprimento de chave RSA é aumentado para 2048 bits para o AD RMS no Windows 7 ou no Windows Server 2008 R2 – em inglês)](http://support.microsoft.com/kb/2627273). O Windows Server 2012 e o Windows Server 2012 R2 suportam nativamente o Modo Criptográfico 2.
 
-### Para configurar servidores SharePoint para utilizarem o conector
+### <a name="to-configure-sharepoint-servers-to-use-the-connector"></a>Para configurar servidores SharePoint para utilizarem o conector
 
 1. Utilize a ferramenta de administração do conector RMS e as informações da secção [Autorizar os servidores a utilizar o conector RMS](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) para se certificar de que os servidores SharePoint estão autorizados a utilizar o conector RMS. Esta configuração é necessária para que o Exchange possa utilizar o conector RMS.
 
@@ -215,14 +215,14 @@ Os servidores com o SharePoint 2010 têm de ter instalada uma versão do cliente
     Depois de a IRM estar ativada num farm do SharePoint, pode ativar a IRM em bibliotecas individuais através da opção **Gestão de Direitos de Informação** na página **Definições da Biblioteca** de cada uma das bibliotecas.
 
 
-## Configurar um servidor de ficheiros para a Infraestrutura de Classificação de Ficheiros para utilizar o conector
+## <a name="configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector"></a>Configurar um servidor de ficheiros para a Infraestrutura de Classificação de Ficheiros para utilizar o conector
 Para utilizar o conector RMS e a Infraestrutura de Classificação de Ficheiros para proteger documentos do Office, o servidor de ficheiros tem de ter um dos seguintes sistemas operativos em execução:
 
 -   Windows Server 2012 R2
 
 -   Windows Server 2012
 
-### Para configurar servidores de ficheiros para utilizarem o conector
+### <a name="to-configure-file-servers-to-use-the-connector"></a>Para configurar servidores de ficheiros para utilizarem o conector
 
 1.  Utilize a ferramenta de administração do conector RMS e as informações da secção [Autorizar os servidores a utilizar o conector RMS](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) para se certificar de que os servidores de ficheiros estão autorizados a utilizar o conector RMS. Esta configuração é necessária para que o Exchange possa utilizar o conector RMS.
 
@@ -240,7 +240,7 @@ Para utilizar o conector RMS e a Infraestrutura de Classificação de Ficheiros 
 
 3.  Crie regras de classificação e tarefas de gestão de ficheiros para proteger os documentos com Encriptação RMS e, em seguida, especifique um modelo de RMS para aplicar automaticamente as políticas de RMS. Para mais informações, consulte o artigo [Descrição Geral do Gestor de Recursos do Servidor de Ficheiros](http://technet.microsoft.com/library/hh831701.aspx) na biblioteca de documentação do Windows Server.
 
-## Passos seguintes
+## <a name="next-steps"></a>Passos seguintes
 Agora que o conector RMS está instalado e configurado, estando os servidores configurados para o utilizar, os administradores de TI e os utilizadores podem proteger e consumir mensagens de e-mail e documentos com o Azure RMS. Para facilitar o trabalho aos utilizadores, implemente a aplicação de partilha RMS, que instala um suplemento para o Office e adiciona novas opções de contexto ao Explorador de Ficheiros. Para obter mais informações, consulte o [Guia do administrador da aplicação de partilha Rights Management](../rms-client/sharing-app-admin-guide.md).
 
 Pode utilizar o [Plano de implementação do Azure Information Protection](../plan-design/deployment-roadmap.md) para verificar se existem outros passos de configuração que seja necessário efetuar antes de implementar o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] para os utilizadores e administradores.
@@ -249,6 +249,6 @@ Para monitorizar o conector RMS, consulte o artigo [Monitorizar o conector do Az
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -14,13 +14,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 90c8c97c720c624ba8f1ca7703b6c79a66f77d08
+ms.sourcegitcommit: ff3b1ce2ec5984c1e79bc9d10c5fc913b4fd3291
+ms.openlocfilehash: 1925eb3a630f61e995886989ad351a8263c9779f
 
 
 ---
 
-# Configuração do Android
+# <a name="android-setup"></a>Configuração do Android
 
 As aplicações Android podem utilizar o SDK Microsoft Rights Management 4.2 para ativar a proteção de informações integrada nas respetivas aplicações utilizando o Azure Active Directory Rights Management (AAD RM).
 
@@ -31,7 +31,7 @@ Este tópico descreve como configurar o ambiente para criar as suas novas aplica
 -   [Configurar o ambiente de desenvolvimento](#configuring-your-development-environment)
 -   [Consulte Também](#see-also)
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Recomendamos o seguinte software no sistema de desenvolvimento:
 
@@ -56,11 +56,11 @@ Recomendamos o seguinte software no sistema de desenvolvimento:
 
 Consulte o tópico [Novidades](release-notes.md) para obter informações sobre atualizações de API, notas de versão e perguntas mais frequentes (FAQ).
 
-## Opcional
+## <a name="optional"></a>Opcional
 
 A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para operações de consumo e proteção para programadores que não pretendem criar a sua IU personalizada – [Biblioteca da IU e Aplicação de exemplo para Android](https://github.com/AzureAD/rms-sdk-ui-for-android).
 
-## Configurar o ambiente de desenvolvimento
+## <a name="configuring-your-development-environment"></a>Configurar o ambiente de desenvolvimento
 
 **Nota** Versão de  Pré-visualização do SDK MS RMS 4.2: nesta versão de pré-visualização, as capturas de ecrã não foram atualizadas para mostrar a alteração no nome dos caminhos de com/microsoft/protection para com/microsoft/rightsmanagment. No entanto, o texto foi atualizado.
 
@@ -134,13 +134,13 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
 
 -   Agora, está pronto para criar as suas novas aplicações Android.
 
-### Consulte Também
+### <a name="see-also"></a>Consulte Também
 
 [Introdução](get-started.md)
 
 [Novidades](release-notes.md)
 
-[Conceitos e termos de programação](core-concepts.md)
+[Conceitos e termos de programador](core-concepts.md)
 
 [Referência da API do Android](https://msdn.microsoft.com/library/dn758245.aspx)
 
@@ -150,6 +150,6 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

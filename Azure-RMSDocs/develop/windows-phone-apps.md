@@ -14,13 +14,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 148cefbe973eadebf942c826ac19c0ee34823c89
+ms.sourcegitcommit: dc452dac3a86cd9cc39127d5a29106ae87ba94be
+ms.openlocfilehash: 790f0d847c57b9e13d9074298b3e89584dc24760
 
 
 ---
 
-# Configuração do Windows Phone
+# <a name="windows-phone-setup"></a>Configuração do Windows Phone
 
 
 As aplicações do Windows Phone podem utilizar o SDK Microsoft Rights Management 4.2 para ativar a proteção de informações integrada na respetiva aplicação utilizando o Azure Active Directory Rights Management (AAD RM).
@@ -31,7 +31,7 @@ Este tópico descreve como configurar o ambiente para criar as suas novas aplica
 -   [Configurar o ambiente de desenvolvimento](#configuring-your-development-environment)
 -   [Consulte Também](#see-also)
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 
 Tem de possuir o seguinte software no sistema de desenvolvimento:
@@ -46,7 +46,7 @@ Consulte o tópico [Novidades](release-notes.md) para obter informações acerca
 
 Reveja as informações no guia de [desenvolvimento do Windows Phone](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx) no Windows Phone Dev Center.
 
-## Configurar o ambiente de desenvolvimento
+## <a name="configuring-your-development-environment"></a>Configurar o ambiente de desenvolvimento
 
 
 -   Abra o *Visual Studio*.
@@ -60,7 +60,7 @@ Reveja as informações no guia de [desenvolvimento do Windows Phone](https://ms
     ![Adicionar referência](../media/wpsetup-addref.png)
 
 -   Clique em **Procurar** na parte inferior esquerda da caixa de diálogo **Adicionar Referência** e selecione o ficheiro *Microsoft.RightsManagment.dll*, situado na pasta da qual extraiu o pacote.
--   **Aplicações Geridas** – Para criar uma aplicação gerida, terá de adicionar esta referência; selecione **Windows 8.1**-&gt;**Extensões** e marque a caixa de **Pacote do Windows Visual C++ Runtime para Windows**
+-   **Aplicações Geridas** – para criar uma aplicação gerida, terá de adicionar esta referência; selecione **Windows 8.1**-&gt;**Extensões** e selecione a caixa **Pacote do Windows Visual C++ Runtime para Windows**
 
     ![Adicionar extensões](../media/wpsetup-refmngr.png)
 
@@ -68,7 +68,7 @@ Reveja as informações no guia de [desenvolvimento do Windows Phone](https://ms
 
 Agora, está pronto para criar as suas novas aplicações do Windows Phone.
 
-### Consulte Também
+### <a name="see-also"></a>Consulte Também
 
 [Introdução](get-started.md)
 
@@ -93,6 +93,6 @@ Agora, está pronto para criar as suas novas aplicações do Windows Phone.
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

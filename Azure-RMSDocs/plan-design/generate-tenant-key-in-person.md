@@ -18,13 +18,13 @@ ms.openlocfilehash: 4f8b32fa7961b3d59911cc279ac30a7c497deb5f
 
 ---
 
-# Gerar e transferir a chave de inquilino – pessoalmente: CONTEÚDO RETIRADO
+# <a name="generate-and-transfer-your-tenant-key-in-person-retired-content"></a>Gerar e transferir a chave de inquilino – pessoalmente: CONTEÚDO RETIRADO
 
 >*Aplica-se a: Azure Rights Management, Office 365*
 
 As informações neste artigo foram removidas porque já não são relevantes agora que o Azure Rights Management utiliza o Cofre de Chaves do Azure para chaves de inquilino geridas pelo cliente (também conhecido como traga a sua própria chave ou BYOK). 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

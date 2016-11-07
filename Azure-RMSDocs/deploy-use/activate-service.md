@@ -18,7 +18,7 @@ ms.openlocfilehash: 06c71229427743e9669baee1fdbb41f175180b0f
 
 ---
 
-# Ativar o Azure Rights Management
+# <a name="activating-azure-rights-management"></a>Ativar o Azure Rights Management
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -48,7 +48,7 @@ Em alternativa, pode utilizar o Windows PowerShell para ativar o [!INCLUDE[aad_r
 
 3. Execute o comando [Enable-Aadrm](http://msdn.microsoft.com/library/windowsazure/dn629412.aspx), que ativa o serviço Azure Rights Management.
 
-## Configurar os controlos de inclusão para uma implementação faseada
+## <a name="configuring-onboarding-controls-for-a-phased-deployment"></a>Configurar os controlos de inclusão para uma implementação faseada
 Se não quiser que todos os utilizadores possam proteger ficheiros imediatamente com o Azure Rights Management, pode configurar os controlos de inclusão do utilizador através do comando do Windows PowerShell [Set-AadrmOnboardingControlPolicy](http://msdn.microsoft.com/library/azure/dn857521.aspx). Pode executar este comando antes ou depois de ativar o serviço Azure Rights Management.
 
 > [!IMPORTANT]
@@ -71,7 +71,7 @@ Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $true
 Quando utilizar estes controlos de inclusão, todos os utilizadores na organização podem sempre consumir conteúdo protegido que foi protegido pelo seu subconjunto de utilizadores, mas não poderão aplicar a proteção de informações a partir de aplicações de cliente. Por exemplo, não poderão ver nos seus clientes do Office os modelos predefinidos que são automaticamente publicados quando o Azure Rights Management está ativado ou os modelos personalizados que poderá configurar.  As aplicações do lado do servidor, como o Exchange, podem implementar os seus próprios controlos por utilizador para integrar o Rights Management, de forma a alcançar o mesmo resultado.
 
 
-## Passos seguintes
+## <a name="next-steps"></a>Passos seguintes
 Uma vez que ativou o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] para a sua organização, utilize o [Plano de implementação do Azure Information Protection](../plan-design/deployment-roadmap.md) para verificar se existem outros passos de configuração que necessite de realizar antes de implementar o Azure Information Protection para utilizadores e administradores. 
 
 Por exemplo, pode querer utilizar [modelos personalizados](configure-custom-templates.md) para que os utilizadores possam mais facilmente aplicar a proteção de informações a ficheiros, ligar os servidores no local para utilizar o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] ao instalar o [conector Rights Management](deploy-rms-connector.md) e implementar a [aplicação de partilha Rights Management](../rms-client/sharing-app-windows.md) que suporta a proteção de todos os tipos de ficheiro em todos os dispositivos. 
@@ -81,6 +81,6 @@ Os serviços do Office, como o Exchange Online e o SharePoint Online, necessitam
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

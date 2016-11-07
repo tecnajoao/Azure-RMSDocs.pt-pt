@@ -14,13 +14,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 763e99e40bbe329305e97757e87d10b048cc62e9
+ms.sourcegitcommit: dc452dac3a86cd9cc39127d5a29106ae87ba94be
+ms.openlocfilehash: c3dfa23a4bb03aec3ad9eae835382040a5347006
 
 
 ---
 
-# Configuração da Loja Windows
+# <a name="windows-store-setup"></a>Configuração da Loja Windows
 
 As aplicações da Loja Windows podem utilizar o SDK Microsoft Rights Management 4.2 para ativar a proteção de informações integrada na respetiva aplicação utilizando o Azure Active Directory Rights Management (AAD RM).
 
@@ -31,7 +31,7 @@ Este tópico descreve como configurar o ambiente para criar as suas novas aplica
 -   [Configurar o ambiente de desenvolvimento](#configuring-your-development-environment)
 -   [Consulte Também](#see-also)
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 
 Tem de possuir o seguinte software no sistema de desenvolvimento:
@@ -44,11 +44,11 @@ Tem de possuir o seguinte software no sistema de desenvolvimento:
 
 Consulte o tópico [Novidades](release-notes.md) para obter informações acerca de atualizações de API, informações de dispositivos e de ambiente, notas de versão e perguntas mais frequentes (FAQ).
 
-## Opcional
+## <a name="optional"></a>Opcional
 
 A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para operações de consumo e proteção para programadores que não pretendem criar a sua IU personalizada – [Biblioteca da IU para aplicações da Loja Windows](https://github.com/AzureAD/rms-sdk-ui-for-windowsstore). Fornecemos também uma aplicação de exemplo de aplicação da Loja Windows – [Aplicação de exemplo do RMS para a Loja Windows](https://github.com/AzureADSamples/rms-samples-for-windowsstore).
 
-## Configurar o ambiente de desenvolvimento
+## <a name="configuring-your-development-environment"></a>Configurar o ambiente de desenvolvimento
 
 
 -   Abra o Visual Studio.
@@ -62,7 +62,7 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
     ![Adicionar referência](../media/winrtsetup-addref.png)
 
 -   Na caixa de diálogo **Adicionar Referência**, clique em **Procurar** e selecione o ficheiro *Microsoft.RightsManagment.dll*, situado na pasta da qual extraiu o pacote SDK.
--   **Aplicações Geridas** – Para criar uma aplicação gerida, terá de adicionar esta referência; selecione **Windows 8.1**-&gt;**Extensões** e marque a caixa de **Pacote do Windows Visual C++ Runtime para Windows**
+-   **Aplicações Geridas** – para criar uma aplicação gerida, terá de adicionar esta referência; selecione **Windows 8.1**-&gt;**Extensões** e selecione a caixa **Pacote do Windows Visual C++ Runtime para Windows**
 
     ![Adicionar extensões](../media/winrtsetup-refmngr.png)
 
@@ -70,13 +70,13 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
 
 Agora, está pronto para criar as suas novas aplicações da Loja Windows.
 
-### Consulte Também
+### <a name="see-also"></a>Consulte Também
 
 [Introdução](get-started.md)
 
 [Novidades](release-notes.md)
 
-[Conceitos e termos de programação](core-concepts.md)
+[Conceitos e termos de programador](core-concepts.md)
 
 [Windows 8](http://windows.microsoft.com/en-US/windows-8/meet)
 
@@ -86,6 +86,6 @@ Agora, está pronto para criar as suas novas aplicações da Loja Windows.
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

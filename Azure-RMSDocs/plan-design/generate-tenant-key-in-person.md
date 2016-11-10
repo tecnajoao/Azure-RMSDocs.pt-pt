@@ -2,6 +2,7 @@
 title: "Gerar e transferir a sua chave de inquilino – pessoalmente: CONTEÚDO RETIRADO | Azure RMS"
 description: "As informações neste artigo foram removidas porque já não são relevantes agora que o Azure Rights Management utiliza o Cofre de Chaves do Azure para chaves de inquilino geridas pelo cliente (também conhecido como traga a sua própria chave ou BYOK)."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

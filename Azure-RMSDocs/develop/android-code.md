@@ -3,6 +3,7 @@ title: "Exemplos de código do Android | Azure RMS"
 description: "Este tópico apresenta-lhe elementos de código importantes para a versão Android do SDK RMS."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -20,14 +21,14 @@ ms.openlocfilehash: febc212cb6bc4b91058aa0e9f18d1e51f751b552
 
 ---
 
-# Exemplos de código do Android
+# <a name="android-code-examples"></a>Exemplos de código do Android
 
 Este tópico apresenta-lhe elementos de código importantes para a versão Android do SDK RMS.
 
 **Nota:** no código de exemplo e nas descrições que se seguem, utilizamos o termo MSIPC (Microsoft Information Protection and Control) para referenciar o processo de cliente.
 
 
-## Utilizar o SDK Microsoft Rights Management 4.2 – cenários principais
+## <a name="using-the-microsoft-rights-management-sdk-42-key-scenarios"></a>Utilizar o SDK Microsoft Rights Management 4.2 – cenários principais
 
 Seguem-se exemplos de código de uma aplicação de exemplo maior que representam cenários de desenvolvimento importantes para se orientar neste SDK. Estes demonstram a utilização do formato de Ficheiro Protegido da Microsoft referido como ficheiro protegido, a utilização de formatos de ficheiros protegidos personalizados e a utilização de controlos de IU personalizados.
 
@@ -35,7 +36,7 @@ Seguem-se exemplos de código de uma aplicação de exemplo maior que representa
 
 A aplicação de exemplo, *MSIPCSampleApp*, está disponível para utilização com este SDK para o sistema operativo Android. Consulte [rms-sdk-ui-for-android](https://github.com/AzureAD/rms-sdk-ui-for-android) no GitHub para ter acesso a esta aplicação de exemplo.
 
-### Cenário: consumir um ficheiro de RMS protegido
+### <a name="scenario-consume-an-rms-protected-file"></a>Cenário: consumir um ficheiro de RMS protegido
 
 -   **Passo 1**: criar um [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx)
 
@@ -197,7 +198,7 @@ A aplicação de exemplo, *MSIPCSampleApp*, está disponível para utilização 
                 }
 
 
-### Cenário: criar um novo ficheiro protegido através de um modelo
+### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Cenário: criar um novo ficheiro protegido através de um modelo
 
 Este cenário começa com a obtenção de uma lista de modelo ao selecionar o primeiro para criar uma política e, em seguida, ao cria e escreve no novo ficheiro protegido.
 
@@ -321,7 +322,7 @@ Este cenário começa com a obtenção de uma lista de modelo ao selecionar o pr
 
 
 
-### Cenário: abrir um ficheiro protegido personalizado
+### <a name="scenario-open-a-custom-protected-file"></a>Cenário: abrir um ficheiro protegido personalizado
 
 -   **Passo 1**: criar um [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) a partir de um *serializedContentPolicy*.
 
@@ -436,7 +437,7 @@ Este cenário começa com a obtenção de uma lista de modelo ao selecionar o pr
         buffer.close();    customProtectedInputStream.close();  }  catch (IOException e)  {    ...  } }
 
 
-### Cenário: criar um ficheiro protegido personalizado utilizando uma política personalizada (ad hoc)
+### <a name="scenario-create-a-custom-protected-file-using-a-custom-adhoc-policy"></a>Cenário: criar um ficheiro protegido personalizado utilizando uma política personalizada (ad hoc)
 
 -   **Passo 1**: com um endereço de e-mail fornecido pelo utilizador, criar um descritor de política.
 

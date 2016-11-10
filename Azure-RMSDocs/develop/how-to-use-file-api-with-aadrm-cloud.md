@@ -3,6 +3,7 @@ title: "Procedimentos para ativar a aplicação do serviço para que funcione co
 description: "Este tópico descreve os passos para configurar a aplicação do serviço para utilizar o Azure Rights Management."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

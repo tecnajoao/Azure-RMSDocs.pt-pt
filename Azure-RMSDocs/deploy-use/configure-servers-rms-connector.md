@@ -2,6 +2,7 @@
 title: Configurar servidores para o conector Azure Rights Management | Azure Information Protection
 description: "Informações para o ajudar a configurar os servidores no local que irão utilizar o conector Azure Rights Management (RMS). Estes procedimentos inclui o passo 5 do artigo Implementar o conector Azure Rights Management."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: article

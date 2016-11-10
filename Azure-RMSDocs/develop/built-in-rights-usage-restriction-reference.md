@@ -3,6 +3,7 @@ title: Como&#58; utilizar direitos incorporados | Azure RMS
 description: "Descreve os direitos incorporados que o SDK RMS 4.2 concede e as restrições de utilização que uma aplicação devem impor para respeitar essas restrições."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -22,13 +23,13 @@ ms.openlocfilehash: 3d897f191368b7af6fd339603e183583fa9b4a27
 
 ---
 
-# Como: utilizar direitos incorporados
+# <a name="how-to-use-builtin-rights"></a>Como: utilizar direitos incorporados
 
 Este tópico descreve os direitos incorporados que o SDK Microsoft Rights Management 4.2 concede e as restrições de utilização que uma aplicação deve impor para respeitar essas restrições. Em seguida, são apresentados os direitos incorporados, direitos comuns, direitos de documento editável e direitos de e-mail, seguidos de uma descrição e os respetivos valores por sistema operativo.
 
 **Nota:** para o SDK Linux, consulte o ficheiro de origem *rights.h* para ver os detalhes.
 
-## Direitos Comuns
+## <a name="common-rights"></a>Direitos Comuns
 
 **Todos** – Uma coleção de todos os direitos comuns.
 - Android: [CommonRights.All](https://msdn.microsoft.com/library/dn758258.aspx)
@@ -51,7 +52,7 @@ Este tópico descreve os direitos incorporados que o SDK Microsoft Rights Manage
 
  
 
-## Direitos de Documento Editável
+## <a name="editable-document-rights"></a>Direitos de Documento Editável
 **Todos** – Uma coleção que contém todos os direitos de documento editável.
 - Android: [EditableDocumentRights.All](https://msdn.microsoft.com/library/dn758284.aspx)
 - iOS e OS X: [MSEditableDocumentRights all](https://msdn.microsoft.com/library/dn758318.aspx)
@@ -93,7 +94,7 @@ Este tópico descreve os direitos incorporados que o SDK Microsoft Rights Manage
 
  
 
-## Direitos de E-mail
+## <a name="email-rights"></a>Direitos de E-mail
 
 **Todos** – uma coleção que contém todos os direitos de e-mail.
 - Android: [EmailRights.All](https://msdn.microsoft.com/library/dn758285.aspx)

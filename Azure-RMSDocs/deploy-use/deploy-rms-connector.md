@@ -2,6 +2,7 @@
 title: Implementar o conector do Azure Rights Management | Azure Information Protection
 description: "Instruções para implementar o conector do RMS, que fornece o serviço de proteção de dados para as implementações no local existentes que utilizam o Exchange Server, o SharePoint Server ou o Windows Server e a Infraestrutura de Classificação de Ficheiros (FCI)."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

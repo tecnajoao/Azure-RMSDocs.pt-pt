@@ -3,6 +3,7 @@ title: Como utilizar o controlo de documentos | Azure RMS
 description: "A funcionalidade de controlo de documentos requer alguns conhecimentos simples sobre a gestão dos metadados associados e o registo do serviço."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -20,11 +21,11 @@ ms.openlocfilehash: 616d5dd088665abf6e7d435978b021b10c5ac3f5
 
 ---
 
-# Como: utilizar o controlo de documentos
+# <a name="how-to-use-document-tracking"></a>Como: utilizar o controlo de documentos
 
 A utilização da funcionalidade de controlo de documentos requer alguns conhecimentos simples sobre a gestão dos metadados associados e o registo do serviço.
 
-## Gerir metadados de controlo de documentos
+## <a name="managing-document-tracking-metadata"></a>Gerir metadados de controlo de documentos
 
 Todos os sistemas operativos que suportam o controlo de documentos têm implementações semelhantes. Estes incluem um conjunto de propriedades que representam os metadados, um novo parâmetro adicionado aos métodos de criação de políticas de utilizador e um método para registar a política a controlar com o serviço de controlo de documentos.
 

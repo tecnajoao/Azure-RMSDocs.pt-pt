@@ -2,6 +2,7 @@
 title: "Descrição geral técnica da aplicação de partilha Rights Management | Azure Information Protection"
 description: "Informações técnicas para administradores em redes empresariais cuja responsabilidade é implementar a aplicação de partilha RMS para Windows."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

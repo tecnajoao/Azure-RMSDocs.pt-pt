@@ -3,6 +3,7 @@ title: "Termos e orientações para programadores | Azure RMS"
 description: "O objetivo do SDK RMS 4.2 é ajudá-lo a criar aplicações com suporte para o AD RMS que tiram partido da Proteção de Informações do AD RMS, da forma mais simples possível."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -20,7 +21,7 @@ ms.openlocfilehash: 2ac4ca3e505d78758a01516f66f1e5f4ff4b17b6
 
 ---
 
-# Termos e orientações para programadores
+# <a name="developer-guidance-and-terms"></a>Termos e orientações para programadores
 O objetivo do SDK Microsoft Rights Management 4.2 é ajudá-lo a criar aplicações com suporte para o AD RMS que tiram partido dos Active Directory Right Management Services (AD RMS), da forma mais simples possível.
 
 Os tópicos seguintes destinam-se a suportar o processo de estruturação para desenvolver aplicações com suporte para o RMS.

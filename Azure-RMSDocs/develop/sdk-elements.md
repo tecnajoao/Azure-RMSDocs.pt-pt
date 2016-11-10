@@ -3,6 +3,7 @@ title: Ficheiros do ambiente de desenvolvimento | Azure RMS
 description: "Este tópico mostra os ficheiros do ambiente de desenvolvimento e as respetivas localizações de instalação no computador."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -20,7 +21,7 @@ ms.openlocfilehash: a251723b6c42058091d57067724e89a1816bcaa1
 
 ---
 
-# Ficheiros do ambiente de desenvolvimento
+# <a name="development-environment-files"></a>Ficheiros do ambiente de desenvolvimento
 
 Este tópico mostra os ficheiros do ambiente de desenvolvimento e as respetivas localizações de instalação no computador.
 

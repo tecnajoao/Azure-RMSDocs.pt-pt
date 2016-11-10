@@ -2,6 +2,7 @@
 title: "Operações de ciclo de vida das chaves de inquilino geridas pelo cliente | Azure Information Protection"
 description: "Informações sobre operações de ciclo de vida que são relevantes se gerir a sua chave de inquilino do Azure Information Protection (o cenário traga a sua própria chave ou BYOK)."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/04/2016
 ms.topic: article

@@ -2,6 +2,7 @@
 title: "Opções da caixa de diálogo da aplicação de partilha Rights Management | Azure Information Protection"
 description: "Informações para ajudar a especificar as opções na caixa de diálogo Adicionar proteção ou na caixa de diálogo Partilhar protegido da aplicação de partilha RMS. Irá ver esta caixa de diálogo quando proteger um ficheiro a partilhar ou quando proteger um ficheiro no local e escolher permissões personalizadas."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/04/2016
 ms.topic: article

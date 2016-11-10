@@ -3,6 +3,7 @@ title: "Configuração da Loja Windows | Azure RMS"
 description: "As aplicações da Loja Windows podem utilizar o SDK Microsoft Rights Management 4.2 para ativar a proteção de informações integrada na respetiva aplicação."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

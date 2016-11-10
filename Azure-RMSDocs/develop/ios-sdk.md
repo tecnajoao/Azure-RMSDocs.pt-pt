@@ -3,6 +3,7 @@ title: "Configuração do iOS e OS X | Azure RMS"
 description: "As aplicações iOS e OS X podem utilizar o SDK RMS 4.2 para ativar a proteção de informações integrada na respetiva aplicação ao utilizar o AAD RM."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

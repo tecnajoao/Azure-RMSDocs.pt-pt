@@ -3,6 +3,7 @@ title: "Testar a sua aplicação | Azure RMS"
 description: "Instruções sobre como configurar a sua aplicação para fins de teste."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

@@ -68,6 +68,6 @@ Se ocorrer uma violação, a melhor ação que o utilizador ou a Microsoft pode 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

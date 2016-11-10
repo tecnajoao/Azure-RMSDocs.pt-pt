@@ -78,6 +78,6 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

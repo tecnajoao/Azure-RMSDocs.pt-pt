@@ -2,8 +2,9 @@
 title: "Passo 2&colon; migração de chave protegida por HSM para chave protegida por HSM | Azure Information Protection"
 description: "Instruções que fazem parte do caminho de migração do AD RMS para o Azure Information Protection e só são aplicáveis se a sua chave do AD RMS estiver protegida por HSM e quiser migrar para o Azure Information Protection com uma chave de inquilino protegida por HSM no Cofre de Chaves do Azure."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/14/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,20 +13,20 @@ ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bad084502b9b7e55c6e80dccfbd66c3f34b63c7c
-ms.openlocfilehash: 8d9538cb2663edce5fc343ed9710032505c15293
+ms.sourcegitcommit: 1fcebaaa2fbe1479e83c232d51013341977796fc
+ms.openlocfilehash: 3f5982b94f1de83ec66860946c46b9acbf45f479
 
 
 ---
 
-# Passo 2: migração de chave protegida por HSM para chave protegida por HSM
+# <a name="step-2-hsmprotected-key-to-hsmprotected-key-migration"></a>Passo 2: migração de chave protegida por HSM para chave protegida por HSM
 
 >*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection*
 
 
 Estas instruções fazem parte do [caminho de migração do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) e só são aplicáveis se a sua chave do AD RMS estiver protegida por HSM e quiser migrar para o Azure Information Protection com uma chave de inquilino protegida por HSM no Cofre de Chaves do Azure. 
 
-Se este não for o cenário de configuração escolhido, volte ao [Passo 2. Exporte os dados de configuração do AD RMS, importe-os para o Azure RMS](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms) e escolha uma configuração diferente.
+Se este não for o cenário de configuração escolhido, volte ao [Passo 2. Exporte os dados de configuração do AD RMS, importe-os para o Azure RMS](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection) e escolha uma configuração diferente.
 
 > [!NOTE]
 > Estas instruções partem do princípio de que a sua chave do AD RMS está protegida por um módulo. Este é o caso mais habitual. 
@@ -41,7 +42,7 @@ Antes de começar, certifique-se de que a sua organização tem um cofre de chav
 > Se for efetuar os passos de configuração do Cofre de Chaves do Azure e não estiver familiarizado com este serviço do Azure, poderá considerar útil primeiro rever [Introdução ao Cofre de Chaves do Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/). 
 
 
-## Parte 1: transferir a chave HSM para o Cofre de Chaves do Azure
+## <a name="part-1-transfer-your-hsm-key-to-azure-key-vault"></a>Parte 1: transferir a chave HSM para o Cofre de Chaves do Azure
 
 Estes procedimentos são efetuados pelo administrador para o Cofre de Chaves do Azure.
 
@@ -60,7 +61,7 @@ Estes procedimentos são efetuados pelo administrador para o Cofre de Chaves do 
 
 Agora que já preparou a sua chave HSM no Cofre de Chaves do Azure para o serviço Azure Rights Management do Azure Information Protection, está pronto para importar os dados de configuração do AD RMS.
 
-## Parte 2: importar os dados de configuração para o Azure Information Protection
+## <a name="part-2-import-the-configuration-data-to-azure-information-protection"></a>Parte 2: importar os dados de configuração para o Azure Information Protection
 
 Estes procedimentos são efetuados pelo administrador para o Azure Information Protection.
 
@@ -89,11 +90,11 @@ Estes procedimentos são efetuados pelo administrador para o Azure Information P
     > [!NOTE]
     > Se tiver de confirmar mais tarde qual a chave de inquilino do Azure Information Protection utilizada no Cofre de Chaves do Azure, utilize o cmdlet [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) do Azure RMS.
 
-Agora está pronto para ir para o [Passo 3. Ative o seu inquilino do Azure Information Protection](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant).
+Agora está pronto para ir para o [Passo 3. Ative o seu inquilino do Azure Information Protection](migrate-from-ad-rms-phase1.md#step-3-activate-your-azure-information-protection-tenant).
 
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

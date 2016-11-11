@@ -3,7 +3,7 @@ title: "Perguntas mais frequentes sobre o serviço de proteção de dados, o Azu
 description: "Algumas perguntas mais frequentes sobre o serviço de proteção de dados, o Azure Rights Management (Azure RMS), do Azure Information Protection."
 author: cabailey
 manager: mbaldwin
-ms.date: 10/18/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ec8609217db42a2cf0b3f89367cf4dee6ccb77de
-ms.openlocfilehash: ae25f5af9784b0de92626dbfe65d4358359b4bd9
+ms.sourcegitcommit: 6566e0ce901097bcf5f30d76be67522d3464f100
+ms.openlocfilehash: c92e35b0cb9f892f7859511365027c241d0f1ef6
 
 
 ---
@@ -27,7 +27,7 @@ Tem uma pergunta sobre o serviço de proteção de dados, o Azure Rights Managem
 ## Os ficheiros têm de estar na nuvem para serem protegidos pelo Azure Rights Management?
 Não, este é um equívoco comum. O serviço Azure Rights Management (e a Microsoft) não vê nem armazena os seus dados como parte do processo de proteção das informações. As informações que protege nunca são enviadas para ou armazenadas no Azure, a menos que as armazene explicitamente no Azure ou utilize outro serviço em nuvem que as armazene no Azure. 
 
-Para mais informações, consulte [How does Azure RMS work? (Como funciona o Azure RMS? Nos bastidores](../understand-explore/how-does-it-work.md) para compreender como uma fórmula de cola secreta criada e armazenada no local é protegida pelo serviço Azure Rights Management, mas permanece no local.
+Para mais informações, consulte [How does Azure RMS work? Under the hood (Como funciona o Azure RMS? Nos bastidores)](../understand-explore/how-does-it-work.md) para compreender como uma fórmula de cola secreta criada e armazenada no local é protegida pelo serviço Azure Rights Management, mas permanece no local.
 
 ## Posso integrar o serviço Azure Rights Management nos meus servidores no local?
 Sim. O Azure Rights Management pode ser integrado nos seus servidores no local, como o Exchange Server, o SharePoint e os servidores de ficheiros do Windows. Para tal, utilize o [conetor Rights Management](../deploy-use/deploy-rms-connector.md). Em alternativa, se estiver interessado em apenas utilizar a Infraestrutura de Classificação de Ficheiros (FCI) com o Windows Server, pode utilizar os [Cmdlets da Proteção RMS](https://technet.microsoft.com/library/mt601315%28v=ws.10%29.aspx). Também pode sincronizar e federar os seus controladores de domínio do Active Directory com o Azure AD para uma experiência de autenticação mais integrada para os utilizadores, por exemplo, ao utilizar o [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/).
@@ -38,7 +38,7 @@ O Azure Rights Management gera e faz a gestão dos certificados XrML automaticam
 
 Muitos fornecedores de software já têm soluções ou estão a implementar soluções que se integram no Azure Rights Management, e a lista está a crescer muito rapidamente. Poderá considerar útil ler o [Blogue Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) e obter as atualizações mais recentes através de [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) no Twitter. No entanto, se tiver uma questão específica, envie uma mensagem de e-mail à equipa de Proteção das Informações: askipteam@microsoft.com.
 
-## Existe um pacote de gestão ou o mecanismo de monitorização semelhante para o conector de RMS?
+## Existe um pacote de gestão ou o mecanismo de monitorização semelhante para o conector RMS?
 
 Embora o conector do Rights Management registe mensagens de erro, aviso e informações no registo de eventos, não existe um pacote de gestão que inclua a monitorização destes eventos. No entanto, a lista de eventos e as suas descrições, com mais informações para ajudá-lo a aplicar as medidas corretivas está documentada em [Monitorizar o conector do Azure Rights Management](../deploy-use/monitor-rms-connector.md).
 
@@ -52,7 +52,7 @@ Factos a ter em conta:
 
 - Apenas os administradores globais do Office 365 e os administradores globais do Azure AD podem utilizar os portais de gestão (centro de administração do Office 365 ou portal clássico do Azure) para configurarem o Azure RMS. Os utilizadores aos quais atribui a função de administrador global para o Azure RMS têm de utilizar os comandos do PowerShell do Azure RMS para configurarem o Azure RMS. Para ajudar a encontrar os cmdlets certos para tarefas específicas, consulte [Administrar o Azure Rights Management Utilizando o Windows PowerShell](../deploy-use/administer-powershell.md).
 
-- Se tiver configurado [controlos de inclusão](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), isto não afeta a capacidade para administrar o Azure RMS, com exceção do conector do RMS. Por exemplo, se tiver configurado controlos de inclusão de para restringir a capacidade de proteger conteúdo ao grupo "Departamento de TI", a conta utilizada para instalar e configurar o conector do RMS tem de ser um membro desse grupo. 
+- Se tiver configurado [controlos de inclusão](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), isto não afeta a capacidade para administrar o Azure RMS, com exceção do conector RMS. Por exemplo, se tiver configurado controlos de inclusão de para restringir a capacidade de proteger conteúdo ao grupo "Departamento de TI", a conta utilizada para instalar e configurar o conector do RMS tem de ser um membro desse grupo. 
 
 - Nenhum administrador do Azure RMS (o administrador global do inquilino ou um administrador global do Azure RMS) pode remover automaticamente a proteção de documentos ou e-mails protegidos pelo Azure RMS. Apenas os utilizadores aos quais estão atribuídos superutilizadores para o Azure RMS podem fazê-lo, desde que a funcionalidade de superutilizador esteja ativada. No entanto, o administrador global do inquilino e qualquer administrador global do Azure RMS pode atribuir utilizadores como superutilizadores, incluindo a sua própria conta. Também pode ativar a funcionalidade de superutilizador. Estas ações são registadas no registo de administrador do Azure RMS. Para obter mais informações, consulte a secção de melhores práticas em [Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados](../deploy-use/configure-super-users.md). 
 
@@ -76,9 +76,9 @@ Não existe uma opção de administração para impedir que os utilizadores part
 ## Quando partilho um documento protegido com alguém fora da minha empresa, como é que esse utilizador é autenticado?
 O serviço Azure Rights Management utiliza sempre uma conta do Azure Active Directory e um endereço de e-mail associado para a autenticação do utilizador, o que torna a colaboração entre empresas totalmente integrada para os administradores. Se a outra organização utilizar serviços do Azure, os utilizadores já terão contas no Azure Active Directory, mesmo que estas contas tenham sido criadas e geridas no local e, em seguida, sincronizadas com o Azure. Se a organização tiver o Office 365, nos bastidores, este serviço também utiliza o Azure Active Directory para as contas de utilizador. Se a organização do utilizador não tiver contas geridas no Azure, os utilizadores podem inscrever-se no [RMS para indivíduos](../understand-explore/rms-for-individuals.md), que cria um diretório e um inquilino do Azure não gerido para a organização com uma conta para o utilizador, para que este utilizador (e utilizadores subsequentes) possa ser autenticado para o serviço Azure Rights Management.
 
-O método de autenticação para estas contas pode variar, dependendo da forma como o administrador na outra organização configurou as contas do Azure Active Directory. Por exemplo, podem utilizar palavras-passe que foram criadas para estas contas, autenticação multifator (MFA), federação ou palavras-passe que foram criadas nos Serviços de Domínio do Active Directory e, em seguida, sincronizadas com o Azure Active Directory.
+O método de autenticação para estas contas pode variar, dependendo da forma como o administrador na outra organização configurou as contas do Azure Active Directory. Por exemplo, podem utilizar palavras-passe que foram criadas para estas contas, autenticação multifator (MFA), federação ou palavras-passe que foram criadas nos Active Directory Domain Services e, em seguida, sincronizadas com o Azure Active Directory.
 
-## Posso adicionar utilizadores externos à minha empresa aos modelos personalizados?
+## Posso adicionar utilizadores externos (pessoas que não pertencem à minha empresa) a modelos personalizados?
 Sim. Criar modelos personalizados que os utilizadores finais (e os administradores) podem selecionar a partir de aplicações torna mais rápido e fácil aplicar a proteção de informações, com políticas predefinidas especificadas por si. Uma das definições no modelo é quem pode aceder aos conteúdos. Pode especificar os utilizadores e os grupos da sua organização e os utilizadores externos à sua organização.
 
 Para especificar os utilizadores a partir de fora da sua organização, adicioná-los como contactos a um grupo que selecionou no portal clássico do Azure quando configurar os seus modelos. Ou utilize o [Módulo Windows PowerShell para Azure Rights Management](../deploy-use/install-powershell.md):
@@ -110,7 +110,7 @@ Não permita que esta limitação atual atrase a utilização do serviço Azure 
 No entanto, se as políticas da sua empresa exigirem que utilize um módulo de hardware de segurança (HSM) e isto bloquear a sua implementação do Azure Information Protection, outra opção é implementar o Azure Information Protection com o BYOK agora, com funcionalidade de proteção Rights Management reduzida para o Exchange. Para mais informações, consulte [Preços e restrições do BYOK](../plan-design/byok-price-restrictions.md) em [Planear e implementar a sua chave de inquilino do Azure Rights Management](../plan-design/plan-implement-tenant-key.md).
 
 ## A funcionalidade que procuro não funciona com bibliotecas protegidas do SharePoint. Planeiam oferecer suporte para a minha funcionalidade?
-Atualmente, o SharePoint suporta documentos protegidos pelo Rights Management com bibliotecas protegidas da IRM, que não suportam modelos personalizados, controlo de documentos e outras funcionalidades. Para mais informações, consulte a secção [SharePoint Online e SharePoint Server](../understand-explore/office-apps-services-support.md#sharepoint-online-and-sharepoint-server) no artigo [Office applications and services (Aplicações e serviços do Office – em inglês)](../understand-explore/office-apps-services-support.md).
+Atualmente, o SharePoint suporta documentos protegidos pelo Rights Management com bibliotecas protegidas da IRM, que não suportam modelos personalizados, controlo de documentos e outras funcionalidades. Para mais informações consulte a secção [SharePoint Online e SharePoint Server](../understand-explore/office-apps-services-support.md#sharepoint-online-and-sharepoint-server) no artigo [Aplicações e serviços do Office ](../understand-explore/office-apps-services-support.md).
 
 Se estiver interessado numa funcionalidade específica que ainda não é suportada, fique atento aos anúncios no [Blogue do Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
 
@@ -157,6 +157,6 @@ Apesar do nome e do aspeto, **Não Reencaminhar** não é o oposto do direito de
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Oct16_HO4-->
 
 

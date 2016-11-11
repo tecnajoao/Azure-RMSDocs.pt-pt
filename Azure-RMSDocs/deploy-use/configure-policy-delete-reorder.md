@@ -1,21 +1,23 @@
 ---
 title: Como eliminar ou reordenar uma etiqueta | Azure Information Protection
 description: "Pode eliminar ou reordenar qualquer uma das etiquetas que os utilizadores veem na barra Information Protection, configurando-o na política do Azure Information Protection."
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: 3e73e928c8a0189c275e02c189db5c872993d9dd
+ms.sourcegitcommit: d5b3f3fc473661022a4f17b6587d58a252d07d1a
+ms.openlocfilehash: 0ecc8f58179ea71f3faf4d4816ca7dbf4087826a
 
 
 ---
 
-# Como eliminar ou reordenar uma etiqueta para o Azure Information Protection
+# <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Como eliminar ou reordenar uma etiqueta para o Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -47,14 +49,14 @@ Utilize as seguintes instruções para efetuar as alterações.
 
 3. Para disponibilizar as alterações aos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
 
-## Passos seguintes
+## <a name="next-steps"></a>Passos seguintes
 
-Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organization-s-policy).  
-
-
+Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).  
 
 
 
-<!--HONumber=Sep16_HO4-->
+
+
+<!--HONumber=Nov16_HO1-->
 
 

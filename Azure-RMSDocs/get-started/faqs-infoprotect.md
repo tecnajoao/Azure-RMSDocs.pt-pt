@@ -3,7 +3,7 @@ title: "Perguntas mais frequentes sobre a classificação e a etiquetagem | Azur
 description: "Tem alguma pergunta sobre a versão de pré-visualização do Azure Information Protection? Verifique se a resposta está aqui."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ce4fc256cf80fdd2e4a8212e2f64ffc6ca6a3964
-ms.openlocfilehash: 9b341a53a85242839d737bc36c90a8f94637bae1
+ms.sourcegitcommit: b23466ee412f3e705f49083c11c2099c0cdcd2d6
+ms.openlocfilehash: b9e0a154b67bc54b7868021fb46f7d52c8b7e3bd
 
 
 ---
@@ -26,7 +26,7 @@ Tem uma pergunta sobre o Azure Information Protection especificamente sobre clas
 
 ## O que posso fazer com as capacidades de classificação no Azure Information Protection?
 
-O cliente do Azure Information Protection adiciona uma barra do Information Protection para aplicações do Microsoft Office que lhe permite ver e modificar etiquetas de classificação atribuídas a dados. A classificação pode ser efetuada manualmente, recomendada para si ou aplicada automaticamente. No que respeita às classificações que especificar, os dados podem ser protegidos com um serviço do Rights Management.  
+O cliente do Azure Information Protection adiciona uma barra do Information Protection para aplicações do Microsoft Office que lhe permite ver e modificar etiquetas de classificação atribuídas a dados. A classificação pode ser efetuada manualmente, recomendada para si ou aplicada automaticamente. No que respeita às classificações que especificar, os dados podem ser protegidos com um serviço de Gestão de Direitos.  
 
 As etiquetas de classificação e o comportamento são configurados no portal do Azure. Pode utilizar a política incorporada predefinida para avaliar rapidamente o Azure Information Protection ou personalizar por completo as suas políticas. Pode alterar as cores, os nomes e a ordem das etiquetas de classificação que os utilizadores veem. Também pode configurar descrições e marcas visuais de classificação como cabeçalho, rodapé ou uma marca d'água.
 
@@ -34,13 +34,17 @@ Experimente o nosso tutorial de início rápido para ver isto em funcionamento e
 
 A versão atual apresenta as seguintes limitações. Procure anúncios no [Blogue Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) e no nosso [site Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) quando estiverem disponíveis funcionalidades e capacidades adicionais:
 
-- Não existe nenhum registo centralizado para classificação e etiquetagem.
+- Só pode aplicar etiquetas a tipos de ficheiros do Office e a mensagens de e-mail do Outlook.
+
+- As etiquetas no suplemento do Office são visíveis a todos os utilizadores com o cliente do Azure Information Protection instalado.
 
 - Os nomes das etiquetas e descrições são suportadas apenas num idioma.
 
-- As condições para classificação automática têm de ser expressões ou padrões.
-
 - Os ficheiros não podem ser classificados a partir do Explorador de Ficheiros do Windows.
+
+- Não existe nenhum registo centralizado para classificação e etiquetagem.
+
+- As condições para classificação automática têm de ser expressões ou padrões.
 
 - As aplicações do Office para dispositivos móveis (iOS e Android), computadores Mac e aplicações Web do Office (Office Online) ainda não são suportadas.
 
@@ -53,6 +57,10 @@ A versão atual apresenta as seguintes limitações. Procure anúncios no [Blogu
 Para configurar a política do Azure Information Protection, tem de iniciar sessão no portal do Azure como um administrador global do Azure Active Directory.
 
 No entanto, se selecionar a opção para instalar a política de demonstração quando instalar o [cliente do Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018), não precisa de iniciar sessão no portal para ver e experimentar a funcionalidade de etiquetagem. A política de demonstração instala localmente a política predefinida do Azure Information Protection, pelo que pode tentar etiquetar documentos e e-mails, mas não pode alterar ou adicionar novas etiquetas sem iniciar sessão no portal do Azure. 
+
+## Que opções no portal do Azure são P1 ou P2?
+
+Para verificar quais as funcionalidades incluídas na subscrição do **Azure Information Protection Premium 1** (P1), em comparação com a subscrição do **Azure Information Protection Premium 2** (P2), consulte a [lista de funcionalidades](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) do site do Azure Information Protection.
 
 ## O Azure Information Protection suporta cenários no local e híbridos?
 
@@ -111,13 +119,13 @@ Sim. Para se certificar de que os utilizadores justificam as suas alterações d
 
 ## Como posso proteger automaticamente o conteúdo depois de ter sido classificado?
 
-No portal do Azure, pode selecionar um modelo do Rights Management para proteger automaticamente os conteúdos, de acordo com o nível de classificação que especificar.
+No portal do Azure, pode selecionar um modelo de Rights Management para proteger automaticamente os conteúdos, de acordo com o nível de classificação que especificar.
 
-Irá ver um exemplo desta situação no [Tutorial de início rápido do Azure Information Protection](infoprotect-quick-start-tutorial.md). Para mais informações, consulte [Como configurar uma etiqueta para aplicar proteção Rights Management](../deploy-use/configure-policy-protection.md).
+Irá ver um exemplo desta situação no [Tutorial de início rápido do Azure Information Protection](infoprotect-quick-start-tutorial.md). Para mais informações, consulte [Como configurar uma etiqueta para aplicar proteção a Gestão de Direitos](../deploy-use/configure-policy-protection.md).
 
 ## Um ficheiro pode ser classificado com duas classificações diferentes?
 
-Se necessário, pode criar subetiquetas que melhor descrevam subcategorias para uma etiqueta de sensibilidade específica. Por exemplo, a etiqueta principal **Segredo** pode conter subetiquetas como **Segredo \ Legal** e **Segredo \ Finanças**. Em seguida, pode aplicar marcações visuais de classificação diferentes e modelos do Rights Management diferentes a subetiquetas diferentes.
+Se necessário, pode criar subetiquetas que melhor descrevam subcategorias para uma etiqueta de sensibilidade específica. Por exemplo, a etiqueta principal **Segredo** pode conter subetiquetas como **Segredo \ Legal** e **Segredo \ Finanças**. Em seguida, pode aplicar marcações visuais de classificação diferentes e modelos de Gestão de Direitos diferentes a subetiquetas diferentes.
 
 Embora possa definir marcações visuais, proteção e condições em ambos os níveis, quando utiliza subníveis, configure estas definições apenas no subnível. Se configurar as mesmas definições na etiqueta principal e no respetivo subnível, as definições do subnível têm precedência.
 
@@ -150,6 +158,6 @@ Se tiver um problema com o Azure Information Protection e estiver a utilizar a v
 Se tiver questões ou comentários, utilize o [site Yammer do Azure Information Protection](https://www.yammer.com/askipteam/). 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO4-->
 
 

@@ -27,7 +27,7 @@ O SDK Microsoft Rights Management 4.2 leva a aplicação RMS a um novo nível d
 
 ### <a name="new-for-june-2016"></a>Novidades para junho de 2016
 
-- **Suporte para a Autenticação Moderna** - isto proporciona um início de sessão baseado em ADAL (Active Directory Authentication Library) para as aplicações com RMS. Permite funcionalidades de início de sessão como o Multi-Factor Authentication, Fornecedores de Identidade terceiros baseados em SAML com aplicações de cliente, autenticação baseada em smart card e em certificado e remove a necessidade de aplicações com RMS utilizarem o protocolo de autenticação básico.
+- **Suporte para a Autenticação Moderna** - isto proporciona um início de sessão baseado em ADAL (Active Directory Authentication Library) para as aplicações com RMS. Permite funcionalidades de início de sessão como o Multi-Factor Authentication (MFA), Fornecedores de Identidade terceiros baseados em SAML com aplicações de cliente, autenticação baseada em smart card e em certificado e remove a necessidade de aplicações com RMS utilizarem o protocolo de autenticação básico.
 - **Suporte ao Controlo de Documentos** - os programadores agora podem ativar o controlo de documentos ao proteger um documento nas suas aplicações
 - Melhoramentos de desempenho
 - Correções
@@ -59,7 +59,7 @@ Com esta versão, o SDK RMS para dispositivos está agora na versão 4.2 e adici
 
     [Método síncrono UserPolicy.create (PolicyDescriptor…)**](https://msdn.microsoft.com/library/mt631385.aspx)
 
-    [Método síncrono UserPolicy.create (TempalteDescriptor…)](https://msdn.microsoft.com/library/mt631386.aspx)
+    [Método síncrono UserPolicy.create (TemplateDescriptor…)](https://msdn.microsoft.com/library/mt631386.aspx)
 
 -   Foi adicionada uma nova classe [ProtectedBuffer](https://msdn.microsoft.com/library/mt631369.aspx) à API do Android.
 -   Atualizações para melhorar a experiência de resolução de problemas e de mensagens de erro.
@@ -115,7 +115,7 @@ O lançamento da versão 4.1 do SDK RMS adiciona as seguintes funcionalidades no
 
 Esta secção apresenta as informações sobre as versões atuais e anteriores das APIs SDK Microsoft Rights Management 4. x que o programador deve ter em consideração.
 
-**AD RMS SDK 4.1 – Lançamento de Disponibilidade Global para as plataformas iOS/OS X e Android**
+**SDK AD RMS 4.1 – Lançamento de Disponibilidade Global para as plataformas iOS / OS X e Android**
 
 -   **Suporte do AD RMS** – os administradores de TI podem utilizar aplicações com suporte RMS em dispositivos móveis com as novas extensões para dispositivos móveis do servidor AD RMS.
 -   **Consumo offline** – os utilizadores finais podem aceder a dados protegidos por RMS offline.
@@ -123,7 +123,7 @@ Esta secção apresenta as informações sobre as versões atuais e anteriores d
 -   **IU Separada** – os programadores podem criar a sua interface de utilizador para proteger e consumir documentos protegidos por RMS.
 -   **API Reformulada** – os programadores podem agora desfrutar de uma API de encriptação e desencriptação simples e transparente, que fornece uma interface de utilizador e comportamentos de RMS consistentes, com esforços mínimos.
 
-**Comuns a todas as plataformas**
+**Comum a todas as plataformas**
 
 -   As APIs do SDK RMS 4.x não são *seguras para os threads*.
 
@@ -137,11 +137,11 @@ Esta secção apresenta as informações sobre as versões atuais e anteriores d
 
     **Solução** – certifique-se de que a aplicação não permite chamadas de várias instâncias para a API do Android.
 
--   Quando utilizo o método [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array, int offset, int length) com um comprimento diferente do valor *array.length*, não consigo consumir os conteúdos posteriormente com o SDK.
+-   Quando utilizo o método [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array, int offset, int length) com um comprimento diferente do valor *array.length*, não consigo consumir posteriormente os conteúdos com o SDK.
 
-    **Solução** – isto é um problema conhecido. Para o resolver, transmita sempre uma matriz de *bytes \[\]* com o mesmo valor de comprimento que o parâmetro ou utilize o método [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array).
+    **Solução** – isto é um problema conhecido. Para resolver o problema, transmita sempre uma matriz de *bytes \[\]* com o mesmo valor de comprimento que o parâmetro de comprimento ou utilize o método [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array).
 
-**iOS e OS X**
+**iOS e OS X**
 
 -   Existem dois dialetos de português que os nossos SDKs para iOS e OS X suportam. Infelizmente, devido a um erro, de momento, não suportamos a 1ª localização completamente. Devido a este erro, o português não é totalmente suportado. A maior parte do texto é traduzido, mas não a IU.
 
@@ -149,13 +149,13 @@ Esta secção apresenta as informações sobre as versões atuais e anteriores d
 
     2. Português (Portugal)
 
-**Apenas no iOS**
+**Apenas iOS**
 
 -   O SDK RMS 4.x não mostra o indicador da atividade de rede.
 
     Este é um comportamento opcional conhecido do iOS, de acordo com as Diretrizes de Interface Humana da Apple.
 
-**Apenas no OS X**
+**Apenas OS X**
 
 -   O SDK RMS 4.x não mostra o indicador da atividade de rede.
 
@@ -182,7 +182,7 @@ Esta secção apresenta as informações sobre as versões atuais e anteriores d
 
 **P**: de que forma obtenho novos inquilinos organizacionais para experimentar o SDK e as aplicações de exemplo?
 
-**R**: para solicitar credenciais para organizações de teste do Azure AD RMS, envie um e-mail para <rmcstbeta@microsoft.com>.
+**R**: para pedir credenciais para organizações de teste do Azure AD RMS, envie um e-mail para <rmcstbeta@microsoft.com>.
 
 **P**: não vejo qualquer debate sobre a hierarquia de testes aqui na documentação. Por que motivo?
 
@@ -211,7 +211,7 @@ Esta secção apresenta as informações sobre as versões atuais e anteriores d
 
 **Um**: nem todas as operações podem ser canceladas, pelo que uma operação de cancelamento é executada da melhor forma possível.
 
-**OS X**
+**OS X**
 
 **P**: a estrutura de aplicações de exemplo é adaptada para o Xcode 5, posso trabalhar com o Xcode 4.6?
 

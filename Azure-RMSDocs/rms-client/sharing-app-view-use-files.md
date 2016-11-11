@@ -3,7 +3,7 @@ title: Ver e utilizar ficheiros que foram protegidos pelo Rights Management | Az
 description: "Instruções de visualização e utilização de um ficheiro protegido, que requer a instalação da aplicação de partilha Rights Management (RMS)."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: 3f906815da2acd8f52bd742306d9936a71229c97
+ms.sourcegitcommit: 94a8729e7c7e5bb438ac2bd48789a522c8de8cc4
+ms.openlocfilehash: db8d6a9c5959139ee76f022a5cee997bab24e6c9
 
 
 ---
@@ -40,7 +40,7 @@ Ao utilizar o Explorador de Ficheiros ou a mensagem de e-mail que contém o anex
 Se vir duas versões do ficheiro, mas com extensões de nome de ficheiro diferentes, abra o ficheiro com a extensão de ficheiro .ppdf apenas se o outro ficheiro não abrir. Se também não conseguir abrir a versão .ppdf, instale primeiro a [Aplicação de partilha RMS](install-sharing-app.md), que sabe como abrir ficheiros com uma extensão de nome de ficheiro .ppdf.
 
 > [!NOTE]
-> Para obter mais informações, veja «[O que é o ficheiro .ppdf criado automaticamente?](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created)».
+> Para mais informações, consulte [O que é o ficheiro .ppdf criado automaticamente?](sharing-app-dialog-box.md#whats-the-ppdf-file-thats-automatically-created)
 
 O modo como o ficheiro abre depende da forma como foi protegido, o que pode descobrir ao observar a extensão de nome de ficheiro. Em qualquer um dos casos, a abertura do ficheiro pode estar sujeita a auditoria e permanece auditada enquanto este estiver protegido. Além disso, se o ficheiro tiver sido enviado como um anexo de e-mail, o remetente poderá ser notificado por e-mail sempre que abrir o ficheiro.
 
@@ -107,6 +107,6 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO4-->
 
 

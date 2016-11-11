@@ -1,21 +1,23 @@
 ---
 title: Como alterar ou personalizar uma etiqueta existente | Azure Information Protection
 description: "Pode alterar ou refinar qualquer uma das etiquetas que os utilizadores veem na barra Information Protection, configurando-os na política do Azure Information Protection."
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/03/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: 0ca82bdbb4db382c868ae38f7595a7eee585c479
+ms.sourcegitcommit: 0046023125fe339ed408edf47c59e36708b01783
+ms.openlocfilehash: 1d92c127581d68bb52979d65ddb8704cad7c8039
 
 
 ---
 
-# Como alterar ou personalizar uma etiqueta existente para o Azure Information Protection
+# <a name="how-to-change-or-customize-an-existing-label-for-azure-information-protection"></a>Como alterar ou personalizar uma etiqueta existente para o Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -41,15 +43,15 @@ Para alterar uma etiqueta, utilize as instruções seguintes.
 > [!TIP]
 >Se pretender regressar a um dos rótulos predefinidos para os valores predefinidos, utilize as informações em [Política do Information Protection predefinida](configure-policy-default.md).
 
-## Passos seguintes
+## <a name="next-steps"></a>Passos seguintes
 
-Para mais informações sobre como configurar as opções que pode efetuar em relação a uma etiqueta e outras definições para a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organization-s-policy).
-
-
+Para mais informações sobre como configurar as opções que pode efetuar em relação a uma etiqueta e outras definições para a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+
+
+<!--HONumber=Nov16_HO1-->
 
 

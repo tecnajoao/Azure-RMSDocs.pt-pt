@@ -3,8 +3,9 @@
 # [Planear e Estruturar](/information-protection/plan-design/deployment-roadmap)
 # [Implementar e Utilizar o Serviço](/information-protection/deploy-use/activate-service)
 # [Implementar e Utilizar o Cliente](use-client.md)
-## [Cliente de Gestão de Direitos](use-client.md)
+## [Cliente do Rights Management](use-client.md)
 ### [Instalar o cliente do Azure Information Protection](info-protect-client.md)
+#### [Cliente do Azure Information Protection: histórico de lançamento de versões](client-version-release-history.md)
 ### [Notas de implementação do cliente RMS](client-deployment-notes.md)
 ### [Proteção RMS com o Windows Server FCI](configure-fci.md)
 #### [Script do PowerShell](fci-script.md)
@@ -25,6 +26,6 @@
 # [Desenvolver e Personalizar Aplicações](/information-protection/develop/developers-guide)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO4-->
 
 

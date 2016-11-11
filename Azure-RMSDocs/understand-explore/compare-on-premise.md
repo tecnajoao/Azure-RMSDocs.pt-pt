@@ -2,8 +2,9 @@
 title: Comparar o Azure Information Protection e o AD RMS | Azure Information Protection
 description: "Se conhecer ou se tiver implementado anteriormente os Serviços de Gestão de Direitos do Active Directory (AD RMS), é possível que se pergunte como o Azure Information Protection se compara em termos de funcionalidade e requisitos."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +13,13 @@ ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4591d5c45104108ccf151bb1d7a9382652e585a6
-ms.openlocfilehash: 36adf768bdb5a0937af3563665bbe139c86ff250
+ms.sourcegitcommit: cf9dba0e6e194e4613f715496f79aa9fdb2fe597
+ms.openlocfilehash: c649534dc43742d46de4d9044495c85ce734aa80
 
 
 ---
 
-# Comparar o Azure Information Protection e o AD RMS
+# <a name="comparing-azure-information-protection-and-ad-rms"></a>Comparar o Azure Information Protection e o AD RMS
 
 >*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Office 365*
 
@@ -43,7 +44,7 @@ Algumas das diferenças principais do Azure Information Protection:
 
 Além disso, uma vez que o Azure Information Protection é um serviço em nuvem, pode disponibilizar novas funcionalidades e correções mais rapidamente do que uma solução baseada num servidor no local. Não existem quaisquer funcionalidades novas planeadas para o AD RMS no Windows Server 2016.
 
-Para obter mais detalhes e outras diferenças, utilize a seguinte tabela para ver uma comparação lado a lado das funcionalidades e vantagens do Azure Information Protection e do AD RMS. Se tiver dúvidas de comparação específicas em relação à segurança, consulte a secção [Controlos criptográficos para assinatura e encriptação](compare-azure-rms-ad-rms.md#cryptographic-controls-for-signing-and-encryption) neste artigo.
+Para obter mais detalhes e outras diferenças, utilize a seguinte tabela para ver uma comparação lado a lado das funcionalidades e vantagens do Azure Information Protection e do AD RMS. Se tiver dúvidas de comparação específicas em relação à segurança, consulte a secção [Controlos criptográficos para assinatura e encriptação](#cryptographic-controls-for-signing-and-encryption) neste artigo.
 
 > [!NOTE]
 > Para facilitar esta comparação, algumas destas informações são repetidas com base nos [Requisitos do Azure Information Protection](../get-started/requirements-azure-rms.md). Utilize essa origem para obter informações mais específicas sobre o suporte e as versões do [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
@@ -55,28 +56,28 @@ Para obter mais detalhes e outras diferenças, utilize a seguinte tabela para ve
 |Fornece dois modelos de política de direitos predefinidos que restringem o acesso do conteúdo à sua própria organização. Um modelo que proporciona a visualização só de leitura de conteúdo protegido e outro que proporciona permissões de escrita ou modificação no conteúdo protegido.<br /><br />Também pode criar os seus modelos personalizados, que incluem modelos departamentais que estão visíveis apenas para um subconjunto de utilizadores. Para mais informações, consulte [Configurar modelos personalizados para o serviço Azure Rights Management](../deploy-use/configure-custom-templates.md).<br /><br />Além disso, os utilizadores podem definir o seu próprio conjunto de permissões se os modelos não forem suficientes.|Não existem modelos de política de direitos predefinidos. Tem de criá-los e, em seguida, distribuí-los. Para mais informações, consulte [Considerações sobre os Modelos de Política do AD RMS](http://go.microsoft.com/fwlink/?LinkId=154765).<br /><br />Além disso, os utilizadores podem definir o seu próprio conjunto de permissões se os modelos não forem suficientes.|
 |A versão mínima suportada do Microsoft Office é o Office 2010, que requer a [aplicação de partilha RMS](../rms-client/sharing-app-windows.md).<br /><br />Microsoft Office para Mac:<br /><br />- Microsoft Office para Mac 2016: suportado<br /><br />- Microsoft Office para Mac 2011: não suportado|A versão mínima suportada do Microsoft Office é o Office 2007.<br /><br />Microsoft Office para Mac:<br /><br />- Microsoft Office para Mac 2016: suportado<br /><br />- Microsoft Office para Mac 2011: suportado|
 |Suporta a [aplicação de partilha RMS](../rms-client/sharing-app-windows.md) para Windows, computadores Mac e dispositivos móveis.<br /><br />Além disso, a aplicação de partilha RMS suporta o seguinte:<br /><br />- A partilha com pessoas noutra organização.<br /><br />- A notificação por e-mail, que informa o remetente quando alguém tenta abrir um anexo protegido.<br /><br />- Um site de controlo de documentos para utilizadores, que inclui a capacidade para revogar um documento.|Suporta a [aplicação de partilha RMS](../rms-client/sharing-app-windows.md) para Windows, computadores Mac e dispositivos móveis. No entanto, a partilha não suporta a partilha com pessoas noutra organização, a notificação por e-mail ou o site de controlo de documentos, nem a capacidade para os utilizadores revogarem documentos.|
-|Todos os tipos de ficheiro podem ser protegidos com [proteção nativa ou genérica](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) quando utiliza a aplicação de partilha RMS.<br /><br />Para outras aplicações, consulte a tabela em [Aplicações que suportam a proteção de dados do Azure Rights Management](../get-started/requirements-applications.md).|Todos os tipos de ficheiro podem ser protegidos com [proteção nativa ou genérica](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) quando utiliza a aplicação de partilha RMS.<br /><br />Para outras aplicações, consulte a tabela em [Aplicações que suportam a proteção de dados do Azure Rights Management](../get-started/requirements-applications.md).|
+|Todos os tipos de ficheiro podem ser protegidos com [proteção nativa ou genérica](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic) quando utiliza a aplicação de partilha RMS.<br /><br />Para outras aplicações, consulte a tabela em [Aplicações que suportam a proteção de dados do Azure Rights Management](../get-started/requirements-applications.md).|Todos os tipos de ficheiro podem ser protegidos com [proteção nativa ou genérica](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic) quando utiliza a aplicação de partilha RMS.<br /><br />Para outras aplicações, consulte a tabela em [Aplicações que suportam a proteção de dados do Azure Rights Management](../get-started/requirements-applications.md).|
 |A versão mínima suportada do cliente Windows é o Windows 7.|A versão mínima suportada do cliente Windows é o Windows Vista Service Pack 2.|
 |O suporte de dispositivos móveis inclui Windows Phone, Android, iOS e Windows RT.<br /><br />O suporte de e-mail através da IRM do Exchange ActiveSynct também é suportado em todas as plataformas de dispositivos móveis que suportem este protocolo.|O suporte de dispositivos móveis inclui Windows Phone, Android, iOS e Windows RT, e necessita da [Extensão de Dispositivos Móveis dos Serviços de Gestão de Direitos do Active Directory](http://technet.microsoft.com/library/dn673574.aspx).<br /><br />O suporte de e-mail através da IRM do Exchange ActiveSync é suportado em todas as plataformas de dispositivos móveis que suportem este protocolo.|
-|Suporta autenticação multifator (MFA) para computadores e dispositivos móveis.<br /><br />Para mais informações, consulte [A autenticação multifator (MFA) e o Azure Information Protection](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-rms).|Suporta a autenticação de smart cards se o IIS estiver configurado para solicitar certificados.|
+|Suporta autenticação multifator (MFA) para computadores e dispositivos móveis.<br /><br />Para mais informações, consulte [A autenticação multifator (MFA) e o Azure Information Protection](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-information-protection).|Suporta a autenticação de smart cards se o IIS estiver configurado para solicitar certificados.|
 |Suporta o Modo Criptográfico 2 sem configuração adicional, que proporciona uma segurança reforçada para comprimentos de chaves e algoritmos de encriptação.<br /><br />Para mais informações, consulte a secção [Controlos criptográficos para assinatura e encriptação](#cryptographic-controls-for-signing-and-encryption) neste artigo e [Modos Criptográficos do AD RMS](http://go.microsoft.com/fwlink/?LinkId=266659).|Suporta o Modo Criptográfico 1 por predefinição e requer configuração adicional para suportar o Modo Criptográfico 2 para reforçar a segurança.<br /><br />Para mais informações, consulte a secção [Controlos criptográficos para assinatura e encriptação](#cryptographic-controls-for-signing-and-encryption) neste artigo e [Modos Criptográficos do AD RMS](http://go.microsoft.com/fwlink/?LinkId=266659).|
-|Suporta a migração do AD RMS e, se necessário, para o AD RMS:<br /><br />- [Migrar do AD RMS para o Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md)<br /><br />- [Encerrar e desativar o Azure Information Protection](../deploy-use/decommission-deactivate.md)|Suporta a migração de e para o Azure Information Protection:<br /><br />- [Encerrar e desativar o Azure Rights Management](../deploy-use/decommission-deactivate.md)<br /><br />- [Migrar do AD RMS para o Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md)|
+|Suporta a migração do AD RMS e, se necessário, para o AD RMS:<br /><br />- [Migrar do AD RMS para o Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md)<br /><br />- [Desativar o Azure Information Protection](../deploy-use/decommission-deactivate.md)|Suporta a migração de e para o Azure Information Protection:<br /><br />- [Desativar o Azure Rights Management](../deploy-use/decommission-deactivate.md)<br /><br />- [Migrar do AD RMS para o Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md)|
 |Necessita de uma licença do Azure Information Protection para proteger conteúdo. Não é necessária nenhuma licença do Azure Information Protection para consumir conteúdos que tenham sido protegidos pelo Azure Information Protection (inclui utilizadores de outra organização).<br /><br />Para mais informações, consulte a [lista de funcionalidades](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) no site do Azure Information Protection.|Necessita de uma licença RMS para proteger conteúdo e consumir conteúdo que tenha sido protegido pelo AD RMS.<br /><br />Para obter mais informações sobre o licenciamento do AD RMS, consulte [Licenças de Acesso de Cliente e Licenças de Gestão](https://www.microsoft.com/en-us/Licensing/product-licensing/client-access-license.aspx) para obter informações gerais, mas contacte o seu parceiro da Microsoft ou o representante da Microsoft para obter informações específicas.|
 
-## Controlos criptográficos para assinatura e encriptação
+## <a name="cryptographic-controls-for-signing-and-encryption"></a>Controlos criptográficos para assinatura e encriptação
 O Azure Information Protection utiliza sempre RSA 2048 para a criptografia de todas as chaves públicas e SHA 256 para as operações de assinatura. Em comparação, o AD RMS suporta RSA 1024 e RSA 2048 e SHA 1 ou SHA 256 para operações de assinatura.
 
 O Azure Information Protection e o AD RMS utilizam AES 128 para a encriptação simétrica.
 
 O Azure Information Protection está em conformidade com FIPS 140-2 se a sua chave de inquilino for criada e gerida pela Microsoft (predefinição) ou se gerir a sua própria chave de inquilino (a solução BYOK). Para mais informações sobre a gestão da chave de inquilino, consulte [Planear e implementar a sua chave de inquilino do Azure Information Protection](../plan-design/plan-implement-tenant-key.md).
 
-## Passos seguintes
+## <a name="next-steps"></a>Passos seguintes
 Se quer migrar do AD RMS para o Azure Information Protection, consulte [Migrar do AD RMS para o Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md)
 
 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

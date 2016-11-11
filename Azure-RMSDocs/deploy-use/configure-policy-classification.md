@@ -1,21 +1,23 @@
 ---
 title: "Como configurar as condições para classificação automática e recomendada | Azure Information Protection"
 description: "Quando configurar as condições para uma etiqueta, pode atribuir automaticamente uma etiqueta a um documento ou a um e-mail. Em alternativa, pode pedir aos utilizadores que selecionem a etiqueta recomendada."
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: 3f7633f29760ceca0ca44fbfe5b99eb33a32c197
+ms.sourcegitcommit: d5b3f3fc473661022a4f17b6587d58a252d07d1a
+ms.openlocfilehash: bd6adab05c4f087f5441d168c3385057ce5b6355
 
 
 ---
 
-# Como configurar as condições para classificação automática e recomendada para o Azure Information Protection
+# <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Como configurar as condições para classificação automática e recomendada para o Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -44,7 +46,7 @@ Um exemplo de aviso para quando configura uma condição para aplicar uma etique
 
 Neste exemplo, o utilizador pode clicar em **Alterar agora** para aplicar a etiqueta recomendada ou substituir a recomendação fechando a barra.
 
-## Para configurar a classificação recomendada ou automática para uma etiqueta
+## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>Para configurar a classificação recomendada ou automática para uma etiqueta
 
 1. Caso ainda não o tenha feito, numa nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com) como administrador global e navegue para o painel **Azure Information Protection**. 
     
@@ -72,7 +74,7 @@ Neste exemplo, o utilizador pode clicar em **Alterar agora** para aplicar a etiq
 
 6. Para disponibilizar as alterações aos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
 
-## Informações sobre as condições incorporadas
+## <a name="information-about-the-builtin-conditions"></a>Informações sobre as condições incorporadas
 
 Durante o período de pré-visualização pode selecionar as seguintes condições:
 
@@ -82,12 +84,12 @@ Durante o período de pré-visualização pode selecionar as seguintes condiçõ
 
 - [Número de Encaminhamento ABA](#aba-routing-number )
 
-- [Número de Segurança Social dos E.U.A. (SSN)](#usa-social-security-number-ssn)
+- [Número de Segurança Social dos EUA (SSN)](#usa-social-security-number-ssn)
 
 - [Número de Conta Bancária Internacional (IBAN)](#international-banking-account-number-iban)
 
 
-### Código SWIFT
+### <a name="swift-code"></a>Código SWIFT
 
 Corresponder a este tipo de informações quando o conteúdo inclui o seguinte:  
 
@@ -113,7 +115,7 @@ Exemplos de teste:
 ----
 
 
-### Número do Cartão de Crédito
+### <a name="credit-card-number"></a>Número do Cartão de Crédito
 
 Corresponder a este tipo de informações quando o conteúdo inclui o seguinte:  
 
@@ -136,7 +138,7 @@ Exemplos de teste:
 
 ----
 
-### Número de Encaminhamento ABA
+### <a name="aba-routing-number"></a>Número de Encaminhamento ABA
 
 Corresponder a este tipo de informações quando o conteúdo inclui o seguinte:  
 
@@ -173,7 +175,7 @@ Exemplos de teste:
 
 ----
 
-### Número de Segurança Social dos E.U.A. (SSN)
+### <a name="usa-social-security-number-ssn"></a>Número de Segurança Social dos E.U.A. (SSN)
 
 Corresponder a este tipo de informações quando o conteúdo inclui o seguinte:  
 
@@ -199,7 +201,7 @@ Exemplos de teste:
 
 ----
 
-### Número de Conta Bancária Internacional (IBAN)
+### <a name="international-banking-account-number-iban"></a>Número de Conta Bancária Internacional (IBAN)
 
 Corresponder a este tipo de informações quando o conteúdo inclui o seguinte:  
 
@@ -213,15 +215,15 @@ Exemplos de teste:
 - **GB29 NWBK 6016 1331 9268 19 IBAN**
 
 
-## Passos seguintes
+## <a name="next-steps"></a>Passos seguintes
 
-Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organization-s-policy).  
-
-
+Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).  
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+
+
+<!--HONumber=Nov16_HO1-->
 
 

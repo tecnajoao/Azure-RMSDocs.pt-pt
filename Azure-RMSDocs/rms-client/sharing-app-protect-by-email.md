@@ -2,8 +2,9 @@
 title: "Proteger um ficheiro que partilha por e-mail ao utilizar a aplicação de partilha Rights Management | Azure Information Protection"
 description: "Instruções sobre como partilhar um documento por e-mail de forma segura."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +13,15 @@ ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: b4467f73dd9d107681961f99ee038ed889e25b2d
+ms.sourcegitcommit: addc24fed28cee52b57c7e3bde926d6324478e7b
+ms.openlocfilehash: 1eed5f339ede2d96b1de7e486a04416d1a22c871
 
 
 ---
 
-# Proteger um ficheiro que partilha por e-mail ao utilizar a aplicação de partilha Rights Management
+# <a name="protect-a-file-that-you-share-by-email-by-using-the-rights-management-sharing-application"></a>Proteger um ficheiro que partilha por e-mail ao utilizar a aplicação de partilha Rights Management
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8 e Windows 8.1*
 
 Quando protege um ficheiro que partilha por e-mail, cria uma nova versão do ficheiro original. O ficheiro original permanece desprotegido e a nova versão é protegida e automaticamente anexada a uma mensagem de e-mail que envia em seguida.
 
@@ -32,7 +33,7 @@ Se a sua organização utilizar o Azure Information Protection, pode controlar o
 
 -   Utilize o site de controlo de documentação. Pode, inclusive, deixar de partilhar o ficheiro ao revogar o acesso ao mesmo no site de controlo de documentos. Para obter mais informações, veja [Controlar e revogar os documentos quando utiliza a aplicação de partilha RMS](sharing-app-track-revoke.md).
 
-## Utilizar o Outlook: para proteger um ficheiro que partilha por e-mail
+## <a name="using-outlook-to-protect-a-file-that-you-share-by-email"></a>Utilizar o Outlook: para proteger um ficheiro que partilha por e-mail
 
 1.  Crie a sua mensagem de e-mail e anexe o ficheiro. Em seguida, no separador **Mensagem**, no grupo **RMS**, clique em **Partilhar Protegido** e, em seguida, clique em **Partilhar Protegido** novamente:
 
@@ -42,14 +43,14 @@ Se a sua organização utilizar o Azure Information Protection, pode controlar o
 
 2.  Especifique as opções que pretende para este ficheiro na [caixa de diálogo partilhar protegido](sharing-app-dialog-box.md) e, em seguida, clique em **Enviar Agora**.
 
-### Outras formas de proteger um ficheiro que partilha por e-mail
+### <a name="other-ways-to-protect-a-file-that-you-share-by-email"></a>Outras formas de proteger um ficheiro que partilha por e-mail
 Além de partilhar um ficheiro protegido com o Outlook, também pode utilizar estas alternativas:
 
 -   A partir do Explorador de Ficheiros: este método funciona para todos os ficheiros.
 
 -   A partir de uma aplicação do Office: este método funciona para as aplicações que a aplicação de partilha RMS suporta através do suplemento do Office, de modo a ver o grupo **RMS** no friso.
 
-#### Utilizar o Explorador de Ficheiros ou uma aplicação do Office: para proteger um ficheiro que partilha por e-mail
+#### <a name="using-file-explorer-or-an-office-application-to-protect-a-file-that-you-share-by-email"></a>Utilizar o Explorador de Ficheiros ou uma aplicação do Office: para proteger um ficheiro que partilha por e-mail
 
 1.  Utilize uma das seguintes opções:
 
@@ -71,7 +72,7 @@ Além de partilhar um ficheiro protegido com o Outlook, também pode utilizar es
 
     ![Mensagem de e-mail para o Azure Information Protection](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
 
-    Está a perguntar-se: [o que é o ficheiro .ppdf criado automaticamente?](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created)
+    Está a perguntar-se: [o que é o ficheiro .ppdf criado automaticamente?](sharing-app-dialog-box.md#whats-the-ppdf-file-thats-automatically-created)
 
 4.  Opcional: pode alterar tudo o que pretender nesta mensagem de e-mail. Por exemplo, pode adicionar ou alterar o assunto ou o texto da mensagem.
 
@@ -80,18 +81,18 @@ Além de partilhar um ficheiro protegido com o Outlook, também pode utilizar es
 
 5.  Envie a mensagem de e-mail.
 
-## Exemplos e outras instruções
+## <a name="examples-and-other-instructions"></a>Exemplos e outras instruções
 Para obter exemplos de como pode utilizar a aplicação de partilha Rights Management e instruções sobre como proceder, veja as secções seguintes do guia do utilizador da aplicação de partilha Rights Management:
 
 -   [Exemplos de utilização da aplicação de partilha RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [O que pretende fazer?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

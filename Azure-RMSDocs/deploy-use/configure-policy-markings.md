@@ -1,21 +1,23 @@
 ---
 title: Como configurar uma etiqueta para marcas visuais | Azure Information Protection
-description: "Quando atribui uma etiqueta a um documento ou a um e-mail pode selecionar várias opções para tornar a classificação escolhida facilmente visível. Estas marcas visuais são um cabeçalho, um rodapé e uma marca d'água."
+description: "Quando atribui uma etiqueta a um documento ou a um e-mail pode selecionar várias opções para tornar a classificação escolhida facilmente visível. Estas marcas visuais são um cabeçalho, um rodapé e uma marca d&quot;água."
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: 5b00975e3e435ec3ab122c3a015a3daf93db3daf
+ms.sourcegitcommit: d5b3f3fc473661022a4f17b6587d58a252d07d1a
+ms.openlocfilehash: eca90185e6225d3f55f979f66f8225d661fe59cd
 
 
 ---
 
-# Como configurar uma etiqueta para marcas visuais para o Azure Information Protection
+# <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Como configurar uma etiqueta para marcas visuais para o Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -53,7 +55,7 @@ Utilize as seguintes instruções para configurar marcas visuais para uma etique
 
 4. Para disponibilizar as alterações aos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
 
-## Utilizar variáveis na cadeia de texto
+## <a name="using-variables-in-the-text-string"></a>Utilizar variáveis na cadeia de texto
 
 Pode utilizar as seguintes variáveis na cadeia de texto para o seu cabeçalho, rodapé ou marca d'água:
 
@@ -61,7 +63,7 @@ Pode utilizar as seguintes variáveis na cadeia de texto para o seu cabeçalho, 
 
 - `${Item.Name}` para o nome de ficheiro ou assunto de e-mail. Por exemplo: VendasJulho.docx
 
-- `${Item.Location}` para o nome de ficheiro e caminho para os documentos, e o assunto de e-mail para os e-mails. Por exemplo: \\\Vendas\2016\T3\RelatórioJulho.docx
+- `${Item.Location}` para o nome de ficheiro e caminho para os documentos e o assunto de e-mail para os e-mails. Por exemplo: \\\Vendas\2016\T3\RelatórioJulho.docx
 
 - `${User.Name}` para o proprietário do documento ou e-mail, por nome de utilizador com sessão iniciada no Windows. Por exemplo: rsimone
 
@@ -71,14 +73,14 @@ Pode utilizar as seguintes variáveis na cadeia de texto para o seu cabeçalho, 
     
 Exemplo: se especificar a cadeia `Document: ${item.name}  Classification: ${item.label}` para o rodapé de etiqueta Secreto, o texto do rodapé aplicado a um project.docx documentado será **Documento: project.docx Classificação: Secreto**.
 
-## Passos seguintes
+## <a name="next-steps"></a>Passos seguintes
 
-Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organization-s-policy).  
-
-
+Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).  
 
 
 
-<!--HONumber=Sep16_HO4-->
+
+
+<!--HONumber=Nov16_HO1-->
 
 

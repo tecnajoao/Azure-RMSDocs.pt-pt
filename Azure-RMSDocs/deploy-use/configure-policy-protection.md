@@ -1,29 +1,31 @@
 ---
-title: "Como configurar uma etiqueta para aplicar a proteção Rights Management | Azure Information Protection"
-description: "Pode proteger os seus documentos e e-mails mais confidenciais utilizando um serviço de Gestão de Direitos, que utiliza políticas de encriptação, identidade e autorização para ajudar a evitar perda de dados. Esta proteção é aplicada ao configurar uma etiqueta para utilizar um modelo do Rights Management."
+title: "Como configurar uma etiqueta para aplicar a proteção de Gestão de Direitos| Azure Information Protection"
+description: "Pode proteger os seus documentos e e-mails mais confidenciais utilizando um serviço de Gestão de Direitos, que utiliza políticas de encriptação, identidade e autorização para ajudar a evitar perda de dados. Esta proteção é aplicada ao configurar uma etiqueta para utilizar um modelo da Gestão de Direitos."
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
-ms.openlocfilehash: 830e982fc1f0443545942c1deb1a2fc93431be17
+ms.sourcegitcommit: addc24fed28cee52b57c7e3bde926d6324478e7b
+ms.openlocfilehash: 4f3c77df23207c3a76a768a1fe428484339de18f
 
 
 ---
 
-# Como configurar uma etiqueta para aplicar a proteção Rights Management
+# <a name="how-to-configure-a-label-to-apply-rights-management-protection"></a>Como configurar uma etiqueta para aplicar a proteção de Gestão de Direitos
 
 >*Aplica-se a: Azure Information Protection*
 
-Pode proteger os seus documentos e e-mails mais confidenciais utilizando um serviço de Gestão de Direitos, que utiliza políticas de encriptação, identidade e autorização para ajudar a evitar perda de dados. Esta proteção é aplicada ao configurar uma etiqueta para utilizar um modelo do Rights Management. 
+Pode proteger os seus documentos e e-mails mais confidenciais utilizando um serviço de Gestão de Direitos, que utiliza políticas de encriptação, identidade e autorização para ajudar a evitar perda de dados. Esta proteção é aplicada ao configurar uma etiqueta para utilizar um modelo de Gestão de Direitos. 
 
 Este modelo pode ser um dos modelos predefinidos que são criados automaticamente ao ativar o Azure Rights Management ou pode ser um modelo personalizado. Os modelos departamentais do Azure Rights Management são suportados mas apenas aplicam a proteção quando o autor do documento ou do e-mail estiver dentro do âmbito configurado do modelo. Se o utilizador não estiver dentro do âmbito, este vê uma mensagem informando que o Azure Rights Management não pode aplicar a etiqueta.
 
-## Como funciona a proteção
+## <a name="how-the-protection-works"></a>Como funciona a proteção
 
 Quando um documento ou correio eletrónico está protegido pelo Azure Rights Management, este é encriptado em descanso e em trânsito e só pode ser desencriptado por utilizadores autorizados. Esta encriptação permanece com o documento ou com o e-mail, mesmo que o nome seja alterado. Além disso, pode configurar direitos e restrições de utilização, tal como nos exemplos seguintes:
 
@@ -43,13 +45,13 @@ Para mais informações sobre o Azure Rights Management e para saber como funcio
 > Para configurar uma etiqueta de modo a aplicar a proteção do Azure Rights Management, o serviço Azure Rights Management tem de ser ativado para a organização. Se ainda não o fez, consulte [Ativar o Azure Rights Management](../deploy-use/activate-service.md).
 
 
-## Para configurar uma etiqueta de modo a aplicar a proteção Rights Management
+## <a name="to-configure-a-label-to-apply-rights-management-protection"></a>Para configurar uma etiqueta de modo a aplicar a proteção de Gestão de Direitos
 
 1. Caso ainda não o tenha feito, abra uma nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com) como administrador global e navegue para o painel **Azure Information Protection**. 
 
     Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
-2. No painel do **Azure Information Protection**, selecione a etiqueta que pretende configurar para aplicar a proteção Rights Management.
+2. No painel do **Azure Information Protection**, selecione a etiqueta que pretende configurar para aplicar a proteção de Gestão de Direitos.
 
 3. No painel **Etiqueta**, na secção **Definir modelo RMS para proteger documentos e e-mails que contêm esta etiqueta**, para **Selecionar modelo RMS a partir de**, selecione **Azure RMS** ou **AD RMS (PRÉ-VISUALIZAÇÃO)**.
     
@@ -67,9 +69,9 @@ Para mais informações sobre o Azure Rights Management e para saber como funcio
         
     - Se selecionar **Remover Proteção**:
         
-        - Os utilizadores têm de ter permissões para remover a proteção do Rights Management para aplicar uma etiqueta que tenha esta opção. Esta opção requer que os utilizadores tenham o [direito de utilização](../deploy-use/configure-usage-rights.md) **Exportar** (para documentos do Office) ou **Controlo Total**, que sejam os proprietários do Rights Management (concede automaticamente o direito de utilização Controlo Total) ou que sejam [superutilizadores do Azure Rights Management](../deploy-use/configure-super-users.md). Os modelos de gestão de direitos predefinidos não incluem os direitos de utilização que permitem que os utilizadores removam a proteção. 
+        - Os utilizadores têm de ter permissões para remover a proteção de Gestão d eDireitos para aplicar uma etiqueta que tenha esta opção. Esta opção requer que os utilizadores tenham o [direito de utilização](../deploy-use/configure-usage-rights.md) **Exportar** (para documentos do Office) ou **Controlo Total**, que sejam os proprietários da Gestão de Direitos (concede automaticamente o direito de utilização Controlo Total) ou que sejam [superutilizadores do Azure Rights Management](../deploy-use/configure-super-users.md). Os modelos de gestão de direitos predefinidos não incluem os direitos de utilização que permitem que os utilizadores removam a proteção. 
 
-            Se os utilizadores não tiverem permissões para remover a proteção do Rights Management e selecionarem esta etiqueta com a opção **Remover Proteção**, verão a seguinte mensagem: **O Azure Information Protection não pode aplicar esta etiqueta. Se este problema persistir, contacte o seu administrador.**
+            Se os utilizadores não tiverem permissões para remover a proteção de Righta Management e selecionarem esta etiqueta com a opção **Remover Proteção**, verão a seguinte mensagem: **O Azure Information Protection não pode aplicar esta etiqueta. Se este problema persistir, contacte o seu administrador.**
 
 5. Se tiver selecionado o AD RMS: forneça o GUID do modelo e o URL de licenciamento do cluster do AD RMS. [Mais informações](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label)
 
@@ -77,12 +79,12 @@ Para mais informações sobre o Azure Rights Management e para saber como funcio
 
 7. Para disponibilizar as alterações aos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
 
-## Passos seguintes
+## <a name="next-steps"></a>Passos seguintes
 
-Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organization-s-policy).  
+Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).  
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

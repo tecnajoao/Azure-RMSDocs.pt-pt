@@ -3,7 +3,7 @@ title: "Como os utilizadores se inscrevem no RMS para indivíduos | Azure Inform
 description: "Instruções de inscrição nesta conta gratuita e informações técnicas sobre o funcionamento deste processo."
 author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
-ms.openlocfilehash: 093bce2835b0606c127d9bcecab5ec353160833c
+ms.sourcegitcommit: 8306d70937aeaf665617d84b4e7ad2c8944e3c79
+ms.openlocfilehash: e3fc6390b3a5b1b6a7b321999a94d4c2226e93ad
 
 
 ---
@@ -22,11 +22,11 @@ ms.openlocfilehash: 093bce2835b0606c127d9bcecab5ec353160833c
 
 >*Aplica-se a: Azure Information Protection*
 
-Para se inscrever nesta conta gratuita, efetue o seu pedido ao aceder à [página do Microsoft Azure Rights Management](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload) e indicar o seu endereço de e-mail de trabalho. A forma mais comum de ser direcionado para esta página de inscrição é ao receber uma mensagem de e-mail com um anexo protegido que contém instruções de inscrição. Irá receber uma resposta por e-mail da Microsoft e, em seguida, poderá concluir o processo de inscrição ao introduzir detalhes para criar a sua conta. Quando o processo for concluído, irá ver uma página onde pode transferir a aplicação de partilha para vários dispositivos, uma ligação para o guia de utilizador e uma ligação para a lista atual de aplicações que suportam de forma nativa a proteção do Rights Management. 
+Para se inscrever nesta conta gratuita, efetue o seu pedido ao aceder à [página do Microsoft Azure Information Protection](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload) e indicar o seu endereço de e-mail profissional. A forma mais comum de ser direcionado para esta página de inscrição é ao receber uma mensagem de e-mail com um anexo protegido que contém instruções de inscrição. Irá receber uma resposta por e-mail da Microsoft e, em seguida, poderá concluir o processo de inscrição ao introduzir detalhes para criar a sua conta. Quando o processo for concluído, irá ver uma página onde pode transferir a aplicação de partilha para vários dispositivos, uma ligação para o guia de utilizador e uma ligação para a lista atual de aplicações que suportam de forma nativa a proteção da Gestão de Direitos. 
 
 ## Para se inscrever no RMS para indivíduos
 
-1.  Num computador Windows ou Mac ou de um dispositivo móvel, aceda à [página do Microsoft Azure Rights Management](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload).
+1.  Num computador Windows ou Mac ou num dispositivo móvel, aceda à [página do Microsoft Azure Information Protection](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload).
 
 2.  Escreva o endereço de e-mail que utiliza para a sua organização, tal como **juliam@contoso.com** ou **p.barbosa@fabrikam.com**.
 
@@ -35,9 +35,9 @@ Para se inscrever nesta conta gratuita, efetue o seu pedido ao aceder à [págin
 
 3.  Clique em **Inscrever-se**.
 
-    A Microsoft utiliza o seu endereço de e-mail para verificar se a sua organização já tem uma [subscrição paga que inclui o Azure RMS](../get-started/requirements-subscriptions.md). Se for esse o caso, não precisa do RMS para indivíduos, pelo que irá iniciar sessão imediatamente e a inscrição self-service para o RMS para indivíduos é cancelada. Se não for encontrada uma subscrição paga para o Azure RMS, irá continuar para o passo seguinte.
+    A Microsoft utiliza o seu endereço de e-mail para verificar se a sua organização já tem uma [subscrição paga para o Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) ou uma [subscrição do Office 365 que inclui proteção de dados através do Azure Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Se for esse o caso, não precisa do RMS para indivíduos, pelo que irá iniciar sessão imediatamente e a inscrição self-service para o RMS para indivíduos é cancelada. Se não for encontrada uma subscrição paga, irá continuar para o passo seguinte.
 
-4.  Aguarde que uma mensagem de e-mail de confirmação seja enviada para o endereço que especificou. Esta será enviada pela equipa do Office 365 (support@email.microsoftonline.com) com o assunto **Concluir a sua inscrição no Microsoft Azure Rights Management**.
+4.  Aguarde que uma mensagem de e-mail de confirmação seja enviada para o endereço que especificou. Esta será enviada pela equipa do Office 365 (support@email.microsoftonline.com) com o assunto **Concluir a sua inscrição no Microsoft Azure Information Protection**.
 
 5.  Quando receber o e-mail, clique em **Sim, sou eu** para verificar o seu endereço de e-mail e concluir o processo de inscrição.
 
@@ -71,9 +71,9 @@ Ao longo deste processo, não é cobrado qualquer valor à organização e não 
 
     Para obter mais informações, consulte [Como os administradores podem controlar as contas criadas para o RMS para indivíduos](rms-for-individuals-take-control.md).
 
--   **Gerir o Rights Management**: os administradores de TI podem converter a subscrição do RMS para indivíduos da organização numa subscrição paga que inclui o Azure Rights Management. Ao fazê-lo, as contas e o diretório do Azure existentes são preservadas para uma transição sem problemas para utilizadores existentes que estavam a utilizar o RMS para indivíduos. Todos os ficheiros que os utilizadores protegeram anteriormente continuarão a estar protegidos com as mesmas políticas e as pessoas às quais foram concedidas permissões para utilizar os ficheiros continuarão a poder utilizar os ficheiros da mesma forma.
+-   **Gerir a Gestão de Direitos**: os administradores de TI podem converter a subscrição do RMS para indivíduos da organização numa subscrição paga que inclui o Azure Rights Management. Ao fazê-lo, as contas e o diretório do Azure existentes são preservadas para uma transição sem problemas para utilizadores existentes que estavam a utilizar o RMS para indivíduos. Todos os ficheiros que os utilizadores protegeram anteriormente continuarão a estar protegidos com as mesmas políticas e as pessoas às quais foram concedidas permissões para utilizar os ficheiros continuarão a poder utilizar os ficheiros da mesma forma.
 
-    Ao realizar este procedimento, a sua organização é beneficiada por poder integrar o Rights Management nos seus fluxos de trabalho, serviços e arquivos de dados. Além disso, já pode gerir o Rights Management porque tem controlo sobre a chave de inquilino da sua organização para o Azure Rights Management. Agora, pode realizar o seguinte:
+    Ao realizar este procedimento, a sua organização é beneficiada por poder integrar a Gestão de Direitos nos seus fluxos de trabalho, serviços e arquivos de dados. Além disso, já pode gerir a Gestão de Direitos porque tem controlo sobre a chave de inquilino da sua organização para o Azure Rights Management. Agora, pode realizar o seguinte:
 
     -   Configurar o Exchange e o SharePoint para suportar o Azure Rights Management, mesmo que estas estejam em execução no local. O Exchange e o SharePoint são nativamente suportados para os serviços online e são suportados por um conetor para os servidores no local. Para obter mais informações, consulte o seguinte:
 
@@ -81,13 +81,13 @@ Ao longo deste processo, não é cobrado qualquer valor à organização e não 
 
         -   [Implementar o conetor Azure Rights Management](../deploy-use/deploy-rms-connector.md)
 
-    -   Efetue a deteção de dados eletrónicos nos dados pertencentes à empresa para poder, se necessário, desencriptar ficheiros que foram protegidos através do Rights Management. Para mais informações, consulte [Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados](../deploy-use/configure-super-users.md).
+    -   Efetue a deteção de dados eletrónicos nos dados pertencentes à empresa para poder, se necessário, desencriptar ficheiros que foram protegidos através da Gestão de Direitos. Para mais informações, consulte [Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados](../deploy-use/configure-super-users.md).
 
-    -   Registe toda a atividade do Rights Management, conforme utilizado na sua organização. Isto é extremamente útil porque não só pode monitorizar os ficheiros que estão a ser protegidos e quem está a aceder a esses ficheiros protegidos com êxito, como também pode identificar comportamentos potencialmente suspeitos de pessoas não autorizadas que estão a tentar aceder a ficheiros protegidos. Para mais informações, consulte [Registar e analisar a utilização do serviço Azure Rights Management](../deploy-use/log-analyze-usage.md).
+    -   Registe toda a atividade da Gestão de Direitos, conforme utilizada na sua organização. Isto é extremamente útil porque não só pode monitorizar os ficheiros que estão a ser protegidos e quem está a aceder a esses ficheiros protegidos com êxito, como também pode identificar comportamentos potencialmente suspeitos de pessoas não autorizadas que estão a tentar aceder a ficheiros protegidos. Para mais informações, consulte [Registar e analisar a utilização do serviço Azure Rights Management](../deploy-use/log-analyze-usage.md).
 
     -   Forneça aos utilizadores a capacidade de controlar e revogar os seus documentos protegidos, se estas funcionalidades forem suportadas pela sua [Subscrição do Azure RMS](https://technet.microsoft.com/dn858608). Para obter mais informações, consulte [Controlar e revogar os ficheiros](../rms-client/sharing-app-track-revoke.md) no [Guia do utilizador da aplicação de partilha RMS](../rms-client/sharing-app-user-guide.md).
 
-    -   Implemente uma solução “traga a sua própria chave” (BYOK) para que a chave de inquilino do Azure Rights Management seja gerada no local, de acordo com as políticas de TI, e seja transferida em segurança para a Microsoft através da utilização de um Módulo de Hardware de Segurança (HSM). Para obter mais informações, consulte [Planear e implementar a chave de inquilino do Azure Rights Management](../plan-design/plan-implement-tenant-key.md).
+    -   Implemente uma solução "traga a sua própria chave" (BYOK) para que a chave do seu inquilino do Azure Rights Management seja gerada no local, de acordo com as políticas de TI, e seja transferida em segurança para a Microsoft através da utilização de um módulo de hardware de segurança (HSM). Para mais informações, consulte [Planear e implementar a sua chave de inquilino do Azure Information Protection](../plan-design/plan-implement-tenant-key.md).
 
 
 ## Passos seguintes
@@ -97,6 +97,6 @@ Consulte [Como os administradores podem controlar as contas criadas para o RMS p
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO4-->
 
 

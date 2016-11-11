@@ -1,21 +1,23 @@
 ---
 title: "Como configurar as definições de política global | Azure Information Protection"
 description: "Existem três definições na política do Azure Information Protection aplicáveis a todos os utilizadores e a todos os dispositivos."
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: e1d0c25995c45d72c1467aa1ff8043ca225a8156
+ms.sourcegitcommit: addc24fed28cee52b57c7e3bde926d6324478e7b
+ms.openlocfilehash: 970a42e89d09af34e9ff16714682d1de250175f6
 
 
 ---
 
-# Como configurar as definições de política global para o Azure Information Protection
+# <a name="how-to-configure-the-global-policy-settings-for-azure-information-protection"></a>Como configurar as definições de política global para o Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -50,11 +52,9 @@ Configurar estas definições:
 
 4. Para disponibilizar as alterações aos utilizadores, clique em **ublicar**.
 
-## Passos seguintes
+## <a name="next-steps"></a>Passos seguintes
 
-Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organization-s-policy).  
-
-
+Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).  
 
 
 
@@ -65,6 +65,8 @@ Para mais informações sobre como configurar a política do Azure Information P
 
 
 
-<!--HONumber=Sep16_HO4-->
+
+
+<!--HONumber=Nov16_HO1-->
 
 

@@ -2,8 +2,9 @@
 title: "Aplicação de partilha RMS para Windows e plataformas móveis | Azure Information Protection"
 description: "Como a aplicação de partilha RMS suporta o Azure RMS como uma aplicação gratuita e transferível que é necessária para suportar o Office 2010, mas que também é recomendada para computadores com o Windows, computadores Mac e dispositivos móveis."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/03/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +13,18 @@ ms.assetid: 1da6e372-2b3f-4af7-80f7-6b9073dff7f5
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 55fd22b60ad87dadce0ffb89bb658e949670f728
-ms.openlocfilehash: e4b9a13ba29820cd7a19e0b8509966f5d8195353
+ms.sourcegitcommit: 18a222c7927ecc4394266518619941b8a4b6499f
+ms.openlocfilehash: 751422489ec4eec074764ff0417640b22a394325
 
 
 ---
 
 
-# Aplicação de partilha RMS para Windows e plataformas móveis
+# <a name="rms-sharing-application-for-windows-and-mobile-platforms"></a>Aplicação de partilha RMS para Windows e plataformas móveis
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
-A aplicação de partilha RMS é uma aplicação gratuita e transferível que é necessária para suportar o Office 2010, mas que também é recomendada para computadores com o Windows, computadores Mac e dispositivos móveis. Uma das suas vantagens é o facto de poder aplicar proteção genérica a aplicações e ficheiros que não suportam nativamente o serviço Azure Rights Management, o que significa que todos os ficheiros podem ser protegidos. Para obter mais informações sobre os diferentes níveis de proteção, consulte a secção [Níveis de proteção – nativa e genérica](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) no [Guia do administrador da aplicação de partilha Rights Management](../rms-client/sharing-app-admin-guide.md).
+A aplicação de partilha RMS é uma aplicação gratuita e transferível que é necessária para suportar o Office 2010, mas que também é recomendada para computadores com o Windows, computadores Mac e dispositivos móveis. Uma das suas vantagens é o facto de poder aplicar proteção genérica a aplicações e ficheiros que não suportam nativamente o serviço Azure Rights Management, o que significa que todos os ficheiros podem ser protegidos. Para obter mais informações sobre os diferentes níveis de proteção, consulte a secção [Níveis de proteção – nativa e genérica](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic) no [Guia do administrador da aplicação de partilha Rights Management](../rms-client/sharing-app-admin-guide.md).
 
 Quando os utilizadores protegem os seus ficheiros com a aplicação de partilha RMS, também podem controlar os documentos que protegeram e, se for necessário, revogar o acesso aos mesmos. Para tal, utilizam o [site de controlo de documentos](http://go.microsoft.com/fwlink/?LinkId=529562).
 
@@ -52,12 +53,12 @@ A aplicação de partilha RMS para dispositivos móveis suporta os dispositivos 
 -   Gerir a aplicação para os dispositivos Android não inscritos pelo Intune.
 
 
-## Passos seguintes
+## <a name="next-steps"></a>Passos seguintes
 Para ver como outras aplicações e serviços suportam o serviço Azure Rights Management do Azure Information Protection, consulte [Como as aplicações suportam o serviço Azure Rights Management](applications-support.md).
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

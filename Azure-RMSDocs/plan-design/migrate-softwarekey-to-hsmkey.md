@@ -2,8 +2,9 @@
 title: "Passo 2&colon; Migração de chave protegida por software para chave protegida por HSM | Azure Information Protection"
 description: "Instruções que fazem parte do caminho de migração do AD RMS para o Azure Information Protection e são aplicáveis apenas se a sua chave do AD RMS estiver protegida por software e quiser migrar para o Azure Information Protection com uma chave de inquilino protegida por HSM no Cofre de Chaves do Azure."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/03/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,20 +13,20 @@ ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 931642ea9070a7581b428bcd04756048673fe3c0
-ms.openlocfilehash: ae530a9ae861bce8f82fa2e535e5b2281f1c9ffe
+ms.sourcegitcommit: 1fcebaaa2fbe1479e83c232d51013341977796fc
+ms.openlocfilehash: 54e759108ecca7a049190823c3874451d7104fc4
 
 
 ---
 
-# Passo 2: migração de chave protegida por software para chave protegida por HSM
+# <a name="step-2-softwareprotected-key-to-hsmprotected-key-migration"></a>Passo 2: migração de chave protegida por software para chave protegida por HSM
 
 >*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection*
 
 
 Estas instruções fazem parte do [caminho de migração do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) e são aplicáveis apenas se a sua chave do AD RMS estiver protegida por software e quiser migrar para o Azure Information Protection com uma chave de inquilino protegida por HSM no Cofre de Chaves do Azure. 
 
-Se este não for o cenário de configuração escolhido, volte ao [Passo 2. Exporte os dados de configuração do AD RMS, importe-os para o Azure RMS](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms) e escolha uma configuração diferente.
+Se este não for o cenário de configuração escolhido, volte ao [Passo 2. Exporte os dados de configuração do AD RMS, importe-os para o Azure RMS](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection) e escolha uma configuração diferente.
 
 Este é um procedimento dividido em quatro partes para importar a configuração do AD RMS para o Azure Information Protection, de modo a criar a chave de inquilino do Azure Information Protection gerida por si (BYOK) no Cofre de Chaves do Azure.
 
@@ -40,7 +41,7 @@ Antes de começar, certifique-se de que a sua organização tem um cofre de chav
 > Se for efetuar os passos de configuração do Cofre de Chaves do Azure e não estiver familiarizado com este serviço do Azure, poderá considerar útil primeiro rever [Introdução ao Cofre de Chaves do Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/). 
 
 
-## Parte 1: extrair a chave SLC dos dados de configuração e importar a chave para o seu HSM no local
+## <a name="part-1-extract-your-slc-key-from-the-configuration-data-and-import-the-key-to-your-onpremises-hsm"></a>Parte 1: extrair a chave SLC dos dados de configuração e importar a chave para o seu HSM no local
 
 1.  Administrador do Cofre de Chaves do Azure: siga os seguintes passos na secção [Implementar o BYOK (Bring Your Own Key – Traga a Sua Própria Chave)](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) da documentação do Cofre de Chaves do Azure:
 
@@ -93,9 +94,9 @@ Antes de começar, certifique-se de que a sua organização tem um cofre de chav
 
     **type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tipo de chave &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RSA**
 
-    **pemreadfile &nbsp;&nbsp; ficheiro PEM que contém a chave RSA &nbsp;&nbsp; e:\ContosoTPD.pem**
+    **pemreadfile &nbsp;&nbsp; Ficheiro PEM que contém a chave RSA&nbsp;&nbsp; e:\ContosoTPD.pem**
 
-    **ident &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Identificador da chave &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; contosobyok**
+    **ident &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Identificador de chave &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; contosobyok**
 
     **plainname &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nome da chave &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ContosoBYOK**
 
@@ -110,7 +111,7 @@ Agora que a chave SLC foi extraída e importada para o seu HSM no local, está p
 > [!IMPORTANT]
 > Quando tiver concluído este passo, apague em segurança estes ficheiros PEM da estação de trabalho desligada para assegurar que não podem ser acedidos por pessoas não autorizadas. Por exemplo, execute "cipher /w:E" para eliminar em segurança todos os ficheiros da unidade E:.
 
-## Parte 2: compactar e transferir a chave HSM para o Cofre de Chaves do Azure
+## <a name="part-2-package-and-transfer-your-hsm-key-to-azure-key-vault"></a>Parte 2: compactar e transferir a chave HSM para o Cofre de Chaves do Azure
 
 1.  Administrador do Cofre de Chaves do Azure: utilize os seguintes passos da secção [Implementar o BYOK (Bring Your Own Key – Traga a Sua Própria Chave)](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) da documentação do Cofre de Chaves do Azure:
 
@@ -126,7 +127,7 @@ Agora que a chave SLC foi extraída e importada para o seu HSM no local, está p
 
     Agora que já transferiu a chave HSM para o Cofre de Chaves do Azure, está pronto para importar os dados de configuração do AD RMS.
 
-## Parte 3: importar os dados de configuração para o Azure Information Protection
+## <a name="part-3-import-the-configuration-data-to-azure-information-protection"></a>Parte 3: importar os dados de configuração para o Azure Information Protection
 
 1.  Administrador do Azure Information Protection: na estação de trabalho ligada à Internet e na sessão do PowerShell, copie o seu novo ficheiro de configuração de dados (.xml) com a chave SLC removida depois de executar a ferramenta TpdUtil.
 
@@ -146,7 +147,7 @@ Agora que a chave SLC foi extraída e importada para o seu HSM no local, está p
 
 
 
-3.  Utilize o cmdlet [Disconnect-AadrmService](http://msdn.microsoft.com/library/windowsazure/dn629416.aspx) para desligar do serviço Azure Rights Management:
+3.  Utilize o cmdlet [Disconnect-AadrmService](https://msdn.microsoft.com/library/azure/dn629416.aspx) para desligar do serviço Azure Rights Management:
 
     ```
     Disconnect-AadrmService
@@ -156,13 +157,13 @@ Agora que a chave SLC foi extraída e importada para o seu HSM no local, está p
     > Se tiver de confirmar mais tarde qual a chave de inquilino do Azure Information Protection utilizada no Cofre de Chaves do Azure, utilize o cmdlet [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) do Azure RMS.
 
 
-Agora está pronto para ir para o [Passo 3. Ative o seu inquilino do Azure Information Protection](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant).
+Agora está pronto para ir para o [Passo 3. Ative o seu inquilino do Azure Information Protection](migrate-from-ad-rms-phase1.md#step-3-activate-your-azure-information-protection-tenant).
 
 
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

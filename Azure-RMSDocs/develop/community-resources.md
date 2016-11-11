@@ -3,6 +3,7 @@ title: Recursos de comunidade | Azure RMS
 description: "O AD RMS é bem suportado por uma crescente comunidade de programadores em várias plataformas."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,17 +15,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: dab2d84371cd2c45af617898f1694f99128551d9
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: cd203a651362564e2f2275051f61f86b3bee6703
 
 
 ---
 
-# Recursos comunitários
+# <a name="community-resources"></a>Recursos comunitários
 
 Os Serviços de Gestão de Direitos do Active Directory são bem suportados por uma crescente comunidade de programadores em várias plataformas.
 
-## Recursos de comunidade do AD RMS
+## <a name="ad-rms-community-resources"></a>Recursos de comunidade do AD RMS
 
 A [Área para Programadores do RMS (blogue)](http://blogs.msdn.com/b/rms/) é o concentrador ativo para o programador de proteção de informações.
 
@@ -50,6 +51,6 @@ Se ainda não se registou no Microsoft Connect, efetue o seguinte:
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

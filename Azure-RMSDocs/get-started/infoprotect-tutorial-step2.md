@@ -2,6 +2,7 @@
 title: "Passo 1 do tutorial de início rápido | Azure Information Protection"
 description: "Passo 2 de um tutorial de introdução com uma duração de aproximadamente 30 minutos, para experimentar rapidamente o Microsoft Azure Information Protection na sua organização."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -10,13 +11,13 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: b23022c5fbec3d4f6f19ab5017ecf9badf01a9e7
-ms.openlocfilehash: c8cad9c4b6efe2630843bcb1618ecd535670e0fe
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 3c2523119020232b9044506b2d2a602104e81d0b
 
 
 ---
 
-# Passo 2: configurar e publicar a política do Azure Information Protection
+# <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passo 2: configurar e publicar a política do Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -39,7 +40,7 @@ Apesar de o Azure Information Protection ser fornecido com uma política predefi
 
     ![Tutorial de início rápido do Azure Information Protection, passo 3 - política predefinida](../media/info-protect-policy.png)
 
-## Alterar as definições globais de um modelo predefinido e pedido de justificação
+## <a name="changing-the-global-settings-for-a-default-template-and-prompt-for-justification"></a>Alterar as definições globais de um modelo predefinido e pedido de justificação
 
 Para o nosso tutorial, vamos alterar algumas dessas definições globais para que possa ver como funcionam:
 
@@ -47,7 +48,7 @@ Para o nosso tutorial, vamos alterar algumas dessas definições globais para qu
 
 2. Para **Os utilizadores têm de fornecer uma justificação para reduzir a etiqueta de classificação, remover uma etiqueta ou remover a proteção** defina esta opção como **Ativado**.
 
-## Configurar uma etiqueta para proteção, uma marca d'água e uma condição para pedidos de classificação
+## <a name="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification"></a>Configurar uma etiqueta para proteção, uma marca d'água e uma condição para pedidos de classificação
 
 Agora vamos alterar as definições de uma das etiquetas, **Confidencial**:
 
@@ -113,7 +114,7 @@ Agora que conhece a política predefinida e fez algumas alterações, o próximo
 
 |Se pretender mais informações|Informações adicionais|
 |--------------------------------|--------------------------|
-|Sobre as opções de configuração para a política|[Configurar política do Azure Information Protection](../deploy-use/configure-policy.md)|
+|Sobre as opções de configuração para a política|[Configurar a política do Azure Information Protection](../deploy-use/configure-policy.md)|
 
 
 >[!div class="step-by-step"]
@@ -121,6 +122,6 @@ Agora que conhece a política predefinida e fez algumas alterações, o próximo
 [Passo 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

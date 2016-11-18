@@ -2,6 +2,7 @@
 title: "Configurar a política | Azure Information Protection"
 description: "Para configurar a classificação, a etiquetagem e a proteção, tem de configurar a política do Azure Information Protection."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: 472541f32c429eea34ea0afb76905bee8abf9747
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 055470948a1bf21d4ee1ee83f345f49a98c1bf31
 
 
 ---
 
-# Configurar política do Azure Information Protection
+# <a name="configuring-azure-information-protection-policy"></a>Configurar a política do Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -51,7 +52,7 @@ Quando terminar de efetuar as alterações que pretende, clique em **Publicar**.
 
 O cliente do Azure Information Protection verifica a existência de quaisquer alterações sempre que uma das aplicações do Office suportadas é iniciada e transfere as alterações como política do Azure Information Protection.
 
-## Configurar a política da organização
+## <a name="configuring-your-organizations-policy"></a>Configurar a política da organização
 
 Utilize as seguintes informações para ajudar a configurar a política do Azure Information Protection:
 
@@ -71,13 +72,13 @@ Utilize as seguintes informações para ajudar a configurar a política do Azure
 
 - [Como configurar condições para as classificações automática e recomendada](configure-policy-classification.md)
 
-## Passos seguintes
+## <a name="next-steps"></a>Passos seguintes
 
 Para obter um exemplo de como personalizar a política predefinida e ver o comportamento resultante de uma aplicação do Office, experimente o [Tutorial de inicio rápido do Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -2,6 +2,7 @@
 title: "Cenário – Os executivos trocam informações privilegiadas em segurança | Azure Information Protection"
 description: "Este cenário e a documentação do utilizador associada utilizam a proteção Azure Rights Management para que os executivos possam trocar em segurança e-mails e anexos por e-mail e as políticas restrinjam automaticamente o acesso dos executivos sem necessidade de ação especial por parte deles."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
-ms.openlocfilehash: 8481c275609e74ff5e09a0397e0e3a0346aa4430
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: c8c460549df34a746b21f57aa890a52571bf2061
 
 
 ---
 
-# Cenário – Os executivos trocam informações privilegiadas em segurança
+# <a name="scenario-executives-securely-exchange-privileged-information"></a>Cenário – Os executivos trocam informações privilegiadas em segurança
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -34,12 +35,12 @@ As instruções aplicam-se às seguintes circunstâncias:
 
 -   Os executivos têm uma forma de contornar a regra se alguma vez precisarem de enviar uma mensagem de e-mail desprotegida para outros executivos.
 
-## Instruções de Implementação
+## <a name="deployment-instructions"></a>Instruções de Implementação
 ![Instruções do administrador para a Implementação Rápida do Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Certifique-se de que os seguintes requisitos são cumpridos e, em seguida, siga as instruções dos procedimentos de suporte antes de avançar para a documentação do utilizador.
 
-## Requisitos para este cenário
+## <a name="requirements-for-this-scenario"></a>Requisitos para este cenário
 Para que as instruções para este cenário funcionem, é necessário o seguinte:
 
 |Requisito|Se precisar de mais informações|
@@ -51,7 +52,7 @@ Para que as instruções para este cenário funcionem, é necessário o seguinte
 |Configurou um modelo personalizado, tal como descrito a seguir|[Configurar modelos personalizados para o serviço Azure Rights Management](../deploy-use/configure-custom-templates.md)|
 |Configurou uma regra de proteção de transporte para IRM, conforme descrito mais à frente neste artigo|Para o Exchange Online: [fluxo de correio ou regras de transporte](https://technet.microsoft.com/library/jj919238(v=exchg.150).aspx)<br /><br />Para o Exchange 2013: [criar uma Regra de Proteção de Transporte](https://technet.microsoft.com/en-us/library/dd302432(v=exchg.150))<br /><br />Para o Exchange 2010: [criar uma Regra de Proteção de Transporte](https://technet.microsoft.com/library/dd302432(v=exchg.141))|
 
-### Para configurar o modelo personalizado para executivos
+### <a name="to-configure-the-custom-template-for-executives"></a>Para configurar o modelo personalizado para executivos
 
 1.  No portal clássico do Azure: crie um novo modelo personalizado para o Azure Rights Management que contenha estes valores e definições:
 
@@ -69,7 +70,7 @@ Para que as instruções para este cenário funcionem, é necessário o seguinte
     Import-RMSTrustedPublishingDomain -Name "RMS Online -1" -RefreshTemplates -RMSOnline
     ```
 
-### Para configurar a regra de transporte para IRM
+### <a name="to-configure-the-transport-rule-for-irm"></a>Para configurar a regra de transporte para IRM
 
 -   Utilize a documentação do Exchange referenciada na tabela para obter informações sobre os procedimentos para criar a regra de transporte com as seguintes definições:
 
@@ -83,7 +84,7 @@ Para que as instruções para este cenário funcionem, é necessário o seguinte
 
     -   Certifique-se de que a regra está configurada para **Impor**.
 
-## Instruções da documentação do utilizador
+## <a name="user-documentation-instructions"></a>Instruções da documentação do utilizador
 A não ser que pretenda fornecer instruções sobre como especificar **DNP** ou a sua opção de palavras ou expressões da exceção no assunto do e-mail, não existem instruções sobre procedimentos a dar aos utilizadores para este cenário, uma vez que proteger e-mails de e para executivos não requer qualquer ação especial por parte deles. As mensagens de e-mail e quaisquer anexos são automaticamente protegidos para que apenas os membros do grupo Executivos possam aceder aos mesmos.
 
 No entanto, poderá ter de informar os executivos e o suporte técnico de que estes e-mails serão automaticamente protegidos e sobre a forma como tal pode restringir a utilização dos mesmos. Por exemplo, se os e-mails ou os anexos forem reencaminhados para outras pessoas mais tarde, estas não os conseguirão ler. Se tiver configurado a exceção DNP (ou equivalente), certifique-se de que o suporte técnico está ciente desta configuração para que os próprios executivos possam contornar a regra, sem necessidade de ação por parte de um administrador do Exchange.
@@ -104,7 +105,7 @@ A documentação de exemplo mostra que aspeto este anúncio poderá ter para os 
 
 ![Modelo de documentação do utilizador para a Implementação Rápida do Azure RMS](../media/AzRMS_UsersBanner.png)
 
-### Anúncio de TI: os e-mails executivos da &lt;nome da organização&gt; são agora automaticamente protegidos
+### <a name="it-announcement-ltorganization-namegt-executive-emails-are-now-automatically-protected"></a>Anúncio de TI: os e-mails executivos da &lt;nome da organização&gt; são agora automaticamente protegidos
 A partir de agora, sempre que enviar e-mails para outro executivo da &lt;nome da organização&gt; na empresa, os conteúdos desses e-mails e quaisquer anexos serão automaticamente protegidos de forma a que apenas outro executivo da empresa lhes possa aceder para ler as respetivas informações, imprimi-los, copiá-los, etc. Esta restrição aplica-se mesmo que reencaminhe a mensagem de e-mail para outras pessoas ou guarde os anexos. Esta proteção ajuda a evitar a perda de dados de informações confidenciais e delicadas.
 
 Tenha em atenção que, se pretender que outras pessoas que não sejam executivos da &lt;nome da organização&gt; possam ler e editar as informações que envia nestes e-mails, tem de as enviar separadamente para essas pessoas. Em alternativa, para contornar a proteção automática, escreva as letras **DNP** (como uma abreviatura de Não Proteger) em qualquer parte do assunto da mensagem de e-mail.
@@ -115,10 +116,10 @@ Ao enviar informações confidenciais da empresa para outro executivo da &lt;nom
 
 -   Contacte o suporte técnico: &lt;detalhes de contacto&gt;
 
-### Exemplo de documentação do utilizador
+### <a name="example-user-documentation"></a>Exemplo de documentação do utilizador
 ![Exemplo de documentação do utilizador para a Implementação Rápida do Azure RMS](../media/AzRMS_ExampleBanner.png)
 
-#### Anúncio de TI: os e-mails executivos da VanArsdel são agora automaticamente protegidos
+#### <a name="it-announcement-vanarsdel-executive-emails-are-now-automatically-protected"></a>Anúncio de TI: os e-mails executivos da VanArsdel são agora automaticamente protegidos
 A partir de agora, sempre que enviar e-mails para outro executivo da VanArsdel na empresa, os conteúdos desses e-mails e quaisquer anexos serão automaticamente protegidos de forma a que apenas outro executivo da empresa possa aceder aos mesmos para ler as respetivas informações, imprimi-los, copiá-los, etc. Esta restrição aplica-se mesmo que reencaminhe a mensagem de e-mail para outras pessoas ou guarde os anexos. Esta proteção ajuda a evitar a perda de dados de informações confidenciais e delicadas.
 
 Tenha em atenção que, se pretender que outras pessoas que não sejam executivos da VanArsdel possam ler e editar as informações que envia nestes e-mails, tem de as enviar separadamente para essas pessoas. Em alternativa, para contornar a proteção automática, escreva as letras **DNP** (como uma abreviatura de Não Proteger) em qualquer parte do assunto da mensagem de e-mail.
@@ -127,11 +128,11 @@ Ao enviar informações confidenciais da empresa para outro executivo da VanArsd
 
 **Precisa de ajuda?**
 
--   Contacte o suporte técnico: helpdesk@vanarsdelltd.com
+-   Contactar o suporte técnico: helpdesk@vanarsdelltd.com
 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

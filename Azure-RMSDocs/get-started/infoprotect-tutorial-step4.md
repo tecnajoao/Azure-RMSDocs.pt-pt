@@ -2,6 +2,7 @@
 title: "Passo 4 do tutorial de início rápido | Azure Rights Management"
 description: "Passo 3 de um tutorial de introdução com uma duração de aproximadamente 30 minutos, para experimentar rapidamente o Microsoft Azure Information Protection na sua organização."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -10,13 +11,13 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 translationtype: Human Translation
-ms.sourcegitcommit: ce1d0a700e0b69d71f5cb2e93f406124bc0ca581
-ms.openlocfilehash: c9ed50317e18e86438b4393ce629d23d433c99fe
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: dc4cf3426bca306b66e2b23c3dd63373f62c9b7c
 
 
 ---
 
-# Passo 4: ver classificação, etiquetas e proteção em ação 
+# <a name="step-4-see-classification-labeling-and-protection-in-action"></a>Passo 4: ver classificação, etiquetas e proteção em ação 
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -24,7 +25,7 @@ Agora que já tem um documento do Word aberto com o cliente do Azure Information
 
 A classificação e a proteção ocorrem quando guarda o documento, mas antes de o fazermos, vamos utilizar o nosso documento não guardado para ver como é fácil aplicar e alterar etiquetas.
 
-## Para alterar manualmente a nossa etiqueta predefinida
+## <a name="to-manually-change-our-default-label"></a>Para alterar manualmente a nossa etiqueta predefinida
 
 Na barra do Information Protection, selecione a etiqueta **Pessoal** e ser-lhe-á pedido para indicar a razão pela qual está a reduzir o nível de classificação:
 
@@ -32,7 +33,7 @@ Na barra do Information Protection, selecione a etiqueta **Pessoal** e ser-lhe-�
 
 Selecione **A etiqueta anterior já não se aplica** e clique em **Confirmar**. O valor **Sensibilidade** é alterado para **Pessoal**.
 
-## Para remover a classificação por completo
+## <a name="to-remove-the-classification-completely"></a>Para remover a classificação por completo
 
 Na barra do Information Protection, clique no ícone **Editar etiqueta** junto a **Pessoal**. Esta ação apresenta as etiquetas disponíveis. No entanto, em vez de selecionar uma das etiquetas, desta vez, clique no ícone **Remover etiqueta**. Clique em **OK** para confirmar e fornecer a justificação para esta ação.  
 
@@ -41,7 +42,7 @@ Verá que o valor **Sensibilidade** apresenta **Não definido**, a opção vista
 ![Tutorial de início rápido do Azure Information Protection, passo 4 - remover classificação](../media/sensitivity-not-set.png)
 
 
-## Para ver um pedido de recomendação para etiquetagem e proteção automática
+## <a name="to-see-a-recommendation-prompt-for-labeling-and-automatic-protection"></a>Para ver um pedido de recomendação para etiquetagem e proteção automática
 
 1. No documento do Word, escreva um número de cartão de crédito válido, por exemplo: **4242-4242-4242-4242**. 
 
@@ -63,6 +64,6 @@ Agora que viu a classificação, a etiquetagem e a proteção em ação, vamos v
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

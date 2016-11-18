@@ -2,6 +2,7 @@
 title: "O que é o Azure Information Protection? | Azure Information Protection"
 description: "Uma descrição geral sobre o serviço Azure Information Protection."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/12/2016
 ms.topic: article
@@ -10,13 +11,13 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 translationtype: Human Translation
-ms.sourcegitcommit: 0098fa28313561e99f39e2539e20c8a6bc0207f7
-ms.openlocfilehash: eaaa08a99b3c065422dd8b0bc01d89ead15e9d49
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: b26db0aae458a897710cd19e05753ad159004aa0
 
 
 ---
 
-# O que é o Azure Information Protection?
+# <a name="what-is-azure-information-protection"></a>O que é o Azure Information Protection?
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -28,7 +29,7 @@ A imagem seguinte mostra um exemplo do Azure Information Protection em ação. O
 
 Após os seus conteúdos serem classificados (e, opcionalmente, protegidos), pode acompanhar e controlar a forma como são utilizados. Pode analisar fluxos de dados para obter estatísticas sobre a sua empresa, detetar comportamentos de risco e tomar medidas corretivas, controlar o acesso a documentos, evitar a fuga ou utilização indevida de dados e assim sucessivamente.
 
-## Como as etiquetas aplicam a classificação
+## <a name="how-labels-apply-classification"></a>Como as etiquetas aplicam a classificação
 
 Pode utilizar etiquetas do Azure Information Protection para aplicar a classificação a documentos e e-mails. Quando o fizer, a classificação será sempre identificável, independentemente do local onde os dados são armazenados ou com quem são partilhados. As etiquetas persistentes incluem marcas visuais, tais como um cabeçalho, rodapé ou uma marca d'água. São adicionados metadados a ficheiros e cabeçalhos de e-mail em texto simples para que outros serviços (tais como soluções de prevenção de perda de dados) possam identificar a classificação e tomar as medidas adequadas. 
 
@@ -37,7 +38,7 @@ Por exemplo, a seguinte mensagem de e-mail foi classificada como "Interna". Esta
 ![Exemplo de rodapé de e-mail e cabeçalhos que mostram a classificação do Azure Information Protection](../media/example-email-footer-header.png)
 
 
-## Como os dados são protegidos
+## <a name="how-data-is-protected"></a>Como os dados são protegidos
 
 A tecnologia de proteção utiliza o *Azure Rights Management* (frequentemente abreviado para Azure RMS). Esta tecnologia está integrada com outros serviços e aplicações na nuvem da Microsoft, como o Office 365 e o Azure Active Directory. Também pode ser utilizado com as suas próprias aplicações de linha de negócio e soluções de proteção de informações de fornecedores de software, sejam estas aplicações e soluções locais ou na nuvem.
 
@@ -45,7 +46,7 @@ Esta tecnologia de proteção utiliza políticas de autorização, encriptação
 
 Por exemplo, pode configurar um documento de relatório ou uma folha de cálculo de previsão de vendas para que só possa ser acedido por pessoas na sua organização e controlar se esse documento pode ser editado, restringi-lo para acesso só de leitura ou impedi-lo de ser impresso. Pode configurar os e-mails da mesma forma e, além disso, impedir que sejam encaminhados ou impedir a utilização da opção Responder a Todos. Estas tarefas de proteção podem ser simplificadas e dinamizadas ao utilizar *modelos de gestão de direitos*.
 
-### Modelos de gestão de direitos
+### <a name="rights-management-templates"></a>Modelos de gestão de direitos
 
 Quando ativar o serviço Azure Rights Management, serão criados dois modelos predefinidos que restringem o acesso aos dados a utilizadores na sua organização. Pode utilizar estes modelos para ajudar imediatamente a impedir a fuga de dados da sua organização. Também pode complementar estes modelos predefinidos ao configurar os seus próprios modelos personalizados que apliquem controlos mais restritivos.
 
@@ -59,9 +60,9 @@ Os mesmos modelos podem ser selecionados no centro de administração do Exchang
 
 ![Exemplo de seleção de modelos para o Exchange Online](../media/templates-exchangeonline-callouts.png)
 
-Para mais informações sobre a proteção do Azure Rights Management, consulte [O que é o Azure Rights Management?](what-is-azure-rms.md)
+Para obter mais informações sobre a proteção do Azure Rights Management, consulte [O que é o Azure Rights Management?](what-is-azure-rms.md)
 
-## Integração com fluxos de trabalho de utilizador final
+## <a name="integration-with-end-user-workflows"></a>Integração com fluxos de trabalho de utilizador final
 
 O Azure Information Protection integra-se com os fluxos de trabalho existentes de utilizadores finais quando o cliente do Azure Information Protection é instalado. Este cliente instala a barra do Information Protection para aplicações do Office, conforme vimos na primeira imagem. A mesma barra é adicionada ao Excel, PowerPoint e Outlook. Por exemplo:
 
@@ -72,7 +73,7 @@ Esta barra do Information Protection facilita aos utilizadores finais a seleçã
 Quando os utilizadores partilharem os respetivos documentos protegidos por e-mail, podem utilizar um site de controlo de documentos para saber quem acede aos documentos e quando. Se suspeitarem que há uma utilização indevida, podem também revogar o acesso aos documentos.
 
 
-## Recursos para o Azure Information Protection
+## <a name="resources-for-azure-information-protection"></a>Recursos para o Azure Information Protection
 
 - Anúncio: [o Azure Information Protection está agora Disponível Globalmente](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/04/azure-information-protection-is-now-generally-available/)
 
@@ -101,13 +102,13 @@ Quando os utilizadores partilharem os respetivos documentos protegidos por e-mai
     - [BRK2128: enviar e-mails seguros a qualquer pessoa com a tecnologia do Microsoft Office 365 e do Azure Information Protection](https://myignite.microsoft.com/videos?q=BRK2128)
 
 
-## Passos seguintes
+## <a name="next-steps"></a>Passos seguintes
 
 Configure e veja o Azure Information Protection, com o nosso [Tutorial de início rápido do Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md) em 5 passos.
 
 Conhece o Azure Information Protection ou Azure Rights Management por outro nome? Consulte a [nossa lista de termos alternativos para o serviço](azure-rms-aka.md).
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

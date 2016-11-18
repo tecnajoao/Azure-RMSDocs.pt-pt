@@ -2,6 +2,7 @@
 title: "Referência do PowerShell para modelos personalizados | Azure Information Protection"
 description: "Tudo o que consegue fazer no portal clássico do Azure para criar e gerir modelos de gestão de direitos, pode fazer a partir da linha de comandos com o PowerShell. Além disso, pode exportar e importar modelos para poder copiar modelos entre inquilinos ou fazer edições em volume de propriedades complexas nos modelos, como nomes e descrições multilingues."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,15 +13,15 @@ ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 3a213388584424871304778f3df36f7d49b370bd
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: aad5bc49b15b32c74352d5c9d6d48cd4f1f3cf9c
 
 
 ---
 
 
 
-# Referência do PowerShell para modelos personalizados
+# <a name="powershell-reference-for-custom-templates"></a>Referência do PowerShell para modelos personalizados
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -55,10 +56,10 @@ Os cmdlets que suportam a criação e gestão de modelos:
 
 
 
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 [Configurar modelos personalizados para o Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

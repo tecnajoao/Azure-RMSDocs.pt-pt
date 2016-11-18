@@ -3,6 +3,7 @@ title: "Procedimentos sobre como depurar uma aplicação com capacidade para dir
 description: "O tópico seguinte mostra como depurar a aplicação e utilizar o Registo de Eventos do Windows."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,17 +15,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: cab6839a1911bb61185f2ef361b2040ac0d38a6e
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 789c93b6d7ac72ebe1df04300f2885ca2aa23a06
 
 
 ---
 
-# Procedimentos: depurar uma aplicação com permissão para direitos
+# <a name="howto-debug-a-rightsenabled-application"></a>Procedimentos: depurar uma aplicação com permissão para direitos
 
 O tópico seguinte mostra como depurar a aplicação e utilizar o Registo de Eventos do Windows.
 
-## Depurar a aplicação
+## <a name="debugging-your-application"></a>Depurar a aplicação
 
 No SDK Rights Management Services 2.1, as verificações antidepuração na versão de programador do nosso tempo de execução estão desativadas.
 
@@ -41,7 +42,7 @@ HKEY_LOCAL_MACHINE
             dword
 ```
 
-### Registo de aplicações ao utilizar o Registo de Eventos do Windows
+### <a name="application-logging-by-using-the-windows-event-log"></a>Registo de aplicações ao utilizar o Registo de Eventos do Windows
 
 O nome do registo de eventos é “Microsoft-RMS-MSIPC/Depuração”. Isto significa que, no Visualizador de Eventos do Windows, o seu registo aparece como “Registos de Aplicações e Serviços\\Microsoft\\RMS\\MSIPC\\Depuração”.
 
@@ -67,7 +68,7 @@ Por exemplo, o comando seguinte ativa o registo de eventos MSIPC e define o nív
 
  
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
  
 
@@ -75,6 +76,6 @@ Por exemplo, o comando seguinte ativa o registo de eventos MSIPC e define o nív
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

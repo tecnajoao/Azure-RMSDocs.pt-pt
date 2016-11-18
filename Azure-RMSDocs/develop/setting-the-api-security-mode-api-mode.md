@@ -3,6 +3,7 @@ title: "Procedimentos para definir o modo de segurança da API | Azure RMS"
 description: "Escolha o modo de segurança em que é executada a sua aplicação de API de Ficheiros."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 77e2dfe7f2afb1e70de658850f83f86e9224aea6
-ms.openlocfilehash: 9235fa1c194162689b854493ea31e76c08c40ce7
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f7acef7fa69c836c5d57d8c1705007f919a9dbf2
 
 
 ---
 
-# Procedimentos: definir o modo de segurança da API
+# <a name="howto-set-the-api-security-mode"></a>Procedimentos: definir o modo de segurança da API
 
 Pode escolher em que modo de segurança a sua aplicação de API de Ficheiros é executada ao utilizar a função [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx).
 
@@ -30,7 +31,7 @@ Para obter mais informações sobre o *modo de servidor*, consulte [Tipos de apl
 
 **Importante** O modo de segurança deve ser definido antes de ser chamada qualquer outra função do SDK Rights Management Services 2.1. Depois de definir o modo de segurança, não o pode alterar para o processo atual.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Tipos de aplicações](application-types.md)
 * [Valores do modo de API](https://msdn.microsoft.com/library/hh535236.aspx)
@@ -41,6 +42,6 @@ Para obter mais informações sobre o *modo de servidor*, consulte [Tipos de apl
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

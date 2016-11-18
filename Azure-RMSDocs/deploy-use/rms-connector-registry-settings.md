@@ -2,6 +2,7 @@
 title: "Definições de registo para o conector RMS | Azure Information Protection"
 description: "Informações sobre as definições de registo em servidores que utilizam o conector RMS. O método recomendado para configurar estas definições é utilizar a ferramenta de configuração do servidor do conetor Microsoft RMS."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,14 +13,14 @@ ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 1dd1b26735732f4bef8cf73a566b0f26b7610a82
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: a0132404bb9ccb202c552aaca680659947d9c888
 
 
 ---
 
 
-# Definição de registo para o conetor Rights Management
+# <a name="registry-setting-for-the-rights-management-connector"></a>Definição de registo para o conetor Rights Management
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -45,7 +46,7 @@ Instruções ao utilizar estas definições:
 -   Utilize o prefixo HTTPS para o URL do conetor se configurou o conetor para utilizar o HTTPS para comunicar com os servidores no local. Para obter mais informações, veja a secção [Configurar o conetor RMS para utilizar HTTPS](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https) das instruções principais. Os URLs do Microsoft RMS utilizam sempre HTTPS.
 
 
-## Definições de registo do Exchange 2016 ou Exchange 2013
+## <a name="exchange-2016-or-exchange-2013-registry-settings"></a>Definições de registo do Exchange 2016 ou Exchange 2013
 
 **Caminho do registo:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
@@ -96,7 +97,7 @@ Instruções ao utilizar estas definições:
 - https://*ConnectorFQDN*
 
 
-## Definições de registo do Exchange 2010
+## <a name="exchange-2010-registry-settings"></a>Definições de registo do Exchange 2010
 
 **Caminho do registo:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
@@ -145,7 +146,7 @@ Instruções ao utilizar estas definições:
 - https://*ConnectorFQDN*
 
 
-## Definições de registo do SharePoint 2016 ou SharePoint 2013
+## <a name="sharepoint-2016-or-sharepoint-2013-registry-settings"></a>Definições de registo do SharePoint 2016 ou SharePoint 2013
 
 **Caminho do registo:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\LicensingRedirection
 
@@ -192,7 +193,7 @@ Instruções ao utilizar estas definições:
 
 
 
-## Servidor de ficheiros e definições de registo de Infraestrutura de Classificação de Ficheiros
+## <a name="file-server-and-file-classification-infrastructure-registry-settings"></a>Servidor de ficheiros e definições de registo de Infraestrutura de Classificação de Ficheiros
 
 **Caminho do registo:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
@@ -216,6 +217,6 @@ Instruções ao utilizar estas definições:
 Voltar a [Implementar o conetor Azure Rights Management](deploy-rms-connector.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

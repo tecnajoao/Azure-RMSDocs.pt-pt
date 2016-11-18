@@ -2,6 +2,7 @@
 title: "Passo 3 do tutorial de início rápido | Azure Information Protection"
 description: "Passo 3 de um tutorial de introdução com uma duração de aproximadamente 30 minutos, para experimentar rapidamente o Microsoft Azure Information Protection na sua organização."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -10,13 +11,13 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 translationtype: Human Translation
-ms.sourcegitcommit: b5c87669c965d1e67b47dcfbd8ba97f1da41d104
-ms.openlocfilehash: 042e168452d2b5cbc1eeec4fc06a3b0f137a5caf
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 496f086d4db43a69ef0acca579b290286a5b9e5b
 
 
 ---
 
-# Passo 3: instalar o cliente e a aplicação 
+# <a name="step-3-install-the-client-and-application"></a>Passo 3: instalar o cliente e a aplicação 
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -27,7 +28,7 @@ Em segundo lugar, irá instalar a aplicação de partilha Rights Management, par
 Ambas as instalações integram-se com as aplicações do Office e, atualmente, tem de as instalar em separado.
 
 
-## Instalar o cliente do Azure Information Protection
+## <a name="install-the-azure-information-protection-client"></a>Instalar o cliente do Azure Information Protection
 
 1. Num PC com o Office instalado (mas sem o Word aberto), [transfira o cliente do Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018) a partir do Centro de transferências da Microsoft. 
 
@@ -35,7 +36,7 @@ Ambas as instalações integram-se com as aplicações do Office e, atualmente, 
 
     Para este tutorial, não interessa se selecionou a opção para instalar uma política de demonstração, porque a nossa política que transferimos vai ser transferida do Azure e substituir a política de demonstração, caso esteja instalada. No entanto, pode utilizar a opção de política de demonstração caso pretenda experimentar as etiquetas predefinidas sem ligar ao Azure Information Protection. 
 
-## Instalar a aplicação de partilha Rights Management 
+## <a name="install-the-rights-management-sharing-application"></a>Instalar a aplicação de partilha Rights Management 
 
 1. Aceda à página do [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) no site da Microsoft.
 
@@ -44,7 +45,7 @@ Ambas as instalações integram-se com as aplicações do Office e, atualmente, 
 3. Na página **Configurar o Microsoft RMS**, clique em **Seguinte** e aguarde até que a instalação esteja concluída. Em seguida, clique em **Reiniciar** se lhe for pedido para reiniciar o computador ou clique em **Fechar** para concluir a instalação.
 
 
-## Verificar as instalações
+## <a name="verify-the-installations"></a>Verificar as instalações
 
 Verifique se estas instalações foram bem-sucedidas ao abrir o Word e um novo documento em branco (não o guarde por agora). Se lhe for pedido para introduzir o seu nome de utilizador e palavra-passe, introduza os detalhes da sua conta de administrador global. 
 
@@ -74,6 +75,6 @@ Agora está pronto para ver o Azure Information Protection em ação.
 [Passo 4 &#187;](infoprotect-tutorial-step4.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

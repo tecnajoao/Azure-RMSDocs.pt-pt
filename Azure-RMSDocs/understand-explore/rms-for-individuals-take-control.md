@@ -2,6 +2,7 @@
 title: "Como os administradores podem controlar as contas criadas para o RMS para indivíduos | Azure Information Protection"
 description: "Como pode controlar as contas de utilizador no Azure Active Directory se não pretender converter a subscrição do RMS para indivíduos da sua organização para uma subscrição paga."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,15 +13,15 @@ ms.assetid: a83880d0-f0f9-4a32-9e00-2f6635d7cc8d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2fd29eb6dec94535d0358fe0a2d9c9285fcd7cd1
-ms.openlocfilehash: 6f26faf8a96c388a4640701a12a77e3b4ef60567
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f9999db44758251f7b9b4c8f86549b1ee36e83d3
 
 
 ---
 
 
 
-# Como os administradores podem controlar as contas criadas para o RMS para indivíduos
+# <a name="how-administrators-can-control-the-accounts-created-for-rms-for-individuals"></a>Como os administradores podem controlar as contas criadas para o RMS para indivíduos
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -37,15 +38,15 @@ Se não pretender converter a subscrição do RMS para indivíduos da sua organi
 
     -   Sincronize a sua infraestrutura dos Serviços de Domínio do Active Directory com o Azure Active Directory. Esta ação impede que novas contas sejam criadas quando os utilizadores se inscrevem em subscrições self-service, tais como o RMS para indivíduos, e pode eliminar ou desativar contas que foram anteriormente criadas no diretório do Azure.
 
-Para controlar as contas de utilizador no diretório do Azure ou impedir que os utilizadores se inscrevam no RMS para indivíduos, tem de ter uma subscrição do Azure e ser o proprietário do diretório. Se ainda não tiver uma subscrição do Azure, pode obter uma gratuitamente. Se um diretório foi criado automaticamente durante o processo self-service, torne-se o proprietário do domínio que foi sido utilizado para o criar. Se já possui um diretório no Azure, mas os utilizadores especificaram um novo domínio que utiliza na sua organização, intercale esse domínio com o seu diretório existente. Para mais informações, consulte as instruções em [O que é a Inscrição Self-Service para o Azure?](https://azure.microsoft.com/documentation/articles/active-directory-self-service-signup/)
+Para controlar as contas de utilizador no diretório do Azure ou impedir que os utilizadores se inscrevam no RMS para indivíduos, tem de ter uma subscrição do Azure e ser o proprietário do diretório. Se ainda não tiver uma subscrição do Azure, pode obter uma gratuitamente. Se um diretório foi criado automaticamente durante o processo self-service, torne-se o proprietário do domínio que foi sido utilizado para o criar. Se já possui um diretório no Azure, mas os utilizadores especificaram um novo domínio que utiliza na sua organização, intercale esse domínio com o seu diretório existente. Para obter mais informações, consulte as instruções em [O que é a Inscrição Self-Service para o Azure?](https://azure.microsoft.com/documentation/articles/active-directory-self-service-signup/)
 
 
-## Passos seguintes
+## <a name="next-steps"></a>Passos seguintes
 
 Se os utilizadores, em vez dos administradores, puderem criar as respetivas contas no Azure Active Directory para o RMS para indivíduos, como pode descobrir se fizeram isto?  Consulte [Como saber se os utilizadores se inscreveram no RMS para indivíduos](rms-for-individuals-identify-sign-up.md).
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -2,6 +2,7 @@
 title: "Guia de implementação rápida do Azure Information Protection | Azure Information Protection"
 description: "Um guia para o ajudar a implementar e utilizar o Azure Information Protection mais rapidamente para proteger os dados da sua organização. Comece por escolher uma lista de cenários específicos a implementar."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2c0f3b58a2f1b5233c262bb67cc4a485557ba997
-ms.openlocfilehash: 914362cbabe2e929b988e0f922c3848e8ca7771f
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: d1415913f4a76331088140555b0cfeaa88200871
 
 
 ---
 
-# Guia de implementação rápida para o Azure Rights Management
+# <a name="rapid-deployment-guide-for-azure-rights-management"></a>Guia de implementação rápida para o Azure Rights Management
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -33,9 +34,9 @@ Os cenários aqui listados são uma amostra daqueles mais populares. Uma vez que
 Antes de implementar estas soluções, deve enviar um anúncio abrangente para os utilizadores finais, permitindo-lhes saber que algumas alterações serão feitas para ajudar a proteger os dados da empresa e que podem ser necessárias algumas alterações por parte desses indivíduos. Uma comunicação de exemplo está incluída depois da tabela seguinte.
 
 > [!NOTE]
-> Se tiver perguntas e comentários acerca deste guia, utilize os mecanismos de comentários nesta página ou envie uma mensagem de e-mail para [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
+> Se tiver perguntas e comentários acerca deste guia, utilize os mecanismos de feedback nesta página ou envie uma mensagem de e-mail para [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
 
-## Cenários do Azure Information Protection
+## <a name="scenarios-for-azure-information-protection"></a>Cenários do Azure Information Protection
 Para o ajudar a implementar mais rapidamente o Azure Information Protection para resolver problemas empresariais específicos, selecione os cenários que melhor correspondem aos seus objetivos empresariais e adapte-os consoante necessário.
 
 
@@ -123,12 +124,12 @@ Consulte: [Cenário – configurar pastas de trabalho para proteção persistent
 
 
 
-## Anúncio para utilizadores antes da implementação
+## <a name="announcement-for-users-before-rollout"></a>Anúncio para utilizadores antes da implementação
 Pode utilizar a seguinte mensagem de comunicação de exemplo para que os utilizadores saibam que implementar o Azure Information Protection significa que algumas alterações estão a caminho. Copie e cole o seguinte texto para ser enviado por e-mail para todos os utilizadores de alguém na equipa de liderança da sua organização, de preferência, o Diretor Executivo. Considere efetuar alterações a este texto para tornar a mensagem mais relevante para os utilizadores e a sua organização.
 
 ![Exemplo de faixa de documentação do utilizador para a Implementação Rápida do Azure RMS](../media/AzRMS_ExampleBanner.png)
 
-### As alterações que estamos a efetuar para salvaguardar os nossos dados
+### <a name="changes-were-making-to-safeguard-our-data"></a>As alterações que estamos a efetuar para salvaguardar os nossos dados
 Alguma vez quis bloquear o acesso a um documento enviado para os parceiros por engano? Já pensou se existe uma forma de saber qual dos seus clientes leu as notícias mais recentes do produto que enviou? Tem necessidade de partilhar informações confidenciais do produto sem preocupações de que poderão ser enviadas a pessoas que não as deveriam ver?
 
 Em breve, poderá fazer tudo isto, porque o Departamento de TI está a implementar algumas alterações que implementam o Microsoft Azure Information Protection como uma solução de proteção de dados da empresa. Muitas destas soluções aplicarão automaticamente a proteção de que precisamos, sem precisar de fazer algo diferente. Algumas alterações podem exigir efetuar algo de forma diferente e, quando for este o caso, o Departamento de TI enviar-lhe-á informações e instruções, com o apoio do suporte técnico se tiver questões ou problemas.
@@ -146,6 +147,6 @@ As soluções que estamos a implementar ajudam-nos a proteger os nossos dados va
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

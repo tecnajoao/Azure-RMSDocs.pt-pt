@@ -2,6 +2,7 @@
 title: "Passo 1 do tutorial de início rápido | Azure Information Protection"
 description: "Passo 1 de um tutorial de introdução com uma duração de aproximadamente 30 minutos, para experimentar rapidamente o Microsoft Azure Information Protection na sua organização."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -10,13 +11,13 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 translationtype: Human Translation
-ms.sourcegitcommit: b23022c5fbec3d4f6f19ab5017ecf9badf01a9e7
-ms.openlocfilehash: 247ab8dd5a47f9370f03fbd5badd7c78784d20b5
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: edb98a61d247b51319a1eb172f9978e3d64d0e1b
 
 
 ---
 
-# Passo 1: ativar o serviço Rights Management
+# <a name="step-1-activate-the-rights-management-service"></a>Passo 1: ativar o serviço Rights Management
  
 >*Aplica-se a: Azure Information Protection*
 
@@ -29,7 +30,7 @@ Para este tutorial, iremos diretamente para a página de ativação para adminis
 
 Se preferir navegar para esta página a partir do seu portal de administração do Office 365, em vez de ir diretamente para a página, consulte as instruções completas em [Ativar o Azure Rights Management](../deploy-use/activate-service.md). Além disso, utilize estas instruções completas se tiver acesso ao portal do Azure, mas não ao portal de administração do Office 365.
 
-## Para ativar o serviço Rights Management
+## <a name="to-activate-the-rights-management-service"></a>Para ativar o serviço Rights Management
 
 1. Abra uma nova janela do browser e aceda diretamente à [página de ativação do Rights Management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) para administradores do Office 365.
     
@@ -56,6 +57,6 @@ Se preferir navegar para esta página a partir do seu portal de administração 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

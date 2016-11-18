@@ -2,6 +2,7 @@
 title: "Cenário – Partilhar um ficheiro do Office com utilizadores noutra organização | Azure Information Protection"
 description: "Este cenário e a documentação do utilizador associada utilizam a proteção Azure Rights Management para que os utilizadores possam enviar em segurança um ficheiro do Office por e-mail para pessoas noutra organização."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f5c138b7a27c7577e5bff23d521ba36264ecc2a
-ms.openlocfilehash: 2a03ae13b269b1a7352dd81fea52fc68bed17d99
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 24b4e542a437a824c6783b02bde5bfb848cdeb3a
 
 
 ---
 
-# Cenário – Partilhar um ficheiro do Office com os utilizadores noutra organização
+# <a name="scenario-share-an-office-file-with-users-in-another-organization"></a>Cenário – Partilhar um ficheiro do Office com os utilizadores noutra organização
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -34,12 +35,12 @@ Este cenário aplica-se às seguintes circunstâncias:
 
 -   O empregado está possivelmente interessado em saber quando este documento é aberto pelo utilizador externo.
 
-## Instruções de implementação
+## <a name="deployment-instructions"></a>Instruções de implementação
 ![Instruções do administrador para a Implementação Rápida do Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Certifique-se de que os seguintes requisitos estão em vigor antes de avançar para a documentação do utilizador.
 
-## Requisitos para este cenário
+## <a name="requirements-for-this-scenario"></a>Requisitos para este cenário
 Para que as instruções de utilizador para este cenário funcionem, é necessário que os seguintes aspetos estejam implementados:
 
 |Requisito|Se precisar de mais informações|
@@ -50,14 +51,14 @@ Para que as instruções de utilizador para este cenário funcionem, é necessá
 |Os utilizadores têm o Outlook do Office 2013|Se os utilizadores tiverem o Office 2016 ou o Office 2010, substitua a captura de ecrã por uma versão equivalente para que a imagem corresponda ao que os utilizadores veem.|
 |A sua subscrição do Azure Information Protection inclui controlo de documentos|Se a sua subscrição não incluir o controlo de documentos e a revogação, os utilizadores não conseguirão concluir todos os passos nas instruções de utilizador. Neste caso, compre uma subscrição que suporte estas funcionalidades ou modifique as instruções de utilizador para remover os passos que as utilizam.<br /><br />Consulte a [lista de funcionalidades](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) no site do Azure Information Protection.|
 
-## Instruções da documentação do utilizador
+## <a name="user-documentation-instructions"></a>Instruções da documentação do utilizador
 Utilizando o modelo seguinte, copie e cole as instruções de utilizador numa comunicação destinada aos utilizadores finais e efetue estas alterações para refletir o seu ambiente:
 
 1.  Substitua *&lt;nome do tipo de documento do Office&gt;* pelo tipo de documento que os seus utilizadores enviarão. Utilize expressões específicas e familiares para os seus fluxos de trabalho, tais como “lista de preços”, “prazos de entrega” e “proposta de licitação”, em vez de “Documento do Word” e “Folha de cálculo do Excel”. A utilização de expressões mais específicas ajuda a aumentar a probabilidade de os utilizadores seguirem as instruções ao trabalhar com esses documentos.
 
-2.  Substitua *&lt;detalhes de contacto&gt;* por instruções sobre como os utilizadores podem contactar o suporte técnico, tais como uma ligação para um site, um endereço de e-mail ou um número de telefone.
+2.  Substitua os *&lt;detalhes de contacto&gt;* por instruções sobre como os utilizadores podem contactar o suporte técnico, tais como uma ligação para um Web site, um endereço de e-mail ou um número de telefone.
 
-3.  **Modificações adicionais que poderá pretender efetuar:**
+3.  **Modificações adicionais que poderá querer efetuar:**
 
     -   No passo 2, sugerimos **Visualizador – Ver Apenas** para as permissões, o que torna o documento anexado (mas não o original) só de leitura para os destinatários. Se esta restrição não for adequada para a sua necessidade comercial, altere esta opção para outro conjunto de permissões, tal como **Revisor – Ver e Editar**.
 
@@ -76,7 +77,7 @@ A documentação de exemplo mostra o aspeto que estas instruções poderão ter 
 
 ![Modelo de documentação do utilizador para a Implementação Rápida do Azure RMS](../media/AzRMS_UsersBanner.png)
 
-### Como partilhar um &lt;nome do tipo de documento do Office&gt;
+### <a name="how-to-share-a-ltname-of-office-document-typegt"></a>Como partilhar um &lt;nome do tipo de documento do Office&gt;
 
 1.  Crie a sua mensagem de e-mail ao especificar o endereço ou os endereços de e-mail, escreva a mensagem e anexe o *&lt;nome do tipo de documento do Office&gt;* à mesma. Em seguida, no separador **MENSAGEM**, no grupo **RMS**, clique em **Partilhar Protegido** e, em seguida, clique em **Partilhar Protegido** novamente:
 
@@ -112,10 +113,10 @@ Utilize o [portal de controlo de documentos](https://track.azurerms.com/) para c
 
     -   *&lt;detalhes de contacto&gt;*
 
-### Exemplo de documentação do utilizador personalizada
+### <a name="example-customized-user-documentation"></a>Exemplo de documentação do utilizador personalizada
 ![Exemplo de documentação do utilizador para a Implementação Rápida do Azure RMS](../media/AzRMS_ExampleBanner.png)
 
-#### Como partilhar uma lista de preços com o seu cliente
+#### <a name="how-to-share-a-price-list-with-your-customer"></a>Como partilhar uma lista de preços com o seu cliente
 
 1.  Crie a sua mensagem de e-mail ao especificar o endereço ou os endereços de e-mail do cliente, escreva a mensagem e anexe a lista de preços mais recente à mesma. Em seguida, no separador **MENSAGEM**, no grupo **RMS**, clique em **Partilhar Protegido** e, em seguida, clique em **Partilhar Protegido** novamente:
 
@@ -154,6 +155,6 @@ Utilize o [portal de controlo de documentos](https://track.azurerms.com/) para c
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -3,6 +3,7 @@ title: "Descrição geral - RMS SDK 4.2 | Azure RMS"
 description: "O AD RMS e o Azure RMS são uma tecnologia de proteção de informações que ajudam a salvaguardar as informações digitais contra a utilização não autorizada."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 390281fbc0a68346ec1cb4b943ddc5919a53fea0
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 65113e57c57621faf9e4625bf224a3f70e9b2e1d
 
 
 ---
 
-# Descrição Geral
+# <a name="overview"></a>Descrição Geral
 
 Microsoft Rights Management SDK 4.2 é uma tecnologia de proteção de informações e estão disponíveis para várias plataformas.  Fornece um software developer kit (SDK) ou framework, que foi concebido para computadores cliente e dispositivos para ajudar a proteger o acesso e utilização das informações que circulam pelas aplicações com «capacidade para direitos». Os SDKs para estas plataformas fornecem uma API simples para um programador de aplicações proteger ou consumir conteúdos digitais, obter modelos e adquirir políticas de um servidor e outras tarefas de gestão de direitos relacionados.
 
@@ -36,7 +37,7 @@ Seguem-se alguns dos possíveis cenários:
 
 O SDK MS RMS 4.2 pode ser transferido, com o reconhecimento e a aceitação do respetivo contrato de licença, distribuído gratuitamente com o seu software de terceiros para permitir o acesso de cliente ao conteúdo que foi protegido por direitos através da utilização e implementação de servidores AD RMS no seu ambiente ou serviços do Azure RMS. Para obter mais informações, consulte [Introdução](get-started.md).
 
-## Destaques do SDK
+## <a name="sdk-highlights"></a>Destaques do SDK
 
 
 O SDK MS RMS 4.2 oferece algumas funcionalidades novas que incluem o seguinte:
@@ -49,9 +50,9 @@ O SDK MS RMS 4.2 oferece algumas funcionalidades novas que incluem o seguinte:
 
 Utilize o guia de [Introdução](get-started.md) para iniciar o projeto de aplicação do dispositivo de informações protegidas.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
-* [SDK Microsoft Rights Management](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md)
+* [Microsoft Rights Management SDK](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md)
 * [Introdução](get-started.md)
 * [Azure AD Authentication Library](https://msdn.microsoft.com/en-us/library/jj573266.aspx)
 * [Conta do GitHub](https://github.com/AzureAD/)
@@ -64,6 +65,6 @@ Utilize o guia de [Introdução](get-started.md) para iniciar o projeto de aplic
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

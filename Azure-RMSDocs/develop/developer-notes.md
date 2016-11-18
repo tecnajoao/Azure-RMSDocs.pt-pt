@@ -3,6 +3,7 @@ title: "Informações e documentação de orientação para programadores | Azur
 description: "Este tópico inclui orientações específicas para vários cenários de desenvolvimento importantes."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/18/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 593b8b505b8bd241c301c95ee6280f93f14901b9
-ms.openlocfilehash: 54ce450600b2a10e6889d2684ce26c9da9f9167e
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 93ed9760d79f2f38d4bee302ebb5c7c6368b1bbe
 
 
 ---
 
-# Informações e documentação de orientação para programadores
+# <a name="developer-guidance-and-information"></a>Informações e documentação de orientação para programadores
 
 Esta secção inclui documentação de orientação específica para diversos cenários de desenvolvimento importantes, bem como informações gerais sobre a desenvolvimento este SDK. Os cenários nesta secção são específicos desta versão do SDK Rights Management Services 2.1 e poderão ser alterados em versões posteriores.
 - [Procedimentos: utilizar a autenticação ADAL](how-to-use-adal-authentication.md) - Autenticação com o Azure RMS para a sua aplicação com o ADAL (Azure Active Directory Authentication Library).
@@ -40,7 +41,7 @@ Esta secção inclui documentação de orientação específica para diversos ce
 - [Referência de restrição da utilização](usage-restriction-reference.md) - as restrições de utilização são definidas pelas constantes listadas neste tópico.
 
  
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 * [Descrição Geral](ad-rms-overview.md)
  
 
@@ -48,6 +49,6 @@ Esta secção inclui documentação de orientação específica para diversos ce
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -2,6 +2,7 @@
 title: Instalar e configurar o conector Azure Rights Management | Azure Information Protection
 description: "Informações para o ajudar a instalar e configurar o conector Azure Rights Management (RMS). Estes procedimentos incluem os passos 1 a 4 da secção Implementar o conector do Azure Rights Management."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 4af8d8b5f95edc7bd95fda93b26da98ee00b5075
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: babd3b14cba61aa49cb448c1d132b279dc9ad5da
 
 
 ---
 
-# Instalar e configurar o conector Azure Rights Management
+# <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Instalar e configurar o conector Azure Rights Management
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -27,7 +28,7 @@ Utilize as seguintes informações para o ajudar a instalar e configurar o conec
 Antes de começar, certifique-se de que consultou e verificou os [pré-requisitos](deploy-rms-connector.md#prerequisites-for-the-rms-connector) para esta implementação.
 
 
-## Instalar o conector RMS
+## <a name="installing-the-rms-connector"></a>Instalar o conector RMS
 
 1.  Identifique os computadores (no mínimo dois) que irão executar o conector RMS. Os computadores têm de cumprir as especificações mínimas descritas nos pré-requisitos.
 
@@ -52,7 +53,7 @@ Antes de começar, certifique-se de que consultou e verificou os [pré-requisito
 
 Para continuar, introduza uma conta e palavra-passe para configurar o conector RMS.
 
-## Introduzir credenciais
+## <a name="entering-credentials"></a>Introduzir credenciais
 Antes de configurar o conector RMS, tem de introduzir as credenciais da conta que tem privilégios suficientes para configurar o conector RMS. Por exemplo, pode escrever **admin@contoso.com** e, em seguida, especificar a palavra-passe desta conta.
 
 Existem algumas restrições de carateres para esta palavra-passe. Não pode utilizar uma palavra-passe que tenha os seguintes carateres: "E" comercial ( **&** ); parêntese reto esquerdo ( **[** ); parêntese reto direito ( **]** ); aspas direitas ( **"** ) e apóstrofo ( **'** ). Se a sua palavra-passe tiver algum destes carateres, a autenticação do conector RMS irá falhar e receberá a mensagem de erro "Essa combinação de nome de utilizador e palavra-passe não está correta", mesmo que já tenha conseguido iniciar sessão com esta conta e palavra-passe noutros cenários. Se este caso se aplicar à sua palavra-passe, utilize uma conta com uma palavra-passe que não tenha nenhum destes carateres especiais ou reponha a palavra-passe para remover os carateres especiais.
@@ -72,7 +73,7 @@ Pode utilizar uma conta que tenha um dos seguintes privilégios:
     > 
     > Para executar o conector do RMS com o mínimo de privilégios, crie uma conta dedicada para este efeito que depois atribui a função de administrador do conector do Azure RMS através do seguinte procedimento:
     >
-    > 1.  Se ainda não o fez, transfira e instale o Windows PowerShell para o Rights Management. Para mais informações, consulte [Instalar o Windows PowerShell para o Azure Rights Management](install-powershell.md).
+    > 1.  Se ainda não o fez, transfira e instale o Windows PowerShell para o Rights Management. Para obter mais informações, consulte [Instalar o Windows PowerShell para o Azure Rights Management](install-powershell.md).
     >
     >     Inicie o Windows PowerShell com o comando **Executar como administrador** e estabeleça ligação ao serviço Azure RMS através do comando [Connect-AadrmService](https://msdn.microsoft.com/library/azure/dn629415.aspx):
     >
@@ -92,7 +93,7 @@ Pode utilizar uma conta que tenha um dos seguintes privilégios:
     >     ```
     >     Add-AadrmRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
     >     ```
-    >     Por exemplo, escreva: **Add-AadrmRoleBasedAdministrator -EmailAddress mariana@contoso.com -Role " ConnectorAdministrator "**
+    >     Por exemplo, escreva: **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
     >
     >     Embora estes comandos atribuam a função de administrador do conector, também pode utilizar a função GlobalAdministrator aqui.
 
@@ -115,7 +116,7 @@ Na página final do assistente, efetue o seguinte procedimento e, em seguida, cl
 
 Se precisar de desinstalar o conector RMS, execute novamente o assistente e selecione a opção Desinstalar.
 
-## Autorizar os servidores a utilizar o conector RMS
+## <a name="authorizing-servers-to-use-the-rms-connector"></a>Autorizar os servidores a utilizar o conector RMS
 Quando tiver instalado o conector RMS em pelo menos dois computadores, está pronto para autorizar os servidores e os serviços com os quais quer utilizar o conector RMS. Por exemplo, os servidores com o Exchange Server 2013 ou o SharePoint Server 2013.
 
 Para definir estes servidores, execute a ferramenta de administração do conector RMS e adicione entradas à lista de servidores permitidos. Pode executar esta ferramenta quando selecionar a opção **Iniciar a consola do administrador do conector para autorizar servidores** no final do Assistente de configuração do conector Microsoft Rights Management ou pode executá-la separadamente do assistente.
@@ -132,7 +133,7 @@ Na página **Servidores com permissão para utilizar o conector**, clique em **A
 > A autorização de servidores é a configuração do Azure RMS equivalente à configuração do AD RMS, que consiste em aplicar manualmente direitos NTFS ao ServerCertification.asmx para a conta de serviço ou do computador servidor e, também, em conceder manualmente direitos de superutilizador às contas do Exchange. Não é necessário aplicar direitos NTFS ao ServerCertification.asmx no conector.
 
 
-### Adicionar um servidor à lista de servidores permitidos
+### <a name="add-a-server-to-the-list-of-allowed-servers"></a>Adicionar um servidor à lista de servidores permitidos
 Na página **Permitir que um servidor utilize o conector**, introduza o nome do objeto ou procure para identificar o objeto a autorizar.
 
 É importante que autorize o objeto correto. Para um servidor utilizar o conector, a conta que executa o serviço no local (por exemplo, o Exchange ou o SharePoint) tem de estar selecionada para autorização. Por exemplo, se o serviço estiver a ser executado como conta de serviço configurada, adicione o nome dessa conta de serviço à lista. Se o serviço estiver a ser executado como Sistema Local, adicione o nome do objeto do computador (por exemplo, NOMEDOSERVIDOR$) Como melhor prática, crie um grupo composto por estas contas e especifique o grupo em vez de nomes de servidores individuais.
@@ -160,7 +161,7 @@ Quando terminar de adicionar os servidores à lista, clique em **Fechar**.
 
 Se ainda não o tiver feito, tem de configurar agora o balanceamento de carga dos servidores que têm o conector RMS instalado e decidir se quer utilizar HTTPS nas ligações entre estes servidores e os servidores que acabou de autorizar.
 
-## Configurar o balanceamento de carga e a elevada disponibilidade
+## <a name="configuring-load-balancing-and-high-availability"></a>Configurar o balanceamento de carga e a elevada disponibilidade
 Depois de instalar a segunda ou última instância do conector RMS, defina um nome de servidor do URL do conector e configure um sistema de balanceamento de carga.
 
 O nome de servidor do URL do conector pode ser qualquer nome dentro do espaço de nomes controlado por si. Por exemplo, pode criar uma entrada no seu sistema DNS para **rmsconnector.contoso.com** e configurar esta entrada para utilizar um endereço IP no seu sistema de balanceamento de carga. Não existem requisitos especiais para este nome e não precisa de ser configurado nos próprios servidores do conector. A menos que os seus servidores Exchange e do SharePoint comuniquem com o conector através da Internet, este nome não precisa de resolver na Internet.
@@ -168,13 +169,13 @@ O nome de servidor do URL do conector pode ser qualquer nome dentro do espaço d
 > [!IMPORTANT]
 > Recomendamos que não altere este nome após ter configurado os servidores Exchange e do SharePoint para utilizar o conector, uma vez que teria de limpar as configurações de IRM destes servidores e, depois, reconfigurá-las.
 
-Depois de criar o nome no DNS e de o configurar para um endereço IP, configure o balanceamento de carga desse endereço, que redireciona o tráfego para os servidores do conector. Pode utilizar qualquer balanceador de carga baseado em IP para este fim, que inclua a funcionalidade Balanceamento de Carga na Rede (NLB) no Windows Server. Para mais informações, consulte o [Load Balancing Deployment Guide ](http://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx) (Guia de Implementação do Balanceamento de Carga – em inglês).
+Depois de criar o nome no DNS e de o configurar para um endereço IP, configure o balanceamento de carga desse endereço, que redireciona o tráfego para os servidores do conector. Pode utilizar qualquer balanceador de carga baseado em IP para este fim, que inclua a funcionalidade Balanceamento de Carga na Rede (NLB) no Windows Server. Para obter mais informações, consulte o [Load Balancing Deployment Guide ](http://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx) (Guia de Implementação do Balanceamento de Carga – em inglês).
 
 Utilize as seguintes definições para configurar o cluster com balanceamento de carga em rede (NLB):
 
 -   Portas: 80 (para HTTP) ou 443 (para HTTPS)
 
-    Para mais informações sobre quando utilizar HTTP ou HTTPS, consulte a secção seguinte.
+    Para obter mais informações sobre quando utilizar HTTP ou HTTPS, consulte a secção seguinte.
 
 -   Afinidade: nenhuma
 
@@ -182,7 +183,7 @@ Utilize as seguintes definições para configurar o cluster com balanceamento de
 
 O nome que define para o sistema com balanceamento de carga (para os servidores a executar o serviço do conector RMS) é o nome do conector RMS da sua organização que irá utilizar mais tarde, quando configurar os servidores no local para utilizar o Azure RMS.
 
-## Configurar o conector RMS para utilizar HTTPS
+## <a name="configuring-the-rms-connector-to-use-https"></a>Configurar o conector RMS para utilizar HTTPS
 > [!NOTE]
 > Este passo da configuração é opcional, mas é recomendado para uma segurança adicional.
 
@@ -199,10 +200,10 @@ Se utilizar a opção HTTPS, certifique-se de que todos os servidores que execut
 > -   Se utilizar uma AC autónoma ou adquirir este certificado a partir de outra empresa, consulte [Configuring Internet Server Certificates (IIS 7) (Configurar Certificados do Servidor de Internet (IIS 7) – em inglês)](http://technet.microsoft.com/library/cc731977%28v=ws.10%29.aspx) na biblioteca de documentos referente ao [Web Server (IIS)](http://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) no TechNet.
 > -   Para configurar o IIS para utilizar o certificado, consulte [Add a Binding to a Site (IIS 7) (Adicionar um Enlace a um Site (IIS 7) – em inglês)](http://technet.microsoft.com/library/cc731692.aspx) na biblioteca de documentos referente ao [Web Server (IIS)](http://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) no TechNet.
 
-## Configurar o conector RMS para um servidor proxy Web
+## <a name="configuring-the-rms-connector-for-a-web-proxy-server"></a>Configurar o conector RMS para um servidor proxy Web
 Se os servidores do seu conector estiverem instalados numa rede que não tem conectividade Internet direta e que necessita de configuração manual de um servidor proxy Web para o acesso à Internet de saída, tem de configurar o registo nestes servidores para o conector RMS.
 
-#### Para configurar o conector RMS para utilizar um servidor proxy Web
+#### <a name="to-configure-the-rms-connector-to-use-a-web-proxy-server"></a>Para configurar o conector RMS para utilizar um servidor proxy Web
 
 1.  Abra o editor de registo, por exemplo o Regedit, em cada servidor que executa o conector RMS.
 
@@ -214,7 +215,7 @@ Se os servidores do seu conector estiverem instalados numa rede que não tem con
 
 4.  Feche o editor de registo e, em seguida, reinicie o servidor ou execute o comando IISReset para reiniciar o IIS.
 
-## Instalar a ferramenta de administração do conector RMS em computadores administrativos
+## <a name="installing-the-rms-connector-administration-tool-on-administrative-computers"></a>Instalar a ferramenta de administração do conector RMS em computadores administrativos
 Pode executar a ferramenta de administração do conector RMS a partir de um computador que não tenha o conector RMS instalado, se esse computador cumprir os seguintes requisitos:
 
 -   Um computador físico ou virtual com o Windows Server 2012 ou Windows Server 2012 R2 (todas as edições), o Windows Server 2008 R2 ou Windows Server 2008 R2 Service Pack 1 (todas as edições), o Windows 8.1, o Windows 8 ou o Windows 7.
@@ -236,10 +237,10 @@ Para instalar a ferramenta de administração do conector RMS, execute os seguin
 Se ainda não tiver transferido estes ficheiros, pode fazê-lo no [Centro de Transferências da Microsoft](http://go.microsoft.com/fwlink/?LinkId=314106).
 
 
-## Passos seguintes
+## <a name="next-steps"></a>Passos seguintes
 Agora que o conector RMS está instalado e configurado, está pronto para configurar os seus servidores no local para utilizá-lo. Aceda a [Configuring servers for the Azure Rights Management connector](configure-servers-rms-connector.md) (Configurar servidores para o conector Azure Rights Management – em inglês).
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

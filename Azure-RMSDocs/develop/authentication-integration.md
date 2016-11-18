@@ -3,8 +3,9 @@ title: "Como registar-se e ativar o RMS na aplicação com o Azure AD | Azure RM
 description: "Descreve as noções básicas da autenticação de utilizador para a sua aplicação com capacidade para RMS."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,34 +15,34 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 2f4e0d1990362ab50d90b1a31c3b5db45d2fcdd1
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 96bf5f830c09bb6b2dd781e749a6ee6eaffdba31
 
 
 ---
 
-# Como registar-se e ativar o RMS na aplicação com o Azure AD
+# <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Como registar-se e ativar o RMS na aplicação com o Azure AD
 
 Este tópico irá guiá-lo sobre as noções básicas de registo da aplicação e de ativação do RMS através do portal do Azure, seguido da autenticação de utilizador com a Azure Active Directory Authentication Library (ADAL).
 
-## O que é a autenticação de utilizador
+## <a name="what-is-user-authentication"></a>O que é a autenticação de utilizador
 A autenticação de utilizador é um passo essencial para estabelecer a comunicação entre a aplicação do dispositivo e a infraestrutura de RMS. Este processo de autenticação utiliza o protocolo OAuth 2.0 padrão que requer peças chave de informação acerca do utilizador atual e do pedido de autenticação.
 
-## Registo através do portal do Azure
+## <a name="registration-via-azure-portal"></a>Registo através do portal do Azure
 Comece por seguir este guia para configurar o registo da aplicação através do portal do Azure, [Configurar o Azure RMS para a autenticação da ADAL](adal-auth.md). Certifique-se de que copia e guarda o **ID de cliente** e **Redireciona o URI** a partir deste processo para uma utilização posterior.
 
-## Concluir o seu contrato de licença de gestão de direitos (RMLA)
+## <a name="complete-your-rights-managagment-license-agreement-rmla"></a>Concluir o seu contrato de licença de gestão de direitos (RMLA)
 Antes de poder implementar a aplicação, tem de concluir um RMLA com a equipa do Microsoft Rights Management. Para obter informações detalhadas completas, veja a primeira secção do tópico, [Implementar em produção - Pedir um Contrato de Licença de Produção](deploying-your-application.md).
 
-## Implementar a autenticação de utilizador para a aplicação
+## <a name="implement-user-authentication-for-your-app"></a>Implementar a autenticação de utilizador para a aplicação
 Cada uma das APIs do RMS tem uma chamada de retorno que tem de ser implementada para ativar a autenticação do utilizador. O SDK RMS 4.2 utilizará, em seguida, a implementação de uma chamada de retorno quando o utilizador não fornecer um token de acesso, quando o seu token de acesso necessitar de ser atualizado ou quando o token de acesso tiver expirado.
 
-- Android - [AuthenticationRequestCallback](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) e [AuthenticationCompletionCallback](/information-protection/sdk/4.2/api/android/authenticationcompletioncallback#msipcthin2_authenticationcompletioncallback_interface_java).
-- iOS/OS X - [MSAuthenticationCallback](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc).
--  Windows Phone/Windows RT -  interface [IAuthenticationCallback](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_iauthenticationcallback).
+- Android - [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) e [AuthenticationCompletionCallback](https://msdn.microsoft.com/library/dn758250.aspx).
+- iOS/OS X - [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx).
+-  Windows Phone/Windows RT -  interface [IAuthenticationCallback](https://msdn.microsoft.com/library/microsoft.rightsmanagement.iauthenticationcallback.aspx).
 - Linux - interface [IAuthenticationCallback](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html).
 
-### Qual biblioteca utilizar para a autenticação
+### <a name="what-library-to-use-for-authentication"></a>Qual biblioteca utilizar para a autenticação
 Para poder implementar a sua chamada de retorno de autenticação, terá de transferir uma biblioteca adequada e configurar o ambiente de desenvolvimento para utilizá-la. Poderá encontrar no GitHub, as bibliotecas ADAL para estas plataformas.
 
 Cada um dos seguintes recursos contém orientações sobre a configuração do ambiente e a utilização da biblioteca.
@@ -55,7 +56,7 @@ Cada um dos seguintes recursos contém orientações sobre a configuração do a
 >[!NOTE]  
 > Recomendamos que utilize uma das ADAL, embora possa utilizar outras bibliotecas de autenticação.
 
-### Parâmetros de autenticação
+### <a name="authentication-parameters"></a>Parâmetros de autenticação
 
 A ADAL requer várias informações para autenticar com êxito um utilizador no Azure RMS (ou AD RMS). Estes são os parâmetros OAuth 2.0 padrão e normalmente são necessários em qualquer aplicação Azure AD. Encontrará as diretrizes atuais para a utilização da ADAL no ficheiro LEIA-ME dos repositórios do Github correspondentes, listados anteriormente.
 
@@ -66,7 +67,7 @@ A ADAL requer várias informações para autenticar com êxito um utilizador no 
 e provém do passo de registo anterior através do portal do Azure.
 - **URI de Redirecionamento** – fornece a biblioteca de autenticação com um destino URI para o código de autenticação. São necessários formatos específicos para iOS e para Android. Estes são explicados nos ficheiros LEIA-ME dos repositórios do GitHub correspondentes da ADAL. Este valor provém do passo de registo anterior através do portal do Azure.
 
->[!NOTE] 
+>[!NOTE]
 > O **âmbito** não é utilizado atualmente mas poderá ser e, por isso, está reservado para utilização futura.
 
     Android: `msauth://packagename/Base64UrlencodedSignature`
@@ -76,7 +77,7 @@ e provém do passo de registo anterior através do portal do Azure.
 >[!NOTE] 
 > Se a aplicação não seguir estas diretrizes, é provável que os fluxos de trabalho do Azure RMS e do Azure AD falhem e não sejam suportados pela Microsoft.com. Além disso, o Contrato de Licença de Rights Management (RMLA) pode ser violado se uma ID de Cliente inválida for utilizada numa aplicação de produção.
 
-### Qual deverá ser o aspeto de uma implementação de chamada de retorno de autenticação
+### <a name="what-should-an-authentication-callback-implementation-look-like"></a>Qual deverá ser o aspeto de uma implementação de chamada de retorno de autenticação
 **Exemplos de Código de Autenticação** – Este SDK tem o código de exemplo que mostra a utilização de chamadas de retorno de autenticação. Para comodidade do utilizador, estes exemplos de código são representados aqui, bem como em cada um dos seguintes tópicos relacionados.
 
 **Autenticação de utilizador do Android** – para obter mais informações, consulte [Exemplos de código do Android](android-code.md), **Passo 2** do primeiro cenário, “Consumir um ficheiro protegido por RMS”.
@@ -274,6 +275,6 @@ e provém do passo de registo anterior através do portal do Azure.
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

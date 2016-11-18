@@ -1,6 +1,8 @@
 ---
 title: "Restrições de HYOK | Azure Information Protection"
 description: Identify the limitations, prerequisites, and recommendations if you select AD RMS protection with Azure Information Protection. This solution is sometimes referred to as "hold your own key" (HYOK).
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/10/2016
 ms.topic: article
@@ -9,17 +11,17 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 translationtype: Human Translation
-ms.sourcegitcommit: 821f4c0bfbad4c88bea0fbe26807f8e50677069b
-ms.openlocfilehash: 44a7dc786b678844e58f2a60204853d86c8750a7
+ms.sourcegitcommit: f1bf7377e5e8079025dff638a185c825256a5cc7
+ms.openlocfilehash: 3a563eccb37cfd660c28fd2308749d1e71771f23
 
 
 ---
 
-# Requisitos e restrições de Tenha a sua própria chave (HYOK) para proteção do AD RMS
+# <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>Requisitos e restrições de Tenha a sua própria chave (HYOK) para proteção do AD RMS
 
 >*Aplica-se a: Azure Information Protection*
 
-**[Esta funcionalidade é ainda preliminar e as informações estão sujeitas a alterações. ]**
+**[Esta funcionalidade é ainda preliminar e as informações estão sujeitas a alterações.]**
 
 Quando protege os documentos e e-mails mais confidenciais, normalmente vai fazê-lo através da aplicação de proteção Azure Rights Management para beneficiar do seguinte:
 
@@ -31,7 +33,7 @@ Quando protege os documentos e e-mails mais confidenciais, normalmente vai fazê
 
 - Controlo, revogação e notificação por e-mail para documentos confidenciais que tenha partilhado.
 
-O Azure RMS protege os documentos e e-mails da sua organização através de uma chave privada para a organização gerida pela Microsoft (predefinição) ou gerida por si ("traga a sua própria chave" ou cenário BYOK). As informações que proteger com o Azure RMS nunca são enviadas para a nuvem; os documentos e e-mails protegidos não são armazenados no Azure, a menos que os armazene aí explicitamente ou utilize outro serviço em nuvem que os armazene no Azure. Para mais informações sobre as opções de chave de inquilino, consulte [Planear e implementar a sua chave de inquilino do Azure Information Protection](../plan-design/plan-implement-tenant-key.md). 
+O Azure RMS protege os documentos e e-mails da sua organização através de uma chave privada para a organização gerida pela Microsoft (predefinição) ou gerida por si ("traga a sua própria chave" ou cenário BYOK). As informações que proteger com o Azure RMS nunca são enviadas para a nuvem; os documentos e e-mails protegidos não são armazenados no Azure, a menos que os armazene aí explicitamente ou utilize outro serviço em nuvem que os armazene no Azure. Para obter mais informações sobre as opções de chave de inquilino, consulte [Planear e implementar a sua chave de inquilino do Azure Information Protection](../plan-design/plan-implement-tenant-key.md). 
 
 No entanto, alguns clientes podem ter de proteger os documentos e e-mails selecionados com uma chave alojada no local. Por exemplo, isto pode ser necessário por motivos de regulamentação e conformidade. 
 
@@ -44,7 +46,7 @@ Neste cenário de HYOK, as políticas de direitos e a chave privada da organiza�
 
 Os utilizadores não saberão quando uma etiqueta utiliza a proteção do AD RMS em vez da proteção do Azure RMS. Devido às restrições incluídas na proteção do AD RMS, certifique-se de que fornece orientações simples para quando os utilizadores devem selecionar etiquetas que aplicam a proteção do AD RMS.
 
-## Limitações ao utilizar o HYOK
+## <a name="limitations-when-using-hyok"></a>Limitações ao utilizar o HYOK
 
 Além de não suportar as vantagens indicadas que obtém quando utiliza a proteção do Azure RMS, utilizar a proteção do AD RMS com o Azure Information Protection tem as seguintes limitações:
 
@@ -54,7 +56,7 @@ Além de não suportar as vantagens indicadas que obtém quando utiliza a prote�
 
     Se a opção Não Reencaminhar for aplicada por uma etiqueta ou manualmente pelos utilizadores, a opção poderá ser aplicada pela sua implementação do AD RMS em vez do serviço Azure Rights Management pretendido. Neste cenário, as pessoas com quem partilha externamente não poderão abrir mensagens de e-mail que têm esta opção Não Reencaminhar aplicada.
 
-## Requisitos para HYOK
+## <a name="requirements-for-hyok"></a>Requisitos para HYOK
 
 Verifique se a sua implementação do AD RMS cumpre os requisitos seguintes para fornecer proteção do AD RMS para o Azure Information Protection.
 
@@ -84,7 +86,7 @@ Verifique se a sua implementação do AD RMS cumpre os requisitos seguintes para
 Para obter informações de implementação e instruções para o AD RMS, veja [Serviços de Gestão de Direitos do Active Directory](https://technet.microsoft.com/library/hh831364.aspx) na biblioteca do Windows Server. 
 
 
-## Localizar as informações para especificar a proteção do AD RMS com uma etiqueta do Azure Information Protection
+## <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Localizar as informações para especificar a proteção do AD RMS com uma etiqueta do Azure Information Protection
 
 Quando configura uma etiqueta para a proteção do AD RMS, tem de especificar o GUID do modelo e o URL de licenciamento do cluster do AD RMS. Pode localizar estes valores na consola dos Serviços de Gestão de Direitos do Active Directory:
 
@@ -94,7 +96,7 @@ Quando configura uma etiqueta para a proteção do AD RMS, tem de especificar o 
     
     Se tiver um valor de licenciamento de extranet, bem como um valor de licenciamento de intranet e forem diferentes: especifique o valor de extranet apenas se for partilhar documentos ou e-mails protegidos com parceiros que definiu com confianças ponto a ponto explícitas. Caso contrário, utilize o valor de intranet e certifique-se de que todos os computadores cliente que utilizam a proteção do AD RMS com o Azure Information Protection se ligam através de uma ligação de intranet (por exemplo, computadores remotos que utilizam uma ligação VPN).
 
-## Passos seguintes
+## <a name="next-steps"></a>Passos seguintes
 
 Para ler mais informações sobre esta funcionalidade de pré-visualização, veja o anúncio de mensagem de blogue, [Azure Information Protection com HYOK (Tenha a Sua Própria Chave)](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/).
 
@@ -102,6 +104,6 @@ Para configurar uma etiqueta para a proteção do AD RMS, veja [Como configurar 
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

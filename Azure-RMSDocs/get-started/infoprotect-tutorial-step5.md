@@ -3,6 +3,7 @@ title: "Passo 5 do tutorial de início rápido | Azure Information Protection"
 description: "Passo 5 de um tutorial de introdução, com uma duração de aproximadamente 30 minutos, para experimentar rapidamente o Microsoft Azure Information Protection na sua organização."
 keywords: 
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: get-started-article
@@ -13,14 +14,14 @@ ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1af9f3b3451bf8ceafbaf3cddd2b26c37fe9d597
-ms.openlocfilehash: d607c19d37da6b6fb23513067e9e30f33f0260de
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 5844ddd3f675cdc5a88de3abc3170d7e8a89aee9
 
 
 ---
 
 
-# Passo 5: ver a partilha de ficheiros protegidos em ação e controlar o seu documento 
+# <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Passo 5: ver a partilha de ficheiros protegidos em ação e controlar o seu documento 
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -28,7 +29,7 @@ Para este passo final do tutorial, localize um documento do Word que já tenha c
 
 Em seguida, está pronto para partilhar de forma segura este documento por e-mail. 
 
-## Para partilhar de forma segura o seu documento por e-mail
+## <a name="to-safely-share-your-document-by-email"></a>Para partilhar de forma segura o seu documento por e-mail
 
 1.  No Word, abra o documento. Verá que a etiqueta predefinida **Interno** volta a ser aplicada automaticamente. 
 
@@ -40,7 +41,7 @@ Em seguida, está pronto para partilhar de forma segura este documento por e-mai
 
     ![Passo 5 do tutorial de início rápido do Azure Information Protection – caixa de diálogo partilhar protegido](../media/example-share-protected-dialog.png)
 
-3. Na caixa **UTILIZADORES**, escreva um ou mais endereços de e-mail empresariais, como faria ao enviar um documento a alguém com quem a sua organização trabalha. Em alternativa, pode especificar o endereço de e-mail de um colega. Certifique-se de que especifica um endereço de e-mail empresarial, tal como **juliam@contoso.com** ou **p.barbosa@fabrikam.com**, porque atualmente o Azure Information Protection não suporta endereços de e-mail pessoais. 
+3. Na caixa **UTILIZADORES**, escreva um ou mais endereços de e-mail empresariais, como faria ao enviar um documento a alguém com quem a sua organização trabalha. Em alternativa, pode especificar o endereço de e-mail de um colega. Certifique-se de que especifica um endereço de e-mail empresarial, tal como **janetm@contoso.com** ou **p.dover@fabrikam.com**, porque atualmente o Azure Information Protection não suporta endereços de e-mail pessoais. 
 
     Não se preocupe se a pessoa a quem está a enviar também tem ou não o Azure Information Protection.
 
@@ -68,13 +69,13 @@ Em seguida, está pronto para partilhar de forma segura este documento por e-mai
 
 Agora que enviou o documento protegido, pode pedir aos destinatários para o abrirem assim que o receberem. No entanto, não feche o Word, pois utilizá-lo-emos novamente no procedimento final para controlar o documento partilhado.
 
-## Pedir aos destinatários para abrir o documento enviado por e-mail
+## <a name="ask-your-recipients-to-open-the-emailed-document"></a>Pedir aos destinatários para abrir o documento enviado por e-mail
 
 Os destinatários podem utilizar vários dispositivos para ler o documento protegido que enviou como anexo de e-mail. Os dispositivos incluem iPads, iPhones, tablets e telemóveis Android, computadores Mac, bem como computadores Windows.
 
 Peça-lhes para lerem a mensagem de e-mail que enviou. Partindo do princípio que esta é a primeira vez que receberam anexos protegidos pelo Rights Management, peça-lhes para clicarem na ligação de instruções. Em seguida, verão a página [Bem-vindo ao Microsoft RMS!](https://portal.azurerms.com/#/rmshelp) com instruções para instalarem a aplicação de partilha RMS e, se necessário, para se inscreverem numa conta gratuita. Estarão assim preparados para ler o anexo protegido.
 
-### Instruções para o destinatário: para ver o anexo do documento protegido
+### <a name="instructions-for-recipient-to-view-the-protected-document-attachment"></a>Instruções para o destinatário: para ver o anexo do documento protegido
 
 1. Abra um dos anexos para ler o documento:
     
@@ -86,7 +87,7 @@ Peça-lhes para lerem a mensagem de e-mail que enviou. Partindo do princípio qu
     
         - Abra o documento que tem uma extensão de nome de ficheiro**.ppdf**.
 
-2.  Se lhe for pedido o nome de utilizador e a palavra-passe, introduza o nome de utilizador no mesmo formato que o endereço de e-mail que foi utilizado para lhe enviar a mensagem de e-mail e o anexo. Por exemplo, **juliam@contoso.com** ou **p.barbosa@fabrikam.com**. Para a palavra-passe, escreva a que especificou quando se inscreveu no RMS para indivíduos. Em alternativa, se a sua organização tiver um serviço em nuvem como o Office 365 ou utilizar o Azure, introduza a palavra-passe profissional habitual.
+2.  Se lhe for pedido o nome de utilizador e a palavra-passe, introduza o nome de utilizador no mesmo formato que o endereço de e-mail que foi utilizado para lhe enviar a mensagem de e-mail e o anexo. Por exemplo, **janetm@contoso.com** ou **p.dover@fabrikam.com**. Para a palavra-passe, escreva a que especificou quando se inscreveu no RMS para indivíduos. Em alternativa, se a sua organização tiver um serviço em nuvem como o Office 365 ou utilizar o Azure, introduza a palavra-passe profissional habitual.
 
 3. Leia os conteúdos do documento quando este for aberto. Uma vez que é só de leitura, não é possível alterar os conteúdos.
 
@@ -94,7 +95,7 @@ Como passo opcional, o destinatário pode reencaminhar o e-mail para outras pess
 
 Agora que o destinatário abriu o anexo e, opcionalmente, o reencaminhou para outra pessoa, aguarde a receção de uma notificação de e-mail a comunicar esta atividade. No entanto, é fácil perder mensagens de e-mail ao longo do tempo. Como tal, para melhor controlar quem acede ao documento, utilize o site de controlo de documentos, o qual é descrito no último procedimento.
 
-## Para controlar o documento protegido
+## <a name="to-track-your-protected-document"></a>Para controlar o documento protegido
 
 1.  De volta ao Word, no separador **Base**, no grupo **RMS**, clique em **Partilhar Protegido** e, em seguida, clique em **Controlar Utilização** no menu:
 
@@ -119,12 +120,12 @@ Pode voltar a este site para controlar mais atividades do documento protegido ou
 |Se pretender mais informações|Informações adicionais|
 |--------------------------------|--------------------------|
 |Instruções completas e métodos alternativos para proteger ficheiros que partilha por e-mail|[Proteger um ficheiro que partilha por e-mail ao utilizar a aplicação de partilha Rights Management](../rms-client/sharing-app-protect-by-email.md)|
-|Acerca das opções na caixa de diálogo **partilhar protegido**|[Opções da caixa de diálogo para a aplicação de partilha Rights Management](../rms-client/sharing-app-dialog-box.md)|
-|Acerca da conta gratuita para outros utilizadores se inscreverem|[RMS para indivíduos e Azure Rights Management](../understand-explore/rms-for-individuals.md)|
+|Acerca das opções na caixa de diálogo **partilhar protegido**|[Opções da caixa de diálogo da aplicação de partilha Rights Management](../rms-client/sharing-app-dialog-box.md)|
+|Acerca da conta gratuita para outros utilizadores se inscreverem|[RMS para utilizadores individuais e Azure Rights Management](../understand-explore/rms-for-individuals.md)|
 |Acerca da utilização do site de controlo de documentos|[Controlar e revogar os documentos](../rms-client/sharing-app-track-revoke.md)
 
 
-## Passos Seguintes
+## <a name="next-steps"></a>Passos Seguintes
 
 Agora que viu a política predefinida do Azure Information Protection, como personalizá-la e como funciona a etiquetagem para um documento do Word, experimente algumas das outras definições e saiba como funcionam nas outras aplicações do Office que suportam o Azure Information Protection: Excel, PowerPoint, Outlook. Se estas aplicações tiverem sido abertas quando instalou o cliente do Azure Information Protection, feche-as e volte a abri-las antes de tentar utilizá-las com o Azure Information Protection.
 
@@ -133,6 +134,6 @@ Experimente partilhar mais documentos e controlar a forma como estão a ser util
 Poderá ser-lhe útil ler algumas das [perguntas mais frequentes](faqs.md) do Azure Information Protection e explorar alguns dos outros artigos da documentação. No entanto, se estiver pronto para iniciar a implementação do Azure Information Protection para a sua organização, o passo seguinte deverá ser o [plano de implementação do Azure Information Protection](../plan-design/deployment-roadmap.md). 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

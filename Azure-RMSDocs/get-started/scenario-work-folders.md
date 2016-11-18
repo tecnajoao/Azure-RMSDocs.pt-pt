@@ -2,6 +2,7 @@
 title: "Cenário – Configurar pastas de trabalho para proteção persistente | Azure Information Protection"
 description: "Este cenário e a documentação de apoio do utilizador utilizam a proteção Azure Rights Management para aplicar proteção persistente aos documentos do Office contidos em Pastas de Trabalho."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: 1f189345-a69e-4bf5-8a45-eb0fe5bb542b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea299f402e5e188b498bf6e3cacf9d4dc7e0f6e8
-ms.openlocfilehash: 966c1b109a02f8193de16eae6f2eacec757f533b
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 0d4b1cdc2620a1f8cf9ddced24a898a38d8e9b57
 
 
 ---
 
-# Cenário – Configurar pastas de trabalho para proteção persistente
+# <a name="scenario-configure-work-folders-for-persistent-protection"></a>Cenário – Configurar pastas de trabalho para proteção persistente
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -41,23 +42,23 @@ As instruções aplicam-se às seguintes circunstâncias:
 
 -   Caso os ficheiros tenham de ser partilhados com pessoas que não estão especificadas no modelo de política de direitos (por exemplo, utilizadores de outra organização), os utilizadores têm de aplicar uma nova política de direitos para substituir a proteção da política de direitos original.
 
-## Instruções de implementação
+## <a name="deployment-instructions"></a>Instruções de implementação
 ![Instruções do administrador para a Implementação Rápida do Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Certifique-se de que os seguintes requisitos são cumpridos e, em seguida, siga as instruções dos procedimentos de suporte antes de avançar para a documentação do utilizador.
 
-## Requisitos para este cenário
+## <a name="requirements-for-this-scenario"></a>Requisitos para este cenário
 Para que as instruções para este cenário funcionem, é necessário o seguinte:
 
 |Requisito|Se precisar de mais informações|
 |---------------|--------------------------------|
-|O Azure Rights Management está ativado|[Activating Azure Rights Management (Ativar o Azure Rights Management – em inglês)](../deploy-use/activate-service.md)|
-|Sincronizou as suas contas de utilizador do Active Directory no local com o Azure Active Directory ou o Office 365, incluindo os respetivos endereços de e-mail. Isto é necessário para todos os utilizadores que utilizam Pastas de Trabalho.|[Preparação para o Azure Information Protection](../plan-design/prepare.md)|
+|O Azure Rights Management está ativado|[Ativar o Azure Rights Management](../deploy-use/activate-service.md)|
+|Sincronizou as suas contas de utilizador do Active Directory no local com o Azure Active Directory ou o Office 365, incluindo o respetivo endereço de e-mail. Isto é necessário para todos os utilizadores que utilizam Pastas de Trabalho.|[Preparação para o Azure Information Protection](../plan-design/prepare.md)|
 |Um dos seguintes:<br /><br />- Para utilizar um modelo predefinido para todos os utilizadores que não permita que os utilizadores apliquem uma nova política de direitos: o modelo predefinido não está arquivado, **&lt;nome da organização&gt; – Confidencial**<br /><br />- Para utilizar um modelo personalizado adequado para os utilizadores aplicarem uma nova política de direitos: utilize as instruções que se seguem para criar um modelo personalizado|[Configurar modelos personalizados para o serviço Azure Rights Management](../deploy-use/configure-custom-templates.md)|
-|O conector Rights Management está instalado, autorizado para o computador Windows Server e configurado para a função **Servidor FCI**.|[Deploying the Azure Rights Management connector (Implementar o conector Azure Rights Management – em inglês)](../deploy-use/deploy-rms-connector.md)|
-|A aplicação de partilha Rights Management está implementada nos computadores dos utilizadores que utilizam o Windows|[Automatic deployment for the Microsoft Rights Management sharing application (Implementação automática da aplicação de partilha Microsoft Rights Management – em inglês)](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
+|O conector Rights Management está instalado, autorizado para o computador Windows Server e configurado para a função **Servidor FCI**.|[Implementar o conetor Azure Rights Management](../deploy-use/deploy-rms-connector.md)|
+|A aplicação de partilha Rights Management está implementada nos computadores dos utilizadores que executam o Windows|[Implementação automática da aplicação de partilha Microsoft Rights Management](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 
-### Configurar o modelo de política de direitos personalizado para que os utilizadores possam partilhar ficheiros de Pastas de Trabalho fora da organização
+### <a name="configuring-the-custom-rights-policy-template-so-that-users-can-share-work-folders-files-outside-the-organization"></a>Configurar o modelo de política de direitos personalizado para que os utilizadores possam partilhar ficheiros de Pastas de Trabalho fora da organização
 
 1.  Inicie sessão no portal clássico do Azure e navegue para os modelos do Azure Rights Management.
 
@@ -79,11 +80,11 @@ Para que as instruções para este cenário funcionem, é necessário o seguinte
 
 5.  Guarde o modelo.
 
-### Configurar Pastas de Trabalho para aplicar proteção persistente a ficheiros do Office
+### <a name="configuring-work-folders-to-apply-persistent-protection-to-office-file"></a>Configurar Pastas de Trabalho para aplicar proteção persistente a ficheiros do Office
 
 1.  Implemente Pastas de Trabalho para os seus utilizadores, para que os ficheiros guardados localmente sejam sincronizados com uma pasta de servidor de ficheiros. Esta ação é conhecida como *partilha de sincronização*. A partilha de sincronização no servidor de ficheiros não pode estar no mesmo servidor que executa o conector Rights Management.
 
-    Esta solução precisa do serviço de função de Pastas de Trabalho no Gestor de Servidor, para a função Serviços de Ficheiros e Armazenamento. O servidor de ficheiros tem de executar o Windows Server 2012 R2 ou uma versão posterior, podendo, além disso, estar no local ou numa máquina virtual no Azure. Para mais informações sobre as Pastas de Trabalho, consulte [Descrição Geral das Pastas de Trabalho](https://technet.microsoft.com/library/dn265974.aspx).
+    Esta solução precisa do serviço de função de Pastas de Trabalho no Gestor de Servidor, para a função Serviços de Ficheiros e Armazenamento. O servidor de ficheiros tem de executar o Windows Server 2012 R2 ou uma versão posterior, podendo, além disso, estar no local ou numa máquina virtual no Azure. Para obter mais informações sobre as Pastas de Trabalho, consulte [Descrição Geral das Pastas de Trabalho](https://technet.microsoft.com/library/dn265974.aspx).
 
     Para obter instruções de implementação, consulte [Implementar Pastas de Trabalho](https://technet.microsoft.com/library/dn528861.aspx). Certifique-se de que seleciona a encriptação incorporada (a opção **Encriptar Pastas de Trabalho**), que será aplicada juntamente com a encriptação do Azure Rights Management. Além disso:
 
@@ -109,7 +110,7 @@ Para que as instruções para este cenário funcionem, é necessário o seguinte
 
 4.  Se decidiu proteger apenas determinados ficheiros através da Infraestrutura de Classificação de Ficheiros, configure a sua agenda e regra de classificação e, em seguida, modifique a tarefa de gestão de ficheiros para incluir esta propriedade de classificação como condição.
 
-## Instruções da documentação do utilizador
+## <a name="user-documentation-instructions"></a>Instruções da documentação do utilizador
 Se não for necessário partilhar os ficheiros que está a proteger através do Azure Rights Management com pessoas externas à sua organização, poderá fornecer aos utilizadores apenas as instruções sobre como utilizar as Pastas de Trabalho. Quando os utilizadores abrem os ficheiros que estão protegidos pelo Azure Rights Management e o modelo predefinido, os ficheiros são abertos no Office como habitualmente. A única diferença é que poderá ser pedido aos utilizadores que efetuem a autenticação e estes verão uma barra de informações na parte superior do documento que os informa de que os conteúdos contêm informações de propriedade destinadas apenas a utilizadores internos.
 
 Se tiver configurado o modelo personalizado conforme indicado neste cenário, os utilizadores verão a descrição do modelo na barra de informações: **Estes conteúdos estão protegidos por Pastas de Trabalho e a sua utilização está restrita aos funcionários da empresa. Para partilhar estes conteúdos com pessoas externas à organização, anexe o documento a uma mensagem de e-mail e utilize a função Partilhar Protegido.** Embora esta descrição forneça um resumo de como partilhar o ficheiro fora da organização, os utilizadores provavelmente precisarão de instruções detalhadas para realizar esta ação, especialmente nas primeiras vezes que o fizerem. Para conseguir este cenário, utilize as instruções do administrador e do utilizador final em [Scenario – Share an Office file with users in another organization (Cenário – Partilhar um ficheiro do Office com os utilizadores de outra organização – em inglês)](scenario-share-office-file-externally.md).
@@ -122,6 +123,6 @@ Se tiver configurado o modelo personalizado conforme indicado neste cenário, os
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

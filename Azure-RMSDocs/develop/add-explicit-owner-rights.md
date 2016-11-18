@@ -3,6 +3,7 @@ title: "Procedimentos sobre como adicionar direitos de proprietário explícitos
 description: Your application should explicitly add "Owner" rights when creating a license from scratch.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,17 +15,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8be965d76578c28457eee207b56e5da83f7eb468
-ms.openlocfilehash: 36c0bece4fb99e4d92fcda0c57da1b3cee11e37a
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 2fa260480eaa26a529a058b597657216572b4cb8
 
 
 ---
 
-# Procedimentos: adicionar direitos de proprietário explícitos
+# <a name="howto-add-explicit-owner-rights"></a>Procedimentos: adicionar direitos de proprietário explícitos
 
 A aplicação deve adicionar explicitamente direitos de "Proprietário" quando criar uma licença a partir do zero com [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx).
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Quando a aplicação estiver a criar um identificador de licença através de [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx), tem também de conceder ao proprietário direitos completos (permissões) explicitamente.
 
@@ -33,16 +34,16 @@ Quando a aplicação estiver a criar um identificador de licença através de [I
 
 O código de exemplo seguinte mostra apenas os passos envolvidos na criação e adição de direitos específicos a uma determinada licença.
 
-## Instruções
+## <a name="instructions"></a>Instruções
  
-## Passo 1: Cenário de exemplo
+## <a name="step-1-example-scenario"></a>Passo 1: Cenário de exemplo
 
 Neste exemplo, os direitos necessários são adicionados a uma licença criada com [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx). O exemplo mostra a criação e a atribuição de direitos à licença através de uma lista de direitos.
 
 Os dois direitos seguintes são adicionados a estes utilizadores:
 
--   Permissões de *leitura* atribuídas a joao@contoso.com
--   Permissões *completas* atribuídas a mariana\_correia@contoso.com
+-   Permissões de *leitura* atribuídas a joe@contoso.com
+-   Permissões *completas* atribuídas a Mariana\_kay@contoso.com
 
         // Create User Rights structure
         IPC_USER_RIGHTS ownerRightForOwner = {0};
@@ -105,7 +106,7 @@ Os dois direitos seguintes são adicionados a estes utilizadores:
 
 
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 - [Notas do programador](developer-notes.md)
 - [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
@@ -116,6 +117,6 @@ Os dois direitos seguintes são adicionados a estes utilizadores:
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

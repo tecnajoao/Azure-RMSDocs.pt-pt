@@ -3,6 +3,7 @@ title: Instalar o SDK | Azure RMS
 description: "Este tópico descreve o processo de instalação das ferramentas de programação."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,19 +15,19 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 8a118e4b5174251122a5798b2674d0c6e79017be
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 8ac3478738693cbc8119ee756f2b0ac566661bea
 
 
 ---
 
-# Instalar o SDK
+# <a name="install-the-sdk"></a>Instalar o SDK
 
 Este tópico descreve o processo de instalação das ferramentas de programação.
 
-## Instruções
+## <a name="instructions"></a>Instruções
 
-### Instalar as ferramentas de programação
+### <a name="install-the-developer-tools"></a>Instalar as ferramentas de programação
 
 1.  Transfira o [SDK Rights Management Services 2.1](http://www.microsoft.com/en-us/download/details.aspx?id=38397) do Centro de Transferências da Microsoft, com o cuidado de escolher a versão de arquitetura correta para o seu computador.
 2.  Execute o pacote do instalador a partir da sua localização de instalação:
@@ -37,7 +38,7 @@ Este tópico descreve o processo de instalação das ferramentas de programaçã
 
 Para obter mais informações sobre os ficheiros instalados no seu sistema pelo ficheiro “setup\_sdk.exe”, consulte [Ficheiros do ambiente de desenvolvimento](sdk-elements.md)
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Ficheiros do ambiente de desenvolvimento](sdk-elements.md)
  
@@ -46,6 +47,6 @@ Para obter mais informações sobre os ficheiros instalados no seu sistema pelo 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -2,6 +2,7 @@
 title: "Cenário – Proteger alguns dos seus ficheiros mais importantes | Azure Information Protection"
 description: "Este cenário e a documentação do utilizador associada utilizam o Azure Rights Management para proteger de forma manual e personalizada alguns ficheiros que tenha identificado como sendo os mais importantes e que requerem o mais elevado nível de proteção contra acesso não autorizado."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f5c138b7a27c7577e5bff23d521ba36264ecc2a
-ms.openlocfilehash: 6687ed42bca5e773d6bbc97285f12e3c91ff9f32
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: ad75734c28c51ac68697f96e0e50a5d90314b76e
 
 
 ---
 
-# Cenário – Proteger alguns dos seus ficheiros mais importantes
+# <a name="scenario-secure-your-most-few-valuable-files"></a>Cenário – Proteger alguns dos seus ficheiros mais importantes
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -28,7 +29,7 @@ As instruções aplicam-se às seguintes circunstâncias:
 
 -   Identificou o pequeno conjunto de ficheiros que pretende proteger.
 
--   Os ficheiros estão num dos formatos de ficheiro do Office que suportam o Rights Management. Se os ficheiros estiverem noutros formatos de ficheiro (por exemplo, ficheiros CAD), certifique-se de que esses formatos suportam o Azure RMS e de que implementa aplicações que suportam nativamente o Azure RMS. Para mais informações, consulte [Como as Aplicações Suportam o serviço Azure Rights Management](../understand-explore/applications-support.md).
+-   Os ficheiros estão num dos formatos de ficheiro do Office que suportam o Rights Management. Se os ficheiros estiverem noutros formatos de ficheiro (por exemplo, ficheiros CAD), certifique-se de que esses formatos suportam o Azure RMS e de que implementa aplicações que suportam nativamente o Azure RMS. Para obter mais informações, consulte [Como as Aplicações Suportam o serviço Azure Rights Management](../understand-explore/applications-support.md).
 
 -   Os ficheiros contêm informações delicadas e altamente confidenciais que devem estar acessíveis apenas para algumas pessoas.
 
@@ -38,12 +39,12 @@ As instruções aplicam-se às seguintes circunstâncias:
 
 -   O administrador deve poder controlar quem está a aceder aos ficheiros e quando, bem como revogar o acesso, se necessário.
 
-## Instruções de implementação
+## <a name="deployment-instructions"></a>Instruções de implementação
 ![Instruções do administrador para a Implementação Rápida do Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Certifique-se de que os seguintes requisitos são cumpridos e, em seguida, siga as instruções dos procedimentos de suporte antes de avançar para a documentação do utilizador.
 
-## Requisitos para este cenário
+## <a name="requirements-for-this-scenario"></a>Requisitos para este cenário
 Para este cenário, é necessário que os seguintes aspetos estejam implementados:
 
 |Requisito|Se precisar de mais informações|
@@ -55,7 +56,7 @@ Para este cenário, é necessário que os seguintes aspetos estejam implementado
 |Os utilizadores autorizados têm o Office 2013 como a versão mínima|Se os utilizadores tiverem o Office 2010, também têm de instalar a aplicação de partilha Rights Management.|
 |A sua subscrição do Azure Information Protection inclui controlo de documentos|Se a sua subscrição não incluir a revogação e o controlo de documentos, não poderá utilizar o site de controlo de documentos para ver quem está a aceder a estes documentos e revogar o acesso, se necessário. Neste caso, compre uma subscrição que suporte o controlo de documentos ou aceite esta limitação. Também poderá considerar as funcionalidades de [registo de utilização](../deploy-use/log-analyze-usage.md) do serviço Azure Rights Management, que podem fornecer informações tais como quem acedeu a cada ficheiro e quando o fez, para o ajudar a detetar um potencial comportamento suspeito.<br /><br />Consulte a [lista de funcionalidades](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) no site do Azure Information Protection.|
 
-### Para configurar o modelo personalizado
+### <a name="to-configure-the-custom-template"></a>Para configurar o modelo personalizado
 
 1.  No portal clássico do Azure: crie um novo modelo personalizado para o Azure Rights Management que contenha estes valores e definições:
 
@@ -69,7 +70,7 @@ Para este cenário, é necessário que os seguintes aspetos estejam implementado
 
 2.  Publique o novo modelo.
 
-### Para proteger os ficheiros no local
+### <a name="to-protect-the-files-inplace"></a>Para proteger os ficheiros no local
 
 1.  No Explorador de Ficheiros, navegue para a primeira pasta que contém os ficheiros a proteger:
 
@@ -90,7 +91,7 @@ Para obter mais informações sobre como proteger ficheiros no local, consulte [
 > [!TIP]
 > Se o número de ficheiros que quer proteger for demasiado elevado para executar este processo manual, considere utilizar a [ferramenta de Proteção RMS](https://www.microsoft.com/en-us/download/details.aspx?id=47256) para proteger os ficheiros em volume com o modelo.
 
-### Para monitorizar e, se necessário, revogar o acesso aos ficheiros
+### <a name="to-monitor-and-if-necessary-revoke-access-to-the-files"></a>Para monitorizar e, se necessário, revogar o acesso aos ficheiros
 
 1.  No Explorador de Ficheiros, clique com o botão direito do rato no ficheiro protegido, selecione **Proteger com RMS** e, em seguida, selecione **Controlar a Utilização**.
 
@@ -98,7 +99,7 @@ Para obter mais informações sobre como proteger ficheiros no local, consulte [
 
 3.  Verifique quem acedeu a esse ficheiro e aos outros ficheiros que protegeu, prestando especial atenção a tentativas falhadas caso indiquem um comportamento suspeito. Se considerar adequado, pode revogar o acesso a cada ficheiro.
 
-## Instruções da documentação do utilizador
+## <a name="user-documentation-instructions"></a>Instruções da documentação do utilizador
 Não existem instruções específicas a dar aos utilizadores para este cenário, uma vez que estes ficheiros não requerem qualquer ação especial por parte deles. Os ficheiros foram protegidos por si e serão monitorizados por si. No entanto, poderá ter de informar os utilizadores e os canais de suporte sobre os ficheiros que estão protegidos e como esta proteção pode restringir a utilização dos documentos. Por exemplo, se um utilizador autorizado não tiver ligação à Internet, não conseguirá abrir o ficheiro.
 
 Utilizando o modelo seguinte, copie e cole o anúncio numa comunicação destinada aos utilizadores finais e efetue estas alterações:
@@ -113,7 +114,7 @@ A documentação de exemplo mostra que aspeto este anúncio poderá ter para os 
 
 ![Modelo de documentação do utilizador para a Implementação Rápida do Azure RMS](../media/AzRMS_UsersBanner.png)
 
-### Anúncio de TI: proteger os documentos confidenciais da &lt;nome da organização&gt;
+### <a name="it-announcement-protecting-ltorganization-namegts-top-secret-documents"></a>Anúncio de TI: proteger os documentos confidenciais da &lt;nome da organização&gt;
 Os ficheiros seguintes estão agora sujeitos a um nível muito elevado de proteção, para que apenas os &lt;utilizadores restritos&gt; possam aceder a estes ficheiros e alterá-los. Para ajudar a protegê-los do acesso não autorizado, a aplicação solicitará automaticamente autorização sempre que abrir estes ficheiros, pelo que agora tem de ter uma ligação à Internet para os abrir, além de poderem ser-lhe pedidas as suas credenciais:
 
 -   &lt;documento confidencial, tipo ou localização 1&gt;
@@ -126,10 +127,10 @@ Os ficheiros seguintes estão agora sujeitos a um nível muito elevado de prote�
 
 -   Se não conseguir aceder a estes ficheiros ou se reparar em alterações suspeitas aos mesmos, &lt;ação e detalhes de contacto&gt;.
 
-#### Exemplo de documentação do utilizador personalizada
+#### <a name="example-customized-user-documentation"></a>Exemplo de documentação do utilizador personalizada
 ![Exemplo de documentação do utilizador para a Implementação Rápida do Azure RMS](../media/AzRMS_ExampleBanner.png)
 
-##### Anúncio de TI: proteger os documentos confidenciais da VanArsdel
+##### <a name="it-announcement-protecting-vanarsdels-top-secret-documents"></a>Anúncio de TI: proteger os documentos confidenciais da VanArsdel
 Os ficheiros seguintes estão agora sujeitos a um nível muito elevado de proteção, para que apenas as pessoas incluídas na linha Para desta mensagem de e-mail possam aceder a estes ficheiros e alterá-los. Para ajudar a protegê-los do acesso não autorizado, as aplicações solicitarão automaticamente autorização sempre que abrir estes ficheiros, pelo que agora tem de ter uma ligação à Internet para os abrir, além de poderem ser-lhe pedidas as suas credenciais:
 
 -   Especificações da conceção para o nome de código “Mercúrio”
@@ -147,6 +148,6 @@ Os ficheiros seguintes estão agora sujeitos a um nível muito elevado de prote�
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

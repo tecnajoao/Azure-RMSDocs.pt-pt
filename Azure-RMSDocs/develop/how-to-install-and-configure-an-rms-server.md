@@ -3,6 +3,7 @@ title: Procedimentos para instalar, configurar e testar com um servidor RMS | Az
 description: "Instale e configure e Servidor RMS para testar a sua aplicação com capacidade para direitos."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,19 +15,19 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b7ee098ceaa8ac6b1e0d5d6cbe090042510aa89b
-ms.openlocfilehash: ac7dd8592d6e11905744c4f4e0171fd5b5945c51
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 47f9cf725b864ee22afc7605702992b08cb686dc
 
 
 ---
 
-# Procedimentos: instalar, configurar e testar com um servidor RMS
+# <a name="howto-install-configure-and-test-with-an-rms-server"></a>Procedimentos: instalar, configurar e testar com um servidor RMS
 
 Este tópico inclui os passos para ligação a um servidor RMS ou ao Azure RMS para fins de testar da sua aplicação com capacidade para direitos.
  
-## Instruções
+## <a name="instructions"></a>Instruções
 
-### Passo 1: configurar o servidor RMS
+### <a name="step-1-setup-your-rms-server"></a>Passo 1: configurar o servidor RMS
 
 Os seguintes passos descrevem a configuração do servidor RMS e incluem:
 
@@ -110,6 +111,6 @@ Os seguintes passos descrevem a configuração do servidor RMS e incluem:
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

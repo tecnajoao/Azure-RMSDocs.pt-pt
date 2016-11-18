@@ -3,6 +3,7 @@ title: Formatos de ficheiro suportados | Azure RMS
 description: "A versão atual da API de Ficheiros suporta a proteção nativa para ficheiros do MS Office e PDF e a proteção PFile para todos os outros formatos de ficheiro."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,17 +15,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 0baa6a5ceeba8ae2e276ffe09edb54060671d8be
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f5fa3082e407e207f33f041d22661888a13566b2
 
 
 ---
 
-# Formatos de ficheiro suportados
+# <a name="supported-file-formats"></a>Formatos de ficheiro suportados
 
 A API de Ficheiros suporta formatos nativos e Pfile.
 
-## Formatos de Ficheiro Suportados
+## <a name="supported-file-formats"></a>Formatos de Ficheiro Suportados
 
 A versão atual da API de Ficheiros suporta a proteção nativa para ficheiros do Microsoft Office e PDF (Portable Document Files) e a proteção PFile para todos os outros formatos de ficheiro. Os ficheiros PDF podem, opcionalmente, ter a proteção PFile aplicada.
 
@@ -33,7 +34,7 @@ A versão atual da API de Ficheiros suporta a proteção nativa para ficheiros d
 
 Os administradores podem definir chaves de registo para configurar se e como os ficheiros devem ser protegidos com base na respetiva extensão do nome do ficheiro. Para obter mais informações sobre como configurar a proteção de ficheiros quando utilizar a API de Ficheiros, consulte [Configuração da API de Ficheiros](file-api-configuration.md).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Notas do programador](developer-notes.md)
 * [Configuração da API de Ficheiros](file-api-configuration.md)
@@ -43,6 +44,6 @@ Os administradores podem definir chaves de registo para configurar se e como os 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

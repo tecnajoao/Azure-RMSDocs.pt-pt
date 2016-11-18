@@ -3,6 +3,7 @@ title: "Compreender as restrições de utilização | Azure RMS"
 description: "Todas as aplicações com suporte RMS têm de impor restrições de utilização."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,19 +15,19 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: cb33a6c784a9b7efca0780771e764b984b51fedd
-ms.openlocfilehash: 3141c4131d83e043e987546900d433e43ee4c946
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: cc383728d487cac45e59ef34ca43ba47c4db237b
 
 
 ---
 
-# Compreender as restrições de utilização
+# <a name="understanding-usage-restrictions"></a>Compreender as restrições de utilização
 
 Todas as aplicações com suporte RMS têm de impor restrições de utilização. Uma restrição de utilização é uma condição que resulta quando um utilizador tenta executar uma ação (por exemplo, imprimir um documento), mas a política do RMS desse documento não lhes concede a permissão ou o direito de executar essa ação (por exemplo, o direito de IMPRIMIR).
 
 As permissões de um utilizador num documento podem ser consultadas ao utilizar a função [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx).
 
-## Compreender as restrições de utilização
+## <a name="understanding-usage-restrictions"></a>Compreender as restrições de utilização
 
 -   Familiarizar-se com os direitos padrão do RMS
 
@@ -46,7 +47,7 @@ As permissões de um utilizador num documento podem ser consultadas ao utilizar 
 
     Para obter orientações acerca de como impor direitos específicos, consulte [Referência das restrições de utilização](usage-restriction-reference.md).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx)
 * [Referência das restrições de utilização](usage-restriction-reference.md)
@@ -56,6 +57,6 @@ As permissões de um utilizador num documento podem ser consultadas ao utilizar 
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

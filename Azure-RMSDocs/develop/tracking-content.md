@@ -3,6 +3,7 @@ title: "Como ativar o controlo e a revogação de documentos | Azure RMS"
 description: "Orientação básica para a implementação do controlo de documento dos conteúdos, bem como código de exemplo para atualizações de metadados e um botão Controlar Utilização para a sua aplicação."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -16,19 +17,17 @@ ms.suite: ems
 experimental: true
 experiment_id: priyamo-test-20160729
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 1a98ea095098fdf09809bb8be1e6263b28f3044b
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: a077e9721bde9e812d36dfab46d6215857cb69ab
 
 
 ---
 
-# Controlar conteúdo
-
-# Procedimentos: ativar o controlo e a revogação de documentos
+# <a name="howto-enable-document-tracking-and-revocation"></a>Procedimentos: ativar o controlo e a revogação de documentos
 
 Este tópico inclui a documentação de orientação básica para implementação do controlo de documento do conteúdo, bem como código de exemplo para atualizações de metadados e criação de um botão **Controlar Utilização** para a sua aplicação.
 
-## Passos para implementar o controlo de documento
+## <a name="steps-to-implement-document-tracking"></a>Passos para implementar o controlo de documento
 
 Os passos 1 e 2 ativam o controlo de documento. O passo 3 permite que os utilizadores de aplicação acedam ao site de controlo de documentos para controlarem e revogarem os seus documentos protegidos.
 
@@ -38,7 +37,7 @@ Os passos 1 e 2 ativam o controlo de documento. O passo 3 permite que os utiliza
 
 Os detalhes de implementação para estes passos são descritos em seguida.
 
-## 1. Adicionar metadados de controlo de documento
+## <a name="1-add-document-tracking-metadata"></a>1. Adicionar metadados de controlo de documento
 
 O controlo de documentos é uma funcionalidade do sistema Rights Management. Ao adicionar metadados específicos durante o processo de proteção de documentos, um documento pode ser registado com o portal do serviço de controlo que fornece várias opções de controlo.
 
@@ -48,12 +47,12 @@ Utilize estas APIs para adicionar/atualizar uma licença de conteúdo com os met
 Operacionalmente, apenas as propriedades **nome do conteúdo** e **tipo de notificação** são necessárias para o controlo de documentos.
 
 
-- [IpcCreateLicenseMetadataHandle](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
-- [IpcSetLicenseMetadataProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
+- [IpcCreateLicenseMetadataHandle](https://msdn.microsoft.com/library/dn974050.aspx)
+- [IpcSetLicenseMetadataProperty](https://msdn.microsoft.com/library/dn974059.aspx)
 
   Esperamos que defina todas as propriedades de metadados. Aqui estão, listadas por tipo.
 
-  Para obter mais informações, consulte [Tipos de propriedade de metadados de licença](/information-protection/sdk/2.1/api/win/constants#msipc_license_metadata_property_types).
+  Para obter mais informações, consulte [Tipos de propriedade de metadados de licença](https://msdn.microsoft.com/library/dn974062.aspx).
 
   - **IPC_MD_CONTENT_PATH**
 
@@ -79,19 +78,19 @@ Operacionalmente, apenas as propriedades **nome do conteúdo** e **tipo de notif
 
     Utilize para definir a data de origem do ficheiro
 
-- [IpcSerializeLicenseWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
+- [IpcSerializeLicenseWithMetadata](https://msdn.microsoft.com/library/dn974058.aspx)
 
 Utilize a API adequada das apresentadas para adicionar os metadados ao seu ficheiro ou fluxo.
 
-- [IpcfEncryptFileWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
-- [IpcfEncryptFileStreamWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
+- [IpcfEncryptFileWithMetadata](https://msdn.microsoft.com/library/dn974052.aspx)
+- [IpcfEncryptFileStreamWithMetadata](https://msdn.microsoft.com/library/dn974051.aspx)
 
 Por último, utilize esta API para registar o documento controlado com o sistema de controlo.
 
-- [IpcRegisterLicense](/information-protection/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
+- [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
 
 
-## 2. Registar o documento no serviço RMS
+## <a name="2-register-the-document-with-the-rms-service"></a>2. Registar o documento no serviço RMS
 
 Veja a seguir um fragmento de código que mostra um exemplo de definição de metadados de controlo de documentos e a chamada para registar com o sistema de controlo.
 
@@ -134,38 +133,38 @@ Veja a seguir um fragmento de código que mostra um exemplo de definição de me
                         wstrContentName.c_str(),
                         sendLicenseRegistrationNotificationEmail);
 
-## Adicionar um botão **Controlar Utilização** à sua aplicação
+## <a name="add-a-track-usage-button-to-your-app"></a>Adicionar um botão **Controlar Utilização** à sua aplicação
 
 Adicionar um item de IU **Controlar Utilização** à sua aplicação é tão simples quanto utilizar um dos seguintes formatos de URL:
 
 - Utilizar ID de Conteúdo
-  - Obtenha o ID de conteúdo utilizando [IpcGetLicenseProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetlicenseproperty) ou [IpcGetSerializedLicenseProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetserializedlicenseproperty), se a licença for serializada e utilize a propriedade de licença **IPC_LI_CONTENT_ID**. Para mais informações, consulte [Tipos de propriedade de licença](/information-protection/sdk/2.1/api/win/constants#msipc_license_property_types).
+  - Obtenha o ID de conteúdo utilizando [IpcGetLicenseProperty](https://msdn.microsoft.com/library/hh535265.aspx) ou [IpcGetSerializedLicenseProperty](https://msdn.microsoft.com/library/hh995038.aspx), se a licença for serializada e utilize a propriedade de licença **IPC_LI_CONTENT_ID**. Para obter mais informações, consulte [Tipos de propriedade de licença](https://msdn.microsoft.com/library/hh535287.aspx).
   - Com os metadados **ContentId** e **Issuer**, utilize o seguinte formato: `https://track.azurerms.com/#/{ContentId}/{Issuer}`
 
-    Exemplo: - `https://track.azurerms.com/#/summary/05405df5-8ad6-4905-9f15-fc2ecbd8d0f7/janedoe@microsoft.com`
+    Exemplo – `https://track.azurerms.com/#/summary/05405df5-8ad6-4905-9f15-fc2ecbd8d0f7/janedoe@microsoft.com`
 
 - Se não tiver acesso a esses metadados (ou seja, está a examinar a versão não protegida do documento), pode utilizar **Content_Name** no seguinte formato: `https://track.azurerms.com/#/?q={ContentName}`
 
-  Exemplo - https://track.azurerms.com/#/?q=Secret!.txt
+  Exemplo – https://track.azurerms.com/#/?q=Secret!.txt
 
 O cliente só tem de abrir um browser com o URL adequado. O portal de Controlo de Documento RMS processará a autenticação e qualquer redirecionamento necessário.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
-* [Tipos de propriedade de metadados de licença](/information-protection/sdk/2.1/api/win/constants#msipc_license_metadata_property_types)
-* [Preferência de notificação](/information-protection/sdk/2.1/api/win/constants#msipc_notification_preference)
-* [Tipo de notificação](/information-protection/sdk/2.1/api/win/constants#msipc_notification_type)
-* [IpcCreateLicenseMetadataHandle](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
-* [IpcSetLicenseMetadataProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
-* [IpcSerializeLicenseWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
-* [IpcfEncryptFileWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
-* [IpcfEncryptFileStreamWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
-* [IpcRegisterLicense](/information-protection/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
+* [Tipos de propriedade de metadados de licença](https://msdn.microsoft.com/library/dn974062.aspx)
+* [Preferência de notificação](https://msdn.microsoft.com/library/dn974063.aspx)
+* [Tipo de notificação](https://msdn.microsoft.com/library/dn974064.aspx)
+* [IpcCreateLicenseMetadataHandle](https://msdn.microsoft.com/library/dn974050.aspx)
+* [IpcSetLicenseMetadataProperty](https://msdn.microsoft.com/library/dn974059.aspx)
+* [IpcSerializeLicenseWithMetadata](https://msdn.microsoft.com/library/dn974058.aspx)
+* [IpcfEncryptFileWithMetadata](https://msdn.microsoft.com/library/dn974052.aspx)
+* [IpcfEncryptFileStreamWithMetadata](https://msdn.microsoft.com/library/dn974051.aspx)
+* [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
 
  
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

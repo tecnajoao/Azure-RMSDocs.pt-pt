@@ -3,6 +3,7 @@ title: Termos | Azure RMS
 description: "Uma coleção de definições terminológicas específicas dos Serviços de Gestão de Direitos."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: cf12a824d3d56ca2df234ba0732d0c4eaae6358e
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 8d6a7553123d36f5a08665949e6417d83bd3912e
 
 
 ---
 
-# Termos
+# <a name="terms"></a>Termos
 
 Uma coleção de definições terminológicas específicas dos Serviços de Gestão de Direitos.
 
@@ -46,6 +47,6 @@ O formato PFile é transparente para o programador de aplicações, já que est�
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -3,6 +3,7 @@ title: "Configurar o ambiente de programação | Azure RMS"
 description: "Saiba como configurar o ambiente de desenvolvimento para trabalhar com as APIs do SDK AD RMS para o seu sistema operativo específico."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 185b67b50b7ded0ff28998f5a59be6b216abd0f9
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: b369c480cc9841a7c8d92f95af3319e0e49f43d0
 
 
 ---
 
-# Configurar o ambiente de programação
+# <a name="setup-developer-environment"></a>Configurar o ambiente de programação
 
 Os tópicos seguintes mostram como configurar o ambiente de desenvolvimento para trabalhar com as APIs do SDK AD RMS para o seu sistema operativo específico.
 
@@ -40,6 +41,6 @@ Os tópicos seguintes mostram como configurar o ambiente de desenvolvimento para
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -3,8 +3,9 @@ title: "FAQ sobre a aplicação Azure Information Protection para iOS e Android 
 description: 
 keywords: "Algumas perguntas mais frequentes para o ajudar a utilizar a aplicação Azure Information Protection para iOS e Android"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2016
+ms.date: 11/07/2016
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -13,8 +14,8 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2f1930f4657278d25ef6dd369866f16e4ba71644
-ms.openlocfilehash: 1cafa88ded2bf951f8af93e4b27cc526735d19e8
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 2c2a0281041f8f9241fd0e733f3c1b08099bae33
 
 
 ---
@@ -35,18 +36,9 @@ Sim, pode abrir ficheiros PDF protegidos que outras pessoas partilharam consigo 
 
 ## <a name="how-do-i-get-started-with-the-viewer-app"></a>Como posso começar a utilizar a aplicação de visualização?
 
-No seu dispositivo móvel, precisa de acesso a um dos ficheiros suportados pela aplicação para ver o visualizador em ação. Por exemplo:
+Depois de instalar a aplicação, não tem de fazer mais nada. Aguarde até receber um e-mail ou ficheiro protegido que queira ver e, em seguida, selecione o **AIP Viewer** para abri-lo. Ser-lhe-á pedido que inicie sessão na sua conta escolar ou profissional. Quando as suas credenciais forem autenticadas, poderá ler os conteúdos.
 
-- **Um ficheiro .rpmsg**: trata-se de uma mensagem de e-mail com proteção de direitos que é apresentada como anexo numa mensagem de e-mail, quando a aplicação de e-mail no seu dispositivo móvel não suporta nativamente a proteção de dados da gestão de direitos. 
-    
-    Utilize outro dispositivo para enviar a si mesmo uma mensagem de e-mail com proteção de direitos à qual pode aceder no seu dispositivo móvel. Por exemplo, utilize o Outlook a partir de um computador Windows. Para obter uma lista de clientes de e-mail que suportam a gestão de direitos nativamente, consulte a coluna E-MAIL na página [Aplicações que suportam a proteção de dados do Azure Rights Management](../get-started/requirements-applications.md).
-
-- **Um ficheiro PDF com proteção de direitos**: utilize a aplicação de partilha Rights Management a partir de um computador Windows ou uma aplicação de PDF que suporte nativamente a gestão de direitos para enviar a si mesmo um ficheiro PDF com proteção de direitos como anexo no e-mail. Em alternativa, carregue um ficheiro PDF para uma biblioteca protegida do SharePoint e partilhe-o com o seu endereço de e-mail.
-
-- **Um .ptxt ou .pjpg ou .ppng**: utilize a aplicação de partilha Rights Management a partir de um computador Windows e a opção [Partilhar Protegido](sharing-app-protect-by-email.md) para enviar a si mesmo um ficheiro protegido como anexo de e-mail. Para obter a lista completa de tipos de ficheiros que pode utilizar para testes, consulte a primeira tabela da secção [Tipos de ficheiro suportados e extensões de nome de ficheiro](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) no guia do administrador da aplicação de partilha Rights Management. 
-
-Para ver estes ficheiros na aplicação de visualização do Azure Information Protection, toque no anexo de e-mail ou na ligação. Quando lhe for pedido para selecionar uma aplicação com a qual abri-lo, selecione a aplicação **AIP Viewer**. Ser-lhe-á pedido que inicie sessão na sua conta escolar ou profissional. Depois de ser autenticado com êxito, a aplicação Azure Information Protection mostra o e-mail ou o ficheiro para que o possa ler.
-
+No entanto, se não quiser esperar, pode utilizar as seguintes instruções para enviar um e-mail ou ficheiro protegido para si próprio para o abrir: [Introdução à aplicação Microsoft Azure Information Protection para iOS e Android](mobile-app-get-started.md) 
 ## <a name="what-credentials-should-i-use-to-sign-in-to-this-app"></a>Que credenciais devo utilizar para iniciar sessão nesta aplicação?
 
 Se a sua organização já tiver o AD RMS no local (com a extensão para dispositivos móveis) ou utilizar o serviço Azure Rights Management, pode utilizar as suas credenciais para iniciar sessão. Caso contrário, pode inscrever-se numa nova conta gratuita através da [página Azure Information Protection](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload).
@@ -66,10 +58,10 @@ Na aplicação, aceda a **Definições** > **Enviar feedback**.
 
 ## <a name="my-question-has-not-been-answeredwhat-should-i-do"></a>A minha pergunta não foi respondida – o que posso fazer?
 
-Publique a sua pergunta no nosso [site do Yammer](http://www.yammer.com/AskIPTeam) ou [envie um e-mail para a equipa do Information Protection](mailto:askIPteam@microsoft.com?subject=Question%20about%20Azure%20Information%20Protection%20app).
+Publique a sua pergunta no nosso [site do Yammer](https://www.yammer.com/AskIPTeam) ou [envie um e-mail para a equipa do Information Protection](mailto:askIPteam@microsoft.com?subject=Question%20about%20Azure%20Information%20Protection%20app).
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

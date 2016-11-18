@@ -3,6 +3,7 @@ title: "Descrição geral - RMS SDK 2.1 | Azure RMS"
 description: "O Rights Management Services (RMS) é uma tecnologia de proteção de informações que ajuda a salvaguardar as informações digitais contra a utilização não autorizada."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 82441858230e179a08bfa74e0f6aaf9ed17a62fb
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 816d665314fb77931433e36420b54c3ab6f689b9
 
 
 ---
 
-# Descrição Geral
+# <a name="overview"></a>Descrição Geral
 
 O SDK Rights Management Services (RMS) 2.1 é uma tecnologia de proteção de informações que ajuda a salvaguardar as informações digitais contra utilização não autorizada. Através da aplicação com capacidade para direitos, os proprietários de conteúdo conseguirão definir quem pode abrir, modificar, imprimir, reencaminhar ou efetuar outras ações no conteúdo.
 
@@ -28,7 +29,7 @@ O AD RMS consiste em componentes de [servidor](ad-rms-server.md) e de [cliente](
 
 O componente de [cliente](ad-rms-client.md) pode ser executado num sistema operativo de cliente ou de servidor e contém funções que permitem que uma aplicação encripte e desencripte conteúdo, obtenha modelos e listas de revogação, adquira licenças e certificados a partir de um servidor e outras tarefas de gestão de direitos relacionadas.
 
-Para mais informações, consulte [Tipos de aplicações](application-types.md).
+Para obter mais informações, consulte [Tipos de aplicações](application-types.md).
 
 Seguem-se alguns dos cenários em que podem ser aplicadas aplicações incorporadas no SDK Rights Management Services 2.1.
 
@@ -42,7 +43,7 @@ Para obter mais informações sobre o servidor AD RMS, o cliente de AD RMS e a r
 
 Os tópicos restantes desta secção a Arquitetura RMS e as suas implementações.
 
-## Nesta secção
+## <a name="in-this-section"></a>Nesta secção
 
 | Tópico | Descrição |
 |-------|-------------|
@@ -50,7 +51,7 @@ Os tópicos restantes desta secção a Arquitetura RMS e as suas implementaçõe
 |[Servidor](ad-rms-server.md) | Este tópico descreve a finalidade e as funções do RMS Server para o Azure e Windows Server.|
 
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Conceitos do RMS](application-types.md)
 * [Introdução](getting-started-with-ad-rms-2-0.md)
@@ -61,6 +62,6 @@ Os tópicos restantes desta secção a Arquitetura RMS e as suas implementaçõe
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

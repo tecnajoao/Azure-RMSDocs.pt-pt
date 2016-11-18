@@ -3,6 +3,7 @@ title: "Ativar notificação por e-mail | Azure RMS"
 description: "A notificação por e-mail permite que um proprietário de conteúdo protegido seja notificado quando o respetivo conteúdo for acedido."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 77e2dfe7f2afb1e70de658850f83f86e9224aea6
-ms.openlocfilehash: 411c549cc865914c6e35ececad99da0a0d46c5d4
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 5da480834485d58028b366c8fbb9a53412cd7c6a
 
 
 ---
 
-# Procedimentos: ativar notificação por e-mail
+# <a name="howto-enable-email-notification"></a>Procedimentos: ativar notificação por e-mail
 
 A notificação por e-mail permite que um proprietário de conteúdo protegido seja notificado quando o respetivo conteúdo for acedido.
 
@@ -56,7 +57,7 @@ A tabela seguinte contém os campos de dados da aplicação, o nome da proprieda
 |MS.Notify.TZSN|cadeia|“Hora Padrão do Pacífico”|**Origem:** TimeZoneInfo.Local.StandardName – nome do Fuso Horário Padrão.<br><br>Isto deve ser o nome localizado do nome do fuso horário padrão do fuso horário.|
 |MS.Notify.TZDN|cadeia|“Hora de Verão do Pacífico”|**Origem:** TimeZoneInfo.Local.DaylightName – nome do Fuso Horário de Verão.<br><br>Isto deve ser o nome localizado do nome da hora de verão do fuso horário. Pode ser igual ao nome padrão se o fuso horário não suportar a hora de verão.|
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 - [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
 - [IPC\_LI\_APP\_SPECIFIC\_DATA](https://msdn.microsoft.com/library/hh535287.aspx)
@@ -67,6 +68,6 @@ A tabela seguinte contém os campos de dados da aplicação, o nome da proprieda
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

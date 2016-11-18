@@ -2,6 +2,7 @@
 title: "Aplicação de Partilha Rights Management para Windows | Azure Information Protection"
 description: "Recursos de informação para a aplicação de partilha Rights Management para Windows. É uma aplicação gratuita e transferível para organizações que utilizam os Serviços de Gestão de Direitos do Active Directory (AD RMS) ou o Azure Information Protection e para as organizações que não têm a sua própria infraestrutura de proteção de informações, mas que pretendem consumir conteúdos protegidos por outras organizações que utilizam o Azure Information Protection."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 7d8a8abe-6de1-4088-90ee-e0c4bd6deec8
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ac04af3b503bb7bb1d3c9f4bcee4aff163d73314
-ms.openlocfilehash: 4151d5d27f4297d3b9e02d45d0168c1933f3abc9
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: abb1f0e1786aadbf3e9ab4b6a1679afeb32bedf1
 
 
 ---
 
-# Aplicação de Partilha Rights Management para Windows
+# <a name="rights-management-sharing-application-for-windows"></a>Aplicação de Partilha Rights Management para Windows
 
 >*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection*
 
@@ -31,16 +32,16 @@ A aplicação de partilha Rights Management para Windows (também conhecida apen
 -   [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md)
 
 > [!TIP]
-> Também existe uma aplicação Azure Information Protection para iOS e Android. Para mais informações, consulte [FAQ da aplicação Azure Information Protection para iOS e Android](mobile-app-faq.md )
+> Também existe uma aplicação Azure Information Protection para iOS e Android. Para obter mais informações, consulte [FAQ da aplicação Azure Information Protection para iOS e Android](mobile-app-faq.md )
 > 
 > Para computadores Mac e Windows Phones: [FAQ da Aplicação de Partilha Rights Management para Plataformas Móveis e Mac](http://technet.microsoft.com/dn451248).
 
-## Consulte Também
-[FAQ acerca da Aplicação de Partilha Rights Management para Windows](http://technet.microsoft.com/dn467883)
+## <a name="see-also"></a>Consulte Também
+[FAQ sobre a Aplicação de Partilha Rights Management para Windows](http://technet.microsoft.com/dn467883)
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

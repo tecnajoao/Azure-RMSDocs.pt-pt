@@ -4,15 +4,15 @@ description: "Existem três definições na política do Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 translationtype: Human Translation
-ms.sourcegitcommit: addc24fed28cee52b57c7e3bde926d6324478e7b
-ms.openlocfilehash: 970a42e89d09af34e9ff16714682d1de250175f6
+ms.sourcegitcommit: 8fa2ed9ff9ebe5c850ab5681e4dcc1f3d3c676b3
+ms.openlocfilehash: de5f5fbddb84e4444751e9fefbfe6ec3fe3e45e4
 
 
 ---
@@ -21,7 +21,7 @@ ms.openlocfilehash: 970a42e89d09af34e9ff16714682d1de250175f6
 
 >*Aplica-se a: Azure Information Protection*
 
-Existem 3 definições da política de proteção de informações do Azure que se aplicam a todos os utilizadores e a todos os dispositivos:
+Existem quatro definições da política do Azure Information Protection que se aplicam a todos os utilizadores e a todos os dispositivos:
 
 ![Definições globais da política do Azure Information Protection](../media/info-protect-policy-settings.png)
 
@@ -48,9 +48,13 @@ Configurar estas definições:
 
     Esta opção não é aplicável a etiquetas secundárias.
 
+    - **Forneça um URL personalizado para a página Web "Mais informações" do cliente do Azure Information Protection**: os utilizadores veem esta ligação na caixa de diálogo do **Microsoft Azure Information Protection**, na secção **Ajuda e Feedback**, quando selecionam **Proteger** > **Ajuda e feedback** no separador **Base** nas respetivas aplicações do Office. Por predefinição, esta ligação direciona-o para o site do [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection). Pode introduzir um URL do tipo HTTP ou HTTPS (recomendado) se quiser que esta ligação redirecione o utilizador para uma página Web alternativa. Não é efetuada nenhuma verificação para confirmar que o URL personalizado que introduziu é acessível ou é apresentado corretamente em todos os dispositivos.
+    
+    Por exemplo, para suporte técnico, pode introduzir a página de documentação da Microsoft que inclui informações acerca da instalação e da utilização do cliente (**https://docs.microsoft.com/information-protection/rms-client/info-protect-client**) ou informações relativas à versão de lançamento (**https://docs.microsoft.com/information-protection/rms-client/client-version-release-history**). Em alternativa, poderá publicar a sua própria página Web com informações para que os utilizadores contactem o seu suporte técnico ou um vídeo com passos para que os utilizadores saibam como utilizar as etiquetas que configurou.
+
 3. Para guardar as alterações, clique em **Guardar**.
 
-4. Para disponibilizar as alterações aos utilizadores, clique em **ublicar**.
+4. Para disponibilizar as alterações aos utilizadores, clique em **Publicar**.
 
 ## <a name="next-steps"></a>Passos seguintes
 
@@ -67,6 +71,6 @@ Para mais informações sobre como configurar a política do Azure Information P
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

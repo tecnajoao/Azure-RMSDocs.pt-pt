@@ -4,7 +4,7 @@ description: "Informações para o ajudar a planear e gerir a sua chave de inqui
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/09/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 84072c64f83ec97ac41d6ec030be5eabff263b4b
-ms.openlocfilehash: afcef2843336e022e63e7895ac3c0488d0aa0e2a
+ms.sourcegitcommit: 5f75e36e5939b23a9d077a6fcd659c59d0f71a68
+ms.openlocfilehash: 1e25f9007004d27fd8f52f77a1663e42f751334e
 
 
 ---
@@ -85,7 +85,7 @@ Consulte a seguinte tabela para obter uma lista de pré-requisitos para o BYOK (
 |Requisito|Mais informações|
 |---------------|--------------------|
 |Uma subscrição que suporta o Azure Information Protection.|Para obter mais informações sobre as subscrições disponíveis, consulte a [Página de preços](https://go.microsoft.com/fwlink/?LinkId=827589) do Azure Information Protection.|
-|Não utilizar o RMS para utilizadores autónomos ou para o Exchange Online. Em alternativa, se utilizar o Exchange Online, compreender e aceitar as limitações da utilização do BYOK com esta configuração.|Para obter mais informações sobre as restrições e limitações atuais do BYOK, consulte [Preços e restrições do BYOK](byok-price-restrictions.md).<br /><br />**Importante**: o BYOK não é atualmente compatível com o Exchange Online.|
+|Não utilizar o RMS para utilizadores individuais ou para o Exchange Online. Em alternativa, se utilizar o Exchange Online, compreender e aceitar as limitações da utilização do BYOK com esta configuração.|Para obter mais informações sobre as restrições e limitações atuais do BYOK, consulte [Preços e restrições do BYOK](byok-price-restrictions.md).<br /><br />**Importante**: o BYOK não é atualmente compatível com o Exchange Online.|
 |Todos os pré-requisitos listados para BYOK do Cofre de Chaves, que inclui uma subscrição paga ou uma versão de avaliação do Azure. |Veja [Pré-requisitos para BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) na documentação do Cofre de Chaves do Azure. <br /><br /> A subscrição gratuita do Azure que fornece acesso para configurar o Azure Active Directory e a configuração dos modelos personalizados do Azure Rights Management (**Aceder ao Azure Active Directory**) não são suficientes para utilizar o Cofre de Chaves do Azure. Para confirmar se tem uma subscrição do Azure que pode utilizar para o BYOK, utilize os cmdlets [Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx) do PowerShell: <br /><br /> 1. Inicie uma sessão no Azure PowerShell e inicie sessão na sua conta do Azure com o seguinte comando: `Login-AzureRmAccount`<br /><br />2. Escreva o que se segue e confirme se os valores apresentados para o nome e ID da sua subscrição, o ID do seu inquilino e o estado estão ativos: `Get-AzureRmSubscription`<br /><br />Se não forem apresentados valores e regressar ao pedido, significa que não tem uma subscrição do Azure que possa ser utilizada para o BYOK. <br /><br />**Nota**: além dos pré-requisitos para BYOK, se estiver a migrar do AD RMS para o Azure Information Protection através da utilização de chave de software para chave de hardware, tem de ter uma versão de firmware da Thales igual ou superior à 11.62.|
 |O módulo de administração do Azure Rights Management para o Windows PowerShell.|Para obter instruções de instalação, consulte [Installing Windows PowerShell for Azure Rights Management (Instalar o Windows PowerShell para o Azure Rights Management – em inglês)](../deploy-use/install-powershell.md). <br /><br />Caso já tenha instalado este módulo do Windows PowerShell, execute o seguinte comando para verificar se o seu número de versão é **2.5.0.0** ou posterior: `(Get-Module aadrm -ListAvailable).Version`|
 
@@ -97,9 +97,9 @@ Para gerar e transferir a sua própria chave de inquilino para o Cofre de Chaves
 
 Quando a chave é transferida para o Cofre de Chaves, é fornecido um ID de chave no Cofre de Chaves, que é um URL que contém o nome do cofre de chaves, o contentor de chaves, o nome da chave e a versão da chave. Por exemplo: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Terá de indicar ao serviço Azure Rights Management do Azure Information Protection que utilize esta chave ao especificar este URL.
 
-No entanto, antes de o Azure Information Protection poder utilizar a chave, o serviço Azure Rights Management tem de estar autorizado a utilizar a chave no cofre de chaves da sua organização. Para tal, o administrador do Cofre de Chaves do Azure utiliza o cmdlet PowerShell do Cofre de Chaves, [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/pt-pt/library/mt603625(v=azure.300\).aspx) e concede permissões ao principal do serviço Azure Rights Management, **Microsoft.Azure.RMS**. Por exemplo:
+No entanto, antes de o Azure Information Protection poder utilizar a chave, o serviço Azure Rights Management tem de estar autorizado a utilizar a chave no cofre de chaves da sua organização. Para tal, o administrador do Cofre de Chaves do Azure utiliza o cmdlet PowerShell do Cofre de Chaves, [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/pt-pt/library/mt603625(v=azure.300\).aspx) e concede permissões ao principal do serviço Azure Rights Management, ao utilizar o GUID 00000012-0000-0000-c000-000000000000. Por exemplo:
 
-    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
+    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
 
 Agora está pronto para configurar o Azure Information Protection para utilizar esta chave como chave de inquilino do Azure Information Protection da sua organização. Através dos cmdlets do Azure RMS, ligue primeiro ao serviço Azure Rights Management e inicie sessão:
 

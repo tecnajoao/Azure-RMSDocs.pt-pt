@@ -4,7 +4,7 @@ description: "Utilize estes passos para preparar, implementar e gerir o Azure In
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 884a4528da6fa79d92f39fa08860773bcc5552d3
+ms.sourcegitcommit: 1551b5dc3c5c9740721e3de01d086185966b6016
+ms.openlocfilehash: ce1ed30122b3bff5b045dfbec65c257d348f0122
 
 
 ---
@@ -44,6 +44,9 @@ Selecione o plano de implementação que se aplica à sua organização e corres
 
 ### <a name="step-1-confirm-your-subscription-and-assign-user-licenses"></a>Passo 1: confirmar a sua subscrição e atribuir licenças de utilizador
 Consulte as [informações de subscrição](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) e a [lista de funcionalidades](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) no site do Azure Information Protection para confirmar se a sua organização tem uma subscrição que inclui as funcionalidades que pretende. Em seguida, atribua uma licença desta subscrição a todos os utilizadores na sua organização que irão classificar, etiquetar e proteger documentos e e-mails.
+
+Nota: não atribua licenças de utilizador manualmente a partir da subscrição do RMS para utilizadores individuais gratuita e não utilize esta licença para administrar o serviço Azure Rights Management para a sua organização. Estas licenças são apresentadas como **Adhoc do Rights Management** no Centro de administração do Office 365 e **RIGHTSMANAGEMENT_ADHOC** quando executa o cmdlet do Azure AD PowerShell, [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx). Para obter mais informações sobre como a subscrição do RMS para utilizadores individuais é automaticamente concedida e atribuída aos utilizadores, consulte [RMS para utilizadores individuais e Azure Information Protection](../understand-explore/rms-for-individuals.md).
+
 
 ### <a name="step-2-prepare-your-tenant-account-to-use-azure-information-protection"></a>Passo 2: preparar a conta de inquilino para utilizar o Azure Information Protection
 Antes de começar a utilizar o Azure Information Protection, efetue a seguinte preparação:
@@ -80,7 +83,7 @@ Quando os utilizadores estiverem mais confortáveis a etiquetar documentos e e-m
 
 2. Instale o módulo do Windows PowerShell para o [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] em, pelo menos, um computador que tenha acesso à Internet. Pode efetuar este passo agora ou mais tarde. Para obter mais informações, consulte [Instalar o Windows PowerShell para o serviço Azure Rights Management](../deploy-use/install-powershell.md).
 
-3. Se estiver a utilizar serviços de Gestão de Direitos no local: efetue uma migração para mover as chaves, os modelos e os URLs para a nuvem. Para obter mais informações, consulte [Migrar do AD RMS para o Information Protection](migrate-from-ad-rms-to-azure-rms.md).
+3. Se estiver a utilizar serviços de Gestão de Direitos no local: efetue uma migração para mover as chaves, os modelos e os URLs para a cloud. Para obter mais informações, consulte [Migrar do AD RMS para o Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 4. Ative o serviço Azure Rights Management para começar a proteger documentos e e-mails. Se for necessária uma implementação faseada, configure os controlos de inclusão do utilizador para restringir a utilização a utilizadores específicos. Para obter mais informações, consulte [Ativar o Azure Rights Management](../deploy-use/activate-service.md).
 
@@ -130,6 +133,9 @@ Se estiver interessado em proteger ficheiros automaticamente ao utilizar a Infra
 ### <a name="step-1-confirm-that-you-have-a-subscription-that-includes-azure-rights-management"></a>Passo 1: confirmar se tem uma subscrição que inclui o Azure Rights Management
 Consulte as [informações de subscrição](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) e a [lista de funcionalidades](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) no site do Azure Information Protection para confirmar se a sua organização tem uma subscrição que inclui as funcionalidades que pretende. Em seguida, atribua uma licença desta subscrição a todos os utilizadores na sua organização que irão proteger documentos e e-mails através do serviço Azure Rights Management.
 
+Nota: não atribua licenças de utilizador manualmente a partir da subscrição do RMS para utilizadores individuais gratuita e não utilize esta licença para administrar o serviço Azure Rights Management para a sua organização. Estas licenças são apresentadas como **Adhoc do Rights Management** no Centro de administração do Office 365 e **RIGHTSMANAGEMENT_ADHOC** quando executa o cmdlet do Azure AD PowerShell, [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx). Para obter mais informações sobre como a subscrição do RMS para utilizadores individuais é automaticamente concedida e atribuída aos utilizadores, consulte [RMS para utilizadores individuais e Azure Information Protection](../understand-explore/rms-for-individuals.md).
+
+
 ### <a name="step-2-prepare-your-tenant-account-to-use-the-azure-rights-management-service"></a>Passo 2: preparar a sua conta de inquilino para utilizar o serviço Azure Rights Management
 Antes de começar a utilizar o [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], efetue a preparação seguinte:
 
@@ -139,7 +145,7 @@ Antes de começar a utilizar o [!INCLUDE[aad_rightsmanagement_2](../includes/aad
 
 3. Instale o módulo do Windows PowerShell para o [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] em, pelo menos, um computador que tenha acesso à Internet. Pode efetuar este passo agora ou mais tarde. Para obter mais informações, consulte [Instalar o Windows PowerShell para o Azure Rights Management](../deploy-use/install-powershell.md).
 
-4. Se estiver a utilizar serviços de Gestão de Direitos no local: efetue uma migração para mover as chaves, os modelos e os URLs para a nuvem. Para obter mais informações, consulte [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
+4. Se estiver a utilizar serviços de Gestão de Direitos no local: efetue uma migração para mover as chaves, os modelos e os URLs para a cloud. Para obter mais informações, consulte [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 5. Ative o Rights Management de modo a poder começar a utilizar o serviço. Se for necessária uma implementação faseada, configure os controlos de inclusão do utilizador para restringir a utilização a utilizadores específicos. Para obter mais informações, consulte [Ativar o Azure Rights Management](../deploy-use/activate-service.md).
 
@@ -184,6 +190,6 @@ Se estiver interessado em proteger ficheiros automaticamente ao utilizar a Infra
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO3-->
 
 

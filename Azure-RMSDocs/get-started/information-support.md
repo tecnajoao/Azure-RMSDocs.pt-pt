@@ -4,7 +4,7 @@ description: "Recursos para administradores que incluem informações sobre nova
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/13/2016
+ms.date: 11/11/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 4f0e3fbfd5caee7a5ea3fc40d8519a5e34d78cb5
+ms.sourcegitcommit: 757b0e1a65d54f81b00c6513ee85ded4fe753684
+ms.openlocfilehash: 37f42c4b9f4e4b41e96b3e1e6a74a6c3d7deb254
 
 
 ---
@@ -33,8 +33,10 @@ Utilize os seguintes recursos para o ajudar a obter mais informações, implemen
 |Consultar as informações de subscrição e as funcionalidades suportadas →|Utilize as [informações da subscrição](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) e a [lista de funcionalidades](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) no site do Azure Information Protection.|
 
 
-## <a name="information-about-new-releases"></a>Informações sobre novas versões
-O grupo de produtos do Information Protection publica anúncios sobre as novas versões e atualizações no [Blogue do Enterprise Mobility e Segurança](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services). Estas publicações no blogue completam a documentação do produto e as informações de suporte.
+## <a name="information-about-new-releases-and-updated-documentation"></a>Informações sobre novas versões e documentação atualizada
+A equipa de produtos do Information Protection publica anúncios sobre as novas versões e atualizações no [Enterprise Mobility and Security Blog (Blogue sobre a Segurança e a Mobilidade nas Grandes Empresas – em inglês)](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services). Estas publicações no blogue completam a documentação do produto e as informações de suporte.
+
+No final de cada mês, verá um resumo das alterações à documentação com o título "**Azure Information Protection Documentation Update for (Atualização da Documentação do Azure Information Protection – em inglês) de \<mês, ano>**". Estas publicações têm a etiqueta de tipo de conteúdo [**Updates**](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) (Atualizações) e incluem atualizações da documentação para novas versões, assim como correções e esclarecimentos sobre as versões existentes.
 
 > [!TIP]
 > Se estiver a desenvolver aplicações que utilizam os serviços do Microsoft Rights Management (Azure RMS ou AD RMS), poderá também estar interessado no [Active Directory Rights Management Services (AD RMS) Developer's Corner blog (blogue Área para Programadores dos Serviços de Gestão de Direitos do Active Directory (AD RMS) – em inglês)](https://blogs.msdn.microsoft.com/rms/).
@@ -60,7 +62,7 @@ Para outros clientes, utilize os seguintes canais de suporte, consoante a forma 
 
 Para opções de suporte adicionais, peça ao seu contacto da Microsoft. 
 
-### <a name="selfhelp"></a>Ajuda autónoma
+### <a name="self-help"></a>Ajuda autónoma
 
 Vídeos a pedido:
 
@@ -82,9 +84,9 @@ Resolva os problemas:
 
 ### <a name="community-resources"></a>Recursos comunitários
 
--   Yammer: [Azure Information Protection](http://www.yammer.com/AskIPTeam)
+-   Yammer: [Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
--   [Fórum: Microsoft RMS (Nuvem)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud)
+-   [Fórum: Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud)
 
 -   [Fórum: RMS para Utilizadores (aplicações)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmsapps)
 

@@ -4,15 +4,15 @@ description: "Passo 2 de um tutorial de introdução com uma duração de aproxi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 3c2523119020232b9044506b2d2a602104e81d0b
+ms.sourcegitcommit: bce1682624b040545d30ca1cc426e4e2f8c38018
+ms.openlocfilehash: 7ba1566a81ca9a3ac45f340f69d3c9e933f015ff
 
 
 ---
@@ -36,7 +36,7 @@ Apesar de o Azure Information Protection ser fornecido com uma política predefi
     
     - Etiquetas para classificação: **Pessoal**, **Público**, **Interno**, **Confidencial** e **Secreto**. Leia a descrição de cada etiqueta para compreender como devem ser utilizadas. Tenha em atenção que **Segredo** tem duas etiquetas secundárias: **Todos os Funcionários** e **O Meu Grupo**, que fornece um exemplo de como uma classificação pode ter subcategorias.
 
-    - Com as predefinições, as etiquetas **Interno**, **Confidencial** e **Secreto** têm marcas visuais configuradas (por exemplo, rodapé, cabeçalho, marca d'água) e nenhuma das etiquetas tem a proteção definida. Além disso, as três definições globais não estão definidas para que todos os documentos e e-mails não precisem de uma etiqueta, não existem etiquetas predefinidas e os utilizadores não têm de fornecer uma justificação ao reduzir o nível de classificação.
+    - Com as predefinições, as etiquetas **Interno**, **Confidencial** e **Secreto** têm marcas visuais configuradas (por exemplo, rodapé, cabeçalho, marca d'água) e nenhuma das etiquetas tem a proteção definida. Além disso, as quatro definições globais não estão definidas para que todos os documentos e e-mails não precisem de uma etiqueta, não existem etiquetas predefinidas e os utilizadores não têm de fornecer uma justificação ao alterar as etiquetas, além de que o cliente não está configurado para obter uma ligação de ajuda personalizada.
 
     ![Tutorial de início rápido do Azure Information Protection, passo 3 - política predefinida](../media/info-protect-policy.png)
 
@@ -122,6 +122,6 @@ Agora que conhece a política predefinida e fez algumas alterações, o próximo
 [Passo 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO3-->
 
 

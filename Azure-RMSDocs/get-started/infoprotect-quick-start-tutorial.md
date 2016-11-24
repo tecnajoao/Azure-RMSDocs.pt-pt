@@ -11,8 +11,8 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 9f475892d7999fc3ff10a27d11986dec9cfa94cd
+ms.sourcegitcommit: d300f3c130476974e39689edf9e1f0eabbc35da1
+ms.openlocfilehash: de3435767d161567003369fc55dd476283b64f41
 
 
 ---
@@ -41,7 +41,7 @@ Para concluir este tutorial, terá de ter o seguinte:
 
 - Uma conta de administrador global para iniciar sessão no portal do Azure para configurar a política do Azure Information Protection. Esta conta também tem de ter um endereço de e-mail e um serviço de e-mail a funcionar (por exemplo, Exchange Online ou Exchange Server).
 
-- Um computador que execute o Windows (no mínimo, o Windows 7 com o Service Pack 1) e que tenha instalado o Office Professional Plus 2016, o Office Professional Plus 2013 com o Service Pack 1 ou o Office Professional Plus 2010. 
+- Um computador que execute o Windows (no mínimo o Windows 7 com o Service Pack 1) e que tenha instalado o Office 365 ProPlus com aplicações da versão 2016 ou 2013, o Office Professional Plus 2016, o Office Professional Plus 2013 com o Service Pack 1 ou o Office Professional Plus 2010. 
 
 Vamos começar.
 

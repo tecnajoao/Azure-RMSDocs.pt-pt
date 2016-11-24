@@ -4,15 +4,15 @@ description: "Instruções para instalar o cliente que adiciona uma barra de Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/01/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 translationtype: Human Translation
-ms.sourcegitcommit: 2f1930f4657278d25ef6dd369866f16e4ba71644
-ms.openlocfilehash: 5e36d046d53b0fdfb6796f2a00e8d0d1325f30c3
+ms.sourcegitcommit: db05149a25b6535d568338140daa2474e48b6711
+ms.openlocfilehash: 984d764d0c1ac41e6baec0b7978f501d7494773d
 
 
 ---
@@ -61,7 +61,7 @@ Pode utilizar uma das seguintes opções:
 
 ## <a name="to-verify-installation-connection-status-or-report-a-problem"></a>Para verificar a instalação, o estado da ligação ou comunicar um problema
 
-1. Abra uma aplicação do Office, no separador **Base**, no grupo **Proteção**, clique em **Proteger** e, em seguida, clique em **Ajuda e comentários**.
+1. Abra uma aplicação do Office, no separador **Base**, no grupo **Proteção**, clique em **Proteger** e, em seguida, clique em **Ajuda e feedback**.
 
 2. Na caixa de diálogo **Microsoft Azure Information Protection**, tenha em consideração o seguinte:
 
@@ -69,7 +69,9 @@ Pode utilizar uma das seguintes opções:
     
         Também o seu nome de utilizador apresentado, que identifica a conta utilizada para o autenticar no Azure Information Protection. Este nome de utilizador tem de corresponder à conta que utiliza para o Office 365 ou para o Azure Active Directory.
 
-    - Na secção **Ajuda e feedback**: utilize a ligação **Enviar feedback** para anexar automaticamente os seus registos de cliente a uma mensagem de e-mail que pode ser enviada para a equipa de Information Protection para que investiguem um problema. 
+    - Na secção **Ajuda e feedback**: a **ligação Mais informações** direciona-o, por predefinição, para o site do [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection), mas pode ser configurada para um URL personalizado, de acordo com uma das [definições globais](../deploy-use/configure-policy-settings.md) da política do Azure Information Protection.
+        
+        Utilize a ligação **Enviar feedback** para anexar automaticamente os registos de cliente a um e-mail que pode ser enviado à equipa do Information Protection para investigar o problema. 
     
         Para ver as informações de diagnóstico e para repor o cliente, clique em **Executar diagnósticos**. Quando os testes de diagnóstico forem concluídos, clique em **Copiar Resultados** para colar as informações num e-mail que pode enviar em seguida para o seu apoio técnico ou para o suporte da Microsoft. Quando os testes forem concluídos, também pode repor o cliente.
         
@@ -115,6 +117,6 @@ para verificar as informações da versão de lançamento do cliente, consulte o
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

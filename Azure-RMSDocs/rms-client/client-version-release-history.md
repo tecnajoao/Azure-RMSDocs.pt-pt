@@ -4,7 +4,7 @@ description: "Veja as novidades ou alterações ao lançamento do cliente do Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/27/2016
+ms.date: 11/23/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3beeaffd5cf5f0e0a629dd6130d780cec3e05d6
-ms.openlocfilehash: ff6573042941640d1cca82d68e85f09c82e3c77b
+ms.sourcegitcommit: 45ca64c8338de3f4b192c61eb437b4acdbb8d799
+ms.openlocfilehash: cdd987bf0670f9e5ef7519119aa886573cf14924
 
 
 ---
@@ -37,8 +37,6 @@ Utilize as seguintes informações para ver o que há de novo ou o que foi alter
 **Lançada**: 27/10/2016
 
 **Correções**:
-
-- Pode aplicar com êxito uma etiqueta que protege os conteúdos quando utiliza o Office 2010 e o seu ambiente não foi iniciado no serviço Azure Rights Management (também denominado "arranque do sistema").
 
 - A instalação do cliente é concluída quando o serviço Windows Update for desativado.
 
@@ -64,6 +62,6 @@ Para mais informações sobre como instalar o cliente, consulte [Instalar o clie
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO4-->
 
 

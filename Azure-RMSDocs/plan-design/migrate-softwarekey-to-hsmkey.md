@@ -4,7 +4,7 @@ description: "Instruções que fazem parte do caminho de migração do AD RMS pa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2016
+ms.date: 11/23/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,13 @@ ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1fcebaaa2fbe1479e83c232d51013341977796fc
-ms.openlocfilehash: 54e759108ecca7a049190823c3874451d7104fc4
+ms.sourcegitcommit: 5aac7b9fae12642c9846a70c5d271c7600af4096
+ms.openlocfilehash: 7a10b0f1fceca58a80145962dfaedddeea64dd64
 
 
 ---
 
-# <a name="step-2-softwareprotected-key-to-hsmprotected-key-migration"></a>Passo 2: migração de chave protegida por software para chave protegida por HSM
+# <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>Passo 2: migração de chave protegida por software para chave protegida por HSM
 
 >*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection*
 
@@ -41,7 +41,7 @@ Antes de começar, certifique-se de que a sua organização tem um cofre de chav
 > Se for efetuar os passos de configuração do Cofre de Chaves do Azure e não estiver familiarizado com este serviço do Azure, poderá considerar útil primeiro rever [Introdução ao Cofre de Chaves do Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/). 
 
 
-## <a name="part-1-extract-your-slc-key-from-the-configuration-data-and-import-the-key-to-your-onpremises-hsm"></a>Parte 1: extrair a chave SLC dos dados de configuração e importar a chave para o seu HSM no local
+## <a name="part-1-extract-your-slc-key-from-the-configuration-data-and-import-the-key-to-your-on-premises-hsm"></a>Parte 1: extrair a chave SLC dos dados de configuração e importar a chave para o seu HSM no local
 
 1.  Administrador do Cofre de Chaves do Azure: siga os seguintes passos na secção [Implementar o BYOK (Bring Your Own Key – Traga a Sua Própria Chave)](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) da documentação do Cofre de Chaves do Azure:
 
@@ -143,7 +143,7 @@ Agora que a chave SLC foi extraída e importada para o seu HSM no local, está p
 
     Quando for solicitado, introduza a palavra-passe que especificou anteriormente para o ficheiro de dados de configuração e confirme que pretende efetuar esta ação.
 
-    Se tiver mais do que um ficheiro de dados de configuração, repita este comando para o resto dos ficheiros. No entanto, para esses ficheiros, defina **-Active** para **false** ao executar o comando Import.
+    Se tiver mais do que um ficheiro de dados de configuração, repita este comando para o resto dos ficheiros. Por exemplo, deverá ter pelo menos um ficheiro adicional para importar se tiver atualizado o seu cluster AD RMS para o Modo Criptográfico 2. No entanto, para esses ficheiros, defina **-Active** para **false** ao executar o comando Import.
 
 
 
@@ -164,6 +164,6 @@ Agora está pronto para ir para o [Passo 3. Ative o seu inquilino do Azure Infor
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO4-->
 
 

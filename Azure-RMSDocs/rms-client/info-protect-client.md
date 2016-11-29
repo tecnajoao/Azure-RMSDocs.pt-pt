@@ -4,15 +4,15 @@ description: "Instruções para instalar o cliente que adiciona uma barra de Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2016
+ms.date: 11/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 translationtype: Human Translation
-ms.sourcegitcommit: db05149a25b6535d568338140daa2474e48b6711
-ms.openlocfilehash: 984d764d0c1ac41e6baec0b7978f501d7494773d
+ms.sourcegitcommit: 0b9d796b8908a42a7aceb95f3c3319028e9a9dbe
+ms.openlocfilehash: d12916a0b60e27592c3917ab5421196392156506
 
 
 ---
@@ -67,7 +67,7 @@ Pode utilizar uma das seguintes opções:
 
     - Na secção **estado do cliente**: utilize o valor **Versão** para verificar que a instalação foi efetuada com êxito. Para além disso, pode ver quando é que o cliente se ligou ao serviço Azure Information Protection da sua organização pela última vez e quando é que a política do Azure Information Protection foi instalada ou atualizada pela última vez. Quando o cliente se liga ao serviço, é transferida automaticamente a política mais recente se forem detetadas alterações em relação à política atual. Se tiver efetuado alterações de política após a hora apresentada, feche e reabra a aplicação do Office.
     
-        Também o seu nome de utilizador apresentado, que identifica a conta utilizada para o autenticar no Azure Information Protection. Este nome de utilizador tem de corresponder à conta que utiliza para o Office 365 ou para o Azure Active Directory.
+        Também o seu nome de utilizador apresentado, que identifica a conta utilizada para o autenticar no Azure Information Protection. Este nome de utilizador tem de corresponder a uma conta que utiliza para o Office 365 ou o Azure Active Directory e que pertence a um inquilino configurado para o Azure Information Protection.
 
     - Na secção **Ajuda e feedback**: a **ligação Mais informações** direciona-o, por predefinição, para o site do [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection), mas pode ser configurada para um URL personalizado, de acordo com uma das [definições globais](../deploy-use/configure-policy-settings.md) da política do Azure Information Protection.
         
@@ -117,6 +117,6 @@ para verificar as informações da versão de lançamento do cliente, consulte o
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

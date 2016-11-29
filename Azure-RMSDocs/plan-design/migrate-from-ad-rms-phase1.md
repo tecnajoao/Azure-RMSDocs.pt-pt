@@ -1,10 +1,10 @@
 ---
-title: "Migrar do AD RMS para o Azure Information Protection – Fase 1 | Azure Information Protection"
+title: "Migrar do AD RMS para o Azure Information Protection – Fase 1 | Azure Information Protection"
 description: "Fase 1 da migração do AD RMS para o Azure Information Protection, abrangendo os passos 1 a 4 de Migrar do AD RMS para o Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/23/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,17 +13,17 @@ ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 2db4041d7839d32a4d8f0bd468aa114d45665c27
+ms.sourcegitcommit: 750919e3d8be88a1a1028d83c89ece55ea4e8690
+ms.openlocfilehash: 65ab175da5c5ab74090bf6bdb88af766dc55e334
 
 
 ---
 
-# <a name="migration-phase-1-serverside-configuration-for-ad-rms"></a>Fase de migração 1 – configuração do lado do servidor para o AD RMS
+# <a name="migration-phase-1---server-side-configuration-for-ad-rms"></a>Fase de migração 1 – configuração do lado do servidor para o AD RMS
 
 >*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Office 365*
 
-Utilize as seguintes informações para a Fase 1 da migração do AD RMS para o Azure Information Protection. Estes procedimentos incluem os passos 1 a 4 do tópico [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
+Utilize as seguintes informações para a Fase 1 da migração do AD RMS para o Azure Information Protection. Estes procedimentos incluem os passos 1 a 4 do tópico [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 
 ## <a name="step-1-download-the-azure-rights-management-administration-tool"></a>Passo 1: transferir a Ferramenta de Administração do Azure Rights Management
@@ -71,9 +71,14 @@ Efetue o seguinte procedimento em todos os clusters do AD RMS de todos os domín
 
     -   Especifique e confirme uma palavra-passe segura. Lembre-se desta palavra-passe, dado que precisará dela mais tarde quando importar os dados de configuração para o Azure Information Protection.
 
-    -   Não marque a caixa de verificação para guardar o ficheiro de domínio fidedigno na versão 1.0 do RMS.
+    -   Não marque a caixa de verificação para guardar o ficheiro de domínio fidedigno na versão 1.0 do RMS.
 
 Após exportar todos os domínios de publicação fidedignos, estará pronto para iniciar a importação destes dados para o Azure Information Protection.
+
+Tenha em atenção que os domínios de publicação fidedignos incluem as chaves para desencriptar os ficheiros protegidos anteriormente, pelo que é importante que exporte (e depois importe para o Azure) todos os domínios de publicação fidedignos e não apenas o domínio atualmente ativo.
+
+Por exemplo, terá vários domínios de publicação fidedignos se tiver atualizado os seus servidores AD RMS do Modo Criptográfico 1 para o Modo Criptográfico 2. Se não exportar e importar o domínio de publicação fidedigno que contém a chave arquivada que utilizou o Modo Criptográfico 1, no final da migração, os utilizadores não poderão abrir o conteúdo que foi protegido com a chave do Modo Criptográfico 1.
+
 
 ### <a name="import-the-configuration-data-to-azure-information-protection"></a>Importar os dados de configuração para o Azure Information Protection
 Os procedimentos exatos para este passo dependem da configuração da sua implementação atual do AD RMS e da topologia preferida para a sua chave de inquilino do Azure Information Protection.
@@ -220,6 +225,6 @@ Vá para a [fase 2 - configuração do lado do cliente](migrate-from-ad-rms-phas
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 

@@ -20,7 +20,7 @@ ms.openlocfilehash: 03c2e885bfb997fda2a2f675be3dee6bc8ea8138
 ---
 
 
-# <a name="customermanaged-tenant-key-lifecycle-operations"></a>Operações de ciclo de vida das chaves de inquilino: geridas pelo cliente
+# <a name="customer-managed-tenant-key-lifecycle-operations"></a>Operações de ciclo de vida das chaves de inquilino: geridas pelo cliente
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -32,7 +32,7 @@ No Cofre de Chaves do Azure, pode alterar as permissões no cofre de chaves que 
 Quando cancelar a sua subscrição do Azure Information Protection, o Azure Information Protection deixará de utilizar a sua chave de inquilino e não será necessário que faça mais nada.
 
 
-## <a name="rekey-your-tenant-key"></a>Efetuar a recodificação da chave de inquilino
+## <a name="re-key-your-tenant-key"></a>Efetuar a recodificação da chave de inquilino
 A recodificação também é conhecida como implementação da chave. Não efetue a recodificação da chave de inquilino, a menos que seja realmente necessário. Os clientes antigos, tal como o Office 2010, não foram concebidos para processar alterações de chave corretamente. Neste cenário, tem de limpar o estado do Rights Management nos computadores através da Política de Grupo ou um mecanismo equivalente. No entanto, existem alguns eventos legítimos que poderão forçá-lo a efetuar a recodificação da chave de inquilino. Por exemplo:
 
 -   A sua empresa foi dividida em duas ou mais empresas. Quando efetua a recodificação da chave de inquilino, a nova empresa não terá acesso ao conteúdo novo que os seus funcionários publicam. Estes podem aceder ao conteúdo antigo se tiverem uma cópia da chave de inquilino antiga.

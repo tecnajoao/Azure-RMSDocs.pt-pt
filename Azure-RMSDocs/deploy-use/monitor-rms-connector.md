@@ -4,7 +4,7 @@ description: "Informações para ajudá-lo a monitorizar o conector e a utiliza�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 65d9e0bb46238d9fda31b8fb47e8e4368d96e1b2
+ms.sourcegitcommit: e5939bb469af198a74d81724c5417eb63db7732b
+ms.openlocfilehash: bf73a79218fa8dba2b90115d0c1573a29f791023
 
 
 ---
@@ -162,9 +162,11 @@ Se tiver adicionado recentemente novas contas de servidor para utilizar o conect
 
 ## <a name="rms-analyzer"></a>RMS Analyzer
 
-Pode utilizar a ferramenta Rights Management Services Analyzer para ajudar a monitorizar o estado de funcionamento do conector e identificar problemas de configuração.
+Embora esta ferramenta seja fornecida com suporte "tal como está", pode utilizar a ferramenta Rights Management Services Analyzer para ajudar a monitorizar o estado de funcionamento do conector e identificar problemas de configuração. Se ainda não tiver transferido esta ferramenta, pode fazê-lo no [Centro de Transferências](https://www.microsoft.com/en-us/download/details.aspx?id=46437). 
 
-Se não tiver já transferido esta ferramenta, pode fazê-lo a partir do [Centro de Transferências](https://www.microsoft.com/en-us/download/details.aspx?id=46437) e, em seguida, instalá-la em qualquer computador que tenha acesso à Internet e que possa ligar ao conector RMS. Execute a ferramenta e, na página **Bem-vindo**, selecione a opção **conector Azure RMS**.
+Inicie sessão num dos servidores que configurou para o conector RMS, com uma conta que autorizou para utilizar o conector para essa carga de trabalho. Por exemplo, se configurou o conector RMS para o Exchange, inicie sessão nesse servidor com uma das contas que autorizou para o Exchange na ferramenta de configuração do conector RMS. Em seguida, execute a ferramenta RMS Analyzer com a opção **Executar como administrador**.
+
+Quando a ferramenta carrega, na página de **Boas-vindas**, selecione a opção **conector Azure RMS**. Introduza o URL do conector RMS como o endereço ativo e clique na seta verde. Vão ser apresentados os detalhes do seu inquilino, os quais confirmam que o conector pode ligar-se com êxito ao serviço Azure Rights Management. Se este teste inicial falhar, verifique a configuração do servidor proxy e as firewalls que poderão estar a bloquear o tráfego de servidor. Após a apresentação com êxito dos detalhes do seu inquilino, pode continuar a executar os testes de diagnóstico da carga de trabalho desse servidor, os quais verificam pormenores como números da versão suportada, pré-requisitos e definições de registo.
 
 Para informação adicional e instruções, consulte os **Detalhes** e as **Instruções de Instalação** na página de transferência.
 
@@ -193,6 +195,6 @@ Se necessitar de registos mais detalhados para fins de diagnóstico, pode utiliz
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO5-->
 
 

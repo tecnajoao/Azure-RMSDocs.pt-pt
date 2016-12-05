@@ -4,7 +4,7 @@ description: "As informações de suporte do Azure Information Protection inclue
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 784e8a1f53df10ee66595b1268a4d9a1f0cdc9b0
-ms.openlocfilehash: 5fbc0af13f1acdbd6b7a1a267c9d2be2b90b8a1b
+ms.sourcegitcommit: 291198ed501854de1aa7ddbfc80cd7a7f1b4849c
+ms.openlocfilehash: a853aaa993bbb5e15e6c4b80d4c6f0581b6e9090
 
 
 ---
@@ -33,11 +33,13 @@ O Azure Information Protection suporta outros serviços e também depende de out
 
 ## <a name="security-compliance-and-auditing"></a>Segurança, conformidade e auditoria
 
-Consulte a secção [Requisitos de segurança, conformidade e regulamentação](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements) no artigo [Que problemas resolve o Azure RMS?](../understand-explore/azure-rms-problems-it-solves.md). Além disso:
+Veja a secção [Requisitos de segurança, conformidade e regulamentação](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements) no artigo [Que problemas resolve o Azure RMS?](../understand-explore/azure-rms-problems-it-solves.md), para obter informações sobre certificados específicos para o serviço Azure Rights Management. Além disso:
 
 - Para obter certificados externos para o Azure Information Protection: [Centro de Fidedignidade do Microsoft Azure](http://azure.microsoft.com/support/trust-center/)
 
 - Para obter informações sobre a norma FIPS 140: [FIPS 140 Validation (Validação da Norma FIPS 140 – em inglês)](https://technet.microsoft.com/library/security/cc750357.aspx)
+
+Para obter informações técnicas detalhadas sobre como funciona a tecnologia de proteção, veja [Como funciona o Azure RMS?](../understand-explore/how-does-it-work.md) 
 
 ## <a name="service-level-agreements"></a>Contratos de nível de serviço
 
@@ -56,6 +58,6 @@ Consulte a secção [Requisitos de segurança, conformidade e regulamentação](
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO5-->
 
 

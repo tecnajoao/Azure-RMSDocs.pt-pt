@@ -4,15 +4,15 @@ description: "Instruções para instalar o cliente que adiciona uma barra de Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/21/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 translationtype: Human Translation
-ms.sourcegitcommit: 0b9d796b8908a42a7aceb95f3c3319028e9a9dbe
-ms.openlocfilehash: d12916a0b60e27592c3917ab5421196392156506
+ms.sourcegitcommit: 23c437479c756f2a9335606e686f117d514a38f6
+ms.openlocfilehash: 71972b0a057b1958dfa5e5b4af41b65d5080a086
 
 
 ---
@@ -27,14 +27,13 @@ A imagem seguinte mostra a barra Information Protection e as etiquetas da [polí
 
 ![Barra do Azure Information Protection com a política predefinida](../media/info-protect-bar-default.png)
 
-Transfira o cliente do Azure Information Protection a partir do [Centro de Transferências da Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+Transfira o cliente do Azure Information Protection a partir do [Centro de Transferências da Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Atualmente, pode instalar a versão de Disponibilidade Geral (DG) e a versão de pré-visualização. A versão de pré-visualização inclui novas funcionalidades para fins de avaliação e está sujeita a alterações. Para obter mais informações, veja o seguinte anúncio de mensagem de blogue: [Azure Information Protection December preview now available (Pré-visualização de Dezembro do Azure Information Protection já disponível)](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/)
 
-Antes de instalar o cliente, verifique se tem as versões de sistema operativo e as aplicações necessárias para o cliente do Azure Information Protection: [Requisitos do Azure Information Protection](../get-started/requirements-azure-rms.md).
-
+Antes de instalar o cliente, verifique se tem as versões de sistema operativo e as aplicações necessárias para o cliente do Azure Information Protection: [Requisitos do Azure Information Protection](../get-started/requirements-azure-rms.md). Além disso, para a versão de pré-visualização do cliente, os computadores a executar o Windows 7 SP1 necessitam da atualização [KB 2533623](https://support.microsoft.com/en-us/kb/2533623), que pode ser instalada após a instalação do cliente. Se esta atualização for necessária, mas não estiver instalada, ser-lhe-á pedido para a instalar.
 
 ## <a name="to-install-the-azure-information-protection-client-manually"></a>Para instalar o cliente do Azure Information Protection manualmente
 
-1. Depois de ter [transferido o cliente](https://www.microsoft.com/en-us/download/details.aspx?id=53018), execute o ficheiro **AzInfoProtection.exe** e siga as instruções para instalar o cliente. Esta instalação requer permissões administrativas locais.
+1. Depois de ter [transferido o cliente](https://www.microsoft.com/en-us/download/details.aspx?id=53018), execute o ficheiro executável, tal como **AzInfoProtection.exe**, e siga as instruções para instalar o cliente. Esta instalação requer permissões administrativas locais.
 
     Selecione a opção para instalar uma política de demonstração se não puder ligar-se ao Office 365 ou ao Azure Active Directory e pretender ver e experimentar o lado do cliente do Azure Information Protection utilizando uma política local para efeitos de demonstração. Quando o cliente se liga a um serviço do Azure Information Protection, esta política de demonstração é substituída pela política do Azure Information Protection da organização. 
 
@@ -42,11 +41,11 @@ Antes de instalar o cliente, verifique se tem as versões de sistema operativo e
 
 ## <a name="to-install-the-azure-information-protection-client-for-users"></a>Para instalar o cliente do Azure Information Protection para os utilizadores
 
-Pode executar scripts e automatizar a instalação do cliente do Azure Information Protection ao utilizar as opções da linha de comandos. Para ver as opções de instalação, execute `AzInfoProtection.exe /help`.
+Pode executar scripts e automatizar a instalação do cliente do Azure Information Protection ao utilizar as opções da linha de comandos. Para ver as opções de instalação, execute o ficheiro executável com **/help**. Por exemplo: `AzInfoProtection.exe /help`.
 
-por exemplo, para instalar automaticamente o cliente: `AzInfoProtection.exe /passive | quiet`
+Como instalar automaticamente o cliente: `AzInfoProtection.exe /passive | quiet`
 
-O cliente Azure Information Protection também está incluído no catálogo Microsoft Update, pelo que pode instalar e atualizar o cliente utilizando qualquer serviço de atualização de software que utilize o catálogo.
+A versão de disponibilidade geral do cliente Azure Information Protection também está incluída no catálogo Microsoft Update, pelo que pode instalar e atualizar o cliente com qualquer serviço de atualização de software que utilize o catálogo. As versões de pré-visualização do cliente não estão incluídas no catálogo Microsoft Update.
 
 ## <a name="to-uninstall-the-azure-information-protection-client"></a>Para instalar o cliente do Azure Information Protection
 
@@ -54,9 +53,9 @@ Pode utilizar uma das seguintes opções:
 
 - Utilize o Painel de Controlo para desinstalar um programa: clique em **Microsoft Azure Information Protection** > **Desinstalar**
 
-- Volte a executar o ficheiro **AzInfoProtection.exe** e, na página **Modificar Configuração**, clique em **Desinstalar**. 
+- Volte a executar o ficheiro executável (por exemplo, **AzInfoProtection.exe**) e, na página **Modificar Configuração**, clique em **Desinstalar**. 
 
-- Execute `AzInfoProtection.exe /uninstall`
+- Execute o ficheiro executável com **/uninstall**. Por exemplo: `AzInfoProtection.exe /uninstall`
 
 
 ## <a name="to-verify-installation-connection-status-or-report-a-problem"></a>Para verificar a instalação, o estado da ligação ou comunicar um problema
@@ -69,7 +68,7 @@ Pode utilizar uma das seguintes opções:
     
         Também o seu nome de utilizador apresentado, que identifica a conta utilizada para o autenticar no Azure Information Protection. Este nome de utilizador tem de corresponder a uma conta que utiliza para o Office 365 ou o Azure Active Directory e que pertence a um inquilino configurado para o Azure Information Protection.
 
-    - Na secção **Ajuda e feedback**: a **ligação Mais informações** direciona-o, por predefinição, para o site do [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection), mas pode ser configurada para um URL personalizado, de acordo com uma das [definições globais](../deploy-use/configure-policy-settings.md) da política do Azure Information Protection.
+    - Na secção **Ajuda e feedback**: a **ligação Mais informações** direciona-o, por predefinição, para o site do [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection), mas pode ser configurada para um URL personalizado, de acordo com uma das [definições da política](../deploy-use/configure-policy-settings.md) da política do Azure Information Protection.
         
         Utilize a ligação **Enviar feedback** para anexar automaticamente os registos de cliente a um e-mail que pode ser enviado à equipa do Information Protection para investigar o problema. 
     
@@ -84,6 +83,56 @@ Pode utilizar uma das seguintes opções:
         - A chave de registo e definições seguintes são eliminadas: **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC**. Caso configure definições para esta chave de registo (por exemplo, definições de redirecionamento para o seu inquilino do Azure Information Protection porque está a migrar do AD RMS e ainda tem um Ponto de Ligação de Serviço na sua rede), tem de voltar a configurar as definições de registo após efetuar a reposição do cliente.
         
         - Caso tenha efetuado a reposição do cliente, tem de reiniciar o ambiente do utilizador (também conhecido como "bootstrapping"), o que irá transferir para o cliente certificados e os modelos mais recentes. Para o fazer, feche todas as instâncias do Office e, em seguida, reinicie uma aplicação do Office. Esta ação também irá verificar se transferiu a política do Azure Information Protection mais recente. Não execute novamente os testes de diagnóstico até ter efetuado esta ação.
+
+
+## <a name="usage-logging"></a>Registo de utilização
+
+**[Esta funcionalidade requer a versão de pré-visualização do cliente e está sujeita a alterações.]**
+
+Para a versão de pré-visualização do cliente do Azure Information Protection, o cliente regista a atividade do utilizador no registo de eventos locais **Aplicações e Serviços** do Windows, **Azure Information Protection**. Os eventos incluem as seguintes informações:
+
+- Data, versão do cliente, ID de política
+
+- Nome de utilizador da sessão iniciada, nome do computador
+
+- Nome e localização do ficheiro
+
+- Ação:
+
+    - Definir Etiqueta: ID de Informações 101
+    
+    - Definir Etiqueta (inferior): ID de Informações 102
+    
+    - Definir Etiqueta (superior): ID de Informações 103
+    
+    - Remover etiqueta: ID de Informações 104
+   
+    - Sugestão recomendada: Informações 105
+    
+    - Aplicar proteção personalizada: ID de Informações 201
+    
+    - Remover proteção personalizada: ID de Informações 202
+    
+    - Início de Sessão (operacional): ID de informações 902
+    
+    - Transferir política (operacional): ID de informações 901
+    
+- Origem da ação:
+    
+    - Manual 
+    
+    - Recomendado
+    
+    - Automático  
+    
+    - Sistema (para iniciar sessão e transferir a política)
+    
+- Etiqueta antes e depois da ação 
+    
+- Proteção antes e depois da ação
+    
+- Justificação do utilizador (quando aplicável)
+    
 
 ## <a name="keyboard-shortcuts-for-the-azure-information-protection-bar"></a>Atalhos de teclado da barra Azure Information Protection
 
@@ -117,6 +166,6 @@ para verificar as informações da versão de lançamento do cliente, consulte o
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -4,15 +4,15 @@ description: "Passo 2 de um tutorial de introdução com uma duração de aproxi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: bce1682624b040545d30ca1cc426e4e2f8c38018
-ms.openlocfilehash: 7ba1566a81ca9a3ac45f340f69d3c9e933f015ff
+ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
+ms.openlocfilehash: 2f996bb974b1d86b137e3a8fba387386276739a2
 
 
 ---
@@ -32,17 +32,21 @@ Apesar de o Azure Information Protection ser fornecido com uma política predefi
     > [!TIP] 
     > Selecione **Afixar ao dashboard** para criar um mosaico do **Azure Information Protection** no seu dashboard. Assim, não terá de procurar o serviço da próxima vez que iniciar sessão no portal.
 
-3.  Explore o painel principal **Azure Information Protection**, que mostra a política do Information Protection predefinida criada automaticamente:
+3.  Explore o painel **Política:Global** apresentado automaticamente, que mostra a política do Information Protection predefinida criada automaticamente:
     
     - Etiquetas para classificação: **Pessoal**, **Público**, **Interno**, **Confidencial** e **Secreto**. Leia a descrição de cada etiqueta para compreender como devem ser utilizadas. Tenha em atenção que **Segredo** tem duas etiquetas secundárias: **Todos os Funcionários** e **O Meu Grupo**, que fornece um exemplo de como uma classificação pode ter subcategorias.
 
-    - Com as predefinições, as etiquetas **Interno**, **Confidencial** e **Secreto** têm marcas visuais configuradas (por exemplo, rodapé, cabeçalho, marca d'água) e nenhuma das etiquetas tem a proteção definida. Além disso, as quatro definições globais não estão definidas para que todos os documentos e e-mails não precisem de uma etiqueta, não existem etiquetas predefinidas e os utilizadores não têm de fornecer uma justificação ao alterar as etiquetas, além de que o cliente não está configurado para obter uma ligação de ajuda personalizada.
-
-    ![Tutorial de início rápido do Azure Information Protection, passo 3 - política predefinida](../media/info-protect-policy.png)
+    - Com as predefinições, as etiquetas **Interno**, **Confidencial** e **Secreto** têm marcas visuais configuradas (por exemplo, rodapé, cabeçalho, marca d'água) e nenhuma das etiquetas tem a proteção definida: 
+    
+    ![Tutorial de início rápido do Azure Information Protection, passo 3 - política predefinida](../media/info-protect-policy-default-labels.png)
+    
+    Além disso, existem algumas definições de política global que não estão definidas para que todos os documentos e e-mails não precisem de uma etiqueta, não existem etiquetas predefinidas e os utilizadores não têm de fornecer uma justificação ao alterar as etiquetas, além de que o cliente não está configurado para obter uma ligação de ajuda personalizada:
+    
+    ![Tutorial de início rápido do Azure Information Protection, passo 3 - política predefinida](../media/info-protect-policy-default-settings.png)
 
 ## <a name="changing-the-global-settings-for-a-default-template-and-prompt-for-justification"></a>Alterar as definições globais de um modelo predefinido e pedido de justificação
 
-Para o nosso tutorial, vamos alterar algumas dessas definições globais para que possa ver como funcionam:
+Para o nosso tutorial, vamos alterar algumas dessas definições de política global para que possa ver como funcionam:
 
 1. Para **Selecione a etiqueta predefinida**, defina esta opção como **Interno**.
 
@@ -102,11 +106,11 @@ Agora vamos alterar as definições de uma das etiquetas, **Confidencial**:
     
     ![Passo 3 do tutorial de início rápido do Azure Information Protection – escrever notas](../media/step2-type-notes.png)
 
-8. Clique em **Guardar** neste painel **Etiqueta: Confidencial**. Em seguida, no painel principal **Azure Information Protection**, clique novamente em **Guardar**.
+8. Clique em **Guardar** neste painel **Etiqueta: Confidencial**. Em seguida, no painel **Política:Global**, clique em **Guardar** novamente.
 
-9. Agora que fizemos as nossas alterações e guardámo-las, queremos disponibilizá-las aos utilizadores, por isso, clique em **Publicar** e clique em **Sim** para confirmar.
+    ![Tutorial de início rápido do Azure Information Protection, passo 3 - política predefinida configurada](../media/info-protect-policy-configured.png)
 
-![Tutorial de início rápido do Azure Information Protection, passo 3 - política predefinida configurada](../media/info-protect-policy-configured.png)
+9. Agora que fizemos as nossas alterações e as guardamos, queremos disponibilizá-las aos utilizadores, por isso, no painel inicial do **Azure Information Protection**, clique em **Publicar** e clique em **Sim** para confirmar.
 
 Pode fechar o portal do Azure ou deixá-lo aberto para experimentar opções de configuração adicionais depois de concluir este tutorial.
 
@@ -122,6 +126,6 @@ Agora que conhece a política predefinida e fez algumas alterações, o próximo
 [Passo 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

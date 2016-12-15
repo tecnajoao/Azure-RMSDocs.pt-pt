@@ -4,15 +4,15 @@ description: "Pode alterar ou refinar qualquer uma das etiquetas que os utilizad
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 translationtype: Human Translation
-ms.sourcegitcommit: 0046023125fe339ed408edf47c59e36708b01783
-ms.openlocfilehash: 1d92c127581d68bb52979d65ddb8704cad7c8039
+ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
+ms.openlocfilehash: f7b5e9e0bb32e4a04dfb407f11e361d959ebb807
 
 
 ---
@@ -32,9 +32,9 @@ Para alterar uma etiqueta, utilize as instruções seguintes.
     
     Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
-2. No painel **Azure Information Protection**, selecione a etiqueta a alterar e, em seguida, efetue as alterações no painel **Etiqueta** e em quaisquer painéis subsequentes, conforme necessário.
+2. Para alterar uma etiqueta da política global, de modo a que se aplique a todos os utilizadores, selecione a etiqueta a alterar no painel **Política:Global** e, em seguida, faça as alterações no painel **Etiqueta** e em todos os painéis subsequentes, conforme necessário. Para alterar uma etiqueta a partir de uma [política de âmbito](configure-policy-scope.md) para que se aplique a utilizadores selecionados, selecione primeiro essa política no painel inicial do **Azure Information Protection**.
 
-    A exceção é se pretende reordenar uma etiqueta, que é efetuada no mesmo painel **Azure Information Protection**: clique com o botão direito do rato na etiqueta ou selecione o menu de contexto para a etiqueta e, em seguida, selecione as opções **Mover para cima** ou **Mover para baixo**.
+    A exceção é se pretender reordenar uma etiqueta, procedimento que é feito no painel da política a partir da política global ou da sua política de âmbito selecionada: clique com o botão direito do rato na etiqueta ou selecione o menu de contexto da etiqueta e, em seguida, selecione as opções **Mover para cima** ou **Mover para baixo**.
 
 3. Sempre que efetuar alterações num painel, caso pretenda manter as alterações, clique em **Guardar** nesse mesmo painel.
 
@@ -52,6 +52,6 @@ Para mais informações sobre como configurar as opções que pode efetuar em re
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -4,15 +4,15 @@ description: "Quando configurar as condições para uma etiqueta, pode atribuir 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 11/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: d5b3f3fc473661022a4f17b6587d58a252d07d1a
-ms.openlocfilehash: bd6adab05c4f087f5441d168c3385057ce5b6355
+ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
+ms.openlocfilehash: 4211adef1696a1b615bd3f25df568f4b5149c186
 
 
 ---
@@ -52,7 +52,9 @@ Neste exemplo, o utilizador pode clicar em **Alterar agora** para aplicar a etiq
     
     Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
-2. No painel do **Azure Information Protection**, selecione a etiqueta que pretende configurar para a classificação automática ou recomendada.
+2. Se a etiqueta que pretende configurar para uma classificação automática ou recomendada se aplicar a todos os utilizadores, selecione a etiqueta a alterar no painel **Política:Global** e, em seguida, faça as alterações no painel **Etiqueta** e em todos os painéis subsequentes, conforme necessário. 
+
+     Se a etiqueta que pretende configurar estiver numa [política de âmbito](configure-policy-scope.md) para ser aplicada apenas a utilizadores selecionados, selecione primeiro essa política de âmbito no painel inicial do **Azure Information Protection**.  
 
 3. No painel **Etiqueta**, na secção **Configurar condições para aplicar esta etiqueta automaticamente**, clique em **Adicionar uma nova condição**.
 
@@ -74,7 +76,7 @@ Neste exemplo, o utilizador pode clicar em **Alterar agora** para aplicar a etiq
 
 6. Para disponibilizar as alterações aos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
 
-## <a name="information-about-the-builtin-conditions"></a>Informações sobre as condições incorporadas
+## <a name="information-about-the-built-in-conditions"></a>Informações sobre as condições incorporadas
 
 Durante o período de pré-visualização pode selecionar as seguintes condições:
 
@@ -224,6 +226,6 @@ Para mais informações sobre como configurar a política do Azure Information P
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

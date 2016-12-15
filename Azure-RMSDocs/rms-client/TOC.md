@@ -23,9 +23,14 @@
 ##### [Remover proteção](sharing-app-remove-protection.md)
 ##### [Utilizar atalhos de teclado](sharing-app-keyboard-shortcuts.md)
 ##### [Opções da caixa de diálogo](sharing-app-dialog-box.md)
+### [Guia do utilizador do Azure Information Protection – pré-visualização](client-user-guide.md)
+#### [Transferir e instalar o cliente do Azure Information Protection](install-client-app.md)
+#### [Classificar e proteger um ficheiro ou e-mail](client-classify-protect.md)
+#### [Controlar e revogar os documentos](client-track-revoke.md)
+#### [Abrir ficheiros que foram protegidos](client-view-use-files.md)
 # [Desenvolver e Personalizar Aplicações](/information-protection/develop/developers-guide)
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 

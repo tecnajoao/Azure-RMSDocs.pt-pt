@@ -4,7 +4,7 @@ description: "Compreender como o serviço Azure Rights Management do Azure Infor
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/10/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: c50a8cbb-d12f-4a0e-bc29-74c463e6ac3e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 28e81e174e1b1a39928fa47f9155c40e769b633f
+ms.sourcegitcommit: f5ed228f1434761208095fd15d36a6bf05e07154
+ms.openlocfilehash: 82269c1b224df944db2bbc40f36ca111cb1ac160
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: 28e81e174e1b1a39928fa47f9155c40e769b633f
 
 Utilize as seguintes informações para compreender como o serviço Azure Rights Management do Azure Information Protection pode suportar outras aplicações para proteger os dados da sua organização.
 
-Ao utilizar o SDK do Rights Management, os programadores internos podem escrever as aplicações de linha de negócio para suportarem nativamente o Azure Rights Management. A forma como a proteção de informações é integrada com estas aplicações depende da forma como estas são escritas. Por exemplo, a integração poderá ser automaticamente aplicada com interação do utilizador mínima necessária ou, para uma experiência mais personalizada, os utilizadores podem ser solicitados a configurar definições para aplicar proteção de informações aos ficheiros. Para mais informações sobre o SDK, consulte o [Guia para Programadores](../develop/developers-guide.md).
+Ao utilizar os SDKs do Azure Information Protection, os programadores internos podem escrever as aplicações de linha de negócio para suportarem nativamente o Azure Rights Management. A forma como a proteção de informações é integrada com estas aplicações depende da forma como estas são escritas. Por exemplo, a integração poderá ser automaticamente aplicada com interação do utilizador mínima necessária ou, para uma experiência mais personalizada, os utilizadores podem ser solicitados a configurar definições para aplicar proteção de informações aos ficheiros. Para obter mais informações, veja o [Guia para Programadores](../develop/developers-guide.md).
 
 Da mesma forma, muitos fornecedores de software fornecem aplicações para proporcionar soluções de proteção de informações, também conhecidos como produtos de gestão de direitos de empresa (ERM). Um exemplo popular é um leitor de PDF que suporte o serviço Azure Rights Management para plataformas específicas. Pode utilizar a tabela em [Aplicações que suportam a proteção de dados do Azure Rights Management](../get-started/requirements-applications.md) para identificar as aplicações que suportam Rights Management (aplicações otimizadas por RMS) e, em seguida, efetuar uma pesquisa na Web para comprar ou transferir a aplicação.
 
@@ -34,6 +34,6 @@ Da mesma forma, muitos fornecedores de software fornecem aplicações para propo
 Para ver como outras aplicações e serviços suportam o serviço Azure Rights Management, consulte [Como as Aplicações Suportam o serviço Azure Rights Management](applications-support.md).
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO1-->
 
 

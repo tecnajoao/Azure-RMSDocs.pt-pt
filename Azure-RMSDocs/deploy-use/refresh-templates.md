@@ -95,7 +95,7 @@ Para os utilizadores deixarem de ver estes modelos, ligue-se ao serviço com o W
 Set-RMSTemplate -Identity "<name or GUID of the template>" -Type Archived
 ```
 
-## <a name="office-2016-office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2016, Office 2013 e aplicação de partilha RMS para Windows: como forçar uma atualização de um modelo personalizado modificado
+## <a name="office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2016, Office 2013 e aplicação de partilha RMS para Windows: como forçar uma atualização de um modelo personalizado modificado
 Ao editar o registo nos computadores ao executar o Office 2016, Office 2013 ou a aplicação de partilha Rights Management (RMS) para Windows, pode alterar o agendamento automático para os modelos modificados serem atualizados nos computadores com mais frequência do que o respetivo valor predefinido. Também pode forçar uma atualização imediata ao eliminar os dados existentes num valor de registo.
 
 > [!WARNING]

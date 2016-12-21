@@ -4,7 +4,7 @@ description: "Tem alguma pergunta sobre a versão de pré-visualização do Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 12/09/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 23c437479c756f2a9335606e686f117d514a38f6
-ms.openlocfilehash: ba67bb149b0128b068c86dcf849e2dd49edbf6a7
+ms.sourcegitcommit: 946daa8dedba71d5887dd96f6853e8d90400bfb1
+ms.openlocfilehash: 125752671ec0ca556cc6967a2a3011fb0bf7d9ab
 
 
 ---
@@ -62,7 +62,7 @@ Para verificar quais as funcionalidades incluídas na subscrição do **Azure In
 
 ## <a name="does-azure-information-protection-support-on-premises-and-hybrid-scenarios"></a>O Azure Information Protection suporta cenários no local e híbridos?
 
-O Azure Information Protection é uma solução baseada na nuvem. Se estiver interessado em implementar o Azure Information Protection num cenário híbrido, contacte a equipa do Information Protection, enviando um e-mail para askipteam@microsoft.com.
+O Azure Information Protection é uma solução baseada na cloud. Se estiver interessado em implementar o Azure Information Protection num cenário híbrido, contacte a equipa do Information Protection, enviando um e-mail para askipteam@microsoft.com.
 
 ## <a name="how-do-computers-get-the-policy-information-from-azure-information-protection-and-how-often-is-it-refreshed"></a>Como é que os computadores obtêm informações de política do Azure Information Protection e com que frequência são atualizados?
 
@@ -76,11 +76,13 @@ Uma vez que o Azure Information Protection aplica etiquetas persistentes e prote
 
 ## <a name="can-i-classify-only-new-data-or-can-i-also-classify-existing-data"></a>Posso classificar apenas novos dados ou posso também classificar dados existentes?
 
-As ações de política do Azure Information Protection entram em vigor quando os documentos são guardados e os e-mails são enviados, tanto para novo conteúdo como para alterações a conteúdo existente. 
+As ações de política do Azure Information Protection entram em vigor quando os documentos são guardados e os e-mails são enviados, tanto para novo conteúdo como para alterações a conteúdo existente.
+
+Se tiver o cliente de pré-visualização, também pode classificar (ou, em alternativa, proteger) rapidamente ficheiros existentes do Explorador de Ficheiros. 
 
 ## <a name="can-i-use-azure-information-protection-for-classification-only-without-enforcing-encryption-and-restricting-usage-rights"></a>Posso utilizar o Azure Information Protection apenas para classificação, sem impor encriptação e restringir direitos de utilização?
 
-Sim. Pode configurar uma política do Azure Information Protection que aplique apenas uma etiqueta. Na verdade, esperamos que seja este o caso da maior parte das redes de implementação em que é necessário proteger apenas um subconjunto de documentos ou e-mails que necessitam da gestão de dados especiais.
+Sim. Pode configurar uma política do Azure Information Protection que aplica apenas a classificação sem proteção quando o tipo de ficheiro suportar esta ação. Na verdade, esperamos que seja este o caso da maior parte das redes de implementação em que é necessário proteger apenas um subconjunto de documentos ou e-mails que necessitam da gestão de dados especiais.
 
 ## <a name="how-does-automatic-classification-work"></a>Como funciona a classificação automática?
 
@@ -100,7 +102,7 @@ Irá ver um exemplo desta situação no [Tutorial de início rápido do Azure In
 
 ## <a name="can-i-force-all-documents-to-be-classified"></a>Posso impor a classificação de todos os documentos?
 
-Sim. Se necessitar que os utilizadores classifiquem todos os ficheiros que guardam, no portal do Azure, defina a opção **Todos os documentos e e-mails têm de ter uma etiqueta** como **Ligado**. 
+Sim. Se solicitar aos utilizadores que classifiquem todos os ficheiros que guardam, no portal do Azure, configure a definição da política **Todos os documentos e e-mails têm de ter uma etiqueta** como **Ativado**. 
 
 ## <a name="can-i-remove-classification-from-a-file"></a>Posso remover a classificação de um ficheiro?
 
@@ -117,11 +119,13 @@ No portal do Azure, pode selecionar um modelo de Rights Management para proteger
 
 Irá ver um exemplo desta situação no [Tutorial de início rápido do Azure Information Protection](infoprotect-quick-start-tutorial.md). Para mais informações, consulte [Como configurar uma etiqueta para aplicar proteção a Gestão de Direitos](../deploy-use/configure-policy-protection.md).
 
-## <a name="can-a-file-be-classified-with-two-different-classifications"></a>Um ficheiro pode ser classificado com duas classificações diferentes?
+## <a name="can-a-file-have-more-than-one-classification"></a>Um ficheiro pode conter mais do que uma classificação?
 
-Se necessário, pode criar subetiquetas que melhor descrevam subcategorias para uma etiqueta de sensibilidade específica. Por exemplo, a etiqueta principal **Segredo** pode conter subetiquetas como **Segredo \ Legal** e **Segredo \ Finanças**. Em seguida, pode aplicar marcações visuais de classificação diferentes e modelos de Gestão de Direitos diferentes a subetiquetas diferentes.
+Os utilizadores podem selecionar apenas uma etiqueta de cada vez para cada documento ou e-mail, o que habitualmente acaba por criar apenas uma classificação. No entanto, se os utilizadores selecionarem uma subetiqueta, esta aplica habitualmente duas etiquetas ao mesmo tempo; uma etiqueta principal e uma etiqueta secundária. Ao utilizar subetiquetas, um ficheiro pode ter duas classificações que indicam uma relação principal\subordinado e permitem um nível adicional de controlo.
 
-Embora possa definir marcações visuais, proteção e condições em ambos os níveis, quando utiliza subníveis, configure estas definições apenas no subnível. Se configurar as mesmas definições na etiqueta principal e no respetivo subnível, as definições do subnível têm precedência.
+Por exemplo, a etiqueta **Secreto** pode conter subetiquetas como **Legal** e **Finanças**. Pode aplicar diferentes marcas de classificação visual e diferentes modelos do Rights Management a estas subetiquetas. Os utilizadores não podem selecionar a etiqueta **Secreto**, mas apenas uma das respetivas subetiquetas, por exemplo **Legal**. Como resultado, a etiqueta definida será **Secreto/Legal**. Os metadados do ficheiro em questão incluem uma propriedade de texto personalizado para **Secreto**, uma propriedade de texto personalizado para **Legal** e outra com ambos os valores (**Secreto/Legal**). 
+
+Quando utilizar subetiquetas, não configure as marcas visuais, a proteção e as condições na etiqueta principal. Quando utilizar subetiquetas, configure esta definição apenas na subetiqueta. Se configurar estas definições na etiqueta principal e na respetiva subetiqueta, as definições da subetiqueta têm prioridade.
 
 ## <a name="when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling"></a>Quando um e-mail tem uma etiqueta, os anexos também recebem a mesma etiqueta automaticamente?
 
@@ -152,6 +156,9 @@ Posteriormente, acontecerá o seguinte quando os utilizadores utilizarem a aplic
 
 Se as suas etiquetas do Azure Information Protection aplicarem a proteção da gestão de direitos, adicione esta opção à configuração da regra ao selecionar a opção para modificar a segurança da mensagem, aplique a proteção de direitos e, em seguida, selecione a opção Não Reencaminhar ou modelo do RMS.
 
+Também pode configurar as regras de transporte para proceder ao mapeamento inverso: quando uma etiqueta do Azure Information Protection é detetada, é definida uma classificação de mensagens do Exchange correspondente. Para efetuar este procedimento:
+
+- Para cada etiqueta do Azure Information Protection, crie uma regra de transporte que seja aplicada quando o cabeçalho **msip_labels** incluir o nome da sua etiqueta (por exemplo, **Confidencial**) e aplique uma classificação de mensagens que mapeie esta etiqueta.
 
 ## <a name="how-can-dlp-solutions-and-other-applications-integrate-with-azure-information-protection"></a>Como podem as soluções DLP e outras aplicações ser integradas com o Azure Information Protection?
 
@@ -198,6 +205,6 @@ Se tiver um problema com o Azure Information Protection e estiver a utilizar a v
 Se tiver questões ou comentários, utilize o [site Yammer do Azure Information Protection](https://www.yammer.com/askipteam/). 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

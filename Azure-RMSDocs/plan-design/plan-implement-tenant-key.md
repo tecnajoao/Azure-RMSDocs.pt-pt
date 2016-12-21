@@ -4,7 +4,7 @@ description: "Informações para o ajudar a planear e gerir a sua chave de inqui
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2016
+ms.date: 12/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5f75e36e5939b23a9d077a6fcd659c59d0f71a68
-ms.openlocfilehash: 1e25f9007004d27fd8f52f77a1663e42f751334e
+ms.sourcegitcommit: f0403d85406cc8642654569958e3482a5d991352
+ms.openlocfilehash: 10e51ed108bedc59a66be86b8b27a140f899dd45
 
 
 ---
@@ -112,7 +112,7 @@ Em seguida, execute o [cmdlet Use-AadrmKeyVaultKey](https://msdn.microsoft.com/l
 > [!IMPORTANT]
 > Neste exemplo, "aaaabbbbcccc111122223333" é a versão da chave a utilizar. Se não especificar a versão, a versão atual da chave é utilizada sem aviso e o comando parece funcionar. No entanto, se a chave no Cofre de Chaves for atualizada mais tarde (renovada), o serviço Azure Rights Management deixará de funcionar para o seu inquilino, mesmo que execute novamente o comando Use-AadrmKeyVaultKey.
 >
->Quando executar este comando, certifique-se de que especifica a versão da chave, bem como o nome da chave.
+>Quando executar este comando, certifique-se de que especifica a versão da chave, bem como o nome da chave. Pode utilizar o comando do Cofre de Chaves do Azure ([Get-AzureKeyVaultKey](https://docs.microsoft.com/powershell/resourcemanager/azurerm.keyvault\/v2.3.0\/get-azurekeyvaultkey)) para obter o número da versão da chave atual. Por exemplo: `Get-AzureKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
 
 Se tiver de confirmar que o URL da chave está definido corretamente no serviço Azure RMS, no Cofre de Chaves do Azure, pode executar [Get-AzureKeyVaultKey](https://msdn.microsoft.com/pt-pt/library/dn868053(v=azure.300\).aspx) para ver o URL da chave.
 
@@ -144,6 +144,6 @@ Agora que já planeou e, se necessário, gerou a chave do inquilino, faça o seg
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 

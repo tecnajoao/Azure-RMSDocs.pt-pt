@@ -4,15 +4,15 @@ description: "Pode eliminar ou reordenar qualquer uma das etiquetas que os utili
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 12/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 translationtype: Human Translation
-ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
-ms.openlocfilehash: 743741fc63adfd959074986aab5c697d817f69c7
+ms.sourcegitcommit: 55895dd6fd0e106c33914a232e2d00d98e8a154a
+ms.openlocfilehash: 195a4ff44d0edc9d35ee30786bdddbcc821fc106
 
 
 ---
@@ -25,7 +25,9 @@ Pode eliminar ou reordenar qualquer uma das etiquetas que os utilizadores veem n
 
 ![Eliminar ou reordenar etiquetas na política do Azure Information Protection](../media/info-protect-contextmenu.png)
 
-Em vez de eliminar uma etiqueta, poderá simplesmente querer desativá-la, no caso de pretender manter a configuração de etiqueta mas impedi-la de ser apresentada na barra Information Protection.
+Quando elimina uma etiqueta que foi aplicada a documentos e e-mails e, em seguida, publica a política do Azure Information Protection, essa etiqueta será removida automaticamente dos mesmos quando forem abertos posteriormente pelo cliente do Azure Information Protection.
+
+Em vez de eliminar uma etiqueta, pode simplesmente desativá-la caso a pretenda manter e evitar que esta seja apresentada na barra do Information Protection.
 
 Ordene as etiquetas para que os utilizadores visualizem uma progressão lógica na barra Information Protection. Por exemplo, ordenar as etiquetas de acordo com o aumento de confidencialidade para que os utilizadores vejam a etiqueta menos confidencial em primeiro e a etiqueta mais confidencial em último. A [política predefinida](configure-policy-default.md) utiliza esta configuração.
 
@@ -59,6 +61,6 @@ Para mais informações sobre como configurar a política do Azure Information P
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

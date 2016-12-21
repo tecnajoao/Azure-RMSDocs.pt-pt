@@ -4,7 +4,7 @@ description: "Para configurar definições e etiquetas diferentes para utilizado
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 12/09/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
-ms.openlocfilehash: 99d7a2a9580466492edc313329cada315a9966d6
+ms.sourcegitcommit: b0600db864f834e9eb84700eb1a36d3e6a6fbde1
+ms.openlocfilehash: ba4567753fbc6320ea6f9170e4bf46857ab999b4
 
 
 ---
@@ -33,7 +33,7 @@ As políticas de âmbito, tal como as etiquetas, são ordenadas no portal do Azu
 
 Como uma política de âmbito herda sempre as etiquetas e as definições da política global, as etiquetas da política global são apresentadas quando cria ou edita uma política de âmbito. No entanto, não pode editar as etiquetas da política global quando edita uma política de âmbito. Pode, porém, adicionar subetiquetas para estas etiquetas herdadas.
 
-Por exemplo, se tiver uma etiqueta com o nome Confidencial na política global, todos os utilizadores veem esta etiqueta. Não a pode remover ou reordenar com uma política de âmbito. Contudo, poderá querer criar uma política de âmbito para o departamento de Marketing que adiciona uma nova subetiqueta a Confidencial, para que estes utilizadores vejam Confidencial\Promoções. Depois, pode criar outra política de âmbito para o departamento de Vendas que adiciona uma nova subetiqueta a Confidencial, para que estes utilizadores vejam Confidencial\Parceiros. Cada subetiqueta pode ser, então, configurada para diferentes definições e esta fica visível apenas para os utilizadores nos respetivos departamentos.
+Por exemplo, se tiver uma etiqueta com o nome **Confidencial** na política global, todos os utilizadores veem esta etiqueta. Não a pode remover ou reordenar com uma política de âmbito. Contudo, poderá querer criar uma política de âmbito para o departamento de Marketing que adiciona uma nova subetiqueta a Confidencial, para que estes utilizadores vejam **Confidencial\Promoções**. Também pode criar outra política de âmbito para o departamento de Vendas que adiciona uma nova subetiqueta a Confidencial, para que estes utilizadores vejam **Confidencial\Parceiros**. Cada subetiqueta pode ser, então, configurada para diferentes definições e esta fica visível apenas para os utilizadores nos respetivos departamentos.
 
 
 Para configurar uma política de âmbito para o Azure Information Protection:
@@ -63,6 +63,6 @@ Para obter um exemplo de como personalizar a política predefinida e ver o compo
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

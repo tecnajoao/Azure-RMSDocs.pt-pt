@@ -85,7 +85,7 @@ A definição de qualquer outro valor ou nenhum valor resulta no comportamento p
 
 Se a encriptação for tentada num tipo de ficheiro que está bloqueado, ocorre um erro [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx).
 
-### <a name="file-api-file-support-details"></a>API de Ficheiros – Detalhes de Suporte de Ficheiros
+### <a name="file-api---file-support-details"></a>API de Ficheiros – Detalhes de Suporte de Ficheiros
 
 É possível adicionar suporte nativo a qualquer tipo de ficheiro (extensão). Por exemplo, para qualquer extensão &lt;ext&gt; (não Ooffice), \*.p&lt;ext&gt; será utilizado se a configuração de administração para essa extensão for "NATIVO".
 
@@ -151,10 +151,8 @@ HKEY_LOCAL_MACHINE
 
 - [Notas do programador](developer-notes.md)
 - [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
- 
 
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 <!--HONumber=Nov16_HO3-->

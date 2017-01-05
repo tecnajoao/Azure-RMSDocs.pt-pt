@@ -8,7 +8,7 @@ Apesar de poder ter uma subscrição que suporta o Azure Rights Management, o se
 
 ![Portal clássico do Azure](../media/AzRMS_Tutorial_1_Screenshots.png)
 
-#### Para ativar o Rights Management a partir do centro de administração do Office 365
+#### <a name="to-activate-rights-management-from-the-office-365-admin-center"></a>Para ativar o Rights Management a partir do centro de administração do Office 365
 
 1.  Aceda ao [portal do Office 365](https://portal.office.com/) e inicie sessão com a sua conta escolar ou profissional.
 
@@ -31,7 +31,7 @@ Já deverá estar visível **O Rights Management encontra-se ativado** e a opç�
 
 Neste momento, não clique em **funcionalidades avançadas**. Isto leva-o para o portal clássico do Azure onde poderá configurar modelos, que não são necessários para este tutorial. Em vez disso, pode fechar o centro de administração do Office 365.
 
-#### Para ativar o Rights Management a partir do portal do Azure
+#### <a name="to-activate-rights-management-from-the-azure-portal"></a>Para ativar o Rights Management a partir do portal do Azure
 
 1.  Aceda ao [portal clássico do Azure](http://go.microsoft.com/fwlink/p/?LinkID=275081) e inicie sessão.
 
@@ -52,9 +52,9 @@ Embora não estejam incluídos aqui, para uma implementação de produção, pro
 |Se pretender mais informações|Informações adicionais|
 |--------------------------------|--------------------------|
 |Acerca da ativação do Rights Management e do controlo de quem pode proteger ficheiros e e-mails quando o serviço está ativado   →|[Ativar o Azure Rights Management](../deploy-use/activate-azure-classic.md)|
-|Acerca dos modelos predefinidos e de como criar modelos novos e personalizados   →|[Configurar Modelos Personalizados para o Azure Rights Management](../deploy-use/create-template.md)|
+|Acerca dos modelos predefinidos e de como criar modelos novos e personalizados   →|[Configurar modelos personalizados para o Azure Rights Management](../deploy-use/create-template.md)|
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

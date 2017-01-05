@@ -6,8 +6,8 @@
 ### [Suporte de aplicações para proteção de dados](requirements-applications.md)
 ### [Suporte de servidores no local para proteção de dados](requirements-servers.md)
 ## [Perguntas mais frequentes](faqs.md)
-### [FAQ sobre classificação e etiquetagem](faqs-infoprotect.md)
-### [FAQ sobre proteção de dados](faqs-rms.md)
+### [FAQs sobre a classificação e etiquetagem](faqs-infoprotect.md)
+### [FAQs sobre a proteção de dados](faqs-rms.md)
 ## [Informações e suporte](information-support.md)
 ## [Terminologia](terminology.md)
 ## [Tutorial de início rápido](infoprotect-quick-start-tutorial.md)
@@ -31,6 +31,6 @@
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

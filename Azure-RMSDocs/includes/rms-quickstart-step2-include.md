@@ -6,7 +6,7 @@ Esta aplicação pode ser transferida gratuitamente e oferece uma instalação c
 
 ![Capturas de ecrã da instalação do RMS](../media/AzRMS_Tutorial_2_Screenshots.png)
 
-#### Para transferir e instalar a aplicação de partilha Rights Management
+#### <a name="to-download-and-install-the-rights-management-sharing-application"></a>Para transferir e instalar a aplicação de partilha Rights Management
 
 1.  Aceda à página do [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) no site da Microsoft.
 
@@ -24,9 +24,9 @@ Agora, está pronto para começar a proteger ficheiros que contêm informações
 |--------------------------------|--------------------------|
 |Acerca de uma instalação local da aplicação de partilha Rights Management para o Windows e instruções de utilizador   →|[Guia do utilizador da aplicação de partilha Rights Management](../rms-client/sharing-app-user-guide.md)|
 |Acerca da instalação com script da aplicação de partilha Rights Management para Windows e mais informações técnicas   →|[Guia do administrador da aplicação de partilha Rights Management](../rms-client/sharing-app-admin-guide.md)|
-|Para compreender a diferença entre a proteção nativa e a proteção genérica   →|[Qual é a diferença entre a proteção genérica e proteção incorporada (nativa)?](../rms-client/sharing-app-dialog-box.md)|
+|Para compreender a diferença entre a proteção nativa e a proteção genérica   →|[Qual é a diferença entre proteção genérica e proteção incorporada (nativa)?](../rms-client/sharing-app-dialog-box.md)|
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

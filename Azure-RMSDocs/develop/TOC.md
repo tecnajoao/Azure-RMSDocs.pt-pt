@@ -5,20 +5,20 @@
 # [Implementar e Utilizar o Cliente](/information-protection/rms-client/use-client)
 # [Desenvolver e Personalizar Aplicações](developers-guide.md)
 ## [Guia para Programadores](developers-guide.md)
-## [SDK do Rights Management 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md)
+## [SDK do Rights Management 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md)
 ### [Descrição Geral](overview.md)
 ### [Introdução](get-started.md)
 #### [Novidades](release-notes.md)
 #### [Configurar o ambiente de programação](setup-Developer-environment.md)
 #### [Configuração do Android](android-sdk.md)
 #### [Configuração do Linux](linux-setup.md)
-#### [Configuração do iOS e OS X](ios-sdk.md)
+#### [Configuração do iOS e OS X](ios-sdk.md)
 #### [Configuração do Windows Phone](windows-phone-apps.md)
 #### [Configuração da Loja Windows](winrt-sdk.md)
 #### [Exemplos de código](code-examples.md)
 #### [Exemplos de código do Android](android-code.md)
 #### [Exemplos de código do Linux](linux-c-code-examples.md)
-#### [Exemplos de código de iOS/OS X](ios-os-x-code-examples.md)
+#### [Exemplos de código de iOS/OS X](ios-os-x-code-examples.md)
 #### [Recursos comunitários](community-resources.md)
 ### [Termos e orientações para programadores](core-concepts.md)
 #### [Como registar-se e ativar o RMS na aplicação com o Azure AD](authentication-integration.md)
@@ -29,9 +29,9 @@
 ### [Referência da API](api-reference-4-2.md)
 #### [Referência da API do Android](https://msdn.microsoft.com/library/dn758245.aspx)
 #### [Referência da API do Linux](linux-c-api-reference.md)
-#### [Referência da API do iOS/OS X](https://msdn.microsoft.com/library/dn758306.aspx)
+#### [Referência da API do iOS/OS X](https://msdn.microsoft.com/library/dn758306.aspx)
 #### [Referência da API do Windows](https://msdn.microsoft.com/library/dn891914.aspx)
-## [SDK do Rights Management 2.1](microsoft-information-protection-and-control-client-portal.md)
+## [SDK do Rights Management 2.1](microsoft-information-protection-and-control-client-portal.md)
 ### [Descrição Geral](ad-rms-overview.md)
 #### [Cliente](ad-rms-client.md)
 #### [Servidor](ad-rms-server.md)
@@ -67,6 +67,6 @@
 #### [Códigos de erro](https://msdn.microsoft.com/library/hh535248.aspx)
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

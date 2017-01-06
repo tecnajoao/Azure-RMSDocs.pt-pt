@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: d481ee096213af79a7852f1afa6d075d389a4212
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: ff150ef29d7ad90e1c53894175a27cfe1f1a4d8e
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: d481ee096213af79a7852f1afa6d075d389a4212
 
 Este tópico contém informações importantes sobre isto e sobre versões anteriores do SDK RMS 2.1.
 
-## <a name="new-for-the-february-2016-sdk-documentation-update"></a>Novo na atualização da documentação do SDK de fevereiro de 2016
+## <a name="new-for-the-february-2016---sdk-documentation-update"></a>Novo na atualização da documentação do SDK de fevereiro de 2016
 
 >[!Note]
 > As atualizações da documentação da funcionalidade nesta secção aplicam-se à transferência do SDK com a data de 11/12/2015.
@@ -161,13 +161,9 @@ Os componentes da API de Ficheiros do SDK foram expandidos e oferecem as seguint
 
 Se não for possível obter um nome e uma descrição, é devolvido um erro. Apenas pode existir um nome e descrição para um LCID específico.
 
-
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

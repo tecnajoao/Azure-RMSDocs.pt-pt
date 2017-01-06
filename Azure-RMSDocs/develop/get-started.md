@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 6e05b2c7444b5440d80bf5c4764b5ada554bbdc7
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 4dd09720f55f07c08350cdeb79a0c9ec3aaede9e
 
 
 ---
@@ -55,8 +55,9 @@ Para esta versão do SDK Microsoft Rights Management 4.2, a abordagem de iníci
   |[Exemplos de código](code-examples.md)|O MS SDK RMS 4.2 inclui código de exemplo e projetos de trabalho para alguns sistemas operativos suportados.|
   |[Recursos comunitários](community-resources.md)|Os Serviços de Gestão de Direitos do Active Directory são bem suportados por uma crescente comunidade de programadores em várias plataformas.|
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

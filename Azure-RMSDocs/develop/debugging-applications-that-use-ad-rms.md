@@ -15,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 789c93b6d7ac72ebe1df04300f2885ca2aa23a06
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: da5a9fa1a2c2eaccb6768914a0c425983b14fdbe
 
 
 ---
 
-# <a name="howto-debug-a-rightsenabled-application"></a>Procedimentos: depurar uma aplicação com permissão para direitos
+# <a name="how-to-debug-a-rights-enabled-application"></a>Procedimentos: depurar uma aplicação com permissão para direitos
 
 O tópico seguinte mostra como depurar a aplicação e utilizar o Registo de Eventos do Windows.
 
@@ -66,16 +66,9 @@ Por exemplo, o comando seguinte ativa o registo de eventos MSIPC e define o nív
 
 **Nota** No Visualizador de Eventos do Windows, no menu **Ver**, selecione **Mostrar Registos Analíticos e de Depuração** para tornar visível o registo de depuração MSIPC.
 
- 
-
-## <a name="related-topics"></a>Tópicos relacionados
-
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

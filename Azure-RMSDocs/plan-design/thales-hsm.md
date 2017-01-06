@@ -13,8 +13,8 @@ ms.assetid: 8c9d61e5-75da-4785-9942-1c6313879fd5
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: fff3b94014728ffbd222bc698dfdf4f6020b5c05
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 382b599e7001e993fa614c95b70e747d500aedda
 
 
 ---
@@ -25,9 +25,10 @@ ms.openlocfilehash: fff3b94014728ffbd222bc698dfdf4f6020b5c05
 
 As informações neste artigo foram removidas porque já não são relevantes agora que o Azure Rights Management utiliza o Cofre de Chaves do Azure para chaves de inquilino geridas pelo cliente (também conhecido como traga a sua própria chave ou BYOK). 
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

@@ -3,34 +3,35 @@ title: "SDK Microsoft Rights Management 4.2 | Azure RMS"
 description: "O SDK RMS 4.2 é uma API simplificada de última geração que possibilita uma experiência de desenvolvimento simples na atualização das suas aplicações de dispositivos com a proteção de informações."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4ee4fa26-b4f7-478f-b360-be6f421c5718
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: b69cf4dc11731182314ab806cfc454f256cd37af
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 98902b25bbade72c4d2c5ee3a2a5306bc863d103
 
 
 ---
 
-# SDK Microsoft Rights Management 4.2
+# <a name="microsoft-rights-management-sdk-42"></a>SDK Microsoft Rights Management 4.2
 
-## Objetivo ##
+## <a name="purpose"></a>Objetivo ##
 
 O SDK Microsoft Rights Management 4.2 é uma API simplificada de última geração que possibilita uma experiência de desenvolvimento simples na atualização das suas aplicações de dispositivos com a proteção de informações através dos Serviços Microsoft Rights Management. Os programadores podem criar aplicações que tiram partido dos Serviços de Gestão de Direitos do Active Directory (AD RMS) ou do Azure Rights Management para fornecerem proteção de informações e podem facilmente proteger ou consumir informações, enquanto processam de forma transparente práticas de segurança complexas, tais como a gestão, encriptação e desencriptação de chaves, criação de políticas e de permissões, colocação em cache segura e comunicação com os serviços do AD RMS e do Azure RMS.
 
-## Público-alvo do programador ##
+## <a name="developer-audience"></a>Público-alvo do programador ##
 
 As APIs do SDK MS RMS 4.2 utilizam modelos e linguagens de programação padrão para cada sistema operativo, por isso, é fácil e intuitivo trabalhar com elas.
 
-## Sistemas Operativos Suportados ##
+## <a name="supported-operating-systems"></a>Sistemas Operativos Suportados ##
 
 Esta versão, SDK MS RMS 4.2, está disponível para os seguintes sistemas operativos:
 
@@ -40,7 +41,7 @@ Esta versão, SDK MS RMS 4.2, está disponível para os seguintes sistemas ope
 - Loja Windows
 - Portable C++ para sistemas operativos caraterísticos de Linux
 
-## Secções ##
+## <a name="sections"></a>Secções ##
 
 [Descrição geral](overview.md) – O Microsoft Rights Management Services (AD RMS e Azure RMS) é uma tecnologia de proteção de informações que ajuda a salvaguardar as informações digitais contra a utilização não autorizada. Através das aplicações com capacidade para direitos, os proprietários de conteúdo conseguirão definir quem pode abrir, modificar, imprimir, reencaminhar ou efetuar outras ações no conteúdo.
 
@@ -50,14 +51,9 @@ Esta versão, SDK MS RMS 4.2, está disponível para os seguintes sistemas ope
 
 [Referência da API](api-reference-4-2.md) – O SDK MS RMS 4.2 suporta vários sistemas operativos indicados no índice que se segue.
 
- 
-
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

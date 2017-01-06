@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: cb0ce6cc8f4740ffc04b36b02392bed2c5f5490c
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: ca3ec0fdde3b8aa2eeebf056c5e155daf79573b0
 
 
 ---
@@ -404,7 +404,7 @@ Os fragmentos de código abaixo são das aplicações de amostra, *rms\_sample* 
     ConvertToPFileUsingPolicy(policy, inStream, fileExt, outStream);
     
 
-## <a name="workerthread-a-supporting-method"></a>WorkerThread – um método de suporte
+## <a name="workerthread---a-supporting-method"></a>WorkerThread – um método de suporte
 
 
 O método *WorkerThread()* é chamado por dois dos cenários de exemplo anteriores; **Criar uma sequência de ficheiros protegidos** e **Protege um ficheiro ao qual é atribuído uma política** da seguinte forma:
@@ -591,9 +591,9 @@ Descrição: pode definir o caminho da cache ou utilizar a predefinição.
 
 **Nota** Qualquer um dos métodos de autenticação da biblioteca pode gerar **rmsauth::Exception**
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

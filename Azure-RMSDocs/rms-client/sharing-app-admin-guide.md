@@ -13,8 +13,8 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c9a5bcf46597ee65e2e0f36199f19935f8997048
-ms.openlocfilehash: adab568d173845f411fe5913786b137508485ef6
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 53bd4b52b73c4a487f7d5aa655fd9b372bb7ada3
 
 
 ---
@@ -169,7 +169,7 @@ Para confirmar o êxito da operação, consulte a secção [Confirmar o êxito d
 
 Para confirmar o êxito da operação, consulte a secção [Confirmar o êxito da instalação](#verifying-installation-success) neste artigo.
 
-### <a name="to-install-the-rms-sharing-application-and-office-addin-only"></a>Para instalar apenas a aplicação de partilha RMS e o suplemento do Office
+### <a name="to-install-the-rms-sharing-application-and-office-add-in-only"></a>Para instalar apenas a aplicação de partilha RMS e o suplemento do Office
 
 1.  Instale o Cliente do AD RMS e a aplicação de partilha RMS através do seguinte comando, especificando uma pasta existente para criar o ficheiro de registo:
 
@@ -273,7 +273,7 @@ Pode utilizar os ficheiros de registo da instalação para verificar se a instal
 
         DefaultUser="&lt;default_user&gt;"
 
-### <a name="to-verify-installation-success-for-the-rms-sharing-application-and-office-addin-only"></a>Para confirmar o êxito da instalação apenas para a aplicação de partilha RMS e o suplemento do Office
+### <a name="to-verify-installation-success-for-the-rms-sharing-application-and-office-add-in-only"></a>Para confirmar o êxito da instalação apenas para a aplicação de partilha RMS e o suplemento do Office
 
 1.  Para confirmar o êxito do comando Setup_ipviewer.exe, procure o seguinte texto no ficheiro de registo de instalação: **Installation success or error status: 0**
 
@@ -310,7 +310,7 @@ Nem todos os comandos de instalação necessários para efetuar estas implementa
         x86\setup_ipviewer.exe /uninstall /quiet
         ```
 
-### <a name="to-uninstall-the-office-addin"></a>Para desinstalar o suplemento do Office
+### <a name="to-uninstall-the-office-add-in"></a>Para desinstalar o suplemento do Office
 
 -   Utilize os seguintes comandos:
 
@@ -404,9 +404,10 @@ Se não fizer esta alteração de registo, é possível que os utilizadores não
 ## <a name="next-steps"></a>Passos seguintes
 Para obter informações técnicas adicionais com explicações sobre os diferentes níveis de proteção (nativa e genérica), os tipos de ficheiro e as extensões de nome de ficheiro suportados e como pode alterar o nível de proteção predefinido, consulte [Descrição geral técnica da aplicação de partilha Rights Management](sharing-app-admin-guide-technical.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

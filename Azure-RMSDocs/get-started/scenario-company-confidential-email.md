@@ -13,13 +13,13 @@ ms.assetid: 950799e9-2289-48c7-b95a-f54a8ead520a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: f886b72ba18f0f13ac60e08d000b231cd36d1d5f
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 3c5576936c07d3921ef8fd70f9542e62383d0751
 
 
 ---
 
-# <a name="scenario-send-a-companyconfidential-email"></a>Cenário – enviar um e-mail confidencial da empresa
+# <a name="scenario---send-a-company-confidential-email"></a>Cenário – enviar um e-mail confidencial da empresa
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -92,7 +92,7 @@ A documentação de exemplo mostra o aspeto que estas instruções poderão ter 
 
 ![Modelo de documentação do utilizador para a Implementação Rápida do Azure RMS](../media/AzRMS_UsersBanner.png)
 
-### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook"></a>Como enviar e-mails que contêm informações confidenciais da empresa através do Outlook
+### <a name="how-to-send-emails-that-contain-company-confidential-information-using-outlook"></a>Como enviar e-mails que contêm informações confidenciais da empresa através do Outlook
 
 1.  No Outlook, crie uma nova mensagem de correio, adicione os anexos que pretende incluir e, em seguida, selecione os utilizadores ou os grupos da *&lt;nome da organização&gt;*.
 
@@ -102,7 +102,7 @@ A documentação de exemplo mostra o aspeto que estas instruções poderão ter 
 
 3.  Envie a mensagem.
 
-### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook-web-app"></a>Como enviar e-mails que contêm informações confidenciais da empresa através do Outlook Web App
+### <a name="how-to-send-emails-that-contain-company-confidential-information-using-outlook-web-app"></a>Como enviar e-mails que contêm informações confidenciais da empresa através do Outlook Web App
 
 1.  No Outlook Web App, crie uma nova mensagem de correio, adicione os anexos que pretende incluir e, em seguida, selecione os utilizadores ou os grupos da *&lt;nome da organização&gt;* no livro de endereços.
 
@@ -125,7 +125,7 @@ As pessoas a quem enviar o e-mail poderão reencaminhá-lo para outras pessoas, 
 ### <a name="example-customized-user-documentation"></a>Exemplo de documentação do utilizador personalizada
 ![Exemplo de documentação do utilizador para a Implementação Rápida do Azure RMS](../media/AzRMS_ExampleBanner.png)
 
-#### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook"></a>Como enviar e-mails que contêm informações confidenciais da empresa através do Outlook
+#### <a name="how-to-send-emails-that-contain-company-confidential-information-using-outlook"></a>Como enviar e-mails que contêm informações confidenciais da empresa através do Outlook
 
 1.  No Outlook, crie uma nova mensagem de correio, adicione os anexos que pretende incluir e, em seguida, selecione os utilizadores ou os grupos da VanArsdel no livro de endereços.
 
@@ -135,7 +135,7 @@ As pessoas a quem enviar o e-mail poderão reencaminhá-lo para outras pessoas, 
 
 3.  Envie a mensagem.
 
-#### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook-web-app"></a>Como enviar e-mails que contêm informações confidenciais da empresa através do Outlook Web App
+#### <a name="how-to-send-emails-that-contain-company-confidential-information-using-outlook-web-app"></a>Como enviar e-mails que contêm informações confidenciais da empresa através do Outlook Web App
 
 1.  No Outlook Web App, crie uma nova mensagem de correio, adicione os anexos que pretende incluir e, em seguida, selecione os utilizadores ou os grupos da VanArsdel no livro de endereços.
 
@@ -155,9 +155,10 @@ As pessoas a quem enviar o e-mail poderão reencaminhá-lo para outras pessoas, 
 
     -   E-mail: helpdesk@vanarsdelltd.com
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

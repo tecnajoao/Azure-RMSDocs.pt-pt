@@ -4,7 +4,7 @@ description: "Identifique as aplicações que utilizam APIs de RMS para suportar
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/14/2016
+ms.date: 12/16/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4ffe5949c080073f8acaadd7780b2c68b4b155f8
-ms.openlocfilehash: 1381a93b3a4f262c1747fa136467132137421ecb
+ms.sourcegitcommit: 115708d10b3504e77a5e469b4df93262c067ae0c
+ms.openlocfilehash: 9947c6e8b8fe78f262dbfa129f8490489d119dd2
 
 
 ---
@@ -76,7 +76,7 @@ Para obter mais informações, consulte a [documentação do produto Citrix para
 Para obter mais informações, consulte a seguinte publicação no blogue do Office: [OWA para Android, agora disponível em determinados dispositivos](http://blogs.office.com/2014/06/11/owa-for-android-now-available-on-select-devices/)
 
 ###### <a name="footnote-8"></a>Nota de rodapé 8
-Para obter mais informações, veja a seguinte mensagem no Blogue de Mobilidade e Empresa: [SealPath proporciona proteção RMS para AutoCAD: (https://blogs.technet.microsoft.com/enterprisemobility/2015/09/08/sealpath-brings-rms-protection-to-autocad/)
+Para obter mais informações, veja a seguinte mensagem no Enterprise and Mobility Blog: [SealPath brings RMS protection to AutoCAD (SealPath proporciona proteção RMS para AutoCAD)](https://blogs.technet.microsoft.com/enterprisemobility/2015/09/08/sealpath-brings-rms-protection-to-autocad/)
 
 
 ## <a name="more-information-about-azure-rms-support-for-office"></a>Mais informações sobre o suporte do Azure RMS para o Office
@@ -166,7 +166,9 @@ Para obter mais informações sobre como as aplicações utilizadas com mais fre
 
 Para obter informações sobre como configurar as aplicações utilizadas com mais frequência para o Azure RMS, consulte [Configurar aplicações para o Azure Rights Management](../deploy-use/configure-applications.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Dec16_HO3-->
+
+<!--HONumber=Jan17_HO4-->
 
 

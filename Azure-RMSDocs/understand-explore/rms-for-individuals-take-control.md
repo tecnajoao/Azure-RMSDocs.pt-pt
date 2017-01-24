@@ -13,8 +13,8 @@ ms.assetid: a83880d0-f0f9-4a32-9e00-2f6635d7cc8d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: f9999db44758251f7b9b4c8f86549b1ee36e83d3
+ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
+ms.openlocfilehash: 19b71ee6016971e1d989db8961b8b77a50fd0124
 
 
 ---
@@ -45,8 +45,9 @@ Para controlar as contas de utilizador no diretório do Azure ou impedir que os 
 
 Se os utilizadores, em vez dos administradores, puderem criar as respetivas contas no Azure Active Directory para o RMS para indivíduos, como pode descobrir se fizeram isto?  Consulte [Como saber se os utilizadores se inscreveram no RMS para indivíduos](rms-for-individuals-identify-sign-up.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

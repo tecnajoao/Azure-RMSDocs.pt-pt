@@ -13,8 +13,8 @@ ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 9dea728836d52249471d3dde69b63a9a2cd1467c
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: ca8694a26f0f9b537a3e3a6b1f468d89cefe6206
 
 
 ---
@@ -154,7 +154,7 @@ Cada uma das linhas subsequentes é um registo. Os valores dos campos estão na 
 |c-ip|Endereço|Endereço IP do cliente que efetua o pedido.|64.51.202.144|
 
 
-#### <a name="exceptions-for-the-userid-field"></a>Exceções para o campo user-id
+#### <a name="exceptions-for-the-user-id-field"></a>Exceções para o campo user-id
 Apesar de o campo user-id indicar geralmente o utilizador que efetuou o pedido, existem duas exceções onde o valor não é mapeado para um utilizador real:
 
 -   O valor **'microsoftrmsonline@&lt;YourTenantID&gt;.rms.&lt;region&gt;.aadrm.com'**.
@@ -236,11 +236,12 @@ Se, no seu armazenamento do Azure, tiver registos criados em datas anteriores à
 
 Para mais informações sobre como utilizar o Windows PowerShell para o serviço Azure Rights Management, consulte [Administrar o serviço Azure Rights Management através do Windows PowerShell](administer-powershell.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

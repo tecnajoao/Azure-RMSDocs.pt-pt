@@ -13,8 +13,8 @@ ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0e66bfa436bf811b34cf3cfe1b2d68a6a4e137c2
-ms.openlocfilehash: dd6c9250102e104ba49b0c08f14d9959cd1228cb
+ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
+ms.openlocfilehash: 91a5485b2860edf6f2095027e1c0d69ec96141d7
 
 
 ---
@@ -52,7 +52,7 @@ Embora não tenha de saber como funciona o RMS, poderão ser-lhe pedidas informa
 
 ###### <a name="footnote-1"></a>Nota de rodapé 1 
 
-O controlo de 256 bits é utilizado pela aplicação de partilha Rights Management para uma proteção genérica e nativa quando o ficheiro tem uma extensão de nome de ficheiro .ppdf ou quando se trata de um ficheiro de imagem ou de texto protegido (como .ptxt ou .pjpg).
+O controlo de&256; bits é utilizado pela aplicação de partilha Rights Management para uma proteção genérica e nativa quando o ficheiro tem uma extensão de nome de ficheiro .ppdf ou quando se trata de um ficheiro de imagem ou de texto protegido (como .ptxt ou .pjpg).
 
 Como as chaves criptográficas são armazenadas e protegidas:
 
@@ -149,8 +149,9 @@ Se estiver pronto para iniciar a implementação da proteção de dados na sua o
 > [!TIP]
 > Para obter ajuda e informações adicionais, utilize os recursos e ligações em [Informações e suporte do Azure Information Protection](../get-started/information-support.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: d1415913f4a76331088140555b0cfeaa88200871
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 12bc1ed0759364273e66d260b9282fbfe42abbe0
 
 
 ---
@@ -144,9 +144,10 @@ Um dos recursos mais importantes desta organização são os seus dados — os d
 
 As soluções que estamos a implementar ajudam-nos a proteger os nossos dados valiosos e dão-lhe as ferramentas necessárias para manter o controlo desses dados. Obrigado pela sua cooperação enquanto implementamos estas alterações.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ced42d0856b992d3539575d64f5a49706f1768b3
-ms.openlocfilehash: b4b701d6a88bea91e2adbe7e002f01929d388e91
+ms.sourcegitcommit: ed836a1f64ccb3f7e176ad19d27af1021c423cd9
+ms.openlocfilehash: 75f8eb2843005f23fd359d6a4fce073abecbfe0a
 
 
 ---
@@ -188,12 +188,10 @@ Se estiver interessado em proteger ficheiros automaticamente ao utilizar a Infra
 ### <a name="step-5-administer-the-rights-management-service-for-your-tenant-account-as-needed"></a>Passo 5: administrar o serviço Rights Management para a sua conta de inquilino, conforme necessário
 À medida que começar a utilizar o serviço Azure Rights Management, poderá considerar o Windows PowerShell útil para ajudar a efetuar scripts ou a automatizar alterações administrativas. Para obter mais informações, consulte [Administrar o serviço Azure Rights Management ao utilizar o Windows PowerShell](../deploy-use/administer-powershell.md).
 
-## <a name="comments"></a>Comentários
-
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -14,8 +14,8 @@ ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 531c75846fb88e6f1d9d802df19b275e12e0fdae
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: c0bfd99229e4d93c91fe8f9efafd887aa7562328
 
 
 ---
@@ -39,7 +39,7 @@ Por exemplo, se outra pessoa protegeu o ficheiro utilizando a aplicação de par
 
 Se quiser remover por completo todas as permissões de modo a que o ficheiro já não fique protegido completamente, veja o artigo [Remover a proteção de um ficheiro](sharing-app-remove-protection.md).
 
-## <a name="to-reprotect-a-file-inplace"></a>Voltar a proteger um ficheiro no local
+## <a name="to-re-protect-a-file-in-place"></a>Voltar a proteger um ficheiro no local
 
 1.  No Explorador de Ficheiros, selecione um ficheiro a proteger. Clique com o botão direito do rato, selecione **Proteger com RMS** e, em seguida, selecione **Proteger no local**. Por exemplo:
 
@@ -72,7 +72,7 @@ Se quiser remover por completo todas as permissões de modo a que o ficheiro já
 >     Quando se inscrever, utilize o seu endereço de e-mail da empresa em vez de um endereço de e-mail pessoal. Caso se esteja a inscrever porque recebeu um anexo protegido, utilize o mesmo endereço de e-mail que foi utilizado para lhe enviar a mensagem de e-mail.
 > -   Para mais informações, consulte [RMS para indivíduos e Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-## <a name="to-reprotect-a-file-that-you-have-emailed"></a>Voltar a proteger um ficheiro enviado por si por e-mail
+## <a name="to-re-protect-a-file-that-you-have-emailed"></a>Voltar a proteger um ficheiro enviado por si por e-mail
 
 Se pretende alterar as permissões de um ficheiro que enviou por e-mail:
 
@@ -95,8 +95,9 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 ## <a name="see-also"></a>Consulte Também
 [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

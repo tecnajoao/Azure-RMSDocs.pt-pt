@@ -4,7 +4,7 @@ description: "Instruções de inscrição nesta conta gratuita e informações t
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 82f59842420667c5ad28a6704c9df0d26043d50c
+ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
+ms.openlocfilehash: 1de26925961ad560cb9aa86ebc16f7354c7cff1f
 
 
 ---
@@ -48,7 +48,7 @@ Para se inscrever nesta conta gratuita, efetue o seu pedido ao aceder à [págin
 
 Agora, a sua conta está criada, está pronto para começar a proteger ficheiros e a ler ficheiros que outros utilizadores protegeram. Se lhe for pedido para iniciar sessão para proteger ou ler ficheiros protegidos, introduza o mesmo endereço de e-mail e palavra-passe que utilizou para criar a conta do RMS para indivíduos.
 
-## <a name="technical-overview-of-the-signup-process"></a>Descrição geral técnica do processo de inscrição
+## <a name="technical-overview-of-the-sign-up-process"></a>Descrição geral técnica do processo de inscrição
 O RMS para indivíduos utiliza um processo de inscrição self-service que também é utilizado por outros serviços que utilizam a tecnologia baseada na nuvem da Microsoft para autenticar os utilizadores.
 
 Isto é o que acontece em segundo plano quando um utilizador se inscreve no RMS para indivíduos e a respetiva organização não tem uma subscrição do Office 365 ou do Azure e, por conseguinte, nenhum diretório no Azure para autenticar os utilizadores:
@@ -94,10 +94,9 @@ Ao longo deste processo, não é cobrado qualquer valor à organização e não 
 ## <a name="next-steps"></a>Passos seguintes
 Consulte [Como os administradores podem controlar as contas criadas para o RMS para indivíduos](rms-for-individuals-take-control.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

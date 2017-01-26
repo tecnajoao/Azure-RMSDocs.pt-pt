@@ -13,8 +13,8 @@ ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: df9da739717465a905c9e6da281df652de63f8bd
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: b4ba043aa351b4b6b118a83bd5fe54898ea17492
 
 
 ---
@@ -112,10 +112,11 @@ Tal como na visualização de um documento protegido, quando os destinatários r
 
 Tal como na visualização de um documento protegido, quando os destinatários recebem a mensagem de e-mail, primeiro são autenticados. Se estiverem autorizados a ver a mensagem de e-mail, esta abre-se com os direitos de utilização restrita que foram especificados para esse utilizador. Por exemplo, se tiver selecionado **Não Responder a Todos**, a opção **RESPONDER A TODOS** na janela da mensagem não está disponível.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

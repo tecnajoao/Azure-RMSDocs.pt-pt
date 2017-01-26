@@ -13,8 +13,8 @@ ms.assetid: a36c3d99-a794-4f7a-aafb-64a950f1fcf9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: b9979d48af7146f8021de840248f71cb1399b777
+ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
+ms.openlocfilehash: ac980951f9b4cef9816706a23e3807fbe40a62f5
 
 
 ---
@@ -34,9 +34,9 @@ Como administrador, como sabe se os seus utilizadores se inscreveram no RMS para
 
 -   Esteja atento às extensões dos nomes dos ficheiros que são criadas pela aplicação de partilha Rights Management. As extensões de nome de ficheiro .pfile e .ppdf são os exemplos mais óbvios, mas existem outros ficheiros cuja extensão de nome de ficheiro é alterada quando são nativamente protegidos pelo serviço Rights Management. Para obter mais informações, consulte a secção [Tipos de ficheiros e extensões dos nomes dos ficheiros suportados](../rms-client/sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) do [Guia do administrador da aplicação de partilha Rights Management](http://technet.microsoft.com/library/dn339003.aspx).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

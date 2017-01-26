@@ -13,8 +13,8 @@ ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f1fff17f76361f8236974c6aeb21ed317c7d9883
-ms.openlocfilehash: 08ca0de6802aa001e5e2bcf7637592c2ad68864d
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: aded487e9d7f7bc8341c7f6e1d6ac4e673b55c56
 
 
 ---
@@ -129,9 +129,10 @@ As versões anteriores a 1 de janeiro de 2015 não estão listadas.
 
 -   **Suporte para múltiplos domínios de e-mail dentro da sua organização**: se utilizar o AD RMS e os utilizadores da sua organização tiverem múltiplos domínios de e-mail, esta atualização permite que os seus utilizadores consumam conteúdo que foi protegido por utilizadores da sua organização noutros domínios. Para obter mais informações, consulte a secção [Apenas AD RMS: suporte para múltiplos domínios de e-mail dentro da sua organização](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization) no [Guia do administrador da aplicação de partilha Rights Management](sharing-app-admin-guide.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

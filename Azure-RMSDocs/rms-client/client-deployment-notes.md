@@ -13,8 +13,8 @@ ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6b1b134aa8a0c7ef7cded627a7d25df4a90e9faa
-ms.openlocfilehash: 811622757a4e44afb84ec2df84341ecbcd2e7a8f
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: d40a8b2062b0b8ccb2dd6115d179e45e64181798
 
 
 ---
@@ -65,13 +65,13 @@ O cliente do RMS é suportado nos seguintes sistemas operativos:
 |Windows Server 2008 R2|Windows 7 com, pelo menos, o SP1|
 |Windows Server 2008 (apenas AD RMS)|Windows Vista com, pelo menos, o SP2 (apenas AD RMS)|
 
-### <a name="which-processors-or-platforms-support-the-rms-client"></a>Que processadores ou plataformas suportam o cliente do RMS?
+### <a name="which-processors-or-platforms-support-the--rms-client"></a>Que processadores ou plataformas suportam o cliente do RMS?
 O cliente do RMS é suportado nas plataformas de processamento x86 e x64.
 
-### <a name="where-is-the-rms-client-installed"></a>Onde está instalado o cliente do RMS?
+### <a name="where-is-the--rms-client-installed"></a>Onde está instalado o cliente do RMS?
 Por predefinição, o cliente do RMS é instalado em %Programas%\Active Directory Rights Management Services Client 2.<minor version number>.
 
-### <a name="what-files-are-associated-with-the-rms-client-software"></a>Que ficheiros estão associados ao software do cliente do RMS?
+### <a name="what-files--are-associated-with-the-rms-client-software"></a>Que ficheiros estão associados ao software do cliente do RMS?
 Os seguintes ficheiros são instalados como parte do software do cliente do RMS:
 
 -   Msipc.dll
@@ -177,7 +177,7 @@ Para efetuar a deteção do serviço, o cliente do RMS verifica o seguinte:
 
 > - Quando um utilizador inicia sessão a partir de uma aplicação do Office, o nome de utilizador (e o domínio) da autenticação é utilizado para identificar qual o inquilino do Azure Information Protection a utilizar. Neste caso, as definições de registo não são necessárias e o SCP não é verificado.
 
-### <a name="ad-rms-only-enabling-serverside-service-discovery-by-using-active-directory"></a>Apenas AD RMS: ativar a deteção do serviço do lado do servidor através do Active Directory
+### <a name="ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory"></a>Apenas AD RMS: ativar a deteção do serviço do lado do servidor através do Active Directory
 Se a sua conta tiver privilégios suficientes (Administradores da Empresa e administrador local para o servidor do AD RMS), pode registar automaticamente um ponto de ligação de serviço (SCP) quando instalar o servidor de cluster de raiz do AD RMS. Se já existir um SCP na floresta, é necessário eliminar primeiro o SCP existente para poder registar um novo.
 
 Pode registar e eliminar um SCP após a instalação do AD RMS, através do seguinte procedimento. Antes de começar, certifique-se de que a sua conta tem os privilégios necessários (Administradores da Empresa e administrador local para o servidor do AD RMS).
@@ -198,10 +198,10 @@ Pode registar e eliminar um SCP após a instalação do AD RMS, através do segu
 
 5.  Selecione a opção **Definir SCP para o cluster de certificação atual** e clique em **OK**.
 
-### <a name="enabling-clientside-service-discovery-by-using-the-windows-registry"></a>Ativar a deteção do serviço do lado do cliente através do registo do Windows
+### <a name="enabling-client-side-service-discovery-by-using-the-windows-registry"></a>Ativar a deteção do serviço do lado do cliente através do registo do Windows
 Como alternativa à utilização de um SCP, ou caso não exista um SCP, pode configurar o registo do computador cliente para que o cliente do RMS possa localizar o respetivo servidor do AD RMS.
 
-#### <a name="to-enable-clientside-ad-rms-service-discovery-by-using-the-windows-registry"></a>Para ativar a deteção do serviço AD RMS do lado do cliente através do registo do Windows
+#### <a name="to-enable-client-side-ad-rms-service-discovery-by-using-the-windows-registry"></a>Para ativar a deteção do serviço AD RMS do lado do cliente através do registo do Windows
 
 1.  Abra o editor de registo do Windows, Regedit.exe:
 
@@ -258,9 +258,9 @@ Em alguns casos, poderá ser necessário redirecionar o tráfego durante a dete�
 
 6.  Feche o Editor de Registo.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Oct16_HO5-->
+<!--HONumber=Jan17_HO4-->
 
 

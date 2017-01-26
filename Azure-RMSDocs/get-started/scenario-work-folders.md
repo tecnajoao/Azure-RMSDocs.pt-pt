@@ -13,13 +13,13 @@ ms.assetid: 1f189345-a69e-4bf5-8a45-eb0fe5bb542b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 0d4b1cdc2620a1f8cf9ddced24a898a38d8e9b57
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 942b9bfffbd4a43c922ada87220f4eecb78f1d11
 
 
 ---
 
-# <a name="scenario-configure-work-folders-for-persistent-protection"></a>Cenário – Configurar pastas de trabalho para proteção persistente
+# <a name="scenario---configure-work-folders-for-persistent-protection"></a>Cenário – Configurar pastas de trabalho para proteção persistente
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -120,9 +120,9 @@ Se tiver configurado o modelo personalizado conforme indicado neste cenário, os
 > 
 > Se, após algum tempo, descobrir que existem muitos pedidos deste tipo, pode optar por definir o seu próprio modelo personalizado para este cenário, de forma a conceder a opção de Coproprietário apenas a determinados utilizadores (tais como gestores ou o suporte técnico), ao passo que aos utilizadores padrão é concedida a opção Coautor ou os [direitos](../deploy-use/configure-usage-rights.md) que considerar adequados.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

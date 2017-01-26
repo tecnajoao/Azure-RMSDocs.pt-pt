@@ -1,18 +1,18 @@
 ---
 title: "Restrições de HYOK | Azure Information Protection"
-description: Identify the limitations, prerequisites, and recommendations if you select AD RMS protection with Azure Information Protection. This solution is sometimes referred to as "hold your own key" (HYOK).
+description: "Conheça as limitações, pré-requisitos e recomendações se selecionar a proteção do AD RMS com o Azure Information Protection. A solução designa-se por vezes &quot;tenha a sua própria chave&quot; (HYOK)."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 01/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 translationtype: Human Translation
-ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
-ms.openlocfilehash: e4ed4513728180179876ff49797f96e9f0f785b3
+ms.sourcegitcommit: 22af60687ad030e686ba843ced6d450487353a0e
+ms.openlocfilehash: 66c19b296ce170d0f7f5317c87bee532edd9bb78
 
 
 ---
@@ -66,6 +66,8 @@ Verifique se a sua implementação do AD RMS cumpre os requisitos seguintes para
     
     - [Modo Criptográfico 2](https://technet.microsoft.com/library/hh867439.aspx): pode confirmar a versão do modo criptográfico do cluster do AD RMS e o respetivo estado de funcionamento global utilizando a [ferramenta RMS Analyser](https://www.microsoft.com/en-us/download/details.aspx?id=46437).   
     
+    - Um ponto de ligação de serviço (SCP) não pode estar registado no Active Directory: não são utilizados SCPs ao utilizar a proteção do AD RMS com o Azure Information Protection. Se tiver registado um SCP na implementação do AD RMS, tem de removê-lo para que a [deteção do serviço](../rms-client/client-deployment-notes.md#rms-service-discovery) seja bem sucedida para a proteção do Azure Rights Management.
+    
     - Os servidores do AD RMS estão configurados para utilizar SSL/TLS com um certificado x.509 válido que seja considerado fidedigno pelos clientes ligados: necessários para ambientes de produção, mas não para fins de teste ou avaliação.
     
     - Modelos de direitos configurados.
@@ -100,8 +102,9 @@ Para ler mais informações sobre esta funcionalidade de pré-visualização, ve
 
 Para configurar uma etiqueta para a proteção do AD RMS, veja [Como configurar uma etiqueta para aplicar a proteção Rights Management](../deploy-use/configure-policy-protection.md). 
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

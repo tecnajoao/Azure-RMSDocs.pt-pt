@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 1c8d69af23ce094520bac491246a158510a948bb
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 5075e0856f81561b3e74dd52a3629cfe2dfa5dce
 
 
 ---
@@ -38,12 +38,10 @@ Para obter mais informações, consulte a [Documentação do TechNet acerca do R
 * [Descrição Geral](ad-rms-overview.md)
 * [Permitir que a aplicação do serviço funcione com o RMS baseado na nuvem](how-to-use-file-api-with-aadrm-cloud.md)
 * [Documentação do TechNet sobre o RMS Client 2.1](https://TechNet.Microsoft.Com/en-us/library/jj159267(WS.10).aspx)
- 
 
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -13,13 +13,13 @@ ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3786fa2529b442f7d31603be09f9b80f1a46d171
-ms.openlocfilehash: 238cc238e62db4a74ce2b10e0e68803cc66b718f
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 9c78ac81a90d46ab8d56cd205474fdf85f486c3d
 
 
 ---
 
-# <a name="migration-phase-4-post-migration-tasks"></a>Fase 4 da migração – tarefas pós-migração
+# <a name="migration-phase-4---post-migration-tasks"></a>Fase 4 da migração – tarefas pós-migração
 
 >*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Office 365*
 
@@ -35,7 +35,7 @@ Monitorize a atividade dos seus servidores do AD RMS, por exemplo, ao verificar 
 
 Após a desativação dos servidores AD RMS, pode aproveitar a oportunidade para rever os modelos no portal clássico do Azure e consolidá-los para que os utilizadores tenham menos por onde escolher, reconfigurá-los ou até adicionar novos modelos. É também uma boa altura para publicar os modelos predefinidos. Para mais informações, consulte [Configurar modelos personalizados para o serviço Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
-## <a name="step-9-rekey-your-azure-information-protection-tenant-key"></a>Passo 9. Recodificar a chave de inquilino do Azure Information Protection
+## <a name="step-9-re-key-your-azure-information-protection-tenant-key"></a>Passo 9. Recodificar a chave de inquilino do Azure Information Protection
 Este passo é aplicável apenas se a topologia de chave de inquilino escolhida for gerida pela Microsoft e não pelo cliente (BYOK com o Cofre de Chaves do Azure).
 
 Este passo é opcional, mas recomendado quando a chave de inquilino do Azure Information Protection for gerida pela Microsoft e tiver sido migrada a partir do AD RMS. A recodificação neste cenário ajuda a proteger a chave de inquilino do Azure Information Protection contra potenciais falhas de segurança na chave do AD RMS.
@@ -51,9 +51,10 @@ Para mais informações sobre a gestão da chave de inquilino do Azure Informati
 
 Agora que concluiu a migração, consulte o [plano de implementação](deployment-roadmap.md) para identificar quaisquer outras tarefas de implementação que tenha de efetuar.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Jan17_HO4-->
 
 

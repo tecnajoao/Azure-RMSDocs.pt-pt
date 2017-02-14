@@ -15,6 +15,7 @@
 ## [Configurar aplicações](configure-applications.md)
 ### [Office 365](configure-office365.md)
 ### [Aplicações do Office](configure-office-apps.md)
+### [Cliente do Azure Information Protection](configure-client.md)
 ### [Aplicação de partilha RMS](configure-sharing-app.md)
 ## [Configurar direitos de utilização](configure-usage-rights.md)
 ## [Configurar superutilizadores para serviços de deteção ou recuperação de dados](configure-super-users.md)
@@ -48,6 +49,6 @@
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

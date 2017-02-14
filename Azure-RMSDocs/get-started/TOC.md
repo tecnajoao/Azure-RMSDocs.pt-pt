@@ -13,7 +13,7 @@
 ## [Tutorial de início rápido](infoprotect-quick-start-tutorial.md)
 ### [Passo 1: ativar o serviço](infoprotect-tutorial-step1.md)
 ### [Passo 2: configurar e publicar a política](infoprotect-tutorial-step2.md)
-### [Passo 3: instalar o cliente e a aplicação](infoprotect-tutorial-step3.md)
+### [Passo 3: instalar o cliente](infoprotect-tutorial-step3.md)
 ### [Passo 4: vê-lo em ação – etiquetagem, classificação, proteção](infoprotect-tutorial-step4.md)
 ### [Passo 5: vê-lo em ação – partilhar protegido e controlo](infoprotect-tutorial-step5.md)
 ## [Guia de implementação rápida](rapid-deployment-guide.md)
@@ -31,6 +31,6 @@
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

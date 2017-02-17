@@ -4,7 +4,7 @@ description: "Tem alguma pergunta sobre a versão de pré-visualização do Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/09/2016
+ms.date: 12/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 946daa8dedba71d5887dd96f6853e8d90400bfb1
-ms.openlocfilehash: 125752671ec0ca556cc6967a2a3011fb0bf7d9ab
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 8bb0058940eaf1663ec82b38bc37c33400ea8b87
 
 
 ---
@@ -62,7 +62,7 @@ Para verificar quais as funcionalidades incluídas na subscrição do **Azure In
 
 ## <a name="does-azure-information-protection-support-on-premises-and-hybrid-scenarios"></a>O Azure Information Protection suporta cenários no local e híbridos?
 
-O Azure Information Protection é uma solução baseada na cloud. Se estiver interessado em implementar o Azure Information Protection num cenário híbrido, contacte a equipa do Information Protection, enviando um e-mail para askipteam@microsoft.com.
+O Azure Information Protection é uma solução baseada na cloud. Se estiver interessado em implementar o Azure Information Protection num cenário híbrido, contacte a equipa do Information Protection através do e-mail askipteam@microsoft.com.
 
 ## <a name="how-do-computers-get-the-policy-information-from-azure-information-protection-and-how-often-is-it-refreshed"></a>Como é que os computadores obtêm informações de política do Azure Information Protection e com que frequência são atualizados?
 
@@ -188,7 +188,7 @@ Especialmente quando estiver a utilizar uma conta de administrador, verifique o 
 
 Para iniciar sessão como um utilizador diferente, tem de editar o registo:
 
-1. Com um editor de registo, navegue para **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** e elimine a chave **TokenCache**.
+1. Com um editor de registo, navegue para **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** e elimine o valor **TokenCache**.
 
 2. Reinicie as aplicações do Office abertas e inicie sessão com a sua conta de utilizador diferente. Se não vir um pedido na aplicação do Office para iniciar sessão no serviço Azure Information Protection, volte à caixa de diálogo do **Microsoft Azure Information Protection** e clique em **Iniciar sessão** na secção **Estado do cliente** atualizada.
 
@@ -204,7 +204,9 @@ Se tiver um problema com o Azure Information Protection e estiver a utilizar a v
 
 Se tiver questões ou comentários, utilize o [site Yammer do Azure Information Protection](https://www.yammer.com/askipteam/). 
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Dec16_HO2-->
+
+<!--HONumber=Jan17_HO4-->
 
 

@@ -4,15 +4,15 @@ description: "Pode eliminar ou reordenar qualquer uma das etiquetas que os utili
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/13/2016
+ms.date: 12/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 translationtype: Human Translation
-ms.sourcegitcommit: 55895dd6fd0e106c33914a232e2d00d98e8a154a
-ms.openlocfilehash: 195a4ff44d0edc9d35ee30786bdddbcc821fc106
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: d8e0f53d85ee7a02ee7fef66eaf76ce6551535d2
 
 
 ---
@@ -27,7 +27,7 @@ Pode eliminar ou reordenar qualquer uma das etiquetas que os utilizadores veem n
 
 Quando elimina uma etiqueta que foi aplicada a documentos e e-mails e, em seguida, publica a política do Azure Information Protection, essa etiqueta será removida automaticamente dos mesmos quando forem abertos posteriormente pelo cliente do Azure Information Protection.
 
-Em vez de eliminar uma etiqueta, pode simplesmente desativá-la caso a pretenda manter e evitar que esta seja apresentada na barra do Information Protection.
+Antes de eliminar uma etiqueta, pondere desativá-la. Quando desativar uma etiqueta que foi aplicada a documentos e e-mails, a etiqueta aplicada não será removida destes documentos e e-mails, mas deixará de ser apresentada como uma etiqueta passível de ser selecionada pelos utilizadores na barra Information Protection. Desativar uma etiqueta também lhe permite manter a configuração original. Se quiser que os utilizadores selecionem a etiqueta posteriormente, basta reativá-la.
 
 Ordene as etiquetas para que os utilizadores visualizem uma progressão lógica na barra Information Protection. Por exemplo, ordenar as etiquetas de acordo com o aumento de confidencialidade para que os utilizadores vejam a etiqueta menos confidencial em primeiro e a etiqueta mais confidencial em último. A [política predefinida](configure-policy-default.md) utiliza esta configuração.
 
@@ -57,10 +57,11 @@ Utilize as seguintes instruções para efetuar as alterações.
 
 Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).  
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -4,7 +4,7 @@ description: "Informações técnicas para administradores em redes empresariais
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 88b03e5e844e78db5dc8ac5f116d19899c5f354f
+ms.sourcegitcommit: 770be3f7423f8d47439096393bba7464629646c5
+ms.openlocfilehash: b90a0e1ab363c1d7f87d0b1a18503da641bf7cfb
 
 
 ---
@@ -43,7 +43,7 @@ Com a versão de outubro de 2013 do RMS, pode proteger documentos nativamente co
 
 Para obter mais informações sobre a implementação, consulte [Implementação automática da aplicação de partilha Microsoft Rights Management](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)
 
-## <a name="levels-of-protection-native-and-generic"></a>Níveis de proteção – nativa e genérica
+## <a name="levels-of-protection--native-and-generic"></a>Níveis de proteção – nativa e genérica
 A aplicação de partilha Microsoft Rights Management suporta proteção a dois níveis diferentes, conforme descrito na tabela seguinte.
 
 |Tipo de proteção|Nativa|Genérico|
@@ -102,25 +102,25 @@ Da mesma forma, pode forçar a aplicação de partilha RMS a aplicar proteção 
 
 Pode também forçar a aplicação de partilha RMS a bloquear a proteção dos ficheiros (ou seja, não aplicar proteção nativa nem proteção genérica). Por exemplo, tal poderá ser necessário se tiver uma aplicação ou um serviço automatizado que tem de conseguir abrir um ficheiro específico para processar os respetivos conteúdos. Quando bloqueia a proteção de um tipo de ficheiro, os utilizadores não podem utilizar a aplicação de partilha RMS para proteger um ficheiro desse tipo. Quando o tentam fazer, é apresentada uma mensagem que indica que o administrador impediu a proteção e têm de cancelar a ação para proteger o ficheiro.
 
-Para configurar a aplicação de partilha RMS para aplicar proteção nativa a todos os ficheiros aos quais seria aplicada proteção genérica por predefinição, efetue as seguintes edições de registo:
+Para configurar a aplicação de partilha RMS para aplicar uma proteção genérica a todos os ficheiros que, por predefinição, teriam uma proteção nativa aplicada, efetue as seguintes edições de registo. Tenha em atenção que, se as chaves RmsSharingApp ou FileProtection não existirem, tem de as criar manualmente.
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection**: crie uma nova chave com o nome *.
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: crie uma nova chave com o nome *.
 
     Esta definição indica ficheiros com qualquer extensão de nome de ficheiro.
 
-2.  Na chave recém-adicionada HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection\\\*, crie um novo valor de cadeia (REG_SZ) com o nome **Encriptação** com o valor de dados **Pfile**.
+2.  Na chave recém-adicionada HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection\\\*, crie um novo valor de cadeia (REG_SZ) com o nome **Encriptação** com o valor de dados **Pfile**.
 
     Esta definição faz com que a aplicação de partilha RMS aplique proteção genérica.
 
 Estas duas definições fazem com que a aplicação de partilha RMS aplique proteção genérica a todos os ficheiros que tenham uma extensão de nome de ficheiro. Se for este o seu objetivo, não é necessário efetuar mais configurações. No entanto, pode definir exceções para tipos de ficheiro específicos, de modo a que estes continuem a ser protegidos nativamente. Para tal, tem de efetuar três edições de registo adicionais para cada tipo de ficheiro:
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection**: adicione uma nova chave com o nome da extensão de nome de ficheiro (sem o ponto final precedente).
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: adicione uma nova chave com o nome da extensão de nome de ficheiro (sem o ponto final precedente).
 
     Por exemplo, para os ficheiros que tenham uma extensão de nome de ficheiro .docx, crie uma chave denominada **DOCX**.
 
-2.  Na chave do tipo de ficheiro recém-adicionada (por exemplo, **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection\DOCX**), crie um novo Valor DWORD denominado **AllowPFILEEncryption** com um valor de **0**.
+2.  Na chave do tipo de ficheiro recém-adicionada (por exemplo, **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection\DOCX**), crie um novo Valor DWORD com o nome **AllowPFILEEncryption** com um valor de **0**.
 
-3.  Na chave do tipo de ficheiro recém-adicionada (por exemplo, **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection\DOCX**), crie um novo valor de cadeia denominado **Encriptação** com o valor **Nativo**.
+3.  Na chave do tipo de ficheiro recém-adicionada (por exemplo, **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection\DOCX**), crie um novo valor de cadeia com o nome **Encriptação** com o valor **Nativo**.
 
 Como resultado destas definições, todos os ficheiros são protegidos genericamente, exceto os ficheiros que tenham uma extensão de nome de ficheiro .docx, que são protegidos nativamente pela aplicação de partilha RMS.
 
@@ -137,9 +137,10 @@ Pode efetuar edições de registo semelhantes para outros cenários ao alterar o
 ## <a name="see-also"></a>Consulte Também
 [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

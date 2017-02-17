@@ -4,7 +4,7 @@ description: "Para configurar definições e etiquetas diferentes para utilizado
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/09/2016
+ms.date: 12/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b0600db864f834e9eb84700eb1a36d3e6a6fbde1
-ms.openlocfilehash: ba4567753fbc6320ea6f9170e4bf46857ab999b4
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: ba201561345d5e6b9f22a65ca1785553fed58e08
 
 
 ---
@@ -54,15 +54,19 @@ Para configurar uma política de âmbito para o Azure Information Protection:
 
 6. Quando terminar de realizar as alterações pretendidas para esta política de âmbito, no painel inicial do **Azure Information Protection**, confirme que esta política de âmbito está na ordem que pretende aplicar. Isto é importante quando tiver selecionado o mesmo utilizador para várias políticas de âmbito. Em seguida, clique em **Publicar**. 
 
-O cliente do Azure Information Protection verifica a existência de quaisquer alterações sempre que uma das aplicações do Office suportadas é iniciada. Este transfere as alterações realizadas na política global ou nas políticas de âmbito que se aplicam a esse utilizador.
+O cliente do Azure Information Protection verifica a existência de alterações sempre que uma das aplicações do Office suportadas é iniciada ou o Explorador de Ficheiros é aberto. O cliente transfere as alterações feitas à política global ou às políticas de âmbito que se aplicam a esse utilizador.
 
-## <a name="next-steps"></a>Passos seguintes
+> [!TIP]
+> Depois de guardar a política de âmbito, pode utilizar o **Editor de Políticas Cruzadas** no painel inicial do **Azure Information Protection** para ver e reconfigurar todas as etiquetas da sua política do Azure Information Protection. Este método proporciona uma forma fácil de comparar etiquetas de múltiplas políticas (a sua política global e de todas as políticas de âmbito). No entanto, este editor não permite adicionar e reorganizar etiquetas ou ver e configurar as definições de política.
 
-Para obter um exemplo de como personalizar a política predefinida e ver o comportamento resultante de uma aplicação do Office, experimente o [Tutorial de inicio rápido do Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
+## <a name="next-steps"></a>Próximos passos
+
+Para obter um exemplo de como personalizar a política predefinida e ver o comportamento resultante de uma aplicação do Office, experimente o [Tutorial de início rápido do Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

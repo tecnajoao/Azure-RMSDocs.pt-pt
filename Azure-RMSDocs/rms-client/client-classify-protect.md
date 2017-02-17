@@ -4,7 +4,7 @@ description: "Instruções sobre como classificar e proteger os seus documentos 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 01/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e6d4cc50259b9d9bb73a75c648f9e6915562accf
-ms.openlocfilehash: e1d61fbe1d74a4a57d9a1fdf518aeb0242d0f7ad
+ms.sourcegitcommit: 171a47f9c22dec24f72f8f21392d6577efd807a5
+ms.openlocfilehash: d050629999c3a886eb8d422f4f38c22d586e0824
 
 
 ---
@@ -53,17 +53,17 @@ Para obter uma lista dos tipos de ficheiros suportados no Explorador de Ficheiro
 
 2. Na caixa de diálogo **Classificar e proteger – Azure Information Protection**, utilize as etiquetas como faria numa aplicação do Office, o que define a classificação e a proteção, conforme definido pelo seu administrador. Se não puder selecionar uma etiqueta (se estiver indisponível), o ficheiro selecionado não suportará a classificação, mas poderá protegê-lo.
 
-3. Para proteger o ficheiro, escolha entre as definições de proteção que o administrador definiu para a etiqueta selecionada (**Automático, com base na etiqueta de classificação selecionada**) ou especifique as suas próprias definições (**Substituir com permissões personalizadas**).
+3. Se quiser especificar as suas próprias definições de proteção em vez de utilizar as definições de proteção que o administrador possa ter incluído com a etiqueta escolhida, selecione **Proteger com permissões personalizadas**.
     
-    A opção de substituição não utiliza quaisquer definições de proteção que o administrador poderá ter definido para a etiqueta escolhida. Em vez disso, pode especificar as suas próprias definições de proteção. 
+    Todas as permissões personalizadas que especificar substituem as definições de proteção que o administrador possa ter definido para a etiqueta escolhida em vez de as complementarem.  
 
-4. Se tiver selecionado a opção de substituição, especifique o seguinte:
+4. Se selecionar a opção de permissões personalizadas, especifique o seguinte:
 
     - **Selecionar permissões**: selecione o nível de acesso que pretende que as pessoas tenham quando protege o ficheiro ou ficheiros selecionados.
     
     - **Selecionar utilizadores**: especifique as pessoas que devem ter as permissões que selecionou para o seu ficheiro ou ficheiros. Pode utilizar o livro de endereços para pesquisar e selecionar as pessoas e os grupos na sua organização. Para pessoas noutra organização, tem de especificar o endereço de e-mail completo. Verifique que utiliza um endereço de e-mail profissional, uma vez que os endereços de e-mail pessoais não são atualmente suportados.
         
-    - **Expirar acesso**: selecione esta opção apenas para ficheiros sensíveis ao tempo para que as pessoas que especificou não consigam abrir o ficheiro ou ficheiros selecionados após uma data especificada. Ainda poderá abrir o ficheiro original, mas, após a meia-noite (o seu fuso horário atual), no dia que selecionou, as pessoas especificadas não poderão abrir o ficheiro.
+    - **Expirar acesso em**: selecione esta opção apenas para ficheiros sensíveis ao tempo, para que as pessoas que especificou não consigam abrir o ficheiro ou ficheiros selecionados após uma data especificada. Ainda poderá abrir o ficheiro original, mas, após a meia-noite (o seu fuso horário atual), no dia que selecionou, as pessoas especificadas não poderão abrir o ficheiro.
 
 5. Clique em **Aplicar** e, em seguida, em **Fechar**.
 
@@ -108,9 +108,10 @@ Para obter instruções sobre os procedimentos, veja as secções seguintes do g
 
 -   [O que pretende fazer?](client-user-guide.md#what-do-you-want-to-do)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

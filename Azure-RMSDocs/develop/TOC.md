@@ -20,12 +20,11 @@
 #### [Exemplos de código do Linux](linux-c-code-examples.md)
 #### [Exemplos de código de iOS/OS X](ios-os-x-code-examples.md)
 #### [Recursos comunitários](community-resources.md)
-### [Termos e orientações para programadores](core-concepts.md)
+### [Orientação para programadores](core-concepts.md)
 #### [Como registar-se e ativar o RMS na aplicação com o Azure AD](authentication-integration.md)
 #### [Como ativar o registo de erros e de desempenho](enabling-logging.md)
 #### [Como utilizar os direitos incorporados](built-in-rights-usage-restriction-reference.md)
 #### [Como utilizar o controlo de documentos](how-to-use-document-tracking.md)
-#### [Termos](terms.md)
 ### [Referência da API](api-reference-4-2.md)
 #### [Referência da API do Android](https://msdn.microsoft.com/library/dn758245.aspx)
 #### [Referência da API do Linux](linux-c-api-reference.md)
@@ -42,7 +41,7 @@
 #### [Desenvolver a sua aplicação](developing-your-application.md)
 #### [Testar a sua aplicação](how-to-set-up-your-test-environment.md)
 #### [Implementar em produção](deploying-your-application.md)
-### [Informações e documentação de orientação para programadores](Developer-notes.md)
+### [Orientação para programadores](Developer-notes.md)
 #### [Procedimentos: utilizar a autenticação ADAL](how-to-use-adal-authentication.md)
 ##### [Configurar o Azure RMS para a autenticação ADAL](adal-auth.md)
 #### [Procedimentos: adicionar direitos de proprietário explícitos](add-explicit-owner-rights.md)
@@ -65,8 +64,9 @@
 #### [Funções](https://msdn.microsoft.com/library/hh535289.aspx)
 #### [Estruturas](https://msdn.microsoft.com/library/hh535294.aspx)
 #### [Códigos de erro](https://msdn.microsoft.com/library/hh535248.aspx)
+## [Termos](terms.md) 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

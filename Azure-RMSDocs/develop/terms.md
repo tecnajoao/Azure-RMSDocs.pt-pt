@@ -1,11 +1,11 @@
 ---
-title: Termos | Azure RMS
-description: "Uma coleção de definições terminológicas específicas dos Serviços de Gestão de Direitos."
+title: Terminologia para Programadores do AIP | Documentos da Microsoft
+description: "Uma coleção de definições terminológicas para programadores específicas dos Serviços de Gestão de Direitos."
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -15,15 +15,15 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 38ed5a7128813f52cb62b906b0a5cef4e6d990be
+ms.sourcegitcommit: 9c0977c57ea8e85b6750fe1f5a063059ee343db9
+ms.openlocfilehash: 4ecf686d8e7e26909c8bda4a2d0df7fc61f413bb
 
 
 ---
 
 # <a name="terms"></a>Termos
 
-Uma coleção de definições terminológicas específicas dos Serviços de Gestão de Direitos.
+Uma coleção de definições terminológicas para programadores específicas do Azure Information Protection.
 
 **Algoritmo Preterido**  
 Uma definição modal que implementa um esquema de proteção de conteúdo mais antigo, referenciando especificamente o modo de cifra ECB (Electronic Codebook). Neste SDK, a definição permite-lhe gerar licenças compatíveis com a biblioteca MSDRM utilizada pelo [SDK dos Serviços de Gestão de Direitos do AD](https://msdn.microsoft.com/library/windows/desktop/cc530379.aspx).
@@ -42,6 +42,6 @@ O formato PFile é transparente para o programador de aplicações, já que est�
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

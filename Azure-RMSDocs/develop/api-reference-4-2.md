@@ -1,11 +1,11 @@
 ---
-title: "Referência da API | Azure RMS"
-description: "O SDK do Microsoft Rights Management 4.2 suporta vários sistemas operativos; Android, iOS, OS X, Linux, Windows Phone e Loja Windows."
+title: "Referência do SDK 4.2 da API | Documentos da Microsoft"
+description: "O SDK 4.2 do Azure Information Protection suporta vários sistemas operativos, tais como Android, iOS, OS X, Linux, Windows Phone e Windows Store."
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 10/18/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -15,15 +15,15 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: e7788088a6eb9f0d3651365c6e0b0e05f0faf3ef
+ms.sourcegitcommit: 61efd11cde36c5f2507a91112cfc3711c1bedfca
+ms.openlocfilehash: 9735b9c1d05f2512eab1a11808dc5911e26174be
 
 
 ---
 
-# <a name="api-reference"></a>Referência da API
+# <a name="api-sdk-42-reference"></a>Referência do SDK 4.2 da API
 
-O SDK do Microsoft Rights Management 4.2 suporta vários sistemas operativos. Para obter mais informações acerca de informações específicas, consulte [Novidades](release-notes.md).
+O SDK 4.2 do Azure Information Protection suporta vários sistemas operativos. Para obter mais informações acerca de informações específicas, consulte [Novidades](release-notes.md).
 
 ### <a name="apple"></a>Apple
 - [Referência da API do iOS/OS X](https://msdn.microsoft.com/library/dn758306.aspx) – Referência da API para os sistemas operativos iOS e OS X da Apple.
@@ -44,6 +44,6 @@ O SDK do Microsoft Rights Management 4.2 suporta vários sistemas operativos. P
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -4,15 +4,15 @@ description: "Pode proteger os seus documentos e e-mails mais confidenciais util
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 659f8d79a0ed0146fb94040ab7328e7b9530460a
+ms.sourcegitcommit: f71b5d98d03453ee49ea177fcb894c28f0f2688f
+ms.openlocfilehash: 9224cdbd5c7e1aa1453328150b903db386af2322
 
 
 ---
@@ -51,41 +51,52 @@ Os utilizadores podem aplicar etiquetas no Outlook para protegerem os seus e-mai
 - Para o Exchange no local, tem de implementar o [conector RMS e configurar os servidores do Exchange](../deploy-use/deploy-rms-connector.md). 
 
 
-## <a name="to-configure-a-label-to-apply-rights-management-protection"></a>Para configurar uma etiqueta de modo a aplicar a proteção de Gestão de Direitos
+## <a name="to-configure-a-label-for-rights-management-protection"></a>Para configurar uma etiqueta para a proteção de Gestão de Direitos
 
 1. Caso ainda não o tenha feito, abra uma nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com) como administrador global e navegue para o painel **Azure Information Protection**. 
 
     Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
-2. Se a etiqueta que pretende configurar se aplicar a todos os utilizadores, selecione a etiqueta a alterar no painel **Política:Global**. 
+2. Se a etiqueta que pretende configurar se aplicar a todos os utilizadores, selecione **Global** no painel **Azure Information Protection**. Contudo, se a etiqueta que pretende configurar estiver numa [política de âmbito](configure-policy-scope.md) para ser aplicada apenas a utilizadores selecionados, selecione antes essa política de âmbito.
 
-     Se a etiqueta que pretende configurar estiver numa [política de âmbito](configure-policy-scope.md) para ser aplicada apenas a utilizadores selecionados, selecione primeiro essa política de âmbito no painel inicial do **Azure Information Protection**.
+3. No painel **Política**, selecione a etiqueta que pretende configurar, o que abre o painel **Etiqueta**. 
 
-3. No painel **Etiqueta**, na secção **Defina o modelo do RMS para a proteção de documentos e e-mails que contenham esta etiqueta**, para **Selecionar modelo do RMS a partir de**, selecione **Azure RMS** ou **AD RMS**.
+4. No painel **Etiqueta**, localize **Definir permissões para documentos e e-mails que contêm esta etiqueta**. 
     
-    Na maioria dos casos, irá selecionar **Azure RMS**. Não selecione AD RMS, a menos que tenha lido e compreendido os pré-requisitos e as restrições que acompanham esta configuração, por vezes referido como "*tenha a sua própria chave*" (HYOK). Para obter mais informações, veja [Requisitos e restrições de Tenha a sua própria chave (HYOK) para proteção do AD RMS](configure-adrms-restrictions.md).
+    Selecione **Proteger** para aplicar a proteção ou selecione **Remover Proteção** para remover a proteção que pode ser aplicada a um e-mail ou documento:
+
+    - Se tiver selecionado **Proteger**, continue para o passo 5.
+    - Se tiver selecionado **Remover Proteção**, continue para o passo 11.
+
+5. Se selecionar **Proteger**, clique agora na barra **Proteção** para abrir o painel **Permissões**:
     
-4. Se tiver selecionado o Azure RMS: em **Selecionar modelo RMS**, clique na caixa pendente e selecione o [modelo](../deploy-use/configure-custom-templates.md) ou a opção de gestão de direitos que pretende utilizar para proteger os documentos e os e-mails com esta etiqueta.
+    ![Configurar a proteção para uma etiqueta do Azure Information Protection](../media/info-protect-protection-bar.png)
+
+6. No painel **Permissões**, selecione **Azure RMS** ou **HYOK (AD RMS)**. 
     
-    Mais informações sobre as opções:
+    Na maioria dos casos, irá selecionar **Azure RMS** para as definições de permissão. Não selecione **HYOK (AD RMS)**, a menos que tenha lido e compreendido os pré-requisitos e as restrições que acompanham esta configuração de "*tenha a sua própria chave*" (HYOK). Para obter mais informações, veja [Requisitos e restrições de Tenha a sua própria chave (HYOK) para proteção do AD RMS](configure-adrms-restrictions.md).
     
-    - Criou um novo modelo após abrir o painel **Etiqueta**? Feche este painel e regresse ao passo 2. Desta forma, o modelo que criou recentemente será obtido a partir do Azure para que o possa selecionar.
+7. Selecione **Não reencaminhar**, se pretender definir esta opção do Outlook para os e-mails, ou **Selecionar modelo**. 
     
-    - Se selecionar um **modelo departamental** ou se tiver configurado [controlos de inclusão](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment):
+8. Se tiver selecionado **Selecionar modelo** para **Azure RMS**, clique na caixa pendente e selecione o [modelo](../deploy-use/configure-custom-templates.md) que pretende utilizar para proteger os documentos e os e-mails com esta etiqueta.
     
-        - Os utilizadores que estão fora do âmbito configurado do modelo ou que estão excluídos de aplicarem a proteção do Azure Rights Management continuarão a ver a etiqueta mas não poderão aplicá-la. Se selecionarem a etiqueta, verão a seguinte mensagem: **O Azure Information Protection não pode aplicar esta etiqueta. Se este problema persistir, contacte o seu administrador.**
-        
-            Tenha em atenção que todos os modelos são sempre apresentados, mesmo que esteja a configurar uma política de âmbito. Por exemplo, está a configurar uma política de âmbito para o grupo de Marketing. Os modelos do Azure RMS que pode selecionar não serão restringidos aos modelos que estão no âmbito do grupo de Marketing e é possível selecionar um modelo departamental que os utilizadores selecionados não podem utilizar. Para facilitar a configuração e para minimizar a resolução de problemas, considere atribuir ao modelo departamental o mesmo nome da etiqueta na sua política de âmbito. 
+    Se selecionar um **modelo departamental** ou se tiver configurado [controlos de inclusão](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment):
+    
+    - Os utilizadores que estão fora do âmbito configurado do modelo ou que estão excluídos de aplicarem a proteção do Azure Rights Management continuarão a ver a etiqueta mas não poderão aplicá-la. Se selecionarem a etiqueta, verão a seguinte mensagem: **O Azure Information Protection não pode aplicar esta etiqueta. Se este problema persistir, contacte o seu administrador.**
+    
+        Tenha em atenção que todos os modelos são sempre apresentados, mesmo que esteja a configurar uma política de âmbito. Por exemplo, está a configurar uma política de âmbito para o grupo de Marketing. Os modelos do Azure RMS que pode selecionar não serão restringidos aos modelos que estão no âmbito do grupo de Marketing e é possível selecionar um modelo departamental que os utilizadores selecionados não podem utilizar. Para facilitar a configuração e para minimizar a resolução de problemas, considere atribuir ao modelo departamental o mesmo nome da etiqueta na sua política de âmbito. 
             
-    - Se selecionar **Remover Proteção**:
-        
-        - Os utilizadores têm de ter permissões para remover a proteção de Gestão d eDireitos para aplicar uma etiqueta que tenha esta opção. Esta opção requer que os utilizadores tenham o [direito de utilização](../deploy-use/configure-usage-rights.md) **Exportar** (para documentos do Office) ou **Controlo Total**, que sejam os proprietários da Gestão de Direitos (concede automaticamente o direito de utilização Controlo Total) ou que sejam [superutilizadores do Azure Rights Management](../deploy-use/configure-super-users.md). Os modelos de gestão de direitos predefinidos não incluem os direitos de utilização que permitem que os utilizadores removam a proteção. 
+9. Se tiver selecionado **Selecionar modelo** para **HYOK (AD RMS)**: forneça o GUID do modelo e o URL de licenciamento do cluster do AD RMS. [Mais informações](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label)
 
-            Se os utilizadores não tiverem permissões para remover a proteção de Righta Management e selecionarem esta etiqueta com a opção **Remover Proteção**, verão a seguinte mensagem: **O Azure Information Protection não pode aplicar esta etiqueta. Se este problema persistir, contacte o seu administrador.**
+10. Clique em **Concluído** para fechar o painel **Permissões** e ver a sua escolha de **Não reencaminhar** ou o modelo que escolheu apresentado na barra **Proteção** do painel **Etiqueta**.
 
-5. Se tiver selecionado o AD RMS: forneça o GUID do modelo e o URL de licenciamento do cluster do AD RMS. [Mais informações](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label)
+11. Se selecionar **Remover Proteção**:
+    
+    Os utilizadores têm de ter permissões para remover a proteção de Gestão d eDireitos para aplicar uma etiqueta que tenha esta opção. Esta opção requer que os utilizadores tenham o [direito de utilização](../deploy-use/configure-usage-rights.md) **Exportar** (para documentos do Office) ou **Controlo Total**, que sejam os proprietários da Gestão de Direitos (concede automaticamente o direito de utilização Controlo Total) ou que sejam [superutilizadores do Azure Rights Management](../deploy-use/configure-super-users.md). Os modelos de gestão de direitos predefinidos não incluem os direitos de utilização que permitem que os utilizadores removam a proteção. 
+    
+    Se os utilizadores não tiverem permissões para remover a proteção de Righta Management e selecionarem esta etiqueta com a opção **Remover Proteção**, verão a seguinte mensagem: **O Azure Information Protection não pode aplicar esta etiqueta. Se este problema persistir, contacte o seu administrador.**
 
-6. Clique em **Guardar**.
+6. No painel **Etiqueta**, clique em **Guardar**.
 
 7. Para disponibilizar as alterações aos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
 
@@ -96,6 +107,6 @@ Para mais informações sobre como configurar a política do Azure Information P
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO3-->
 
 

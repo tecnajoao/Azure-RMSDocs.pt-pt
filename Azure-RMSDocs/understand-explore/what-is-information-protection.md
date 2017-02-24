@@ -4,15 +4,15 @@ description: "Uma descrição geral sobre o serviço Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 translationtype: Human Translation
-ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
-ms.openlocfilehash: c0ea97dc29855ad46271dac251c804ca602cee69
+ms.sourcegitcommit: 4d20462f190042e1ac8d674123296f65c66d9921
+ms.openlocfilehash: 50b83f165dfbcf9b5f66ae8bfc596d1aa910f10d
 
 
 ---
@@ -54,7 +54,7 @@ Estes modelos podem fazer parte da configuração de uma etiqueta, para que, qua
 
 Este exemplo mostra como pode selecionar um modelo para uma etiqueta ao configurar a política do Azure Information Protection a partir do portal do Azure:
 
-![Exemplo de seleção de modelos no portal do Azure](../media/templates-infoprotection-callouts.png)
+![Exemplo de seleção de modelos no portal do Azure](../media/info-protect-template-callout.png)
 
 Os mesmos modelos podem ser selecionados no centro de administração do Exchange para configurar as regras de fluxo de correio do Exchange Online, que suportam a tecnologia do Azure Rights Management:
 
@@ -66,11 +66,21 @@ Para obter mais informações sobre a proteção do Azure Rights Management, con
 
 O Azure Information Protection integra-se com os fluxos de trabalho existentes de utilizadores finais quando o cliente do Azure Information Protection é instalado. Este cliente instala a barra do Information Protection para aplicações do Office, conforme vimos na primeira imagem. A mesma barra é adicionada ao Excel, PowerPoint e Outlook. Por exemplo:
 
-![Exemplo de barra do Azure Information Protection no Excel](../media/excel2013-infoprotect-bar2.png)
+![Exemplo de barra do Azure Information Protection no Excel](../media/excel2016-infoprotect-bar.png)
 
 Esta barra do Information Protection facilita aos utilizadores finais a seleção de etiquetas para uma classificação correta. Se for necessário, estas etiquetas também podem proteger automaticamente documentos e e-mails.
 
-Quando os utilizadores partilharem os respetivos documentos protegidos por e-mail, podem utilizar um site de controlo de documentos para saber quem acede aos documentos e quando. Se suspeitarem que há uma utilização indevida, podem também revogar o acesso aos documentos.
+Para classificar e proteger tipos de ficheiro adicionais e para suportar vários ficheiros ao mesmo tempo, os utilizadores podem clicar com o botão direito do rato nos ficheiros ou numa pasta do Explorador de Ficheiros do Windows:
+
+![No Explorador de Ficheiros, clique com o botão direito do rato em Classificar e proteger ao utilizar o Azure Information Protection](../media/right-click-classify-protect-folder.png)
+
+Quando os utilizadores selecionam a opção de menu **Classificar e proteger** no Explorador de Ficheiros, podem selecionar uma etiqueta tal como quando utilizam a barra do Information Protection nas suas aplicações de ambiente de trabalho do Office. Também podem definir as suas próprias permissões personalizadas, se necessário.
+
+Os utilizadores avançados (e os administradores) podem considerar a utilização dos comandos do PowerShell mais eficiente para gerir e definir a classificação e a proteção de vários ficheiros. Os comandos do PowerShell para realizar este procedimento são incluídos automaticamente com o cliente, embora também possa instalar o módulo do PowerShell separadamente.
+
+Depois de proteger um documento, os utilizadores e os administradores podem utilizar um site de controlo de documentos para saber quem acede aos documentos e quando. Se suspeitarem que há uma utilização indevida, podem também revogar o acesso aos documentos:
+
+![Ícone Revogar acesso no site de controlo de documentos](../media/tracking-site-revoke-access-icon.png)
 
 
 ## <a name="resources-for-azure-information-protection"></a>Recursos para o Azure Information Protection
@@ -111,6 +121,6 @@ Conhece o Azure Information Protection ou Azure Rights Management por outro nome
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

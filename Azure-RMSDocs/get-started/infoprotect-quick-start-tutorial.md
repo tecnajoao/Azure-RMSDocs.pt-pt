@@ -1,18 +1,18 @@
 ---
 title: "Tutorial de início rápido | Azure Information Protection"
-description: "Um tutorial de introdução, com uma duração de aproximadamente 30 minutos, para experimentar rapidamente o Microsoft Azure Information Protection na sua organização."
+description: "Um tutorial de introdução, com uma duração de aproximadamente 20 minutos, para experimentar rapidamente o Microsoft Azure Information Protection na sua organização."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2016
+ms.date: 02/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 2a601d075245280d30b78d9c38bbb09e6387f8be
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: 4d61cf28be8e41cad20ff2dbc3be2c71eac9d2ad
 
 
 ---
@@ -21,9 +21,9 @@ ms.openlocfilehash: 2a601d075245280d30b78d9c38bbb09e6387f8be
 
 >*Aplica-se a: Azure Information Protection*
 
-Utilize este tutorial, com uma duração de aproximadamente 30 minutos, para experimentar rapidamente o Azure Information Protection em apenas 5 passos. Este tutorial foi concebido para ser uma demonstração auto-configurada para mostrar rapidamente algumas das funcionalidades disponibilizadas pelo Azure Information Protection. Não inclui todas as funcionalidades disponíveis e não se destina a ser um guia de implementação para a sua organização. Se quiser implementar o Azure Information Protection na sua organização, consulte a [documentação com informações gerais sobre a implementação](../plan-design/deployment-roadmap.md). 
+Utilize este tutorial, com uma duração de aproximadamente 20 minutos, para experimentar rapidamente o Azure Information Protection em apenas 5 passos. Este tutorial foi concebido para ser uma demonstração auto-configurada para mostrar rapidamente algumas das funcionalidades disponibilizadas pelo Azure Information Protection. Não inclui todas as funcionalidades disponíveis e não se destina a ser um guia de implementação para a sua organização. Se quiser implementar o Azure Information Protection na sua organização, consulte a [documentação com informações gerais sobre a implementação](../plan-design/deployment-roadmap.md). 
 
-Este tutorial destina-se a administradores de TI e consultores, para os ajudar a avaliar o Azure Information Protection como uma solução de proteção de informações empresariais para uma organização. Num ambiente de produção, os passos para configurar a política de Information Protection e instalar o cliente e as aplicações para os utilizadores teriam de ser feitos por um administrador. Os passos para etiquetar o documento, partilhá-lo em segurança por e-mail e controlá-lo seriam efetuados pelos utilizadores finais. Este tutorial inclui todos estes passos para demonstrar cenários comuns completos de classificação, etiquetagem e proteção dos dados da sua organização. 
+Este tutorial destina-se a administradores de TI e consultores, para os ajudar a avaliar o Azure Information Protection como uma solução de proteção de informações empresariais para uma organização. Num ambiente de produção, os passos para configurar a política do Information Protection e instalar o cliente para os utilizadores teriam de ser feitos por um administrador. Os passos para etiquetar o documento, partilhá-lo em segurança por e-mail e controlá-lo seriam efetuados pelos utilizadores finais. Este tutorial inclui todos estes passos para demonstrar cenários comuns completos de classificação, etiquetagem e proteção dos dados da sua organização. 
 
 Se tiver alguma dificuldade em concluir este tutorial ou em utilizar o Azure Information Protection, ou se quiser ver o que tem sido dito sobre esta aplicação, aceda ao [site do Yammer do Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all).
 
@@ -53,6 +53,6 @@ Vamos começar.
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

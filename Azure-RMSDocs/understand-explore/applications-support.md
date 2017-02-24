@@ -4,7 +4,7 @@ description: "Compreender como as aplicações de utilizador final (como as apli
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
-ms.openlocfilehash: f3e0be224f2a9e587f5be1bbdbbdb3e81b7a4bca
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: 53a77c0e312f44fe2210ed19ead6dedeb36a5a78
 
 
 ---
@@ -27,7 +27,7 @@ Utilize as seguintes informações para o ajudar a compreender como as aplicaç�
 > [!NOTE]
 > Para saber que aplicações e versões são suportadas pelo serviço Azure Rights Management, consulte [Aplicações que suportam a proteção de dados do Azure Rights Management](../get-started/requirements-applications.md).
 
-Em alguns casos, o serviço Azure Rights Management aplica automaticamente a proteção, de acordo com as políticas configuradas pelos administradores. Por exemplo, é este o caso com bibliotecas do SharePoint, ficheiros classificados e regras de transporte do Exchange. Noutros casos, os utilizadores finais têm de aplicar a proteção de informações por si próprios nas respetivas aplicações, quer ao selecionar um modelo ou ao selecionar opções específicas. Por exemplo, é este o caso quando os utilizadores partilham um ficheiro por e-mail ou protegem um ficheiro no local ao restringir o acesso ou a utilização a utilizadores selecionados ou a utilizadores fora da organização.
+Em alguns casos, o serviço Azure Rights Management aplica automaticamente a proteção, de acordo com as políticas configuradas pelos administradores. Por exemplo, é este o caso com bibliotecas do SharePoint e regras de transporte do Exchange. Noutros casos, os utilizadores finais têm de aplicar a proteção de informações pessoalmente a partir das suas aplicações, por exemplo, ao selecionar uma etiqueta de classificação que tenha sido configurada para aplicar um modelo, ao selecionar um modelo diretamente ou ao selecionar opções específicas. A proteção aplicada pelos utilizadores é típica quando os utilizadores protegem um ficheiro a partilhar e restringem o acesso ou utilização a utilizadores selecionados ou a utilizadores fora da organização.
 
 Os modelos fazem com que seja mais fácil para os utilizadores (e administradores que configuram políticas) aplicar o nível correto de proteção e restringir o acesso a pessoas dentro da sua organização. Embora o serviço Azure Rights Management inclua dois modelos predefinidos, é provável que pretenda criar modelos personalizados para reduzir as vezes em que é necessário especificar opções individuais. Para obter mais informações, consulte [Configurar modelos personalizados para o serviço Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
@@ -64,6 +64,6 @@ Saiba mais sobre como cada um dos seguintes suporta o serviço Azure Rights Mana
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

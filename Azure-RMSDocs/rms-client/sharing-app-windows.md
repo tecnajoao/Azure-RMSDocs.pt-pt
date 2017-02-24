@@ -4,7 +4,7 @@ description: "Recursos de informação para a aplicação de partilha Rights Man
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 08/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 7d8a8abe-6de1-4088-90ee-e0c4bd6deec8
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 5c65e007c971ad6d62ee61e15134e16d7bf87624
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: 78a796eaea0c6ece4bbaee80e7f287eb2aba29f6
 
 
 ---
@@ -22,6 +22,10 @@ ms.openlocfilehash: 5c65e007c971ad6d62ee61e15134e16d7bf87624
 # <a name="rights-management-sharing-application-for-windows"></a>Aplicação de Partilha Rights Management para Windows
 
 >*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection*
+
+> [!IMPORTANT]
+> **Notificação de fim do suporte**: a aplicação de partilha Rights Management para Windows está a ser substituída pelo [cliente do Azure Information Protection](aip-client.md). O suporte para esta aplicação mais antiga será interrompido a 31 de janeiro de 2018. 
+
 
 A aplicação de partilha Rights Management para Windows (também conhecida apenas como "a aplicação de partilha RMS") é uma aplicação gratuita e transferível para organizações que utilizam os [Serviços de Gestão de Direitos do Active Directory](https://technet.microsoft.com/library/cc772403.aspx) (AD RMS) ou o [Azure Information Protection](../understand-explore/what-is-information-protection.md) e para as organizações que não têm a sua própria infraestrutura de proteção de informações, mas que pretendem consumir conteúdos protegidos por outras organizações que utilizam o serviço Rights Management do Azure Information Protection.
 
@@ -43,6 +47,6 @@ A aplicação de partilha Rights Management para Windows (também conhecida apen
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

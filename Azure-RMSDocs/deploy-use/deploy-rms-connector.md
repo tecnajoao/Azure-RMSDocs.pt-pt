@@ -4,7 +4,7 @@ description: "Instruções para implementar o conector do RMS, que fornece o ser
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/24/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a8bfb3be9b19718cc8a94755e19b8d2521dde323
-ms.openlocfilehash: 874882b46bea052a1052b6f8e0e09f74b92753b8
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: 5d33e0a8a9c6efbe937a53ae964b2972bf41580c
 
 
 ---
@@ -41,7 +41,7 @@ O conector RMS é um serviço que consome poucos recursos e que se instala no lo
 O conector RMS suporta os seguintes servidores no local: Exchange Server, SharePoint Server e servidores de ficheiros que executam o Windows Server e utilizam a Infraestrutura de Classificação de Ficheiros para classificar e aplicar políticas a documentos do Office numa pasta. 
 
 > [!NOTE]
-> Se pretender proteger todos os tipos de ficheiro (e não apenas os documentos do Office) ao utilizar a Infraestrutura de Classificação de Ficheiros, não utilize o conector RMS, mas sim os [cmdlets Proteção RMS](https://msdn.microsoft.com/library/azure/mt433195.aspx).
+> Se quiser proteger vários tipos de ficheiro (e não apenas os documentos do Office) ao utilizar a Infraestrutura de Classificação de Ficheiros, não utilize o conector RMS, mas sim os [cmdlets AzureInformationProtection](/powershell/azureinformationprotection/vlatest/aip).
 
 Para as versões destes servidores no local que são suportadas pelo conector RMS, consulte [Servidores no local que suportam o Azure RMS](..\get-started\requirements-servers.md).
 
@@ -100,6 +100,6 @@ Aceda ao Passo 1: [instalar e configurar o conector Azure Rights Management](ins
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

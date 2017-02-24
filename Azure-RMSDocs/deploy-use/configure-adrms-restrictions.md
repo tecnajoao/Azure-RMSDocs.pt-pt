@@ -4,15 +4,15 @@ description: "Conheça as limitações, pré-requisitos e recomendações se sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/13/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 translationtype: Human Translation
-ms.sourcegitcommit: 22af60687ad030e686ba843ced6d450487353a0e
-ms.openlocfilehash: 66c19b296ce170d0f7f5317c87bee532edd9bb78
+ms.sourcegitcommit: fb68fc152e7f1d323cce71e3873475c78f7bbc15
+ms.openlocfilehash: afb676dc133c23123cd3cce6d3c6367b4e80911a
 
 
 ---
@@ -35,7 +35,7 @@ O Azure RMS protege os documentos e e-mails da sua organização através de uma
 
 No entanto, alguns clientes podem ter de proteger os documentos e e-mails selecionados com uma chave alojada no local. Por exemplo, isto pode ser necessário por motivos de regulamentação e conformidade. 
 
-Esta configuração é, por vezes, referida como "tenha a sua própria chave" (HYOK) e é suportada pelo Azure Information Protection quando tem uma implementação de Serviços de Gestão de Direitos do Active Directory (AD RMS) ativa com os requisitos documentados na secção seguinte. Esta funcionalidade ainda está em pré-visualização.
+Esta configuração é, por vezes, referida como "tenha a sua própria chave" (HYOK) e é suportada pelo Azure Information Protection quando tem uma implementação de Serviços de Gestão de Direitos do Active Directory (AD RMS) ativa com os requisitos documentados na secção seguinte.
 
 Neste cenário de HYOK, as políticas de direitos e a chave privada da organização que protege estas políticas são geridas e mantidas no local, enquanto que a política do Azure Information Protection para etiquetagem e classificação permanece gerida e armazenada no Azure. Tal como acontece com a proteção do Azure RMS, as informações que proteger com o AD RMS nunca são enviadas para a nuvem.
 
@@ -96,15 +96,15 @@ Quando configura uma etiqueta para a proteção do AD RMS, tem de especificar o 
     
     Se tiver um valor de licenciamento de extranet, bem como um valor de licenciamento de intranet e forem diferentes: especifique o valor de extranet apenas se for partilhar documentos ou e-mails protegidos com parceiros que definiu com confianças ponto a ponto explícitas. Caso contrário, utilize o valor de intranet e certifique-se de que todos os computadores cliente que utilizam a proteção do AD RMS com o Azure Information Protection se ligam através de uma ligação de intranet (por exemplo, computadores remotos que utilizam uma ligação VPN).
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
-Para ler mais informações sobre esta funcionalidade de pré-visualização, veja o anúncio de mensagem de blogue, [Azure Information Protection com HYOK (Tenha a Sua Própria Chave)](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/).
+Para ler mais informações sobre esta funcionalidade, veja o anúncio do blogue, [Azure Information Protection com HYOK (Tenha a Sua Própria Chave)](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/).
 
 Para configurar uma etiqueta para a proteção do AD RMS, veja [Como configurar uma etiqueta para aplicar a proteção Rights Management](../deploy-use/configure-policy-protection.md). 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

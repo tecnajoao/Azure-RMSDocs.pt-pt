@@ -4,7 +4,7 @@ description: "Conheça os direitos específicos utilizados quando protege fichei
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 8b3926bf9e985eb8954449b0e88d0d953f4fb339
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: 42f2c592091edb6305d72036545631069e79da2a
 
 
 ---
@@ -56,18 +56,18 @@ Utilize a tabela seguinte para obter uma lista destes níveis de permissões e u
 
 |Nível de Permissões|Aplicações|Direitos incluídos (nome comum)|
 |---------------------|----------------|---------------------------------|
-|Visualizador|Portal clássico do Azure<br /><br />Aplicação de partilha Rights Management para Windows<br /><br />Cliente do Azure Information Protection para Windows (pré-visualização)|Ver, Abrir, Ler; Responder; Responder a Todos|
-|Revisor|Portal clássico do Azure<br /><br />Aplicação de partilha Rights Management para Windows<br /><br />Cliente do Azure Information Protection para Windows (pré-visualização)|Ver, Abrir, Ler; Guardar; Editar Conteúdo, Editar; Responder [[1]](#footnote-1); Responder a Todos [[1]](#footnote-1); Reencaminhar [[1]](#footnote-1)|
-|Coautor|Portal clássico do Azure<br /><br />Aplicação de partilha Rights Management para Windows<br /><br />Cliente do Azure Information Protection para Windows (pré-visualização)|Ver, Abrir, Ler; Guardar; Editar Conteúdo, Editar; Copiar; Ver Direitos; Permitir Macros; Guardar Como, Exportar [[2]](#footnote-2); Imprimir; Responder [[1]](#footnote-1); Responder a Todos [[1]](#footnote-1); Reencaminhar [[1]](#footnote-1)|
-|Coproprietário|Portal clássico do Azure<br /><br />Aplicação de partilha Rights Management para Windows<br /><br />Cliente do Azure Information Protection para Windows (pré-visualização)|Ver, Abrir, Ler; Guardar; Editar Conteúdo, Editar; Copiar; Ver Direitos; Permitir Macros; Guardar Como, Exportar; Imprimir; Responder [[1]](#footnote-1); Responder a Todos [[1]](#footnote-1); Reencaminhar [[1]](#footnote-1) Controlo Total|
+|Visualizador|Portal clássico do Azure<br /><br />Aplicação de partilha Rights Management para Windows<br /><br />Cliente do Azure Information Protection para Windows|Ver, Abrir, Ler; Responder; Responder a Todos|
+|Revisor|Portal clássico do Azure<br /><br />Aplicação de partilha Rights Management para Windows<br /><br />Cliente do Azure Information Protection para Windows|Ver, Abrir, Ler; Guardar; Editar Conteúdo, Editar; Responder [[1]](#footnote-1); Responder a Todos [[1]](#footnote-1); Reencaminhar [[1]](#footnote-1)|
+|Coautor|Portal clássico do Azure<br /><br />Aplicação de partilha Rights Management para Windows<br /><br />Cliente do Azure Information Protection para Windows|Ver, Abrir, Ler; Guardar; Editar Conteúdo, Editar; Copiar; Ver Direitos; Permitir Macros; Guardar Como, Exportar [[2]](#footnote-2); Imprimir; Responder [[1]](#footnote-1); Responder a Todos [[1]](#footnote-1); Reencaminhar [[1]](#footnote-1)|
+|Coproprietário|Portal clássico do Azure<br /><br />Aplicação de partilha Rights Management para Windows<br /><br />Cliente do Azure Information Protection para Windows|Ver, Abrir, Ler; Guardar; Editar Conteúdo, Editar; Copiar; Ver Direitos; Permitir Macros; Guardar Como, Exportar; Imprimir; Responder [[1]](#footnote-1); Responder a Todos [[1]](#footnote-1); Reencaminhar [[1]](#footnote-1) Controlo Total|
 
 ----
 
 ###### <a name="footnote-1"></a>Nota de rodapé 1
-Não aplicável à aplicação de partilha Rights Management para Windows ou ao cliente do Azure Information Protection para Windows (pré-visualização).
+Não aplicável ao cliente do Azure Information Protection para Windows ou à aplicação de partilha Rights Management para Windows.
 
 ###### <a name="footnote-2"></a>Nota de rodapé 2
-Não incluído no cliente do Azure Information Protection para Windows (pré-visualização). Neste cliente, o direito de utilização de Exportação inclui a capacidade para remover a proteção.
+Não incluído no cliente do Azure Information Protection para Windows. Neste cliente, o direito de utilização de Exportação inclui a capacidade para remover a proteção.
 
 
 ## <a name="rights-included-in-the-default-templates"></a>Direitos incluídos nos modelos predefinidos
@@ -108,6 +108,6 @@ Um utilizador pretende enviar algumas informações por e-mail a pessoas especí
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

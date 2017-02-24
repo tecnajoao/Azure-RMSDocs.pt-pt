@@ -1,18 +1,18 @@
 ---
 title: "Passo 2 do tutorial de início rápido | Azure Information Protection"
-description: "Passo 2 de um tutorial de introdução com uma duração de aproximadamente 30 minutos, para experimentar rapidamente o Microsoft Azure Information Protection na sua organização."
+description: "Passo 2 de um tutorial de introdução, com uma duração de aproximadamente 20 minutos, para experimentar rapidamente o Microsoft Azure Information Protection na sua organização."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: a8bfb3be9b19718cc8a94755e19b8d2521dde323
-ms.openlocfilehash: 4ad51bef524fd408881c4c3195a34f730c810b5a
+ms.sourcegitcommit: 8ad1ff05f642571bfe7f4170cb88e29d05515e59
+ms.openlocfilehash: f3ec39af7bdbc63169c09eefa54c29cfc4cee40b
 
 
 ---
@@ -32,7 +32,7 @@ Apesar de o Azure Information Protection ser fornecido com uma política predefi
     > [!TIP] 
     > Selecione **Afixar ao dashboard** para criar um mosaico do **Azure Information Protection** no seu dashboard. Assim, não terá de procurar o serviço da próxima vez que iniciar sessão no portal.
 
-3.  Explore o painel **Política:Global** apresentado automaticamente, que mostra a política do Information Protection predefinida criada automaticamente:
+3.  No painel do Azure Information Protection, clique em **Global** e explore o painel **Política: Global**, que mostra a política do Information Protection predefinida criada automaticamente:
     
     - Etiquetas para classificação: **Pessoal**, **Público**, **Interno**, **Confidencial** e **Secreto**. Leia a descrição de cada etiqueta para compreender como devem ser utilizadas. Tenha em atenção que **Segredo** tem duas etiquetas secundárias: **Todos os Funcionários** e **O Meu Grupo**, que fornece um exemplo de como uma classificação pode ter subcategorias.
 
@@ -114,7 +114,7 @@ Agora vamos alterar as definições de uma das etiquetas, **Confidencial**:
 
 Pode fechar o portal do Azure ou deixá-lo aberto para experimentar opções de configuração adicionais depois de concluir este tutorial.
 
-Agora que conhece a política predefinida e fez algumas alterações, o próximo passo é instalar o cliente do Azure Information Protection e a aplicação de partilha Rights Management.
+Agora que conhece o que é a política predefinida e efetuou algumas alterações, o próximo passo é instalar o cliente do Azure Information Protection.
 
 |Se pretender mais informações|Informações adicionais|
 |--------------------------------|--------------------------|
@@ -128,6 +128,6 @@ Agora que conhece a política predefinida e fez algumas alterações, o próximo
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

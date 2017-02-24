@@ -4,7 +4,7 @@ description: "Está confuso com uma palavra, expressão ou acrónimo relacionado
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: a5706c9cf8b81ec761865a800761c69584659578
+ms.sourcegitcommit: 47de236f07996eed3f1ceb51309c6315d4625128
+ms.openlocfilehash: 70657eb86ac3aeb53b8fb9983a33905100ca92b8
 
 
 ---
@@ -50,7 +50,7 @@ Está confuso com uma palavra, expressão ou acrónimo relacionado com o Microso
 |Gestão de Direitos de Informação|Frequentemente abreviado para *IRM*.<br /><br />Um termo utilizado em conjunto com os serviços do Office, como o Exchange Server, o Word e o SharePoint Online, para descrever a capacidade de suportar o serviço Microsoft Rights Management.|
 |IRM|Consulte *Gestão de Direitos de Informação*.|
 |MSDRM|Por vezes apresentado como referência para o cliente RMS 1.0, que é substituído pelo cliente mais recente, MSIPC. Este cliente antigo suporta as aplicações que são desenvolvidas com o SDK RMS 1.0 e suporta o Office 2010 e o Office 2007, o Exchange 2010 e o Exchange 2013, bem como o SharePoint 2010 e o SharePoint 2007.|
-|MSIPC|Por vezes apresentado como referência para o cliente RMS 2.0, que substituiu o cliente RMS mais antigo, MSDRM. Este cliente mais recente suporta as aplicações que são desenvolvidas com o SDK RMS 2.0 e suporta o Office 2016 e o Office 2013, o SharePoint 2013 e a aplicação de partilha do RMS.|
+|MSIPC|Por vezes apresentado como referência para o cliente RMS 2.0, que substituiu o cliente RMS mais antigo, MSDRM. Este cliente mais recente suporta as aplicações que são desenvolvidas com o SDK RMS 2.0 e suporta o Office 2016 e o Office 2013, o SharePoint 2013, a aplicação de partilha RMS e o cliente do Azure Information Protection.|
 |proteção nativa|Um nível de proteção disponível em todas as aplicações otimizadas que impede que pessoas não autorizadas abram um ficheiro e que também possam aplicar políticas mais restritas, tais como só de leitura e que não são impressas. Além disso, esta proteção permanece com o ficheiro, mesmo quando o ficheiro é reencaminhado para outras pessoas ou guardado numa localização pública à qual outras pessoas possam aceder.|
 |.pfile|A extensão de nome de ficheiro que é acrescentada a todos os ficheiros que o serviço de gestão de direitos protege genericamente.|
 |.ppdf|A extensão de nome de ficheiro que o serviço de gestão de direitos cria quando este cria automaticamente uma cópia em PDF de um ficheiro (Word, Excel, PowerPoint ou PDF) que partilha por e-mail, para que o ficheiro possa ser lido (mas não editado) em todos os dispositivos.|
@@ -59,7 +59,7 @@ Está confuso com uma palavra, expressão ou acrónimo relacionado com o Microso
 |publicar|Proteger um ficheiro de modo a salvaguardá-lo contra o acesso e a utilização não autorizados.|
 |Conector Rights Management|Um reencaminhamento de proxy de saída que pode implementar para serviços no local, como o Exchange Server e o SharePoint, para proteger dados através do serviço Azure Rights Management.|
 |Serviços de Gestão de Direitos|O termo genérico que se aplica tanto à versão na nuvem do [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] ([!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]) como à versão no local do [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] (AD RMS).|
-|Aplicação de partilha Rights Management|Uma aplicação transferível e opcional para o Windows e os dispositivos móveis mais populares, que suporta a partilha segura de ficheiros no local e por e-mail.|
+|Aplicação de partilha Rights Management|Foi agora substituída pelo cliente do Azure Information Protection, uma aplicação opcional para o Windows e para os dispositivos móveis mais populares, que suporta a partilha segura de ficheiros no local e por e-mail.|
 |RMS|Consulte *Serviços de Gestão de Direitos*.|
 |Conector RMS|Consulte *Conector Rights Management*.|
 |RMS para indivíduos|Uma subscrição gratuita para um utilizador utilizar o [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] quando a sua organização não tiver uma subscrição do Office 365 ou do Azure Active Directory.|
@@ -73,6 +73,6 @@ Está confuso com uma palavra, expressão ou acrónimo relacionado com o Microso
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

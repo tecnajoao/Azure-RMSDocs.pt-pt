@@ -4,7 +4,7 @@ description: "Instruções para criar e gerir modelos personalizados no portal c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/11/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5b7a73c153edfdc7db3a55ee714b05f65d5090f4
-ms.openlocfilehash: 41a4406803cb0de4af607c7494258fc57d5217f7
+ms.sourcegitcommit: 4d9cf4f9ab3f73d2b1ba06eb74541f2982d24677
+ms.openlocfilehash: 66158f74951e7226482e58cf94e4249486b4dc7b
 
 
 ---
@@ -85,10 +85,10 @@ Utilize os seguintes procedimentos para criar, configurar e publicar modelos per
     > [!TIP]
     > Pode adicionar utilizadores fora da sua organização ("utilizadores externos") ao modelo selecionando um grupo com capacidade de correio que contém os contactos do Office 365 ou Exchange Online. Isto permite-lhe atribuir direitos a estes utilizadores da mesma forma que pode atribuir direitos aos utilizadores na sua organização. Por exemplo, pode impedir os clientes de editar uma lista de preços que lhes enviou. Não utilize esta configuração de modelo para proteger e-mails se os utilizadores fora da sua organização forem ler os e-mails protegidos utilizando o Outlook Web App.
     > 
-    > Além disso, pode adicionar utilizadores fora da sua organização ao modelo com o [Módulo do Windows PowerShell para o Azure Rights Management](install-powershell.md) e através de um dos seguintes métodos:
+    > Além disso, pode adicionar mais tarde utilizadores de fora da sua organização ao modelo, por **utilizadores específicos**, **grupos** ou **todos os utilizadores dessa organização**. Para tal, utilize o [Módulo do Windows PowerShell para o Azure Rights Management](install-powershell.md) e um dos seguintes métodos:
     > 
-    > -  **Utilizar um objeto de definição de direitos para atualizar um modelo**: especifique os endereços de e-mail externos e os seus direitos num objeto de definição de direitos, que depois utiliza para atualizar o modelo. Deve especificar o objeto de definição de direitos com o cmdlet [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) para criar uma variável e, em seguida, fornecer esta variável ao parâmetro -RightsDefinition com o cmdlet [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx) para modificar um modelo existente. No entanto, se estiver a adicionar estes utilizadores a um modelo existente, também terá de definir os objetos de definição de direitos dos grupos existentes nos modelos e não apenas dos utilizadores externos novos.
-    > -  **Exportar, editar e importar o modelo atualizado**: utilize o cmdlet [Export-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727078.aspx) para exportar o modelo para um ficheiro que possa editar para adicionar os endereços de e-mail externos destes utilizadores e os respetivos direitos aos grupos e direitos existentes. Em seguida, utilize o cmdlet [Import-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727077.aspx) para importar esta alteração novamente para o Azure RMS.
+    > -  **Utilizar um objeto de definição de direitos para atualizar um modelo**: especifique os utilizadores externos (por endereço de e-mail dos utilizadores, endereço de e-mail do grupo ou por um domínio para todos os utilizadores nessa organização) e os seus direitos num objeto de definição de direitos. Em seguida, utilize este objeto de definição de direitos para atualizar o modelo. Deve especificar o objeto de definição de direitos com o cmdlet [New-AadrmRightsDefinition](/powershell/aadrm/vlatest/new-aadrmrightsdefinition) para criar uma variável e, em seguida, fornecer esta variável ao parâmetro -RightsDefinition com o cmdlet [Set-AadrmTemplateProperty](/powershell/aadrm/vlatest/set-aadrmtemplateproperty) para modificar um modelo existente. No entanto, se estiver a adicionar estes utilizadores a um modelo existente, também terá de definir os objetos de definição de direitos dos grupos existentes nos modelos e não apenas dos utilizadores externos novos.
+    > -  **Exportar, editar e importar o modelo atualizado**: utilize o cmdlet [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate) para exportar o modelo para um ficheiro que possa editar para adicionar os utilizadores externos (por endereço de e-mail dos utilizadores, endereço de e-mail do grupo ou por um domínio para todos os utilizadores nessa organização) e os seus direitos aos grupos e direitos existentes. Em seguida, utilize o cmdlet [Import-AadrmTemplate](/powershell/aadrm/vlatest/import-aadrmtemplate) para importar esta alteração novamente para o Azure RMS.
 
 3.  Clique no botão Seguinte e atribua um dos direitos indicados aos seus utilizadores e grupos selecionados.
 
@@ -107,7 +107,7 @@ Utilize os seguintes procedimentos para criar, configurar e publicar modelos per
 
     Mais informações sobre modelos departamentais: por predefinição, todos os utilizadores no seu diretório do Azure veem todos os modelos publicados e podem, em seguida, selecioná-los a partir das aplicações quando pretendem proteger conteúdos. Se quiser que apenas determinados utilizadores vejam alguns dos modelos publicados, deve definir o âmbito dos modelos para estes utilizadores. Assim, só esses utilizadores poderão selecionar estes modelos. Os outros utilizadores que não especificou não verão os modelos e, por isso, não poderão selecioná-los. Esta técnica pode facilitar a escolha do modelo correto para os utilizadores, principalmente quando cria modelos concebidos para serem utilizados por grupos ou departamentos específicos. Deste modo, os utilizadores só veem os modelos que foram concebidos para eles.
 
-    Por exemplo, se criou um modelo para o departamento de Recursos Humanos que aplica a permissão Só de Leitura aos membros do departamento Financeiro. Deverá definir o âmbito do modelo para o grupo com permissões de e-mail denominado RecursosHumanos, para que apenas os membros do departamento de Recursos Humanos possam aplicar este modelo quando estiverem a utilizar a aplicação de partilha Rights Management. Assim, apenas os membros deste grupo poderão consultar e aplicar este modelo.
+    Por exemplo, se criou um modelo para o departamento de Recursos Humanos que aplica a permissão Só de Leitura aos membros do departamento Financeiro. Deverá definir o âmbito do modelo para o grupo com permissões de e-mail denominado RecursosHumanos para que apenas os membros do departamento de Recursos Humanos possam aplicar este modelo quando estiverem a utilizar o cliente do Azure Information Protection. Assim, apenas os membros deste grupo poderão aplicar este modelo. Além disso, se os utilizadores executarem o cliente do Azure Information Protection no [modo apenas de proteção](../rms-client/client-protection-only-mode.md), não verão este modelo.
 
 7.  Na página **VISIBILIDADE DO MODELO**, selecione os utilizadores e grupos que vão conseguir ver e selecionar o modelo a partir das aplicações suportadas pelo RMS. Como anteriormente, de acordo com as melhores práticas, utilize grupos em vez de utilizadores e os grupos ou utilizadores que selecionar têm de ter um endereço de e-mail.
 
@@ -115,7 +115,7 @@ Utilize os seguintes procedimentos para criar, configurar e publicar modelos per
 
     Por que razão poderá ser necessário configurar a compatibilidade aplicacional? Nem todas as aplicações conseguem suportar modelos departamentais. Para fazê-lo, a aplicação primeiro tem de efetuar a autenticação com o serviço RMS antes de transferir os modelos. Se o processo de autenticação não ocorrer, por predefinição, nenhum dos modelos departamentais serão transferidos. Pode substituir este comportamento ao especificar que todos os modelos departamentais deverão ser transferidos, ao configurar a compatibilidade aplicacional e selecionar a caixa de verificação **Mostrar este modelo a todos os utilizadores quando as aplicações não suportam a identidade de utilizador**.
 
-    Por exemplo, se não configurar a compatibilidade aplicacional para o modelo departamental no nosso exemplo de Recursos Humanos, apenas os utilizadores do departamento de Recursos Humanos veem o modelo departamental quando utilizarem a aplicação de partilha RMS, mas nenhum utilizador verá o modelo departamental quando utilizar o Outlook Web Access (OWA) do Exchange Server 2013, porque o OWA do Exchange e o Exchange ActiveSync atualmente não suportam modelos departamentais. Se substituir este comportamento predefinido ao configurar a compatibilidade aplicacional, apenas os utilizadores do departamento de Recursos Humanos poderão ver o modelo departamental quando utilizarem a aplicação de partilha RMS, mas todos os utilizadores poderão ver o modelo departamental quando utilizarem o Outlook Web Access (OWA). Se os utilizadores utilizarem o OWA ou o Exchange ActiveSync do Exchange Online, todos os utilizadores irão ver os modelos departamentais ou nenhum utilizador verá os modelos departamentais, com base no estado do modelo (arquivado ou publicado) no Exchange Online.
+    Por exemplo, se não configurar a compatibilidade aplicacional para o modelo departamental no nosso exemplo de Recursos Humanos, apenas os utilizadores do departamento de Recursos Humanos veem o modelo departamental quando utilizarem o cliente do Azure Information Protection no [modo apenas de proteção](../rms-client/client-protection-only-mode.md), mas nenhum utilizador verá o modelo departamental quando utilizar o Outlook Web Access (OWA) do Exchange Server 2013, porque o OWA do Exchange e o Exchange ActiveSync atualmente não suportam modelos departamentais. Se substituir este comportamento predefinido ao configurar a compatibilidade aplicacional, apenas os utilizadores do departamento de Recursos Humanos poderão ver o modelo departamental quando utilizarem o cliente do Azure Information Protection, mas todos os utilizadores poderão ver o modelo departamental quando utilizarem o Outlook Web Access (OWA). Se os utilizadores utilizarem o OWA ou o Exchange ActiveSync do Exchange Online, todos os utilizadores irão ver os modelos departamentais ou nenhum utilizador verá os modelos departamentais, com base no estado do modelo (arquivado ou publicado) no Exchange Online.
 
     O Office 2016 suporta nativamente modelos departamentais, assim como o Office 2013 a partir da versão 15.0.4727.1000, lançada em junho de 2015 como parte do [KB 3054853](https://support.microsoft.com/kb/3054853).
 
@@ -165,6 +165,6 @@ Para fazer alterações ao seu modelo, selecione-o e, em seguida, utilize os pas
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

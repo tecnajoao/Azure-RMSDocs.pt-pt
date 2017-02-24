@@ -1,6 +1,6 @@
 ---
 title: "Passo 1 do tutorial de início rápido | Azure Information Protection"
-description: "Passo 1 de um tutorial de introdução com uma duração de aproximadamente 30 minutos, para experimentar rapidamente o Microsoft Azure Information Protection na sua organização."
+description: "Passo 1 de um tutorial de introdução com uma duração de aproximadamente 20 minutos para experimentar rapidamente o Microsoft Azure Information Protection na sua organização."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -11,8 +11,8 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 1b9a65619e2cbe9def71379dffc6c1df1729cdfa
+ms.sourcegitcommit: 420da63412f10431d29c01bad317c69cf72b66ad
+ms.openlocfilehash: a2631af6bf972a8c88d37e42149b90fb96f71763
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: 1b9a65619e2cbe9def71379dffc6c1df1729cdfa
 > [!NOTE]
 >Se já ativou o serviço Azure Rights Management para o seu inquilino, avance diretamente para o [passo seguinte](infoprotect-tutorial-step2.md). 
 
-Quando o serviço Azure Rights Management for ativado, poderá proteger os e-mails e documentos mais confidenciais da sua organização e controlar a forma como serão utilizados quando os partilhar com outras pessoas. Existem diferentes formas de ativar este serviço, que incluem a utilização do Windows PowerShell e a navegação nos portais de administração.
+Quando o serviço Azure Rights Management for ativado, poderá proteger os e-mails e os documentos mais confidenciais da sua organização e controlar a forma como os documentos protegidos são utilizados quando os partilhar com outras pessoas. Existem diferentes formas de ativar este serviço, que incluem a utilização do Windows PowerShell e a navegação nos portais de administração.
 
 Para este tutorial, iremos diretamente para a página de ativação para administradores do Office 365, que é a mesma página do portal clássico do Office 365 e da pré-visualização do centro de administração do Office 365. 
 
@@ -59,6 +59,6 @@ Se preferir navegar para esta página a partir do seu portal de administração 
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

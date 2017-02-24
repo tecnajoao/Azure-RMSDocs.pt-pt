@@ -4,7 +4,7 @@ description: "Informações para fornecer orientações a utilizadores, administ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: b4ba043aa351b4b6b118a83bd5fe54898ea17492
+ms.sourcegitcommit: 4cdac14d3a77ea7bcce23b914bc3be0a1f46d2b5
+ms.openlocfilehash: 0af15bf3238d020b1ee45b45bc780256c88b5e55
 
 
 ---
@@ -61,20 +61,16 @@ Após ter implementado e configurado o Azure Information Protection para a sua o
 
 Utilize as secções seguintes para obter informações específicas de aplicações para ajudar os utilizadores a proteger e-mails e documentos confidenciais.
 
-## <a name="using-information-protection-with-the-rights-management-sharing-application"></a>Utilizar a proteção de informações com a aplicação de partilha Rights Management
-A aplicação de partilha Rights Management (RMS) pode ser necessária para os utilizadores protegerem e consumirem conteúdos protegidos se utilizarem o Office 2010, mas também é recomendada para todos os computadores e dispositivos móveis que suportam o serviço Azure Rights Management.
+## <a name="using-information-protection-with-the-azure-information-protection-client"></a>Utilizar a proteção de informações com o cliente do Azure Information Protection
+O cliente do Azure Information Protection pode ser preciso para os utilizadores protegerem e consumirem e-mails e documentos protegidos se utilizarem o Office 2010, mas também é recomendado para computadores e dispositivos móveis.
 
-Para além de tornar mais fácil para os utilizadores protegerem documentos importantes, a aplicação de partilha RMS permite aos utilizadores controlarem os documentos que protegeram e, se necessário, revogarem o acesso aos mesmos.
+Para além de tornar mais fácil para os utilizadores protegerem documentos importantes, o cliente do Azure Information Protection permite-lhes controlarem os documentos que protegeram e, se for preciso, revogarem o acesso aos mesmos.
 
-Para obter as instruções de utilização desta aplicação em computadores Windows, consulte o [Guia do utilizador da aplicação de partilha Rights Management](../rms-client/sharing-app-user-guide.md).
+Para obter instruções sobre como utilizar este cliente para computadores Windows, veja o [Guia de utilizador do cliente do Azure Information Protection](../rms-client/client-user-guide.md).
 
-Para dispositivos móveis, consulte as [FAQ acerca da Aplicação de Partilha Microsoft Rights Management para Plataformas Móveis](http://technet.microsoft.com/dn451248).
-
-> [!TIP]
-> Para obter um cenário de exemplo de nível superior com capturas de ecrã, consulte [Os utilizadores partilham anexos de forma segura com os utilizadores móveis](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users).
 
 ## <a name="using-information-protection-with-office-365-office-2016-or-office-2013"></a>Utilizar a proteção de informações com o Office 365, Office 2016 ou Office 2013
-Se estiver a utilizar o serviço Azure Rights Management e não tiver instalado a aplicação de partilha Rights Management, os utilizadores não verão o botão **Partilhar Protegido** no friso ou **Proteger no local** do Explorador de Ficheiros que facilita aos mesmos a proteção de ficheiros. Estes utilizadores têm de seguir instruções semelhantes a estas.
+Se estiver a utilizar o serviço Azure Rights Management e não tiver instalado o cliente do Azure Information Protection, os utilizadores não verão a barra do Azure Information Protection nas suas aplicações de ambiente de trabalho do Office, o botão **Proteger** no friso ou **Classificar e proteger** do Explorador de Ficheiros que torna mais fácil para os mesmos protegerem ficheiros. Estes utilizadores têm de seguir instruções semelhantes aos passos que se seguem.
 
 > [!TIP]
 > Para encontrar a ajuda específica da aplicação e instruções para utilizar a proteção de informações com estas aplicações, pesquise a **IRM** e o nome e a versão da aplicação.
@@ -117,6 +113,6 @@ Tal como na visualização de um documento protegido, quando os destinatários r
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

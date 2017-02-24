@@ -4,7 +4,7 @@ description: "Informações para administradores sobre como implementar a aplica
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: b9af5dc3-73d4-4147-b7ef-f6803b0d5216
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 0d15a232bc1f0b1bce94e48c7e9c6f6b9419b5dd
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: cffebd2ac11f78b20b125bfd7eabca83a6ba0363
 
 
 ---
@@ -23,21 +23,22 @@ ms.openlocfilehash: 0d15a232bc1f0b1bce94e48c7e9c6f6b9419b5dd
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
-A aplicação de partilha Rights Management (RMS) é necessária para os computadores cliente utilizarem o serviço Azure Rights Management com o Office 2010 e é recomendada para todos os computadores e dispositivos móveis que suportam o serviço Azure Rights Management a partir do Azure Information Protection. A aplicação de partilha RMS integra-se com aplicações do Office através da instalação de um suplemento do Office para que os utilizadores possam facilmente proteger ficheiros e e-mails diretamente do friso. De igual modo, proporciona proteção genérica a tipos de ficheiros que não são suportados nativamente pelo serviço Azure Rights Management e possibilita um site de controlo de documentos para os utilizadores controlarem e revogarem ficheiros protegidos por eles.
+> [!IMPORTANT]
+> **Notificação de fim do suporte**: a aplicação de partilha Rights Management para Windows está a ser substituída pelo [cliente do Azure Information Protection](../rms-client/aip-client.md). O suporte para esta aplicação mais antiga será interrompido a 31 de janeiro de 2018. 
+ 
+A aplicação de partilha RMS fornece suporte de autenticação para o Office 2010 e integra-se com aplicações do Office através da instalação de um suplemento do Office para que os utilizadores possam facilmente proteger os ficheiros e os e-mails diretamente do friso. Esta aplicação também proporciona proteção genérica a tipos de ficheiros que não são suportados nativamente pelo serviço Azure Rights Management e possibilita um site de controlo de documentos para os utilizadores controlarem e revogarem ficheiros protegidos por eles.
 
 ## <a name="the-rms-sharing-application-for-windows-installation-and-configuration"></a>A aplicação de partilha RMS para o Windows: instalação e configuração
-Para instalar e configurar a aplicação de partilha RMS para Windows para uma implementação empresarial, consulte o [Guia do administrador da aplicação de partilha Rights Management](../rms-client/sharing-app-admin-guide.md).
+Para uma instalação e configuração empresariais da aplicação de partilha RMS para Windows, veja o [Guia do administrador da aplicação de partilha Rights Management](../rms-client/sharing-app-admin-guide.md).
 
-> [!TIP]
-> Se pretender instalar rapidamente e testar a aplicação de partilha RMS para um único computador, consulte [Transferir e instalar a aplicação de partilha Rights Management](../rms-client/install-sharing-app.md) no [Guia do utilizador da aplicação de partilha Rights Management](../rms-client/sharing-app-user-guide.md).
+Já não pode transferir esta aplicação a partir da página do Microsoft Azure Information Protection; a ligação para os computadores Windows agora transfere o cliente do Azure Information Protection. 
+
 
 ## <a name="the-rms-sharing-application-for-mobile-platforms-installation-and-management"></a>A aplicação de partilha RMS para plataformas móveis: instalação e gestão
-Para instalar a aplicação de partilha RMS para plataformas móveis, pode transferir a aplicação relevante utilizando as ligações na [página Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970). Não é necessária nenhuma configuração para utilizar o serviço Azure Rights Management com esta aplicação.
+Pode transferir e instalar a aplicação de partilha RMS para computadores Mac e dispositivos Windows Phone a partir da [página do Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970). 
 
-> [!NOTE]
-> A aplicação de partilha RMS para iOS e Android foi substituída pela aplicação Azure Information Protection.
+Já não pode transferir a aplicação de partilha RMS para iOS e Android a partir desta página; as ligações para estes dispositivos móveis agora transferem o cliente do Azure Information Protection. 
 
-**Se tiver o Microsoft Intune**: uma vez que a aplicação Azure Information Protection inclui o Microsoft Intune App Software Development Kit, quando os dispositivos iOS e Android forem inscritos pelo Intune, poderá implementar e gerir a aplicação Azure Information Protection para esses dispositivos. Para obter mais informações, consulte [Configurar e implementar políticas de gestão de aplicações móveis na consola do Microsoft Intune](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console) na documentação do Intune. Para o Passo 2, utilize as instruções para publicar uma aplicação gerida por política.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
@@ -45,6 +46,6 @@ Para instalar a aplicação de partilha RMS para plataformas móveis, pode trans
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

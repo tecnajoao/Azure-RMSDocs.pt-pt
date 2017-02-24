@@ -1,10 +1,10 @@
 ---
-title: "Regras básicas para os comentários de clientes no site de documentação da Microsoft dedicado ao Azure Information Protection | Azure Information Protection"
+title: "Regras básicas para os comentários de clientes | Azure Information Protection"
 description: "Âmbito e intenção dos comentários e barras laterais do Livefyre na documentação do Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 02/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,13 @@ ms.assetid: 4eafbe72-f537-4e66-80ae-d11894d373f7
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4347e1759c1690436eb37482831c97b93ac8fd5a
-ms.openlocfilehash: 958135678a9b48ca59b3d377439f5cf4b3d1efd7
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: 95e1b3502d06c96f666da665739f4f97050c0b67
 
 
 ---
 
-# <a name="house-rules-for-customer-comments-on-the-documentation-site-for-azure-information-protection"></a>Regras básicas para os comentários de clientes no site de documentação dedicado ao Azure Information Protection
+# <a name="house-rules-for-comments-on-the-azure-information-protection-documentation"></a>Regras básicas para os comentários na documentação do Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -44,6 +44,6 @@ Nota: se for um funcionário da Microsoft, utilize os canais de comunicação in
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

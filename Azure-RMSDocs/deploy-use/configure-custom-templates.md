@@ -4,7 +4,7 @@ description: "Informações e instruções para os administradores configurarem 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: bab64fcb5f4ac208bfc7f1f385c558a77e9eb796
+ms.sourcegitcommit: efab4cdc455237b4bb064252dfe6702ec40539d2
+ms.openlocfilehash: a5a27e9d1d12381b7c4c945596480171f7265552
 
 
 ---
@@ -37,7 +37,7 @@ Quando o serviço Azure Rights Management tiver sido [ativado](activate-service.
 
     -   Permissões específicas: Ver Conteúdo, Guardar Ficheiro, Editar Conteúdo, Ver Direitos Atribuídos, Permitir Macros, Reencaminhar, Responder, Responder A Todos
 
-Além disso, a [aplicação de partilha RMS](../rms-client/sharing-app-windows.md) permite que os utilizadores definam o seu próprio conjunto de permissões. E, para o cliente do Outlook e o Outlook Web Access, os utilizadores podem selecionar a [opção Não Reencaminhar](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails).
+Além disso, o [cliente do Azure Information Protection](../rms-client/aip-client.md) permite aos utilizadores definirem o seu próprio conjunto de permissões. E, para o cliente do Outlook e o Outlook Web Access, os utilizadores podem selecionar a [opção Não Reencaminhar](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails).
 
 Para muitas organizações, os modelos predefinidos poderão ser suficientes. No entanto, se quiser criar os seus próprios modelos de políticas de direitos personalizados, pode fazê-lo. Seguem-se algumas das razões para criar um modelo personalizado:
 
@@ -68,6 +68,6 @@ Utilize as informações seguintes para configurar e utilizar modelos personaliz
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

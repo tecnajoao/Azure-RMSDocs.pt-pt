@@ -4,7 +4,7 @@ description: "Como a Infraestrutura de Classificação de Ficheiros do Windows S
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
-ms.openlocfilehash: 589f0ff68e1e58c0903eb40dcfd0697a500c8491
+ms.sourcegitcommit: 4cdac14d3a77ea7bcce23b914bc3be0a1f46d2b5
+ms.openlocfilehash: dd94145bc2a6f338bb8a8c0ac0712ed1c86517d4
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 589f0ff68e1e58c0903eb40dcfd0697a500c8491
 
 Quando configura o Windows Server para utilizar a Infraestrutura de Classificação de Ficheiros, esta funcionalidade do Gestor de Recursos de Servidor de Ficheiros pode analisar ficheiros locais e determinar se contêm dados sensíveis. Os ficheiros que obedecem a estes critérios são etiquetados com propriedades de classificação definidas por um administrador. A Infraestrutura de Classificação de Ficheiros pode então tomar uma ação automática, de acordo com a classificação. Uma destas ações inclui aplicar proteção de informações ao utilizar o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] e a implementação do conector Rights Management (também conhecido como conector RMS). Os ficheiros do Office são então automaticamente protegidos pelo Azure RMS.
 
-Para proteger todos os tipos de ficheiros, não deverá utilizar o conector RMS, em vez disso, deverá executar um script do Windows PowerShell, utilizando os cmdlets da [Ferramenta de Proteção RMS](https://www.microsoft.com/en-us/download/details.aspx?id=47256).
+Para proteger todos os tipos de ficheiros, não deverá utilizar o conector RMS, mas, em vez disso, deverá executar um script do Windows PowerShell que utilize os cmdlets do [módulo do Azure Information Protection](../rms-client/client-admin-guide-powershell.md).
 
 As políticas de classificação são totalmente configuráveis e altamente extensíveis para que possa impedir potenciais fugas de dados de utilizadores autorizados e não autorizados. Podem inclusivamente ajudar a reduzir o risco de fuga de dados por administradores de rede, porque pode configurar políticas que não exijam que estes administradores tenham acesso aos ficheiros.
 
@@ -45,6 +45,6 @@ Agora que compreende como as aplicações e os serviços suportam o Azure RMS, p
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -1,10 +1,10 @@
 ---
-title: "Guia de implementação rápida do Azure Information Protection | Azure Information Protection"
-description: "Um guia para o ajudar a implementar e utilizar o Azure Information Protection mais rapidamente para proteger os dados da sua organização. Comece por escolher uma lista de cenários específicos a implementar."
+title: "Guia de implementação rápida do Azure Rights Management | Azure Information Protection"
+description: "Um guia para o ajudar a implementar e utilizar o serviço Azure Rights Management mais rapidamente para proteger os dados da sua organização. Comece por escolher uma lista de cenários específicos a implementar."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/08/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 12bc1ed0759364273e66d260b9282fbfe42abbe0
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: abe3de4cb972053179a87023c91509168ffeffc4
 
 
 ---
@@ -23,7 +23,10 @@ ms.openlocfilehash: 12bc1ed0759364273e66d260b9282fbfe42abbe0
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
-Utilize este guia, além das informações de configuração na secção **Implementar e Utilizar**, para o ajudar a implementar e utilizar mais rapidamente o Azure Information Protection ao selecionar numa lista dos cenários específicos a implementar.
+Utilize este guia, além das informações de configuração na secção **Implementar e Utilizar**, para o ajudar a implementar mais rapidamente uma solução apenas de proteção que utiliza o serviço Azure Rights Management do Azure Information Protection. Escolha a partir de uma lista de cenários específicos a implementar.
+
+> [!NOTE]
+> Neste momento, o guia contém cenários apenas para proteção e não contém cenários para classificação e proteção nem para o cliente do Azure Information Protection. 
 
 Estes cenários contêm as instruções do administrador e a documentação do utilizador final associada. Antes de dar a documentação (instruções ou anúncios) aos seus utilizadores finais, terá primeiro de personalizá-la para os seus requisitos empresariais e fluxos de trabalho existentes. Um conjunto de instruções de exemplo ou um anúncio mostram o possível aspeto da documentação do utilizador final.
 
@@ -33,8 +36,7 @@ Os cenários aqui listados são uma amostra daqueles mais populares. Uma vez que
 
 Antes de implementar estas soluções, deve enviar um anúncio abrangente para os utilizadores finais, permitindo-lhes saber que algumas alterações serão feitas para ajudar a proteger os dados da empresa e que podem ser necessárias algumas alterações por parte desses indivíduos. Uma comunicação de exemplo está incluída depois da tabela seguinte.
 
-> [!NOTE]
-> Se tiver perguntas e comentários acerca deste guia, utilize os mecanismos de feedback nesta página ou envie uma mensagem de e-mail para [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
+Se tiver perguntas e comentários acerca deste guia, utilize os mecanismos de feedback nesta página ou envie uma mensagem de e-mail para [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
 
 ## <a name="scenarios-for-azure-information-protection"></a>Cenários do Azure Information Protection
 Para o ajudar a implementar mais rapidamente o Azure Information Protection para resolver problemas empresariais específicos, selecione os cenários que melhor correspondem aos seus objetivos empresariais e adapte-os consoante necessário.
@@ -148,6 +150,6 @@ As soluções que estamos a implementar ajudam-nos a proteger os nossos dados va
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

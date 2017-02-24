@@ -4,7 +4,7 @@ description: "Instruções de inscrição nesta conta gratuita e informações t
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
-ms.openlocfilehash: 1de26925961ad560cb9aa86ebc16f7354c7cff1f
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: 57e7cb922c0701dbe1088d205cfc56a69dcc4e05
 
 
 ---
@@ -23,7 +23,7 @@ ms.openlocfilehash: 1de26925961ad560cb9aa86ebc16f7354c7cff1f
 
 >*Aplica-se a: Azure Information Protection*
 
-Para se inscrever nesta conta gratuita, efetue o seu pedido ao aceder à [página do Microsoft Azure Information Protection](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload) e indicar o seu endereço de e-mail profissional. A forma mais comum de ser direcionado para esta página de inscrição é ao receber uma mensagem de e-mail com um anexo protegido que contém instruções de inscrição. Irá receber uma resposta por e-mail da Microsoft e, em seguida, poderá concluir o processo de inscrição ao introduzir detalhes para criar a sua conta. Quando o processo for concluído, irá ver uma página onde pode transferir a aplicação de partilha para vários dispositivos, uma ligação para o guia de utilizador e uma ligação para a lista atual de aplicações que suportam de forma nativa a proteção da Gestão de Direitos. 
+Para se inscrever nesta conta gratuita, efetue o seu pedido ao aceder à [página do Microsoft Azure Information Protection](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload) e indicar o seu endereço de e-mail profissional. A forma mais comum de ser direcionado para esta página de inscrição é ao receber uma mensagem de e-mail com um anexo protegido que contém instruções de inscrição. Irá receber uma resposta por e-mail da Microsoft e, em seguida, poderá concluir o processo de inscrição ao introduzir detalhes para criar a sua conta. Quando o processo for concluído, verá uma página onde pode transferir o Azure Information Protection para vários dispositivos, uma ligação para o guia de utilizador e uma ligação para a lista atual de aplicações que suportam de forma nativa a proteção da Rights Management. 
 
 ## <a name="to-sign-up-for-rms-for-individuals"></a>Para se inscrever no RMS para indivíduos
 
@@ -44,7 +44,7 @@ Para se inscrever nesta conta gratuita, efetue o seu pedido ao aceder à [págin
 
 6.  Verá a página **Mais uma coisa...**, onde pode fornecer os detalhes da sua conta. Escreva o seu nome próprio, o seu apelido, introduza e confirme uma palavra-passe à sua escolha e, em seguida, clique em **Iniciar**.
 
-7. Assim que a sua conta for criada, verá uma nova página do Microsoft Rights Management onde poderá transferir e instalar a aplicação de partilha ou clicar na ligação [Mais informações](../rms-client/sharing-app-user-guide.md) para ler o guia de utilizador da aplicação de partilha.
+7. Quando a sua conta estiver criada, verá uma nova página do Microsoft Azure Information Protection, onde pode transferir e instalar o cliente do Azure Information Protection ou clicar na ligação [Guia do utilizador](../rms-client/client-user-guide.md) para obter as instruções de procedimentos para computadores Windows.
 
 Agora, a sua conta está criada, está pronto para começar a proteger ficheiros e a ler ficheiros que outros utilizadores protegeram. Se lhe for pedido para iniciar sessão para proteger ou ler ficheiros protegidos, introduza o mesmo endereço de e-mail e palavra-passe que utilizou para criar a conta do RMS para indivíduos.
 
@@ -60,7 +60,7 @@ Isto é o que acontece em segundo plano quando um utilizador se inscreve no RMS 
 
     Se for encontrado um inquilino existente, este é verificado para ver se já tem uma subscrição do Azure RMS. Quando não é encontrada qualquer subscrição, é possível adicionar a subscrição do RMS para indivíduos gratuita.
 
-2.  É concedida à organização a subscrição do RMS para indivíduos. Agora, este utilizador pode ser autenticado pelo Azure e pode, em seguida, proteger ficheiros e ler ficheiros que outras pessoas protegeram utilizando o Azure Rights Management. Para proteger e ler ficheiros protegidos, o utilizador tem de ter uma aplicação otimizada por RMS, tal como a [aplicação de partilha Rights Management](../rms-client/sharing-app-windows.md) gratuita.
+2.  É concedida à organização a subscrição do RMS para indivíduos. Agora, este utilizador pode ser autenticado pelo Azure e pode, em seguida, proteger ficheiros e ler ficheiros que outras pessoas protegeram utilizando o Azure Rights Management. Para proteger e ler ficheiros protegidos, o utilizador tem de ter uma aplicação otimizada para o RMS, tal como o [cliente do Azure Information Protection](../rms-client/aip-client.md) gratuito.
 
 3.  Quando o segundo utilizador da mesma organização solicita uma subscrição do RMS para indivíduos, é adicionada uma nova conta de utilizador ao diretório do Azure criado anteriormente, utilizando a subscrição do RMS para indivíduos da organização. Este segundo utilizador pode fazer tudo o que o primeiro utilizador podia fazer (proteger ficheiros e ler ficheiros protegidos), mas, além disso, estes dois utilizadores podem agora colaborar mais facilmente em segurança porque podem aplicar rapidamente modelos predefinidos a ficheiros que restringem o acesso a contas no diretório do Azure da sua organização.
 
@@ -97,6 +97,6 @@ Consulte [Como os administradores podem controlar as contas criadas para o RMS p
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

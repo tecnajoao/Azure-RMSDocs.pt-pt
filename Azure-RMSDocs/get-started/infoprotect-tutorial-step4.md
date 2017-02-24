@@ -1,18 +1,18 @@
 ---
 title: "Passo 4 do tutorial de início rápido | Azure Rights Management"
-description: "Passo 4 de um tutorial de introdução, com uma duração de aproximadamente 30 minutos, para experimentar rapidamente o Microsoft Azure Information Protection na sua organização."
+description: "Passo 3 de um tutorial de introdução com uma duração de aproximadamente 20 minutos para experimentar rapidamente o Microsoft Azure Information Protection na sua organização."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 08/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 translationtype: Human Translation
-ms.sourcegitcommit: a8bfb3be9b19718cc8a94755e19b8d2521dde323
-ms.openlocfilehash: 59639e9c90c5a55d8eda44bbcc2f9efbc5b9ffb5
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: bf438f4f7617b4cc05df7f4a7067c5ac57fd1d06
 
 
 ---
@@ -35,7 +35,7 @@ Selecione **A etiqueta anterior já não se aplica** e clique em **Confirmar**. 
 
 ## <a name="to-remove-the-classification-completely"></a>Para remover a classificação por completo
 
-Na barra do Information Protection, clique no ícone **Editar etiqueta** junto a **Pessoal**. Esta ação apresenta as etiquetas disponíveis. No entanto, em vez de selecionar uma das etiquetas, desta vez, clique no ícone **Remover etiqueta**. Clique em **OK** para confirmar e fornecer a justificação para esta ação.  
+Na barra do Information Protection, clique no ícone **Editar Etiqueta** junto a **Pessoal**. Esta ação apresenta as etiquetas disponíveis. No entanto, em vez de selecionar uma das etiquetas, desta vez, clique no ícone **Eliminar etiqueta**. Desta vez, escreva “Este documento não precisa de classificação” e clique em **Confirmar**.  
 
 Verá que o valor **Sensibilidade** apresenta **Não definido**, a opção vista pelos utilizadores inicialmente se não definir uma etiqueta predefinida:
 
@@ -56,7 +56,17 @@ Verá que o valor **Sensibilidade** apresenta **Não definido**, a opção vista
 
     O documento é também protegido com o modelo do Azure Rights Management especificado, que pode confirmar quando clica no separador **Ficheiro** e ver as informações de **Proteger Documento**. Se utilizou o modelo de confidencialidade predefinido, é apresentada uma informação a indicar que o documento está restrito a utilizadores internos (os utilizadores fora da sua organização não conseguem abrir o documento) e os respetivos conteúdos não podem ser copiados ou impressos. Como proprietário do documento, pode copiar a partir do mesmo e imprimi-lo, mas se o enviar por e-mail a outro utilizador na sua organização, o mesmo não poderá efetuar estas ações.
 
+4. Agora, pode fechar este documento.
+
 Agora que viu a classificação, a etiquetagem e a proteção em ação, vamos ver como pode proteger os documentos, mesmo quando são partilhados com outras pessoas noutra organização. Pode até controlar como estão a ser utilizados e revogar o acesso aos mesmos.
+
+|Se pretender mais informações|Informações adicionais|
+|--------------------------------|--------------------------|
+|Instruções completas para etiquetar e proteger ficheiros |[Classificar e proteger um ficheiro ou e-mail](../rms-client/client-classify-protect.md)|
+
+
+
+
 
 >[!div class="step-by-step"]
 [&#171; Passo 3](infoprotect-tutorial-step3.md)
@@ -65,6 +75,6 @@ Agora que viu a classificação, a etiquetagem e a proteção em ação, vamos v
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

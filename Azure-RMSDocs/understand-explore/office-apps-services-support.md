@@ -4,7 +4,7 @@ description: "Como as aplicações do Office para o utilizador final (tais como 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/31/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
-ms.openlocfilehash: 2e895f51e21d5f8cb45a43719d47ba6987c13a09
+ms.sourcegitcommit: 4cdac14d3a77ea7bcce23b914bc3be0a1f46d2b5
+ms.openlocfilehash: d2d33329457e181b55489834daf595da81bc7ada
 
 
 ---
@@ -30,6 +30,8 @@ As aplicações do Office para o utilizador final (tais como o Word, Excel, Powe
 Estas aplicações suportam nativamente Gestão de Direitos com a gestão de direitos de informação (IRM) e permitem que os utilizadores protejam um documento guardado ou a uma mensagem de e-mail a enviar. Os utilizadores podem aplicar modelos ou escolher definições muito personalizadas para as restrições de acesso, os direitos e as restrições de utilização no Word, Excel e PowerPoint. 
 
 Por exemplo, os utilizadores podem configurar um documento do Word para que possa ser acedido apenas por pessoas na sua organização ou controlar se uma folha de cálculo do Excel pode ser editada, restringida para acesso só d leitura ou impedida de ser impressa. Para ficheiros sensíveis ao tempo, é possível configurar um prazo de expiração (diretamente pelos utilizadores ou ao aplicar um modelo) para indicar quando deixa de ser possível aceder ao ficheiro. Para o Outlook, os utilizadores também podem escolher a opção **Não Reencaminhar** para ajudar a evitar a fuga de dados, além de escolherem um modelo.
+
+Para além do suporte IRM nativo, estas aplicações suportam a barra do Azure Information Protection que é instalada com o [cliente do Azure Information Protection](../rms-client/aip-client.md ). Esta barra apresenta etiquetas para fazer com que seja mais fácil para os utilizadores aplicarem automaticamente a proteção do Rights Management a documentos e e-mails que contêm dados confidenciais.
 
 ## <a name="exchange-online-and-exchange-server"></a>Exchange Online e Exchange Server
 Quando utiliza o Exchange Online ou o Exchange Server, pode utilizar a integração de gestão de direitos de informação (IRM), que fornece soluções de proteção de informações adicionais:
@@ -64,7 +66,7 @@ Se utilizar o SharePoint Server, pode utilizar as funcionalidades de proteção 
 > - Os ficheiros que tenham uma extensão de nome de ficheiro .PPDF para ficheiros PDF protegidos não são suportados. Os ficheiros que têm uma extensão de nome de ficheiro .PDF e que foram protegidos nativamente pela Gestão de Direitos são suportados quando utiliza um leitor de PDF que suporta nativamente a Gestão de Direitos.
 
 
-O Azure RMS aplica restrições de utilização e a encriptação de dados para os documentos quando são transferidos do SharePoint e não quando o documento é criado pela primeira vez no SharePoint ou carregado para a biblioteca. Para obter informações sobre como os documentos estão protegidos antes de serem transferidos, consulte [Encriptação de Dados no OneDrive para Empresas e no SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) da documentação do SharePoint.
+O Azure Rights Management aplica restrições de utilização e a encriptação de dados aos documentos quando são transferidos do SharePoint e não quando o documento é criado pela primeira vez no SharePoint ou carregado para a biblioteca. Para obter informações sobre como os documentos estão protegidos antes de serem transferidos, consulte [Encriptação de Dados no OneDrive para Empresas e no SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) da documentação do SharePoint.
 
 Para mais informações sobre como utilizar o serviço Azure Rights Management com o SharePoint, consulte a seguinte mensagem do blogue do Office: [What’s New with Information Rights Management in SharePoint and SharePoint Online (Novidades na Gestão de Direitos de Informação no SharePoint e no SharePoint Online – em inglês)](http://blogs.office.com/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
 
@@ -75,6 +77,6 @@ Para ver como outras aplicações e serviços suportam o serviço Azure Rights M
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

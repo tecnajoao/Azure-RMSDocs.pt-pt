@@ -4,7 +4,7 @@ description: "Para configurar definições e etiquetas diferentes para utilizado
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/21/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: ba201561345d5e6b9f22a65ca1785553fed58e08
+ms.sourcegitcommit: fb68fc152e7f1d323cce71e3873475c78f7bbc15
+ms.openlocfilehash: 6818d514c303b3e3ee61189e62769dc72f36b668
 
 
 ---
@@ -23,9 +23,7 @@ ms.openlocfilehash: ba201561345d5e6b9f22a65ca1785553fed58e08
 
 >*Aplica-se a: Azure Information Protection*
 
-**[Esta funcionalidade está na pré-visualização e está sujeita a alterações.]**
-
-Quando a política do Azure Information Protection é transferida para computadores com o [cliente do Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018) instalado, todos os utilizadores recebem as definições e as etiquetas da política predefinida ou as alterações que configurou para a política global. Se pretender complementar estas para utilizadores específicos, ao ter definições e etiquetas diferentes, deve criar uma **política de âmbito** (atualmente na pré-visualização) configurada para esses utilizadores.
+Quando a política do Azure Information Protection é transferida para computadores com o [cliente do Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018) instalado, todos os utilizadores recebem as definições e as etiquetas da política predefinida ou as alterações que configurou para a política global. Se quiser complementá-las para utilizadores específicos, ao ter definições e etiquetas diferentes, terá de criar uma **política de âmbito** configurada para esses utilizadores.
 
 Todos os utilizadores recebem a política global, a qual contém o título da barra e a descrição, as definições e as etiquetas globais do Information Protection. Se tiver configurado políticas de âmbito para utilizadores específicos, estes recebem definições e etiquetas adicionais. 
 
@@ -42,7 +40,7 @@ Para configurar uma política de âmbito para o Azure Information Protection:
 
 2. Navegue para o painel **Azure Information Protection**: por exemplo, no menu hub, clique em **Mais serviços** e comece a escrever **Information Protection** na caixa Filtro. Na lista de resultados, selecione **Azure Information Protection**. 
 
-    No painel inicial do **Azure Information Protection**, selecione **Adicionar uma nova política (PRÉ-VISUALIZAÇÃO)**. Em seguida, verá o segundo painel utilizado para apresentar a atualização da política global, para que possa agora configurar a sua nova política de âmbito.
+    No painel inicial do **Azure Information Protection**, selecione **Adicionar uma nova política**. Em seguida, verá o segundo painel utilizado para apresentar a atualização da política global, para que possa agora configurar a sua nova política de âmbito.
 
 3. Especifique um nome e uma descrição da política que apenas os administradores veem no portal do Azure. O nome do inquilino deve ser exclusivo. Em seguida, clique em **Especificar que utilizadores/grupos recebem esta política** e, nos painéis subsequentes, pode pesquisar e selecionar os utilizadores e grupos para esta política. As etiquetas e as definições que configurou nesta política de âmbito serão aplicadas apenas a esses utilizadores. 
 
@@ -67,6 +65,6 @@ Para obter um exemplo de como personalizar a política predefinida e ver o compo
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

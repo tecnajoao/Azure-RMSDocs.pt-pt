@@ -1,5 +1,5 @@
 ---
-title: "RMS para indivíduos e Azure Information Protection | Azure Information Protection"
+title: "RMS para indivíduos e Azure Information Protection"
 description: "Informações sobre o RMS para indivíduos, uma subscrição gratuita de gestão personalizada para utilizadores numa organização que tenham recebido ficheiros confidenciais protegidos pelo serviço Azure Rights Management, mas que não possam ser autenticados porque o respetivo departamento de TI não gere uma conta para os mesmos no Azure."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,8 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9453354687b4b469989f0fe33d4abce0bde21570
-ms.openlocfilehash: 327e68131c8d432887a682c83a6e30f6c83c1a8e
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: b864f8223865661184ce5742e23313e88cae1db5
 
 
 ---
@@ -43,6 +43,6 @@ Consulte [Como os utilizadores se inscrevem no RMS para indivíduos](rms-for-ind
 
 
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO4-->
 
 

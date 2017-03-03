@@ -1,10 +1,10 @@
 ---
-title: "Remover etiquetas de classificação e proteção de ficheiros e e-mails | Azure Information Protection"
+title: Remover etiquetas do Azure Information Protection
 description: "Instruções para remover etiquetas de classificação e proteção de ficheiros que foram etiquetados pelo Azure Information Protection ou protegidos pelo Rights Management."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid:
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0a720ab08596964ed04fdc800ce55f3932a7cc0f
-ms.openlocfilehash: fc401131a11426a17be4417d049199fb1c1a8f68
+ms.sourcegitcommit: f77200fa8a305c0306c41470bda7aa5a54951909
+ms.openlocfilehash: e6fe5edfeb165839260371942cbf59922853a342
+ms.lasthandoff: 03/02/2017
 
 
 ---
@@ -71,11 +72,5 @@ Pode obter mais instruções sobre os procedimentos no guia do utilizador do Azu
 
 - [O que pretende fazer?](client-user-guide.md#what-do-you-want-to-do)
 
--   [O que pretende fazer?](client-user-guide.md#what-do-you-want-to-do)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

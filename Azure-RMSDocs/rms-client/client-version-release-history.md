@@ -1,10 +1,10 @@
 ---
-title: "Cliente do Azure Information Protection&colon; Histórico de lançamento de versões | Azure Information Protection"
+title: "Cliente do Azure Information Protection&colon; histórico de lançamento de versões"
 description: "Veja as novidades ou alterações ao lançamento do cliente do Azure Information Protection para Windows."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a55a35ae0f0a3e0c60e6a0289a23888b2eda7fb5
-ms.openlocfilehash: 1f021eee1535abb09d4a4715c819935e21eb89dd
+ms.sourcegitcommit: 343ac5f79902379e45efcb6979a115ba4c00d1c5
+ms.openlocfilehash: 503cb76825d0092e8562d39281b1d702edaf6438
+ms.lasthandoff: 03/02/2017
 
 
 ---
@@ -76,7 +77,7 @@ Esta versão do cliente é a [Versão de Disponibilidade Geral](https://blogs.te
 
 - Os testes de diagnóstico e a opção de reposição que um utilizador pode executar a partir da aplicação do Office quando o cliente do Azure Information Protection está instalado: no separador **Base**, no grupo **Proteção**, clique em **Proteger** e em **Ajuda e comentários** e, em seguida, clique em **Executar diagnósticos**. 
 
-    Para obter mais informações acerca desta opção, veja a secção [Para verificar a instalação, o estado da ligação ou enviar comentários](client-admin-guide.md#to-verify-installation-connection-status-or-send-feedback) na documentação de instalação do cliente.
+    Para obter mais informações acerca desta opção, veja a secção [Para verificar a instalação, o estado da ligação ou enviar comentários](client-admin-guide.md#additional-checks-to-verify-installation-connection-status-or-send-feedback) na documentação de instalação do cliente.
 
 ## <a name="version-11230"></a>Versão 1.1.23.0
 
@@ -84,7 +85,7 @@ Esta versão do cliente é a [Versão de Disponibilidade Geral](https://blogs.te
 
 Disponibilidade Geral.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Para obter mais informações sobre como instalar o cliente:
 
@@ -94,8 +95,3 @@ Para obter mais informações sobre como instalar o cliente:
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

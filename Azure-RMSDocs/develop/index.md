@@ -16,6 +16,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
 ms.openlocfilehash: 85cd61e564b066458618c02b4ac20cddf6b7e183
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -51,8 +52,3 @@ Esta coleção de ferramentas de suporte de programação e de exemplos de códi
 | [Cenários de utilização no Android](https://msdn.microsoft.com/en-us/library/dn758246(v=vs.85).aspx) |Android|[SDK RMS 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) e versões posteriores do SDK 4.x|**Exemplos de código Java** que representam cenários de desenvolvimento importantes para o ajudar a habituar-se ao SDK RMS. Os exemplos incluem a utilização do formato de Ficheiro Protegido da Microsoft, formatos de ficheiros protegidos personalizados e controlos de IU personalizados.|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
 ms.openlocfilehash: b864f8223865661184ce5742e23313e88cae1db5
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -40,9 +41,4 @@ O RMS para indivíduos é um exemplo de uma inscrição self-service que é supo
 Consulte [Como os utilizadores se inscrevem no RMS para indivíduos](rms-for-individuals-user-sign-up.md) para obter instruções passo a passo e uma descrição geral técnica de o que está a acontecer em segundo plano. 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

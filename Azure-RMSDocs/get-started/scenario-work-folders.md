@@ -1,10 +1,10 @@
 ---
-title: "Cenário – Configurar pastas de trabalho para proteção persistente | Azure Information Protection"
-description: "Este cenário e a documentação de apoio do utilizador utilizam a proteção Azure Rights Management para aplicar proteção persistente aos documentos do Office contidos em Pastas de Trabalho."
+title: "Cenário do AIP – configurar pastas de trabalho para a proteção do RMS"
+description: "Este cenário e a documentação de apoio do utilizador utilizam a proteção do Azure Rights Management para aplicar proteção persistente aos documentos do Office contidos em Pastas de Trabalho."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,14 @@ ms.assetid: 1f189345-a69e-4bf5-8a45-eb0fe5bb542b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 942b9bfffbd4a43c922ada87220f4eecb78f1d11
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 1fa655cd91746d8e5c19f6a9eca0d93a3be8fb23
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="scenario---configure-work-folders-for-persistent-protection"></a>Cenário – Configurar pastas de trabalho para proteção persistente
+# <a name="scenario---configure-work-folders-for-persistent-protection"></a>Cenário – configurar pastas de trabalho para proteção persistente
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -121,8 +122,3 @@ Se tiver configurado o modelo personalizado conforme indicado neste cenário, os
 > Se, após algum tempo, descobrir que existem muitos pedidos deste tipo, pode optar por definir o seu próprio modelo personalizado para este cenário, de forma a conceder a opção de Coproprietário apenas a determinados utilizadores (tais como gestores ou o suporte técnico), ao passo que aos utilizadores padrão é concedida a opção Coautor ou os [direitos](../deploy-use/configure-usage-rights.md) que considerar adequados.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

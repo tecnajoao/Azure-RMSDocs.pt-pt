@@ -1,18 +1,19 @@
 ---
-title: "Como configurar as definições de política | Azure Information Protection"
+title: "Configurar as definições de política do Azure Information Protection"
 description: "Configurar as definições na política do Azure Information Protection aplicáveis a todos os utilizadores e a todos os dispositivos."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: d0f94713674bf5e8eb71c177819bc7a7192575e4
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: f91e7c322688a562a0060031896bce0827b328a0
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -63,9 +64,4 @@ Configurar estas definições:
 Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

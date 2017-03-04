@@ -1,10 +1,10 @@
 ---
-title: "Cenário – Manter o controlo de documentos armazenados no SharePoint | Azure Information Protection"
+title: "Cenário do AIP – controlo de documentos armazenados no SharePoint"
 description: "Este cenário e a documentação do utilizador associada utilizam a proteção do Azure Rights Management para garantir que os documentos do Office armazenados no SharePoint permanecem sob o seu controlo através da utilização de bibliotecas protegidas."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,14 @@ ms.assetid: 1b6244c7-5ab9-4881-bc8f-6fa960390d89
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 1c25f1c8792f7d6d99930dd01c3f3c92a56bbd8a
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3d5d1c818323a3723f6837ebe8fedd4995efb467
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="scenario---retain-control-of-documents-stored-in-sharepoint"></a>Cenário – Manter o controlo de documentos armazenados no SharePoint
+# <a name="scenario---retain-control-of-documents-stored-in-sharepoint"></a>Cenário – manter o controlo de documentos armazenados no SharePoint
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -104,8 +105,3 @@ Não poderá carregar documentos para o site Previsões de Vendas e Relatórios 
 -   Contactar o suporte técnico: helpdesk@vanarsdelltd.com
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

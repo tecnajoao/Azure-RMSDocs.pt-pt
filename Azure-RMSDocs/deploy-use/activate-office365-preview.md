@@ -1,10 +1,10 @@
 ---
-title: "Como ativar o Azure Rights Management a partir da pré-visualização do centro de administração do Office 365 | Azure Information Protection"
+title: "Ativar o Azure RMS com a pré-visualização do centro de administração do Office 365 – AIP"
 description: "Instruções de ativação do serviço Azure Rights Management quando tem acesso à nova versão de pré-visualização do centro de administração do Office 365 (pré-visualização do centro de administração do Office 365)."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/07/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 8f5a2ff7cf82795c46b065ff96c4b83167afa099
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: bef1ed0e38beadbd86868e8be3535f32b22382df
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -59,9 +60,4 @@ Já deverá estar visível **O Rights Management encontra-se ativado** e a opç�
 Volte a [Ativar o Azure Rights Management](activate-service.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

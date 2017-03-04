@@ -1,5 +1,5 @@
 ---
-title: "Proteção RMS com Infraestrutura de Classificação de Ficheiros (FCI) do Windows Server | Azure Information Protection"
+title: "Proteção do Azure RMS com o Windows Server FCI – AIP"
 description: "Instruções para utilizar o cliente de Gestão de Direitos (RMS) com a ferramenta RMS Protection para configurar o Gestor de Recursos do Servidor de Ficheiros e a infraestrutura de classificação de ficheiros (FCI)."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 06419438281e0d5a0b976e506d45be2b4eaaef70
-ms.openlocfilehash: da7ab2f9fcd3919cd7143a407e54d2270449760d
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 58a0f117100ff5d19dfd6fee2ac4dd61c6bea36b
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -34,7 +35,7 @@ Esta solução permite-lhe proteger automaticamente todos os ficheiros numa past
 
 As instruções que se seguem aplicam-se ao Windows Server 2012 R2 ou Windows Server 2012. Se utilizar outras versões suportadas do Windows, poderá ter de adaptar alguns dos passos devido às diferenças entre a versão do seu sistema operativo e a descrita neste artigo.
 
-## <a name="prerequisites-for-azure-rights-management-protection-with-windows-server-fci"></a>Pré-requisitos para a proteção Azure Rights Management com a FCI do Windows Server
+## <a name="prerequisites-for-azure-rights-management-protection-with-windows-server-fci"></a>Pré-requisitos para a proteção do Azure Rights Management com a FCI do Windows Server
 Pré-requisitos para estas instruções:
 
 -   Nos servidores de ficheiros em que executará o Gestor de Recursos de Ficheiros com a infraestrutura de classificação de ficheiros:
@@ -53,7 +54,7 @@ Pré-requisitos para estas instruções:
 
 -   Identificou o modelo de Gestão de Direitos a utilizar, o que irá proteger os ficheiros. Certifique-se de que sabe o ID deste modelo. Para esse efeito, utilize o cmdlet [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate).
 
-## <a name="instructions-to-configure-file-server-resource-manager-fci-for-azure-rights-management-protection"></a>Instruções para configurar a FCI do Gestor de Recursos do Servidor de Ficheiros para a proteção Azure Rights Management
+## <a name="instructions-to-configure-file-server-resource-manager-fci-for-azure-rights-management-protection"></a>Instruções para configurar a FCI do Gestor de Recursos do Servidor de Ficheiros para a proteção do Azure Rights Management
 Siga estas instruções para proteger automaticamente todos os ficheiros numa pasta, através de um script do PowerShell como uma tarefa personalizada. Efetue estes procedimentos pela seguinte ordem:
 
 1.  Guardar o script do PowerShell
@@ -72,7 +73,7 @@ No final destas instruções, todos os ficheiros na sua pasta selecionada serão
 
 ### <a name="save-the-windows-powershell-script"></a>Guardar o script do Windows PowerShell
 
-1.  Copie os conteúdos do [script do Windows PowerShell](fci-script.md) para a proteção Azure RMS através do Gestor de Recursos do Servidor de Ficheiros. Cole os conteúdos do script e atribua o nome **RMS-Protect-FCI.ps1** ao ficheiro no seu computador.
+1.  Copie os conteúdos do [script do Windows PowerShell](fci-script.md) para a proteção do Azure RMS através do Gestor de Recursos do Servidor de Ficheiros. Cole os conteúdos do script e atribua o nome **RMS-Protect-FCI.ps1** ao ficheiro no seu computador.
 
 2.  Reveja o script e efetue as seguintes alterações:
 
@@ -287,9 +288,4 @@ Para tal, utilize uma das propriedades de classificação incorporadas (por exem
 Agora, tudo o que precisa de fazer é criar uma nova tarefa de gestão de ficheiros que utilize o mesmo script, mas talvez com um modelo diferente, e configurar a condição da propriedade de classificação que acabou de configurar. Por exemplo, em vez da condição que configurámos anteriormente (propriedade **RMS**, **Igual**, **Sim**), selecione a propriedade **Informações Pessoais** com o valor **Operador** definido como **Igual** e o **Valor** **Elevado**.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

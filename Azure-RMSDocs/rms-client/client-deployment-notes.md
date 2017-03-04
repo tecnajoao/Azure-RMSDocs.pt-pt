@@ -1,5 +1,5 @@
 ---
-title: "Notas de implementação do cliente do RMS | Azure Information Protection"
+title: "Notas de implementação do cliente do RMS – AIP"
 description: "As informações sobre a redistribuição, instalação, sistemas operativos suportados, definições de registo e deteção do serviço para a versão 2 do cliente do Serviço de Gestão de Direitos (cliente do RMS), também denominado cliente MSIPC."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: ff9f1ba390fcad0569972fc65a2425266fd918b4
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: a68bf7fe02836a9a2267834435c9d5de5595478e
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: ff9f1ba390fcad0569972fc65a2425266fd918b4
 
 >*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 7 com SP1, Windows 8, Windows 8.1, Windows 10, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Vista*
 
-A versão 2 do cliente de Rights Management Service (cliente do RMS) é também conhecida como cliente MSIPC. É o software para computadores com o Windows que comunica com os serviços do Microsoft Rights Management no local ou na nuvem, para ajudar a proteger o acesso e a utilização de informações que fluem através de aplicações e dispositivos, dentro dos limites da sua organização ou fora desses limites geridos. 
+A versão 2 do cliente de Rights Management Service (cliente do RMS) é também conhecida como cliente MSIPC. É o software para computadores com o Windows que comunica com os serviços do Microsoft Rights Management no local ou na cloud, para ajudar a proteger o acesso e a utilização de informações que fluem através de aplicações e dispositivos, dentro dos limites da sua organização ou fora desses limites geridos. 
 
 Além de ser enviado com o [cliente do Azure Information Protection para Windows](aip-client.md), o cliente do RMS está disponível [como uma transferência opcional](http://www.microsoft.com/download/details.aspx?id=38396) que pode, com a confirmação e a aceitação do contrato de licença, ser livremente distribuída com software de terceiros para que os clientes possam proteger e consumir conteúdos protegidos por serviços de Gestão de Direitos.
 
@@ -171,7 +172,7 @@ Para efetuar a deteção do serviço, o cliente do RMS verifica o seguinte:
 > [!NOTE]
 > Existem três exceções importantes no fluxo desta deteção de serviço:
 > 
-> - Os dispositivos móveis adequam-se à utilização de um serviço em nuvem, pelo que, por predefinição, utilizam a deteção de serviço para o serviço Azure Rights Management (https://discover.aadrm.com). Para substituir esta opção, de forma a que os dispositivos móveis utilizem o AD RMS em alternativa ao serviço Azure Rights Management, deve especificar registos SRV no DNS e instalar a extensão para dispositivos móveis, como documentado em [Extensão do Dispositivo Móvel dos Serviços de Gestão de Direitos do Active Directory](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx). 
+> - Os dispositivos móveis adequam-se à utilização de um serviço na cloud, pelo que, por predefinição, utilizam a deteção de serviço para o serviço Azure Rights Management (https://discover.aadrm.com). Para substituir esta opção, de forma a que os dispositivos móveis utilizem o AD RMS em alternativa ao serviço Azure Rights Management, deve especificar registos SRV no DNS e instalar a extensão para dispositivos móveis, como documentado em [Extensão do Dispositivo Móvel dos Serviços de Gestão de Direitos do Active Directory](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx). 
 >
 > - Quando o serviço Rights Management é invocado por uma etiqueta do Azure Information Protection, a deteção de serviço não é realizada. Em alternativa, o URL é especificado diretamente na definição da etiqueta que é configurada na política do Azure Information Protection.  
 
@@ -259,8 +260,3 @@ Em alguns casos, poderá ser necessário redirecionar o tráfego durante a dete�
 6.  Feche o Editor de Registo.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

@@ -1,10 +1,10 @@
 ---
-title: "Passo 2&colon; Migração de chave protegida por software para chave protegida por HSM | Azure Information Protection"
-description: "Instruções que fazem parte do caminho de migração do AD RMS para o Azure Information Protection e são aplicáveis apenas se a sua chave do AD RMS estiver protegida por software e quiser migrar para o Azure Information Protection com uma chave de inquilino protegida por HSM no Cofre de Chaves do Azure."
+title: "Migrar chave protegida por software para chave protegida por HSM – AIP"
+description: "Instruções que fazem parte do caminho de migração do AD RMS para o Azure Information Protection e são aplicáveis apenas se a sua chave do AD RMS estiver protegida por software e quiser migrar para o Azure Information Protection com uma chave de inquilino protegida por HSM no Azure Key Vault."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: c0f13fba558a0196c87d62b5127a75380140014e
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 4126bd34615307347d387217b8ad4f39ba69cad8
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -24,28 +25,28 @@ ms.openlocfilehash: c0f13fba558a0196c87d62b5127a75380140014e
 >*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection*
 
 
-Estas instruções fazem parte do [caminho de migração do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) e são aplicáveis apenas se a sua chave do AD RMS estiver protegida por software e quiser migrar para o Azure Information Protection com uma chave de inquilino protegida por HSM no Cofre de Chaves do Azure. 
+Estas instruções fazem parte do [caminho de migração do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) e são aplicáveis apenas se a sua chave do AD RMS estiver protegida por software e quiser migrar para o Azure Information Protection com uma chave de inquilino protegida por HSM no Azure Key Vault. 
 
 Se este não for o cenário de configuração escolhido, volte ao [Passo 2. Exporte os dados de configuração do AD RMS, importe-os para o Azure RMS](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection) e escolha uma configuração diferente.
 
-Este é um procedimento dividido em quatro partes para importar a configuração do AD RMS para o Azure Information Protection, de modo a criar a chave de inquilino do Azure Information Protection gerida por si (BYOK) no Cofre de Chaves do Azure.
+Este é um procedimento dividido em quatro partes para importar a configuração do AD RMS para o Azure Information Protection, de modo a criar a chave de inquilino do Azure Information Protection gerida por si (BYOK) no Azure Key Vault.
 
-Primeiro tem de extrair a sua chave de certificado de licenciante para servidor (SLC) dos dados de configuração do AD RMS e transferir a chave para um HSM da Thales no local. Em seguida, tem de transferir a sua chave HSM para o Cofre de Chaves do Azure, autorizar o acesso do serviço Azure Rights Management do Azure Information Protection ao seu cofre de chaves e, em seguida, importar os dados de configuração.
+Primeiro tem de extrair a sua chave de certificado de licenciante para servidor (SLC) dos dados de configuração do AD RMS e transferir a chave para um HSM da Thales no local. Em seguida, tem de transferir a sua chave HSM para o Azure Key Vault, autorizar o acesso do serviço Azure Rights Management do Azure Information Protection ao seu cofre de chaves e, em seguida, importar os dados de configuração.
 
-Uma vez que a chave de inquilino do Azure Information Protection será armazenada e gerida pelo Cofre de Chaves do Azure, esta parte da migração requer administração no Cofre de Chaves do Azure, além do Azure Information Protection. Se o Cofre de Chaves do Azure for gerido por um administrador diferente de si para a sua organização, irá precisar de coordenar e trabalhar com esse administrador para concluir estes procedimentos.
+Uma vez que a chave de inquilino do Azure Information Protection será armazenada e gerida pelo Azure Key Vault, esta parte da migração requer administração no Azure Key Vault, além do Azure Information Protection. Se o Azure Key Vault for gerido por um administrador diferente de si para a sua organização, irá precisar de coordenar e trabalhar com esse administrador para concluir estes procedimentos.
 
-Antes de começar, certifique-se de que a sua organização tem um cofre de chaves criado no Cofre de Chaves do Azure e que suporta chaves protegidas por HSM. Embora não seja necessário, recomendamos que tenha um cofre de chaves dedicado para o Azure Information Protection. Este cofre de chaves será configurado para permitir o acesso ao serviço Azure Rights Management do Azure Information Protection, de forma a que as chaves armazenadas neste cofre de chaves sejam limitadas apenas a chaves do Azure Information Protection.
+Antes de começar, certifique-se de que a sua organização tem um cofre de chaves criado no Azure Key Vault e que suporta chaves protegidas por HSM. Embora não seja necessário, recomendamos que tenha um cofre de chaves dedicado para o Azure Information Protection. Este cofre de chaves será configurado para permitir o acesso ao serviço Azure Rights Management do Azure Information Protection, de forma a que as chaves armazenadas neste cofre de chaves sejam limitadas apenas a chaves do Azure Information Protection.
 
 
 > [!TIP]
-> Se for efetuar os passos de configuração do Cofre de Chaves do Azure e não estiver familiarizado com este serviço do Azure, poderá considerar útil primeiro rever [Introdução ao Cofre de Chaves do Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/). 
+> Se for efetuar os passos de configuração do Azure Key Vault e não estiver familiarizado com este serviço do Azure, poderá considerar útil primeiro rever [Introdução ao Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/). 
 
 
 ## <a name="part-1-extract-your-slc-key-from-the-configuration-data-and-import-the-key-to-your-on-premises-hsm"></a>Parte 1: extrair a chave SLC dos dados de configuração e importar a chave para o seu HSM no local
 
-1.  Administrador do Cofre de Chaves do Azure: siga os seguintes passos na secção [Implementar o BYOK (Bring Your Own Key – Traga a Sua Própria Chave)](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) da documentação do Cofre de Chaves do Azure:
+1.  Administrador do Azure Key Vault: siga os seguintes passos na secção [Implementar o BYOK (Bring Your Own Key – Traga a Sua Própria Chave)](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) da documentação do Azure Key Vault:
 
-    -   **Gerar e transferir a sua chave para o HSM do Cofre de Chaves do Azure**: [Passo 1: preparar a estação de trabalho ligada à Internet](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-1-prepare-your-internet-connected-workstation)
+    -   **Gerar e transferir a sua chave para o HSM do Azure Key Vault**: [Passo 1: preparar a estação de trabalho ligada à Internet](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-1-prepare-your-internet-connected-workstation)
 
     -   **Gerar e transferir a chave de inquilino – através da Internet**: [Passo 2: preparar a estação de trabalho desligada](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-2-prepare-your-disconnected-workstation)
 
@@ -55,7 +56,7 @@ Antes de começar, certifique-se de que a sua organização tem um cofre de chav
 
     - Um ficheiro PEM (contentor de chaves) com a chave, que está pronto para ser importado para o seu HSM no local.
 
-2. Administrador do Azure Information Protection ou do Cofre de Chaves do Azure: na estação de trabalho desligada, execute a ferramenta TpdUtil a partir do [Toolkit de migração do Azure RMS](https://go.microsoft.com/fwlink/?LinkId=524619). Por exemplo, se a ferramenta for instalada na unidade E para a qual copia o ficheiro de dados de configuração com o nome ContosoTPD.xml:
+2. Administrador do Azure Information Protection ou do Azure Key Vault: na estação de trabalho desligada, execute a ferramenta TpdUtil a partir do [Toolkit de migração do Azure RMS](https://go.microsoft.com/fwlink/?LinkId=524619). Por exemplo, se a ferramenta for instalada na unidade E para a qual copia o ficheiro de dados de configuração com o nome ContosoTPD.xml:
 
     ```
         E:\TpdUtil.exe /tpd:ContosoTPD.xml /otpd:ContosoTPD.xml /opem:ContosoTPD.pem
@@ -106,26 +107,26 @@ Antes de começar, certifique-se de que a sua organização tem um cofre de chav
 
 Esta saída confirma que a chave privada foi agora migrada para o seu dispositivo HSM da Thales no local com uma cópia encriptada guardada numa chave (no nosso exemplo, "key_simple_contosobyok"). 
 
-Agora que a chave SLC foi extraída e importada para o seu HSM no local, está pronto para empacotar a chave protegida por HSM e transferi-la para o Cofre de Chaves do Azure.
+Agora que a chave SLC foi extraída e importada para o seu HSM no local, está pronto para empacotar a chave protegida por HSM e transferi-la para o Azure Key Vault.
 
 > [!IMPORTANT]
 > Quando tiver concluído este passo, apague em segurança estes ficheiros PEM da estação de trabalho desligada para assegurar que não podem ser acedidos por pessoas não autorizadas. Por exemplo, execute "cipher /w:E" para eliminar em segurança todos os ficheiros da unidade E:.
 
-## <a name="part-2-package-and-transfer-your-hsm-key-to-azure-key-vault"></a>Parte 2: compactar e transferir a chave HSM para o Cofre de Chaves do Azure
+## <a name="part-2-package-and-transfer-your-hsm-key-to-azure-key-vault"></a>Parte 2: compactar e transferir a chave HSM para o Azure Key Vault
 
-1.  Administrador do Cofre de Chaves do Azure: utilize os seguintes passos da secção [Implementar o BYOK (Bring Your Own Key – Traga a Sua Própria Chave)](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) da documentação do Cofre de Chaves do Azure:
+1.  Administrador do Azure Key Vault: utilize os seguintes passos da secção [Implementar o BYOK (Bring Your Own Key – Traga a Sua Própria Chave)](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) da documentação do Azure Key Vault:
 
     -   [Passo 4: preparar a transferência da chave](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-4-prepare-your-key-for-transfer)
 
-    -   [Passo 5: transferir a chave para o Cofre de Chaves do Azure](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-5-transfer-your-key-to-azure-key-vault)
+    -   [Passo 5: transferir a chave para o Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-5-transfer-your-key-to-azure-key-vault)
 
     Não siga os passos para gerar o par de chaves, uma vez que já tem a chave. Em vez disso, executará um comando para transferir esta chave (no nosso exemplo, o parâmetro KeyIdentifier utiliza "contosobyok") a partir do seu HSM no local.
 
-    Antes de transferir a chave para o Cofre de Chaves do Azure, certifique-se de que o utilitário KeyTransferRemote.exe devolve **Result: SUCCESS** (Resultado: ÊXITO) quando cria uma cópia da sua chave com permissões reduzidas (passo 4.1) e ao encriptar a chave (passo 4.3).
+    Antes de transferir a chave para o Azure Key Vault, certifique-se de que o utilitário KeyTransferRemote.exe devolve **Result: SUCCESS** (Resultado: ÊXITO) quando cria uma cópia da sua chave com permissões reduzidas (passo 4.1) e ao encriptar a chave (passo 4.3).
 
-    Quando a chave é carregada para o Cofre de Chaves do Azure, pode ver as propriedades da chave apresentadas, incluindo o ID da chave. Terá um aspeto semelhante a **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Anote este URL, uma vez que o administrador do Azure Information Protection irá precisar do mesmo para indicar ao serviço Azure Rights Management do Azure Information Protection para utilizar esta chave na respetiva chave de inquilino.
+    Quando a chave é carregada para o Azure Key Vault, pode ver as propriedades da chave apresentadas, incluindo o ID da chave. Terá um aspeto semelhante a **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Anote este URL, uma vez que o administrador do Azure Information Protection irá precisar do mesmo para indicar ao serviço Azure Rights Management do Azure Information Protection para utilizar esta chave na respetiva chave de inquilino.
 
-    Agora que já transferiu a chave HSM para o Cofre de Chaves do Azure, está pronto para importar os dados de configuração do AD RMS.
+    Agora que já transferiu a chave HSM para o Azure Key Vault, está pronto para importar os dados de configuração do AD RMS.
 
 ## <a name="part-3-import-the-configuration-data-to-azure-information-protection"></a>Parte 3: importar os dados de configuração para o Azure Information Protection
 
@@ -154,17 +155,12 @@ Agora que a chave SLC foi extraída e importada para o seu HSM no local, está p
     ```
 
     > [!NOTE]
-    > Se tiver de confirmar mais tarde qual a chave de inquilino do Azure Information Protection utilizada no Cofre de Chaves do Azure, utilize o cmdlet [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) do Azure RMS.
+    > Se tiver de confirmar mais tarde qual a chave de inquilino do Azure Information Protection utilizada no Azure Key Vault, utilize o cmdlet [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) do Azure RMS.
 
 
 Agora está pronto para ir para o [Passo 3. Ative o seu inquilino do Azure Information Protection](migrate-from-ad-rms-phase1.md#step-3-activate-your-azure-information-protection-tenant).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Jan17_HO4-->
 
 

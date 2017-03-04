@@ -1,10 +1,10 @@
 ---
-title: Migrar do AD RMS para o Azure Information Protection | Azure Information Protection
+title: Migrar do AD RMS para o Azure Information Protection
 description: "Instruções para migrar a implementação dos Serviços de Gestão de Direitos do Active Directory (AD RMS) para o Azure Information Protection. Após a migração, os utilizadores continuam a ter acesso a documentos e mensagens de e-mail que a sua organização protegeu com o AD RMS, sendo que os conteúdos recentemente protegidos utilizarão o Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/27/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 30a154d67db81441cd48c56681ddb6552fc4cd18
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 12bd5b89cf9957521c7d7b4fb573e4ffcd6c865d
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -35,13 +36,13 @@ Não tem a certeza se esta migração do AD RMS é adequada para a sua organiza�
 
 Apesar de não ser obrigatório, poderá considerar útil ler o seguinte antes de iniciar a migração para que possa compreender melhor como funciona a tecnologia quando é relevante para o seu passo de migração:
 
-- [Planear e implementar a sua chave de inquilino do Azure Information Protection](../plan-design/plan-implement-tenant-key.md): compreenda as opções de gestão de chaves que tem para o seu inquilino do Azure Information Protection em que o equivalente da sua chave SLC na nuvem é gerido pela Microsoft (predefinição) ou gerido por si (a configuração "traga a sua própria chave" ou BYOK (Bring Your Own Key)). 
+- [Planear e implementar a sua chave de inquilino do Azure Information Protection](../plan-design/plan-implement-tenant-key.md): compreenda as opções de gestão de chaves que tem para o seu inquilino do Azure Information Protection em que o equivalente da sua chave SLC na cloud é gerido pela Microsoft (predefinição) ou gerido por si (a configuração "traga a sua própria chave" ou BYOK (Bring Your Own Key)). 
 
-- [Deteção do serviço RMS](../rms-client/client-deployment-notes.md#rms-service-discovery): esta secção das notas de implementação do cliente RMS explica que a ordem para a deteção do serviço é **registo** > **SCP** > **nuvem**. Durante o processo de migração, quando o SCP ainda está instalado, o utilizador configura clientes com as definições de registo do seu inquilino do Azure Information Protection para que estes não utilizem o cluster do AD RMS devolvido do SCP.
+- [Deteção do serviço RMS](../rms-client/client-deployment-notes.md#rms-service-discovery): esta secção das notas de implementação do cliente RMS explica que a ordem para a deteção do serviço é **registo** > **SCP** > **cloud**. Durante o processo de migração, quando o SCP ainda está instalado, o utilizador configura clientes com as definições de registo do seu inquilino do Azure Information Protection para que estes não utilizem o cluster do AD RMS devolvido do SCP.
 
 - [Descrição geral do conector Microsoft Rights Management](../deploy-use/deploy-rms-connector.md#overview-of-the-microsoft-rights-management-connector): esta secção da documentação do conector RMS explica a forma como os seus servidores no local se podem ligar ao serviço Azure Rights Management para proteger documentos e e-mail.
 
-Além disso, se estiver familiarizado com o funcionamento do AD RMS, poderá achar útil ler a secção [como funciona o Azure RMS? Nos bastidores](../understand-explore/how-does-it-work.md) para o ajudar a identificar que processos de tecnologia são iguais ou diferentes na versão em nuvem.
+Além disso, se estiver familiarizado com o funcionamento do AD RMS, poderá achar útil ler a secção [como funciona o Azure RMS? Nos bastidores](../understand-explore/how-does-it-work.md) para o ajudar a identificar que processos de tecnologia são iguais ou diferentes na versão na cloud.
 
 ## <a name="prerequisites-for-migrating-ad-rms-to-azure-information-protection"></a>Pré-requisitos para migrar o AD RMS para o Azure Information Protection
 Antes de iniciar a migração para o Azure Information Protection, certifique-se de que os seguintes pré-requisitos são cumpridos e de que compreende todas as limitações.
@@ -100,7 +101,7 @@ Antes de iniciar a migração para o Azure Information Protection, certifique-se
 
 - **Se quiser gerir a sua própria chave de inquilino do Azure Information Protection com uma chave protegida por HSM**:
 
-    - Esta configuração opcional requer o Cofre de Chaves do Azure e uma subscrição do Azure que suporte o Cofre de Chaves com chaves protegidas por HSM. Para obter mais informações, veja a [página de Preços do Cofre de Chaves do Azure](https://azure.microsoft.com/en-us/pricing/details/key-vault/). 
+    - Esta configuração opcional requer o Azure Key Vault e uma subscrição do Azure que suporte o Cofre de Chaves com chaves protegidas por HSM. Para obter mais informações, veja a [página de Preços do Azure Key Vault](https://azure.microsoft.com/en-us/pricing/details/key-vault/). 
 
 
 Limitações:
@@ -138,11 +139,11 @@ Os passos de migração podem ser divididos em 4 fases que podem ser efetuadas e
 
     - **Migração de chave protegida por HSM para chave protegida por HSM**:
 
-        Chaves que são armazenadas por um HSM do AD RMS para a chave de inquilino do Azure Information Protection gerida pelo cliente (o cenário "traga a sua própria chave" ou BYOK). Isto requer passos adicionais para transferir a chave do seu HSM da Thales no local para o Cofre de Chaves do Azure e autorizar o serviço Azure Rights Management a utilizar esta chave. A sua chave existente protegida por HSM tem de ser protegida por módulo. As chaves protegidas por OCS não são suportadas pelos Rights Management Services.
+        Chaves que são armazenadas por um HSM do AD RMS para a chave de inquilino do Azure Information Protection gerida pelo cliente (o cenário "traga a sua própria chave" ou BYOK). Isto requer passos adicionais para transferir a chave do seu HSM da Thales no local para o Azure Key Vault e autorizar o serviço Azure Rights Management a utilizar esta chave. A sua chave existente protegida por HSM tem de ser protegida por módulo. As chaves protegidas por OCS não são suportadas pelos Rights Management Services.
 
     - **Migração de chave protegida por software para chave protegida por HSM**:
 
-        Chaves geridas centralmente e baseadas em palavras-passe no AD RMS para a chave de inquilino do Azure Information Protection gerida pelo cliente (o cenário "traga a sua própria chave" ou BYOK). Esta é a migração que requer mais configuração porque tem primeiro de extrair a chave de software e importá-la para um HSM no local e, em seguida, efetuar os passos adicionais para transferir a chave do seu HSM da Thales no local para um HSM do Cofre de Chaves do Azure e autorizar o serviço Azure Rights Management a utilizar o cofre de chaves que armazena a chave.
+        Chaves geridas centralmente e baseadas em palavras-passe no AD RMS para a chave de inquilino do Azure Information Protection gerida pelo cliente (o cenário "traga a sua própria chave" ou BYOK). Esta é a migração que requer mais configuração porque tem primeiro de extrair a chave de software e importá-la para um HSM no local e, em seguida, efetuar os passos adicionais para transferir a chave do seu HSM da Thales no local para um HSM do Azure Key Vault e autorizar o serviço Azure Rights Management a utilizar o cofre de chaves que armazena a chave.
 
 - **Passo 3: ativar o inquilino do Azure Information Protection**
 
@@ -198,9 +199,4 @@ Os passos de migração podem ser divididos em 4 fases que podem ser efetuadas e
 Para iniciar a migração, aceda a [Fase 1 – configuração do lado do servidor](migrate-from-ad-rms-phase1.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

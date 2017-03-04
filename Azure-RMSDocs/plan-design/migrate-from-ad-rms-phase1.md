@@ -1,10 +1,10 @@
 ---
-title: "Migrar do AD RMS para o Azure Information Protection – Fase 1 | Azure Information Protection"
+title: "Migrar do AD RMS para o Azure Information Protection – fase 1"
 description: "Fase 1 da migração do AD RMS para o Azure Information Protection, abrangendo os passos 1 a 4 de Migrar do AD RMS para o Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 774ea4fe8bb5e0ae7335bb3c106b57393167ee39
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: d38d7f89ba780b519ebe4a182161deb5bc9331b5
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -96,7 +97,7 @@ A sua implementação atual do AD RMS utilizará uma das seguintes configuraçõ
 > [!NOTE]
 > Para obter mais informações sobre a utilização de módulos de hardware de segurança com o AD RMS, consulte [Utilizar o AD RMS com Módulos de Hardware de Segurança](http://technet.microsoft.com/library/jj651024.aspx).
 
-As duas opções de topologia de chaves de inquilino do Azure Information Protection estão relacionadas com o facto de a sua chave de inquilino poder ser gerida pela Microsoft (**gerida pela Microsoft**) ou por si (**gerida pelo cliente**) no Cofre de Chaves do Azure. Quando faz a gestão da sua própria chave de inquilino do Azure Information Protection, essa gestão é por vezes referida como "bring your own key" (BYOK – Traga a Sua Própria Chave) e requer um módulo de hardware de segurança (HSM) da Thales. Para obter mais informações, consulte [Planear e implementar a sua chave de inquilino do Azure Information Protection](plan-implement-tenant-key.md).
+As duas opções de topologia de chaves de inquilino do Azure Information Protection estão relacionadas com o facto de a sua chave de inquilino poder ser gerida pela Microsoft (**gerida pela Microsoft**) ou por si (**gerida pelo cliente**) no Azure Key Vault. Quando faz a gestão da sua própria chave de inquilino do Azure Information Protection, essa gestão é por vezes referida como "bring your own key" (BYOK – Traga a Sua Própria Chave) e requer um módulo de hardware de segurança (HSM) da Thales. Para obter mais informações, consulte [Planear e implementar a sua chave de inquilino do Azure Information Protection](plan-implement-tenant-key.md).
 
 > [!IMPORTANT]
 > O Exchange Online não é atualmente compatível com o BYOK no Azure Information Protection. Se quer utilizar o BYOK após a migração e tenciona utilizar o Exchange Online, certifique-se de que compreende como esta configuração reduz a funcionalidade IRM no Exchange Online. Reveja as informações em [BYOK pricing and restrictions (Preços e restrições do BYOK – em inglês)](byok-price-restrictions.md) para o ajudar a escolher a melhor topologia de chaves de inquilino do Azure Information Protection para a sua migração.
@@ -106,8 +107,8 @@ Utilize a seguinte tabela para identificar o procedimento a utilizar para a sua 
 |Implementação atual do AD RMS|Topologia de chave de inquilino do Azure Information Protection selecionada|Instruções de migração|
 |-----------------------------|----------------------------------------|--------------------------|
 |Proteção por palavra-passe na base de dados do AD RMS|Gerida pela Microsoft|Consulte o procedimento de migração **Chave protegida por software para chave protegida por software** que se encontra após esta tabela.<br /><br />Este é o caminho de migração mais simples e requer apenas que transfira os seus dados de configuração para o Azure Information Protection.|
-|Proteção HSM através da utilização de um módulo de hardware de segurança (HSM) nShield da Thales.|Gerida pelo cliente (BYOK)|Consulte o procedimento de migração **Chave protegida por HMS para chave protegida por HMS ** que se encontra após esta tabela.<br /><br />Este procedimento requer o conjunto de ferramentas BYOK do Cofre de Chaves do Azure e três conjuntos de passos para transferir primeiro a chave HSM no local para os HSMs do Cofre de Chaves do Azure e, em seguida, autorizar o serviço Azure Rights Management a partir do Azure Information Protection a utilizar a sua chave de inquilino e, por último, transferir os dados de configuração para o Azure Information Protection.|
-|Proteção por palavra-passe na base de dados do AD RMS|Gerida pelo cliente (BYOK)|Consulte o procedimento de migração **Chave protegida por software para chave protegida por HMS ** que se encontra após esta tabela.<br /><br />Este procedimento requer o conjunto de ferramentas BYOK do Cofre de Chaves do Azure e quatro conjuntos de passos para, em primeiro lugar, extrair a sua chave de software e importá-la para um HSM no local, transferir a chave do seu HSM no local para os HSMs do Azure Information Protection, em seguida transferir os dados do Cofre de Chaves para o Azure Information Protection e, por último, transferir os dados de configuração para o Azure Information Protection.|
+|Proteção HSM através da utilização de um módulo de hardware de segurança (HSM) nShield da Thales.|Gerida pelo cliente (BYOK)|Consulte o procedimento de migração **Chave protegida por HMS para chave protegida por HMS ** que se encontra após esta tabela.<br /><br />Este procedimento requer o conjunto de ferramentas BYOK do Azure Key Vault e três conjuntos de passos para transferir primeiro a chave HSM no local para os HSMs do Azure Key Vault e, em seguida, autorizar o serviço Azure Rights Management a partir do Azure Information Protection a utilizar a sua chave de inquilino e, por último, transferir os dados de configuração para o Azure Information Protection.|
+|Proteção por palavra-passe na base de dados do AD RMS|Gerida pelo cliente (BYOK)|Consulte o procedimento de migração **Chave protegida por software para chave protegida por HMS ** que se encontra após esta tabela.<br /><br />Este procedimento requer o conjunto de ferramentas BYOK do Azure Key Vault e quatro conjuntos de passos para, em primeiro lugar, extrair a sua chave de software e importá-la para um HSM no local, transferir a chave do seu HSM no local para os HSMs do Azure Information Protection, em seguida transferir os dados do Cofre de Chaves para o Azure Information Protection e, por último, transferir os dados de configuração para o Azure Information Protection.|
 |Proteção HSM através da utilização de um módulo de hardware de segurança (HSM) a partir de um fornecedor que não seja a Thales|Gerida pelo cliente (BYOK)|Contacte o seu fornecedor do HSM para obter instruções sobre como transferir a chave deste HSM para um módulo de hardware de segurança (HSM) nShield da Thales. Em seguida, siga as instruções do procedimento de migração **Chave protegida por HMS para chave protegida por HMS** que se encontram após esta tabela.|
 |Proteção por palavra-passe através de um fornecedor de serviços de criptografia externo|Gerida pelo cliente (BYOK)|Contacte o seu fornecedor de serviços de criptografia para obter instruções sobre como transferir a sua chave para um Módulo de Hardware de Segurança (HSM) nShield da Thales. Em seguida, siga as instruções do procedimento de migração **Chave protegida por HMS para chave protegida por HMS** que se encontram após esta tabela.|
 Antes de iniciar estes procedimentos, certifique-se de que consegue aceder aos ficheiros. xml que criou anteriormente, quando exportou os domínios de publicação fidedignos. Estes poderão estar guardados, por exemplo, numa pen USB que pode ser movida do servidor do AD RMS para uma estação de trabalho com ligação à Internet.
@@ -165,7 +166,7 @@ Em seguida, pode publicar ou arquivar estes modelos como faria com qualquer mode
 
 ## <a name="procedure-if-your-templates-in-ad-rms-used-the-anyone-group"></a>Procedimento se os modelos no AD RMS utilizavam o grupo **ANYONE**
 
-Se os seus modelos no AD RMS utilizavam o grupo **ANYONE**, este grupo será removido automaticamente quando importar os modelos para o Azure Information Protection, pelo que tem de adicionar manualmente o grupo ou os utilizadores equivalentes, bem como adicionar os mesmos direitos aos modelos importados. O grupo equivalente do Azure Information Protection é designado **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@<tenant_name>.onmicrosoft.com**. Por exemplo, para a Contoso, este grupo poderá ser semelhante ao seguinte: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**.
+Se os seus modelos no AD RMS utilizavam o grupo **ANYONE**, este grupo será removido automaticamente quando importar os modelos para o Azure Information Protection, pelo que tem de adicionar manualmente o grupo ou os utilizadores equivalentes, bem como adicionar os mesmos direitos aos modelos importados. O grupo equivalente do Azure Information Protection é designado por **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@<tenant_name>.onmicrosoft.com**. Por exemplo, para a Contoso, este grupo poderá ser semelhante ao seguinte: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**.
 
 Se não tiver a certeza se os seus modelos do AD RMS incluem o grupo ANYONE, pode utilizar o script de amostra do Windows PowerShell para identificar estes modelos. Para obter mais informações sobre como utilizar o Windows PowerShell com o AD RMS, consulte [Utilizar o Windows PowerShell para Administrar o AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
 
@@ -223,9 +224,4 @@ Remove-PSDrive MyRmsAdmin -force
 Vá para a [fase 2 - configuração do lado do cliente](migrate-from-ad-rms-phase2.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

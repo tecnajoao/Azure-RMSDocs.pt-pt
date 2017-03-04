@@ -1,10 +1,10 @@
 ---
-title: Planear e implementar a sua chave de inquilino do Azure Rights Management | Azure Information Protection
+title: A sua chave de inquilino do Azure Information Protection
 description: "Informações para o ajudar a planear e gerir a sua chave de inquilino do Azure Information Protection. Em vez de a sua chave de inquilino ser gerida pela Microsoft (predefinição), poderá querer gerir a sua própria chave de inquilino para cumprir os regulamentos específicos que se aplicam à sua organização. A gestão da sua própria chave de inquilino também é referida como Bring Your Own Key (Traga a Sua Própria Chave) ou BYOK."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2016
+ms.date: 02/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 433a655870556ed045273713f6773f36c3d86fc1
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3d2e667f78eeccecb0bd837a9020ff188f67fb50
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -41,21 +42,21 @@ Se implementar o Azure Information Protection com uma chave de inquilino gerida 
 ## <a name="choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok"></a>Selecione a sua topologia de chaves de inquilino: gerida pela Microsoft (predefinição) ou gerida por si (BYOK)
 Decida que topologia de chaves de inquilino é melhor para a sua organização. Por predefinição, o Azure Information Protection gera a sua chave de inquilino e gere a maioria dos aspetos do ciclo de vida da chave de inquilino. Esta é a opção mais simples e com menos tarefas administrativas adicionais. Na maioria dos casos, nem precisa de saber que tem uma chave de inquilino. Basta inscrever-se no Azure Information Protection e o processo de gestão de chaves restante será processado pela Microsoft.
 
-Em alternativa, pode pretender o controlo total sobre a chave de inquilino, utilizando o [Cofre de Chaves do Azure](https://azure.microsoft.com/services/key-vault/). Este cenário envolve criar a sua chave de inquilino e manter a cópia principal no local. Este cenário é frequentemente referido como BYOK (Bring Your Own Key – Traga a Sua Própria Chave). Quando esta opção é selecionada, ocorre o seguinte:
+Em alternativa, pode pretender o controlo total sobre a chave de inquilino, utilizando o [Azure Key Vault](https://azure.microsoft.com/services/key-vault/). Este cenário envolve criar a sua chave de inquilino e manter a cópia principal no local. Este cenário é frequentemente referido como BYOK (Bring Your Own Key – Traga a Sua Própria Chave). Quando esta opção é selecionada, ocorre o seguinte:
 
 1.  Gera a chave de inquilino no local, de acordo com as suas políticas de TI e de segurança.
 
-2.  Transfere com segurança a chave de inquilino de um módulo de hardware de segurança (HSM) do qual é proprietário para HSMs que são propriedade da Microsoft e geridos pela mesma utilizando o Cofre de Chaves do Azure. Durante este processo, a sua chave de inquilino nunca ultrapassa o limite de proteção de hardware.
+2.  Transfere com segurança a chave de inquilino de um módulo de hardware de segurança (HSM) do qual é proprietário para HSMs que são propriedade da Microsoft e geridos pela mesma utilizando o Azure Key Vault. Durante este processo, a sua chave de inquilino nunca ultrapassa o limite de proteção de hardware.
 
-3.  Quando transfere a chave de inquilino para a Microsoft, esta permanece protegida pelo Cofre de Chaves do Azure.
+3.  Quando transfere a chave de inquilino para a Microsoft, esta permanece protegida pelo Azure Key Vault.
 
 Embora seja opcional, provavelmente também irá querer utilizar os registos de utilização quase em tempo real do Azure Information Protection, para saber exatamente como e quando a sua chave de inquilino está a ser utilizada.
 
 > [!NOTE]
-> Como medida de proteção adicional, o Cofre de Chaves do Azure utiliza domínios de segurança separados nos seus centros de dados em regiões como a América do Norte, EMEA (Europa, Médio Oriente e África) e Ásia. E para diferentes instâncias do Azure, como o Microsoft Azure Alemanha e o Azure Government. Quando faz a gestão da sua própria chave de inquilino, esta é associada ao domínio de segurança da região ou instância na qual o seu inquilino do Azure Information Protection está registado. Por exemplo, não é possível utilizar uma chave de inquilino de um cliente europeu nos centros de dados da América do Norte ou da Ásia.
+> Como medida de proteção adicional, o Azure Key Vault utiliza domínios de segurança separados nos seus centros de dados em regiões como a América do Norte, EMEA (Europa, Médio Oriente e África) e Ásia. E para diferentes instâncias do Azure, como o Microsoft Azure Alemanha e o Azure Government. Quando faz a gestão da sua própria chave de inquilino, esta é associada ao domínio de segurança da região ou instância na qual o seu inquilino do Azure Information Protection está registado. Por exemplo, não é possível utilizar uma chave de inquilino de um cliente europeu nos centros de dados da América do Norte ou da Ásia.
 
 ## <a name="the-tenant-key-lifecycle"></a>O ciclo de vida das chaves de inquilino
-Se decidir que a Microsoft deve gerir a sua chave de inquilino, a maioria das operações de ciclo de vida da chave será processada pela Microsoft. No entanto, se optar por gerir a sua chave de inquilino, fica responsável por muitas das operações de ciclo de vida da chave e por alguns procedimentos adicionais no Cofre de Chaves do Azure.
+Se decidir que a Microsoft deve gerir a sua chave de inquilino, a maioria das operações de ciclo de vida da chave será processada pela Microsoft. No entanto, se optar por gerir a sua chave de inquilino, fica responsável por muitas das operações de ciclo de vida da chave e por alguns procedimentos adicionais no Azure Key Vault.
 
 Os diagramas seguintes apresentam e comparam estas duas opções. O primeiro diagrama mostra que há poucas tarefas administrativas adicionais para si na configuração predefinida quando a Microsoft gere a chave de inquilino.
 
@@ -85,19 +86,19 @@ Consulte a seguinte tabela para obter uma lista de pré-requisitos para o BYOK (
 |Requisito|Mais informações|
 |---------------|--------------------|
 |Uma subscrição que suporta o Azure Information Protection.|Para obter mais informações sobre as subscrições disponíveis, consulte a [Página de preços](https://go.microsoft.com/fwlink/?LinkId=827589) do Azure Information Protection.|
-|Não utilizar o RMS para utilizadores individuais ou para o Exchange Online. Em alternativa, se utilizar o Exchange Online, compreender e aceitar as limitações da utilização do BYOK com esta configuração.|Para obter mais informações sobre as restrições e limitações atuais do BYOK, consulte [Preços e restrições do BYOK](byok-price-restrictions.md).<br /><br />**Importante**: o BYOK não é atualmente compatível com o Exchange Online.|
-|Todos os pré-requisitos listados para BYOK do Cofre de Chaves, que inclui uma subscrição paga ou uma versão de avaliação do Azure. |Veja [Pré-requisitos para BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) na documentação do Cofre de Chaves do Azure. <br /><br /> A subscrição gratuita do Azure que fornece acesso para configurar o Azure Active Directory e a configuração dos modelos personalizados do Azure Rights Management (**Aceder ao Azure Active Directory**) não são suficientes para utilizar o Cofre de Chaves do Azure. Para confirmar se tem uma subscrição do Azure que pode utilizar para o BYOK, utilize os cmdlets [Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx) do PowerShell: <br /><br /> 1. Inicie uma sessão no Azure PowerShell e inicie sessão na sua conta do Azure com o seguinte comando: `Login-AzureRmAccount`<br /><br />2. Escreva o que se segue e confirme se os valores apresentados para o nome e ID da sua subscrição, o ID do seu inquilino e o estado estão ativos: `Get-AzureRmSubscription`<br /><br />Se não forem apresentados valores e regressar ao pedido, significa que não tem uma subscrição do Azure que possa ser utilizada para o BYOK. <br /><br />**Nota**: além dos pré-requisitos para BYOK, se estiver a migrar do AD RMS para o Azure Information Protection através da utilização de chave de software para chave de hardware, tem de ter uma versão de firmware da Thales igual ou superior à 11.62.|
+|Não utilizar o RMS para utilizadores individuais ou para o Exchange Online.<br /><br /> Em alternativa, se utilizar o Exchange Online, compreender e aceitar as limitações da utilização do BYOK com esta configuração.|Para obter mais informações sobre as restrições e limitações atuais do BYOK, consulte [Preços e restrições do BYOK](byok-price-restrictions.md).<br /><br />**Importante**: o BYOK não é atualmente compatível com o Exchange Online.|
+|Todos os pré-requisitos indicados para o BYOK do Azure Key Vault, que incluem uma subscrição paga ou de avaliação do Azure para o seu inquilino existente do Azure Information Protection. |Veja [Pré-requisitos para BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) na documentação do Azure Key Vault. <br /><br /> A subscrição gratuita do Azure que fornece acesso para configurar o Azure Active Directory e a configuração dos modelos personalizados do Azure Rights Management (**Aceder ao Azure Active Directory**) não são suficientes para utilizar o Azure Key Vault. Para confirmar se tem uma subscrição do Azure que pode utilizar para o BYOK, utilize os cmdlets [Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx) do PowerShell: <br /><br /> 1. Inicie uma sessão do PowerShell do Azure com a opção **Executar como administrador** e inicie sessão como um administrador global do seu inquilino do Azure Information Protection com o seguinte comando: `Login-AzureRmAccount`<br /><br />2. Escreva o que se segue e confirme se os valores apresentados para o nome e ID da sua subscrição, o ID do seu inquilino do Azure Information Protection e o estado estão ativos: `Get-AzureRmSubscription`<br /><br />Se não forem apresentados valores e regressar ao pedido, significa que não tem uma subscrição do Azure que possa ser utilizada para o BYOK. <br /><br />**Nota**: além dos pré-requisitos para BYOK, se estiver a migrar do AD RMS para o Azure Information Protection através da utilização de chave de software para chave de hardware, tem de ter uma versão de firmware da Thales igual ou superior à 11.62.|
 |O módulo de administração do Azure Rights Management para o Windows PowerShell.|Para obter instruções de instalação, consulte [Installing Windows PowerShell for Azure Rights Management (Instalar o Windows PowerShell para o Azure Rights Management – em inglês)](../deploy-use/install-powershell.md). <br /><br />Caso já tenha instalado este módulo do Windows PowerShell, execute o seguinte comando para verificar se o seu número de versão é **2.5.0.0** ou posterior: `(Get-Module aadrm -ListAvailable).Version`|
 
-Para obter mais informações sobre HSMs da Thales e como são utilizados com o Cofre de Chaves do Azure, consulte o [site da Thales](https://www.thales-esecurity.com/msrms/cloud).
+Para obter mais informações sobre HSMs da Thales e como são utilizados com o Azure Key Vault, consulte o [site da Thales](https://www.thales-esecurity.com/msrms/cloud).
 
 ### <a name="instructions-for-byok"></a>Instruções para BYOK
 
-Para gerar e transferir a sua própria chave de inquilino para o Cofre de Chaves do Azure, siga os procedimentos em [Como gerar e transferir chaves protegidas por HSM para o Cofre de Chaves do Azure](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/) da documentação do Cofre de Chaves do Azure.
+Para gerar e transferir a sua própria chave de inquilino para o Azure Key Vault, siga os procedimentos em [Como gerar e transferir chaves protegidas por HSM para o Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/) da documentação do Azure Key Vault.
 
 Quando a chave é transferida para o Cofre de Chaves, é fornecido um ID de chave no Cofre de Chaves, que é um URL que contém o nome do cofre de chaves, o contentor de chaves, o nome da chave e a versão da chave. Por exemplo: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Terá de indicar ao serviço Azure Rights Management do Azure Information Protection que utilize esta chave ao especificar este URL.
 
-No entanto, antes de o Azure Information Protection poder utilizar a chave, o serviço Azure Rights Management tem de estar autorizado a utilizar a chave no cofre de chaves da sua organização. Para tal, o administrador do Cofre de Chaves do Azure utiliza o cmdlet PowerShell do Cofre de Chaves, [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/pt-pt/library/mt603625(v=azure.300\).aspx) e concede permissões ao principal do serviço Azure Rights Management, ao utilizar o GUID 00000012-0000-0000-c000-000000000000. Por exemplo:
+No entanto, antes de o Azure Information Protection poder utilizar a chave, o serviço Azure Rights Management tem de estar autorizado a utilizar a chave no cofre de chaves da sua organização. Para tal, o administrador do Azure Key Vault utiliza o cmdlet PowerShell do Cofre de Chaves, [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/pt-pt/library/mt603625(v=azure.300\).aspx) e concede permissões ao principal do serviço Azure Rights Management, ao utilizar o GUID 00000012-0000-0000-c000-000000000000. Por exemplo:
 
     Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
 
@@ -112,9 +113,9 @@ Em seguida, execute o [cmdlet Use-AadrmKeyVaultKey](https://msdn.microsoft.com/l
 > [!IMPORTANT]
 > Neste exemplo, "aaaabbbbcccc111122223333" é a versão da chave a utilizar. Se não especificar a versão, a versão atual da chave é utilizada sem aviso e o comando parece funcionar. No entanto, se a chave no Cofre de Chaves for atualizada mais tarde (renovada), o serviço Azure Rights Management deixará de funcionar para o seu inquilino, mesmo que execute novamente o comando Use-AadrmKeyVaultKey.
 >
->Quando executar este comando, certifique-se de que especifica a versão da chave, bem como o nome da chave. Pode utilizar o comando do Cofre de Chaves do Azure ([Get-AzureKeyVaultKey](https://docs.microsoft.com/powershell/resourcemanager/azurerm.keyvault\/v2.3.0\/get-azurekeyvaultkey)) para obter o número da versão da chave atual. Por exemplo: `Get-AzureKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
+>Quando executar este comando, certifique-se de que especifica a versão da chave, bem como o nome da chave. Pode utilizar o comando do Azure Key Vault ([Get-AzureKeyVaultKey](https://docs.microsoft.com/powershell/resourcemanager/azurerm.keyvault\/v2.3.0\/get-azurekeyvaultkey)) para obter o número da versão da chave atual. Por exemplo: `Get-AzureKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
 
-Se tiver de confirmar que o URL da chave está definido corretamente no serviço Azure RMS, no Cofre de Chaves do Azure, pode executar [Get-AzureKeyVaultKey](https://msdn.microsoft.com/pt-pt/library/dn868053(v=azure.300\).aspx) para ver o URL da chave.
+Se tiver de confirmar que o URL da chave está definido corretamente no serviço Azure RMS, no Azure Key Vault, pode executar [Get-AzureKeyVaultKey](https://msdn.microsoft.com/pt-pt/library/dn868053(v=azure.300\).aspx) para ver o URL da chave.
 
 
 ## <a name="next-steps"></a>Passos seguintes
@@ -123,7 +124,7 @@ Agora que já planeou e, se necessário, gerou a chave do inquilino, faça o seg
 
 1.  Comece a utilizar a sua chave de inquilino:
 
-    -   Se ainda não o fez, tem agora de ativar o serviço de Gestão de Direitos para que a sua organização possa começar a utilizar o Azure Information Protection. Os utilizadores começam a utilizar de imediato a sua chave de inquilino (gerida pela Microsoft ou por si no Cofre de Chaves do Azure).
+    -   Se ainda não o fez, tem agora de ativar o serviço de Gestão de Direitos para que a sua organização possa começar a utilizar o Azure Information Protection. Os utilizadores começam a utilizar de imediato a sua chave de inquilino (gerida pela Microsoft ou por si no Azure Key Vault).
 
         Para obter mais informações sobre a ativação, consulte [Ativar o Azure Rights Management](../deploy-use/activate-service.md).
 
@@ -142,9 +143,4 @@ Agora que já planeou e, se necessário, gerou a chave do inquilino, faça o seg
     Para obter mais informações, consulte [Operações para a sua chave de inquilino do Azure Rights Management](../deploy-use/operations-tenant-key.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

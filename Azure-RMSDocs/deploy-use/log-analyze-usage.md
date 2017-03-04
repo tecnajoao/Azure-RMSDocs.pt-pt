@@ -1,10 +1,10 @@
 ---
-title: "Registar e analisar a utilização do serviço Azure Rights Management | Azure Information Protection"
+title: "Registar e analisar a utilização do serviço Azure RMS – AIP"
 description: "Informações e instruções sobre como utilizar os registos de utilização com o Azure Rights Management (Azure RMS)."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: ca8694a26f0f9b537a3e3a6b1f468d89cefe6206
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 89c0cae4b0549a0dd86ede26ef3eed0f09200419
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -157,7 +158,7 @@ Cada uma das linhas subsequentes é um registo. Os valores dos campos estão na 
 #### <a name="exceptions-for-the-user-id-field"></a>Exceções para o campo user-id
 Apesar de o campo user-id indicar geralmente o utilizador que efetuou o pedido, existem duas exceções onde o valor não é mapeado para um utilizador real:
 
--   O valor **'microsoftrmsonline@&lt;YourTenantID&gt;.rms.&lt;region&gt;.aadrm.com'**.
+-   O valor **"microsoftrmsonline@&lt;IDDoSeuInquilino&gt;.rms.&lt;região&gt;.aadrm.com"**.
 
     Isto indica que o pedido está a ser efetuado por um serviço do Office 365, tal como o Exchange Online ou o SharePoint Online. Na cadeia, *&lt;IDDoSeuInquilino&gt;* é o GUID para o seu inquilino e *&lt;região&gt;* é a região em que o seu inquilino está registado. Por exemplo, **na** significa North America (América do Norte), **eu** significa Europa e **ap** significa Ásia.
 
@@ -190,14 +191,14 @@ Há muitos tipos de pedido para o serviço Azure Rights Management, mas a seguin
 |GetAllTemplates|É efetuada uma chamada a partir do portal clássico do Azure para obter todos os modelos.|
 |GetClientLicensorCert|O cliente está a pedir um certificado de publicação (que é posteriormente utilizado para proteger conteúdos) a partir de um computador baseado no Windows.|
 |GetConfiguration|É chamado um cmdlet do PowerShell do Azure para obter a configuração do inquilino do Azure RMS.|
-|GetConnectorAuthorizations|É efetuada uma chamada a partir dos conectores do RMS para obter a configuração destes a partir da nuvem.|
+|GetConnectorAuthorizations|É efetuada uma chamada a partir dos conectores do RMS para obter a configuração destes a partir da cloud.|
 |GetRecipients|É feita uma chamada a partir do site de controlo de documentos para navegar para a vista de lista para um único documento.|
 |GetSingle|É feita uma chamada a partir do site de controlo de documentos para navegar para uma página de um **único documento**.|
 |GetTenantFunctionalState|O portal clássico do Azure está a verificar se o serviço Azure Rights Management está ativado.|
 |GetTemplateById|É efetuada uma chamada a partir do portal clássico do Azure para obter um modelo através da especificação de um ID de modelo.|
-|KeyVaultDecryptRequest|O cliente está a tentar desencriptar os conteúdos protegidos pelo RMS. Aplicável apenas para uma chave de inquilino gerida pelo cliente (BYOK) no Cofre de Chaves do Azure.|
-|KeyVaultGetKeyInfoRequest|É feita uma chamada para verificar se a chave especificada para ser utilizada no Cofre de Chaves do Azure para a chave de inquilino do Azure Information Protection está acessível e se ainda não está em utilização.|
-|KeyVaultSignDigest|É feita uma chamada quando uma chave gerida pelo cliente (BYOK) no Cofre de Chaves do Azure é utilizada para fins de assinatura. Esta opção é normalmente chamada uma vez por cada pedido AcquireLicence (ou FECreateEndUserLicenseV1), Certify e GetClientLicensorCert (ou FECreatePublishingLicenseV1).|
+|KeyVaultDecryptRequest|O cliente está a tentar desencriptar os conteúdos protegidos pelo RMS. Aplicável apenas para uma chave de inquilino gerida pelo cliente (BYOK) no Azure Key Vault.|
+|KeyVaultGetKeyInfoRequest|É feita uma chamada para verificar se a chave especificada para ser utilizada no Azure Key Vault para a chave de inquilino do Azure Information Protection está acessível e se ainda não está em utilização.|
+|KeyVaultSignDigest|É feita uma chamada quando uma chave gerida pelo cliente (BYOK) no Azure Key Vault é utilizada para fins de assinatura. Esta opção é normalmente chamada uma vez por cada pedido AcquireLicence (ou FECreateEndUserLicenseV1), Certify e GetClientLicensorCert (ou FECreatePublishingLicenseV1).|
 |KMSPDecrypt|O cliente está a tentar desencriptar os conteúdos protegidos pelo RMS. Aplicável apenas para uma chave de inquilino gerida pelo cliente (BYOK) antiga.|
 |KMSPSignDigest|É feita uma chamada quando uma chave gerida pelo cliente (BYOK) antiga é utilizada para fins de assinatura. Esta opção é normalmente chamada uma vez por cada pedido AcquireLicence (ou FECreateEndUserLicenseV1), Certify e GetClientLicensorCert (ou FECreatePublishingLicenseV1).|
 |LoadEventsForMap|É feita uma chamada a partir do site de controlo de documentos para navegar para a vista de mapa de um único documento.|
@@ -238,10 +239,5 @@ Para mais informações sobre como utilizar o Windows PowerShell para o serviço
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Jan17_HO4-->
 
 

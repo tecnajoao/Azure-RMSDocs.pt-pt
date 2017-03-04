@@ -1,10 +1,10 @@
 ---
-title: "Cenário – Proteger alguns dos seus ficheiros mais importantes | Azure Information Protection"
+title: "Cenário do AIP – proteger alguns dos seus ficheiros mais importantes"
 description: "Este cenário e a documentação do utilizador associada utilizam o Azure Rights Management para proteger de forma manual e personalizada alguns ficheiros que tenha identificado como sendo os mais importantes e que requerem o mais elevado nível de proteção contra acesso não autorizado."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,14 @@ ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 0f2fb608be647e967d8e5857414f25ebba1d4d29
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: f096a4ad7333d24c7bce0dd729b40ebb203726c5
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="scenario---secure-your-most-few-valuable-files"></a>Cenário – Proteger alguns dos seus ficheiros mais importantes
+# <a name="scenario---secure-your-most-few-valuable-files"></a>Cenário – proteger alguns dos seus ficheiros mais importantes
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -146,8 +147,3 @@ Os ficheiros seguintes estão agora sujeitos a um nível muito elevado de prote�
 -   Se não conseguir aceder a estes ficheiros ou se reparar em alterações suspeitas aos mesmos, ligue para a linha do suporte disponível 24 horas por dia que o Departamento de TI lhe indicou numa mensagem de e-mail protegida.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

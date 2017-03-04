@@ -1,10 +1,10 @@
 ---
-title: "Cenário – Os executivos trocam informações privilegiadas em segurança | Azure Information Protection"
-description: "Este cenário e a documentação do utilizador associada utilizam a proteção Azure Rights Management para que os executivos possam trocar em segurança e-mails e anexos por e-mail e as políticas restrinjam automaticamente o acesso dos executivos sem necessidade de ação especial por parte deles."
+title: "Cenário do AIP – executivos trocam informações privilegiadas"
+description: "Este cenário e a documentação do utilizador associada utilizam a proteção do Azure Rights Management para que os executivos possam trocar em segurança e-mails e anexos por e-mail e as políticas restrinjam automaticamente o acesso dos executivos sem necessidade de ação especial por parte deles."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,14 @@ ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: cb7cbe24589030e5fd1b2b2f9589f47e3f0b780e
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 1407a7bee800fec0ba8498d0439586378003ed54
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="scenario---executives-securely-exchange-privileged-information"></a>Cenário – Os executivos trocam informações privilegiadas em segurança
+# <a name="scenario---executives-securely-exchange-privileged-information"></a>Cenário – os executivos trocam informações privilegiadas em segurança
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -131,9 +132,4 @@ Ao enviar informações confidenciais da empresa para outro executivo da VanArsd
 -   Contactar o suporte técnico: helpdesk@vanarsdelltd.com
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

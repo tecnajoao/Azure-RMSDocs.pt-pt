@@ -1,10 +1,10 @@
 ---
-title: "Opções da caixa de diálogo da aplicação de partilha Rights Management | Azure Information Protection"
+title: "Opções da caixa de diálogo da aplicação de partilha RMS – AIP"
 description: "Informações para ajudar a especificar as opções na caixa de diálogo Adicionar proteção ou na caixa de diálogo Partilhar protegido da aplicação de partilha RMS. Irá ver esta caixa de diálogo quando proteger um ficheiro a partilhar ou quando proteger um ficheiro no local e escolher permissões personalizadas."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: d70dbd0f9fc4119a506551e7e058b29cc21562bd
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 190d8ac29bec0fc3825eb9fe099e06bd16e2112f
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -77,9 +78,4 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

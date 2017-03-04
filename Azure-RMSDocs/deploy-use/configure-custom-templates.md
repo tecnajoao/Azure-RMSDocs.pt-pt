@@ -1,5 +1,5 @@
 ---
-title: "Configurar modelos personalizados para o serviço Azure Rights Management | Azure Information Protection"
+title: "Configurar modelos personalizados para o Azure RMS – AIP"
 description: "Informações e instruções para os administradores configurarem e gerirem modelos de direitos de utilização. Os modelos permitem aos utilizadores e outros administradores aplicar facilmente políticas a ficheiros confidenciais que restringem o acesso a utilizadores autorizados."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: efab4cdc455237b4bb064252dfe6702ec40539d2
-ms.openlocfilehash: a5a27e9d1d12381b7c4c945596480171f7265552
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 0818f8e65f2065e70ef66732819d21aa85c912fa
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -64,10 +65,5 @@ Utilize as informações seguintes para configurar e utilizar modelos personaliz
 -   [Utilizar o PowerShell para gerir modelos](configure-templates-with-powershell.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

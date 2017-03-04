@@ -1,10 +1,10 @@
 ---
-title: Guia do administrador do cliente do Azure Information Protection | Azure Information Protection
+title: Guia do administrador do cliente do Azure Information Protection
 description: "Instruções e informações para administradores numa rede empresarial responsáveis por implementar o cliente do Azure Information Protection para o Windows."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid:
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f82c7964b16ad984ad920059e2f61f19ad0f471a
-ms.openlocfilehash: dff30520c149c29663c340b70a12c427b31659b9
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: b6a8477078a333aa23ccfe5904af3582216a1e96
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -78,6 +79,8 @@ Além disso:
 
 - Se o Visualizador do Azure Information Protection for instalado à parte, precisará da versão mínima do Microsoft .NET Framework 4.5.2 e, se esta estiver em falta, o instalador não a transfere nem a instala.
 
+- O módulo do PowerShell requer o Windows PowerShell versão 4.0, que poderá ter de ser instalado em sistemas operativos mais antigos. Para obter mais informações, consulte [Como Instalar o Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). Para verificar que versão do Windows PowerShell está a executar, escreva **$PSVersionTable** numa sessão do PowerShell.
+
 - Os computadores com o Windows 7 Service Pack 1 instalado requerem o [KB 2533623](https://support.microsoft.com/en-us/kb/2533623), que pode ser instalado após a instalação do cliente. Se esta atualização for exigida, mas não estiver instalada, ser-lhe-á pedido que a instale.
 
 > [!NOTE]
@@ -95,7 +98,7 @@ Além de utilizar as seguintes instruções, o cliente do Azure Information Prot
    
    Além disso, se estiver a instalar o cliente em computadores com o Office 2010, tem de especificar o parâmetro **ServiceLocation** (não incluído no ecrã de ajuda) caso os utilizadores não sejam administradores locais nos computadores. Veja a secção seguinte para obter mais informações.
 
-3. Se estiver a instalar interativamente, selecione a opção para instalar uma **política de demonstração** se não puder ligar-se ao Office 365 ou ao Azure Active Directory e quiser ver e experimentar o lado do cliente do Azure Information Protection com uma política local para efeitos de demonstração. Quando o cliente se liga a um serviço do Azure Information Protection, esta política de demonstração é substituída pela política do Azure Information Protection da organização.
+3. Se estiver a instalar interativamente, selecione a opção para instalar uma **política de demonstração** se não puder ligar-se ao Office 365 ou ao Azure Active Directory e quiser ver e experimentar o lado do cliente do Azure Information Protection com uma política local para efeitos de demonstração. Quando o cliente se liga a um serviço Azure Information Protection, esta política de demonstração é substituída pela política do Azure Information Protection da organização.
     
 4. Para concluir a instalação: 
 
@@ -105,7 +108,9 @@ Além de utilizar as seguintes instruções, o cliente do Azure Information Prot
     
     - Para outras versões do Office, reinicie todas as aplicações do Office e todas as instâncias do Explorador de Ficheiros. 
         
-
+5. Pode confirmar que a instalação foi concluída com êxito ao verificar o ficheiro de registo de instalação na pasta %temp%. Este ficheiro tem o seguinte formato de nomes: `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`. Por exemplo: **Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
+    
+    Procure a seguinte cadeia neste ficheiro de registo: **Product: Microsoft Azure Information Protection -- Installation completed successfully.**
 
 ### <a name="additional-instructions-for-office-2010-only"></a>Instruções adicionais apenas para o Office 2010
 
@@ -176,7 +181,7 @@ Pode utilizar uma das seguintes opções:
         - Caso tenha efetuado a reposição do cliente, tem de reiniciar o ambiente do utilizador (também conhecido como "bootstrapping"), o que irá transferir para o cliente certificados e os modelos mais recentes. Para o fazer, feche todas as instâncias do Office e, em seguida, reinicie uma aplicação do Office. Esta ação também irá verificar se transferiu a política do Azure Information Protection mais recente. Não execute novamente os testes de diagnóstico até ter efetuado esta ação.
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 Agora que instalou o cliente do Azure Information Protection, veja o seguinte para obter informações adicionais que poderá precisar para suportar este cliente:
 
 - [Ficheiros de cliente e registo de utilização](client-admin-guide-files-and-logging.md)
@@ -189,9 +194,4 @@ Agora que instalou o cliente do Azure Information Protection, veja o seguinte pa
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

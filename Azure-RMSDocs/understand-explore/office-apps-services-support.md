@@ -1,5 +1,5 @@
 ---
-title: "Aplicações e serviços do Office | Azure Information Protection"
+title: "Aplicações e serviços do Office com o Azure Information Protection"
 description: "Como as aplicações do Office para o utilizador final (tais como o Word, Excel, PowerPoint e Outlook) e os serviços do Office (tais como o Exchange e SharePoint) podem utilizar o serviço Azure Rights Management para ajudar a proteger os dados da sua organização."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4cdac14d3a77ea7bcce23b914bc3be0a1f46d2b5
-ms.openlocfilehash: d2d33329457e181b55489834daf595da81bc7ada
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3e77cebd642b2b9e983f5cbc81e43e1cc437dc5d
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -57,7 +58,7 @@ Para listas e bibliotecas, a proteção de informações é sempre aplicada por 
 
 Primeiro, o serviço de IRM tem de estar ativado para o SharePoint. Em seguida, especifique a Gestão de Direitos de Informação para uma biblioteca. No caso do SharePoint Online e do OneDrive para Empresas, os utilizadores também podem especificar a Gestão de Direitos de Informação para a respetiva biblioteca do OneDrive para Empresas. O SharePoint não utiliza modelos de política de direitos, apesar de existirem configurações do SharePoint que pode selecionar que estritamente correspondem às definições que pode especificar nos modelos.
 
-Se utilizar o SharePoint Server, pode utilizar as funcionalidades de proteção de informações com o serviço Azure Rights Management ao implementar o conector RMS, que atua como um reencaminhamento entre os servidores no local e o serviço de Gestão de Direitos em nuvem. Para obter mais informações, consulte [Implementar o conector do Azure Rights Management](../deploy-use/deploy-rms-connector.md).
+Se utilizar o SharePoint Server, pode utilizar as funcionalidades de proteção de informações com o serviço Azure Rights Management ao implementar o conector RMS, que atua como um reencaminhamento entre os servidores no local e o serviço de Gestão de Direitos na cloud. Para obter mais informações, consulte [Implementar o conector do Azure Rights Management](../deploy-use/deploy-rms-connector.md).
 
 > [!NOTE]
 > Atualmente, existem algumas limitações ao utilizar a IRM com o SharePoint:
@@ -75,8 +76,3 @@ Para mais informações sobre como utilizar o serviço Azure Rights Management c
 Para ver como outras aplicações e serviços suportam o serviço Azure Rights Management do Azure Information Protection, consulte [Como as aplicações suportam o serviço Azure Rights Management](applications-support.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

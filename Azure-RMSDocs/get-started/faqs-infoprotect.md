@@ -1,5 +1,5 @@
 ---
-title: "Perguntas mais frequentes sobre a classificação e a etiquetagem | Azure Information Protection"
+title: "FAQs sobre classificação e identificação – AIP"
 description: "Tem alguma pergunta sobre a versão atual do Azure Information Protection? Verifique se a resposta está aqui."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fb68fc152e7f1d323cce71e3873475c78f7bbc15
-ms.openlocfilehash: ad94507f4aea48172ed3c3f74f6d12e3c67cc18e
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: dfa89dc4c216807fdebd57dce202a7983a18d9fb
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -118,7 +119,7 @@ Sim. Para se certificar de que os utilizadores justificam as suas alterações d
 
 No portal do Azure, pode selecionar um modelo de Rights Management para proteger automaticamente os conteúdos, de acordo com o nível de classificação que especificar.
 
-Irá ver um exemplo desta situação no [Tutorial de início rápido do Azure Information Protection](infoprotect-quick-start-tutorial.md). Para mais informações, consulte [Como configurar uma etiqueta para aplicar proteção a Gestão de Direitos](../deploy-use/configure-policy-protection.md).
+Irá ver um exemplo desta situação no [Tutorial de início rápido do Azure Information Protection](infoprotect-quick-start-tutorial.md). Para obter mais informações, consulte [Como configurar uma etiqueta para a proteção do Rights Management](../deploy-use/configure-policy-protection.md).
 
 ## <a name="can-a-file-have-more-than-one-classification"></a>Um ficheiro pode conter mais do que uma classificação?
 
@@ -206,8 +207,3 @@ Para comentários como sugestões de melhorias ou novas funcionalidades: na apli
 É também convidado a interagir com a nossa equipa de engenharia, no [site Yammer do Azure Information Protection](https://www.yammer.com/askipteam/). 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

@@ -1,5 +1,5 @@
 ---
-title: "Passo 3 do tutorial de início rápido | Azure Information Protection"
+title: "Passo 3 do tutorial de início rápido – AIP"
 description: "Passo 3 de um tutorial de introdução com uma duração de aproximadamente 20 minutos para experimentar rapidamente o Microsoft Azure Information Protection na sua organização."
 author: cabailey
 ms.author: cabailey
@@ -11,8 +11,9 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: 559136e48a709b91c544352c38a5bbb40d66261f
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: be4863c06806932916c192624f8f290be59608a4
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -61,8 +62,3 @@ Agora está pronto para ver o Azure Information Protection em ação.
 [Passo 4 &#187;](infoprotect-tutorial-step4.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

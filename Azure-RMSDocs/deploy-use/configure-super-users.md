@@ -1,5 +1,5 @@
 ---
-title: "Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados | Azure Information Protection"
+title: "Configurar superutilizadores para o Azure Rights Management – AIP"
 description: "Conheça e implemente a funcionalidade de superutilizador do serviço Azure Rights Management do Azure Information Protection para que as pessoas e os serviços autorizados possam sempre ler e inspecionar os dados que o Azure Rights Management protege na sua organização. Esta capacidade é por vezes referida como &quot;raciocínio através de dados&quot; e é um elemento fundamental na manutenção do controlo dos dados da organização."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: bb7b459456fd8fb43997f73b39880d7110f92442
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: f1c50d67ba03cee9846e81f98aad6da0da33a951
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -71,10 +72,5 @@ Para obter mais informações sobre estes cmdlets, veja [Utilizar o PowerShell c
 > O módulo AIP substitui o módulo do PowerShell da Proteção do RMS que foi instalado com a Ferramenta de Proteção RMS. Ambos os módulos são diferentes do [Módulo do Windows PowerShell para o Azure Rights Management](administer-powershell.md) principal e complementam-no. O módulo AIP suporta o Azure Information Protection, o serviço Azure Rights Management (Azure RMS) para o Azure Information Protection e os Serviços de Gestão de Direitos do Active Directory (AD RMS).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

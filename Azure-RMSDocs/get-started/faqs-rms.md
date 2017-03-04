@@ -1,10 +1,10 @@
 ---
-title: "Perguntas mais frequentes sobre o serviço de proteção de dados, o Azure Rights Management, do Azure Information Protection | Azure Information Protection"
+title: "FAQs do Azure RMS – AIP"
 description: "Algumas perguntas mais frequentes sobre o serviço de proteção de dados, o Azure Rights Management (Azure RMS), do Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4d9cf4f9ab3f73d2b1ba06eb74541f2982d24677
-ms.openlocfilehash: f0fb23195983771fb7e19a626adc78ca28faa1a7
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: f2413580bf76f0b9b6fa52d8be381c44f9c985fe
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -32,9 +33,22 @@ Para obter mais informações, consulte [How does Azure RMS work? Under the hood
 
 ## <a name="whats-the-difference-between-azure-rights-management-encryption-and-encryption-in-other-microsoft-cloud-services"></a>Qual é a diferença entre a encriptação do Azure Rights Management e a encriptação noutros serviços cloud da Microsoft?
 
-A Microsoft fornece múltiplas tecnologias de encriptação que lhe permitem proteger os seus dados para cenários diferentes e muitas vezes complementares. Por exemplo, enquanto o Office 365 oferece encriptação para dados inativos armazenados no Office 365, o serviço do Azure Rights Management do Azure Information Protection encripta os seus dados independentemente para que estes estejam protegidos, qualquer que seja o local ou a forma de transmissão.
+A Microsoft fornece múltiplas tecnologias de encriptação que lhe permitem proteger os seus dados para cenários diferentes e muitas vezes complementares. Por exemplo, enquanto o Office 365 oferece encriptação para dados inativos armazenados no Office 365, o serviço Azure Rights Management do Azure Information Protection encripta os seus dados independentemente para que estes estejam protegidos, qualquer que seja o local ou a forma de transmissão.
 
 Estas tecnologias de encriptação são complementares e para as utilizar tem de as ativar e configurar independentemente. Quando o fizer, poderá ter a opção de utilizar a sua própria chave para a encriptação, um cenário também conhecido como "BYOK". Ativar o BYOK para uma destas tecnologias não afeta as outras tecnologias existentes. Por exemplo, pode utilizar o BYOK para o Azure Information Protection e não o utilizar para outras tecnologias de encriptação e vice-versa. As chaves utilizadas por estas diferentes tecnologias podem ser as mesmas ou diferentes, dependendo da forma como configurou as opções de encriptação para cada serviço.
+
+## <a name="whats-the-difference-between-byok-and-hyok-and-when-should-i-use-them"></a>Qual é a diferença entre BYOK e HYOK e quando devo utilizá-los?
+
+**Bring Your Own Key – Traga a Sua Própria Chave** (BYOK), no contexto do Azure Information Protection, é quando cria a sua própria chave no local para a proteção do Azure Rights Management. Em seguida, transfere essa chave para um módulo de segurança de hardware (HSM) no Azure Key Vault, onde continua a ser o proprietário e a gerir a sua chave. Se não o fizer, a proteção do Azure Rights Management utilizará uma chave criada e gerida automaticamente no Azure. Esta configuração predefinida é referida como "gerida pela Microsoft" em vez de "gerida pelo cliente" (opção BYOK).
+
+Para obter mais informações sobre o BYOK e se deve escolher esta topologia de chaves para a sua organização, consulte [Planear e implementar a sua chave de inquilino do Azure Information Protection](../plan-design/plan-implement-tenant-key.md). 
+
+**Hold Your Own Key – Tenha a Sua Própria Chave** (HYOK), no contexto do Azure Information Protection, destina-se a um pequeno número de organizações com um subconjunto de documentos ou e-mails que não podem ser protegidos por uma chave armazenada na cloud. Para estas organizações, esta restrição aplica-se mesmo que tenham criado e gerido a chave através de BYOK. A restrição pode dever-se muitas vezes a motivos de regulamentação e conformidade e a configuração HYOK só deve ser aplicada a informações "Confidenciais", que nunca serão partilhadas fora da organização, que serão consumidas apenas na rede interna e que não precisam de ser acedidas a partir de dispositivos móveis. 
+
+Para estas exceções (normalmente, menos de 10% de todos os conteúdos que têm de ser protegidos), as organizações podem utilizar uma solução no local, os Serviços de Gestão de Direitos do Active Directory, para criar a chave que permanece no local. Com esta solução, os computadores obtêm a política do Azure Information Protection a partir da cloud, mas estes conteúdos identificados podem ser protegidos com a chave no local.
+
+Para obter mais informações sobre o HYOK, certificar-se de que compreende as suas limitações e restrições e obter orientações para quando o utilizar, veja [Requisitos e restrições de Tenha a sua própria chave (HYOK) para proteção do AD RMS](../deploy-use/configure-adrms-restrictions.md).
+
 
 ## <a name="can-i-integrate-the-azure-rights-management-service-with-my-on-premises-servers"></a>Posso integrar o serviço Azure Rights Management nos meus servidores no local?
 Sim. O Azure Rights Management pode ser integrado nos seus servidores no local, como o Exchange Server, o SharePoint e os servidores de ficheiros do Windows. Para tal, utilize o [conetor Rights Management](../deploy-use/deploy-rms-connector.md). Em alternativa, se estiver interessado em apenas utilizar a Infraestrutura de Classificação de Ficheiros (FCI) com o Windows Server, pode utilizar os [Cmdlets da Proteção RMS](https://technet.microsoft.com/library/mt601315%28v=ws.10%29.aspx). Também pode sincronizar e federar os seus controladores de domínio do Active Directory com o Azure AD para uma experiência de autenticação mais integrada para os utilizadores, por exemplo, ao utilizar o [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/).
@@ -70,7 +84,7 @@ Absolutamente. Além disso, a vantagem é que os utilizadores poderão proteger 
 ## <a name="if-i-use-this-protection-for-my-production-environment-is-my-company-then-locked-into-the-solution-or-risk-losing-access-to-content-that-we-protected-with-azure-rms"></a>Se utilizar esta proteção para o meu ambiente de produção, a minha empresa fica presa a essa solução ou arrisca-se a perder o acesso aos conteúdos que protegemos com o Azure RMS?
 Não, permanece sempre no controlo dos seus dados e pode continuar a aceder aos mesmos, mesmo se optar por deixar de utilizar o serviço Azure Rights Management. Para obter mais informações, consulte [Desativar o Azure Rights Management](../deploy-use/decommission-deactivate.md).
 
-No entanto, antes de desativar a implementação do Azure RMS, gostaríamos de ouvir o seu feedback e compreender por que motivo tomou esta decisão. Se a proteção Azure Rights Management não satisfizer os seus requisitos empresariais, contacte-nos no caso de estarmos a planear novas funcionalidades para um futuro próximo ou no caso de existirem alternativas. Envie uma mensagem de e-mail para [AskIPTeam@Microsoft.com](mailto:askipteam@microsoft.com?subject=Planning%20to%20decommission%20Azure%20RMS) e teremos todo o gosto em falar sobre os seus requisitos técnicos e empresariais.
+No entanto, antes de desativar a implementação do Azure RMS, gostaríamos de ouvir o seu feedback e compreender por que motivo tomou esta decisão. Se a proteção do Azure Rights Management não satisfizer os seus requisitos empresariais, contacte-nos no caso de estarmos a planear novas funcionalidades para um futuro próximo ou no caso de existirem alternativas. Envie uma mensagem de e-mail para [AskIPTeam@Microsoft.com](mailto:askipteam@microsoft.com?subject=Planning%20to%20decommission%20Azure%20RMS) e teremos todo o gosto em falar sobre os seus requisitos técnicos e empresariais.
 
 ## <a name="can-i-control-which-of-my-users-can-use-azure-rms-to-protect-content"></a>Posso controlar que utilizadores podem aceder ao Azure RMS para proteger o conteúdo?
 Sim, o serviço Azure Rights Management tem controlos de integração do utilizador para este cenário. Para obter mais informações, consulte a secção [Configuring onboarding controls for a phased deployment (Configurar os controlos de inclusão para uma implementação faseada – em inglês)](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) no artigo [Activating Azure Rights Management (Ativar o Azure Rights Management – em inglês)](../deploy-use/activate-service.md).
@@ -95,7 +109,7 @@ Para especificar os utilizadores a partir de fora da sua organização, adicion�
 Para obter mais informações sobre os modelos personalizados, consulte [Configurar modelos personalizados para o serviço Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
 ## <a name="does-azure-rms-work-with-dynamic-groups-in-azure-ad"></a>O Azure RMS funciona com grupos dinâmicos no Azure AD?
-Uma funcionalidade do Azure AD Premium permite-lhe configurar a associação dinâmica para grupos ao especificar [regras baseadas em atributos](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/). Quando cria um grupo de segurança no Azure AD, este tipo de grupo suporta a associação dinâmica mas não suporta um endereço de e-mail e por isso não pode ser utilizado com o serviço Azure Rights Management. No entanto, agora pode criar um novo tipo de grupo no Azure AD que suporte a associação dinâmica e tenha capacidade de correio. Quando adiciona um novo grupo no portal clássico do Azure, pode escolher o **TIPO DE GRUPO** do **Office 365 "Preview"**. Como este grupo tem capacidade de correio, pode utilizá-lo com a proteção Azure Rights Management.
+Uma funcionalidade do Azure AD Premium permite-lhe configurar a associação dinâmica para grupos ao especificar [regras baseadas em atributos](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/). Quando cria um grupo de segurança no Azure AD, este tipo de grupo suporta a associação dinâmica mas não suporta um endereço de e-mail e por isso não pode ser utilizado com o serviço Azure Rights Management. No entanto, agora pode criar um novo tipo de grupo no Azure AD que suporte a associação dinâmica e tenha capacidade de correio. Quando adiciona um novo grupo no portal clássico do Azure, pode escolher o **TIPO DE GRUPO** do **Office 365 "Preview"**. Como este grupo tem capacidade de correio, pode utilizá-lo com a proteção do Azure Rights Management.
 
 ## <a name="what-devices-and-which-file-types-are-supported-by-azure-rms"></a>Que dispositivos e que tipos de ficheiro são suportados pelo Azure RMS?
 Para obter uma lista dos dispositivos que suportam o serviço Azure Rights Management, consulte [Dispositivos cliente que suportam a proteção de dados do Azure Rights Management](../get-started/requirements-client-devices.md). Uma vez que nem todos os dispositivos suportados conseguem atualmente suportar todas as capacidades de Rights Management, certifique-se de que também consulta a tabela em [Aplicações que suportam a proteção de dados do Azure Rights Management](../get-started/requirements-applications.md).
@@ -111,7 +125,7 @@ Não. Neste cenário, o ficheiro temporário associado não contém dados do doc
 ## <a name="we-really-want-to-use-byok-with-azure-information-protection-but-learned-that-this-isnt-compatible-with-exchange-onlinewhats-your-advice"></a>Queremos utilizar o BYOK com o Azure Information Protection, mas descobrimos que não é compatível com o Exchange Online. O que aconselham?
 Não permita que esta limitação atual atrase a utilização do serviço Azure Rights Management do Azure Information Protection. Se tiver o Exchange Online e quiser utilizar o BYOK (Bring Your Own Key – Traga a Sua Própria Chave), recomendamos que implemente agora o Azure Information Protection no modo de gestão de chaves predefinido, em que a Microsoft gera e faz a gestão da sua chave. Dessa forma, obtém todas as vantagens de proteger os seus ficheiros e e-mails importantes, com a opção de mudar para o BYOK mais tarde (por exemplo, quando o Exchange Online suporta o BYOK). Quando mudar para o BYOK, os seus documentos e e-mails anteriormente protegidos continuarão acessíveis através de uma chave arquivada.
 
-No entanto, se as políticas da sua empresa exigirem que utilize um módulo de hardware de segurança (HSM) e isto bloquear a sua implementação do Azure Information Protection, outra opção é implementar o Azure Information Protection com o BYOK agora, com funcionalidade de proteção Rights Management reduzida para o Exchange. Para obter mais informações, consulte [Preços e restrições do BYOK](../plan-design/byok-price-restrictions.md) em [Planear e implementar a sua chave de inquilino do Azure Rights Management](../plan-design/plan-implement-tenant-key.md).
+No entanto, se as políticas da sua empresa exigirem que utilize um módulo de hardware de segurança (HSM) e isto bloquear a sua implementação do Azure Information Protection, outra opção é implementar o Azure Information Protection com o BYOK agora, com funcionalidade de proteção do Rights Management reduzida para o Exchange. Para obter mais informações, consulte [Preços e restrições do BYOK](../plan-design/byok-price-restrictions.md) em [Planear e implementar a sua chave de inquilino do Azure Rights Management](../plan-design/plan-implement-tenant-key.md).
 
 ## <a name="a-feature-i-am-looking-for-doesnt-seem-to-work-with-sharepoint-protected-librariesis-support-for-my-feature-planned"></a>A funcionalidade que procuro não funciona com bibliotecas protegidas do SharePoint. Planeiam oferecer suporte para a minha funcionalidade?
 Atualmente, o SharePoint suporta documentos protegidos pelo Rights Management com bibliotecas protegidas da IRM, que não suportam modelos personalizados, controlo de documentos e outras funcionalidades. Para obter mais informações consulte a secção [SharePoint Online e SharePoint Server](../understand-explore/office-apps-services-support.md#sharepoint-online-and-sharepoint-server) no artigo [Aplicações e serviços do Office ](../understand-explore/office-apps-services-support.md).
@@ -156,10 +170,5 @@ Apesar do nome e do aspeto, **Não Reencaminhar** não é o oposto do direito de
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

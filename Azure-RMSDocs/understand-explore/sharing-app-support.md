@@ -1,5 +1,5 @@
 ---
-title: "Aplicação de partilha RMS para Windows e plataformas móveis | Azure Information Protection"
+title: "Aplicação de partilha RMS para Windows e plataformas móveis – AIP"
 description: "Como a aplicação de partilha RMS suporta o Azure RMS como uma aplicação gratuita e transferível que é necessária para suportar o Office 2010, mas que também é recomendada para computadores com o Windows, computadores Mac e dispositivos móveis."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 1da6e372-2b3f-4af7-80f7-6b9073dff7f5
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: 5c5f34e9009d87da4ea4091b619dfc75a1361251
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3c96d8718f42dcedebba03354c149bb2b9667d66
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -60,9 +61,4 @@ A aplicação de partilha RMS para dispositivos móveis suporta os dispositivos 
 Para ver como outras aplicações e serviços suportam o serviço Azure Rights Management do Azure Information Protection, consulte [Como as aplicações suportam o serviço Azure Rights Management](applications-support.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

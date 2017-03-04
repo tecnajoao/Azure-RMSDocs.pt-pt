@@ -1,5 +1,5 @@
 ---
-title: Configurar servidores para o conector Azure Rights Management | Azure Information Protection
+title: "Configurar servidores para o conector Rights Management – AIP"
 description: "Informações para o ajudar a configurar os servidores no local que irão utilizar o conector Azure Rights Management (RMS). Estes procedimentos inclui o passo 5 do artigo Implementar o conector Azure Rights Management."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 47de236f07996eed3f1ceb51309c6315d4625128
-ms.openlocfilehash: faff30ed2115307ff51afc24db8d08233eee9d14
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 8837b6187aee8bc041df7185527470297e913f49
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -247,7 +248,7 @@ Para utilizar o conector RMS e a Infraestrutura de Classificação de Ficheiros 
 
 3.  Crie regras de classificação e tarefas de gestão de ficheiros para proteger os documentos com Encriptação RMS e, em seguida, especifique um modelo de RMS para aplicar automaticamente as políticas de RMS. Para mais informações, consulte o artigo [Descrição Geral do Gestor de Recursos do Servidor de Ficheiros](http://technet.microsoft.com/library/hh831701.aspx) na biblioteca de documentação do Windows Server.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 Agora que o conector RMS está instalado e configurado, estando os servidores configurados para o utilizar, os administradores de TI e os utilizadores podem proteger e tirar partido das mensagens de e-mail e documentos com o serviço Azure Rights Management. Para facilitar o trabalho aos utilizadores, implemente o cliente do Azure Information Protection, que instala um suplemento para o Office e adiciona novas opções de contexto ao Explorador de Ficheiros. Para obter mais informações, veja o [Guia do administrador do Azure Information Protection](../rms-client/client-admin-guide.md).
 
 Tenha em atenção que, se configurar modelos departamentais que pretende utilizar com as regras de transporte do Exchange ou com o Windows Server FCI, a configuração do âmbito tem de incluir a opção de compatibilidade de aplicações e a caixa de verificação **Mostrar este modelo a todos os utilizadores quando as aplicações não suportam a identidade de utilizador** tem de estar selecionada.
@@ -257,8 +258,3 @@ Pode utilizar o [Plano de implementação do Azure Information Protection](../pl
 Para monitorizar o conector RMS, consulte o artigo [Monitorizar o conector do Azure Rights Management](monitor-rms-connector.md). 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

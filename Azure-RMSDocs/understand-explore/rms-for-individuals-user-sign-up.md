@@ -1,5 +1,5 @@
 ---
-title: "Como os utilizadores se inscrevem no RMS para indivíduos | Azure Information Protection"
+title: "Como os utilizadores se inscrevem no RMS para indivíduos – AIP"
 description: "Instruções de inscrição nesta conta gratuita e informações técnicas sobre o funcionamento deste processo."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: 57e7cb922c0701dbe1088d205cfc56a69dcc4e05
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 1134bff1935b3fada661865f31104e0316e8fecd
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -38,7 +39,7 @@ Para se inscrever nesta conta gratuita, efetue o seu pedido ao aceder à [págin
 
     A Microsoft utiliza o seu endereço de e-mail para verificar se a sua organização já tem uma [subscrição paga para o Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) ou uma [subscrição do Office 365 que inclui proteção de dados através do Azure Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Se for esse o caso, não precisa do RMS para indivíduos, pelo que irá iniciar sessão imediatamente e a inscrição self-service para o RMS para indivíduos é cancelada. Se não for encontrada uma subscrição paga, irá continuar para o passo seguinte.
 
-4.  Aguarde que uma mensagem de e-mail de confirmação seja enviada para o endereço que especificou. Esta será enviada pela equipa do Office 365 (support@email.microsoftonline.com) com o assunto **Concluir a sua inscrição no Microsoft Azure Information Protection**.
+4.  Aguarde que uma mensagem de e-mail de confirmação seja enviada para o endereço que especificou. Esta será enviada pela Equipa do Office 365 (support@email.microsoftonline.com) com o assunto **Concluir a sua inscrição no Microsoft Azure Information Protection**.
 
 5.  Quando receber o e-mail, clique em **Sim, sou eu** para verificar o seu endereço de e-mail e concluir o processo de inscrição.
 
@@ -49,7 +50,7 @@ Para se inscrever nesta conta gratuita, efetue o seu pedido ao aceder à [págin
 Agora, a sua conta está criada, está pronto para começar a proteger ficheiros e a ler ficheiros que outros utilizadores protegeram. Se lhe for pedido para iniciar sessão para proteger ou ler ficheiros protegidos, introduza o mesmo endereço de e-mail e palavra-passe que utilizou para criar a conta do RMS para indivíduos.
 
 ## <a name="technical-overview-of-the-sign-up-process"></a>Descrição geral técnica do processo de inscrição
-O RMS para indivíduos utiliza um processo de inscrição self-service que também é utilizado por outros serviços que utilizam a tecnologia baseada na nuvem da Microsoft para autenticar os utilizadores.
+O RMS para indivíduos utiliza um processo de inscrição self-service que também é utilizado por outros serviços que utilizam a tecnologia baseada na cloud da Microsoft para autenticar os utilizadores.
 
 Isto é o que acontece em segundo plano quando um utilizador se inscreve no RMS para indivíduos e a respetiva organização não tem uma subscrição do Office 365 ou do Azure e, por conseguinte, nenhum diretório no Azure para autenticar os utilizadores:
 
@@ -95,8 +96,3 @@ Ao longo deste processo, não é cobrado qualquer valor à organização e não 
 Consulte [Como os administradores podem controlar as contas criadas para o RMS para indivíduos](rms-for-individuals-take-control.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

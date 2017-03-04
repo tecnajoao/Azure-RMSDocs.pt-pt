@@ -1,5 +1,5 @@
 ---
-title: "Registo de utilização e ficheiros do cliente do Azure Information Protection | Azure Information Protection"
+title: "Registo de utilização e de ficheiros do cliente do Azure Information Protection"
 description: "Informações sobre o registo de utilização e ficheiros do cliente do Azure Information Protection para Windows."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: 279e70416248e51dfc2331945b6193aa285c4003
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: a1211af06c24c79cfce262d1f2e1eb8add2724b8
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -89,7 +90,7 @@ Para obter mais informações sobre o registo de utilização do serviço Azure 
 
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 Agora que identificou todos os ficheiros de registo associados ao cliente do Azure Information Protection, veja o seguinte para obter informações adicionais que poderá precisar para suportar este cliente:
 
 
@@ -100,9 +101,4 @@ Agora que identificou todos os ficheiros de registo associados ao cliente do Azu
 - [Comandos do PowerShell](client-admin-guide-powershell.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

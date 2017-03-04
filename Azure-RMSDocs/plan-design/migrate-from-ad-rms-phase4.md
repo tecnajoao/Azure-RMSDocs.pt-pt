@@ -1,5 +1,5 @@
 ---
-title: "Migrar do AD RMS para o Azure Information Protection – Fase 4 | Azure Information Protection"
+title: "Migrar do AD RMS para o Azure Information Protection – fase 4"
 description: "Fase 4 da migração do AD RMS para o Azure Information Protection, abrangendo os passos 8 a 9 de Migrar do AD RMS para o Azure Information Protection."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e45bbfe0fc2b064d987016cac8af8c4f57d465c9
-ms.openlocfilehash: e10b271872935b7903a3e1bcfe2e8287e693c613
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: fc45ae10101460ea46bf2aa599b213a772eb5626
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -29,7 +30,7 @@ Utilize as seguintes informações para a Fase 4 da migração do AD RMS para o 
 
 ## <a name="step-8-decommission-ad-rms"></a>Passo 8. Desativar o AD RMS
 
-Remova o Ponto de Ligação de Serviço (SCP) do Active Directory para impedir que os computadores detetem a sua infraestrutura da Gestão de Direitos no local. Isto é opcional para os clientes existentes que migraram devido ao redirecionamento que foi configurado no registo (por exemplo, ao executar o script de migração). No entanto, remover o SCP impede que novos clientes e potenciais serviços e ferramentas relacionados com o RMS localizem o SCP quando a migração estiver concluída e que todas as ligações sejam ligadas ao serviço do Azure Rights Management. 
+Remova o Ponto de Ligação de Serviço (SCP) do Active Directory para impedir que os computadores detetem a sua infraestrutura da Gestão de Direitos no local. Isto é opcional para os clientes existentes que migraram devido ao redirecionamento que foi configurado no registo (por exemplo, ao executar o script de migração). No entanto, remover o SCP impede que novos clientes e potenciais serviços e ferramentas relacionados com o RMS localizem o SCP quando a migração estiver concluída e que todas as ligações sejam ligadas ao serviço Azure Rights Management. 
 
 Para remover o SCP, garanta que tem sessão iniciada como administrador da empresa do domínio e, em seguida, utilize o seguinte procedimento:
 
@@ -46,7 +47,7 @@ Monitorize a atividade dos seus servidores do AD RMS, por exemplo, ao verificar 
 Após a desativação dos servidores AD RMS, pode aproveitar a oportunidade para rever os modelos no portal clássico do Azure e consolidá-los para que os utilizadores tenham menos por onde escolher, reconfigurá-los ou até adicionar novos modelos. É também uma boa altura para publicar os modelos predefinidos. Para mais informações, consulte [Configurar modelos personalizados para o serviço Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
 ## <a name="step-9-re-key-your-azure-information-protection-tenant-key"></a>Passo 9. Recodificar a chave de inquilino do Azure Information Protection
-Este passo é aplicável apenas se a topologia de chave de inquilino escolhida for gerida pela Microsoft e não pelo cliente (BYOK com o Cofre de Chaves do Azure).
+Este passo é aplicável apenas se a topologia de chave de inquilino escolhida for gerida pela Microsoft e não pelo cliente (BYOK com o Azure Key Vault).
 
 Este passo é opcional, mas recomendado quando a chave de inquilino do Azure Information Protection for gerida pela Microsoft e tiver sido migrada a partir do AD RMS. A recodificação neste cenário ajuda a proteger a chave de inquilino do Azure Information Protection contra potenciais falhas de segurança na chave do AD RMS.
 
@@ -62,9 +63,4 @@ Para mais informações sobre a gestão da chave de inquilino do Azure Informati
 Agora que concluiu a migração, consulte o [plano de implementação](deployment-roadmap.md) para identificar quaisquer outras tarefas de implementação que tenha de efetuar.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

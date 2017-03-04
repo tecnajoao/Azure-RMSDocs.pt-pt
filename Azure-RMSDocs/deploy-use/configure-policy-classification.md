@@ -1,5 +1,5 @@
 ---
-title: "Como configurar as condições para classificação automática e recomendada | Azure Information Protection"
+title: "Configurar condições para uma etiqueta do Azure Information Protection"
 description: "Quando configurar as condições para uma etiqueta, pode atribuir automaticamente uma etiqueta a um documento ou a um e-mail. Em alternativa, pode pedir aos utilizadores que selecionem a etiqueta recomendada."
 author: cabailey
 ms.author: cabailey
@@ -11,8 +11,9 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: fb68fc152e7f1d323cce71e3873475c78f7bbc15
-ms.openlocfilehash: 2178e8257c67ff8272b5cf359d3cccc60e519762
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: fd410002d2841c834f40a98c77534169ca09aa70
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -223,10 +224,5 @@ Para mais informações sobre como configurar a política do Azure Information P
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

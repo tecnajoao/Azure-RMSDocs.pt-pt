@@ -1,5 +1,5 @@
 ---
-title: "Aplicação de partilha Rights Management&colon; instalação e configuração para clientes | Azure Information Protection"
+title: "Aplicação de partilha RMS&colon; instalar e configurar"
 description: "Informações para administradores sobre como implementar a aplicação de partilha Rights Management (RMS) em dispositivos móveis e computadores Windows."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: b9af5dc3-73d4-4147-b7ef-f6803b0d5216
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: cffebd2ac11f78b20b125bfd7eabca83a6ba0363
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: af5541ab5dcec7224d1048121460b58b1ca13c48
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -42,10 +43,5 @@ Já não pode transferir a aplicação de partilha RMS para iOS e Android a part
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

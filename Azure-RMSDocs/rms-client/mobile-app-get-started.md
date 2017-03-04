@@ -1,5 +1,5 @@
 ---
-title: "Introdução à aplicação Azure Information Protection para iOS e Android | Azure Information Protection"
+title: "Introdução à aplicação AIP para iOS e Android"
 description: 
 keywords: "Como ver e-mails ou ficheiros com a aplicação Azure Information Protection para iOS e Android"
 author: cabailey
@@ -14,8 +14,9 @@ ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 47de236f07996eed3f1ceb51309c6315d4625128
-ms.openlocfilehash: 32e0315a8a4e6515b0b89b85afefa1bb17591e0b
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 14f0d3ba1c01f0fd1b68d2b793e2bb5c8ee9906e
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -45,8 +46,3 @@ Se tiver outras perguntas sobre esta aplicação, verifique se estão na secçã
 Para outras questões, aceda ao nosso [site do Yammer](https://www.yammer.com/AskIPTeam) ou [envie um e-mail para a equipa do Information Protection](mailto:askIPteam@microsoft.com?subject=Question%20about%20Azure%20Information%20Protection%20app).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

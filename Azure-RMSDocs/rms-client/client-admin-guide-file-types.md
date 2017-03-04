@@ -1,10 +1,10 @@
 ---
-title: Tipos de ficheiro suportados pelo cliente do Azure Information Protection | Azure Information Protection
+title: Tipos de ficheiro suportados pelo Azure Information Protection
 description: "Detalhes técnicos sobre tipos de ficheiro suportados, extensões de nome de ficheiro e níveis de proteção para administradores responsáveis pelo cliente do Azure Information Protection para Windows."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/09/2017
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid:
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f4503c7383f9ffd9dc7e5cd3c676ec929bdc2802
-ms.openlocfilehash: c556769aa34282063ae10190202a746eee33abe6
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 107bac4e318c08d4fdc6d24fc88a6f7cbe5c0a74
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -92,7 +93,6 @@ Para os ficheiros que são protegidos genericamente, a extensão de nome de fich
 |.tiff|.ptiff|
 |.bmp|.pbmp|
 |.gif|.pgif|
-|.giff|.pgiff|
 |.jpe|.pjpe|
 |.jfif|.pjfif|
 |.jt|.pjt|
@@ -166,7 +166,7 @@ Para ajudar a impedir que os utilizadores alterem os ficheiros que são crítico
 
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 Agora que identificou os tipos de ficheiro suportados pelo cliente do Azure Information Protection, veja o seguinte para obter informações adicionais que poderá precisar para suportar este cliente:
 
 - [Ficheiros de cliente e registo de utilização](client-admin-guide-files-and-logging.md)
@@ -176,9 +176,4 @@ Agora que identificou os tipos de ficheiro suportados pelo cliente do Azure Info
 - [Comandos do PowerShell](client-admin-guide-powershell.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

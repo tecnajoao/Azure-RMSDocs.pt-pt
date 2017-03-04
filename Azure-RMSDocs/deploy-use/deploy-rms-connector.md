@@ -1,5 +1,5 @@
 ---
-title: Implementar o conector do Azure Rights Management | Azure Information Protection
+title: "Implementar o conector Rights Management – AIP"
 description: "Instruções para implementar o conector do RMS, que fornece o serviço de proteção de dados para as implementações no local existentes que utilizam o Exchange Server, o SharePoint Server ou o Windows Server e a Infraestrutura de Classificação de Ficheiros (FCI)."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: 5d33e0a8a9c6efbe937a53ae964b2972bf41580c
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 93246a239476331f8fc117560c8ce45420eea674
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -29,9 +30,9 @@ Utilize estas informações para saber mais sobre o conector Azure Rights Manage
 > Para um cenário geral de exemplo com capturas de ecrã, consulte a secção [Proteger automaticamente ficheiros em servidores de ficheiros a executar o Windows Server e a Infraestrutura de Classificação de Ficheiros](../understand-explore/what-admins-users-see.md#automatically-protecting-files-on-file-servers-running-windows-server-and-file-classification-infrastructure) no artigo [O Azure RMS em ação](../understand-explore/what-admins-users-see.md).
 
 ## <a name="overview-of-the-microsoft-rights-management-connector"></a>Descrição geral do conector Microsoft Rights Management
-O conector Microsoft Rights Management (RMS) permite-lhe ativar rapidamente servidores no local existentes para utilizar a respetiva funcionalidade de Gestão de Direitos de Informação (IRM) com o serviço Microsoft Rights Management (Azure RMS) baseado na nuvem. Com esta funcionalidade, o departamento de TI e os utilizadores podem proteger facilmente documentos e imagens dentro e fora da organização, sem terem de instalar outras infraestruturas ou estabelecer relações de fidedignidade com outras organizações. 
+O conector Microsoft Rights Management (RMS) permite-lhe ativar rapidamente servidores no local existentes para utilizar a respetiva funcionalidade de Gestão de Direitos de Informação (IRM) com o serviço Microsoft Rights Management (Azure RMS) baseado na cloud. Com esta funcionalidade, o departamento de TI e os utilizadores podem proteger facilmente documentos e imagens dentro e fora da organização, sem terem de instalar outras infraestruturas ou estabelecer relações de fidedignidade com outras organizações. 
 
-O conector RMS é um serviço que consome poucos recursos e que se instala no local, em servidores que executem o Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 ou Windows Server 2008 R2. Além de executar o conector em computadores físicos, também pode executá-lo em máquinas virtuais, incluindo VMs IaaS do Azure. Após implementar o conector, este funciona como uma interface comunicações (um reencaminhamento) entre os servidores no local e o serviço em nuvem, conforme apresentado na imagem seguinte. As setas indicam a direção em que são iniciadas as ligações de rede.
+O conector RMS é um serviço que consome poucos recursos e que se instala no local, em servidores que executem o Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 ou Windows Server 2008 R2. Além de executar o conector em computadores físicos, também pode executá-lo em máquinas virtuais, incluindo VMs IaaS do Azure. Após implementar o conector, este funciona como uma interface comunicações (um reencaminhamento) entre os servidores no local e o serviço na cloud, conforme apresentado na imagem seguinte. As setas indicam a direção em que são iniciadas as ligações de rede.
 
 ![Descrição geral da arquitetura do conector RMS](../media/RMS_connector.png)
 
@@ -98,8 +99,3 @@ O conector não verifica automaticamente todos os [pré-requisitos](deploy-rms-c
 Aceda ao Passo 1: [instalar e configurar o conector Azure Rights Management](install-configure-rms-connector.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

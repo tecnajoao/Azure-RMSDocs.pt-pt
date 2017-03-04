@@ -1,5 +1,5 @@
 ---
-title: "Passo 5 do tutorial de início rápido | Azure Information Protection"
+title: "Passo 5 do tutorial de início rápido – AIP"
 description: "Passo 5 de um tutorial de introdução com uma duração de aproximadamente 20 minutos para experimentar rapidamente o Microsoft Azure Information Protection na sua organização."
 keywords: 
 author: cabailey
@@ -14,8 +14,9 @@ ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: 7d8efb8d590e75979c98f14951f2cda389e58c4c
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 351ba4f71ac36194494ed315466522120a61692c
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -79,7 +80,7 @@ Ao clicar em **Inscrever-se**, o Azure Information Protection verifica se a orga
 
 1. Num PC ou dispositivo móvel que tenha o Office instalado, abra o anexo para ler o documento.  
 
-2.  Se lhe for pedido o nome de utilizador e a palavra-passe, introduza o nome de utilizador no mesmo formato que o endereço de e-mail que foi utilizado para lhe enviar a mensagem de e-mail e o anexo. Por exemplo, **janetm@contoso.com** ou **p.dover@fabrikam.com**. Para a palavra-passe, escreva a que especificou quando se inscreveu no RMS para indivíduos. Em alternativa, se a sua organização tiver um serviço em nuvem como o Office 365 ou utilizar o Azure, introduza a palavra-passe profissional habitual.
+2.  Se lhe for pedido o nome de utilizador e a palavra-passe, introduza o nome de utilizador no mesmo formato que o endereço de e-mail que foi utilizado para lhe enviar a mensagem de e-mail e o anexo. Por exemplo, **janetm@contoso.com** ou **p.dover@fabrikam.com**. Para a palavra-passe, escreva a que especificou quando se inscreveu no RMS para indivíduos. Em alternativa, se a sua organização tiver um serviço na cloud como o Office 365 ou utilizar o Azure, introduza a palavra-passe profissional habitual.
 
 3. Leia os conteúdos do documento quando este for aberto. Uma vez que é só de leitura, não é possível alterar os conteúdos.
 
@@ -129,8 +130,3 @@ Experimente partilhar mais documentos e controlar a forma como estão a ser util
 Poderá ser-lhe útil ler algumas das [perguntas mais frequentes](faqs.md) do Azure Information Protection e explorar alguns dos outros artigos da documentação. No entanto, se estiver pronto para iniciar a implementação do Azure Information Protection para a sua organização, o passo seguinte deverá ser o [plano de implementação do Azure Information Protection](../plan-design/deployment-roadmap.md). 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

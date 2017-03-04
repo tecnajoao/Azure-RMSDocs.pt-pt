@@ -1,5 +1,5 @@
 ---
-title: O cliente | Azure Information Protection
+title: O cliente do Azure Information Protection
 description: "O Microsoft Azure Information Protection fornece uma solução de servidor cliente que ajuda a proteger os dados de uma organização. O cliente (o cliente do Azure Information Protection ou o cliente Rights Management) está integrado nas aplicações executadas em computadores e dispositivos móveis."
 author: cabailey
 ms.author: cabailey
@@ -14,8 +14,9 @@ ROBOTS: noindex,nofollow
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 190b5d2a25dc9479aa2ba34fd884795e0de40238
-ms.openlocfilehash: f52f3e04f41e33828bd9a9c5c1aad3ef460b2d23
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 5b17d639382238ce4669bc02beadb80570b5ca6f
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -28,7 +29,7 @@ O Azure Information Protection fornece uma solução de servidor cliente que aju
 
 - O cliente pode ser o cliente do Azure Information Protection ou do Rights Management e está integrado nas aplicações executadas em computadores e dispositivos móveis. 
 
-- O serviço reside na nuvem (Azure Information Protection, que utiliza o serviço Azure Rights Management para a proteção de dados) ou no local (Serviços de Gestão de Direitos do Active Directory). 
+- O serviço reside na cloud (Azure Information Protection, que utiliza o serviço Azure Rights Management para a proteção de dados) ou no local (Serviços de Gestão de Direitos do Active Directory). 
 
 O cliente do Azure Information Protection suporta classificação e etiquetagem, bem como proteção. Este cliente está integrado nas aplicações do Office e tem de ser instalado em separado.
 
@@ -51,8 +52,3 @@ Note que a aplicação de partilha Rights Management para Windows e a Ferramenta
 [Comparar o Azure Information Protection e o AD RMS](../understand-explore/compare-azure-rms-ad-rms.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

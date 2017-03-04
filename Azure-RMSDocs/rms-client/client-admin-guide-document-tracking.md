@@ -1,5 +1,5 @@
 ---
-title: Configurar e utilizar o controlo de documentos do Azure Information Protection | Azure Information Protection
+title: Controlo de documentos do Azure Information Protection
 description: "Instruções e informações para os administradores configurarem e utilizarem o controlo de documentos do Azure Information Protection."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 569c60d502ddcf3169ec0955a76312a50451ec72
-ms.openlocfilehash: a50a358f6552eb4ddd4cde982f2aa01504c1d555
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: aa3b80b7369348f87adc440d6f7a91977aa0fc7c
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -75,7 +76,7 @@ Para obter mais informações sobre o registo de utilização, consulte [Regista
 
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 Agora que configurou o site de controlo de documentos do cliente do Azure Information Protection, veja o seguinte para obter informações adicionais que poderá precisar para suportar este cliente:
 
 - [Ficheiros de cliente e registo de utilização](client-admin-guide-files-and-logging.md)
@@ -85,9 +86,4 @@ Agora que configurou o site de controlo de documentos do cliente do Azure Inform
 - [Comandos do PowerShell](client-admin-guide-powershell.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

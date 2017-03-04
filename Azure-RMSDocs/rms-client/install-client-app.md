@@ -1,10 +1,10 @@
 ---
-title: Transferir e instalar o cliente do Azure Information Protection | Azure Information Protection
+title: Transferir e instalar o cliente do Azure Information Protection
 description: "Instruções para os utilizadores instalarem o cliente do Azure Information Protection para Windows, para que possa classificar e proteger os seus documentos e e-mails."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 633f3dfe12828a21943bb5faf6ad9f69b98fc70b
-ms.openlocfilehash: 303ca72fa8753e417b4a06b4cad475559295eb2a
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 37bddeed5b81ce1cd6b881db0b71345bcf4cad49
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -31,19 +32,22 @@ Além disso:
 
 ## <a name="to-download-and-install-the-azure-information-protection-client"></a>Para transferir e instalar o cliente do Azure Information Protection    
 
-1.  Aceda à página do [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) no Web site da Microsoft.    
-2. Clique no ícone do Windows para o **cliente do Azure Information Protection** e guarde o ficheiro **AzInfoProtection.exe** para instalar o cliente do Azure Information Protection.     
+1.  Aceda à página do [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) no Web site da Microsoft.
 
-2. Faça duplo clique no ficheiro executável transferido. Se lhe for pedido para continuar, clique em **Sim**.    
+    Esta página tem ligações para todos os dispositivos populares que poderá utilizar, para poder transferir facilmente uma aplicação de visualização, se for necessária para abrir os ficheiros protegidos. No entanto, iremos instalar o cliente completo, que lhe permite identificar e proteger ficheiros. 
 
-3. Na página **Instalar o cliente do Azure Information Protection**:     
-    - Selecione a opção para instalar uma política de demonstração se não puder ligar-se à nuvem, mas pretender ver e experimentar o lado do cliente do Azure Information Protection com uma política local para efeitos de demonstração. Quando o cliente se liga a um serviço do Azure Information Protection, esta política de demonstração é substituída pela política do Azure Information Protection da organização.    
+2. Localize a secção **cliente do Azure Information Protection** e clique no ícone do Windows. Clique em **Transferir** e guarde o ficheiro **AzInfoProtection.exe**.     
+
+3. Execute o ficheiro executável que foi transferido. Se lhe for pedido para continuar, clique em **Sim**.    
+
+4. Na página **Instalar o cliente do Azure Information Protection**:     
+    - Selecione a opção para instalar uma política de demonstração se não puder ligar-se à cloud, mas pretender ver e experimentar o lado do cliente do Azure Information Protection com uma política local para efeitos de demonstração. Quando o cliente se liga a um serviço Azure Information Protection, esta política de demonstração é substituída pela política do Azure Information Protection da organização.    
 
     - Clique em **Concordo** quando tiver lido os termos e as condições de licenciamento.    
 
-4. Se lhe for pedido para continuar, clique em **Sim**e aguarde a conclusão da instalação.    
+5. Se lhe for pedido para continuar, clique em **Sim**e aguarde a conclusão da instalação.    
 
-3. Clique em **Fechar**. Antes de começar a utilizar o cliente do Azure Information Protection:    
+6. Clique em **Fechar**. Antes de começar a utilizar o cliente do Azure Information Protection:    
 
     - Se o computador estiver a executar o Office 2010, reinicie o computador e, em seguida, avance para a próxima secção para o seu passo final.    
         
@@ -69,9 +73,4 @@ Veja [Como instalar o cliente do Azure Information Protection para os utilizador
  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

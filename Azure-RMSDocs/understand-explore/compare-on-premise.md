@@ -1,5 +1,5 @@
 ---
-title: Comparar o Azure Information Protection e o AD RMS | Azure Information Protection
+title: Comparar o Azure Information Protection e o AD RMS
 description: "Se conhecer ou se tiver implementado anteriormente os Serviços de Gestão de Direitos do Active Directory (AD RMS), é possível que se pergunte como o Azure Information Protection se compara em termos de funcionalidade e requisitos."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: 1357e2d4f2065f02209b861d00eab133039e2c5a
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: d0027fa04824b0c1172ef21da4736895965925d7
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -27,9 +28,9 @@ Se conhecer ou se tiver implementado anteriormente os Serviços de Gestão de Di
 
 Algumas das diferenças principais do Azure Information Protection:
 
-- **Não é necessária nenhuma infraestrutura de servidor**: o Azure Information Protection não necessita dos servidores adicionais e dos certificados PKI de que o AD RMS necessita, porque o Microsoft Azure trata disso por si. Isto torna a solução em nuvem mais rápida de implementar e mais fácil de manter.
+- **Não é necessária nenhuma infraestrutura de servidor**: o Azure Information Protection não necessita dos servidores adicionais e dos certificados PKI de que o AD RMS necessita, porque o Microsoft Azure trata disso por si. Isto torna a solução na cloud mais rápida de implementar e mais fácil de manter.
 
-- **Autenticação baseada na nuvem**: o Azure Information Protection utiliza o Azure AD para autenticação – tanto para utilizadores internos como para utilizadores de outras organizações. Isto significa que os utilizadores móveis podem ser autenticados mesmo quando não estiverem ligados à sua rede interna e que é mais fácil partilhar conteúdo protegido com utilizadores de outras organizações. Muitas organizações já possuem contas de utilizador no Azure AD porque executam serviços do Azure ou possuem o Office 365. Caso contrário, o RMS para indivíduos permite que os utilizadores criem uma conta gratuita. A partilha de conteúdo protegido pelo AD RMS com outra organização exige que configure fidedignidades explícitas com cada organização.
+- **Autenticação baseada na cloud**: o Azure Information Protection utiliza o Azure AD para autenticação – tanto para utilizadores internos como para utilizadores de outras organizações. Isto significa que os utilizadores móveis podem ser autenticados mesmo quando não estiverem ligados à sua rede interna e que é mais fácil partilhar conteúdo protegido com utilizadores de outras organizações. Muitas organizações já possuem contas de utilizador no Azure AD porque executam serviços do Azure ou possuem o Office 365. Caso contrário, o RMS para indivíduos permite que os utilizadores criem uma conta gratuita. A partilha de conteúdo protegido pelo AD RMS com outra organização exige que configure fidedignidades explícitas com cada organização.
 
 - **Suporte incorporado para dispositivos móveis**: não são necessárias alterações de implementação para que o Azure RMS suporte dispositivos móveis e computadores Mac. Para suportar estes dispositivos com o AD RMS, tem de instalar a extensão de dispositivo móvel, configurar o AD FS para federação e criar registos adicionais para o seu serviço DNS público.
 
@@ -42,7 +43,7 @@ Algumas das diferenças principais do Azure Information Protection:
 - **Classificação e etiquetagem**: o Azure Information Protection suporta estas funcionalidades com o cliente do Azure Information Protection que está integrado nas aplicações do Office e no Explorador de Ficheiros, ao passo que o AD RMS não.
 
 
-Além disso, uma vez que o Azure Information Protection é um serviço em nuvem, pode disponibilizar novas funcionalidades e correções mais rapidamente do que uma solução baseada num servidor no local. Não existem quaisquer funcionalidades novas planeadas para o AD RMS no Windows Server 2016.
+Além disso, uma vez que o Azure Information Protection é um serviço na cloud, pode disponibilizar novas funcionalidades e correções mais rapidamente do que uma solução baseada num servidor no local. Não existem quaisquer funcionalidades novas planeadas para o AD RMS no Windows Server 2016.
 
 Para obter mais detalhes e outras diferenças, utilize a seguinte tabela para ver uma comparação lado a lado das funcionalidades e vantagens do Azure Information Protection e do AD RMS. Se tiver dúvidas de comparação específicas em relação à segurança, consulte a secção [Controlos criptográficos para assinatura e encriptação](#cryptographic-controls-for-signing-and-encryption) neste artigo.
 
@@ -75,10 +76,5 @@ O Azure Information Protection está em conformidade com FIPS 140-2 se a sua cha
 Se quer migrar do AD RMS para o Azure Information Protection, consulte [Migrar do AD RMS para o Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

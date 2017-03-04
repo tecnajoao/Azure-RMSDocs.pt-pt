@@ -1,5 +1,5 @@
 ---
-title: "Ajudar os utilizadores a proteger ficheiros com o serviço Azure Rights Management | Azure Information Protection"
+title: "Ajudar os utilizadores a proteger ficheiros com o Azure RMS – AIP"
 description: "Informações para fornecer orientações a utilizadores, administradores e suporte técnico após ter implementado e configurado o serviço Azure Rights Management do Azure Information Protection."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4cdac14d3a77ea7bcce23b914bc3be0a1f46d2b5
-ms.openlocfilehash: 0af15bf3238d020b1ee45b45bc780256c88b5e55
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 61f7a7208b13a28f2e8cfb85489cceb2a2caf077
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -109,10 +110,5 @@ Tal como na visualização de um documento protegido, quando os destinatários r
 Tal como na visualização de um documento protegido, quando os destinatários recebem a mensagem de e-mail, primeiro são autenticados. Se estiverem autorizados a ver a mensagem de e-mail, esta abre-se com os direitos de utilização restrita que foram especificados para esse utilizador. Por exemplo, se tiver selecionado **Não Responder a Todos**, a opção **RESPONDER A TODOS** na janela da mensagem não está disponível.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

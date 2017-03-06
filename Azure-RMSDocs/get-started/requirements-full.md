@@ -1,10 +1,10 @@
 ---
-title: "Requisitos do Azure Information Protection – Artigo completo| Azure Information Protection"
+title: "Requisitos para o Azure Information Protection – artigo completo"
 description: "Identifique os pré-requisitos para implementar o Azure Information Protection para a sua organização."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 10cf9371-a61b-495f-9d42-898448806994
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: a71123cd055052e6e4a372a945727063b7c2d666
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 94259046ed2eb78bce9d7ce49a4dc3b9c99d55c3
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -50,7 +51,7 @@ Para obter informações sobre os requisitos adicionais para este cenário, cons
 > 
 > -   Executar o AD RMS e o Azure RMS lado a lado na mesma organização, exceto durante a migração, conforme descrito em [Migrar do AD RMS para o Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 > 
-> Existe um caminho de migração suportado [do AD RMS para o Azure Information Protection](http://technet.microsoft.com/library/Dn858447.aspx) e do [Azure Information Protection para o AD RMS](http://msdn.microsoft.com/library/azure/dn629429.aspx). Se implementar o Azure Information Protection e, em seguida, decidir que já não quer utilizar este serviço em nuvem, consulte [Encerrar e desativar o Azure Information Protection](../deploy-use/decommission-deactivate.md).
+> Existe um caminho de migração suportado [do AD RMS para o Azure Information Protection](http://technet.microsoft.com/library/Dn858447.aspx) e do [Azure Information Protection para o AD RMS](http://msdn.microsoft.com/library/azure/dn629429.aspx). Se implementar o Azure Information Protection e, em seguida, decidir que já não quer utilizar este serviço na cloud, consulte [Encerrar e desativar o Azure Information Protection](../deploy-use/decommission-deactivate.md).
 
 ## <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Requisitos do Azure Active Directory para o Azure Information Protection
 
@@ -90,7 +91,7 @@ Em seguida, configure a sua solução de MFA:
 
 -   Para inquilinos geridos pela Microsoft (que possuem o Azure Active Directory ou Office 365):
 
-    -   Configure a Azure MFA para impor a MFA aos utilizadores. Para obter instruções, consulte [Introdução à Multi-Factor Authentication do Azure na nuvem](/multi-factor-authentication/multi-factor-authentication-get-started-cloud) na documentação da Multi-factor Authentication.
+    -   Configure a Azure MFA para impor a MFA aos utilizadores. Para obter instruções, consulte [Introdução à Multi-Factor Authentication do Azure na cloud](/multi-factor-authentication/multi-factor-authentication-get-started-cloud) na documentação da Multi-factor Authentication.
 
         Para obter mais informações acerca da Azure MFA, consulte [O que é a Multi-Factor Authentication do Azure?](/multi-factor-authentication/multi-factor-authentication)
 
@@ -286,9 +287,4 @@ O conector Rights Management é suportado no Windows Server 2012 R2, Windows Se
 Para mais informações sobre como configurar o conector Rights Management para estes servidores no local, consulte [Implementar o conector do Azure Rights Management](../deploy-use/deploy-rms-connector.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

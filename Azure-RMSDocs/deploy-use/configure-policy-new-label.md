@@ -4,7 +4,7 @@ description: "Apesar do Azure Information Protection ter etiquetas predefinidas 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -37,8 +37,7 @@ Utilize as seguintes instruções para adicionar uma nova etiqueta à política 
     - Para criar uma nova etiqueta: clique em **Adicionar uma nova etiqueta**.
 
     - Para criar uma nova etiqueta secundária: faça duplo clique ou selecione o menu de contexto (**…**) da etiqueta para a qual pretende criar uma etiqueta secundária e, em seguida, clique em **Adicionar uma etiqueta secundária**.
-
-
+    
      Se a nova etiqueta que pretende adicionar for incluída numa [política de âmbito](configure-policy-scope.md) para ser aplicada apenas a utilizadores selecionados, selecione primeiro essa política de âmbito no painel inicial do **Azure Information Protection**.
 
 3. No painel **Etiqueta** ou **Etiqueta secundária**, selecione as opções que pretende para esta nova etiqueta e, em seguida, clique em **Guardar**.

@@ -4,7 +4,7 @@ description: "Instruções para os utilizadores instalarem o cliente do Azure In
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/17/2017
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 37bddeed5b81ce1cd6b881db0b71345bcf4cad49
+ms.sourcegitcommit: 92ad7198aad17664062b8d007fa95524fe535443
+ms.openlocfilehash: d4820070aff013b42ee49f4c7b81e78ffbc7a049
 ms.lasthandoff: 02/24/2017
 
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 02/24/2017
 
 # <a name="download-and-install-the-azure-information-protection-client"></a>Transferir e instalar o cliente do Azure Information Protection
 
-Se o seu administrador não lhe instalar o Azure Information Protection, pode fazê-lo por si mesmo. Tem de ser um administrador local no seu PC para instalar este cliente. 
+Se o seu administrador não lhe instalar o Azure Information Protection, pode fazê-lo por si mesmo. Tem de ser administrador local do seu PC para instalar este cliente, de forma a que o mesmo possa etiquetar e proteger os seus documentos e e-mails.
 
 Além disso:
 
@@ -34,7 +34,7 @@ Além disso:
 
 1.  Aceda à página do [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) no Web site da Microsoft.
 
-    Esta página tem ligações para todos os dispositivos populares que poderá utilizar, para poder transferir facilmente uma aplicação de visualização, se for necessária para abrir os ficheiros protegidos. No entanto, iremos instalar o cliente completo, que lhe permite identificar e proteger ficheiros. 
+    Esta página tem ligações para todos os dispositivos populares que poderá utilizar, para poder transferir facilmente uma aplicação de visualização, se for necessária para abrir os ficheiros protegidos. Se não for administrador local do seu PC, pode sempre instalar a aplicação de visualizador para Windows. No entanto, estas instruções são para instalar o cliente completo, o qual lhe permite etiquetar e proteger ficheiros. 
 
 2. Localize a secção **cliente do Azure Information Protection** e clique no ícone do Windows. Clique em **Transferir** e guarde o ficheiro **AzInfoProtection.exe**.     
 

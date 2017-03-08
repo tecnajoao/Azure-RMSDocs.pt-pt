@@ -4,16 +4,16 @@ description: "Pode proteger os seus documentos e e-mails mais confidenciais ao c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2017
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: cd0fa432bbec97b39e7c32f0b40594840d57fb04
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5bc117cbff3226a2ee0ff375f0aa02fc3232a183
+ms.openlocfilehash: ed6bd63a945b73b792bcafcdc0d07e08e83fc344
+ms.lasthandoff: 02/27/2017
 
 
 ---
@@ -38,12 +38,12 @@ Quando um documento ou correio eletrónico está protegido pelo Azure Rights Man
 
 - A lista de preços atual enviada para os parceiros de negócios não pode ser aberta após uma data especificada.
 
-Para mais informações sobre os modelos do Azure Rights Management e como configurar estes direitos e restrições de utilização, consulte [Configurar modelos personalizados para o serviço Azure Rights Management](../deploy-use/configure-custom-templates.md).
+Para mais informações sobre os modelos do Azure Rights Management e como configurar estes direitos e restrições de utilização, veja [Configurar modelos personalizados para o serviço Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
-Para mais informações sobre o Azure Rights Management e para saber como funciona, consulte [O que é o Azure Rights Management?](../understand-explore/what-is-azure-rms.md)
+Para mais informações sobre o Azure Rights Management e para saber como funciona, veja [O que é o Azure Rights Management?](../understand-explore/what-is-azure-rms.md)
 
 > [!IMPORTANT]
-> Para configurar uma etiqueta de modo a aplicar a proteção do Azure Rights Management, o serviço Azure Rights Management tem de ser ativado para a organização. Se ainda não o fez, consulte [Ativar o Azure Rights Management](../deploy-use/activate-service.md).
+> Para configurar uma etiqueta de modo a aplicar a proteção do Azure Rights Management, o serviço Azure Rights Management tem de ser ativado para a organização. Se ainda não o fez, veja [Ativar o Azure Rights Management](../deploy-use/activate-service.md).
 
 Os utilizadores podem aplicar etiquetas no Outlook para protegerem os seus e-mails mesmo que o Exchange não esteja configurado para a gestão de direitos de informação (IRM). No entanto, até que o Exchange seja configurado para IRM, não tem acesso a todas as funcionalidades associadas à utilização da proteção do Azure Rights Management com o Exchange. Por exemplo, os utilizadores não podem ver e-mails protegidos no telemóvel ou com o Outlook Web Access, não é possível indexar os e-mails protegidos para pesquisa e não pode configurar o Exchange Online DLP para a proteção de gestão de direitos. Para configurar o Exchange para suportar estes cenários adicionais, veja os seguintes recursos:
 
@@ -74,11 +74,11 @@ Os utilizadores podem aplicar etiquetas no Outlook para protegerem os seus e-mai
         
         Se os utilizadores não tiverem permissões para remover a proteção do Rights Management e selecionarem uma etiqueta configurada com a opção **Remover Proteção**, verão a seguinte mensagem: **O Azure Information Protection não pode aplicar esta etiqueta. Se este problema persistir, contacte o seu administrador.**
 
-5. Se selecionou **Proteger**, selecione agora **Proteção** para abrir o painel **Permissões**:
+5. Se selecionou **Proteger**, agora selecione **Proteção** para abrir o painel **Proteção**:
     
     ![Configurar a proteção para uma etiqueta do Azure Information Protection](../media/info-protect-protection-bar.png)
 
-6. No painel **Permissões**, selecione **Azure RMS** ou **HYOK (AD RMS)**. 
+6. No painel **Proteção**, selecione **Azure RMS** ou **HYOK (AD RMS)**. 
     
     Na maioria dos casos, irá selecionar **Azure RMS** para as definições de permissão. Não selecione **HYOK (AD RMS)**, a menos que tenha lido e compreendido os pré-requisitos e as restrições que acompanham esta configuração de "*tenha a sua própria chave*" (HYOK). Para obter mais informações, veja [Requisitos e restrições de Tenha a sua própria chave (HYOK) para proteção do AD RMS](configure-adrms-restrictions.md). Para continuar a configuração para HYOK (AD RMS), avance para o passo 9.
     
@@ -94,7 +94,7 @@ Os utilizadores podem aplicar etiquetas no Outlook para protegerem os seus e-mai
             
 9. Se tiver selecionado **Selecionar modelo** para **HYOK (AD RMS)**: forneça o GUID do modelo e o URL de licenciamento do cluster do AD RMS. [Mais informações](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label)
 
-10. Clique em **Concluído** para fechar o painel **Permissões** e ver a sua escolha de **Não reencaminhar** ou o modelo que escolheu apresentado para a opção **Proteção** do painel **Etiqueta**.
+10. Clique em **OK** para fechar o painel **Proteção** e ver a sua opção **Não reencaminhar** ou a apresentação do modelo selecionado da opção **Proteção** no painel **Etiqueta**.
 
 10. No painel **Etiqueta**, clique em **Guardar**.
 

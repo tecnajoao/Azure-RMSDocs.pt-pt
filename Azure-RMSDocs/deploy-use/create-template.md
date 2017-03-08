@@ -4,7 +4,7 @@ description: "Instruções para criar e gerir modelos personalizados no portal c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: ebc0ad13952f2036f997fc5ba9207f02d1571021
+ms.sourcegitcommit: 11971a176b9c5f413bbe6daa208c062a131343be
+ms.openlocfilehash: 5ab725294d93540f35c395eca08f5f3fbc6ae392
 ms.lasthandoff: 02/24/2017
 
 
@@ -41,7 +41,7 @@ Utilize os seguintes procedimentos para criar, configurar e publicar modelos per
         1.  Na secção **configuração adicional**, clique em **funcionalidades avançadas**.
 
             > [!NOTE]
-            > Se o serviço Rights Management não estiver ativado, primeiro clique em **Ativar** e confirme a ação. Para mais informações, consulte [Activating Azure Rights Management (Ativar o Azure Rights Management – em inglês)](activate-service.md).
+            > Se o serviço Rights Management não estiver ativado, primeiro clique em **Ativar** e confirme a ação. Para obter mais informações, veja [Ativar o Azure Rights Management](activate-service.md).
             > 
             > Se não clicou em **funcionalidades avançadas** anteriormente, depois de o Rights Management ser ativado, siga as instruções no ecrã para obter uma subscrição gratuita do Azure, pois é necessária para aceder ao portal clássico do Azure.
 
@@ -58,7 +58,7 @@ Utilize os seguintes procedimentos para criar, configurar e publicar modelos per
         4.  Se ainda não ativou o Rights Management, primeiro clique em **ATIVAR** e confirme a ação.
 
             > [!NOTE]
-            > Para mais informações, consulte [Activating Azure Rights Management (Ativar o Azure Rights Management – em inglês)](activate-service.md).
+            > Para obter mais informações, veja [Ativar o Azure Rights Management](activate-service.md).
 
 2.  Criar um novo modelo:
 
@@ -81,7 +81,9 @@ Utilize os seguintes procedimentos para criar, configurar e publicar modelos per
     > [!NOTE]
     > Os utilizadores ou grupos que selecionou têm de possuir um endereço de e-mail. Num ambiente de produção, este será quase sempre o caso, mas num ambiente de teste simples poderá ter de adicionar endereços de e-mail às contas de utilizador ou grupos.
 
-    De acordo com as melhores práticas, utilize grupos em vez de utilizadores, pois simplifica a gestão dos modelos. Se tiver o Active Directory no local e estiver a sincronizar com o Azure AD, pode utilizar grupos com capacidade de correio (grupos de segurança ou grupos de distribuição). No entanto, se quiser conceder direitos a todos os utilizadores na organização, será mais eficiente copiar um dos modelos predefinidos, em vez de especificar múltiplos grupos. Para mais informações, consulte [Como copiar um modelo](copy-template.md).
+    De acordo com as melhores práticas, utilize grupos em vez de utilizadores, pois simplifica a gestão dos modelos. No entanto, se fizer alterações ao grupo, tenha em atenção que, por motivos de desempenho, o Azure Rights Management [coloca a associação do grupo em cache](../plan-design/prepare.md#group-membership-caching). 
+    
+    Se tiver o Active Directory no local e estiver a sincronizar com o Azure AD, pode utilizar grupos com capacidade de correio (grupos de segurança ou grupos de distribuição). Para conceder direitos a todos os utilizadores na organização, um método mais eficiente será copiar um dos modelos predefinidos em vez de especificar múltiplos grupos. Para mais informações, veja [Como copiar um modelo](copy-template.md).
 
     > [!TIP]
     > Pode adicionar utilizadores fora da sua organização ("utilizadores externos") ao modelo selecionando um grupo com capacidade de correio que contém os contactos do Office 365 ou Exchange Online. Isto permite-lhe atribuir direitos a estes utilizadores da mesma forma que pode atribuir direitos aos utilizadores na sua organização. Por exemplo, pode impedir os clientes de editar uma lista de preços que lhes enviou. Não utilize esta configuração de modelo para proteger e-mails se os utilizadores fora da sua organização forem ler os e-mails protegidos utilizando o Outlook Web App.
@@ -93,7 +95,7 @@ Utilize os seguintes procedimentos para criar, configurar e publicar modelos per
 
 3.  Clique no botão Seguinte e atribua um dos direitos indicados aos seus utilizadores e grupos selecionados.
 
-    Utilize a descrição apresentada para obter mais informações sobre cada direito (e para direitos personalizados). Também estão disponíveis mais informações detalhadas no tópico [Configurar direitos de utilização para o Azure Rights Management](configure-usage-rights.md). No entanto, a forma como as aplicações que suportam o Rights Management implementam estes direitos pode variar. Consulte a respetiva documentação e faça os seus próprios testes com as aplicações que os utilizadores usam para verificar o comportamento antes de implementar o modelo para os utilizadores. Para tornar este modelo visível apenas para os administradores no âmbito deste teste, torne o modelo num modelo departamental (passo 6).
+    Utilize a descrição apresentada para obter mais informações sobre cada direito (e para direitos personalizados). Também estão disponíveis mais informações detalhadas no tópico [Configurar direitos de utilização para o Azure Rights Management](configure-usage-rights.md). No entanto, a forma como as aplicações que suportam o Rights Management implementam estes direitos pode variar. Veja a respetiva documentação e faça os seus próprios testes com as aplicações que os utilizadores usam para verificar o comportamento antes de implementar o modelo para os utilizadores. Para tornar este modelo visível apenas para os administradores no âmbito deste teste, torne o modelo num modelo departamental (passo 6).
 
 4.  Se tiver selecionado **Personalizado**, clique no botão Seguinte e selecione esses direitos personalizados.
 
@@ -158,9 +160,9 @@ Para fazer alterações ao seu modelo, selecione-o e, em seguida, utilize os pas
 -   Para fazer outras alterações de configuração: clique em **CONFIGURAR**, faça as alterações pretendidas e, em seguida, clique em **GUARDAR**.
 
 > [!WARNING]
-> Quando fizer alterações a um modelo que foi guardado anteriormente, os clientes não irão ver essas alterações feitas ao modelo até que os modelos sejam atualizados nos respetivos computadores. Para mais informações, consulte [Atualizar modelos para os utilizadores](refresh-templates.md).
+> Quando fizer alterações a um modelo que foi guardado anteriormente, os clientes não irão ver essas alterações feitas ao modelo até que os modelos sejam atualizados nos respetivos computadores. Para mais informações, veja [Atualizar modelos para os utilizadores](refresh-templates.md).
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 [Configurar modelos personalizados para o Azure Rights Management](configure-custom-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

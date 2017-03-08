@@ -4,7 +4,7 @@ description: "Informações e instruções sobre como utilizar os registos de ut
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,9 +13,9 @@ ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 89c0cae4b0549a0dd86ede26ef3eed0f09200419
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 17824b007444e9539ffc0374bf39f0984efa494c
+ms.openlocfilehash: 5deea0dce593aae09c498e8b6696205890e9f232
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -64,11 +64,11 @@ O serviço Azure Rights Management escreve registos na sua conta de armazenament
 
 Após uma ação do Azure Rights Management, os registos poderão demorar algum tempo a serem apresentados na sua conta de armazenamento. A maioria dos registos é apresentada no espaço de 15 minutos. Recomendamos que transfira os registos para o armazenamento local, por exemplo para uma pasta local, uma base de dados ou um repositório MapReduce.
 
-Para transferir os seus registos de utilização, deverá utilizar o módulo de administração do Azure Rights Management para o Windows PowerShell. Para obter instruções de instalação, consulte [Installing Windows PowerShell for Azure Rights Management (Instalar o Windows PowerShell para o Azure Rights Management – em inglês)](install-powershell.md). Caso já tenha transferido este módulo do Windows PowerShell, execute o seguinte comando para verificar se o seu número de versão é **2.4.0.0** ou posterior: `(Get-Module aadrm -ListAvailable).Version` 
+Para transferir os seus registos de utilização, deverá utilizar o módulo de administração do Azure Rights Management para o Windows PowerShell. Para obter instruções de instalação, veja [Installing Windows PowerShell for Azure Rights Management (Instalar o Windows PowerShell para o Azure Rights Management – em inglês)](install-powershell.md). Caso já tenha transferido este módulo do Windows PowerShell, execute o seguinte comando para verificar se o seu número de versão é **2.4.0.0** ou posterior: `(Get-Module aadrm -ListAvailable).Version` 
 
 ### <a name="to-download-your-usage-logs-by-using-powershell"></a>Para transferir os seus registos de utilização através do PowerShell
 
-1.  Inicie o Windows PowerShell com a opção **Executar como administrador** e utilize o cmdlet [Connect-AadrmService](https://msdn.microsoft.com/library/azure/dn629415.aspx) para efetuar uma ligação ao serviço Azure Rights Management:
+1.  Inicie o Windows PowerShell com a opção **Executar como administrador** e utilize o cmdlet [Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) para efetuar uma ligação ao serviço Azure Rights Management:
 
     ```
     Connect-AadrmService
@@ -101,7 +101,7 @@ Por predefinição, este cmdlet utiliza três threads para transferir os registo
 #### <a name="if-you-manually-enabled-azure-rights-management-usage-logging-before-the-logging-change-february-22-2016"></a>Se ativou manualmente o registo da utilização do Azure Rights Management antes da alteração do registo de 22 de fevereiro de 2016
 
 
-Se utilizou o registo da utilização antes da alteração do registo, terá registos de utilização na sua conta de armazenamento do Azure configurada. A Microsoft não copiará estes registos da sua conta de armazenamento para a nova conta de armazenamento gerida pelo Azure Rights Management como parte desta alteração de registo. Você é responsável por gerir o ciclo de vida dos registos gerados anteriormente e pode utilizar o cmdlet [Get-AadrmUsageLog](https://msdn.microsoft.com/library/dn629401.aspx) para transferir os registos antigos. Por exemplo:
+Se utilizou o registo da utilização antes da alteração do registo, terá registos de utilização na sua conta de armazenamento do Azure configurada. A Microsoft não copiará estes registos da sua conta de armazenamento para a nova conta de armazenamento gerida pelo Azure Rights Management como parte desta alteração de registo. Você é responsável por gerir o ciclo de vida dos registos gerados anteriormente e pode utilizar o cmdlet [Get-AadrmUsageLog](/powershell/aadrm/vlatest/get-aadrmusagelog) para transferir os registos antigos. Por exemplo:
 
 - Para transferir todos os registos disponíveis para a sua pasta E:\logs: `Get-AadrmUsageLog -Path "E:\Logs"`
     
@@ -146,13 +146,15 @@ Cada uma das linhas subsequentes é um registo. Os valores dos campos estão na 
 |result|Cadeia|'Êxito' se o pedido tiver sido servido com êxito.<br /><br />O tipo de erro entre plicas se o pedido tiver falhado.|'Êxito'|
 |correlation-id|Texto|GUID que é comum entre o registo de cliente do RMS e o registo do servidor para um determinado pedido.<br /><br />Este valor pode ser útil para ajudar na resolução de problemas do cliente.|cab52088-8925-4371-be34-4b71a3112356|
 |content-id|Texto|GUID, entre chavetas, que identifica os conteúdos protegidos (por exemplo, um documento).<br /><br />Este campo só terá um valor se o request-type for AcquireLicense e estiver em branco para todos os outros tipos de pedido.|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
-|owner-email|Cadeia|Endereço de e-mail do proprietário do documento.|alice@contoso.com|
-|issuer|Cadeia|Endereço de e-mail do emissor do documento.|alice@contoso.com (ou) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
-|template-id|Cadeia|ID do modelo utilizado para proteger o documento.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|file-name|Cadeia|Nome de ficheiro do documento que foi protegido. <br /><br />Atualmente, alguns ficheiros (como documentos do Office) são apresentados como GUIDs em vez do nome de ficheiro real.|DocumentoConfidencial.docx|
-|date-published|Data|Data em que o ficheiro foi protegido.|2015-10-15T21:37:00|
+|owner-email|Cadeia|Endereço de e-mail do proprietário do documento.<br /><br /> Este campo fica em branco se o tipo de pedido for RevokeAccess.|alice@contoso.com|
+|issuer|Cadeia|Endereço de e-mail do emissor do documento. <br /><br /> Este campo fica em branco se o tipo de pedido for RevokeAccess.|alice@contoso.com (ou) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
+|template-id|Cadeia|ID do modelo utilizado para proteger o documento. <br /><br /> Este campo fica em branco se o tipo de pedido for RevokeAccess.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
+|file-name|Cadeia|Nome de ficheiro do documento que foi protegido. <br /><br />Atualmente, alguns ficheiros (como documentos do Office) são apresentados como GUIDs em vez do nome de ficheiro real.<br /><br /> Este campo fica em branco se o tipo de pedido for RevokeAccess.|DocumentoConfidencial.docx|
+|date-published|Data|Data em que o ficheiro foi protegido.<br /><br /> Este campo fica em branco se o tipo de pedido for RevokeAccess.|2015-10-15T21:37:00|
 |c-info|Cadeia|Informações sobre a plataforma de cliente que está a efetuar o pedido.<br /><br />A cadeia específica varia em função da aplicação (por exemplo, do sistema operativo ou do browser).|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|Endereço|Endereço IP do cliente que efetua o pedido.|64.51.202.144|
+|admin-action|Booleano|Indica se um administrador acedeu ao site de controlo de documentos no modo de Administrador.|Verdadeiro|
+|acting-as-user|Cadeia|O endereço de e-mail do utilizador pelo qual o administrador está a aceder ao site de controlo de documentos. |'joe@contoso.com'|
 
 
 #### <a name="exceptions-for-the-user-id-field"></a>Exceções para o campo user-id
@@ -235,7 +237,7 @@ Antes desta alteração, para os registos de utilização do Azure Rights Manage
 
 Se, no seu armazenamento do Azure, tiver registos criados em datas anteriores à da alteração do registo do Azure Rights Management, pode transferi-los com os cmdlets mais antigos Get-AadrmUsageLog e Get-AadrmUsageLogLastCounterValue, tal como faria anteriormente. No entanto, todos os novos registos de utilização escreverão no novo armazenamento do Azure RMS e têm de ser transferidos com o cmdlet Get-AadrmUserLog.
 
-Para mais informações sobre como utilizar o Windows PowerShell para o serviço Azure Rights Management, consulte [Administrar o serviço Azure Rights Management através do Windows PowerShell](administer-powershell.md).
+Para mais informações sobre como utilizar o Windows PowerShell para o serviço Azure Rights Management, veja [Administrar o serviço Azure Rights Management através do Windows PowerShell](administer-powershell.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

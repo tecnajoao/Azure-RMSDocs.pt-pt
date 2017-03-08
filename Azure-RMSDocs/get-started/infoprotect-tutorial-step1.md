@@ -1,19 +1,19 @@
 ---
 title: "Passo 1 do tutorial de início rápido – AIP"
-description: "Passo 1 de um tutorial de introdução com uma duração de aproximadamente 20 minutos para experimentar rapidamente o Microsoft Azure Information Protection na sua organização."
+description: "Passo 1 de um tutorial de introdução para experimentar o Azure Information Protection rapidamente – Ativar o serviço Azure Rights Management."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 7046a82d83c7bf3197dc2e7cea51f4af0be03a56
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
+ms.openlocfilehash: aa1808503e92d0afeb7c0f3f7f9da446d2f13b51
+ms.lasthandoff: 03/01/2017
 
 
 ---
@@ -29,7 +29,7 @@ Quando o serviço Azure Rights Management for ativado, poderá proteger os e-mai
 
 Para este tutorial, iremos diretamente para a página de ativação para administradores do Office 365, que é a mesma página do portal clássico do Office 365 e da pré-visualização do centro de administração do Office 365. 
 
-Se preferir navegar para esta página a partir do seu portal de administração do Office 365, em vez de ir diretamente para a página, consulte as instruções completas em [Ativar o Azure Rights Management](../deploy-use/activate-service.md). Além disso, utilize estas instruções completas se tiver acesso ao portal do Azure, mas não ao portal de administração do Office 365.
+Se preferir navegar para esta página a partir do seu portal de administração do Office 365, em vez de ir diretamente para a página, veja as instruções completas em [Ativar o Azure Rights Management](../deploy-use/activate-service.md). Além disso, utilize estas instruções completas se tiver acesso ao portal do Azure, mas não ao portal de administração do Office 365.
 
 ## <a name="to-activate-the-rights-management-service"></a>Para ativar o serviço Rights Management
 

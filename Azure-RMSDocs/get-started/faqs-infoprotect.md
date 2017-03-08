@@ -1,10 +1,10 @@
 ---
 title: "FAQs sobre classificação e identificação – AIP"
-description: "Tem alguma pergunta sobre a versão atual do Azure Information Protection? Verifique se a resposta está aqui."
+description: "Tem uma pergunta específica sobre classificação e etiquetagem através do Azure Information Protection? Verifique se a resposta está aqui."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,9 +13,9 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: dfa89dc4c216807fdebd57dce202a7983a18d9fb
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: ccd840fdfc702e209390ed431d24d7e47edf9930
+ms.openlocfilehash: 0ce3ba72eb8a201486eaf2ae39f5d7bf99753cad
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -28,98 +28,33 @@ Tem uma pergunta sobre o Azure Information Protection especificamente sobre clas
 
 ## <a name="what-can-i-do-with-the-classification-capabilities-in-azure-information-protection"></a>O que posso fazer com as capacidades de classificação no Azure Information Protection?
 
-O cliente do Azure Information Protection adiciona uma barra do Information Protection a aplicações do Microsoft Office para permitir que os utilizadores vejam e atribuam etiquetas de classificação aos respetivos e-mails e documentos do Office.
-
-A classificação pode ser aplicada por predefinição, manualmente, por recomendação ou automaticamente quando são detetados dados confidenciais. Estas etiquetas também podem automaticamente proteger os dados através de um serviço Rights Management. Além dos e-mails e dos documentos do Office, outros ficheiros podem ser classificados e protegidos através do Explorador de Ficheiros para clicar com o botão direito do rato num ficheiro, em vários ficheiros ou numa pasta. Em alternativa, pode utilizar o PowerShell para realizar esta ação a partir da linha de comandos para uma classificação e proteção em massa mais rápidas.
-
-As etiquetas de classificação e o comportamento são configurados no portal do Azure. Pode utilizar a política incorporada predefinida para avaliar rapidamente o Azure Information Protection ou personalizar por completo as suas políticas. Pode alterar as cores, os nomes e a ordem das etiquetas de classificação que os utilizadores veem. Também pode configurar descrições e marcas visuais de classificação como cabeçalho, rodapé ou uma marca d'água.
-
 Experimente o nosso tutorial de início rápido para ver isto em funcionamento em apenas alguns minutos: [tutorial de início rápido do Azure Information Protection](infoprotect-quick-start-tutorial.md).
 
-A versão atual apresenta as seguintes limitações. Procure anúncios no [Blogue Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) e no nosso [site Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) quando estiverem disponíveis funcionalidades e capacidades adicionais:
+Procure anúncios no [Blogue Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) e no nosso [site Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) estiverem disponíveis funcionalidades e capacidades adicionais. Seguem-se algumas limitações da versão atual, que incluem o seguinte:
 
-- Os nomes das etiquetas e descrições são suportadas apenas num idioma.
+- Os nomes das etiquetas e descrições são suportados apenas num idioma.
 
 - Não existe nenhum registo centralizado para classificação e etiquetagem.
 
 - As condições para classificação automática têm de ser expressões ou padrões.
 
-- As aplicações do Office para dispositivos móveis (iOS e Android), computadores Mac e aplicações Web do Office (Office Online) ainda não são suportadas.
+- A capacidade de etiquetagem das aplicações do Office não se encontra disponível para dispositivos móveis (iOS e Android) e computadores Mac nem nas aplicações Web do Office (Office Online).
 
-- Não existe integração com o Exchange Online ou o SharePoint Online.
+- As funcionalidades de classificação e etiquetagem não foram integradas com o Exchange Online nem com o SharePoint Online.
 
-- O SDK para parceiros e programadores não está disponível.
+- O SDK para parceiros e programadores ainda não inclui as funcionalidades de classificação e etiquetagem.
 
-Algumas das limitações enumeradas anteriormente estão agora disponíveis com o lançamento de Fevereiro do novo cliente. Para obter mais informações, veja o anúncio do blogue.
+A versão de fevereiro veio colmatar muitas das limitações anteriores. Para obter mais informações, veja o [anúncio do blogue](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/08/azure-information-protection-december-update-moves-to-general-availability/).
 
-
-## <a name="do-i-need-to-be-a-global-admin-to-try-azure-information-protection"></a>É necessário ser um administrador global para experimentar o Azure Information Protection?
+## <a name="do-i-need-to-be-a-global-admin-to-configure-classification-and-labels"></a>É necessário ser um administrador global para configurar a classificação e etiquetas?
 
 Para configurar a política do Azure Information Protection, tem de iniciar sessão no portal do Azure como um administrador global do Azure Active Directory.
 
-No entanto, se selecionar a opção para instalar a política de demonstração quando instalar o [cliente do Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018), não precisa de iniciar sessão no portal para ver e experimentar a funcionalidade de etiquetagem. A política de demonstração instala localmente a política predefinida do Azure Information Protection, pelo que pode tentar etiquetar documentos e e-mails, mas não pode alterar ou adicionar novas etiquetas sem iniciar sessão no portal do Azure. 
+Se selecionar a opção para instalar a política de demonstração quando instalar o [cliente do Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018), não precisa de iniciar sessão no portal para ver e experimentar a funcionalidade de etiquetagem. A política de demonstração instala localmente a política predefinida do Azure Information Protection, pelo que pode tentar etiquetar documentos e e-mails, mas não pode alterar ou adicionar novas etiquetas sem iniciar sessão no portal do Azure. 
 
 ## <a name="which-options-in-the-azure-portal-are-p1-or-p2"></a>Que opções no portal do Azure são P1 ou P2?
 
-Para verificar quais as funcionalidades incluídas na subscrição do **Azure Information Protection Premium 1** (P1), em comparação com a subscrição do **Azure Information Protection Premium 2** (P2), consulte a [lista de funcionalidades](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) do site do Azure Information Protection. No entanto, como guia geral, as funcionalidades avançadas, tal como classificação automática e tenha sua própria chave (HYOK), são específicas para a subscrição do Azure Information Protection Premium 2.
-
-## <a name="does-azure-information-protection-support-on-premises-and-hybrid-scenarios"></a>O Azure Information Protection suporta cenários no local e híbridos?
-
-O Azure Information Protection é uma solução baseada na cloud. Se estiver interessado em implementar o Azure Information Protection num cenário híbrido, contacte a equipa do Information Protection através do e-mail askipteam@microsoft.com.
-
-## <a name="how-do-computers-get-the-policy-information-from-azure-information-protection-and-how-often-is-it-refreshed"></a>Como é que os computadores obtêm informações de política do Azure Information Protection e com que frequência são atualizados?
-
-Sempre que um utilizador abre uma aplicação do Office, o cliente do Azure Information Protection verifica se existe uma versão posterior da política do Azure Information Protection. Além disso, as aplicações do Office são verificadas a cada 24 horas. Se houver uma versão posterior, o cliente transfere-a utilizando uma ligação HTTPS para proteger os dados. 
-
-Se várias instâncias da aplicação Office forem carregadas quando uma nova política do Azure Information Protection é publicada, deve fechar todas as instâncias para obter a versão mais recente da política. Por exemplo, se tiver dois documentos do Word abertos e pretende testar a política do Azure Information Protection num único documento: feche ambos documentos do Word e reabra o documento que pretende utilizar com a política mais recente.
-
-## <a name="where-can-files-be-stored-to-use-azure-information-protection"></a>Onde podem ser armazenados os ficheiros para utilizar o Azure Information Protection? 
-
-Uma vez que o Azure Information Protection aplica etiquetas persistentes e proteção a ficheiros e e-mails, é irrelevante o local onde os ficheiros são armazenados.
-
-## <a name="can-i-classify-only-new-data-or-can-i-also-classify-existing-data"></a>Posso classificar apenas novos dados ou posso também classificar dados existentes?
-
-As ações de política do Azure Information Protection entram em vigor quando os documentos são guardados e os e-mails são enviados, tanto para novo conteúdo como para alterações a conteúdo existente.
-
-Se tiver a versão mais recente do cliente, também poderá classificar (e, opcionalmente, proteger) ficheiros existentes do Explorador de Ficheiros de forma rápida. 
-
-## <a name="can-i-use-azure-information-protection-for-classification-only-without-enforcing-encryption-and-restricting-usage-rights"></a>Posso utilizar o Azure Information Protection apenas para classificação, sem impor encriptação e restringir direitos de utilização?
-
-Sim. Pode configurar uma política do Azure Information Protection que aplica apenas a classificação sem proteção quando o tipo de ficheiro suportar esta ação. Na verdade, esperamos que seja este o caso da maior parte das redes de implementação em que é necessário proteger apenas um subconjunto de documentos ou e-mails que necessitam da gestão de dados especiais.
-
-## <a name="how-does-automatic-classification-work"></a>Como funciona a classificação automática?
-
-No portal do Azure, pode utilizar padrões predefinidos, como "Números de cartão de crédito" ou "Número de Segurança Social dos E.U.A.". Em alternativa, pode definir uma cadeia personalizada ou um padrão como condição para classificação automática.
-
-Irá ver um exemplo desta situação no [Tutorial de início rápido do Azure Information Protection](infoprotect-quick-start-tutorial.md). 
-
-A precisão da classificação depende da forma como configurar a regra de classificação, que se baseia em condições. Atualmente, as condições suportam padrões de texto e expressões regulares. Para obter uma explicação de cada uma das opções disponíveis, com algumas sugestões de exemplos para testar, veja [Como configurar condições para classificação automática e recomendada para o Azure Information Protection](../deploy-use/configure-policy-classification.md). A deteção é executada quando o documento é guardado ou um e-mail é enviado.
-
-Para a melhor experiência de utilizador e para assegurar a continuidade do negócio, recomendamos que comece por ações de recomendação do utilizador em vez de ações totalmente automáticas. Isto permite aos utilizadores aceitar a ação de etiquetagem ou proteção ou substituir estas sugestões.   
-
-## <a name="can-azure-information-protection-prompt-users-to-classify-files-themselves-rather-than-use-automatic-classification"></a>O Azure Information Protection pode pedir aos utilizadores para classificar ficheiros em vez de utilizar a classificação automática? 
-
-Sim. Utilize o portal do Azure para configurar se pretende utilizar a classificação automática ou fazer uma recomendação aos utilizadores, definindo a opção **Selecione a forma como esta etiqueta é aplicada: automaticamente ou recomendada para o utilizador** como **Recomendada**.
-
-Irá ver um exemplo desta situação no [Tutorial de início rápido do Azure Information Protection](infoprotect-quick-start-tutorial.md).  
-
-## <a name="can-i-force-all-documents-to-be-classified"></a>Posso impor a classificação de todos os documentos?
-
-Sim. Se solicitar aos utilizadores que classifiquem todos os ficheiros que guardam, no portal do Azure, configure a definição da política **Todos os documentos e e-mails têm de ter uma etiqueta** como **Ativado**. 
-
-## <a name="can-i-remove-classification-from-a-file"></a>Posso remover a classificação de um ficheiro?
-
-Sim. Esta parte é agora abrangida no guia de utilizador: [Remover etiquetas de classificação e proteção de ficheiros e e-mails](../rms-client/client-remove-label-protection.md) 
-
-## <a name="can-i-prompt-users-to-justify-why-they-are-changing-the-classification-level"></a>Posso solicitar aos utilizadores que indiquem a razão pela qual pretendem alterar o nível de classificação?
-
-Sim. Para se certificar de que os utilizadores justificam as suas alterações de classificação, no portal do Azure, defina a opção **Os utilizadores têm de fornecer uma justificação para reduzir a etiqueta de classificação, remover uma etiqueta ou remover a proteção** como **Ativado**. Ao fazerem-no, a ação e a justificação são registadas no registo de eventos do Windows local: **Aplicações e Registos de Serviços** > **Proteção do Microsoft Azure Information Protection**.
-
-## <a name="how-can-i-automatically-protect-the-content-after-its-been-classified"></a>Como posso proteger automaticamente o conteúdo depois de ter sido classificado?
-
-No portal do Azure, pode selecionar um modelo de Rights Management para proteger automaticamente os conteúdos, de acordo com o nível de classificação que especificar.
-
-Irá ver um exemplo desta situação no [Tutorial de início rápido do Azure Information Protection](infoprotect-quick-start-tutorial.md). Para obter mais informações, consulte [Como configurar uma etiqueta para a proteção do Rights Management](../deploy-use/configure-policy-protection.md).
+Para verificar quais as funcionalidades incluídas na subscrição do **Azure Information Protection Premium 1** (P1), em comparação com a subscrição do **Azure Information Protection Premium 2** (P2), veja a [lista de funcionalidades](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) do site do Azure Information Protection. No entanto, como guia geral, as funcionalidades avançadas, tal como classificação automática e tenha sua própria chave (HYOK), são específicas para a subscrição do Azure Information Protection Premium 2.
 
 ## <a name="can-a-file-have-more-than-one-classification"></a>Um ficheiro pode conter mais do que uma classificação?
 
@@ -166,25 +101,13 @@ Também pode configurar as regras de transporte para proceder ao mapeamento inve
 
 Uma vez que o Azure Information Protection utiliza metadados persistentes para classificação, que incluem uma etiqueta de texto não encriptado, estas informações podem ser lidas por soluções DLP e outras aplicações. Nos ficheiros, estes metadados são armazenados em propriedades personalizadas; nos e-mails, estas informações estão indicadas nos cabeçalhos de e-mail.
 
-## <a name="how-does-document-tracking-and-revocation-work-for-azure-information-protection"></a>Como funciona o controlo de documentos e a revogação em relação ao Azure Information Protection?
-
-O controlo de documentos relativo a ficheiros que classifica e protege com o Azure Information Protection funciona com a versão mais recente do cliente do Azure Information Protection (versão 1.3.155.2 ou posterior). 
-
-Para obter mais informações, veja [Controlar e revogar os documentos protegidos quando utiliza o Azure Information Protection](../rms-client/client-track-revoke.md).
-
-## <a name="can-i-control-which-users-can-use-azure-information-protection-to-classify-and-protect-content"></a>Posso controlar que utilizadores podem utilizar o Azure Information Protection para classificar e proteger conteúdo?
-
-Pode restringir os utilizadores que classificam e protegem os dados ao controlar a distribuição do cliente do Azure Information Protection. Adicione novas etiquetas apenas para utilizadores especificados quando configura uma [política de âmbito](../deploy-use\configure-policy-scope.md). 
-
-Os ficheiros e e-mails classificados pelo Azure Information Protection podem ser consumidos ou editados por qualquer utilizador, com ou sem o cliente do Azure Information Protection instalado. 
-
 ## <a name="how-do-i-sign-in-as-a-different-user"></a>Como posso iniciar sessão como um utilizador diferente?
 
 Num ambiente de produção, normalmente não precisa de iniciar sessão como um utilizador diferente quando está a utilizar o cliente do Azure Information Protection. No entanto, poderá ter de o fazer se tiver vários inquilinos. Por exemplo, tem um inquilino de teste além do inquilino do Office 365 ou do Azure que a sua organização utiliza.
 
 Pode verificar com que conta tem sessão iniciada atualmente através da caixa de diálogo do **Microsoft Azure Information Protection**: abra uma aplicação do Office e, no separador **Base**, no grupo **Proteção**, clique em **Proteger** e, em seguida, clique em **Ajuda e comentários**. O nome da sua conta é apresentado na secção **Estado do cliente**.
 
-Especialmente quando estiver a utilizar uma conta de administrador, verifique o nome de domínio da conta com sessão iniciada que é apresentada. Por exemplo, se tiver uma conta de administrador em dois inquilinos diferentes, pode não perceber que tem sessão iniciada com o nome da conta certo, mas com o domínio errado. Um sinal de tal engano pode ser a impossibilidade de transferir a política do Azure Information Protection ou não ver as etiquetas ou o comportamento esperados.
+Especialmente quando estiver a utilizar uma conta de administrador, verifique o nome de domínio da conta com sessão iniciada que é apresentada. Por exemplo, se tiver uma conta de administrador em dois inquilinos diferentes, pode não perceber que tem sessão iniciada com o nome da conta certo, mas com o domínio errado. Um sinal de tal engano pode ser a impossibilidade de transferir a política do Azure Information Protection ou não ver as etiquetas ou o comportamento esperado.
 
 Para iniciar sessão como um utilizador diferente, tem de editar o registo:
 
@@ -197,13 +120,5 @@ Além disso,
 - Se pretender reinicializar o ambiente do serviço Azure Rights Management (também conhecido como arranque do sistema), pode fazê-lo através da opção **Repor** da [ferramenta RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437).
 
 - Se pretender eliminar a política do Azure Information Protection atualmente transferida, pode fazê-lo ao eliminar o ficheiro **Policy.msip** da pasta %localappdata%\Microsoft\MSIP.
-
-## <a name="how-can-i-report-a-problem-or-send-feedback-for-azure-information-protection"></a>Como posso comunicar um problema ou enviar feedback do Azure Information Protection?
-
-Em alternativa, utilize os canais de suporte padrão ou [contacte o Suporte da Microsoft](information-support.md#to-contact-microsoft-support).
-
-Para comentários como sugestões de melhorias ou novas funcionalidades: na aplicação do Office, no separador **Base** no grupo **Proteção**, clique em **Proteger** e, em seguida, clique em **Ajuda e comentários**. Na caixa de diálogo **Microsoft Azure Information Protection**, clique em **Enviar comentários**. Deste modo, envia um e-mail à equipa do Information Protection e anexa automaticamente os ficheiros de registo do seu PC. 
-
-É também convidado a interagir com a nossa equipa de engenharia, no [site Yammer do Azure Information Protection](https://www.yammer.com/askipteam/). 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -78,4 +78,4 @@ Da mesma forma, os "Serviços de Gestão de Direitos do Active Directory" (AD RM
 
 Para mais informações sobre como pode comprar ou avaliar o Azure Information Protection e as diferentes funcionalidades disponíveis para os planos de subscrição, veja o site do [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection).
 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

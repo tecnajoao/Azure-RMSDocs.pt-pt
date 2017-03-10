@@ -14,13 +14,10 @@ ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: a0192d8210c8163a298cb7da8eff62e4eb9a87ad
-
-
+ms.openlocfilehash: 3f08823903b9da03c10e27c82d3edeb3067efd8e
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="how-to-install-configure-and-test-with-an-rms-server"></a>Procedimentos: instalar, configurar e testar com um servidor RMS
 
 Este tópico inclui os passos para ligação a um servidor RMS ou ao Azure RMS para fins de testar da sua aplicação com capacidade para direitos.
@@ -106,8 +103,3 @@ Os seguintes passos descrevem a configuração do servidor RMS e incluem:
             ```
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

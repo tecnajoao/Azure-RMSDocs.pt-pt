@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: d38d7f89ba780b519ebe4a182161deb5bc9331b5
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: bbd5cd5be72dfe72f8312f7ee5049dec2e46ac96
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="migration-phase-1---server-side-configuration-for-ad-rms"></a>Fase de migração 1 – configuração do lado do servidor para o AD RMS
 
 >*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Office 365*
@@ -43,18 +39,6 @@ Este passo divide-se em duas partes:
 2.  Importar os dados de configuração para o Azure Information Protection. Existem diferentes processos para este passo consoante a configuração da implementação atual do AD RMS e a topologia preferida para a sua chave de inquilino do Azure RMS.
 
 ### <a name="export-the-configuration-data-from-ad-rms"></a>Exportar os dados de configuração do AD RMS
-
-> [!IMPORTANT]
-> Antes de efetuar este procedimento, confirme primeiro se os servidores do AD RMS estão em execução no Modo Criptográfico 2, que é um requisito para o Azure Information Protection.
-> 
-> Para confirmar o modo criptográfico:
-> 
-> - Para o Windows Server 2012 R2 e o Windows 2012: propriedades de cluster do AD RMS > separador **Geral**. 
-> 
-> - Para todas as versões do AD RMS suportadas: utilize a opção [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) e **Admin do AD RMS** para ver o modo criptográfico nas **Informações do serviço RMS**.
-> 
-> Certifique-se de que o valor para o modo criptográfico é **2**. Se não for, veja as instruções para ativar o Modo Criptográfico 2 em [Modos Criptográficos do AD RMS](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
-
 
 Efetue o seguinte procedimento em todos os clusters do AD RMS de todos os domínios de publicação fidedignos que possuem conteúdos protegidos da sua organização. Não tem de o executar em clusters só de licenciamento.
 
@@ -224,4 +208,3 @@ Remove-PSDrive MyRmsAdmin -force
 Vá para a [fase 2 - configuração do lado do cliente](migrate-from-ad-rms-phase2.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

@@ -37,8 +37,3 @@
 ##### [Utilizar atalhos de teclado](sharing-app-keyboard-shortcuts.md)
 ##### [Opções da caixa de diálogo](sharing-app-dialog-box.md)
 # [Desenvolver e Personalizar Aplicações](/information-protection/develop/developers-guide)
-
-
-<!--HONumber=Feb17_HO2-->
-
-

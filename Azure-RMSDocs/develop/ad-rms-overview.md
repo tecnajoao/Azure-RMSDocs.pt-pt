@@ -14,13 +14,10 @@ ms.assetid: B546B6C1-ADC1-4EBD-95E2-B4A74E4E980B
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: f41640a0a6c46dc7cacf69dc3784d703b971e9d0
-
-
+ms.openlocfilehash: 702bc9049b8027aecdfaf897e184888f010bc0e4
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="overview"></a>Descrição Geral
 
 O SDK Rights Management Services (RMS) 2.1 é uma tecnologia de proteção de informações que ajuda a salvaguardar as informações digitais contra utilização não autorizada. Através da aplicação com capacidade para direitos, os proprietários de conteúdo conseguirão definir quem pode abrir, modificar, imprimir, reencaminhar ou efetuar outras ações no conteúdo.
@@ -58,8 +55,3 @@ Os tópicos restantes desta secção a Arquitetura RMS e as suas implementaçõe
 * [Documentação de profissionais de TI para o AD RMS](https://TechNet.Microsoft.Com/en-us/library/cc771234.aspx)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

@@ -38,8 +38,3 @@ Este tutorial descreveu os passos para um cenário: como o Azure RMS pode ajudar
 
 Se estiver pronto para iniciar a implementação do Azure RMS, utilize o [Plano de Implementação do Azure Rights Management](../plan-design/deployment-roadmap.md) para obter os passos da implementação e ligações para instruções sobre como proceder.
 
-
-
-<!--HONumber=Jan17_HO1-->
-
-

@@ -14,23 +14,13 @@ ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 8af3161946b2dfc6ea58d0565491d8e59736d565
-ms.openlocfilehash: 2f4c11f7661a814849ccea41c60edfc2ad2287e8
-ms.lasthandoff: 02/28/2017
-
-
+ms.openlocfilehash: 8afff75366e7891ac7f00a1fa28e2939978a8b74
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="release-notes"></a>Notas de versão
 
 Este tópico contém informações importantes sobre isto e sobre versões anteriores do SDK RMS 2.1.
-
-## <a name="new-for-the-february-2017---sdk-documentation-update"></a>Novo na atualização da documentação do SDK de fevereiro de 2017
->[!Note]  
-> As atualizações à documentação nesta secção aplicam-se à versão de transferência do SDK 1.03102.0221.
- 
-- **Recolha de dados** – a recolha de erros da aplicação e de informações sobre o desempenho já está disponível. Esta funcionalidade é controlada através de uma nova propriedade, *IPC_EI_DATA_COLLECTION_ENABLED*, uma das [propriedades de Ambiente](https://msdn.microsoft.com/en-us/library/hh535247.aspx) e pode ser substituída administrativamente. 
 
 ## <a name="february-2016---sdk-documentation-update"></a>Atualização da documentação do SDK de fevereiro de 2016
 

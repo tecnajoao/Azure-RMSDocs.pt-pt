@@ -14,13 +14,10 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: b5f1d44d950cd020c4b15d5f9505752bc960fa88
-
-
+ms.openlocfilehash: 46aba2289f0e3a41cc2fb09db3d5727cd77feb40
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="developing-your-application"></a>Desenvolver a sua aplicação
 
 Neste exemplo, vai criar uma aplicação de consola simples que interage com o serviço do Azure Information Protection (AIP).  Este irá considerar o caminho de um documento a proteger como uma entrada e, em seguida, vai protegê-lo com uma política ad hoc ou um modelo do Azure. A aplicação irá aplicar as políticas corretas, de acordo com as entradas, e criar um documento de informações protegido. O código de exemplo que irá utilizar é a [aplicação de teste de IP do Azure](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AzureIP_Test) e encontra-se no Github.
@@ -232,8 +229,3 @@ Depois de ter tudo compilado e em execução, os resultados da aplicação devem
 6. Por último, introduza alguns metadados da política: nome da política, descrição e nome a apresentar do emissor (Inquilino do Azure AD) ![resultado da aplicação – passo 6](../media/develop/app-output-6.png)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO4-->
-
-

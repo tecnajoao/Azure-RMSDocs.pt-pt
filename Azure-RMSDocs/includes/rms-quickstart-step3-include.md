@@ -40,8 +40,3 @@ Agora que enviou o documento protegido, pode pedir aos destinatários para o abr
 |--------------------------------|--------------------------|
 |Instruções completas e métodos alternativos para proteger ficheiros que partilha por e-mail   →|[Proteger um ficheiro que partilha por e-mail ao utilizar a aplicação de partilha Rights Management](../rms-client/sharing-app-protect-by-email.md)|
 |Acerca das opções na caixa de diálogo **partilhar protegido**   →|[Opções da caixa de diálogo da aplicação de partilha Rights Management](../rms-client/sharing-app-dialog-box.md)|
-
-
-<!--HONumber=Jan17_HO1-->
-
-

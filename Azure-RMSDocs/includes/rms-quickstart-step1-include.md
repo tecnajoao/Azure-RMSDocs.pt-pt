@@ -53,8 +53,3 @@ Embora não estejam incluídos aqui, para uma implementação de produção, pro
 |--------------------------------|--------------------------|
 |Acerca da ativação do Rights Management e do controlo de quem pode proteger ficheiros e e-mails quando o serviço está ativado   →|[Ativar o Azure Rights Management](../deploy-use/activate-azure-classic.md)|
 |Acerca dos modelos predefinidos e de como criar modelos novos e personalizados   →|[Configurar modelos personalizados para o Azure Rights Management](../deploy-use/create-template.md)|
-
-
-<!--HONumber=Jan17_HO1-->
-
-

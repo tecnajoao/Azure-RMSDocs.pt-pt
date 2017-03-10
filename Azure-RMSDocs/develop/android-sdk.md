@@ -14,13 +14,10 @@ ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 617bb94af65c3e475bf40c51021d20b9755defb8
-
-
+ms.openlocfilehash: 3225e143bc80fa35c3e4b96317cdd264f63ac098
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="android-setup"></a>Configuração do Android
 
 As aplicações Android podem utilizar o SDK Microsoft Rights Management 4.2 para ativar a proteção de informações integrada nas respetivas aplicações utilizando o Azure Active Directory Rights Management (AAD RM).
@@ -147,8 +144,3 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

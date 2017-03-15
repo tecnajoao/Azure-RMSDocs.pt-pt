@@ -4,7 +4,7 @@ description: "Instruções para migrar a implementação dos Serviços de Gestã
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 12bd5b89cf9957521c7d7b4fb573e4ffcd6c865d
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: b82132d45f1d671c11355c44104dacf521e18082
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrar do AD RMS para o Azure Information Protection
 
 >*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Office 365*
@@ -59,12 +55,6 @@ Antes de iniciar a migração para o Azure Information Protection, certifique-se
         
         - Windows Server 2016 (x64)
         
-    - Modo Criptográfico 2:
-
-        - Os clientes e os servidores do AD RMS têm de estar em execução no Modo Criptográfico 2 antes de iniciar a migração para o Azure Information Protection.
-        
-        Embora a chave do certificado de licenciante para servidor (SLC) atual tenha de utilizar o Modo Criptográfico 2, as chaves anteriores que foram configuradas para o Modo Criptográfico 1 são suportadas pelo Azure Information Protection como chaves arquivadas. Para obter mais informações sobre os modos criptográficos e como mudar para o Modo Criptográfico 2, consulte [Modos Criptográficos do AD RMS](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
-        
     - Todas as topologias válidas do AD RMS são suportadas:
     
         - Floresta única, cluster RMS único
@@ -73,7 +63,7 @@ Antes de iniciar a migração para o Azure Information Protection, certifique-se
         
         - Várias florestas, vários clusters RMS
         
-    Nota: por predefinição, múltiplos clusters RMS migram para um único inquilino do Azure Information Protection. Se quiser inquilinos do Azure Information Protection separados, tem de tratá-los como migrações diferentes. Uma chave de um cluster do RMS não pode ser importada para mais do que um inquilino do Azure Information Protection.
+    Nota: por predefinição, vários clusters do AD RMS migram para um único inquilino do Azure Information Protection. Se quiser inquilinos do Azure Information Protection separados, tem de tratá-los como migrações diferentes. Uma chave de um cluster do RMS não pode ser importada para mais do que um inquilino do Azure Information Protection.
 
 - **Todos os requisitos para executar o Azure Information Protection, incluindo um inquilino do Azure Information Protection (não ativado):**
 
@@ -104,7 +94,22 @@ Antes de iniciar a migração para o Azure Information Protection, certifique-se
     - Esta configuração opcional requer o Azure Key Vault e uma subscrição do Azure que suporte o Cofre de Chaves com chaves protegidas por HSM. Para obter mais informações, veja a [página de Preços do Azure Key Vault](https://azure.microsoft.com/en-us/pricing/details/key-vault/). 
 
 
-Limitações:
+### <a name="cryptographic-mode-considerations"></a>Considerações sobre o modo criptográfico
+
+Apesar de não ser um pré-requisito para a migração, recomendamos que os clientes e os servidores AD RMS sejam executados no Modo Criptográfico 2 antes de iniciar a migração. 
+
+Para obter mais informações sobre os diferentes modos e sobre como realizar a atualização, veja [Modos Criptográficos do AD RMS](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
+
+Se o cluster do AD RMS estiver no Modo Criptográfico 1 e não conseguir atualizá-lo, terá de recodificar a chave de inquilino do Azure Information Protection quando a migração estiver concluída. A recodificação da chave cria uma nova chave de inquilino que utiliza o Modo Criptográfico 2. A utilização do serviço Azure Rights Management com o Modo Criptográfico 1 é suportada apenas durante o processo de migração.
+
+Para confirmar o Modo Criptográfico do AD RMS:
+ 
+- Para o Windows Server 2012 R2 e o Windows 2012: propriedades de cluster do AD RMS > separador **Geral**. 
+
+- Para todas as versões do AD RMS suportadas: utilize a opção [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) e **Admin do AD RMS** para ver o modo criptográfico nas **Informações do serviço RMS**.
+
+
+### <a name="migration-limitations"></a>Limitações da migração
 
 -   Embora o processo de migração permita migrar a chave do certificado de licenciamento de servidor (SLC) para um módulo de segurança de hardware (HSM) para o Azure Information Protection, o Exchange Online não suporta atualmente esta configuração para o serviço Rights Management utilizado pelo Azure Information Protection. Se quiser todas as funcionalidades de IRM com o Exchange Online após a migração para o Azure Information Protection, a chave de inquilino do Azure Information Protection tem de ser [gerida pela Microsoft](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok). Em alternativa, pode executar a IRM com funcionalidade reduzida no Exchange Online quando o inquilino do Azure Information Protection é gerido por si (BYOK). Para mais informações sobre a utilização do Exchange Online com o serviço Azure Rights Management, consulte o [Passo 6. Configurar a integração de IRM para o Exchange Online](migrate-from-ad-rms-phase3.md#step-6-configure-irm-integration-for-exchange-online) nestas instruções de migração.
 
@@ -192,11 +197,10 @@ Os passos de migração podem ser divididos em 4 fases que podem ser efetuadas e
 
 - **Passo 9: recodificar a chave de inquilino do Azure Information Protection**
 
-    Este passo é opcional mas recomendado se a topologia de chave de inquilino do Azure Information Protection escolhida no passo 2 for gerida pela Microsoft. Este passo não é aplicável se a topologia de chave de inquilino do Azure Information Protection escolhida for gerida pelo cliente (BYOK).
+    Este passo é obrigatório se não estava a executar no Modo Criptográfico 2 antes da migração, sendo opcional, mas recomendado, para todas as migrações para ajudar a salvaguardar a segurança da sua chave de inquilino do Azure Information Protection.
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 Para iniciar a migração, aceda a [Fase 1 – configuração do lado do servidor](migrate-from-ad-rms-phase1.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

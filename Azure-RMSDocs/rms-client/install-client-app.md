@@ -4,7 +4,7 @@ description: "Instruções para os utilizadores instalarem o cliente do Azure In
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/24/2017
+ms.date: 03/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 92ad7198aad17664062b8d007fa95524fe535443
-ms.openlocfilehash: d4820070aff013b42ee49f4c7b81e78ffbc7a049
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: f47cad9d613517413ab5f3a61d24a4c8b9f79e15
+ms.sourcegitcommit: cbdbabd626fa5b91c418d84cd6228c9ca94a2525
+translationtype: HT
 ---
-
 # <a name="download-and-install-the-azure-information-protection-client"></a>Transferir e instalar o cliente do Azure Information Protection
 
 Se o seu administrador não lhe instalar o Azure Information Protection, pode fazê-lo por si mesmo. Tem de ser administrador local do seu PC para instalar este cliente, de forma a que o mesmo possa etiquetar e proteger os seus documentos e e-mails.
@@ -28,7 +24,7 @@ Além disso:
 
 - O cliente do Azure Information Protection requer a versão mínima do Microsoft .NET Framework 4.6.2. Se esta versão estiver em falta, o instalador tentará transferir e instalar este pré-requisito. Quando este pré-requisito é instalado como parte da instalação do cliente, o seu computador tem de ser reiniciado.
 
-- Se tiver o Windows 7 SP1, o cliente do Azure Information Protection precisa de uma atualização específica [KB 2533623](https://support.microsoft.com/kb/2533623). Se o seu PC precisar desta atualização, mas não estiver instalada, a instalação é concluída, mas verá uma mensagem a informar que é preciso instalar esta atualização antes de poder utilizar todas as funcionalidades do Azure Information Protection. 
+- Se tiver o Windows 7 SP1, o cliente do Azure Information Protection precisará de uma atualização específica, KB 2533623. Se o PC precisar desta atualização, mas não estiver instalada, a instalação será concluída, mas com uma mensagem a indicar que o cliente do Azure Information Protection precisa desta atualização. Até esta atualização estar instalada, não poderá utilizar todas as funcionalidades do cliente do Azure Information Protection. 
 
 ## <a name="to-download-and-install-the-azure-information-protection-client"></a>Para transferir e instalar o cliente do Azure Information Protection    
 
@@ -73,4 +69,3 @@ Veja [Como instalar o cliente do Azure Information Protection para os utilizador
  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]  
-

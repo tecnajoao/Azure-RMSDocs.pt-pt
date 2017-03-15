@@ -4,27 +4,25 @@ description: "Quando atribui uma etiqueta a um documento ou a um e-mail pode sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 4ddacf2be34cb7921dfbe282a0476a8cd47de2cf
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: f1ac1ed3aada5d332764db962794d8d6b5428bd7
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Como configurar uma etiqueta para marcas visuais para o Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection*
 
 Quando atribui uma etiqueta a um documento ou a um e-mail pode selecionar várias opções para tornar a classificação escolhida facilmente visível. Estas marcas visuais são um cabeçalho, rodapé e uma marca d'água:
 
-As marcas visuais são aplicadas a documentos do Word, do Excel e do PowerPoint quando a etiqueta é aplicada e quando o documento é guardado. Para e-mails, as marcas visuais são aplicadas quando o e-mail é enviado.
+As marcas visuais são aplicadas a documentos do Word, do Excel e do PowerPoint quando a etiqueta é aplicada e quando o documento é guardado nestas aplicações do Office. Para mensagens de e-mail, as marcas visuais são aplicadas quando o e-mail é enviado do Outlook.
+
+As marcas visuais não são aplicadas aos documentos quando a etiqueta é aplicada através do Explorador de Ficheiros e da ação de clique com o botão direito. Ou quando um documento é classificado através do PowerShell.
 
 Informações adicionais sobre este marcadores visuais:
 
@@ -81,5 +79,4 @@ Exemplo: se especificar a cadeia `Document: ${item.name}  Classification: ${item
 Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 

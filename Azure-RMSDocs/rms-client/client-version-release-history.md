@@ -4,7 +4,7 @@ description: "Veja as novidades ou alterações ao lançamento do cliente do Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/01/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,24 +12,22 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 343ac5f79902379e45efcb6979a115ba4c00d1c5
-ms.openlocfilehash: 503cb76825d0092e8562d39281b1d702edaf6438
-ms.lasthandoff: 03/02/2017
-
-
+ms.openlocfilehash: cfd5eae4191cb0b09d8d43f9f708c80ff724d136
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="azure-information-protection-client-version-release-history"></a>Cliente do Azure Information Protection: histórico de lançamento de versões
 
 >*Aplica-se a: Azure Information Protection*
 
-A equipa do Azure Information Protection atualiza regularmente o cliente do Azure Information Protection com correções e novas funcionalidades. O cliente está incluído no Catálogo do Microsoft Update (categoria: **Azure Information Protection**), além de poder transferir sempre a versão mais recente no [Centro de Transferências da Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+A equipa do Azure Information Protection atualiza regularmente o cliente do Azure Information Protection com correções e novas funcionalidades. O cliente está incluído no Catálogo Microsoft Update (categoria: **Azure Information Protection**) e pode sempre transferir a versão de lançamento de disponibilidade geral (DG) mais recente e a versão futura (a versão de pré-visualização) a partir do [Centro de Transferências da Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-Utilize as seguintes informações para ver o que há de novo ou o que foi alterado num lançamento. A versão mais atual aparece em primeiro na lista. As versões anteriores à Disponibilidade Geral não se encontram listadas.
+As versões de pré-visualização não devem ser implementadas para os utilizadores finais em redes de produção. Em vez disso, utilize as versões de pré-visualização para ver e experimentar as novas funcionalidades ou correções disponíveis na futura versão de DG. 
+
+Utilize as seguintes informações para ver o que há de novo ou o que foi alterado num determinado lançamento de DG. A versão mais atual aparece em primeiro na lista. Para obter mais informações sobre a versão de pré-visualização atual, veja as informações na página de transferência.
 
 > [!NOTE]
-> As pequenas correções não se encontram listadas, pelo que se encontrar um problema com o cliente do Azure Information Protection, primeiro deve verificar se é ou não um problema com a versão mais recente.
+> As pequenas correções não se encontram listadas, pelo que se encontrar um problema com o cliente do Azure Information Protection, primeiro deverá verificar se é ou não um problema com a versão de DG mais recente. Se for, verifique a versão de pré-visualização atual.
 >  
 > Se o problema continuar, veja as informações em [Opções de suporte e recursos da comunidade](../get-started/information-support.md#support-options-and-community-resources). Também o incentivamos a interagir com a equipa do Azure Information Protection, no [site Yammer](https://www.yammer.com/askipteam/).
 

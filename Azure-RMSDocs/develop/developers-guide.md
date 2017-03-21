@@ -1,10 +1,10 @@
 ---
-title: Guia para Programadores do Azure Information Protection | Documentos da Microsoft
+title: "Guia para Programadores – AIP"
 description: Os programadores podem utilizar o Azure Information Protection para proteger e gerir ficheiros de todos os tipos
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/09/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: ea8a0f60997ca5d569f10969abfb9b010f0918da
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: fbd76e377c8b11b8e64187685144010dce9bbb25
+ms.sourcegitcommit: ee432bdb6783bfe311a7ebbc9a5f20a7c2ae759c
 translationtype: HT
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guia para Programadores do Azure Information Protection
@@ -79,9 +79,9 @@ Cada um dos seguintes tópicos apresenta instruções específicas para um aspet
 
 - [Como ativar o controlo e a revogação de documentos (serviço)](tracking-content.md)
 - [Como implementar o seu cliente](../rms-client/client-deployment-notes.md)
+- [Como implementar a aplicação de serviço num inquilino diferente] (how-to-deploy-app.md)
 - [Como instalar e configurar um Servidor RMS (serviço)](how-to-install-and-configure-an-rms-server.md)
 - [Como utilizar o controlo de documentos (utilizador)](how-to-use-document-tracking.md)
-
 
 ### <a name="security-and-authentication"></a>Segurança e autenticação
 

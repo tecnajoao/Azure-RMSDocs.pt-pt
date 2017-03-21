@@ -1,21 +1,21 @@
 ---
-title: "Como registar-se e ativar o RMS na aplicação com o Azure AD | Azure RMS"
+title: "Como registar a aplicação no Azure AD – AIP"
 description: "Descreve as noções básicas da autenticação de utilizador para a sua aplicação com capacidade para RMS."
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
 audience: developer
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 0c06a498c62b61c106572e049f8ef40fdb07485f
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: a98b4eb3bd7705faf268a544f4efa7ba41712816
+ms.sourcegitcommit: 262f88c4f46e29f3747271276c62913b4cefe4f7
 translationtype: HT
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Como registar-se e ativar o RMS na aplicação com o Azure AD
@@ -28,8 +28,8 @@ A autenticação de utilizador é um passo essencial para estabelecer a comunica
 ## <a name="registration-via-azure-portal"></a>Registo através do portal do Azure
 Comece por seguir este guia para configurar o registo da aplicação através do portal do Azure, [Configurar o Azure RMS para a autenticação da ADAL](adal-auth.md). Certifique-se de que copia e guarda o **ID de cliente** e **Redireciona o URI** a partir deste processo para uma utilização posterior.
 
-## <a name="complete-your-rights-managagment-license-agreement-rmla"></a>Concluir o seu contrato de licença de gestão de direitos (RMLA)
-Antes de poder implementar a aplicação, tem de concluir um RMLA com a equipa do Microsoft Rights Management. Para obter informações detalhadas completas, veja a primeira secção do tópico, [Implementar em produção - Pedir um Contrato de Licença de Produção](deploying-your-application.md).
+## <a name="complete-your-information-protection-integration-agreement-ipia"></a>Preencher o Contrato de Integração do Information Protection (IPIA)
+Para poder implementar a aplicação, tem de preencher um IPIA com a equipa do Microsoft Information Protection. Para obter informações detalhadas completas, veja a primeira secção do tópico, [Implementar na produção](deploying-your-application.md).
 
 ## <a name="implement-user-authentication-for-your-app"></a>Implementar a autenticação de utilizador para a aplicação
 Cada uma das APIs do RMS tem uma chamada de retorno que tem de ser implementada para ativar a autenticação do utilizador. O SDK RMS 4.2 utilizará, em seguida, a implementação de uma chamada de retorno quando o utilizador não fornecer um token de acesso, quando o seu token de acesso necessitar de ser atualizado ou quando o token de acesso tiver expirado.

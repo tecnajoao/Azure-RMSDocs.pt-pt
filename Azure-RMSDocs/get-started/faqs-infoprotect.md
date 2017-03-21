@@ -4,7 +4,7 @@ description: "Tem uma pergunta específica sobre classificação e etiquetagem a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/28/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: c6bdceba2b1cce25e5f49e92a59e3e3e83f25c31
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 854de3beea1f4b6e05461dee58cec6ca91f79034
+ms.sourcegitcommit: 117e4016794d0cb9b7bd95603fb6c79114d65360
 translationtype: HT
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Perguntas mais frequentes sobre a classificação e a etiquetagem no Azure Information Protection
@@ -112,6 +112,8 @@ Para iniciar sessão como um utilizador diferente, tem de editar o registo:
 2. Reinicie as aplicações do Office abertas e inicie sessão com a sua conta de utilizador diferente. Se não vir um pedido na aplicação do Office para iniciar sessão no serviço Azure Information Protection, volte à caixa de diálogo do **Microsoft Azure Information Protection** e clique em **Iniciar sessão** na secção **Estado do cliente** atualizada.
 
 Além disso,
+
+- Se estiver a utilizar o início de sessão único, terá de terminar sessão no Windows e iniciar sessão com outra conta de utilizador após editar o registo. O cliente do Azure Information Protection fará a autenticação automaticamente através da conta de utilizador com sessão iniciada.
 
 - Se pretender reinicializar o ambiente do serviço Azure Rights Management (também conhecido como arranque do sistema), pode fazê-lo através da opção **Repor** da [ferramenta RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437).
 

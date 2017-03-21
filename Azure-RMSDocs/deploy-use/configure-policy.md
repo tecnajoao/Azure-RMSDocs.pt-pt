@@ -4,7 +4,7 @@ description: "Para configurar a classificação, a etiquetagem e a proteção, t
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 64a3daa57d71087d11098a1e71465f17b6b8f3b7
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: faf296a92abb6636bd516e41a6e44d4580984146
+ms.sourcegitcommit: 117e4016794d0cb9b7bd95603fb6c79114d65360
 translationtype: HT
 ---
 # <a name="configuring-azure-information-protection-policy"></a>Configurar a política do Azure Information Protection
@@ -48,7 +48,14 @@ Quando efetuar alterações num painel do Azure Information Protection, clique e
 
 Quando terminar de efetuar as alterações que pretende, clique em **Publicar**. 
 
-O cliente do Azure Information Protection verifica a existência de quaisquer alterações sempre que uma das aplicações do Office suportadas é iniciada e transfere as alterações como política do Azure Information Protection.
+O cliente do Azure Information Protection verifica se existem alterações sempre que uma das aplicações do Office suportada é iniciada e transfere as alterações como política do Azure Information Protection mais recente. Acionadores adicionais que atualizam a política do cliente:
+
+- Clique com o botão direito do rato para classificar e proteger um ficheiro ou uma pasta.
+
+- Execução dos cmdlets do PowerShell para etiquetagem e proteção (Get-AIPFileStatus e Set-AIPFileLabel).
+
+- A cada 24 horas.
+
 
 ## <a name="configuring-your-organizations-policy"></a>Configurar a política da organização
 

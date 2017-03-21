@@ -1,21 +1,21 @@
 ---
-title: "Implementar a aplicação"
+title: "Implementar a aplicação – AIP"
 description: "Este tópico descreve e fornece orientações sobre como implementar a sua aplicação"
 keywords: implementar, RMS, AIP
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: aaff9ff7cda961ab0d61115f84197e2c5c7ef8b0
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: a78520f3cdf316c7264cb0ca88460858b5a2bf07
+ms.sourcegitcommit: 262f88c4f46e29f3747271276c62913b4cefe4f7
 translationtype: HT
 ---
 # <a name="deploy-into-production"></a>Implementar em produção
@@ -96,14 +96,13 @@ Se o cliente não estiver presente, forneça uma mensagem de erro a informar o u
 
 Se o cliente estiver presente, prossiga com a instalação da aplicação.
 
-## <a name="enabling-azure-information-protection--rights-management-services-with-your-application"></a>Ativar o Azure Information Protection/Rights Management Services na sua aplicação
+## <a name="enabling-azure-information-protection-services-with-your-application"></a>Ativar o Azure Information Protection Services na aplicação
 
 > [!NOTE]
 > Se tiver migrado para o novo modelo de autenticação da ADAL, não tem de instalar o **SIA**. Para obter mais informações, consulte [Autenticação ADAL para a aplicação com suporte RMS](adal-auth.md).
 > Além disso, pode **certificar a sua aplicação para o Windows 10** - através da atualização da sua aplicação para utilizar a autenticação ADAL em vez do Assistente de Início de Sessão do Microsoft Online, o utilizador e os seus clientes poderão: utilizar a autenticação multifator Instale o RMS Client 2.1 sem necessidade de privilégios administrativos para a máquina
 
-
-Para o utilizador final tirar partido do Azure Information Protection/Rights Management Services, tem de implementar o *Assistente de Início de Sessão (SIA) do Online Services*. Enquanto programador da aplicação, não sabe se o utilizador final irá utilizar o Information Protection através do RMS (no local) ou através do Azure Information Protection.
+Para o utilizador final tirar partido dos serviços do Information Protection, terá de implementar o *Assistente de Início de Sessão (SIA) do Online Services*. Enquanto programador da aplicação, não sabe se o utilizador final irá utilizar o Information Protection através do RMS (no local) ou através do Azure Information Protection.
 
 
 > [!IMPORTANT]
@@ -113,6 +112,8 @@ Para o utilizador final tirar partido do Azure Information Protection/Rights Man
 -   Transfira o [Assistente de Início de Sessão do Microsoft Online Services](http://www.microsoft.com/en-us/download/details.aspx?id=28177) do Centro de Transferências da Microsoft.
 -   Certifique-se de que a implementação de uma aplicação com capacidade para direitos inclui uma verificação de pré-requisitos para esta seleção de serviço.
 -   Para os seus próprios testes e para a utilização do serviço online por parte dos utilizadores finais, consulte o tópico da TechNet [Configurar o Rights Management](https://TechNet.Microsoft.Com/en-us/library/jj585002.aspx).
+
+Também terá de utilizar este guia para configurar a sua aplicação – [How to configure your App Service application to use Azure Active Directory login (Como configurar a aplicação do Serviço de Aplicações para utilizar o início de sessão do Azure Active Directory)](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication).
 
 Para obter mais informações sobre como permitir que a aplicação utilize o RMS para serviços de Gestão de Direitos do Azure, consulte [Permitir que a aplicação funcione com o RMS baseado na cloud](how-to-use-file-api-with-aadrm-cloud.md).
 

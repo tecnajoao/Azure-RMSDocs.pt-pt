@@ -4,7 +4,7 @@ description: "Veja as novidades ou alterações ao lançamento do cliente do Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/06/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cfd5eae4191cb0b09d8d43f9f708c80ff724d136
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 70c358954a39b02610a77ec81074379dc574158b
+ms.sourcegitcommit: d5ce1bce5e63b3e510033ff9d4d246dd3511ed7c
 translationtype: HT
 ---
 # <a name="azure-information-protection-client-version-release-history"></a>Cliente do Azure Information Protection: histórico de lançamento de versões
@@ -30,6 +30,33 @@ Utilize as seguintes informações para ver o que há de novo ou o que foi alter
 > As pequenas correções não se encontram listadas, pelo que se encontrar um problema com o cliente do Azure Information Protection, primeiro deverá verificar se é ou não um problema com a versão de DG mais recente. Se for, verifique a versão de pré-visualização atual.
 >  
 > Se o problema continuar, veja as informações em [Opções de suporte e recursos da comunidade](../get-started/information-support.md#support-options-and-community-resources). Também o incentivamos a interagir com a equipa do Azure Information Protection, no [site Yammer](https://www.yammer.com/askipteam/).
+
+## <a name="version-14210"></a>Versão 1.4.21.0
+
+**Lançada**: 15/03/2017
+
+**Alteração nos requisitos:**
+
+A versão anterior introduziu o novo pré-requisito do Microsoft .NET Framework 4.6.2 para o cliente completo. Embora não seja recomendado, pode ignorar este pré-requisito com um parâmetro de instalação personalizada, **DowngradeDotNetRequirement**. Para obter mais informações, veja a [secção de instalação do cliente](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users) no guia do administrador.
+
+
+**Correções**:
+
+- Suporte para unidades mapeadas para classificar e proteger ficheiros.
+
+- Suporte para ficheiros grandes (>250 ) no visualizador. 
+
+- Quando o HYOK estiver configurado, o Outlook pode aplicar etiquetas que estão configuradas para utilizar modelos do Azure Rights Management ou modelos do AD RMS.
+
+
+**Novas funcionalidades**:
+
+- A capacidade de definir permissões personalizadas a partir da aplicação do Office, que lhe permite definir a proteção apenas para si, para grupos externos ou para todos os utilizadores noutra organização. Para obter mais informações, veja [Definir permissões personalizadas para um documento](client-classify-protect.md#set-custom-permissions-for-a-document) no guia do utilizador.
+    
+- Os ficheiros PDF já suportam etiquetas que aplicam apenas a classificação.
+
+- Para os ficheiros PDF, o visualizador já suporta as opções como pesquisa, zoom e rodar. Para utilizar estas opções, clique com o botão direito do rato no ficheiro quando for apresentado no visualizador.
+
 
 ## <a name="version-131552"></a>Versão 1.3.155.2
 
@@ -75,7 +102,7 @@ Esta versão do cliente é a [Versão de Disponibilidade Geral](https://blogs.te
 
 - Os testes de diagnóstico e a opção de reposição que um utilizador pode executar a partir da aplicação do Office quando o cliente do Azure Information Protection está instalado: no separador **Base**, no grupo **Proteção**, clique em **Proteger** e em **Ajuda e comentários** e, em seguida, clique em **Executar diagnósticos**. 
 
-    Para obter mais informações acerca desta opção, veja a secção [Para verificar a instalação, o estado da ligação ou enviar comentários](client-admin-guide.md#additional-checks-to-verify-installation-connection-status-or-send-feedback) na documentação de instalação do cliente.
+    Para obter mais informações sobre esta opção, veja a secção [Verificações adicionais e resolução de problemas](client-admin-guide.md#additional-checks-and-troubleshooting) no guia do administrador.
 
 ## <a name="version-11230"></a>Versão 1.1.23.0
 

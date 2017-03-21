@@ -4,7 +4,7 @@ description: "Instruções e informações para administradores numa rede empres
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/09/2017
+ms.date: 03/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: adb444f7777304ed40b5b5f988e4efb73268ae14
-ms.sourcegitcommit: cbdbabd626fa5b91c418d84cd6228c9ca94a2525
+ms.openlocfilehash: 3cc1cf7f35c8cf66423c00332691c2291a8b6106
+ms.sourcegitcommit: 02e860196efca306ef9d1e61c1d89c4d8593c912
 translationtype: HT
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guia do administrador do cliente do Azure Information Protection
@@ -70,7 +70,7 @@ Antes de instalar o cliente, verifique se tem as versões de sistema operativo e
 
 Além disso:
 
-- A instalação completa do cliente do Azure Information Protection requer a versão mínima do Microsoft .NET Framework 4.6.2 e, se esta estiver em falta, o instalador tentará transferir e instalar este pré-requisito. Quando este pré-requisito é instalado como parte da instalação do cliente, o computador tem de ser reiniciado.
+- A instalação completa do cliente do Azure Information Protection requer, por predefinição, a versão mínima do Microsoft .NET Framework 4.6.2 e, se estiver em falta, o instalador tentará transferir e instalar este pré-requisito. Quando este pré-requisito é instalado como parte da instalação do cliente, o computador tem de ser reiniciado. Embora não seja recomendado, pode ignorar este pré-requisito com um parâmetro de instalação personalizada.
 
 - Se o Visualizador do Azure Information Protection for instalado à parte, precisará da versão mínima do Microsoft .NET Framework 4.5.2 e, se esta estiver em falta, o instalador não a transfere nem a instala.
 
@@ -83,7 +83,7 @@ Além disso:
 > [!NOTE]
 > A instalação requer permissões administrativas locais.
 
-Além de utilizar as seguintes instruções, o cliente do Azure Information Protection também está incluído no catálogo Microsoft Update, pelo que pode instalar e atualizar o cliente com qualquer serviço de atualização de software que utilize o catálogo. 
+O cliente Azure Information Protection também está incluído no catálogo Microsoft Update, pelo que pode instalar e atualizar o cliente utilizando qualquer serviço de atualização de software que utilize o catálogo. 
 
 1. Transfira o cliente do Azure Information Protection a partir do [Centro de Transferências da Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
     
@@ -91,11 +91,15 @@ Além de utilizar as seguintes instruções, o cliente do Azure Information Prot
 
 2. Para uma instalação predefinida, basta executar o ficheiro **AzInfoProtection.exe**, por exemplo. Porém, para ver as opções de instalação, execute primeiro o ficheiro com **/help**: `AzInfoProtection.exe /help`
 
-   Exemplo de como instalar automaticamente o cliente: `AzInfoProtection.exe /quiet`
-   
-   Exemplo de como instalar automaticamente apenas os cmdlets do PowerShell: `AzInfoProtection.exe  PowerShellOnly=true /quiet`
-   
-   Além disso, se estiver a instalar o cliente em computadores com o Office 2010, tem de especificar o parâmetro **ServiceLocation** (não incluído no ecrã de ajuda) caso os utilizadores não sejam administradores locais nos computadores. Veja a secção seguinte para obter mais informações.
+    Exemplo de como instalar automaticamente o cliente: `AzInfoProtection.exe /quiet`
+    
+    Exemplo de como instalar automaticamente apenas os cmdlets do PowerShell: `AzInfoProtection.exe  PowerShellOnly=true /quiet`
+    
+    Parâmetros adicionais que não estão listados no ecrã de ajuda:
+    
+    - **ServiceLocation**: utilize este parâmetro se estiver a instalar o cliente em computadores com o Office 2010 e se os utilizadores não forem administradores locais nos computadores deles ou se não quiser que lhes seja pedido. [Mais informações](#more-information-about-the-servicelocation-installation-parameter) 
+    
+    - **DowngradeDotNetRequirement**: utilize este parâmetro para ignorar o requisito para o Microsoft Framework .NET versão 4.6.2. [Mais informações](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
 
 3. Se estiver a instalar interativamente, selecione a opção para instalar uma **política de demonstração** se não puder ligar-se ao Office 365 ou ao Azure Active Directory e quiser ver e experimentar o lado do cliente do Azure Information Protection com uma política local para efeitos de demonstração. Quando o cliente se liga a um serviço Azure Information Protection, esta política de demonstração é substituída pela política do Azure Information Protection da organização.
     
@@ -107,13 +111,15 @@ Além de utilizar as seguintes instruções, o cliente do Azure Information Prot
     
     - Para outras versões do Office, reinicie todas as aplicações do Office e todas as instâncias do Explorador de Ficheiros. 
         
-5. Pode confirmar que a instalação foi concluída com êxito ao verificar o ficheiro de registo de instalação na pasta %temp%. Este ficheiro tem o seguinte formato de nomes: `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`
+5. Pode confirmar que a instalação foi concluída com êxito ao verificar o ficheiro de registo de instalação que, por predefinição, é criado na pasta %temp%. Pode alterar esta localização com o parâmetro de instalação **/log**. 
+ 
+    Este ficheiro tem o seguinte formato de nomes: `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`
     
     Por exemplo: **Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
     
     Procure a seguinte cadeia neste ficheiro de registo: **Product: Microsoft Azure Information Protection -- Installation completed successfully.** Se a instalação falhou, este ficheiro de registo contém detalhes que o ajudam a identificar e resolver qualquer tipo de problemas.
 
-### <a name="additional-instructions-for-office-2010-only"></a>Instruções adicionais apenas para o Office 2010
+### <a name="more-information-about-the-servicelocation-installation-parameter"></a>Mais informações sobre o parâmetro de instalação ServiceLocation
 
 Quando instala o cliente para utilizadores que têm o Office 2010 e não têm permissões administrativas locais, especifique o parâmetro ServiceLocation e o URL para o serviço Azure Rights Management. O parâmetro e o valor criam e definem as seguintes chaves de registo:
 
@@ -144,6 +150,59 @@ Utilize o seguinte procedimento para identificar o valor a especificar para o pa
 Exemplo de como instalar automaticamente o cliente para o Office 2010 e para o Azure RMS: `AzInfoProtection.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 
 
+### <a name="more-information-about-the-downgradedotnetrequirement-installation-parameter"></a>Mais informações sobre o parâmetro de instalação DowngradeDotNetRequirement
+
+Para suportar as atualizações automáticas através do Windows Update e para integração fiável com aplicações do Office, o cliente do Azure Information Protection utiliza o Microsoft .NET Framework versão 4.6.2. Por predefinição, a instalação procura esta versão e tenta instalá-la se estiver em falta. A instalação exige então que o computador seja reiniciado.
+
+Se a instalação desta versão posterior do Microsoft .NET Framework não for conveniente, poderá instalar o cliente com o parâmetro e valor **DowngradeDotNetRequirement=True**, que ignorará este requisito se o Microsoft .NET Framework 4.5.1 estiver instalado.
+
+Por exemplo: `AzInfoProtection.exe DowngradeDotNetRequirement=True`
+
+Recomendamos que utilize este parâmetro com cuidado e com o conhecimento de que existem problemas comunicados com aplicações do Office pendentes quando o cliente do Azure Information Protection é utilizado com esta versão mais antiga do Microsoft .NET Framework. Se surgirem problemas de aplicações pendentes, atualize para a versão recomendada antes de experimentar outras soluções para resolução de problemas. 
+
+Lembre-se também de que, se utilizar o Windows Update para manter atualizado o cliente do Azure Information Protection, vai precisar de outro mecanismo de implementação de software para atualizar o cliente para versões posteriores.
+
+## <a name="additional-checks-and-troubleshooting"></a>Verificações adicionais e resolução de problemas
+
+Utilize a opção **Ajuda e Feedback** para abrir a caixa de diálogo **Microsoft Azure Information Protection**:
+
+- A partir de uma aplicação do Office: no separador **Base**, no grupo **Proteção**, clique em **Proteger** e, em seguida, selecione **Ajuda e Feedback**.
+
+- No Explorador de Ficheiros: selecione com o botão direito do rato um ficheiro, ficheiros ou pasta, selecione **Classificar e proteger** e, em seguida, selecione **Ajuda e Feedback**. 
+
+### <a name="help-and-feedback-section"></a>Secção **Ajuda e Feedback**
+
+A **ligação Mais informações** direciona-o, por predefinição, para o site do [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection), mas pode ser configurada para um URL personalizado, de acordo com uma das [definições da política](../deploy-use/configure-policy-settings.md) da política do Azure Information Protection.
+
+Utilize a ligação **Enviar comentários** para enviar pedidos ou sugestões para a equipa do Information Protection. Não utilize esta opção para o suporte técnico e, em vez disso, veja [Opções de suporte e recursos da comunidade](../get-started/information-support.md#support-options-and-community-resources). 
+
+**Exportar Registos** serve para recolher e anexar automaticamente ficheiros de registo para o cliente de Azure Information Protection se lhe tiver sido pedido para os enviar ao Suporte da Microsoft. Esta opção também serve para os utilizadores finais enviarem estes ficheiros de registo ao suporte técnico.
+
+Para ver as informações de diagnóstico e para repor o cliente, selecione **Executar diagnósticos**. Quando os testes de diagnóstico forem concluídos, clique em **Copiar Resultados** para colar as informações num e-mail que pode enviar ao Suporte da Microsoft ou os utilizadores podem enviar ao seu suporte técnico. Quando os testes forem concluídos, também pode repor o cliente.
+
+Mais informações acerca da opção **Repor**:
+
+- Não precisa de ser um administrador local para utilizar esta opção e esta ação não é registada no Visualizador de Eventos. 
+
+- A menos que os ficheiros estejam bloqueados, esta ação elimina todos os ficheiros existentes em **%localappdata%\Microsoft\MSIPC**, que é o local onde os certificados de cliente e os modelos de gestão de direitos estão armazenados. Não elimina a política do Azure Information Protection ou os ficheiros de registo de clientes nem termina a sessão do utilizador.
+
+- A chave de registo e definições seguintes são eliminadas: **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC**. Caso configure definições para esta chave de registo (por exemplo, definições de redirecionamento para o seu inquilino do Azure Information Protection porque está a migrar do AD RMS e ainda tem um Ponto de Ligação de Serviço na sua rede), tem de voltar a configurar as definições de registo após efetuar a reposição do cliente.
+
+- Caso tenha efetuado a reposição do cliente, tem de reiniciar o ambiente do utilizador (também conhecido como "bootstrapping"), o que irá transferir para o cliente certificados e os modelos mais recentes. Para o fazer, feche todas as instâncias do Office e, em seguida, reinicie uma aplicação do Office. Esta ação também irá verificar se transferiu a política do Azure Information Protection mais recente. Não execute novamente os testes de diagnóstico até ter efetuado esta ação.
+
+
+### <a name="client-status-section"></a>Secção **Estado de cliente**
+
+Utilize o valor **Ligado como** para confirmar que o nome de utilizador apresentado identifica a conta a ser utilizada para autenticação do Azure Information Protection. Este nome de utilizador tem de corresponder a uma conta que serve para o Office 365 ou o Azure Active Directory e que pertence a um inquilino configurado para o Azure Information Protection.
+
+Se precisar de iniciar sessão como um utilizador diferente ao apresentado, veja [Como posso iniciar sessão como um utilizador diferente?](../get-started/faqs-infoprotect.md#how-do-i-sign-in-as-a-different-user)
+
+**Última ligação** apresenta quando o cliente se ligou pela última vez ao serviço do Azure Information Protection da sua organização e pode ser utilizada com a data e hora em que **a política do Information Protection foi instalada** para confirmar quando a política do Azure Information Protection foi instalada ou atualizada pela última vez. Quando o cliente se liga ao serviço, será transferida automaticamente a política mais recente se forem detetadas alterações em relação à política atual e, também, a cada 24 horas. Se tiver efetuado alterações de política após a hora apresentada, feche e reabra a aplicação do Office.
+
+Se vir **O cliente não está licenciado para o Office Professional Plus**: significa que o cliente do Azure Information Protection detetou que a edição instalada do Office não suporta a aplicação da proteção Rights Management. Quando esta deteção é feita, as etiquetas que aplicam a proteção não são apresentadas na barra do Azure Information Protection.
+
+Utilize as informações da **Versão** para confirmar que versão do cliente está instalada. Pode verificar se esta é a versão mais recente, bem como as correções correspondentes e as novas funcionalidades, ao clicar na ligação **Novidades**, para ler o [Histórico do Lançamento de Versões](client-version-release-history.md) do cliente.
+
 ## <a name="to-uninstall-the-azure-information-protection-client"></a>Para instalar o cliente do Azure Information Protection
 
 Pode utilizar uma das seguintes opções:
@@ -154,35 +213,7 @@ Pode utilizar uma das seguintes opções:
 
 - Execute o ficheiro executável com **/uninstall**. Por exemplo: `AzInfoProtection.exe /uninstall`
 
-
-## <a name="additional-checks-to-verify-installation-connection-status-or-send-feedback"></a>Verificações adicionais de instalação, do estado da ligação ou enviar comentários
-
-1. Abra uma aplicação do Office, no separador **Base**, no grupo **Proteção**, clique em **Proteger** e, em seguida, clique em **Ajuda e feedback**.
-
-2. Na caixa de diálogo **Microsoft Azure Information Protection**, tenha em consideração o seguinte:
-
-    - Na secção **estado do cliente**: utilize o valor **Versão** para verificar que a instalação foi efetuada com êxito. Para além disso, pode ver quando é que o cliente se ligou ao serviço Azure Information Protection da sua organização pela última vez e quando é que a política do Azure Information Protection foi instalada ou atualizada pela última vez. Quando o cliente se liga ao serviço, é transferida automaticamente a política mais recente se forem detetadas alterações em relação à política atual. Se tiver efetuado alterações de política após a hora apresentada, feche e reabra a aplicação do Office.
-    
-        Também o seu nome de utilizador apresentado, que identifica a conta utilizada para o autenticar no Azure Information Protection. Este nome de utilizador tem de corresponder a uma conta que utiliza para o Office 365 ou o Azure Active Directory e que pertence a um inquilino configurado para o Azure Information Protection.
-
-    - Na secção **Ajuda e feedback**: a **ligação Mais informações** direciona-o, por predefinição, para o site do [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection), mas pode ser configurada para um URL personalizado, de acordo com uma das [definições da política](../deploy-use/configure-policy-settings.md) da política do Azure Information Protection.
-        
-        Utilize a ligação **Enviar comentários** para enviar pedidos ou sugestões para a equipa do Information Protection. Não utilize esta opção para o suporte técnico e, em vez disso, veja [Opções de suporte e recursos da comunidade](../get-started/information-support.md#support-options-and-community-resources). 
-    
-        Para ver as informações de diagnóstico e para repor o cliente, clique em **Executar diagnósticos**. Quando os testes de diagnóstico forem concluídos, clique em **Copiar Resultados** para colar as informações num e-mail que pode enviar em seguida para o seu apoio técnico ou para o suporte da Microsoft. Quando os testes forem concluídos, também pode repor o cliente.
-        
-        Mais informações acerca da opção **Repor**:
-        
-        - Não precisa de ser um administrador local para utilizar esta opção e esta ação não é registada no Visualizador de Eventos. 
-        
-        - A menos que os ficheiros estejam bloqueados, esta ação elimina todos os ficheiros existentes em **%localappdata%\Microsoft\MSIPC**, que é o local onde os certificados de cliente e os modelos de gestão de direitos estão armazenados. Não elimina a política do Azure Information Protection ou os ficheiros de registo de clientes nem termina a sessão do utilizador.
-        
-        - A chave de registo e definições seguintes são eliminadas: **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC**. Caso configure definições para esta chave de registo (por exemplo, definições de redirecionamento para o seu inquilino do Azure Information Protection porque está a migrar do AD RMS e ainda tem um Ponto de Ligação de Serviço na sua rede), tem de voltar a configurar as definições de registo após efetuar a reposição do cliente.
-        
-        - Caso tenha efetuado a reposição do cliente, tem de reiniciar o ambiente do utilizador (também conhecido como "bootstrapping"), o que irá transferir para o cliente certificados e os modelos mais recentes. Para o fazer, feche todas as instâncias do Office e, em seguida, reinicie uma aplicação do Office. Esta ação também irá verificar se transferiu a política do Azure Information Protection mais recente. Não execute novamente os testes de diagnóstico até ter efetuado esta ação.
-
-
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 Agora que instalou o cliente do Azure Information Protection, veja o seguinte para obter informações adicionais que poderá precisar para suportar este cliente:
 
 - [Ficheiros de cliente e registo de utilização](client-admin-guide-files-and-logging.md)

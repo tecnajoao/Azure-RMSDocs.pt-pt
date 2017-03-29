@@ -4,14 +4,14 @@ description: "Passo 3 de um tutorial de introdução para experimentar o Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
-ms.openlocfilehash: 61c0d2c97ae1db15bf2ec5c4586aa54270502117
-ms.sourcegitcommit: d5ce1bce5e63b3e510033ff9d4d246dd3511ed7c
+ms.openlocfilehash: ba10ce73d5bd9cbfa65d373e247b440150be826b
+ms.sourcegitcommit: 9f542a5599ca6332b4b69ebbbbfb9ffdf5464731
 translationtype: HT
 ---
 # <a name="step-3-install-the-client"></a>Passo 3: instalar o cliente
@@ -29,7 +29,7 @@ Neste passo, irá instalar o cliente Azure Information Protection, para que a po
 
     Para este tutorial, não interessa se selecionou a opção para instalar uma política de demonstração, porque a nossa política que transferimos vai ser transferida do Azure e substituir a política de demonstração, caso esteja instalada. No entanto, pode utilizar a opção de política de demonstração caso pretenda experimentar as etiquetas predefinidas sem ligar ao Azure Information Protection. 
 
-## <a name="verify-the-installations"></a>Verificar as instalações
+## <a name="verify-the-installation"></a>Verificar a instalação
 
 Verifique se a instalação foi bem-sucedida ao abrir o Word e um novo documento em branco (não o guarde por agora). Se lhe for pedido para introduzir o seu nome de utilizador e palavra-passe, introduza os detalhes da sua conta de administrador global. 
 
@@ -37,13 +37,13 @@ Se esta é a primeira vez que instala o cliente, verá a página **Parabéns** c
 
 Quando o documento é carregado, deve ver duas novas opções:
 
-- No separador **Home page**, um novo grupo **Proteção**, com um botão com a etiqueta **Proteger**.
+![Passo 3 do tutorial de início rápido do Azure Information Protection – cliente instalado](../media/word2016-calloutsv2.png)
+
+- No separador **Base**, um novo grupo **Proteção**, com um botão com o nome **Proteger**.
 
     Clique em **Proteger** > **Ajuda e Feedback** e, na caixa de diálogo **Microsoft Azure Information Protection**, confirme o estado do cliente. Deverá apresentar **Ligado como** e o seu nome de utilizador. Além disso, também deverá ver uma hora e data recentes para a última ligação e quando a política do Information Protection foi instalada. Verifique se o seu nome de utilizador apresentado está correto para o seu inquilino.
 
-- Uma nova barra abaixo do friso; a barra do Information Protection. Apresenta o título **Sensibilidade** e a etiqueta predefinida que configurámos de **Interna**. 
-    
-    ![Tutorial de início rápido do Azure Information Protection, passo 3 - cliente instalado](../media/word2013-callouts2.png)
+- Uma nova barra abaixo do friso; a barra do Information Protection. Apresenta o título **Sensibilidade** e a etiqueta predefinida que configurámos como **Geral**. 
 
 Agora está pronto para ver o Azure Information Protection em ação.
 

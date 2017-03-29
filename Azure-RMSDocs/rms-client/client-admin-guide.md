@@ -4,7 +4,7 @@ description: "Instruções e informações para administradores numa rede empres
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/16/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3cc1cf7f35c8cf66423c00332691c2291a8b6106
-ms.sourcegitcommit: 02e860196efca306ef9d1e61c1d89c4d8593c912
+ms.openlocfilehash: ffa336d352c60f36269cfb23236133bf1ca50d9f
+ms.sourcegitcommit: 9f542a5599ca6332b4b69ebbbbfb9ffdf5464731
 translationtype: HT
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guia do administrador do cliente do Azure Information Protection
@@ -35,7 +35,9 @@ O cliente do Azure Information Protection inclui o seguinte:
 
 - O cliente do Rights Management que comunica com o Azure Rights Management (Azure RMS) ou os Serviços de Gestão de Direitos do Active Directory (AD RMS).
 
-O cliente do Azure Information Protection é mais adequado para funcionar com os respetivos serviços do Azure; o Azure Information Protection e o respetivo serviço de proteção de dados, o Azure Rights Management. No entanto, com algumas limitações, o cliente do Azure Information Protection também funciona com a versão no local do Rights Management, o AD RMS. Para ver uma comparação detalhada das funcionalidades suportadas pelo Azure Information Protection e pelo AD RMS, veja [Comparar o Azure Information Protection e o AD RMS](../understand-explore/compare-azure-rms-ad-rms.md). Se tiver o AD RMS e quiser migrar para o Azure Information Protection, veja [Migrar do AD RMS para o Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+O cliente do Azure Information Protection é mais adequado para funcionar com os respetivos serviços do Azure; o Azure Information Protection e o respetivo serviço de proteção de dados, o Azure Rights Management. No entanto, com algumas limitações, o cliente do Azure Information Protection também funciona com a versão no local do Rights Management, o AD RMS. Para ver uma comparação detalhada das funcionalidades suportadas pelo Azure Information Protection e pelo AD RMS, veja [Comparar o Azure Information Protection e o AD RMS](../understand-explore/compare-azure-rms-ad-rms.md). 
+
+Se tiver o AD RMS e quiser migrar para o Azure Information Protection, veja [Migrar do AD RMS para o Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
 **Tem uma pergunta que não foi respondida por esta documentação?** Visite o nosso [site Yammer do Azure Information Protection](https://www.yammer.com/AskIPTeam). 
 
@@ -62,13 +64,13 @@ Implemente o cliente do Azure Information Protection no caso de se aplicar algum
 
 Exemplo que mostra o suplemento do cliente do Azure Information Protection em aplicações do Office a apresentar as etiquetas de classificação para a sua organização e o novo botão **Proteger** no friso:
 
-![Barra do Azure Information Protection com a política predefinida](../media/info-protect-bar-default.png)
+![Barra do Azure Information Protection com a política predefinida](../media/word2016-calloutsv2.png)
 
 ## <a name="how-to-install-the-azure-information-protection-client-for-users"></a>Como instalar o cliente do Azure Information Protection para os utilizadores
 
 Antes de instalar o cliente, verifique se tem as versões de sistema operativo e as aplicações necessárias para o cliente do Azure Information Protection: [Requisitos do Azure Information Protection](../get-started/requirements-azure-rms.md). 
 
-Além disso:
+Pré-requisitos adicionais para o cliente do Azure Information Protection:
 
 - A instalação completa do cliente do Azure Information Protection requer, por predefinição, a versão mínima do Microsoft .NET Framework 4.6.2 e, se estiver em falta, o instalador tentará transferir e instalar este pré-requisito. Quando este pré-requisito é instalado como parte da instalação do cliente, o computador tem de ser reiniciado. Embora não seja recomendado, pode ignorar este pré-requisito com um parâmetro de instalação personalizada.
 
@@ -174,7 +176,7 @@ Utilize a opção **Ajuda e Feedback** para abrir a caixa de diálogo **Microsof
 
 A **ligação Mais informações** direciona-o, por predefinição, para o site do [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection), mas pode ser configurada para um URL personalizado, de acordo com uma das [definições da política](../deploy-use/configure-policy-settings.md) da política do Azure Information Protection.
 
-Utilize a ligação **Enviar comentários** para enviar pedidos ou sugestões para a equipa do Information Protection. Não utilize esta opção para o suporte técnico e, em vez disso, veja [Opções de suporte e recursos da comunidade](../get-started/information-support.md#support-options-and-community-resources). 
+Utilize a ligação **Enviar Comentários** para enviar pedidos ou sugestões para a equipa do Information Protection. Não utilize esta opção para o suporte técnico e, em vez disso, veja [Opções de suporte e recursos da comunidade](../get-started/information-support.md#support-options-and-community-resources). 
 
 **Exportar Registos** serve para recolher e anexar automaticamente ficheiros de registo para o cliente de Azure Information Protection se lhe tiver sido pedido para os enviar ao Suporte da Microsoft. Esta opção também serve para os utilizadores finais enviarem estes ficheiros de registo ao suporte técnico.
 

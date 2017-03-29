@@ -4,7 +4,7 @@ description: "Algumas perguntas mais frequentes sobre o Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/16/2017
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c15d4ea3309bc58cb3b2c34481f3c4588e2f2433
-ms.sourcegitcommit: df8492aa3687974dc6105dc415c2d959f32e6630
+ms.openlocfilehash: 987936c79325c33a8c553dea1a6594933df5f7d8
+ms.sourcegitcommit: d959f0a9ba347a5dde77aac45a5d9f88d7cfdfb2
 translationtype: HT
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Perguntas mais frequentes sobre o Azure Information Protection
@@ -61,9 +61,7 @@ Veja [Informações de suporte e conformidade do Azure Information Protection](.
 
 Em alternativa, utilize os canais de suporte padrão ou [contacte o Suporte da Microsoft](information-support.md#to-contact-microsoft-support).
 
-Para comentários como sugestões de melhorias ou novas funcionalidades: na aplicação do Office, no separador **Base** no grupo **Proteção**, clique em **Proteger** e, em seguida, clique em **Ajuda e comentários**. Na caixa de diálogo **Microsoft Azure Information Protection**, clique em **Enviar comentários**. Deste modo, envia um e-mail à equipa do Information Protection e anexa automaticamente os ficheiros de registo do seu PC. 
-
-É também convidado a interagir com a nossa equipa de engenharia, no [site Yammer do Azure Information Protection](https://www.yammer.com/askipteam/). 
+Para enviar feedback, como sugestões de melhorias ou novas funcionalidades: na aplicação do Office, no separador **Base** no grupo **Proteção**, clique em **Proteger** e, em seguida, clique em **Ajuda e Feedback**. Na caixa de diálogo **Microsoft Azure Information Protection**, clique em **Envie-nos Os Seus Comentários**. Esta ação abre uma mensagem de e-mail para ser enviado à equipa do Information Protection. É também convidado a interagir com a nossa equipa de engenharia, no [site Yammer do Azure Information Protection](https://www.yammer.com/askipteam/). 
 
 ## <a name="what-do-i-do-if-my-question-isnt-here"></a>O que posso fazer se a minha pergunta não constar aqui?
 

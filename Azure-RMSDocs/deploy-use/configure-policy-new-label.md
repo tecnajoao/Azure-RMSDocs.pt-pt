@@ -4,14 +4,14 @@ description: "Apesar do Azure Information Protection ter etiquetas predefinidas 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/06/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
-ms.openlocfilehash: eb9f68994d92695412c64a7795c6ae2b2b094218
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: ff0a5af172fa7ae20406ab4362a02a9de3fff5c0
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
 translationtype: HT
 ---
 # <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Como criar uma nova etiqueta para o Azure Information Protection
@@ -20,7 +20,7 @@ translationtype: HT
 
 Apesar do Azure Information Protection ter etiquetas predefinidas que pode personalizar, também pode criar as suas próprias etiquetas que os utilizadores veem na barra Information Protection.
 
-Pode adicionar uma nova etiqueta ou adicionar uma nova etiqueta secundária a uma etiqueta existente quando precisar de um nível adicional de classificação. Por exemplo, a etiqueta **Secreto** etiqueta, que se encontra na [política predefinia](configure-policy-default.md), contém etiquetas secundárias.
+Pode adicionar uma nova etiqueta ou adicionar uma nova etiqueta secundária a uma etiqueta existente quando precisar de um nível adicional de classificação. Por exemplo, a última etiqueta na [política predefinida](configure-policy-default.md) contém subetiquetas.
 
 Utilize as seguintes instruções para adicionar uma nova etiqueta à política do Azure Information Protection.
 

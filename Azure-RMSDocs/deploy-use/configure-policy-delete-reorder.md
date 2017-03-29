@@ -4,14 +4,14 @@ description: "Pode eliminar ou reordenar qualquer uma das etiquetas que os utili
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: 09fc981338935536974935574409b0a30bfe8e0e
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 8cb5c6270c90b7d012607da9aa9e4e6172d33a7b
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
 translationtype: HT
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Como eliminar ou reordenar uma etiqueta para o Azure Information Protection
@@ -26,7 +26,7 @@ Quando elimina uma etiqueta que foi aplicada a documentos e e-mails e, em seguid
 
 Antes de eliminar uma etiqueta, pondere desativá-la. Quando desativar uma etiqueta que foi aplicada a documentos e e-mails, a etiqueta aplicada não será removida destes documentos e e-mails, mas deixará de ser apresentada como uma etiqueta passível de ser selecionada pelos utilizadores na barra Information Protection. Desativar uma etiqueta também lhe permite manter a configuração original. Se quiser que os utilizadores selecionem a etiqueta posteriormente, basta reativá-la.
 
-Ordene as etiquetas para que os utilizadores visualizem uma progressão lógica na barra Information Protection. Por exemplo, ordenar as etiquetas de acordo com o aumento de confidencialidade para que os utilizadores vejam a etiqueta menos confidencial em primeiro e a etiqueta mais confidencial em último. A [política predefinida](configure-policy-default.md) utiliza esta configuração.
+Ordene as etiquetas para que os utilizadores visualizem uma progressão lógica na barra Information Protection. Por exemplo, ordenar as etiquetas de acordo com o aumento de confidencialidade para que os utilizadores vejam a etiqueta menos confidencial em primeiro e a etiqueta mais confidencial em último. A [política predefinida](configure-policy-default.md) utiliza esta configuração e reflete o aumento de confidencialidade nos nomes das etiquetas.
 
 > [!IMPORTANT]
 >Se configurar [condições](configure-policy-classification.md) para as etiquetas que podem ser aplicadas a mais do que uma etiqueta, deve ordenar as etiquetas desde a menos confidencial à mais confidencial. Esta ordem garante que a etiqueta mais confidencial é aplicada quando são condições são avaliadas.

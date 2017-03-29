@@ -4,7 +4,7 @@ description: "Tem uma pergunta específica sobre classificação e etiquetagem a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 854de3beea1f4b6e05461dee58cec6ca91f79034
-ms.sourcegitcommit: 117e4016794d0cb9b7bd95603fb6c79114d65360
+ms.openlocfilehash: 6af0a81b31fb0a2e5437428dc8373dd997b18406
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
 translationtype: HT
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Perguntas mais frequentes sobre a classificação e a etiquetagem no Azure Information Protection
@@ -46,7 +46,7 @@ A versão de fevereiro veio colmatar muitas das limitações anteriores. Para ob
 
 Para configurar a política do Azure Information Protection, tem de iniciar sessão no portal do Azure como um administrador global do Azure Active Directory.
 
-Se selecionar a opção para instalar a política de demonstração quando instalar o [cliente do Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018), não precisa de iniciar sessão no portal para ver e experimentar a funcionalidade de etiquetagem. A política de demonstração instala localmente a política predefinida do Azure Information Protection, pelo que pode tentar etiquetar documentos e e-mails, mas não pode alterar ou adicionar novas etiquetas sem iniciar sessão no portal do Azure. 
+Se selecionar a opção para instalar a política de demonstração quando instalar o [cliente do Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018), não precisa de iniciar sessão no portal para ver e experimentar a funcionalidade de etiquetagem. A política de demonstração instala localmente uma política predefinida para o Azure Information Protection. Por isso, pode tentar etiquetar documentos e e-mails, mas não poderá alterar ou adicionar novas etiquetas sem iniciar sessão no portal do Azure. 
 
 ## <a name="which-options-in-the-azure-portal-are-p1-or-p2"></a>Que opções no portal do Azure são P1 ou P2?
 
@@ -56,7 +56,7 @@ Para verificar quais as funcionalidades incluídas na subscrição do **Azure In
 
 Os utilizadores podem selecionar apenas uma etiqueta de cada vez para cada documento ou e-mail, o que habitualmente acaba por criar apenas uma classificação. No entanto, se os utilizadores selecionarem uma subetiqueta, esta aplica habitualmente duas etiquetas ao mesmo tempo; uma etiqueta principal e uma etiqueta secundária. Ao utilizar subetiquetas, um ficheiro pode ter duas classificações que indicam uma relação principal\subordinado e permitem um nível adicional de controlo.
 
-Por exemplo, a etiqueta **Secreto** pode conter subetiquetas como **Legal** e **Finanças**. Pode aplicar diferentes marcas de classificação visual e diferentes modelos do Rights Management a estas subetiquetas. Os utilizadores não podem selecionar a etiqueta **Secreto**, mas apenas uma das respetivas subetiquetas, por exemplo **Legal**. Como resultado, a etiqueta definida será **Secreto/Legal**. Os metadados do ficheiro em questão incluem uma propriedade de texto personalizado para **Secreto**, uma propriedade de texto personalizado para **Legal** e outra com ambos os valores (**Secreto/Legal**). 
+Por exemplo, a etiqueta **Confidencial** pode conter subetiquetas como **Informações jurídicas** e **Finanças**. Pode aplicar diferentes marcas de classificação visual e diferentes modelos do Rights Management a estas subetiquetas. Um utilizador não pode selecionar a etiqueta **Confidencial**, mas apenas uma das respetivas subetiquetas, como **Informações jurídicas**. Como resultado, a etiqueta definida será **Confidencial\Informações jurídicas**. Os metadados do ficheiro em questão incluem uma propriedade de texto personalizado para **Confidencial**, uma propriedade de texto personalizado para **Informações jurídicas** e outra com ambos os valores (**Confidencial/Informações jurídicas**). 
 
 Quando utilizar subetiquetas, não configure as marcas visuais, a proteção e as condições na etiqueta principal. Quando utilizar subetiquetas, configure esta definição apenas na subetiqueta. Se configurar estas definições na etiqueta principal e na respetiva subetiqueta, as definições da subetiqueta têm prioridade.
 

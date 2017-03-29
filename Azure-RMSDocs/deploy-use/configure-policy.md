@@ -4,7 +4,7 @@ description: "Para configurar a classificação, a etiquetagem e a proteção, t
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: faf296a92abb6636bd516e41a6e44d4580984146
-ms.sourcegitcommit: 117e4016794d0cb9b7bd95603fb6c79114d65360
+ms.openlocfilehash: b946dff4782d1b5571aa0438d1681030f0de092f
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
 translationtype: HT
 ---
 # <a name="configuring-azure-information-protection-policy"></a>Configurar a política do Azure Information Protection
@@ -26,7 +26,7 @@ Para configurar a política do Azure Information Protection:
 
 1. Numa nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com) como administrador global.
 
-2. Navegue para o painel **Azure Information Protection**: por exemplo, no menu hub, clique em **Mais serviços** e comece a escrever **Information Protection** na caixa Filtro. Na lista de resultados, selecione **Azure Information Protection**. 
+2. Navegue para o painel **Azure Information Protection**: por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information Protection** na caixa Filtro. Na lista de resultados, selecione **Azure Information Protection**. 
 
     Em seguida, verá o painel **Azure Information Protection**, onde pode abrir a política **Global** que todos os utilizadores obtêm. Opcionalmente, também pode adicionar e editar as políticas de âmbito. A política **Global** do Azure Information Protection contém os elementos seguintes que pode configurar:
 
@@ -40,9 +40,11 @@ Para configurar a política do Azure Information Protection:
 
     - A opção para solicitar aos utilizadores que indiquem um motivo quando estes selecionam uma etiqueta que tem um nível de sensibilidade inferior ao original.
 
+    - A opção para etiquetar automaticamente uma mensagem de e-mail com base nos respetivos anexos.
+
     - A opção para fornecer uma ligação de ajuda personalizada para os utilizadores.
 
-O Azure Information Protection vem com uma [política predefinida](configure-policy-default.md), que contém as etiquetas **Pessoal**, **Público**, **Interno**, **Confidencial** e **Secreto**. Pode utilizar as etiquetas predefinidas sem alterações ou pode personalizá-las, eliminá-las ou criar novas etiquetas.
+O Azure Information Protection tem uma [política predefinida](configure-policy-default.md) que contém cinco etiquetas principais. Estas etiquetas podem ser utilizadas com o intervalo de dados completo que uma organização normalmente cria e armazena, desde a classificação mais baixa de dados pessoais à classificação mais elevada de dados altamente confidenciais. Pode utilizar as etiquetas predefinidas sem alterações ou pode personalizá-las, eliminá-las ou criar novas etiquetas.
 
 Quando efetuar alterações num painel do Azure Information Protection, clique em **Guardar** para guardar as alterações ou clique em **Eliminar** para reverter para as últimas definições guardadas. 
 

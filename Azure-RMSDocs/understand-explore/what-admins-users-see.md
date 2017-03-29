@@ -119,7 +119,7 @@ Neste exemplo, o administrador configura uma política para ajudar a manter a or
 
 ![Capturas de ecrã de exemplo a mostrar algumas das opções de configuração para configurar a prevenção de perda de dados do Exchange Online](../media/AzRMS_DLPExample1.png)
 
-**O QUE VEEM OS ADMINISTRADORES NO PASSO 1:** no centro de administração do Exchange, o modelo do Exchange com o nome ** Dados de Informação Identificativa (PII) dos E.U.A.** é utilizado pelo administrador para criar e configurar uma nova política de DLP. Este modelo procura informações como números de segurança social e números de cartas de condução nas mensagens e-mail.
+**O QUE VEEM OS ADMINISTRADORES NO PASSO 1:** no centro de administração do Exchange, o modelo do Exchange com o nome **Dados de Informação Identificativa (PII) dos E.U.A.** é utilizado pelo administrador para criar e configurar uma nova política de DLP. Este modelo procura informações como números de segurança social e números de cartas de condução nas mensagens e-mail.
 
 As regras são configuradas de modo a que a proteção de direitos seja automaticamente aplicada às mensagens de e-mail que contêm estas informações e que são enviadas para fora da organização, através de um modelo de RMS que restringe o acesso exclusivamente aos funcionários da empresa.
 

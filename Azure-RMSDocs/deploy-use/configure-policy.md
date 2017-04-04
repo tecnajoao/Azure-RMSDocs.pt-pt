@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b946dff4782d1b5571aa0438d1681030f0de092f
-ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
+ms.openlocfilehash: ec57bae71b11b6505ccb94fcdf692f215862191d
+ms.sourcegitcommit: 8ae83a9fc03bf2ee39ea758835ef52156f19784d
 translationtype: HT
 ---
 # <a name="configuring-azure-information-protection-policy"></a>Configurar a política do Azure Information Protection
@@ -28,7 +28,7 @@ Para configurar a política do Azure Information Protection:
 
 2. Navegue para o painel **Azure Information Protection**: por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information Protection** na caixa Filtro. Na lista de resultados, selecione **Azure Information Protection**. 
 
-    Em seguida, verá o painel **Azure Information Protection**, onde pode abrir a política **Global** que todos os utilizadores obtêm. Opcionalmente, também pode adicionar e editar as políticas de âmbito. A política **Global** do Azure Information Protection contém os elementos seguintes que pode configurar:
+    Quando o painel **Azure Information Protection** é carregado, é apresentado automaticamente o painel **Política: Global**, onde pode ver e editar a política global que todos os utilizadores têm. Contudo, opcionalmente, também pode adicionar e editar as políticas de âmbito. As políticas do Azure Information Protection contêm os elementos seguintes que pode configurar:
 
     - Etiquetas que permitem tanto a si como aos utilizadores classificar documentos e e-mails.
 

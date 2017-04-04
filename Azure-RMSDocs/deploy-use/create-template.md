@@ -4,7 +4,7 @@ description: "Instruções para criar e gerir modelos personalizados no portal c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/08/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9d0b71db6245e49765a0f79aaa901141a155372d
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: cf11e0ac3bb13dcb31d14bad5f97ad117bd09953
+ms.sourcegitcommit: 16fec44713c7064959ebb520b9f0857744fecce9
 translationtype: HT
 ---
 # <a name="create-configure-and-publish-a-custom-template"></a>Criar, configurar e publicar um modelo personalizado
@@ -75,6 +75,8 @@ Utilize os seguintes procedimentos para criar, configurar e publicar modelos per
 
     > [!NOTE]
     > Os utilizadores ou grupos que selecionou têm de possuir um endereço de e-mail. Num ambiente de produção, este será quase sempre o caso, mas num ambiente de teste simples poderá ter de adicionar endereços de e-mail às contas de utilizador ou grupos.
+    > 
+    > Em caso de alteração de um endereço de e-mail depois de selecionar o utilizador ou o grupo e guardar o modelo, veja a secção [Considerações em caso de alteração do endereço de e-mail](../plan-design/prepare.md#considerations-if-email-addresses-change) da documentação de planeamento. 
 
     De acordo com as melhores práticas, utilize grupos em vez de utilizadores, pois simplifica a gestão dos modelos. No entanto, se fizer alterações ao grupo, tenha em atenção que, por motivos de desempenho, o Azure Rights Management [coloca a associação do grupo em cache](../plan-design/prepare.md#group-membership-caching). 
     

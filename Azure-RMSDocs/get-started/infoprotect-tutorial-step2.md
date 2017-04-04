@@ -4,14 +4,14 @@ description: "Passo 2 de um tutorial de introdução para experimentar o Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 03/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 7db581d07698edf50fda8379d622e35414ad3671
-ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
+ms.openlocfilehash: 98e65768651c77b4cc0616142e6b7515d275b7a9
+ms.sourcegitcommit: 8ae83a9fc03bf2ee39ea758835ef52156f19784d
 translationtype: HT
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passo 2: configurar e publicar a política do Azure Information Protection
@@ -29,11 +29,9 @@ Apesar de o Azure Information Protection ser fornecido com uma política predefi
     > [!TIP] 
     > Selecione **Afixar ao dashboard** para criar um mosaico do **Azure Information Protection** no seu dashboard. Assim, não terá de procurar o serviço da próxima vez que iniciar sessão no portal.
 
-3.  No painel Azure Information Protection, clique em **Global** e explore o painel **Política:Global**, que mostra a política predefinida do Information Protection criada automaticamente para o seu inquilino.
+3.  Explore o painel **Política: Global**, apresentado automaticamente, que mostra a política do Information Protection predefinida criada automaticamente para o seu inquilino:
     
-    No painel **Política:Global**, irá reparar no seguinte:
-    
-    - Etiquetas para classificação: **Pessoal**, **Público**, **Geral**, **Confidencial** e **Altamente Confidencial**. Tenha em atenção que as últimas duas etiquetas se expandem para mostrar subetiquetas: **Todos os Funcionários** e **Todos (não protegidos)**, para disponibilizar exemplos de como uma classificação pode ter subcategorias.
+    - Etiquetas para classificação: **Pessoal**, **Público**, **Geral**, **Confidencial** e **Altamente Confidencial**. As últimas duas etiquetas expandem-se para mostrar subetiquetas: **Todos os Funcionários** e **Todos (não protegidos)**, para disponibilizar exemplos de como uma classificação pode ter subcategorias.
     
        > [!NOTE]
        > A sua política predefinida pode ter um aspeto diferente da que é apresentada neste tutorial. Por exemplo, tem uma etiqueta com o nome **Interno** em vez de **Geral** e **Secreto** em vez de **Altamente Confidencial**. Se for este o caso, está provavelmente a utilizar uma versão mais antiga da política predefinida. Também é possível que tenha editado a política antes de iniciar o tutorial.

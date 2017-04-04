@@ -4,7 +4,7 @@ description: "Informações e instruções sobre como utilizar os registos de ut
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/24/2017
+ms.date: 03/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f179d9b4a9b883e6a7cff15ce3f8e713508b0bd3
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: fd4fa09da3bffe9abdec5754185659393fdbf531
+ms.sourcegitcommit: 96410e06941ec414032d72cf96491884dc11aba0
 translationtype: HT
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Registar e analisar a utilização do serviço Azure Rights Management
@@ -145,7 +145,7 @@ Cada uma das linhas subsequentes é um registo. Os valores dos campos estão na 
 |owner-email|Cadeia|Endereço de e-mail do proprietário do documento.<br /><br /> Este campo fica em branco se o tipo de pedido for RevokeAccess.|alice@contoso.com|
 |issuer|Cadeia|Endereço de e-mail do emissor do documento. <br /><br /> Este campo fica em branco se o tipo de pedido for RevokeAccess.|alice@contoso.com (ou) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
 |template-id|Cadeia|ID do modelo utilizado para proteger o documento. <br /><br /> Este campo fica em branco se o tipo de pedido for RevokeAccess.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|file-name|Cadeia|Nome de ficheiro do documento que foi protegido. <br /><br />Atualmente, alguns ficheiros (como documentos do Office) são apresentados como GUIDs em vez do nome de ficheiro real.<br /><br /> Este campo fica em branco se o tipo de pedido for RevokeAccess.|DocumentoConfidencial.docx|
+|file-name|Cadeia|O nome de ficheiro de um documento protegido que é controlado com o cliente do Azure Information Protection para Windows ou a aplicação de partilha Rights Management para Windows. <br /><br />Atualmente, alguns ficheiros (como documentos do Office) são apresentados como GUIDs em vez do nome de ficheiro real.<br /><br /> Este campo fica em branco se o tipo de pedido for RevokeAccess.|DocumentoConfidencial.docx|
 |date-published|Data|Data em que o ficheiro foi protegido.<br /><br /> Este campo fica em branco se o tipo de pedido for RevokeAccess.|2015-10-15T21:37:00|
 |c-info|Cadeia|Informações sobre a plataforma de cliente que está a efetuar o pedido.<br /><br />A cadeia específica varia em função da aplicação (por exemplo, do sistema operativo ou do browser).|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|Endereço|Endereço IP do cliente que efetua o pedido.|64.51.202.144|

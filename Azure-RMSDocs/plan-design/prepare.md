@@ -4,7 +4,7 @@ description: "Verifique se preparou tudo para utilizar o Azure Rights Management
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/24/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 034ca391c5b021333e77e8b6b9c389300e4a9da2
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 4b074f9a9a3d72b4d1ab5810b69e92b4792b0711
+ms.sourcegitcommit: 16fec44713c7064959ebb520b9f0857744fecce9
 translationtype: HT
 ---
 # <a name="preparing-for-azure-information-protection"></a>Preparação para o Azure Information Protection
@@ -33,6 +33,14 @@ Antes de implementar o Azure Information Protection na sua organização, certif
 ### <a name="group-membership-caching"></a>Colocação em cache da associação de grupos
 
 Por motivos de desempenho, a associação a grupos é colocada em cache pelo serviço Azure Rights Management. Isto significa que qualquer alteração feita à associação a grupos pode demorar até 3 horas para entrar em vigor, estando também este período de tempo sujeito a alterações. Lembre-se de ter este período de atraso em conta ao efetuar quaisquer alterações ou testes quando utilizar grupos na sua configuração do serviço Azure Rights Management, como a configuração de [modelos personalizados](../deploy-use/configure-custom-templates.md) ou quando utiliza um grupo para a funcionalidade de [superutilizador](../deploy-use/configure-super-users.md). 
+
+### <a name="considerations-if-email-addresses-change"></a>Considerações em caso de alteração dos endereços de e-mail
+
+Ao configurar direitos de utilização para utilizadores ou grupos e selecioná-los pelo nome a apresentar, a sua seleção guarda e utiliza o endereço de e-mail desse objeto. Se o endereço de e-mail for alterado mais tarde, os utilizadores selecionados não serão autorizados com êxito.
+
+Em caso de alteração dos endereços de e-mail, recomendamos que adicione o endereço de e-mail antigo como um endereço de e-mail do proxy (também conhecido como um alias ou um endereço de e-mail alternativo) ao utilizador ou grupo para que os direitos de utilização que foram atribuídos anteriormente sejam mantidos. Se não conseguir fazê-lo, terá de remover o utilizador ou grupo da sua configuração e selecioná-lo novamente para guardar o endereço de e-mail atualizado para que o conteúdo protegido recentemente utilize o novo endereço de e-mail.
+
+Os modelos do Rights Management personalizados são um exemplo de onde pode selecionar utilizadores ou grupos pelo nome a apresentar para atribuir direitos de utilização. Os utilizadores também podem selecionar utilizadores e grupos pelo nome a apresentar quando configurarem permissões personalizadas com o cliente do Azure Information Protection.
 
 ## <a name="activate-the-rights-management-service-for-data-protection"></a>Ativar o serviço Rights Management para a proteção de dados
 Quando estiver pronto para começar a proteger documentos e e-mails, ative o serviço Rights Management para ativar esta tecnologia. Para obter mais informações, veja [Ativar o Azure Rights Management](../deploy-use/activate-service.md).

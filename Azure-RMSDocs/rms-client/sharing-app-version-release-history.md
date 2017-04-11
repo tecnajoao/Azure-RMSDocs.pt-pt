@@ -1,9 +1,10 @@
 ---
-title: "Aplicação de partilha Rights Management&colon; histórico de lançamento de versões | Azure Information Protection"
+title: "Aplicação de partilha RMS&colon; histórico de lançamento de versões – AIP"
 description: "Veja as novidades ou alterações numa versão da aplicação de partilha Rights Management para Windows."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -11,16 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: 31b9ad27e1fc640f8fec29067794f952aa6031b6
-
-
+ms.openlocfilehash: cee881a77b695fe38d0f88c05b0699d3d9d14955
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
+# <a name="rights-management-sharing-application-version-release-history"></a>Aplicação de partilha Rights Management: histórico de lançamento de versões
 
-# Aplicação de partilha Rights Management: histórico de lançamento de versões
-
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8 e Windows 8.1*
 
 A equipa do Azure Information Protection atualiza regularmente a aplicação de partilha Rights Management com correções e novas funcionalidades. Utilize as seguintes informações para ver o que há de novo ou o que foi alterado num lançamento. A versão mais atual aparece em primeiro na lista.
 
@@ -29,7 +27,7 @@ As versões anteriores a 1 de janeiro de 2015 não estão listadas.
 > [!NOTE]
 > Se tiver comentários ou uma pergunta sobre a aplicação de partilha RMS, envie uma mensagem de e-mail para [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question).
 
-## Versão 1.0.2217.0
+## <a name="version-1022170"></a>Versão 1.0.2217.0
 
 **Lançada**: 13/07/2016
 
@@ -39,7 +37,7 @@ As versões anteriores a 1 de janeiro de 2015 não estão listadas.
 
 
 
-## Versão 1.0.2191.0
+## <a name="version-1021910"></a>Versão 1.0.2191.0
 **Lançamento**: 16/06/2016
 
 **Correções**:
@@ -53,7 +51,7 @@ As versões anteriores a 1 de janeiro de 2015 não estão listadas.
 - Pequeno número de erros secundários e melhoramentos para mensagens de erro.
 
 
-## Versão 1.0.2004.0
+## <a name="version-1020040"></a>Versão 1.0.2004.0
 **Lançada**: 11/12/2015
 
 **Correções**:
@@ -72,16 +70,16 @@ As versões anteriores a 1 de janeiro de 2015 não estão listadas.
 
     Existem algumas restrições para os utilizadores padrão que executam o Office 2010. Para obter mais informações, consulte a secção [Se não for um administrador local e utilizar o Office 2010](install-sharing-app.md#if-you-are-not-a-local-administrator-and-use-office-2010) nas instruções do utilizador para [Transferir e instalar a aplicação de partilha Rights Management](install-sharing-app.md).
 
-## Versão 1.0.1908.0
+## <a name="version-1019080"></a>Versão 1.0.1908.0
 **Lançada**: 16/09/2015
 
 **Correções**:
 
 -   Suporte para a autenticação multifator (MFA) para o Azure RMS, que também remove a dependência do Assistente de Início de Sessão do Microsoft para as aplicações que utilizam autenticação moderna.
 
-    Para obter mais informações, consulte a secção [Multi-Factor Authentication (MFA) e Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-rms) em [Requisitos do Azure Rights Management](../get-started/requirements-azure-rms.md).
+    Para mais informações, consulte a secção [Multi-Factor Authentication (MFA) e Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-information-protection) em [Requisitos do Azure Active Directory para o Azure Information Protection](../get-started/requirements-azure-ad.md).
 
-## Versão 1.0.1784.0
+## <a name="version-1017840"></a>Versão 1.0.1784.0
 **Lançada**: 30/07/2015
 
 **Correções**:
@@ -90,7 +88,7 @@ As versões anteriores a 1 de janeiro de 2015 não estão listadas.
 
 -   Um pequeno número de regressões e erros secundários.
 
-## Versão 1.0.1770.0
+## <a name="version-1017700"></a>Versão 1.0.1770.0
 **Lançada**: 25/04/2015
 
 **Correções**:
@@ -113,7 +111,7 @@ As versões anteriores a 1 de janeiro de 2015 não estão listadas.
 
     Para obter mais informações, consulte [Opções da caixa de diálogo para a aplicação de partilha Rights Management](sharing-app-dialog-box.md).
 
-## Versão 1.0.1667.0
+## <a name="version-1016670"></a>Versão 1.0.1667.0
 **Lançada**: 19/01/2015
 
 **Correções**:
@@ -128,9 +126,4 @@ As versões anteriores a 1 de janeiro de 2015 não estão listadas.
 
 -   **Suporte para múltiplos domínios de e-mail dentro da sua organização**: se utilizar o AD RMS e os utilizadores da sua organização tiverem múltiplos domínios de e-mail, esta atualização permite que os seus utilizadores consumam conteúdo que foi protegido por utilizadores da sua organização noutros domínios. Para obter mais informações, consulte a secção [Apenas AD RMS: suporte para múltiplos domínios de e-mail dentro da sua organização](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization) no [Guia do administrador da aplicação de partilha Rights Management](sharing-app-admin-guide.md).
 
-
-
-
-<!--HONumber=Sep16_HO4-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

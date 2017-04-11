@@ -6,14 +6,14 @@
 ### [Suporte de aplicações para proteção de dados](requirements-applications.md)
 ### [Suporte de servidores no local para proteção de dados](requirements-servers.md)
 ## [Perguntas mais frequentes](faqs.md)
-### [FAQ sobre classificação e etiquetagem](faqs-infoprotect.md)
-### [FAQ sobre proteção de dados](faqs-rms.md)
+### [FAQs sobre a classificação e etiquetagem](faqs-infoprotect.md)
+### [FAQs sobre a proteção de dados](faqs-rms.md)
 ## [Informações e suporte](information-support.md)
 ## [Terminologia](terminology.md)
 ## [Tutorial de início rápido](infoprotect-quick-start-tutorial.md)
 ### [Passo 1: ativar o serviço](infoprotect-tutorial-step1.md)
 ### [Passo 2: configurar e publicar a política](infoprotect-tutorial-step2.md)
-### [Passo 3: instalar o cliente e a aplicação](infoprotect-tutorial-step3.md)
+### [Passo 3: instalar o cliente](infoprotect-tutorial-step3.md)
 ### [Passo 4: vê-lo em ação – etiquetagem, classificação, proteção](infoprotect-tutorial-step4.md)
 ### [Passo 5: vê-lo em ação – partilhar protegido e controlo](infoprotect-tutorial-step5.md)
 ## [Guia de implementação rápida](rapid-deployment-guide.md)
@@ -28,9 +28,4 @@
 # [Implementar e Utilizar o Serviço](/information-protection/deploy-use/activate-service)
 # [Implementar e Utilizar o Cliente](/information-protection/rms-client/use-client)
 # [Desenvolver e Personalizar Aplicações](/information-protection/develop/developers-guide)
-
-
-
-<!--HONumber=Sep16_HO5-->
-
 

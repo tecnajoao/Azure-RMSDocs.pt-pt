@@ -3,21 +3,17 @@
 # [Planear e Estruturar](deployment-roadmap.md)
 ## [Plano de implementação](deployment-roadmap.md)
 ## [Migrar do AD RMS](migrate-from-ad-rms-to-azure-rms.md)
-### [Configuração do lado do servidor](migrate-from-ad-rms-phase1.md)
+### [Preparação](migrate-from-ad-rms-phase1.md)
+### [Configuração do lado do servidor](migrate-from-ad-rms-phase2.md)
 #### [Chave de software para chave de software](migrate-softwarekey-to-softwarekey.md)
 #### [HSM key to HSM key (Chave HSM para chave HSM – em inglês)](migrate-hsmkey-to-hsmkey.md)
 #### [Chave de software para chave HSM](migrate-softwarekey-to-hsmkey.md)
-### [Configuração do lado do cliente](migrate-from-ad-rms-phase2.md)
-### [Configuração de serviços de suporte](migrate-from-ad-rms-phase3.md)
-### [Tarefas pós-migração](migrate-from-ad-rms-phase4.md)
+### [Configuração do lado do cliente](migrate-from-ad-rms-phase3.md)
+### [Configuração de serviços de suporte](migrate-from-ad-rms-phase4.md)
+### [Tarefas pós-migração](migrate-from-ad-rms-phase5.md)
 ## [Planear e implementar a chave de inquilino](plan-implement-tenant-key.md)
 ### [Preços e restrições de BYOK](byok-price-restrictions.md)
 ## [Preparação para o Azure Information Protection](prepare.md)
 # [Implementar e Utilizar o Serviço](/information-protection/deploy-use/activate-service)
 # [Implementar e Utilizar o Cliente](/information-protection/rms-client/use-client)
 # [Desenvolver e Personalizar Aplicações](/information-protection/develop/developers-guide)
-
-
-<!--HONumber=Sep16_HO4-->
-
-

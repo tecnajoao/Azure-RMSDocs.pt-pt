@@ -1,9 +1,10 @@
 ---
-title: "Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados | Azure Information Protection"
+title: "Configurar superutilizadores para o Azure Rights Management – AIP"
 description: "Conheça e implemente a funcionalidade de superutilizador do serviço Azure Rights Management do Azure Information Protection para que as pessoas e os serviços autorizados possam sempre ler e inspecionar os dados que o Azure Rights Management protege na sua organização. Esta capacidade é por vezes referida como &quot;raciocínio através de dados&quot; e é um elemento fundamental na manutenção do controlo dos dados da organização."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -11,14 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: d2ae8df5895b1cf1985420be25abac36fe2689b7
-
-
+ms.openlocfilehash: b11367b726a7740d42719b184b6a522e067e205b
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-# Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados
+# <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -36,10 +34,12 @@ A funcionalidade de superutilizador do serviço Azure Rights Management do Azure
 
 Por predefinição, a funcionalidade de superutilizador não está ativada. Esta função não é atribuída a nenhum utilizador. É automaticamente ativado para si se configurar o conector Rights Management para Exchange e não é necessário para serviços padrão que executem o Exchange Online, o SharePoint Online ou o SharePoint Server.
 
-Se precisar de ativar manualmente a funcionalidade de superutilizador, utilize o cmdlet do Windows PowerShell [Enable-AadrmSuperUserFeature](https://msdn.microsoft.com/library/azure/dn629400.aspx) e atribua utilizadores (ou contas de serviço), conforme necessário, ao utilizar o cmdlet [Add-AadrmSuperUser](https://msdn.microsoft.com/library/azure/dn629411.aspx) ou o cmdlet [Set-AadrmSuperUserGroup](https://msdn.microsoft.com/library/azure/mt653943.aspx) e adicione utilizadores (ou outros grupos), conforme necessário, a este grupo. 
+Se precisar de ativar manualmente a funcionalidade de superutilizador, utilize o cmdlet do PowerShell [Enable-AadrmSuperUserFeature](/powershell/aadrm/vlatest/enable-aadrmsuperuserfeature) e, em seguida, atribua utilizadores (ou contas de serviço), conforme necessário, ao utilizar o cmdlet [Add-AadrmSuperUser](/powershell/aadrm/vlatest/add-aadrmsuperuser) cmdlet ou o cmdlet [Set-AadrmSuperUserGroup](/powershell/aadrm/vlatest/set-aadrmsuperusergroup) e adicione utilizadores (ou outros grupos) a este grupo, conforme necessário. 
+
+Embora utilizar um grupo para os seus superutilizadores seja mais fácil de gerir, tenha em atenção que, por motivos de desempenho, o Azure Rights Management [coloca a associação do grupo em cache](../plan-design/prepare.md#group-membership-caching). Por isso, se precisa de atribuir um novo utilizador como superutilizador para desencriptar conteúdos imediatamente, adicione esse utilizador através do cmdlet Add-AadrmSuperUser em vez de o adicionar a um grupo existente que configurou ao utilizar o cmdlet Set-AadrmSuperUserGroup.
 
 > [!NOTE]
-> Se ainda não tiver instalado o módulo do Windows PowerShell para o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], consulte [Instalar o Windows PowerShell para o Azure Rights Management](install-powershell.md).
+> Se ainda não tiver instalado o módulo do Windows PowerShell para o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], veja [Instalar o Windows PowerShell para o Azure Rights Management](install-powershell.md).
 
 Melhores práticas de segurança para a funcionalidade de superutilizador:
 
@@ -51,26 +51,23 @@ Melhores práticas de segurança para a funcionalidade de superutilizador:
 
 O seguinte extrato de registo mostra algumas entradas de exemplo ao utilizar o cmdlet Get-AadrmAdminLog. Neste exemplo, o administrador da Contoso Ltd confirma que a funcionalidade de superutilizador está desativada, adiciona Guilherme Sarmento como um superutilizador, verifica se o Guilherme é o único superutilizador configurado para o serviço Azure Rights Management e, em seguida, ativa a funcionalidade de superutilizador para que o Guilherme possa desencriptar alguns ficheiros que foram protegidos por um empregado que entretanto saiu da empresa.
 
-`2015-08-01T18:58:20    admin@contoso.com   GetSuperUserFeatureState    Passed  Disabled`
+`2015-08-01T18:58:20    admin@contoso.com    GetSuperUserFeatureState    Passed    Disabled`
 
-`2015-08-01T18:59:44    admin@contoso.com   AddSuperUser -id rsimone@contoso.com    Passed  True`
+`2015-08-01T18:59:44    admin@contoso.com    AddSuperUser -id rsimone@contoso.com    Passed    True`
 
-`2015-08-01T19:00:51    admin@contoso.com   GetSuperUser    Passed  rsimone@contoso.com`
+`2015-08-01T19:00:51    admin@contoso.com    GetSuperUser    Passed    rsimone@contoso.com`
 
-`2015-08-01T19:01:45    admin@contoso.com   SetSuperUserFeatureState -state Enabled Passed  True`
+`2015-08-01T19:01:45    admin@contoso.com    SetSuperUserFeatureState -state Enabled    Passed    True`
 
-## Opções de scripting para superutilizadores
-É frequente que uma pessoa a quem seja atribuído um superutilizador para o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] venha a ter de remover a proteção de vários ficheiros, em várias localizações. Embora seja possível fazê-lo manualmente, é mais eficaz (e, muitas vezes, mais fiável) efetuar um script disto. Para tal, [transfira a Ferramenta de Proteção RMS](http://www.microsoft.com/en-us/download/details.aspx?id=47256). Em seguida, utilize o cmdlet [Unprotect-RMSFile](https://msdn.microsoft.com/library/azure/mt433200.aspx) e o cmdlet [Protect-RMSFile](https://msdn.microsoft.com/library/azure/mt433201.aspx), conforme necessário.
+## <a name="scripting-options-for-super-users"></a>Opções de scripting para superutilizadores
+É frequente que uma pessoa a quem seja atribuído um superutilizador para o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] venha a ter de remover a proteção de vários ficheiros, em várias localizações. Embora seja possível fazê-lo manualmente, é mais eficaz (e, muitas vezes, mais fiável) efetuar um script disto. Em seguida, pode utilizar o cmdlet [Unprotect-RMSFile](/powershell/azureinformationprotection/vlatest/unprotect-rmsfile) e o cmdlet [Protect-RMSFile](/powershell/azureinformationprotection/vlatest/protect-rmsfile), conforme necessário. 
 
-Para obter mais informações acerca destes cmdlets, consulte [Cmdlets da Proteção RMS](https://msdn.microsoft.com/library/azure/mt433195.aspx).
+Se estiver a utilizar a classificação e a proteção, também poderá utilizar o [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) para aplicar uma nova etiqueta que não aplique proteção ou remover a etiqueta que aplicou a proteção. 
+
+Para obter mais informações sobre estes cmdlets, veja [Utilizar o PowerShell com o cliente do Azure Information Protection](../rms-client/client-admin-guide-powershell.md) no guia do administrador do cliente do Azure Information Protection.
 
 > [!NOTE]
-> O módulo do PowerShell de Proteção RMS que é fornecido com a Ferramenta de Proteção RMS é diferente do principal [módulo do Windows PowerShell para o Azure Rights Management](administer-powershell.md) e complementa-o. O módulo RMS Protection suporta o serviço Azure Rights Management (Azure RMS) para o Azure Information Protection e os Serviços de Gestão de Direitos do Active Directory (AD RMS).
+> O módulo AIP substitui o módulo do PowerShell da Proteção do RMS que foi instalado com a Ferramenta de Proteção RMS. Ambos os módulos são diferentes do [Módulo do Windows PowerShell para o Azure Rights Management](administer-powershell.md) principal e complementam-no. O módulo AIP suporta o Azure Information Protection, o serviço Azure Rights Management (Azure RMS) para o Azure Information Protection e os Serviços de Gestão de Direitos do Active Directory (AD RMS).
 
-
-
-
-
-<!--HONumber=Sep16_HO4-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

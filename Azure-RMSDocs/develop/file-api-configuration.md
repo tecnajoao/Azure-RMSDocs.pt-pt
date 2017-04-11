@@ -3,8 +3,9 @@ title: "Configuração da API de Ficheiros | Azure RMS"
 description: "O comportamento da API de Ficheiros pode ser configurado através de definições no registo."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,14 +14,11 @@ ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: d949acd4281509bbed05a14e0e26d1549b52a33a
-
-
+ms.openlocfilehash: 890319e80941232af636fce6913f362ad48632f6
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-# Configuração da API de Ficheiros
+# <a name="file-api-configuration"></a>Configuração da API de Ficheiros
 
 
 O comportamento da API de Ficheiros pode ser configurado através de definições no registo.
@@ -32,17 +30,17 @@ A API de Ficheiros fornece dois tipos de proteção: a proteção nativa e a pro
 
 Para obter mais informações sobre formatos de ficheiro suportados, consulte **Detalhes de Suporte de Ficheiros da API de Ficheiros** neste tópico.
 
-## Tipos e descrições de Chaves/Valores de Chave
+## <a name="keykey-value-types-and-descriptions"></a>Tipos e descrições de Chaves/Valores de Chave
 
 As secções seguintes descrevem as chaves e os valores de chave que controlam a encriptação.
 
-### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection
+### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection`
 
 **Tipo**: Chave
 
 **Descrição**: contém a configuração geral da API de Ficheiros.
 
-### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;
+### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\<EXT>`
 
 **Tipo**: Chave
 
@@ -55,7 +53,7 @@ As secções seguintes descrevem as chaves e os valores de chave que controlam a
 Defina o valor de **Encriptação** na chave para especificar o comportamento de proteção. Se o valor de **Encriptação** não for definido, é aplicado o comportamento predefinido para o tipo de ficheiro.
 
 
-### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;\Encryption*
+### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\<EXT>\Encryption*`
 
 **Tipo**: REG_SZ
 
@@ -63,7 +61,7 @@ Defina o valor de **Encriptação** na chave para especificar o comportamento de
 
 - **Desativar**: a encriptação está desativada.
 
-> [!Note] 
+> [!Note]
 > Esta definição não tem efeito na desencriptação. Qualquer ficheiro encriptado, seja ele encriptado com a proteção nativa ou Pfile, pode ser desencriptado, desde que o utilizador tenha o direito **EXTRAIR**.
 
 - **Nativa**: a encriptação nativa é utilizada. Para ficheiros do Office, o ficheiro encriptado terá a mesma extensão que o ficheiro original. Por exemplo, um ficheiro com a extensão de ficheiro .docx será encriptado para um ficheiro com uma extensão .docx. Para outros ficheiros que podem ter a proteção nativa aplicada, o ficheiro será encriptado para um ficheiro com uma extensão no formato p*zzz*, em que *zzz* é a extensão do ficheiro original. Por exemplo, os ficheiros .txt serão encriptados para um ficheiro com a extensão .ptxt. Consulte abaixo a lista de extensões de ficheiros que podem ter a proteção nativa aplicada.
@@ -71,20 +69,20 @@ Defina o valor de **Encriptação** na chave para especificar o comportamento de
 - **Pfile**: a encriptação PFile é utilizada. O ficheiro encriptado terá .pfile anexado à extensão original. Por exemplo, depois da encriptação, um ficheiro .txt terá uma extensão .txt.pfile.
 
 
-> [!Note] 
+> [!Note]
 > Esta definição não tem efeito em formatos de ficheiros do Office. Por exemplo, se o valor `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` estiver definido para &quot;Pfile”, os ficheiros .docx ainda serão encriptados com a proteção nativa e o ficheiro encriptado continuará a ter uma extensão de ficheiro .docx.
 
 A definição de qualquer outro valor ou nenhum valor resulta no comportamento predefinido.
 
-## Comportamento predefinido para formatos de ficheiro diferentes
+## <a name="default-behavior-for-different-file-formats"></a>Comportamento predefinido para formatos de ficheiro diferentes
 
 -   **Ficheiros do Office** A encriptação nativa está ativada.
 -   **Ficheiros txt, xml, jpg, jpeg, pdf, png, tiff, bmp, gif, giff, jpe, jfif, jif** A encriptação nativa está ativada (xxx torna-se pxxx)
 -   **Todos os outros ficheiros** A encriptação ativada é a de ficheiro protegido (.pfile) (xxx torna-se xxx.pfile)
 
-Se a encriptação for tentada num tipo de ficheiro que está bloqueado, ocorre um erro [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/information-protection/sdk/2.1/api/win/error%20codes).
+Se a encriptação for tentada num tipo de ficheiro que está bloqueado, ocorre um erro [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx).
 
-### API de Ficheiros – Detalhes de Suporte de Ficheiros
+### <a name="file-api---file-support-details"></a>API de Ficheiros – Detalhes de Suporte de Ficheiros
 
 É possível adicionar suporte nativo a qualquer tipo de ficheiro (extensão). Por exemplo, para qualquer extensão &lt;ext&gt; (não Ooffice), \*.p&lt;ext&gt; será utilizado se a configuração de administração para essa extensão for "NATIVO".
 
@@ -106,7 +104,7 @@ Se a encriptação for tentada num tipo de ficheiro que está bloqueado, ocorre 
 -   Tipo de proteção = Pfile: exemplo.*zzz* é encriptado e é-lhe atribuído o nome exemplo.*zzz*.pfile; em que *zzz* é a extensão de ficheiro original.
 -   Desativar: desativa a encriptação.
 
-### Exemplos
+### <a name="examples"></a>Exemplos
 
 As definições seguintes ativam a encriptação PFile para ficheiros txt. Os ficheiros do Office terão a proteção nativa aplicada (por predefinição), os ficheiros txt terão a proteção PFile aplicada e todos os outros ficheiros terão a proteção bloqueada (por predefinição).
 
@@ -146,16 +144,9 @@ HKEY_LOCAL_MACHINE
                   Encryption = Off
 ```
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
-* [Notas do programador](developer-notes.md)
-* [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/information-protection/sdk/2.1/api/win/error%20codes)
- 
+- [Notas do programador](developer-notes.md)
+- [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
 
- 
-
-
-
-<!--HONumber=Oct16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

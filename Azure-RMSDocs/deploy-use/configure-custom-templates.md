@@ -1,9 +1,10 @@
 ---
-title: "Configurar modelos personalizados para o serviço Azure Rights Management | Azure Information Protection"
+title: "Configurar modelos personalizados para o Azure RMS – AIP"
 description: "Informações e instruções para os administradores configurarem e gerirem modelos de direitos de utilização. Os modelos permitem aos utilizadores e outros administradores aplicar facilmente políticas a ficheiros confidenciais que restringem o acesso a utilizadores autorizados."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -11,14 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: d8db7f0346fad1b9c46423875d1e559d41987686
-
-
+ms.openlocfilehash: 27ffbc6eb9e88840f1b33c59b76bdaa5d028cc36
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-# Configurar modelos personalizados para o serviço Azure Rights Management
+# <a name="configuring-custom-templates-for-the-azure-rights-management-service"></a>Configurar modelos personalizados para o serviço Azure Rights Management
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -36,7 +34,7 @@ Quando o serviço Azure Rights Management tiver sido [ativado](activate-service.
 
     -   Permissões específicas: Ver Conteúdo, Guardar Ficheiro, Editar Conteúdo, Ver Direitos Atribuídos, Permitir Macros, Reencaminhar, Responder, Responder A Todos
 
-Além disso, a [aplicação de partilha RMS](../rms-client/sharing-app-windows.md) permite que os utilizadores definam o seu próprio conjunto de permissões. E, para o cliente do Outlook e o Outlook Web Access, os utilizadores podem selecionar a [opção Não Reencaminhar](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails).
+Além disso, o [cliente do Azure Information Protection](../rms-client/aip-client.md) permite aos utilizadores definirem o seu próprio conjunto de permissões. E, para o cliente do Outlook e o Outlook Web Access, os utilizadores podem selecionar a [opção Não Reencaminhar](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails).
 
 Para muitas organizações, os modelos predefinidos poderão ser suficientes. No entanto, se quiser criar os seus próprios modelos de políticas de direitos personalizados, pode fazê-lo. Seguem-se algumas das razões para criar um modelo personalizado:
 
@@ -62,10 +60,5 @@ Utilize as informações seguintes para configurar e utilizar modelos personaliz
 
 -   [Utilizar o PowerShell para gerir modelos](configure-templates-with-powershell.md)
 
-
-
-
-
-<!--HONumber=Sep16_HO4-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

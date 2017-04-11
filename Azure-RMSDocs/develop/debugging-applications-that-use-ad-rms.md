@@ -3,8 +3,9 @@ title: "Procedimentos sobre como depurar uma aplicação com capacidade para dir
 description: "O tópico seguinte mostra como depurar a aplicação e utilizar o Registo de Eventos do Windows."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,18 +14,15 @@ ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: cab6839a1911bb61185f2ef361b2040ac0d38a6e
-
-
+ms.openlocfilehash: 128f472eb69a52bd8a7cf2e8103ee520d83ee92c
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-# Procedimentos: depurar uma aplicação com permissão para direitos
+# <a name="how-to-debug-a-rights-enabled-application"></a>Procedimentos: depurar uma aplicação com permissão para direitos
 
 O tópico seguinte mostra como depurar a aplicação e utilizar o Registo de Eventos do Windows.
 
-## Depurar a aplicação
+## <a name="debugging-your-application"></a>Depurar a aplicação
 
 No SDK Rights Management Services 2.1, as verificações antidepuração na versão de programador do nosso tempo de execução estão desativadas.
 
@@ -41,7 +39,7 @@ HKEY_LOCAL_MACHINE
             dword
 ```
 
-### Registo de aplicações ao utilizar o Registo de Eventos do Windows
+### <a name="application-logging-by-using-the-windows-event-log"></a>Registo de aplicações ao utilizar o Registo de Eventos do Windows
 
 O nome do registo de eventos é “Microsoft-RMS-MSIPC/Depuração”. Isto significa que, no Visualizador de Eventos do Windows, o seu registo aparece como “Registos de Aplicações e Serviços\\Microsoft\\RMS\\MSIPC\\Depuração”.
 
@@ -65,16 +63,4 @@ Por exemplo, o comando seguinte ativa o registo de eventos MSIPC e define o nív
 
 **Nota** No Visualizador de Eventos do Windows, no menu **Ver**, selecione **Mostrar Registos Analíticos e de Depuração** para tornar visível o registo de depuração MSIPC.
 
- 
-
-## Tópicos relacionados
-
- 
-
- 
-
-
-
-<!--HONumber=Oct16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

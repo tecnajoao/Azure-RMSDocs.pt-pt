@@ -3,8 +3,9 @@ title: "Configuração do Windows Phone | Azure RMS"
 description: "As aplicações do Windows Phone podem utilizar o SDK Microsoft Rights Management 4.2 para ativar a proteção de informações integrada na respetiva aplicação."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,14 +14,11 @@ ms.assetid: e25a446e-b977-4736-9c65-7711171fb0e1
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 148cefbe973eadebf942c826ac19c0ee34823c89
-
-
+ms.openlocfilehash: 96dfeb54c866facec73facee7c8356059b107a2f
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-# Configuração do Windows Phone
+# <a name="windows-phone-setup"></a>Configuração do Windows Phone
 
 
 As aplicações do Windows Phone podem utilizar o SDK Microsoft Rights Management 4.2 para ativar a proteção de informações integrada na respetiva aplicação utilizando o Azure Active Directory Rights Management (AAD RM).
@@ -31,7 +29,7 @@ Este tópico descreve como configurar o ambiente para criar as suas novas aplica
 -   [Configurar o ambiente de desenvolvimento](#configuring-your-development-environment)
 -   [Consulte Também](#see-also)
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 
 Tem de possuir o seguinte software no sistema de desenvolvimento:
@@ -46,7 +44,7 @@ Consulte o tópico [Novidades](release-notes.md) para obter informações acerca
 
 Reveja as informações no guia de [desenvolvimento do Windows Phone](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx) no Windows Phone Dev Center.
 
-## Configurar o ambiente de desenvolvimento
+## <a name="configuring-your-development-environment"></a>Configurar o ambiente de desenvolvimento
 
 
 -   Abra o *Visual Studio*.
@@ -60,7 +58,7 @@ Reveja as informações no guia de [desenvolvimento do Windows Phone](https://ms
     ![Adicionar referência](../media/wpsetup-addref.png)
 
 -   Clique em **Procurar** na parte inferior esquerda da caixa de diálogo **Adicionar Referência** e selecione o ficheiro *Microsoft.RightsManagment.dll*, situado na pasta da qual extraiu o pacote.
--   **Aplicações Geridas** – Para criar uma aplicação gerida, terá de adicionar esta referência; selecione **Windows 8.1**-&gt;**Extensões** e marque a caixa de **Pacote do Windows Visual C++ Runtime para Windows**
+-   **Aplicações Geridas** – para criar uma aplicação gerida, terá de adicionar esta referência; selecione **Windows 8.1**-&gt;**Extensões** e selecione a caixa **Pacote do Windows Visual C++ Runtime para Windows**
 
     ![Adicionar extensões](../media/wpsetup-refmngr.png)
 
@@ -68,7 +66,7 @@ Reveja as informações no guia de [desenvolvimento do Windows Phone](https://ms
 
 Agora, está pronto para criar as suas novas aplicações do Windows Phone.
 
-### Consulte Também
+### <a name="see-also"></a>Consulte Também
 
 [Introdução](get-started.md)
 
@@ -78,21 +76,10 @@ Agora, está pronto para criar as suas novas aplicações do Windows Phone.
 
 [Desenvolvimento do Windows Phone](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx)
 
-[Referência da API do Windows](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement)
+[Referência da API do Windows](https://msdn.microsoft.com/library/dn891914.aspx)
 
 [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
 
 [Windows Phone SDK](http://dev.windowsphone.com/en-us/downloadsdk)
 
- 
-
- 
-
-
-
-
-
-
-<!--HONumber=Oct16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

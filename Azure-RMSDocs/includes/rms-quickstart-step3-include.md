@@ -6,11 +6,11 @@ Em seguida, está pronto para partilhar de forma segura este documento por e-mai
 
 ![Capturas de ecrã da partilha do Azure RMS por e-mail](../media/AzRMS_Tutorial_3_Screenshots.png)
 
-#### Para partilhar de forma segura o documento por e-mail
+#### <a name="to-safely-share-your-document-by-email"></a>Para partilhar de forma segura o documento por e-mail
 
 1.  Ao utilizar o Outlook, crie uma nova mensagem e anexe o ficheiro que acabou de criar.
 
-2.  Na caixa **Para**, escreva um ou mais endereços de e-mail profissionais. Certifique-se de que especifica um endereço de e-mail profissional, tal como **juliam@contoso.com** ou **p.barbosa@fabrikam.com**, porque atualmente o Azure Rights Management não suporta os endereços de e-mail pessoais que poderá utilizar em casa através do seu fornecedor de Internet. Não se preocupe se a pessoa a quem está a enviar também tem o Azure Rights Management ou não.
+2.  Na caixa **Para**, escreva um ou mais endereços de e-mail profissionais. Certifique-se de que especifica um endereço de e-mail profissional, tal como **janetm@contoso.com** ou **p.dover@fabrikam.com**, porque atualmente o Azure Rights Management não suporta os endereços de e-mail pessoais que poderá utilizar em casa através do seu fornecedor de Internet. Não se preocupe se a pessoa a quem está a enviar também tem o Azure Rights Management ou não.
 
 3.  Escreva um assunto, tal como **Documento confidencial**, em seguida, escreva uma mensagem curta no e-mail, tal como **Leia este documento confidencial e não o partilhe com outras pessoas.**
 
@@ -39,9 +39,4 @@ Agora que enviou o documento protegido, pode pedir aos destinatários para o abr
 |Se pretender mais informações|Informações adicionais|
 |--------------------------------|--------------------------|
 |Instruções completas e métodos alternativos para proteger ficheiros que partilha por e-mail   →|[Proteger um ficheiro que partilha por e-mail ao utilizar a aplicação de partilha Rights Management](../rms-client/sharing-app-protect-by-email.md)|
-|Acerca das opções na caixa de diálogo **partilhar protegido**   →|[Opções da caixa de diálogo para a aplicação de partilha Rights Management](../rms-client/sharing-app-dialog-box.md)|
-
-
-<!--HONumber=Jun16_HO4-->
-
-
+|Acerca das opções na caixa de diálogo **partilhar protegido**   →|[Opções da caixa de diálogo da aplicação de partilha Rights Management](../rms-client/sharing-app-dialog-box.md)|

@@ -1,10 +1,11 @@
 ---
-title: "Configurar o Azure RMS para autenticação ADAL | Azure RMS"
-description: "Descreve os passos para configurar o Azure RMS para utilizar a autenticação baseada no Azure ADAL"
-keywords: "autenticação, RMS, ADAL"
+title: "Configurar a autenticação ADAL na aplicação – AIP"
+description: "Passos para configurar a aplicação Azure Information Protection para utilizar a autenticação baseada em ADAL do Azure"
+keywords: "autenticação, RMS, ADAL, Information Protection,"
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,25 +14,22 @@ ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 2588d10805ddfdc1c09db3008a424767fb528986
-
-
+ms.openlocfilehash: 27674aac7962c7a2f79fda8ccd6f90c366574b9b
+ms.sourcegitcommit: 262f88c4f46e29f3747271276c62913b4cefe4f7
+translationtype: HT
 ---
+# <a name="configure-your-app-for-adal-authentication"></a>Configurar a autenticação ADAL na sua aplicação
 
-# Configurar o Azure RMS para a autenticação ADAL
+Este tópico descreve os passos para configurar a sua aplicação para a autenticação baseada no Azure Active Directory Authentication Library (ADAL).
 
-Este tópico descreve os passos para configurar a autenticação baseada no Azure ADAL.
-
-## Configuração da Autenticação Azure
+## <a name="azure-authentication-setup"></a>Configuração da autenticação do Azure
 
 Será necessário o seguinte:
 
 - Uma [subscrição do Microsoft Azure](https://azure.microsoft.com/en-us/) (uma avaliação gratuita é suficiente). Para obter mais informações, consulte o artigo [Como iniciar sessão no RMS para utilizadores](../understand-explore/rms-for-individuals-user-sign-up.md)
 - Uma subscrição do Microsoft Azure Rights Management (uma conta [RMS para Indivíduos](https://technet.microsoft.com/en-us/library/dn592127.aspx) gratuita é suficiente).
 
-> [!NOTE] 
+> [!NOTE]
 > Pergunte ao seu Administrador de TI se possui ou não uma subscrição do Microsoft Azure Rights Management e, em seguida, peça ao Administrador de TI para realizar os passos abaixo. Se a sua organização não tiver uma subscrição, deve pedir ao seu administrador de TI para criar uma. Além disso, o Administrador de TI deve subscrever com uma conta *Escolar ou profissional*, em vez de uma *conta Microsoft* (por exemplo, Hotmail).
 
 Após a inscrição no Microsoft Azure:
@@ -48,7 +46,7 @@ Após a inscrição no Microsoft Azure:
 
 ![Selecionar NOVO](../media/AzureNewBtn.png)
 
-- Selecione o separador **Rights Management** e certifique-se de que o **Estado do Rights Management** é **Ativo**, **Desconhecido** ou **Não Autorizado**. Se o estado for **Inativo**, escolha o botão **Ativar** ,na parte inferior central do portal, e confirme a seleção.
+- Selecione o separador **Rights Management** e certifique-se de que o **Estado do Rights Management** é **Ativo**, **Desconhecido** ou **Não Autorizado**. Se o estado for **Inativo**, escolha o botão **Ativar**, na parte inferior central do portal, e confirme a seleção.
 
 ![Escolher ATIVAR](../media/RMTab.png)
 
@@ -69,7 +67,7 @@ Após a inscrição no Microsoft Azure:
 ![Atribuir um nome à aplicação](../media/TellUsInput.png)
 
 - Adicione um URI de redirecionamento e selecione seguinte.
-  O URI redirecionamento tem de ser um URI válido e exclusivo para o seu diretório. Por exemplo, pode utilizar algo como `com.mycompany.myapplication://authorize`.
+  O URI redirecionamento tem de ser um URI válido e exclusivo para o seu diretório. Por exemplo, pode utilizar algo como `https://contoso.azurewebsites.net/.auth/login/done`.
 
 ![Adicionar URI de redirecionamento](../media/RedirectURI.png)
 
@@ -77,19 +75,15 @@ Após a inscrição no Microsoft Azure:
 
 ![Escolher CONFIGURAR](../media/ConfigYourApp.png)
 
->[!NOTE] 
+>[!NOTE]
 > Copie a **ID DE CLIENTE** e o **URI DE REDIRECIONAMENTO** e armazene-os para utilização futura quando configurar o cliente RMS.
 
 - Navegue até à parte inferior das definições da aplicação e escolha o botão **Adicionar aplicação** em **permissões para outras aplicações**.
 
->[!NOTE] 
+>[!NOTE]
 > As **Permissões de Delegado** apresentadas para o Windows Azure Active Directory estão corretas por predefinição – deve ser selecionada apenas a opção **Iniciar sessão e ler o perfil de utilizador**.
 
 ![Selecionar Adicionar aplicação](../media/PermissionsToOtherBtn.png)
-
-- Agora, adicione este GUID `00000012-0000-0000-c000-000000000000` à caixa de edição **QUE INICIE COM** e selecione o botão de verificação.
-
-![Adicionar GUID](../media/AddGUID.png)
 
 - Selecione o sinal de adição junto de **Microsoft Rights Management**.
 
@@ -97,7 +91,7 @@ Após a inscrição no Microsoft Azure:
 
 - Agora, selecione a marca de verificação situada no canto inferior esquerdo da caixa de diálogo.
 
-![Escolher a marca de verificação](../media/ChooseCheck.png)
+![Escolher a marca de verificação](../media/choosecheck01.png)
 
 - Está agora preparado para adicionar uma dependência à sua aplicação do Azure RMS. Para adicionar a dependência, selecione a nova entrada do **Microsoft Rights Management Services** em **permissões para outras aplicações** e escolha a caixa de verificação **Criar e aceder a conteúdo protegido para utilizadores** na pasta de depósito **Permissões delegadas:**.
 
@@ -107,8 +101,4 @@ Após a inscrição no Microsoft Azure:
 
 ![Selecionar GUARDAR](../media/SaveApplication.png)
 
-
-
-<!--HONumber=Oct16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

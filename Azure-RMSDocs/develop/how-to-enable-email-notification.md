@@ -3,8 +3,9 @@ title: "Ativar notificação por e-mail | Azure RMS"
 description: "A notificação por e-mail permite que um proprietário de conteúdo protegido seja notificado quando o respetivo conteúdo for acedido."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,18 +14,15 @@ ms.assetid: 5FB975EE-E4E5-4089-B8E1-CAFD5B9B34EC
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 45724e633e1d31f17782e30713584fe3d3b281b1
-
-
+ms.openlocfilehash: 7bb4a4f5e79b87a9111641fb414004c80b1f8533
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-# Procedimentos: ativar notificação por e-mail
+# <a name="how-to-enable-email-notification"></a>Procedimentos: ativar notificação por e-mail
 
 A notificação por e-mail permite que um proprietário de conteúdo protegido seja notificado quando o respetivo conteúdo for acedido.
 
-Para configurar a notificação por e-mail para uma determinada licença, utilize [**IpcSetLicenseProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) com o parâmetro de tipo de propriedade *dwPropID* como [**IPC\_LI\_APP\_SPECIFIC\_DATA**](/information-protection/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA) e os campos de dados da aplicação formatados como [**IPC\_NAME\_VALUE\_LIST**](/information-protection/sdk/2.1/api/win/structures#msipc_ipc_name_value_list).
+Para configurar a notificação por e-mail para uma determinada licença, utilize [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx) com o parâmetro de tipo de propriedade, *dwPropID*, como [IPC\_LI\_APP\_SPECIFIC\_DATA](https://msdn.microsoft.com/library/hh535287.aspx) e os campos de dados da aplicação formatados como [IPC\_NAME\_VALUE\_LIST](https://msdn.microsoft.com/library/hh535277.aspx).
 
     C++
 
@@ -34,14 +32,14 @@ Para configurar a notificação por e-mail para uma determinada licença, utiliz
 
     // lcid field set to 0 causes the default lcid to be used
 
-    propertyValuePairs[0] = {&quot;MS.Conetent.Name&quot;, 0, &quot;FinancialReport.docx&quot;};
-    propertyValuePairs[1] = {&quot;MS.Notify.Enabled&quot;,0 , &quot;true&quot;};
-    propertyValuePairs[2] = {&quot;MS.Notify.Culture&quot;,0 , “en-US”};
+    propertyValuePairs[0] = {"MS.Conetent.Name", 0, "FinancialReport.docx"};
+    propertyValuePairs[1] = {"MS.Notify.Enabled",0 , "true"};
+    propertyValuePairs[2] = {"MS.Notify.Culture",0 , “en-US”};
 
     IPC_NAME_VALUE_LIST emailNotificationAppData = {numDataPairs, propertyValuePairs};
 
     result = IpcSetLicenseProperty( licenseHandle, FALSE, IPC_LI_APP_SPECIFIC_DATA, emailNotificationAppData);
-        
+
 
 A tabela seguinte contém os campos de dados da aplicação, o nome da propriedade e os pares de valor para a notificação por e-mail do RMS.
 
@@ -56,17 +54,10 @@ A tabela seguinte contém os campos de dados da aplicação, o nome da proprieda
 |MS.Notify.TZSN|cadeia|“Hora Padrão do Pacífico”|**Origem:** TimeZoneInfo.Local.StandardName – nome do Fuso Horário Padrão.<br><br>Isto deve ser o nome localizado do nome do fuso horário padrão do fuso horário.|
 |MS.Notify.TZDN|cadeia|“Hora de Verão do Pacífico”|**Origem:** TimeZoneInfo.Local.DaylightName – nome do Fuso Horário de Verão.<br><br>Isto deve ser o nome localizado do nome da hora de verão do fuso horário. Pode ser igual ao nome padrão se o fuso horário não suportar a hora de verão.|
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
-* [**IpcSetLicenseProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty)
-* [**IPC\_LI\_APP\_SPECIFIC\_DATA**](/information-protection/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA)
-* [**IPC\_NAME\_VALUE\_LIST**](/information-protection/sdk/2.1/api/win/structures#msipc_ipc_name_value_list)
- 
+- [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
+- [IPC\_LI\_APP\_SPECIFIC\_DATA](https://msdn.microsoft.com/library/hh535287.aspx)
+- [IPC\_NAME\_VALUE\_LIST](https://msdn.microsoft.com/library/hh535277.aspx).
 
- 
-
-
-
-<!--HONumber=Oct16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

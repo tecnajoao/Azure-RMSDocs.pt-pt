@@ -3,8 +3,9 @@ title: "Exemplos de código | Azure RMS"
 description: "O SDK RMS 4.2 inclui código de exemplo e projetos de trabalho para alguns sistemas operativos suportados."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,39 +14,25 @@ ms.assetid: 634df601-79d2-4bc2-b845-4df886d7c589
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: a8f5230b80d2472c1680499704f17879cd66de02
-
-
+ms.openlocfilehash: 1f6b8c75e7d9ef6d01226b5a1d2ece4de773a1d5
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-# Exemplos de código
+# <a name="code-examples"></a>Exemplos de código
 
 O SDK Microsoft Rights Management 4.2 inclui código de exemplo e projetos de trabalho para alguns sistemas operativos suportados.
 
-## Disponível através do GitHub ##
+## <a name="available-via-github"></a>Disponível através do GitHub ##
 A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para operações de consumo e proteção para programadores que não pretendem criar a sua IU personalizada:
 
 - Android – [Biblioteca da IU e Aplicação de exemplo para Android](https://github.com/AzureAD/rms-sdk-ui-for-android)
 - iOS – [Biblioteca da IU e Aplicação de exemplo para iOS](https://github.com/AzureAD/rms-sdk-ui-for-ios)
 - Aplicações da Loja Windows – [Biblioteca da IU para aplicações da Loja Windows](https://github.com/AzureAD/rms-sdk-ui-for-windowsstore) e [Aplicação de exemplo para a Loja Windows](https://github.com/AzureADSamples/rms-samples-for-windowsstore).
 
-## Exemplos ##
+## <a name="examples"></a>Exemplos ##
 Estes tópicos apresentam-lhe elementos de código importantes para a versão associada do SDK RMS.
 - [Exemplos de código do Android](android-code.md)
 - [Exemplos de código do Linux](linux-c-code-examples.md)
-- [Exemplos de código do iOS/OS X](ios-os-x-code-examples.md)
+- [Exemplos de código de iOS/OS X](ios-os-x-code-examples.md)
 
-
- 
-
- 
-
- 
-
-
-
-<!--HONumber=Oct16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

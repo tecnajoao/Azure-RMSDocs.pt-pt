@@ -3,7 +3,7 @@
 # [Planear e Estruturar](/information-protection/plan-design/deployment-roadmap)
 # [Implementar e Utilizar o Serviço](activate-service.md)
 ## [Ativar o serviço](activate-service.md)
-### [Pré-visualização do centro de administração do Office 365](activate-office365-preview.md)
+### [Centro de administração do Office 365 – pré-visualização](activate-office365-preview.md)
 ### [Centro de administração clássico do Office 365](activate-office365-classic.md)
 ### [Portal clássico do Azure](activate-azure-classic.md)
 ## [Configurar modelos personalizados](configure-custom-templates.md)
@@ -15,19 +15,21 @@
 ## [Configurar aplicações](configure-applications.md)
 ### [Office 365](configure-office365.md)
 ### [Aplicações do Office](configure-office-apps.md)
+### [Cliente do Azure Information Protection](configure-client.md)
 ### [Aplicação de partilha RMS](configure-sharing-app.md)
 ## [Configurar direitos de utilização](configure-usage-rights.md)
 ## [Configurar superutilizadores para serviços de deteção ou recuperação de dados](configure-super-users.md)
 ## [Configurar a política do Azure Information Protection](configure-policy.md)
 ### [Política predefinida](configure-policy-default.md)
-### [Configurar definições globais](configure-policy-settings.md)
+### [Configurar as definições de política](configure-policy-settings.md)
 ### [Criar uma nova etiqueta](configure-policy-new-label.md)
 ### [Eliminar ou reordenar uma etiqueta](configure-policy-delete-reorder.md)
 ### [Alterar uma etiqueta](configure-policy-change-label.md)
-### [Aplicar proteção](configure-policy-protection.md)
+### [Configurar a proteção](configure-policy-protection.md)
 #### [Restrições de HYOK](configure-adrms-restrictions.md)
 ### [Configurar marcas visuais](configure-policy-markings.md)
 ### [Configurar condições](configure-policy-classification.md)
+### [Configurar políticas de âmbito](configure-policy-scope.md)
 ## [Implementar o conector RMS](deploy-rms-connector.md)
 ### [Instalar e configurar o conector](install-configure-rms-connector.md)
 ### [Configurar servidores](configure-servers-rms-connector.md)
@@ -44,9 +46,4 @@
 ### [Instalar o Windows PowerShell para o Azure RMS](install-powershell.md)
 # [Implementar e Utilizar o Cliente](/information-protection/rms-client/use-client)
 # [Desenvolver e Personalizar Aplicações](/information-protection/develop/developers-guide)
-
-
-
-<!--HONumber=Sep16_HO4-->
-
 

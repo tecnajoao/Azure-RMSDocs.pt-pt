@@ -1,9 +1,10 @@
 ---
-title: "Migrar do AD RMS para o Azure Information Protection – Fase 2 | Azure Information Protection"
+title: "Migrar do AD RMS para o Azure Information Protection – fase 2"
 description: "Fase 2 da migração do AD RMS para o Azure Information Protection, abrangendo o passo 5 de Migrar do AD RMS para o Azure Information Protection."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -11,20 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 4a6d07e9a24293f054915b5598c63e118c9c1430
-ms.openlocfilehash: c10e8b46fae2158e561421e8e5090d0cd9edbb83
-
-
+ms.openlocfilehash: 6e3f0bf46886c27620f8b7c836d0c67aafb61d37
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-# Fase 2 da migração – configuração do lado do cliente
+# <a name="migration-phase-2---client-side-configuration"></a>Fase 2 da migração – configuração do lado do cliente
 
 >*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Office 365*
 
 Utilize as seguintes informações para a Fase 2 da migração do AD RMS para o Azure Information Protection. Estes procedimentos incluem o passo 5 do tópico [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 
-## Passo 5. Reconfigurar os clientes para utilizar o Azure Information Protection
+## <a name="step-5-reconfigure-clients-to-use-azure-information-protection"></a>Passo 5. Reconfigurar os clientes para utilizar o Azure Information Protection
 Para clientes Windows:
 
 1.  [Transfira os scripts de migração](https://go.microsoft.com/fwlink/?LinkId=524619):
@@ -39,6 +38,8 @@ Para clientes Windows:
 
     > [!IMPORTANT]
     > As instruções incluem substituir endereços de exemplo de **adrms** e **adrms.contoso.com** pelos endereços dos seus próprios servidores AD RMS. Ao fazê-lo, certifique-se de que não existem espaços adicionais antes ou depois dos endereços, uma vez que estes interrompem o script de migração e são muito difíceis de identificar como a causa de raiz do problema. Algumas ferramentas de edição adicionam automaticamente um espaço depois do texto colado.
+    >
+    > Além disso, se os seus servidores do AD RMS utilizarem certificados de servidor SSL/TLS, verifique se os valores de URL de licenciamento incluem o número de porta **443** na cadeia. Por exemplo: https:// rms.treyresearch.net:443/_wmcs/licensing. Estas informações encontram-se na consola dos Serviços de Gestão de Direitos do Active Directory quando clica no nome do cluster e vê as informações de **Detalhes do Cluster**. Se vir o número de porta 443 incluído no URL, inclua este valor quando modificar o script. Por exemplo, https://rms.treyresearch.net**:443**.
 
 3. Se os utilizadores tiverem o Office 2016: os scripts não foram ainda atualizados para incluir a configuração para o Office 2016, pelo que se os utilizadores tiverem esta versão do Office, têm de atualizar manualmente os scripts:
 
@@ -74,7 +75,7 @@ Para clientes Windows:
 
     -  Remova os registos SRV de DNS que criou quando implementou a [extensão de dispositivo móvel do AD RMS](http://technet.microsoft.com/library/dn673574.aspx).
 
-#### Alterações efetuadas pelos scripts de migração
+#### <a name="changes-made-by-the-migration-scripts"></a>Alterações efetuadas pelos scripts de migração
 Esta secção documenta as alterações que os scripts de migração efetuam. Pode utilizar estas informações apenas para efeitos de referência, para resolução de problemas ou para o caso de preferir efetuar estas alterações sozinho.
 
 CleanUpRMS_RUN_Elevated.cmd:
@@ -127,10 +128,7 @@ Redirect_OnPrem.cmd:
     > Pode encontrar este valor ao identificar o valor **RightsManagementServiceId** quando executar o cmdlet [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) do Azure RMS.
 
 
-## Passos seguintes
+## <a name="next-steps"></a>Passos seguintes
 Para continuar a migração, consulte a [fase 3 – suportar a configuração de serviços](migrate-from-ad-rms-phase3.md).
 
-
-<!--HONumber=Oct16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

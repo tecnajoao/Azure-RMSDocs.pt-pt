@@ -1,9 +1,10 @@
 ---
-title: "Proteger um ficheiro num dispositivo (proteger no local) através da aplicação de partilha Rights Management | Azure Information Protection"
+title: "Proteger no local com a aplicação de partilha RMS – AIP"
 description: "Instruções sobre como armazenar um ficheiro no seu computador, num servidor ou noutro dispositivo de armazenamento com segurança."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -11,23 +12,20 @@ ms.technology: techgroup-identity
 ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: 3d7a4b71f32c37d3ab632114e8147382cfbbcbd1
-
-
+ms.openlocfilehash: a49a3cee8a13f677bd532a36f2e1e9ca7f919f28
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
+# <a name="protect-a-file-on-a-device-protect-in-place-by-using-the-rights-management-sharing-application"></a>Proteger um ficheiro num dispositivo (proteger no local) através da aplicação de partilha Rights Management
 
-# Proteger um ficheiro num dispositivo (proteger no local) através da aplicação de partilha Rights Management
-
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8 e Windows 8.1*
 
 Quando protege um ficheiro no local, este substitui o ficheiro original, que está desprotegido. Em seguida, pode deixar o ficheiro onde se encontra, copiá-lo para outra pasta ou dispositivo ou partilhar a pasta onde está e o ficheiro permanece protegido. Também pode anexar o ficheiro protegido a uma mensagem de e-mail, embora a forma recomendada para partilhar um ficheiro protegido por e-mail seja diretamente a partir do Explorador de Ficheiros ou de uma aplicação do Office (consulte [Proteger um ficheiro que partilha por e-mail ao utilizar a aplicação de partilha Rights Management](sharing-app-protect-by-email.md)).
 
 > [!TIP]
 > Se vir algum erro ao tentar proteger ficheiros, consulte as [FAQ acerca da Aplicação de Partilha Microsoft Rights Management para Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
 
-## Para proteger um ficheiro num dispositivo (proteger no local)
+## <a name="to-protect-a-file-on-a-device-protect-in-place"></a>Para proteger um ficheiro num dispositivo (proteger no local)
 
 1.  No Explorador de Ficheiros, selecione um ficheiro a proteger. Clique com o botão direito do rato, selecione **Proteger com RMS** e, em seguida, selecione **Proteger no local**. Por exemplo:
 
@@ -54,18 +52,14 @@ Se mudar de ideias sobre as permissões ou necessitar mais tarde de modificá-la
 
 Se precisar de remover a proteção de um ficheiro mais tarde, consulte [Remover a proteção de um ficheiro com a aplicação de partilha Rights Management](sharing-app-remove-protection.md).
 
-## Exemplos e outras instruções
+## <a name="examples-and-other-instructions"></a>Exemplos e outras instruções
 Para obter exemplos de como pode utilizar a aplicação de partilha Rights Management e instruções sobre como proceder, veja as secções seguintes do guia do utilizador da aplicação de partilha Rights Management:
 
 -   [Exemplos de utilização da aplicação de partilha RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [O que pretende fazer?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md)
 
-
-
-<!--HONumber=Sep16_HO4-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

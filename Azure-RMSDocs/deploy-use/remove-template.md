@@ -1,9 +1,10 @@
 ---
-title: Remover modelos | Azure Information Protection
+title: "Remover modelos do Azure RMS – AIP"
 description: "Os modelos predefinidos não podem ser eliminados, mas podem ser arquivados para que os utilizadores não os vejam."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -11,15 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 42935ce2-879c-4168-aef9-9a88f72b15b2
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 2597df5b95bc1aaff345804e476f48d6436d9a32
-
-
+ms.openlocfilehash: 1bbd2b6c8bc37862106661531dbf0e07c7fb179a
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
-# Remover modelos (arquivo)
+# <a name="remove-archive-templates"></a>Remover modelos (arquivo)
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -29,7 +26,7 @@ Do mesmo modo, se tiver publicado um modelo personalizado e já não quiser que 
 
 Como não pode editar modelos predefinidos, para arquivar estes modelos, tem de utilizar a opção **ARQUIVAR** a partir da página **MODELOS**. Não pode arquivar a opção do Outlook **Não Reencaminhar**.
 
-## Para remover um modelo predefinido
+## <a name="to-remove-a-default-template"></a>Para remover um modelo predefinido
 
 -   Na página **MODELOS**, selecione o modelo predefinido e clique em **ARQUIVAR**.
 
@@ -37,10 +34,7 @@ O estado é alterado de **Publicado** para **Arquivado**. Se mudar de ideias, se
 
 
 
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 [Configurar modelos personalizados para o Azure Rights Management](configure-custom-templates.md)
 
-
-<!--HONumber=Sep16_HO4-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

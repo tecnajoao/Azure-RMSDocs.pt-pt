@@ -3,8 +3,9 @@ title: Como utilizar o controlo de documentos | Azure RMS
 description: "A funcionalidade de controlo de documentos requer alguns conhecimentos simples sobre a gestão dos metadados associados e o registo do serviço."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,18 +14,15 @@ ms.assetid: 70E10936-7953-49B0-B0DC-A5E7C4772E60
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 3d5d920f628bc39c4c280afa53be0b7199433803
-
-
+ms.openlocfilehash: bae83de7d91d30ce39d2edb1311fac55ca2dafad
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-# Como: utilizar o controlo de documentos
+# <a name="how-to-use-document-tracking"></a>Como: utilizar o controlo de documentos
 
 A utilização da funcionalidade de controlo de documentos requer alguns conhecimentos simples sobre a gestão dos metadados associados e o registo do serviço.
 
-## Gerir metadados de controlo de documentos
+## <a name="managing-document-tracking-metadata"></a>Gerir metadados de controlo de documentos
 
 Todos os sistemas operativos que suportam o controlo de documentos têm implementações semelhantes. Estes incluem um conjunto de propriedades que representam os metadados, um novo parâmetro adicionado aos métodos de criação de políticas de utilizador e um método para registar a política a controlar com o serviço de controlo de documentos.
 
@@ -32,38 +30,25 @@ Operacionalmente, apenas as propriedades **nome do conteúdo** e **tipo de notif
 
 A sequência de passos que irá utilizar para configurar o controlo de documentos para um determinado conteúdo é a seguinte:
 
--   Crie um objeto **metadados de licença**.
+-   Crie um objeto de **metadados de licença** e defina o **nome de conteúdo** e o **tipo de notificação**. Estas são as únicas propriedades necessárias.
+   - Android – [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx)
+   -  iOS – [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx)
 
-    Consulte [**LicenseMetadata**](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_licensemetadata_interface_java) ou [**MSLicenseMetadata**](/information-protection/sdk/4.2/api/iOS/mslicensemetadata#msipcthin2_mslicensemetadata_class_objc) para obter mais informações.
+Selecione o tipo de política (modelo ou ad-hoc):
+- Para o controlo de documentos com base em modelos, crie um objeto **política de utilizador** passando os metadados de licença como um parâmetro.
+  - Android – [UserPolicy.create](https://msdn.microsoft.com/library/dn790887.aspx)
+  - iOS – [MSUserPolicy.userPolicyWithTemplateDescriptor](https://msdn.microsoft.com/library/dn790808.aspx)
 
--   Defina o **nome do conteúdo** e o **tipo de notificação**. Estas são as únicas propriedades necessárias.
+- Para o controlo de documentos com base em ad hoc, defina a propriedade **metadados de licença** no objeto **descritor de política**.
+  - Android – [PolicyDescriptor.setLicenseMetadata](https://msdn.microsoft.com/library/mt573698.aspx)
+  - iOS – [MSPolicyDescriptor.licenseMetadata](https://msdn.microsoft.com/library/mt573693.aspx).
 
-    Para obter mais informações, consulte os métodos de acesso às propriedades da classe de metadados de licença adequada da plataforma, seja [**LicenseMetadata**](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_licensemetadata_interface_java) ou [**MSLicenseMetadata**](/information-protection/sdk/4.2/api/iOS/mslicensemetadata#msipcthin2_mslicensemetadata_class_objc).
-
--   Por tipo de política, modelo ou ad hoc:
-
-    -   Para o controlo de documentos com base em modelos, crie um objeto **política de utilizador** passando os metadados de licença como um parâmetro.
-
-        Para obter mais informações, consulte [**UserPolicy.create**](/information-protection/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_class_java) e [**MSUserPolicy.userPolicyWithTemplateDescriptor**](/information-protection/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_templatedescriptor_property_objc).
-
-    -   Para o controlo de documentos com base em ad hoc, defina a propriedade **metadados de licença** no objeto **descritor de política**.
-
-        Para obter mais informações, consulte [**PolicyDescriptor.getLicenseMetadata**](/information-protection/sdk/4.2/api/android/policydescriptor#msipcthin2_policydescriptor_interface_java), [**PolicyDescriptor.setLicenseMetadata**](/information-protection/sdk/4.2/api/android/policydescriptor#msipcthin2_policydescriptor_setlicensemetadata_java) e [**MSPolicyDescriptor.licenseMetadata**](/information-protection/sdk/4.2/api/iOS/mspolicydescriptor#msipcthin2_mspolicydescriptor_licensemetadata_property_objc).
-
-    **Nota** O objeto de metadados de licença só é acessível diretamente durante o processo de configuração do controlo de documentos da política de utilizador especificada. Quando o objeto de política de utilizador tiver sido criado, os metadados de licença associados não estão acessíveis, ou seja, alterar os valores dos metadados de licença não tem qualquer efeito.
+    **Nota:** o objeto de metadados de licença só é acessível diretamente durante o processo de configuração do controlo de documentos da política de utilizador especificada. Quando o objeto de política de utilizador tiver sido criado, os metadados de licença associados não estão acessíveis, ou seja, alterar os valores dos metadados de licença não tem qualquer efeito.
 
      
 
--   Chame o método de registo de plataforma para o controlo de documentos.
+-   Por fim, chame o método de registo de plataforma para o controlo de documentos
+  - Android – [UserPolicy.registerForDocTracking assíncrono](https://msdn.microsoft.com/library/mt573699.aspx) ou [UserPolicy.registerForDocTracking síncrono](https://msdn.microsoft.com/library/mt631387.aspx)
+  - iOS – [MSUserPolicy.registerForDocTracking](https://msdn.microsoft.com/library/mt573694.aspx)
 
-    Consulte [**MSUserPolicy.registerForDocTracking**](/information-protection/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_registerfordoctracking_userid_authenticationcallback_completionblock_method_objc) ou [**UserPolicy.registerForDocTracking**](/information-protection/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_registerfordoctracking_userid_authenticationcallback_completionblock_method_objc).
-
- 
-
- 
-
-
-
-<!--HONumber=Oct16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

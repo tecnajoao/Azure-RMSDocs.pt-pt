@@ -3,8 +3,9 @@ title: "Configuração do iOS e OS X | Azure RMS"
 description: "As aplicações iOS e OS X podem utilizar o SDK RMS 4.2 para ativar a proteção de informações integrada na respetiva aplicação ao utilizar o AAD RM."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,14 +14,11 @@ ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 80d79ead119b5dbe86d94f979742ecc2b62d1ef9
-
-
+ms.openlocfilehash: 7027e3833344c7734818bf034bd8aa68f04409eb
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-# Configuração do iOS e OS X
+# <a name="ios-and-os-x-setup"></a>Configuração do iOS e OS X
 
 As aplicações iOS e OS X podem utilizar o SDK Microsoft Rights Management 4.2 para ativar a proteção de informações integrada na respetiva aplicação utilizando o Azure Rights Management (Azure RMS).
 
@@ -34,7 +32,7 @@ Este tópico descreve como configurar o ambiente para criar as suas novas aplica
 -   [Configurar o ambiente de desenvolvimento](#configuring-your-development-environment)
 -   [Consulte Também](#see-also)
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Recomendamos o seguinte software no sistema de desenvolvimento:
 
@@ -53,11 +51,11 @@ Recomendamos o seguinte software no sistema de desenvolvimento:
 
 Consulte o tópico [Novidades](release-notes.md) para obter informações sobre atualizações de API, notas de versão e perguntas mais frequentes (FAQ).
 
-## Opcional
+## <a name="optional"></a>Opcional
 
 A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para operações de consumo e proteção para programadores que não pretendem criar a sua IU personalizada – [Biblioteca da IU e Aplicação de exemplo para iOS](https://github.com/AzureAD/rms-sdk-ui-for-ios).
 
-## Configurar o ambiente de desenvolvimento
+## <a name="configuring-your-development-environment"></a>Configurar o ambiente de desenvolvimento
 
 -   Para criar um novo projeto, no menu **Ficheiro**, clique em **Novo** e, em seguida, em **Projeto**.
 -   Selecione **Aplicação de Vista Única**.
@@ -100,25 +98,14 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
 
 -   Agora, está pronto para criar as suas novas aplicações iOS/OS X.
 
-### Consulte Também
+### <a name="see-also"></a>Consulte Também
 
 * [Introdução](get-started.md)
 
 * [Novidades](release-notes.md)
 
-* [Conceitos e termos de programação](core-concepts.md)
+* [Conceitos e termos de programador](core-concepts.md)
 
-* [Referência da API do iOS/OS X](/information-protection/sdk/4.2/api/ios/ios)
+* [Referência da API do iOS/OS X](https://msdn.microsoft.com/library/dn758306.aspx)
 
- 
-
- 
-
-
-
-
-
-
-<!--HONumber=Oct16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

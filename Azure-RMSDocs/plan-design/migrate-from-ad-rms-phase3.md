@@ -1,7 +1,10 @@
 ---
-title: "Migrar do AD RMS para o Azure Information Protection – Fase 3 | Azure Information Protection"
+title: "Migrar do AD RMS para o Azure Information Protection – fase 3"
 description: "Fase 3 da migração do AD RMS para o Azure Information Protection, que abrange os passos 6 a 7 do tópico Migrar do AD RMS para o Azure Information Protection"
-ms.date: 09/25/2016
+author: cabailey
+ms.author: cabailey
+manager: mbaldwin
+ms.date: 02/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -9,14 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: d7e21c2bb07e82bc243e5ab01c0a21aa0fe274d1
-ms.openlocfilehash: 8f7f27f3b9def4b38f5de45b9d9686208a4f5283
-
-
+ms.openlocfilehash: 1124019309749574241bf25e6b0eb58a50771afc
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-# Fase 3 da migração – configuração de serviços de suporte
+# <a name="migration-phase-3---supporting-services-configuration"></a>Fase 3 da migração – configuração de serviços de suporte
 
 >*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Office 365*
 
@@ -24,7 +24,7 @@ ms.openlocfilehash: 8f7f27f3b9def4b38f5de45b9d9686208a4f5283
 Utilize as seguintes informações para a Fase 3 da migração do AD RMS para o Azure Information Protection. Estes procedimentos incluem os passos 6 a 7 do tópico [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 
-## Passo 6. Configurar a integração de IRM para o Exchange Online
+## <a name="step-6-configure-irm-integration-for-exchange-online"></a>Passo 6. Configurar a integração de IRM para o Exchange Online
 
 Se tiver importado anteriormente o TDP do AD RMS para o Exchange Online, tem de remover este TDP para evitar modelos e políticas em conflito após a migração para o Azure Information Protection. Para tal, utilize o cmdlet [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx) do Exchange Online.
 
@@ -36,7 +36,7 @@ Se optou por uma topologia de chave de inquilino do Azure Information Protection
 
 -   Terá funcionalidades reduzidas de proteção do Rights Management com o Exchange Online, conforme descrito no artigo [Preços e restrições do BYOK](byok-price-restrictions.md).
 
-## Passo 7. Implementar o conetor RMS
+## <a name="step-7-deploy-the-rms-connector"></a>Passo 7. Implementar o conetor RMS
 Se tiver utilizado a funcionalidade de Gestão de Direitos de Informação (IRM) do Exchange Server ou o SharePoint Server com o AD RMS, tem primeiro de desativar a IRM nestes servidores e remover a configuração do AD RMS. Em seguida, implemente o conector Rights Management (RMS), que funciona como uma interface de comunicações (um reencaminhamento) entre os servidores no local e o Azure Information Protection.
 
 Por fim, para este passo, se tiver importado múltiplos ficheiros de configuração de dados do AD RMS (.xml) para o Azure Information Protection que foram utilizados para proteger mensagens de e-mail, terá de editar manualmente o registo nos computadores do Exchange Server para redirecionar todos os URLs de domínio de publicação fidedigno para o conetor RMS.
@@ -44,7 +44,7 @@ Por fim, para este passo, se tiver importado múltiplos ficheiros de configuraç
 > [!NOTE]
 > Antes de começar, verifique as versões dos servidores no local que o serviço Azure Rights Management suporta em [Servidores no local que suportam o Azure RMS](../get-started/requirements-servers.md).
 
-### Desativar a IRM nos Servidores do Exchange e remover a configuração do AD RMS
+### <a name="disable-irm-on-exchange-servers-and-remove-ad-rms-configuration"></a>Desativar a IRM nos Servidores do Exchange e remover a configuração do AD RMS
 
 1.  Em cada Exchange Server, localize a pasta seguinte e elimine todas as entradas nessa pasta: \ProgramData\Microsoft\DRM\Server\S-1-5-18
 
@@ -74,7 +74,7 @@ Por fim, para este passo, se tiver importado múltiplos ficheiros de configuraç
 
 6.  Em cada Exchange Server, reponha o IIS, por exemplo, ao executar uma linha de comandos como administrador e escrever **iisreset**.
 
-### Desativar a IRM em SharePoint Servers e remover a configuração do AD RMS
+### <a name="disable-irm-on-sharepoint-servers-and-remove-ad-rms-configuration"></a>Desativar a IRM em SharePoint Servers e remover a configuração do AD RMS
 
 1.  Certifique-se de que não existem documentos com saída dada em bibliotecas protegidas por RMS. Se existirem, vão tornar-se inacessíveis no final deste procedimento.
 
@@ -84,13 +84,13 @@ Por fim, para este passo, se tiver importado múltiplos ficheiros de configuraç
 
 4.  Na página **Gestão de Direitos de Informação**, na secção **Gestão de Direitos de Informação**, selecione **Não utilizar IRM neste servidor** e, em seguida, clique em **OK**.
 
-5.  Em cada computador do SharePoint Server, elimine o conteúdo da pasta \ProgramData\Microsoft\MSIPC\Server\\*&lt;SID da conta que está a executar o SharePoint Server&gt;*.
+5.  Em cada computador do SharePoint Server, elimine os conteúdos da pasta \ProgramData\Microsoft\MSIPC\Server\\*&lt;SID da conta que está a executar o SharePoint Server&gt;*.
 
-#### Instalar e configurar o conetor RMS
+#### <a name="install-and-configure-the-rms-connector"></a>Instalar e configurar o conetor RMS
 
 -   Utilize as instruções no artigo [Implementar o conetor Azure Rights Management](../deploy-use/deploy-rms-connector.md).
 
-#### Apenas para o Exchange e vários TPD: editar o registo
+#### <a name="for-exchange-only-and-multiple-tpds-edit-the-registry"></a>Apenas para o Exchange e vários TPD: editar o registo
 
 -   Em cada Exchange Server, adicione manualmente as chaves do registo seguintes para cada ficheiro de dados de configuração (.xml) adicional que tenha importado para redirecionar os URLs de domínio de publicação fidedigno para o conetor RMS. Estas entradas do registo são específicas da migração e não são adicionadas pela ferramenta de configuração do servidor para o conetor Microsoft RMS.
 
@@ -113,15 +113,15 @@ Reg_SZ
 
 **Valor:**
 
-https://<AD RMS Intranet Licensing URL>/_wmcs/licensing
+https://\<URL de Licenciamento na Intranet do AD RMS\>/_wmcs/licensing
 
 **Dados:**
 
 Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange Server para o conetor RMS:
 
-- http://<connectorFQDN>/_wmcs/licensing
+- http://\<connectorFQDN\>/_wmcs/licensing
 
-- https://<connectorName>/_wmcs/licensing
+- https://\<connectorName\>/_wmcs/licensing
 
 
 ---
@@ -139,16 +139,16 @@ Reg_SZ
 
 **Valor:**
 
-https://<AD RMS Extranet Licensing URL>/_wmcs/licensing
+https://\<URL de Licenciamento na Extranet do AD RMS\>/_wmcs/licensing
 
 
 **Dados:**
 
 Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange Server para o conetor RMS:
 
-- http://<connectorFQDN>/_wmcs/licensing
+- http://\<connectorFQDN\>/_wmcs/licensing
 
-- https://<connectorFQDN>/_wmcs/licensing
+- https://\<connectorFQDN\>/_wmcs/licensing
 
 ---
 
@@ -166,15 +166,15 @@ Reg_SZ
 
 **Valor:**
 
-https://<AD RMS Intranet Licensing URL>/_wmcs/licensing
+https://\<URL de Licenciamento na Intranet do AD RMS\>/_wmcs/licensing
 
 **Dados:**
 
 Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange Server para o conetor RMS:
 
-- http://<connectorFQDN>/_wmcs/licensing
+- http://\<connectorFQDN\>/_wmcs/licensing
 
-- https://<connectorName>/_wmcs/licensing
+- https://\<connectorName\>/_wmcs/licensing
 
 
 ---
@@ -193,25 +193,22 @@ Reg_SZ
 
 **Valor:**
 
-https://<AD RMS Extranet Licensing URL>/_wmcs/licensing
+https://\<URL de Licenciamento na Extranet do AD RMS\>/_wmcs/licensing
 
 
 **Dados:**
 
 Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange Server para o conetor RMS:
 
-- http://<connectorFQDN>/_wmcs/licensing
+- http://\<connectorFQDN\>/_wmcs/licensing
 
-- https://<connectorFQDN>/_wmcs/licensing
+- https://\<connectorFQDN\>/_wmcs/licensing
 
 ---
 
 Depois de concluir estes procedimentos, está pronto para ler a secção **Passos seguintes** do artigo [Implementar o conetor Azure Rights Management](../deploy-use/deploy-rms-connector.md).
 
-## Passos seguintes
+## <a name="next-steps"></a>Passos seguintes
 Para continuar a migração, consulte a [fase 4 – tarefas de pós-migração](migrate-from-ad-rms-phase4.md).
 
-
-<!--HONumber=Sep16_HO4-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

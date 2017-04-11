@@ -3,8 +3,9 @@ title: "Configuração da Loja Windows | Azure RMS"
 description: "As aplicações da Loja Windows podem utilizar o SDK Microsoft Rights Management 4.2 para ativar a proteção de informações integrada na respetiva aplicação."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,14 +14,11 @@ ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 763e99e40bbe329305e97757e87d10b048cc62e9
-
-
+ms.openlocfilehash: e10588c166beb48d98aba619d9e2269d5f808f3a
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-# Configuração da Loja Windows
+# <a name="windows-store-setup"></a>Configuração da Loja Windows
 
 As aplicações da Loja Windows podem utilizar o SDK Microsoft Rights Management 4.2 para ativar a proteção de informações integrada na respetiva aplicação utilizando o Azure Active Directory Rights Management (AAD RM).
 
@@ -31,7 +29,7 @@ Este tópico descreve como configurar o ambiente para criar as suas novas aplica
 -   [Configurar o ambiente de desenvolvimento](#configuring-your-development-environment)
 -   [Consulte Também](#see-also)
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 
 Tem de possuir o seguinte software no sistema de desenvolvimento:
@@ -44,11 +42,11 @@ Tem de possuir o seguinte software no sistema de desenvolvimento:
 
 Consulte o tópico [Novidades](release-notes.md) para obter informações acerca de atualizações de API, informações de dispositivos e de ambiente, notas de versão e perguntas mais frequentes (FAQ).
 
-## Opcional
+## <a name="optional"></a>Opcional
 
 A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para operações de consumo e proteção para programadores que não pretendem criar a sua IU personalizada – [Biblioteca da IU para aplicações da Loja Windows](https://github.com/AzureAD/rms-sdk-ui-for-windowsstore). Fornecemos também uma aplicação de exemplo de aplicação da Loja Windows – [Aplicação de exemplo do RMS para a Loja Windows](https://github.com/AzureADSamples/rms-samples-for-windowsstore).
 
-## Configurar o ambiente de desenvolvimento
+## <a name="configuring-your-development-environment"></a>Configurar o ambiente de desenvolvimento
 
 
 -   Abra o Visual Studio.
@@ -62,7 +60,7 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
     ![Adicionar referência](../media/winrtsetup-addref.png)
 
 -   Na caixa de diálogo **Adicionar Referência**, clique em **Procurar** e selecione o ficheiro *Microsoft.RightsManagment.dll*, situado na pasta da qual extraiu o pacote SDK.
--   **Aplicações Geridas** – Para criar uma aplicação gerida, terá de adicionar esta referência; selecione **Windows 8.1**-&gt;**Extensões** e marque a caixa de **Pacote do Windows Visual C++ Runtime para Windows**
+-   **Aplicações Geridas** – para criar uma aplicação gerida, terá de adicionar esta referência; selecione **Windows 8.1**-&gt;**Extensões** e selecione a caixa **Pacote do Windows Visual C++ Runtime para Windows**
 
     ![Adicionar extensões](../media/winrtsetup-refmngr.png)
 
@@ -70,22 +68,18 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
 
 Agora, está pronto para criar as suas novas aplicações da Loja Windows.
 
-### Consulte Também
+### <a name="see-also"></a>Consulte Também
 
 [Introdução](get-started.md)
 
 [Novidades](release-notes.md)
 
-[Conceitos e termos de programação](core-concepts.md)
+[Conceitos e termos de programador](core-concepts.md)
 
 [Windows 8](http://windows.microsoft.com/en-US/windows-8/meet)
 
 [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
 
-[Referência da API do Windows](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement)
+[Referência da API do Windows](https://msdn.microsoft.com/library/dn891914.aspx)
 
-
-
-<!--HONumber=Oct16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

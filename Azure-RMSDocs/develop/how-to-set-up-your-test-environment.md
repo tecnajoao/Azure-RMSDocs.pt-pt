@@ -3,8 +3,9 @@ title: "Testar a sua aplicação | Azure RMS"
 description: "Instruções sobre como configurar a sua aplicação para fins de teste."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,20 +14,17 @@ ms.assetid: E480D8D6-F070-43D1-B2B0-6921459C3437
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 719077671664dda3102949609874c569a691bbb8
-
-
+ms.openlocfilehash: a4306d69fd08f4839c0b02fd3e0a2acbbbc28721
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-# Testar a sua aplicação
+# <a name="testing-your-application"></a>Testar a sua aplicação
 
 Este tópico contém instruções sobre como configurar o teste de aplicações.
 
-## Instruções
+## <a name="instructions"></a>Instruções
 
-### Passo 1: Configuração para teste
+### <a name="step-1-setup-for-testing"></a>Passo 1: Configuração para teste
 
 Pode testar com o Azure RMS ou um servidor RMS em execução no Windows Server. Sugerimos que inicie os testes no Azure RMS e, em seguida, se for necessário para a implementação, efetue o teste com o RMS Server.
 
@@ -40,22 +38,15 @@ Pode testar com o Azure RMS ou um servidor RMS em execução no Windows Server. 
 
     Para obter informações sobre como instalar o SDK RMS 2.1, consulte [Instalar o SDK](install-the-rms-sdk.md).
 
-## Observações
+## <a name="remarks"></a>Observações
 
 As orientações neste tópico não são abrangentes. Para obter informações detalhadas sobre como configurar o RMS Client 2.1, consulte as [Notas de Implementação do RMS Client 2.1](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx).
 
-### Tópicos relacionados
+### <a name="related-topics"></a>Tópicos relacionados
 
 * [Procedimentos: instalar e configurar um servidor RMS](how-to-install-and-configure-an-rms-server.md)
 * [Procedimentos: utilizar a autenticação ADAL](how-to-use-adal-authentication.md)
 * [Instalar o SDK](install-the-rms-sdk.md)
 * [Notas de Implementação do RMS Client 2.1](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx)
- 
 
- 
-
-
-
-<!--HONumber=Oct16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

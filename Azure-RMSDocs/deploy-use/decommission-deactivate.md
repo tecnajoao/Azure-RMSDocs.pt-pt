@@ -1,9 +1,10 @@
 ---
-title: "Desativar o serviço Azure Rights Management | Azure Information Protection"
+title: Encerrar e desativar o Azure RMS
 description: "Informações e instruções caso decida que já não quer utilizar este serviço de proteção de informações do Azure Information Protection."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -11,14 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 57ae18a479e06084e1266276a4420a5092c23b8d
-
-
+ms.openlocfilehash: f577337cf7ce904a82ff23b165fdc7befe319092
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-# Encerrar e desativar o Azure Rights Management
+# <a name="decommissioning-and-deactivating-azure-rights-management"></a>Encerrar e desativar o Azure Rights Management
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -47,50 +45,36 @@ Para obter mais informações sobre os procedimentos nesta tabela, consulte os r
 
 Quando estiver pronto para desativar o serviço Azure Rights Management na sua organização, utilize as instruções que se seguem.
 
-## Desativar o Rights Management
+## <a name="deactivating-rights-management"></a>Desativar o Rights Management
 Utilize um dos seguintes procedimentos para desativar o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
 
 > [!TIP]
 > Também pode utilizar o cmdlet do Windows PowerShell, [Disable-Aadrm](http://msdn.microsoft.com/library/windowsazure/dn629422.aspx), para desativar o [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
 
-#### Para desativar o Rights Management a partir do centro de administração do Office 365
+#### <a name="to-deactivate-rights-management-from-the-office-365-admin-center"></a>Para desativar o Rights Management a partir do centro de administração do Office 365
 
-1.  [Inicie sessão no Office 365 com a sua conta escolar ou profissional](https://portal.office.com/) que seja de um administrador da implementação do Office 365.
+1. Aceda à [página do Rights Management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) para administradores do Office 365.
+    
+    Se lhe for pedido para iniciar sessão, utilize uma conta que seja um administrador global do Office 365.    
 
-2.  Se o centro de administração do Office 365 não for apresentado automaticamente, selecione o ícone do iniciador de aplicações no canto superior esquerdo e escolha **Administrador**. O mosaico **Administrador** só é apresentado para os administradores do Office 365.
+2. Na página **gestão de direitos**, clique em **desativar**.
 
-    > [!TIP]
-    > Para obter ajuda acerca do centro de administração, consulte [Acerca do centro de administração do Office 365 – Ajuda de Administração](https://support.office.com/article/About-the-Office-365-admin-center-Admin-Help-58537702-d421-4d02-8141-e128e3703547).
-
-3.  No painel esquerdo, expanda **DEFINIÇÕES DE SERVIÇO**.
-
-4.  Clique em **Rights Management**.
-
-5.  Na página **RIGHTS MANAGEMENT**, clique em **Gerir**.
-
-6.  Na página **gestão de direitos**, clique em **desativar**.
-
-7.  Quando lhe for perguntado **Pretende desativar o Rights Management?**, clique em **desativar**.
+3.  Quando lhe for perguntado **Pretende desativar o Rights Management?**, clique em **desativar**.
 
 Já deverá estar visível **O Rights Management não está ativado** e a opção para ativar.
 
-#### Para desativar o Rights Management a partir do portal clássico do Azure
+#### <a name="to-deactivate-rights-management-from-the-azure-classic-portal"></a>Para desativar o Rights Management a partir do portal clássico do Azure
 
 1.  Inicie sessão no [portal clássico do Azure](http://go.microsoft.com/fwlink/p/?LinkID=275081).
 
 2.  No painel esquerdo, clique em **ACTIVE DIRECTORY**.
 
-3.  Na página **active directory**, clique em **GESTÃO DE DIREITOS**.
+3.  Na página **active directory**, clique em **RIGHTS MANAGEMENT**.
 
-4.  Selecione o diretório a gerir do [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], clique em **DESATIVAR** e confirme a ação.
+4.  Confirme se o nome do inquilino está selecionado, clique em **DESATIVAR** e, em seguida, confirme a ação.
 
 O **ESTADO DO RIGHTS MANAGEMENT** deverá agora apresentar **Inativo** e a opção **DESATIVAR** é substituída por **ATIVAR**.
 
-
-
-
-
-
-<!--HONumber=Sep16_HO4-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

@@ -1,9 +1,10 @@
 ---
-title: "Transferir e instalar a aplicação de partilha Rights Management | Azure Information Protection"
+title: "Transferir e instalar a aplicação de partilha RMS – AIP"
 description: "Instruções para instalar interativamente a aplicação de partilha RMS para Windows, para que possa partilhar documentos com outras pessoas de forma segura."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -11,20 +12,17 @@ ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: c705bfec85bb93cb03d7e3edc9f3ce5949a8b61d
-
-
+ms.openlocfilehash: 6559191b86ac8b2f0ceb8c6998f02aa8cd0f2735
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
+# <a name="download-and-install-the-rights-management-sharing-application"></a>Transferir e instalar a aplicação de partilha Rights Management
 
-# Transferir e instalar a aplicação de partilha Rights Management
-
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8 e Windows 8.1*
 
 Não é necessário ser um administrador local para instalar a aplicação de partilha RMS. No entanto, se não for e utilizar o Office 2010, existem algumas limitações. Para obter mais informações, consulte a secção [Se não for um administrador local e utilizar o Office 2010](#if-you-are-not-a-local-administrator-and-use-office-2010) nesta página.
 
-## Para transferir e instalar a aplicação de partilha Rights Management
+## <a name="to-download-and-install-the-rights-management-sharing-application"></a>Para transferir e instalar a aplicação de partilha Rights Management
 
 1.  Aceda à página do [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) no site da Microsoft.
 
@@ -41,7 +39,7 @@ Não é necessário ser um administrador local para instalar a aplicação de pa
 
 Agora, está pronto para começar a proteger os ficheiros ou ler ficheiros que outras pessoas protegeram.
 
-## Se não for um administrador local e utilizar o Office 2010
+## <a name="if-you-are-not-a-local-administrator-and-use-office-2010"></a>Se não for um administrador local e utilizar o Office 2010
 Se iniciar sessão no computador e não tiver direitos administrativos locais e a Configuração detetar que tem o Office 2010 instalado, verá uma mensagem de aviso a indicar que alguns cenários não funcionarão com esta configuração. Os cenários são:
 
 -   Se a sua organização utiliza o serviço Azure Rights Management do Azure Information Protection em vez de uma versão no local do Rights Management:
@@ -56,19 +54,14 @@ Se não for um administrador local e utilizar o Office 365 ou Office 2013, não 
 
 Pode continuar a instalação com estas limitações conhecidas. Em alternativa, pode interromper a instalação e voltar a executá-la com a opção **Executar como administrador** quando executar Setup.exe no passo 3 ou pedir a um administrador que o instale por si. Os administradores podem [efetuar o script desta instalação](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application) para instalar automaticamente.
 
-## Exemplos e outras instruções
+## <a name="examples-and-other-instructions"></a>Exemplos e outras instruções
 Para obter exemplos de como pode utilizar a aplicação de partilha Rights Management e instruções sobre como proceder, veja as secções seguintes do guia do utilizador da aplicação de partilha Rights Management:
 
 -   [Exemplos de utilização da aplicação de partilha RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [O que pretende fazer?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md)
 
-
-
-
-<!--HONumber=Sep16_HO4-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

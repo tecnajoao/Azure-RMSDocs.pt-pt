@@ -3,8 +3,9 @@ title: Procedimentos para instalar, configurar e testar com um servidor RMS | Az
 description: "Instale e configure e Servidor RMS para testar a sua aplicação com capacidade para direitos."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,20 +14,17 @@ ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: ea8ef9108afc01b5046d523cfc8394d81689638b
-
-
+ms.openlocfilehash: 3f08823903b9da03c10e27c82d3edeb3067efd8e
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
+# <a name="how-to-install-configure-and-test-with-an-rms-server"></a>Procedimentos: instalar, configurar e testar com um servidor RMS
 
-# Procedimentos: instalar, configurar e testar com um servidor RMS
-
-Este tópico inclui os passos para ligação a um servidor RMS ou ao Azure RMS para fins de testar da sua aplicação com permissão para direitos.
+Este tópico inclui os passos para ligação a um servidor RMS ou ao Azure RMS para fins de testar da sua aplicação com capacidade para direitos.
  
-## Instruções
+## <a name="instructions"></a>Instruções
 
-### Passo 1: configurar o servidor RMS
+### <a name="step-1-setup-your-rms-server"></a>Passo 1: configurar o servidor RMS
 
 Os seguintes passos descrevem a configuração do servidor RMS e incluem:
 
@@ -70,12 +68,26 @@ Os seguintes passos descrevem a configuração do servidor RMS e incluem:
   Para configurar a deteção do lado do cliente, pode definir as seguintes chaves de registo para que apontem para o servidor RMS. Para obter informações sobre como configurar a deteção do lado do serviço, consulte as [Notas de Implementação do RMS Client 2.0](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
 
 1. **EnterpriseCertification**
-        HKEY_LOCAL_MACHINE        SOFTWARE          Microsoft            MSIPC              ServiceLocation                EnterpriseCertification
 
-  **Value**: (Predefinição): [**http|https**]://RMSClusterName/**_wmcs/Certification**
+        HKEY_LOCAL_MACHINE
+          SOFTWARE
+            Microsoft
+              MSIPC
+                ServiceLocation
+                  EnterpriseCertification
+
+   **Value**: (Predefinição): [**http|https**]://RMSClusterName/**_wmcs/Certification**
 
 2. **EnterprisePublishing**
-        HKEY_LOCAL_MACHINE        SOFTWARE          Microsoft            MSIPC              ServiceLocation                EnterprisePublishing **Value**: (Predefinição): [**http|https**]://RMSClusterName/**_wmcs/Licensing**
+
+        HKEY_LOCAL_MACHINE
+          SOFTWARE
+            Microsoft
+              MSIPC
+                ServiceLocation
+                  EnterprisePublishing
+                  
+   **Value**: (Predefinição): [**http|https**]://RMSClusterName/**_wmcs/Licensing**
 
 >[!NOTE] 
 > Por predefinição, estas chaves não existem no registo e têm de ser criadas.
@@ -90,12 +102,4 @@ Os seguintes passos descrevem a configuração do servidor RMS e incluem:
           MSIPC
             ```
 
- 
-
- 
-
-
-
-<!--HONumber=Oct16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -1,55 +1,29 @@
-# <a name='report-top'></a> Localization Handoff Report
+﻿# <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 3
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [Azure-RMSDocs\deploy-use\configure-usage-rights.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/4d6e0af200410b5af4e290ee0e6f94725916ecde/Azure-RMSDocs/deploy-use/configure-usage-rights.md) | OutofSyncHandedBackSuccess | [Details](#e9f2fe16494af2286d8ed77d0894bb5229e7c24617)
- [Azure-RMSDocs\information-protection\faq.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/172dcd427339fa6e3a24a6243cec18e7063047be/Azure-RMSDocs/information-protection/faq.md) | HandedOffSuccess | [Details](#ad87be4dd1cd1c7b31419cc47511b6cf64087a44154)
- [Azure-RMSDocs\information-protection\infoprotect-quick-start-tutorial.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/cac95dec84f99d2e6caa3458dc8284defe2324bc/Azure-RMSDocs/information-protection/infoprotect-quick-start-tutorial.md) | HandedOffSuccess | [Details](#7dc988365c1fa86827d1a7edc33c0a2eb6180f0e155)
+ [Azure-RMSDocs\rms-client\client-deployment-notes.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/9c125950af03b0b2e50bf8890da5d78bc762e29d/Azure-RMSDocs/rms-client/client-deployment-notes.md) | HandedOffSuccess | [Details](#673c699422489b313dd03d70dbebe80dc295307a423)
 
 ## Item Details
-##### <a name='e9f2fe16494af2286d8ed77d0894bb5229e7c24617'></a> Source: [Azure-RMSDocs\deploy-use\configure-usage-rights.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/4d6e0af200410b5af4e290ee0e6f94725916ecde/Azure-RMSDocs/deploy-use/configure-usage-rights.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/5375eda09eca9c04fcc6ad9aeee40184df4a10e6/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.pt-pt.xlf)
-* Handoff Datetime: 2016-07-18 16:04:27
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [Azure-RMSDocs\deploy-use\configure-usage-rights.md](https://github.com/Microsoft/Azure-RMSDocs-pr.pt-pt/blob/c147fcda8154cf025589fb9908646d19b3aac97f/Azure-RMSDocs/deploy-use/configure-usage-rights.md)
-* Current Handback File: [configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.pt-pt.xlf)
-* Current Handback Datetime: 2016-07-09 02:02:31
-* Bilingual File: [configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.pt-pt.xlf](https://github.com/Microsoft/EM.handback/blob/dd91144236c152c0c188315b477dd025fbc3ac63/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.pt-pt.xlf)
-* Bilingual Datetime: 2016-07-09 02:10:50
-* [Back to Top](#report-top)
-
-##### <a name='ad87be4dd1cd1c7b31419cc47511b6cf64087a44154'></a> Source: [Azure-RMSDocs\information-protection\faq.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/172dcd427339fa6e3a24a6243cec18e7063047be/Azure-RMSDocs/information-protection/faq.md)
+##### <a name='673c699422489b313dd03d70dbebe80dc295307a423'></a> Source: [Azure-RMSDocs\rms-client\client-deployment-notes.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/9c125950af03b0b2e50bf8890da5d78bc762e29d/Azure-RMSDocs/rms-client/client-deployment-notes.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [faq.b147013c6b8c2df0f18408c2316c67980bca10e5.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/5375eda09eca9c04fcc6ad9aeee40184df4a10e6/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/faq.b147013c6b8c2df0f18408c2316c67980bca10e5.pt-pt.xlf)
-* Handoff Datetime: 2016-07-18 16:04:27
+* Handoff File: [client-deployment-notes.2c00eef84cbb27e32ece796eecdb703ce7d8f4c7.pt-pt.xlf](https://github.com/Microsoft/Azure-RMSDocs-pr.handoff/blob/7463090f189f248b1531b4a106940ab7f80722bf/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/live/client-deployment-notes.2c00eef84cbb27e32ece796eecdb703ce7d8f4c7.pt-pt.xlf)
+* Handoff Datetime: 2016-10-28 19:07:00
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='7dc988365c1fa86827d1a7edc33c0a2eb6180f0e155'></a> Source: [Azure-RMSDocs\information-protection\infoprotect-quick-start-tutorial.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/cac95dec84f99d2e6caa3458dc8284defe2324bc/Azure-RMSDocs/information-protection/infoprotect-quick-start-tutorial.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [infoprotect-quick-start-tutorial.2b82e7233bd20712415e16d00ec21857eb05a5ed.pt-pt.xlf](https://github.com/Microsoft/EM.handoff/blob/5375eda09eca9c04fcc6ad9aeee40184df4a10e6/ol-handoff/Microsoft/Azure-RMSDocs-pr.pt-pt/master/infoprotect-quick-start-tutorial.2b82e7233bd20712415e16d00ec21857eb05a5ed.pt-pt.xlf)
-* Handoff Datetime: 2016-07-18 16:04:27
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [Azure-RMSDocs\rms-client\client-deployment-notes.md](https://github.com/Microsoft/Azure-RMSDocs-pr.pt-pt/blob/8b095446e7957fa0bdcc8fc64e6072057223d4cd/Azure-RMSDocs/rms-client/client-deployment-notes.md)
+* Current Handback File: [client-deployment-notes.2c00eef84cbb27e32ece796eecdb703ce7d8f4c7.pt-pt.xlf](https://github.com/Microsoft/Azure-RMSDocs-pr.handback/blob/ba1bab27d576df68d9ef7153e2904cd043143e89/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/client-deployment-notes.2c00eef84cbb27e32ece796eecdb703ce7d8f4c7.pt-pt.xlf)
+* Current Handback Datetime: 2016-07-13 21:33:27
+* Bilingual File: [client-deployment-notes.2c00eef84cbb27e32ece796eecdb703ce7d8f4c7.pt-pt.xlf](https://github.com/Microsoft/Azure-RMSDocs-pr.handback/blob/ba1bab27d576df68d9ef7153e2904cd043143e89/ol-handback/Microsoft/Azure-RMSDocs-pr.pt-pt/master/client-deployment-notes.2c00eef84cbb27e32ece796eecdb703ce7d8f4c7.pt-pt.xlf)
+* Bilingual Datetime: 2016-07-13 22:03:01
 * [Back to Top](#report-top)
 
 

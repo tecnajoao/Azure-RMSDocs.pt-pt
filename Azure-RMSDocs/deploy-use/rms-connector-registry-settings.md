@@ -1,9 +1,10 @@
 ---
-title: "Definições de registo para o conector RMS | Azure Information Protection"
+title: "Definições de registo para o conetor Rights Management – AIP"
 description: "Informações sobre as definições de registo em servidores que utilizam o conector RMS. O método recomendado para configurar estas definições é utilizar a ferramenta de configuração do servidor do conetor Microsoft RMS."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -11,15 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 1dd1b26735732f4bef8cf73a566b0f26b7610a82
-
-
+ms.openlocfilehash: d2ec79f99390a8afba7b679c2a5fdb232df309b4
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
-# Definição de registo para o conetor Rights Management
+# <a name="registry-setting-for-the-rights-management-connector"></a>Definição de registo para o conetor Rights Management
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -28,7 +25,7 @@ Utilize as tabelas nas secções seguintes apenas se pretender adicionar manualm
 
 Instruções ao utilizar estas definições:
 
--   *MicrosoftRMSURL* é o URL do serviço do Microsoft RMS da sua organização. Para localizar este valor:
+-   *MicrosoftRMSURL* é o URL do serviço Microsoft RMS da sua organização. Para localizar este valor:
 
     1.  Execute o cmdlet [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) para o Azure RMS. Se ainda não instalou o módulo do Windows PowerShell para o Azure RMS, consulte [Instalar o Windows PowerShell para o Azure Rights Management](install-powershell.md).
 
@@ -45,7 +42,7 @@ Instruções ao utilizar estas definições:
 -   Utilize o prefixo HTTPS para o URL do conetor se configurou o conetor para utilizar o HTTPS para comunicar com os servidores no local. Para obter mais informações, veja a secção [Configurar o conetor RMS para utilizar HTTPS](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https) das instruções principais. Os URLs do Microsoft RMS utilizam sempre HTTPS.
 
 
-## Definições de registo do Exchange 2016 ou Exchange 2013
+## <a name="exchange-2016-or-exchange-2013-registry-settings"></a>Definições de registo do Exchange 2016 ou Exchange 2013
 
 **Caminho do registo:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
@@ -96,7 +93,7 @@ Instruções ao utilizar estas definições:
 - https://*ConnectorFQDN*
 
 
-## Definições de registo do Exchange 2010
+## <a name="exchange-2010-registry-settings"></a>Definições de registo do Exchange 2010
 
 **Caminho do registo:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
@@ -145,7 +142,7 @@ Instruções ao utilizar estas definições:
 - https://*ConnectorFQDN*
 
 
-## Definições de registo do SharePoint 2016 ou SharePoint 2013
+## <a name="sharepoint-2016-or-sharepoint-2013-registry-settings"></a>Definições de registo do SharePoint 2016 ou SharePoint 2013
 
 **Caminho do registo:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\LicensingRedirection
 
@@ -192,7 +189,7 @@ Instruções ao utilizar estas definições:
 
 
 
-## Servidor de ficheiros e definições de registo de Infraestrutura de Classificação de Ficheiros
+## <a name="file-server-and-file-classification-infrastructure-registry-settings"></a>Servidor de ficheiros e definições de registo de Infraestrutura de Classificação de Ficheiros
 
 **Caminho do registo:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
@@ -215,7 +212,4 @@ Instruções ao utilizar estas definições:
 
 Voltar a [Implementar o conetor Azure Rights Management](deploy-rms-connector.md)
 
-
-<!--HONumber=Sep16_HO4-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

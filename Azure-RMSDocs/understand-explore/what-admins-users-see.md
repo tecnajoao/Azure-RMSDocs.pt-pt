@@ -1,9 +1,10 @@
 ---
-title: O Que Veem os Administradores e Utilizadores? | Azure Information Protection
+title: "O que os utilizadores e administradores veem com o Azure RMS – AIP"
 description: "Veja alguns exemplos típicos de como os administradores e utilizadores veem e podem utilizar a tecnologia Azure Rights Management (Azure RMS) para ajudar a proteger as informações confidenciais."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -11,15 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 013e0eb4-49a7-4e81-9e4d-f56c0ceb017f
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 4a6d07e9a24293f054915b5598c63e118c9c1430
-ms.openlocfilehash: 4cc2522a03d1d6003d60e9c87fb8bab3c1454df4
-
-
+ms.openlocfilehash: 254386ad7cda2d3e178eb9520e6282abe609c158
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
-# O Azure RMS em ação: conteúdo visto pelos administradores e utilizadores
+# <a name="azure-rms-in-action-what-administrators-and-users-see"></a>O Azure RMS em ação: conteúdo visto pelos administradores e utilizadores
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -32,17 +29,17 @@ Este artigo mostra alguns exemplos típicos de como os administradores e utiliza
 
 Para obter outras capturas de ecrã e vídeos que mostram o RMS em ação, visite o [Blogue do Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
 
-## Ativar e configurar o Rights Management
+## <a name="activating-and-configuring-rights-management"></a>Ativar e configurar o Rights Management
 Apesar de poder utilizar o Windows PowerShell para ativar e configurar o Azure RMS, é mais fácil fazê-lo a partir do portal de gestão. Assim que o serviço é ativado, dispõe de dois modelos predefinidos que os administradores e os utilizadores podem selecionar para aplicar a proteção de informações aos ficheiros de uma forma rápida e fácil. No entanto, também pode criar os seus próprios modelos personalizados para disponibilizar opções e definições adicionais.
 
-![O QUE VEEM OS ADMINISTRADORES NO PASSO 1](../media/AzRMS_StoryboardActivate_small1.png)
+![Capturas de ecrã dos portais de gestão, a mostrar a opção para ativar o serviço Azure Rights Management](../media/AzRMS_StoryboardActivate_small1.png)
 
 
 **O QUE VEEM OS ADMINISTRADORES NO PASSO 1:** pode utilizar o centro de administração do Office 365 (primeira imagem) ou o portal clássico do Azure (segunda imagem) para ativar o RMS.<br /><br />Basta um clique para ativar e outro para confirmar, e a proteção de informação estará ativada para administradores e utilizadores da sua organização.
 
 ---
 
-![O QUE VEEM OS ADMINISTRADORES NO PASSO 2](../media/AzRMS_TemplatesPortal_small.png)
+![Capturas de ecrã do portal clássico do Azure, a mostrar os dois modelos predefinidos e o início do assistente para criar um novo modelo](../media/AzRMS_TemplatesPortal_small.png)
 
 **O QUE VEEM OS ADMINISTRADORES NO PASSO 2:** após a ativação, são automaticamente disponibilizados dois modelos de política de direitos para a sua organização. Um modelo permite o acesso só de leitura (inclui a designação **Apenas Visualização Confidencial** no nome), o outro concede acesso de leitura e modificação (**Confidencial**).
 
@@ -55,13 +52,13 @@ Se não quiser que estes modelos sejam apresentados aos utilizadores ou preferir
 
 ---
 
-![O QUE VEEM OS ADMINISTRADORES NO PASSO 3](../media/AzRMS_TemplatesSettings3.png)
+![Capturas de ecrã do portal clássico do Azure, a mostrar algumas das opções de configuração do modelo](../media/AzRMS_TemplatesSettings3.png)
 
 **O QUE VEEM OS ADMINISTRADORES NO PASSO 3:** acesso offline, definições de expiração e eventuais instruções para publicar o modelo imediatamente (torná-lo visível em aplicações que suportam o Rights Management) são algumas das definições de configuração disponíveis se optar por criar os seus próprios modelos.
 
 ---
 
-![O QUE VEEM OS ADMINISTRADORES NO PASSO 4](../media/AzRMS_TemplatesPortal_ExplorerWord3.png)
+![Capturas de ecrã do Explorador de Ficheiros e do Word, a mostrar os modelos disponíveis para os utilizadores selecionarem](../media/AzRMS_TemplatesPortal_ExplorerWord3.png)
 
 **O QUE VEEM OS UTILIZADORES NO PASSO 4:** na sequência da publicação destes modelos, os utilizadores passam a poder selecioná-los em aplicações como o Explorador de Ficheiros e o Microsoft Word:
 
@@ -71,7 +68,7 @@ Se não quiser que estes modelos sejam apresentados aos utilizadores ou preferir
 
 ---
 
-**Para mais informações relativas a este cenário:**
+**Mais informações relativas a este cenário:**
 
 - Para obter instruções passo a passo, consulte [Ativar o Azure Rights Management](../deploy-use/activate-service.md) e [Configurar modelos personalizados para o serviço Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
@@ -79,19 +76,19 @@ Se não quiser que estes modelos sejam apresentados aos utilizadores ou preferir
 
 Em seguida, veja alguns exemplos que ilustram a forma como os administradores podem aplicar os modelos para configurar automaticamente a proteção de informações de ficheiros e mensagens de e-mail.
 
-## Proteger automaticamente os ficheiros em servidores de ficheiros com o Windows Server e a Infraestrutura de Classificação de Ficheiros
+## <a name="automatically-protecting-files-on-file-servers-running-windows-server-and-file-classification-infrastructure"></a>Proteger automaticamente os ficheiros em servidores de ficheiros com o Windows Server e a Infraestrutura de Classificação de Ficheiros
 
 Este exemplo mostra como pode utilizar o Azure RMS para proteger automaticamente os ficheiros em servidores de ficheiros que têm, pelo menos, o Windows Server 2012 e estão configurados para utilizar a Infraestrutura de Classificação de Ficheiros.
 
 Existem várias formas de aplicar valores de classificação aos ficheiros. Por exemplo, pode inspecionar os conteúdos dos ficheiros e aplicar as classificações incorporadas que se adequem, tal como Confidencialidade e Informações Pessoais. No entanto, neste exemplo, um administrador cria uma classificação personalizada, **Marketing**, que é aplicada automaticamente a todos os documentos de utilizador guardados na pasta **Promoções de Marketing**. Apesar de esta pasta estar protegida com permissões de NTFS que restringem o acesso aos membros do grupo de Marketing, o administrador sabe que estas permissões podem ser perdidas se alguém desse grupo mover ou enviar os ficheiros por e-mail. Nessa situação, as informações contidas nos ficheiros poderiam ser acedidas por utilizadores não autorizados.
 
-![O QUE VEEM OS ADMINISTRADORES NO PASSO 1](../media/AzRMS_FCI_ConnectorSmall.png)
+![Capturas de ecrã a mostrar a instalação e a configuração do conector Rights Management](../media/AzRMS_FCI_ConnectorSmall.png)
 
 **O QUE VEEM OS ADMINISTRADORES NO PASSO 1:** os administradores instalam e configuram o conector Rights Management (RMS), que funciona como um reencaminhador entre os servidores no local e o Azure RMS.
 
 ---
 
-![O QUE VEEM OS ADMINISTRADORES NO PASSO 2](../media/AzRMS_ExampleFCI_ConfigurationSmall.png)
+![Capturas de ecrã a mostrar as caixas de diálogo para a configuração da Infraestrutura de Classificação de Ficheiros no Windows Server](../media/AzRMS_ExampleFCI_ConfigurationSmall.png)
 
 **O QUE VEEM OS ADMINISTRADORES NO PASSO 2:** no servidor de ficheiros, o administrador configura as tarefas e regras de classificação de modo a que todos os ficheiros de utilizador contidos na pasta **Promoções de Marketing** sejam automaticamente classificados como **Marketing** e protegidos com a encriptação do RMS.
 
@@ -101,7 +98,7 @@ Como resultado, todos os documentos contidos nessa pasta são automaticamente co
 
 ---
 
-![O QUE VEEM OS ADMINISTRADORES NO PASSO 3](../media/AzRMS_FCI_EmailSmall.png)
+![Capturas de ecrã a mostrar um e-mail de exemplo que o utilizador recebe com um anexo protegido, que pede ao utilizador a autenticação antes de poder abrir o anexo](../media/AzRMS_FCI_EmailSmall.png)
 
 **O QUE VEEM OS UTILIZADORES NO PASSO 3:** forma como o RMS ajuda a impedir a fuga de dados para pessoas que não devem ter acesso a informações confidenciais:
 
@@ -110,19 +107,19 @@ O destinatário não poderá ler o relatório confidencial porque não é um mem
 
 ---
 
-**Para mais informações relativas a este cenário:**
+**Mais informações relativas a este cenário:**
 
 - Para obter instruções passo a passo, consulte [Deploying the Azure Rights Management connector (Implementar o conector Azure Rights Management – em inglês)](../deploy-use/deploy-rms-connector.md).
 
-## Proteger automaticamente a mensagens de e-mail com o Exchange Online e políticas de prevenção de perda de dados
+## <a name="automatically-protecting-emails-with-exchange-online-and-data-loss-prevention-policies"></a>Proteger automaticamente a mensagens de e-mail com o Exchange Online e políticas de prevenção de perda de dados
 
 O exemplo anterior mostrou como pode proteger automaticamente ficheiros que contêm informações confidenciais, mas o que acontece se as informações não estiverem num ficheiro e sim numa mensagem de e-mail? É aqui que as políticas de prevenção de perda de dados (DLP) do Exchange Online entram em ação, seja através de pedidos aos utilizadores no sentido de aplicarem a proteção de informações (por intermédio de Sugestões de Política) seja através da sua aplicação automática (por intermédio de regras de transporte).
 
 Neste exemplo, o administrador configura uma política para ajudar a manter a organização em conformidade com as normas dos E.U.A. no que se refere à proteção de dados de informações pessoais, mas também é possível configurar as regras para outras normas de conformidade ou regras personalizadas definidas por si.
 
-![O QUE VEEM OS ADMINISTRADORES NO PASSO 1](../media/AzRMS_DLPExample1.png)
+![Capturas de ecrã de exemplo a mostrar algumas das opções de configuração para configurar a prevenção de perda de dados do Exchange Online](../media/AzRMS_DLPExample1.png)
 
-**O QUE VEEM OS ADMINISTRADORES NO PASSO 1:** no centro de administração do Exchange, o modelo do Exchange com o nome ** Dados de Informação Identificativa (PII) dos E.U.A.** é utilizado pelo administrador para criar e configurar uma nova política de DLP. Este modelo procura informações como números de segurança social e números de cartas de condução nas mensagens e-mail.
+**O QUE VEEM OS ADMINISTRADORES NO PASSO 1:** no centro de administração do Exchange, o modelo do Exchange com o nome **Dados de Informação Identificativa (PII) dos E.U.A.** é utilizado pelo administrador para criar e configurar uma nova política de DLP. Este modelo procura informações como números de segurança social e números de cartas de condução nas mensagens e-mail.
 
 As regras são configuradas de modo a que a proteção de direitos seja automaticamente aplicada às mensagens de e-mail que contêm estas informações e que são enviadas para fora da organização, através de um modelo de RMS que restringe o acesso exclusivamente aos funcionários da empresa.
 
@@ -133,13 +130,13 @@ Aqui, a regra está configurada para utilizar um dos modelos predefinidos, **Van
 
 ---
 
-![O QUE VEEM OS ADMINISTRADORES NO PASSO 2](../media/AzRMS_DLPUnprotectedEmail_small.png)
+![Captura de ecrã a mostrar um e-mail de exemplo que contém um número da segurança social](../media/AzRMS_DLPUnprotectedEmail_small.png)
 
 **O QUE VEEM OS UTILIZADORES NO PASSO 2:** o gestor de contratações escreve uma mensagem de e-mail que contém o número de segurança social de um funcionário contratado recentemente. Em seguida, envia a mensagem de e-mail para a Sofia, do departamento de Recursos Humanos.
 
 ---
 
-![O QUE VEEM OS ADMINISTRADORES NO PASSO 3](../media/AzRMS_DLPProtectedEmail_small.png)
+![Captura de ecrã a mostrar um e-mail de exemplo que está agora protegido pelo Azure Rights Management, porque foi enviado para fora da organização](../media/AzRMS_DLPProtectedEmail_small.png)
 
 **O QUE VEEM OS UTILIZADORES NO PASSO 3:** se esta mensagem de e-mail for enviada ou reencaminhada para alguém fora da organização, a regra de DLP aplica automaticamente a proteção de direitos.
 
@@ -147,25 +144,25 @@ A mensagem de e-mail é encriptada quando sai da infraestrutura da organização
 
 ---
 
-**Para mais informações relativas a este cenário:**
+**Mais informações relativas a este cenário:**
 
--   Para mais informações sobre a interação do Azure RMS com o Exchange Online, consulte a secção [Exchange Online e Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server) em [Como as aplicações suportam o serviço Azure Rights Management](applications-support.md).
+-   Para obter mais informações sobre a interação do Azure RMS com o Exchange Online, consulte a secção [Exchange Online e Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server) em [Como as aplicações suportam o serviço Azure Rights Management](applications-support.md).
 
 -   Para obter instruções passo a passo com vista à configuração do Exchange Online para o Azure RMS, consulte a secção [Exchange Online: IRM Configuration (Exchange Online: Configuração da IRM – em inglês)](../deploy-use/configure-office365.md#exchange-online-irm-configuration) em [Configuring applications for Azure Rights Management (Configurar aplicações para o Azure Rights Management – em inglês)](../deploy-use/configure-applications.md).
 
-## Proteger automaticamente os ficheiros com o SharePoint Online e as bibliotecas protegidas
+## <a name="automatically-protecting-files-with-sharepoint-online-and-protected-libraries"></a>Proteger automaticamente os ficheiros com o SharePoint Online e as bibliotecas protegidas
 
 Este tópico mostra como é fácil proteger documentos com o SharePoint Online e as bibliotecas protegidas.
 
 Neste exemplo, o administrador do SharePoint da Contoso criou uma biblioteca para cada departamento, que utiliza para armazenar e dar saída de documentos de forma centralizada para fins de edição e controlo de versões. Por exemplo, existe uma biblioteca para o departamento de Vendas, outra para o de Marketing, outra para o de Recursos Humanos e assim sucessivamente. Sempre que é carregado ou criado um novo documento numa destas bibliotecas protegidas, esse documento herda a proteção da biblioteca (sem ter de selecionar um modelo de política de direitos), sendo automaticamente protegido e permanecendo protegido, mesmo que seja movido para fora da biblioteca do SharePoint.
 
-![O QUE VEEM OS ADMINISTRADORES NO PASSO 1](../media/AzRMS_StoryboardSPO_small1.png)
+![Captura de ecrã a mostrar a opção para ativar o IRM no SharePoint Online](../media/AzRMS_StoryboardSPO_small1.png)
 
 **O QUE VEEM OS ADMINISTRADORES NO PASSO 1:** o administrador ativa a Gestão de Direitos de Informação para o site do SharePoint.
 
 ---
 
-![O QUE VEEM OS ADMINISTRADORES NO PASSO 2](../media/AzRMS_StoryboardSPO_small2.png)
+![Captura de ecrã a mostrar a opção para o IRM proteger uma biblioteca no SharePoint Online](../media/AzRMS_StoryboardSPO_small2.png)
 
 **O QUE VEEM OS ADMINISTRADORES NO PASSO 2:** em seguida, ativa o Rights Management para uma biblioteca. Apesar de existirem opções adicionais, esta definição simples é, muitas vezes, tudo o que precisa.
 
@@ -173,7 +170,7 @@ A partir desse momento, sempre que forem transferidos documentos a partir desta 
 
 ---
 
-![O QUE VEEM OS ADMINISTRADORES NO PASSO 3](../media/AzRMS_StoryboardSPO_small3.png)
+![Captura de ecrã a mostrar um documento transferido de uma biblioteca protegida do SharePoint Online e que apresenta a faixa de informações para indicar que o documento está protegido](../media/AzRMS_StoryboardSPO_small3.png)
 
 **O QUE VEEM OS UTILIZADORES NO PASSO 3:** quando alguém do departamento de vendas der saída deste relatório de vendas a partir da biblioteca, verá claramente na faixa de informações localizada na parte superior que se trata de um documento protegido com acesso restrito.
 
@@ -181,13 +178,13 @@ O documento permanece protegido mesmo que o utilizador lhe mude o nome, o guarde
 
 ---
 
-**Para mais informações relativas a este cenário:**
+**Mais informações relativas a este cenário:**
 
--   Para mais informações sobre a interação do Azure RMS com o SharePoint, consulte a secção [SharePoint Online e SharePoint Server](office-apps-services-support.md#sharepoint-online-and-sharepoint-server) em [Como as aplicações suportam o serviço Azure Rights Management](applications-support.md).
+-   Para obter mais informações sobre a interação do Azure RMS com o SharePoint, consulte a secção [SharePoint Online e SharePoint Server](office-apps-services-support.md#sharepoint-online-and-sharepoint-server) em [Como as aplicações suportam o serviço Azure Rights Management](applications-support.md).
 
 -   Para obter instruções passo a passo com vista à configuração do SharePoint para o Azure RMS, consulte a secção [SharePoint Online and OneDrive for Business: IRM Configuration (SharePoint Online e OneDrive para Empresas: Configuração da IRM – em inglês)](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) em [Configuring Applications for Azure Rights Management (Configurar Aplicações para o Azure Rights Management – em inglês)](../deploy-use/configure-applications.md).
 
-## Os utilizadores partilham anexos de forma segura com os utilizadores móveis
+## <a name="users-safely-share-attachments-with-mobile-users"></a>Os utilizadores partilham anexos de forma segura com os utilizadores móveis
 
 Os exemplos anteriores demonstraram como os administradores podem aplicar a proteção de informações aos dados confidenciais de forma automática. No entanto, pode haver ocasiões em que os utilizadores poderão precisar de aplicar esta proteção pessoalmente. Por exemplo, se estiverem a colaborar com parceiros noutra organização, precisarem de definições ou permissões personalizadas que não estão definidas nos modelos ou outras situações ad-hoc que não são abrangidas pelos exemplos anteriores. Nestas situações, os utilizadores podem aplicar os modelos de RMS pessoalmente ou configurar permissões personalizadas.
 
@@ -195,7 +192,7 @@ Este exemplo mostra como os utilizadores podem partilhar facilmente um documento
 
 Neste exemplo, a Adriana, da Contoso, envia um documento do Word confidencial por e-mail para o Artur, da Fabrikam. Este lê o documento no seu iPad, mas também poderia fazê-lo facilmente num iPhone, num telemóvel ou tablet Android, num computador Mac ou num computador ou telemóvel com Windows.
 
-![O QUE VEEM OS UTILIZADORES NO PASSO 1](../media/AzRMS_StoryboardEmail_small1.png)
+![Captura de ecrã a mostrar um e-mail de exemplo com um anexo e a caixa de diálogo Partilhar Protegido na aplicação de partilha Rights Management](../media/AzRMS_StoryboardEmail_small1.png)
 
 **O QUE VEEM OS UTILIZADORES NO PASSO 1:** num PC com Windows, a Inês cria uma mensagem de e-mail padrão e anexa um documento.
 
@@ -205,7 +202,7 @@ A Inês quer restringir as ações do Artur à visualização e edição do docu
 
 ---
 
-![O QUE VEEM OS UTILIZADORES NO PASSO 2](../media/AzRMS_StoryboardEmail_small2.png)
+![Captura de ecrã a mostrar um e-mail direcionado a um utilizador num iPad, que inclui a mensagem, os anexos e instruções](../media/AzRMS_StoryboardEmail_small2.png)
 
 **O QUE VEEM OS UTILIZADORES NO PASSO 2:** o Artur vê a mensagem de e-mail no seu iPad.
 
@@ -213,7 +210,7 @@ Para além da mensagem e do anexo enviados pela Inês, encontra instruções par
 
 ---
 
-![O QUE VEEM OS UTILIZADORES NO PASSO 3](../media/AzRMS_StoryboardEmail_small3.png)
+![Captura de ecrã a mostrar o utilizador a ler o anexo protegido no iPad](../media/AzRMS_StoryboardEmail_small3.png)
 
 **O QUE VEEM OS UTILIZADORES NO PASSO 3:** o Artur pode agora abrir o anexo. Em primeiro lugar, é-lhe pedido que inicie sessão a fim de confirmar que é o destinatário pretendido.
 
@@ -221,7 +218,7 @@ Quando o Artur vê o documento, vê também as informações de acesso restrito 
 
 ---
 
-![O QUE VEEM OS UTILIZADORES NO PASSO 4](../media/AzRMS_StoryboardEmail_small4.png)
+![Captura de ecrã a mostrar um e-mail de confirmação de exemplo para o remetente](../media/AzRMS_StoryboardEmail_small4.png)
 
 **O QUE VEEM OS UTILIZADORES NO PASSO 4:** a Inês recebe uma mensagem de e-mail a indicar que o Artur abriu o documento que ela lhe enviou com êxito, indicando também quando foi feito o acesso ao documento.
 
@@ -229,18 +226,14 @@ Se o Artur reencaminhar a mensagem de e-mail com o anexo, se a guardar num local
 
 ---
 
-**Para mais informações relativas a este cenário:**
+**Mais informações relativas a este cenário:**
 
 - Para obter instruções passo a passo, consulte [Protect a file that you share by email (Proteger um ficheiro partilhado por e-mail – em inglês)](../rms-client/sharing-app-protect-by-email.md) e [View and use files that have been protected (Ver e utilizar ficheiros que foram protegidos – em inglês)](../rms-client/sharing-app-view-use-files.md) do [Rights Management sharing application user guide (Guia de utilizador da aplicação de partilha Rights Management – em inglês)](../rms-client/sharing-app-user-guide.md).
 
 - O [Quick start tutorial for Azure Rights Management (Tutorial de introdução ao Azure Rights Management – em inglês)](../get-started/quick-start-tutorial.md) inclui instruções passo a passo para este cenário.
 
-## Passos seguintes
+## <a name="next-steps"></a>Passos seguintes
 
 Agora que viu alguns exemplos das capacidades do Azure RMS, poderá estar interessado na aplicação prática das mesmas. Para obter informações técnicas sobre o funcionamento do Azure RMS, consulte [How does Azure RMS work? (Como funciona o Azure RMS? – em inglês)](how-does-it-work.md)
 
-
-
-<!--HONumber=Oct16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

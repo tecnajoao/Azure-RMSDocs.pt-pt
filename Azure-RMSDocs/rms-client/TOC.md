@@ -3,9 +3,23 @@
 # [Planear e Estruturar](/information-protection/plan-design/deployment-roadmap)
 # [Implementar e Utilizar o Serviço](/information-protection/deploy-use/activate-service)
 # [Implementar e Utilizar o Cliente](use-client.md)
-## [Cliente de Gestão de Direitos](use-client.md)
-### [Instalar o cliente do Azure Information Protection](info-protect-client.md)
+## [Cliente do Rights Management](use-client.md)
 ### [Notas de implementação do cliente RMS](client-deployment-notes.md)
+### [Cliente do Azure Information Protection](aip-client.md)
+#### [Cliente do Azure Information Protection: histórico de lançamento de versões](client-version-release-history.md)
+#### [Guia do administrador de clientes do Azure Information Protection](client-admin-guide.md)
+##### [Ficheiros de cliente e registo de utilização](client-admin-guide-files-and-logging.md)
+##### [Controlo de documentos](client-admin-guide-document-tracking.md)
+##### [Tipos de ficheiro suportados](client-admin-guide-file-types.md)
+##### [Comandos do PowerShell](client-admin-guide-powershell.md)
+#### [Guia do utilizador do Azure Information Protection](client-user-guide.md)
+##### [Transferir e instalar o cliente](install-client-app.md)
+##### [Classificar e proteger um ficheiro ou e-mail](client-classify-protect.md)
+##### [Controlar e revogar os documentos](client-track-revoke.md)
+##### [Abrir ficheiros que foram protegidos](client-view-use-files.md)
+##### [Remover etiquetas e proteção](client-remove-label-protection.md)
+##### [Modo de apenas de proteção](client-protection-only-mode.md)
+##### [Tarefas que costumava realizar com a aplicação de partilha RMS](upgrade-client-app.md)
 ### [Proteção RMS com o Windows Server FCI](configure-fci.md)
 #### [Script do PowerShell](fci-script.md)
 ### [Aplicação de partilha Rights Management para Windows](sharing-app-windows.md)
@@ -23,8 +37,3 @@
 ##### [Utilizar atalhos de teclado](sharing-app-keyboard-shortcuts.md)
 ##### [Opções da caixa de diálogo](sharing-app-dialog-box.md)
 # [Desenvolver e Personalizar Aplicações](/information-protection/develop/developers-guide)
-
-
-<!--HONumber=Sep16_HO4-->
-
-

@@ -11,7 +11,7 @@ Este passo é opcional, mas a maioria das pessoas gosta de saber se o anexo que 
 
 ![Capturas de ecrã do tutorial do Azure RMS](../media/AzRMS_Tutorial_5_Screenshots.png)
 
-#### Para controlar o documento protegido
+#### <a name="to-track-your-protected-document"></a>Para controlar o documento protegido
 
 1.  No Outlook, no separador **Base**, no grupo **RMS**, clique em **Controlar a Utilização**.
 
@@ -31,15 +31,10 @@ Pode voltar a este site para controlar mais atividades do documento protegido ou
 |--------------------------------|--------------------------|
 |Instruções completas para controlar os documentos   →|[Controlar e revogar os documentos quando utiliza a aplicação de partilha RMS](../rms-client/sharing-app-track-revoke.md)|
 |Vídeo de dois minutos que explica e mostra o controlo de documentos   →|[Revogação e Controlo de Documentos do Azure RMS](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)|
-|Para resolução de problemas e questões dos clientes   →|[FAQ acerca do Controlo de Documentos](https://technet.microsoft.com/dn947488)|
+|Para resolução de problemas e questões dos clientes   →|[FAQ sobre o Controlo de Documentos](https://technet.microsoft.com/dn947488)|
 
-## Passos Seguintes
+## <a name="next-steps"></a>Passos Seguintes
 Este tutorial descreveu os passos para um cenário: como o Azure RMS pode ajudar a proteger os seus dados. Para ver outras utilizações comuns, consulte [Azure RMS em ação](../understand-explore/what-admins-users-see.md). Existem outras secções neste artigo que também pode achar úteis, tais como de que forma funciona o Azure RMS e quais os problemas empresariais que pode resolver.
 
 Se estiver pronto para iniciar a implementação do Azure RMS, utilize o [Plano de Implementação do Azure Rights Management](../plan-design/deployment-roadmap.md) para obter os passos da implementação e ligações para instruções sobre como proceder.
-
-
-
-<!--HONumber=Jun16_HO4-->
-
 

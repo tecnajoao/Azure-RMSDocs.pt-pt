@@ -15,8 +15,3 @@ Para concluir este tutorial, terá de ter o seguinte:
 -   Um computador a executar o Windows (no mínimo, o Windows 7 SP1) e no qual se encontre instalado o Office 2016, Office 2013 ou Office 2010.
 
 Vamos começar!
-
-
-<!--HONumber=Jul16_HO3-->
-
-

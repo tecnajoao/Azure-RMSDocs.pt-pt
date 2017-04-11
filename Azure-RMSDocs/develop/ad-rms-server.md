@@ -3,8 +3,9 @@ title: Servidor AD RMS | Azure RMS
 description: "O componente de servidor do Rights Management Services (RMS) é implementado por um conjunto de serviços Web que são executados nos Serviços de Informação de Internet da Microsoft."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,14 +14,11 @@ ms.assetid: 17B05780-B0EF-4805-8304-52DCDEB3AADB
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 3e2dee5511bc86e44e2e10ff9fc981aa36ccee38
-
-
+ms.openlocfilehash: fa703300c8e751835ec62fdceb49d84c6b57548f
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-# Servidor
+# <a name="server"></a>Servidor
 
 Este tópico descreve a finalidade e as funções do RMS Server para o Azure e Windows Server.
 
@@ -42,7 +40,7 @@ Entre os diversos serviços Web instalados, os que se seguem são importantes pa
 |Pré-certificação | Permite que um servidor peça um *certificado de conta de direitos* em nome de um utilizador. O serviço é executado em servidores de certificação de raiz e em servidores de licenciamento.|
 |Localizador de Serviço | Fornece o URL dos serviços de certificação de conta, licenciamento e publicação ao Active Directory para que possam ser detetados pelos clientes RMS. O serviço é executado em servidores de certificação de raiz e em servidores de licenciamento.|
 
-## Tópicos relacionados ##
+## <a name="related-topics"></a>Tópicos relacionados ##
 * [Descrição Geral](ad-rms-overview.md)
 * [Serviços de Informação Internet da Microsoft](http://www.iis.net/overview)
 * [Permitir que a aplicação do serviço funcione com o RMS baseado na nuvem](how-to-use-file-api-with-aadrm-cloud.md)
@@ -52,12 +50,4 @@ Entre os diversos serviços Web instalados, os que se seguem são importantes pa
 * [Ativar um Utilizador](https://msdn.microsoft.com/library/Cc530378)
 * [Criar uma Licença de Emissão](https://msdn.microsoft.com/library/Aa362355)
 
- 
-
- 
-
-
-
-<!--HONumber=Oct16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

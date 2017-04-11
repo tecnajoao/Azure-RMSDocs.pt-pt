@@ -3,8 +3,9 @@ title: "Introdução | Azure RMS"
 description: "O guia de introdução para uma primeira aplicação é efetuado através de guias de configuração do ambiente de desenvolvimento para cada um dos sistemas operativos/plataformas."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,14 +14,11 @@ ms.assetid: 9f4cbd16-58e5-421f-a472-8d279e952760
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: d4373ed4a0909c5c0c4dceb51f98ace1977cb6f7
-
-
+ms.openlocfilehash: 18c9f1f694601aea105eb5a7d97deb0da7f15730
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-# Introdução
+# <a name="get-started"></a>Introdução
 
 Para esta versão do SDK Microsoft Rights Management 4.2, a abordagem de início rápido a uma primeira aplicação é efetuada através de guias de configuração do ambiente de desenvolvimento para cada um dos sistemas operativos/plataformas. Comece a criar a aplicação com direitos ativados da seguinte forma:
 
@@ -54,8 +52,4 @@ Para esta versão do SDK Microsoft Rights Management 4.2, a abordagem de iníci
   |[Exemplos de código](code-examples.md)|O MS SDK RMS 4.2 inclui código de exemplo e projetos de trabalho para alguns sistemas operativos suportados.|
   |[Recursos comunitários](community-resources.md)|Os Serviços de Gestão de Direitos do Active Directory são bem suportados por uma crescente comunidade de programadores em várias plataformas.|
 
-
-
-<!--HONumber=Oct16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

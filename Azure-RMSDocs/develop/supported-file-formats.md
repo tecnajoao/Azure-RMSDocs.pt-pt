@@ -3,8 +3,9 @@ title: Formatos de ficheiro suportados | Azure RMS
 description: "A versão atual da API de Ficheiros suporta a proteção nativa para ficheiros do MS Office e PDF e a proteção PFile para todos os outros formatos de ficheiro."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,18 +14,15 @@ ms.assetid: EC831494-7F2C-4C70-9063-B02CDDEA14EE
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 0baa6a5ceeba8ae2e276ffe09edb54060671d8be
-
-
+ms.openlocfilehash: 780a2a4dc96c602cabcec69bffd4b8584097ca7b
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-# Formatos de ficheiro suportados
+# <a name="supported-file-formats"></a>Formatos de ficheiro suportados
 
 A API de Ficheiros suporta formatos nativos e Pfile.
 
-## Formatos de Ficheiro Suportados
+## <a name="supported-file-formats"></a>Formatos de Ficheiro Suportados
 
 A versão atual da API de Ficheiros suporta a proteção nativa para ficheiros do Microsoft Office e PDF (Portable Document Files) e a proteção PFile para todos os outros formatos de ficheiro. Os ficheiros PDF podem, opcionalmente, ter a proteção PFile aplicada.
 
@@ -33,16 +31,9 @@ A versão atual da API de Ficheiros suporta a proteção nativa para ficheiros d
 
 Os administradores podem definir chaves de registo para configurar se e como os ficheiros devem ser protegidos com base na respetiva extensão do nome do ficheiro. Para obter mais informações sobre como configurar a proteção de ficheiros quando utilizar a API de Ficheiros, consulte [Configuração da API de Ficheiros](file-api-configuration.md).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Notas do programador](developer-notes.md)
 * [Configuração da API de Ficheiros](file-api-configuration.md)
  
-
- 
-
-
-
-<!--HONumber=Oct16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

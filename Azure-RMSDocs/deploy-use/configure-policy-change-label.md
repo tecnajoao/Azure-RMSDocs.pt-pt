@@ -1,21 +1,20 @@
 ---
-title: Como alterar ou personalizar uma etiqueta existente | Azure Information Protection
+title: Alterar uma etiqueta do Azure Information Protection
 description: "Pode alterar ou refinar qualquer uma das etiquetas que os utilizadores veem na barra Information Protection, configurando-os na política do Azure Information Protection."
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
-translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: 0ca82bdbb4db382c868ae38f7595a7eee585c479
-
-
+ms.openlocfilehash: 4111fbaf678509cfb5b961f19dcc4b62f77c7a4a
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
+translationtype: HT
 ---
-
-# Como alterar ou personalizar uma etiqueta existente para o Azure Information Protection
+# <a name="how-to-change-or-customize-an-existing-label-for-azure-information-protection"></a>Como alterar ou personalizar uma etiqueta existente para o Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -30,9 +29,9 @@ Para alterar uma etiqueta, utilize as instruções seguintes.
     
     Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
-2. No painel **Azure Information Protection**, selecione a etiqueta a alterar e, em seguida, efetue as alterações no painel **Etiqueta** e em quaisquer painéis subsequentes, conforme necessário.
+2. Para alterar uma etiqueta da política global, de modo a que se aplique a todos os utilizadores, selecione a etiqueta a alterar no painel **Política:Global** e, em seguida, faça as alterações no painel **Etiqueta** e em todos os painéis subsequentes, conforme necessário. Para alterar uma etiqueta a partir de uma [política de âmbito](configure-policy-scope.md) para que se aplique a utilizadores selecionados, selecione primeiro essa política no painel inicial do **Azure Information Protection**.
 
-    A exceção é se pretende reordenar uma etiqueta, que é efetuada no mesmo painel **Azure Information Protection**: clique com o botão direito do rato na etiqueta ou selecione o menu de contexto para a etiqueta e, em seguida, selecione as opções **Mover para cima** ou **Mover para baixo**.
+    A exceção é se pretender reordenar uma etiqueta, procedimento que é feito no painel da política a partir da política global ou da sua política de âmbito selecionada: clique com o botão direito do rato na etiqueta ou selecione o menu de contexto da etiqueta e, em seguida, selecione as opções **Mover para cima** ou **Mover para baixo**.
 
 3. Sempre que efetuar alterações num painel, caso pretenda manter as alterações, clique em **Guardar** nesse mesmo painel.
 
@@ -41,15 +40,10 @@ Para alterar uma etiqueta, utilize as instruções seguintes.
 > [!TIP]
 >Se pretender regressar a um dos rótulos predefinidos para os valores predefinidos, utilize as informações em [Política do Information Protection predefinida](configure-policy-default.md).
 
-## Passos seguintes
+## <a name="next-steps"></a>Passos seguintes
 
-Para mais informações sobre como configurar as opções que pode efetuar em relação a uma etiqueta e outras definições para a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organization-s-policy).
+Para mais informações sobre como configurar as opções que pode efetuar em relação a uma etiqueta e outras definições para a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).
 
-
-
-
-
-
-<!--HONumber=Sep16_HO4-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

@@ -3,8 +3,9 @@ title: Configurar o Visual Studio | Azure RMS
 description: "Instruções sobre como configurar um projeto do Visual Studio para utilizar o SDK RMS 2.1."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,24 +14,21 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 28286a4c8a5fcc602afba5975cfe5133e8b6c55b
-
-
+ms.openlocfilehash: 0b0d761376854101dff66d8f78de01f97c3725de
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-# Configurar o Visual Studio
+# <a name="configure-visual-studio"></a>Configurar o Visual Studio
 
 Este tópico contém instruções sobre como configurar um projeto do Visual Studio para utilizar o SDK Rights Management Services 2.1.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 -   [Instalar o SDK](install-the-rms-sdk.md)
 
 **Instruções**
 
-### Passo 1: configurar um projeto do Visual Studio para utilizar o SDK RMS 2.1
+### <a name="step-1-configure-a-visual-studio-project-to-use-rms-sdk-21"></a>Passo 1: configurar um projeto do Visual Studio para utilizar o SDK RMS 2.1
 
 Estas instruções são específicas para o Microsoft Visual Studio 2010. Se estiver a utilizar uma versão diferente do Microsoft Visual Studio, as caixas de diálogo das definições podem ter um aspeto ligeiramente diferente.
 
@@ -69,15 +67,8 @@ Estas instruções aplicam-se à criação de uma aplicação de 32 bits nativa
 
     ![Campo de ficheiros de recurso do explorador de soluções](../media/original_file_name.png)
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Instalar o SDK](install-the-rms-sdk.md)
- 
 
- 
-
-
-
-<!--HONumber=Oct16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

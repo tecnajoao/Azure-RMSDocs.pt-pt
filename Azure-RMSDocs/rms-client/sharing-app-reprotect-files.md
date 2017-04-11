@@ -1,10 +1,11 @@
 ---
-title: "Alterar permissões em ficheiros que foram protegidos pelo Rights Management | Azure Information Protection"
+title: "Alterar permissões em ficheiros protegidos pelo RMS – AIP"
 description: "Se um ficheiro tiver sido protegido pela Rights Management, pode alterar as permissões voltando a protegê-lo e, em seguida, especificar todos os utilizadores que devem ter acesso à mesma e que permissões pretende conceder-lhes."
 keywords: 
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,16 +13,13 @@ ms.technology: techgroup-identity
 ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: 99dcbeb68cbbe363cfd1e6ded07882f01621e438
-
-
+ms.openlocfilehash: c355f3d7f21ece6a63c2b43982fcec8f668cd38a
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
+# <a name="change-permissions-on-files-that-have-been-protected-by-rights-management"></a>Alterar permissões em ficheiros que tenham sido protegidos pela Rights Management
 
-# Alterar permissões em ficheiros que tenham sido protegidos pela Rights Management
-
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8 e Windows 8.1*
 
 Se um ficheiro tiver sido protegido pela Rights Management, pode alterar as permissões voltando a protegê-lo e, em seguida, especificar todos os utilizadores que devem ter acesso à mesma e que permissões pretende conceder-lhes.
 
@@ -38,7 +36,7 @@ Por exemplo, se outra pessoa protegeu o ficheiro utilizando a aplicação de par
 
 Se quiser remover por completo todas as permissões de modo a que o ficheiro já não fique protegido completamente, veja o artigo [Remover a proteção de um ficheiro](sharing-app-remove-protection.md).
 
-## Voltar a proteger um ficheiro no local
+## <a name="to-re-protect-a-file-in-place"></a>Voltar a proteger um ficheiro no local
 
 1.  No Explorador de Ficheiros, selecione um ficheiro a proteger. Clique com o botão direito do rato, selecione **Proteger com RMS** e, em seguida, selecione **Proteger no local**. Por exemplo:
 
@@ -71,7 +69,7 @@ Se quiser remover por completo todas as permissões de modo a que o ficheiro já
 >     Quando se inscrever, utilize o seu endereço de e-mail da empresa em vez de um endereço de e-mail pessoal. Caso se esteja a inscrever porque recebeu um anexo protegido, utilize o mesmo endereço de e-mail que foi utilizado para lhe enviar a mensagem de e-mail.
 > -   Para mais informações, consulte [RMS para indivíduos e Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-## Voltar a proteger um ficheiro enviado por si por e-mail
+## <a name="to-re-protect-a-file-that-you-have-emailed"></a>Voltar a proteger um ficheiro enviado por si por e-mail
 
 Se pretende alterar as permissões de um ficheiro que enviou por e-mail:
 
@@ -84,18 +82,14 @@ Se pretende alterar as permissões de um ficheiro que enviou por e-mail:
     Para revogar um ficheiro que tenha enviado por e-mail, veja o artigo [Controlar e revogar os documentos](sharing-app-track-revoke.md).
 
 
-## Exemplos e outras instruções
+## <a name="examples-and-other-instructions"></a>Exemplos e outras instruções
 Para obter exemplos de como pode utilizar a aplicação de partilha Rights Management e instruções sobre como proceder, veja as secções seguintes do guia do utilizador da aplicação de partilha Rights Management:
 
 -   [Exemplos de utilização da aplicação de partilha RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [O que pretende fazer?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md)
 
-
-
-<!--HONumber=Sep16_HO4-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

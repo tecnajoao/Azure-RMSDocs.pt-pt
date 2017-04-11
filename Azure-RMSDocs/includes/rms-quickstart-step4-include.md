@@ -11,13 +11,13 @@ Quando clicam na ligação, são encaminhados para as instruções de instalaç�
 
 ![Capturas de ecrã do tutorial do RM](../media/AzRMS_Tutorial_4_Screenshots.png)
 
-#### Para ver o anexo do documento protegido
+#### <a name="to-view-the-protected-document-attachment"></a>Para ver o anexo do documento protegido
 
 1.  Uma vez que o Azure Rights Management protegeu um documento do Word, existem dois anexos na mensagem de e-mail. Estes anexos são, na verdade, duas versões do mesmo ficheiro, mas com extensões de nomes de ficheiro diferentes. Abra a versão que tem a extensão de nome de ficheiro **.ppdf** (**Confidencial.ppdf**).
 
     Se tiver uma versão do [Office no dispositivo que suporte o Rights Management](https://technet.microsoft.com/library/dn655136.aspx), pode abrir a outra versão do ficheiro (**Confidencial.docx**) no Word.
 
-2.  Se lhe for pedido o nome de utilizador e a palavra-passe, introduza o nome de utilizador no mesmo formato que o endereço de e-mail que foi utilizado para lhe enviar a mensagem de e-mail e o anexo. Por exemplo, **juliam@contoso.com** ou **p.barbosa@fabrikam.com**. Para a palavra-passe, escreva a que especificou quando se inscreveu no RMS para indivíduos. Em alternativa, se a sua organização tiver o Azure RMS, introduza a palavra-passe habitual do trabalho.
+2.  Se lhe for pedido o nome de utilizador e a palavra-passe, introduza o nome de utilizador no mesmo formato que o endereço de e-mail que foi utilizado para lhe enviar a mensagem de e-mail e o anexo. Por exemplo, **janetm@contoso.com** ou **p.dover@fabrikam.com**. Para a palavra-passe, escreva a que especificou quando se inscreveu no RMS para indivíduos. Em alternativa, se a sua organização tiver o Azure RMS, introduza a palavra-passe habitual do trabalho.
 
 O documento é aberto e já pode ler o conteúdo. Por exemplo, pode dizer **Se conseguir ler isto no anexo de e-mail, significa que o remetente partilhou com êxito um ficheiro que foi protegido com o Azure RMS.** Uma vez que é só de leitura, não é possível alterar o conteúdo.
 
@@ -28,11 +28,6 @@ Agora que o destinatário abriu o anexo e, opcionalmente, o reencaminhou para ou
 |Se pretender mais informações|Informações adicionais|
 |--------------------------------|--------------------------|
 |Instruções completas para visualizar ficheiros que estão protegidos pelo Azure Rights Management   →|[Ver e utilizar ficheiros que foram protegidos pelo Rights Management](../rms-client/sharing-app-view-use-files.md)|
-|Acerca da subscrição gratuita, RMS para indivíduos   →|[RMS para Indivíduos e Azure Rights Management](../understand-explore/rms-for-individuals.md)|
+|Acerca da subscrição gratuita, RMS para indivíduos   →|[RMS para indivíduos e Azure Rights Management](../understand-explore/rms-for-individuals.md)|
 |Acerca das duas versões do ficheiro que vê anexado à mensagem de e-mail   →|[O que é o ficheiro .ppdf criado automaticamente?](../rms-client/sharing-app-dialog-box.md)|
-
-
-
-<!--HONumber=Jun16_HO4-->
-
 

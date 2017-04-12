@@ -4,7 +4,7 @@ description: "Recursos para administradores que incluem informações sobre nova
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/30/2017
+ms.date: 04/04/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5e836d99c59cbd055b219aab6499a67fb62bd1a5
-ms.sourcegitcommit: 8733730882bea6f505f4c6d53d4bdf08c3106f40
+ms.openlocfilehash: c3838c29d26c8c1bed196ad0a86c63f5f78ad9cc
+ms.sourcegitcommit: d2bd2ddc68d9b5a095b57235b28a3b7e9307bd9b
 translationtype: HT
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informações e suporte do Azure Information Protection
@@ -45,17 +45,21 @@ As secções seguintes fornecem informações sobre as opções de suporte e de 
 
 Se tiver Suporte Premier, visite o [portal clientes do Suporte Premier](https://premier.microsoft.com/) para submeter incidentes, procurar soluções e obter ajuda.
 
-Pode ser elegível para o **FastTrack**: pode utilizar o Benefício do FastTrack Center ao adquirir pelo menos 150 licenças do Azure Information Protection num plano elegível. O Benefício do FastTrack Center permite-lhe trabalhar com especialistas da Microsoft para avaliar, corrigir e ativar serviços elegíveis. Para obter mais informações, consulte [Benefício do FastTrack Center do Azure Rights Management](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
+Pode ser elegível para o **FastTrack**: pode utilizar o Benefício do FastTrack Center ao adquirir pelo menos 150 licenças do Azure Information Protection num plano elegível. O Benefício do FastTrack Center permite-lhe trabalhar com especialistas da Microsoft para avaliar, corrigir e ativar serviços elegíveis. Para obter mais informações, veja [Benefício do FastTrack Center do Azure Rights Management](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
 
 Para outros clientes, utilize os seguintes canais de suporte, consoante a forma como tiver obtido o Azure Information Protection:
 
-- **Azure Information Protection Premium** (autónomo): abra um [pedido de suporte no portal do Azure](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade). Quando lhe for pedido, no painel **Noções Básicas**, escolha **Técnico** para o **Tipo de Problema** e **Subscrição com suporte técnico incluído** para a opção **Subscrição**.
-
-- **Azure Information Protection com uma subscrição do Office 365**: consulte [Contactar o suporte do Office 365 para empresas – Ajuda para Administradores](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) para obter números de telefone e saber como contactar o Suporte através do portal de administração do Office 365. 
-
-- **Azure Information Protection com o Enterprise Mobility + Security (EMS)**: se também tiver o Office 365, pode utilizar os [canais de suporte do Office 365](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b). Para obter mais informações, consulte a [Enterprise Mobility Suite: FAQ de Suporte](https://technet.microsoft.com/dn932057.aspx).
-
-- **Azure Information Protection com Secure Productive Enterprise (SPE)**: utilize os [canais de suporte do Office 365](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).
+- **Azure Information Protection** (autónomo): 
+    - Crie um **Novo pedido de suporte** a partir da secção [Ajuda e suporte](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) no portal do Azure. Quando lhe for pedido, no painel **Noções Básicas**, escolha **Técnico** para o **Tipo de Problema** e **Subscrição com suporte técnico incluído** para a opção **Subscrição**.
+    
+- **Azure Information Protection com uma subscrição do Office 365**: 
+    - Veja [Contactar o Office 365 para suporte de negócio – Ajuda de Administração](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) para consultar os números de telefone e saber como contactar o Suporte através do portal de administração do Office 365. 
+    
+- **Azure Information Protection com o Enterprise Mobility + Security (EMS)**: 
+    - Crie um **Novo pedido de suporte** a partir da secção [Ajuda e suporte](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) no portal do Azure. Quando lhe for pedido, no painel **Noções Básicas**, escolha **Técnico** para o **Tipo de Problema** e **Subscrição com suporte técnico incluído** para a opção **Subscrição**.
+    
+- **Azure Information Protection com Secure Productive Enterprise (SPE)**: 
+    - Utilize os [canais de suporte do Office 365](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).
 
 Para opções de suporte adicionais, peça ao seu contacto da Microsoft. 
 
@@ -73,7 +77,7 @@ Resolva os problemas:
 
 - Se tiver uma pergunta sobre uma declaração de suporte do Azure Information Protection: consulte as informações sobre [Requisitos](requirements-azure-rms.md) que são atualizadas regularmente.
 
-- Para obter informações para dar suporte aos seus utilizadores finais, suporte técnico e administradores que estão a configurar serviços e aplicações que utilizam o Azure Information Protection: consulte [Ajudar os utilizadores a proteger ficheiros](../deploy-use/help-users.md).
+- Para obter informações para dar suporte aos seus utilizadores finais, suporte técnico e administradores que estão a configurar serviços e aplicações que utilizam o Azure Information Protection: veja [Ajudar os utilizadores a proteger ficheiros](../deploy-use/help-users.md).
 
 - Se tiver implementado o conector do Rights Management para os servidores no local: consulte as informações de [monitorização](../deploy-use/monitor-rms-connector.md) que incluem detalhes sobre as entradas do registo de eventos, contadores de desempenho e registo.
 

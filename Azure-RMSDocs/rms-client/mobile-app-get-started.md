@@ -5,7 +5,7 @@ keywords: "Como ver e-mails ou ficheiros com a aplicação Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/06/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.technology: techgroup-identity
 ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 24e1b9df2284abde20d5308a313019d666afed5d
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 96ab267f22abf31d39a77dcc5450b28a583096e8
+ms.sourcegitcommit: 81b5c111627246a4094ef87da17d260f66ae985c
 translationtype: HT
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Introdução à aplicação Microsoft Azure Information Protection para iOS e Android
@@ -31,9 +31,9 @@ No seu dispositivo móvel, precisa de acesso a um dos ficheiros suportados pela 
 
 - **Um ficheiro PDF protegido por direitos**: num computador Windows, utilize o cliente do Azure Information Protection para [proteger um ficheiro PDF](client-classify-protect.md) e, em seguida, envie para si próprio este ficheiro PDF protegido por direitos PDF como um anexo de e-mail. Em alternativa, carregue um ficheiro PDF para uma biblioteca protegida do SharePoint e partilhe-o com o seu endereço de e-mail.
 
-- **Um .ptxt, .pjpg ou .ppng**: num computador Windows, utilize o cliente do Azure Information Protection para proteger um ficheiro de texto ou imagem e, em seguida, envie para si próprio este ficheiro protegido como um anexo de e-mail. Para obter a lista completa dos tipos de ficheiros que pode utilizar para fins de teste, veja a secção [Tipos de ficheiros suportados para a proteção e as suas extensões do nome de ficheiro](client-admin-guide-file-types.md#supported-file-types-for-protection-and-their-file-name-extensions) no guia de administração do cliente do Azure Information Protection. 
+- **Um .ptxt, .pjpg ou .ppng**: num computador Windows, utilize o cliente do Azure Information Protection para proteger um ficheiro de texto ou imagem e, em seguida, envie para si próprio este ficheiro protegido como um anexo de e-mail. Para obter a lista completa dos tipos de ficheiros que pode utilizar para teste, veja a primeira tabela na secção [Tipos de ficheiros suportados para a classificação e proteção](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) no guia de administração do cliente do Azure Information Protection. 
 
-Para ver estes ficheiros na aplicação de visualização do Azure Information Protection, toque no anexo de e-mail ou na ligação. Quando lhe for pedido para selecionar uma aplicação com a qual abri-lo, selecione a aplicação **AIP Viewer**. Ser-lhe-á pedido que inicie sessão na sua conta escolar ou profissional. Depois de ser autenticado com êxito, a aplicação Azure Information Protection mostra o e-mail ou o ficheiro para que o possa ler.
+Para ver estes ficheiros na aplicação de visualização do Azure Information Protection, toque no anexo de e-mail ou na ligação. Quando lhe for pedido para selecionar uma aplicação com a qual abri-lo, selecione a aplicação **AIP Viewer**. Ser-lhe-á pedido que inicie sessão com a sua conta escolar ou profissional, ou que selecione um certificado. Depois de as suas credenciais serem autenticadas, a aplicação Azure Information Protection mostra o e-mail ou o ficheiro para que o possa ler.
 
 ## <a name="next-steps"></a>Passos seguintes
 

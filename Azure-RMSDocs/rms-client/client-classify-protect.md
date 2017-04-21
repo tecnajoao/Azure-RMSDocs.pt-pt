@@ -4,7 +4,7 @@ description: "Instruções sobre como classificar e proteger os seus documentos 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/16/2017
+ms.date: 04/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: edc8c7227a0f2b493a64f25a26a64aef3a314e39
-ms.sourcegitcommit: df8492aa3687974dc6105dc415c2d959f32e6630
+ms.openlocfilehash: f461b349440043bcf5d8624731eda86968194462
+ms.sourcegitcommit: 52b7502e7049358f9fc0a418625bb460bb81479f
 translationtype: HT
 ---
 # <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Classificar e proteger um ficheiro ou e-mail com o Azure Information Protection
@@ -133,7 +133,7 @@ O guia do administrador contém uma lista completa dos tipos de ficheiro suporta
 
     - **Selecionar permissões**: selecione o nível de acesso que pretende que as pessoas tenham quando protege o ficheiro ou ficheiros selecionados.
     
-    - **Selecionar utilizadores**: especifique as pessoas que devem ter as permissões que selecionou para o seu ficheiro ou ficheiros. Pode utilizar o livro de endereços para pesquisar e selecionar as pessoas e os grupos na sua organização. Para pessoas noutra organização, tem de especificar o endereço de e-mail completo. Verifique que utiliza um endereço de e-mail profissional, uma vez que os endereços de e-mail pessoais não são atualmente suportados.
+    - **Selecionar utilizadores**: especifique as pessoas que devem ter as permissões que selecionou para o seu ficheiro ou ficheiros. Escreva o endereço de e-mail completo dessas pessoas, um endereço de e-mail de grupo ou um nome de domínio da organização para todos os utilizadores nessa organização. Tenha em atenção que, atualmente, os endereços de e-mail pessoais não são suportados.
         
     - **Expirar acesso**: selecione esta opção apenas para ficheiros sensíveis ao tempo para que as pessoas que especificou não consigam abrir o ficheiro ou ficheiros selecionados após uma data especificada. Ainda poderá abrir o ficheiro original, mas, após a meia-noite (o seu fuso horário atual), no dia que selecionou, as pessoas especificadas não poderão abrir o ficheiro.
 

@@ -4,7 +4,7 @@ description: "Está confuso com uma palavra, expressão ou acrónimo relacionado
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/08/2017
+ms.date: 04/18/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5fecc61fb77625047a5ebedad4ff906fe8c27bbe
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 7ed60b1a2c02007668a11fdf8278bf196ee84521
+ms.sourcegitcommit: 9c033b7f5a6cbb20275aeecd48ff5071964eb587
 translationtype: HT
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologia do Azure Information Protection
@@ -43,6 +43,7 @@ Está confuso com uma palavra, expressão ou acrónimo relacionado com o Microso
 |proteção genérica|Um nível de proteção que encripta qualquer tipo de ficheiro e evita que os utilizadores não autorizados abram o ficheiro. Ao abrir o ficheiro, o ficheiro fica desencriptado e utilizável numa aplicação que não suporta nativamente o [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].|
 |HYOK|Veja *tenha a sua própria chave*.|
 |tenha a sua própria chave|Frequentemente abreviado para *HYOK*.<br /><br />Uma opção de configuração e topologia de uma organização que pretende gerar e armazenar as suas próprias chaves no local, normalmente por motivos de regulamentação ou conformidade.|
+|objeto de chave|No contexto de chaves de inquilino, uma entidade que contém metadados exigidos pelo serviço Azure Rights Management para operações criptográficas.|
 |proteção de informações|Por vezes, abreviado para *IP*.<br /><br />Um termo genérico comum na indústria que se refere à proteção de dados e ficheiros contra acesso não autorizado, mesmo depois de os dados e os ficheiros saírem dos limites organizacionais através de e-mail ou da partilha de documentos. O Microsoft Azure Information Protection é um exemplo de uma solução de proteção de informações (IP).|
 |Gestão de Direitos de Informação|Frequentemente abreviado para *IRM*.<br /><br />Um termo utilizado em conjunto com os serviços do Office, como o Exchange Server, o Word e o SharePoint Online, para descrever a capacidade de suportar o serviço Microsoft Rights Management.|
 |IRM|Consulte *Gestão de Direitos de Informação*.|

@@ -1,22 +1,22 @@
 ---
 title: "Migrar do AD RMS para o Azure Information Protection – fase 4"
-description: "Fase 4 da migração do AD RMS para o Azure Information Protection, abrangendo os passos 8 a 9 de Migrar do AD RMS para o Azure Information Protection."
+description: "Fase 4 da migração do AD RMS para o Azure Information Protection, que abrange os passos 8 a 9 de Migrar do AD RMS para o Azure Information Protection"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/08/2017
+ms.date: 04/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
-ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
+ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d36f47e586ac1295dcc79e43a9e061b4c7c7fe1e
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: c6646b6e3df72105d0808e23b40fe01e444e164a
+ms.sourcegitcommit: 384461f0e3fccd73cd7eda3229b02e51099538d4
 translationtype: HT
 ---
-# <a name="migration-phase-4---post-migration-tasks"></a>Fase 4 da migração – tarefas pós-migração
+# <a name="migration-phase-4---supporting-services-configuration"></a>Fase 4 da migração – configuração de serviços de suporte
 
 >*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Office 365*
 
@@ -24,41 +24,200 @@ translationtype: HT
 Utilize as seguintes informações para a Fase 4 da migração do AD RMS para o Azure Information Protection. Estes procedimentos incluem os passos 8 a 9 do tópico [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 
-## <a name="step-8-decommission-ad-rms"></a>Passo 8. Desativar o AD RMS
 
-Remova o Ponto de Ligação de Serviço (SCP) do Active Directory para impedir que os computadores detetem a sua infraestrutura da Gestão de Direitos no local. Isto é opcional para os clientes existentes que migraram devido ao redirecionamento que foi configurado no registo (por exemplo, ao executar o script de migração). No entanto, remover o SCP impede que novos clientes e potenciais serviços e ferramentas relacionados com o RMS localizem o SCP quando a migração estiver concluída e que todas as ligações sejam ligadas ao serviço Azure Rights Management. 
+## <a name="step-8-configure-irm-integration-for-exchange-online"></a>Passo 8: configurar a integração de IRM para o Exchange Online
 
-Para remover o SCP, garanta que tem sessão iniciada como administrador da empresa do domínio e, em seguida, utilize o seguinte procedimento:
+Se tiver importado anteriormente o TDP do AD RMS para o Exchange Online, tem de remover este TDP para evitar modelos e políticas em conflito após a migração para o Azure Information Protection. Para tal, utilize o cmdlet [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx) do Exchange Online.
 
-1. Na consola Serviços de Gestão de Direitos do Active Directory, clique com o botão direito do rato no cluster do AD RMS e, em seguida, clique em **Propriedades**.
+Se optou por uma topologia de chave de inquilino do Azure Information Protection **gerida pela Microsoft**:
 
-2. Clique no separador **SCP**.
+1. Utilize as instruções na secção [Exchange Online: configuração de IRM](../deploy-use/configure-office365.md#exchange-online-irm-configuration) no artigo [Office 365: Configuração para clientes e serviços online](../deploy-use/configure-office365.md). Esta secção inclui comandos típicos a executar que ligam ao serviço do Exchange Online, importam a chave de inquilino do Azure Information Protection e ativam a funcionalidade IRM para o Exchange Online. Após concluir estes passos, terá acesso às funcionalidades completas de proteção do Azure Rights Management com o Exchange Online.
 
-3. Selecione a caixa de verificação **Alterar SCP**.
+2. Para além da configuração padrão para ativar a IRM para o Exchange Online, execute os seguintes comandos do PowerShell para garantir que os utilizadores conseguirão ler e-mails que foram enviados ao utilizar a proteção do AD RMS.
 
-4. Selecione **Remover SCP atual** e, em seguida, clique em **OK**.
+    Substitua o nome de domínio da organização para *\<asuaempresa.dominio>*.
 
-Monitorize a atividade dos seus servidores do AD RMS, por exemplo, ao verificar os [pedidos no relatório de Estado de Funcionamento do Sistema](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx), a [tabela ServiceRequest](http://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx) ou a [auditoria de acesso de utilizador a conteúdo protegido](http://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx). Quando tiver confirmado que os clientes RMS já não estão a comunicar com estes servidores e que os clientes estão a utilizar o Azure Information Protection com êxito, pode remover a função de servidor do AD RMS destes servidores. Se estiver a utilizar servidores dedicados, poderá preferir o passo cautelar de começar por encerrar os servidores durante um período de tempo para se certificar de que não existem problemas comunicados que exijam reiniciar estes servidores para assegurar a continuidade do serviço enquanto estiver a investigar por que razão os clientes não estão a utilizar o Azure Information Protection.
+        $irmConfig = Get-IRMConfiguration
+        $list = $irmConfig.LicensingLocation
+        $list += "https://adrms.<yourcompany.domain>/_wmcs/licensing"
+        Set-IRMConfiguration -LicensingLocation $list
+        Set-IRMConfiguration -internallicensingenabled $false
+        Set-IRMConfiguration -internallicensingenabled $true
 
-Após a desativação dos servidores AD RMS, pode aproveitar a oportunidade para rever os modelos no portal clássico do Azure e consolidá-los para que os utilizadores tenham menos por onde escolher, reconfigurá-los ou até adicionar novos modelos. É também uma boa altura para publicar os modelos predefinidos. Para mais informações, consulte [Configurar modelos personalizados para o serviço Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
-## <a name="step-9-re-key-your-azure-information-protection-tenant-key"></a>Passo 9. Recodificar a chave de inquilino do Azure Information Protection
-Este passo é obrigatório quando a migração estiver concluída se a sua implementação do AD RMS estava a utilizar o Modo Criptográfico 1 do RMS, pois o rechaveamento cria uma nova chave de inquilino que utiliza o Modo Criptográfico 2 do RMS. A utilização do Azure RMS com o Modo Criptográfico 1 é suportada apenas durante o processo de migração.
+Se optou por uma topologia de chave de inquilino do Azure Information Protection **gerida pelo cliente (BYOK)**:
 
-Este passo é opcional, mas é recomendado quando a migração estiver concluída, mesmo que estivesse em execução no Modo Criptográfico 2 do RMS. A recodificação neste cenário ajuda a proteger a chave de inquilino do Azure Information Protection contra potenciais falhas de segurança na chave do AD RMS.
+-   Terá funcionalidades reduzidas de proteção do Rights Management com o Exchange Online, conforme descrito no artigo [Preços e restrições do BYOK](byok-price-restrictions.md).
 
-Quando recodificar a chave de inquilino do Azure Information Protection (também conhecido como "implementar a chave"), é criada uma nova chave e a chave original é arquivada. No entanto, uma vez que a mudança de uma chave para outra não é imediata, mas sim um processo de algumas semanas, não espere até suspeitar que existe uma falha na chave original e recodifique a chave de inquilino do Azure Information Protection assim que a migração for concluída.
 
-Para recodificar a chave de inquilino do Azure Information Protection:
+## <a name="step-9-configure-irm-integration-for-exchange-server-and-sharepoint-server"></a>Passo 9: configurar a integração de IRM para o Exchange Server e SharePoint Server
 
-- Se a sua chave de inquilino for gerida pela Microsoft: contacte o [Suporte da Microsoft](../get-started/information-support.md#to-contact-microsoft-support) e abra um **incidente de suporte do Azure Information Protection com um pedido de recodificação da chave do Azure Information Protection após a migração a partir do AD RMS**. Tem de provar que é um administrador do inquilino do Azure Information Protection e compreender que este processo demorará vários dias a ser confirmado. São aplicáveis encargos de suporte padrão; a recodificação da chave de inquilino não é um serviço de suporte gratuito.
+Se tiver utilizado a funcionalidade de Gestão de Direitos de Informação (IRM) do Exchange Server ou SharePoint Server com o AD RMS, terá de implementar o conector Azure Rights Management (RMS), que atua como uma interface de comunicações (um reencaminhamento) entre os seus servidores no local e o serviço de proteção do Azure Information Protection.
 
-- Se a sua chave de inquilino for gerida por si (BYOK): no Cofre de Chaves do Azure, recodifique a chave que estiver a utilizar para o inquilino do Azure Information Protection e, em seguida, execute o cmdlet [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) novamente para especificar o novo URL da chave. 
+Estes passos indicam como instalar e configurar o conector, desativar a IRM para o Exchange e SharePoint e configurar estes servidores para utilizar o conector. Por fim, se tiver importado ficheiros de configuração de dados do AD RMS (.xml) para o Azure Information Protection que foram utilizados para proteger mensagens de e-mail, terá de editar manualmente o registo nos computadores do Exchange Server para redirecionar todos os URLs de domínio de publicação fidedigno para o conector RMS.
 
-## <a name="next-steps"></a>Próximos passos
+> [!NOTE]
+> Antes de começar, verifique as versões dos servidores no local que o serviço Azure Rights Management suporta em [Servidores no local que suportam o Azure RMS](../get-started/requirements-servers.md).
 
-Para mais informações sobre a gestão da chave de inquilino do Azure Information Protection, consulte [Operações para a chave de inquilino do Azure Rights Management](../deploy-use/operations-tenant-key.md).
+### <a name="install-and-configure-the-rms-connector"></a>Instalar e configurar o conector RMS
 
-Agora que concluiu a migração, consulte o [plano de implementação](deployment-roadmap.md) para identificar quaisquer outras tarefas de implementação que tenha de efetuar.
+Utilize as instruções no artigo [Implementar o conector Azure Rights Management](../deploy-use/deploy-rms-connector.md) e efetue os passos 1 a 4. Ainda não inicie o passo 5 das instruções de conector. 
+
+### <a name="disable-irm-on-exchange-servers-and-remove-ad-rms-configuration"></a>Desativar a IRM nos Servidores do Exchange e remover a configuração do AD RMS
+
+1.  Em cada servidor Exchange, localize a pasta seguinte e elimine todas as entradas nessa pasta: **\ProgramData\Microsoft\DRM\Server\S-1-5-18**
+
+2. Num dos servidores Exchange, execute os seguintes comandos do PowerShell para garantir que os utilizadores poderão ler e-mails que estão protegidos ao utilizar o Azure Rights Management.
+
+    Antes de executar estes comandos, substitua o URL do serviço Azure Rights Management para *\<URL de Inquilino>*.
+
+        $irmConfig = Get-IRMConfiguration
+        $list = $irmConfig.LicensingLocation 
+        $list + "<Your Tenant URL>/_wmcs/licensing"
+        Set-IRMConfiguration -LicensingLocation $list
+
+3.  Agora, desative as funcionalidades da IRM para mensagens que são enviadas para destinatários internos:
+
+    ```
+    Set-IRMConfiguration -InternalLicensingEnabled $false
+    ```
+
+4. Em seguida, utilize o mesmo cmdlet para desativar a IRM no Microsoft Office Outlook Web App e no Microsoft Exchange ActiveSync:
+
+    ```
+    Set-IRMConfiguration -ClientAccessServerEnabled $false
+    ```
+
+5.  Por fim, utilize o mesmo cmdlet para limpar todos os certificados em cache:
+
+    ```
+    Set-IRMConfiguration -RefreshServerCertificates
+    ```
+
+6.  Em cada Exchange Server, reponha o IIS, por exemplo, ao executar uma linha de comandos como administrador e escrever **iisreset**.
+
+### <a name="disable-irm-on-sharepoint-servers-and-remove-ad-rms-configuration"></a>Desativar a IRM em SharePoint Servers e remover a configuração do AD RMS
+
+1.  Certifique-se de que não existem documentos com saída dada em bibliotecas protegidas por RMS. Se existirem, vão tornar-se inacessíveis no final deste procedimento.
+
+2.  No Web site de Administração Central do SharePoint , na secção **Iniciação Rápida**, clique em **Segurança**.
+
+3.  Na página **Segurança**, na secção **Política de Informações**, clique em **Configurar gestão de direitos de informação**.
+
+4.  Na página **Gestão de Direitos de Informação**, na secção **Gestão de Direitos de Informação**, selecione **Não utilizar IRM neste servidor** e, em seguida, clique em **OK**.
+
+5.  Em cada computador do SharePoint Server, elimine os conteúdos da pasta \ProgramData\Microsoft\MSIPC\Server\\\<*SID da conta que está a executar o SharePoint Server>*.
+
+### <a name="configure-exchange-and-sharepoint-to-use-the-connector"></a>Configurar o Exchange e o SharePoint para utilizar o conector
+
+1. Volte às instruções para implementar o conector RMS: [Passo 5: configurar servidores para utilizar o conector RMS](../deploy-use/configure-servers-rms-connector.md)
+
+    Se apenas tiver o SharePoint Server, aceda diretamente aos [Passos seguintes](#next-steps) para continuar a migração. 
+
+2. Em cada Exchange Server, adicione manualmente as chaves de registo na secção seguinte para cada ficheiro de dados de configuração (.xml) que tenha importado para redirecionar os URLs de domínio de publicação fidedigno para o conector RMS. Estas entradas do registo são específicas da migração e não são adicionadas pela ferramenta de configuração do servidor para o conector Microsoft RMS.
+
+    Quando efetuar estas edições de registo, utilize as instruções seguintes:
+
+    -   Substitua o *conector FQDN* pelo nome que definiu no DNS para o conector. Por exemplo, **rmsconnector.contoso.com**.
+
+    -   Utilize o prefixo HTTP ou HTTPS para o URL do conector, dependendo se configurou o conector para utilizar HTTP ou HTTPS para comunicar com os servidores no local.
+
+#### <a name="registry-edits-for-exchange"></a>Edições de registo do Exchange
+
+Para todos os servidores Exchange, remova os valores de registo que adicionou para LicenseServerRedirection durante a fase de preparação. Estes valores foram adicionados aos seguintes caminhos:
+
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
+
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
+
+
+Para o Exchange 2013 e o Exchange 2016 – edição de registo 1:
+
+
+**Caminho do registo:**
+
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
+
+**Tipo:** Reg_SZ
+
+**Valor:** https://\<URL de Licenciamento na Intranet do AD RMS\>/_wmcs/licensing
+
+**Dados:**
+
+Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange Server para o conector RMS:
+
+- http://\<conector FQDN\>/_wmcs/licensing
+
+- https://\<conector FQDN\>/_wmcs/licensing
+
+
+---
+
+Para o Exchange 2013 – edição de registo 2:
+
+**Caminho do registo:**
+
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection 
+
+**Tipo:** Reg_SZ
+
+**Valor:**https://\<URL de Licenciamento na Extranet do AD RMS\>/_wmcs/licensing
+
+**Dados:**
+
+Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange Server para o conector RMS:
+
+- http://\<conector FQDN\>/_wmcs/licensing
+
+- https://\<conector FQDN\>/_wmcs/licensing
+
+---
+
+Para o Exchange 2010 – edição de registo 1:
+
+
+**Caminho do registo:**
+
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
+
+**Tipo:** Reg_SZ
+
+**Valor:** https://\<URL de Licenciamento na Intranet do AD RMS\>/_wmcs/licensing
+
+**Dados:**
+
+Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange Server para o conector RMS:
+
+- http://\<conector FQDN\>/_wmcs/licensing
+
+- https://\<Nome do conector\>/_wmcs/licensing
+
+
+---
+
+Para o Exchange 2010 – edição de registo 2:
+
+
+**Caminho do registo:**
+
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
+
+**Tipo:** Reg_SZ
+
+**Valor:**https://\<URL de Licenciamento na Extranet do AD RMS\>/_wmcs/licensing
+
+**Dados:**
+
+Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange Server para o conector RMS:
+
+- http://\<conector FQDN\>/_wmcs/licensing
+
+- https://\<conector FQDN\>/_wmcs/licensing
+
+---
+
+
+## <a name="next-steps"></a>Passos seguintes
+Para continuar a migração, aceda a [fase 5 – tarefas de pós-migração](migrate-from-ad-rms-phase5.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -1,134 +1,204 @@
 ---
 title: "Migrar do AD RMS para o Azure Information Protection – fase 2"
-description: "Fase 2 da migração do AD RMS para o Azure Information Protection, abrangendo o passo 5 de Migrar do AD RMS para o Azure Information Protection."
+description: "Fase 2 da migração do AD RMS para o Azure Information Protection, que abrange os passos 4 a 6 de Migrar do AD RMS para o Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 04/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
-ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
+ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6e3f0bf46886c27620f8b7c836d0c67aafb61d37
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: a2ef28f2db2a22a766d658294a7d68b0dc6eebb2
+ms.sourcegitcommit: 89e13f6be15a96293e0af0b2529a2e39563a63b6
 translationtype: HT
 ---
-# <a name="migration-phase-2---client-side-configuration"></a>Fase 2 da migração – configuração do lado do cliente
+# <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Fase 2 da migração – configuração do AD RMS do lado do servidor
 
 >*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Office 365*
 
-Utilize as seguintes informações para a Fase 2 da migração do AD RMS para o Azure Information Protection. Estes procedimentos incluem o passo 5 do tópico [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
+Utilize as seguintes informações para a Fase 2 da migração do AD RMS para o Azure Information Protection. Estes procedimentos incluem os passos 4 a 6 de [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 
-## <a name="step-5-reconfigure-clients-to-use-azure-information-protection"></a>Passo 5. Reconfigurar os clientes para utilizar o Azure Information Protection
-Para clientes Windows:
+## <a name="step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection"></a>Passo 4: exportar os dados de configuração do AD RMS e importá-los para o Azure Information Protection
+Este passo divide-se em duas partes:
 
-1.  [Transfira os scripts de migração](https://go.microsoft.com/fwlink/?LinkId=524619):
+1. Exportar os dados de configuração do AD RMS através da exportação dos domínios de publicação fidedignos (TPD) para um ficheiro. xml. Este processo é igual para todas as migrações.
 
-    -   CleanUpRMS_RUN_Elevated.cmd
+2. Importar os dados de configuração para o Azure Information Protection. Existem diferentes processos para este passo consoante a configuração da implementação atual do AD RMS e a topologia preferida para a sua chave de inquilino do Azure RMS.
 
-    -   Redirect_OnPrem.cmd
+### <a name="export-the-configuration-data-from-ad-rms"></a>Exportar os dados de configuração do AD RMS
 
-    Estes scripts repõem a configuração em computadores Windows para que utilizem o serviço Azure Information Protection em vez do AD RMS.
+Efetue o seguinte procedimento em todos os clusters do AD RMS de todos os domínios de publicação fidedignos que possuem conteúdos protegidos da sua organização. Não tem de o executar em clusters só de licenciamento.
 
-2.  Siga as instruções no script de redirecionamento (Redirect_OnPrem.cmd) para modificar o script para apontar para o novo inquilino do Azure Information Protection.
+#### <a name="to-export-the-configuration-data-trusted-publishing-domain-information"></a>Para exportar os dados de configuração (informações de domínio de publicação fidedigno)
 
-    > [!IMPORTANT]
-    > As instruções incluem substituir endereços de exemplo de **adrms** e **adrms.contoso.com** pelos endereços dos seus próprios servidores AD RMS. Ao fazê-lo, certifique-se de que não existem espaços adicionais antes ou depois dos endereços, uma vez que estes interrompem o script de migração e são muito difíceis de identificar como a causa de raiz do problema. Algumas ferramentas de edição adicionam automaticamente um espaço depois do texto colado.
-    >
-    > Além disso, se os seus servidores do AD RMS utilizarem certificados de servidor SSL/TLS, verifique se os valores de URL de licenciamento incluem o número de porta **443** na cadeia. Por exemplo: https:// rms.treyresearch.net:443/_wmcs/licensing. Estas informações encontram-se na consola dos Serviços de Gestão de Direitos do Active Directory quando clica no nome do cluster e vê as informações de **Detalhes do Cluster**. Se vir o número de porta 443 incluído no URL, inclua este valor quando modificar o script. Por exemplo, https://rms.treyresearch.net**:443**.
+1. Inicie sessão no cluster do AD RMS como utilizador com permissões de administração do AD RMS.
 
-3. Se os utilizadores tiverem o Office 2016: os scripts não foram ainda atualizados para incluir a configuração para o Office 2016, pelo que se os utilizadores tiverem esta versão do Office, têm de atualizar manualmente os scripts:
+2. Na consola de gestão do AD RMS (**Serviços de Gestão de Direitos do Active Directory**), expanda o nome do cluster do AD RMS, expanda as **Políticas de Fidedignidade** e, em seguida, clique em **Domínios de Publicação Fidedignos**.
 
-    - Para **CleanUpRMS.cmd** – procure a linha `reg delete HKCU\Software\Microsoft\Office\15.0\Common\DRM /f` e, imediatamente abaixo desta, adicione a seguinte linha:
+3. No painel de resultados, selecione o domínio de publicação fidedigno e, em seguida, no painel Ações, clique em **Exportar Domínio de Publicação Fidedigno**.
 
-            reg delete HKCU\Software\Microsoft\Office\16.0\Common\DRM /f
+4. Na caixa de diálogo **Exportar Domínio de Publicação Fidedigno**:
 
-    - Para **Redirect_Onprem.cmd** – procure a linha `reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM" /t REG_SZ /v "DefaultServer" /d "%CloudRMS%" /F` e, imediatamente abaixo desta, adicione a seguinte linha:
+    - Clique em **Guardar Como** e guarde no caminho e com um nome de ficheiro à sua escolha. Certifique-se de que especifica **. xml** a extensão de nome de ficheiro (esta não é acrescentada automaticamente).
 
-            reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\DRM" /t REG_SZ /v "DefaultServerUrl" /d "https://%CloudRMS%/_wmcs/licensing" /F 
+    - Especifique e confirme uma palavra-passe segura. Lembre-se desta palavra-passe, dado que precisará dela mais tarde quando importar os dados de configuração para o Azure Information Protection.
 
-            reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\DRM" /t REG_SZ /v "DefaultServer" /d "%CloudRMS%" /F
+    - Não marque a caixa de verificação para guardar o ficheiro de domínio fidedigno na versão 1.0 do RMS.
 
-    Opcional: os scripts não mencionam o Office 2016 nos comentários. Se quiser atualizar os comentários para refletir estas adições do 2016 do Office, altere **Redirect_Onprem.cmd** da seguinte forma:
+Após exportar todos os domínios de publicação fidedignos, estará pronto para iniciar a importação destes dados para o Azure Information Protection.
 
-    - Procure `::     or MSIPC (Office 2013) with on-premises AD RMS` e substitua por:
+Tenha em atenção que os domínios de publicação fidedignos incluem as chaves para desencriptar os ficheiros protegidos anteriormente, pelo que é importante que exporte (e depois importe para o Azure) todos os domínios de publicação fidedignos e não apenas o domínio atualmente ativo.
+
+Por exemplo, terá vários domínios de publicação fidedignos se tiver atualizado os seus servidores do AD RMS do Modo Criptográfico 1 para o Modo Criptográfico 2. Se não exportar e importar o domínio de publicação fidedigno que contém a chave arquivada que utilizou o Modo Criptográfico 1, no final da migração, os utilizadores não poderão abrir o conteúdo que foi protegido com a chave do Modo Criptográfico 1.
+
+
+### <a name="import-the-configuration-data-to-azure-information-protection"></a>Importar os dados de configuração para o Azure Information Protection
+Os procedimentos exatos para este passo dependem da configuração da sua implementação atual do AD RMS e da topologia preferida para a sua chave de inquilino do Azure Information Protection.
+
+A sua implementação atual do AD RMS utilizará uma das seguintes configurações para a sua chave do certificado de licenciante para servidor (SLC):
+
+- Proteção por palavra-passe na base de dados do AD RMS. Esta é a configuração predefinida.
+
+- Proteção HSM através da utilização de um módulo de hardware de segurança (HSM) da Thales.
+
+- Proteção HSM através da utilização de um módulo de hardware de segurança (HSM) de um fornecedor diferente da Thales.
+
+- Proteção por palavra-chave através de um fornecedor de serviços de criptografia externo.
+
+> [!NOTE]
+> Para obter mais informações sobre a utilização de módulos de hardware de segurança com o AD RMS, veja [Utilizar o AD RMS com Módulos de Hardware de Segurança](http://technet.microsoft.com/library/jj651024.aspx).
+
+As duas opções de topologia de chaves de inquilino do Azure Information Protection estão relacionadas com o facto de a sua chave de inquilino poder ser gerida pela Microsoft (**gerida pela Microsoft**) ou por si (**gerida pelo cliente**) no Azure Key Vault. Quando faz a gestão da sua própria chave de inquilino do Azure Information Protection, essa gestão é por vezes referida como "bring your own key" (BYOK – Traga a Sua Própria Chave) e requer um módulo de hardware de segurança (HSM) da Thales. Para obter mais informações, veja [Planear e implementar a sua chave de inquilino do Azure Information Protection](plan-implement-tenant-key.md).
+
+> [!IMPORTANT]
+> O Exchange Online não é atualmente compatível com o BYOK no Azure Information Protection. Se quer utilizar o BYOK após a migração e tenciona utilizar o Exchange Online, certifique-se de que compreende como esta configuração reduz a funcionalidade IRM no Exchange Online. Reveja as informações em [BYOK pricing and restrictions (Preços e restrições do BYOK – em inglês)](byok-price-restrictions.md) para o ajudar a escolher a melhor topologia de chaves de inquilino do Azure Information Protection para a sua migração.
+
+Utilize a seguinte tabela para identificar o procedimento a utilizar para a sua migração. As combinações que não estão listadas não são suportadas.
+
+|Implementação atual do AD RMS|Topologia de chave de inquilino do Azure Information Protection selecionada|Instruções de migração|
+|-----------------------------|----------------------------------------|--------------------------|
+|Proteção por palavra-passe na base de dados do AD RMS|Gerida pela Microsoft|Consulte o procedimento de migração **Chave protegida por software para chave protegida por software** que se encontra após esta tabela.<br /><br />Este é o caminho de migração mais simples e requer apenas que transfira os seus dados de configuração para o Azure Information Protection.|
+|Proteção HSM através da utilização de um módulo de hardware de segurança (HSM) nShield da Thales.|Gerida pelo cliente (BYOK)|Consulte o procedimento de migração **Chave protegida por HMS para chave protegida por HMS** que se encontra após esta tabela.<br /><br />Este procedimento requer o conjunto de ferramentas BYOK do Azure Key Vault e três conjuntos de passos para transferir primeiro a chave HSM no local para os HSMs do Azure Key Vault e, em seguida, autorizar o serviço Azure Rights Management a partir do Azure Information Protection a utilizar a sua chave de inquilino e, por último, transferir os dados de configuração para o Azure Information Protection.|
+|Proteção por palavra-passe na base de dados do AD RMS|Gerida pelo cliente (BYOK)|Consulte o procedimento de migração **Chave protegida por software para chave protegida por HMS** que se encontra após esta tabela.<br /><br />Este procedimento requer o conjunto de ferramentas BYOK do Azure Key Vault e quatro conjuntos de passos para, em primeiro lugar, extrair a sua chave de software e importá-la para um HSM no local, transferir a chave do seu HSM no local para os HSMs do Azure Information Protection, em seguida transferir os dados do Key Vault para o Azure Information Protection e, por último, transferir os dados de configuração para o Azure Information Protection.|
+|Proteção HSM através da utilização de um módulo de hardware de segurança (HSM) a partir de um fornecedor que não seja a Thales|Gerida pelo cliente (BYOK)|Contacte o seu fornecedor do HSM para obter instruções sobre como transferir a chave deste HSM para um módulo de hardware de segurança (HSM) nShield da Thales. Em seguida, siga as instruções do procedimento de migração **Chave protegida por HMS para chave protegida por HMS** que se encontram após esta tabela.|
+|Proteção por palavra-passe através de um fornecedor de serviços de criptografia externo|Gerida pelo cliente (BYOK)|Contacte o seu fornecedor de serviços de criptografia para obter instruções sobre como transferir a sua chave para um Módulo de Hardware de Segurança (HSM) nShield da Thales. Em seguida, siga as instruções do procedimento de migração **Chave protegida por HMS para chave protegida por HMS** que se encontram após esta tabela.|
+Antes de iniciar estes procedimentos, certifique-se de que consegue aceder aos ficheiros. xml que criou anteriormente, quando exportou os domínios de publicação fidedignos. Estes poderão estar guardados, por exemplo, numa pen USB que pode ser movida do servidor do AD RMS para uma estação de trabalho com ligação à Internet.
+
+> [!NOTE]
+> Independentemente da forma como guarda estes ficheiros, siga os procedimentos de segurança recomendados para os proteger, uma vez que estes dados incluem a sua chave privada.
+
+Para concluir o Passo 4, escolha e selecione as instruções para o seu caminho de migração: 
+
+- [Chave protegida por software para chave protegida por software](migrate-softwarekey-to-softwarekey.md)
+- [Chave protegida por HSM para chave protegida por HSM](migrate-hsmkey-to-hsmkey.md)
+- [Chave protegida por software para chave protegida por HSM](migrate-softwarekey-to-hsmkey.md)
+
+## <a name="step-5-activate-the-azure-rights-management-service"></a>Passo 5: ativar o serviço Azure Rights Management
+
+Abra uma sessão do PowerShell e execute os seguintes comandos:
+
+1. Ligue ao serviço Azure Rights Management e quando lhe for pedido, especifique as credenciais de administrador global:
     
-            ::     or MSIPC (Office 2013 and 2016) with on-premises AD RMS
+        Connect-Aadrmservice
 
-    - Procure `echo Redirect SCP for Office 2013` e substitua por:
+2. Ative o serviço Azure Rights Management:
     
-            echo Redirect SCP for Office versions based on MSIPC
+        Enable-Aadrmservice
 
-    - Procure `echo Redirect MSIPC for Office 2013` e substitua por:
-    
-            echo Redirect MSIPC for Office versions based on MSIPC
+**E se o seu inquilino do Azure Information Protection já estiver ativado?** Se o serviço Azure Rights Management já estiver ativado na sua organização, os utilizadores poderão já ter utilizado o Azure Information Protection para proteger conteúdos com uma chave de inquilino gerada automaticamente (e com os modelos predefinidos) em vez das chaves (e modelos) existentes do AD RMS. É pouco provável que tal ocorra em computadores que são bem geridos na sua intranet, dado que estes serão automaticamente configurados para a sua infraestrutura do AD RMS. No entanto, esta situação pode ocorrer em computadores de grupo de trabalho ou em computadores que raramente estabelecem ligação à sua intranet. Infelizmente, também é difícil identificar estes computadores, razão pela qual recomendamos que não ative o serviço antes de importar os dados de configuração do AD RMS.
 
-4.  Em computadores com o Windows:
+Se o seu inquilino do Azure Information Protection já estiver ativado e conseguir identificar estes computadores, certifique-se de que executa o script CleanUpRMS.cmd nestes computadores, conforme descrito no [Passo 7](migrate-from-ad-rms-phase3.md#step-7-reconfigure-clients-to-use-azure-information-protection). A execução deste script força-os a reinicializar o ambiente do utilizador para que seja possível transferir a chave de inquilino atualizada e os modelos importados.
 
-    - Execute estes scripts com privilégios elevados no contexto do utilizador.
+Além disso, se criou modelos personalizados que quer utilizar após a migração, tem de exportar e importá-los. Este procedimento é descrito no passo seguinte. 
 
-    Para clientes de dispositivos móveis e computadores Mac:
+## <a name="step-6-configure-imported-templates"></a>Passo 6: configurar modelos importados
 
-    -  Remova os registos SRV de DNS que criou quando implementou a [extensão de dispositivo móvel do AD RMS](http://technet.microsoft.com/library/dn673574.aspx).
+Como os modelos que importou estão predefinidos para o estado **Arquivado**, tem de alterar este estado para **Publicado** se quiser que os utilizadores possam utilizar estes modelos com o Azure Rights Management.
 
-#### <a name="changes-made-by-the-migration-scripts"></a>Alterações efetuadas pelos scripts de migração
-Esta secção documenta as alterações que os scripts de migração efetuam. Pode utilizar estas informações apenas para efeitos de referência, para resolução de problemas ou para o caso de preferir efetuar estas alterações sozinho.
+Os modelos que importa do AD RMS assemelham-se e comportam-se tal como os modelos personalizados que pode criar no portal clássico do Azure. Para alterar modelos importados a publicar para que os utilizadores os possam ver e selecionar a partir de aplicações, veja [Configurar modelos personalizados para o Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
-CleanUpRMS_RUN_Elevated.cmd:
+Para além da publicação de modelos recentemente importados, existem apenas duas alterações importantes para os modelos que poderá ter de fazer antes de continuar com a migração. Para que os utilizadores tenham uma experiência mais consistente durante o processo de migração, não faça alterações adicionais aos modelos importados, não publique os dois modelos predefinidos do Azure Information Protection nem crie novos modelos nesta altura. Em alternativa, aguarde até que o processo de migração esteja concluído e que tenha desaprovisionado os servidores do AD RMS.
 
--   Elimine o conteúdo das pastas %userprofile%\AppData\Local\Microsoft\DRM e %userprofile%\AppData\Local\Microsoft\MSIPC, incluindo quaisquer subpastas e ficheiros com nomes de ficheiro longos.
+As alterações de modelo que poderá ter de fazer para este passo:
 
--   Elimine o conteúdo das seguintes chaves de registo:
+- Se criou modelos personalizados no Azure Information Protection antes da migração, tem de os exportar e importar manualmente.
 
-    -   HKEY_LOCAL_MACHINE\Software\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM
+- Se os modelos do AD RMS utilizavam o grupo **ANYONE**, tem de adicionar manualmente o grupo e os direitos equivalentes.
 
-    -   HKEY_LOCAL_MACHINE\Software\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM
+### <a name="procedure-if-you-created-custom-templates-before-the-migration"></a>Procedimento se criou modelos personalizados antes da migração
 
-    -   HKEY_LOCAL_MACHINE\Software\WoW6432Node\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM
+Se tiver criado modelos personalizados antes da migração, antes ou depois de ativar o serviço Azure Rights Management, os modelos não estarão disponíveis para os utilizadores após a migração, mesmo que tenham sido definidos como **Publicado**. Para que fiquem disponíveis para os utilizadores, tem primeiro de: 
 
-    -   HKEY_CURRENT_USER\Software\WoW6432Node\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM
+1. Identificar estes modelos e anotar o ID de modelo executando [Get-AadrmTemplate](/powershell/aadrm/vlatest/get-aadrmtemplate). 
 
-    -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation
+2. Exportar os modelos utilizando o cmdlet do PowerShell do Azure RMS, [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate).
 
-    -   HKEY_LOCAL_MACHINE\SOFTWARE\WoW6432Node\Microsoft\MSIPC\ServiceLocation
+3. Exportar os modelos utilizando o cmdlet do PowerShell do Azure RMS, [Import-AadrmTemplate](/powershell/aadrm/vlatest/Import-AadrmTpd).
 
-    -   HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation
+Em seguida, pode publicar ou arquivar estes modelos como faria com qualquer modelo criado após a migração.
 
--   Adicione os seguintes valores de registo:
+### <a name="procedure-if-your-templates-in-ad-rms-used-the-anyone-group"></a>Procedimento se os modelos no AD RMS utilizavam o grupo **ANYONE**
 
-    -   HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM\DefaultServerURL
+Se os seus modelos no AD RMS utilizavam o grupo **ANYONE**, este grupo será removido automaticamente quando importar os modelos para o Azure Information Protection, pelo que tem de adicionar manualmente o grupo ou os utilizadores equivalentes, bem como adicionar os mesmos direitos aos modelos importados. O grupo equivalente do Azure Information Protection é designado **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<nome_do_inquilino>.onmicrosoft.com**. Por exemplo, para a Contoso, este grupo poderá ser semelhante ao seguinte: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**.
 
-    -   HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM\DefaultServer
+Se não tiver a certeza se os seus modelos do AD RMS incluem o grupo ANYONE, pode utilizar o script de exemplo do Windows PowerShell para identificar estes modelos. Para obter mais informações sobre como utilizar o Windows PowerShell com o AD RMS, veja [Utilizar o Windows PowerShell para Administrar o AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
 
-Redirect_OnPrem.cmd:
+Pode ver o grupo automaticamente criado da sua organização se copiar um dos modelos da política de direitos predefinidos no portal clássico do Azure e, em seguida, identificar o **NOME DE UTILIZADOR** na página **DIREITOS**. No entanto, não pode utilizar o portal clássico para adicionar este grupo a um modelo criado ou importado manualmente. Em vez disso, tem de utilizar uma das seguintes opções do PowerShell do Azure RMS:
 
--   Crie os seguintes valores do registo para cada URL fornecido como um parâmetro em cada uma das seguintes localizações:
+- Utilize o cmdlet do PowerShell [New-AadrmRightsDefinition](/powershell/aadrm/vlatest/new-aadrmrightsdefinition) para definir os direitos e o grupo "AllStaff" como um objeto de definição de direitos e execute novamente este comando para cada um dos outros grupos ou utilizadores aos quais já foram concedidos direitos no modelo original juntamente com o grupo ANYONE. Em seguida, adicione os objetos de definição de direitos aos modelos através do cmdlet [Set-AadrmTemplateProperty](/powershell/aadrm/vlatest/set-aadrmtemplateproperty).
 
-    -   HKEY_CURRENT_USER\Software\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM\LicenseServerRedirection
+- Utilize o cmdlet [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate) para exportar o modelo para um ficheiro .XML que consiga editar para adicionar os direitos e o grupo "AllStaff" aos grupos e direitos existentes e, em seguida, utilize o cmdlet [Import-AadrmTemplate](/powershell/aadrm/vlatest/import-aadrmtemplate) para voltar a importar esta alteração para o Azure Information Protection.
 
-    -   HKEY_CURRENT_USER\Software\WoW6432Node\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM\LicenseServerRedirection
+> [!NOTE]
+> Este grupo equivalente "AllStaff" não é exatamente igual ao grupo ANYONE no AD RMS. O grupo "AllStaff" inclui todos os utilizadores no seu inquilino do Azure, ao passo que o grupo ANYONE inclui todos os utilizadores autenticados, que podem estar fora da sua organização.
+> 
+> Devido a esta diferença entre os dois grupos, é possível que também tenha de adicionar utilizadores externos, além do grupo "AllStaff". Atualmente, não são suportados endereços de e-mails externos para grupos.
 
-    -   HKEY_LOCAL_MACHINE\Software\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM\LicenseServerRedirection
 
-    -   HKEY_LOCAL_MACHINE\Software\WoW6432Node\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM\LicenseServerRedirection
+#### <a name="sample-windows-powershell-script-to-identify-ad-rms-templates-that-include-the-anyone-group"></a>Script de exemplo do Windows PowerShell para identificar modelos do AD RMS que incluem o grupo ANYONE
+Esta secção contém o script de exemplo para o ajudar a identificar modelos do AD RMS que têm o grupo ANYONE definido, conforme descrito na secção anterior.
 
-    -   HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\LicensingRedirection
+**Exclusão de responsabilidade:** este script de exemplo não é suportado por nenhum serviço ou programa de suporte padrão da Microsoft. Este script de exemplo é fornecido TAL COMO ESTÁ, sem qualquer tipo de garantia.
 
-    Cada entrada tem um valor REG_SZ de **https://OldRMSserverURL/_wmcs/licensing** com os dados no seguinte formato: **https://&lt;URLdeInquilino&gt;/_wmcs/licensing**.
+```
+import-module adrmsadmin 
 
-    > [!NOTE]
-    > *&lt;URLdeInquilino&gt;* tem o seguinte formato: **{GUID}.rms.[Região].aadrm.com**.
-    > 
-    > Por exemplo: 5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com
-    > 
-    > Pode encontrar este valor ao identificar o valor **RightsManagementServiceId** quando executar o cmdlet [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) do Azure RMS.
+New-PSDrive -Name MyRmsAdmin -PsProvider AdRmsAdmin -Root https://localhost -Force 
+
+$ListofTemplates=dir MyRmsAdmin:\RightsPolicyTemplate
+
+foreach($Template in $ListofTemplates) 
+{ 
+                $templateID=$Template.id
+
+                $rights = dir MyRmsAdmin:\RightsPolicyTemplate\$Templateid\userright
+
+     $templateName=$Template.DefaultDisplayName 
+
+        if ($rights.usergroupname -eq "anyone")
+
+                         {
+                           $templateName = $Template.defaultdisplayname
+
+                           write-host "Template " -NoNewline
+
+                           write-host -NoNewline $templateName -ForegroundColor Red
+
+                           write-host " contains rights for " -NoNewline
+
+                           write-host ANYONE  -ForegroundColor Red
+                         }
+ } 
+Remove-PSDrive MyRmsAdmin -force
+```
 
 
 ## <a name="next-steps"></a>Passos seguintes
-Para continuar a migração, consulte a [fase 3 – suportar a configuração de serviços](migrate-from-ad-rms-phase3.md).
+Avance para a [fase 3 – configuração do lado do cliente](migrate-from-ad-rms-phase2.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

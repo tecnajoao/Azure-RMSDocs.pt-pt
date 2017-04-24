@@ -4,7 +4,7 @@ description: "Instruções que fazem parte do caminho de migração do AD RMS pa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 04/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: dc2b5e083b016953688214dddbe42f15b675641b
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 936b6e66c7ca0f94e437b91847166b51cf939b3f
+ms.sourcegitcommit: 384461f0e3fccd73cd7eda3229b02e51099538d4
 translationtype: HT
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Passo 2: migração de chave protegida por HSM para chave protegida por HSM
@@ -23,7 +23,7 @@ translationtype: HT
 
 Estas instruções fazem parte do [caminho de migração do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) e só são aplicáveis se a sua chave do AD RMS estiver protegida por HSM e quiser migrar para o Azure Information Protection com uma chave de inquilino protegida por HSM no Azure Key Vault. 
 
-Se este não for o cenário de configuração escolhido, volte ao [Passo 2. Exporte os dados de configuração do AD RMS, importe-os para o Azure RMS](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection) e escolha uma configuração diferente.
+Se este não for o cenário de configuração escolhido, regresse ao [Passo 4. Exporte os dados de configuração do AD RMS, importe-os para o Azure RMS](migrate-from-ad-rms-phase2.md#step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection) e escolha uma configuração diferente.
 
 > [!NOTE]
 > Estas instruções partem do princípio de que a sua chave do AD RMS está protegida por um módulo. Este é o caso mais habitual. 
@@ -49,7 +49,7 @@ Estes procedimentos são efetuados pelo administrador para o Azure Key Vault.
 
     Quando a chave é carregada para o Azure Key Vault, pode ver as respetivas propriedades apresentadas, incluindo o ID da chave. Terá um aspeto semelhante a https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Tome nota deste URL, porque o administrador do Azure Information Protection irá precisar dele para indicar ao serviço Azure Rights Management que utilize esta chave para a respetiva chave de inquilino.
 
-2. Na estação de trabalho ligada à Internet, numa sessão do PowerShell, utilize o cmdlet [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/pt-pt/library/mt603625(v=azure.300\).aspx) para autorizar o principal do serviço Azure Rights Management para aceder ao cofre de chaves que armazenará a chave de inquilino do Azure Information Protection. As permissões necessárias são decrypt, encrypt, unwrapkey, wrapkey, verify e sign.
+2. Na estação de trabalho com ligação à Internet, numa sessão do PowerShell, utilize o cmdlet [Set-AzureRmKeyVaultAccessPolicy](/powershell/resourcemanager/azurerm.keyvault/v2.7.0/set-azurermkeyvaultaccesspolicy) para autorizar o principal do serviço Azure Rights Management para aceder ao cofre de chaves que armazenará a chave de inquilino do Azure Information Protection. As permissões necessárias são decrypt, encrypt, unwrapkey, wrapkey, verify e sign.
     
     Por exemplo, se o cofre de chaves que criou para o Azure Information Protection tiver o nome contoso-byok-ky e o grupo de recursos tiver o nome contoso-byok-rg, execute o seguinte comando:
     
@@ -62,9 +62,9 @@ Agora que já preparou a sua chave HSM no Azure Key Vault para o serviço Azure 
 
 Estes procedimentos são efetuados pelo administrador para o Azure Information Protection.
 
-1.  Na estação de trabalho ligada à Internet e na sessão do PowerShell, ligue ao serviço Azure Rights Management com o cmdlet [Connnect AadrmService](https://msdn.microsoft.com/library/dn629415.aspx).
+1.  Na estação de trabalho ligada à Internet e na sessão do PowerShell, ligue ao serviço Azure Rights Management com o cmdlet [Connnect AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice).
     
-    Em seguida, carregue o primeiro ficheiro de domínio de publicação fidedigno exportado (.xml) utilizando o cmdlet [Import-AadrmTpd](https://msdn.microsoft.com/library/dn857523.aspx). Se tiver mais do que um ficheiro .xml, porque tinha vários domínios de publicação fidedignos, escolha o ficheiro que contém o domínio de publicação fidedigno exportado que corresponde à chave de HSM que pretende utilizar no Azure RMS para proteger o conteúdo após a migração. 
+    Em seguida, carregue o primeiro ficheiro de domínio de publicação fidedigno exportado (.xml) utilizando o cmdlet [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd). Se tiver mais do que um ficheiro .xml, porque tinha vários domínios de publicação fidedignos, escolha o ficheiro que contém o domínio de publicação fidedigno exportado que corresponde à chave de HSM que pretende utilizar no Azure RMS para proteger o conteúdo após a migração. 
     
     Para executar este cmdlet, precisará do URL para a chave identificada no passo anterior.
     
@@ -78,15 +78,15 @@ Estes procedimentos são efetuados pelo administrador para o Azure Information P
 
 2.  Quando o comando for concluído, repita o passo 1 para cada ficheiro .xml restante que criou ao exportar os seus domínios de publicação fidedignos. Por exemplo, deverá ter pelo menos um ficheiro adicional para importar se tiver atualizado o seu cluster AD RMS para o Modo Criptográfico 2. No entanto, para esses ficheiros, defina **-Active** para **false** ao executar o comando Import.  
 
-3.  Utilize o cmdlet [Disconnect-AadrmService](https://msdn.microsoft.com/library/azure/dn629416.aspx) para desligar do serviço Azure Rights Management:
+3.  Utilize o cmdlet [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) para desligar do serviço Azure Rights Management:
 
     ```
     Disconnect-AadrmService
     ```
 
     > [!NOTE]
-    > Se tiver de confirmar mais tarde qual a chave de inquilino do Azure Information Protection utilizada no Azure Key Vault, utilize o cmdlet [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) do Azure RMS.
+    > Se tiver de confirmar mais tarde qual a chave de inquilino do Azure Information Protection utilizada no Azure Key Vault, utilize o cmdlet [Get-AadrmKeys](/powershell/aadrm/vlatest/get-aadrmkeys) do Azure RMS.
 
-Agora está pronto para ir para o [Passo 3. Ative o seu inquilino do Azure Information Protection](migrate-from-ad-rms-phase1.md#step-3-activate-your-azure-information-protection-tenant).
+Agora está pronto para ir para o [Passo 5. Ative o seu inquilino do Azure Information Protection](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

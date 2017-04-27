@@ -4,7 +4,7 @@ description: "Conheça os requisitos do Azure AD para utilizar o Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/12/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fa0a9351177b44b4d770e37d24aee85e1e313c2d
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 29bc3b414a1fde17aec03702a87f4364b565b848
+ms.sourcegitcommit: 65e2d607954dfb6c7529ff200602887b71c39312
 translationtype: HT
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Requisitos do Azure Active Directory para o Azure Information Protection
@@ -30,13 +30,19 @@ Para obter mais informações, consulte os recursos seguintes na documentação 
 
 -   [Como é que as subscrições do Azure são associadas ao Azure Active Directory](/active-directory/active-directory-how-subscriptions-associated-directory)
 
-Se pretender integrar o seu diretório do Azure AD com as suas florestas do AD no local, consulte [Integrar as identidades no local com o Azure Active Directory](/active-directory/active-directory-aadconnect).
+Se pretender integrar o seu diretório do Azure AD com as suas florestas do AD no local, veja [Integrar as identidades no local com o Azure Active Directory](/active-directory/active-directory-aadconnect).
 
 ### <a name="scenarios-that-have-specific-requirements"></a>Cenários com requisitos específicos 
 
 Computadores a executar o Office 2010: 
 
+- Os computadores necessitam do [cliente Azure Information Protection](../rms-client/aip-client.md) (recomendado) ou da [aplicação de partilha Rights Management para Windows](../rms-client/sharing-app-windows.md) para se autenticarem no Azure Information Protection e no respetivo serviço de proteção de dados, o Azure Rights Management.
+
 - Se as suas contas de utilizador forem federadas (por exemplo, se utilizar o AD FS), terá de utilizar a Autenticação Integrada do Windows. Neste cenário, a autenticação baseada em formulários não conseguirá autenticar os utilizadores do Azure Information Protection.
+
+Suporte para a autenticação baseada em certificados (CBA):
+
+- A aplicação Azure Information Protection para Android suporta a autenticação baseada em certificados quando tem, no mínimo, a versão do Android 5.0. Para obter instruções sobre como configurar a autenticação baseada em certificados, veja [Começar a utilizar a autenticação baseada em certificados no Azure Active Directory](/azure/active-directory/active-directory-certificate-based-authentication-get-started).
 
 Os dispositivos móveis ou computadores Mac que autenticam no local com o AD FS ou um fornecedor de autenticação equivalente:
 
@@ -47,7 +53,7 @@ A utilização da autenticação multifator (MFA) com o Azure Information Protec
 
 -   Office 2013 (versão mínima):
 
-    -   Se tiver o Office 2013, também tem de instalar a [Atualização do Office 2013 de 9 de junho de 2015 (KB3054853)](https://support.microsoft.com/kb/3054853). Para obter mais informações acerca desta atualização e de como a autenticação moderna proporciona ao Office 2013 o início de sessão baseado na Active Directory Authentication Library (ADAL), consulte [Pré-visualização pública da autenticação moderna do Office 2013 comunicada](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/) no blogue do Office.
+    -   Se tiver o Office 2013, poderá ter de instalar uma atualização adicional para suportar o Azure Active Directory Authentication Library (ADAL). Por exemplo [a atualização de 9 de junho de 2015 para o Office 2013 (KB3054853)](https://support.microsoft.com/kb/3054853). Para obter mais informações acerca desta atualização e de como a autenticação moderna proporciona ao Office 2013 o início de sessão baseado na Active Directory Authentication Library (ADAL), veja [Pré-visualização pública da autenticação moderna do Office 2013 comunicada](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/) no blogue do Office.
 
 - Cliente do Azure Information Protection:
 
@@ -55,7 +61,7 @@ A utilização da autenticação multifator (MFA) com o Azure Information Protec
 
 -   Aplicação de partilha Rights Management para Windows:
 
-    -   Tem de ter instalada a versão mínima 1.0.1908.0, que pode ser confirmada ao aceder ao Painel de Controlo, Programas e Funcionalidades. Note que a aplicação de Partilha Rights Management está a ser substituída pelo cliente do Azure Information Protection. Para obter mais informações acerca da aplicação de partilha, consulte [Aplicação de partilha Rights Management para Windows](../rms-client/sharing-app-windows.md).
+    -   Tem de ter instalada a versão mínima 1.0.1908.0, que pode ser confirmada ao aceder ao Painel de Controlo, Programas e Funcionalidades. Note que a aplicação de Partilha Rights Management está a ser substituída pelo cliente do Azure Information Protection. Para obter mais informações acerca da aplicação de partilha, veja [Aplicação de partilha Rights Management para Windows](../rms-client/sharing-app-windows.md).
 
 -   Aplicação de partilha Rights Management para dispositivos móveis e computadores Mac:
 
@@ -65,17 +71,17 @@ Em seguida, configure a sua solução de MFA:
 
 -   Para inquilinos geridos pela Microsoft (que possuem o Azure Active Directory ou Office 365):
 
-    -   Configure a Azure MFA para impor a MFA aos utilizadores. Para obter instruções, consulte [Introdução à Multi-Factor Authentication do Azure na cloud](/multi-factor-authentication/multi-factor-authentication-get-started-cloud) na documentação da Multi-factor Authentication.
+    -   Configure a Azure MFA para impor a MFA aos utilizadores. Para obter instruções, veja [Introdução à Multi-Factor Authentication do Azure na cloud](/multi-factor-authentication/multi-factor-authentication-get-started-cloud) na documentação da Multi-factor Authentication.
 
-        Para obter mais informações acerca da Azure MFA, consulte [O que é a Multi-Factor Authentication do Azure?](/multi-factor-authentication/multi-factor-authentication)
+        Para obter mais informações acerca da Azure MFA, veja [O que é a Multi-Factor Authentication do Azure?](/multi-factor-authentication/multi-factor-authentication)
 
 -   Para inquilinos federados (que operam servidores de federação no local):
 
-    -   Configure os servidores de federação para o Azure Active Directory ou Office 365. Por exemplo, se estiver a utilizar o AD FS, consulte [Configurar Métodos de Autenticação Adicionais para o AD FS](https://technet.microsoft.com/library/dn758113.aspx) na TechNet.
+    -   Configure os servidores de federação para o Azure Active Directory ou Office 365. Por exemplo, se estiver a utilizar o AD FS, veja [Configurar Métodos de Autenticação Adicionais para o AD FS](https://technet.microsoft.com/library/dn758113.aspx) na TechNet.
 
-        Para obter mais informações acerca deste cenário, consulte [Trabalhos no Office 365 – o programa de identidade está mais simples](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) no blogue do Office.
+        Para obter mais informações acerca deste cenário, veja [Trabalhos no Office 365 – o programa de identidade está mais simples](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) no blogue do Office.
 
 ## <a name="next-steps"></a>Passos seguintes
-Para verificar outros requisitos, consulte [Requisitos do Azure Information Protection](requirements-azure-rms.md).
+Para verificar outros requisitos, veja [Requisitos do Azure Information Protection](requirements-azure-rms.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

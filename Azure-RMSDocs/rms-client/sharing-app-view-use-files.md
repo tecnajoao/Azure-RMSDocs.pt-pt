@@ -42,7 +42,7 @@ Se vir duas versões do ficheiro, mas com extensões de nome de ficheiro diferen
 
 O modo como o ficheiro abre depende da forma como foi protegido, o que pode descobrir ao observar a extensão de nome de ficheiro. Em qualquer um dos casos, a abertura do ficheiro pode estar sujeita a auditoria e permanece auditada enquanto este estiver protegido. Além disso, se o ficheiro tiver sido enviado como um anexo de e-mail, o remetente poderá ser notificado por e-mail sempre que abrir o ficheiro.
 
-- **O ficheiro tem uma extensão de nome de ficheiro*.pfile***
+- **O ficheiro tem uma extensão de nome de ficheiro* .pfile* **
 
     O ficheiro foi protegido genericamente.
 
@@ -50,7 +50,7 @@ O modo como o ficheiro abre depende da forma como foi protegido, o que pode desc
 
     ![Caixa de diálogo para um ficheiro .pfile partilhado por e-mail ao utilizar a aplicação de partilha RMS](../media/ADRMS_MSRMSApp_PfilePermission.png)
 
-- **O ficheiro tem uma extensão de nome de ficheiro*.ppdf* ou é um ficheiro de texto ou de imagem protegido (tal como *.ptxt* ou *.pjpg*)**
+- **O ficheiro tem uma extensão de nome de ficheiro* .ppdf* ou é um ficheiro de texto ou de imagem protegido (tal como *.ptxt* ou *.pjpg*)**
 
     O ficheiro foi protegido nativamente como uma cópia só de leitura.
 
@@ -74,7 +74,7 @@ Para obter uma lista completa das extensões de nome de ficheiro que os serviço
 ## <a name="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file"></a>Para utilizar ficheiros que foram protegidos (por exemplo, editar e imprimir o ficheiro)
 Se pretender efetuar outras ações além da leitura (por exemplo, editar, copiar e imprimir) depois de abrir o ficheiro protegido, siga as instruções de acordo com a extensão de nome de ficheiro:
 
-- **O ficheiro tem uma extensão de nome de ficheiro*.pfile***
+- **O ficheiro tem uma extensão de nome de ficheiro* .pfile* **
 
     Guarde o ficheiro aberto e atribua-lhe uma nova extensão de nome de ficheiro que esteja associada à aplicação que pretende utilizar.
 
@@ -82,7 +82,7 @@ Se pretender efetuar outras ações além da leitura (por exemplo, editar, copia
 
     O novo ficheiro já não está protegido. Se pretender protegê-lo, tem de o fazer manualmente. Para obter instruções, veja [Proteger um ficheiro num dispositivo (proteger no local) através da aplicação de partilha Rights Management](sharing-app-protect-in-place.md).
 
-- **O ficheiro tem uma extensão de nome de ficheiro*.ppdf* ou é um ficheiro de texto ou de imagem protegido (tal como *.ptxt* ou *.pjpg*)**
+- **O ficheiro tem uma extensão de nome de ficheiro* .ppdf* ou é um ficheiro de texto ou de imagem protegido (tal como *.ptxt* ou *.pjpg*)**
 
     Só pode ver o ficheiro e, se o mover ou mudar o nome, a proteção permanece aplicada ao ficheiro.
 

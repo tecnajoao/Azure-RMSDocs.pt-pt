@@ -4,7 +4,7 @@ description: "Informações para o ajudar a instalar e configurar o conector Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 04/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 100ac0f42d82eb02635187dbb0c91422d3097872
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 21eab2a693147b4e6562a8bcdff8cece7d706432
+ms.sourcegitcommit: 9c033b7f5a6cbb20275aeecd48ff5071964eb587
 translationtype: HT
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Instalar e configurar o conector Azure Rights Management
@@ -53,7 +53,7 @@ Para continuar, introduza uma conta e palavra-passe para configurar o conector R
 ## <a name="entering-credentials"></a>Introduzir credenciais
 Antes de configurar o conector RMS, tem de introduzir as credenciais da conta que tem privilégios suficientes para configurar o conector RMS. Por exemplo, pode escrever **admin@contoso.com** e, em seguida, especificar a palavra-passe desta conta.
 
-Existem algumas restrições de carateres para esta palavra-passe. Não pode utilizar uma palavra-passe que tenha os seguintes carateres: "E" comercial ( **&** ); parêntese reto esquerdo ( **[** ); parêntese reto direito ( **]** ); aspas direitas ( **"** ) e apóstrofo ( **'** ). Se a sua palavra-passe tiver algum destes carateres, a autenticação do conector RMS irá falhar e receberá a mensagem de erro "Essa combinação de nome de utilizador e palavra-passe não está correta", mesmo que já tenha conseguido iniciar sessão com esta conta e palavra-passe noutros cenários. Se este caso se aplicar à sua palavra-passe, utilize uma conta com uma palavra-passe que não tenha nenhum destes carateres especiais ou reponha a palavra-passe para remover os carateres especiais.
+Existem algumas restrições de carateres para esta palavra-passe. Não pode utilizar uma palavra-passe que tenha os seguintes carateres: "E" comercial ( **&** ); parêntese reto esquerdo ( **[** ); parêntese reto direito ( **]** ); aspas direitas ( **"** ) e apóstrofo ( **'** ). Se a sua palavra-passe tiver algum destes carateres, a autenticação do conector RMS irá falhar e receberá a mensagem de erro **Essa combinação de nome de utilizador e palavra-passe não está correta**, mesmo que já tenha conseguido iniciar sessão com esta conta e palavra-passe noutros cenários. Se este caso se aplicar à sua palavra-passe, utilize uma conta com uma palavra-passe que não tenha nenhum destes carateres especiais ou reponha a palavra-passe para remover os carateres especiais.
 
 Além disso, se tiver implementado [controlos de integração](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), certifique-se de que a conta especificada tem a capacidade de proteger conteúdos. Por exemplo, se tiver restringido a capacidade de proteger conteúdos ao grupo "Departamento de TI", a conta que especificar tem de ser membro desse grupo. Caso contrário, receberá a mensagem de erro: **Ocorreu uma falha ao tentar descobrir a localização da organização e do serviço de administração. Certifique-se de que o serviço Microsoft Rights Management está ativado para a sua organização.**
 

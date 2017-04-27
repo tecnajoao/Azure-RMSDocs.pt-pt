@@ -4,7 +4,7 @@ description: "Tem uma pergunta específica sobre classificação e etiquetagem a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/29/2017
+ms.date: 04/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 7f2bd30603f88ec72ee51f980c40903362cfdeba
-ms.sourcegitcommit: 8733730882bea6f505f4c6d53d4bdf08c3106f40
+ms.openlocfilehash: 69ff30dea84717557153bbd0bf2013d3fc06d320
+ms.sourcegitcommit: 0b5aa77825463eccfb4856aa549a2dae80a1e361
 translationtype: HT
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Perguntas mais frequentes sobre a classificação e a etiquetagem no Azure Information Protection
@@ -48,9 +48,9 @@ Para configurar a política do Azure Information Protection, tem de iniciar sess
 
 Se selecionar a opção para instalar a política de demonstração quando instalar o [cliente do Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018), não precisa de iniciar sessão no portal para ver e experimentar a funcionalidade de etiquetagem. A política de demonstração instala localmente uma política predefinida para o Azure Information Protection. Por isso, pode tentar etiquetar documentos e e-mails, mas não poderá alterar ou adicionar novas etiquetas sem iniciar sessão no portal do Azure. 
 
-## <a name="which-options-in-the-azure-portal-are-p1-or-p2"></a>Que opções no portal do Azure são P1 ou P2?
+## <a name="which-options-in-the-azure-portal-are-p2"></a>Que opções no portal do Azure são P2?
 
-Para verificar quais as funcionalidades incluídas na subscrição do **Azure Information Protection Premium 1** (P1), em comparação com a subscrição do **Azure Information Protection Premium 2** (P2), veja a [lista de funcionalidades](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) do site do Azure Information Protection. No entanto, como guia geral, as funcionalidades avançadas, tal como classificação automática e tenha sua própria chave (HYOK), são específicas para a subscrição do Azure Information Protection Premium 2.
+As opções no portal do Azure que necessitam de uma subscrição do **Azure Information Protection Premium 2** (P2) agora incluem uma mensagem de pop-up com informações para as identificar. Para obter mais informações sobre as funcionalidades que estão incluídas nas subscrições P1 e P2, veja a [lista de funcionalidades](https://www.microsoft.com/cloud-platform/azure-information-protection-features) do site do Azure Information Protection.
 
 ## <a name="can-a-file-have-more-than-one-classification"></a>Um ficheiro pode conter mais do que uma classificação?
 
@@ -64,6 +64,10 @@ Quando utilizar subetiquetas, não configure as marcas visuais, a proteção e a
 
 Não. Quando coloca uma etiqueta numa mensagem de e-mail com anexos, esses anexos não herdam a mesma etiqueta. Os anexos permanecem sem uma etiqueta ou retêm uma etiqueta aplicada separadamente. No entanto, se a etiqueta do e-mail aplicar proteção, essa proteção é aplicada aos anexos.
 
+## <a name="how-can-dlp-solutions-and-other-applications-integrate-with-azure-information-protection"></a>Como podem as soluções DLP e outras aplicações ser integradas com o Azure Information Protection?
+
+Uma vez que o Azure Information Protection utiliza metadados persistentes para classificação, que incluem uma etiqueta de texto não encriptado, estas informações podem ser lidas por soluções DLP e outras aplicações. Nos ficheiros, estes metadados são armazenados em propriedades personalizadas; nos e-mails, estas informações estão indicadas nos cabeçalhos de e-mail.
+
 ## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>Qual a diferença entre a classificação do Azure Information Protection para e-mails e a classificação de mensagens do Exchange?
 
 A classificação de mensagens do Exchange é uma funcionalidade mais antiga que pode classificar e-mails e é implementada independentemente da classificação do Azure Information Protection. Porém, pode integrar as duas soluções para que, quando os utilizadores classificarem um e-mail com a aplicação Web do Outlook e em algumas aplicações de e-mail móveis, a classificação do Azure Information Protection e as marcas de etiqueta correspondentes sejam adicionadas automaticamente. O Exchange adiciona a classificação e o cliente do Azure Information Protection aplica as definições de etiquetas correspondentes a essa classificação.
@@ -76,10 +80,15 @@ Para obter esta solução:
 
 2. Crie uma regra de transporte do Exchange para cada etiqueta: aplique a regra quando as propriedades da mensagem incluírem a classificação que configurou e modifique as propriedades das mensagens para definir um cabeçalho da mensagem. 
 
-    Para o cabeçalho da mensagem, encontrará as informações a especificar ao inspecionar as propriedades de um ficheiro do Office que classificou com a etiqueta do Azure Information Protection. Identifique a propriedade do ficheiro com o formato **MSIP_Label_<GUID>_Enabled** e especifique esta cadeia para o cabeçalho da mensagem e, em seguida, especifique como **Verdadeiro** o valor do cabeçalho. Por exemplo, o cabeçalho da sua mensagem poderá ser semelhante a esta cadeia: **MSIP_Label_132616b8-f72d-5d1e-aec1-dfd89eb8c5b2_Enabled**
+    Para o cabeçalho da mensagem, encontrará as informações a especificar ao inspecionar os cabeçalhos de Internet do e-mail que enviou e classificou com a etiqueta do Azure Information Protection. Procure o cabeçalho **msip_labels** e a cadeia que imediatamente a seguir, até ao ponto e vírgula, inclusive. Utilizando o exemplo anterior:
+    
+    **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
+    
+    Em seguida, para o cabeçalho da mensagem na regra, especifique **msip_labels** para o cabeçalho e a parte restante da cadeia para o valor do cabeçalho. Por exemplo:
+    
+    ![Exemplo de uma regra de transporte do Exchange Online que define o cabeçalho de mensagem de uma etiqueta específica do Azure Information Protection](../media/exchange-rule-for-message-header.png)
 
-
-Posteriormente, acontecerá o seguinte quando os utilizadores utilizarem a aplicação de acesso Web do Outlook ou um cliente de dispositivo móvel que suporta a proteção da gestão de direitos: 
+Antes de testar esta opção, lembre-se de que é frequente ocorrer um atraso ao criar ou editar regras de transporte (por exemplo, poderá ter de esperar uma hora). No entanto, quando a regra entrar em vigor, agora acontecerá o seguinte quando os utilizadores utilizarem a aplicação Outlook na Web ou um cliente para dispositivos móveis que suporte a proteção do Rights Management: 
 
 - Os utilizadores selecionam a classificação de mensagens do Exchange e enviam o e-mail.
 
@@ -91,11 +100,7 @@ Se as suas etiquetas do Azure Information Protection aplicarem a proteção da g
 
 Também pode configurar as regras de transporte para proceder ao mapeamento inverso: quando uma etiqueta do Azure Information Protection é detetada, é definida uma classificação de mensagens do Exchange correspondente. Para efetuar este procedimento:
 
-- Para cada etiqueta do Azure Information Protection, crie uma regra de transporte que seja aplicada quando o cabeçalho **msip_labels** incluir o nome da sua etiqueta (por exemplo, **Confidencial**) e aplique uma classificação de mensagens que mapeie esta etiqueta.
-
-## <a name="how-can-dlp-solutions-and-other-applications-integrate-with-azure-information-protection"></a>Como podem as soluções DLP e outras aplicações ser integradas com o Azure Information Protection?
-
-Uma vez que o Azure Information Protection utiliza metadados persistentes para classificação, que incluem uma etiqueta de texto não encriptado, estas informações podem ser lidas por soluções DLP e outras aplicações. Nos ficheiros, estes metadados são armazenados em propriedades personalizadas; nos e-mails, estas informações estão indicadas nos cabeçalhos de e-mail.
+- Para cada etiqueta do Azure Information Protection, crie uma regra de transporte que seja aplicada quando o cabeçalho **msip_labels** incluir o nome da sua etiqueta (por exemplo, **Geral**) e aplique uma classificação de mensagens que mapeie esta etiqueta.
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

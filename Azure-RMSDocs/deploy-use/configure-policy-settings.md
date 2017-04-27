@@ -10,8 +10,8 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 74bc8e7e7bb91fc5e296b5437e1d7df5a717545f
-ms.sourcegitcommit: 306b8af25f2f6a08805a28ba4706d4f89f3e59a1
+ms.openlocfilehash: f78de628ab82f8b41001c0c70c8e4ecc52cf20ca
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Como configurar as definições de política do Azure Information Protection
@@ -47,7 +47,7 @@ Configurar estas definições:
         
     - **Para mensagens de e-mail com anexos, aplique uma etiqueta que corresponda à classificação mais elevada desses anexos**: quando define esta opção como **Recomendado**, é pedido aos utilizadores que apliquem uma etiqueta à respetiva mensagem de e-mail. A etiqueta é selecionada de forma dinâmica com base nas etiquetas de classificação aplicadas aos anexos e é selecionada a etiqueta de classificação mais elevada. O anexo tem de ser um ficheiro físico e não pode ser uma ligação a um ficheiro (por exemplo, uma ligação a um ficheiro no SharePoint ou no OneDrive para Empresas). Os utilizadores podem aceitar a recomendação ou ignorá-la. Quando define esta opção como **Ativado**, a etiqueta é automaticamente aplicada mas os utilizadores podem removê-la ou selecionar uma etiqueta diferente antes de enviarem o e-mail.  
 
-    - **Forneça um URL personalizado para a página Web "Mais informações" do cliente do Azure Information Protection**: os utilizadores veem esta ligação na caixa de diálogo do **Microsoft Azure Information Protection**, na secção **Ajuda e Feedback**, quando selecionam **Proteger** > **Ajuda e feedback** no separador **Base** nas respetivas aplicações do Office. Por predefinição, esta ligação direciona-o para o site do [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection). Pode introduzir um URL do tipo HTTP ou HTTPS (recomendado) se quiser que esta ligação redirecione o utilizador para uma página Web alternativa. Não é efetuada nenhuma verificação para confirmar que o URL personalizado que introduziu é acessível ou é apresentado corretamente em todos os dispositivos.
+    - **Forneça um URL personalizado para a página Web "Mais informações" do cliente do Azure Information Protection**: os utilizadores veem esta ligação na caixa de diálogo do **Microsoft Azure Information Protection**, na secção **Ajuda e Feedback**, quando selecionam **Proteger** > **Ajuda e feedback** no separador **Base** nas respetivas aplicações do Office. Por predefinição, esta ligação direciona-o para o site do [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection). Pode introduzir um URL do tipo HTTP ou HTTPS (recomendado) se quiser que esta ligação redirecione o utilizador para uma página Web alternativa. Não é efetuada nenhuma verificação para confirmar que o URL personalizado que introduziu é acessível ou é apresentado corretamente em todos os dispositivos.
         
         Por exemplo, para suporte técnico, pode introduzir a página de documentação da Microsoft que inclui informações acerca da instalação e da utilização do cliente (**https://docs.microsoft.com/information-protection/rms-client/info-protect-client**) ou informações relativas à versão de lançamento (**https://docs.microsoft.com/information-protection/rms-client/client-version-release-history**). Em alternativa, poderá publicar a sua própria página Web com informações para que os utilizadores contactem o seu suporte técnico ou um vídeo com passos para que os utilizadores saibam como utilizar as etiquetas que configurou.
         

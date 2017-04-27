@@ -4,7 +4,7 @@ description: "Instruções que fazem parte do caminho de migração do AD RMS pa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: dfdea977819434cc4a6d164fecb5727a22fca26f
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: ef3b3f08dfc73703f2bb05943645176c22134a02
+ms.sourcegitcommit: 237ce3a0cc4921da5a08ed5753e6491403298194
 translationtype: HT
 ---
 # <a name="step-2-software-protected-key-to-software-protected-key-migration"></a>Passo 2: migração de chave protegida por software para chave protegida por software
@@ -23,45 +23,41 @@ translationtype: HT
 
 Estas instruções fazem parte do [caminho de migração do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) e só são aplicáveis se a sua chave do AD RMS estiver protegida por software e quiser migrar para o Azure Information Protection com uma chave de inquilino protegida por software. 
 
-Se este não for o cenário de configuração escolhido, volte ao [Passo 2. Exporte os dados de configuração do AD RMS, importe-os para o Azure RMS](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection) e escolha uma configuração diferente.
+Se este não for o cenário de configuração escolhido, regresse ao [Passo 4. Exporte os dados de configuração do AD RMS, importe-os para o Azure RMS](migrate-from-ad-rms-phase2.md#step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection) e escolha uma configuração diferente.
 
 Utilize o seguinte procedimento para importar a configuração do AD RMS para o Azure Information Protection, que resultará na sua chave de inquilino do Azure Information Protection que é gerida pela Microsoft.
 
 ## <a name="to-import-the-configuration-data-to-azure-information-protection"></a>Para importar os dados de configuração para o Azure Information Protection
 
-1.  Numa estação de trabalho com ligação à Internet, transfira e instale o módulo do Windows PowerShell para o Azure Rights Management (versão mínima 2.5.0.0), que inclui o cmdlet [Import-AadrmTpd](http://msdn.microsoft.com/library/azure/dn857523.aspx). O serviço Azure Rights Management (Azure RMS) fornece o serviço de proteção para o Azure Information Protection.
-
-    > [!TIP]
-    > Se já transferiu e instalou o módulo anteriormente, verifique o número da versão ao executar: `(Get-Module aadrm -ListAvailable).Version`
-
-    Para obter instruções de instalação, consulte [Installing Windows PowerShell for Azure Rights Management (Instalar o Windows PowerShell para o Azure Rights Management – em inglês)](../deploy-use/install-powershell.md).
-
-2.  Inicie o Windows PowerShell com a opção **Executar como administrador** e utilize o cmdlet [Connect-AadrmService](http://msdn.microsoft.com/library/azure/dn629415.aspx) para efetuar uma ligação ao serviço do Azure RMS:
+1. Numa estação de trabalho com ligação à Internet, utilize o cmdlet [Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) para ligar ao serviço Azure Rights Management:
 
     ```
     Connect-AadrmService
     ```
     Quando for solicitado, introduza as credenciais de administrador de inquilinos do [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (normalmente, utilizará uma conta de um administrador global do Azure Active Directory ou do Office 365).
 
-3.  Utilize o cmdlet [Import-AadrmTpd](http://msdn.microsoft.com/library/azure/dn857523.aspx) para carregar o primeiro ficheiro de domínio de publicação fidedigno exportado (.xml). Se tiver mais do que um ficheiro .xml porque tinha múltiplos domínios de publicação fidedignos, selecione o ficheiro que contém o domínio de publicação fidedigno exportado que pretende utilizar com o Azure Information Protection para proteger conteúdos após a migração. Utilize o seguinte comando:
-
-    ```
-    Import-AadrmTpd -TpdFile <PathToTpdPackageFile> -ProtectionPassword <secure string> -Active $True -Verbose
-    ```
-    Pode utilizar [ConvertTo-SecureString -AsPlaintext](https://technet.microsoft.com/library/hh849818.aspx) ou [Read-Host](https://technet.microsoft.com/library/hh849945.aspx) para especificar a palavra-passe como uma cadeia segura. Quando utilizar ConvertTo-SecureString e a palavra-passe tiver carateres especiais, introduza a palavra-passe entre plicas ou remova os carateres especiais.
+2. Utilize o cmdlet [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) para carregar cada ficheiro de domínio de publicação fidedigno exportado (.xml). Por exemplo, deverá ter pelo menos um ficheiro adicional para importar se tiver atualizado o seu cluster AD RMS para o Modo Criptográfico 2. 
     
-    Por exemplo: primeiro, execute **$TPD_Password = Read-Host -AsSecureString** e introduza a palavra-passe que especificou anteriormente. Em seguida, execute **Import-AadrmTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Active $true -Verbose**. Quando lhe for pedido, confirme que pretende efetuar esta ação.
+    Para executar este cmdlet, precisará da palavra-passe que especificou anteriormente para cada ficheiro de dados de configuração. 
     
-4.  Quando o comando for concluído, repita o passo 3 para cada ficheiro .xml restante que criou ao exportar os seus domínios de publicação fidedignos. Por exemplo, deverá ter pelo menos um ficheiro adicional para importar se tiver atualizado o seu cluster AD RMS para o Modo Criptográfico 2. No entanto, para esses ficheiros, defina **-Active** para **false** ao executar o comando Import. Por exemplo: **Import-AadrmTpd -TpdFile E:\contosokey2.xml -ProtectionPassword $TPD_Password -Active $false -Verbose**
+    Por exemplo, execute primeiro o seguinte para armazenar a palavra-passe:
+    
+        $TPD_Password = Read-Host -AsSecureString
+    
+    Introduza a palavra-passe que especificou para exportar o primeiro ficheiro de dados de configuração. Em seguida, ao utilizar E:\contosokey1.xml como exemplo para esse ficheiro de configuração, execute o seguinte comando e confirme que pretende realizar esta ação:
+    ```
+    Import-AadrmTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Verbose
+    ```
+    
+3. Depois de carregar todos os ficheiros, execute [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) para identificar a chave importada que corresponde à chave SLC atualmente ativa no AD RMS. Esta chave tornar-se-á a chave de inquilino ativa para o seu serviço Azure Rights Management.
 
-5.  Utilize o cmdlet [Disconnect-AadrmService](http://msdn.microsoft.com/library/azure/dn629416.aspx) para desligar do serviço Azure Rights Management:
+4.  Utilize o cmdlet [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) para desligar do serviço Azure Rights Management:
 
     ```
     Disconnect-AadrmService
     ```
 
-
-Agora está pronto para ir para o [Passo 3. Ative o seu inquilino do Azure Information Protection](migrate-from-ad-rms-phase1.md#step-3-activate-your-azure-information-protection-tenant).
+Agora está pronto para ir para o [Passo 5. Ativar o serviço Azure Rights Management](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

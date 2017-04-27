@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 855523925a6f774568cdbd55a7645223d015b013
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: c8f2c94da965dafd7f428b4d385253bc6dff4714
+ms.sourcegitcommit: 05b7e06e330a33936aeeef32934717f870963612
 translationtype: HT
 ---
 # <a name="rights-management-sharing-application-administrator-guide"></a>Guia do administrador da aplicação de partilha Rights Management
@@ -340,7 +340,7 @@ Dado que a aplicação de partilha RMS não é suportada pelo WSUS, pode utiliza
 3.  Após a conclusão dos testes e a resolução de eventuais problemas, implemente a versão mais recente para todos os utilizadores através das instruções de implementação automática existentes neste guia.
 
 ## <a name="azure-information-protection-only-configuring-document-tracking"></a>Apenas Azure Information Protection: configurar o controlo de documentos
-Se tiver uma [subscrição que suporta o controlo de documentos](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features), o site de controlo de documentos é ativado por predefinição para todos os utilizadores da sua organização. O controlo de documentos apresenta informações como os endereços de e-mail das pessoas que tentaram aceder a documentos protegidos partilhados por utilizadores, quando essas pessoas tentaram aceder aos mesmos e a sua localização. Se a apresentação deste tipo de informações é proibida dentro da sua organização devido a requisitos de privacidade, pode desativar o acesso ao site de controlo de documentos através do cmdlet [Disable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623032). Pode reativar o acesso ao site em qualquer altura através de [Enable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) e ainda verificar se o acesso ao site está ativado ou desativado com [Get-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037).
+Se tiver uma [subscrição que suporta o controlo de documentos](https://www.microsoft.com/cloud-platform/azure-information-protection-features), o site de controlo de documentos é ativado por predefinição para todos os utilizadores da sua organização. O controlo de documentos apresenta informações como os endereços de e-mail das pessoas que tentaram aceder a documentos protegidos partilhados por utilizadores, quando essas pessoas tentaram aceder aos mesmos e a sua localização. Se a apresentação deste tipo de informações for proibida dentro da sua organização devido a requisitos de privacidade, pode desativar o acesso ao site de controlo de documentos através do cmdlet [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature). Pode reativar o acesso ao site em qualquer altura através de [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) e ainda verificar se o acesso ao site está ativado ou desativado com [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature).
 
 Para executar estes cmdlets, tem de ter no mínimo a versão **2.3.0.0** do módulo do Azure Rights Management para o Windows PowerShell. Para obter instruções de instalação, consulte [Installing Windows PowerShell for Azure Rights Management (Instalar o Windows PowerShell para o Azure Rights Management – em inglês)](../deploy-use/install-powershell.md).
 

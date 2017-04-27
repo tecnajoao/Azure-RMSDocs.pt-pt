@@ -4,7 +4,7 @@ description: "Identifique os pré-requisitos para implementar o Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/07/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8f249994c2ac1cf02c4572d3f7cb8ba6566cb142
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 90cfc530d8d4289e4c614e822cd666c50db86b90
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisitos para o Azure Information Protection
@@ -24,7 +24,7 @@ Antes de implementar o Azure Information Protection na sua organização, certif
 
 |Requisito|Mais informações|
 |---------------|--------------------|
-|Uma subscrição do Azure Information Protection|Consulte as [informações de subscrição](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) e a [lista de funcionalidades](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) no site do Azure Information Protection para certificar-se de que a subscrição da sua organização inclui as funcionalidades do Azure Information Protection que pretende utilizar.|
+|Uma subscrição do Azure Information Protection|Consulte as [informações de subscrição](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) e a [lista de funcionalidades](https://www.microsoft.com/cloud-platform/azure-information-protection-features) no site do Azure Information Protection para certificar-se de que a subscrição da sua organização inclui as funcionalidades do Azure Information Protection que pretende utilizar.|
 |Azure Active Directory|A sua organização tem de ter um Azure Active Directory (Azure AD) para suportar a autenticação de utilizador para Azure Information Protection. Além disso, se pretender utilizar as contas de utilizador do seu diretório no local (AD DS), tem também de configurar a integração de diretórios.<br /><br />A autenticação multifator (MFA) é suportada com o Azure Information Protection quando tem o software de cliente necessário e a infraestrutura de suporte de MFA corretamente configurada.<br /><br />Para mais informações, consulte [Requisitos do Azure Active Directory para o Azure Information Protection](requirements-azure-ad.md).|
 |Dispositivos cliente|Os utilizadores têm de ter dispositivos cliente (computador ou dispositivo móvel) com um sistema operativo que suporte o Azure Information Protection.<br /><br />Os seguintes dispositivos suportam o cliente do Azure Information Protection, o qual permite aos utilizadores classificar e etiquetar os documentos e e-mails do Office:<br /><br />– Windows 10 (x86, x64)<br /><br />– Windows 8.1 (x86, x64)<br /><br />– Windows 8 (x86, x64)<br /><br />– Windows 7 Service Pack 1 (x86, x64)<br /><br />Quando este cliente protege os dados através do serviço Azure Rights Management, estes podem ser consumidos pelos mesmos dispositivos (Windows, Mac, iOS, Android) que suportam o serviço Azure Rights Management. <br /><br />Para obter detalhes sobre os dispositivos que suportam o serviço Azure Rights Management, consulte [Dispositivos cliente que suportam a proteção de dados do Azure Rights Management](../get-started/requirements-client-devices.md).|
 |Aplicações|O cliente do Azure Information Protection pode etiquetar e proteger ficheiros e e-mails ao utilizar as aplicações **Word**, **Excel**, **PowerPoint** e **Outlook** a partir de qualquer um dos conjuntos de aplicações do Office:<br /><br /> – Office 365 ProPlus com aplicações da versão de 2016 ou 2013 (instalação com tecnologia Clique-e-Use ou baseada no Windows Installer)<br /><br />– Office Professional Plus 2016<br /><br />– Office Professional Plus 2013 com o Service Pack 1<br /><br />– Office Professional Plus 2010 <br /><br />Para obter informações sobre as aplicações do Office que suportam o serviço de proteção de dados, consulte [Aplicações que suportam a proteção de dados do Azure Rights Management](requirements-applications.md).|

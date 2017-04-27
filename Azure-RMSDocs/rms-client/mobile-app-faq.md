@@ -5,7 +5,7 @@ keywords: "Algumas perguntas mais frequentes para o ajudar a utilizar a aplicaç
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/05/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.technology: techgroup-identity
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bc3d92cb0dc23ddd2d1f81daf2fc589ad4862977
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: d797dd31c44d985becc92ec81266afbe23cd970c
+ms.sourcegitcommit: 1671466a42e7e00e1cc2702b1f609fb112aac7db
 translationtype: HT
 ---
-# <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>FAQ sobre a aplicação Microsoft Azure Information Protection para iOS e Android
+# <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>FAQs sobre a aplicação Microsoft Azure Information Protection para iOS e Android
 
 *Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection*
 
@@ -45,7 +45,7 @@ Se tiver estas versões ou versões superiores, pode instalar a aplicação para
 
 ## <a name="how-do-i-get-started-with-the-viewer-app"></a>Como posso começar a utilizar a aplicação de visualização?
 
-Depois de instalar a aplicação, não tem de fazer mais nada. Aguarde até receber um e-mail ou ficheiro protegido que queira ver e, em seguida, selecione o **AIP Viewer** para abri-lo. Ser-lhe-á pedido que inicie sessão na sua conta escolar ou profissional. Quando as suas credenciais forem autenticadas, poderá ler os conteúdos.
+Depois de instalar a aplicação, não tem de fazer mais nada. Aguarde até receber um e-mail ou ficheiro protegido que queira ver e, em seguida, selecione o **AIP Viewer** para abri-lo. Ser-lhe-á pedido que inicie sessão com a sua conta escolar ou profissional, ou que selecione um certificado. Quando essas credenciais forem autenticadas, poderá ler os conteúdos.
 
 No entanto, se não quiser esperar, pode utilizar as seguintes instruções para enviar um e-mail ou ficheiro protegido para si próprio para o abrir: [Introdução à aplicação Microsoft Azure Information Protection para iOS e Android](mobile-app-get-started.md) 
 ## <a name="what-credentials-should-i-use-to-sign-in-to-this-app"></a>Que credenciais devo utilizar para iniciar sessão nesta aplicação?

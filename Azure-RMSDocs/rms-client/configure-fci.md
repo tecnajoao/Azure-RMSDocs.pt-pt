@@ -4,7 +4,7 @@ description: "Instruções para utilizar o cliente de Gestão de Direitos (RMS) 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/22/2017
+ms.date: 04/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5e1a193ab54e5d0d85e4f7a22f53ac0b9b39036c
-ms.sourcegitcommit: 047e6dfe8f44fd13585e902df5ea871b5d0adccb
+ms.openlocfilehash: 6cb1cd8c70dff0c24125f875c91d23326538e56b
+ms.sourcegitcommit: d2bd2ddc68d9b5a095b57235b28a3b7e9307bd9b
 translationtype: HT
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Proteção RMS com Infraestrutura de Classificação de Ficheiros (FCI) do Windows Server
@@ -46,7 +46,7 @@ Pré-requisitos para estas instruções:
 
     -   Tem uma ligação à Internet, com as definições de computador configuradas, se tal for necessário para um servidor proxy. Por exemplo: `netsh winhttp import proxy source=ie`
 
--   Sincronizou as suas contas de utilizador do Active Directory no local com o Azure Active Directory ou o Office 365, incluindo os respetivos endereços de e-mail. Isto é necessário para todos os utilizadores que possam necessitar de aceder a ficheiros protegidos pela FCI e pelo serviço Azure Rights Management. Se não efetuar este passo (por exemplo, num ambiente de teste), os utilizadores poderão ficar bloqueados de aceder a estes ficheiros. Se precisar de mais informações sobre esta configuração de conta, consulte [Preparar para o serviço Azure Rights Management](../plan-design/prepare.md).
+-   Sincronizou as suas contas de utilizador do Active Directory no local com o Azure Active Directory ou o Office 365, incluindo os respetivos endereços de e-mail. Isto é necessário para todos os utilizadores que possam necessitar de aceder a ficheiros protegidos pela FCI e pelo serviço Azure Rights Management. Se não efetuar este passo (por exemplo, num ambiente de teste), os utilizadores poderão ficar bloqueados de aceder a estes ficheiros. Se precisar de mais informações sobre esta configuração de conta, veja [Preparar para o serviço Azure Rights Management](../plan-design/prepare.md).
 
 -   Transferiu os modelos do Rights Management para o servidor de ficheiros e identificou o ID do modelo que irá proteger os ficheiros. Para o fazer, utilize o cmdlet [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate). Este cenário não suporta modelos departamentais, pelo que tem de utilizar um modelo que não esteja configurado para um âmbito ou a configuração do âmbito tem de incluir a opção de compatibilidade de aplicações para marcar a caixa de verificação **Mostrar este modelo a todos os utilizadores quando as aplicações não suportam a identidade de utilizador**.
 
@@ -110,7 +110,7 @@ Tenha em atenção que se fizer alterações ao modelo do Rights Management que 
 
 3.  Assine o script. Se não assinar o script (mais seguro), tem de configurar o Windows PowerShell nos servidores que o executam. Por exemplo, execute uma sessão do Windows PowerShell com a opção **Executar como Administrador** e escreva: **Set-ExecutionPolicy RemoteSigned**. No entanto, esta configuração permite executar todos os scripts não assinados quando estes estão armazenados neste servidor (menos seguro).
 
-    Para mais informações sobre como assinar os scripts do Windows PowerShell, consulte [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) na biblioteca de documentação do PowerShell.
+    Para obter mais informações sobre como assinar os scripts do Windows PowerShell, veja [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) na biblioteca de documentação do PowerShell.
 
 4.  Guarde o ficheiro localmente em cada um dos servidores de ficheiros que irão executar o Gestor de Recursos de Ficheiros com a infraestrutura de classificação de ficheiros. Por exemplo, guarde o ficheiro em **C:\RMS-Protection**. Se utilizar um caminho ou nome de pasta diferente, escolha um caminho e uma pasta que não incluam espaços. Proteja este ficheiro com permissões NTFS para que os utilizadores não autorizados não o possam modificar.
 
@@ -233,7 +233,7 @@ Agora que concluiu a configuração de classificação, está pronto para config
 
         -   **Executar em**: configure o horário da sua preferência.
 
-            Reserve bastante tempo para que o script seja concluído. Embora esta solução proteja todos os ficheiros na pasta, o script é executado uma vez para cada ficheiro, de cada vez. Apesar de este processo ser mais demorado do que proteger todos os ficheiros ao mesmo tempo, o que é suportado pela ferramenta RMS Protection, esta configuração ficheiro-a-ficheiro para a FCI é mais eficiente. Por exemplo, os ficheiros protegidos podem ter diferentes proprietários (manter o proprietário original) quando utiliza a variável [Source File Owner Email (E-mail do Proprietário do Ficheiro de Origem)] e esta ação ficheiro-a-ficheiro será necessária se posteriormente alterar a configuração para proteger ficheiros de forma seletiva, em vez de todos os ficheiros numa pasta.
+            Reserve bastante tempo para que o script seja concluído. Embora esta solução proteja todos os ficheiros na pasta, o script é executado uma vez para cada ficheiro, de cada vez. Apesar de este processo ser mais demorado do que proteger todos os ficheiros ao mesmo tempo, o que é suportado pelo cliente do Azure Information Protection, esta configuração ficheiro-a-ficheiro para a FCI é mais eficiente. Por exemplo, os ficheiros protegidos podem ter diferentes proprietários (manter o proprietário original) quando utiliza a variável [Source File Owner Email (E-mail do Proprietário do Ficheiro de Origem)] e esta ação ficheiro-a-ficheiro será necessária se posteriormente alterar a configuração para proteger ficheiros de forma seletiva, em vez de todos os ficheiros numa pasta.
 
         -   **Executar continuamente em ficheiros novos**: selecione esta caixa de verificação.
 
@@ -253,7 +253,7 @@ Agora que concluiu a configuração de classificação, está pronto para config
 
     2.  Clique em **Aguardar a conclusão da tarefa** e, em seguida, clique em **OK**.
 
-4.  Aguarde que a caixa de diálogo **A Executar Tarefa de Gestão de Ficheiros** seja fechada e, em seguida, veja os resultados no relatório que é automaticamente apresentado. Deverá ver o número de ficheiros que estão na pasta selecionada no campo **Ficheiros**. Certifique-se de que os ficheiros na pasta escolhida estão agora protegidos pelo RMS. Por exemplo, se a pasta que escolheu for C:\FileShare, escreva o seguinte numa sessão do Windows PowerShell e confirme que não existem ficheiros com um estado **Desprotegido**:
+4.  Aguarde que a caixa de diálogo **A Executar Tarefa de Gestão de Ficheiros** seja fechada e, em seguida, veja os resultados no relatório que é automaticamente apresentado. Deverá ver o número de ficheiros que estão na pasta selecionada no campo **Ficheiros**. Confirme que os ficheiros na sua pasta selecionada estão agora protegidos pelo Rights Management. Por exemplo, se a sua pasta selecionada for C:\FileShare, escreva o seguinte numa sessão do Windows PowerShell e confirme que não existem ficheiros com um estado **Desprotegido**:
 
     ```
     foreach ($file in (Get-ChildItem -Path C:\FileShare -Force | where {!$_.PSIsContainer})) {Get-RMSFileStatus -f $file.PSPath}
@@ -261,9 +261,9 @@ Agora que concluiu a configuração de classificação, está pronto para config
     > [!TIP]
     > Algumas dicas para a resolução de problemas:
     > 
-    > -   Se vir **0** no relatório, em vez do número de ficheiros na sua pasta, isto indica que o script não foi executado. Em primeiro lugar, verifique o próprio script ao carregá-lo no ISE do Windows PowerShell para validar os conteúdos do script e tente executá-lo para ver se são apresentados erros. Sem especificar argumentos, o script irá tentar estabelecer ligação e autenticar para o Azure RMS.
+    > -   Se vir **0** no relatório, em vez do número de ficheiros na sua pasta, isto indica que o script não foi executado. Em primeiro lugar, verifique o próprio script ao carregá-lo no ISE do Windows PowerShell para validar os conteúdos do script e tente executá-lo para ver se são apresentados erros. Sem especificar argumentos, o script irá tentar estabelecer ligação e autenticar para o serviço Azure Rights Management.
     > 
-    >     -   Se o script anunciar que não foi possível ligar ao Azure RMS, verifique os valores que este apresenta para a conta do principal do serviço que especificou no script. Para obter mais informações sobre como criar esta conta do principal do serviço, veja [Pré-requisito 3: para proteger ou desproteger ficheiros sem interação](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction) no guia do administrador do cliente do Azure Information Protection.
+    >     -   Se o script anunciar que não foi possível ligar ao serviço Azure Rights Management (Azure RMS), verifique os valores que este apresenta para a conta do principal do serviço que especificou no script. Para obter mais informações sobre como criar esta conta do principal do serviço, veja [Pré-requisito 3: para proteger ou desproteger ficheiros sem interação](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction) no guia do administrador do cliente do Azure Information Protection.
     >     -   Se o script anunciar que pode ligar ao Azure RMS, em seguida verifique se pode encontrar o modelo especificado ao executar [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) diretamente a partir do Windows PowerShell no servidor. Deverá ver o modelo que especificou devolvido nos resultados.
     > -   Se o script for automaticamente executado no ISE do Windows PowerShell sem erros, tente executá-lo da seguinte maneira a partir de uma sessão do PowerShell, especificando um nome de ficheiro a proteger e sem o parâmetro -OwnerEmail:
     > 
@@ -275,8 +275,7 @@ Agora que concluiu a configuração de classificação, está pronto para config
     >         Se a tarefa de gestão de ficheiros funcionar com êxito sem **-OwnerEmail [Source File Owner Email (E-mail de Proprietário do Ficheiro de Origem)]**, verifique se os ficheiros não protegidos têm um utilizador de domínio listado como o proprietário do ficheiro, em vez de **SYSTEM**.  Para o fazer, utilize o separador **Segurança** nas propriedades do ficheiro e, em seguida, clique em **Avançadas**. O valor **Proprietário** é apresentado imediatamente a seguir ao **Nome** do ficheiro. Além disso, certifique-se de que o servidor de ficheiros está no mesmo domínio ou num domínio fidedigno para procurar o endereço de e-mail do utilizador a partir dos Serviços de Domínio do Active Directory.
     > -   Se vir o número correto de ficheiros no relatório, mas os ficheiros não estiverem protegidos, experimente proteger os ficheiros manualmente com o cmdlet [Protect-RMSFile](/powershell/azureinformationprotection/vlatest/protect-rmsfile), para ver se são apresentados erros.
 
-Após confirmar que estas tarefas foram executadas com êxito, pode fechar o Gestor de Recursos de Ficheiros. Os novos ficheiros serão protegidos automaticamente e todos os ficheiros serão protegidos novamente quando os agendamentos forem executados. Voltar a proteger os ficheiros garante que todas as alterações ao modelo são aplicadas aos ficheiros.
-
+Após confirmar que estas tarefas foram executadas com êxito, pode fechar o Gestor de Recursos de Ficheiros. Os novos ficheiros serão classificados e protegidos automaticamente quando as tarefas agendadas forem executadas. 
 
 ## <a name="modifying-the-instructions-to-selectively-protect-files"></a>Modificar as instruções para proteger ficheiros de forma seletiva
 Quando tiver implementado as instruções anteriores, será muito fácil modificá-las para uma configuração mais complexa. Por exemplo, pode proteger ficheiros com o mesmo script, mas apenas para ficheiros que contenham informações pessoais, e talvez selecionar um modelo que possua direitos mais restritivos.

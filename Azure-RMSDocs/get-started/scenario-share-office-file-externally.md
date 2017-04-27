@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 629717055620af93c5870fff4ef833dc7931e622
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 89c563ebcf62dc80cbda15048780adf5e414e70b
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="scenario---share-an-office-file-with-users-in-another-organization"></a>Cenário – Partilhar um ficheiro do Office com os utilizadores noutra organização
@@ -46,7 +46,7 @@ Para que as instruções de utilizador para este cenário funcionem, é necessá
 |O Azure Rights Management está ativado|[Ativar o Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |A aplicação de partilha Rights Management está implementada nos computadores dos utilizadores que executam o Windows|[Implementação automática da aplicação de partilha Microsoft Rights Management](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 |Os utilizadores têm o Outlook do Office 2013|Se os utilizadores tiverem o Office 2016 ou o Office 2010, substitua a captura de ecrã por uma versão equivalente para que a imagem corresponda ao que os utilizadores veem.|
-|A sua subscrição do Azure Information Protection inclui controlo de documentos|Se a sua subscrição não incluir o controlo de documentos e a revogação, os utilizadores não conseguirão concluir todos os passos nas instruções de utilizador. Neste caso, compre uma subscrição que suporte estas funcionalidades ou modifique as instruções de utilizador para remover os passos que as utilizam.<br /><br />Consulte a [lista de funcionalidades](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) no site do Azure Information Protection.|
+|A sua subscrição do Azure Information Protection inclui controlo de documentos|Se a sua subscrição não incluir o controlo de documentos e a revogação, os utilizadores não conseguirão concluir todos os passos nas instruções de utilizador. Neste caso, compre uma subscrição que suporte estas funcionalidades ou modifique as instruções de utilizador para remover os passos que as utilizam.<br /><br />Consulte a [lista de funcionalidades](https://www.microsoft.com/cloud-platform/azure-information-protection-features) no site do Azure Information Protection.|
 
 ## <a name="user-documentation-instructions"></a>Instruções da documentação do utilizador
 Utilizando o modelo seguinte, copie e cole as instruções de utilizador numa comunicação destinada aos utilizadores finais e efetue estas alterações para refletir o seu ambiente:

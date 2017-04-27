@@ -4,7 +4,7 @@ description: "Instruções para migrar a implementação dos Serviços de Gestã
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 89ccb599fe21c409d36b9d0ab28e274e6aedaf1e
-ms.sourcegitcommit: 384461f0e3fccd73cd7eda3229b02e51099538d4
+ms.openlocfilehash: b1d643cdb28f46c03e9c0c2707d44f9ff9eedcb3
+ms.sourcegitcommit: 237ce3a0cc4921da5a08ed5753e6491403298194
 translationtype: HT
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrar do AD RMS para o Azure Information Protection
@@ -119,10 +119,6 @@ Para confirmar o Modo Criptográfico do AD RMS:
 
 -   Se tiver software e clientes que não são suportados pelo serviço Rights Management utilizado pelo Azure Information Protection, estes não poderão proteger ou consumir conteúdos protegidos pelo Azure Rights Management. Certifique-se de que verifica as secções de aplicações e clientes suportados no artigo [Requisitos para o Azure Rights Management](../get-started/requirements-azure-rms.md).
 
--   Se importar a chave no local para o Azure Information Protection como arquivada (se não definir o TPD para ser o ativo durante o processo de importação) e migrar utilizadores em lotes para uma migração faseada, os conteúdos protegidos recentemente pelos utilizadores migrados não estarão acessíveis aos utilizadores que permanecerem no AD RMS. Neste cenário, sempre que possível, mantenha o tempo de migração curto e migre os utilizadores em lotes lógicos, de tal forma que se colaborarem mutuamente, sejam migrados em conjunto.
-
-    Esta limitação não se aplica quando define o TPD para ativo durante o processo de importação, porque todos os utilizadores irão proteger o conteúdo através da mesma chave. Recomendamos esta configuração porque lhe permite migrar todos os utilizadores de forma independente e ao seu ritmo.
-
 -   Se a sua implementação do AD RMS estiver configurada para colaborar com parceiros externos (por exemplo, ao utilizar federações ou domínios de utilizadores fidedignos), estes também devem migrar para o Azure Information Protection em simultâneo com a sua migração ou logo que seja possível posteriormente. Para continuarem a aceder a conteúdos que a sua organização protegeu anteriormente com o Azure Information Protection, têm de fazer alterações na configuração de clientes semelhantes às que foram feitas por si e que estão incluídas neste documento.
 
     Devido às possíveis variações de configuração que os seus parceiros possam ter, as instruções exatas para esta reconfiguração não estão incluídas neste documento. No entanto, pode consultar a secção seguinte para obter orientações de planeamento e se precisar de ajuda adicional, [contacte o Suporte da Microsoft](../get-started/information-support.md#support-options-and-community-resources).
@@ -165,7 +161,7 @@ Os passos de migração podem ser divididos em 5 fases que podem ser efetuadas e
 
 - **Passo 4: exportar os dados de configuração do AD RMS e importá-los para o Azure Information Protection**
 
-    Exporte os dados de configuração (chaves, modelos, URLs) do AD RMS para um ficheiro XML e, em seguida, carregue esse ficheiro para o serviço Azure Rights Management do Azure Information Protection através do cmdlet Import-AadrmTpd do PowerShell. Podem ser necessários passos adicionais, dependendo da configuração da sua chave do AD RMS:
+    Exporte os dados de configuração (chaves, modelos, URLs) do AD RMS para um ficheiro XML e, em seguida, carregue esse ficheiro para o serviço Azure Rights Management do Azure Information Protection através do cmdlet Import-AadrmTpd do PowerShell. Em seguida, identifique a chave do Certificado de Licenciante para Servidor (SLC) importada para utilizar como a chave de inquilino no serviço do Azure Rights Management. Podem ser necessários passos adicionais, dependendo da configuração da sua chave do AD RMS:
 
     - **Migração de chave protegida por software para chave protegida por software**:
 
@@ -181,7 +177,7 @@ Os passos de migração podem ser divididos em 5 fases que podem ser efetuadas e
 
 - **Passo 5: ativar o serviço Azure Rights Management**
 
-    Se possível, efetue este passo depois do processo de importação e não antes.
+    Se possível, efetue este passo depois do processo de importação e não antes. Será necessário realizar passos adicionais se o serviço tiver sido ativado antes da importação.
 
 - **Passo 6: configurar modelos importados**
 

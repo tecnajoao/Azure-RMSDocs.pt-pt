@@ -4,7 +4,7 @@ description: "Fase 2 da migração do AD RMS para o Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a2ef28f2db2a22a766d658294a7d68b0dc6eebb2
-ms.sourcegitcommit: 89e13f6be15a96293e0af0b2529a2e39563a63b6
+ms.openlocfilehash: f93458b5b2788aa2c7d780a9d0d2939e16221559
+ms.sourcegitcommit: 237ce3a0cc4921da5a08ed5753e6491403298194
 translationtype: HT
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Fase 2 da migração – configuração do AD RMS do lado do servidor
@@ -52,7 +52,7 @@ Efetue o seguinte procedimento em todos os clusters do AD RMS de todos os domín
 
 Após exportar todos os domínios de publicação fidedignos, estará pronto para iniciar a importação destes dados para o Azure Information Protection.
 
-Tenha em atenção que os domínios de publicação fidedignos incluem as chaves para desencriptar os ficheiros protegidos anteriormente, pelo que é importante que exporte (e depois importe para o Azure) todos os domínios de publicação fidedignos e não apenas o domínio atualmente ativo.
+Tenha em atenção que os domínios de publicação fidedignos incluem as chaves do Certificado de Licenciante para Servidor (SLC) para desencriptar os ficheiros protegidos anteriormente, pelo que é importante que exporte (e depois importe para o Azure) todos os domínios de publicação fidedignos e não apenas o domínio atualmente ativo.
 
 Por exemplo, terá vários domínios de publicação fidedignos se tiver atualizado os seus servidores do AD RMS do Modo Criptográfico 1 para o Modo Criptográfico 2. Se não exportar e importar o domínio de publicação fidedigno que contém a chave arquivada que utilizou o Modo Criptográfico 1, no final da migração, os utilizadores não poderão abrir o conteúdo que foi protegido com a chave do Modo Criptográfico 1.
 
@@ -83,8 +83,8 @@ Utilize a seguinte tabela para identificar o procedimento a utilizar para a sua 
 |Implementação atual do AD RMS|Topologia de chave de inquilino do Azure Information Protection selecionada|Instruções de migração|
 |-----------------------------|----------------------------------------|--------------------------|
 |Proteção por palavra-passe na base de dados do AD RMS|Gerida pela Microsoft|Consulte o procedimento de migração **Chave protegida por software para chave protegida por software** que se encontra após esta tabela.<br /><br />Este é o caminho de migração mais simples e requer apenas que transfira os seus dados de configuração para o Azure Information Protection.|
-|Proteção HSM através da utilização de um módulo de hardware de segurança (HSM) nShield da Thales.|Gerida pelo cliente (BYOK)|Consulte o procedimento de migração **Chave protegida por HMS para chave protegida por HMS** que se encontra após esta tabela.<br /><br />Este procedimento requer o conjunto de ferramentas BYOK do Azure Key Vault e três conjuntos de passos para transferir primeiro a chave HSM no local para os HSMs do Azure Key Vault e, em seguida, autorizar o serviço Azure Rights Management a partir do Azure Information Protection a utilizar a sua chave de inquilino e, por último, transferir os dados de configuração para o Azure Information Protection.|
-|Proteção por palavra-passe na base de dados do AD RMS|Gerida pelo cliente (BYOK)|Consulte o procedimento de migração **Chave protegida por software para chave protegida por HMS** que se encontra após esta tabela.<br /><br />Este procedimento requer o conjunto de ferramentas BYOK do Azure Key Vault e quatro conjuntos de passos para, em primeiro lugar, extrair a sua chave de software e importá-la para um HSM no local, transferir a chave do seu HSM no local para os HSMs do Azure Information Protection, em seguida transferir os dados do Key Vault para o Azure Information Protection e, por último, transferir os dados de configuração para o Azure Information Protection.|
+|Proteção HSM através da utilização de um módulo de hardware de segurança (HSM) nShield da Thales.|Gerida pelo cliente (BYOK)|Consulte o procedimento de migração **Chave protegida por HMS para chave protegida por HMS**  que se encontra após esta tabela.<br /><br />Este procedimento requer o conjunto de ferramentas BYOK do Azure Key Vault e três conjuntos de passos para transferir primeiro a chave HSM no local para os HSMs do Azure Key Vault e, em seguida, autorizar o serviço Azure Rights Management a partir do Azure Information Protection a utilizar a sua chave de inquilino e, por último, transferir os dados de configuração para o Azure Information Protection.|
+|Proteção por palavra-passe na base de dados do AD RMS|Gerida pelo cliente (BYOK)|Consulte o procedimento de migração **Chave protegida por software para chave protegida por HMS**  que se encontra após esta tabela.<br /><br />Este procedimento requer o conjunto de ferramentas BYOK do Azure Key Vault e quatro conjuntos de passos para, em primeiro lugar, extrair a sua chave de software e importá-la para um HSM no local, transferir a chave do seu HSM no local para os HSMs do Azure Information Protection, em seguida transferir os dados do Key Vault para o Azure Information Protection e, por último, transferir os dados de configuração para o Azure Information Protection.|
 |Proteção HSM através da utilização de um módulo de hardware de segurança (HSM) a partir de um fornecedor que não seja a Thales|Gerida pelo cliente (BYOK)|Contacte o seu fornecedor do HSM para obter instruções sobre como transferir a chave deste HSM para um módulo de hardware de segurança (HSM) nShield da Thales. Em seguida, siga as instruções do procedimento de migração **Chave protegida por HMS para chave protegida por HMS** que se encontram após esta tabela.|
 |Proteção por palavra-passe através de um fornecedor de serviços de criptografia externo|Gerida pelo cliente (BYOK)|Contacte o seu fornecedor de serviços de criptografia para obter instruções sobre como transferir a sua chave para um Módulo de Hardware de Segurança (HSM) nShield da Thales. Em seguida, siga as instruções do procedimento de migração **Chave protegida por HMS para chave protegida por HMS** que se encontram após esta tabela.|
 Antes de iniciar estes procedimentos, certifique-se de que consegue aceder aos ficheiros. xml que criou anteriormente, quando exportou os domínios de publicação fidedignos. Estes poderão estar guardados, por exemplo, numa pen USB que pode ser movida do servidor do AD RMS para uma estação de trabalho com ligação à Internet.

@@ -3,7 +3,6 @@
 ### [Também conhecido como...](aka.md)
 ### [O que é o Azure Rights Management?](what-is-azure-rms.md)
 #### [Que problemas resolve?](azure-rms-problems-it-solves.md)
-#### [O que veem os administradores e utilizadores?](what-admins-users-see.md)
 #### [Como é que funciona?](how-does-it-work.md)
 ## [RMS para utilizadores individuais e Azure Information Protection](rms-for-individuals.md)
 ### [Como é que os utilizadores se podem inscrever no RMS para utilizadores individuais](rms-for-individuals-user-sign-up.md)

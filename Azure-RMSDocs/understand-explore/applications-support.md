@@ -4,7 +4,7 @@ description: "Compreender como as aplicações de utilizador final (como as apli
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c7c91c09ebcd7dcc35c7d91e056b5f83f93d53cd
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: db9f67c5baeea678bf288f4f10237ff4517d905b
+ms.sourcegitcommit: 3ff6c072a228994308402778c493727cc682c6b7
 translationtype: HT
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Como as aplicações suportam o serviço Azure Rights Management
@@ -31,9 +31,6 @@ Os modelos fazem com que seja mais fácil para os utilizadores (e administradore
 Para os casos em que os utilizadores têm de aplicar a proteção de informações por si próprios, certifique-se de que lhes faculta instruções e orientações sobre como e quando devem efetuá-la. As instruções devem ser específicas da aplicação e das versões que utilizarem e de como as utilizam, e a orientação para quando e como a proteção de informações deve ser aplicada adequadamente na sua empresa. Para obter mais informações, consulte [Ajudar os utilizadores a proteger ficheiros com o serviço Azure Rights Management](../deploy-use/help-users.md).
 
 Para obter mais informações sobre como configurar estas aplicações para o serviço Azure Rights Management do Azure Information Protection, consulte [Configurar aplicações para o Azure Rights Management](../deploy-use/configure-applications.md).
-
-> [!TIP]
-> Para obter exemplos e capturas de ecrã das aplicações a utilizar o serviço Azure Rights Management, consulte [O Azure RMS em ação: conteúdo visto pelos administradores e utilizadores](what-admins-users-see.md).
 
 Os serviços de pesquisa podem ser integrados no Rights Management de diferentes formas. Por exemplo: 
 

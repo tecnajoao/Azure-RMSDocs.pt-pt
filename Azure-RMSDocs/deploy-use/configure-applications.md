@@ -4,7 +4,7 @@ description: "Instruções para os administradores configurarem aplicações e s
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: df08c66daa692137e60a5bd17e1f21cedbc37ec2
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: e3030aca9e7b93d93df583934b2a6ad2f0013903
+ms.sourcegitcommit: 3ff6c072a228994308402778c493727cc682c6b7
 translationtype: HT
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Configurar aplicações para o Azure Rights Management
@@ -48,10 +48,6 @@ Depois de ter implementado o Azure Information Protection na sua organização, 
 
 
 Para configurar os servidores no local, como o Exchange Server e o SharePoint Server, consulte [Implementar o conector Azure Rights Management](deploy-rms-connector.md).
-
-> [!TIP]
-> Para obter exemplos gerais e capturas de ecrã das aplicações configuradas para utilizar o serviço Azure Rights Management, consulte [O Azure RMS em ação: conteúdo visto pelos administradores e utilizadores](../understand-explore/what-admins-users-see.md).
-
 
 Além destas aplicações e serviços, existem outras aplicações que suportam as APIs de Rights Management. Esta categoria inclui aplicações de linha de negócio que são escritas internamente através do SDK Rights Management, bem como aplicações de fornecedores de software que são escritas através do SDK Rights Management. Para estas aplicações, siga as instruções fornecidas com a aplicação.
 

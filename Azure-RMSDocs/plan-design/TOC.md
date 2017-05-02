@@ -13,7 +13,7 @@
 ### [Tarefas pós-migração](migrate-from-ad-rms-phase5.md)
 ## [Planear e implementar a chave de inquilino](plan-implement-tenant-key.md)
 ### [Preços e restrições de BYOK](byok-price-restrictions.md)
-## [Preparação para o Azure Information Protection](prepare.md)
+## [Preparar utilizadores e grupos](prepare.md)
 # [Implementar e Utilizar o Serviço](/information-protection/deploy-use/activate-service)
 # [Implementar e Utilizar o Cliente](/information-protection/rms-client/use-client)
 # [Desenvolver e Personalizar Aplicações](/information-protection/develop/developers-guide)

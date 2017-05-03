@@ -211,7 +211,7 @@ Se selecionar a política ad hoc, o utilizador da aplicação terá de disponibi
 
 Depois de ter tudo compilado e em execução, os resultados da aplicação devem ter o seguinte aspeto:
 
-1. É-lhe pedido para selecionar um método de encriptação.
+1.É-lhe pedido para selecionar um método de encriptação.
 ![resultado da aplicação – passo 1](../media/develop/app-output-1.png)
 
 2. É-lhe solicitado para indicar o caminho do ficheiro a ser protegido.

@@ -4,14 +4,14 @@ description: "Pode eliminar ou reordenar qualquer uma das etiquetas que os utili
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 04/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: 8cb5c6270c90b7d012607da9aa9e4e6172d33a7b
-ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
+ms.openlocfilehash: 8d0d52c1ba82f44acacf361b1d23c67d063348e9
+ms.sourcegitcommit: d814d2876cf56e8fff0b107a5e3ec6df2aeda9ae
 translationtype: HT
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Como eliminar ou reordenar uma etiqueta para o Azure Information Protection
@@ -34,7 +34,7 @@ Ordene as etiquetas para que os utilizadores visualizem uma progressão lógica 
 
 Utilize as seguintes instruções para efetuar as alterações.
 
-1. Caso ainda não o tenha feito, numa nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com) como administrador global e navegue para o painel **Azure Information Protection**. 
+1. Caso ainda não o tenha feito, numa nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com) como administrador de segurança ou administrador global e navegue para o painel **Azure Information Protection**. 
     
     Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
@@ -50,7 +50,7 @@ Utilize as seguintes instruções para efetuar as alterações.
 
 3. Para disponibilizar as alterações aos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).  
 

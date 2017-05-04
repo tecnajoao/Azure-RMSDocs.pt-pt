@@ -4,7 +4,7 @@ description: "Descrição detalhada de como o Azure RMS funciona, os controlos c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/03/2017
+ms.date: 04/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a5f189ab5ad1df43b14fa0b6d23bf4f0eef88142
-ms.sourcegitcommit: d44105d4d45fabf0f1d90765304e4b43dd97c0fc
+ms.openlocfilehash: d3d174fabb4189d2f4ca7755b6355293261318d4
+ms.sourcegitcommit: 55d8a769084c6422f80aefc5f7c6594ea6855bfa
 translationtype: HT
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Como funciona o Azure RMS? Os bastidores
@@ -120,7 +120,7 @@ Se um utilizador quiser consumir um documento protegido, o cliente de RMS começ
 
 ![Consumo de documentos pelo RMS – passo 1, o utilizador é autenticado e obtém a lista de direitos](../media/AzRMS_documentconsumption1.png)
 
-**O que acontece no passo 1**: o utilizador autenticado envia a política do documento e os certificados do utilizador para o serviço Azure Rights Management. O serviço desencripta e avalia a política e cria uma lista de direitos (se aplicável) que o utilizador tem sobre o documento. Para identificar o utilizador, o proxyAttribute do Azure AD é utilizado para a conta de utilizador e para os grupos do qual o utilizador é membro. Por motivos de desempenho, a associação a grupos é [colocada em cache](../plan-design/prepare.md#group-membership-caching).
+**O que acontece no passo 1**: o utilizador autenticado envia a política do documento e os certificados do utilizador para o serviço Azure Rights Management. O serviço desencripta e avalia a política e cria uma lista de direitos (se aplicável) que o utilizador tem sobre o documento. Para identificar o utilizador, é utilizado o atributo proxyAddress do Azure AD para a conta de utilizador e para os grupos do qual o utilizador é membro. Por motivos de desempenho, a associação a grupos é [colocada em cache](../plan-design/prepare.md#group-membership-caching).
 
 ![Consumo de documentos pelo RMS – passo 2, a licença de utilização é dada ao cliente](../media/AzRMS_documentconsumption2.png)
 
@@ -149,7 +149,7 @@ Os passos anteriores abrangem os cenários padrão, mas existem algumas variaç�
 
 -   **PDF protegido (.ppdf)**: quando o serviço Azure Rights Management protege originalmente um ficheiro do Office, também cria uma cópia desse ficheiro e protege-o da mesma forma. A única diferença é que a cópia do ficheiro está no formato de ficheiro PPDF, que o visualizador do cliente do Azure Information Protection e a aplicação de partilha RMS sabem como abrir no modo só de visualização. Este cenário permite-lhe enviar anexos protegidos por e-mail, sabendo que o destinatário num dispositivo móvel poderá sempre lê-los, mesmo que o dispositivo móvel não tenha uma aplicação que suporte ficheiros protegidos do Office de raiz.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Para saber mais sobre o serviço Azure Rights Management, utilize os outros artigos na secção **Compreender e Explorar**, por exemplo [Como as aplicações suportam o serviço Azure Rights Management](applications-support.md) para saber como é que as suas aplicações existentes se podem integrar com o serviço Azure Rights Management para fornecer uma solução de proteção de informações. 
 

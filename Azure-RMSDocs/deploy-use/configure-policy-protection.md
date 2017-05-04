@@ -4,14 +4,14 @@ description: "Pode proteger os seus documentos e e-mails mais confidenciais ao c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 696d744ae21d8957225a24d39547493515b63d76
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 608fa9fe48667c1419736243e5c069b48828ff1b
+ms.sourcegitcommit: 2358f76f9a039daff7d70ea68967a45362d3da35
 translationtype: HT
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Como configurar uma etiqueta para a proteção do Rights Management
@@ -50,7 +50,7 @@ Os utilizadores podem aplicar etiquetas no Outlook para protegerem os seus e-mai
 
 ## <a name="to-configure-a-label-for-rights-management-protection"></a>Para configurar uma etiqueta para a proteção do Rights Management
 
-1. Caso ainda não o tenha feito, abra uma nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com) como administrador global e navegue para o painel **Azure Information Protection**. 
+1. Caso ainda não o tenha feito, abra uma nova janela de browser e inicie sessão no [portal do Azure](https://portal.azure.com) como administrador de segurança ou administrador global e, em seguida, navegue para o painel **Azure Information Protection**. 
 
     Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
@@ -78,9 +78,13 @@ Os utilizadores podem aplicar etiquetas no Outlook para protegerem os seus e-mai
     
     Na maioria dos casos, irá selecionar **Azure RMS** para as definições de permissão. Não selecione **HYOK (AD RMS)**, a menos que tenha lido e compreendido os pré-requisitos e as restrições que acompanham esta configuração de "*tenha a sua própria chave*" (HYOK). Para obter mais informações, veja [Requisitos e restrições de Tenha a sua própria chave (HYOK) para proteção do AD RMS](configure-adrms-restrictions.md). Para continuar a configuração para HYOK (AD RMS), avance para o passo 9.
     
-7. Selecione **Não reencaminhar**, se pretender definir esta opção do Outlook para os e-mails, ou **Selecionar modelo**. 
+7. Selecione **Não reencaminhar** se quiser definir esta opção do Outlook para e-mails, **Selecionar um modelo predefinido** para utilizar um dos modelos predefinidos ou um modelo personalizado que tenha configurado ou selecione **Personalizadas (Pré-visualização)** para definir novas definições de proteção neste portal. 
     
-8. Se tiver selecionado **Selecionar modelo** para **Azure RMS**, clique na caixa pendente e selecione o [modelo](../deploy-use/configure-custom-templates.md) que pretende utilizar para proteger os documentos e os e-mails com esta etiqueta.
+    Tenha em atenção que a opção **Personalizadas (Pré-visualização)** possui a maioria das opções de configuração presentes no portal clássico do Azure. Além disso, pode adicionar facilmente todos os utilizadores da sua organização e especificar endereços de e-mail externos para utilizadores individuais ou de grupo ou para todos os utilizadores noutra organização quando especificar um nome de domínio. 
+    
+    Para obter mais informações sobre a configuração desta pré-visualização, veja a publicação do blogue [Azure Information Protection unified administration now in Preview (Administração unificada do Azure Information Protection agora na Pré-visualização)](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/). Para obter mais informações sobre as permissões que pode selecionar, veja [Configuração de direitos de utilização para o Azure Rights Management](configure-usage-rights.md).
+    
+8. Se tiver selecionado **Selecionar um modelo predefinido** para **Azure RMS**, clique na caixa pendente e selecione o [modelo](../deploy-use/configure-custom-templates.md) que pretende utilizar para proteger os documentos e os e-mails com esta etiqueta.
     
     Se selecionar um **modelo departamental** ou se tiver configurado [controlos de inclusão](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment):
     
@@ -96,7 +100,7 @@ Os utilizadores podem aplicar etiquetas no Outlook para protegerem os seus e-mai
 
 11. Para disponibilizar as alterações aos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).  
 

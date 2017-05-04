@@ -4,7 +4,7 @@ description: "Quando utiliza o serviço Azure Rights Management, os modelos são
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/27/2017
+ms.date: 04/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 77bd9e7bedf4a319f8f911782c995066a26a7055
-ms.sourcegitcommit: 8ae83a9fc03bf2ee39ea758835ef52156f19784d
+ms.openlocfilehash: 6f02bffa99719d5cd987bc0fa9c84baabe191ec5
+ms.sourcegitcommit: 2358f76f9a039daff7d70ea68967a45362d3da35
 translationtype: HT
 ---
 # <a name="refreshing-templates-for-users"></a>Atualizar modelos para os utilizadores
@@ -24,12 +24,13 @@ Quando utiliza o serviço Azure Rights Management do Azure Information Protectio
 
 |Aplicação ou serviço|Como os modelos são atualizados depois das alterações|
 |--------------------------|---------------------------------------------|
-|Exchange Online|Configuração manual necessária para atualizar os modelos.<br /><br />Para obter os passos de configuração, consulte a secção [Apenas para o Exchange Online: como configurar o Exchange para transferir modelos personalizados modificados](#exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates).|
+|Exchange Online<br /><br />Aplicável a regras de transporte, regras de DLP e ao Outlook Web App|Configuração manual necessária para atualizar os modelos.<br /><br />Para obter os passos de configuração, consulte a secção [Apenas para o Exchange Online: como configurar o Exchange para transferir modelos personalizados modificados](#exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates).|
 |Cliente do Azure Information Protection|Atualizado automaticamente sempre que a política do Azure Information Protection é atualizada no cliente:<br /><br /> - Quando abre uma aplicação do Office que suporta a barra do Azure Information Protection. <br /><br /> - Quando clica com o botão direito do rato para classificar e proteger um ficheiro ou uma pasta. <br /><br /> - Quando executa os cmdlets do PowerShell para etiquetagem e proteção (Get-AIPFileStatus e Set-AIPFileLabel).<br /><br /> - A cada 24 horas.<br /><br /> Além disso, uma vez que o cliente do Azure Information Protection está totalmente integrado no Office, todos os modelos atualizados do Office 2016 ou do Office 2013 também serão atualizados no cliente do Azure Information Protection.|
 |Office 2016 e Office 2013<br /><br />Aplicação de partilha RMS para Windows|Atualizados automaticamente – com base numa agenda:<br /><br />- Para estas versões posteriores do Office: o intervalo de atualização predefinido é de sete dias.<br /><br />- Para a aplicação de partilha RMS para Windows: a partir da versão 1.0.1784.0, o intervalo de atualização predefinido é de um dia. As versões anteriores têm um intervalo de atualização predefinido de 7 dias.<br /><br />Para forçar uma atualização mais cedo do que a agendada, veja a secção [Office 2016, Office 2013 e aplicação de partilha RMS para Windows: como forçar uma atualização de um modelo personalizado modificado](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
 |Office 2010|Atualizado automaticamente quando os utilizadores terminam sessão no Windows, iniciam sessão novamente e esperam até uma hora.|
+|Exchange no local com o conector Rights Management<br /><br />Aplicável a regras de transporte e ao Outlook Web App|Atualizados automaticamente – não existem passos adicionais necessários. No entanto, o Outlook Web App coloca a IU em cache durante um dia.|
 |Office 2016 para Mac|Atualizados automaticamente – não existem passos adicionais necessários.|
-|Aplicação de partilha RMS para dispositivos móveis|Atualizados automaticamente – não existem passos adicionais necessários.|
+|Aplicação de partilha RMS para computadores Mac|Atualizados automaticamente – não existem passos adicionais necessários.|
 
 
 ## <a name="exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates"></a>Apenas para Exchange Online: como configurar o Exchange para transferir modelos personalizados modificados

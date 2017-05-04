@@ -4,7 +4,7 @@ description: "Conheça os requisitos ou os problemas que a sua organização pod
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 95ece72f7261691f762c8786490c8010aa3e0778
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 65b9d369308505e74e0dde8d96973f9985d209a0
+ms.sourcegitcommit: 3ff6c072a228994308402778c493727cc682c6b7
 translationtype: HT
 ---
 # <a name="what-problems-does-azure-rms-solve"></a>Que problemas resolve o Azure RMS?
@@ -64,10 +64,8 @@ O Azure Rights Management suporta os seguintes requisitos de segurança, conform
 
 Para obter mais informações acerca destas certificações externas, consulte o [Centro de Fidedignidade do Azure](http://azure.microsoft.com/support/trust-center/compliance/).
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
-Para ver o aspeto do Azure Rights Management do ponto de vista dos administradores e utilizadores, veja [O Azure RMS em ação](what-admins-users-see.md).
-
-Para obter mais informações técnicas sobre o funcionamento do Azure Rights Management, veja [Como funciona o Azure RMS?](how-does-it-work.md)
+Para obter mais informações técnicas sobre o funcionamento do serviço Azure Rights Management, veja [Como funciona o Azure RMS?](how-does-it-work.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

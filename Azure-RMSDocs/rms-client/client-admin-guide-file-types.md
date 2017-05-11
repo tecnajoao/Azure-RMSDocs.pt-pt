@@ -4,7 +4,7 @@ description: "Detalhes técnicos sobre tipos de ficheiro suportados, extensões 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/26/2017
+ms.date: 05/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5899710615a1a875d3613b70b1c378db67942404
-ms.sourcegitcommit: 3ff6c072a228994308402778c493727cc682c6b7
-translationtype: HT
+ms.openlocfilehash: ffd2ed8aa59c3d9eb1ab6d36a9ccac71d449d978
+ms.sourcegitcommit: dabea768a37aa56635b9123f628c1c2b2d6a0f55
+ms.translationtype: HT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 05/08/2017
 ---
 # <a name="file-types-supported-by-the-azure-information-protection-client"></a>Tipos de ficheiro suportados pelo cliente do Azure Information Protection
 
@@ -117,17 +119,19 @@ Pode também forçar o cliente do Azure Information Protection a bloquear a prot
 
 Para configurar o cliente do Azure Information Protection para aplicar uma proteção genérica a todos os ficheiros que, por predefinição, teriam uma proteção nativa aplicada, realize as seguintes edições de registo. Tenha em atenção que, se a chave FileProtection não existir, terá de a criar manualmente.
 
-1. **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**: crie uma nova chave com o nome*.
+1. Crie uma nova chave com o nome * para o seguinte caminho de registo, que indica ficheiros com qualquer extensão de nome de ficheiro:
+    
+    - Para a versão de 32 bits do Windows: **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
+    
+    - Para a versão de 64 bits do Windows: **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection**
 
-    Esta definição indica ficheiros com qualquer extensão de nome de ficheiro.
-
-2. Na chave recentemente adicionada HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\\\*, crie um novo valor de cadeia (REG_SZ) com o nome **Encriptação** com o valor de dados **Pfile**.
+2. Na chave recentemente adicionada (por exemplo, HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\\\*), crie um novo valor de cadeia (REG_SZ) com o nome **Encryption** com o valor de dados **Pfile**.
 
     Esta definição faz com que o cliente do Azure Information Protection aplique proteção genérica.
 
 Estas duas definições fazem com que o cliente do Azure Information Protection aplique proteção genérica a todos os ficheiros que tenham uma extensão de nome de ficheiro. Se for este o seu objetivo, não é necessário efetuar mais configurações. No entanto, pode definir exceções para tipos de ficheiro específicos, de modo a que estes continuem a ser protegidos nativamente. Para tal, tem de efetuar três edições de registo adicionais para cada tipo de ficheiro:
 
-1. **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**: adicione uma nova chave com o nome da extensão de nome de ficheiro (sem o ponto final precedente).
+1. Para **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** (Windows de 32 bits) ou **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (Windows de 64 bits): adicione uma nova chave que inclua o nome da extensão de nome de ficheiro (sem o ponto final antes).
 
     Por exemplo, para os ficheiros que tenham uma extensão de nome de ficheiro .docx, crie uma chave denominada **DOCX**.
 

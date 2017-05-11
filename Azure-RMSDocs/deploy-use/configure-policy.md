@@ -4,7 +4,7 @@ description: "Para configurar a classificação, a etiquetagem e a proteção, t
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2017
+ms.date: 05/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8b6bd6e44fb39c3787e2fe63577c7e7fd9948025
-ms.sourcegitcommit: d814d2876cf56e8fff0b107a5e3ec6df2aeda9ae
-translationtype: HT
+ms.openlocfilehash: f412d36e8c58d874360c55c5c90416c2629ed69e
+ms.sourcegitcommit: e3974cc1490581414084669632cad54b12b05d5a
+ms.translationtype: HT
+ms.contentlocale: pt-PT
 ---
 # <a name="configuring-azure-information-protection-policy"></a>Configurar a política do Azure Information Protection
 
@@ -58,6 +59,8 @@ O cliente do Azure Information Protection verifica se existem alterações sempr
 
 - A cada 24 horas.
 
+>[!NOTE]
+>Quando o cliente transferir a política, poderá ter de aguardar alguns minutos até que fique totalmente operacional. O tempo em questão pode variar devido a fatores como o tamanho e a complexidade da configuração da política e a conectividade de rede. Se a ação resultante das etiquetas não corresponder às suas alterações mais recentes, aguarde 15 minutos e tente novamente.
 
 ## <a name="configuring-your-organizations-policy"></a>Configurar a política da organização
 

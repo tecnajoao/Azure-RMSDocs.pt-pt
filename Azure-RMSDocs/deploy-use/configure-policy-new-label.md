@@ -4,15 +4,16 @@ description: "Apesar do Azure Information Protection ter etiquetas predefinidas 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2017
+ms.date: 05/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
-ms.openlocfilehash: ee5366826f77403246b7e0b302220236dbe04298
-ms.sourcegitcommit: d814d2876cf56e8fff0b107a5e3ec6df2aeda9ae
-translationtype: HT
+ms.openlocfilehash: 91feb6dfd9421d7c5cccf53b45f8a0f35e74007d
+ms.sourcegitcommit: e3974cc1490581414084669632cad54b12b05d5a
+ms.translationtype: HT
+ms.contentlocale: pt-PT
 ---
 # <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Como criar uma nova etiqueta para o Azure Information Protection
 
@@ -37,9 +38,8 @@ Utilize as seguintes instruções para adicionar uma nova etiqueta à política 
      Se a nova etiqueta que pretende adicionar for incluída numa [política de âmbito](configure-policy-scope.md) para ser aplicada apenas a utilizadores selecionados, selecione primeiro essa política de âmbito no painel inicial do **Azure Information Protection**.
 
 3. No painel **Etiqueta** ou **Etiqueta secundária**, selecione as opções que pretende para esta nova etiqueta e, em seguida, clique em **Guardar**.
-
-    > [!NOTE]
-    >Para informações sobre proteção de definições, consulte [Como configurar uma etiqueta para aplicar proteção](configure-policy-protection.md).
+    
+    Tenha em atenção que a cor preta é automaticamente atribuída às novas etiquetas. Selecione uma cor distinta na lista de cores ou introduza um código terno hexadecimal dos componentes RGB (vermelho, verde e azul) da cor. Por exemplo, **#DAA520**. Se precisar de uma referência para estes códigos, o artigo [Cores por Nome](https://msdn.microsoft.com/library/aa358802\(v=vs.85).aspx) da documentação da MSDN é um ponto de partida útil. Poderá também encontrar estes códigos em muitos programas de edição de imagens, como o Microsoft Paint, onde pode selecionar uma cor personalizada a partir de uma paleta e os valores RGB são automaticamente apresentados.
 
 4. Para disponibilizar as alterações aos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
 

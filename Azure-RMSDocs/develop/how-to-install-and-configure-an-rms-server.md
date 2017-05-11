@@ -16,7 +16,8 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 3f08823903b9da03c10e27c82d3edeb3067efd8e
 ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: pt-PT
 ---
 # <a name="how-to-install-configure-and-test-with-an-rms-server"></a>Procedimentos: instalar, configurar e testar com um servidor RMS
 

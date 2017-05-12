@@ -14,7 +14,8 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 9b67159136de154b934f70991fcb10799a4cbbb2
 ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: pt-PT
 ---
 # <a name="rms-client-deployment-notes"></a>Notas de implementação do cliente do RMS
 
@@ -158,7 +159,7 @@ Para efetuar a deteção do serviço, o cliente do RMS verifica o seguinte:
 
     Se estiver registado um SCP, como é documentado na [secção seguinte](#ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory), é devolvido o URL do servidor de AD RMS para o cliente do RMS utilizar.
 
-3. **O serviço de deteção do Azure Rights Management **: o cliente do RMS liga-se a **https://discover.aadrm.com**, que pede ao utilizador para efetuar a autenticação.
+3. **O serviço de deteção do Azure Rights Management**: o cliente do RMS liga-se a **https://discover.aadrm.com**, que pede ao utilizador para efetuar a autenticação.
 
     Quando a autenticação tiver sido concluída com êxito, o nome de utilizador (e o domínio) da autenticação é utilizado para identificar o inquilino do Azure Information Protection a utilizar. O URL do Azure Information Protection a utilizar para essa conta de utilizador é devolvido ao cliente de RMS. O URL estará no seguinte formato: **https://**\<YourTenantURL\>**/_wmcs/licensing** 
 

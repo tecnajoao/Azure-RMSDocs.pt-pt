@@ -12,9 +12,11 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: e940dfd1d3a053c14ea1adb6e72f4cde7d26bba0
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 37b91a1b3e0a25f6014198998609d33dcc0979ae
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="security-best-practices-for-azure-information-protection"></a>Melhores Práticas de Segurança do Azure Information Protection
 
@@ -51,8 +53,8 @@ A Microsoft não testa nem revê os resultados de testes relacionados com o cump
 
 |Nível do padrão|    Descrição|
 |---|---|
-|Padrão mínimo|    É preciso determinar que uma aplicação que processa informações protegidas pelo AIP cumpre o padrão mínimo antes de poder ser assinada com o certificado de produção recebido da Microsoft. Geralmente, os parceiros utilizam o certificado de hierarquia de produção apenas no momento do lançamento final do software, depois de os seus próprios testes internos confirmarem que a aplicação satisfaz este padrão mínimo. O cumprimento do padrão mínimo não é uma garantia de segurança por parte da Microsoft e não deve ser interpretado como tal. A Microsoft não testa nem revê os resultados de testes relacionados com o cumprimento dos padrões mínimos; é da inteira responsabilidade do parceiro garantir que os padrões mínimos são cumpridos.|
-|Padrão recomendado|    As diretrizes recomendadas traçam um caminho para uma maior segurança das aplicações, além de proporcionarem uma indicação da forma como o AIP pode evoluir à medida que são implementados mais critérios de segurança. Os fornecedores poderão tentar diferenciar as suas aplicações ao concebê-las de acordo com este nível mais elevado de diretrizes de segurança.|
+|Padrão mínimo|  É preciso determinar que uma aplicação que processa informações protegidas pelo AIP cumpre o padrão mínimo antes de poder ser assinada com o certificado de produção recebido da Microsoft. Geralmente, os parceiros utilizam o certificado de hierarquia de produção apenas no momento do lançamento final do software, depois de os seus próprios testes internos confirmarem que a aplicação satisfaz este padrão mínimo. O cumprimento do padrão mínimo não é uma garantia de segurança por parte da Microsoft e não deve ser interpretado como tal. A Microsoft não testa nem revê os resultados de testes relacionados com o cumprimento dos padrões mínimos; é da inteira responsabilidade do parceiro garantir que os padrões mínimos são cumpridos.|
+|Padrão recomendado|  As diretrizes recomendadas traçam um caminho para uma maior segurança das aplicações, além de proporcionarem uma indicação da forma como o AIP pode evoluir à medida que são implementados mais critérios de segurança. Os fornecedores poderão tentar diferenciar as suas aplicações ao concebê-las de acordo com este nível mais elevado de diretrizes de segurança.|
 |Padrão preferencial|    É a mais elevada categoria de segurança atualmente definida. Os fornecedores que desenvolvem aplicações comercializadas como altamente seguras devem ter em vista este padrão. As aplicações que satisfazem este padrão são, provavelmente, as menos vulneráveis a ataques.|
 
 
@@ -90,6 +92,6 @@ O AIP permite que um utilizador desencripte informações ou não; as informaç�
 
 - Quaisquer direitos que sejam abstraídos por inclusão em novos direitos implementados por uma aplicação têm de ser mapeados para a nova terminologia. Por exemplo, um novo direito denominado GESTOR pode incluir como direitos abstraídos os direitos IMPRIMIR, COPIAR e EDITAR.
 Padrão recomendado    Nenhum neste momento.
-Padrão preferencial    Nenhum neste momento.
+Padrão preferencial  Nenhum neste momento.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -12,9 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 013e0eb4-49a7-4e81-9e4d-f56c0ceb017f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 254386ad7cda2d3e178eb9520e6282abe609c158
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 365b0d16643e5fbd625034428e01aac01b5cc122
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="azure-rms-in-action-what-administrators-and-users-see"></a>O Azure RMS em ação: conteúdo visto pelos administradores e utilizadores
 
@@ -119,7 +121,7 @@ Neste exemplo, o administrador configura uma política para ajudar a manter a or
 
 ![Capturas de ecrã de exemplo a mostrar algumas das opções de configuração para configurar a prevenção de perda de dados do Exchange Online](../media/AzRMS_DLPExample1.png)
 
-**O QUE VEEM OS ADMINISTRADORES NO PASSO 1:** no centro de administração do Exchange, o modelo do Exchange com o nome **Dados de Informação Identificativa (PII) dos E.U.A.** é utilizado pelo administrador para criar e configurar uma nova política de DLP. Este modelo procura informações como números de segurança social e números de cartas de condução nas mensagens e-mail.
+**O QUE VEEM OS ADMINISTRADORES NO PASSO 1:** no centro de administração do Exchange, o modelo do Exchange com o nome  **Dados de Informação Identificativa (PII) dos E.U.A.** é utilizado pelo administrador para criar e configurar uma nova política de DLP. Este modelo procura informações como números de segurança social e números de cartas de condução nas mensagens e-mail.
 
 As regras são configuradas de modo a que a proteção de direitos seja automaticamente aplicada às mensagens de e-mail que contêm estas informações e que são enviadas para fora da organização, através de um modelo de RMS que restringe o acesso exclusivamente aos funcionários da empresa.
 

@@ -4,7 +4,7 @@ description: "Informações e instruções caso decida que já não quer utiliza
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f577337cf7ce904a82ff23b165fdc7befe319092
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 6dc6a42cf6d4a5e7a2768c927a75522a265432f7
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="decommissioning-and-deactivating-azure-rights-management"></a>Encerrar e desativar o Azure Rights Management
 
@@ -31,7 +33,7 @@ Quando tiver a sua chave de inquilino do Azure Information Protection, pode impl
 
 |Se isto se aplica a si...|… efetue o seguinte:|
 |----------------------------|--------------|
-|Quer que todos os utilizadores continuem a utilizar o Rights Management, mas utiliza uma solução no local em vez de utilizar o Azure Information Protection    →|Utilize o cmdlet [Set-AadrmMigrationUrl](https://msdn.microsoft.com/library/azure/dn629429.aspx) para direcionar os utilizadores existentes para a sua implementação no local quando consumirem conteúdo protegido após esta alteração. Os utilizadores utilizarão automaticamente a instalação do AD RMS para consumir conteúdo protegido.<br /><br />Para que os utilizadores consumam conteúdo que foi protegido antes desta alteração, redirecione os seus clientes para a implementação no local utilizando a chave de registo **LicensingRedirection** para o Office 2016 ou o Office 2013, tal como descrito na [secção de deteção do serviço](../rms-client/client-deployment-notes.md) nas notas de implementação do cliente do RMS, bem como a chave de registo **LicenseServerRedirection** para o Office 2010, conforme descrito nas [Definições de Registo do Office](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx).|
+|Quer que todos os utilizadores continuem a utilizar o Rights Management, mas utiliza uma solução no local em vez de utilizar o Azure Information Protection    →|Utilize o cmdlet [Set-AadrmMigrationUrl](/powershell/module/aadrm/Set-AadrmMigrationUrl) para direcionar os utilizadores existentes para a sua implementação no local quando consumirem conteúdo protegido após esta alteração. Os utilizadores utilizarão automaticamente a instalação do AD RMS para consumir conteúdo protegido.<br /><br />Para que os utilizadores consumam conteúdo que foi protegido antes desta alteração, redirecione os seus clientes para a implementação no local utilizando a chave de registo **LicensingRedirection** para o Office 2016 ou o Office 2013, tal como descrito na [secção de deteção do serviço](../rms-client/client-deployment-notes.md) nas notas de implementação do cliente do RMS, bem como a chave de registo **LicenseServerRedirection** para o Office 2010, conforme descrito nas [Definições de Registo do Office](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx).|
 |Pretende deixar de utilizar as tecnologias de Rights Management completamente    →|Conceda a um administrador designado [direitos de superutilizador](../deploy-use/configure-super-users.md) e forneça-lhe a [Ferramenta de Proteção RMS](http://www.microsoft.com/en-us/download/details.aspx?id=47256).<br /><br />Este administrador pode então utilizar a ferramenta para desencriptar ficheiros em volume em pastas que estavam protegidas pelo serviço Azure Rights Management, para que os ficheiros voltem a estar desprotegidos e, por conseguinte, possam ser lidos sem uma tecnologia de Rights Management, como o Azure Information Protection ou o AD RMS. Esta ferramenta pode ser utilizada com o serviço Azure Rights Management a partir do Azure Information Protection e AD RMS, para que possa escolher entre desencriptar ficheiros antes ou depois de desativar o serviço Azure Rights Management (ou uma combinação de ambos).|
 |Não consegue identificar todos os ficheiros que estavam protegidos pelo serviço Azure Rights Management do Azure Information Protection ou quer que todos os utilizadores possam ler automaticamente quaisquer ficheiros protegidos em falta    →|Implemente uma definição de registo em todos os computadores cliente utilizando a chave de registo **LicensingRedirection** para o Office 2016 ou o Office 2013, tal como descrito na [secção de deteção do serviço](../rms-client/client-deployment-notes.md) nas notas de implementação do cliente do RMS, bem como a chave de registo **LicenseServerRedirection** para o Office 2010, conforme descrito nas [Definições de Registo do Office](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx).<br /><br />Implemente também outra definição de registo para impedir que os utilizadores protejam novos ficheiros ao definir **DisableCreation** como **1**, conforme descrito nas [Definições de Registo do Office](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx).|
 |Pretende um serviço de recuperação manual controlado para ficheiros em falta    →|Conceda a utilizadores designados num grupo de recuperação de dados [direitos de superutilizador](../deploy-use/configure-super-users.md) e forneça-lhes a [Ferramenta de Proteção RMS](http://www.microsoft.com/en-us/download/details.aspx?id=47256) para que possam desproteger ficheiros quando solicitado por utilizadores padrão.<br /><br />Implemente em todos os computadores a definição de registo para impedir que os utilizadores protejam novos ficheiros ao definir **DisableCreation** como **1**, conforme descrito nas [Definições de Registo do Office](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx).|
@@ -49,7 +51,7 @@ Quando estiver pronto para desativar o serviço Azure Rights Management na sua o
 Utilize um dos seguintes procedimentos para desativar o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
 
 > [!TIP]
-> Também pode utilizar o cmdlet do Windows PowerShell, [Disable-Aadrm](http://msdn.microsoft.com/library/windowsazure/dn629422.aspx), para desativar o [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
+> Também pode utilizar o cmdlet do Windows PowerShell, [Disable-Aadrm](/powershell/module/aadrm/disable-aadrm), para desativar o [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
 
 #### <a name="to-deactivate-rights-management-from-the-office-365-admin-center"></a>Para desativar o Rights Management a partir do centro de administração do Office 365
 

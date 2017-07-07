@@ -12,9 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 10cf9371-a61b-495f-9d42-898448806994
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 11aea973a156556e14d474deae04deb97ee1dc73
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 9fc5560381cc8ff3e3b8b1780c97ab88f3dda44a
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisitos para o Azure Information Protection
 
@@ -86,9 +88,9 @@ Em seguida, configure a sua solução de MFA:
 
 -   Para inquilinos geridos pela Microsoft (que possuem o Azure Active Directory ou Office 365):
 
-    -   Configure a Azure MFA para impor a MFA aos utilizadores. Para obter instruções, consulte [Introdução à Multi-Factor Authentication do Azure na cloud](/multi-factor-authentication/multi-factor-authentication-get-started-cloud) na documentação da Multi-factor Authentication.
+    -   Configure a Azure MFA para impor a MFA aos utilizadores. Para obter instruções, veja [Introdução à Multi-Factor Authentication do Azure na cloud](/multi-factor-authentication/multi-factor-authentication-get-started-cloud) na documentação da Multi-factor Authentication.
 
-        Para obter mais informações acerca da Azure MFA, consulte [O que é a Multi-Factor Authentication do Azure?](/multi-factor-authentication/multi-factor-authentication)
+        Para obter mais informações acerca da Azure MFA, veja [O que é a Multi-Factor Authentication do Azure?](/multi-factor-authentication/multi-factor-authentication)
 
 -   Para inquilinos federados (que operam servidores de federação no local):
 

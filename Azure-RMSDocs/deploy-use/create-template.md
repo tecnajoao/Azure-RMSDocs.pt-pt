@@ -4,7 +4,7 @@ description: "Instruções para criar e gerir modelos personalizados no portal c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/28/2017
+ms.date: 05/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,26 +12,35 @@ ms.technology: techgroup-identity
 ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fe569124494f837e770e5f1f8c6de0c2188a6e40
-ms.sourcegitcommit: ed954c84c9009d205638f0ad54fdbfc02ef5b92c
-translationtype: HT
+ms.openlocfilehash: 56a17c745ba55c2c7b97bd444be42e3554e795b9
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="create-configure-and-publish-a-custom-template"></a>Criar, configurar e publicar um modelo personalizado
+<a id="create-configure-and-publish-a-custom-template" class="xliff"></a>
+
+# Criar, configurar e publicar um modelo personalizado
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
 
 Criar e gerir modelos personalizados no portal clássico do Azure. Pode fazê-lo diretamente a partir do portal clássico do Azure ou pode iniciar sessão no centro de administração do Office 365 e escolher as **funcionalidades avançadas** do Rights Management que, em seguida, redireciona para o portal clássico do Azure.
 
+> [!TIP]
+> Os modelos e as novas opções de configuração de proteção do Azure Rights Management estão a ser movidos para o portal do Azure. Esta funcionalidade está atualmente em pré-visualização. Para obter mais informações, veja o seguinte anúncio de mensagem de blogue: [Azure Information Protection unified administration now in Preview](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/) (Administração unificada do Azure Information Protection agora em Pré-visualização) 
+
 Tem de ser um administrador global para criar e gerir modelos no portal clássico do Azure. Se tiver atribuído a função de administrador global para o serviço Azure Rights Management a outros utilizadores, estes também podem criar e gerir modelos, mas têm de utilizar o [PowerShell](configure-templates-with-powershell.md). Para obter mais informações, veja [Tenho de ser um administrador global para configurar o Azure RMS ou posso delegar noutros administradores?](../get-started/faqs-rms.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators) 
 
 Utilize os seguintes procedimentos para criar, configurar e publicar modelos personalizados do Rights Management.
 
-## <a name="to-create-a-custom-template"></a>Para criar um modelo personalizado
+<a id="to-create-a-custom-template" class="xliff"></a>
+
+## Para criar um modelo personalizado
 
 1.  Consoante opte por iniciar sessão no centro de administração do Office 365 ou no portal clássico do Azure, efetue um dos seguintes procedimentos:
 
-    -   No **centro de administração do Office 365**, a navegação varia conforme esteja a utilizar a pré-visualização do centro de administração do Office 365 (e qual a versão) ou o centro de administração clássico do Office 365. No entanto, em todas as versões, pode aceder diretamente à página [rights management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx): 
+    -   No **Centro de administração do Office 365**, pode ir diretamente para a página [gestão de direitos](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx): 
 
         1.  Na secção **configuração adicional**, clique em **funcionalidades avançadas**.
 
@@ -67,7 +76,9 @@ Utilize os seguintes procedimentos para criar, configurar e publicar modelos per
 
 4. Na página de início rápido **Introdução ao Rights Management**, clique em **Gerir modelos de política de direitos**. Verá o modelo criado recentemente adicionado à lista de modelos, com o estado **Arquivado**. Nesta fase, o modelo é criado mas não é configurado nem é visível para os utilizadores.
 
-## <a name="to-configure-and-publish-a-custom-template"></a>Para configurar e publicar um modelo personalizado
+<a id="to-configure-and-publish-a-custom-template" class="xliff"></a>
+
+## Para configurar e publicar um modelo personalizado
 
 1.  Selecione o modelo criado recentemente na página **MODELOS** do portal clássico do Azure.
 
@@ -159,7 +170,9 @@ Para fazer alterações ao seu modelo, selecione-o e, em seguida, utilize os pas
 > [!WARNING]
 > Quando fizer alterações a um modelo que foi guardado anteriormente, os clientes não irão ver essas alterações feitas ao modelo até que os modelos sejam atualizados nos respetivos computadores. Para mais informações, veja [Atualizar modelos para os utilizadores](refresh-templates.md).
 
-## <a name="see-also"></a>Veja Também
+<a id="see-also" class="xliff"></a>
+
+## Veja Também
 [Configurar modelos personalizados para o Azure Rights Management](configure-custom-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

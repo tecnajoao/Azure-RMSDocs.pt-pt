@@ -4,14 +4,15 @@ Os destinatários podem utilizar vários dispositivos para ler o documento prote
 
 Peça-lhes para lerem a mensagem de e-mail que enviou. Os destinatários verão a sua mensagem de e-mail e, antes disso, o seguinte texto:
 
-**O remetente protegeu os anexos com Microsoft RMS. Tem de** [iniciar sessão](http://aka.ms/rms)
-      **para os abrir.**
+**O remetente protegeu os anexos com Microsoft RMS. Tem de** [iniciar sessão](http://aka.ms/rms) **para os abrir.**
 
 Quando clicam na ligação, são encaminhados para as instruções de instalação da aplicação de partilha RMS e, se necessário, para se inscreverem numa conta gratuita. A conta gratuita concede-lhes uma subscrição do RMS para indivíduos, que garante que os utilizadores autorizados podem sempre ler um documento protegido, mesmo que a organização não tenha o Azure RMS. Em seguida, podem ler o anexo protegido ao utilizar as instruções seguintes.
 
 ![Capturas de ecrã do tutorial do RM](../media/AzRMS_Tutorial_4_Screenshots.png)
 
-#### <a name="to-view-the-protected-document-attachment"></a>Para ver o anexo do documento protegido
+<a id="to-view-the-protected-document-attachment" class="xliff"></a>
+
+#### Para ver o anexo do documento protegido
 
 1.  Uma vez que o Azure Rights Management protegeu um documento do Word, existem dois anexos na mensagem de e-mail. Estes anexos são, na verdade, duas versões do mesmo ficheiro, mas com extensões de nomes de ficheiro diferentes. Abra a versão que tem a extensão de nome de ficheiro **.ppdf** (**Confidencial.ppdf**).
 

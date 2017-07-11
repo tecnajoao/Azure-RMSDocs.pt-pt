@@ -4,7 +4,7 @@ description: "Veja as novidades ou alterações ao lançamento do cliente do Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 06/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 70c358954a39b02610a77ec81074379dc574158b
-ms.sourcegitcommit: d5ce1bce5e63b3e510033ff9d4d246dd3511ed7c
-translationtype: HT
+ms.openlocfilehash: 9ee487f65f417c9faaf71f3c50b5d4e35659c55f
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="azure-information-protection-client-version-release-history"></a>Cliente do Azure Information Protection: histórico de lançamento de versões
+<a id="azure-information-protection-client-version-release-history" class="xliff"></a>
+
+# Cliente do Azure Information Protection: histórico de lançamento de versões
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -31,7 +35,37 @@ Utilize as seguintes informações para ver o que há de novo ou o que foi alter
 >  
 > Se o problema continuar, veja as informações em [Opções de suporte e recursos da comunidade](../get-started/information-support.md#support-options-and-community-resources). Também o incentivamos a interagir com a equipa do Azure Information Protection, no [site Yammer](https://www.yammer.com/askipteam/).
 
-## <a name="version-14210"></a>Versão 1.4.21.0
+
+<a id="version-172100" class="xliff"></a>
+
+## Versão 1.7.210.0
+
+**Lançada**: 06/06/2017
+
+Esta versão inclui a versão MSIPC 1.0.2217.1 do cliente RMS.
+
+**Correções**:
+
+- Todos os cmdlets de classificação e etiquetagem são agora suportados em computadores que não estão ligados à Internet, mas têm uma política do Azure Information Protection válida.
+
+- Para obter consistência, um parâmetro de saída do cmdlet [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) é alterado de inglês britânico (**IsLabelled**) para inglês americano (**IsLabeled**). Se tiver scripts ou processos automatizados que procuram este parâmetro, atualize a ortografia desse parâmetro.
+
+- As correções gerais para estabilidade são:
+
+    - Para Outlook: correções para falhas de sistema, alto consumo de memória e problemas de exibição para menus.
+    
+    - Para Word, Excel e PowerPoint: correções de alta utilização da CPU, problemas de exibição ao guardar grandes ficheiros Excel ou a aplicação para de responder. 
+    
+    Também para estas aplicações, para melhorar o desempenho do Office 2016 com o SharePoint Online e o OneDrive para Empresas, a etiquetagem automática e recomendada é aplicada quando o ficheiro é fechado, em vez de quando o ficheiro é guardado (guarda automaticamente ou o utilizador opta por guardar). Da mesma forma, se a definição **Todos os documentos e e-mails devem ter uma etiqueta** estiver ativada, não será pedido aos utilizadores para selecionarem uma etiqueta até que o ficheiro seja fechado. A exceção é para Word 2016 e Excel 2016 e o utilizador seleciona a opção **Guardar como**. Em seguida, esta ação aciona estes comportamentos de etiquetagem se forem configurados. 
+
+**Novas funcionalidades**:
+
+- Novo cmdlet do PowerShell, [Set-AIPFileClassification](/powershell/module/azureinformationprotection/Set-AIPFileClassification). Ao executar este cmdlet, ele inspeciona os conteúdos do ficheiro e aplica automaticamente etiquetas em ficheiros sem etiqueta, de acordo com as condições que especificar na política do Azure Information Protection.
+
+
+<a id="version-14210" class="xliff"></a>
+
+## Versão 1.4.21.0
 
 **Lançada**: 15/03/2017
 
@@ -58,7 +92,9 @@ A versão anterior introduziu o novo pré-requisito do Microsoft .NET Framework�
 - Para os ficheiros PDF, o visualizador já suporta as opções como pesquisa, zoom e rodar. Para utilizar estas opções, clique com o botão direito do rato no ficheiro quando for apresentado no visualizador.
 
 
-## <a name="version-131552"></a>Versão 1.3.155.2
+<a id="version-131552" class="xliff"></a>
+
+## Versão 1.3.155.2
 
 **Lançada**: 08/02/2017
 
@@ -86,7 +122,9 @@ Esta versão do cliente é a [Versão de Disponibilidade Geral](https://blogs.te
 - [Guia do utilizador do Azure Information Protection](client-user-guide.md)
 
 
-## <a name="version-1240"></a>Versão 1.2.4.0
+<a id="version-1240" class="xliff"></a>
+
+## Versão 1.2.4.0
 
 **Lançada**: 27/10/2016
 
@@ -104,13 +142,17 @@ Esta versão do cliente é a [Versão de Disponibilidade Geral](https://blogs.te
 
     Para obter mais informações sobre esta opção, veja a secção [Verificações adicionais e resolução de problemas](client-admin-guide.md#additional-checks-and-troubleshooting) no guia do administrador.
 
-## <a name="version-11230"></a>Versão 1.1.23.0
+<a id="version-11230" class="xliff"></a>
+
+## Versão 1.1.23.0
 
 **Lançada**: 01/10/2016
 
 Disponibilidade Geral.
 
-## <a name="next-steps"></a>Passos seguintes
+<a id="next-steps" class="xliff"></a>
+
+## Passos seguintes
 
 Para obter mais informações sobre como instalar o cliente:
 

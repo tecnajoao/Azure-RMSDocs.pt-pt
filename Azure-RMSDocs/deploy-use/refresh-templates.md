@@ -4,7 +4,7 @@ description: "Quando utiliza o serviço Azure Rights Management, os modelos são
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6f02bffa99719d5cd987bc0fa9c84baabe191ec5
-ms.sourcegitcommit: 2358f76f9a039daff7d70ea68967a45362d3da35
-translationtype: HT
+ms.openlocfilehash: 374c807862d4922679e8622ee0d0d5a16a156bb0
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="refreshing-templates-for-users"></a>Atualizar modelos para os utilizadores
+<a id="refreshing-templates-for-users-and-services" class="xliff"></a>
+
+# Atualizar modelos para os utilizadores e os serviços
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -32,8 +36,11 @@ Quando utiliza o serviço Azure Rights Management do Azure Information Protectio
 |Office 2016 para Mac|Atualizados automaticamente – não existem passos adicionais necessários.|
 |Aplicação de partilha RMS para computadores Mac|Atualizados automaticamente – não existem passos adicionais necessários.|
 
+Quando as aplicações de cliente precisam de transferir modelos (inicialmente ou atualizados para alterações), esteja preparado para aguardar até 15 minutos antes de a transferência estar concluída e os modelos novos ou atualizados estarem totalmente operacionais. O tempo em questão pode variar devido a fatores como o tamanho e a complexidade da configuração do modelo e a conectividade de rede. 
 
-## <a name="exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates"></a>Apenas para Exchange Online: como configurar o Exchange para transferir modelos personalizados modificados
+<a id="exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates" class="xliff"></a>
+
+## Apenas para Exchange Online: como configurar o Exchange para transferir modelos personalizados modificados
 Se já tiver configurado a Gestão de Direitos de Informação (IRM) para o Exchange Online, os utilizadores não poderão transferir os modelos personalizados até fazer as seguintes alterações com o Windows PowerShell no Exchange Online.
 
 > [!NOTE]
@@ -41,7 +48,9 @@ Se já tiver configurado a Gestão de Direitos de Informação (IRM) para o Exch
 
 Tem de efetuar este procedimento sempre que alterar um modelo.
 
-### <a name="to-update-templates-for-exchange-online"></a>Para atualizar modelos para o Exchange Online
+<a id="to-update-templates-for-exchange-online" class="xliff"></a>
+
+### Para atualizar modelos para o Exchange Online
 
 1.  Com o Windows PowerShell no Exchange Online, ligue-se ao serviço:
 
@@ -94,13 +103,17 @@ Para os utilizadores deixarem de ver estes modelos, ligue-se ao serviço com o W
 Set-RMSTemplate -Identity "<name or GUID of the template>" -Type Archived
 ```
 
-## <a name="office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2016, Office 2013 e aplicação de partilha RMS para Windows: como forçar uma atualização de um modelo personalizado modificado
+<a id="office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template" class="xliff"></a>
+
+## Office 2016, Office 2013 e aplicação de partilha RMS para Windows: como forçar uma atualização de um modelo personalizado modificado
 Ao editar o registo nos computadores ao executar o Office 2016, Office 2013 ou a aplicação de partilha Rights Management (RMS) para Windows, pode alterar o agendamento automático para os modelos modificados serem atualizados nos computadores com mais frequência do que o respetivo valor predefinido. Também pode forçar uma atualização imediata ao eliminar os dados existentes num valor de registo.
 
 > [!WARNING]
 > A utilização incorreta do Editor de Registo poderá causar problemas graves que exijam a reinstalação do sistema operativo. A Microsoft não garante que consiga resolver os problemas resultantes da utilização incorreta do Editor de Registo. A utilização do Editor de Registo é da exclusiva responsabilidade do utilizador.
 
-### <a name="to-change-the-automatic-schedule"></a>Para alterar o agendamento automático
+<a id="to-change-the-automatic-schedule" class="xliff"></a>
+
+### Para alterar o agendamento automático
 
 1.  Através de um editor de registo, crie e defina um dos seguintes valores do registo:
 
@@ -124,7 +137,9 @@ Ao editar o registo nos computadores ao executar o Office 2016, Office 2013 ou a
 
 2.  Se quiser forçar uma atualização imediata dos modelos, avance para o procedimento seguinte. Caso contrário, reinicie as suas aplicações do Office e instâncias do Explorador de Ficheiros agora.
 
-### <a name="to-force-an-immediate-refresh"></a>Para forçar uma atualização imediata
+<a id="to-force-an-immediate-refresh" class="xliff"></a>
+
+### Para forçar uma atualização imediata
 
 1.  Através de um editor de registo, elimine os dados do valor **LastUpdatedTime**. Por exemplo, os dados poderão apresentar **2015-04-20T15:52**. Elimine 2015-04-20T15:52 para não serem apresentados dados. Utilize as seguintes informações para localizar o caminho do registo para eliminar os dados deste valor de registo.
 
@@ -150,7 +165,9 @@ Ao editar o registo nos computadores ao executar o Office 2016, Office 2013 ou a
 3.  Reinicie as suas aplicações do Office e instâncias do Explorador de Ficheiros.
 
 
-## <a name="see-also"></a>Consulte Também
+<a id="see-also" class="xliff"></a>
+
+## Consulte Também
 [Configurar modelos personalizados para o Azure Rights Management](configure-custom-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

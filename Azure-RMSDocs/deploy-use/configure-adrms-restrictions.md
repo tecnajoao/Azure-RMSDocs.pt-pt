@@ -4,18 +4,21 @@ description: "Conheça as limitações, pré-requisitos e recomendações se sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/02/2017
+ms.date: 05/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: 984bc844187a419cb73ab30527278d1762b70fcb
-ms.sourcegitcommit: 45053160d956587fcf45e021065e452a4c48aa4c
+ms.openlocfilehash: ca0fe89178840917fba4ae672547f6852123d699
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: pt-PT
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>Requisitos e restrições de Tenha a sua própria chave (HYOK) para proteção do AD RMS
+<a id="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection" class="xliff"></a>
+
+# Requisitos e restrições de Tenha a sua própria chave (HYOK) para proteção do AD RMS
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -54,7 +57,9 @@ Os utilizadores não saberão quando uma etiqueta utiliza a proteção do AD RMS
 
 As [políticas de âmbito](configure-policy-scope.md) são uma boa forma de garantir que apenas os utilizadores que precisam de aplicar a proteção do AD RMS veem as etiquetas configuradas para a proteção do AD RMS. 
 
-## <a name="additional-limitations-when-using-hyok"></a>Limitações adicionais ao utilizar HYOK
+<a id="additional-limitations-when-using-hyok" class="xliff"></a>
+
+## Limitações adicionais ao utilizar HYOK
 
 Além de não suportar as vantagens indicadas que obtém quando utiliza a proteção do Azure RMS, utilizar a proteção do AD RMS com o Azure Information Protection tem as seguintes limitações:
 
@@ -70,7 +75,9 @@ Além de não suportar as vantagens indicadas que obtém quando utiliza a prote�
     
     A única solução é fechar a mensagem de e-mail e começar novamente. A mesma limitação é aplicável se os utilizadores escolherem primeiro uma etiqueta que aplica a proteção do Azure RMS e, em seguida, alterarem a etiqueta para uma que aplica a proteção do AD RMS.
 
-## <a name="requirements-for-hyok"></a>Requisitos para HYOK
+<a id="requirements-for-hyok" class="xliff"></a>
+
+## Requisitos para HYOK
 
 Verifique se a sua implementação do AD RMS cumpre os requisitos seguintes para fornecer proteção do AD RMS para o Azure Information Protection.
 
@@ -102,7 +109,9 @@ Verifique se a sua implementação do AD RMS cumpre os requisitos seguintes para
 Para obter informações de implementação e instruções para o AD RMS, veja [Serviços de Gestão de Direitos do Active Directory](https://technet.microsoft.com/library/hh831364.aspx) na biblioteca do Windows Server. 
 
 
-## <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Localizar as informações para especificar a proteção do AD RMS com uma etiqueta do Azure Information Protection
+<a id="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label" class="xliff"></a>
+
+## Localizar as informações para especificar a proteção do AD RMS com uma etiqueta do Azure Information Protection
 
 Quando configura uma etiqueta para a proteção do **HYOK (AD RMS)**, tem de especificar o GUID do modelo e o URL de licenciamento do cluster do AD RMS. Pode localizar estes valores na consola dos Serviços de Gestão de Direitos do Active Directory:
 
@@ -112,7 +121,9 @@ Quando configura uma etiqueta para a proteção do **HYOK (AD RMS)**, tem de esp
     
     Se tiver um valor de licenciamento de extranet, bem como um valor de licenciamento de intranet e forem diferentes: especifique o valor de extranet apenas se for partilhar documentos ou e-mails protegidos com parceiros que definiu com confianças ponto a ponto explícitas. Caso contrário, utilize o valor de intranet e certifique-se de que todos os computadores cliente que utilizam a proteção do AD RMS com o Azure Information Protection se ligam através de uma ligação de intranet (por exemplo, computadores remotos que utilizam uma ligação VPN).
 
-## <a name="next-steps"></a>Passos seguintes
+<a id="next-steps" class="xliff"></a>
+
+## Passos seguintes
 
 Para obter mais informações sobre esta funcionalidade e orientações para quando a utilizar, consulte o anúncio do blogue [Azure Information Protection com HYOK (Tenha a Sua Própria Chave)](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/).
 

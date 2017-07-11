@@ -4,17 +4,21 @@ description: "Passo 2 de um tutorial de introdução para experimentar o Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2017
+ms.date: 05/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 9a2392df400356e7937db49cec3e0fe1e3d0f228
-ms.sourcegitcommit: d814d2876cf56e8fff0b107a5e3ec6df2aeda9ae
-translationtype: HT
+ms.openlocfilehash: b91bfea99170b747bb199b3c966ae8c89fae5359
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passo 2: configurar e publicar a política do Azure Information Protection
+<a id="step-2-configure-and-publish-the-azure-information-protection-policy" class="xliff"></a>
+
+# Passo 2: configurar e publicar a política do Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -29,7 +33,7 @@ Apesar de o Azure Information Protection ser fornecido com uma política predefi
     > [!TIP] 
     > Selecione **Afixar ao dashboard** para criar um mosaico do **Azure Information Protection** no seu dashboard. Assim, não terá de procurar o serviço da próxima vez que iniciar sessão no portal.
 
-3.  Explore o painel **Política: Global**, apresentado automaticamente, que mostra a política do Information Protection predefinida criada automaticamente para o seu inquilino:
+3. Preste atenção às informações na página **Início rápido** que se abre automaticamente ao ligar ao serviço pela primeira vez. Pode regressar aqui mais tarde. Para ver este tutorial, clique em **Política global** para abrir o painel **Política: Global**. Este painel abre automaticamente para as ligações subsequentes do serviço e mostra a política do Information Protection predefinida criada automaticamente para o seu inquilino:
     
     - Etiquetas para classificação: **Pessoal**, **Público**, **Geral**, **Confidencial** e **Altamente Confidencial**. As últimas duas etiquetas expandem-se para mostrar subetiquetas: **Todos os Funcionários** e **Todos (não protegidos)**, para disponibilizar exemplos de como uma classificação pode ter subcategorias.
     
@@ -46,7 +50,9 @@ Apesar de o Azure Information Protection ser fornecido com uma política predefi
     
     ![Passo 3 do tutorial de início rápido do Azure Information Protection – política predefinida](../media/info-protect-policy-default-settings.png)
 
-## <a name="changing-the-settings-for-a-default-label-and-prompt-for-justification"></a>Alterar as definições para uma etiqueta predefinida e pedir uma justificação
+<a id="changing-the-settings-for-a-default-label-and-prompt-for-justification" class="xliff"></a>
+
+## Alterar as definições para uma etiqueta predefinida e pedir uma justificação
 
 Para o nosso tutorial, vamos alterar algumas dessas definições de política para que possa ver como funcionam:
 
@@ -56,7 +62,9 @@ Para o nosso tutorial, vamos alterar algumas dessas definições de política pa
 
 2. Para **Os utilizadores têm de fornecer uma justificação para reduzir a etiqueta de classificação, remover uma etiqueta ou remover a proteção** defina esta opção como **Ativado**.
 
-## <a name="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification"></a>Configurar uma etiqueta para proteção, uma marca d'água e uma condição para pedidos de classificação
+<a id="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification" class="xliff"></a>
+
+## Configurar uma etiqueta para proteção, uma marca d'água e uma condição para pedidos de classificação
 
 Iremos alterar as definições de uma das subetiquetas, **Todos os Funcionários**, da etiqueta principal **Confidencial**. 
 

@@ -4,7 +4,7 @@ description: "Informações sobre operações de ciclo de vida que são relevant
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/08/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,25 +12,28 @@ ms.technology: techgroup-identity
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 095b847b522aa7c7468b2f6475b4e839619be2b2
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 781e534566fe01bca4583d2fb5a1a430db77429b
+ms.sourcegitcommit: 1dee39e5e3b222b4aab2b6c4284b82927148407e
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/13/2017
 ---
-# <a name="customer-managed-tenant-key-lifecycle-operations"></a>Operações de ciclo de vida das chaves de inquilino: geridas pelo cliente
+# Operações de ciclo de vida das chaves de inquilino: geridas pelo cliente
+<a id="customer-managed-tenant-key-lifecycle-operations" class="xliff"></a>
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
 Se gerir a sua chave de inquilino para o Azure Information Protection (o cenário traga a sua própria chave ou BYOK), utilize as secções seguintes para obter mais informações sobre as operações de ciclo de vida que são relevantes para esta topologia.
 
-## <a name="revoke-your-tenant-key"></a>Revogar a chave de inquilino
+## Revogar a chave de inquilino
+<a id="revoke-your-tenant-key" class="xliff"></a>
 No Azure Key Vault, pode alterar as permissões no cofre de chaves que contêm a chave de inquilino do Azure Information Protection, de modo a que o serviço Azure Rights Management já não possa aceder à chave. No entanto, ao fazê-lo, ninguém conseguirá abrir documentos e e-mails que anteriormente eram protegidos com o serviço Azure Rights Management.
 
 Quando cancelar a sua subscrição do Azure Information Protection, o Azure Information Protection deixará de utilizar a sua chave de inquilino e não será necessário que faça mais nada.
 
 
-## <a name="re-key-your-tenant-key"></a>Efetuar a recodificação da chave de inquilino
+## Efetuar a recodificação da chave de inquilino
+<a id="re-key-your-tenant-key" class="xliff"></a>
 A recodificação também é conhecida como implementação da chave. Não efetue a recodificação da chave de inquilino, a menos que seja realmente necessário. Os clientes antigos, tal como o Office 2010, não foram concebidos para processar alterações de chave corretamente. Neste cenário, tem de limpar o estado do Rights Management nos computadores através da Política de Grupo ou um mecanismo equivalente. No entanto, existem alguns eventos legítimos que poderão forçá-lo a efetuar a recodificação da chave de inquilino. Por exemplo:
 
 -   A sua empresa foi dividida em duas ou mais empresas. Quando efetua a recodificação da chave de inquilino, a nova empresa não terá acesso ao conteúdo novo que os seus funcionários publicam. Estes podem aceder ao conteúdo antigo se tiverem uma cópia da chave de inquilino antiga.
@@ -39,17 +42,20 @@ A recodificação também é conhecida como implementação da chave. Não efetu
 
 Quando efetua a recodificação da chave de inquilino, o novo conteúdo é protegido através da utilização da nova chave de inquilino. Isto acontece de forma faseada, pelo que, durante um período de tempo, algum conteúdo novo irá continuar a ser protegido com a chave de inquilino antiga. O conteúdo previamente protegido permanece protegido para a sua chave de inquilino antiga. Para suportar este cenário, o Azure Information Protection retém a chave de inquilino antiga para poder emitir licenças para os antigos conteúdos.
 
-Para recodificar a sua chave de inquilino, primeiro recodifique a chave de inquilino do Azure Information Protection no Cofre de Chaves. Em seguida, execute o cmdlet [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkey) novamente e especifique o novo URL da chave.
+Para recodificar a sua chave de inquilino, primeiro recodifique a chave de inquilino do Azure Information Protection no Cofre de Chaves. Em seguida, execute o cmdlet [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey) novamente e especifique o novo URL da chave.
 
-## <a name="backup-and-recover-your-tenant-key"></a>Efetuar cópia de segurança e recuperar a chave de inquilino
+## Efetuar cópia de segurança e recuperar a chave de inquilino
+<a id="backup-and-recover-your-tenant-key" class="xliff"></a>
 É responsável pela cópia de segurança da sua chave de inquilino. Se gerou a chave de inquilino num HSM da Thales, para efetuar a cópia de segurança da chave, basta efetuar uma cópia de segurança do Ficheiro de Chave com Token, do ficheiro de Universo e dos Cartões de Administrador.
 
 Uma vez que transferiu a chave seguindo os procedimentos na secção [Implementar BYOK (traga a sua própria chave)](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key) do artigo [Planear e implementar a chave de inquilino do Azure Rights Management](../plan-design/plan-implement-tenant-key.md), o Cofre de Chaves irá manter o Ficheiro de Chave com Token, para proteção contra falhas de quaisquer nós do serviço. Este ficheiro está vinculado ao mundo da segurança da instância ou região do Azure específica. No entanto, não considere que esta seja uma cópia de segurança completa. Por exemplo, se alguma vez precisar de uma cópia de texto simples da sua chave para utilizar fora de um HSM da Thales, o Azure Key Vault não conseguirá recuperá-la porque apenas tem uma cópia não recuperável.
 
-## <a name="export-your-tenant-key"></a>Exportar a chave de inquilino
+## Exportar a chave de inquilino
+<a id="export-your-tenant-key" class="xliff"></a>
 Se utiliza o BYOK, não pode exportar a chave de inquilino do Azure Key Vault ou do Azure Information Protection. A cópia no Azure Key Vault não é recuperável. 
 
-## <a name="respond-to-a-breach"></a>Responder a uma violação
+## Responder a uma violação
+<a id="respond-to-a-breach" class="xliff"></a>
 Nenhum sistema de segurança, por mais forte que seja, está completo sem um processo de resposta a violações. A sua chave de inquilino pode estar comprometida ou ter sido roubada. Mesmo quando está bem protegida, podem existir vulnerabilidades na tecnologia HSM da geração atual ou nos algoritmos e comprimentos de chaves atuais.
 
 A Microsoft tem uma equipa dedicada para responder a incidentes de segurança nos seus produtos e serviços. Assim que existir um relatório credível de um incidente, esta equipa investiga o âmbito, a causa raiz e as resoluções. Se este incidente afetar os seus recursos, a Microsoft irá notificar os administradores de inquilinos do Azure Information Protection por e-mail através do endereço que especificou aquando da subscrição.

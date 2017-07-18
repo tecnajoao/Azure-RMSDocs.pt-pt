@@ -14,13 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 56a17c745ba55c2c7b97bd444be42e3554e795b9
 ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="create-configure-and-publish-a-custom-template" class="xliff"></a>
-
-# Criar, configurar e publicar um modelo personalizado
+# <a name="create-configure-and-publish-a-custom-template"></a>Criar, configurar e publicar um modelo personalizado
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -34,9 +32,7 @@ Tem de ser um administrador global para criar e gerir modelos no portal clássic
 
 Utilize os seguintes procedimentos para criar, configurar e publicar modelos personalizados do Rights Management.
 
-<a id="to-create-a-custom-template" class="xliff"></a>
-
-## Para criar um modelo personalizado
+## <a name="to-create-a-custom-template"></a>Para criar um modelo personalizado
 
 1.  Consoante opte por iniciar sessão no centro de administração do Office 365 ou no portal clássico do Azure, efetue um dos seguintes procedimentos:
 
@@ -76,9 +72,7 @@ Utilize os seguintes procedimentos para criar, configurar e publicar modelos per
 
 4. Na página de início rápido **Introdução ao Rights Management**, clique em **Gerir modelos de política de direitos**. Verá o modelo criado recentemente adicionado à lista de modelos, com o estado **Arquivado**. Nesta fase, o modelo é criado mas não é configurado nem é visível para os utilizadores.
 
-<a id="to-configure-and-publish-a-custom-template" class="xliff"></a>
-
-## Para configurar e publicar um modelo personalizado
+## <a name="to-configure-and-publish-a-custom-template"></a>Para configurar e publicar um modelo personalizado
 
 1.  Selecione o modelo criado recentemente na página **MODELOS** do portal clássico do Azure.
 
@@ -170,9 +164,7 @@ Para fazer alterações ao seu modelo, selecione-o e, em seguida, utilize os pas
 > [!WARNING]
 > Quando fizer alterações a um modelo que foi guardado anteriormente, os clientes não irão ver essas alterações feitas ao modelo até que os modelos sejam atualizados nos respetivos computadores. Para mais informações, veja [Atualizar modelos para os utilizadores](refresh-templates.md).
 
-<a id="see-also" class="xliff"></a>
-
-## Veja Também
+## <a name="see-also"></a>Veja Também
 [Configurar modelos personalizados para o Azure Rights Management](configure-custom-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -14,13 +14,11 @@ ms.reviewer: eymanor
 ms.suite: ems
 ms.openlocfilehash: 1f41aad2d132e087e9122b2683be4b45185527de
 ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="configuring-and-managing-templates-in-the-azure-information-protection-policy" class="xliff"></a>
-
-# Configurar e gerir modelos na política do Azure Information Protection
+# <a name="configuring-and-managing-templates-in-the-azure-information-protection-policy"></a>Configurar e gerir modelos na política do Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -43,9 +41,7 @@ Os modelos de gestão de direitos estão agora integrados com a política do Azu
 - Os modelos de gestão de direitos do seu inquilino são apresentados como etiquetas e, atualmente, as definições de configuração que são específicas para classificação e etiquetagem também estão disponíveis. 
 
 
-<a id="considerations-for-templates-in-the-azure-portal" class="xliff"></a>
-
-## Considerações para modelos no portal do Azure
+## <a name="considerations-for-templates-in-the-azure-portal"></a>Considerações para modelos no portal do Azure
 
 Antes de editar estes modelos ou convertê-los em etiquetas no portal do Azure, esteja ciente das seguintes alterações na implementação de gestão de modelos no portal clássico do Azure. Algumas limitações devem ser tratadas durante a pré-visualização:
 
@@ -69,9 +65,7 @@ Antes de editar estes modelos ou convertê-los em etiquetas no portal do Azure, 
 
 - O utilizador não cria um novo modelo a partir do contentor **Modelos**; em vez disso, cria uma etiqueta com a definição **Proteger** e configura os direitos de utilização e as definições a partir do painel **Proteção**. Para obter todas as instruções, veja [Criar um novo modelo](#to-create-a-new-template).
 
-<a id="to-configure-the-templates-in-the-azure-information-protection-policy" class="xliff"></a>
-
-## Para configurar os modelos na política do Azure Information Protection
+## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Para configurar os modelos na política do Azure Information Protection
 
 1. Numa nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com) como administrador de segurança ou administrador global.
 
@@ -93,9 +87,7 @@ Antes de editar estes modelos ou convertê-los em etiquetas no portal do Azure, 
 
 6. Para disponibilizar as alterações às aplicações e serviços dos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
 
-<a id="to-convert-templates-to-labels" class="xliff"></a>
-
-## Converter modelos em etiquetas
+## <a name="to-convert-templates-to-labels"></a>Converter modelos em etiquetas
 
 Quando tem uma subscrição que inclui a classificação, a etiquetagem e a proteção, pode converter um modelo numa etiqueta. Quando o faz, o modelo original é mantido mas, no portal do Azure, é apresentado agora como incluído numa nova etiqueta.
 
@@ -115,9 +107,7 @@ Ao converter um modelo numa etiqueta:
 
 - O modelo original deixará de ser apresentado em **Modelos** e, para o editar no portal do Azure, edita agora a etiqueta que foi criada. O modelo permanece disponível para o serviço Azure Rights Management e ainda pode ser gerido com os [comandos do PowerShell](administer-powershell.md).  
 
-<a id="to-create-a-new-template" class="xliff"></a>
-
-## Criar um novo modelo
+## <a name="to-create-a-new-template"></a>Criar um novo modelo
 
 Ao criar um novo modelo com a definição de proteção do **Azure RMS**, nos bastidores, esta ação cria um novo modelo personalizado que pode ser acedido por serviços e aplicações que se integram nos modelos do Rights Management.
 
@@ -138,9 +128,7 @@ Ao criar um novo modelo com a definição de proteção do **Azure RMS**, nos ba
 5. Para disponibilizar estes modelos às aplicações e serviços dos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
 
 
-<a id="next-steps" class="xliff"></a>
-
-## Próximos passos
+## <a name="next-steps"></a>Próximos passos
 
 Como em todas as alterações à política do Azure Information Protection, pode demorar até 15 minutos para que um computador que executa o cliente do Azure Information Protection conclua a transferência destes modelos. Para obter mais informações sobre como os computadores e os serviços transferem e atualizam modelos, veja [Atualizar modelos para utilizadores e serviços](refresh-templates.md).
 

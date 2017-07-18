@@ -14,13 +14,11 @@ ms.reviewer: eymanor
 ms.suite: ems
 ms.openlocfilehash: 960fe1abf2fa4f5b8976f190454d31849736298a
 ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="classify-and-protect-a-file-or-email-by-using-azure-information-protection" class="xliff"></a>
-
-# Classificar e proteger um ficheiro ou e-mail com o Azure Information Protection
+# <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Classificar e proteger um ficheiro ou e-mail com o Azure Information Protection
 
 >*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8 e Windows 7 com SP1*
 
@@ -28,9 +26,7 @@ A forma mais fácil de classificar e proteger os seus documentos e e-mails é du
 
 No entanto, também pode classificar e proteger ficheiros com o **Explorador de Ficheiros**, que suporta outros tipos de ficheiros e é uma forma conveniente de classificar e proteger vários ficheiros ao mesmo tempo. Este método suporta proteger documentos do Office, ficheiros PDF, ficheiros de texto e imagem e uma vasta gama de outros ficheiros. 
 
-<a id="safely-share-a-file-with-people-outside-your-organization" class="xliff"></a>
-
-### Partilhar um ficheiro de forma segura com pessoas fora da sua organização
+### <a name="safely-share-a-file-with-people-outside-your-organization"></a>Partilhar um ficheiro de forma segura com pessoas fora da sua organização
 
 Os ficheiros que estão protegidos são seguros para serem partilhados com outras pessoas. Por exemplo, anexe o ficheiro a um e-mail ou envie um convite a partir do site do SharePoint.
 
@@ -41,9 +37,7 @@ Se tiver definido as suas próprias permissões personalizadas e o ficheiro já 
 Quando o ficheiro está protegido com as permissões personalizadas, utilize o seu mecanismo de partilha padrão para partilhar o ficheiro. Se esta for a primeira vez que estas pessoas com as quais está a partilhar receberam um ficheiro protegido, poderão precisar de instruções para o visualizar. Para estas pessoas, pode copiar e colar a seguinte mensagem: **Protegi este ficheiro com o Microsoft Azure Information Protection. Para a primeira utilização, veja estas [instruções](https://aka.ms/rms-signup).**
 
 
-<a id="using-office-apps-to-classify-and-protect-your-documents-and-emails" class="xliff"></a>
-
-## Utilizar aplicações do Office para classificar e proteger os seus documentos e e-mails
+## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Utilizar aplicações do Office para classificar e proteger os seus documentos e e-mails
 
 Utilize a barra do Azure Information Protection e selecione uma das etiquetas que tenha sido configurada para si. 
 
@@ -59,19 +53,13 @@ Além de selecionar etiquetas manualmente, as etiquetas também podem ser aplica
 
 - O administrador configurou pedidos recomendados para selecionar uma etiqueta específica quando são detetados dados confidenciais. Pode aceitar a recomendação (e a etiqueta é aplicada) ou rejeitá-la (não é aplicada a etiqueta recomendada).
 
-<a id="exceptions-for-the-azure-information-protection-bar" class="xliff"></a>
+### <a name="exceptions-for-the-azure-information-protection-bar"></a>Exceções para a barra do Azure Information Protection 
 
-### Exceções para a barra do Azure Information Protection 
-
-<a id="dont-see-this-information-protection-bar-in-your-office-apps" class="xliff"></a>
-
-##### Não vê esta barra do Information Protection nas suas aplicações do Office?
+##### <a name="dont-see-this-information-protection-bar-in-your-office-apps"></a>Não vê esta barra do Information Protection nas suas aplicações do Office?
 
 - Poderá não ter o cliente do Azure Information Protection [instalado](install-client-app.md) ou o cliente está em execução no [modo apenas de proteção](client-protection-only-mode.md).
  
-<a id="is-the-label-that-you-expect-to-see-not-displayed-on-the-bar" class="xliff"></a>
-
-##### A etiqueta que pretende ver não é apresentada na barra? 
+##### <a name="is-the-label-that-you-expect-to-see-not-displayed-on-the-bar"></a>A etiqueta que pretende ver não é apresentada na barra? 
 
 - Se o administrador tiver configurado recentemente uma nova etiqueta para si, experimente fechar todas as instâncias da sua aplicação do Office e voltar a abrir-la. Esta ação verifica se as suas etiquetas sofreram alguma alteração.
 
@@ -79,9 +67,7 @@ Além de selecionar etiquetas manualmente, as etiquetas também podem ser aplica
 
 - A etiqueta pode estar numa política de âmbito que não inclui a sua conta. Contacte o suporte técnico ou o administrador.
 
-<a id="set-custom-permissions-for-a-document" class="xliff"></a>
-
-### Definir permissões personalizadas num documento
+### <a name="set-custom-permissions-for-a-document"></a>Definir permissões personalizadas num documento
 
 Pode especificar as suas próprias definições de proteção para documentos em vez de utilizar as definições de proteção que o administrador possa ter incluído com a etiqueta escolhida.
 
@@ -104,9 +90,7 @@ Pode especificar as suas próprias definições de proteção para documentos em
 5. Clique em **Aplicar** e espere pela mensagem **Permissões personalizadas aplicadas**. Em seguida, clique em **Fechar**.
 
 
-<a id="keyboard-shortcuts-for-the-azure-information-protection-bar" class="xliff"></a>
-
-### Atalhos de teclado da barra Azure Information Protection
+### <a name="keyboard-shortcuts-for-the-azure-information-protection-bar"></a>Atalhos de teclado da barra Azure Information Protection
 
 Para aceder à barra Azure Information Protection através de atalhos de teclado, utilize a seguinte combinação de teclas:
 
@@ -114,9 +98,7 @@ Para aceder à barra Azure Information Protection através de atalhos de teclado
 
 Em seguida, utilize a tecla de Tabulação para selecionar as etiquetas e outros controlos na barra (o ícone **Ocultar Etiquetas** e o ícone **Eliminar Etiqueta**) e a tecla Enter para os selecionar.
 
-<a id="using-file-explorer-to-classify-and-protect-files" class="xliff"></a>
-
-## Utilizar o Explorador de Ficheiros para classificar e proteger ficheiros
+## <a name="using-file-explorer-to-classify-and-protect-files"></a>Utilizar o Explorador de Ficheiros para classificar e proteger ficheiros
 
 Quando utiliza o Explorador de Ficheiros, pode rapidamente classificar e proteger um ficheiro único, vários ficheiros ou uma pasta. 
 
@@ -129,9 +111,7 @@ Alguns ficheiros são automaticamente excluídos da classificação e da proteç
 O guia do administrador contém uma lista completa dos tipos de ficheiro suportados e os ficheiros e pastas que estão automaticamente excluídos: [Tipos de ficheiro suportados pelo cliente do Azure Information Protection](client-admin-guide-file-types.md).
 
 
-<a id="to-classify-and-protect-a-file-by-using-file-explorer" class="xliff"></a>
-
-### Para classificar e proteger ficheiros com o Explorador de Ficheiros
+### <a name="to-classify-and-protect-a-file-by-using-file-explorer"></a>Para classificar e proteger ficheiros com o Explorador de Ficheiros
 
 1. No Explorador de Ficheiros, selecione o ficheiro, vários ficheiros ou uma pasta. Clique com o botão direito do rato e selecione **Classificar e proteger**. Por exemplo:
     
@@ -172,9 +152,7 @@ Se mudar de ideias sobre a classificação e proteção, ou precisar de modifica
 A classificação e proteção que especificou permanecem com o ficheiro, mesmo que o envie por e-mail ou o guarde noutra localização. Se tiver protegido o ficheiro, pode controlar a forma como as pessoas estão a utilizá-lo e, se necessário, revogar o acesso ao mesmo. Para obter mais informações, veja [Controlar e revogar os documentos protegidos quando utiliza o Azure Information Protection](client-track-revoke.md). 
 
 
-<a id="other-instructions" class="xliff"></a>
-
-## Outras instruções
+## <a name="other-instructions"></a>Outras instruções
 Pode obter mais instruções sobre os procedimentos no guia do utilizador do Azure Information Protection:
 
 -   [O que pretende fazer?](client-user-guide.md#what-do-you-want-to-do)

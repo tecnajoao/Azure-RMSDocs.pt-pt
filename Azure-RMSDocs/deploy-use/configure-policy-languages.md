@@ -12,13 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 ms.openlocfilehash: ec99bf36e8904a7304a9d33c32d17ba92e2e22d2
 ms.sourcegitcommit: 8b768e7e249e124f24acdf630d165eaf743f9c21
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 07/05/2017
 ---
-<a id="how-to-configure-labels-for-different-languages-in-azure-information-protection" class="xliff"></a>
-
-# Como configurar etiquetas para diferentes idiomas no Azure Information Protection
+# <a name="how-to-configure-labels-for-different-languages-in-azure-information-protection"></a>Como configurar etiquetas para diferentes idiomas no Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -29,9 +27,7 @@ Por predefinição, os nomes e as descrições das etiquetas suportam um único 
 
 Selecione os idiomas que correspondem à definição de idioma do Office e do Windows. Estes nomes de etiqueta e descrições apresentam então a barra do Azure Information Protection em aplicações do Office, e na caixa de diálogo **Classificar e proteção - Azure Information Protection**, respetivamente. Para obter mais informações sobre os idiomas que são escolhidos, veja a secção [Como o cliente do Azure Information Protection determina o idioma a apresentar](#how-the-azure-information-protection-client-determines-the-language-to- display) nesta página. 
 
-<a id="to-configure-labels-to-display-in-different-languages" class="xliff"></a>
-
-## Configurar etiquetas para apresentar diferentes idiomas
+## <a name="to-configure-labels-to-display-in-different-languages"></a>Configurar etiquetas para apresentar diferentes idiomas
 
 1. Caso ainda não o tenha feito, numa nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com) como administrador de segurança ou administrador global e navegue para o painel **Azure Information Protection**. 
     
@@ -66,9 +62,7 @@ Selecione os idiomas que correspondem à definição de idioma do Office e do Wi
     
     Quando a importação é concluída, os nomes das etiquetas e das descrições são transferidos para os utilizadores depois de publicar a política do Azure Information Protection. Pode clicar em **Publicar** a partir do painel **Política global** ou **Políticas de âmbito**.
 
-<a id="how-the-azure-information-protection-client-determines-the-language-to-display" class="xliff"></a>
-
-## Como o cliente do Azure Information Protection determina o idioma a apresentar
+## <a name="how-the-azure-information-protection-client-determines-the-language-to-display"></a>Como o cliente do Azure Information Protection determina o idioma a apresentar
 
 Quando os utilizadores transferem uma política do Azure Information Protection que suporta idiomas diferentes, o idioma que os utilizadores veem para os seus nomes de etiqueta e descrições é determinado pela seguinte lógica:
 
@@ -84,9 +78,7 @@ Quando os utilizadores transferem uma política do Azure Information Protection 
 
 - Quando não há nenhuma correspondência do idioma do seu sistema operativo, os nomes de etiqueta e as descrições são apresentados no idioma especificado por predefinição de todos os utilizadores. Este idioma é normalmente o inglês, que é o idioma utilizado na política predefinida.
 
-<a id="when-localized-label-names-are-not-used" class="xliff"></a>
-
-## Quando os nomes de etiqueta localizados não são utilizados
+## <a name="when-localized-label-names-are-not-used"></a>Quando os nomes de etiqueta localizados não são utilizados
 
 Nos cenários a seguir, os nomes de etiqueta (e subetiqueta) localizados não são utilizados. Para obter consistência com o seu inquilino, o idioma predefinido sempre utilizado é o seguinte:
 
@@ -97,9 +89,7 @@ Nos cenários a seguir, os nomes de etiqueta (e subetiqueta) localizados não s�
 - Metadados de documento e cabeçalhos de e-mail
 
 
-<a id="next-steps" class="xliff"></a>
-
-## Passos seguintes
+## <a name="next-steps"></a>Passos seguintes
 
 Para mais informações sobre como configurar as opções que pode efetuar em relação a uma etiqueta e outras definições para a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).
 

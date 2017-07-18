@@ -14,13 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 8da24d00f6b6cb62bc745404e68e691b5afc2cb8
 ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="powershell-reference-for-custom-templates" class="xliff"></a>
-
-# Referência do PowerShell para modelos personalizados
+# <a name="powershell-reference-for-custom-templates"></a>Referência do PowerShell para modelos personalizados
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -55,9 +53,7 @@ Os cmdlets que suportam a criação e gestão de modelos:
 
 
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 [Configurar modelos personalizados para o Azure Rights Management](configure-custom-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

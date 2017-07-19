@@ -14,13 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: b1bb3308dc6e0561109602411fea3e63252fb9d4
 ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="technical-overview-and-protection-details-for-the-microsoft-rights-management-sharing-application" class="xliff"></a>
-
-# Descrição geral técnica e detalhes de proteção da aplicação de partilha Microsoft Rights Management
+# <a name="technical-overview-and-protection-details-for-the-microsoft-rights-management-sharing-application"></a>Descrição geral técnica e detalhes de proteção da aplicação de partilha Microsoft Rights Management
 
 >*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8 e Windows 8.1*
 
@@ -43,9 +41,7 @@ Com a versão de outubro de 2013 do RMS, pode proteger documentos nativamente co
 
 Para obter mais informações sobre a implementação, consulte [Implementação automática da aplicação de partilha Microsoft Rights Management](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)
 
-<a id="levels-of-protection--native-and-generic" class="xliff"></a>
-
-## Níveis de proteção – nativa e genérica
+## <a name="levels-of-protection--native-and-generic"></a>Níveis de proteção – nativa e genérica
 A aplicação de partilha Microsoft Rights Management suporta proteção a dois níveis diferentes, conforme descrito na tabela seguinte.
 
 |Tipo de proteção|Nativa|Genérico|
@@ -55,9 +51,7 @@ A aplicação de partilha Microsoft Rights Management suporta proteção a dois 
 |Predefinição para tipos de ficheiro|Este é o nível de proteção predefinido para os seguintes tipos de ficheiro:<br /><br />- Ficheiros de texto e imagem<br /><br />- Ficheiros do Microsoft Office (Word, Excel, PowerPoint)<br /><br />- Formato Portable Document Dormat (.pdf)<br /><br />Para mais informações, consulte a secção seguinte [Tipos de ficheiro suportados e extensões de nome de ficheiro](#supported-file-types-and-file-name-extensions).|Esta é a proteção predefinida para todos os outros tipos de ficheiro (tal como .vsdx, .rtf e etc.) que não são suportados pela proteção completa.|
 Pode alterar o nível de proteção predefinido aplicado pela aplicação de partilha RMS. Pode alterar o nível predefinido de nativa para genérica, de genérica para nativa e até mesmo impedir que a aplicação de partilha RMS aplique proteção. Para obter mais informações, consulte a secção [Alterar o nível de proteção predefinido dos ficheiros](#changing-the-default-protection-level-of-files) neste artigo.
 
-<a id="supported-file-types-and-file-name-extensions" class="xliff"></a>
-
-## Tipos de ficheiro suportados e extensões de nome de ficheiro
+## <a name="supported-file-types-and-file-name-extensions"></a>Tipos de ficheiro suportados e extensões de nome de ficheiro
 A tabela seguinte apresenta uma lista dos tipos de ficheiro que são suportados nativamente pela aplicação de partilha Microsoft Rights Management. Para estes tipos de ficheiro, a extensão de nome de ficheiro original é alterada quando a proteção nativa é aplicada e esses ficheiros passam a ser só de leitura.
 
 Além disso, quando a aplicação de partilha RMS protege nativamente um ficheiro do Word, Excel ou PowerPoint que os utilizadores protegem através da partilha, esta ação cria automaticamente um segundo ficheiro que é uma cópia do original com o mesmo nome de ficheiro, mas com uma extensão de nome de ficheiro **.ppdf**¹. Esta versão do ficheiro garante que os destinatários que instalem a aplicação de partilha RMS podem abrir sempre o ficheiro ao qual foi aplicada proteção nativa.
@@ -90,9 +84,7 @@ A tabela seguinte apresenta uma lista dos tipos de ficheiro que a aplicação de
 |----------------------------------|----------------------------------|
 |.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm|.pptx<br /><br />.thmx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
 
-<a id="changing-the-default-protection-level-of-files" class="xliff"></a>
-
-### Alterar o nível de proteção predefinido dos ficheiros
+### <a name="changing-the-default-protection-level-of-files"></a>Alterar o nível de proteção predefinido dos ficheiros
 Pode alterar a forma como a aplicação de partilha RMS protege os ficheiros ao editar o registo. Por exemplo, pode forçar os ficheiros que suportam a proteção nativa a serem protegidos genericamente pela aplicação de partilha RMS.
 
 Seguem-se alguns motivos pelos quais poderá pretender fazê-lo:
@@ -139,9 +131,7 @@ Pode efetuar edições de registo semelhantes para outros cenários ao alterar o
 
 -   **Desativado**: bloquear proteção
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

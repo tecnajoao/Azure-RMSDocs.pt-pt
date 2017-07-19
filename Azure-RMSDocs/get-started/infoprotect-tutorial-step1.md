@@ -12,13 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 ms.openlocfilehash: adc2baa875595d5044b47a9f014cc1381ba85dc2
 ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="step-1-activate-the-rights-management-service" class="xliff"></a>
-
-# Passo 1: ativar o serviço Rights Management
+# <a name="step-1-activate-the-rights-management-service"></a>Passo 1: ativar o serviço Rights Management
  
 >*Aplica-se a: Azure Information Protection*
 
@@ -31,9 +29,7 @@ Quando o serviço Azure Rights Management for ativado, poderá proteger os e-mai
 
 Para este tutorial, iremos avançar diretamente para a página de ativação no portal de administração para administradores do Office 365. No entanto, se preferir navegar para esta página a partir do seu portal de administração do Office 365, em vez de ir diretamente para a página, veja as instruções completas em [Ativar o Azure Rights Management](../deploy-use/activate-service.md). Além disso, utilize estas instruções completas se tiver acesso ao portal do Azure, mas não ao portal de administração do Office 365.
 
-<a id="to-activate-the-rights-management-service" class="xliff"></a>
-
-## Para ativar o serviço Rights Management
+## <a name="to-activate-the-rights-management-service"></a>Para ativar o serviço Rights Management
 
 1. Abra uma nova janela do browser e aceda diretamente à [página de ativação do Rights Management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) para administradores do Office 365.
     

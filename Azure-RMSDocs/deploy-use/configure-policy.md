@@ -14,21 +14,17 @@ ms.reviewer: eymanor
 ms.suite: ems
 ms.openlocfilehash: 7a4922384a228457b683653e80afe4b8c8db6df2
 ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="configuring-azure-information-protection-policy" class="xliff"></a>
-
-# Configurar a política do Azure Information Protection
+# <a name="configuring-azure-information-protection-policy"></a>Configurar a política do Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection*
 
 Para configurar a classificação, a etiquetagem e a proteção, tem de configurar a política do Azure Information Protection. Esta política é, em seguida, transferida para computadores que têm instalado o [cliente do Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-<a id="subscription-support" class="xliff"></a>
-
-## Suporte da subscrição
+## <a name="subscription-support"></a>Suporte da subscrição
 
 A política do Azure Information Protection suporta diferentes níveis de subscrições:
 
@@ -46,9 +42,7 @@ Para obter mais informações sobre as subscrições, veja [De que subscrição 
 
 Para obter mais informações sobre como configurar políticas de âmbito, veja [Como configurar a política para utilizadores específicos com políticas de âmbito](configure-policy-scope.md).
 
-<a id="how-to-configure-the-azure-information-protection-policy" class="xliff"></a>
-
-## Como configurar a política do Azure Information Protection
+## <a name="how-to-configure-the-azure-information-protection-policy"></a>Como configurar a política do Azure Information Protection
 
 1. Numa nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com) como administrador de segurança ou administrador global.
 
@@ -91,9 +85,7 @@ O cliente do Azure Information Protection verifica se existem alterações sempr
 >[!NOTE]
 >Quando o cliente transferir a política, poderá ter de aguardar alguns minutos até que fique totalmente operacional. O tempo em questão varia devido a fatores como o tamanho e a complexidade da configuração da política e a conectividade de rede. Se a ação resultante das suas etiquetas não corresponder às suas alterações mais recentes, aguarde 15 minutos e tente novamente.
 
-<a id="configuring-your-organizations-policy" class="xliff"></a>
-
-### Configurar a política da organização
+### <a name="configuring-your-organizations-policy"></a>Configurar a política da organização
 
 Utilize as seguintes informações para ajudar a configurar a política do Azure Information Protection:
 
@@ -119,9 +111,7 @@ Utilize as seguintes informações para ajudar a configurar a política do Azure
 
 - [Como configurar etiquetas para diferentes idiomas](configure-policy-languages.md)
 
-<a id="next-steps" class="xliff"></a>
-
-## Próximos passos
+## <a name="next-steps"></a>Próximos passos
 
 Para obter um exemplo de como personalizar a política predefinida e ver o comportamento resultante de uma aplicação do Office, experimente o [Tutorial de início rápido do Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 

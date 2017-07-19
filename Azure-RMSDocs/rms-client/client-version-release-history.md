@@ -14,13 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 9ee487f65f417c9faaf71f3c50b5d4e35659c55f
 ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="azure-information-protection-client-version-release-history" class="xliff"></a>
-
-# Cliente do Azure Information Protection: histórico de lançamento de versões
+# <a name="azure-information-protection-client-version-release-history"></a>Cliente do Azure Information Protection: histórico de lançamento de versões
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -36,9 +34,7 @@ Utilize as seguintes informações para ver o que há de novo ou o que foi alter
 > Se o problema continuar, veja as informações em [Opções de suporte e recursos da comunidade](../get-started/information-support.md#support-options-and-community-resources). Também o incentivamos a interagir com a equipa do Azure Information Protection, no [site Yammer](https://www.yammer.com/askipteam/).
 
 
-<a id="version-172100" class="xliff"></a>
-
-## Versão 1.7.210.0
+## <a name="version-172100"></a>Versão 1.7.210.0
 
 **Lançada**: 06/06/2017
 
@@ -63,9 +59,7 @@ Esta versão inclui a versão MSIPC 1.0.2217.1 do cliente RMS.
 - Novo cmdlet do PowerShell, [Set-AIPFileClassification](/powershell/module/azureinformationprotection/Set-AIPFileClassification). Ao executar este cmdlet, ele inspeciona os conteúdos do ficheiro e aplica automaticamente etiquetas em ficheiros sem etiqueta, de acordo com as condições que especificar na política do Azure Information Protection.
 
 
-<a id="version-14210" class="xliff"></a>
-
-## Versão 1.4.21.0
+## <a name="version-14210"></a>Versão 1.4.21.0
 
 **Lançada**: 15/03/2017
 
@@ -92,9 +86,7 @@ A versão anterior introduziu o novo pré-requisito do Microsoft .NET Framework�
 - Para os ficheiros PDF, o visualizador já suporta as opções como pesquisa, zoom e rodar. Para utilizar estas opções, clique com o botão direito do rato no ficheiro quando for apresentado no visualizador.
 
 
-<a id="version-131552" class="xliff"></a>
-
-## Versão 1.3.155.2
+## <a name="version-131552"></a>Versão 1.3.155.2
 
 **Lançada**: 08/02/2017
 
@@ -122,9 +114,7 @@ Esta versão do cliente é a [Versão de Disponibilidade Geral](https://blogs.te
 - [Guia do utilizador do Azure Information Protection](client-user-guide.md)
 
 
-<a id="version-1240" class="xliff"></a>
-
-## Versão 1.2.4.0
+## <a name="version-1240"></a>Versão 1.2.4.0
 
 **Lançada**: 27/10/2016
 
@@ -142,17 +132,13 @@ Esta versão do cliente é a [Versão de Disponibilidade Geral](https://blogs.te
 
     Para obter mais informações sobre esta opção, veja a secção [Verificações adicionais e resolução de problemas](client-admin-guide.md#additional-checks-and-troubleshooting) no guia do administrador.
 
-<a id="version-11230" class="xliff"></a>
-
-## Versão 1.1.23.0
+## <a name="version-11230"></a>Versão 1.1.23.0
 
 **Lançada**: 01/10/2016
 
 Disponibilidade Geral.
 
-<a id="next-steps" class="xliff"></a>
-
-## Passos seguintes
+## <a name="next-steps"></a>Passos seguintes
 
 Para obter mais informações sobre como instalar o cliente:
 

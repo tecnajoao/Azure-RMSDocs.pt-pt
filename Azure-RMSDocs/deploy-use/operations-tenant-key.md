@@ -14,13 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 10ce24e72dae1225505592508d4bf88cadb131a2
 ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="operations-for-your-azure-information-protection-tenant-key" class="xliff"></a>
-
-# Operações para a sua chave de inquilino do Azure Information Protection
+# <a name="operations-for-your-azure-information-protection-tenant-key"></a>Operações para a sua chave de inquilino do Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 

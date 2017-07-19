@@ -12,13 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
 ms.openlocfilehash: ac12ab9023499d5aac632159ef689a8f10a91418
 ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="how-to-create-a-new-label-for-azure-information-protection" class="xliff"></a>
-
-# Como criar uma nova etiqueta para o Azure Information Protection
+# <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Como criar uma nova etiqueta para o Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -48,9 +46,7 @@ Utilize as seguintes instruções para adicionar uma nova etiqueta à política 
 
 5. Se pretender que este novo nome de etiqueta e descrição sejam apresentados em idiomas diferentes para os utilizadores, siga os procedimentos em [Como configurar etiquetas para diferentes idiomas](configure-policy-languages.md). 
 
-<a id="next-steps" class="xliff"></a>
-
-## Próximos passos
+## <a name="next-steps"></a>Próximos passos
 
 Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).  
 

@@ -15,22 +15,16 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 899c05d233ec31db27cee058982c98d8dd809c3a
 ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="rms-developers-guide" class="xliff"></a>
+# <a name="rms-developers-guide"></a>Guia para Programadores do RMS
 
-# Guia para Programadores do RMS
-
-<a id="overview" class="xliff"></a>
-
-## Descrição Geral ##
+## <a name="overview"></a>Descrição Geral ##
 Estão agora disponíveis três gerações do SDK do Rights Management: **SDK Microsoft Rights Management 4.2** para Android, iOS/OS X, dispositivos Windows e Linux, **SDK Microsoft Rights Management 2.1** para o Cliente do Ambiente de Trabalho do Windows e o **SDK AD RMS** substituído.
 
-<a id="software-development-kits" class="xliff"></a>
-
-## Kits de Programação de Software ##
+## <a name="software-development-kits"></a>Kits de Programação de Software ##
 | SDK | Descrição |
 |------|---------|
 | [SDK RMS 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) | Um conjunto de ferramentas simplificado e de última geração que fornece uma experiência de desenvolvimento simples para ativar as aplicações de dispositivos Android, iOS, Mac OS X, Windows Phone/RT e Linux/C++ com a proteção de informações através de serviços Microsoft Rights Management Services |
@@ -38,9 +32,7 @@ Estão agora disponíveis três gerações do SDK do Rights Management: **SDK Mi
 |[SDK AD RMS]()|** NOTA ** – a funcionalidade de aproveitamento do AD RMS SDK exposta pelo cliente no Msdrm.dll está disponível para utilização no Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008 e Windows Vista. Pode ser alterada ou não estar disponível em versões posteriores. Em alternativa, utilize o SDK Microsoft Rights Management Services 2.1, que tira partido da funcionalidade exposta pelo cliente no Msipc.dll.|
 |[API de Scripting do AD RMS]()| Utilizada para criar scripts para administrar uma instalação do AD RMS|
 
-<a id="code-samples-and-tools" class="xliff"></a>
-
-## Exemplos de Código e Ferramentas ##
+## <a name="code-samples-and-tools"></a>Exemplos de Código e Ferramentas ##
 Esta coleção de ferramentas de suporte de programação e de exemplos de código do RMS fornecidos pela Microsoft abrange todos os sistemas operativos suportados; Android, iOS/OS X, Windows Phone e Ambiente de Trabalho do Windows e é atualizada periodicamente para manter a compatibilidade com o SDK suportado.
 
 | Item | Sistema Operativo | Suporte da Versão do SDK | Descrição |

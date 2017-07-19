@@ -4,7 +4,7 @@ description: "Verifique se tem as contas de utilizador e de grupo de que precisa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/03/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 362c5108238a0561c35d72faa556417f0f0f8566
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
-ms.translationtype: HT
+ms.openlocfilehash: f49d00317503f23d03ae64aa3608375b871b3854
+ms.sourcegitcommit: 1dee39e5e3b222b4aab2b6c4284b82927148407e
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/13/2017
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Preparar utilizadores e grupos para o Azure Information Protection
 
@@ -72,7 +72,7 @@ Para atribuir direitos de utilização e controlos de acesso, assim como configu
 
 - O atributo **proxyAddresses do Azure AD** armazena todos os endereços de e-mail de uma conta e pode ser preenchido de diferentes formas. Por exemplo, um utilizador do Office 365 que tem uma caixa de correio do Exchange Online terá automaticamente um endereço de e-mail que é armazenado neste atributo. Se atribuir um endereço de e-mail alternativo a um utilizador do Office 365, também será guardado neste atributo. De igual modo, pode ser preenchido com os endereços de e-mail que são sincronizados a partir de contas no local. 
     
-    O Azure Information Protection poderá utilizar qualquer valor neste atributo proxyAddresses do Azure AD se o domínio tiver sido adicionado ao inquilino (um “domínio verificado”). Para obter mais informações sobre a verificação de domínios:
+    O Azure Information Protection poderá utilizar qualquer valor neste atributo proxyAddresses do Azure AD, desde que o domínio tenha sido adicionado ao inquilino (um "domínio verificado"). Para obter mais informações sobre a verificação de domínios:
     
     - No Azure AD: [Adicionar um nome de domínio personalizado ao Azure Active Directory](/active-directory/active-directory-add-domain)
     
@@ -88,13 +88,13 @@ Além de utilizar os atributos proxyAddresses e userPrincipalName do Azure AD p
 
 Para atribuir etiquetas:
 
-- Pode utilizar qualquer tipo de grupo no Azure AD para configurar políticas de âmbito que atribuem etiquetas adicionais aos membros do grupo.
+- Para configurar políticas de âmbito que atribuem etiquetas adicionais aos membros do grupo, pode utilizar qualquer tipo de grupo no Azure AD que tenha um endereço de e-mail que contenha um domínio verificado do inquilino do utilizador. Um grupo que tem um endereço de e-mail é frequentemente referido como um grupo com capacidade de correio.
+    
+    Por exemplo, pode utilizar um grupo de segurança com capacidade de correio, um grupo de distribuição (que pode ser estático ou dinâmico) e um grupo do Office 365. Não pode utilizar um grupo de segurança (dinâmico ou estático), porque este tipo de grupo não tem um endereço de e-mail.
 
 Para atribuir direitos de utilização e controlos de acesso:
 
 - Pode utilizar qualquer tipo de grupo no Azure AD que tenha um endereço de e-mail com um domínio verificado do inquilino do utilizador. Um grupo que tem um endereço de e-mail é frequentemente referido como um grupo com capacidade de correio. 
-    
-    Por exemplo, pode utilizar um grupo de segurança com capacidade de correio, um grupo de distribuição (que pode ser estático ou dinâmico) e um grupo do Office 365. Não pode utilizar um grupo de segurança (dinâmico ou estático), porque este tipo de grupo não tem um endereço de e-mail.
 
 Para configurar o serviço Azure Rights Management:
 

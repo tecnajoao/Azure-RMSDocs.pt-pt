@@ -4,21 +4,19 @@ description: "Passo 2 de um tutorial de introdução para experimentar o Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: b91bfea99170b747bb199b3c966ae8c89fae5359
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
-ms.translationtype: HT
+ms.openlocfilehash: f6cd01357db99ee9d299606172aa85f7e2f44ba0
+ms.sourcegitcommit: 1dee39e5e3b222b4aab2b6c4284b82927148407e
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/13/2017
 ---
-<a id="step-2-configure-and-publish-the-azure-information-protection-policy" class="xliff"></a>
-
-# Passo 2: configurar e publicar a política do Azure Information Protection
+# <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passo 2: configurar e publicar a política do Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -46,13 +44,11 @@ Apesar de o Azure Information Protection ser fornecido com uma política predefi
     
     ![Passo 3 do tutorial de início rápido do Azure Information Protection – política predefinida](../media/info-protect-policy-default-labelsv2.png)
     
-    Além disso, existem algumas definições de política que não estão definidas para que, por exemplo, todos os documentos e e-mails não precisem de uma etiqueta, não existam etiquetas predefinidas e os utilizadores não tenham de fornecer uma justificação ao alterar as etiquetas:
+    Além disso, existem algumas definições de política que não estão definidas. Por exemplo, os documentos e e-mails não precisam de uma etiqueta, não existem etiquetas predefinidas e os utilizadores não têm de fornecer uma justificação para alterar as etiquetas:
     
     ![Passo 3 do tutorial de início rápido do Azure Information Protection – política predefinida](../media/info-protect-policy-default-settings.png)
 
-<a id="changing-the-settings-for-a-default-label-and-prompt-for-justification" class="xliff"></a>
-
-## Alterar as definições para uma etiqueta predefinida e pedir uma justificação
+## <a name="changing-the-settings-for-a-default-label-and-prompt-for-justification"></a>Alterar as definições para uma etiqueta predefinida e pedir uma justificação
 
 Para o nosso tutorial, vamos alterar algumas dessas definições de política para que possa ver como funcionam:
 
@@ -62,9 +58,7 @@ Para o nosso tutorial, vamos alterar algumas dessas definições de política pa
 
 2. Para **Os utilizadores têm de fornecer uma justificação para reduzir a etiqueta de classificação, remover uma etiqueta ou remover a proteção** defina esta opção como **Ativado**.
 
-<a id="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification" class="xliff"></a>
-
-## Configurar uma etiqueta para proteção, uma marca d'água e uma condição para pedidos de classificação
+## <a name="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification"></a>Configurar uma etiqueta para proteção, uma marca d'água e uma condição para pedidos de classificação
 
 Iremos alterar as definições de uma das subetiquetas, **Todos os Funcionários**, da etiqueta principal **Confidencial**. 
 
@@ -82,9 +76,11 @@ Se a sua etiqueta **Confidencial** não tiver subetiquetas porque tem uma versã
     
     Esta ação abre o painel **Proteção**.
     
-3. No painel **Proteção**, certifique-se de que as opções **Azure RMS** e **Selecionar um modelo predefinido** estão selecionadas e, em seguida, clique na caixa pendente e selecione o modelo predefinido **\<o nome da sua organização> – Confidencial**.     
+3. No painel **Proteção**, certifique-se de que o **Azure RMS** está selecionado e que a opção **Selecionar um modelo predefinido** também está selecionada. Em seguida, clique na caixa pendente e selecione o modelo predefinido que permite que todos os utilizadores na sua organização vejam e editem os conteúdos protegidos. 
     
-    Por exemplo, se o nome de organização for VanArsdel, Lda., irá ver e selecionar **VanArsdel, Lda. – Confidencial**: 
+    Se tiver ativado o serviço Azure Rights Management recentemente, este modelo terá o nome **Confidencial\Todos os funcionários**. 
+    
+    Se o serviço Azure Rights Management já estava ativado antes de começar este tutorial, o seu modelo predefinido poderá designar-se **\<<nome da sua organização> – Confidencial**. Por exemplo, se o nome de organização for VanArsdel, Lda., irá ver e selecionar **VanArsdel, Lda. – Confidencial**: 
     
     ![Passo 3 do tutorial de início rápido do Azure Information Protection – definir a proteção do Azure RMS](../media/step2-select-rms-template.png)
     
@@ -108,7 +104,7 @@ Se a sua etiqueta **Confidencial** não tiver subetiquetas porque tem uma versã
     
     a. **Escolha o tipo de condição**: mantenha a predefinição **Incorporada**.
     
-    b. **Selecione incorporada**: no menu pendente, selecione **Número do Cartão de Crédito**.
+    b. **Selecione a condição incorporada**: no menu pendente, selecione **Número do Cartão de Crédito**.
     
     c. **Número mínimo de ocorrências**: mantenha a predefinição de **1**.
     

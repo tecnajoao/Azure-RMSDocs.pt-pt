@@ -4,46 +4,40 @@ description: "Uma descrição geral sobre o serviço Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2017
+ms.date: 07/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 0ca0c2aa3d7b21c3e1143af51c9518aa85b7ee93
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
-ms.translationtype: HT
+ms.openlocfilehash: fff96103544242510b7e53b1636f1f95fbd4bb2b
+ms.sourcegitcommit: c5e117f5329c6e5a93d5858a3b4609aadd8a6e7e
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/12/2017
 ---
-<a id="what-is-azure-information-protection" class="xliff"></a>
-
-# O que é o Azure Information Protection?
+# <a name="what-is-azure-information-protection"></a>O que é o Azure Information Protection?
 
 >*Aplica-se a: Azure Information Protection*
 
 O Azure Information Protection é uma solução na cloud que ajuda uma organização a classificar, etiquetar e proteger os respetivos documentos e e-mails. Tal pode ser feito automaticamente por administradores que definem regras e condições, manualmente pelos utilizadores ou numa combinação em que os utilizadores recebem recomendações. 
 
-A imagem seguinte mostra um exemplo do Azure Information Protection em ação. O administrador configurou regras para detetar dados confidenciais (neste caso, informações de cartão de crédito). Quando um utilizador guarda um documento do Word que contém informações de cartão de crédito, vê uma descrição personalizada que lhe recomenda que aplique uma etiqueta específica que o administrador configurou, que classifica e, opcionalmente, protege o documento. 
+A imagem seguinte mostra um exemplo do Azure Information Protection em ação. O administrador configurou regras para detetar dados confidenciais (neste caso, informações de cartão de crédito). Quando um utilizador guarda um documento do Word que contém informações de cartão de crédito, vê uma descrição personalizada que lhe recomenda que aplique uma etiqueta específica que o administrador configurou. Esta etiqueta classifica e, opcionalmente (consoante a configuração), protege o documento. 
 
 ![Exemplo de classificação recomendada para o Azure Information Protection](../media/info-protect-recommend-calloutsv2.png)
 
 Após os seus conteúdos serem classificados (e, opcionalmente, protegidos), pode acompanhar e controlar a forma como são utilizados. Pode analisar fluxos de dados para obter estatísticas sobre a sua empresa, detetar comportamentos de risco e tomar medidas corretivas, controlar o acesso a documentos, evitar a fuga ou utilização indevida de dados e assim sucessivamente.
 
-<a id="how-labels-apply-classification" class="xliff"></a>
+## <a name="how-labels-apply-classification"></a>Como as etiquetas aplicam a classificação
 
-## Como as etiquetas aplicam a classificação
+Pode utilizar etiquetas do Azure Information Protection para aplicar a classificação a documentos e e-mails. Quando o fizer, a classificação será sempre identificável, independentemente do local onde os dados são armazenados ou com quem são partilhados. As etiquetas incluem marcas visuais como cabeçalhos, rodapés ou marcas d'água. Os metadados são adicionados aos ficheiros e cabeçalhos de e-mail em texto não encriptado. O texto não encriptado garante que outros serviços (tais como soluções de prevenção de perda de dados) conseguem identificar a classificação e tomar as medidas adequadas. 
 
-Pode utilizar etiquetas do Azure Information Protection para aplicar a classificação a documentos e e-mails. Quando o fizer, a classificação será sempre identificável, independentemente do local onde os dados são armazenados ou com quem são partilhados. As etiquetas incluem marcas visuais como cabeçalhos, rodapés ou marcas d'água. São adicionados metadados a ficheiros e cabeçalhos de e-mail em texto simples para que outros serviços (tais como soluções de prevenção de perda de dados) possam identificar a classificação e tomar as medidas adequadas. 
-
-Por exemplo, a seguinte mensagem de e-mail foi classificada como "Interna". Esta etiqueta é adicionada em rodapé à mensagem de e-mail e serve como indicador visual para informar todos os destinatários de que a mesma se destina a utilização interna e não deve ser enviada para fora da organização. Esta etiqueta também é incorporada nos cabeçalhos de e-mail para que os serviços de e-mail possam inspecionar este valor e criar uma entrada de auditoria ou impedir o e-mail de ser enviado para fora da organização.
+Por exemplo, a seguinte mensagem de e-mail foi classificada como "Geral". Esta etiqueta será adicionada como um rodapé à mensagem de e-mail. Este rodapé é um indicador visual para todos os destinatários a informar que o e-mail contém dados empresariais gerais que não deverão ser enviados para fora da organização. A etiqueta também é incorporada nos cabeçalhos de e-mail para que os serviços de e-mail consigam inspecionar este valor e criar uma entrada de auditoria ou impedir o e-mail de ser enviado para fora da organização.
 
 ![Exemplo de rodapé de e-mail e cabeçalhos que mostram a classificação do Azure Information Protection](../media/example-email-footerv2.png)
 
 
-<a id="how-data-is-protected" class="xliff"></a>
-
-## Como os dados são protegidos
+## <a name="how-data-is-protected"></a>Como os dados são protegidos
 
 A tecnologia de proteção utiliza o *Azure Rights Management* (frequentemente abreviado para Azure RMS). Esta tecnologia está integrada com outros serviços e aplicações na cloud da Microsoft, como o Office 365 e o Azure Active Directory. Também pode ser utilizado com as suas próprias aplicações de linha de negócio e soluções de proteção de informações de fornecedores de software, sejam estas aplicações e soluções locais ou na cloud.
 
@@ -51,33 +45,29 @@ Esta tecnologia de proteção utiliza políticas de autorização, encriptação
 
 Por exemplo, pode configurar um documento de relatório ou uma folha de cálculo de previsão de vendas para que só possa ser acedido por pessoas na sua organização e controlar se esse documento pode ser editado, restringi-lo para acesso só de leitura ou impedi-lo de ser impresso. Pode configurar os e-mails da mesma forma e, além disso, impedir que sejam encaminhados ou impedir a utilização da opção Responder a Todos. Estas tarefas de proteção podem ser simplificadas e dinamizadas ao utilizar *modelos de gestão de direitos*.
 
-<a id="rights-management-templates" class="xliff"></a>
-
-### Modelos de gestão de direitos
+### <a name="rights-management-templates"></a>Modelos de gestão de direitos
 
 Quando ativar o serviço Azure Rights Management, serão criados dois modelos predefinidos que restringem o acesso aos dados a utilizadores na sua organização. Pode utilizar estes modelos para ajudar imediatamente a impedir a fuga de dados da sua organização. Também pode complementar estes modelos predefinidos ao configurar os seus próprios modelos personalizados que apliquem controlos mais restritivos.
 
-Estes modelos podem fazer parte da configuração de uma etiqueta, para que, quando uma etiqueta específica for aplicada a um documento (ou mensagem de e-mail), os dados sejam classificados e protegidos automaticamente. Os modelos também podem ser selecionados por utilizadores ou administradores em produtos e serviços que suportam a tecnologia Azure Rights Management.
+Estes modelos podem fazer parte da configuração de uma etiqueta, para que, quando uma etiqueta específica for aplicada a um documento ou a uma mensagem de e-mail, os dados sejam classificados e protegidos automaticamente. Os modelos também podem ser selecionados por utilizadores ou administradores em produtos e serviços que suportam a tecnologia Azure Rights Management.
 
 Este exemplo mostra como pode selecionar um modelo para uma etiqueta ao configurar a política do Azure Information Protection a partir do portal do Azure:
 
 ![Exemplo de seleção de modelos no portal do Azure](../media/info-protect-template-callout.png)
 
-Os mesmos modelos podem ser selecionados no centro de administração do Exchange para configurar as regras de fluxo de correio do Exchange Online, que suportam a tecnologia do Azure Rights Management:
+Estes modelos podem ser selecionados a partir do centro de administração do Exchange. Por exemplo, pode configurar as regras de fluxo de correio do Exchange Online para utilizar estes modelos, uma vez que o Exchange suporta a tecnologia Azure Rights Management:
 
 ![Exemplo de seleção de modelos para o Exchange Online](../media/templates-exchangeonline-callouts.png)
 
 Para obter mais informações sobre a proteção do Azure Rights Management, veja [O que é o Azure Rights Management?](what-is-azure-rms.md)
 
-<a id="integration-with-end-user-workflows" class="xliff"></a>
+## <a name="integration-with-end-user-workflows"></a>Integração com fluxos de trabalho de utilizador final
 
-## Integração com fluxos de trabalho de utilizador final
-
-O Azure Information Protection integra-se com os fluxos de trabalho existentes de utilizadores finais quando o cliente do Azure Information Protection é instalado. Este cliente instala a barra do Information Protection para aplicações do Office, conforme vimos na primeira imagem. A mesma barra é adicionada ao Excel, PowerPoint e Outlook. Por exemplo:
+O Azure Information Protection integra-se com os fluxos de trabalho existentes de utilizadores finais quando o cliente do Azure Information Protection é instalado. Este cliente instala a barra do Information Protection em aplicações do Office, conforme vimos na primeira imagem que mostrava esta barra no Word. Esta barra do Information Protection é adicionada ao Excel, PowerPoint e Outlook. Por exemplo:
 
 ![Exemplo de barra do Azure Information Protection no Excel](../media/excel2016-infoprotect-barv2.png)
 
-Esta barra do Information Protection facilita aos utilizadores finais a seleção de etiquetas para uma classificação correta. Se for necessário, estas etiquetas também podem proteger automaticamente documentos e e-mails.
+Esta barra do Information Protection torna mais fácil para os utilizadores finais selecionar etiquetas para a classificação correta. Se necessário, as etiquetas também podem ser aplicadas automaticamente de modo a reduzir o trabalho que os utilizadores teriam com essa tarefa ou para estarem em conformidade com as políticas da sua empresa.
 
 Para classificar e proteger tipos de ficheiro adicionais e para suportar vários ficheiros ao mesmo tempo, os utilizadores podem clicar com o botão direito do rato nos ficheiros ou numa pasta do Explorador de Ficheiros do Windows:
 
@@ -92,9 +82,7 @@ Depois de proteger um documento, os utilizadores e os administradores podem util
 ![Ícone Revogar acesso no site de controlo de documentos](../media/tracking-site-revoke-access-icon.png)
 
 
-<a id="resources-for-azure-information-protection" class="xliff"></a>
-
-## Recursos para o Azure Information Protection
+## <a name="resources-for-azure-information-protection"></a>Recursos para o Azure Information Protection
 
 - Anúncio: [o Azure Information Protection está agora Disponível Globalmente](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/04/azure-information-protection-is-now-generally-available/)
 
@@ -123,9 +111,7 @@ Depois de proteger um documento, os utilizadores e os administradores podem util
     - [BRK2128: enviar e-mails seguros a qualquer pessoa com a tecnologia do Microsoft Office 365 e do Azure Information Protection](https://myignite.microsoft.com/videos?q=BRK2128)
 
 
-<a id="next-steps" class="xliff"></a>
-
-## Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Leia a publicação do blogue [Azure Information Protection: Ready, set, protect! (Azure Information Protection: deixar tudo a postos para proteger informações)](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/)
 

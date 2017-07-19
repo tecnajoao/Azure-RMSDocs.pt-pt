@@ -4,21 +4,19 @@ description: "Um tutorial de introdução, com uma duração de aproximadamente 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/25/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: 023330bbd3909290e098bd7379d8cc2a24d36672
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
-ms.translationtype: HT
+ms.openlocfilehash: 9afee2da9cb6fdd787dfb6bdafe2ae64fdef9475
+ms.sourcegitcommit: ea03477312b64c0a846701e46d991fe2c85b3a1f
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/10/2017
 ---
-<a id="quick-start-tutorial-for-azure-information-protection" class="xliff"></a>
-
-# Tutorial de início rápido do Azure Information Protection 
+# <a name="quick-start-tutorial-for-azure-information-protection"></a>Tutorial de início rápido do Azure Information Protection 
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -28,10 +26,8 @@ Este tutorial destina-se a administradores de TI e consultores, para os ajudar a
 
 Se tiver alguma dificuldade em concluir este tutorial ou em utilizar o Azure Information Protection, ou se quiser ver o que tem sido dito sobre esta aplicação, aceda ao [site do Yammer do Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all).
 
-<a id="prerequisites" class="xliff"></a>
-
-## Pré-requisitos 
-Para concluir este tutorial, terá de ter o seguinte:
+## <a name="prerequisites"></a>Pré-requisitos 
+Para concluir este tutorial, precisa de ter o seguinte:
 
 - Uma subscrição que inclui o Azure Information Protection para classificação, etiquetagem e proteção. Este tutorial inclui algumas das funcionalidades avançadas, tais como a classificação automática de dados com recomendações de utilizador e o site de controlo de documentos. Confirme se tem uma subscrição para suportar estas funcionalidades para este tutorial. Para obter mais informações, consulte as [informações da subscrição](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) e a [lista de funcionalidades](https://www.microsoft.com/cloud-platform/azure-information-protection-features) no site do Azure Information Protection.
     
@@ -42,7 +38,7 @@ Para concluir este tutorial, terá de ter o seguinte:
 
 - Uma conta de administrador global para iniciar sessão no portal do Azure para configurar a política do Azure Information Protection. Esta conta também tem de ter um endereço de e-mail e um serviço de e-mail a funcionar (por exemplo, Exchange Online ou Exchange Server).
 
-- Um computador que execute o Windows (no mínimo o Windows 7 com o Service Pack 1) e que tenha instalado o Office 365 ProPlus com aplicações da versão 2016 ou 2013, o Office Professional Plus 2016, o Office Professional Plus 2013 com o Service Pack 1 ou o Office Professional Plus 2010. 
+- Um computador que execute o Windows (no mínimo o Windows 7 com Service Pack 1) e que tenha instalado o Office 365 ProPlus com aplicações da versão 2016 ou 2013, o Office Professional Plus 2016, o Office Professional Plus 2013 com Service Pack 1 ou o Office Professional Plus 2010 com Service Pack 2. Tem de estar com sessão iniciada nas suas aplicações do Office com a sua conta da cloud.
 
 Vamos começar.
 

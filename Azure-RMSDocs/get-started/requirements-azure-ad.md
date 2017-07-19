@@ -4,7 +4,7 @@ description: "Conheça os requisitos do Azure AD para utilizar o Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/01/2017
+ms.date: 07/11/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 27ce787cbf5370634f6b1e15903cc981f08656a2
-ms.sourcegitcommit: 505a2c182bcd5a87a7dcb43b9aa1e43244f4c537
-ms.translationtype: HT
+ms.openlocfilehash: ac14cb491c39f57c7a0f81d71300db3917587cd9
+ms.sourcegitcommit: 55c36739e1d9f3f0cf2e1777fe4302b443a49b8e
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/12/2017
 ---
-<a id="azure-active-directory-requirements-for-azure-information-protection" class="xliff"></a>
-
-# Requisitos do Azure Active Directory para o Azure Information Protection
+# <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Requisitos do Azure Active Directory para o Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
@@ -36,15 +34,13 @@ Para obter mais informações, consulte os recursos seguintes na documentação 
 
 Se pretender integrar o seu diretório do Azure AD com as suas florestas do AD no local, veja [Integrar as identidades no local com o Azure Active Directory](/active-directory/active-directory-aadconnect).
 
-<a id="scenarios-that-have-specific-requirements" class="xliff"></a>
-
-### Cenários com requisitos específicos 
+### <a name="scenarios-that-have-specific-requirements"></a>Cenários com requisitos específicos 
 
 Computadores a executar o Office 2010: 
 
 - Os computadores necessitam do [cliente Azure Information Protection](../rms-client/aip-client.md) (recomendado) ou da [aplicação de partilha Rights Management para Windows](../rms-client/sharing-app-windows.md) para se autenticarem no Azure Information Protection e no respetivo serviço de proteção de dados, o Azure Rights Management.
 
-- Se as suas contas de utilizador forem federadas (por exemplo, se utilizar o AD FS), terá de utilizar a Autenticação Integrada do Windows. Neste cenário, a autenticação baseada em formulários não conseguirá autenticar os utilizadores do Azure Information Protection.
+- Se as suas contas de utilizador forem federadas (por exemplo, se utilizar o AD FS), terá de utilizar a Autenticação Integrada do Windows. Neste cenário, a autenticação baseada em formulários não consegue autenticar os utilizadores do Azure Information Protection.
 
 Suporte para a autenticação baseada em certificados (CBA):
 
@@ -52,7 +48,7 @@ Suporte para a autenticação baseada em certificados (CBA):
 
 O valor UPN dos utilizadores não corresponde ao endereço de e-mail deles:
 
-- Não se trata de uma configuração recomendada. Se não puder alterar o valor UPN, configure o ID de início de sessão alternativo dos utilizadores e diga-lhes como iniciar sessão no Office com esse início de sessão alternativo. Para obter mais informações, veja [Configurar o ID de Início de Sessão Alternativo](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) e [As aplicações do Office pedem periodicamente credenciais para o SharePoint Online, o OneDrive e o Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
+- Esta configuração não é recomendada. Se não conseguir alterar o valor UPN, configure um ID de início de sessão alternativo para os utilizadores e diga-lhes como iniciar sessão no Office com esse início de sessão alternativo. Para obter mais informações, veja [Configurar o ID de Início de Sessão Alternativo](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) e [As aplicações do Office pedem periodicamente credenciais para o SharePoint Online, o OneDrive e o Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
     
     Quando o nome de domínio no valor UPN é um domínio validado para o seu inquilino, adicione o valor UPN do utilizador como outro endereço de e-mail ao atributo proxyAddresses do Azure AD. Esta ação permitirá que seja concedida autorização ao utilizador do Azure Rights Management se o seu valor UPN for especificado durante a concessão dos direitos de utilização. Para obter mais informações sobre isto e sobre como é concedida autorização às contas de utilizador, veja [Preparar utilizadores e grupos para o Azure Information Protection](../plan-design/prepare.md).
 
@@ -60,9 +56,7 @@ Os dispositivos móveis ou computadores Mac que autenticam no local com o AD FS
 
 - É necessário utilizar o AD FS na versão mínima de servidor do **Windows Server 2012 R2** ou num fornecedor de autenticação alternativo que suporte o protocolo OAuth 2.0.
 
-<a id="multi-factor-authentication-mfa-and-azure-information-protection" class="xliff"></a>
-
-## A autenticação multifator (MFA) e o Azure Information Protection
+## <a name="multi-factor-authentication-mfa-and-azure-information-protection"></a>A autenticação multifator (MFA) e o Azure Information Protection
 A utilização da autenticação multifator (MFA) com o Azure Information Protection requer pelo menos um dos seguintes:
 
 -   Office 2013 (versão mínima):
@@ -75,7 +69,7 @@ A utilização da autenticação multifator (MFA) com o Azure Information Protec
 
 -   Aplicação de partilha Rights Management para Windows:
 
-    -   Tem de ter instalada a versão mínima 1.0.1908.0, que pode ser confirmada ao aceder ao Painel de Controlo, Programas e Funcionalidades. Note que a aplicação de Partilha Rights Management está a ser substituída pelo cliente do Azure Information Protection. Para obter mais informações acerca da aplicação de partilha, veja [Aplicação de partilha Rights Management para Windows](../rms-client/sharing-app-windows.md).
+    - Tem de ter instalada a versão mínima 1.0.1908.0, que pode confirmar ao aceder ao Painel de Controlo > Programas e Funcionalidades. Note que a aplicação de Partilha Rights Management está a ser substituída pelo cliente do Azure Information Protection. Para obter mais informações acerca da aplicação de partilha, veja [Aplicação de partilha Rights Management para Windows](../rms-client/sharing-app-windows.md).
 
 -   Aplicação de partilha Rights Management para dispositivos móveis e computadores Mac:
 
@@ -85,19 +79,19 @@ Em seguida, configure a sua solução de MFA:
 
 -   Para inquilinos geridos pela Microsoft (que possuem o Azure Active Directory ou Office 365):
 
-    -   Configure a Azure MFA para impor a MFA aos utilizadores. Para obter instruções, veja [Introdução à Multi-Factor Authentication do Azure na cloud](/multi-factor-authentication/multi-factor-authentication-get-started-cloud) na documentação da Multi-factor Authentication.
+    - Configure a Azure MFA para impor a MFA aos utilizadores. Para obter instruções, veja [Introdução à Multi-Factor Authentication do Azure na cloud](/multi-factor-authentication/multi-factor-authentication-get-started-cloud) na documentação da Multi-factor Authentication.
 
         Para obter mais informações acerca da Azure MFA, veja [O que é a Multi-Factor Authentication do Azure?](/multi-factor-authentication/multi-factor-authentication)
 
--   Para inquilinos federados (que operam servidores de federação no local):
+- Para inquilinos federados (que operam servidores de federação no local):
 
-    -   Configure os servidores de federação para o Azure Active Directory ou Office 365. Por exemplo, se estiver a utilizar o AD FS, veja [Configurar Métodos de Autenticação Adicionais para o AD FS](https://technet.microsoft.com/library/dn758113.aspx) na TechNet.
+    - Configure os servidores de federação para o Azure Active Directory ou Office 365. Por exemplo, se estiver a utilizar o AD FS, veja [Configurar Métodos de Autenticação Adicionais para o AD FS](https://technet.microsoft.com/library/dn758113.aspx) na TechNet.
 
         Para obter mais informações acerca deste cenário, veja [Trabalhos no Office 365 – o programa de identidade está mais simples](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) no blogue do Office.
 
-<a id="next-steps" class="xliff"></a>
+O conector do Rights Management não suporta a MFA. Se implementar este conector nos seus servidores no local, tem de utilizar uma conta para o conector que não exija a MFA.
 
-## Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 Para verificar outros requisitos, veja [Requisitos do Azure Information Protection](requirements-azure-rms.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

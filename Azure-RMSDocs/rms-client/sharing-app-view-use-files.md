@@ -4,7 +4,7 @@ description: "Instruções de visualização e utilização de um ficheiro prote
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 07/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a10162139f2b188640c446477fd9b4756d48c31e
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
-ms.translationtype: HT
+ms.openlocfilehash: 0a510d559573e942b8a2bf392f36a1300dfbfb7a
+ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/18/2017
 ---
-<a id="view-and-use-files-that-have-been-protected-by-rights-management" class="xliff"></a>
-
-# Ver e utilizar ficheiros que foram protegidos pelo Rights Management
+# <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Ver e utilizar ficheiros que foram protegidos pelo Rights Management
 
 >*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8 e Windows 8.1*
 
@@ -36,9 +34,7 @@ Quando a [Aplicação de partilha Rights Management (RMS) está instalada no com
 >     Quando se inscrever, utilize o seu endereço de e-mail da empresa em vez de um endereço de e-mail pessoal. Caso se esteja a inscrever porque recebeu um anexo protegido, utilize o mesmo endereço de e-mail que foi utilizado para lhe enviar a mensagem de e-mail.
 > -   Para obter mais informações, consulte [RMS para indivíduos e Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-<a id="to-view-a-protected-file" class="xliff"></a>
-
-## Para ver um ficheiro protegido
+## <a name="to-view-a-protected-file"></a>Para ver um ficheiro protegido
 Ao utilizar o Explorador de Ficheiros ou a mensagem de e-mail que contém o anexo, faça duplo clique no ficheiro protegido e introduza as suas credenciais, se lhe for pedido.
 
 Se vir duas versões do ficheiro, mas com extensões de nome de ficheiro diferentes, abra o ficheiro com a extensão de ficheiro .ppdf apenas se o outro ficheiro não abrir. Se também não conseguir abrir a versão .ppdf, instale primeiro a [Aplicação de partilha RMS](install-sharing-app.md), que sabe como abrir ficheiros com uma extensão de nome de ficheiro .ppdf.
@@ -74,12 +70,7 @@ O modo como o ficheiro abre depende da forma como foi protegido, o que pode desc
 
 Para obter uma lista completa das extensões de nome de ficheiro que os serviços Rights Management suportam, consulte a secção [Tipos de ficheiro suportados e extensões de nome de ficheiro](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) no [Guia do administrador da aplicação de partilha Rights Management](sharing-app-admin-guide.md). Se a sua extensão de nome de ficheiro não constar da lista, faça uma pesquisa na Web para ver se é uma extensão de nome de ficheiro suportada por outra aplicação.
 
-> [!NOTE]
-> Se, depois de confirmar que o ficheiro está protegido pelo Rights Management, o ficheiro não abrir, transfira e utilize a [Ferramenta RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Siga as instruções na ferramenta para verificar se existem problemas no seu computador que possam impedir que um documento protegido seja aberto.
-
-<a id="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file" class="xliff"></a>
-
-## Para utilizar ficheiros que foram protegidos (por exemplo, editar e imprimir o ficheiro)
+## <a name="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file"></a>Para utilizar ficheiros que foram protegidos (por exemplo, editar e imprimir o ficheiro)
 Se pretender efetuar outras ações além da leitura (por exemplo, editar, copiar e imprimir) depois de abrir o ficheiro protegido, siga as instruções de acordo com a extensão de nome de ficheiro:
 
 - **O ficheiro tem uma extensão de nome de ficheiro *.pfile***
@@ -101,18 +92,14 @@ Se pretender efetuar outras ações além da leitura (por exemplo, editar, copia
     As aplicações otimizadas para o Rights Management sabem como abrir ficheiros que foram protegidos por outras aplicações otimizadas para o Rights Management. Além disso, também mantêm a proteção que lhes é aplicada, mesmo que edite o ficheiro ou o guarde com outro nome de ficheiro ou noutra localização. Estas aplicações permitem-lhe utilizar o ficheiro de acordo com as permissões aplicadas atualmente ao mesmo, para que o possa utilizar se tiver permissões para o fazer. Por exemplo, poderá conseguir editar o ficheiro, mas não imprimi-lo.
 
 
-<a id="examples-and-other-instructions" class="xliff"></a>
-
-## Exemplos e outras instruções
+## <a name="examples-and-other-instructions"></a>Exemplos e outras instruções
 Para obter exemplos de como pode utilizar a aplicação de partilha Rights Management e instruções sobre como proceder, veja as secções seguintes do guia do utilizador da aplicação de partilha Rights Management:
 
 -   [Exemplos de utilização da aplicação de partilha RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [O que pretende fazer?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

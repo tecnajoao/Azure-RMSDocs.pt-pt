@@ -12,13 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 ms.openlocfilehash: ff32ea4759b46683398a86c0a549d50710f9a943
 ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="how-to-change-or-customize-an-existing-label-for-azure-information-protection" class="xliff"></a>
-
-# Como alterar ou personalizar uma etiqueta existente para o Azure Information Protection
+# <a name="how-to-change-or-customize-an-existing-label-for-azure-information-protection"></a>Como alterar ou personalizar uma etiqueta existente para o Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -46,9 +44,7 @@ Para alterar uma etiqueta, utilize as instruções seguintes.
 > [!TIP]
 >Se pretender regressar a um dos rótulos predefinidos para os valores predefinidos, utilize as informações em [Política do Information Protection predefinida](configure-policy-default.md).
 
-<a id="next-steps" class="xliff"></a>
-
-## Próximos passos
+## <a name="next-steps"></a>Próximos passos
 
 Para mais informações sobre como configurar as opções que pode efetuar em relação a uma etiqueta e outras definições para a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).
 

@@ -12,13 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ms.openlocfilehash: f5c4e2f7513832a884820ec0c57c7da2dec5f04e
 ms.sourcegitcommit: 8b768e7e249e124f24acdf630d165eaf743f9c21
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 07/05/2017
 ---
-<a id="how-to-configure-a-label-for-rights-management-protection" class="xliff"></a>
-
-# Como configurar uma etiqueta para a proteção do Rights Management
+# <a name="how-to-configure-a-label-for-rights-management-protection"></a>Como configurar uma etiqueta para a proteção do Rights Management
 
 >*Aplica-se a: Azure Information Protection*
 
@@ -26,9 +24,7 @@ Pode proteger os seus documentos e e-mails mais confidenciais utilizando um serv
 
 O modelo pode ser um dos modelos predefinidos que são criados automaticamente ao ativar o Azure Rights Management ou um modelo personalizado. Os modelos departamentais do Azure Rights Management são suportados mas apenas aplicam a proteção quando o autor do documento ou do e-mail estiver dentro do âmbito configurado do modelo. Se o utilizador não estiver dentro do âmbito, este vê uma mensagem informando que o Azure Rights Management não pode aplicar a etiqueta.
 
-<a id="how-the-protection-works" class="xliff"></a>
-
-## Como funciona a proteção
+## <a name="how-the-protection-works"></a>Como funciona a proteção
 
 Quando um documento ou correio eletrónico está protegido pelo Azure Rights Management, este é encriptado em descanso e em trânsito e só pode ser desencriptado por utilizadores autorizados. Esta encriptação permanece com o documento ou com o e-mail, mesmo que o nome seja alterado. Além disso, pode configurar direitos e restrições de utilização, tal como nos exemplos seguintes:
 
@@ -54,9 +50,7 @@ Os utilizadores podem aplicar etiquetas no Outlook para protegerem os seus e-mai
 - Para o Exchange no local, tem de implementar o [conector RMS e configurar os servidores do Exchange](../deploy-use/deploy-rms-connector.md). 
 
 
-<a id="to-configure-a-label-for-rights-management-protection" class="xliff"></a>
-
-## Para configurar uma etiqueta para a proteção do Rights Management
+## <a name="to-configure-a-label-for-rights-management-protection"></a>Para configurar uma etiqueta para a proteção do Rights Management
 
 1. Caso ainda não o tenha feito, abra uma nova janela de browser e inicie sessão no [portal do Azure](https://portal.azure.com) como administrador de segurança ou administrador global e, em seguida, navegue para o painel **Azure Information Protection**. 
 
@@ -125,9 +119,7 @@ Os utilizadores podem aplicar etiquetas no Outlook para protegerem os seus e-mai
 
 13. Para disponibilizar as alterações aos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
 
-<a id="next-steps" class="xliff"></a>
-
-## Próximos passos
+## <a name="next-steps"></a>Próximos passos
 
 Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).  
 

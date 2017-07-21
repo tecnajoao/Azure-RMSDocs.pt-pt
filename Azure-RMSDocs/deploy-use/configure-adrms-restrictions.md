@@ -4,17 +4,17 @@ description: "Conheça as limitações, pré-requisitos e recomendações se sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/07/2017
+ms.date: 07/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: f1ae8d75b3fd3900b7c863be332656b71c647e1f
-ms.sourcegitcommit: 834b6bcab70a185018b4876b2d24b145e5089ac4
+ms.openlocfilehash: ac4068885df92c58ecba2a90e7aa0aeaaa34e8e9
+ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/07/2017
+ms.lasthandoff: 07/17/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>Requisitos e restrições de Tenha a sua própria chave (HYOK) para proteção do AD RMS
 
@@ -64,6 +64,8 @@ Além de não suportar as vantagens indicadas que obtém quando utiliza a prote�
 - Não utilize a opção **Não Reencaminhar** quando configurar uma etiqueta para a proteção do Azure RMS. Também tem de informar os utilizadores para não selecionarem manualmente esta opção no Outlook. 
 
     Se a opção Não Reencaminhar for aplicada por uma etiqueta ou manualmente pelos utilizadores, a opção poderá ser aplicada pela sua implementação do AD RMS em vez do serviço Azure Rights Management pretendido. Neste cenário, as pessoas com quem partilha externamente não poderão abrir mensagens de e-mail que têm esta opção Não Reencaminhar aplicada.
+    
+    A partir da versão 1.9.58.0 do cliente do Azure Information Protection (atualmente em pré-visualização), o botão **Não reencaminhar** no Outlook utiliza sempre o Azure RMS. Esta definição não afeta a opção de menu **Não Reencaminhar** do Outlook nem a opção **Não Reencaminhar** quando configura uma etiqueta para a proteção. Se não quiser este comportamento, pode ocultar o botão **Não Reencaminhar** no Outlook ao configurar uma [definição de cliente avançado](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook).
 
 - Se os utilizadores configurarem permissões personalizadas quando utiliza a proteção do AD RMS (HYOK) e a proteção do Azure RMS, o documento ou e-mail será sempre protegido pelo Azure Rights Management.
 

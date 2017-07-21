@@ -4,7 +4,7 @@ description: "Identifique os pré-requisitos para implementar o Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2017
+ms.date: 07/17/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 74c0725857148fe12943bd9368173124cb059dcf
-ms.sourcegitcommit: 1128ccda089727ac4a638e99532516474cef0ef4
+ms.openlocfilehash: 2a41876a8c307b0736901de895e10cf3d3201809
+ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/17/2017
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisitos para o Azure Information Protection
 
@@ -65,7 +65,7 @@ Os seguintes dispositivos suportam o cliente do Azure Information Protection, o 
 
 - Windows Server 2008 R2 
 
-Nas versões de servidor listadas, o cliente do Azure Information Protection é suportado para os Serviços de Ambiente de Trabalho Remoto. Se eliminar perfis de utilizadores ao utilizar o cliente do Azure Information Protection com os Serviços de Ambiente de Trabalho Remoto, não elimine a pasta **%LocalAppData%\Roaming\Microsoft\Protect**.
+Nas versões de servidor listadas, o cliente do Azure Information Protection é suportado para os Serviços de Ambiente de Trabalho Remoto. Se eliminar perfis de utilizador ao utilizar o cliente do Azure Information Protection com os Serviços de Ambiente de Trabalho Remoto, não elimine a pasta **%Appdata%\Microsoft\Protect**.
 
 Quando o cliente do Azure Information Protection protege os dados através do serviço Azure Rights Management, estes podem ser consumidos pelos [mesmos dispositivos](requirements-client-devices.md) que suportam o serviço Azure Rights Management.
 

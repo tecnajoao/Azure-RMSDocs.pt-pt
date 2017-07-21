@@ -12,17 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4f187b3fa991fb4ed3a11ded34fa663dc6b4bafc
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
-ms.translationtype: HT
+ms.openlocfilehash: cf36e96ff7399188818ef0afdbefc223a82b9900
+ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/17/2017
 ---
-<a id="file-types-supported-by-the-azure-information-protection-client" class="xliff"></a>
+# <a name="file-types-supported-by-the-azure-information-protection-client"></a>Tipos de ficheiro suportados pelo cliente do Azure Information Protection
 
-# Tipos de ficheiro suportados pelo cliente do Azure Information Protection
-
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 O cliente do Azure Information Protection pode aplicar o seguinte aos documentos e aos e-mails:
 
@@ -34,9 +32,7 @@ O cliente do Azure Information Protection pode aplicar o seguinte aos documentos
 
 Utilize as seguintes informações para verificar que tipos de ficheiro são suportados, os diferentes níveis de proteção, como alterar o nível de proteção predefinido e que ficheiros são excluídos (ignorados) automaticamente da proteção e da classificação.
 
-<a id="file-types-supported-for-classification-only" class="xliff"></a>
-
-## Tipos de ficheiro suportados apenas para classificação
+## <a name="file-types-supported-for-classification-only"></a>Tipos de ficheiro suportados apenas para classificação
 
 Os seguintes tipos de ficheiros suportam apenas a classificação. Existem tipos de ficheiro adicionais que suportam a classificação quando estes também estão protegidos (veja a secção [Tipos de ficheiros suportados para a classificação e proteção](#supported-file-types-for-classification-and-protection)).
 
@@ -61,9 +57,7 @@ Os seguintes tipos de ficheiros suportam apenas a classificação. Existem tipos
 
 - **Digital Negative**: .dng
 
-<a id="file-types-supported-for-protection" class="xliff"></a>
-
-## Tipos de ficheiro suportados para proteção
+## <a name="file-types-supported-for-protection"></a>Tipos de ficheiro suportados para proteção
 
 O cliente do Azure Information Protection suporta a proteção em dois níveis diferentes, conforme descrito na tabela seguinte.
 
@@ -77,9 +71,7 @@ Pode alterar o nível de proteção predefinido que o cliente do Azure Informati
 
 Esta proteção de dados pode ser aplicada automaticamente quando um utilizador seleciona uma etiqueta que um administrador tenha configurado ou, em alternativa, os utilizadores podem especificar as suas próprias definições de proteção personalizadas ao utilizar [níveis de permissão](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels). 
 
-<a id="file-sizes-supported-for-protection" class="xliff"></a>
-
-### Tamanhos de ficheiro suportados para proteção
+### <a name="file-sizes-supported-for-protection"></a>Tamanhos de ficheiro suportados para proteção
 
 Há tamanhos de ficheiro máximos que o cliente do Azure Information Protection suporta para proteção.
 
@@ -91,11 +83,13 @@ Há tamanhos de ficheiro máximos que o cliente do Azure Information Protection 
     |Excel 2007 (suportado apenas pelo AD RMS)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016|32 bits: 2 GB<br /><br />64 bits: limitado apenas pela memória e espaço disponível no disco|
     |PowerPoint 2007 (suportado apenas pelo AD RMS)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016|32 bits: limitado apenas pela memória e espaço disponível no disco<br /><br />64 bits: limitado apenas pela memória e espaço disponível no disco
 
-- **Para todos os outros ficheiros**: 1 GB
+- **Para todos os outros ficheiros**:
+    
+    - Para a versão de disponibilidade geral do cliente: - 1 GB
+    
+    - Para o cliente de pré-visualização (versão mínima de **1.8.41.0**): limitado apenas pela memória e espaço disponível no disco
 
-<a id="supported-file-types-for-classification-and-protection" class="xliff"></a>
-
-### Tipos de ficheiros suportados para a classificação e proteção
+### <a name="supported-file-types-for-classification-and-protection"></a>Tipos de ficheiros suportados para a classificação e proteção
 
 A seguinte tabela lista um subconjunto de tipos de ficheiro que suportam a proteção nativa pelo cliente do Azure Information Protection e que também podem ser classificados. 
 
@@ -128,9 +122,7 @@ Nestes ficheiros, a extensão de nome de ficheiro permanece igual depois de o fi
 |----------------------------------|----------------------------------|
 |.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm|.pptx<br /><br />.thmx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
 
-<a id="changing-the-default-protection-level-of-files" class="xliff"></a>
-
-### Alterar o nível de proteção predefinido dos ficheiros
+### <a name="changing-the-default-protection-level-of-files"></a>Alterar o nível de proteção predefinido dos ficheiros
 Pode alterar a forma como o cliente do Azure Information Protection protege os ficheiros ao editar o registo. Por exemplo, pode forçar os ficheiros que suportam a proteção nativa a serem protegidos genericamente pelo cliente do Azure Information Protection.
 
 Seguem-se alguns motivos pelos quais poderá pretender fazê-lo:
@@ -179,9 +171,7 @@ Pode efetuar edições de registo semelhantes para outros cenários ao alterar o
 
 Para obter informações adicionais, veja [Configuração da API de Ficheiros](../develop/file-api-configuration.md) na orientação para programadores. Nesta documentação para programadores, a proteção genérica é referida como "PFile". 
 
-<a id="file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-client" class="xliff"></a>
-
-## Tipos de ficheiro que estão excluídos da classificação e da proteção pelo cliente do Azure Information Protection
+## <a name="file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-client"></a>Tipos de ficheiro que estão excluídos da classificação e da proteção pelo cliente do Azure Information Protection
 
 Para ajudar a impedir que os utilizadores alterem os ficheiros que são críticos para operações informáticas, alguns tipos de ficheiro e pastas são automaticamente excluídos da proteção e da classificação. Se os utilizadores tentarem classificar ou proteger estes ficheiros, verão uma mensagem a indicar que foram excluídos.
 
@@ -194,9 +184,7 @@ Para ajudar a impedir que os utilizadores alterem os ficheiros que são crítico
     - \AppData (para todos os utilizadores)
 
 
-<a id="next-steps" class="xliff"></a>
-
-## Passos seguintes
+## <a name="next-steps"></a>Passos seguintes
 Agora que identificou os tipos de ficheiro suportados pelo cliente do Azure Information Protection, veja o seguinte para obter informações adicionais que poderá precisar para suportar este cliente:
 
 - [Personalizações](client-admin-guide-customizations.md)

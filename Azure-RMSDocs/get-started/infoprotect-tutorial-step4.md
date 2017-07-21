@@ -4,17 +4,17 @@ description: "Passo 4 de um tutorial de introdução para experimentar o Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 07/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
-ms.openlocfilehash: 9a21c10404582000a55ee0cea554aad9b5a552b3
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
-ms.translationtype: HT
+ms.openlocfilehash: d397ed8290d8b792b55ee78865cdbd41e330f8a9
+ms.sourcegitcommit: d42c6bb914563ae798d4171bb017c85b7077abfb
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/14/2017
 ---
 # <a name="step-4-see-classification-labeling-and-protection-in-action"></a>Passo 4: ver classificação, etiquetas e proteção em ação 
 
@@ -54,7 +54,7 @@ Na barra Information Protection, clique novamente no ícone **Editar Etiqueta**.
 
 Desta vez, quando lhe for apresentada uma mensagem, escreva "Este documento não precisa de ser classificado" e clique em **Confirmar**.  
 
-Verá que o valor **Sensibilidade** apresenta **Não definido**, a opção vista pelos utilizadores inicialmente se não definir uma etiqueta predefinida:
+Vê que o valor **Sensibilidade** apresenta **Não definido**, a opção vista pelos utilizadores inicialmente se não definir uma etiqueta predefinida:
 
 ![Passo 4 do tutorial de início rápido do Azure Information Protection – remover classificação](../media/sensitivity-not-setv2.png)
 
@@ -69,7 +69,7 @@ Verá que o valor **Sensibilidade** apresenta **Não definido**, a opção vista
 
     ![Passo 4 do tutorial de início rápido do Azure Information Protection – recomendar pedido](../media/change-nowv2.png)
 
-    Para além do documento a mostrar que a etiqueta configurada foi aplicada (por exemplo, **Confidencial\Todos os Funcionários**), verá automaticamente a marca d'água do nome da sua organização na página. O rodapé **Classificado como Confidencial** também é aplicado. 
+    Para além do documento a mostrar que a etiqueta configurada foi aplicada (por exemplo, **Confidencial\Todos os Funcionários**), vê automaticamente a marca d'água do nome da sua organização na página. O rodapé **Classificado como Confidencial** também é aplicado. 
 
     O documento é também protegido com o modelo do Azure Rights Management especificado, que pode confirmar quando clica no separador **Ficheiro** e ver as informações de **Proteger Documento**. Se utilizou o modelo de confidencialidade predefinido, é apresentada uma informação a indicar que o documento está restrito a utilizadores internos (os utilizadores fora da sua organização não conseguem abrir o documento) e os respetivos conteúdos não podem ser copiados ou impressos. Como proprietário do documento, pode copiar a partir do mesmo e imprimi-lo, mas se o enviar por e-mail a outro utilizador na sua organização, o mesmo não poderá efetuar estas ações.
 

@@ -4,7 +4,7 @@ description: "As instruções e as informações para os administradores gerirem
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/06/2017
+ms.date: 07/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,21 +12,19 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e39097a4786ddd71082eda4a5b445b3fb682f6b7
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
-ms.translationtype: HT
+ms.openlocfilehash: ceabbba93dd31f82ac4d0fa33898f8b09a7ee984
+ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/17/2017
 ---
-<a id="using-powershell-with-the-azure-information-protection-client" class="xliff"></a>
+# <a name="using-powershell-with-the-azure-information-protection-client"></a>Utilizar o PowerShell com o cliente do Azure Information Protection
 
-# Utilizar o PowerShell com o cliente do Azure Information Protection
-
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Quando instala o cliente do Azure Information Protection, os comandos do PowerShell são instalados automaticamente para que possa gerir o cliente ao executar comandos que pode colocar em scripts para a automatização.
 
-Os cmdlets são instalados com o módulo do PowerShell **AzureInformationProtection**, que substitui o módulo RMSProtection que foi instalado com a Ferramenta de Proteção RMS. Se tiver a ferramenta RMSProtection instalada ao instalar o cliente do Azure Information Protection, o módulo RMSProtection é automaticamente desinstalado.
+Os cmdlets são instalados com o módulo do PowerShell **AzureInformationProtection**. Este módulo substitui o módulo RMSProtection que é instalado com a Ferramenta de Proteção RMS. Se tiver a ferramenta RMSProtection instalada ao instalar o cliente do Azure Information Protection, o módulo RMSProtection é automaticamente desinstalado.
 
 O módulo AzureInformationProtection inclui todos os cmdlets do Rights Management da Ferramenta de Proteção RMS e três cmdlets novos que utilizam o serviço Azure Information Protection (AIP) para etiquetar:
 
@@ -58,16 +56,12 @@ Antes de começar a utilizar estes cmdlets, veja os pré-requisitos e as instru�
     - Aplicável se utilizar apenas a proteção com a versão no local do Azure Rights Management; Serviços de Gestão de Direitos do Active Directory (AD RMS).
 
 
-<a id="azure-information-protection-service-and-azure-rights-management-service" class="xliff"></a>
-
-## Serviço Azure Information Protection e serviço Azure Rights Management
+## <a name="azure-information-protection-service-and-azure-rights-management-service"></a>Serviço Azure Information Protection e serviço Azure Rights Management
 
 Leia esta secção antes de começar a utilizar os comandos do PowerShell se a sua organização utilizar o Azure Information Protection e o serviço de proteção de dados do Azure Rights Management ou apenas o serviço Azure Rights Management.
 
 
-<a id="prerequisites" class="xliff"></a>
-
-### Pré-requisitos
+### <a name="prerequisites"></a>Pré-requisitos
 
 Além dos pré-requisitos para instalar o módulo AzureInformationProtection, existem pré-requisitos adicionais para o serviço Azure Information Protection e o serviço de proteção de dados do Azure Rights Management:
 
@@ -85,25 +79,19 @@ Além dos pré-requisitos para instalar o módulo AzureInformationProtection, ex
     
     - Edite o registo para a autenticação no serviço.
 
-<a id="prerequisite-1-the-azure-rights-management-service-must-be-activated" class="xliff"></a>
-
-#### Pré-requisito 1: o serviço Azure Rights Management tem de ser ativado
+#### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>Pré-requisito 1: o serviço Azure Rights Management tem de ser ativado
 
 Este pré-requisito aplica-se quer aplique a proteção de dados através da utilização de etiquetas ou da ligação direta ao serviço Azure Rights Management para a aplicação da proteção de dados.
 
 Se o seu inquilino do Azure Information Protection não estiver ativado, veja as instruções para [Ativar o Azure Rights Management](../deploy-use/activate-service.md).
 
-<a id="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account" class="xliff"></a>
-
-#### Pré-requisito 2: para remover a proteção dos ficheiros para os outros utilizadores que utilizam a sua conta
+#### <a name="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account"></a>Pré-requisito 2: para remover a proteção dos ficheiros para os outros utilizadores que utilizam a sua conta
 
 Os cenários típicos para remover a proteção dos ficheiros para os outros utilizadores incluem a recuperação de dados ou a deteção de dados. Se estiver a utilizar etiquetas para aplicar a proteção, poderá remover a proteção através da definição de uma nova etiqueta que não aplica a proteção ou da remoção da etiqueta. Porém, é mais provável que se ligue diretamente ao serviço Azure Rights Management para remover a proteção.
 
 Tem de ter um direito de utilização do Rights Management para remover a proteção de ficheiros ou ser um superutilizador. A funcionalidade de superutilizador é normalmente utilizada para a deteção ou a recuperação de dados. Para ativar esta funcionalidade e configurar a sua conta para ser um superutilizador, veja [Configurar superutilizadores para o Azure Rights Management e Serviços de Deteção ou Recuperação de Dados](../deploy-use/configure-super-users.md).
 
-<a id="prerequisite-3-to-protect-or-unprotect-files-without-user-interaction" class="xliff"></a>
-
-#### Pré-requisito 3: para proteger ou desproteger ficheiros sem interação do utilizador
+#### <a name="prerequisite-3-to-protect-or-unprotect-files-without-user-interaction"></a>Pré-requisito 3: para proteger ou desproteger ficheiros sem interação do utilizador
 
 Atualmente, não pode aplicar etiquetas de forma não interativa, mas pode ligar diretamente ao serviço Azure Rights Management não interativamente para proteger ou desproteger ficheiros.
 
@@ -117,9 +105,7 @@ Tem de utilizar um principal de serviço para estabelecer ligação ao serviço 
 
 As secções seguintes explicam como obter estes identificadores.
 
-<a id="to-get-the-bpostenantid" class="xliff"></a>
-
-##### Para obter o BposTenantId
+##### <a name="to-get-the-bpostenantid"></a>Para obter o BposTenantId
 
 Execute o cmdlet Get-AadrmConfiguration a partir do módulo do Windows PowerShell do Azure RMS:
 
@@ -131,7 +117,7 @@ Execute o cmdlet Get-AadrmConfiguration a partir do módulo do Windows PowerShel
     
         Connect-AadrmService
     
-    Quando for solicitado, introduza as credenciais de administrador de inquilinos do Azure Information Protection (normalmente, utilizará uma conta de um administrador global do Azure Active Directory ou do Office 365).
+    Quando for solicitado, introduza as credenciais de administrador de inquilinos do Azure Information Protection (normalmente, utiliza uma conta de um administrador global do Azure Active Directory ou do Office 365).
     
 4. Execute `Get-AadrmConfiguration` e faça uma cópia do valor BPOSId.
     
@@ -153,9 +139,7 @@ Execute o cmdlet Get-AadrmConfiguration a partir do módulo do Windows PowerShel
     
         Disconnect-AadrmService
 
-<a id="to-get-the-appprincipalid-and-symmetric-key" class="xliff"></a>
-
-##### Para obter o AppPrincipalId e a Chave Simétrica
+##### <a name="to-get-the-appprincipalid-and-symmetric-key"></a>Para obter o AppPrincipalId e a Chave Simétrica
 
 Crie um novo principal de serviço ao executar o cmdlet `New-MsolServicePrincipal` no módulo MSOnline PowerShell do Azure Active Directory e utilize as instruções seguintes. 
 
@@ -176,7 +160,7 @@ Crie um novo principal de serviço ao executar o cmdlet `New-MsolServicePrincipa
     
         New-MsolServicePrincipal
     
-    Quando lhe for pedido, introduza um nome a apresentar à sua escolha para este principal de serviço que o irá ajudar a identificar o objetivo mais tarde como uma conta para estabelecer ligação ao serviço Azure Rights Management para que possa proteger e desproteger ficheiros.
+    Quando lhe for pedido, introduza um nome a apresentar à sua escolha para este principal de serviço que o ajuda a identificar o objetivo mais tarde como uma conta para estabelecer ligação ao serviço Azure Rights Management para que possa proteger e desproteger ficheiros.
     
     Um exemplo de saída do New-MsolServicePrincipal:
     
@@ -201,7 +185,7 @@ Crie um novo principal de serviço ao executar o cmdlet `New-MsolServicePrincipa
 
 5. A partir desta saída, anote a chave simétrica e o AppPrincialId.
 
-    É especialmente importante que faça uma cópia da chave simétrica, uma vez não pode recuperá-la na íntegra mais tarde. Como tal, se não a souber, terá de criar um novo principal de serviço da próxima vez que precisar de fazer a autenticação no serviço Azure Rights Management.
+    É importante que faça uma cópia da chave simétrica, uma vez não pode recuperá-la na íntegra mais tarde. Como tal, se não a souber, terá de criar um novo principal de serviço da próxima vez que precisar de fazer a autenticação no serviço Azure Rights Management.
 
 Com estas instruções e os nossos exemplos, temos os três identificadores necessários para a execução do Set-RMSServerAuthentication:
 
@@ -224,9 +208,7 @@ Para obter mais informações sobre superutilizadores, veja [Configurar superuti
 > [!NOTE]
 > Para utilizar a sua própria conta para a autenticação no serviço Azure Rights Management, não precisa de executar Set-RMSServerAuthentication antes de proteger ou desproteger ficheiros ou de obter modelos.
 
-<a id="prerequisite-4-for-regions-outside-north-america" class="xliff"></a>
-
-#### Pré-requisito 4: para regiões fora da América do Norte
+#### <a name="prerequisite-4-for-regions-outside-north-america"></a>Pré-requisito 4: para regiões fora da América do Norte
 
 Para a autenticação fora da região da América do Norte do Azure, tem de editar o registo da seguinte forma. Se o seu inquilino do Azure Information Protection estiver na América do Norte, não siga este passo:
 
@@ -246,9 +228,7 @@ Para a autenticação fora da região da América do Norte do Azure, tem de edit
 
 5. Feche o editor de registo. Não é preciso reiniciar o computador. No entanto, se estiver a utilizar uma conta do principal de serviço em vez da sua própria conta de utilizador, terá de executar o comando Set-RMSServerAuthentication depois desta edição do registo.
 
-<a id="example-scenarios-for-using-the-cmdlets-for-azure-information-protection-and-the-azure-rights-management-service" class="xliff"></a>
-
-### Cenários de exemplo para utilizar os cmdlets para o Azure Information Protection e o serviço Azure Rights Management
+### <a name="example-scenarios-for-using-the-cmdlets-for-azure-information-protection-and-the-azure-rights-management-service"></a>Cenários de exemplo para utilizar os cmdlets para o Azure Information Protection e o serviço Azure Rights Management
 
 É mais eficiente utilizar etiquetas para classificar e proteger ficheiros, uma vez que apenas precisa de dois cmdlets, que podem ser executados individualmente ou em conjunto: [Get-AIPFileStatus](/powershell/azureinformationprotection/vlatest/get-aipfilestatus) e [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel). Utilize a ajuda de ambos os cmdlets para obter mais informações e exemplos.
 
@@ -281,7 +261,7 @@ A saída pode ser semelhante ao seguinte:
     FromTemplate      : True
     FromTemplate      : True
 
-Tenha em atenção que se não executou o comando Set-RMSServerAuthentication, será autenticado para o serviço Azure Rights Management através da sua própria conta de utilizador. Se estiver num computador associado a um domínio, as suas credenciais atuais serão sempre utilizadas automaticamente. Se estiver num computador de grupo de trabalho, será solicitado a iniciar sessão no Azure e estas credenciais serão armazenadas em cache para comandos subsequentes. Neste cenário, se mais tarde tiver de iniciar sessão como um utilizador diferente, utilize o cmdlet `Clear-RMSAuthentication`.
+Tenha em atenção que se não executou o comando Set-RMSServerAuthentication, é autenticado para o serviço Azure Rights Management através da sua própria conta de utilizador. Se estiver num computador associado a um domínio, as suas credenciais atuais são sempre utilizadas automaticamente. Se estiver num computador de grupo de trabalho, é solicitado a iniciar sessão no Azure e estas credenciais são armazenadas em cache para comandos subsequentes. Neste cenário, se mais tarde tiver de iniciar sessão como um utilizador diferente, utilize o cmdlet `Clear-RMSAuthentication`.
 
 Agora que sabe o ID do modelo, pode utilizá-lo com o cmdlet `Protect-RMSFile` para proteger um ficheiro individual ou todos os ficheiros numa pasta. Por exemplo, se quiser proteger apenas um único ficheiro e substituir o original, ao utilizar o modelo “Contoso, Lda. – Confidencial”:
 
@@ -328,16 +308,12 @@ A saída pode ser semelhante ao seguinte:
 
 Tenha em atenção que se os modelos do Rights Management forem alterados, terá de os transferir novamente com `Get-RMSTemplate -force`. 
 
-<a id="active-directory-rights-management-services" class="xliff"></a>
-
-## Serviços de Gestão de Direitos do Active Directory
+## <a name="active-directory-rights-management-services"></a>Serviços de Gestão de Direitos do Active Directory
 
 Leia esta secção antes de começar a utilizar os comandos do PowerShell para proteger ou desproteger ficheiros quando a sua organização utiliza apenas Serviços de Gestão de Direitos do Active Directory.
 
 
-<a id="prerequisites" class="xliff"></a>
-
-### Pré-requisitos
+### <a name="prerequisites"></a>Pré-requisitos
 
 Além dos pré-requisitos para instalar o módulo AzureInformationProtection, a sua conta tem de ter permissões de Leitura e Execução para aceder a ServerCertification.asmx:
 
@@ -361,13 +337,11 @@ Além dos pré-requisitos para instalar o módulo AzureInformationProtection, a 
 
 10. Clique em **OK** duas vezes.
 
-<a id="example-scenarios-for-using-the-cmdlets-for-active-directory-rights-management-services" class="xliff"></a>
-
-### Cenários de exemplo para utilizar os cmdlets para os Serviços de Gestão de Direitos do Active Directory
+### <a name="example-scenarios-for-using-the-cmdlets-for-active-directory-rights-management-services"></a>Cenários de exemplo para utilizar os cmdlets para os Serviços de Gestão de Direitos do Active Directory
 
 Um cenário típico para estes cmdlets é proteger todos os ficheiros numa pasta ao utilizar um modelo de política de direitos ou para desproteger um ficheiro. 
 
-Em primeiro lugar, se tiver mais de uma implementação do AD RMS, precisará dos nomes dos servidores do AD RMS, o que pode fazer ao utilizar o cmdlet Get-RMSServer para apresentar uma lista de servidores disponíveis:
+Em primeiro lugar, se tiver mais de uma implementação do AD RMS, precisa dos nomes dos servidores do AD RMS, o que pode fazer ao utilizar o cmdlet Get-RMSServer para apresentar uma lista de servidores disponíveis:
 
     Get-RMSServer
 
@@ -379,7 +353,7 @@ A saída pode ser semelhante ao seguinte:
     Microsoft.InformationAnd…  RmsContoso                       True
     Microsoft.InformationAnd…  RmsFabrikam                      True
 
-Antes de poder proteger os ficheiros, terá de obter uma lista de modelos do Rights Management para identificar qual utilizar e o número de ID correspondente. Só quando tiver mais do que uma implementação do AD RMS é que terá de especificar também o servidor RMS. 
+Antes de poder proteger os ficheiros, terá de obter uma lista de modelos do Rights Management para identificar qual utilizar e o número de ID correspondente. Só quando tiver mais do que uma implementação do AD RMS é que tem de especificar também o servidor RMS. 
 
 A partir da saída, pode copiar o ID do modelo:
 
@@ -446,13 +420,67 @@ A saída pode ser semelhante ao seguinte:
     ---------                             -------------
     C:\Test.docx                          C:\Test.docx
 
+## <a name="how-to-label-files-non-interactively-for-azure-information-protection"></a>Como etiquetar ficheiros de forma não interativa para o Azure Information Protection
 
-<a id="next-steps" class="xliff"></a>
+A partir da versão 1.8.41.0 do cliente do Azure Information Protection (atualmente em pré-visualização), pode executar os cmdlets de etiquetagem de forma não interativa através do cmdlet **Set-AIPAuthentication**.
 
-## Passos seguintes
-Para obter ajuda com o cmdlet quando estiver numa sessão do PowerShell, utilize o cmdlet Get-Help <cmdlet name>, em que <cmdlet name> é o nome do cmdlet que pretende pesquisar. Por exemplo: 
+Por predefinição, quando executa os cmdlets de etiquetagem, os comandos são executados no seu próprio contexto de utilizador numa sessão interativa do PowerShell. Para executá-los de modo autónomo, crie uma nova conta de utilizador do Azure AD para este fim. Em seguida, no contexto desse utilizador, execute o cmdlet Set-AIPAuthentication para definir e armazenar credenciais através de um token de acesso do Azure AD. Esta conta de utilizador é, em seguida, autenticada e reiniciada para o serviço Azure Rights Management. A conta transfere a política do Azure Information Protection e quaisquer modelos do Rights Management utilizados pelas etiquetas.
 
-    Get-Help Get-RMSTemplate
+Na primeira vez que executar este cmdlet, é pedido que inicie sessão no Azure Information Protection. Especifique o nome da conta e a palavra-passe de utilizador que criou para o utilizador autónomo. Em seguida, esta conta pode executar os cmdlets de etiquetagem de forma não interativa até o token de autenticação expirar. Quando o token expirar, execute o cmdlet novamente para comprar um novo token:
+
+Se executar este cmdlet sem parâmetros, a conta compra um token de acesso que é válido durante 90 dias ou até a sua palavra-passe expirar.  
+
+Para controlar quando o token de acesso expira, execute este cmdlet com parâmetros. Tal permite-lhe configurar o token de acesso para um ano, dois anos ou para nunca expirar. Esta configuração requer que tenha duas aplicações registadas no Azure Active Directory: uma **aplicação Web/aplicação API** e uma **aplicação nativa**. Os parâmetros para este cmdlet utilizam valores destas aplicações.
+
+Após ter executado este cmdlet, pode executar os cmdlets de etiquetagem no contexto da conta de utilizador que criou. Se pretender utilizar mais do que uma conta, cada conta tem de ter as suas próprias aplicações registadas no Azure AD e, por conseguinte, tem de executar este cmdlet para cada conta.
+
+### <a name="to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication"></a>Para criar e configurar as aplicações do Azure AD para Set-AIPAuthentication
+
+1. Numa nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com/).
+
+2. Para o inquilino do Azure AD que utiliza com o Azure Information Protection, navegue para **Azure Active Directory** > **Registos das aplicações**. 
+
+3. Selecione **Novo registo de aplicação** para criar a aplicação Web/aplicação API. Na etiqueta **Criar**, especifique os seguintes valores e, em seguida, clique em **Criar**:
+    
+    - Nome: **AIPOnBehalfOf**
+    
+    - Tipo de Aplicação: **aplicação Web/API**
+    
+    - URL de Início de Sessão: **http://localhost**
+    
+4. Selecione a aplicação que acabou de criar, **AIPOnBehalfOf**, e no painel **Definições**, selecione **Propriedades**. No painel **Propriedades**, copie o valor para o **ID da Aplicação** e, em seguida, feche este painel. 
+    
+    Este valor é utilizado para o parâmetro `WebAppId` quando executa o cmdlet Set-AIPAuthentication.
+
+5. No painel **Definições**, selecione **Chaves**. Adicione uma nova chave especificando uma descrição e a sua escolha de duração (1 ano, 2 anos ou nunca expira). Em seguida, selecione **Guardar**e copie a cadeia para o **Valor** que é apresentado. É importante que guarde esta cadeia, uma vez que não é novamente apresentada e não pode obtê-la.
+    
+    Este valor é utilizado para o parâmetro `WebAppKey` quando executa o cmdlet Set-AIPAuthentication.
+
+6. De novo no painel **Registos das aplicações**, selecione **Novo registo de aplicação** para criar a aplicação nativa. Na etiqueta **Criar**, especifique os seguintes valores e, em seguida, clique em **Criar**:
+    
+    - Nome: **AIPClient**
+    
+    - Tipo de Aplicação: **Nativa**
+    
+    - URL de Início de Sessão: **http://localhost**
+
+7. Selecione a aplicação que acabou de criar, **AIPClient**, e no painel **Definições**, selecione **Propriedades**. No painel **Propriedades**, copie o valor para o **ID da Aplicação** e, em seguida, feche este painel.
+    
+    Este valor é utilizado para o parâmetro `NativeAppId` quando executa o cmdlet Set-AIPAuthentication.
+
+8. No painel **Definições**, selecione **Permissões obrigatórias**. 
+
+9. No painel **Permissões obrigatórias**, clique em **Adicionar**e, de seguida, em **Selecionar uma API**. Na caixa de pesquisa, escreva **AIPOnBehalfOf**. Selecione este valor na caixa de listagem e, em seguida, clique em **Selecionar**.
+
+10. No painel **Ativar Acesso**, selecione **AIPOnBehalfOf**, clique em **Selecionar**e, de seguida, em **Concluído**.
+    
+    Concluiu agora a configuração das duas aplicações e tem os valores necessários para executar o cmdlet Set-AIPAuthentication com parâmetros.
+
+
+## <a name="next-steps"></a>Próximos passos
+Para obter a ajuda do cmdlet quando estiver numa sessão do PowerShell, escreva `Get-Help <cmdlet name> cmdlet` e utilize o parâmetro online para ler as informações mais atualizadas. Por exemplo: 
+
+    Get-Help Get-RMSTemplate -online
 
 Veja o seguinte para obter informações adicionais que poderá precisar para suportar o cliente do Azure Information Protection:
 

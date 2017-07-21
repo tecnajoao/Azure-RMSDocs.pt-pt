@@ -4,7 +4,7 @@ description: "Informações sobre a personalização do cliente do Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 07/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,25 +12,41 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6ab5465db1527e6236d2dca466936c36b260f03d
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
-ms.translationtype: HT
+ms.openlocfilehash: 5b5f8b336e1946bc4c394b9154eed50844b6b72b
+ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/18/2017
 ---
-<a id="custom-configurations-for-the-azure-information-protection-client" class="xliff"></a>
+# <a name="custom-configurations-for-the-azure-information-protection-client"></a>Configurações personalizadas do cliente do Azure Information Protection
 
-# Configurações personalizadas do cliente do Azure Information Protection
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+Utilize as seguintes informações para as configurações avançadas que poderá precisar para cenários específicos ou um subconjunto de utilizadores ao gerir o cliente do Azure Information Protection.
 
-Utilize as seguintes informações para as configurações avançadas que poderá precisar para cenários específicos ou um subconjunto de utilizadores ao gerir o cliente do Azure Information Protection. 
+Algumas destas definições requerem a edição do registo e algumas utilizam definições avançadas que tem de configurar no portal do Azure e, em seguida, publicar para os clientes transferirem. 
 
-<a id="prevent-sign-in-prompts-for-ad-rms-only-computers" class="xliff"></a>
+Além disso, algumas definições apenas poderão estar disponíveis numa versão de pré-visualização do cliente do Azure Information Protection. Para estas definições, está documentada uma versão de cliente mínima. Para as definições e as configurações que são suportadas na versão de disponibilidade geral do cliente, não está documentado qualquer número da versão de cliente mínima.
 
-## Impedir pedidos de início de sessão para computadores só com AD RMS
+### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>Como configurar as definições avançadas de configuração de cliente no portal
 
-Por predefinição, o cliente do Azure Information Protection tenta automaticamente estabelecer ligação ao serviço Azure Information Protection. Para computadores que só comunicam com AD RMS, isto pode resultar num pedido desnecessário de início de sessão aos utilizadores. Pode impedir este pedido de início de sessão ao editar o registo:
+1. Caso ainda não o tenha feito, numa nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com) como administrador de segurança ou administrador global e navegue para o painel **Azure Information Protection**.
+
+2. No painel inicial do Azure Information Protection, selecione **Políticas de âmbito**.
+
+3. No painel **Azure Information Protection - Políticas de âmbito**, selecione o menu de contexto (**...** ) junto à política que contém as definições avançadas. Em seguida, selecione **Definições avançadas**.
+    
+    Pode configurar as definições avançadas para a Política global, bem como para as políticas de âmbito.
+
+4. No painel **Definições avançadas**, escreva o nome e o valor da definição avançada e, em seguida, selecione **Guardar e fechar**.
+
+5. Clique em **Publicar**e garanta que os utilizadores desta política reiniciam as aplicações do Office que tinham abertas.
+
+6. Caso já não precise da definição e pretenda reverter para o comportamento predefinido: no painel **Definições avançadas**, selecione o menu de contexto (**...** ) junto à definição que já não é precisa e, em seguida, selecione **Eliminar**. Em seguida, clique em **Guardar e fechar**e publique novamente a política modificada.
+
+## <a name="prevent-sign-in-prompts-for-ad-rms-only-computers"></a>Impedir pedidos de início de sessão para computadores só com AD RMS
+
+Por predefinição, o cliente do Azure Information Protection tenta automaticamente estabelecer ligação ao serviço Azure Information Protection. Para computadores que só comunicam com AD RMS, esta configuração pode resultar num pedido desnecessário de início de sessão aos utilizadores. Pode impedir este pedido de início de sessão ao editar o registo:
 
 Localize o nome do valor seguinte e, em seguida, defina os dados do valor como **0**:
 
@@ -38,15 +54,13 @@ Localize o nome do valor seguinte e, em seguida, defina os dados do valor como *
 
 Independentemente desta definição, o cliente do Azure Information Protection segue o [processo de deteção do serviço RMS](../rms-client/client-deployment-notes.md#rms-service-discovery) padrão, para localizar o respetivo cluster AD RMS.
 
-<a id="sign-in-as-a-different-user" class="xliff"></a>
+## <a name="sign-in-as-a-different-user"></a>Iniciar sessão como um utilizador diferente
 
-## Iniciar sessão como um utilizador diferente
-
-Num ambiente de produção, normalmente, os utilizadores não precisam de iniciar sessão como um utilizador diferente quando estão a utilizar o cliente do Azure Information Protection. No entanto, poderá ter de o fazer como administrador se tiver vários inquilinos. Por exemplo, tem um inquilino de teste além do inquilino do Office 365 ou do Azure que a sua organização utiliza.
+Num ambiente de produção, normalmente, os utilizadores não precisam de iniciar sessão como um utilizador diferente quando estão a utilizar o cliente do Azure Information Protection. No entanto, como administrador, poderá ter de iniciar sessão como um utilizador diferente. Por exemplo, tem um inquilino de teste além do inquilino do Office 365 ou do Azure que a sua organização utiliza na produção.
 
 Pode verificar com que conta tem sessão iniciada atualmente através da caixa de diálogo do **Microsoft Azure Information Protection**: abra uma aplicação do Office e, no separador **Base**, no grupo **Proteção**, clique em **Proteger** e, em seguida, clique em **Ajuda e comentários**. O nome da sua conta é apresentado na secção **Estado do cliente**.
 
-Especialmente quando estiver a utilizar uma conta de administrador, verifique o nome de domínio da conta com sessão iniciada que é apresentada. Por exemplo, se tiver uma conta de administrador em dois inquilinos diferentes, pode não perceber que tem sessão iniciada com o nome da conta certo, mas com o domínio errado. Um sinal de tal engano pode ser a impossibilidade de transferir a política do Azure Information Protection ou não ver as etiquetas ou o comportamento esperado.
+Especialmente quando estiver a utilizar uma conta de administrador, verifique o nome de domínio da conta com sessão iniciada que é apresentada. Por exemplo, se tiver uma conta de administrador em dois inquilinos diferentes, pode não perceber que tem sessão iniciada com o nome da conta certo, mas com o domínio errado. Um sinal de utilização da conta errada inclui a impossibilidade de transferir a política do Azure Information Protection ou não ver as etiquetas ou o comportamento esperado.
 
 Para iniciar sessão como um utilizador diferente:
 
@@ -56,15 +70,13 @@ Para iniciar sessão como um utilizador diferente:
 
 Além disso,
 
-- Se estiver a utilizar o início de sessão único, terá de terminar sessão no Windows e iniciar sessão com a sua outra conta de utilizador após editar o registo. O cliente do Azure Information Protection fará a autenticação automaticamente através da conta de utilizador com sessão iniciada.
+- Se estiver a utilizar o início de sessão único, tem de terminar sessão no Windows e iniciar sessão com a sua outra conta de utilizador após editar o registo. O cliente do Azure Information Protection faz, em seguida, a autenticação automaticamente através da conta de utilizador com sessão iniciada.
 
-- Se pretender reinicializar o ambiente do serviço Azure Rights Management (também conhecido como arranque do sistema), pode fazê-lo através da opção **Repor** da [ferramenta RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437).
+- Caso pretenda repor as definições de utilizador para o serviço Azure Rights Management, pode fazê-lo através da opção **Ajuda e Comentários**.
 
 - Se pretender eliminar a política do Azure Information Protection atualmente transferida, elimine o ficheiro **Policy.msip** da pasta **%localappdata%\Microsoft\MSIP**.
 
-<a id="hide-the-classify-and-protect-menu-option-in-windows-file-explorer" class="xliff"></a>
-
-## Ocultar a opção de menu Classificar e Proteger no Explorador de Ficheiros do Windows
+## <a name="hide-the-classify-and-protect-menu-option-in-windows-file-explorer"></a>Ocultar a opção de menu Classificar e Proteger no Explorador de Ficheiros do Windows
 
 Pode configurar esta configuração avançada ao editar o registo quando tiver a versão do cliente do Azure Information Protection 1.3.0.0 ou superior. 
 
@@ -72,19 +84,61 @@ Crie o nome do valor DWORD seguinte (com quaisquer dados do valor):
 
 **HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\Microsoft.Azip.RightClick\LegacyDisable**
 
-<a id="support-for-disconnected-computers" class="xliff"></a>
+## <a name="support-for-disconnected-computers"></a>Suporte para computadores desligados
 
-## Suporte para computadores desligados
+Por predefinição, o cliente do Azure Information Protection tenta automaticamente estabelecer ligação ao serviço Azure Information Protection para transferir a política do Azure Information Protection mais recente. Se tiver um computador que sabe que não poderá estabelecer ligação à Internet durante um período de tempo, poderá impedir o cliente de tentar estabelecer ligação ao serviço ao editar o registo. 
 
-Por predefinição, o cliente do Azure Information Protection tenta automaticamente estabelecer ligação ao serviço Azure Information Protection para transferir a política do Azure Information Protection mais recente. Se tiver um computador que sabe que não poderá estabelecer ligação à Internet durante um período de tempo, poderá impedir o cliente de tentar estabelecer ligação ao serviço ao editar o registo. Localize o nome do valor seguinte e defina os dados do valor como **0**:
+Localize o nome do valor seguinte e defina os dados do valor como **0**:
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
 Confirme se o cliente tem um ficheiro de política válido denominado **Policy.msip** na pasta **%localappdata%\Microsoft\MSIP**. Se necessário, pode exportar a política a partir do portal do Azure e copiar o ficheiro exportado para o computador cliente. Também pode utilizar este método para substituir um ficheiro de política desatualizada pela política publicada mais recente.
 
-<a id="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution" class="xliff"></a>
+## <a name="hide-the-do-not-forward-button-in-outlook"></a>Ocultar o botão Não Reencaminhar no Outlook
 
-## Integração com a classificação de mensagem do Exchange para uma solução de etiquetagem do dispositivo móvel
+Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. Esta definição requer também uma versão de pré-visualização do cliente do Azure Information Protection com uma versão mínima de **1.8.41.0**.
+
+Quando configura esta definição, oculta o botão **Não Reencaminhar** no friso do Outlook. Não oculta esta opção a partir dos menus do Office.
+
+Para configurar esta definição avançada, introduza as cadeias seguintes:
+
+- Chave: **DisableDNF**
+
+- Valor: **Verdadeiro**
+
+## <a name="make-the-custom-permissions-options-unavailable-to-users"></a>Tornar as opções de permissões personalizadas indisponíveis para os utilizadores
+
+Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
+
+Quando configura esta definição e publica a política para os utilizadores, as opções de permissões personalizadas das seguintes localizações ficam indisponíveis para seleção pelos utilizadores:
+
+- Nas aplicações do Office: separador **Base** > grupo de **Proteção** > **Proteger** > **Permissões Personalizadas**
+
+- No Explorador de Ficheiros: clique com o botão direito do rato > **Classificar e proteger** > **Permissões personalizadas**
+
+Esta definição não tem efeito nas permissões personalizadas que pode configurar a partir das opções do menu do Office. 
+
+Para configurar esta definição avançada, introduza as cadeias seguintes:
+
+- Chave: **EnableCustomPermissions**
+
+- Valor: **Falso**
+
+## <a name="permanently-hide-the-azure-information-protection-bar"></a>Ocultar permanentemente a barra do Azure Information Protection
+
+Esta configuração utiliza uma definição avançada que tem de configurar no portal do Azure. Esta definição requer também uma versão de pré-visualização do cliente do Azure Information Protection com uma versão mínima de **1.9.58.0**.
+
+Quando configura esta definição e publica a política para os utilizadores, se um utilizador optar por não mostrar a barra do Azure Information Protection nas aplicações do Office, a barra permanece oculta. Tal acontece quando o utilizador desmarca a opção **Mostrar Barra** do separador **Base**, grupo de **Proteção**, botão **Proteger**. Esta definição não tem qualquer efeito caso o utilizador feche a barra através do ícone **Fechar esta barra**.
+
+Apesar de a barra do Azure Information Protection permanecer oculta, os utilizadores ainda podem selecionar uma etiqueta na barra apresentada temporariamente caso tenha configurado a classificação recomendada ou um documento ou um e-mail tenha de ter uma etiqueta. A definição não tem igualmente qualquer efeito nas etiquetas configuradas por si ou por terceiros, tais como a classificação manual ou automática, ou na definição de uma etiqueta predefinida.
+
+Para configurar esta definição avançada, introduza as cadeias seguintes:
+
+- Chave: **EnableBarHiding**
+
+- Valor: **Verdadeiro**
+
+## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Integração com a classificação de mensagem do Exchange para uma solução de etiquetagem do dispositivo móvel
 
 Embora o Outlook na Web ainda não ofereça suporte à proteção e à classificação do Azure Information Protection, pode utilizar a classificação de mensagem do Exchange para expandir as etiquetas do Azure Information Protection para os seus utilizadores móveis.
 
@@ -94,7 +148,7 @@ Para obter esta solução:
 
 2. Crie uma regra de transporte do Exchange para cada etiqueta: aplique a regra quando as propriedades da mensagem incluírem a classificação que configurou e modifique as propriedades das mensagens para definir um cabeçalho da mensagem. 
 
-    Para o cabeçalho da mensagem, encontrará as informações a especificar ao inspecionar os cabeçalhos de Internet do e-mail que enviou e classificou com a etiqueta do Azure Information Protection. Procure o cabeçalho **msip_labels** e a cadeia que imediatamente a seguir, até ao ponto e vírgula, inclusive. Utilizando o exemplo anterior:
+    Para o cabeçalho da mensagem, encontra as informações a especificar ao inspecionar os cabeçalhos de Internet do e-mail que enviou e classificou com a etiqueta do Azure Information Protection. Procure o cabeçalho **msip_labels** e a cadeia que imediatamente a seguir, até ao ponto e vírgula, inclusive. Utilizando o exemplo anterior:
     
     **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
     
@@ -102,25 +156,23 @@ Para obter esta solução:
     
     ![Exemplo de uma regra de transporte do Exchange Online que define o cabeçalho de mensagem de uma etiqueta específica do Azure Information Protection](../media/exchange-rule-for-message-header.png)
 
-Antes de testar esta opção, lembre-se de que é frequente ocorrer um atraso ao criar ou editar regras de transporte (por exemplo, poderá ter de esperar uma hora). Quando a regra entrar em vigor, agora acontecerá o seguinte quando os utilizadores utilizarem o Outlook na Web ou um cliente para dispositivos móveis que suporte a proteção do Rights Management: 
+Antes de testar esta configuração, lembre-se de que é frequente ocorrer um atraso ao criar ou editar regras de transporte (por exemplo, poderá ter de esperar uma hora). Quando a regra entrar em vigor, agora acontecerão os seguintes eventos quando os utilizadores utilizarem o Outlook na Web ou um cliente para dispositivos móveis que suporte a proteção do Rights Management: 
 
 - Os utilizadores selecionam a classificação de mensagens do Exchange e enviam o e-mail.
 
 - A regra do Exchange deteta a classificação do Exchange e modifica o cabeçalho da mensagem em conformidade para adicionar a classificação do Azure Information Protection.
 
-- Quando os destinatários que executam o cliente do Azure Information Protection veem o e-mail no Outlook, verão a etiqueta do Azure Information Protection atribuída e quaisquer cabeçalhos, rodapés ou marcas de água de e-mail correspondentes. 
+- Quando os destinatários veem o e-mail no Outlook e têm o cliente do Azure Information Protection instalado, veem a etiqueta do Azure Information Protection atribuída e quaisquer cabeçalhos, rodapés ou marcas de água de e-mail correspondentes. 
 
-Se as suas etiquetas do Azure Information Protection aplicarem a proteção da gestão de direitos, adicione esta opção à configuração da regra ao selecionar a opção para modificar a segurança da mensagem, aplique a proteção de direitos e, em seguida, selecione a opção Não Reencaminhar ou modelo do RMS.
+Se as suas etiquetas do Azure Information Protection aplicarem a proteção da gestão de direitos, adicione esta proteção à configuração da regra: ao selecionar a opção para modificar a segurança da mensagem, aplique a proteção de direitos e, em seguida, selecione a opção Não Reencaminhar ou modelo do RMS.
 
-Também pode configurar as regras de transporte para proceder ao mapeamento inverso: quando uma etiqueta do Azure Information Protection é detetada, é definida uma classificação de mensagens do Exchange correspondente. Para efetuar este procedimento:
+Pode igualmente configurar regras de transporte para fazer o mapeamento inverso. Quando uma etiqueta do Azure Information Protection é detetada, é definida uma classificação de mensagens do Exchange correspondente:
 
-- Para cada etiqueta do Azure Information Protection, crie uma regra de transporte que seja aplicada quando o cabeçalho **msip_labels** incluir o nome da sua etiqueta (por exemplo, **Geral**) e aplique uma classificação de mensagens que mapeie esta etiqueta.
+- Para cada etiqueta do Azure Information Protection: crie uma regra de transporte que seja aplicada quando o cabeçalho **msip_labels** incluir o nome da sua etiqueta (por exemplo, **Geral**) e aplique uma classificação de mensagens que mapeie esta etiqueta.
 
 
-<a id="next-steps" class="xliff"></a>
-
-## Próximos passos
-Agora que personalizou o cliente do Azure Information Protection, veja o seguinte para obter informações adicionais que poderá precisar para suportar este cliente:
+## <a name="next-steps"></a>Próximos passos
+Agora que personalizou o cliente do Azure Information Protection, veja os seguintes recursos para obter informações adicionais que poderá precisar para suportar este cliente:
 
 - [Ficheiros de cliente e registo de utilização](client-admin-guide-files-and-logging.md)
 

@@ -12,23 +12,19 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: bf695772d545daca602903e156903da2aadaae7a
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
-ms.translationtype: HT
+ms.openlocfilehash: 63249b98578b952177351cc5547ef92c67164f06
+ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/17/2017
 ---
-<a id="azure-information-protection-client-files-and-client-usage-logging" class="xliff"></a>
+# <a name="azure-information-protection-client-files-and-client-usage-logging"></a>Registo de utilização do cliente e de ficheiros do cliente do Azure Information Protection
 
-# Registo de utilização do cliente e de ficheiros do cliente do Azure Information Protection
-
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Depois de instalar o cliente do Azure Information Protection, poderá precisar de saber onde estão localizados os ficheiros e monitorizar a forma como o cliente está a ser utilizado.
 
-<a id="file-locations-for-the-azure-information-protection-client" class="xliff"></a>
-
-## Localizações dos ficheiros do cliente do Azure Information Protection
+## <a name="file-locations-for-the-azure-information-protection-client"></a>Localizações dos ficheiros do cliente do Azure Information Protection
 
 Ficheiros de cliente:   
 
@@ -40,9 +36,7 @@ Ficheiros de registo de cliente e ficheiro da política atualmente instalada:
 
 - Sistemas operativos de 64 bits e de 32 bits: **%localappdata%\Microsoft\MSIP**
 
-<a id="usage-logging-for-the-azure-information-protection-client" class="xliff"></a>
-
-## Registo de utilização do cliente do Azure Information Protection
+## <a name="usage-logging-for-the-azure-information-protection-client"></a>Registo de utilização do cliente do Azure Information Protection
 
 O cliente regista a atividade do utilizador no registo de eventos locais **Aplicações e Serviços** do Windows, **Azure Information Protection**. Os eventos incluem as seguintes informações:
 
@@ -93,9 +87,7 @@ Para obter mais informações sobre o registo de utilização do serviço Azure 
 
 
 
-<a id="next-steps" class="xliff"></a>
-
-## Passos seguintes
+## <a name="next-steps"></a>Passos seguintes
 Agora que identificou todos os ficheiros de registo associados ao cliente do Azure Information Protection, veja o seguinte para obter informações adicionais que poderá precisar para suportar este cliente:
 
 - [Personalizações](client-admin-guide-customizations.md)

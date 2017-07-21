@@ -4,7 +4,7 @@ description: "Como a Infraestrutura de Classificação de Ficheiros do Windows S
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 07/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 909ff4f7c96af65172604bb903173dd38d95dcf9
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 7f49fc1613afcfdbad1f1f13e827a866b8ebe6f9
+ms.sourcegitcommit: 0fd2e63822280ec96ab957e22868c63de9ef3d47
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/18/2017
 ---
 # <a name="file-servers-that-run-windows-server-and-use-file-classification-infrastructure-fci"></a>Servidores de ficheiros que executam o Windows Server e utilizam a Infraestrutura de Classificação de Ficheiros (FCI)
 
@@ -35,7 +35,7 @@ Para obter instruções para utilizar o script do Windows PowerShell para todos 
 
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 Agora que compreende como as aplicações e os serviços suportam o Azure RMS, pode estar interessado em comparar o Azure RMS com a versão no local do Rights Management, os Serviços de Gestão de Direitos do Active Directory (AD RMS). Para obter uma comparação de funcionalidades, requisitos e controlos de segurança, consulte [Comparar o Azure Rights Management e o AD RMS](compare-azure-rms-ad-rms.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -4,17 +4,17 @@ description: "Passo 4 de um tutorial de introdução para experimentar o Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/14/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
-ms.openlocfilehash: d397ed8290d8b792b55ee78865cdbd41e330f8a9
-ms.sourcegitcommit: d42c6bb914563ae798d4171bb017c85b7077abfb
+ms.openlocfilehash: 5ceb351e72ec30015697d2b27111ae76fb3b2b58
+ms.sourcegitcommit: 64ba794e7844a74b1e25db0d44b90060e3ae1468
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 07/19/2017
 ---
 # <a name="step-4-see-classification-labeling-and-protection-in-action"></a>Passo 4: ver classificação, etiquetas e proteção em ação 
 
@@ -80,9 +80,7 @@ Agora que viu a classificação, a etiquetagem e a proteção em ação, vamos v
 |Se pretender mais informações|Informações adicionais|
 |--------------------------------|--------------------------|
 |Instruções completas para etiquetar e proteger ficheiros |[Classificar e proteger um ficheiro ou e-mail](../rms-client/client-classify-protect.md)|
-
-
-
+|Onde a atividade de etiquetagem está a registar |[Registo de utilização do cliente do Azure Information Protection](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client)|
 
 
 >[!div class="step-by-step"]

@@ -4,7 +4,7 @@ description: "Instruções que fazem parte do caminho de migração do AD RMS pa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0965ac3547449a23f4c40fe3f40bac2a6e0365e3
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: d942e51994c6db3ee0c3e1127991a7007ed91f92
+ms.sourcegitcommit: 52ad844cd42479a56b1ae0e56ba0614f088d8a1a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/20/2017
 ---
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>Passo 2: migração de chave protegida por software para chave protegida por HSM
 
@@ -31,7 +31,7 @@ Este é um procedimento dividido em quatro partes para importar a configuração
 
 Primeiro tem de extrair a sua chave de certificado de licenciante para servidor (SLC) dos dados de configuração do AD RMS e transferir a chave para um HSM da Thales no local. Em seguida, tem de transferir a sua chave HSM para o Azure Key Vault, autorizar o acesso do serviço Azure Rights Management do Azure Information Protection ao seu cofre de chaves e, em seguida, importar os dados de configuração.
 
-Uma vez que a chave de inquilino do Azure Information Protection será armazenada e gerida pelo Azure Key Vault, esta parte da migração requer administração no Azure Key Vault, além do Azure Information Protection. Se o Azure Key Vault for gerido por um administrador diferente de si para a sua organização, irá precisar de coordenar e trabalhar com esse administrador para concluir estes procedimentos.
+Uma vez que a chave de inquilino do Azure Information Protection será armazenada e gerida pelo Azure Key Vault, esta parte da migração requer administração no Azure Key Vault, além do Azure Information Protection. Se o Azure Key Vault da sua organização for gerido por um administrador diferente de si, tem de se coordenar e trabalhar com esse administrador para concluir estes procedimentos.
 
 Antes de começar, certifique-se de que a sua organização tem um cofre de chaves criado no Azure Key Vault e que suporta chaves protegidas por HSM. Embora não seja necessário, recomendamos que tenha um cofre de chaves dedicado para o Azure Information Protection. Este cofre de chaves será configurado para permitir o acesso ao serviço Azure Rights Management do Azure Information Protection, de forma a que as chaves armazenadas neste cofre de chaves sejam limitadas apenas a chaves do Azure Information Protection.
 
@@ -42,7 +42,7 @@ Antes de começar, certifique-se de que a sua organização tem um cofre de chav
 
 ## <a name="part-1-extract-your-slc-key-from-the-configuration-data-and-import-the-key-to-your-on-premises-hsm"></a>Parte 1: extrair a chave SLC dos dados de configuração e importar a chave para o seu HSM no local
 
-1.  Administrador do Azure Key Vault: para cada chave SLC exportada que pretende armazenar no Azure Key Vault, siga os seguintes passos na secção [Implementing bring your own key (BYOK) for Azure Key Vault (Implementar o BYOK (Bring Your Own Key – Traga a sua Própria Chave))](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault) da documentação do Azure Key Vault:
+1.  Administrador do Azure Key Vault: para cada chave SLC exportada que pretende armazenar no Azure Key Vault, siga os seguintes passos na secção [Implementing bring your own key (BYOK) for Azure Key Vault (Implementar o BYOK (Bring Your Own Key – Traga a sua Própria Chave))](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azurekey-vault) da documentação do Azure Key Vault:
 
     -   **Gerar e transferir a sua chave para o HSM do Azure Key Vault**: [Passo 1: preparar a estação de trabalho ligada à Internet](/azure/key-vault-hsm-protected-keys/#step-1-prepare-your-internet-connected-workstation)
 
@@ -72,9 +72,9 @@ Antes de começar, certifique-se de que a sua organização tem um cofre de chav
 
     - **/opem**: especifica o nome do ficheiro de saída para o ficheiro PEM, o qual contém a chave extraída. O nome do parâmetro completo é **OutPemFile**. Se não especificar este parâmetro, o ficheiro de saída é predefinido para o nome do ficheiro original com o sufixo **_key** e é armazenado na pasta atual.
 
-    - Se não especificar a palavra-passe quando executa este comando (utilizando o nome do parâmetro completo **TpdPassword** ou o nome do parâmetro curto **pwd**), será solicitado que a especifique.
+    - Se não especificar a palavra-passe ao executar este comando (ao utilizar o nome do parâmetro completo **TpdPassword** ou o nome do parâmetro curto **pwd**), será solicitado que a especifique.
 
-3. Na mesma estação de trabalho desligada, anexe e configure o seu HSM da Thales, de acordo com a documentação da Thales. Agora, pode importar a chave para o seu HSM da Thales anexado utilizando o seguinte comando em que terá de substituir o nome de ficheiro para ContosoTPD.pem:
+3. Na mesma estação de trabalho desligada, anexe e configure o seu HSM da Thales, de acordo com a documentação da Thales. Agora, pode importar a chave para o seu HSM da Thales anexado ao utilizar o seguinte comando, em que terá de substituir o seu próprio nome de ficheiro para ContosoTPD.pem:
 
         generatekey --import simple pemreadfile=e:\ContosoTPD.pem plainname=ContosoBYOK protect=module ident=contosobyok type=RSA
 
@@ -112,11 +112,11 @@ Agora que a chave SLC foi extraída e importada para o seu HSM no local, está p
 
 ## <a name="part-2-package-and-transfer-your-hsm-key-to-azure-key-vault"></a>Parte 2: compactar e transferir a chave HSM para o Azure Key Vault
 
-Administrador do Azure Key Vault: para cada chave SLC exportada que pretende armazenar no Azure Key Vault, siga os seguintes passos na secção [Implementing bring your own key (BYOK) for Azure Key Vault (Implementar o BYOK (Bring Your Own Key – Traga a sua Própria Chave))](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) da documentação do Azure Key Vault:
+Administrador do Azure Key Vault: para cada chave SLC exportada que pretende armazenar no Azure Key Vault, siga os seguintes passos na secção [Implementing bring your own key (BYOK) for Azure Key Vault (Implementar o BYOK (Bring Your Own Key – Traga a sua Própria Chave))](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azurekey-vault) da documentação do Azure Key Vault:
 
 - [Passo 4: preparar a transferência da chave](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-4-prepare-your-key-for-transfer)
 
-- [Passo 5: transferir a chave para o Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-5-transfer-your-key-to-azure-key-vault)
+- [Passo 5: transferir a chave para o Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-5-transfer-your-key-to-azurekey-vault)
 
 Não siga os passos para gerar o par de chaves, uma vez que já tem a chave. Em vez disso, executará um comando para transferir esta chave (no nosso exemplo, o parâmetro KeyIdentifier utiliza "contosobyok") a partir do seu HSM no local.
 

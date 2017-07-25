@@ -4,7 +4,7 @@ description: "Informações sobre operações de ciclo de vida que são relevant
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 781e534566fe01bca4583d2fb5a1a430db77429b
-ms.sourcegitcommit: 1dee39e5e3b222b4aab2b6c4284b82927148407e
+ms.openlocfilehash: 1f96c6be6b1b6b52450351ce0ec8994aac6f026e
+ms.sourcegitcommit: 64ba794e7844a74b1e25db0d44b90060e3ae1468
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/19/2017
 ---
 # <a name="customer-managed-tenant-key-lifecycle-operations"></a>Operações de ciclo de vida das chaves de inquilino: geridas pelo cliente
 
@@ -29,8 +29,7 @@ No Azure Key Vault, pode alterar as permissões no cofre de chaves que contêm a
 
 Quando cancelar a sua subscrição do Azure Information Protection, o Azure Information Protection deixará de utilizar a sua chave de inquilino e não será necessário que faça mais nada.
 
-
-## <a name="re-key-your-tenant-key"></a>Efetuar a recodificação da chave de inquilino
+## <a name="rekey-your-tenant-key"></a>Recodificar a sua chave de inquilino
 A recodificação também é conhecida como implementação da chave. Não efetue a recodificação da chave de inquilino, a menos que seja realmente necessário. Os clientes antigos, tal como o Office 2010, não foram concebidos para processar alterações de chave corretamente. Neste cenário, tem de limpar o estado do Rights Management nos computadores através da Política de Grupo ou um mecanismo equivalente. No entanto, existem alguns eventos legítimos que poderão forçá-lo a efetuar a recodificação da chave de inquilino. Por exemplo:
 
 -   A sua empresa foi dividida em duas ou mais empresas. Quando efetua a recodificação da chave de inquilino, a nova empresa não terá acesso ao conteúdo novo que os seus funcionários publicam. Estes podem aceder ao conteúdo antigo se tiverem uma cópia da chave de inquilino antiga.
@@ -39,7 +38,7 @@ A recodificação também é conhecida como implementação da chave. Não efetu
 
 Quando efetua a recodificação da chave de inquilino, o novo conteúdo é protegido através da utilização da nova chave de inquilino. Isto acontece de forma faseada, pelo que, durante um período de tempo, algum conteúdo novo irá continuar a ser protegido com a chave de inquilino antiga. O conteúdo previamente protegido permanece protegido para a sua chave de inquilino antiga. Para suportar este cenário, o Azure Information Protection retém a chave de inquilino antiga para poder emitir licenças para os antigos conteúdos.
 
-Para recodificar a sua chave de inquilino, primeiro recodifique a chave de inquilino do Azure Information Protection no Cofre de Chaves. Em seguida, execute o cmdlet [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey) novamente e especifique o novo URL da chave.
+Para recodificar a sua chave de inquilino, primeiro recodifique a chave de inquilino do Azure Information Protection no Key Vault. Em seguida, execute o cmdlet [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey) novamente e especifique o novo URL da chave.
 
 ## <a name="backup-and-recover-your-tenant-key"></a>Efetuar cópia de segurança e recuperar a chave de inquilino
 É responsável pela cópia de segurança da sua chave de inquilino. Se gerou a chave de inquilino num HSM da Thales, para efetuar a cópia de segurança da chave, basta efetuar uma cópia de segurança do Ficheiro de Chave com Token, do ficheiro de Universo e dos Cartões de Administrador.
@@ -58,8 +57,8 @@ Se ocorrer uma violação, a melhor ação que o utilizador ou a Microsoft pode 
 
 |Descrição do incidente|Resposta provável|
 |------------------------|-------------------|
-|Ocorreu uma fuga da chave de inquilino.|Efetue a recodificação da chave de inquilino. Consulte [Efetuar a recodificação da chave de inquilino](#re-key-your-tenant-key).|
-|Um indivíduo não autorizado ou um software maligno obteve direitos para utilizar a sua chave de inquilino, mas não houve uma fuga da própria chave.|Efetuar a recodificação da chave de inquilino não ajuda neste caso e requer a análise da causa raiz. Se um erro no processo ou software tiver sido responsável pelo acesso que o indivíduo não autorizado obteve, essa situação tem de ser resolvida.|
+|Ocorreu uma fuga da chave de inquilino.|Recodifique a sua chave de inquilino. Consulte [Recodificar a sua chave de inquilino](#rkey-your-tenant-key).|
+|Um indivíduo não autorizado ou um software maligno obteve direitos para utilizar a sua chave de inquilino, mas não houve uma fuga da própria chave.|Efetuar a recodificação da chave de inquilino não ajuda neste caso e requer a análise da causa principal. Se um erro no processo ou software tiver sido responsável pelo acesso que o indivíduo não autorizado obteve, essa situação tem de ser resolvida.|
 |Vulnerabilidade detetada na tecnologia HSM de geração atual.|A Microsoft tem de atualizar os HSMs. Se existir razão para considerar que a vulnerabilidade expôs chaves, a Microsoft instruirá todos os clientes a renovarem as respetivas chaves de inquilino.|
 |Foi detetada uma vulnerabilidade no algoritmo RSA, ou no comprimento da chave, ou ataques de força bruta tornaram-se exequíveis a nível informático.|A Microsoft tem de atualizar o Azure Key Vault ou o Azure Information Protection para suportarem os novos algoritmos e maiores comprimentos de chaves para serem resilientes e instruir todos os clientes a renovarem as respetivas chaves de inquilino.|
 

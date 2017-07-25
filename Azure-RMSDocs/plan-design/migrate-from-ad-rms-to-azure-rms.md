@@ -4,7 +4,7 @@ description: "Instruções para migrar a implementação dos Serviços de Gestã
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cc11c4c9cfa9a6886180782c4ae88068bf280895
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 6ce3936b36a716cfdc2651cda9f59eb9b552eeb3
+ms.sourcegitcommit: 52ad844cd42479a56b1ae0e56ba0614f088d8a1a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/20/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrar do AD RMS para o Azure Information Protection
 
@@ -34,7 +34,7 @@ Não tem a certeza se esta migração do AD RMS é adequada para a sua organiza�
 
 ## <a name="recommended-reading-before-you-migrate-to-azure-information-protection"></a>Leitura recomendada antes de migrar para o Azure Information Protection
 
-Apesar de não ser obrigatório, poderá considerar útil ler o seguinte antes de iniciar a migração para que possa compreender melhor como funciona a tecnologia quando é relevante para o seu passo de migração:
+Ainda que não seja obrigatório, poderá considerar útil a leitura da seguinte documentação antes de iniciar a migração. Estes conhecimentos fornecem uma melhor compreensão da forma como a tecnologia funciona quando é relevante para o passo de migração.
 
 - [Planear e implementar a sua chave de inquilino do Azure Information Protection](../plan-design/plan-implement-tenant-key.md): compreenda as opções de gestão de chaves que tem para o seu inquilino do Azure Information Protection em que o equivalente da sua chave SLC na cloud é gerido pela Microsoft (predefinição) ou gerido por si (a configuração "traga a sua própria chave" ou BYOK (Bring Your Own Key)). 
 
@@ -106,7 +106,7 @@ Apesar de não ser um pré-requisito para a migração, recomendamos que os clie
 
 Para obter mais informações sobre os diferentes modos e sobre como realizar a atualização, veja [Modos Criptográficos do AD RMS](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
 
-Se o cluster do AD RMS estiver no Modo Criptográfico 1 e não conseguir atualizá-lo, terá de recodificar a chave de inquilino do Azure Information Protection quando a migração estiver concluída. A recodificação da chave cria uma nova chave de inquilino que utiliza o Modo Criptográfico 2. A utilização do serviço Azure Rights Management com o Modo Criptográfico 1 é suportada apenas durante o processo de migração.
+Se o cluster do AD RMS estiver no Modo Criptográfico 1 e não conseguir atualizá-lo, terá de recodificar a chave de inquilino do Azure Information Protection quando a migração estiver concluída. A recodificação da chave cria uma nova chave de inquilino que utiliza o Modo Criptográfico 2. A utilização do serviço Azure Rights Management com o Modo Criptográfico 1 é suportada apenas durante o processo de migração.
 
 Para confirmar o Modo Criptográfico do AD RMS:
  
@@ -135,7 +135,7 @@ Inclua os seus parceiros de AD RMS na fase de planeamento da migração porque e
 
 - O serviço Azure Rights Management dos parceiros ainda não está ativado mas estes sabem o URL do serviço Azure Rights Management.
 
-    Podem obter estas informações ao instalar a Ferramenta do Azure Rights Management, ao ligar ao serviço ([Connect-Aadrmservice](/powershell/aadrm/vlatest/connect-aadrmservice)) e, em seguida, ao ver as informações do inquilino do serviço Azure Rights Management ([Get-AadrmConfiguration](/powershell/aadrm/vlatest/get-aadrmconfiguration)).
+    Podem obter estas informações ao instalar a Ferramenta do Azure Rights Management, ao ligar ao serviço ([Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice)) e, em seguida, ao ver as informações do inquilino do serviço Azure Rights Management ([Get-AadrmConfiguration](/powershell/aadrm/vlatest/get-aadrmconfiguration)).
 
 - Fornecem-lhe os URLs para o respetivo cluster do AD RMS e o URL do serviço Azure Rights Management, para que possa configurar os seus clientes migrados para redirecionar pedidos para os conteúdos protegidos do AD RMS deles para o serviço Azure Rights Management do inquilino. As instruções para configurar o redirecionamento de clientes encontram-se no passo 7.
 
@@ -143,17 +143,17 @@ Inclua os seus parceiros de AD RMS na fase de planeamento da migração porque e
 
 ## <a name="overview-of-the-steps-for-migrating-ad-rms-to-azure-information-protection"></a>Descrição geral dos passos para migrar o AD RMS para o Azure Information Protection
 
-Os passos de migração podem ser divididos em 5 fases que podem ser efetuadas em alturas diferentes e por administradores diferentes.
+Os passos de migração podem ser divididos em cinco fases que podem ser efetuadas em alturas diferentes e por administradores diferentes.
 
 [**FASE 1: PREPARAÇÃO DA MIGRAÇÃO**](migrate-from-ad-rms-phase1.md)
 
 - **Passo 1: transferir a Ferramenta de Administração do Azure RMS Management e identificar o URL de inquilino**
 
-    O processo de migração requer a execução de um ou mais cmdlets do PowerShell do módulo do Azure RMS que é instalado com a Ferramenta de Administração do Azure RMS Management. Também precisará de saber o URL do serviço Azure Rights Management do seu inquilino para concluir vários passos de migração e pode identificar este valor ao utilizar o PowerShell.
+    O processo de migração requer a execução de um ou mais cmdlets do PowerShell do módulo do Azure RMS que é instalado com a Ferramenta de Administração do Azure RMS Management. Também precisará de saber o URL do serviço Azure Rights Management do seu inquilino para concluir vários passos da migração. Pode identificar este valor através do PowerShell.
 
 - **Passo 2: preparar a migração de clientes**
 
-     Se não conseguir migrar todos os clientes de uma só vez, mas vai migrá-los em lotes, utilize os controlos de inclusão e implemente um script de pré-migração.
+     Se não conseguir migrar todos os clientes de uma só vez e os migrar em lotes, utilize os controlos de inclusão e implemente um script de pré-migração.
 
 - **Passo 3: preparar a implementação do Exchange para a migração**
 
@@ -216,7 +216,7 @@ Os passos de migração podem ser divididos em 5 fases que podem ser efetuadas e
 
     Os controlos de inclusão que configurou durante a fase de preparação já não são necessários.
 
-- **Passo 12: recodificar a chave de inquilino do Azure Information Protection**
+- **Passo 12: recodificar a sua chave de inquilino do Azure Information Protection**
 
     Este passo é obrigatório se não estava a executar no Modo Criptográfico 2 antes da migração, sendo opcional, mas recomendado, para todas as migrações para ajudar a salvaguardar a segurança da sua chave de inquilino do Azure Information Protection.
 

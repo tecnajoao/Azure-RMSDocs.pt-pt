@@ -4,7 +4,7 @@ description: "As instruções e as informações para os administradores gerirem
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: ceabbba93dd31f82ac4d0fa33898f8b09a7ee984
-ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
+ms.openlocfilehash: 8dd4917b23b3732e0d835f957191db9c4578f60d
+ms.sourcegitcommit: 64ba794e7844a74b1e25db0d44b90060e3ae1468
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 07/19/2017
 ---
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Utilizar o PowerShell com o cliente do Azure Information Protection
 
@@ -432,7 +432,7 @@ Se executar este cmdlet sem parâmetros, a conta compra um token de acesso que �
 
 Para controlar quando o token de acesso expira, execute este cmdlet com parâmetros. Tal permite-lhe configurar o token de acesso para um ano, dois anos ou para nunca expirar. Esta configuração requer que tenha duas aplicações registadas no Azure Active Directory: uma **aplicação Web/aplicação API** e uma **aplicação nativa**. Os parâmetros para este cmdlet utilizam valores destas aplicações.
 
-Após ter executado este cmdlet, pode executar os cmdlets de etiquetagem no contexto da conta de utilizador que criou. Se pretender utilizar mais do que uma conta, cada conta tem de ter as suas próprias aplicações registadas no Azure AD e, por conseguinte, tem de executar este cmdlet para cada conta.
+Após ter executado este cmdlet, pode executar os cmdlets de etiquetagem no contexto da conta de utilizador que criou.
 
 ### <a name="to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication"></a>Para criar e configurar as aplicações do Azure AD para Set-AIPAuthentication
 
@@ -444,15 +444,17 @@ Após ter executado este cmdlet, pode executar os cmdlets de etiquetagem no cont
     
     - Nome: **AIPOnBehalfOf**
     
+    Se preferir, especifique um nome diferente. Tem de ser exclusivo por inquilino.
+    
     - Tipo de Aplicação: **aplicação Web/API**
     
     - URL de Início de Sessão: **http://localhost**
-    
-4. Selecione a aplicação que acabou de criar, **AIPOnBehalfOf**, e no painel **Definições**, selecione **Propriedades**. No painel **Propriedades**, copie o valor para o **ID da Aplicação** e, em seguida, feche este painel. 
+
+4. Selecione a aplicação que acabou de criar, por exemplo, **AIPOnBehalfOf**. Em seguida, no painel **Definições**, selecione **Propriedades**. No painel **Propriedades**, copie o valor para o **ID da Aplicação** e, em seguida, feche este painel. 
     
     Este valor é utilizado para o parâmetro `WebAppId` quando executa o cmdlet Set-AIPAuthentication.
 
-5. No painel **Definições**, selecione **Chaves**. Adicione uma nova chave especificando uma descrição e a sua escolha de duração (1 ano, 2 anos ou nunca expira). Em seguida, selecione **Guardar**e copie a cadeia para o **Valor** que é apresentado. É importante que guarde esta cadeia, uma vez que não é novamente apresentada e não pode obtê-la.
+5. No painel **Definições**, selecione **Chaves**. Adicione uma nova chave especificando uma descrição e a sua escolha de duração (1 ano, 2 anos ou nunca expira). Em seguida, selecione **Guardar**e copie a cadeia para o **Valor** que é apresentado. É importante que guarde esta cadeia, uma vez que não é novamente apresentada e não pode obtê-la. Tal como com qualquer chave que utiliza, armazene o valor guardado de forma segura e restrinja o acesso ao mesmo.
     
     Este valor é utilizado para o parâmetro `WebAppKey` quando executa o cmdlet Set-AIPAuthentication.
 
@@ -460,11 +462,13 @@ Após ter executado este cmdlet, pode executar os cmdlets de etiquetagem no cont
     
     - Nome: **AIPClient**
     
+    Se preferir, especifique um nome diferente. Tem de ser exclusivo por inquilino.
+    
     - Tipo de Aplicação: **Nativa**
     
     - URL de Início de Sessão: **http://localhost**
 
-7. Selecione a aplicação que acabou de criar, **AIPClient**, e no painel **Definições**, selecione **Propriedades**. No painel **Propriedades**, copie o valor para o **ID da Aplicação** e, em seguida, feche este painel.
+7. Selecione a aplicação que acabou de criar, por exemplo, **AIPClient**. Em seguida, no painel **Definições**, selecione **Propriedades**. No painel **Propriedades**, copie o valor para o **ID da Aplicação** e, em seguida, feche este painel.
     
     Este valor é utilizado para o parâmetro `NativeAppId` quando executa o cmdlet Set-AIPAuthentication.
 
@@ -474,7 +478,7 @@ Após ter executado este cmdlet, pode executar os cmdlets de etiquetagem no cont
 
 10. No painel **Ativar Acesso**, selecione **AIPOnBehalfOf**, clique em **Selecionar**e, de seguida, em **Concluído**.
     
-    Concluiu agora a configuração das duas aplicações e tem os valores necessários para executar o cmdlet Set-AIPAuthentication com parâmetros.
+    Concluiu agora a configuração das duas aplicações e tem os valores necessários para executar o cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) com parâmetros.
 
 
 ## <a name="next-steps"></a>Próximos passos

@@ -4,7 +4,7 @@ description: "Instruções e informações para administradores numa rede empres
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2017
+ms.date: 07/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 491d3191a713bf30ef0da58e359249869d3c82a9
-ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
+ms.openlocfilehash: 036fae62087bf71e0f3bf5ef2859acac701c5e62
+ms.sourcegitcommit: 724b0b5d7a3ab694643988148ca68c0eac769f1e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 07/21/2017
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guia do administrador do cliente do Azure Information Protection
 
@@ -148,7 +148,7 @@ Utilize as instruções a seguir para instalar o cliente quando não estiver a u
     
     - **DowngradeDotNetRequirement**: utilize este parâmetro para ignorar o requisito para o Microsoft Framework .NET versão 4.6.2. [Mais informações](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
     
-    - **AllowTelemetry=0**: utilize este parâmetro para desativar a opção de instalação **Ajude a melhorar o Azure Information Protection ao enviar estatísticas de utilização para a Microsoft.**. 
+    - **AllowTelemetry=0**: utilize este parâmetro para desativar a opção de instalação **Ajude a melhorar o Azure Information Protection ao enviar estatísticas de utilização para a Microsoft**. 
     
 3. Se estiver a instalar interativamente, selecione a opção para instalar uma **política de demonstração** se não puder ligar-se ao Office 365 ou ao Azure Active Directory e quiser ver e experimentar o lado do cliente do Azure Information Protection com uma política local para efeitos de demonstração. Quando o cliente se liga a um serviço Azure Information Protection, esta política de demonstração é substituída pela política do Azure Information Protection da organização.
     
@@ -252,16 +252,46 @@ Utilize a ligação **Enviar Comentários** para enviar pedidos ou sugestões pa
 
 Para ver as informações de diagnóstico e para repor o cliente, selecione **Executar diagnósticos**. Quando os testes de diagnóstico forem concluídos, clique em **Copiar Resultados** para colar as informações num e-mail que pode enviar ao Suporte da Microsoft ou os utilizadores podem enviar ao seu suporte técnico. Quando os testes forem concluídos, também pode repor o cliente.
 
-Mais informações acerca da opção **Repor**:
+> [!NOTE]
+> Na versão de pré-visualização do cliente, a função **Executar diagnósticos** foi removida e substituída por **Repor Definições**. Além disso, o comportamento desta opção foi [alterado](#more-information-about-the-reset-option-for-the-current-preview-version-of-the-azure-information-protection-client).
+
+#### <a name="more-information-about-the-reset-option-for-the-general-availability-ga-version-of-the-azure-information-protection-client"></a>Obter mais informações sobre a opção de reposição da versão de disponibilidade geral (DG) do cliente do Azure Information Protection
 
 - Não precisa de ser um administrador local para utilizar esta opção e esta ação não é registada no Visualizador de Eventos. 
 
-- A menos que os ficheiros estejam bloqueados, esta ação elimina todos os ficheiros existentes em **%localappdata%\Microsoft\MSIPC**, que é o local onde os certificados de cliente e os modelos de gestão de direitos estão armazenados. Não elimina a política do Azure Information Protection ou os ficheiros de registo de clientes nem termina a sessão do utilizador.
+- A menos que os ficheiros estejam bloqueados, esta ação elimina todos os ficheiros existentes em **%LocalAppData%\Microsoft\MSIPC**, que é o local onde os certificados de cliente e os modelos do Rights Management estão armazenados. Não elimina a política do Azure Information Protection ou os ficheiros de registo de clientes nem termina a sessão do utilizador.
 
 - A chave de registo e definições seguintes são eliminadas: **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC**. Se tiver configurado as definições para esta chave do registo, terá de reconfigurar as definições do registo após repor o cliente. Por exemplo, configurou as definições de forma a redirecionar para o seu inquilino do Azure Information Protection porque está a migrar a partir do AD RMS e ainda tem um Ponto de Ligação de Serviço na sua rede.
 
 - Depois da reposição do cliente, tem de reinicializar o ambiente do utilizador, o que irá transferir para o cliente certificados e os modelos mais recentes. Para o fazer, feche todas as instâncias do Office e, em seguida, reinicie uma aplicação do Office. Esta ação também verifica se transferiu a política do Azure Information Protection mais recente. Não execute novamente os testes de diagnóstico até ter efetuado esta ação.
 
+#### <a name="more-information-about-the-reset-option-for-the-current-preview-version-of-the-azure-information-protection-client"></a>Obter mais informações sobre a opção de reposição da versão de pré-visualização atual do cliente do Azure Information Protection
+
+- Não precisa de ser um administrador local para utilizar esta opção e esta ação não é registada no Visualizador de Eventos. 
+
+- A menos que os ficheiros estejam bloqueados, esta ação elimina todos os ficheiros nas seguintes localizações. Estes ficheiros incluem certificados de cliente, modelos do Rights Management, a política do Azure Information Protection e as credenciais de utilizador em cache. Não são eliminados os ficheiros de registo de cliente.
+    
+    - %LocalAppData%\Microsoft\DRM
+    
+    - %LocalAppData%\Microsoft\MSIPC
+    
+    - %LocalAppData%\Microsoft\MSIP\Policy.msip
+    
+    - %LocalAppData%\Microsoft\MSIP\TokenCache
+
+- As seguintes chaves do registo e definições são eliminadas. Se tiver configurado definições para alguma destas chaves do registo, terá de as reconfigurar após efetuar a reposição do cliente. Por exemplo, configurou as definições de forma a redirecionar para o seu inquilino do Azure Information Protection porque está a migrar a partir do AD RMS e ainda tem um Ponto de Ligação de Serviço na sua rede:
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
+
+- É terminada a sessão do utilizador com sessão iniciada atualmente.
 
 ### <a name="client-status-section"></a>Secção **Estado de cliente**
 

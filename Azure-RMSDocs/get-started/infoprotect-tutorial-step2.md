@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: f6cd01357db99ee9d299606172aa85f7e2f44ba0
-ms.sourcegitcommit: 1dee39e5e3b222b4aab2b6c4284b82927148407e
+ms.openlocfilehash: db87ffaa15802f081439f7983ef1060a60c0b24c
+ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passo 2: configurar e publicar a política do Azure Information Protection
 
@@ -78,9 +78,9 @@ Se a sua etiqueta **Confidencial** não tiver subetiquetas porque tem uma versã
     
 3. No painel **Proteção**, certifique-se de que o **Azure RMS** está selecionado e que a opção **Selecionar um modelo predefinido** também está selecionada. Em seguida, clique na caixa pendente e selecione o modelo predefinido que permite que todos os utilizadores na sua organização vejam e editem os conteúdos protegidos. 
     
-    Se tiver ativado o serviço Azure Rights Management recentemente, este modelo terá o nome **Confidencial\Todos os funcionários**. 
+    Se obteve recentemente a sua subscrição, este modelo é denominado **Confidencial\Todos os Funcionários**. 
     
-    Se o serviço Azure Rights Management já estava ativado antes de começar este tutorial, o seu modelo predefinido poderá designar-se **\<<nome da sua organização> – Confidencial**. Por exemplo, se o nome de organização for VanArsdel, Lda., irá ver e selecionar **VanArsdel, Lda. – Confidencial**: 
+    Se já tem a sua subscrição há algum tempo, o seu modelo predefinido poderá designar-se **\<<nome da sua organização> – Confidencial**. Por exemplo, se o nome de organização for VanArsdel, Lda., irá ver e selecionar **VanArsdel, Lda. – Confidencial**: 
     
     ![Passo 3 do tutorial de início rápido do Azure Information Protection – definir a proteção do Azure RMS](../media/step2-select-rms-template.png)
     

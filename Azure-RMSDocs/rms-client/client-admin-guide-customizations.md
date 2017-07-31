@@ -4,7 +4,7 @@ description: "Informações sobre a personalização do cliente do Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2017
+ms.date: 07/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 41e9e8aff35727a40413e0bf18e46f1ad14e9222
-ms.sourcegitcommit: 724b0b5d7a3ab694643988148ca68c0eac769f1e
+ms.openlocfilehash: 32226274c8b50b02e453f1c1b6655fb01b4ec942
+ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/21/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="custom-configurations-for-the-azure-information-protection-client"></a>Configurações personalizadas do cliente do Azure Information Protection
 
@@ -24,11 +24,11 @@ ms.lasthandoff: 07/21/2017
 
 Utilize as seguintes informações para as configurações avançadas que poderá precisar para cenários específicos ou um subconjunto de utilizadores ao gerir o cliente do Azure Information Protection.
 
-Algumas destas definições requerem a edição do registo e algumas utilizam definições avançadas que tem de configurar no portal do Azure e, em seguida, publicar para os clientes transferirem. 
-
-Além disso, algumas definições apenas poderão estar disponíveis numa versão de pré-visualização do cliente do Azure Information Protection. Para estas definições, está documentada uma versão de cliente mínima. Para as definições e as configurações que são suportadas na versão de disponibilidade geral do cliente, não está documentado qualquer número da versão de cliente mínima.
+Algumas destas definições requerem a edição do registo e algumas utilizam definições avançadas que tem de configurar no portal do Azure e, em seguida, publicar para os clientes transferirem. Além disso, algumas definições apenas poderão estar disponíveis numa versão de pré-visualização do cliente do Azure Information Protection. Para estas definições, está documentada uma versão de cliente mínima. Para as definições e as configurações que são suportadas na versão de disponibilidade geral do cliente, não está documentado qualquer número da versão de cliente mínima.
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>Como configurar as definições avançadas de configuração de cliente no portal
+
+Esta configuração está atualmente em pré-visualização.
 
 1. Caso ainda não o tenha feito, numa nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com) como administrador de segurança ou administrador global e navegue para o painel **Azure Information Protection**.
 
@@ -86,6 +86,8 @@ Além disso,
 
 ## <a name="hide-the-classify-and-protect-menu-option-in-windows-file-explorer"></a>Ocultar a opção de menu Classificar e Proteger no Explorador de Ficheiros do Windows
 
+Esta opção de configuração está atualmente em pré-visualização.
+
 Pode configurar esta configuração avançada ao editar o registo quando tiver a versão do cliente do Azure Information Protection 1.3.0.0 ou superior. 
 
 Crie o nome do valor DWORD seguinte (com quaisquer dados do valor):
@@ -104,6 +106,8 @@ Confirme se o cliente tem um ficheiro de política válido denominado **Policy.m
 
 ## <a name="hide-the-do-not-forward-button-in-outlook"></a>Ocultar o botão Não Reencaminhar no Outlook
 
+Esta opção de configuração está atualmente em pré-visualização.
+
 Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. Esta definição requer também uma versão de pré-visualização do cliente do Azure Information Protection com uma versão mínima de **1.8.41.0**.
 
 Quando configura esta definição, oculta o botão **Não Reencaminhar** no friso do Outlook. Não oculta esta opção a partir dos menus do Office.
@@ -115,6 +119,8 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 - Valor: **Verdadeiro**
 
 ## <a name="make-the-custom-permissions-options-unavailable-to-users"></a>Tornar as opções de permissões personalizadas indisponíveis para os utilizadores
+
+Esta opção de configuração está atualmente em pré-visualização.
 
 Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
 

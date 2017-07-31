@@ -4,7 +4,7 @@ description: "Informações e instruções para os administradores configurarem 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 07/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,27 +12,27 @@ ms.technology: techgroup-identity
 ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d141589c9dc9d90cf3a507db77f624c849f955b5
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 6c3f066a373d253d8488c805828a65513370e3a4
+ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="configuring-custom-templates-for-the-azure-rights-management-service"></a>Configurar modelos personalizados para o serviço Azure Rights Management
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
-Quando o serviço Azure Rights Management tiver sido [ativado](activate-service.md), os utilizadores podem utilizar automaticamente dois modelos predefinidos que facilitam a aplicação de políticas de gestão de direitos a ficheiros confidenciais que restringem o acesso aos utilizadores autorizados na sua organização. Estes dois modelos têm as seguintes restrições de política de direitos:
+Quando o serviço Azure Rights Management estiver [ativado](activate-service.md), os utilizadores podem utilizar automaticamente dois modelos predefinidos. Estes modelos facilitam a aplicação de políticas de gestão de direitos em ficheiros confidenciais que restringem o acesso a utilizadores autorizados na sua organização. Os dois modelos têm as seguintes restrições de política de direitos:
 
 -   Visualização só de leitura dos conteúdos protegidos
 
-    -   Nome a apresentar: **&lt;nome da organização&gt; – Apenas Visualização Confidencial**
+    -   Nome a apresentar: **&lt;nome da organização&gt; – Apenas Visualização Confidencial** ou **Altamente Confidencial\Todos os funcionários**
 
     -   Permissão específica: Ver Conteúdo
 
 -   Permissões Ler ou Modificar para o conteúdo protegido
 
-    -   Nome a apresentar: **&lt;nome da organização&gt; – Confidencial**
+    -   Nome a apresentar: **&lt;nome da organização&gt; – Confidencial** ou **Confidencial\Todos os funcionários**
 
     -   Permissões específicas: Ver Conteúdo, Guardar Ficheiro, Editar Conteúdo, Ver Direitos Atribuídos, Permitir Macros, Reencaminhar, Responder, Responder A Todos
 
@@ -46,9 +46,9 @@ Para muitas organizações, os modelos predefinidos poderão ser suficientes. No
 
 -   Quer definir um direito personalizado para um modelo, como Ver e Editar, mas não Copiar e Imprimir.
 
--   Quer configurar opções adicionais num modelo que inclua uma data de expiração e definir se os conteúdos pode ser acedidos sem uma ligação à Internet.
+-   Quer configurar opções adicionais num modelo que inclua uma data de expiração e definir se os conteúdos podem ser acedidos sem uma ligação à Internet.
 
-Para os utilizadores poderem selecionar um modelo personalizado com definições como estas, primeiro tem de criar um modelo personalizado, configurá-lo e, em seguida, publicá-lo. Embora provavelmente venha a necessitar de apenas alguns modelos, pode ter um máximo de 500 modelos personalizados guardados no Azure. 
+Para os utilizadores poderem selecionar um modelo personalizado com definições como estas, primeiro tem de criar um modelo personalizado, configurá-lo e, em seguida, publicá-lo. Embora provavelmente necessite de apenas alguns modelos, pode ter um máximo de 500 modelos personalizados guardados no Azure. 
 
 Utilize as informações seguintes para configurar e utilizar modelos personalizados:
 

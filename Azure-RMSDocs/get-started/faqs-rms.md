@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6d62bb6c3ed6738a3c4f32a506342c7137b9b35e
-ms.sourcegitcommit: 1dee39e5e3b222b4aab2b6c4284b82927148407e
+ms.openlocfilehash: a73dcc5e2a38c5874361f0fc2845229f505b2d3e
+ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Perguntas mais frequentes sobre a proteção de dados no Azure Information Protection
 
@@ -143,7 +143,7 @@ Abra o Outlook e crie um perfil com a conta escolar ou profissional do Office 36
 
 Para proteger uma mensagem de e-mail ou um documento: no separador **Opções**, clique em **Permissões** e escolha uma opção ou um modelo que protege o seu e-mail ou documento.
 
-Para controlar um documento depois de o proteger: a partir de um computador Windows que tenha o cliente do Azure Information Protection instalado, registe o documento no site de controlo de documentos ao utilizar uma aplicação do Office ou o Explorador de Ficheiros. Para obter instruções, veja [Controlar e revogar os documentos](../rms-client/client-track-revoke.md). A partir de um computador Mac, já pode utilizar o seu browser para aceder ao site de controlo de documentos (https://track.azurerms.com) para controlar e revogar este documento.
+Para controlar um documento depois de o proteger: a partir de um computador Windows que tenha o cliente do Azure Information Protection instalado, registe o documento no site de controlo de documentos ao utilizar uma aplicação do Office ou o Explorador de Ficheiros. Para obter instruções, veja [Controlar e revogar os documentos](../rms-client/client-track-revoke.md). No seu computador Mac, agora já pode utilizar o browser para aceder ao site de controlo de documentos (https://track.azurerms.com) para controlar e revogar este documento.
 
 ## <a name="when-i-open-an-rms-protected-office-document-does-the-associated-temporary-file-become-rms-protected-as-well"></a>Quando abro um documento do Office protegido por RMS, o ficheiro temporário associado também fica protegido por RMS?
 Não. Neste cenário, o ficheiro temporário associado não contém dados do documento original, mas apenas o que o utilizador introduz enquanto o ficheiro está aberto. Ao contrário do ficheiro original, o ficheiro temporário não foi concebido para partilha e permaneceria no dispositivo, protegido por controlos de segurança locais, como o BitLocker e o EFS.
@@ -188,7 +188,7 @@ Ao não conceder direitos de **utilização** [de Cópia](../deploy-use/configur
 
 Impedir capturas de ecrã pode ajudar a evitar a divulgação por acidente ou por negligência de informações confidenciais. No entanto, existem várias formas de um utilizador partilhar os dados apresentados num ecrã e tirar uma captura de ecrã é apenas um dos métodos possíveis. Por exemplo, um utilizador que esteja determinado em partilhar as informações apresentadas pode tirar uma fotografia com a câmara do telemóvel, reescrever os dados ou simplesmente dizê-las a alguém.
 
-Conforme estes exemplos demonstram, mesmo que todas as plataformas e todos os softwares suportassem as APIs do Rights Management para bloquear as capturas de ecrã, a tecnologia por si só nem sempre pode impedir os utilizadores de partilharem dados que não deviam. O Rights Management pode ajudar a salvaguardar os seus dados importantes com políticas de utilização e autorização, mas esta solução de gestão de direitos de empresa deve ser utilizada em conjunto com outros controlos. Por exemplo, implementar segurança física, monitorizar cuidadosamente as pessoas que têm acesso autorizado aos dados da sua organização e investir na educação do utilizadores para que estes compreendam que os dados não devem ser partilhados.
+Conforme estes exemplos demonstram, mesmo que todas as plataformas e todos os softwares suportassem as APIs do Rights Management para bloquear as capturas de ecrã, a tecnologia por si só nem sempre pode impedir os utilizadores de partilharem dados que não deviam. O Rights Management pode ajudar a salvaguardar os seus dados importantes com políticas de utilização e autorização, mas esta solução de gestão de direitos de empresa deve ser utilizada em conjunto com outros controlos. Por exemplo, implementar segurança física, monitorizar cuidadosamente as pessoas que têm acesso autorizado aos dados da sua organização e investir na educação dos utilizadores para que estes compreendam que os dados não devem ser partilhados.
 
 ## <a name="whats-the-difference-between-a-user-protecting-an-email-with-do-not-forward-and-a-template-that-doesnt-include-the-forward-right"></a>Qual a diferença entre um utilizador que protege um e-mail com Não Reencaminhar e um modelo que não inclui o direito de Reencaminhar?
 

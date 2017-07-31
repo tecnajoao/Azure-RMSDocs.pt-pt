@@ -4,7 +4,7 @@ description: "Conheça e implemente a funcionalidade de superutilizador do servi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/24/2017
+ms.date: 07/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8b915ad2bf58352c41f1b534aa6c88f1640fb589
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 70c7bbd1f6244c3624cd4b1e32a98e71b5779004
+ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados
 
@@ -71,7 +71,7 @@ Se estiver a utilizar a classificação e a proteção, também poderá utilizar
 Para obter mais informações sobre estes cmdlets, veja [Utilizar o PowerShell com o cliente do Azure Information Protection](../rms-client/client-admin-guide-powershell.md) no guia do administrador do cliente do Azure Information Protection.
 
 > [!NOTE]
-> O módulo AIP substitui o módulo do PowerShell da Proteção do RMS que foi instalado com a Ferramenta de Proteção RMS. Ambos os módulos são diferentes do [Módulo do Windows PowerShell para o Azure Rights Management](administer-powershell.md) principal e complementam-no. O módulo AIP suporta o Azure Information Protection, o serviço Azure Rights Management (Azure RMS) para o Azure Information Protection e os Serviços de Gestão de Direitos do Active Directory (AD RMS).
+> O módulo AzureInformationProtection substitui o módulo do PowerShell de Proteção RMS que foi instalado com a Ferramenta de Proteção RMS. Ambos os módulos são diferentes do [Módulo do Windows PowerShell para o Azure Rights Management](administer-powershell.md) principal e complementam-no. O módulo AzureInformationProtection suporta o Azure Information Protection, o serviço Azure Rights Management (Azure RMS) para o Azure Information Protection e os Serviços de Gestão de Direitos do Active Directory (AD RMS).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

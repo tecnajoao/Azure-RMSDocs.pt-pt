@@ -4,7 +4,7 @@ description: "Instruções sobre como classificar e proteger os seus documentos 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/06/2017
+ms.date: 08/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 960fe1abf2fa4f5b8976f190454d31849736298a
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: c7678be03106719af4679ae06e2aaa84aff8ca3e
+ms.sourcegitcommit: 87f0c7a8f9f1fdf7eece0f9d0c114ecf91f57683
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Classificar e proteger um ficheiro ou e-mail com o Azure Information Protection
 
@@ -24,18 +24,19 @@ ms.lasthandoff: 06/30/2017
 
 A forma mais fácil de classificar e proteger os seus documentos e e-mails é durante a criação ou edição nas aplicações de ambiente de trabalho do Office: **Word**, **Excel**, **PowerPoint** e **Outlook**. 
 
-No entanto, também pode classificar e proteger ficheiros com o **Explorador de Ficheiros**, que suporta outros tipos de ficheiros e é uma forma conveniente de classificar e proteger vários ficheiros ao mesmo tempo. Este método suporta proteger documentos do Office, ficheiros PDF, ficheiros de texto e imagem e uma vasta gama de outros ficheiros. 
+No entanto, também pode classificar e proteger ficheiros ao utilizar **Explorador de ficheiros**. Este método suporta tipos de ficheiro adicionais e é uma forma conveniente para classificar e proteger vários ficheiros de uma só vez. Este método suporta proteger documentos do Office, ficheiros PDF, ficheiros de texto e imagem e uma vasta gama de outros ficheiros. 
+
+Se a etiqueta aplica-se a proteção para um documento, o documento protegido não é adequado ser guardada no SharePoint ou OneDrive. Estas localizações não suportam o seguinte para os ficheiros protegidos: criação conjunta, Office Online, pesquisa, pré-visualização do documento, miniatura e deteção de dados eletrónicos. 
 
 ### <a name="safely-share-a-file-with-people-outside-your-organization"></a>Partilhar um ficheiro de forma segura com pessoas fora da sua organização
 
-Os ficheiros que estão protegidos são seguros para serem partilhados com outras pessoas. Por exemplo, anexe o ficheiro a um e-mail ou envie um convite a partir do site do SharePoint.
+Os ficheiros que estão protegidos são seguros para serem partilhados com outras pessoas. Por exemplo, anexe o ficheiro a um e-mail.
 
 Se partilha regularmente ficheiros com pessoas fora da sua organização, o administrador poderá ter configurado uma etiqueta para si que define uma proteção que permite que estas pessoas os possam ler. Em alternativa, pode utilizar a [aplicação do Office para definir permissões personalizadas](#set-custom-permissions-for-a-document) ou utilizar o [Explorador de Ficheiros para definir permissões personalizadas](#using-file-explorer-to-classify-and-protect-files) para um ficheiro antes de o partilhar. 
 
 Se tiver definido as suas próprias permissões personalizadas e o ficheiro já estiver protegido para utilização interna, primeiro faça uma cópia do mesmo para manter as permissões originais. Em seguida, utilize a cópia para definir as permissões personalizadas.  
 
 Quando o ficheiro está protegido com as permissões personalizadas, utilize o seu mecanismo de partilha padrão para partilhar o ficheiro. Se esta for a primeira vez que estas pessoas com as quais está a partilhar receberam um ficheiro protegido, poderão precisar de instruções para o visualizar. Para estas pessoas, pode copiar e colar a seguinte mensagem: **Protegi este ficheiro com o Microsoft Azure Information Protection. Para a primeira utilização, veja estas [instruções](https://aka.ms/rms-signup).**
-
 
 ## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Utilizar aplicações do Office para classificar e proteger os seus documentos e e-mails
 
@@ -63,7 +64,7 @@ Além de selecionar etiquetas manualmente, as etiquetas também podem ser aplica
 
 - Se o administrador tiver configurado recentemente uma nova etiqueta para si, experimente fechar todas as instâncias da sua aplicação do Office e voltar a abrir-la. Esta ação verifica se as suas etiquetas sofreram alguma alteração.
 
-- Se a etiqueta em falta aplicar proteção, poderá ter uma edição do Office que não suporta a aplicação da proteção Rights Management. Para verificar, clique em **Proteger** > **Ajuda e Feedback** e verifique se tem uma mensagem na secção **Estado do cliente** a indicar **O cliente não está licenciado para o Office Professional Plus.** 
+- Se a etiqueta em falta aplicar proteção, poderá ter uma edição do Office que não suporta a aplicação da proteção Rights Management. Para verificar, clique em **proteger** > **ajuda e comentários**. Na caixa de diálogo, verifique se possui uma mensagem **estado do cliente** secção indica **este cliente não estiver licenciado para o Office Professional Plus.** 
 
 - A etiqueta pode estar numa política de âmbito que não inclui a sua conta. Contacte o suporte técnico ou o administrador.
 
@@ -84,8 +85,10 @@ Pode especificar as suas próprias definições de proteção para documentos em
     - **Selecionar permissões**: se quiser proteger o ficheiro de modo a ser o único utilizador a poder aceder ao mesmo, selecione **Apenas para mim**. Caso contrário, selecione o nível de acesso que pretende que as pessoas tenham.
 
     - **Selecionar utilizadores, grupos ou organizações**: especifique as pessoas que devem ter as permissões que selecionou para o seu ficheiro ou ficheiros. Escreva o endereço de e-mail completo dessas pessoas, um endereço de e-mail de grupo ou um nome de domínio da organização para todos os utilizadores nessa organização. Tenha em atenção que, atualmente, os endereços de e-mail pessoais não são suportados.
+    
+    Se tiver a versão de pré-visualização atual do cliente Azure Information Protection, em alternativa pode utilizar o **selecionar utilizadores, grupos ou organização** botão. Este botão apresenta o **selecionar utilizadores ou grupos** caixa de diálogo para o Active Directory no local. Se os utilizadores ou grupos que pretende especificar no Active Directory, pode procurar e selecionar a partir desta caixa de diálogo. Para utilizar esta opção, o computador tem de estar ligado à rede interna, o computador tem de ser associado ao domínio e tem de ter um Active Directory no local. Se qualquer uma das seguintes condições não são cumpridos, verá a seguinte mensagem: **o programa não é possível abrir a caixa de diálogo necessária, porque não existem localizações podem ser encontradas.**
         
-    - **Expirar acesso**: selecione esta opção somente para ficheiros sensíveis ao tempo, para que as pessoas especificadas não possam abrir o ficheiro ou ficheiros selecionados, após uma data definida por si. No entanto, continuará a poder abrir o ficheiro original, mas após a meia-noite (no seu fuso horário atual), no dia definido por si, as pessoas que especificou não poderão abrir o ficheiro.
+    - **Expirar acesso**: selecione esta opção apenas para os ficheiros sensíveis ao tempo para que as pessoas que especificou não poderá abrir o ficheiro ou ficheiros selecionados após uma data que definir. Ainda poderá abrir o ficheiro original, mas após a meia-noite (o fuso horário atual), no dia em que é definida, as pessoas que especificou não poderão abrir o ficheiro.
 
 5. Clique em **Aplicar** e espere pela mensagem **Permissões personalizadas aplicadas**. Em seguida, clique em **Fechar**.
 
@@ -135,7 +138,9 @@ O guia do administrador contém uma lista completa dos tipos de ficheiro suporta
 
     - **Selecionar permissões**: selecione o nível de acesso que pretende que as pessoas tenham quando protege o ficheiro ou ficheiros selecionados.
     
-    - **Selecionar utilizadores**: especifique as pessoas que devem ter as permissões que selecionou para o seu ficheiro ou ficheiros. Poderá selecioná-las a partir do livro de endereços (por exemplo, pessoas da sua organização e contactos de outras organizações). Para outras pessoas, escreva o endereço de e-mail completo dessas pessoas, um endereço de e-mail de grupo ou um nome de domínio da organização para todos os utilizadores nessa organização. Tenha em atenção que, atualmente, os endereços de e-mail pessoais não são suportados.
+    - **Selecionar utilizadores, grupos ou organizações**: especifique as pessoas que devem ter as permissões que selecionou para o seu ficheiro ou ficheiros. Escreva o endereço de e-mail completo dessas pessoas, um endereço de e-mail de grupo ou um nome de domínio da organização para todos os utilizadores nessa organização. Tenha em atenção que, atualmente, os endereços de e-mail pessoais não são suportados.
+    
+    Em alternativa, pode utilizar o **selecionar utilizadores, grupos ou organização** botão para selecionar utilizadores ou grupos do livro de endereços do Outlook. Se tiver a versão de pré-visualização atual do cliente Azure Information Protection, este botão apresenta o **selecionar utilizadores ou grupos** caixa de diálogo para o Active Directory no local. Se os utilizadores ou grupos que pretende especificar no Active Directory, pode procurar e selecionar a partir desta caixa de diálogo. Para utilizar esta opção, o computador tem de estar ligado à rede interna, o computador tem de ser associado ao domínio e tem de ter um Active Directory no local. Se qualquer uma das seguintes condições não são cumpridos, verá a seguinte mensagem: **o programa não é possível abrir a caixa de diálogo necessária, porque não existem localizações podem ser encontradas.**
         
     - **Expirar acesso**: selecione esta opção somente para ficheiros sensíveis ao tempo, para que as pessoas especificadas não possam abrir o ficheiro ou ficheiros selecionados, após uma data definida por si. No entanto, continuará a poder abrir o ficheiro original, mas após a meia-noite (no seu fuso horário atual), no dia definido por si, as pessoas que especificou não poderão abrir o ficheiro.
     

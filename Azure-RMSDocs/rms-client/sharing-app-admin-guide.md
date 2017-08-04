@@ -4,7 +4,7 @@ description: "Instruções e informações para administradores numa rede empres
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cfe5822e426748dcf6df3bb0c25949a85f69db1f
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 4cd74b6fcee53acc99e0c89d7cbb606d8aab2d54
+ms.sourcegitcommit: d7bdf865a06df2150b261c98b66503c1db7fed11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/28/2017
 ---
 # <a name="rights-management-sharing-application-administrator-guide"></a>Guia do administrador da aplicação de partilha Rights Management
 
 >*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8 e Windows 8.1*
 
 > [!IMPORTANT]
-> **Notificação de fim do suporte**: a aplicação de partilha Rights Management para Windows está a ser substituída pelo [cliente do Azure Information Protection](aip-client.md). O suporte para esta aplicação mais antiga será interrompido a 31 de janeiro de 2018. 
+> **Notificação de fim do suporte**: a aplicação de partilha Rights Management para Windows está a ser substituída pelo [cliente do Azure Information Protection](aip-client.md). Suporte para esta aplicação anterior irá parar 31 de Janeiro de 2019. 
 
 Utilize as seguintes informações se for o responsável pela aplicação de partilha Microsoft Rights Management numa rede empresarial ou se quiser obter mais informações técnicas além das que se encontram no [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md) ou nas [FAQ sobre a Aplicação de Partilha Microsoft Rights Management do Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
 
@@ -187,7 +187,7 @@ Para confirmar o êxito da operação, consulte a secção [Confirmar o êxito d
 
     Por exemplo: `\\server5\apps\rms\x64\setup_ipviewer.exe /norestart /quiet /msicl "MSIRESTARTMANAGERCONTROL=Disable" /log "C:\Log files\ipviewerinstall.log"`
     
-    Se este comando não for executado com êxito, não verá mensagens de erro devido ao parâmetro **/quiet**. Para ajudar a apurar o motivo pelo qual a instalação falhou, volte a executar o comando sem /quiet para ver as mensagens de erro.
+    Se este comando não conseguir executar com êxito, não visualizará quaisquer mensagens de erro porque o **lightweightserver /quiet** parâmetro. Para ajudar a apurar o motivo pelo qual a instalação falhou, volte a executar o comando sem /quiet para ver as mensagens de erro.
 
 2.  Instale o suplemento do Office através dos seguintes comandos, especificando uma pasta existente para criar o ficheiro de registo:
 
@@ -205,7 +205,7 @@ Para confirmar o êxito da operação, consulte a secção [Confirmar o êxito d
 
     Por exemplo: `\\server5\apps\rms\msiexec.exe /norestart /quiet MSIRESTARTMANAGERCONTROL=Disable /i "x64\Setup64.msi" /L*v "C:\Log files\rmsofficeinstall.log"`
     
-    Se este comando não for executado com êxito, não verá mensagens de erro devido ao parâmetro **/quiet**. Para ajudar a apurar o motivo pelo qual a instalação falhou, volte a executar o comando sem /quiet para ver as mensagens de erro.
+    Se este comando não conseguir executar com êxito, não visualizará quaisquer mensagens de erro porque o **lightweightserver /quiet** parâmetro. Para ajudar a apurar o motivo pelo qual a instalação falhou, volte a executar o comando sem /quiet para ver as mensagens de erro.
 
 Para confirmar o êxito da operação, consulte a secção [Confirmar o êxito da instalação](#verifying-installation-success) neste artigo.
 

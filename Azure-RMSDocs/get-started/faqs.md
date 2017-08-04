@@ -4,7 +4,7 @@ description: "Algumas perguntas mais frequentes sobre o Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/15/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cbceb3f3e68c558576cc275793dac6feb3b9245b
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 7e8f49a9775ac6eab89b72a50f8ca866875313a5
+ms.sourcegitcommit: d7bdf865a06df2150b261c98b66503c1db7fed11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/28/2017
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Perguntas mais frequentes sobre o Azure Information Protection
 
@@ -45,7 +45,7 @@ Não. Embora a maioria das apresentações e demonstrações que viu do cliente 
 
 Quando o cliente do Azure Information Protection para o Windows estiver instalado e não tiver uma política do Azure Information Protection, o cliente funciona automaticamente no [modo apenas de proteção](../rms-client/client-protection-only-mode.md). Neste modo, os utilizadores podem facilmente aplicar modelos e permissões personalizadas do Rights Management. Se posteriormente comprar uma subscrição que inclui classificação e etiquetagem, o cliente mudará automaticamente para o modo padrão quando transfere a política do Azure Information Protection.
 
-Se atualmente utilizar a aplicação de partilha Rights Management para Windows, recomendamos que a substitua pelo cliente do Azure Information Protection. O suporte para a aplicação de partilha vai terminar a 31 de janeiro de 2018. Para ajudar com a transição, veja [Tarefas que costumava realizar com a aplicação de partilha RMS](../rms-client/upgrade-client-app.md).
+Se atualmente utilizar a aplicação de partilha Rights Management para Windows, recomendamos que a substitua pelo cliente do Azure Information Protection. Suporte para a aplicação de partilha vai terminar 31 de Janeiro de 2019. Para ajudar com a transição, veja [Tarefas que costumava realizar com a aplicação de partilha RMS](../rms-client/upgrade-client-app.md).
 
 ## <a name="does-azure-information-protection-support-on-premises-and-hybrid-scenarios"></a>O Azure Information Protection suporta cenários no local e híbridos?
 

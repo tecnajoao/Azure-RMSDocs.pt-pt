@@ -4,7 +4,7 @@ description: "Utilize estes passos para preparar, implementar e gerir o Azure In
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/14/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 54f72dad3f7dbc259df602f0f613124c46ce5846
-ms.sourcegitcommit: d42c6bb914563ae798d4171bb017c85b7077abfb
+ms.openlocfilehash: fabb31e2945b47cda688129d7ecd7cc3c26fd802
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Plano de implementação do Azure Information Protection
 
@@ -88,7 +88,7 @@ Quando os utilizadores estiverem mais confortáveis a etiquetar documentos e e-m
 
 Opcionalmente, considere configurar o seguinte:
 
--   Modelos personalizados se os modelos de política de direitos predefinidos não forem suficientes para a sua organização. Pode efetuar este passo agora ou mais tarde. Para obter mais informações, consulte [Configurar modelos personalizados para o serviço Azure Rights Management](../deploy-use/configure-custom-templates.md).
+-   Modelos personalizados se os modelos de política de direitos predefinidos não forem suficientes para a sua organização. Pode efetuar este passo agora ou mais tarde. Para obter mais informações, consulte [configurar e gerir modelos do Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
 -   Registo de utilização para que possa monitorizar a forma como a sua organização utiliza o Rights Management. Pode efetuar este passo agora ou mais tarde. Para obter mais informações, consulte [Registar e analisar a utilização do serviço Azure Rights Management](../deploy-use/log-analyze-usage.md).
 
@@ -154,7 +154,7 @@ Antes de começar a utilizar o [!INCLUDE[aad_rightsmanagement_2](../includes/aad
 
 Opcionalmente, considere configurar o seguinte:
 
--   Modelos personalizados se os modelos de política de direitos predefinidos não forem suficientes para a sua organização. Pode efetuar este passo agora ou mais tarde. Para obter mais informações, consulte [Configurar modelos personalizados para o serviço Azure Rights Management](../deploy-use/configure-custom-templates.md).
+-   Modelos personalizados se os modelos predefinidos não forem suficientes para a sua organização. Pode efetuar este passo agora ou mais tarde. Para obter mais informações, consulte [configurar e gerir modelos do Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
 -   Registo de utilização para que possa monitorizar a forma como a sua organização utiliza o Rights Management. Pode efetuar este passo agora ou mais tarde. Para obter mais informações, consulte [Registar e analisar a utilização do serviço Azure Rights Management](../deploy-use/log-analyze-usage.md).
 

@@ -1,55 +1,8 @@
 ---
-title: "Ativar o Azure RMS com o antigo centro de administração do Office 365 – AIP"
-description: "Instruções de ativação do serviço Azure Rights Management quando utiliza a versão antiga do centro de administração do Office 365."
-author: cabailey
-ms.author: cabailey
-manager: mbaldwin
-ms.date: 05/18/2017
-ms.topic: article
-ms.prod: 
-ms.service: information-protection
-ms.technology: techgroup-identity
-ms.assetid: b6c42663-af01-49d5-94bc-98963c383379
-ms.reviewer: esaggese
-ms.suite: ems
-ms.openlocfilehash: 3282606e4ddc5747bf710e0a885318f07b7da457
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+redirect_url: /information-protection//deploy-use/activate-office365
+ms.openlocfilehash: cc95653cec2fec565906d527250d85a2891ef4b1
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/31/2017
 ---
-# <a name="how-to-activate-azure-rights-management-from-the-old-office-365-admin-center"></a>Como ativar o Azure Rights Management a partir do antigo centro de administração do Office 365
-
->*Aplica-se a: Azure Information Protection, Office 365*
-
-
-Utilize estas instruções apenas se estiver a utilizar a versão antiga do centro de administração do Office 365.
-
-1. Depois de se ter inscrito num plano do Office 365 que inclui o Rights Management, [inicie sessão no Office 365 com a sua conta escolar ou profissional](https://portal.office.com/) que seja um administrador global para a implementação do Office 365.
-
-2. Se o centro de administração do Office 365 não for apresentado automaticamente, selecione o ícone do iniciador de aplicações no canto superior esquerdo e escolha **Administrador**. O mosaico **Administrador** só é apresentado para os administradores do Office 365.
-
-    > [!TIP]
-    > Para obter ajuda acerca do centro de administração, consulte [Acerca do centro de administração do Office 365 – Ajuda de Administração](https://support.office.com/article/About-the-Office-365-admin-center-Admin-Help-58537702-d421-4d02-8141-e128e3703547).
-
-3. No painel esquerdo, expanda **DEFINIÇÕES DE SERVIÇO**.
-
-4.  Clique em **Rights Management**.
-
-    > [!NOTE]
-    >Se não vir esta opção, poderá dever-se ao facto de o seu plano de serviços ou versão de produtos não incluir o serviço Azure Rights Management para o Azure Information Protection.
-    >
-    >Para ativar o serviço Azure Rights Management, precisa de ter um [plano Premium do Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) ou um [plano do Office 365 que inclua o Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Para obter ajuda com este problema, envie uma mensagem de e-mail para [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
-
-5. Na página **RIGHTS MANAGEMENT**, clique em **Gerir**.
-
-6. Na página **rights management**, clique em **ativar**.
-
-7. Quando lhe for perguntado **Pretende ativar o Rights Management?**, clique em **ativar**.
-
-Já deverá estar visível **O Rights Management encontra-se ativado** e a opção para desativar.
-
-## <a name="next-steps"></a>Passos seguintes
-Volte a [Ativar o Azure Rights Management](activate-service.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

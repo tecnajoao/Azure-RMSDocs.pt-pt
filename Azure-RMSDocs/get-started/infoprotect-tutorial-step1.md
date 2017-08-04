@@ -4,17 +4,17 @@ description: "Passo 1 de um tutorial de introdução para experimentar o Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/25/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: adc2baa875595d5044b47a9f014cc1381ba85dc2
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 1779eb6f2bcf31ce3515b58b6ed955208fafb237
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="step-1-activate-the-rights-management-service"></a>Passo 1: ativar o serviço Rights Management
  
@@ -43,14 +43,14 @@ Para este tutorial, iremos avançar diretamente para a página de ativação no 
 
     Já deverá estar visível **O Rights Management encontra-se ativado** e a opção para desativar (poderá ter de atualizar manualmente a página)
 
-    Neste momento, não clique em **funcionalidades avançadas**. Isto leva-o para o portal clássico do Azure onde poderá configurar modelos personalizados, que não são necessários para este tutorial. Em vez disso, pode fechar esta página.
+    Neste momento, não clique em **funcionalidades avançadas**. Em vez disso, pode fechar esta página.
 
-É tudo o que precisa de fazer neste primeiro passo para concluir este tutorial. Para uma implementação de produção, provavelmente, será útil configurar modelos personalizados como suplemento ou em vez de modelos predefinidos do Azure Rights Management. No entanto, os modelos personalizados não são necessários para este tutorial, pelo que pode ir para o passo 2.
+É tudo o que precisa de fazer neste primeiro passo para concluir este tutorial. Está pronto para ir para o passo 2.
 
 |Se pretender mais informações|Informações adicionais|
 |--------------------------------|--------------------------|
 |Como ativar o Azure Rights Management|[Ativar o Azure Rights Management](../deploy-use/activate-service.md)|
-|Acerca dos modelos predefinidos e de como criar modelos novos e personalizados|[Configurar modelos personalizados para o serviço Azure Rights Management](../deploy-use/configure-custom-templates.md)|
+
 
 >[!div class="step-by-step"]
 [&#171; Introdução](infoprotect-quick-start-tutorial.md)

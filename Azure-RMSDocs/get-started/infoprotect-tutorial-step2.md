@@ -4,17 +4,17 @@ description: "Passo 2 de um tutorial de introdução para experimentar o Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: db87ffaa15802f081439f7983ef1060a60c0b24c
-ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
+ms.openlocfilehash: 86857d9fe744ee8b8949bdf247a360492ceb8165
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passo 2: configurar e publicar a política do Azure Information Protection
 
@@ -33,18 +33,18 @@ Apesar de o Azure Information Protection ser fornecido com uma política predefi
 
 3. Preste atenção às informações na página **Início rápido** que se abre automaticamente ao ligar ao serviço pela primeira vez. Pode regressar aqui mais tarde. Para ver este tutorial, clique em **Política global** para abrir o painel **Política: Global**. Este painel abre automaticamente para as ligações subsequentes do serviço e mostra a política do Information Protection predefinida criada automaticamente para o seu inquilino:
     
-    - Etiquetas para classificação: **Pessoal**, **Público**, **Geral**, **Confidencial** e **Altamente Confidencial**. As últimas duas etiquetas expandem-se para mostrar subetiquetas: **Todos os Funcionários** e **Todos (não protegidos)**, para disponibilizar exemplos de como uma classificação pode ter subcategorias.
+    - Etiquetas para classificação: **Pessoal**, **Público**, **Geral**, **Confidencial** e **Altamente Confidencial**. Expanda as últimas duas etiquetas para mostrar etiquetas secundárias que incluem **todos os funcionários** e **qualquer pessoa (não protegido)**, fornecer exemplos de como uma classificação pode ter subcategorias.
     
        > [!NOTE]
-       > A sua política predefinida pode ter um aspeto diferente da que é apresentada neste tutorial. Por exemplo, tem uma etiqueta com o nome **Interno** em vez de **Geral** e **Secreto** em vez de **Altamente Confidencial**. Se for este o caso, está provavelmente a utilizar uma versão mais antiga da política predefinida. Também é possível que tenha editado a política antes de iniciar o tutorial.
+       > A sua política predefinida pode ter um aspeto diferente da que é apresentada neste tutorial. Por exemplo, tem uma etiqueta com o nome **Interno** em vez de **Geral** e **Secreto** em vez de **Altamente Confidencial**. Ou ter uma etiqueta secundária adicional com o nome **destinatários apenas**. Isto acontece porque existem versões diferentes da política predefinida, dependendo de que foi criada para o seu inquilino. Também é possível que tenha editado a política antes de iniciar o tutorial.
        > 
        > Se a sua política predefinida tiver um aspeto diferente, ainda pode utilizar este tutorial, mas tenha em consideração estas alterações quando utilizar as instruções e as imagens que se seguem. Se quiser modificar a sua política predefinida para que corresponda à atual, veja [Política do Azure Information Protection predefinida](../deploy-use/configure-policy-default.md).
 
-    - Com a configuração predefinida, algumas etiquetas não têm marcas visuais configuradas (como o rodapé, cabeçalho, marca d'água) e nenhuma delas tem uma proteção definida: 
+    - A configuração predefinida, algumas etiquetas não têm marcas visuais configuradas (por exemplo, um rodapé, cabeçalho, marca d'água). Consoante a política predefinida, algumas das etiquetas podem ter proteção definida, ou não. Por exemplo:
     
     ![Passo 3 do tutorial de início rápido do Azure Information Protection – política predefinida](../media/info-protect-policy-default-labelsv2.png)
     
-    Além disso, existem algumas definições de política que não estão definidas. Por exemplo, os documentos e e-mails não precisam de uma etiqueta, não existem etiquetas predefinidas e os utilizadores não têm de fornecer uma justificação para alterar as etiquetas:
+    Além disso, existem algumas definições de política que não estão definidas. Todos os documentos e e-mails não têm de ter uma etiqueta, há qualquer etiqueta predefinida e os utilizadores têm de fornecer justificação quando são alterados etiquetas:
     
     ![Passo 3 do tutorial de início rápido do Azure Information Protection – política predefinida](../media/info-protect-policy-default-settings.png)
 
@@ -62,21 +62,21 @@ Para o nosso tutorial, vamos alterar algumas dessas definições de política pa
 
 Iremos alterar as definições de uma das subetiquetas, **Todos os Funcionários**, da etiqueta principal **Confidencial**. 
 
-Se a sua etiqueta **Confidencial** não tiver subetiquetas porque tem uma versão mais antiga da política, pode utilizar a etiqueta **Confidencial** em alternativa. Os passos de configuração serão os mesmos, mas o nome do painel da etiqueta será **Confidencial** em vez de **Todos os Funcionários**.
+Se a sua etiqueta **Confidencial** não tiver subetiquetas porque tem uma versão mais antiga da política, pode utilizar a etiqueta **Confidencial** em alternativa. Os passos de configuração são os mesmos mas o nome do painel etiqueta é **confidencial** em vez de **todos os funcionários**.
 
-1. Certifique-se de que a etiqueta **Confidencial** está expandida e, em seguida, selecione **Todos os Funcionários** a partir da mesma.
-    
-    No novo painel **Etiqueta: Todos os Funcionários**, pode ver agora as definições disponíveis para cada etiqueta. 
+1. Certifique-se de que o **confidencial** etiqueta é expandida para mostrar etiquetas secundárias e, em seguida, para o **todos os funcionários** etiqueta, anote se **Azure RMS** é apresentado para o **PROTEÇÃO** coluna. Se for, a política predefinida mais recente e proteção para esta etiqueta é configurada automaticamente para si. Se esta coluna está em branco, terá de configurar a proteção num passo posterior.
+
+    Selecione esta opção **todos os funcionários** etiqueta secundária e no novo **etiqueta: todos os funcionários** painel, pode ver as definições que estão disponíveis para cada etiqueta. 
 
 2. Leia o texto de **Descrição** desta etiqueta. Este texto descreve como a etiqueta selecionada se destina a ser utilizada e a ser visível para os utilizadores como uma descrição para ajudá-los a decidir qual a etiqueta a selecionar.
 
-3. Localize a secção **Defina permissões para documentos e e-mails que contenham esta etiqueta** e selecione **Proteger**:
+3. Se a proteção já está configurada para a etiqueta, avance para o passo 5.
     
-    ![Configurar a proteção para uma etiqueta do Azure Information Protection](../media/info-protect-protection-barv2.png) 
+    Se a proteção não está configurada para a etiqueta, localize a secção **definir as permissões para documentos e e-mails que contêm esta etiqueta**. Selecione **proteger**e, em seguida, selecione o **proteção** barra:
     
-    Esta ação abre o painel **Proteção**.
+    ![Proteção configurada para uma etiqueta de Azure Information Protection](../media/info-protect-protection-bar-configured.png) 
     
-3. No painel **Proteção**, certifique-se de que o **Azure RMS** está selecionado e que a opção **Selecionar um modelo predefinido** também está selecionada. Em seguida, clique na caixa pendente e selecione o modelo predefinido que permite que todos os utilizadores na sua organização vejam e editem os conteúdos protegidos. 
+4. No **proteção** painel, certifique-se de que **Azure RMS** está selecionada e escolha **selecionar um modelo predefinido**. Clique na caixa pendente e escolha o modelo predefinido que permite que todos os utilizadores na sua vista de organização e editar conteúdo protegido. 
     
     Se obteve recentemente a sua subscrição, este modelo é denominado **Confidencial\Todos os Funcionários**. 
     
@@ -86,7 +86,7 @@ Se a sua etiqueta **Confidencial** não tiver subetiquetas porque tem uma versã
     
     Se tiver desativado este modelo da Azure Rights Management predefinido, selecione um modelo alternativo. No entanto, se selecionar um modelo departamental, certifique-se de que a sua conta está incluída no âmbito.
     
-4. Clique em **OK** para guardar as suas alterações, o que fecha o painel **Proteção**. Verá a sua configuração refletida no painel **Etiqueta: Todos os Funcionários**:
+4. Clique em **OK** para guardar as suas alterações, o que fecha o painel **Proteção**. Consulte a barra de proteção atualizada no **etiqueta: todos os funcionários** painel. Por exemplo:
     
     ![Passo 3 do tutorial de início rápido do Azure Information Protection – proteção do Azure RMS configurada](../media/protection-bar-configured.png)
     
@@ -96,7 +96,7 @@ Se a sua etiqueta **Confidencial** não tiver subetiquetas porque tem uma versã
     
     ![Passo 3 do tutorial de início rápido do Azure Information Protection – definir a proteção do Azure RMS](../media/step2-configure-watermark.png)
     
-    Embora possa alterar o tamanho, a cor e o esquema das marcas d'água, iremos deixá-las nas predefinições por agora.
+    Embora o pode alterar o tamanho, a cor e o esquema para as marcas d'água, iremos irá deixe estas definições as predefinições por agora.
     
 6. Localize a secção **Configurar condições para aplicar esta etiqueta automaticamente**:
     
@@ -126,13 +126,13 @@ Se a sua etiqueta **Confidencial** não tiver subetiquetas porque tem uma versã
     
     ![Passo 3 do tutorial de início rápido do Azure Information Protection – escrever notas](../media/step2-type-notes.png)
 
-10. Clique em **Guardar** neste painel **Etiqueta: Todos os Funcionários**. Em seguida, no painel **Política:Global**, clique em **Guardar** novamente.
+10. Clique em **guardar** neste **etiqueta: todos os funcionários** painel. Em seguida, no painel **Política:Global**, clique em **Guardar** novamente.
     
-    Neste momento, as suas etiquetas mostram a proteção do Azure RMS para a etiqueta que configurou:
+    Se tiver configurado a etiqueta para a proteção, a etiqueta agora é atualizada para mostrar a proteção Azure RMS:
 
     ![Tutorial de início rápido do Azure Information Protection, passo 3 - política predefinida configurada](../media/info-protect-policy-configuredv2.png)
     
-    As definições são configuradas com as suas alterações para a etiqueta e a justificação predefinidas:
+    Consulte também se as definições são configuradas com as suas alterações para a etiqueta predefinida e a justificação:
     
     ![Passo 3 do tutorial de início rápido do Azure Information Protection – definições configuradas](../media/info-protect-settings-configuredv2.png)
     
@@ -147,6 +147,7 @@ Agora que conhece o que é a política predefinida e efetuou algumas alteraçõe
 |Se pretender mais informações|Informações adicionais|
 |--------------------------------|--------------------------|
 |Sobre as opções de configuração para a política|[Configurar a política do Azure Information Protection](../deploy-use/configure-policy.md)|
+|Definições de configuração na política predefinida|[A política do Azure Information Protection predefinida](../deploy-use/configure-policy-default.md)|
 
 
 >[!div class="step-by-step"]

@@ -4,17 +4,17 @@ description: "Conheça a forma como a política predefinida do Azure Information
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: decc5e3462a80e307201933e634c3ecfa03ee074
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 51b5f7d332a86c16ceb6928ea99039812dd54802
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Política do Azure Information Protection predefinida
 
@@ -28,9 +28,80 @@ Pode usar os seguintes valores como referência para voltar à política predefi
 
 ## <a name="current-default-policy"></a>Política predefinida atual
 
-Esta versão da política predefinida é de 21 de março de 2017.
+Esta versão da política predefinida é de 31 de Julho de 2017.
 
-Tenha em atenção que as descrições nesta política se referem aos dados que necessitam de proteção, bem como à monitorização e revogação dos mesmos. A política não configura esta proteção para estas etiquetas, por isso tem de efetuar passos adicionais para cumprir esta descrição. Por exemplo, configure a etiqueta para aplicar a proteção do Azure RMS ou utilize uma solução DLP (proteção contra a perda de dados). Para poder monitorizar e revogar um documento através do site de controlo de documentos, o documento tem de estar protegido pelo Azure RMS. 
+Esta política predefinida é criada apenas se o serviço Azure Rights Management foi ativado quando a política foi criada. Se este serviço não foi ativado, a política predefinida não configurar a proteção para as seguintes etiquetas secundárias:
+
+- **Confidencial\Todos os Funcionários**
+
+- **Confidencial \ destinatários apenas**
+
+- **Altamente Confidencial\Todos os Funcionários** 
+
+- **Altamente confidenciais \ destinatários apenas** 
+
+Se estas etiquetas secundárias não são automaticamente configuradas para proteção, a política predefinida continua a ser o mesmo que o [anterior política predefinida](#default-policy-before-july-31-2017).
+
+Quando a proteção é aplicada para a **todos os funcionários** etiquetas secundárias, a proteção é configurada utilizando os modelos predefinidos que são automaticamente convertidos para etiquetas no portal do Azure. Para obter mais informações sobre estes modelos, consulte [configurar e gerir modelos do Azure Information Protection](configure-policy-templates.md).
+
+#### <a name="more-information-about-the-recipients-only-sub-label"></a>Obter mais informações sobre a etiqueta secundária apenas os destinatários
+
+Os utilizadores veem apenas esta etiqueta no Outlook. Se não vir esta etiqueta no Word, Excel, PowerPoint ou do Explorador de ficheiros. 
+
+Quando os utilizadores selecionarem esta etiqueta, a Outlook opção não reencaminhar é aplicada automaticamente a mensagem de correio eletrónico. Os destinatários que os utilizadores especifiquem não é possível reencaminhar o e-mail e não é possível copiar ou imprimir os conteúdos ou guarde os anexos.
+
+
+### <a name="labels"></a>Etiquetas
+
+|Etiqueta|Descrição|Definições|
+|-------------------------------|---------------------------|-----------------|
+|Pessoal|Dados não empresariais, apenas para utilização pessoal.|**Ativado**: ligado <br /><br />**Cor**: verde claro<br /><br />**Marcas visuais**: desligado <br /><br />**Condições**: nenhuma<br /><br />**Proteção**: nenhuma|
+|Público|Dados empresariais que são especialmente preparados e aprovados para o consumo público.|**Ativado**: ligado <br /><br />**Cor**: verde<br /><br />**Marcas visuais**: desligado<br /><br />**Condições**: nenhuma<br /><br />**Proteção**: nenhuma|
+|Geral|Dados empresariais que não se destinam ao consumo público. No entanto, estes dados podem ser partilhados com parceiros externos, conforme necessário. Os exemplos incluem um diretório de telefone interno da empresa, organogramas, padrões internos e a maioria da comunicação interna.|**Ativado**: ligado <br /><br />**Cor**: azul <br /><br />**Marcas visuais**: desligado<br /><br />**Condições**: nenhuma<br /><br />**Proteção**: nenhuma|
+|Confidencial|Dados empresariais confidenciais que podiam causar danos à empresa se fossem partilhados com pessoas não autorizadas. Os exemplos incluem contratos, relatórios de segurança, resumos de previsões e dados de conta de vendas.|**Ativado**: ligado <br /><br />**Cor**: laranja<br /><br />**Marcas visuais**: desligado<br /><br />**Condições**: nenhuma<br /><br />**Proteção**: nenhuma|
+|Altamente Confidencial|Dados empresariais altamente confidenciais que iriam causar danos à empresa se fossem partilhados com pessoas não autorizadas. Os exemplos incluem informações dos funcionários e clientes, palavras-passe, código de origem e relatórios financeiros previamente anunciados.|**Ativado**: ligado <br /><br />**Cor**: vermelho<br /><br />**Marcas visuais**: desligado<br /><br />**Condições**: nenhuma<br /><br />**Proteção**: nenhuma|
+
+
+### <a name="sub-labels"></a>Etiquetas secundárias
+
+|Etiqueta|Descrição|Definições|
+|-------------------------------|---------------------------|-----------------|
+|Confidencial\Todos os Funcionários|Dados confidenciais que necessitam de proteção, o que permite que todos os funcionários tenham todas as permissões. Os proprietários de dados podem monitorizar e revogar os conteúdos.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (documentos e e-mails)<br /><br />Classificado como Confidencial<br /><br />**Condições**: nenhuma<br /><br />**Proteção**: o Azure RMS [[1]](#footnote-1)|
+|Confidencial\Todos (não protegidos)|Dados que não necessitam de proteção. Utilize esta opção com cuidado e com uma justificação comercial adequada.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (documentos e e-mails)<br /><br />Classificado como Confidencial <br /><br />**Condições**: nenhuma<br /><br />**Proteção**: nenhuma|
+|Confidencial \ destinatários apenas|Dados confidenciais que requer a proteção e que podem ser visualizados, apenas os destinatários.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (e-mail)<br /><br />Classificado como Confidencial <br /><br />**Condições**: nenhuma<br /><br />**Proteção**: não reencaminhar|
+|Altamente Confidencial\Todos os Funcionários|Dados altamente confidenciais que fornecem a todos os funcionários permissões de visualização, edição e resposta para estes conteúdos. Os proprietários de dados podem monitorizar e revogar os conteúdos.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (documentos e e-mails)<br /><br />Classificado como Altamente Confidencial<br /><br />**Condições**: nenhuma<br /><br />**Proteção**: o Azure RMS [[2]](#footnote-2)|
+|Altamente Confidencial\Todos (não protegidos)|Dados que não necessitam de proteção. Utilize esta opção com cuidado e com uma justificação comercial adequada.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (documentos e e-mails)<br /><br />Classificado como Altamente Confidencial<br /><br />**Condições**: nenhuma<br /><br />**Proteção**: nenhuma|
+|Altamente confidenciais \ destinatários apenas|Dados altamente confidenciais que requer a proteção e que podem ser visualizados, apenas os destinatários.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (e-mail)<br /><br />Classificado como Altamente Confidencial <br /><br />**Condições**: nenhuma<br /><br />**Proteção**: não reencaminhar|
+
+###### <a name="footnote-1"></a>Nota de rodapé 1
+As definições de proteção utilizam o modelo predefinido, **confidencial \ todos os funcionários**.
+
+###### <a name="footnote-2"></a>Nota de rodapé 2 
+As definições de proteção utilizam o modelo predefinido, **altamente confidenciais \ todos os funcionários**.
+
+
+### <a name="information-protection-bar"></a>Barra Information Protection
+
+|Definição|Valor|
+|-------------------------------|---------------------------|
+|Título|Sensibilidade|
+|Descrição|A etiqueta atual para estes conteúdos. Esta definição identifica o risco para a empresa se estes conteúdos forem partilhados com pessoas não autorizadas dentro ou fora da organização.|
+
+
+### <a name="settings"></a>Definições
+
+|Definição|Valor|
+|-------------------------------|---------------------------|
+|Todos os documentos e e-mails devem ter uma etiqueta (aplicada automaticamente ou pelos utilizadores)|Desativada|
+|Selecione a etiqueta predefinida|Nenhum|
+|Os utilizadores têm de fornecer uma justificação para poderem definir uma etiqueta de classificação inferior e remover uma etiqueta ou proteção|Desativada|
+|Para mensagens de e-mail com anexos, aplique uma etiqueta que corresponda à classificação mais elevada dos mesmos|Desativada|
+|Fornecer um URL personalizado para a página Web "Mais informações" do cliente do Azure Information Protection|Em Branco|
+
+
+## <a name="default-policy-before-july-31-2017"></a>Política predefinida antes de 31 de Julho de 2017
+
+Tenha em atenção que as descrições nesta política se referem aos dados que necessitam de proteção, bem como à monitorização e revogação dos mesmos. A política não configura esta proteção para estas etiquetas, por isso tem de efetuar passos adicionais para cumprir esta descrição. Por exemplo, configure a etiqueta para aplicar a proteção do Azure RMS ou utilize uma solução DLP (proteção contra a perda de dados). Antes de poder controlar e revogar um documento, utilizando o site de controlo de documentos, o documento tem de ser protegido pelo Azure RMS e controlado pela pessoa que o documento protegido. 
 
 
 ### <a name="labels"></a>Etiquetas

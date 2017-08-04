@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 587d24a005452874ca06b8fc179b25e91a7f0130
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: a1f448a51ee4bfecfd0d680b842eed44aa816ed1
+ms.sourcegitcommit: e4199d243d9f6c80efccc0f0d5574d069d69f46d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/02/2017
 ---
 # <a name="migration-phase-1---preparation"></a>Fase 1 da migração – preparação
 
@@ -50,9 +50,13 @@ Por exemplo: **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
     
 3. Copie o valor apresentado em **LicensingIntranetDistributionPointUrl** e, em seguida, a partir desta cadeia, remova `/_wmcs\licensing`. 
     
-    O que permanece é o URL do serviço Azure Rights Management para o inquilino do Azure Information Protection, que é muitas vezes encurtado para *URL de inquilino* nas seguintes instruções de migração.
+    O que permanece é o URL do serviço Azure Rights Management para o seu inquilino do Azure Information Protection. Este valor é frequentemente shortened para *o seu URL de inquilino* nas seguintes instruções de migração.
+    
+    Pode verificar que tem o valor correto, executando o seguinte comando do PowerShell:
+    
+            (Get-AadrmConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
 
-## <a name="step-2-prepare-for-client-migration"></a>Passo 2: preparar a migração de clientes
+## <a name="step-2-prepare-for-client-migration"></a>Passo 2. preparar a migração de clientes
 
 Na maioria das migrações, não é prático migrar todos os clientes de uma só vez, por isso irá migrar os clientes em lotes. O que significa que durante um período de tempo, alguns clientes irão utilizar o Azure Information Protection e alguns ainda irão utilizar o AD RMS. Para suportar os utilizadores pré-migrados e migrados, utilize os controlos de inclusão e implemente um script de pré-migração. Este passo é obrigatório durante o processo de migração para que os utilizadores que ainda não migraram possam consumir conteúdos que foram protegidos pelos utilizadores migrados que estão agora a utilizar o Azure Rights Management.
 

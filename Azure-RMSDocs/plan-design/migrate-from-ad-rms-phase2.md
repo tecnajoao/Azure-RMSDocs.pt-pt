@@ -4,7 +4,7 @@ description: "Fase 2 da migração do AD RMS para o Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/27/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 24e832c63ce7ff4f774bbc2ec10a7b35f72e050a
-ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
+ms.openlocfilehash: 9f04698064037343719d274e793eb560b703b031
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Fase 2 da migração – configuração do AD RMS do lado do servidor
 
@@ -125,7 +125,7 @@ Além disso, se tiver criado modelos personalizados que pretende utilizar após 
 
 Como os modelos que importou estão predefinidos para o estado **Arquivado**, tem de alterar este estado para **Publicado** se quiser que os utilizadores possam utilizar estes modelos com o Azure Rights Management.
 
-Os modelos que importa do AD RMS assemelham-se e comportam-se tal como os modelos personalizados que pode criar no portal clássico do Azure. Para alterar modelos importados a publicar para que os utilizadores os possam ver e selecionar a partir de aplicações, veja [Configurar modelos personalizados para o Azure Rights Management](../deploy-use/configure-custom-templates.md).
+Os modelos que importa do AD RMS parecer e comportar-se, tal como modelos personalizados que pode criar no portal do Azure. Para alterar modelos importados a publicar para que os utilizadores possam ver e selecionar a partir de aplicações, consulte [configurar e gerir modelos do Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
 Para além da publicação de modelos recentemente importados, existem apenas duas alterações importantes para os modelos que poderá ter de fazer antes de continuar com a migração. Para que os utilizadores tenham uma experiência mais consistente durante o processo de migração, não faça alterações adicionais aos modelos importados, não publique os dois modelos predefinidos do Azure Information Protection nem crie novos modelos nesta altura. Em alternativa, aguarde até que o processo de migração esteja concluído e que tenha desaprovisionado os servidores do AD RMS.
 

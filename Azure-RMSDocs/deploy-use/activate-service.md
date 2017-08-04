@@ -4,7 +4,7 @@ description: "O serviço Azure Rights Management tem de ser ativado antes de a s
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2b4e62ab14702beabe8692147b97c4464d672bdf
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: f6d13d05c7139635c9a43770e418c1d7e11f880e
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="activating-azure-rights-management"></a>Ativar o Azure Rights Management
 
@@ -32,18 +32,23 @@ Quando o serviço Azure Rights Management para o Azure Information Protection é
 Se quiser saber mais acerca do serviço Azure Rights Management antes de o ativar (por exemplo, os problemas empresariais que resolve, alguns casos de utilização típicos e como funciona), veja [O que é o Azure Rights Management?](../understand-explore/what-is-azure-rms.md)
 
 > [!IMPORTANT]
-> Antes de ativar o [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], certifique-se de que a sua organização tem um plano de serviço que inclui a proteção de dados do Azure Rights Management. Caso contrário, não será possível ativar o Azure Rights Management.
->
-> Precisa de ter um [plano do Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) ou um [plano do Office 365 que inclua o Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+> Não ative o serviço Azure Rights Management se tiver o Active Directory Rights Management Services (AD RMS) implementado na sua organização. [Mais informações](prepare-environment-adrms.md)
+
+Antes de ativar o [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], certifique-se de que a sua organização tem um plano de serviço que inclui a proteção de dados do Azure Rights Management. Caso contrário, não será possível ativar o Azure Rights Management. Tem de ter um dos seguintes:
+
+- Um [plano do Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) 
+
+- Um [plano do Office 365 que inclui o Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 Quando o serviço Azure Rights Management está ativado, todos os utilizadores na sua organização podem aplicar a proteção de informações aos respetivos ficheiros e todos os utilizadores podem abrir (consumir) ficheiros que foram protegidos pelo Azure Rights Management. No entanto, se preferir, pode restringir quem pode aplicar a proteção de informações, ao utilizar controlos de inclusão para uma implementação faseada. Para obter mais informações, consulte a secção [Configurar os controlos de inclusão para uma implementação faseada](#configuring-onboarding-controls-for-a-phased-deployment) neste artigo.
 
-Para obter instruções acerca de como ativar o serviço Rights Management a partir do portal de gestão, selecione se irá utilizar o centro de administração do Office 365 ou o portal de gestão clássico do Azure:
+Para instruções de como ativar os Rights Management service partir do portal de gestão, selecione se pretende utilizar o Centro de administração do Office 365, o portal clássico do Azure ou o portal do Azure (este método última está atualmente em pré-visualização):
 
+- [**Centro de administração do Office 365** ](activate-office365.md) -requer a conta de administrador global
 
-- [Centro de administração do Office 365](activate-office365.md)
+- [**Portal clássico do Azure** ](activate-azure-classic.md) -requer a conta de administrador global
 
-- [Portal clássico do Azure](activate-azure-classic.md)
+- [**Portal do Azure** ](activate-azure.md) -requer a conta de administrador global ou [conta de administrador de segurança](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles)
 
 Em alternativa, pode utilizar o PowerShell para ativar o [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]:
 
@@ -90,7 +95,7 @@ Quando utilizar estes controlos de inclusão, todos os utilizadores na organiza�
 ## <a name="next-steps"></a>Passos seguintes
 Uma vez que ativou o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] para a sua organização, utilize o [Plano de implementação do Azure Information Protection](../plan-design/deployment-roadmap.md) para verificar se existem outros passos de configuração que necessite de realizar antes de implementar o Azure Information Protection para utilizadores e administradores. 
 
-Por exemplo, pode querer utilizar [modelos personalizados](configure-custom-templates.md) para que os utilizadores possam mais facilmente aplicar a proteção de informações a ficheiros, ligar os servidores no local para utilizar o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] ao instalar o [conector Rights Management](deploy-rms-connector.md) e implementar o [cliente do Azure Information Protection](../rms-client/aip-client.md) que suporta a proteção de todos os tipos de ficheiro em todos os dispositivos. 
+Por exemplo, pode querer utilizar [modelos](configure-policy-templates.md) para tornar mais fácil para os utilizadores aplicar proteção de informações aos ficheiros, ligar os servidores no local para utilizar [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] instalando o [conector Rights Management](deploy-rms-connector.md)e implementar o [cliente Azure Information Protection](../rms-client/aip-client.md) que suporta a proteção de todos os tipos de ficheiro em todos os dispositivos. 
 
 Os serviços do Office, como o Exchange Online e o SharePoint Online, necessitam de configuração adicional antes de poder utilizar as respetivas funcionalidades de Gestão de Direitos de Informação (IRM). Para obter informações sobre a interação das suas aplicações com o serviço Rights Management, veja [Como as aplicações suportam o serviço Azure Rights Management](../understand-explore/applications-support.md).
 

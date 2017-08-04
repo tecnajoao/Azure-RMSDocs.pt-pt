@@ -4,7 +4,7 @@ description: "Informações para o ajudar a instalar e configurar o conector Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: be09e2c974d9d542b94bc16f140e764858cc9282
-ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
+ms.openlocfilehash: a8cfa6a5baf1661495fc8b485ac0a6535c22233d
+ms.sourcegitcommit: 2a1c690ca84611e5774ac8fac0fb4caba09fef2e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Instalar e configurar o conector Azure Rights Management
 
@@ -59,7 +59,7 @@ Esta conta não deve exigir a autenticação multifator (MFA) porque a ferrament
 
 O conector também tem algumas restrições de carateres para esta palavra-passe. Não pode utilizar uma palavra-passe que tenha os seguintes carateres: "E" comercial ( **&** ); parêntese reto esquerdo ( **[** ); parêntese reto direito ( **]** ); aspas direitas ( **"** ) e apóstrofo ( **'** ). Se a sua palavra-passe tiver algum destes carateres, a autenticação do conector RMS irá falhar e receberá a mensagem de erro **Essa combinação de nome de utilizador e palavra-passe não está correta**, mesmo que já tenha conseguido iniciar sessão com esta conta e palavra-passe noutros cenários. Se este cenário se aplicar à sua palavra-passe, utilize uma conta com uma palavra-passe que não tenha nenhum destes carateres especiais ou reponha a palavra-passe para remover os carateres especiais.
 
-Além disso, se tiver implementado [controlos de integração](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), certifique-se de que a conta especificada tem a capacidade de proteger conteúdos. Por exemplo, se tiver restringido a capacidade de proteger conteúdos ao grupo "Departamento de TI", a conta que especificar tem de ser membro desse grupo. Caso contrário, receberá a mensagem de erro: **Ocorreu uma falha ao tentar descobrir a localização da organização e do serviço de administração. Certifique-se de que o serviço Microsoft Rights Management está ativado para a sua organização.**
+Além disso, se tiver implementado [controlos de integração](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), certifique-se de que a conta especificada tem a capacidade de proteger conteúdos. Por exemplo, se tiver restringido a capacidade de proteger conteúdos ao grupo "Departamento de TI", a conta que especificar tem de ser membro desse grupo. Se não vir a mensagem de erro: **Falha ao tentar descobrir a localização do serviço de administração e organização. Certifique-se de que o serviço Microsoft Rights Management está ativado para a sua organização.**
 
 Pode utilizar uma conta que tenha um dos seguintes privilégios:
 
@@ -117,6 +117,10 @@ Na página final do assistente, efetue o seguinte procedimento e, em seguida, cl
 
 Se precisar de desinstalar o conector RMS, execute novamente o assistente e selecione a opção Desinstalar.
 
+Se surgirem problemas durante a instalação, verifique o registo de instalação: **%LocalAppData%\Temp\Microsoft Rights Management connector_\<data e hora >. log** 
+
+Por exemplo, o registo de instalação pode ter um aspeto semelhante connector_20170803110352.log C:\Users\Administrator\AppData\Local\Temp\Microsoft Rights Management
+
 ## <a name="authorizing-servers-to-use-the-rms-connector"></a>Autorizar os servidores a utilizar o conector RMS
 Quando tiver instalado o conector RMS em pelo menos dois computadores, está pronto para autorizar os servidores e os serviços com os quais quer utilizar o conector RMS. Por exemplo, os servidores com o Exchange Server 2013 ou o SharePoint Server 2013.
 
@@ -126,7 +130,7 @@ Quando autorizar estes servidores, tenha em consideração o seguinte:
 
 - Os servidores que adicionar terão privilégios especiais. Todas as contas que especificar para a função do Exchange Server na configuração do conector terão a [função de superutilizador](configure-super-users.md) no Azure RMS, que lhes concede acesso a todos os conteúdos deste inquilino RMS. Se necessário, a funcionalidade de superutilizador é ativada automaticamente nesta fase. Para evitar o risco de segurança da elevação de privilégios, tenha o cuidado de especificar apenas as contas que são utilizadas pelos servidores Exchange da sua organização. Todos os servidores configurados como servidores do SharePoint ou servidores de ficheiros que utilizem a FCI (Infraestrutura de Classificação de Ficheiros) terão privilégios de utilizador normais.
 
-- Pode adicionar múltiplos servidores como uma única entrada, ao especificar um grupo de distribuição ou de segurança do Active Directory ou uma conta de serviço que seja utilizada por mais do que um servidor. Se utilizar esta configuração, o grupo de servidores partilhará os mesmos certificados RMS e todos serão considerados proprietários dos conteúdos que cada um deles protege. Para minimizar as tarefas administrativas adicionais, recomendamos que utilize esta configuração de um único grupo, em vez de servidores individuais, para autorizar os servidores Exchange da sua organização ou um farm de servidores do SharePoint.
+- Pode adicionar múltiplos servidores como uma única entrada, ao especificar um grupo de distribuição ou de segurança do Active Directory ou uma conta de serviço que seja utilizada por mais do que um servidor. Quando utiliza esta configuração, o grupo de servidores partilha os mesmos certificados RMS e é todos serão considerados proprietários dos conteúdos que qualquer um deles protegidos. Para minimizar as tarefas administrativas adicionais, recomendamos que utilize esta configuração de um único grupo, em vez de servidores individuais, para autorizar os servidores Exchange da sua organização ou um farm de servidores do SharePoint.
 
 Na página **Servidores com permissão para utilizar o conector**, clique em **Adicionar**.
 

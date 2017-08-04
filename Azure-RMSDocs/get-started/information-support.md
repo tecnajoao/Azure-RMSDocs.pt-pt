@@ -4,7 +4,7 @@ description: "Recursos para administradores que incluem informações sobre nova
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2017
+ms.date: 07/31/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 666ea0288a06b7a7e7f25b4a6cff0ac62888587c
-ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
+ms.openlocfilehash: 0d8c6a1ccfaf52af25ab0cfb5fb8074019939b90
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informações e suporte do Azure Information Protection
 
@@ -27,7 +27,7 @@ Utilize os seguintes recursos para o ajudar a obter mais informações, implemen
 |Para...|... efetue o seguinte:|
 |----------------|---------------|
 |Ver a documentação recomendada para o serviço|Utilize a página inicial da [Documentação do Azure Information Protection](https://docs.microsoft.com/information-protection/).|
-|Fornecer feedback sobre a documentação ou fazer uma pergunta sobre a documentação|Envie um e-mail para [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
+|Fornecer feedback sobre a documentação ou fazer uma pergunta sobre a documentação|E-mail [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback).|
 |Receber tweets do grupo de produtos sobre o Azure Information Protection e anúncios para atualizações da documentação|Siga [@DanPlastina](https://twitter.com/DanPlastina), que ajuda a liderar a equipa do Azure Information Protection na Microsoft.|
 |Ver as informações de subscrição e as funcionalidades suportadas|Utilize as [informações da subscrição](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) e a [lista de funcionalidades](https://www.microsoft.com/cloud-platform/azure-information-protection-features) no site do Azure Information Protection.|
 
@@ -35,12 +35,13 @@ Utilize os seguintes recursos para o ajudar a obter mais informações, implemen
 ## <a name="information-about-new-releases-and-updated-documentation"></a>Informações sobre novas versões e documentação atualizada
 A equipa de produtos do Azure Information Protection publica anúncios sobre as novas versões e atualizações no [Blogue sobre a Segurança e a Mobilidade nas Grandes Empresas – em inglês](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection). Estas publicações no blogue completam a documentação do produto e as informações de suporte.
 
-Também encontrará informações sobre novas funcionalidades e pré-visualizações no [site do Yammer do Azure Information Protection](https://www.yammer.com/AskIPTeam), onde também pode pedir novas funcionalidades.
+Cada mês, vamos publicar as seguintes [ **atualizações** ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) para ajudar a manter-se atualizado:
 
-No final de cada mês, publicamos um resumo de mensagem do blogue com as alterações à documentação com o título "**Atualização da Documentação do Azure Information Protection de \<mês, ano>**". Estas publicações têm a etiqueta de tipo de conteúdo [**Updates**](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) (Atualizações) e incluem atualizações da documentação para novas versões, assim como correções e esclarecimentos sobre as versões existentes.
+- Uma atualização de estado para os quais são as novidades e novidades futuras. Estas mensagens são intituladas: "**atualização do Estado do Azure Information Protection – \<mês ano >**"
 
-> [!TIP]
-> Se estiver a desenvolver aplicações que utilizam os serviços do Microsoft Rights Management (Azure RMS ou AD RMS), poderá também estar interessado no [Active Directory Rights Management Services (AD RMS) Developer's Corner blog (blogue Área para Programadores dos Serviços de Gestão de Direitos do Active Directory (AD RMS) – em inglês)](https://blogs.msdn.microsoft.com/rms/).
+- Um resumo das alterações de documentação que incluem a documentação para os novos lançamentos, atualiza para suportar as instruções e também as correções e clarificações para versões existentes. Estas mensagens são intituladas: "**atualização documentação de proteção de informações do Azure para \<mês ano >**" 
+
+Também pode encontrar informações sobre novas funcionalidades e pré-visualizações no [site Yammer do Azure Information Protection](https://www.yammer.com/AskIPTeam), onde também pode colocar perguntas sobre o Azure Information Protection. Para propor novas funcionalidades ou voto para novas funcionalidades, visite o [site voz do utilizador](https://msip.uservoice.com) para o Azure Information Protection.
 
 ## <a name="support-options-and-community-resources"></a>Opções de suporte e recursos da comunidade
 As secções seguintes fornecem informações sobre as opções de suporte e de resolução de problemas e os recursos da comunidade.
@@ -49,13 +50,13 @@ As secções seguintes fornecem informações sobre as opções de suporte e de 
 
 Se tiver Suporte Premier, visite o [portal clientes do Suporte Premier](https://premier.microsoft.com/) para submeter incidentes, procurar soluções e obter ajuda.
 
-Pode ser elegível para o **FastTrack**: pode utilizar o Benefício do FastTrack Center ao adquirir pelo menos 150 licenças do Azure Information Protection num plano elegível. O Benefício do FastTrack Center permite-lhe trabalhar com especialistas da Microsoft para avaliar, corrigir e ativar serviços elegíveis. Para obter mais informações, veja [Benefício do FastTrack Center do Azure Rights Management](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
+Pode ser elegível para **FastTrack**: pode utilizar o benefício do FastTrack Center ao adquirir pelo menos 150 licenças num plano elegível para o Azure Information Protection. O Benefício do FastTrack Center permite-lhe trabalhar com especialistas da Microsoft para avaliar, corrigir e ativar serviços elegíveis. Para obter mais informações, veja [Benefício do FastTrack Center do Azure Rights Management](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
 
 Para outros clientes, utilize os canais de suporte na tabela seguinte, consoante a sua subscrição do Azure Information Protection.
 
 |Subscrição|Instruções|
 |----------------|---------------|
-|Azure Information Protection (autónomo)|Selecione **Novo pedido de suporte** na secção [Ajuda e suporte](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) no portal do Azure.<br /><br />Quando lhe for pedido, no painel **Noções básicas**, selecione **Técnico** para o **Tipo de problema** e **Proteção de Informação** para o serviço. <br /><br />Além disso, certifique-se de que uma das seguintes opções está selecionada:<br /><br />- **Subscrição com suporte técnico incluído**: verá esta opção se tiver uma subscrição paga ou de avaliação do Azure.<br /><br /> - **Suporte técnico – incluído**: verá esta opção se tiver uma subscrição gratuita do Azure para configurar modelos personalizados do Azure Rights Management e Azure Active Directory ou se não tiver uma subscrição do Azure.|
+|Azure Information Protection (autónomo)|Selecione **Novo pedido de suporte** na secção [Ajuda e suporte](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) no portal do Azure.<br /><br />Quando lhe for pedido, no painel **Noções básicas**, selecione **Técnico** para o **Tipo de problema** e **Proteção de Informação** para o serviço. <br /><br />Além disso, certifique-se de que uma das seguintes opções está selecionada:<br /><br />- **Subscrição com suporte técnico incluído**: verá esta opção se tiver uma subscrição paga ou de avaliação do Azure.<br /><br /> - **O suporte técnico - incluído**: ver esta opção se tiver uma subscrição gratuita do Azure para configurar o Azure Active Directory e o Azure Rights Management no portal clássico do Azure, ou se não tiver uma subscrição do Azure.|
 |Azure Information Protection e uma subscrição do Office 365<br /><br />Azure Rights Management com uma subscrição do Office 365|Veja [Contactar o Office 365 para suporte de negócio – Ajuda de Administração](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) para consultar os números de telefone e saber como contactar o Suporte através do portal de administração do Office 365.|
 |Azure Information Protection com o Enterprise Mobility + Security (EMS)|Selecione **Novo pedido de suporte** na secção [Ajuda e suporte](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) no portal do Azure.<br /><br />Quando lhe for pedido, no painel **Noções básicas**, selecione **Técnico** para o **Tipo de problema** e **Proteção de Informação** para o serviço. <br /><br />Além disso, certifique-se de que uma das seguintes opções está selecionada:<br /><br />- **Subscrição com suporte técnico incluído**: verá esta opção se tiver uma subscrição paga ou de avaliação do Azure.<br /><br /> - **Suporte técnico – incluído**: verá esta opção se tiver uma subscrição gratuita do Azure para configurar modelos personalizados do Azure Rights Management e Azure Active Directory ou se não tiver uma subscrição do Azure.|
 |Azure Information Protection com Secure Productive Enterprise (SPE)|Utilize os [canais de suporte do Office 365](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
@@ -67,9 +68,9 @@ Para opções de suporte adicionais, peça ao seu contacto da Microsoft.
 
 Vídeos a pedido:
 
-- Sessões do Microsoft Ignite 2016 para [Azure Information Protection e Azure Rights Management](https://myignite.microsoft.com/videos?f=%5B%7B%22name%22:%22Azure%20Rights%20Management%22,%22facetName%22:%22products%22%7D,%7B%22name%22:%22Azure%20Information%20Protection%22,%22facetName%22:%22products%22%7D%5D)
+- Microsoft Ignite 2016 sessões para [Azure Information Protection](https://myignite.microsoft.com/videos?f=%5B%7B%22name%22:%22Azure%20Rights%20Management%22,%22facetName%22:%22products%22%7D,%7B%22name%22:%22Azure%20Information%20Protection%22,%22facetName%22:%22products%22%7D%5D).
 
-- Microsoft Virtual Academy [Competências Essenciais dos Serviços do Azure Rights Management](https://mva.microsoft.com/en-us/training-courses/azure-rights-management-services-core-skills-10500?l=QLoxMwuCB_1805094681)
+- As sessões do Microsoft Virtual Academy que incluem [Azure Information Protection](https://mva.microsoft.com/search/SearchResults.aspx#!q=Azure%20Information%20protection).
 
 Resolva os problemas:
 
@@ -85,7 +86,7 @@ Resolva os problemas:
 
 ### <a name="community-resources"></a>Recursos comunitários
 
-Recomendamos o [site do Yammer para o Azure Information Protection](https://www.yammer.com/AskIPTeam). Este recurso proporciona respostas diretas da equipa do Azure Information Protection, o benefício da experiência partilhada e o conhecimento de outros administradores e consultores.
+Recomendamos o [site do Yammer para o Azure Information Protection](https://www.yammer.com/AskIPTeam). Este recurso fornece respostas diretas da equipa do Azure Information Protection, para além das vantagens de experiência partilhada e o conhecimento dos outros administradores e consultores.
 
 Se não tiver acesso ao Yammer, tente o [Fórum do TechNet para Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
 

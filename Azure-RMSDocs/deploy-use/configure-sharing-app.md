@@ -4,7 +4,7 @@ description: "Informações para administradores sobre como implementar a aplica
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: b9af5dc3-73d4-4147-b7ef-f6803b0d5216
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: af5541ab5dcec7224d1048121460b58b1ca13c48
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 65b4a60909f93090fa2e6d27660e1ed20f410955
+ms.sourcegitcommit: d7bdf865a06df2150b261c98b66503c1db7fed11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/28/2017
 ---
 # <a name="rights-management-sharing-application-installation-and-configuration-for-clients"></a>Aplicação de partilha Rights Management: instalação e configuração para clientes
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
 > [!IMPORTANT]
-> **Notificação de fim do suporte**: a aplicação de partilha Rights Management para Windows está a ser substituída pelo [cliente do Azure Information Protection](../rms-client/aip-client.md). O suporte para esta aplicação mais antiga será interrompido a 31 de janeiro de 2018. 
+> **Notificação de fim do suporte**: a aplicação de partilha Rights Management para Windows está a ser substituída pelo [cliente do Azure Information Protection](../rms-client/aip-client.md). Suporte para esta aplicação anterior irá parar 31 de Janeiro de 2019. 
  
 A aplicação de partilha RMS fornece suporte de autenticação para o Office 2010 e integra-se com aplicações do Office através da instalação de um suplemento do Office para que os utilizadores possam facilmente proteger os ficheiros e os e-mails diretamente do friso. Esta aplicação também proporciona proteção genérica a tipos de ficheiros que não são suportados nativamente pelo serviço Azure Rights Management e possibilita um site de controlo de documentos para os utilizadores controlarem e revogarem ficheiros protegidos por eles.
 

@@ -4,7 +4,7 @@ description: "Fase 5 da migração do AD RMS para o Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 85b00b8f1e6bd8612b4bd49770e2ff4a934d3177
-ms.sourcegitcommit: 52ad844cd42479a56b1ae0e56ba0614f088d8a1a
+ms.openlocfilehash: 2ab4d8c9d253098b4f9ecb7fb820a3df1891e124
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Fase 5 da migração – tarefas de pós-migração
 
@@ -43,7 +43,7 @@ Agora monitorize a atividade dos seus servidores do AD RMS, por exemplo, ao veri
 
 Quando tiver confirmado que os clientes RMS já não estão a comunicar com estes servidores e que os clientes estão a utilizar o Azure Information Protection com êxito, pode remover a função de servidor do AD RMS destes servidores. Se estiver a utilizar servidores dedicados, poderá preferir o passo cautelar de começar por encerrar os servidores durante um período de tempo para se certificar de que não existem problemas comunicados que exijam reiniciar estes servidores para assegurar a continuidade do serviço enquanto estiver a investigar por que razão os clientes não estão a utilizar o Azure Information Protection.
 
-Depois de ter desaprovisionado os seus servidores do AD RMS, pode aproveitar a oportunidade para rever os seus modelos no portal clássico do Azure e consolidá-los para que os utilizadores tenham menos opções por onde escolher, reconfigurá-los ou até mesmo adicionar novos modelos. É também uma boa altura para publicar os modelos predefinidos. Para obter mais informações, veja [Configurar modelos personalizados para o serviço Azure Rights Management](../deploy-use/configure-custom-templates.md).
+Depois de ter desaprovisionada seus servidores AD RMS, pode querer aproveitar a oportunidade para rever os modelos no portal do Azure e consolidá-los para que os utilizadores tenham menos por onde escolher, reconfigurá-las ou até adicionar novos modelos. É também uma boa altura para publicar os modelos predefinidos. Para obter mais informações, consulte [configurar e gerir modelos do Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
 >[!IMPORTANT]
 > No final desta migração, o seu cluster do AD RMS não pode ser utilizado com o Azure Information Protection e a opção "tenha a sua própria chave" (HYOK). Se optar por utilizar o HYOK para uma etiqueta do Azure Information Protection, por causa dos redirecionamentos que estão em vigor, o cluster do AD RMS que utilizar tem de ter URLs de licenciamento diferentes do que tem nos clusters que migrou.

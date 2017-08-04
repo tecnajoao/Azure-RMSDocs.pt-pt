@@ -1,5 +1,5 @@
 ---
-title: "Aplicações do Office: configuração para clientes – AIP"
+title: "Configuração para clientes utilizar aplicações do Office com o Azure RMS do AIP"
 description: "Informações e instruções para administradores para configurarem aplicações do Office para trabalhar com o serviço Azure Rights Management do Azure Information Protection."
 author: cabailey
 ms.author: cabailey
@@ -12,26 +12,26 @@ ms.technology: techgroup-identity
 ms.assetid: ec269afe-4e87-4cc1-9144-5fbb594b412e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 430f390bef496b5e297ae25a03531da42954121d
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 52b3942d7918ada46cbdd7b45ed3925817e75f45
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/31/2017
 ---
-# <a name="office-apps-configuration-for-clients"></a>Aplicações do Office: configuração para clientes
+# <a name="office-apps-configuration-for-clients-to-use-the-azure-rights-management-service"></a>Aplicações do Office: configuração para os clientes utilizem o serviço Azure Rights Management
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
 
-Utilize estas informações para determinar o que tem de fazer para que as aplicações do Office utilizadas pelos seus utilizadores finais funcionem com o Azure Rights Management do Azure Information Protection.
+Utilize estas informações para determinar o que precisa de fazer para que as aplicações do Office funcionam com o serviço Azure Rights Management do Azure Information Protection.
 
 ## <a name="office-2016-and-office-2013"></a>Office 2016 e Office 2013
-Uma vez que estas versões mais recentes do Office suportam nativamente o serviço Azure Rights Management, não é necessária nenhuma configuração de computador cliente para suportar as funcionalidades de gestão de direitos de informação (IRM) em aplicações como o Word, o Excel, o PowerPoint, o Outlook e o Outlook Web App. Os utilizadores só têm de iniciar sessão nas aplicações do Office com as respetivas credenciais do [!INCLUDE[o365_1](../includes/o365_1_md.md)] para poderem proteger ficheiros e e-mails e utilizar ficheiros e e-mails protegidos por outras pessoas.
+Porque estas versões posteriores do Office suportam nativamente o serviço Azure Rights Management, nenhuma configuração de computador cliente é necessária para suportar as funcionalidades de gestão (IRM) direitos informações para aplicações como o Word, Excel, PowerPoint, Outlook e Outlook na web. Todos os utilizadores têm para o fazer, iniciar sessão nas aplicações do Office com os respetivos [!INCLUDE[o365_1](../includes/o365_1_md.md)] credenciais. Podem, em seguida, pode proteger ficheiros e e-mails e utilizar ficheiros e e-mails que foram protegidos por outras pessoas.
 
 No entanto, recomendamos que complemente estas aplicações com o cliente do Azure Information Protection para que os utilizadores possam beneficiar do suplemento do Office e do suporte para tipos de ficheiros adicionais. Para obter mais informações, veja [Cliente do Azure Information Protection: instalação e configuração para clientes](configure-client.md).
 
 ## <a name="office-2010"></a>Office 2010
-Para que os computadores cliente possam utilizar o serviço Azure Rights Management com o Office 2010, têm de ter instalado o cliente do Azure Information Protection ou a aplicação de partilha Rights Management para Windows. Os utilizadores apenas têm de iniciar sessão com as respetivas credenciais do [!INCLUDE[o365_1](../includes/o365_1_md.md)] para poderem proteger ficheiros e utilizar ficheiros que tenham sido protegidos por outros utilizadores.
+Para computadores de cliente para utilizar o serviço Azure Rights Management com o Office 2010, têm de ter o cliente Azure Information Protection ou a aplicação de partilha Rights Management para Windows. Os utilizadores apenas têm de iniciar sessão com as respetivas credenciais do [!INCLUDE[o365_1](../includes/o365_1_md.md)] para poderem proteger ficheiros e utilizar ficheiros que tenham sido protegidos por outros utilizadores.
 
 Para obter mais informações sobre o cliente do Azure Information Protection, veja [Cliente do Azure Information Protection: instalação e configuração para clientes](configure-client.md).
 

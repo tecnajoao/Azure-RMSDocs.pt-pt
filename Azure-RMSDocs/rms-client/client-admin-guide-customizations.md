@@ -4,7 +4,7 @@ description: "Informações sobre a personalização do cliente do Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/25/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 32226274c8b50b02e453f1c1b6655fb01b4ec942
-ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
+ms.openlocfilehash: 28b4e89cd6300c9b206abdf45f5d580b4474eaa5
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="custom-configurations-for-the-azure-information-protection-client"></a>Configurações personalizadas do cliente do Azure Information Protection
 
@@ -102,7 +102,20 @@ Localize o nome do valor seguinte e defina os dados do valor como **0**:
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
-Confirme se o cliente tem um ficheiro de política válido denominado **Policy.msip** na pasta **%localappdata%\Microsoft\MSIP**. Se necessário, pode exportar a política a partir do portal do Azure e copiar o ficheiro exportado para o computador cliente. Também pode utilizar este método para substituir um ficheiro de política desatualizada pela política publicada mais recente.
+Certifique-se de que o cliente tem um ficheiro de política válido denominado **Policy.msip**, além de **%LocalAppData%\Microsoft\MSIP** pasta. Se necessário, pode exportar a política a partir do portal do Azure e copiar o ficheiro exportado para o computador cliente. Também pode utilizar este método para substituir um ficheiro de política desatualizada pela política publicada mais recente.
+
+Ao exportar a política, esta ação transfere um ficheiro zipped com várias versões da política que corresponde ao versões diferentes do cliente Azure Information Protection:
+
+1. Deszipe o ficheiro e utilize a tabela seguinte para identificar o ficheiro de política é necessário. 
+    
+    |Nome de ficheiro|Versão de cliente correspondente|
+    |--------------------------|---------------------------------------------|
+    |Policy1.1.msip |versão 1.2|
+    |Policy1.2.msip |versão 1.3 1.7|
+    |Policy1.3.msip |versão 1.8 e posterior|
+    
+2. Mudar o nome do ficheiro identificado para **Policy.msip**e, em seguida, copie-o para o **%LocalAppData%\Microsoft\MSIP** pasta em computadores que tenham o cliente do Azure information protection instalado. 
+
 
 ## <a name="hide-the-do-not-forward-button-in-outlook"></a>Ocultar o botão Não Reencaminhar no Outlook
 

@@ -4,7 +4,7 @@ description: "Informações e instruções para os administradores configurarem 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/21/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,59 +12,21 @@ ms.technology: techgroup-identity
 ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6c3f066a373d253d8488c805828a65513370e3a4
-ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
+ms.openlocfilehash: 2111953057792e2f3a97a2460d1cffee41cb2e31
+ms.sourcegitcommit: a183baf227428bbb7f30edc04d8034e287874213
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="configuring-custom-templates-for-the-azure-rights-management-service"></a>Configurar modelos personalizados para o serviço Azure Rights Management
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
-Quando o serviço Azure Rights Management estiver [ativado](activate-service.md), os utilizadores podem utilizar automaticamente dois modelos predefinidos. Estes modelos facilitam a aplicação de políticas de gestão de direitos em ficheiros confidenciais que restringem o acesso a utilizadores autorizados na sua organização. Os dois modelos têm as seguintes restrições de política de direitos:
+Agora, configurar modelos personalizados no portal do Azure. A capacidade de configurar modelos no portal clássico do Azure agora foi preterida.
 
--   Visualização só de leitura dos conteúdos protegidos
+Apesar de ainda pode criar e gerir modelos no portal clássico do Azure, devido às diferenças na implementação, recomendamos que gerir os mesmos modelos a partir do portal clássico do Azure e o portal do Azure.
 
-    -   Nome a apresentar: **&lt;nome da organização&gt; – Apenas Visualização Confidencial** ou **Altamente Confidencial\Todos os funcionários**
-
-    -   Permissão específica: Ver Conteúdo
-
--   Permissões Ler ou Modificar para o conteúdo protegido
-
-    -   Nome a apresentar: **&lt;nome da organização&gt; – Confidencial** ou **Confidencial\Todos os funcionários**
-
-    -   Permissões específicas: Ver Conteúdo, Guardar Ficheiro, Editar Conteúdo, Ver Direitos Atribuídos, Permitir Macros, Reencaminhar, Responder, Responder A Todos
-
-Além disso, o [cliente do Azure Information Protection](../rms-client/aip-client.md) permite aos utilizadores definirem o seu próprio conjunto de permissões. E, para o cliente do Outlook e o Outlook Web Access, os utilizadores podem selecionar a [opção Não Reencaminhar](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails).
-
-Para muitas organizações, os modelos predefinidos poderão ser suficientes. No entanto, se quiser criar os seus próprios modelos de políticas de direitos personalizados, pode fazê-lo. Seguem-se algumas das razões para criar um modelo personalizado:
-
--   Quer um modelo que conceda direitos a um subconjunto de utilizadores na organização em vez de os conceder a todos os utilizadores.
-
--   Quer que apenas um subconjunto de utilizadores possa ver e selecionar um modelo (modelo departamental) a partir de aplicações, em vez de todos os utilizadores na organização poderem ver e selecionar o modelo.
-
--   Quer definir um direito personalizado para um modelo, como Ver e Editar, mas não Copiar e Imprimir.
-
--   Quer configurar opções adicionais num modelo que inclua uma data de expiração e definir se os conteúdos podem ser acedidos sem uma ligação à Internet.
-
-Para os utilizadores poderem selecionar um modelo personalizado com definições como estas, primeiro tem de criar um modelo personalizado, configurá-lo e, em seguida, publicá-lo. Embora provavelmente necessite de apenas alguns modelos, pode ter um máximo de 500 modelos personalizados guardados no Azure. 
-
-Utilize as informações seguintes para configurar e utilizar modelos personalizados:
-
--   [Como criar, configurar e publicar um modelo personalizado](create-template.md)
-
--   [Como copiar um modelo](copy-template.md)
-
--   [Como remover (arquivar) modelos](remove-template.md)
-
--   [Como atualizar modelos para utilizadores](refresh-templates.md)
-
--   [Utilizar o PowerShell para gerir modelos](configure-templates-with-powershell.md)
-
-> [!TIP]
-> Os modelos e as novas opções de configuração de proteção do Azure Rights Management estão a ser movidos para o portal do Azure. Esta funcionalidade está atualmente em pré-visualização. Para obter mais informações, veja o seguinte anúncio de mensagem de blogue: [Azure Information Protection unified administration now in Preview](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/) (Administração unificada do Azure Information Protection agora em Pré-visualização) 
-
+Instruções para configurar modelos no portal do Azure: [configurar e gerir modelos do Azure Information Protection](configure-policy-templates.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

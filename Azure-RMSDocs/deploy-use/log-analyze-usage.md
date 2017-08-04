@@ -4,7 +4,7 @@ description: "Informações e instruções sobre como utilizar os registos de ut
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 92b64867486f64dd5920c578faeb411104f00ebd
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 032fb5525d1bd4f32419358cdeae5efe1be30f56
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Registar e analisar a utilização do serviço Azure Rights Management
 
@@ -175,27 +175,27 @@ Há muitos tipos de pedido para o serviço Azure Rights Management, mas a seguin
 |AcquirePreLicense|Um cliente está a pedir, em nome do utilizador, uma licença para conteúdos protegidos pelo RMS.|
 |AcquireTemplates|Foi efetuada uma chamada para adquirir modelos com base em IDs de modelo|
 |AcquireTemplateInformation|Foi efetuada uma chamada para obter as ID do modelo a partir do serviço.|
-|AddTemplate|É efetuada uma chamada a partir do portal clássico do Azure para adicionar um modelo.|
+|AddTemplate|É efetuada uma chamada a partir do portal do Azure para adicionar um modelo.|
 |AllDocsCsv|É feita uma chamada a partir do site de controlo de documentos para transferir o ficheiro CSV a partir da página **Todos os Documentos**.|
 |BECreateEndUserLicenseV1|É efetuada uma chamada a partir de um dispositivo móvel para criar uma licença de utilizador final.|
 |BEGetAllTemplatesV1|É efetuada uma chamada a partir de um dispositivo móvel (back-end) para obter todos os modelos.|
 |Certify|O cliente está a certificar os conteúdos para proteção.|
-|DeleteTemplateById|É efetuada uma chamada a partir do portal clássico do Azure para eliminar um modelo por ID de modelo.|
+|DeleteTemplateById|É efetuada uma chamada do portal do Azure, ao eliminar o ID de modelo pelo modelo.|
 |DocumentEventsCsv|É feita uma chamada a partir do site de controlo de documentos para transferir o ficheiro .CSV para um único documento.|
-|ExportTemplateById|É efetuada uma chamada a partir do portal clássico do Azure para exportar um modelo baseado num ID de modelo.|
+|ExportTemplateById|É efetuada uma chamada do portal do Azure para exportar um modelo com base no ID de modelo.|
 |FECreateEndUserLicenseV1|É semelhante ao pedido AcquireLicense, mas este pedido é efetuado a partir de dispositivos móveis.|
 |FECreatePublishingLicenseV1|É igual à combinação dos pedidos Certify e GetClientLicensorCert, feito a partir de clientes móveis.|
 |FEGetAllTemplates|É efetuada uma chamada a partir de um dispositivo móvel (front-end) para obter os modelos.|
 |FindServiceLocationsForUser|É efetuada uma chamada de consulta de URL, que é utilizada para chamar o pedido Certify ou AcquireLicense.|
 |GetAllDocs|É feita uma chamada a partir do site de controlo de documentos para carregar a página **todos os documentos** para um utilizador ou procurar todos os documentos para o inquilino. Utilize este valor com os campos admin-action e acting-as-admin:<br /><br />- admin-action está vazio: um utilizador vê a página **todos os documentos** para os seus próprios documentos.<br /><br />- admin-action é verdadeiro e acting-as-user está vazio: um administrador vê todos os documentos para o respetivo inquilino.<br /><br />- admin-action é verdadeiro e acting-as-user não está vazio: um administrador vê **todos os documentos** para um utilizador.|
-|GetAllTemplates|É efetuada uma chamada a partir do portal clássico do Azure para obter todos os modelos.|
+|GetAllTemplates|É efetuada uma chamada do portal do Azure, para obter todos os modelos.|
 |GetClientLicensorCert|O cliente está a pedir um certificado de publicação (que é posteriormente utilizado para proteger conteúdos) a partir de um computador baseado no Windows.|
 |GetConfiguration|É chamado um cmdlet do PowerShell do Azure para obter a configuração do inquilino do Azure RMS.|
 |GetConnectorAuthorizations|É efetuada uma chamada a partir dos conectores do RMS para obter a configuração destes a partir da cloud.|
 |GetRecipients|É feita uma chamada a partir do site de controlo de documentos para navegar para a vista de lista para um único documento.|
 |GetSingle|É feita uma chamada a partir do site de controlo de documentos para navegar para uma página de um **único documento**.|
-|GetTenantFunctionalState|O portal clássico do Azure está a verificar se o serviço Azure Rights Management está ativado.|
-|GetTemplateById|É efetuada uma chamada a partir do portal clássico do Azure para obter um modelo através da especificação de um ID de modelo.|
+|GetTenantFunctionalState|O portal do Azure está a verificar se o serviço Azure Rights Management está ativado.|
+|GetTemplateById|É efetuada uma chamada do portal do Azure para obter um modelo, especificando um ID de modelo.|
 |KeyVaultDecryptRequest|O cliente está a tentar desencriptar os conteúdos protegidos pelo RMS. Aplicável apenas para uma chave de inquilino gerida pelo cliente (BYOK) no Azure Key Vault.|
 |KeyVaultGetKeyInfoRequest|É feita uma chamada para verificar se a chave especificada para ser utilizada no Azure Key Vault para a chave de inquilino do Azure Information Protection está acessível e se ainda não está em utilização.|
 |KeyVaultSignDigest|É feita uma chamada quando uma chave gerida pelo cliente (BYOK) no Azure Key Vault é utilizada para fins de assinatura. Esta opção é normalmente chamada uma vez por cada pedido AcquireLicence (ou FECreateEndUserLicenseV1), Certify e GetClientLicensorCert (ou FECreatePublishingLicenseV1).|
@@ -204,14 +204,14 @@ Há muitos tipos de pedido para o serviço Azure Rights Management, mas a seguin
 |LoadEventsForMap|É feita uma chamada a partir do site de controlo de documentos para navegar para a vista de mapa de um único documento.|
 |LoadEventsForSummary|É feita uma chamada a partir do site de controlo de documentos para navegar para a vista de linha de tempo de um único documento.|
 |LoadEventsForTimeline|É feita uma chamada a partir do site de controlo de documentos para navegar para a vista de mapa de um único documento.|
-|ImportTemplate|É efetuada uma chamada a partir do portal clássico do Azure para importar um modelo.|
+|ImportTemplate|É efetuada uma chamada a partir do portal do Azure para importar um modelo.|
 |RevokeAccess|É feita uma chamada a partir do site de controlo de documentos para revogar um documento.|
 |SearchUsers |É feita uma chamada a partir do site de controlo de documentos para procurar todos os utilizadores num inquilino.|
 |ServerCertify|É efetuada uma chamada a partir de um cliente com RMS ativado (tal como o SharePoint) para certificar o servidor.|
 |SetUsageLogFeatureState|É efetuada uma chamada para ativar o registo de utilização.|
 |SetUsageLogStorageAccount|É efetuada uma chamada para especificar a localização dos registos do serviço Azure Rights Management.|
 |UpdateNotificationSettings|É feita uma chamada a partir do site de controlo de documentos para alterar as definições de notificação de um único documento.|
-|UpdateTemplate|É efetuada uma chamada a partir do portal clássico do Azure para atualizar um modelo existente.|
+|UpdateTemplate|É efetuada uma chamada a partir do portal do Azure para atualizar um modelo existente.|
 
 
 ## <a name="windows-powershell-reference"></a>Referência do Windows PowerShell

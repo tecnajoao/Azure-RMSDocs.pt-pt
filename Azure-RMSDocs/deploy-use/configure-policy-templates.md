@@ -4,7 +4,7 @@ description: "Atualmente em pré-visualização, já pode configurar e gerir mod
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b9c6b808de6c5967885f4937965b4e0e759668f3
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: dc39a52ca09ec7818b70a5bac320024bdc4de657
+ms.sourcegitcommit: 4186c8fadea7bcd32cce7d468916374a9cdf151b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurar e gerir modelos do Azure Information Protection
 
@@ -32,7 +32,7 @@ Modelos de gestão de direitos agora estão integrados com a política do Azure 
 
 **Quando tem uma subscrição que inclui a classificação, a etiquetagem e a proteção (Azure Information Protection P1 ou P2):**
 
-- Modelos de gestão de direitos que não estão integrados com as etiquetas para o seu inquilino são apresentados no **modelos** secção após as etiquetas a **Azure Information Protection - política Global** painel. Pode converter estes modelos das etiquetas, ou pode continuar a geri-los como separados modelos e ligar aos mesmos, quando configurar a proteção para as etiquetas. 
+- Modelos de gestão de direitos que não estão integrados com as etiquetas para o seu inquilino são apresentados no **modelos** secção após as etiquetas a **Azure Information Protection - política Global** painel. Pode converter estes modelos das etiquetas, ou pode ligar aos mesmos quando configurar a proteção para as etiquetas. 
 
 **Quando tem uma subscrição que inclui apenas proteção (uma subscrição do Office 365 que inclui o serviço Azure Rights Management):**
 
@@ -69,7 +69,7 @@ Se tiver adquirido a subscrição do Azure Information Protection algum tempo h�
 - **\<nome da organização >-apenas visualização confidencial**, para uma visualização só de leitura para o conteúdo protegido. 
 
 >[!NOTE]
->Se não vir os modelos predefinidos no **Azure Information Protection - política Global** painel, estes são convertidos em etiquetas. Ainda existem como modelos, mas no portal do Azure, pode vê-los como parte de uma configuração de etiqueta, que inclui proteção Azure RMS. Pode confirmar sempre que modelos tem o inquilino, executando o [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) do [módulo AADRM PowerShell](administer-powershell.md).
+>Se não vir os modelos predefinidos no **Azure Information Protection - política Global** painel, estes são convertidos para as etiquetas ou ligados a uma etiqueta. Ainda existem como modelos, mas no portal do Azure, pode vê-los como parte de uma configuração de etiqueta, que inclui proteção Azure RMS. Pode confirmar sempre que modelos tem o inquilino, executando o [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) do [módulo AADRM PowerShell](administer-powershell.md).
 >
 >Pode converter manualmente modelos, conforme explicado na secção posterior, [converter modelos etiquetas](#to-convert-templates-to-labels)e, em seguida, renomeie-os se pretender. Ou serão convertidos automaticamente para si se a política de Azure Information Protection predefinida criada recentemente e o serviço Azure Rights Management para o seu inquilino foi ativado nessa altura.
 

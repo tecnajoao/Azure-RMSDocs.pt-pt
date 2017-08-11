@@ -4,7 +4,7 @@ description: "Instruções para migrar a implementação dos Serviços de Gestã
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6ce3936b36a716cfdc2651cda9f59eb9b552eeb3
-ms.sourcegitcommit: 52ad844cd42479a56b1ae0e56ba0614f088d8a1a
+ms.openlocfilehash: 1e9a124e4b115491c014bb54977cdb9d922cad45
+ms.sourcegitcommit: 238657f9450f18213c2b9fb453174df0ce1f1aef
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrar do AD RMS para o Azure Information Protection
 
@@ -102,18 +102,15 @@ Antes de iniciar a migração para o Azure Information Protection, certifique-se
 
 ### <a name="cryptographic-mode-considerations"></a>Considerações sobre o modo criptográfico
 
-Apesar de não ser um pré-requisito para a migração, recomendamos que os clientes e os servidores do AD RMS sejam executados no Modo Criptográfico 2 antes de iniciar a migração. 
+Se o cluster de AD RMS está atualmente no modo criptográfico 1, não atualize o cluster para o modo criptográfico 2 antes de começar a migração. Em vez disso, migrar através do modo criptográfico 1 e recodificar a chave de inquilino no final da migração, como uma das tarefas de migração post.
 
-Para obter mais informações sobre os diferentes modos e sobre como realizar a atualização, veja [Modos Criptográficos do AD RMS](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
-
-Se o cluster do AD RMS estiver no Modo Criptográfico 1 e não conseguir atualizá-lo, terá de recodificar a chave de inquilino do Azure Information Protection quando a migração estiver concluída. A recodificação da chave cria uma nova chave de inquilino que utiliza o Modo Criptográfico 2. A utilização do serviço Azure Rights Management com o Modo Criptográfico 1 é suportada apenas durante o processo de migração.
+Modo criptográfico 1 é suportada apenas durante o processo de migração.
 
 Para confirmar o Modo Criptográfico do AD RMS:
  
 - Para o Windows Server 2012 R2 e o Windows 2012: propriedades de cluster do AD RMS > separador **Geral**. 
 
 - Para todas as versões do AD RMS suportadas: utilize a opção [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) e **Admin do AD RMS** para ver o modo criptográfico nas **Informações do serviço RMS**.
-
 
 ### <a name="migration-limitations"></a>Limitações da migração
 

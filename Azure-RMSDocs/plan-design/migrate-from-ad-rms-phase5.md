@@ -4,7 +4,7 @@ description: "Fase 5 da migração do AD RMS para o Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2ab4d8c9d253098b4f9ecb7fb820a3df1891e124
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: aeffd9780001f4c91ea8600f11d8fc3b36abce73
+ms.sourcegitcommit: 238657f9450f18213c2b9fb453174df0ce1f1aef
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Fase 5 da migração – tarefas de pós-migração
 
@@ -25,9 +25,9 @@ ms.lasthandoff: 07/31/2017
 
 Utilize as seguintes informações para a Fase 5 da migração do AD RMS para o Azure Information Protection. Estes procedimentos incluem os passos 10 a 12 de [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-## <a name="step-10-deprovison-ad-rms"></a>Passo 10: desaprovisionar o AD RMS
+## <a name="step-10-deprovision-ad-rms"></a>Passo 10: Retirar o aprovisionamento do AD RMS
 
-Remova o Ponto de Ligação de Serviço (SCP) do Active Directory para impedir que os computadores detetem a sua infraestrutura da Gestão de Direitos no local. Isto é opcional para os clientes existentes que migraram devido ao redirecionamento que foi configurado no registo (por exemplo, ao executar o script de migração). No entanto, remover o SCP impede que novos clientes e potenciais serviços e ferramentas relacionados com o RMS localizem o SCP quando a migração estiver concluída e que todas as ligações sejam direcionadas para o serviço Azure Rights Management. 
+Remova o Ponto de Ligação de Serviço (SCP) do Active Directory para impedir que os computadores detetem a sua infraestrutura da Gestão de Direitos no local. Isto é opcional para os clientes existentes que migraram devido ao redirecionamento que foi configurado no registo (por exemplo, ao executar o script de migração). No entanto, remover o SCP impede que novos clientes e serviços potencialmente relacionados com o RMS e as ferramentas de localizar o SCP quando a migração estar concluída. Neste momento, todas as ligações do computador devem passar para o serviço Azure Rights Management. 
 
 Para remover o SCP, garanta que tem sessão iniciada como administrador da empresa do domínio e, em seguida, utilize o seguinte procedimento:
 
@@ -39,11 +39,11 @@ Para remover o SCP, garanta que tem sessão iniciada como administrador da empre
 
 4. Selecione **Remover SCP atual** e, em seguida, clique em **OK**.
 
-Agora monitorize a atividade dos seus servidores do AD RMS, por exemplo, ao verificar os [pedidos no relatório de Estado de Funcionamento do Sistema](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx), a [tabela ServiceRequest](http://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx) ou a [auditoria de acesso de utilizador a conteúdos protegidos](http://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx). 
+Agora a monitorizar os servidores do AD RMS para a atividade. Por exemplo, verificar o [pedidos no relatório do Estado de funcionamento do sistema](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx), a [tabela ServiceRequest](http://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx) ou [auditar o acesso de utilizador a conteúdo protegido](http://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx). 
 
-Quando tiver confirmado que os clientes RMS já não estão a comunicar com estes servidores e que os clientes estão a utilizar o Azure Information Protection com êxito, pode remover a função de servidor do AD RMS destes servidores. Se estiver a utilizar servidores dedicados, poderá preferir o passo cautelar de começar por encerrar os servidores durante um período de tempo para se certificar de que não existem problemas comunicados que exijam reiniciar estes servidores para assegurar a continuidade do serviço enquanto estiver a investigar por que razão os clientes não estão a utilizar o Azure Information Protection.
+Quando tiver confirmado que os clientes RMS já não estão a comunicar com estes servidores e que os clientes estão a utilizar o Azure Information Protection com êxito, pode remover a função de servidor do AD RMS destes servidores. Se estiver a utilizar servidores dedicados, poderá preferir o passo cautelar de começar por encerrar os servidores durante um período de tempo. Este fornecem tempo para se certificar de que existem não existem problemas comunicados que exijam reiniciar estes servidores para a continuidade do serviço enquanto estiver a investigar por que razão os clientes não estiver a utilizar o Azure Information Protection.
 
-Depois de ter desaprovisionada seus servidores AD RMS, pode querer aproveitar a oportunidade para rever os modelos no portal do Azure e consolidá-los para que os utilizadores tenham menos por onde escolher, reconfigurá-las ou até adicionar novos modelos. É também uma boa altura para publicar os modelos predefinidos. Para obter mais informações, consulte [configurar e gerir modelos do Azure Information Protection](../deploy-use/configure-policy-templates.md).
+Depois de ter desaprovisionada seus servidores AD RMS, pode querer aproveitar a oportunidade para rever os modelos no portal do Azure. Por exemplo, convertê-las em etiquetas, consolidá-los para que os utilizadores tenham menos escolher entre ou reconfigurá-las. É também uma boa altura para publicar os modelos predefinidos. Para obter mais informações, consulte [configurar e gerir modelos do Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
 >[!IMPORTANT]
 > No final desta migração, o seu cluster do AD RMS não pode ser utilizado com o Azure Information Protection e a opção "tenha a sua própria chave" (HYOK). Se optar por utilizar o HYOK para uma etiqueta do Azure Information Protection, por causa dos redirecionamentos que estão em vigor, o cluster do AD RMS que utilizar tem de ter URLs de licenciamento diferentes do que tem nos clusters que migrou.
@@ -52,7 +52,7 @@ Depois de ter desaprovisionada seus servidores AD RMS, pode querer aproveitar a 
 
 Quando todos os clientes existentes tiverem migrado para o Azure Information Protection, não precisa de continuar a utilizar controlos de inclusão e manter o grupo **AIPMigrated** que criou para o processo de migração. 
 
-Remova os controlos de inclusão primeiro e, em seguida, pode eliminar o grupo **AIPMigrated** e qualquer tarefa de implementação de software que criou para implementar os redirecionamentos.
+Remova primeiro os controlos de inclusão e, em seguida, pode eliminar o **AIPMigrated** grupo e as tarefas de implementação de software que criou para implementar os redirecionamentos.
 
 Para remover os controlos de inclusão:
 
@@ -71,11 +71,11 @@ Para remover os controlos de inclusão:
     No resultado, a opção **License** deve apresentar **False** e não é apresentado um GUID para **SecurityGroupOjbectId**
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Passo 12: recodificar a chave de inquilino do Azure Information Protection
-Este passo é obrigatório quando a migração estiver concluída se a sua implementação do AD RMS estava a utilizar o Modo Criptográfico 1 do RMS, porque a recodificação cria uma nova chave de inquilino que utiliza o Modo Criptográfico 2 do RMS. A utilização do Azure RMS com o Modo Criptográfico 1 é suportada apenas durante o processo de migração.
+Este passo é necessário quando a migração estiver concluída se a sua implementação do AD RMS estava a utilizar o RMS modo criptográfico 1. Rekeying cria uma nova chave de inquilino que utiliza o RMS modo criptográfico 2. Modo criptográfico 1 é suportada para o Azure Information Protection apenas durante o processo de migração.
 
-Este passo é opcional, mas é recomendado quando a migração estiver concluída, mesmo que estivesse em execução no Modo Criptográfico 2 do RMS. Neste cenário, a recodificação ajuda a proteger a sua chave de inquilino do Azure Information Protection contra potenciais falhas de segurança na sua chave do AD RMS.
+Também rekeying quando a migração estiver concluída ajuda a proteger a chave de inquilino do Azure Information Protection contra potenciais falhas de segurança para a sua chave de AD RMS.
 
-Quando recodificar a chave de inquilino do Azure Information Protection (também conhecido como "implementar a chave"), é criada uma nova chave e a chave original é arquivada. No entanto, uma vez que a mudança de uma chave para outra não é imediata, mas sim um processo de algumas semanas, não espere até suspeitar que existe uma falha na chave original e recodifique a chave de inquilino do Azure Information Protection assim que a migração estiver concluída.
+Quando a recodificar a chave de inquilino do Azure Information Protection (também conhecido como "implementar a chave"), é criada uma nova chave e a chave original é arquivada. No entanto, a mover de uma chave para outra não ocorre imediatamente mas ao longo de algumas semanas. Porque não é imediata, não espere até suspeitar uma violação na chave original e recodificar a chave de inquilino do Azure Information Protection, assim que a migração estar concluída.
 
 Para recodificar a chave de inquilino do Azure Information Protection:
 

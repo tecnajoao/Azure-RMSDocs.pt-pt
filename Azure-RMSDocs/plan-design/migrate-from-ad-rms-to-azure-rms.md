@@ -4,7 +4,7 @@ description: "Instruções para migrar a implementação dos Serviços de Gestã
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/07/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1e9a124e4b115491c014bb54977cdb9d922cad45
-ms.sourcegitcommit: 238657f9450f18213c2b9fb453174df0ce1f1aef
+ms.openlocfilehash: 8f81eee3c15b771e60c24a83f66d13a4a654a7e3
+ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrar do AD RMS para o Azure Information Protection
 
@@ -110,7 +110,7 @@ Para confirmar o Modo Criptográfico do AD RMS:
  
 - Para o Windows Server 2012 R2 e o Windows 2012: propriedades de cluster do AD RMS > separador **Geral**. 
 
-- Para todas as versões do AD RMS suportadas: utilize a opção [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) e **Admin do AD RMS** para ver o modo criptográfico nas **Informações do serviço RMS**.
+- Para o Windows Server 2008 R2: Verifique se o [comprimento de chave RSA é aumentado para 2048 bits para o AD RMS no Windows Server 2008 R2 e no Windows Server 2008](https://support.microsoft.com/help/2627272/rsa-key-length-is-increased-to-2048-bits-for-ad-rms-in-windows-server ) correção está instalada. Se não for, o cluster do AD RMS está em execução no modo criptográfico 1.
 
 ### <a name="migration-limitations"></a>Limitações da migração
 

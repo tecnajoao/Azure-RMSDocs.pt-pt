@@ -4,17 +4,17 @@ description: "Quando configurar as condições para uma etiqueta, pode atribuir 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 510375dec4fc4e28197270e62655375698580b95
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 3aad6eb4956b6565e44c4b1019c984a28cb41fdc
+ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Como configurar as condições para classificação automática e recomendada para o Azure Information Protection
 
@@ -26,7 +26,7 @@ Quando configurar as condições para uma etiqueta, pode atribuir automaticament
  
 - A classificação recomendada aplica-se ao Word, ao Excel e ao PowerPoint quando os ficheiros são guardados.
 
-Ao configurar as condições pode utilizar padrões predefinidos, como "Números de cartão de crédito" ou "Número de Segurança Social dos E.U.A.". Em alternativa, pode definir uma cadeia personalizada ou um padrão como condição para classificação automática. Estas condições aplicam-se ao corpo de texto em documentos e e-mails, bem como a cabeçalhos e rodapés. Para mais informações sobre as condições, consulte a secção [Informações sobre as condições incorporadas](#information-about-the-built-in-conditions).
+Quando configurar as condições, pode utilizar padrões predefinidos, tais como "números de cartão de crédito" ou "EUA número de Segurança Social." Em alternativa, pode definir uma cadeia personalizada ou um padrão como condição para classificação automática. Estas condições aplicam-se ao corpo de texto em documentos e e-mails, bem como a cabeçalhos e rodapés. Para mais informações sobre as condições, consulte a secção [Informações sobre as condições incorporadas](#information-about-the-built-in-conditions).
 
 Como são avaliadas várias condições quando estas são aplicadas a mais do que uma etiqueta:
 
@@ -37,13 +37,13 @@ Como são avaliadas várias condições quando estas são aplicadas a mais do qu
 3. É aplicada a última subetiqueta.
 
 > [!TIP]
->Para a melhor experiência de utilizador e para assegurar a continuidade do negócio, recomendamos que comece pela classificação recomendada ao utilizador em vez da classificação automática. Esta configuração fornece aos utilizadores a capacidade de aceitar a etiquetagem ou a ação de proteção ou substituir estas sugestões no caso de não serem adequados ao documento ou ao e-mail.
+>Para a melhor experiência de utilizador e para assegurar a continuidade do negócio, recomendamos que comece pela classificação recomendada ao utilizador em vez da classificação automática. Esta configuração permite aos utilizadores aceitar a ação de etiquetagem ou proteção ou substituir estas sugestões se não forem adequados para o seu documento ou mensagem de e-mail.
 
 Um exemplo de aviso para quando configura uma condição para aplicar uma etiqueta como uma ação recomendada, com uma sugestão de política personalizada:
 
-![Deteção e recomendação do Azure Information Protection](../media/info-protect-recommend-callouts.png)
+![Deteção e recomendação do Azure Information Protection](../media/info-protect-recommend-calloutsv2.png)
 
-Neste exemplo, o utilizador pode clicar em **Alterar agora** para aplicar a etiqueta recomendada ou substituir a recomendação fechando a barra.
+Neste exemplo, o utilizador pode clicar em **alterar agora** para aplicar a etiqueta recomendada ou substituir a recomendação selecionando **dispensar**.
 
 ## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>Para configurar a classificação recomendada ou automática para uma etiqueta
 
@@ -51,7 +51,7 @@ Neste exemplo, o utilizador pode clicar em **Alterar agora** para aplicar a etiq
     
     Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
-2. Se a etiqueta que pretende configurar para uma classificação automática ou recomendada se aplicar a todos os utilizadores, selecione a etiqueta a alterar no painel **Política:Global** e, em seguida, faça as alterações no painel **Etiqueta** e em todos os painéis subsequentes, conforme necessário. 
+2. Se a etiqueta que pretende configurar para classificação automática ou recomendada aplica-se a todos os utilizadores, selecione a etiqueta a alterar o **política: Global** painel e, em seguida, efetue as alterações no **etiqueta** painel e em quaisquer painéis subsequentes, conforme necessário. 
 
      Se a etiqueta que pretende configurar estiver numa [política de âmbito](configure-policy-scope.md) para ser aplicada apenas a utilizadores selecionados, selecione primeiro essa política de âmbito no painel inicial do **Azure Information Protection**.  
 
@@ -59,11 +59,11 @@ Neste exemplo, o utilizador pode clicar em **Alterar agora** para aplicar a etiq
 
 4. No painel **Condição**, selecione **Incorporada** se pretender utilizar uma condição predefinida, ou **Personalizada** se pretender especificar a sua própria condição e, em seguida, clique em **Guardar**:
 
-    - Para **Incorporada**: selecione uma da lista de condições disponíveis e, em seguida, selecione o número mínimo de ocorrências e se a ocorrência deve ter um valor único a ser incluído na contagem de ocorrências.
+    - Para **incorporada**: selecione na lista de condições disponíveis e, em seguida, selecione o número mínimo de ocorrências e se a ocorrência deve ter um valor único a ser incluído na contagem de ocorrências.
         
         Para mais informações sobre as regras de deteção para estas condições e alguns exemplos, consulte a secção [Informações sobre as condições incorporadas](#information-about-the-built-in-conditions).
 
-    - Para **Personalizada**: especifique um nome e uma expressão correspondente, que tem de excluir aspas e carateres especiais. Em seguida, especifique se corresponde ou não a uma expressão regular, utilize sensibilidade às maiúsculas e minúsculas e o número mínimo de ocorrências e se a ocorrência deve ter um valor único a ser incluído na contagem de ocorrências.
+    - Para **Personalizada**: especifique um nome e uma expressão correspondente, que tem de excluir aspas e carateres especiais. Em seguida, especifique se correspondente como uma expressão regular, sensibilidade às maiúsculas e de utilização e o número mínimo de ocorrências e se a ocorrência deve ter um valor único a ser incluído na ocorrência da contagem.
         
     **Exemplo das opções de ocorrências**: se selecionar a opção de número de segurança social incorporado e definir o número mínimo de ocorrências como 2 e um documento tiver o mesmo número de segurança social listado duas vezes: se definir **Contar ocorrências apenas com valores únicos** como **Ativada**, a condição não é satisfeita. Se definir esta opção como **Desativada**, a condição é satisfeita.
 

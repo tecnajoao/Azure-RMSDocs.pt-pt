@@ -4,27 +4,23 @@ description: "Quando atribui uma etiqueta a um documento ou a um e-mail pode sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: efc60ee6126a6a0b2798f66c46c2242942878829
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: a65299651abd97adb0fc7641be2f2f3c6f1d8d2f
+ms.sourcegitcommit: adb38b008656ac706920a8488fd2beafedadbc97
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Como configurar uma etiqueta para marcas visuais para o Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection*
 
-Quando atribui uma etiqueta a um documento ou a um e-mail pode selecionar várias opções para tornar a classificação escolhida facilmente visível. Estas marcas visuais são um cabeçalho, rodapé e uma marca d'água:
-
-As marcas visuais são aplicadas a documentos do Word, do Excel e do PowerPoint quando a etiqueta é aplicada e quando o documento é guardado nestas aplicações do Office. Para as mensagens de e-mail, as marcas visuais são aplicadas quando o e-mail é enviado do Outlook.
-
-As marcas visuais não são aplicadas aos documentos quando a etiqueta é aplicada através do Explorador de Ficheiros e da ação de clique com o botão direito. Ou quando um documento é classificado através do PowerShell.
+Quando atribui uma etiqueta a um documento ou a um e-mail pode selecionar várias opções para tornar a classificação escolhida facilmente visível. Estas marcas visuais são um cabeçalho, um rodapé e uma marca d'água.
 
 Informações adicionais sobre este marcadores visuais:
 
@@ -33,10 +29,32 @@ Informações adicionais sobre este marcadores visuais:
 - As marcas d'água aplicam-se ao Word, ao Excel e ao PowerPoint:
 
     - Excel: as marcas d'água só estarão visíveis nos modos de Pré-visualização de impressão e Esquema de página e quando foram impressas.
-
+    
     - PowerPoint: as arcas d'água são aplicadas ao diapositivo principal, como uma imagem de fundo.
+    
+    - Várias linhas de texto são suportadas quando utilizar a versão de pré-visualização atual do cliente Azure Information Protection.
 
 - Pode especificar apenas uma cadeia de texto ou utilizar [variáveis](#using-variables-in-the-text-string) para criar dinamicamente a cadeia de texto quando o cabeçalho, rodapé ou marca d'água for aplicada.
+
+## <a name="when-visual-markings-are-applied"></a>Quando as marcas visuais são aplicadas
+
+Para as mensagens de e-mail, as marcas visuais são aplicadas quando o e-mail é enviado do Outlook.
+
+Para documentos, as marcas visuais são aplicadas da seguinte forma:
+
+- **Para a versão de disponibilidade geral** do cliente Azure Information Protection: 
+    
+    - Numa aplicação Office, de uma etiqueta, as marcas visuais são aplicadas quando a etiqueta é aplicada e sempre que o documento é guardado. 
+    
+    - Quando um documento assinalada como utilizando o Explorador de ficheiros ou o PowerShell, marcas visuais não são aplicadas de imediato, mas são aplicadas quando esse documento é aberto numa aplicação Office e sempre que o documento é guardado.
+
+- **Para a versão de pré-visualização atual** do cliente Azure Information Protection: 
+    
+    - Numa aplicação Office, de uma etiqueta, as marcas visuais são aplicadas quando a etiqueta é aplicada. Marcas visuais também são aplicadas quando um documento com nome é aberto e o documento é guardado primeiro.  
+    
+    - Quando um documento assinalada como utilizando o Explorador de ficheiros ou o PowerShell, marcas visuais não são aplicadas de imediato, mas são aplicadas quando esse documento é aberto numa aplicação Office e o documento é guardado primeiro.
+
+## <a name="to-configure-visual-markings-for-a-label"></a>Para configurar marcas visuais para uma etiqueta
 
 Utilize as seguintes instruções para configurar marcas visuais para uma etiqueta.
 

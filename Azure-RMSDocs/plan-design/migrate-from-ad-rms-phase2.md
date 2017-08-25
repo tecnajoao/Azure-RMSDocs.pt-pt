@@ -4,7 +4,7 @@ description: "Fase 2 da migração do AD RMS para o Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9f04698064037343719d274e793eb560b703b031
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 22b43c2b149c7a7fd5ce79ca3ceef8100b9d5e7b
+ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/24/2017
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Fase 2 da migração – configuração do AD RMS do lado do servidor
 
@@ -133,7 +133,9 @@ As alterações de modelo que poderá ter de fazer para este passo:
 
 - Se criou modelos personalizados no Azure Information Protection antes da migração, tem de os exportar e importar manualmente.
 
-- Se os modelos do AD RMS utilizavam o grupo **ANYONE**, tem de adicionar manualmente o grupo e os direitos equivalentes.
+- Se os modelos no AD RMS utilizavam o **ANYONE** grupo, poderá ter de adicionar utilizadores ou grupos a partir de fora da sua organização. 
+    
+    No AD RMS, o grupo qualquer pessoa direitos para todos os utilizadores autenticados. Este grupo é automaticamente convertido em todos os utilizadores no seu inquilino do Azure AD. Se não pretender conceder direitos para os utilizadores adicionais, é necessária nenhuma ação adicional. Mas se estava a utilizar o grupo ANYONE para incluir utilizadores externos, tem de adicionar manualmente estes utilizadores e os direitos que pretende conceder-lhes.
 
 ### <a name="procedure-if-you-created-custom-templates-before-the-migration"></a>Procedimento se criou modelos personalizados antes da migração
 
@@ -149,24 +151,18 @@ Em seguida, pode publicar ou arquivar estes modelos como faria com qualquer mode
 
 ### <a name="procedure-if-your-templates-in-ad-rms-used-the-anyone-group"></a>Procedimento se os modelos no AD RMS utilizavam o grupo **ANYONE**
 
-Se os seus modelos no AD RMS utilizavam o grupo **ANYONE**, este grupo será removido automaticamente quando importar os modelos para o Azure Information Protection, pelo que tem de adicionar manualmente o grupo ou os utilizadores equivalentes, bem como adicionar os mesmos direitos aos modelos importados. O grupo equivalente do Azure Information Protection é designado **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<nome_do_inquilino>.onmicrosoft.com**. Por exemplo, para a Contoso, este grupo poderá ser semelhante ao seguinte: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**.
+Se os modelos no AD RMS utilizavam o **ANYONE** grupo, este grupo é automaticamente convertido para utilizar o grupo com o nome **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<nome_de_inquilino >. onmicrosoft.com**. Por exemplo, para a Contoso, este grupo poderá ser semelhante ao seguinte: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**. Este grupo contém todos os utilizadores do seu inquilino do Azure AD.
 
-Se não tiver a certeza se os seus modelos do AD RMS incluem o grupo ANYONE, pode utilizar o script de exemplo do Windows PowerShell para identificar estes modelos. Para obter mais informações sobre como utilizar o Windows PowerShell com o AD RMS, veja [Utilizar o Windows PowerShell para Administrar o AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
+Quando gere modelos e as etiquetas no portal do Azure, este grupo é apresentado como nome de domínio do seu inquilino no Azure AD. Por exemplo, este grupo aspeto que poderá ter o seguinte procedimento para Contoso: **contoso.onmicrosoft.com**. Para adicionar este grupo, a opção apresenta **adicionar \<nome da organização >-todos os membros**.
 
-Pode ver o grupo automaticamente criado da sua organização se copiar um dos modelos da política de direitos predefinidos no portal clássico do Azure e, em seguida, identificar o **NOME DE UTILIZADOR** na página **DIREITOS**. No entanto, não pode utilizar o portal clássico para adicionar este grupo a um modelo criado ou importado manualmente. Em vez disso, tem de utilizar uma das seguintes opções do PowerShell do Azure RMS:
+Se não tiver a certeza se os seus modelos do AD RMS incluem o grupo ANYONE, pode utilizar o script de exemplo do Windows PowerShell para identificar estes modelos. Para obter mais informações sobre como utilizar o Windows PowerShell com o AD RMS, consulte [utilizando o Windows PowerShell para administrar o AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
 
-- Utilize o cmdlet do PowerShell [New-AadrmRightsDefinition](/powershell/aadrm/vlatest/new-aadrmrightsdefinition) para definir os direitos e o grupo "AllStaff" como um objeto de definição de direitos e execute novamente este comando para cada um dos outros grupos ou utilizadores aos quais já foram concedidos direitos no modelo original juntamente com o grupo ANYONE. Em seguida, adicione os objetos de definição de direitos aos modelos através do cmdlet [Set-AadrmTemplateProperty](/powershell/aadrm/vlatest/set-aadrmtemplateproperty).
+Pode facilmente adicionar utilizadores externos para modelos quando converter estes modelos para etiquetas no portal do Azure. Em seguida, no **adicionar permissões** painel, escolha **Introduza detalhes** especificar manualmente os endereços de e-mail para estes utilizadores. 
 
-- Utilize o cmdlet [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate) para exportar o modelo para um ficheiro .XML que consiga editar para adicionar os direitos e o grupo "AllStaff" aos grupos e direitos existentes e, em seguida, utilize o cmdlet [Import-AadrmTemplate](/powershell/aadrm/vlatest/import-aadrmtemplate) para voltar a importar esta alteração para o Azure Information Protection.
-
-> [!NOTE]
-> Este grupo equivalente "AllStaff" não é exatamente igual ao grupo ANYONE no AD RMS. O grupo "AllStaff" inclui todos os utilizadores no seu inquilino do Azure, ao passo que o grupo ANYONE inclui todos os utilizadores autenticados, que podem estar fora da sua organização.
-> 
-> Devido a esta diferença entre os dois grupos, é possível que também tenha de adicionar utilizadores externos, além do grupo "AllStaff". Atualmente, não são suportados endereços de e-mails externos para grupos.
-
+Para obter mais informações sobre esta configuração, consulte [como configurar uma etiqueta para a proteção Rights Management](../deploy-use/configure-policy-protection.md).
 
 #### <a name="sample-windows-powershell-script-to-identify-ad-rms-templates-that-include-the-anyone-group"></a>Script de exemplo do Windows PowerShell para identificar modelos do AD RMS que incluem o grupo ANYONE
-Esta secção contém o script de exemplo para o ajudar a identificar modelos do AD RMS que têm o grupo ANYONE definido, conforme descrito na secção anterior.
+Esta secção contém o script de exemplo para ajudar a identificar os modelos de AD RMS com o grupo ANYONE definido, conforme descrito na secção anterior.
 
 **Exclusão de responsabilidade:** este script de exemplo não é suportado por nenhum serviço ou programa de suporte padrão da Microsoft. Este script de exemplo é fornecido TAL COMO ESTÁ, sem qualquer tipo de garantia.
 

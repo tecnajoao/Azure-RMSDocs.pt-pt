@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8f81eee3c15b771e60c24a83f66d13a4a654a7e3
-ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
+ms.openlocfilehash: a4337d197e08cd75b974594fdd797c9bb383c1f9
+ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/24/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrar do AD RMS para o Azure Information Protection
 
@@ -102,9 +102,7 @@ Antes de iniciar a migração para o Azure Information Protection, certifique-se
 
 ### <a name="cryptographic-mode-considerations"></a>Considerações sobre o modo criptográfico
 
-Se o cluster de AD RMS está atualmente no modo criptográfico 1, não atualize o cluster para o modo criptográfico 2 antes de começar a migração. Em vez disso, migrar através do modo criptográfico 1 e recodificar a chave de inquilino no final da migração, como uma das tarefas de migração post.
-
-Modo criptográfico 1 é suportada apenas durante o processo de migração.
+Se o cluster de AD RMS está atualmente no modo criptográfico 1, não atualize o cluster para o modo criptográfico 2 antes de começar a migração. Em vez disso, migrar através do modo criptográfico 1 e pode recodificar a chave de inquilino no final da migração, como uma das tarefas de migração post.
 
 Para confirmar o Modo Criptográfico do AD RMS:
  
@@ -215,10 +213,10 @@ Os passos de migração podem ser divididos em cinco fases que podem ser efetuad
 
 - **Passo 12: recodificar a sua chave de inquilino do Azure Information Protection**
 
-    Este passo é obrigatório se não estava a executar no Modo Criptográfico 2 antes da migração, sendo opcional, mas recomendado, para todas as migrações para ajudar a salvaguardar a segurança da sua chave de inquilino do Azure Information Protection.
+    Este passo é recomendado se não estivesse a executar no modo criptográfico 2 antes da migração.
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 Para iniciar a migração, avance para a [Fase 1 – preparação](migrate-from-ad-rms-phase1.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

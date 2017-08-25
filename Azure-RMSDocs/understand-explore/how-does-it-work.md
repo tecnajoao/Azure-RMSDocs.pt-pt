@@ -4,7 +4,7 @@ description: "Descrição detalhada de como o Azure RMS funciona, os controlos c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3d53e57b8bff94c39426b37755c643c1dc9d9fde
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 26c82884c706c8397eae63197ed0307faa3562d3
+ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/24/2017
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Como funciona o Azure RMS? Os bastidores
 
@@ -56,11 +56,13 @@ O controlo de 256 bits é utilizado pelo cliente do Azure Information Protectio
 
 O comprimento da chave é de 2048 bits quando o serviço Azure Rights Management está ativado. São suportados 1024 bits nos seguintes cenários opcionais:
 
-- Durante uma migração a partir do local se o cluster do AD RMS estiver a ser executado no Modo Criptográfico 1 e não puder ser atualizado para o Modo Criptográfico 2.
+- Durante uma migração no local se o cluster de AD RMS está em execução no modo criptográfico 1.
+
+- Depois de uma migração no local, se o cluster de AD RMS estava a utilizar o Exchange Online.
 
 - Para as chaves arquivadas que foram criadas no local antes da migração para que o conteúdo que foi protegido pelo AD RMS possa continuar a ser aberto após migrar para o Azure Rights Management.
 
-- Se os clientes optarem por trazer a sua própria chave (BYOK) através do Cofre de Chaves do Azure. Recomendamos, mas não impomos, um tamanho mínimo da chave de 2048 bits.
+- Se os clientes optarem por trazer a sua própria chave (BYOK) através do Cofre de Chaves do Azure. O Azure Information Protection suporta comprimentos de chave de 1024 bits e 2048 bits. Para uma maior segurança, recomendamos um comprimento de chave de 2048 bits.
 
 ### <a name="how-the-azure-rms-cryptographic-keys-are-stored-and-secured"></a>Como as chaves criptográficas do Azure RMS são armazenadas e protegidas
 
@@ -68,7 +70,7 @@ O Azure RMS cria uma chave AES única (a "chave de conteúdo") para cada documen
 
 A chave de conteúdo é protegida com a chave RSA da organização (a "chave de inquilino do Azure Information Protection") como parte da política no documento e a política também é assinada pelo autor do documento. Esta chave de inquilino é comum a todos os documentos e e-mails protegidos pelo serviço Azure Rights Management da organização e esta chave só poderá ser alterada por um administrador do Azure Information Protection se a organização estiver a utilizar uma chave de inquilino gerida pelo cliente, conhecida como BYOK (Bring Your Own Key – Traga a Sua Própria Chave). 
 
-Esta chave de inquilino está protegida nos serviços online da Microsoft, num ambiente altamente controlado e sob monitorização rigorosa. Quando utiliza uma chave de inquilino gerida pelo cliente (BYOK), esta segurança é melhorada pela utilização de uma matriz de módulos de segurança de hardware de ponta (HSMs) em cada região do Azure, impossibilitando completamente a extração, exportação ou partilha das chaves. Para obter mais informações sobre a chave de inquilino e a BYOK, veja [Planear e implementar a sua chave de inquilino do Azure Information Protection](../plan-design/plan-implement-tenant-key.md).
+Esta chave de inquilino está protegida nos serviços online da Microsoft, num ambiente altamente controlado e sob monitorização rigorosa. Quando utiliza uma chave de inquilino gerida pelo cliente (BYOK), esta segurança é melhorada pela utilização de uma matriz de módulos de segurança de hardware de alta gama (HSMs) em cada região do Azure, sem a capacidade para as chaves a ser extraído, exportação ou partilha em circunstância alguma. Para obter mais informações sobre a chave de inquilino e a BYOK, veja [Planear e implementar a sua chave de inquilino do Azure Information Protection](../plan-design/plan-implement-tenant-key.md).
 
 As licenças e certificados enviados para um dispositivo Windows estão protegidos pela chave privada do dispositivo do cliente, que é criada quando um utilizador usa o Azure RMS pela primeira vez num dispositivo. Por sua vez, esta chave privada está protegida com a DPAPI do cliente, que protege estes segredos com uma chave derivada da palavra-passe do utilizador. Em dispositivos móveis, as chaves são utilizadas apenas uma vez, pois como não estão armazenadas nos clientes, não precisam de ser protegidas no dispositivo. 
 
@@ -130,7 +132,7 @@ Se um utilizador quiser consumir um documento protegido, o cliente de RMS começ
 
 A chave de conteúdo encriptada novamente é incorporada numa licença de utilização encriptada com a lista de direitos de utilizador que, em seguida, é devolvida ao cliente de RMS.
 
-![Consumo de documentos pelo RMS – passo 3, o documento é desencriptado e os direitos são impostos](../media/AzRMS_documentconsumption3.png)
+![Documento consumo pelo RMS – passo 3, documento é desencriptado e são impostos direitos](../media/AzRMS_documentconsumption3.png)
 
 **O que acontece no passo 3**: por fim, o cliente de RMS obtém a licença de utilização encriptada e desencripta a mesma com a sua própria chave privada de utilizador. Isto permite que o cliente de RMS desencripte o corpo do documento conforme necessário e o apresente no ecrã.
 
@@ -149,7 +151,7 @@ Os passos anteriores abrangem os cenários padrão, mas existem algumas variaç�
 
 -   **Proteção genérica (.pfile)**: quando o serviço Azure Rights Management protege genericamente um ficheiro, o fluxo é basicamente o mesmo para a proteção de conteúdos com a exceção do facto de ser o cliente de RMS a criar uma política que concede todos os direitos. Quando o ficheiro é consumido, é desencriptado antes de ser transmitido para a aplicação de destino. Este cenário permite-lhe proteger todos os ficheiros, mesmo que não suportem o RMS originalmente.
 
--   **PDF protegido (.ppdf)**: quando o serviço Azure Rights Management protege originalmente um ficheiro do Office, também cria uma cópia desse ficheiro e protege-o da mesma forma. A única diferença é que a cópia do ficheiro está no formato de ficheiro PPDF, que o visualizador do cliente do Azure Information Protection e a aplicação de partilha RMS sabem como abrir no modo só de visualização. Este cenário permite-lhe enviar anexos protegidos por e-mail, sabendo que o destinatário num dispositivo móvel poderá sempre lê-los, mesmo que o dispositivo móvel não tenha uma aplicação que suporte ficheiros protegidos do Office de raiz.
+-   **PDF protegido (.ppdf)**: quando o serviço Azure Rights Management protege originalmente um ficheiro do Office, também cria uma cópia desse ficheiro e protege-o da mesma forma. A única diferença é que a cópia do ficheiro está no formato de ficheiro PPDF, que o visualizador do cliente do Azure Information Protection e a aplicação de partilha RMS sabem como abrir no modo só de visualização. Este cenário permite-lhe enviar anexos protegidos por e-mail, sabendo que o destinatário num dispositivo móvel pode sempre lê-los, mesmo se o dispositivo móvel não tem uma aplicação que suporta nativamente protegidos ficheiros do Office.
 
 ## <a name="next-steps"></a>Próximos passos
 

@@ -4,7 +4,7 @@ description: "As instruções e as informações para os administradores gerirem
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/01/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 618e8b6a160ccc699658bf8c317c40ed2ded3bee
-ms.sourcegitcommit: 87f0c7a8f9f1fdf7eece0f9d0c114ecf91f57683
+ms.openlocfilehash: 6077b9eba8ee04bf22c17612183f3d41b6b71e35
+ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/24/2017
 ---
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Utilizar o PowerShell com o cliente do Azure Information Protection
 
@@ -77,7 +77,7 @@ Para além dos pré-requisitos para instalar o módulo de AzureInformationProtec
 
 4. Para regiões fora da América do Norte: 
     
-    - Edite o registo para a autenticação no serviço.
+    - Edite o registo de deteção do serviço.
 
 #### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>Pré-requisito 1: o serviço Azure Rights Management tem de ser ativado
 
@@ -229,12 +229,9 @@ Para obter mais informações sobre superutilizadores, veja [Configurar superuti
 > [!NOTE]
 > Para utilizar a sua própria conta para a autenticação no serviço Azure Rights Management, não precisa de executar Set-RMSServerAuthentication antes de proteger ou desproteger ficheiros ou de obter modelos.
 
-
-
-
 #### <a name="prerequisite-4-for-regions-outside-north-america"></a>Pré-requisito 4: para regiões fora da América do Norte
 
-Para a autenticação fora da região da América do Norte do Azure, tem de editar o registo da seguinte forma. Se o seu inquilino do Azure Information Protection estiver na América do Norte, não siga este passo:
+Quando utilizar uma conta do principal de serviço para proteger ficheiros e transferir modelos fora da região da América do Norte de Azure, tem de editar o registo: 
 
 1. Execute o cmdlet Get-AadrmConfiguration novamente e tome nota dos valores para **CertificationExtranetDistributionPointUrl** e **LicensingExtranetDistributionPointUrl**.
 

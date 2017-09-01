@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 88843833b87eb054f534a7c85e6a7c2e52797e9b
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 7f3b64e5e4b0dfbccf694a986a85f1c207580915
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="configuring-azure-information-protection-policy"></a>Configurar a política do Azure Information Protection
 
@@ -48,7 +48,7 @@ Para obter mais informações sobre como configurar políticas de âmbito, veja 
 
 2. Navegue para o painel **Azure Information Protection**: por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information Protection** na caixa Filtro. Na lista de resultados, selecione **Azure Information Protection**. 
     
-    Ao ligar ao serviço pela primeira vez, a página **Início rápido** abre-se automaticamente. Para configurar a política que todos os utilizadores obtêm, clique em **Política global** para abrir o painel **Política: Global**. Este painel é aberto automaticamente para ligações subsequentes ao serviço, para ver e editar a política global que todos os utilizadores obtêm. 
+    Na primeira vez que se ligar ao serviço, o **Azure Information Protection - início rápido** automaticamente é aberto o painel. Para configurar a política que todos os utilizadores obtêm, do **políticas** selecção de menu, selecione **política Global** para abrir o **Azure Information Protection - política Global** painel. Este painel é aberto automaticamente para ligações subsequentes ao serviço, para ver e editar a política global que todos os utilizadores obtêm. 
     
     A política do Azure Information Protection contém os elementos seguintes que pode configurar:
     
@@ -70,7 +70,7 @@ O Azure Information Protection tem uma [política predefinida](configure-policy-
 
 Pode utilizar as etiquetas predefinidas sem alterações ou pode personalizá-las, eliminá-las ou criar novas etiquetas. Para obter mais informações, utilize as ligações na próxima secção, para o ajudar a encontrar as opções relevantes e como as configurar. 
 
-Quando efetuar alterações num painel do Azure Information Protection, clique em **Guardar** para guardar as alterações ou clique em **Eliminar** para reverter para as últimas definições guardadas. 
+Quando efetuar alterações num painel do Azure Information Protection, clique em **Guardar** para guardar as alterações ou clique em **Eliminar** para reverter para as últimas definições guardadas.
 
 Quando terminar de efetuar as alterações que pretende, clique em **Publicar**. 
 

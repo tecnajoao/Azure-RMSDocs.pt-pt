@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d3138cd16e1bd86d63243feea30d23db9aa45bdb
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: e790b669298bb40b3397150d1b2c3ed7e26c10ab
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Como configurar a política do Azure Information Protection para utilizadores específicos com políticas de âmbito
 
@@ -35,26 +35,30 @@ Por exemplo, se tiver uma etiqueta com o nome **Confidencial** na política glob
 
 Para configurar uma política de âmbito para o Azure Information Protection:
 
-1. Numa nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com) como administrador de segurança ou administrador global.
+1. Se ainda não o tiver feito, abra uma nova janela do browser e inicie sessão para o [portal do Azure](https://portal.azure.com) como um administrador de segurança ou um administrador global. Em seguida, navegue para o painel **Azure Information Protection**. 
 
-2. Navegue para o painel **Azure Information Protection**: por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information Protection** na caixa Filtro. Na lista de resultados, selecione **Azure Information Protection**. 
+    Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
-    No painel inicial do **Azure Information Protection**, selecione **Adicionar uma nova política**. Em seguida, verá o segundo painel utilizado para apresentar a atualização da política global, para que possa agora configurar a sua nova política de âmbito.
+2. Do **políticas** selecção de menu, selecione **âmbito políticas**.
 
-3. Especifique um nome e uma descrição da política que apenas os administradores veem no portal do Azure. O nome do inquilino deve ser exclusivo. Em seguida, clique em **Especificar que utilizadores/grupos recebem esta política** e, nos painéis subsequentes, pode pesquisar e selecionar os utilizadores e grupos para esta política. As etiquetas e as definições que configurou nesta política de âmbito serão aplicadas apenas a esses utilizadores.
+3. No **Azure Information Protection - políticas de âmbito** painel, selecione **adicionar uma nova política**. Em seguida, consulte o **política** painel que mostra a política global existente, onde agora, pode configurar a nova, âmbito política.
 
-4. Agora, crie novas etiquetas ou configure as definições da política de âmbito. A política global é aplicada sempre em primeiro lugar, desta forma, pode complementar a política global com novas etiquetas e pode substituir as definições globais. Por exemplo, a política global poderá não ter uma etiqueta predefinida especificada e pode configurar uma etiqueta predefinida diferente em políticas de âmbito diferentes para departamentos específicos.
+4. Especifique um nome e uma descrição da política que apenas os administradores veem no portal do Azure. O nome do inquilino deve ser exclusivo. Em seguida, selecione **especifique quais os utilizadores/grupos obter esta política**, e os painéis subsequentes, pode procurar e selecione os utilizadores e grupos para esta política. As etiquetas e as definições que configurou nesta política de âmbito serão aplicadas apenas a esses utilizadores.
+
+5. Agora, crie novas etiquetas ou configure as definições da política de âmbito. A política global é aplicada sempre em primeiro lugar, desta forma, pode complementar a política global com novas etiquetas e pode substituir as definições globais. Por exemplo, a política global poderá não ter uma etiqueta predefinida especificada e pode configurar uma etiqueta predefinida diferente em políticas de âmbito diferentes para departamentos específicos.
 
     Se precisar de ajuda a configurar as etiquetas ou as definições, utilize as ligações na secção [Configurar a política da sua organização](configure-policy.md#configuring-your-organizations-policy).
 
-5. Tal como na edição da política global, quando realiza alterações num painel do Azure Information Protection, clique em **Guardar** para guardar as alterações ou clique em **Eliminar** para reverter para as últimas definições guardadas. 
+6. Tal como na edição da política global, quando realiza alterações num painel do Azure Information Protection, clique em **Guardar** para guardar as alterações ou clique em **Eliminar** para reverter para as últimas definições guardadas. 
 
-6. Quando terminar de realizar as alterações pretendidas para esta política de âmbito, no painel inicial do **Azure Information Protection**, confirme que esta política de âmbito está na ordem que pretende aplicar. Isto é importante quando tiver selecionado o mesmo utilizador para várias políticas de âmbito. Em seguida, clique em **Publicar**. 
+7. Quando terminar de efetuar as alterações que pretende para este âmbito de política, no iniciais **Azure Information Protection - políticas de âmbito** painel, certifique-se de que esta política âmbito na ordem que pretende que o se aplicadas. Isto é importante quando tiver selecionado o mesmo utilizador para várias políticas de âmbito. Para alterar a ordem, selecione o menu de contexto (**...** ) e selecione **mover para cima** ou **mover para baixo**. 
+
+8. Para implementar as suas alterações, clique em **publicar**. 
 
 O cliente do Azure Information Protection verifica a existência de alterações sempre que uma das aplicações do Office suportadas é iniciada ou o Explorador de Ficheiros é aberto. O cliente transfere as alterações feitas à política global ou às políticas de âmbito que se aplicam a esse utilizador.
 
 > [!TIP]
-> Depois de guardar a política de âmbito, pode utilizar o **Editor de Políticas Cruzadas** no painel inicial do **Azure Information Protection** para ver e reconfigurar todas as etiquetas da sua política do Azure Information Protection. Este método proporciona uma forma fácil de comparar etiquetas de múltiplas políticas (a sua política global e de todas as políticas de âmbito). No entanto, este editor não permite adicionar e reorganizar etiquetas ou ver e configurar as definições de política.
+> Depois de guardar a política de âmbito, do **políticas** secção, pode utilizar o **tudo - entre a vista de política** opção de visualizar e reconfigurar todas as etiquetas da sua política do Azure Information Protection. Este método proporciona uma forma fácil para comparar as etiquetas de política global e âmbito de todas as políticas. 
 
 ## <a name="next-steps"></a>Próximos passos
 

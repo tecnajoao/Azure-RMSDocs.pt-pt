@@ -4,17 +4,17 @@ description: "Quando atribui uma etiqueta a um documento ou a um e-mail pode sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/16/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: a65299651abd97adb0fc7641be2f2f3c6f1d8d2f
-ms.sourcegitcommit: adb38b008656ac706920a8488fd2beafedadbc97
+ms.openlocfilehash: 09e8bfdc9bae9979db6e6bc39457bdcdcf6dabca
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Como configurar uma etiqueta para marcas visuais para o Azure Information Protection
 
@@ -35,6 +35,8 @@ Informações adicionais sobre este marcadores visuais:
     - Várias linhas de texto são suportadas quando utilizar a versão de pré-visualização atual do cliente Azure Information Protection.
 
 - Pode especificar apenas uma cadeia de texto ou utilizar [variáveis](#using-variables-in-the-text-string) para criar dinamicamente a cadeia de texto quando o cabeçalho, rodapé ou marca d'água for aplicada.
+
+- Marcas visuais suportam apenas um idioma.
 
 ## <a name="when-visual-markings-are-applied"></a>Quando as marcas visuais são aplicadas
 
@@ -58,13 +60,13 @@ Para documentos, as marcas visuais são aplicadas da seguinte forma:
 
 Utilize as seguintes instruções para configurar marcas visuais para uma etiqueta.
 
-1. Caso ainda não o tenha feito, numa nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com) como administrador de segurança ou administrador global e navegue para o painel **Azure Information Protection**.
-
+1. Se ainda não o tiver feito, abra uma nova janela do browser e inicie sessão para o [portal do Azure](https://portal.azure.com) como um administrador de segurança ou um administrador global. Em seguida, navegue para o painel **Azure Information Protection**. 
+    
     Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
-2. Se a etiqueta que pretende configurar para marcas visuais se aplicar a todos os utilizadores, selecione a etiqueta a alterar no painel **Política:Global**.
-
-     Se a etiqueta que pretende configurar estiver numa [política de âmbito](configure-policy-scope.md) para ser aplicada apenas a utilizadores selecionados, selecione primeiro essa política de âmbito no painel inicial do **Azure Information Protection**.
+2. Se a etiqueta que pretende configurar será aplicada a todos os utilizadores, permaneça o **Azure Information Protection - política Global** painel.
+    
+    Se a etiqueta que pretende configurar está a ser um [âmbito política](configure-policy-scope.md) para que o se aplica apenas a utilizadores selecionados do **políticas** selecção de menu, selecione **âmbito políticas**. Em seguida, selecione a política de âmbito do **políticas do Azure Information Protection - âmbito** painel.
 
 3. No painel **Etiqueta**, na secção **Definir marcas visuais (como o cabeçalho ou o rodapé)** configure as definições para as marcas visuais que pretende e, em seguida, clique em **Guardar**:
 

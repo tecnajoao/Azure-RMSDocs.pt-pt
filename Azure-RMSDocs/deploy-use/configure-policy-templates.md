@@ -1,10 +1,10 @@
 ---
-title: "Configurar e gerir modelos na política do Azure Information Protection"
-description: "Atualmente em pré-visualização, já pode configurar e gerir modelos de gestão de direitos da política do Azure Information Protection."
+title: Configurar e gerir modelos do Azure Information Protection
+description: "Configurar e gerir modelos de gestão de direitos do portal do Azure."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/09/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: dc39a52ca09ec7818b70a5bac320024bdc4de657
-ms.sourcegitcommit: 4186c8fadea7bcd32cce7d468916374a9cdf151b
+ms.openlocfilehash: 5075c8cbab441a376595baabd7863005b15b84e3
+ms.sourcegitcommit: 5bcb916106021f624a69d620bbcc2c4a51398771
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurar e gerir modelos do Azure Information Protection
 
@@ -40,33 +40,40 @@ Modelos de gestão de direitos agora estão integrados com a política do Azure 
 
 ## <a name="default-templates"></a>Modelos predefinidos
 
-Quando obtiver a sua subscrição do Azure Information Protection ou uma subscrição do Office 365 que inclui o serviço Azure Rights Management, dois modelos predefinidos são criados automaticamente para o seu inquilino que restringem o acesso aos utilizadores autorizados na sua organização. Estes dois modelos têm as seguintes restrições: 
+Quando obtiver a sua subscrição do Azure Information Protection ou uma subscrição do Office 365 que inclui o serviço Azure Rights Management, dois modelos predefinidos são criados automaticamente para o seu inquilino que restringem o acesso aos utilizadores autorizados na sua organização. Quando são criados estes dois modelos, estes têm as seguintes restrições: 
 
 - Permissões Ler ou Modificar para o conteúdo protegido
     
-    -Permissões específicas: ver conteúdo, guarde o ficheiro, editar conteúdo, ver direitos atribuídos, permitir Macros, reencaminhar, responder, responder a todos
+    - **Permissões específicas**: ver conteúdo, guarde o ficheiro, editar conteúdo, ver direitos atribuídos, permitir Macros, reencaminhar, responder, responder a todos
 
 - Visualização só de leitura dos conteúdos protegidos
     
-    - Permissão específica: Ver Conteúdo
+    - **Permissão específica**: ver conteúdo
 
-Estes modelos tornam mais fácil para si e a outras pessoas, imediatamente começar a proteger os dados confidenciais da sua organização. Estes modelos podem ser utilizados com etiquetas do Azure Information Protection, ou por si mesmos com [aplicações e serviços](../understand-explore/applications-support.md) que pode utilizar modelos de Rights Management.
+Além disso, os modelos são configurados para permitir acesso offline durante sete dias e não dispõe de uma data de expiração.
+
+>[!NOTE]
+> Pode alterar estas definições e os nomes e descrições dos modelos predefinidos. Esta capacidade não foi possível com o portal clássico do Azure e continua sem suporte para o PowerShell.
+
+Estes modelos predefinidos tornam mais fácil para si e a outras pessoas, imediatamente começar a proteger os dados confidenciais da sua organização. Estes modelos podem ser utilizados com etiquetas do Azure Information Protection, ou por si mesmos com [aplicações e serviços](../understand-explore/applications-support.md) que pode utilizar modelos de Rights Management.
 
 Também pode criar os seus modelos personalizados. Embora provavelmente necessite de apenas alguns modelos, pode ter um máximo de 500 modelos personalizados guardados no Azure.
 
 ### <a name="default-template-names"></a>Nomes de modelo predefinido
 
-Se tiver adquirido recentemente uma subscrição do Azure Information Protection, os nomes dos seus modelos predefinidos são os seguintes:
+Se tiver adquirido recentemente uma subscrição do Azure Information Protection, os modelos predefinidos são criados com os nomes seguintes:
 
 - **Confidencial \ todos os funcionários** para ler ou modificar permissões para o conteúdo protegido.
 
 - **Altamente confidenciais \ todos os funcionários** para visualização só de leitura para o conteúdo protegido.
 
-Se tiver adquirido a subscrição do Azure Information Protection algum tempo há ou, se não tiver uma subscrição do Azure Information Protection, mas tiver uma subscrição do Office 365 que inclua o Azure Rights Management, os nomes dos seus modelos predefinidos são os seguintes:
+Se tiver adquirido a subscrição do Azure Information Protection algum tempo há ou se não tiver uma subscrição do Azure Information Protection, mas tiver uma subscrição do Office 365 que inclua o Azure Rights Management, os modelos predefinidos são criados com o nomes seguintes:
 
 - **\<nome da organização > – confidencial** para ler ou modificar permissões para o conteúdo protegido.
 
 - **\<nome da organização >-apenas visualização confidencial**, para uma visualização só de leitura para o conteúdo protegido. 
+
+Pode mudar o nome (e reconfigurar) estes modelos predefinidos, ao utilizar o portal do Azure.
 
 >[!NOTE]
 >Se não vir os modelos predefinidos no **Azure Information Protection - política Global** painel, estes são convertidos para as etiquetas ou ligados a uma etiqueta. Ainda existem como modelos, mas no portal do Azure, pode vê-los como parte de uma configuração de etiqueta, que inclui proteção Azure RMS. Pode confirmar sempre que modelos tem o inquilino, executando o [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) do [módulo AADRM PowerShell](administer-powershell.md).
@@ -96,21 +103,21 @@ Antes de editar estes modelos ou convertê-las em etiquetas, certifique-se de qu
     
     Além disso, atualmente não pode definir a definição de compatibilidade aplicacional para um modelo departamental. Se for necessário, pode definir esta opção através do PowerShell com o cmdlet [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty).
 
-- Atualmente, os modelos que foram configurados para vários idiomas utilizando o portal clássico do Azure ou o PowerShell não são apresentados os idiomas selecionados para o nome e as descrições, mas estes são retidos.
-
-- Quando converter ou ligar um modelo para uma etiqueta, já não pode ser utilizada por outras etiquetas.
+- Quando converter ou ligar um modelo para uma etiqueta, já não pode ser utilizada por outras etiquetas. Além disso, este modelo já não apresenta na **modelos** secção.
 
 - Não crie um novo modelo do **modelos** contentor. Em vez disso, crie uma etiqueta que tem o **proteger** definir e configurar os direitos de utilização e as definições do **proteção** painel. Para obter todas as instruções, veja [Criar um novo modelo](#to-create-a-new-template).
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Para configurar os modelos na política do Azure Information Protection
 
-1. Numa nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com) como administrador de segurança ou administrador global.
+1. Se ainda não o tiver feito, abra uma nova janela do browser e inicie sessão para o [portal do Azure](https://portal.azure.com) como um administrador de segurança ou um administrador global. Em seguida, navegue para o painel **Azure Information Protection**. 
+    
+    Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
-2. Navegue para o painel **Azure Information Protection**: por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information Protection** na caixa Filtro. Na lista de resultados, selecione **Azure Information Protection**. 
+2. Se o modelo que pretende configurar para todos os utilizadores, permaneça o **Azure Information Protection - política Global** painel.
+    
+    Se o modelo que pretende configurar está a ser um [âmbito política](configure-policy-scope.md) para que o se aplica apenas a utilizadores selecionados do **políticas** selecção de menu, selecione **âmbito políticas**. Em seguida, selecione a política de âmbito do **políticas do Azure Information Protection - âmbito** painel.
 
-2. Se o modelo que pretende configurar se aplicar a todos os utilizadores, selecione **Global** no painel **Azure Information Protection**. Contudo, se o modelo que pretende configurar estiver numa [política de âmbito](configure-policy-scope.md) para que seja aplicado apenas a utilizadores selecionados, então selecione essa política de âmbito.
-
-3. No painel de política, encontre o modelo que pretende configurar:
+3. Do **Azure Information Protection - política Global** painel, ou o **política:\<nome >** painel, localize o modelo que pretende configurar:
     
     - Quando tem uma subscrição que inclui a classificação, a etiquetagem e a proteção: expanda **Modelos** depois das suas etiquetas.
     
@@ -122,7 +129,10 @@ Antes de editar estes modelos ou convertê-las em etiquetas, certifique-se de qu
     
     Clique em **OK** para manter as suas alterações e, no painel **Etiqueta**, clique em **Guardar**.
 
-6. Para disponibilizar as alterações às aplicações e serviços dos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
+6. Para disponibilizar as alterações aos utilizadores aplicações e serviços no iniciais **Azure Information Protection** painel, clique em **publicar**.
+
+> [!NOTE]
+> Também pode editar um modelo utilizando o **Editar modelo** botão no **proteção** painel se tiver configurado uma etiqueta para utilizar um modelo predefinido. Desde que não existem outra etiqueta também utiliza o modelo selecionado, este botão converte o modelo de uma etiqueta e leva-o para o passo 5. Para obter mais informações sobre o que acontece quando os modelos são convertidos em etiquetas, consulte a secção seguinte.
 
 ## <a name="to-convert-templates-to-labels"></a>Converter modelos em etiquetas
 
@@ -132,7 +142,9 @@ Por exemplo, se converter uma etiqueta denominada **Marketing** que concede dire
 
 Não existe nenhum requisito para converter todos os modelos em etiquetas, mas, quando o fizer, as definições de proteção são totalmente integradas com a funcionalidade completa de etiquetas para que não precise de manter as definições separadamente.
 
-Para converter um modelo numa etiqueta, clique com o botão direito no rato no modelo e selecione **Converter em etiqueta**. Em alternativa, utilize o menu de contexto para selecionar esta opção.
+Para converter um modelo numa etiqueta, clique com o botão direito no rato no modelo e selecione **Converter em etiqueta**. Em alternativa, utilize o menu de contexto para selecionar esta opção. 
+
+Também pode converter um modelo de uma etiqueta ao configurar uma etiqueta para a proteção e um modelo predefinido, utilizando o **Editar modelo** botão. 
 
 Ao converter um modelo numa etiqueta:
 
@@ -148,21 +160,23 @@ Ao converter um modelo numa etiqueta:
 
 Ao criar um novo modelo com a definição de proteção do **Azure RMS**, nos bastidores, esta ação cria um novo modelo personalizado que pode ser acedido por serviços e aplicações que se integram nos modelos do Rights Management.
 
-1. Se o novo modelo que pretende criar se aplicar a todos os utilizadores, no painel **Política: Global**, clique em **Adicionar uma nova etiqueta**.
+1. Se o novo modelo for para todos os utilizadores, permaneça o **Azure Information Protection - política Global** painel.
     
-     Se a nova etiqueta que pretende criar for um modelo departamental, para ser aplicada apenas a utilizadores selecionados, selecione ou crie primeiro uma política de âmbito no painel inicial do **Azure Information Protection**.
+     Se o novo modelo será um modelo departamental, de modo a que se aplica apenas a utilizadores selecionados do **políticas** selecção de menu, selecione **âmbito políticas**. Em seguida, crie ou selecione o [âmbito política](configure-policy-scope.md) do **políticas do Azure Information Protection - âmbito** painel.
 
-2. No painel **Etiqueta**, mantenha a predefinição de **Ativado**: **Ligado** para publicar este novo modelo, ou altere esta definição para **Desligado** para criar o modelo como arquivado. Em seguida, insira um nome de etiqueta e descrição para o nome do modelo e a descrição.
+2. Do **Azure Information Protection - política Global** painel, ou o **política:\<nome >** painel, clique em **adicionar uma nova etiqueta**.
 
-3. Para **Defina permissões para documentos e e-mails que contenham esta etiqueta**, selecione **Proteger** e, em seguida, selecione **Proteção**:
+3. No painel **Etiqueta**, mantenha a predefinição de **Ativado**: **Ligado** para publicar este novo modelo, ou altere esta definição para **Desligado** para criar o modelo como arquivado. Em seguida, insira um nome de etiqueta e descrição para o nome do modelo e a descrição.
+
+4. Para **Defina permissões para documentos e e-mails que contenham esta etiqueta**, selecione **Proteger** e, em seguida, selecione **Proteção**:
     
-     ![Configurar a proteção para uma etiqueta do Azure Information Protection](../media/info-protect-protection-bar.png)
+     ![Configurar a proteção para uma etiqueta do Azure Information Protection](../media/info-protect-protection-bar-configured.png)
 
-4. No painel **Proteção**, pode alterar as permissões, a expiração de conteúdo e as definições de acesso offline. Para obter mais informações sobre a configuração destas definições de proteção, veja [Como configurar uma etiqueta para a proteção do Rights Management](configure-policy-protection.md)
+5. No painel **Proteção**, pode alterar as permissões, a expiração de conteúdo e as definições de acesso offline. Para obter mais informações sobre a configuração destas definições de proteção, veja [Como configurar uma etiqueta para a proteção do Rights Management](configure-policy-protection.md)
     
     Clique em **OK** para manter as suas alterações e, no painel **Etiqueta**, clique em **Guardar**.
 
-5. Para disponibilizar estes modelos às aplicações e serviços dos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
+6. Para que estes modelos disponíveis para aplicações de utilizador e serviços no iniciais **Azure Information Protection** painel, clique em **publicar**.
 
 
 ## <a name="next-steps"></a>Próximos passos

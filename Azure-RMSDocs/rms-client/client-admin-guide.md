@@ -4,7 +4,7 @@ description: "Instruções e informações para administradores numa rede empres
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/09/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e942555c7a985db10054aa3f13be5ebcda2269a3
-ms.sourcegitcommit: 5ea919b1b2bcb9c4b3e5dd1939ff8d0d937e1168
+ms.openlocfilehash: f07d39e5110ae9bfb58a81585a042e8afdbbc639
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guia do administrador do cliente do Azure Information Protection
 
@@ -330,7 +330,7 @@ O cliente Azure Information Protection suporta os mesmos idiomas de que suporta 
 
 Estes idiomas, opções de menu, caixas de diálogo e mensagens do Azure Information Protection cliente apresentado no idioma do utilizador. Não há um programa de instalação único que Deteta a linguagem de, pelo que não é necessária nenhuma configuração adicional para instalar o cliente Azure Information Protection para idiomas diferentes. 
 
-No entanto, os nomes de etiquetas que os utilizadores veem não são traduzidos automaticamente para a [política predefinida](../deploy-use/configure-policy-default.md) ou para os nomes de etiquetas que especificar. Para os utilizadores verem as etiquetas em idiomas diferentes, tem de fornecer as suas próprias traduções e configurar a política do Azure Information Protection para as utilizar. Para obter mais informações, veja [Como configurar etiquetas para diferentes idiomas no Azure Information Protection](../deploy-use/configure-policy-languages.md).
+No entanto, a etiqueta nomes e descrições que especificou não são convertidas automaticamente quando configurar as etiquetas na política do Azure Information Protection. A partir de 30 de Agosto de 2017, atual [política predefinida](../deploy-use/configure-policy-default.md) inclui suporte para alguns idiomas. Para os utilizadores vejam as etiquetas no respetivo idioma preferencial, fornecem as suas próprias traduções e configure a política do Azure Information Protection para utilizar estes traduções. Para obter mais informações, veja [Como configurar etiquetas para diferentes idiomas no Azure Information Protection](../deploy-use/configure-policy-languages.md). Marcas visuais não são convertidos e não suportam mais do que um idioma.
 
 ## <a name="to-uninstall-the-azure-information-protection-client"></a>Para instalar o cliente do Azure Information Protection
 

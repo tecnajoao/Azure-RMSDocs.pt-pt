@@ -4,17 +4,17 @@ description: "Quando configurar as condições para uma etiqueta, pode atribuir 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/11/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 3aad6eb4956b6565e44c4b1019c984a28cb41fdc
-ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
+ms.openlocfilehash: ef84f3ceb8f732dd475b4db8eae489e715d4b7da
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Como configurar as condições para classificação automática e recomendada para o Azure Information Protection
 
@@ -26,7 +26,7 @@ Quando configurar as condições para uma etiqueta, pode atribuir automaticament
  
 - A classificação recomendada aplica-se ao Word, ao Excel e ao PowerPoint quando os ficheiros são guardados.
 
-Quando configurar as condições, pode utilizar padrões predefinidos, tais como "números de cartão de crédito" ou "EUA número de Segurança Social." Em alternativa, pode definir uma cadeia personalizada ou um padrão como condição para classificação automática. Estas condições aplicam-se ao corpo de texto em documentos e e-mails, bem como a cabeçalhos e rodapés. Para mais informações sobre as condições, consulte a secção [Informações sobre as condições incorporadas](#information-about-the-built-in-conditions).
+Quando configurar as condições, pode utilizar padrões predefinidos, tais como **número de cartão de crédito** ou **número de Segurança Social dos E.U.A. (SSN)**. Em alternativa, pode definir uma cadeia personalizada ou um padrão como condição para classificação automática. Estas condições aplicam-se ao corpo de texto em documentos e e-mails, bem como a cabeçalhos e rodapés. Para obter mais informações sobre as condições, consulte o [detalhes sobre os tipos de informações](#details-about-the-information-types) secção.
 
 Como são avaliadas várias condições quando estas são aplicadas a mais do que uma etiqueta:
 
@@ -47,37 +47,42 @@ Neste exemplo, o utilizador pode clicar em **alterar agora** para aplicar a etiq
 
 ## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>Para configurar a classificação recomendada ou automática para uma etiqueta
 
-1. Caso ainda não o tenha feito, numa nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com) como administrador de segurança ou administrador global e navegue para o painel **Azure Information Protection**. 
+1. Se ainda não o tiver feito, abra uma nova janela do browser e inicie sessão para o [portal do Azure](https://portal.azure.com) como um administrador de segurança ou um administrador global. Em seguida, navegue para o painel **Azure Information Protection**. 
     
     Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
-2. Se a etiqueta que pretende configurar para classificação automática ou recomendada aplica-se a todos os utilizadores, selecione a etiqueta a alterar o **política: Global** painel e, em seguida, efetue as alterações no **etiqueta** painel e em quaisquer painéis subsequentes, conforme necessário. 
+2. Se a etiqueta que pretende configurar será aplicada a todos os utilizadores, permaneça o **Azure Information Protection - política Global** painel.
+    
+    Se a etiqueta que pretende configurar está a ser um [âmbito política](configure-policy-scope.md) para que o se aplica apenas a utilizadores selecionados do **políticas** selecção de menu, selecione **âmbito políticas**. Em seguida, selecione a política de âmbito do **políticas do Azure Information Protection - âmbito** painel.
 
-     Se a etiqueta que pretende configurar estiver numa [política de âmbito](configure-policy-scope.md) para ser aplicada apenas a utilizadores selecionados, selecione primeiro essa política de âmbito no painel inicial do **Azure Information Protection**.  
+3. Do **Azure Information Protection - política Global** painel, ou o **política:\<nome >** painel, selecione a etiqueta a configurar. 
 
-3. No painel **Etiqueta**, na secção **Configurar condições para aplicar esta etiqueta automaticamente**, clique em **Adicionar uma nova condição**.
+4. No painel **Etiqueta**, na secção **Configurar condições para aplicar esta etiqueta automaticamente**, clique em **Adicionar uma nova condição**.
 
-4. No painel **Condição**, selecione **Incorporada** se pretender utilizar uma condição predefinida, ou **Personalizada** se pretender especificar a sua própria condição e, em seguida, clique em **Guardar**:
-
-    - Para **incorporada**: selecione na lista de condições disponíveis e, em seguida, selecione o número mínimo de ocorrências e se a ocorrência deve ter um valor único a ser incluído na contagem de ocorrências.
+5. No **condição** painel, selecione **tipos de informações** se pretender utilizar uma condição predefinida, ou **personalizada** se pretender especificar a sua própria e, em seguida, clique em **Guardar**:
+    - Para **tipos de informações**: selecione na lista de condições disponíveis e, em seguida, selecione o número mínimo de ocorrências e se a ocorrência deve ter um valor único a ser incluído na contagem de ocorrências.
         
-        Para mais informações sobre as regras de deteção para estas condições e alguns exemplos, consulte a secção [Informações sobre as condições incorporadas](#information-about-the-built-in-conditions).
-
+        Para utilizar a lista completa das condições, tem de utilizar a versão de pré-visualização atual do cliente Azure Information Protection. Se tiver a versão de disponibilidade geral atual do cliente, as seguintes cinco condições só são suportadas: **código SWIFT**, **número de cartão de crédito**, **número de encaminhamento ABA**, **Número de Segurança Social dos E.U.A. (SSN)**, e **internacional (IBAN) do número de conta bancária**. [Mais informações](#details-about-the-information-types)
+    
     - Para **Personalizada**: especifique um nome e uma expressão correspondente, que tem de excluir aspas e carateres especiais. Em seguida, especifique se correspondente como uma expressão regular, sensibilidade às maiúsculas e de utilização e o número mínimo de ocorrências e se a ocorrência deve ter um valor único a ser incluído na ocorrência da contagem.
         
-    **Exemplo das opções de ocorrências**: se selecionar a opção de número de segurança social incorporado e definir o número mínimo de ocorrências como 2 e um documento tiver o mesmo número de segurança social listado duas vezes: se definir **Contar ocorrências apenas com valores únicos** como **Ativada**, a condição não é satisfeita. Se definir esta opção como **Desativada**, a condição é satisfeita.
+        Se tiver a versão de pré-visualização atual do cliente Azure Information Protection, as expressões regulares utilizam os padrões de regex do Office 365. Para obter mais informações, consulte [que define a expressão regular com a base de correspondências](https://technet.microsoft.com/library/jj674702(v=exchg.150).aspx#Anchor_2) na documentação do Office. 
+        
+    **Exemplo das opções de ocorrências**: selecione a opção de número de segurança social incorporado, conjunto o número mínimo de ocorrências como 2 e um documento tiver o mesmo número de segurança social listado duas vezes: Se definir o **contagem de ocorrências com apenas valores exclusivos** para **no**, a condição não for cumprida. Se definir esta opção para **desativar**, a condição for satisfeita.
 
-5. No painel **Etiqueta**, configure as seguintes opções e, em seguida, clique em **Guardar**:
-
+6. No painel **Etiqueta**, configure as seguintes opções e, em seguida, clique em **Guardar**:
+    
     - Escolha a classificação automática ou recomendada: para **Selecionar a forma como esta etiqueta é aplicada: automaticamente ou recomendada para o utilizador**, selecione **Automática** ou **Recomendada**.
-
+    
     - Especifique o texto do aviso ao utilizador ou da sugestão de política: mantenha o texto predefinido ou especifique uma cadeia própria.
 
-6. Para disponibilizar as alterações aos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
+7. Para disponibilizar as alterações aos utilizadores, no painel inicial **Azure Information Protection**, clique em **Publicar**.
 
-## <a name="information-about-the-built-in-conditions"></a>Informações sobre as condições incorporadas
+## <a name="details-about-the-information-types"></a>Detalhes sobre os tipos de informações
 
-Pode selecionar as seguintes condições:
+Se tiver a versão de pré-visualização atual do cliente Azure Information Protection, a lista completa dos tipos de informações são suportadas e utilize os tipos de informações de sensibilidade perda prevenção (DLP) do Office 365 dados e a deteção de padrão. Pode escolher entre vários tipos comuns de informações confidenciais, algumas das quais são específicas para diferentes regiões. Para obter mais informações, consulte [que os tipos de informações confidenciais serve para](https://support.office.com/article/What-the-sensitive-information-types-look-for-fd505979-76be-4d9f-b459-abef3fc9e86b) na documentação do Office. Quando o Azure Information Protection avalia estes tipos de informações, não utiliza a definição de nível de confiança de DLP do Office mas coincide de acordo com a confiança mais baixa.  
+
+Se tiver a versão de disponibilidade geral atual do cliente, os seguintes tipos de informações só são suportados:
 
 - [Código SWIFT](#swift-code )
 
@@ -89,6 +94,7 @@ Pode selecionar as seguintes condições:
 
 - [Número de Conta Bancária Internacional (IBAN)](#international-banking-account-number-iban)
 
+Consulte as secções seguintes para obter mais informações sobre cada um destes tipos de informações para a versão de disponibilidade geral do cliente.
 
 ### <a name="swift-code"></a>Código SWIFT
 

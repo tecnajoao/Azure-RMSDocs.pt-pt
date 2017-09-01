@@ -4,7 +4,7 @@ description: "As instruções e as informações para os administradores gerirem
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/23/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6077b9eba8ee04bf22c17612183f3d41b6b71e35
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 3a4a84356d59692dd3693b4bbaa00a3e39c95597
+ms.sourcegitcommit: adeab31c7aa99eab115dd12035fc5d9dffec4e9c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 08/29/2017
 ---
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Utilizar o PowerShell com o cliente do Azure Information Protection
 
@@ -220,7 +220,7 @@ O nosso comando de exemplo teria um aspeto semelhante ao seguinte:
 
     Set-RMSServerAuthentication -Key zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=-AppPrincipalId b5e3f76a-b5c2-4c96-a594-a0807f65bba4-BposTenantId 23976bc6-dcd4-4173-9d96-dad1f48efd42
 
-Tal como apresentado no comando anterior, pode indicar os valores com um comando único, ou apenas escrever Set-RMSServerAuthentication, e indicar os valores individualmente quando lhe for pedido. Quando o comando estiver concluído, verá “**O RmsServerAuthentication está definido como Ligado**”, o que significa que o cliente está agora a funcionar no “modo de servidor”. Esta mensagem não confirma que a autenticação foi realizada com êxito com os valores fornecidos, mas que a transição para o modo de servidor teve êxito.
+Como é mostrado no comando anterior, pode fornecer os valores com um único comando, efetue um script para executar de forma não interativa. Mas, para fins de teste, pode apenas escreva Set-RMSServerAuthentication e forneça os valores por-um quando lhe for pedido. Quando o comando for concluído, o cliente está agora a funcionar no "modo de servidor", que é adequado para utilização não interativa, como scripts e de infraestrutura de classificação de ficheiros do Windows Server.
 
 Considere tornar este principal de serviço um superutilizador: para garantir que este principal de serviço pode sempre desproteger ficheiros para outros utilizadores, pode ser configurado para ser um superutilizador. Da mesma forma como configurar uma conta de utilizador padrão para ser um Superutilizador, utilizar o mesmo cmdlet do Azure RMS, [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md), mas Especifica o **ServicePrincipalId** parâmetro com o valor do seu AppPrincipalId.
 

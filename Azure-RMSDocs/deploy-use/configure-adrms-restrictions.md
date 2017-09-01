@@ -4,17 +4,17 @@ description: "Conheça as limitações, pré-requisitos e recomendações se sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/11/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: 4730c2e27a78ec8bf106f43b3ac7097a40e0555d
-ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
+ms.openlocfilehash: 80e7cb411132fa3c3fdff7f8c80febde68b071fa
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>Requisitos e restrições de Tenha a sua própria chave (HYOK) para proteção do AD RMS
 
@@ -61,13 +61,17 @@ Além de não suportar as vantagens indicadas que obtém quando utiliza a prote�
 
 - Não suporta o Office 2010 ou o Office 2007.
 
-- Não utilize a opção **Não Reencaminhar** quando configurar uma etiqueta para a proteção do Azure RMS. Também tem de informar os utilizadores para não selecionarem manualmente esta opção no Outlook. 
+- Instruir os utilizadores não a selecionar **não reencaminhar** no Outlook, ou fornecer orientações específicas. 
 
-    Se a opção Não Reencaminhar for aplicada por uma etiqueta ou manualmente pelos utilizadores, a opção poderá ser aplicada pela sua implementação do AD RMS em vez do serviço Azure Rights Management pretendido. Neste cenário, as pessoas com quem partilha externamente não poderão abrir mensagens de e-mail que têm esta opção Não Reencaminhar aplicada.
+    Embora seja possível configurar uma etiqueta para **não reencaminhar** para utilizar HYOK ou o serviço Azure Rights Management, os utilizadores podem também selecionar não reencaminhar próprios. Pode selecionar esta opção, utilizando o **não reencaminhar** botão no **mensagem** separador do friso Office ou ao utilizar opções de menu do Outlook. O **não reencaminhar** opções de menu estão localizadas em **ficheiro** > **permissões**e o **permissões** botão do o **opções** separador no Friso. 
     
-    A partir da versão 1.9.58.0 do cliente do Azure Information Protection (atualmente em pré-visualização), o botão **Não reencaminhar** no Outlook utiliza sempre o Azure RMS. Esta definição não afeta a opção de menu **Não Reencaminhar** do Outlook nem a opção **Não Reencaminhar** quando configura uma etiqueta para a proteção. Se não quiser este comportamento, pode ocultar o botão **Não Reencaminhar** no Outlook ao configurar uma [definição de cliente avançado](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook).
+    Quando os utilizadores selecionar o botão não reencaminhar, o Azure RMS ou o AD RMS pode ser utilizado e a escolha é não determinística. Quando os utilizadores selecionam **não reencaminhar** de uma opção de menu do Outlook, podem escolher de entre o Azure RMS ou o AD RMS, mas poderão não saber qual é a opção para selecionar para a sua mensagem de correio eletrónico. Para ambos os cenários, se o AD RMS é utilizado quando deve ser utilizado o Azure RMS, as pessoas que partilha com externamente não é possível abrir estas mensagens de correio eletrónico.
+    
+    A versão de pré-visualização atual do cliente Azure Information Protection utiliza sempre o Azure RMS quando os utilizadores selecionam a **não reencaminhar** botão no Outlook. Se não quiser este comportamento, pode ocultar o botão **Não Reencaminhar** no Outlook ao configurar uma [definição de cliente avançado](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook). 
 
-- Se os utilizadores configurarem permissões personalizadas quando utiliza a proteção do AD RMS (HYOK) e a proteção do Azure RMS, o documento ou e-mail será sempre protegido pelo Azure Rights Management.
+- A versão de disponibilidade geral atual do cliente Azure Information Protection: se os utilizadores configurar permissões personalizadas ao utilizar a proteção do AD RMS (HYOK) e Azure RMS, documento ou e-mail esteja sempre protegido pelo Azure Rights Management. Esta limitação não se aplica à versão de pré-visualização atual do cliente.
+
+- Se configurar permissões de utilizador definida para Word, Excel, PowerPoint e Explorador de ficheiros, que é suportado com a versão de pré-visualização atual do cliente Azure Information Protection: no Explorador de ficheiros, a proteção é sempre aplicada através do Azure RMS em vez disso a proteção de HYOK (AD RMS). 
 
 - Se os utilizadores escolherem uma etiqueta no Outlook que aplica a proteção do AD RMS e, em seguida, mudarem de ideias antes de enviar o e-mail e selecionarem uma etiqueta que aplica a proteção do Azure RMS, a última etiqueta selecionada não será aplicada. Os utilizadores verão a seguinte mensagem de erro: **O Azure Information Protection não pode aplicar esta etiqueta. Não tem permissão para efetuar esta ação.**
     
@@ -107,9 +111,11 @@ Para obter informações de implementação e instruções para o AD RMS, veja [
 
 ## <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Localizar as informações para especificar a proteção do AD RMS com uma etiqueta do Azure Information Protection
 
-Quando configura uma etiqueta para a proteção do **HYOK (AD RMS)**, tem de especificar o GUID do modelo e o URL de licenciamento do cluster do AD RMS. Pode localizar estes valores na consola dos Serviços de Gestão de Direitos do Active Directory:
+Quando configurar uma etiqueta para **HYOK (AD RMS)** proteção, tem de especificar o URL de licenciamento do cluster do AD RMS. Além disso, tem de especificar a um modelo que configurou para conhecer as permissões conceder aos utilizadores ou permitir que os utilizadores a definir as permissões e os utilizadores. 
 
-- Para localizar o GUID do modelo: expanda o cluster e clique em **Modelos de Política de Direitos**. A partir das informações em **Modelos de Política de Direitos Distribuídos**, pode copiar o GUID do modelo que pretende utilizar. Por exemplo: 82bf3474-6efe-4fa1-8827-d1bd93339119
+Pode encontrar o GUID do modelo e licenciamento valores do URL da consola de serviços de gestão de direitos do Active Directory:
+
+- Para localizar um GUID do modelo: expanda o cluster e clique em **modelos de política de direitos**. A partir das informações em **Modelos de Política de Direitos Distribuídos**, pode copiar o GUID do modelo que pretende utilizar. Por exemplo: 82bf3474-6efe-4fa1-8827-d1bd93339119
 
 - Para localizar o URL de licenciamento: clique no nome do cluster. A partir das informações em **Detalhes do Cluster**, copie o valor de **Licenciamento** menos a cadeia **/_wmcs/licensing**. Por exemplo: https://rmscluster.contoso.com 
     

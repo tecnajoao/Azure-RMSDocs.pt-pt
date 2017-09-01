@@ -4,46 +4,57 @@ description: "Passo 1 de um tutorial de introdução para experimentar o Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: 1779eb6f2bcf31ce3515b58b6ed955208fafb237
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: ac28e18573ec1bd8f0a3f1e715a8c8e1b7c2854e
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="step-1-activate-the-rights-management-service"></a>Passo 1: ativar o serviço Rights Management
  
 >*Aplica-se a: Azure Information Protection*
 
 > [!NOTE]
->Se sabe que o serviço Azure Rights Management para o seu inquilino já está ativado, avance diretamente para o [passo seguinte](infoprotect-tutorial-step2.md). 
->
->Se não tem a certeza se este serviço está ativado, siga as instruções neste passo para o confirmar.
+>Mesmo se já tiver ativado o serviço Azure Rights Management para o seu inquilino, conclua este passo para confirmar o estado de ativação. As instruções incluem o início de sessão portal do Azure e criar painel do Azure Information Protection, para que esteja preparado para o passo 2. 
 
 Quando o serviço Azure Rights Management for ativado, poderá proteger os e-mails e os documentos mais confidenciais da sua organização e controlar a forma como os documentos protegidos são utilizados quando os partilhar com outras pessoas. Existem diferentes métodos que pode utilizar para ativar este serviço, que incluem utilizar o Windows PowerShell e os portais de administração.
 
-Para este tutorial, iremos avançar diretamente para a página de ativação no portal de administração para administradores do Office 365. No entanto, se preferir navegar para esta página a partir do seu portal de administração do Office 365, em vez de ir diretamente para a página, veja as instruções completas em [Ativar o Azure Rights Management](../deploy-use/activate-service.md). Além disso, utilize estas instruções completas se tiver acesso ao portal do Azure, mas não ao portal de administração do Office 365.
+Para este tutorial, iremos utilizar o portal do Azure, o que é onde também configurar as etiquetas para utilizadores. 
 
-## <a name="to-activate-the-rights-management-service"></a>Para ativar o serviço Rights Management
+## <a name="to-activate-the-azure-rights-management-service"></a>Para ativar o serviço Azure Rights Management
 
-1. Abra uma nova janela do browser e aceda diretamente à [página de ativação do Rights Management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) para administradores do Office 365.
+1. Iniciar sessão para o [portal do Azure](https://portal.azure.com) como um administrador global ou o administrador de segurança para o seu inquilino.
+
+2. No menu do hub, clique em **Novo** e, em seguida, na lista **MARKETPLACE**, selecione **Security + Identity**. 
     
-    Se lhe for pedido para iniciar sessão, utilize uma conta que seja um administrador global do Office 365.
+3.  No **segurança + identidade** painel, do **aplicações em destaque** lista, selecione **Azure Information Protection**. Em seguida, no **Azure Information Protection** painel, clique em **criar**.
+    
+    Esta ação cria o **Azure Information Protection** painel para que a próxima vez que iniciar sessão no portal, pode selecionar o serviço do hub **mais serviços** lista. 
+    
+    > [!TIP] 
+    > Selecione **Afixar ao dashboard** para criar um mosaico do **Azure Information Protection** no seu dashboard. Assim, não terá de procurar o serviço da próxima vez que iniciar sessão no portal.
 
-2. Na página **rights management**, clique em **ativar**. Se este botão apresentar a opção **desativar**, significa que o serviço já está ativado e que pode avançar diretamente para o [passo seguinte](infoprotect-tutorial-step2.md). 
+4. Preste atenção às informações na página **Início rápido** que se abre automaticamente ao ligar ao serviço pela primeira vez. Pode regressar aqui mais tarde. Para este tutorial, selecione **definições RMS**.  
 
-    ![Passo 1 do tutorial de início rápido do Azure Information Protection – ativar o serviço](../media/info-protect-activate.png)
+5. Pode agora ver se o serviço do Azure Rights Management está ativado para o seu inquilino. 
+    
+    - Se o serviço está ativado, consulte a confirmação do seguinte:
+        
+        ![Estado de proteção de informações do Azure para o Azure RMS](../media/info-protect-azurerms-activated.png)
+        
+    - Se o serviço não está ativado, consulte que este serão refletidas nas informações de estado e a opção para ativar:
+        
+        ![Estado de proteção de informações do Azure para o Azure RMS](../media/info-protect-azurerms-deactivated.png)
 
-3. Quando lhe for perguntado **Pretende ativar o Rights Management?**, clique em **ativar** para confirmar.
+6. Se o serviço não está ativado, selecione **ativar**. 
 
-    Já deverá estar visível **O Rights Management encontra-se ativado** e a opção para desativar (poderá ter de atualizar manualmente a página)
-
-    Neste momento, não clique em **funcionalidades avançadas**. Em vez disso, pode fechar esta página.
+    Quando a ativação estiver concluída, a barra de informações apresenta **ativação foi concluído com sucesso**.
 
 É tudo o que precisa de fazer neste primeiro passo para concluir este tutorial. Está pronto para ir para o passo 2.
 

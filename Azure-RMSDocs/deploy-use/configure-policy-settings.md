@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 28997c346c727112a1acb35014af1c8ad8174ccf
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 2bc5493c906b0d21be2679f0d777cb4fd5fbe30c
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Como configurar as definições de política do Azure Information Protection
 
@@ -27,11 +27,15 @@ Além do título da barra e a descrição do Information Protection, existem alg
 
 Configurar estas definições:
 
-1. Caso ainda não o tenha feito, numa nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com) como administrador de segurança ou administrador global e navegue para o painel **Azure Information Protection**. 
+1. Se que ainda não o fez, numa nova janela do browser, inicie sessão no [portal do Azure](https://portal.azure.com) como um administrador de segurança ou um administrador global. Em seguida, navegue para o painel **Azure Information Protection**. 
     
     Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
-2. Se as definições que pretende configurar se aplicarem a todos os utilizadores, configure as seguintes definições globais no painel **Política:Global**:
+2. Se as definições que pretende configurar serão aplicada a todos os utilizadores, permaneça o **Azure Information Protection - política Global** painel.
+    
+    Se as definições que pretende configurar estão disponíveis num [âmbito política](configure-policy-scope.md) para que se apliquem a utilizadores selecionados apenas, do **políticas** selecção de menu, selecione **âmbito políticas**. Em seguida, selecione a política de âmbito do **políticas do Azure Information Protection - âmbito** painel.
+
+3. Do **Azure Information Protection - política Global** painel, ou o **política:\<nome >** painel, configure as definições:
     
     - **Todos os documentos e e-mails devem ter uma etiqueta**: quando configurar esta opção como **Ativado**, todos os todos os documentos guardado e e-mails enviados devem ter uma etiqueta aplicada. As etiquetas podem ser atribuídas manualmente por um utilizador, automaticamente como resultado de uma [Condição](configure-policy-classification.md) ou pode ser atribuída por predefinição (definindo opção **Selecionar etiqueta predefinida**). 
         
@@ -52,8 +56,6 @@ Configurar estas definições:
     - **Forneça um URL personalizado para a página Web "Mais informações" do cliente do Azure Information Protection**: os utilizadores veem esta ligação na caixa de diálogo do **Microsoft Azure Information Protection**, na secção **Ajuda e Feedback**, quando selecionam **Proteger** > **Ajuda e feedback** no separador **Base** nas respetivas aplicações do Office. Por predefinição, esta ligação direciona-o para o site do [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection). Pode introduzir um URL do tipo HTTP ou HTTPS (recomendado) se quiser que esta ligação redirecione o utilizador para uma página Web alternativa. Não é efetuada nenhuma verificação para confirmar que o URL personalizado que introduziu é acessível ou é apresentado corretamente em todos os dispositivos.
         
         Por exemplo, para suporte técnico, pode introduzir a página de documentação da Microsoft que inclui informações acerca da instalação e da utilização do cliente (**https://docs.microsoft.com/information-protection/rms-client/info-protect-client**) ou informações relativas à versão de lançamento (**https://docs.microsoft.com/information-protection/rms-client/client-version-release-history**). Em alternativa, poderá publicar a sua própria página Web com informações para que os utilizadores contactem o seu suporte técnico ou um vídeo com passos para que os utilizadores saibam como utilizar as etiquetas que configurou.
-        
-         Estas definições podem ser substituídas para utilizadores especificados quando tiver criado uma [política de âmbito](configure-policy-scope.md). Para configurar estas definições numa política de âmbito, selecione primeiro essa política de âmbito no painel inicial do **Azure Information Protection**.
 
 3. Para guardar as alterações, clique em **Guardar**.
 

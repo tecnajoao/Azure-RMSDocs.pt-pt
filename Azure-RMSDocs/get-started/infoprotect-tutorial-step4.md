@@ -4,17 +4,17 @@ description: "Passo 4 de um tutorial de introdução para experimentar o Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
-ms.openlocfilehash: 5ceb351e72ec30015697d2b27111ae76fb3b2b58
-ms.sourcegitcommit: 64ba794e7844a74b1e25db0d44b90060e3ae1468
+ms.openlocfilehash: 3a5e3fc018bb19480a52729345ad2ac6d4c851be
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="step-4-see-classification-labeling-and-protection-in-action"></a>Passo 4: ver classificação, etiquetas e proteção em ação 
 
@@ -54,24 +54,23 @@ Na barra Information Protection, clique novamente no ícone **Editar Etiqueta**.
 
 Desta vez, quando lhe for apresentada uma mensagem, escreva "Este documento não precisa de ser classificado" e clique em **Confirmar**.  
 
-Vê que o valor **Sensibilidade** apresenta **Não definido**, a opção vista pelos utilizadores inicialmente se não definir uma etiqueta predefinida:
-
-![Passo 4 do tutorial de início rápido do Azure Information Protection – remover classificação](../media/sensitivity-not-setv2.png)
-
+Pode ver o **sensibilidade** valor apresentar **não definido**, que é o que veem os utilizadores inicialmente se não definir uma etiqueta predefinida.
 
 ## <a name="to-see-a-recommendation-prompt-for-labeling-and-automatic-protection"></a>Para ver um pedido de recomendação para etiquetagem e proteção automática
 
 1. No documento do Word, escreva um número de cartão de crédito válido, por exemplo: **4242-4242-4242-4242**. 
 
-2. Guarde o documento (utilize qualquer nome de ficheiro, qualquer localização). 
+2. Guarde o documento localmente, com um nome de ficheiro. 
 
 3. Verá um pedido para aplicar a etiqueta que configurou para proteção quando forem detetados números de cartão de crédito. Se não concordar com a recomendação, a definição da política permite rejeitá-la ao selecionar **Dispensar**. Fornecer uma recomendação mas deixar que o utilizador a ignore ajuda a reduzir os falsos positivos quando utiliza a classificação automática. Para este tutorial, clique em **Alterar agora**.
 
     ![Passo 4 do tutorial de início rápido do Azure Information Protection – recomendar pedido](../media/change-nowv2.png)
 
-    Para além do documento a mostrar que a etiqueta configurada foi aplicada (por exemplo, **Confidencial\Todos os Funcionários**), vê automaticamente a marca d'água do nome da sua organização na página. O rodapé **Classificado como Confidencial** também é aplicado. 
+    Para além do documento agora que mostra que a nossa etiqueta configurada é aplicada (por exemplo, **confidencial \ financeiro**), pode ver imediatamente a marca d'água do nome da sua organização através da página e rodapé  **Classificados como confidenciais** também é aplicada. 
 
-    O documento é também protegido com o modelo do Azure Rights Management especificado, que pode confirmar quando clica no separador **Ficheiro** e ver as informações de **Proteger Documento**. Se utilizou o modelo de confidencialidade predefinido, é apresentada uma informação a indicar que o documento está restrito a utilizadores internos (os utilizadores fora da sua organização não conseguem abrir o documento) e os respetivos conteúdos não podem ser copiados ou impressos. Como proprietário do documento, pode copiar a partir do mesmo e imprimi-lo, mas se o enviar por e-mail a outro utilizador na sua organização, o mesmo não poderá efetuar estas ações.
+    O documento é também protegido com as permissões que especificou para esta etiqueta. Pode confirmar que o documento está protegido clicando a **ficheiro** separador e ver as informações de **Proteger documento**. Verá que o documento está protegido por **confidencial \ financeiro** e a descrição da etiqueta. 
+    
+    Devido à configuração de proteção da etiqueta, apenas os funcionários podem abrir o documento e algumas ações estão limitadas para os mesmos. Por exemplo, porque não têm o imprimir e a cópia e extrair conteúdas permissões, estes não é possível imprimir o documento ou uma cópia do mesmo. Estas restrições ajudam a evitar perda de dados. Como o proprietário do documento, pode imprimir e copiar a partir do mesmo, mas se por e-mail o documento para outro utilizador na sua organização, não é possível efetuar estas ações.
 
 4. Agora, pode fechar este documento.
 

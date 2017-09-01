@@ -4,7 +4,7 @@ description: "Tem uma pergunta específica sobre classificação e etiquetagem a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/12/2017
+ms.date: 08/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 80efd633bc814af1ac28e4b6bf2d0b3062b27d01
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 2ac8211b338b9d35bb7962455a117d02f9c1fa32
+ms.sourcegitcommit: 4b7f025e9f78d25c6f3079cceb42bc33f3f3a612
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 09/01/2017
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Perguntas mais frequentes sobre a classificação e a etiquetagem no Azure Information Protection
 
@@ -30,19 +30,15 @@ Experimente o nosso tutorial de início rápido para ver isto em funcionamento e
 
 Procure anúncios no [Blogue Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) e no nosso [site Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) estiverem disponíveis funcionalidades e capacidades adicionais. Seguem-se algumas limitações da versão atual, que incluem o seguinte:
 
-- Os nomes das etiquetas e descrições são suportados apenas num idioma. No entanto, o suporte a vários idiomas está agora em pré-visualização. Para obter mais informações, veja [Como configurar etiquetas para diferentes idiomas](../deploy-use/configure-policy-languages.md).
+- Os nomes das etiquetas e descrições são suportados apenas num idioma. No entanto, o suporte a vários idiomas está agora em pré-visualização. Para obter mais informações, consulte [como configurar as etiquetas e modelos para idiomas diferentes](../deploy-use/configure-policy-languages.md).
 
 - Não existe nenhum registo centralizado para classificação e etiquetagem.
 
-- As condições para classificação automática têm de ser expressões ou padrões.
-
-- A capacidade de etiquetagem das aplicações do Office não se encontra disponível para dispositivos móveis (iOS e Android) e computadores Mac nem nas aplicações Web do Office (Office Online).
+- Nenhuma capacidade etiquetas em aplicações do Office para computadores Mac e dispositivos móveis (iOS e Android) ou as aplicações web do Office (Office Online).
 
 - As funcionalidades de classificação e etiquetagem não foram integradas com o Exchange Online nem com o SharePoint Online.
 
-- O SDK para parceiros e programadores ainda não inclui as funcionalidades de classificação e etiquetagem.
-
-A versão de fevereiro veio colmatar muitas das limitações anteriores. Para obter mais informações, veja o [anúncio do blogue](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/08/azure-information-protection-december-update-moves-to-general-availability/).
+Pedir novas funcionalidades e votar em pedidos, visitando o [site voz do utilizador](https://msip.uservoice.com/) para o Azure Information Protection.
 
 ## <a name="do-i-need-to-be-a-global-admin-to-configure-classification-and-labels"></a>É necessário ser um administrador global para configurar a classificação e etiquetas?
 

@@ -4,7 +4,7 @@ description: "Informações e instruções sobre como utilizar os registos de ut
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,17 +12,17 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 032fb5525d1bd4f32419358cdeae5efe1be30f56
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: ebfd7ce4266061cef3099fb8fb096c95b01e6fb4
+ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Registar e analisar a utilização do serviço Azure Rights Management
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
-Utilize estas informações para o ajudar a compreender como pode utilizar o registo de utilização do serviço Azure Rights Management do Azure Information Protection. Este serviço fornece a proteção de dados de documentos e e-mails para a sua organização e pode registar todos os pedidos, incluindo pedidos de utilizadores, ações efetuadas pelos seus administradores para este serviço e ações efetuadas por operadores da Microsoft para suportar a implementação do Azure Information Protection.
+Utilize estas informações para o ajudar a compreender como pode utilizar o registo de utilização do serviço Azure Rights Management do Azure Information Protection. Este serviço fornece a proteção de dados de documentos da sua organização e os e-mails e podem registar cada pedido ao mesmo. Estes pedidos incluem quando os utilizadores proteger documentos e e-mails e também consumam este conteúdo, ações realizadas pelos administradores para este serviço e ações realizadas por operadores da Microsoft para suportar a implementação do Azure Information Protection. 
 
 Em seguida, pode utilizar estes registos do serviço Azure Rights Management para suportar os seguintes cenários empresariais:
 
@@ -40,12 +40,18 @@ Em seguida, pode utilizar estes registos do serviço Azure Rights Management par
 
     Se ocorrer uma fuga de informações, é provável que lhe seja pedido para indicar quem acedeu recentemente a documentos específicos e a que tipo de informações uma pessoa suspeita acedeu recentemente. Se utilizar este registo, poderá responder a este tipo de perguntas, porque as pessoas que utilizam conteúdos protegidos têm sempre de obter uma licença de Rights Management para abrir documentos e imagens protegidos pelo serviço Azure Rights Management, mesmo que estes ficheiros sejam movidos por e-mail ou copiados para unidades USB ou para outros dispositivos de armazenamento. Isto significa que, se proteger os seus dados com o serviço Azure Rights Management, pode utilizar os registos do mesmo como fonte definitiva de informações para análises forenses.
 
-> [!NOTE]
-> Caso só esteja interessado no registo de tarefas administrativas para o serviço Azure Rights Management e não queira controlar a forma como os utilizadores estão a utilizar o serviço Rights Management, pode utilizar o cmdlet [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) do Windows PowerShell para o Azure Rights Management.
-> 
-> Também pode utilizar o portal clássico do Azure para relatórios gerais de utilização que incluam **Resumo do RMS**, **Utilizadores ativos do RMS**, **Plataformas de dispositivos do RMS** e **Utilização da aplicação do RMS**. Para aceder a estes relatórios a partir do portal clássico do Azure, clique em **Active Directory**, selecione e abra um diretório e, em seguida, clique em **RELATÓRIOS**.
+Além deste registo de utilização, também tem as seguintes opções de registo:
 
-Utilize as seguintes secções para obter mais informações sobre o registo de utilização do Azure Rights Management.
+|Opção de registo|Descrição|
+|----------------|---------------|
+|Registo de Admin|Regista tarefas administrativas para o serviço Azure Rights Management. Por exemplo, se o serviço estiver desativado, quando a funcionalidade de Superutilizador é ativada e quando os utilizadores têm permissões de administrador delegado para o serviço. <br /><br />Para obter mais informações, consulte o cmdlet do PowerShell, [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog).|
+|Relatórios Web do|Relatórios de alto nível de utilização do portal clássico do Azure: **resumo do RMS**, **utilizadores ativos do RMS**, **plataformas de dispositivos do RMS**, e **utilização da aplicação do RMS**. <br /><br />Para aceder a estes relatórios do portal clássico do Azure, clique em **do Active Directory**, selecione e abra um diretório e, em seguida, clique em **relatórios**.|
+|controlo de documentos|Permite que os utilizadores controlarem e revogarem os seus documentos que possam tem controlados com o cliente Azure Information Protection ou a aplicação de partilha RMS. Os administradores globais também podem controlar estes documentos em nome dos utilizadores. <br /><br />Para obter mais informações, consulte [configurar e utilizar o controlo de documentos para o Azure Information Protection](../rms-client/client-admin-guide-document-tracking.md).|
+|Registos de eventos de cliente|Atividade de utilização para o cliente Azure Information Protection, a sessão do Windows local **aplicações e serviços** registo de eventos, **Azure Information Protection**. <br /><br />Para obter mais informações, consulte [registo de utilização para o cliente Azure Information Protection](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
+|Ficheiros de registo de cliente|Resolução de problemas registos f ou o cliente Azure Information Protection, localizado na **%localappdata%\Microsoft\MSIP**. <br /><br />Estes ficheiros são concebidos para Support da Microsoft.|
+
+
+Utilize as secções seguintes para obter mais informações sobre o registo de utilização para o serviço Azure Rights Management. 
 
 ## <a name="how-to-enable-azure-rights-management-usage-logging"></a>Como ativar o registo de utilização do Azure Rights Management
 A partir de fevereiro de 2016, o registo de utilização do Azure Rights Management passou a ser ativado por predefinição para todos os clientes. Isto aplica-se aos clientes que ativaram o serviço Azure Rights Management antes e após fevereiro de 2016. 

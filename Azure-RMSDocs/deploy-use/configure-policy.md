@@ -4,7 +4,7 @@ description: "Para configurar a classificação, a etiquetagem e a proteção, t
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 7f3b64e5e4b0dfbccf694a986a85f1c207580915
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: 23f41199f03bb6a6530f668c20c030b52613d3c2
+ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="configuring-azure-information-protection-policy"></a>Configurar a política do Azure Information Protection
 
@@ -26,7 +26,7 @@ Para configurar a classificação, a etiquetagem e a proteção, tem de configur
 
 ## <a name="subscription-support"></a>Suporte da subscrição
 
-A política do Azure Information Protection suporta diferentes níveis de subscrições:
+O Azure Information Protection suporta diferentes níveis de subscrições:
 
 - Azure Information Protection P2: suporte para todas as funcionalidades de classificação, etiquetagem e proteção.
 
@@ -34,13 +34,16 @@ A política do Azure Information Protection suporta diferentes níveis de subscr
 
 - Office 365 que inclui o serviço Azure Rights Management: suporte para proteção, mas não para classificação e etiquetagem.
 
-As opções que exigem uma subscrição do Azure Information Protection P2 estão agora identificadas no portal.
+As opções que necessitam de uma subscrição do Azure Information Protection P2 são identificadas no portal.
 
-Se tiver uma mistura de subscrições para os utilizadores do seu inquilino, é da sua responsabilidade assegurar-se de que a política do Azure Information Protection que os utilizadores transferem não contém opções de configuração para as quais a respetiva conta não tem licença de utilização. Ao configurar opções para as quais nem todos os utilizadores têm uma licença, utilize políticas de âmbito, para que os utilizadores que não estão configurados utilizem as funcionalidades para os quais têm uma licença.
+Se a sua organização tem uma combinação de subscrições, é da responsabilidade do cliente, certifique-se de que os utilizadores não a utilizar funcionalidades que a conta não está licenciada para utilizar. O Azure Information Protection does de cliente não licenças verificação e de imposição. Quando configurar as opções que nem todos os utilizadores possuem uma licença para, utilize confinada políticas ou de uma definição de registo para se certificar de que a sua organização permanece em conformidade com as suas licenças:
+
+- **Quando a sua organização tem uma combinação de licenças do Azure Information Protection P1 e Azure Information Protection P2**: para utilizadores que tenham um P2 de licença, criar e utilizar um ou mais [âmbito políticas](configure-policy-scope.md) quando configurar as opções que requerem uma licença do Azure Information Protection P2. Certifique-se de que a política global não contém opções que requerem uma licença do Azure Information Protection P2.
+
+- **Quando a sua organização tem uma subscrição do Azure Information Protection, alguns utilizadores tem apenas uma licença para o Office 365 que inclui o serviço Azure Rights Management, mas**: para os utilizadores que não possuem uma licença para o Azure Information Protection, Edite o registo nos respetivos computadores para não transferir política do Azure Information Protection. Para obter instruções, consulte o guia de administração para a personalização seguinte: [impor proteção-modo só de quando a sua organização tiver uma mistura de licenças](../rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses).
 
 Para obter mais informações sobre as subscrições, veja [De que subscrição preciso para o Azure Information Protection e que funcionalidades estão incluídas?](../get-started/faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
 
-Para obter mais informações sobre como configurar políticas de âmbito, veja [Como configurar a política para utilizadores específicos com políticas de âmbito](configure-policy-scope.md).
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Como configurar a política do Azure Information Protection
 

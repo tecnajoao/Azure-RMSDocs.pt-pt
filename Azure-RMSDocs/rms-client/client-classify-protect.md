@@ -4,7 +4,7 @@ description: "Instruções sobre como classificar e proteger os seus documentos 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/08/2017
+ms.date: 08/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 954b69213c055c4b94981fabef40df29aa0e19ba
-ms.sourcegitcommit: 5a087ff509162a98f3d09fda4ef5a114028e5664
+ms.openlocfilehash: 5e8329a441dcc871a155ef1b1484544732bec212
+ms.sourcegitcommit: 23aeb2bcce05968b850313333e359c99dd99a56f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 09/05/2017
 ---
 # <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Classificar e proteger um ficheiro ou e-mail com o Azure Information Protection
 
@@ -85,8 +85,6 @@ Pode especificar as suas próprias definições de proteção para documentos em
     - **Selecionar permissões**: se quiser proteger o ficheiro de modo a ser o único utilizador a poder aceder ao mesmo, selecione **Apenas para mim**. Caso contrário, selecione o nível de acesso que pretende que as pessoas tenham.
 
     - **Selecionar utilizadores, grupos ou organizações**: especifique as pessoas que devem ter as permissões que selecionou para o seu ficheiro ou ficheiros. Escreva o endereço de e-mail completo dessas pessoas, um endereço de e-mail de grupo ou um nome de domínio da organização para todos os utilizadores nessa organização. Tenha em atenção que, atualmente, os endereços de e-mail pessoais não são suportados.
-    
-    Se tiver a versão de pré-visualização atual do cliente Azure Information Protection, em alternativa pode utilizar o **selecionar utilizadores, grupos ou organização** botão. Este botão apresenta o **selecionar utilizadores ou grupos** caixa de diálogo para o Active Directory no local. Se os utilizadores ou grupos que pretende especificar no Active Directory, pode procurar e selecionar a partir desta caixa de diálogo. Para utilizar esta opção, o computador tem de estar ligado à rede interna, o computador tem de ser associado ao domínio e tem de ter um Active Directory no local. Se qualquer uma das seguintes condições não são cumpridos, verá a seguinte mensagem: **o programa não é possível abrir a caixa de diálogo necessária, porque não existem localizações podem ser encontradas.**
         
     - **Expirar acesso**: selecione esta opção apenas para os ficheiros sensíveis ao tempo para que as pessoas que especificou não poderá abrir o ficheiro ou ficheiros selecionados após uma data que definir. Ainda poderá abrir o ficheiro original, mas após a meia-noite (o fuso horário atual), no dia em que é definida, as pessoas que especificou não poderão abrir o ficheiro.
 
@@ -131,7 +129,7 @@ O guia do administrador contém uma lista completa dos tipos de ficheiro suporta
     
     - **Selecionar utilizadores, grupos ou organizações**: especifique as pessoas que devem ter as permissões que selecionou para o seu ficheiro ou ficheiros. Escreva o endereço de e-mail completo dessas pessoas, um endereço de e-mail de grupo ou um nome de domínio da organização para todos os utilizadores nessa organização. Tenha em atenção que, atualmente, os endereços de e-mail pessoais não são suportados.
     
-    Em alternativa, pode utilizar o **selecionar utilizadores, grupos ou organização** botão para selecionar utilizadores ou grupos do livro de endereços do Outlook. Se tiver a versão de pré-visualização atual do cliente Azure Information Protection, este botão apresenta o **selecionar utilizadores ou grupos** caixa de diálogo para o Active Directory no local. Se os utilizadores ou grupos que pretende especificar no Active Directory, pode procurar e selecionar a partir desta caixa de diálogo. Para utilizar esta opção, o computador tem de estar ligado à rede interna, o computador tem de ser associado ao domínio e tem de ter um Active Directory no local. Se qualquer uma das seguintes condições não são cumpridos, verá a seguinte mensagem: **o programa não é possível abrir a caixa de diálogo necessária, porque não existem localizações podem ser encontradas.**
+    Em alternativa, pode utilizar o ícone do livro de endereços para selecionar utilizadores ou grupos no livro de endereços do Outlook.
         
     - **Expirar acesso**: selecione esta opção somente para ficheiros sensíveis ao tempo, para que as pessoas especificadas não possam abrir o ficheiro ou ficheiros selecionados, após uma data definida por si. No entanto, continuará a poder abrir o ficheiro original, mas após a meia-noite (no seu fuso horário atual), no dia definido por si, as pessoas que especificou não poderão abrir o ficheiro.
     

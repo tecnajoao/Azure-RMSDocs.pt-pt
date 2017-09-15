@@ -4,17 +4,17 @@ description: "Conheça as limitações, pré-requisitos e recomendações se sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: 80e7cb411132fa3c3fdff7f8c80febde68b071fa
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: ef39c5489e63a67e0880e4faab4d9675a49f5f90
+ms.sourcegitcommit: 4e31a4797eb8df64af3ae8932d2b49839e7a4524
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>Requisitos e restrições de Tenha a sua própria chave (HYOK) para proteção do AD RMS
 
@@ -85,7 +85,15 @@ Verifique se a sua implementação do AD RMS cumpre os requisitos seguintes para
     
     - Versão mínima do Windows Server 2012 R2: necessária para ambientes de produção, mas para fins de teste ou avaliação, pode utilizar uma versão mínima do Windows Server 2008 R2 com o Service Pack 1.
     
-    - Cluster de raiz única do AD RMS.
+    - Uma das seguintes topologias:
+        
+        - Floresta única com um único cluster de raiz de AD RMS. 
+        
+        - Várias florestas com clusters independentes de raiz de AD RMS e os utilizadores não têm acesso ao conteúdo que está protegido pelos utilizadores nas outras florestas.
+        
+        - Clusters de várias florestas com o AD RMS em cada um deles. Cada cluster de AD RMS partilhas de um URL de licenciamento que aponta para o mesmo cluster de AD RMS. Neste cluster de AD RMS, tem de importar todos os certificados de domínio (TUD) de utilizadores fidedignos de todos os outros clusters de AD RMS. Para obter mais informações sobre esta topologia, consulte [utilizador domínio fidedigno] (https://technet.microsoft.com/library/dd983944(v=ws.10\).aspx).
+        
+    Quando tiver vários clusters de AD RMS em florestas diferentes, elimine as etiquetas na política de global que aplicarem a proteção de HYOK (AD RMS) e configurar um [âmbito política](configure-policy-scope.md) para cada cluster. Em seguida, atribua utilizadores para cada cluster a respetiva política de âmbito, certificando-se de que não utilize grupos que resultariam num utilizador que está a ser atribuído a mais de uma política no âmbito. O resultado deve ser que cada utilizador tem as etiquetas para um cluster AD RMS. 
     
     - [Modo criptográfico 2](https://technet.microsoft.com/library/hh867439.aspx): pode confirmar o modo ao verificar as propriedades de cluster de AD RMS, **geral** separador.
     

@@ -4,7 +4,7 @@ description: "Informações e instruções caso decida que já não quer utiliza
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/05/2017
+ms.date: 09/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 33566381cf4d45c82f7f1a5ab210bccfd953fa49
-ms.sourcegitcommit: eea0e4eacfeb7307b94181c28626177b4467623d
+ms.openlocfilehash: 1f8d7a56cec4df8f0ef50f4f83ef662ad8923f17
+ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="decommissioning-and-deactivating-azure-rights-management"></a>Encerrar e desativar o Azure Rights Management
 
@@ -75,9 +75,9 @@ Já deverá estar visível **O Rights Management não está ativado** e a opçã
     
     Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
-2. No iniciais **Azure Information Protection** painel, selecione **definições RMS**. 
+2. No iniciais **Azure Information Protection** painel, selecione **definições RMS** ou **ativação da proteção**. Esta opção está no processo de ser mudado. 
 
-3.  No **Azure Information Protection - definições do RMS** painel, selecione **desativar**. Selecione **Sim** para confirmar a sua escolha.
+3.  No **Azure Information Protection - definições do RMS** ou **Azure Information Protection - ativação da proteção** painel, selecione **desativar**. Selecione **Sim** para confirmar a sua escolha.
 
 Mostra a barra de informações **desativação foi concluído com sucesso** e **desativar** é agora substituída com **ativar**. 
 

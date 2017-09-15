@@ -4,7 +4,7 @@ description: "Como as aplicações do Office de utilizador final, tais como o Wo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/27/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5e4d753c6c58394c257466269c5a4f50df6c6fc4
-ms.sourcegitcommit: 869e42f35a851c412164a71b1f657621af07b2f5
+ms.openlocfilehash: ede24547a01bc38e528ce02dac9abe0ade396c2d
+ms.sourcegitcommit: 6636defa6eca24360f15fb9ef93c2b82dc36cf76
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Como as aplicações do Office e serviços suportam o Azure Rights Management 
 
@@ -48,7 +48,7 @@ Quando utiliza o Exchange Online ou Exchange Server, pode configurar opções de
 
 -   **Regras de transporte** que um administrador configura para aplicar automaticamente modelos de proteção de e-mail mensagens. Estas regras são baseadas em propriedades, tais como remetente, destinatário, assunto da mensagem e conteúdo. Estas regras são semelhantes no conceito às regras de proteção, mas não permitem que os utilizadores que remova a proteção. As regras podem ser aplicadas ao Outlook na web e e-mails que são enviados por dispositivos móveis. Além disso, estas regras não encriptam as mensagens de e-mail antes de serem enviados do cliente. Para obter mais informações, consulte [Criar uma Regra de Proteção de Transporte](https://technet.microsoft.com/library/dd302432.aspx) na biblioteca do Exchange.
 
--   **Políticas de prevenção (DLP) de perda de dados** que contêm conjuntos de condições para filtrar as mensagens de e-mail e tomar ações para ajudar a evitar perda de dados para conteúdos sensíveis ou confidenciais. Exemplos de conteúdos sensíveis ou confidenciais incluem informações pessoais informações ou cartão de crédito. As sugestões de política podem ser utilizadas quando são detetados dados confidenciais, para alertar utilizadores que poderão ter para aplicar a proteção. Para obter mais informações, veja [Data loss prevention](https://technet.microsoft.com/library/jj150527(v=exchg.160).aspx) (Prevenção de perda de dados) na biblioteca do Exchange.
+-   **Políticas de prevenção (DLP) de perda de dados** que contêm conjuntos de condições para filtrar as mensagens de e-mail e tomar ações para ajudar a evitar perda de dados para conteúdos sensíveis ou confidenciais. Exemplos de conteúdos sensíveis ou confidenciais incluem informações pessoais informações ou cartão de crédito. As sugestões de política podem ser utilizadas quando são detetados dados confidenciais, para alertar utilizadores que poderão ter para aplicar a proteção. Para obter mais informações, consulte [prevenção de perda de dados] (https://technet.microsoft.com/library/jj150527(v=exchg.160\).aspx) na biblioteca do Exchange.
 
 -   **Encriptação de mensagens do Office 365** que utiliza regras de transporte para enviar e-mails encriptados para pessoas fora da sua empresa e o e-mail é lido num browser com uma interface semelhante ao Outlook na web. Pode personalizar o texto de exclusão de responsabilidade e o texto do cabeçalho nos e-mails encriptados da sua empresa e até adicionar o logótipo da empresa. Para obter mais informações, consulte [Encriptação de Mensagens do Office 365](https://office.microsoft.com/o365-message-encryption-FX104179182.aspx) no Web site do Office.
 
@@ -82,7 +82,9 @@ Se utilizar o SharePoint Server, pode utilizar esta proteção IRM ao implementa
 > 
 > - Os ficheiros que tenham uma extensão de nome de ficheiro. ppdf para ficheiros PDF protegidos não são suportados. Os ficheiros que tenham a extensão de nome de ficheiro. pdf e que foram protegidos nativamente pela Rights Management são suportados quando utiliza um leitor de PDF que suporta nativamente o Rights Management.
 > 
-> - Se proteger um ficheiro que, em seguida, carregar uma biblioteca do SharePoint ou OneDrive, o seguinte não funcionará com este ficheiro: criação conjunta, Office Online, pesquisa, pré-visualização do documento, miniatura e deteção de dados eletrónicos.
+> - Não é suportada a criação de conteúdos conjunta. Porque tem de verificar e transferir um documento numa biblioteca protegida IRM, uma pessoa pode editá-lo a uma hora.
+
+Para bibliotecas que não são IRM protegida, se proteger um ficheiro que carregar, em seguida, SharePoint ou OneDrive, o seguinte não funcionará com este ficheiro: criação conjunta, Office Online, pesquisa, pré-visualização do documento, miniatura, deteção de dados Eletrónicos e prevenção de perda de dados (DLP).
 
 Quando utiliza a proteção IRM do SharePoint, o serviço Azure Rights Management aplica restrições de utilização e a encriptação de dados aos documentos quando são transferidos do SharePoint e não quando o documento é criado inicialmente no SharePoint ou carregado para a biblioteca. Para obter informações sobre como os documentos estão protegidos antes de serem transferidos, veja [Encriptação de Dados no OneDrive para Empresas e no SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) da documentação do SharePoint.
 

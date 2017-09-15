@@ -4,7 +4,7 @@ description: "Configurar e gerir modelos de gestão de direitos do portal do Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5075c8cbab441a376595baabd7863005b15b84e3
-ms.sourcegitcommit: 5bcb916106021f624a69d620bbcc2c4a51398771
+ms.openlocfilehash: 1094c0a711b3691b8186baafc06d1fb72daf5613
+ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurar e gerir modelos do Azure Information Protection
 
@@ -103,9 +103,9 @@ Antes de editar estes modelos ou convertê-las em etiquetas, certifique-se de qu
     
     Além disso, atualmente não pode definir a definição de compatibilidade aplicacional para um modelo departamental. Se for necessário, pode definir esta opção através do PowerShell com o cmdlet [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty).
 
-- Quando converter ou ligar um modelo para uma etiqueta, já não pode ser utilizada por outras etiquetas. Além disso, este modelo já não apresenta na **modelos** secção.
+- Quando converter ou ligar um modelo para uma etiqueta, já não pode ser utilizada por outras etiquetas. Além disso, este modelo já não apresenta na **modelos** ou **modelos proteção** secção. Esta secção está no processo de ser mudado.
 
-- Não crie um novo modelo do **modelos** contentor. Em vez disso, crie uma etiqueta que tem o **proteger** definir e configurar os direitos de utilização e as definições do **proteção** painel. Para obter todas as instruções, veja [Criar um novo modelo](#to-create-a-new-template).
+- Não crie um novo modelo do **modelos** ou **modelos proteção** secção. Em vez disso, crie uma etiqueta que tem o **proteger** definir e configurar os direitos de utilização e as definições do **proteção** painel. Para obter todas as instruções, veja [Criar um novo modelo](#to-create-a-new-template).
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Para configurar os modelos na política do Azure Information Protection
 
@@ -119,11 +119,11 @@ Antes de editar estes modelos ou convertê-las em etiquetas, certifique-se de qu
 
 3. Do **Azure Information Protection - política Global** painel, ou o **política:\<nome >** painel, localize o modelo que pretende configurar:
     
-    - Quando tem uma subscrição que inclui a classificação, a etiquetagem e a proteção: expanda **Modelos** depois das suas etiquetas.
+    - Quando tiver uma subscrição que inclui a classificação, etiquetagem e proteção: expanda **modelos** ou **modelos proteção** após as etiquetas.
     
     - Quando tem uma subscrição que inclui apenas proteção: os modelos são apresentados como etiquetas.
 
-4. Selecione o modelo e, no painel **Etiqueta**, pode alterar o nome do modelo e a descrição, se necessário, ao editar o **Nome da etiqueta** e a **Descrição**. Em seguida, selecione **Proteção**, que tem um valor de **Azure RMS**, para abrir o painel **Proteção**.
+4. Selecione o modelo e, no painel **Etiqueta**, pode alterar o nome do modelo e a descrição, se necessário, ao editar o **Nome da etiqueta** e a **Descrição**. Em seguida, selecione **proteção** que tem um valor de **Azure RMS** ou **Azure (chave de nuvem)**, para abrir o **proteção** painel.
 
 5. No painel **Proteção**, pode alterar as permissões, a expiração de conteúdo e as definições de acesso offline. Para obter mais informações, sobre a configuração das definições de proteção, veja [Como configurar uma etiqueta para a proteção do Rights Management](configure-policy-protection.md)
     
@@ -154,11 +154,11 @@ Ao converter um modelo numa etiqueta:
 
 - As definições de proteção são mantidas e pode editá-las se for necessário, além de adicionar outras definições de etiqueta como marcadores visuais e condições.
 
-- O modelo original já não é apresentado em **modelos** e não pode ser selecionado como um modelo predefinido ao configurar a proteção para uma etiqueta. Para editar este modelo no portal do Azure, agora tem de editar a etiqueta que foi criada quando converter o modelo. O modelo permanece disponível para o serviço Azure Rights Management e ainda pode ser gerido com os [comandos do PowerShell](administer-powershell.md).  
+- O modelo original já não é apresentado em **modelos** ou **modelos proteção** e não pode ser selecionado como um modelo predefinido ao configurar a proteção para uma etiqueta. Para editar este modelo no portal do Azure, agora tem de editar a etiqueta que foi criada quando converter o modelo. O modelo permanece disponível para o serviço Azure Rights Management e ainda pode ser gerido com os [comandos do PowerShell](administer-powershell.md).  
 
 ## <a name="to-create-a-new-template"></a>Criar um novo modelo
 
-Ao criar um novo modelo com a definição de proteção do **Azure RMS**, nos bastidores, esta ação cria um novo modelo personalizado que pode ser acedido por serviços e aplicações que se integram nos modelos do Rights Management.
+Quando cria uma nova etiqueta com a definição de proteção da **Azure RMS** ou **Azure (chave de nuvem)**, nos bastidores, esta ação cria um novo modelo personalizado que possam ser acedido por aplicações e serviços que Integre com modelos do Rights Management.
 
 1. Se o novo modelo for para todos os utilizadores, permaneça o **Azure Information Protection - política Global** painel.
     

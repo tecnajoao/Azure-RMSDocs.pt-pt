@@ -4,17 +4,17 @@ description: "Passo 1 de um tutorial de introdução para experimentar o Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: ac28e18573ec1bd8f0a3f1e715a8c8e1b7c2854e
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: e80d47d1a477c03296b9a2e0eb4373929cfaa66b
+ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="step-1-activate-the-rights-management-service"></a>Passo 1: ativar o serviço Rights Management
  
@@ -40,15 +40,15 @@ Para este tutorial, iremos utilizar o portal do Azure, o que é onde também con
     > [!TIP] 
     > Selecione **Afixar ao dashboard** para criar um mosaico do **Azure Information Protection** no seu dashboard. Assim, não terá de procurar o serviço da próxima vez que iniciar sessão no portal.
 
-4. Preste atenção às informações na página **Início rápido** que se abre automaticamente ao ligar ao serviço pela primeira vez. Pode regressar aqui mais tarde. Para este tutorial, selecione **definições RMS**.  
+4. Preste atenção às informações na página **Início rápido** que se abre automaticamente ao ligar ao serviço pela primeira vez. Pode regressar aqui mais tarde. Para este tutorial, selecione **definições RMS** ou **ativação da proteção**. Esta opção está no processo de ser mudado. 
 
 5. Pode agora ver se o serviço do Azure Rights Management está ativado para o seu inquilino. 
     
-    - Se o serviço está ativado, consulte a confirmação do seguinte:
+    - Se o serviço está ativado, consulte confirmação, tais como o seguinte:
         
         ![Estado de proteção de informações do Azure para o Azure RMS](../media/info-protect-azurerms-activated.png)
         
-    - Se o serviço não está ativado, consulte que este serão refletidas nas informações de estado e a opção para ativar:
+    - Se o serviço não está ativado, pode ver que este serão refletidas nas informações de estado e a opção para ativar. Por exemplo:
         
         ![Estado de proteção de informações do Azure para o Azure RMS](../media/info-protect-azurerms-deactivated.png)
 

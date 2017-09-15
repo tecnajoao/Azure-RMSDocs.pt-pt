@@ -4,17 +4,17 @@ description: "Passo 2 de um tutorial de introdução para experimentar o Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: dbe198f84ed092f815e2c419d039d4f926fb5892
-ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
+ms.openlocfilehash: cf84cef5d6bc4d3df32a4e3c8bc3a6ac7380655c
+ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passo 2: configurar e publicar a política do Azure Information Protection
 
@@ -67,7 +67,7 @@ Vamos agora criar uma nova etiqueta secundária **confidencial**.
     
     ![Proteção configurada para uma etiqueta de Azure Information Protection](../media/info-protect-protection-bar-configured.png) 
     
-4. No **proteção** painel, certifique-se de que **Azure RMS** estiver selecionada e que **definir permissões** está selecionada. Em seguida, selecione **adicionar permissões**.
+4. No **proteção** painel, certifique-se de que **Azure RMS** ou **Azure (chave de nuvem)** está selecionada. Esta opção está no processo de ser mudado. Certifique-se de que **definir permissões** também é selecionada. Em seguida, selecione **adicionar permissões**.
 
 5. No **adicionar permissões** painel, selecione **adicionar \<nome da organização >-todos os membros**. Por exemplo, se o nome de organização for VanArsdel Lda., verá a seguinte opção para selecionar:
     
@@ -113,7 +113,7 @@ Vamos agora criar uma nova etiqueta secundária **confidencial**.
     
     Clique em **guardar** para voltar para o **subetiqueta** painel.
 
-10. No **subetiqueta** painel, verá que **número de cartão de crédito** é apresentado como o **nome da condição**, com **1**  **As OCORRÊNCIAS**:
+10. No **subetiqueta** painel, verá que **número de cartão de crédito** é apresentado como o **nome da condição**, com **1** ** As OCORRÊNCIAS**:
     
     ![Passo 3 do tutorial de início rápido do Azure Information Protection – configurar condição de cartão de crédito](../media/step2-see-condition.png)
 
@@ -123,7 +123,7 @@ Vamos agora criar uma nova etiqueta secundária **confidencial**.
 
 13. Clique em **guardar** neste **subetiqueta** painel. Em seguida, no painel **Política:Global**, clique em **Guardar** novamente.
     
-    Agora, ver a nova etiqueta secundária, que está configurada para marcas visuais e a proteção Azure RMS:
+    Agora, pode ver a nova etiqueta secundária, que é configurada para proteção e marcas visuais. Por exemplo:
 
     ![Tutorial de início rápido do Azure Information Protection, passo 3 - política predefinida configurada](../media/info-protect-policy-configuredv2.png)
     

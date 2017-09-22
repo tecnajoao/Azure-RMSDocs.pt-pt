@@ -4,7 +4,7 @@ description: "As instruções e as informações para os administradores gerirem
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3a4a84356d59692dd3693b4bbaa00a3e39c95597
-ms.sourcegitcommit: adeab31c7aa99eab115dd12035fc5d9dffec4e9c
+ms.openlocfilehash: 99cb5d1ca256977cb07c41bbe153e5ca248b9efd
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Utilizar o PowerShell com o cliente do Azure Information Protection
 
@@ -26,13 +26,15 @@ Quando instala o cliente Azure Information Protection, os comandos do PowerShell
 
 Os cmdlets são instalados com o módulo do PowerShell **AzureInformationProtection**. Este módulo substitui o módulo RMSProtection que é instalado com a Ferramenta de Proteção RMS. Se tiver a ferramenta RMSProtection instalada ao instalar o cliente do Azure Information Protection, o módulo RMSProtection é automaticamente desinstalado.
 
-O módulo AzureInformationProtection inclui todos os cmdlets do Rights Management da Ferramenta de Proteção RMS e três cmdlets novos que utilizam o serviço Azure Information Protection (AIP) para etiquetar:
+O módulo de AzureInformationProtection inclui todos os cmdlets do Rights Management da ferramenta de proteção do RMS. Também existem novos cmdlets que utilizam o serviço de proteção de informações do Azure (AIP) para etiquetagem. Por exemplo:
 
 |Cmdlet de etiquetagem|Utilização de exemplo|
 |----------------|---------------|
 |[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)|Para uma pasta partilhada, identifique todos os ficheiros com uma etiqueta específica.|
 |[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)|Para uma pasta partilhada, inspecione o conteúdo do ficheiro e etiquete automaticamente os ficheiros sem etiqueta, de acordo com as condições que especificou.|
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|Para uma pasta partilhada, aplique uma etiqueta especificada a todos os ficheiros que não têm uma etiqueta.|
+|[Conjunto AIPAuthentication](/powershell/module/azureinformationprotection/set-aipsuthentication)|Etiqueta ficheiros de forma não interativa, por exemplo, utilizando um script que é executado numa agenda.|
+
 
 Para obter uma lista de todos os cmdlets e o artigo de ajuda correspondente, veja [AzureInformationProtection Module (Módulo AzureInformationProtection)](/powershell/module/azureinformationprotection). Numa sessão do PowerShell, escreva `Get-Help <cmdlet name> -online` para ver a ajuda mais recente e obter outros idiomas diferentes do inglês.  
 
@@ -95,7 +97,7 @@ Tem de ter um direito de utilização do Rights Management para remover a prote�
 
 Pode ligar diretamente ao serviço Azure Rights Management forma não interativa para proteger ou desproteger ficheiros.
 
-Tem de utilizar um principal de serviço para estabelecer ligação ao serviço Azure Rights Management não interativamente. Para tal, utilize o cmdlet `Set-RMSServerAuthentication`. Tem de o fazer para cada sessão do Windows PowerShell que executa cmdlets que se ligam diretamente ao serviço Azure Rights Management. Antes de executar este cmdlet, tem de ter estes três identificadores:
+Tem de utilizar uma serviço principal conta para estabelecer ligação ao serviço Azure Rights Management forma não interativa, que pode fazer utilizando a `Set-RMSServerAuthentication` cmdlet. Tem de o fazer para cada sessão do Windows PowerShell que executa cmdlets que se ligam diretamente ao serviço Azure Rights Management. Antes de executar este cmdlet, tem de ter estes três identificadores:
 
 - BposTenantId
 
@@ -222,7 +224,7 @@ O nosso comando de exemplo teria um aspeto semelhante ao seguinte:
 
 Como é mostrado no comando anterior, pode fornecer os valores com um único comando, efetue um script para executar de forma não interativa. Mas, para fins de teste, pode apenas escreva Set-RMSServerAuthentication e forneça os valores por-um quando lhe for pedido. Quando o comando for concluído, o cliente está agora a funcionar no "modo de servidor", que é adequado para utilização não interativa, como scripts e de infraestrutura de classificação de ficheiros do Windows Server.
 
-Considere tornar este principal de serviço um superutilizador: para garantir que este principal de serviço pode sempre desproteger ficheiros para outros utilizadores, pode ser configurado para ser um superutilizador. Da mesma forma como configurar uma conta de utilizador padrão para ser um Superutilizador, utilizar o mesmo cmdlet do Azure RMS, [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md), mas Especifica o **ServicePrincipalId** parâmetro com o valor do seu AppPrincipalId.
+Considere tornar esta conta do principal de serviço um Superutilizador: para se certificar de que esta conta do principal de serviço pode sempre desproteger ficheiros para outros utilizadores, pode ser configurado para ser um Superutilizador. Da mesma forma como configurar uma conta de utilizador padrão para ser um Superutilizador, utilizar o mesmo cmdlet do Azure RMS, [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md), mas Especifica o **ServicePrincipalId** parâmetro com o valor do seu AppPrincipalId.
 
 Para obter mais informações sobre superutilizadores, veja [Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados](../deploy-use/configure-super-users.md).
 
@@ -259,7 +261,7 @@ Quando utilizar uma conta do principal de serviço para proteger ficheiros e tra
 
 No entanto, para proteger ou desproteger ficheiros ligando-se diretamente ao serviço Azure Rights Management, tem geralmente de executar uma série de cmdlets conforme descrito em seguida.
 
-Em primeiro lugar, se precisar de se autenticar no serviço Azure Rights Management com um principal de serviço em vez de utilizar a sua própria conta, numa sessão do Powershell, escreva:
+Em primeiro lugar, se precisar de autenticar para o serviço do Azure Rights Management com uma conta do principal de serviço, em vez de utilizar a sua própria conta numa sessão do PowerShell, escreva:
 
     Set-RMSServerAuthentication
 
@@ -340,7 +342,7 @@ Leia esta secção antes de começar a utilizar os comandos do PowerShell para p
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
-Além dos pré-requisitos para instalar o módulo AzureInformationProtection, a sua conta tem de ter permissões de Leitura e Execução para aceder a ServerCertification.asmx:
+Para além dos pré-requisitos para instalar o módulo de AzureInformationProtection, a conta utilizada para proteger ou desproteger ficheiros tem de ter permissões de leitura e execução para aceder à ServerCertification.asmx:
 
 1. Inicie sessão num servidor AD RMS.
 
@@ -356,7 +358,9 @@ Além dos pré-requisitos para instalar o módulo AzureInformationProtection, a 
 
 7. Na caixa de diálogo **Permissões para ServerCertification.asmx**, clique em **Adicionar**. 
 
-8. Adicione o nome da sua conta. Se outros administradores do AD RMS também forem utilizar estes cmdlets para proteger e desproteger ficheiros, adicione também os nomes deles.
+8. Adicione o nome da sua conta. Se a outros administradores de AD RMS ou contas de serviço também utilizar estes cmdlets para proteger e desproteger ficheiros, adicione, bem como essas contas. 
+    
+    Para proteger ou desproteger ficheiros de forma não interativa, adicione a conta de computador relevantes ou contas. Por exemplo, adicione a conta de computador do computador do Windows Server que está configurado para a infraestrutura de classificação de ficheiros e irá utilizar um script do PowerShell para proteger ficheiros. Este cenário requer a versão de pré-visualização atual do cliente Azure Information Protection.
 
 9. Na coluna **Permitir**, confirme que as caixas de verificação **Leitura e Execução**e **Leitura** estão selecionadas.
 
@@ -435,7 +439,7 @@ A saída pode ser semelhante ao seguinte:
     --------                              ------
     \\Server1\Documents\Test1.docx        Protected
 
-Para desproteger um ficheiro, terá de ter direitos de Proprietário ou de Extração a partir do momento em que o ficheiro foi protegido ou ser um superutilizador do AD RMS. Em seguida, utilize o cmdlet Desproteger. Por exemplo:
+Ao desproteger um ficheiro, tem de ter direitos de utilização de proprietário ou extraia do quando o ficheiro foi protegido ou ser Superutilizador para o AD RMS. Em seguida, utilize o cmdlet Desproteger. Por exemplo:
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -447,7 +451,7 @@ A saída pode ser semelhante ao seguinte:
 
 ## <a name="how-to-label-files-non-interactively-for-azure-information-protection"></a>Como etiquetar ficheiros de forma não interativa para o Azure Information Protection
 
-A partir da versão 1.8.41.0 do cliente do Azure Information Protection (atualmente em pré-visualização), pode executar os cmdlets de etiquetagem de forma não interativa através do cmdlet **Set-AIPAuthentication**.
+Pode executar os cmdlets de etiquetas não interativamente utilizando a **conjunto AIPAuthentication** cmdlet.
 
 Por predefinição, quando executa os cmdlets de etiquetagem, os comandos são executados no seu próprio contexto de utilizador numa sessão interativa do PowerShell. Para executá-los de modo autónomo, crie uma nova conta de utilizador do Azure AD para este fim. Em seguida, no contexto desse utilizador, execute o cmdlet Set-AIPAuthentication para definir e armazenar credenciais através de um token de acesso do Azure AD. Esta conta de utilizador é, em seguida, autenticada e reiniciada para o serviço Azure Rights Management. A conta transfere a política do Azure Information Protection e quaisquer modelos do Rights Management utilizados pelas etiquetas.
 

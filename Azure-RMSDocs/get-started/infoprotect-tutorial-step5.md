@@ -5,7 +5,7 @@ keywords:
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 09/18/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c9964e013d24bb1f42acb5f1e7a180d2a85a8576
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 6d62b6dd588b035ded582a87f5faf04a04df6ab6
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Passo 5: ver a partilha de ficheiros protegidos em ação e controlar o seu documento 
 
@@ -39,9 +39,11 @@ Em seguida, está pronto para partilhar de forma segura este documento por e-mai
 
     Com esta definição, os nossos destinatários poderão visualizar o documento, mas não o poderão editar nem imprimir.
 
-4. Em **Selecionar utilizadores**, escreva um ou mais endereços de e-mail empresariais, como faria ao enviar um documento a alguém com quem a sua organização trabalha. Certifique-se de que especifica um endereço de e-mail empresarial, tal como **janetm@contoso.com** ou **p.dover@fabrikam.com**, porque atualmente o Azure Information Protection não suporta endereços de e-mail pessoais. 
+4. Em **Selecionar utilizadores**, escreva um ou mais endereços de e-mail empresariais, como faria ao enviar um documento a alguém com quem a sua organização trabalha. Para especificar mais de um endereço, utilize um ponto e vírgula ou prima Enter. 
 
-    Em alternativa, clique no livro de endereços para selecionar o endereço de e-mail de um colega:
+    Certifique-se de que especificou um endereço de e-mail da empresa, tais como ** janetm@contoso.com ** ou ** p.dover@fabrikam.com ** porque, atualmente, o Azure Information Protection não suporta endereços de e-mail pessoais para este cenário. 
+
+    Em alternativa, clique em de **selecionar utilizadores, grupos ou organização** ícone para selecionar o endereço de correio eletrónico de um co-worker:
 
     ![Passo 5 do tutorial de início rápido do Azure Information Protection – proteger com permissões personalizadas](../media/protect-custom-permissions.png)  
     
@@ -93,7 +95,7 @@ Agora que o destinatário abriu o anexo e, opcionalmente, o reencaminhou para ou
 
 2.  No separador **Base**, clique em **Proteger** > **Controlar e Revogar**:
 
-    ![Opção Controlar Utilização](../media/track-usage-calloutv2.png)
+    ![Opção Controlar Utilização](../media/track-usage-calloutv3.png)
 
     Isto leva-o para o site de controlo de documentos.
 

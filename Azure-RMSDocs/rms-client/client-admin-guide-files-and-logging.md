@@ -4,7 +4,7 @@ description: "Informações sobre o registo de utilização e ficheiros do clien
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 63249b98578b952177351cc5547ef92c67164f06
-ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
+ms.openlocfilehash: d1802fbd3c659b154d585224a3f7b412b8995e5b
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="azure-information-protection-client-files-and-client-usage-logging"></a>Registo de utilização do cliente e de ficheiros do cliente do Azure Information Protection
 
@@ -75,6 +75,11 @@ O cliente regista a atividade do utilizador no registo de eventos locais **Aplic
     - Automático  
     
     - Sistema (para iniciar sessão e transferir a política)
+    
+    - DefaultAutomatic
+        
+        Isto **DefaultAutomatic** acção de origem é para o cliente de pré-visualização só e refere-se a etiqueta definida utilizando o **selecione a etiqueta predefinida** na política do Azure Information Protection.
+
     
 - Etiqueta antes e depois da ação 
     

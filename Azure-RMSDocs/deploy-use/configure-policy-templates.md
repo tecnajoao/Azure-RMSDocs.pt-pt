@@ -4,7 +4,7 @@ description: "Configurar e gerir modelos de gestão de direitos do portal do Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/12/2017
+ms.date: 09/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 1094c0a711b3691b8186baafc06d1fb72daf5613
-ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
+ms.openlocfilehash: c27f239467bf546479827c7ca215a8892553e9c0
+ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/22/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurar e gerir modelos do Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection*
 
 >[!NOTE]
->Esta funcionalidade substitui configurar modelos personalizados no portal clássico do Azure.
+>Esta funcionalidade substitui configurar modelos personalizados no portal clássico do Azure. Para um mapeamento de procedimentos rápido, consulte [tarefas que utilizou para fazer com o portal clássico do Azure](migrate-portal.md).
 >
 >Apesar de ainda pode criar e gerir modelos no portal clássico do Azure, não recomendamos que gerir os mesmos modelos a partir do portal clássico do Azure e o portal do Azure. A implementação para a configuração de modelos nestes portais diferentes foi alterada, para que configurar o mesmo modelo no portais diferentes pode resultar numa configuração instável.
 
@@ -109,8 +109,7 @@ Antes de editar estes modelos ou convertê-las em etiquetas, certifique-se de qu
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Para configurar os modelos na política do Azure Information Protection
 
-1. Se ainda não o tiver feito, abra uma nova janela do browser e inicie sessão para o [portal do Azure](https://portal.azure.com) como um administrador de segurança ou um administrador global. Em seguida, navegue para o painel **Azure Information Protection**. 
-    
+1. Se ainda não o tiver feito, abra uma nova janela do browser e inicie sessão para o [portal do Azure](https://portal.azure.com) como um administrador de segurança ou um administrador global. Em seguida, navegue para o painel **Azure Information Protection**.     
     Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
 2. Se o modelo que pretende configurar para todos os utilizadores, permaneça o **Azure Information Protection - política Global** painel.
@@ -119,11 +118,11 @@ Antes de editar estes modelos ou convertê-las em etiquetas, certifique-se de qu
 
 3. Do **Azure Information Protection - política Global** painel, ou o **política:\<nome >** painel, localize o modelo que pretende configurar:
     
-    - Quando tiver uma subscrição que inclui a classificação, etiquetagem e proteção: expanda **modelos** ou **modelos proteção** após as etiquetas.
+    - Quando tiver uma subscrição que inclui a classificação, etiquetagem e proteção: expanda **modelos proteção** após as etiquetas.
     
     - Quando tem uma subscrição que inclui apenas proteção: os modelos são apresentados como etiquetas.
 
-4. Selecione o modelo e, no painel **Etiqueta**, pode alterar o nome do modelo e a descrição, se necessário, ao editar o **Nome da etiqueta** e a **Descrição**. Em seguida, selecione **proteção** que tem um valor de **Azure RMS** ou **Azure (chave de nuvem)**, para abrir o **proteção** painel.
+4. Selecione o modelo e, no painel **Etiqueta**, pode alterar o nome do modelo e a descrição, se necessário, ao editar o **Nome da etiqueta** e a **Descrição**. Em seguida, selecione **proteção** que tem um valor de **Azure (chave de nuvem)**, para abrir o **proteção** painel.
 
 5. No painel **Proteção**, pode alterar as permissões, a expiração de conteúdo e as definições de acesso offline. Para obter mais informações, sobre a configuração das definições de proteção, veja [Como configurar uma etiqueta para a proteção do Rights Management](configure-policy-protection.md)
     

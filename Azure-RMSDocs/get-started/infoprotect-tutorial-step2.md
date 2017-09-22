@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: cf84cef5d6bc4d3df32a4e3c8bc3a6ac7380655c
-ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
+ms.openlocfilehash: 4fb571f84e9916fb5573d551ec0f0bf374e5df2f
+ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/22/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passo 2: configurar e publicar a política do Azure Information Protection
 
@@ -67,7 +67,7 @@ Vamos agora criar uma nova etiqueta secundária **confidencial**.
     
     ![Proteção configurada para uma etiqueta de Azure Information Protection](../media/info-protect-protection-bar-configured.png) 
     
-4. No **proteção** painel, certifique-se de que **Azure RMS** ou **Azure (chave de nuvem)** está selecionada. Esta opção está no processo de ser mudado. Certifique-se de que **definir permissões** também é selecionada. Em seguida, selecione **adicionar permissões**.
+4. No **proteção** painel, certifique-se de que **Azure (chave de nuvem)** está selecionada. Esta opção utiliza o serviço Azure Rights Management para proteger documentos e e-mails. Certifique-se de que **definir permissões** também é selecionada. Em seguida, selecione **adicionar permissões**.
 
 5. No **adicionar permissões** painel, selecione **adicionar \<nome da organização >-todos os membros**. Por exemplo, se o nome de organização for VanArsdel Lda., verá a seguinte opção para selecionar:
     

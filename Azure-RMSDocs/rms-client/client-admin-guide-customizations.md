@@ -4,7 +4,7 @@ description: "Informações sobre a personalização do cliente do Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/07/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e590bd7983b0f3e4e4d1348fbe120452e9ceb79b
-ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
+ms.openlocfilehash: d5345f794fb69ddbfb4d6ffcddfcffd41ecacff5
+ms.sourcegitcommit: ff2fadacf9ef4c6ee27d9d08c4c455ffd48f21f8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="custom-configurations-for-the-azure-information-protection-client"></a>Configurações personalizadas do cliente do Azure Information Protection
 
@@ -24,17 +24,15 @@ ms.lasthandoff: 09/08/2017
 
 Utilize as seguintes informações para as configurações avançadas que poderá precisar para cenários específicos ou um subconjunto de utilizadores ao gerir o cliente do Azure Information Protection.
 
-Algumas destas definições requerem a edição do registo e algumas utilizam definições avançadas que tem de configurar no portal do Azure e, em seguida, publicar para os clientes transferirem. Além disso, algumas definições apenas poderão estar disponíveis numa versão de pré-visualização do cliente do Azure Information Protection. Para estas definições, está documentada uma versão de cliente mínima. Para as definições e as configurações que são suportadas na versão de disponibilidade geral do cliente, não está documentado qualquer número da versão de cliente mínima.
+Algumas destas definições requerem a edição do registo e algumas utilizam definições avançadas que tem de configurar no portal do Azure e, em seguida, publicar para os clientes transferirem.  
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>Como configurar as definições avançadas de configuração de cliente no portal
-
-Esta configuração está atualmente em pré-visualização.
 
 1. Caso ainda não o tenha feito, numa nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com) como administrador de segurança ou administrador global e navegue para o painel **Azure Information Protection**.
 
 2. No painel inicial do Azure Information Protection, selecione **Políticas de âmbito**.
 
-3. No painel **Azure Information Protection - Políticas de âmbito**, selecione o menu de contexto (**...** ) junto à política que contém as definições avançadas. Em seguida, selecione **Definições avançadas**.
+3. No painel **Azure Information Protection - Políticas de âmbito**, selecione o menu de contexto (**... **) junto à política que contém as definições avançadas. Em seguida, selecione **Definições avançadas**.
     
     Pode configurar as definições avançadas para a Política global, bem como para as políticas de âmbito.
 
@@ -42,7 +40,7 @@ Esta configuração está atualmente em pré-visualização.
 
 5. Clique em **Publicar**e garanta que os utilizadores desta política reiniciam as aplicações do Office que tinham abertas.
 
-6. Caso já não precise da definição e pretenda reverter para o comportamento predefinido: no painel **Definições avançadas**, selecione o menu de contexto (**...** ) junto à definição que já não é precisa e, em seguida, selecione **Eliminar**. Em seguida, clique em **Guardar e fechar**e publique novamente a política modificada.
+6. Caso já não precise da definição e pretenda reverter para o comportamento predefinido: no painel **Definições avançadas**, selecione o menu de contexto (**... **) junto à definição que já não é precisa e, em seguida, selecione **Eliminar**. Em seguida, clique em **Guardar e fechar**e publique novamente a política modificada.
 
 ## <a name="prevent-sign-in-prompts-for-ad-rms-only-computers"></a>Impedir pedidos de início de sessão para computadores só com AD RMS
 
@@ -64,11 +62,7 @@ Confirme que também verifica o nome de domínio da conta com sessão iniciada q
 
 Para iniciar sessão como um utilizador diferente:
 
-1. Dependendo da versão do cliente do Azure Information Protection: 
-    
-    - Para a versão de disponibilidade geral do cliente Azure Information Protection: com um editor de registo, navegue até **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** e elimine o valor **TokenCache** (e os dados do valor associados).
-    
-    - Para a versão de pré-visualização atual do cliente Azure Information Protection: navegue até **%localappdata%\Microsoft\MSIP** e elimine o ficheiro **TokenCache**.
+1. Navegue para **%localappdata%\Microsoft\MSIP** e elimine o **TokenCache** ficheiro.
 
 2. Reinicie as aplicações do Office abertas e inicie sessão com a sua conta de utilizador diferente. Se não vir um pedido na aplicação do Office para iniciar sessão no serviço Azure Information Protection, volte à caixa de diálogo do **Microsoft Azure Information Protection** e clique em **Iniciar sessão** na secção **Estado do cliente** atualizada.
 
@@ -78,11 +72,7 @@ Além disso,
 
 - Se estiver a utilizar o início de sessão único, tem de terminar sessão no Windows e iniciar sessão com a sua outra conta de utilizador após editar o registo. O cliente do Azure Information Protection faz, em seguida, a autenticação automaticamente através da conta de utilizador com sessão iniciada.
 
-- Caso pretenda repor as definições de utilizador para o serviço Azure Rights Management, pode fazê-lo através da opção **Ajuda e Comentários**.
-
-- Se pretender eliminar a política do Azure Information Protection atualmente transferida, elimine o ficheiro **Policy.msip** da pasta **%localappdata%\Microsoft\MSIP**.
-
-- Se tiver a versão de pré-visualização atual do cliente Azure Information Protection, pode utilizar a opção **Repor definições** de **Ajuda e Feedback** para terminar sessão e eliminar a política do Azure Information Protection atualmente transferida.
+- Pode utilizar o **repor definições** opção de **ajuda e comentários** para terminar sessão e eliminar a política do Azure Information Protection atualmente transferida.
 
 ## <a name="enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses"></a>Impor o modo só de proteção quando a sua organização tem uma combinação de licenças
 
@@ -99,10 +89,6 @@ Localize o nome do valor seguinte e defina os dados do valor como **0**:
 Além disso, verifique que estes computadores não têm um ficheiro denominado **Policy.msip** no **%LocalAppData%\Microsoft\MSIP** pasta. Se este ficheiro, elimine-o. Este ficheiro contém a política do Azure Information Protection e poderá ter transferido antes de editar o registo ou se o cliente Azure Information Protection foi instalado com a opção de demonstração.
 
 ## <a name="hide-the-classify-and-protect-menu-option-in-windows-file-explorer"></a>Ocultar a opção de menu Classificar e Proteger no Explorador de Ficheiros do Windows
-
-Esta opção de configuração está atualmente em pré-visualização.
-
-Pode configurar esta configuração avançada ao editar o registo quando tiver a versão do cliente do Azure Information Protection 1.3.0.0 ou superior. 
 
 Crie o nome do valor DWORD seguinte (com quaisquer dados do valor):
 
@@ -133,9 +119,7 @@ Ao exportar a política, esta ação transfere um ficheiro zipped com várias ve
 
 ## <a name="hide-the-do-not-forward-button-in-outlook"></a>Ocultar o botão Não Reencaminhar no Outlook
 
-Esta opção de configuração está atualmente em pré-visualização.
-
-Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. Esta definição requer também uma versão de pré-visualização do cliente do Azure Information Protection com uma versão mínima de **1.8.41.0**.
+Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure.
 
 Quando configura esta definição, oculta o botão **Não Reencaminhar** no friso do Outlook. Não oculta esta opção a partir dos menus do Office.
 
@@ -147,10 +131,8 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 ## <a name="make-the-custom-permissions-options-unavailable-to-users"></a>Tornar as opções de permissões personalizadas indisponíveis para os utilizadores
 
-Esta opção de configuração está atualmente em pré-visualização.
-
 > [!IMPORTANT]
-> Não utilize esta opção se tiver etiquetas que estão configuradas para permissões definidas pelo utilizador para Word, Excel, PowerPoint e Explorador de ficheiros. Se o fizer, quando a etiqueta é aplicada, os utilizadores não recebem um pedido para configurar as permissões personalizadas. O resultado é que o documento tem o nome, mas não está protegido como esperados.
+> A menos que utilize a versão de pré-visualização atual do cliente, não utilize esta opção se tiver etiquetas que estão configuradas para permissões definidas pelo utilizador para Word, Excel, PowerPoint e Explorador de ficheiros. Se o fizer, quando a etiqueta é aplicada, os utilizadores não recebem um pedido para configurar as permissões personalizadas. O resultado é que o documento tem o nome, mas não está protegido como esperados.
 
 Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
 
@@ -170,7 +152,7 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Ocultar permanentemente a barra do Azure Information Protection
 
-Esta configuração utiliza uma definição avançada que tem de configurar no portal do Azure. Esta definição requer também uma versão de pré-visualização do cliente do Azure Information Protection com uma versão mínima de **1.9.58.0**.
+Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
 
 Quando configura esta definição e publica a política para os utilizadores, se um utilizador optar por não mostrar a barra do Azure Information Protection nas aplicações do Office, a barra permanece oculta. Tal acontece quando o utilizador desmarca a opção **Mostrar Barra** do separador **Base**, grupo de **Proteção**, botão **Proteger**. Esta definição não tem qualquer efeito caso o utilizador feche a barra através do ícone **Fechar esta barra**.
 
@@ -181,6 +163,39 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 - Chave: **EnableBarHiding**
 
 - Valor: **Verdadeiro**
+
+
+## <a name="enable-recommended-classification-in-outlook"></a>Ativar a classificação recomendada no Outlook
+
+Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure.
+
+Quando configurar uma etiqueta para a classificação recomendada, os utilizadores recebem um pedido para aceitar ou ignorar a etiqueta recomendada no Word, Excel e PowerPoint. Esta definição prolonga esta recomendação de etiqueta a apresentar também no Outlook.
+
+Para configurar esta definição avançada, introduza as cadeias seguintes:
+
+- Chave: **OutlookRecommendationEnabled**
+
+- Valor: **Verdadeiro**
+
+
+## <a name="set-a-different-default-label-for-outlook"></a>Definir uma etiqueta predefinida diferente para o Outlook
+
+Esta opção de configuração está atualmente em pré-visualização e requer a versão de pré-visualização do cliente.
+
+Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
+
+Quando configurar esta definição, Outlook não se aplica a etiqueta predefinida que está configurada na política de proteção de informações do Azure para a definição **selecione a etiqueta predefinida**. Em vez disso, o Outlook pode aplicar uma etiqueta diferente ou sem etiqueta.
+
+Para aplicar uma etiqueta diferente, tem de especificar o ID da etiqueta. O valor de ID da etiqueta é apresentado no **etiqueta** painel, ao ver ou configurar a política do Azure Information Protection no portal do Azure. Para os ficheiros que tenham etiquetas aplicadas, também pode executar o [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) cmdlet do PowerShell para identificar o ID de etiqueta (MainLabelId ou SubLabelId). Quando uma etiqueta tiver etiquetas secundárias, sempre especificar o ID de apenas uma etiqueta secundária e não a etiqueta principal.
+
+Por isso que Outlook não se aplica a etiqueta predefinida, especifique **nenhum**.
+
+Para configurar esta definição avançada, introduza as cadeias seguintes:
+
+- Chave: **OutlookDefaultLabel**
+
+- Valor: \< **etiqueta ID**> ou **None**
+
 
 ## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Integração com a classificação de mensagem do Exchange para uma solução de etiquetagem do dispositivo móvel
 

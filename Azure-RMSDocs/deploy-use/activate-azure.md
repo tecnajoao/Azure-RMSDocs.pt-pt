@@ -4,7 +4,7 @@ description: "Instruções para a ativação de proteção no portal do Azure pa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/12/2017
+ms.date: 09/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4e886f5a-f535-4207-b8c4-8e0376c0758e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 56c75286280905065539b2d865aa0886edfd226f
-ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
+ms.openlocfilehash: 15b8abd6b8ba8fa494e1d7d5c7b02221204507d1
+ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/22/2017
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-azure-portal"></a>Como ativar o Azure Rights Management a partir do portal do Azure
 
@@ -30,7 +30,7 @@ Utilize estas instruções se pretender ativar o serviço Azure Rights Managemen
     
     Para abrir o painel do Azure Information Protection, têm de ter um [plano Premium de proteção de informações do Azure](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) ou um [plano do Office 365 que inclui o Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Se tiver um estas subscrições mas Consulte uma mensagem que não é possível localizar uma subscrição válida, envie uma mensagem de correio eletrónico para [askipteam](mailto:askipteam@microsoft.com?subject=I%20cannot%20activate%20RMS).
 
-2. Localize o **GERIR** opções de menu e selecione **definições RMS** ou **ativação da proteção**. Esta opção está no processo de ser mudado.
+2. Localize o **GERIR** opções de menu e selecione **ativação da proteção**. 
     
     Clique em **ativar**e, em seguida, confirme a ação. 
 

@@ -4,7 +4,7 @@ description: "Informações sobre as operações de ciclo de vida que são relev
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/23/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3220b1cbe93b110c838a4e85cc143b44de0d2d14
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 2f3ae7a0558cf209f3ec710a5114dbbc9a0dda9d
+ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 09/23/2017
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Gerida pelo cliente: Operações de ciclo de vida de chave de inquilino
 
@@ -38,22 +38,28 @@ Exemplos de quando poderá ter de recodificação para o Azure Information Prote
 
 - A sua empresa foi dividida em duas ou mais empresas. Quando efetua a recodificação da chave de inquilino, a nova empresa não terá acesso ao conteúdo novo que os seus funcionários publicam. Estes podem aceder ao conteúdo antigo se tiverem uma cópia da chave de inquilino antiga.
 
+- Pretender mover de uma topologia de gestão de chaves para outro. 
+
 - Considerar que a cópia principal da sua chave de inquilino (a cópia na sua posse) é comprometida.
 
-Para recodificação, pode criar uma nova chave no Cofre de chaves do Azure ou utilizar uma chave diferente que já se encontra no Cofre de chaves do Azure. Em seguida, siga os mesmos procedimentos que fez para implementar o BYOK do Azure Information Protection:
+A recodificar a chave de outro por si, pode criar uma nova chave no Cofre de chaves do Azure ou utilizar uma chave diferente que já se encontra no Cofre de chaves do Azure. Em seguida, siga os mesmos procedimentos que fez para implementar o BYOK do Azure Information Protection.
 
 1. Apenas se a nova chave está a ser um cofre de chaves diferentes para o já estiver a utilizar para o Azure Information Protection: autorizar o Azure Information Protection para utilizar o Cofre de chaves, utilizando o [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) cmdlet.
 
-2. Configurar o Azure Information Protection para utilizar a nova chave, utilizando o [utilize AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey) cmdlet.
+2. Se já não conhece o Azure Information Protection sobre a chave de que pretende utilizar, execute [utilize AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey) cmdlet.
 
 3. Configurar o objeto de chave de inquilino, utilizando a execução [conjunto AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) cmdlet.
 
-Para obter mais informações sobre cada um destes passos, consulte [implementar a sua chave de inquilino do Azure Information Protection](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key).
+Para obter mais informações sobre cada um destes passos:
+
+- A recodificar a chave de outro por si, consulte [implementar o BYOK para a sua chave de inquilino do Azure Information Protection](../plan-design/plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
+
+- A recodificar, alterar para uma chave pela Microsoft gere por si, consulte o [recodificar a chave de inquilino](operations-microsoft-managed-tenant-key.md#rekey-your-tenant-key) secção para operações de gerida pela Microsoft.
 
 ## <a name="backup-and-recover-your-tenant-key"></a>Efetuar cópia de segurança e recuperar a chave de inquilino
 É responsável pela cópia de segurança da sua chave de inquilino. Se gerou a chave de inquilino num HSM da Thales, para efetuar a cópia de segurança da chave, basta efetuar uma cópia de segurança do Ficheiro de Chave com Token, do ficheiro de Universo e dos Cartões de Administrador.
 
-Porque transferiu a chave ao seguir os procedimentos [implementar traga a sua própria chave (BYOK)](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key), Cofre de chaves irá manter o ficheiro de chave com token, para proteger contra falhas de quaisquer nós de serviço. Este ficheiro está vinculado ao mundo da segurança da instância ou região do Azure específica. No entanto, não considere que esta seja uma cópia de segurança completa. Por exemplo, se alguma vez precisar de uma cópia de texto simples da sua chave para utilizar fora de um HSM da Thales, Cofre de chaves do Azure não é possível recuperá-la, porque tem apenas uma cópia não recuperável.
+Porque transferiu a chave ao seguir os procedimentos [implementar o BYOK para a sua chave de inquilino do Azure Information Protection](../plan-design/plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key), Cofre de chaves irá manter o ficheiro de chave com token, para proteger contra falhas de quaisquer nós de serviço. Este ficheiro está vinculado ao mundo da segurança da instância ou região do Azure específica. No entanto, não considere que esta seja uma cópia de segurança completa. Por exemplo, se alguma vez precisar de uma cópia de texto simples da sua chave para utilizar fora de um HSM da Thales, Cofre de chaves do Azure não é possível recuperá-la, porque tem apenas uma cópia não recuperável.
 
 ## <a name="export-your-tenant-key"></a>Exportar a chave de inquilino
 Se utiliza o BYOK, não pode exportar a chave de inquilino do Azure Key Vault ou do Azure Information Protection. A cópia no Azure Key Vault não é recuperável. 

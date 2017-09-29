@@ -4,7 +4,7 @@ description: "Instruções para ver e utilizar um documento protegido que requer
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d8fd80d6ff97118cd37dd62e293768b145c98595
-ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
+ms.openlocfilehash: 8ed2480892d5a48075d986ee64733b0144bbc5b4
+ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 09/23/2017
 ---
 # <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Ver e utilizar ficheiros que foram protegidos pelo Rights Management
 
@@ -50,13 +50,11 @@ No entanto, se tiver um dispositivo iOS ou Android, pode utilizar a aplicação 
 
 Para poder ver o ficheiro protegido, o serviço Rights Management que foi utilizado para proteger o ficheiro tem de confirmar primeiro que está autorizado a ver o ficheiro. O serviço fá-lo ao verificar o seu nome de utilizador e palavra-passe. Em alguns casos, estas informações podem estar em cache e não lhe são pedidas as suas credenciais. Noutros casos, ser-lhe-á pedido que forneça as credenciais.
 
-Se a sua organização não tiver uma conta baseada na cloud que possa utilizar (para o Office 365 ou Azure) e não utilizar uma versão no local equivalente (AD RMS), pode candidatar-se a uma conta gratuita que aceitará as suas credenciais para que possa abrir ficheiros que estão protegidos pelo Rights Management:
+Se a sua organização tiver uma conta baseada na nuvem para a utilização (para Office 365 ou do Azure) e não utiliza uma versão equivalente no local (AD RMS), tem duas opções:
 
--   Para se candidatar a esta conta, clique na ligação para aderir ao [RMS para indivíduos](http://go.microsoft.com/fwlink/?LinkId=309469).
-    
-    Quando se inscrever, utilize o seu endereço de e-mail da empresa em vez de um endereço de e-mail pessoal. Caso se esteja a inscrever porque recebeu um anexo protegido, utilize o mesmo endereço de e-mail que foi utilizado para lhe enviar a mensagem de e-mail.
-    
--   Para obter mais informações, consulte [RMS para indivíduos e Azure Rights Management](../understand-explore/rms-for-individuals.md).
+- Se foi enviada uma mensagem de e-mail protegida, siga as instruções para iniciar sessão com o fornecedor de identidade sociais (tais como o Google para uma conta do Gmail) ou aplicar para um código de acesso único.
+
+- Pode aplicar-se numa conta gratuita que aceitará as suas credenciais para que pode abrir documentos que estão protegidos pelo Rights Management. Para se candidatar a esta conta, clique na ligação para se candidatar [RMS para indivíduos](http://go.microsoft.com/fwlink/?LinkId=309469) e utilizar o seu endereço de e-mail da empresa em vez de um endereço de e-mail pessoal. 
 
 ## <a name="to-view-and-use-a-protected-document"></a>Para ver e utilizar um documento protegido
 
@@ -64,7 +62,7 @@ Se a sua organização não tiver uma conta baseada na cloud que possa utilizar 
 
 2. Se vir uma página para **Iniciar sessão** ou **Inscrever-se**: clique em **Iniciar sessão** e introduza as suas credenciais. Se o ficheiro protegido tiver sido enviado para si como um anexo, especifique o mesmo endereço de e-mail que foi utilizado para enviar o ficheiro.
     
-    Se não tiver uma conta válida, veja a secção [Pedidos de autenticação](#prompts-for-authentication) nesta página. Inscreva-se para obter uma conta gratuita e regresse a estas instruções.
+    Se não tiver uma conta válida, veja a secção [Pedidos de autenticação](#prompts-for-authentication) nesta página.
 
 3. Uma versão só de leitura do ficheiro é aberta no **Visualizador do Azure Information Protection**. Se tiver permissões suficientes, pode imprimir o ficheiro e editá-lo. 
 
@@ -77,8 +75,7 @@ Se a sua organização não tiver uma conta baseada na cloud que possa utilizar 
 5. Se tiver ficheiros protegidos adicionais para abrir, pode navegar diretamente até aos mesmos a partir do visualizador, através da opção **Abrir**. O ficheiro selecionado substitui o ficheiro original no visualizador. 
 
 > [!TIP]
-> Se o ficheiro protegido não abrir, utilize a opção **Ajuda e Comentários** do Azure Information Protection e selecione **Executar Diagnósticos**. Após a conclusão dos testes, pode repor o cliente, o que poderá resolver o problema.
-
+> Se o ficheiro protegido não for aberto, pode utilizar o **executar diagnósticos** opção de **proteger** > **ajuda e comentários** para o Azure Information Protection cliente para verificar a existência de problemas no seu computador que poderá impedir que um documento protegido ao abrir.
 
 ## <a name="other-instructions"></a>Outras instruções
 Pode obter mais instruções sobre os procedimentos no guia do utilizador do Azure Information Protection:

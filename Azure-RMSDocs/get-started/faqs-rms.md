@@ -4,7 +4,7 @@ description: "Algumas perguntas mais frequentes sobre o serviço de proteção d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2017
+ms.date: 09/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a2c0a8ef4534f8d5149178986688c4d00b4cee9f
-ms.sourcegitcommit: 5ea919b1b2bcb9c4b3e5dd1939ff8d0d937e1168
+ms.openlocfilehash: 381eaee2aa33a2a6a715c31616ad92a0f957e8b0
+ms.sourcegitcommit: dd567f8395bb55e4ca174ef1d72b1a14cf7735e1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Perguntas mais frequentes sobre a proteção de dados no Azure Information Protection
 
@@ -47,9 +47,15 @@ Para estas exceções (normalmente, menos de 10% de todos os conteúdos que têm
 
 Para obter mais informações sobre o HYOK, certificar-se de que compreende as suas limitações e restrições e obter orientações para quando o utilizar, veja [Requisitos e restrições de Tenha a sua própria chave (HYOK) para proteção do AD RMS](../deploy-use/configure-adrms-restrictions.md).
 
+## <a name="can-i-now-use-byok-with-exchange-online"></a>Posso agora utilizar o BYOK com o Exchange Online?
+
+Sim, pode agora utilizar o BYOK com o Exchange Online quando siga as instruções em [configurar novas capacidades de encriptação de mensagens do Office 365 desenvolvidas Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Estas instruções ativar as novas funcionalidades no Exchange Online, que suportam a utilizar uma BYOK para o Azure Information Protection, bem como a nova encriptação de mensagens do Office 365.
+
+Para obter mais informações sobre esta alteração, consulte o anúncio de blogue: [encriptação de mensagens do Office 365 com as novas funcionalidades](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)
+
 ## <a name="where-can-i-find-information-about-third-party-solutions-that-integrate-with-azure-rms"></a>Onde posso encontrar informações sobre soluções de terceiros que se integram com o Azure RMS?
 
-Muitos fornecedores de software já têm soluções ou estão a implementar soluções que se integram no Azure Rights Management e a lista está a crescer rapidamente. Poderá considerar útil consultar a lista [Soluções otimizadas pelo RMS](requirements-applications.md#rms-enlightened-solutions) e obter as atualizações mais recentes através de [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) no Twitter. No entanto, se tiver uma pergunta específica, envie uma mensagem de e-mail à equipa do Information Protection: askipteam@microsoft.com.
+Muitos fornecedores de software já têm soluções ou estão a implementar soluções que se integram no Azure Rights Management e a lista está a crescer rapidamente. Poderá achar útil para verificar o [soluções de RMS englightened](requirements-applications.md#rms-enlightened-solutions) lista e obter as atualizações mais recentes do [Microsoft Mobility@MSFTMobility ](https://twitter.com/MSFTMobility) no Twitter. No entanto, se tiver uma pergunta específica, envie uma mensagem de e-mail à equipa do Information Protection: askipteam@microsoft.com.
 
 ## <a name="is-there-a-management-pack-or-similar-monitoring-mechanism-for-the-rms-connector"></a>Existe um pacote de gestão ou o mecanismo de monitorização semelhante para o conector RMS?
 
@@ -86,7 +92,7 @@ Absolutamente. Além disso, a vantagem é que os utilizadores poderão proteger 
 ## <a name="if-i-use-this-protection-for-my-production-environment-is-my-company-then-locked-into-the-solution-or-risk-losing-access-to-content-that-we-protected-with-azure-rms"></a>Se utilizar esta proteção para o meu ambiente de produção, a minha empresa fica presa a essa solução ou arrisca-se a perder o acesso aos conteúdos que protegemos com o Azure RMS?
 Não, permanece sempre no controlo dos seus dados e pode continuar a aceder aos mesmos, mesmo se optar por deixar de utilizar o serviço Azure Rights Management. Para obter mais informações, veja [Desativar o Azure Rights Management](../deploy-use/decommission-deactivate.md).
 
-No entanto, antes de desativar a implementação do Azure RMS, gostaríamos de ouvir o seu feedback e compreender por que motivo tomou esta decisão. Se a proteção do Azure Rights Management não satisfizer os seus requisitos empresariais, contacte-nos no caso de estarmos a planear novas funcionalidades para um futuro próximo ou no caso de existirem alternativas. Envie uma mensagem de e-mail para [AskIPTeam@Microsoft.com](mailto:askipteam@microsoft.com?subject=Planning%20to%20decommission%20Azure%20RMS) e teremos todo o gosto em falar sobre os seus requisitos técnicos e empresariais.
+No entanto, antes de desativar o serviço Azure Rights Management, gostaríamos de ouvir do utilizador e compreender por que motivo tomou esta decisão. Se a proteção do Azure Rights Management não satisfizer os seus requisitos empresariais, contacte-nos no caso de estarmos a planear novas funcionalidades para um futuro próximo ou no caso de existirem alternativas. Envie uma mensagem de e-mail para [AskIPTeam@Microsoft.com](mailto:askipteam@microsoft.com?subject=Planning%20to%20decommission%20Azure%20RMS) e teremos todo o gosto em falar sobre os seus requisitos técnicos e empresariais.
 
 ## <a name="can-i-control-which-of-my-users-can-use-azure-rms-to-protect-content"></a>Posso controlar que utilizadores podem aceder ao Azure RMS para proteger o conteúdo?
 Sim, o serviço Azure Rights Management tem controlos de integração do utilizador para este cenário. Para obter mais informações, veja a secção [Configurar os controlos de inclusão para uma implementação faseada](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) no artigo [Ativar o Azure Rights Management](../deploy-use/activate-service.md).
@@ -97,9 +103,12 @@ Uma das grandes vantagens da utilização do serviço Azure Rights Management na
 Não existe uma opção de administração para impedir que os utilizadores partilhem documentos de forma segura com organizações específicas. Por exemplo, imagine que pretende bloquear uma organização na qual não confia ou que tem uma empresa concorrente. Não faria sentido impedir o serviço Azure Rights Management de enviar documentos protegidos aos utilizadores nessas organizações, porque os seus utilizadores iriam partilhar os seus documentos desprotegidos, que é provavelmente a última coisa que quer que aconteça neste cenário. Por exemplo, não poderia identificar quem está a partilhar documentos confidenciais da empresa com os utilizadores nessas organizações, o que pode fazer quando o documento (ou e-mail) é protegido pelo serviço Azure Rights Management.
 
 ## <a name="when-i-share-a-protected-document-with-somebody-outside-my-company-how-does-that-user-get-authenticated"></a>Quando partilho um documento protegido com alguém fora da minha empresa, como é que esse utilizador é autenticado?
-O serviço Azure Rights Management utiliza sempre uma conta do Azure Active Directory e um endereço de e-mail associado para a autenticação do utilizador, o que torna a colaboração entre empresas totalmente integrada para os administradores. Se a outra organização utilizar serviços do Azure, os utilizadores já terão contas no Azure Active Directory, mesmo que estas contas tenham sido criadas e geridas no local e, em seguida, sincronizadas com o Azure. Se a organização tiver o Office 365, nos bastidores, este serviço também utiliza o Azure Active Directory para as contas de utilizador. Se a organização do utilizador não tiver contas geridas no Azure, os utilizadores podem inscrever-se no [RMS para utilizadores individuais](../understand-explore/rms-for-individuals.md), que cria um diretório e um inquilino do Azure não gerido para a organização com uma conta para o utilizador, para que este utilizador (e utilizadores subsequentes) possa ser autenticado para o serviço Azure Rights Management.
+
+Por predefinição, o serviço Azure Rights Management utiliza uma conta do Azure Active Directory e um endereço de e-mail associado para a autenticação de utilizador, o que torna a colaboração de empresa-empresa totalmente integrada para os administradores. Se a outra organização utilizar serviços do Azure, os utilizadores já terão contas no Azure Active Directory, mesmo que estas contas tenham sido criadas e geridas no local e, em seguida, sincronizadas com o Azure. Se a organização tiver o Office 365, nos bastidores, este serviço também utiliza o Azure Active Directory para as contas de utilizador. Se a organização do utilizador não tiver contas geridas no Azure, os utilizadores podem inscrever-se no [RMS para utilizadores individuais](../understand-explore/rms-for-individuals.md), que cria um diretório e um inquilino do Azure não gerido para a organização com uma conta para o utilizador, para que este utilizador (e utilizadores subsequentes) possa ser autenticado para o serviço Azure Rights Management.
 
 O método de autenticação para estas contas pode variar, dependendo da forma como o administrador na outra organização configurou as contas do Azure Active Directory. Por exemplo, podem utilizar palavras-passe que foram criadas para estas contas, autenticação multifator (MFA), federação ou palavras-passe que foram criadas nos Active Directory Domain Services e, em seguida, sincronizadas com o Azure Active Directory.
+
+Se proteger um e-mail com um anexo de documento do Office para um utilizador não tem uma conta no Azure AD, o método de autenticação é alterado. O serviço Azure Rights Management está Federado com alguns fornecedores de identidade de redes sociais populares, tais como o Gmail. Se o fornecedor de e-mail do utilizador é suportada, o utilizador pode iniciar sessão para que o serviço e os respetivos fornecedor de correio eletrónico é responsável por autenticá-los. Se o fornecedor de e-mail do utilizador não é suportado, ou uma preferência, o utilizador pode candidatar-se um código de acesso único que autentica e apresenta o e-mail com o documento protegido num web browser.
 
 ## <a name="can-i-add-external-users-people-from-outside-my-company-to-custom-templates"></a>Posso adicionar utilizadores externos (pessoas que não pertencem à minha empresa) a modelos personalizados?
 
@@ -107,14 +116,20 @@ Sim. Quando converter um modelo para uma etiqueta no portal do Azure, pode confi
 
 Para obter mais informações sobre a conversão de modelos personalizados para as etiquetas para que possa, em seguida, facilmente adicionar utilizadores externos, consulte [configurar e gerir modelos do Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
-## <a name="does-azure-rms-work-with-dynamic-groups-in-azure-ad"></a>O Azure RMS funciona com grupos dinâmicos no Azure AD?
-Uma funcionalidade do Azure AD Premium permite-lhe configurar a associação dinâmica para grupos de segurança ao especificar [regras baseadas em atributos](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/). Este tipo de grupo não suporta um endereço de e-mail e não pode ser utilizado com o serviço Azure Rights Management. No entanto, os grupos do Office 365 suportam a associação do grupo dinâmico e estão habilitados para e-mail. Como este grupo tem capacidade de correio, pode utilizá-lo com a proteção do Azure Rights Management.
+Para obter mais informações sobre a conversão de modelos personalizados para as etiquetas, consulte [configurar e gerir modelos do Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
-Para obter mais informações sobre os requisitos dos utilizadores e dos grupos que podem ser utilizados com o serviço Azure Rights Management, veja [Preparar utilizadores e grupos do Azure Information Protection](../plan-design/prepare.md).
+## <a name="what-type-of-groups-can-i-use-with-azure-rms"></a>Tipo de grupos que pode utilizar com o Azure RMS?
+Para a maioria dos cenários, pode utilizar qualquer tipo de grupo no Azure AD que tenha um endereço de e-mail. Esta regra prática aplica-se sempre ao atribuir direitos de utilização, mas existem algumas exceções para administrar o serviço Azure Rights Management. Para obter mais informações, consulte [requisitos do Azure Information Protection para contas de grupo](../plan-design/prepare.md#azure-information-protection-requirements-for-group-accounts).
 
 ## <a name="how-do-i-send-a-protected-email-to-a-gmail-or-hotmail-account"></a>Como envio um e-mail protegido a uma conta do Gmail ou do Hotmail?
 
-Poderá ter visto referências ou demonstrações no Azure Information Protection a enviar e-mails protegidos a contas do Gmail ou do Hotmail. Esta funcionalidade ainda está em pré-visualização privada, pelo que encontrará obter mais informações sobre o assunto nesta documentação até totalmente está a ser libertado.
+Quando utiliza o Exchange Online e o serviço Azure Rights Management, apenas enviar mensagem de correio eletrónico como uma mensagem protegida. Por exemplo, pode selecionar o novo **proteger** botão na barra de comando no Outlook na Web, utilize a opção do Outlook não reencaminhar, selecione uma etiqueta de Azure Information Protection aplica proteção do Azure Rights Management, ou a proteção pode ser aplicada por regras de transporte do Exchange Online.
+
+O destinatário verá uma opção para iniciar sessão na sua conta Gmail, Yahoo ou Microsoft e, em seguida, poderá ler o e-mail protegido. Em alternativa, que possam escolher a opção para um código de acesso único ler o e-mail num browser.
+
+Para suportar este cenário, Exchange Online tem de estar ativada para o serviço Azure Rights Management e as novas funcionalidades na encriptação de mensagens do Office 365. Para obter mais informações sobre esta configuração, consulte [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration).
+
+Para obter mais informações sobre as novas funcionalidades que suportam todas as contas de e-mail em todos os dispositivos, consulte a seguinte mensagem de blogue: [anunciar novas capacidades disponíveis na encriptação de mensagens do Office 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
 ## <a name="what-devices-and-which-file-types-are-supported-by-azure-rms"></a>Que dispositivos e que tipos de ficheiro são suportados pelo Azure RMS?
 Para obter uma lista dos dispositivos que suportam o serviço Azure Rights Management, veja [Dispositivos cliente que suportam a proteção de dados do Azure Rights Management](../get-started/requirements-client-devices.md). Uma vez que nem todos os dispositivos suportados conseguem atualmente suportar todas as funcionalidades de Rights Management, verifique também a tabela [Aplicações otimizadas pelo RMS](../get-started/requirements-applications.md#rms-enlightened-applications).
@@ -142,11 +157,6 @@ Para controlar um documento depois de o proteger: a partir de um computador Wind
 ## <a name="when-i-open-an-rms-protected-office-document-does-the-associated-temporary-file-become-rms-protected-as-well"></a>Quando abro um documento do Office protegido por RMS, o ficheiro temporário associado também fica protegido por RMS?
 Não. Neste cenário, o ficheiro temporário associado não contém dados do documento original, mas apenas o que o utilizador introduz enquanto o ficheiro está aberto. Ao contrário do ficheiro original, o ficheiro temporário não foi concebido para partilha e permaneceria no dispositivo, protegido por controlos de segurança locais, como o BitLocker e o EFS.
 
-## <a name="we-really-want-to-use-byok-with-azure-information-protection-but-learned-that-this-isnt-compatible-with-exchange-onlinewhats-your-advice"></a>Queremos utilizar o BYOK com o Azure Information Protection, mas descobrimos que não é compatível com o Exchange Online. O que aconselham?
-Não permita que esta limitação atual atrase a utilização do serviço Azure Rights Management do Azure Information Protection. Se tiver o Exchange Online e quiser utilizar o BYOK (Bring Your Own Key – Traga a Sua Própria Chave), recomendamos que implemente agora o Azure Information Protection no modo de gestão de chaves predefinido, em que a Microsoft gera e faz a gestão da sua chave. Dessa forma, obtém todas as vantagens de proteger os seus ficheiros e e-mails importantes, com a opção de mudar para o BYOK mais tarde (por exemplo, quando o Exchange Online suporta o BYOK). Quando mudar para o BYOK, os seus documentos e e-mails anteriormente protegidos continuarão acessíveis através de uma chave arquivada.
-
-No entanto, se as políticas da sua empresa exigirem que utilize um módulo de hardware de segurança (HSM) e isto bloquear a sua implementação do Azure Information Protection, outra opção é implementar o Azure Information Protection com o BYOK agora, com funcionalidade de proteção do Rights Management reduzida para o Exchange. Para obter mais informações, veja [Preços e restrições do BYOK](../plan-design/byok-price-restrictions.md) em [Planear e implementar a sua chave de inquilino do Azure Rights Management](../plan-design/plan-implement-tenant-key.md).
-
 ## <a name="a-feature-i-am-looking-for-doesnt-seem-to-work-with-sharepoint-protected-librariesis-support-for-my-feature-planned"></a>A funcionalidade que procuro não funciona com bibliotecas protegidas do SharePoint. Planeiam oferecer suporte para a minha funcionalidade?
 Atualmente, o SharePoint suporta protegidos pelo RMS documentos ao utilizar IRM protegido bibliotecas, o que não suportam modelos de Rights Management, controlo de documentos e outras funcionalidades. Para obter mais informações veja a secção [SharePoint Online e SharePoint Server](../understand-explore/office-apps-services-support.md#sharepoint-online-and-sharepoint-server) no artigo [Aplicações e serviços do Office ](../understand-explore/office-apps-services-support.md).
 
@@ -158,12 +168,13 @@ Por predefinição, enquanto administrador do Office 365, não lhe cabe a si con
 Tal como um administrador do site do SharePoint ativa e configura a IRM para uma biblioteca do SharePoint que possui, o OneDrive para Empresas é concebido para os utilizadores ativarem e configurarem a IRM para as suas próprias bibliotecas do OneDrive para Empresas. No entanto, com o PowerShell, pode fazê-lo pelos utilizadores. Para obter instruções, veja a secção [SharePoint Online e OneDrive para Empresas: configuração de IRM](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) no artigo [Office 365: configuração para clientes e serviços online](../deploy-use/configure-office365.md).
 
 ## <a name="do-you-have-any-tips-or-tricks-for-a-successful-deployment"></a>Tem sugestões ou truques para uma implementação com êxito?
-Após supervisionar várias implementações e ouvir nosso ers, parceiros, consultores e engenheiros de suporte – uma das maiores sugestões que podemos transmitir da experiência: **Design e implementar políticas simples**.
 
-Como o Azure Information Protection suporta a partilha segura com todas as pessoas, pode ser ambicioso com o alcance da proteção de dados. No entanto, seja conservador com as suas políticas de direitos. Para muitas organizações, o maior impacto comercial provém de impedir a fuga de dados ao aplicar o modelo de política de direitos predefinido que restringe o acesso a pessoas na sua organização. Claro que, se for necessário, pode ser muito mais granular e impedir que as pessoas imprimam, editem, etc. No entanto, as restrições mais granulares devem ser a exceção, para documentos que precisam de um alto nível de segurança. Não implemente estas políticas mais restritas no primeiro dia, mas planeie uma abordagem mais faseada.
+Após supervisionar várias implementações e ouvir os nossos clientes, parceiros, consultores e engenheiros de suporte – uma das maiores sugestões que podemos transmitir da nossa experiência: **Crie e implemente políticas simples**.
+
+Como o Azure Information Protection suporta a partilha segura com todas as pessoas, pode ser ambicioso com o alcance da proteção de dados. Mas, seja conservador quando configurar as restrições de utilização de direitos. Para muitas organizações, o maior impacto comercial provém de impedir a fuga de dados ao restringir o acesso a pessoas na sua organização. Claro que, se for necessário, pode ser muito mais granular e impedir que as pessoas imprimam, editem, etc. Mas manter as restrições mais granulares como a exceção para documentos que precisam de alto nível de segurança e não implementam estes direitos de utilização mais restritivos no primeiro dia, mas planeie uma abordagem mais faseada.
 
 ## <a name="how-do-we-regain-access-to-files-that-were-protected-by-an-employee-who-has-now-left-the-organization"></a>Como recuperamos o acesso a ficheiros que foram protegidos por um funcionário que saiu da organização?
-Utilize a [funcionalidade de superutilizador](../deploy-use/configure-super-users.md), que permite que os utilizadores autorizados têm direitos de utilização completos para todas as licenças de utilização que foram atribuídas pelo inquilino da sua organização. Esta mesma funcionalidade permite que os serviços autorizados indexem e inspecionem ficheiros, conforme necessário.
+Utilize o [funcionalidade de Superutilizador](../deploy-use/configure-super-users.md), que concede a utilização de controlo total de direitos aos utilizadores autorizados para todos os documentos e e-mails que são protegidos pelo seu inquilino. Superutilizadores podem sempre ler este conteúdo protegido e se for necessário, remova a proteção ou volte a protegê-lo para diferentes utilizadores. Esta mesma funcionalidade permite que os serviços autorizados indexem e inspecionem ficheiros, conforme necessário.
 
 ## <a name="when-i-test-revocation-in-the-document-tracking-site-i-see-a-message-that-says-people-can-still-access-the-document-for-up-to-30-daysis-this-time-period-configurable"></a>Quando testo a revogação no site de controlo do documento, vejo uma mensagem a indicar que as pessoas ainda podem aceder ao documento durante até 30 dias. Este período de tempo é configurável?
 

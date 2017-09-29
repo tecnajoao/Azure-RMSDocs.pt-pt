@@ -1,6 +1,6 @@
 ---
 title: "Passo 1 do tutorial de início rápido – AIP"
-description: "Passo 1 de um tutorial de introdução para experimentar o Azure Information Protection rapidamente – Ativar o serviço Azure Rights Management."
+description: "Passo 1 de um tutorial de introdução rapidamente experimentar o Azure Information Protection-ativar o serviço de proteção."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -10,20 +10,20 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: c168f54d873d8e5b1f2d455c9ae2d12cda8926b3
-ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
+ms.openlocfilehash: 91eb9ec61f4fa1ebd7aac3cf0c244878ef450bb9
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="step-1-activate-the-rights-management-service"></a>Passo 1: ativar o serviço Rights Management
+# <a name="step-1-activate-protection"></a>Passo 1: Ativar proteção
  
 >*Aplica-se a: Azure Information Protection*
 
 > [!NOTE]
 >Mesmo se já tiver ativado o serviço Azure Rights Management para o seu inquilino, conclua este passo para confirmar o estado de ativação. As instruções incluem o início de sessão portal do Azure e criar painel do Azure Information Protection, para que esteja preparado para o passo 2. 
 
-Quando o serviço Azure Rights Management for ativado, poderá proteger os e-mails e os documentos mais confidenciais da sua organização e controlar a forma como os documentos protegidos são utilizados quando os partilhar com outras pessoas. Existem diferentes métodos que pode utilizar para ativar este serviço, que incluem utilizar o Windows PowerShell e os portais de administração.
+Quando o serviço Azure Rights Management for ativado, poderá proteger os e-mails e os documentos mais confidenciais da sua organização e controlar a forma como os documentos protegidos são utilizados quando os partilhar com outras pessoas. Existem várias formas que pode ativar a proteção, o que inclui utilizando o Windows PowerShell e utilizar os portais de admin.
 
 Para este tutorial, iremos utilizar o portal do Azure, o que é onde também configurar as etiquetas para utilizadores. 
 

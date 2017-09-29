@@ -4,7 +4,7 @@ description: "Algumas perguntas mais frequentes sobre o Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/27/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7e8f49a9775ac6eab89b72a50f8ca866875313a5
-ms.sourcegitcommit: d7bdf865a06df2150b261c98b66503c1db7fed11
+ms.openlocfilehash: dd576541ab7cb6f1f1132d2a826a5b602ab71328
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Perguntas mais frequentes sobre o Azure Information Protection
 
@@ -57,7 +57,7 @@ O serviço Azure Rights Management gera e faz a gestão automática de certifica
 
 ## <a name="ive-heard-a-new-release-is-going-to-be-available-soon-for-azure-information-protectionwhen-will-it-be-released"></a>Já ouvi falar que uma nova versão irá estar disponível em breve para o Azure Information Protection. Quando será lançada?
 
-A documentação técnica não contém informações sobre os lançamentos futuros. Para obter este tipo de informação e ter acesso aos anúncios de lançamento, leia o [Blogue Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services) e obtenha as atualizações mais recentes através de [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) no Twitter. Se estiver interessado numa versão do Office, certifique-se de que vê também o [blogue do Office](https://blogs.office.com/).
+A documentação técnica não contém informações sobre os lançamentos futuros. Para este tipo de informações e anúncios de lançamento, verifique o [blogue Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services) e obter as atualizações mais recentes do [Microsoft Mobility@MSFTMobility ](https://twitter.com/MSFTMobility) no Twitter. Se estiver interessado numa versão do Office, certifique-se de que vê também o [blogue do Office](https://blogs.office.com/).
 
 ## <a name="where-can-i-find-supporting-information-for-azure-information-protectionsuch-as-legal-compliance-and-slas"></a>Onde posso encontrar informações de suporte para o Azure Information Protection, como informações legais, sobre conformidade e SLAs?
 

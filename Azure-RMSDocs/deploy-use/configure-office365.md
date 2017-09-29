@@ -4,7 +4,7 @@ description: "Informações e instruções para administradores para configurare
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 09/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: dd8e9604c819f61f94bfdd51194744d127bbf55c
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 53d93a36d4b18c93f54349633046e5fc242e7c2b
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="office-365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Configuração para clientes e serviços online utilizar o serviço Azure Rights Management
 
@@ -29,116 +29,11 @@ No entanto, recomendamos que complemente estas aplicações com o cliente do Azu
 ## <a name="exchange-online-irm-configuration"></a>Exchange Online: configuração de IRM
 Para obter mais informações sobre como o IRM do Exchange Online funciona com o serviço Azure Rights Management, veja [Exchange Online e Exchange Server](../understand-explore/office-apps-services-support.md#exchange-online-and-exchange-server), na secção **Compreender e explorar**.
 
-Para configurar o Exchange Online para suportar o serviço Azure Rights Management, tem de configurar o serviço de gestão de direitos de informação (IRM) para o Exchange Online. Para isso, tem de utilizar o Windows PowerShell (não é necessário instalar um módulo separado) e executar os [comandos do PowerShell para o Exchange Online](https://technet.microsoft.com/library/jj200677.aspx).
+Para configurar o Exchange Online utilizar o serviço Azure Rights Management, consulte [configurar novas capacidades de encriptação de mensagens do Office 365 desenvolvidas Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).
 
-> [!NOTE]
-> Atualmente, não pode configurar o Exchange Online para suportar o serviço Azure Rights Management se estiver a utilizar uma chave de inquilino gerida pelo cliente (BYOK) para o Azure Information Protection, em vez da configuração predefinida de uma chave de inquilino gerida pela Microsoft. Para obter mais informações, veja [Preços e restrições do BYOK](../plan-design/byok-price-restrictions.md).
->
-> Se tentar configurar o Exchange Online quando o serviço Azure Rights Management está a utilizar o BYOK, o comando para importar a chave (passo 5 no procedimento seguinte) falhará com a mensagem de erro **[FailureCategory=Cmdlet-FailedToGetTrustedPublishingDomainFromRmsOnlineException]**.
+Se anteriormente tiver configurado o Exchange Online utilizar o serviço Azure Rights Management ao importar o domínio de publicação fidedigno (TPD), utilize o mesmo conjunto de instruções para ativar as novas funcionalidades no Exchange Online.
 
-Os passos seguintes fornecem um conjunto típico de comandos que executaria para ativar o Exchange Online de forma a utilizar o serviço Azure Rights Management:
-
-1.  Se esta é a primeira vez que utiliza o Windows PowerShell para o Exchange Online no seu computador, tem de configurar o Windows PowerShell para executar scripts assinados. Inicie sessão do Windows PowerShell através da opção **Executar como administrador** e, em seguida, escreva:
-
-    ```
-    Set-ExecutionPolicy RemoteSigned
-    ```
-
-2.  Na sessão do Windows PowerShell, inicie sessão no Exchange Online com uma conta ativada para acesso remoto à Shell. Por predefinição, todas as contas criadas no Exchange Online têm o acesso remoto à Shell ativado, embora possa desativar (e ativar) esta funcionalidade através do comando [Set-User &lt;UserIdentity&gt; -RemotePowerShellEnabled](https://technet.microsoft.com/library/jj984292%28v=exchg.160%29.aspx).
-
-    Para iniciar sessão, escreva:
-
-    ```
-    $UserCredential = Get-Credential
-    ```
-    Na caixa de diálogo **Pedido de Credencial do Windows PowerShell**, forneça o seu nome de utilizador e palavra-passe do Office 365.
-
-3.  Execute os dois comandos seguintes para ligar ao serviço Exchange Online:
-
-    ```
-    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
-    ```
-
-    ```
-    Import-PSSession $Session
-    ```
-
-4.  Especifique a localização da chave de inquilino do Azure Information Protection, em conformidade com a localização onde foi criado o inquilino da sua organização:
-
-    Para a América do Norte
-
-    ```
-    Set-IRMConfiguration -RMSOnlineKeySharingLocation "https://sp-rms.na.aadrm.com/TenantManagement/ServicePartner.svc"
-    ```
-    Para a Europa:
-
-    ```
-    Set-IRMConfiguration -RMSOnlineKeySharingLocation "https://sp-rms.eu.aadrm.com/TenantManagement/ServicePartner.svc"
-    ```
-    Para a Ásia:
-
-    ```
-    Set-IRMConfiguration -RMSOnlineKeySharingLocation "https://sp-rms.ap.aadrm.com/TenantManagement/ServicePartner.svc"
-    ```
-    Para a América do Sul:
-
-    ```
-    Set-IRMConfiguration -RMSOnlineKeySharingLocation "https://sp-rms.sa.aadrm.com/TenantManagement/ServicePartner.svc"
-    ```
-    Para o Office 365 Administração Pública (Government Community Cloud):
-
-    ```
-    Set-IRMConfiguration -RMSOnlineKeySharingLocation "https://sp-rms.govus.aadrm.com/TenantManagement/ServicePartner.svc"
-    ```
-
-5.  Importe dados de configuração do serviço Azure Rights Management para o Exchange Online sob a forma de um domínio de publicação fidedigno (TPD). Isto inclui a chave de inquilino do Azure Information Protection e modelos do Azure Rights Management:
-
-    ```
-    Import-RMSTrustedPublishingDomain -RMSOnline -name "RMS Online"
-    ```
-    Neste comando, utilizámos o nome **RMS Online** como nome base do TPD para o Azure Rights Management no Exchange Online. Após a importação do TPD, terá o nome **RMS Online – 1** no Exchange Online.
-
-6.  Ative a funcionalidade do Azure Rights Management para que as funcionalidades da IRM estejam disponíveis no Exchange Online:
-
-    ```
-    Set-IRMConfiguration -InternalLicensingEnabled $true
-    ```
-    Após executar este comando, o Rights Management é automaticamente ativado para o cliente do Outlook, o Outlook Web App e o Exchange Active Sync.
-
-7.  Opcionalmente, pode testar se esta configuração tem êxito através do seguinte comando:
-
-    ```
-    Test-IRMConfiguration -Sender <user email address>
-    ```
-    Por exemplo: **Test-IRMConfiguration -Sender  adams@contoso.com**
-
-    Este comando executa um conjunto de verificações que inclui a verificação da conectividade ao serviço, a obtenção da configuração, a obtenção de URIs, licenças e modelos. Na sessão do Windows PowerShell, verá os resultados de cada verificação e, no final, se nenhuma delas encontrar problemas, verá a mensagem: **RESULTADO GERAL: APROVADO**
-
-8.  Desligue a sua sessão remota do PowerShell:
-
-    ```
-    Remove-PSSession $Session
-    ```
-
-Agora, os utilizadores podem proteger as suas mensagens de e-mail através do serviço Azure Rights Management. Por exemplo, no Outlook Web App, selecione **Definir permissões** no menu expandido (**...**) e, em seguida, selecione **Não Reencaminhar** ou um dos modelos disponíveis para aplicar a proteção da informação à mensagem de e-mail e respetivos anexos. Contudo, como o Outlook Web App coloca a IU em cache durante um dia, espere que este período de tempo termine antes de tentar aplicar a proteção da informação às mensagens de e-mail e depois de executar estes comandos de configuração. Antes da atualização da IU para refletir a nova configuração, não verá nenhuma opção no menu **Definir permissões**.
-
-> [!IMPORTANT]
-> Se criar ou atualizar [modelos](configure-policy-templates.md) para o Azure Rights Management, cada vez, tem de executar o seguinte Exchange Ogit adicionar .nline comando do PowerShell (se necessário, execute os passos 2 e 3 primeiro) para sincronizar estas alterações para o Exchange Online:`Import-RMSTrustedPublishingDomain -Name "RMS Online - 1" -RefreshTemplates –RMSOnline`
-
-Como administrador do Exchange, já pode configurar funcionalidades que apliquem automaticamente a proteção da informação, como, por exemplo, [regras de transporte](https://technet.microsoft.com/library/dd302432.aspx), [políticas de prevenção de perda de dados (DLP)](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx) e [voice mail protegido](https://technet.microsoft.com/library/dn198211%28v=exchg.150%29.aspx) (Unified Messaging).
-
-Para obter instruções detalhadas para configurar o Exchange Online de forma a ativar a funcionalidade IRM, consulte a documentação na biblioteca do Exchange. Por exemplo:
-
--   [Ligar ao Exchange Online através do PowerShell remoto](https://technet.microsoft.com/library/jj984289%28v=exchg.160%29.aspx)
-
--   [Configurar a IRM para utilizar o Azure Rights Management](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx)
-
-### <a name="office-365-message-encryption"></a>Encriptação de Mensagens do Office 365
-Execute os mesmos passos conforme indicado na secção anterior. Contudo, se não quiser que os modelos sejam apresentados, antes de chegar ao passo 6, execute o comando seguinte para impedir que os modelos IRM estejam disponíveis no Outlook Web App e no cliente do Outlook: `Set-IRMConfiguration -ClientAccessServerEnabled $false`
-
-Em seguida, estará pronto para configurar [regras de transporte](https://technet.microsoft.com/library/dd302432.aspx), para modificar automaticamente a segurança da mensagem quando os destinatários estão fora da organização, e selecionar a opção **Aplicar a Encriptação de Mensagens do Office 365**.
-
-Para obter mais informações sobre a encriptação de mensagens, veja [Encryption in Office 365 (Encriptação no Office 365 – em inglês)](https://technet.microsoft.com/library/dn569286.aspx) na biblioteca do Exchange.
+Depois de ter configurado o Exchange Online utilizar o serviço Azure Rights Management, agora pode configurar funcionalidades que se aplicam a proteção de informações automaticamente, tal como [regras de transporte](https://technet.microsoft.com/library/dd302432.aspx), [(de prevenção de perda de dados Políticas DLP)](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx), e [voice mail protegido](https://technet.microsoft.com/library/dn198211%28v=exchg.150%29.aspx) (Unified Messaging).
 
 ## <a name="sharepoint-online-and-onedrive-for-business-irm-configuration"></a>SharePoint Online e OneDrive para Empresas: configuração de IRM
 
@@ -147,7 +42,7 @@ Para obter mais informações sobre como o IRM do SharePoint Online funciona com
 Para configurar o SharePoint Online e o OneDrive para Empresas para suportar o serviço Azure Rights Management, primeiro tem de ativar o serviço de gestão de direitos de informação (IRM) para o SharePoint Online através do centro de administração do SharePoint. Assim, os proprietários de sites podem proteger as respetivas listas e bibliotecas de documentos do SharePoint com IRM e, além disso, os utilizadores podem proteger a respetiva biblioteca do OneDrive para Empresas com a IRM, para que os documentos aí guardados e partilhados com outras pessoas sejam automaticamente protegidos pelo serviço Azure Rights Management.
 
 > [!NOTE]
-> As bibliotecas protegidas por IRM para o SharePoint e OneDrive para Empresas não suportam o novo [cliente de sincronização do OneDrive (OneDrive.exe)](https://support.office.com/article/Enable-users-to-sync-SharePoint-files-with-the-new-OneDrive-sync-client-22e1f635-fb89-49e0-a176-edab26f69614). Para utilizar a proteção IRM com as suas bibliotecas do SharePoint e com o OneDrive para Empresas, utilize o cliente de sincronização mais antigo, o cliente de sincronização do OneDrive para Empresas (Groove.exe). Ambas as versões de clientes podem ser executadas ao mesmo tempo. Para obter mais informações, veja [Restrições e limitações ao sincronizar ficheiros e pastas](https://support.microsoft.com/help/3125202/restrictions-and-limitations-when-you-sync-files-and-folders).
+> Bibliotecas protegidas de IRM para o SharePoint e o OneDrive para empresas requerem o [versão de pré-visualização](https://support.office.com/article/6778d4de-b5f8-423c-af43-a1b2449e9b99) do novo cliente de sincronização do OneDrive (OneDrive.exe). Em alternativa, utilizar o cliente de sincronização mais antigo, o OneDrive para o cliente de sincronização de negócio (Groove.exe). Ambas as versões de clientes podem ser executadas ao mesmo tempo. Para obter mais informações, veja [Restrições e limitações ao sincronizar ficheiros e pastas](https://support.microsoft.com/help/3125202/restrictions-and-limitations-when-you-sync-files-and-folders).
 
 Para ativar o serviço de gestão de direitos de informação (IRM) para o SharePoint Online, consulte as seguintes instruções a partir do site do Office:
 

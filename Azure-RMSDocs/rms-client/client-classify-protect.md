@@ -4,7 +4,7 @@ description: "Instruções sobre como classificar e proteger os seus documentos 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b82904da81b73f0ae7ab5ab758a4cf3a982eb6ee
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 996835254652a307f66c472fdc74707a59041fe0
+ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 09/23/2017
 ---
 # <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Classificar e proteger um ficheiro ou e-mail com o Azure Information Protection
 
@@ -32,9 +32,7 @@ Se a etiqueta aplica-se a proteção para um documento, o documento protegido n�
 
 Os ficheiros que estão protegidos são seguros para serem partilhados com outras pessoas. Por exemplo, anexe o ficheiro a um e-mail.
 
-Se partilha regularmente ficheiros com pessoas fora da sua organização, o administrador poderá ter configurado uma etiqueta para si que define uma proteção que permite que estas pessoas os possam ler. Em alternativa, pode utilizar a [aplicação do Office para definir permissões personalizadas](#set-custom-permissions-for-a-document) ou utilizar o [Explorador de Ficheiros para definir permissões personalizadas](#using-file-explorer-to-classify-and-protect-files) para um ficheiro antes de o partilhar. 
-
-Se tiver definido as suas próprias permissões personalizadas e o ficheiro já estiver protegido para utilização interna, primeiro faça uma cópia do mesmo para manter as permissões originais. Em seguida, utilize a cópia para definir as permissões personalizadas.  
+Se partilha regularmente ficheiros com pessoas fora da sua organização, o administrador poderá ter configurado uma etiqueta para si que define uma proteção que permite que estas pessoas os possam ler. Em alternativa, pode utilizar a [aplicação do Office para definir permissões personalizadas](#set-custom-permissions-for-a-document) ou utilizar o [Explorador de Ficheiros para definir permissões personalizadas](#using-file-explorer-to-classify-and-protect-files) para um ficheiro antes de o partilhar. Se tiver definido as suas próprias permissões personalizadas e o ficheiro já estiver protegido para utilização interna, primeiro faça uma cópia do mesmo para manter as permissões originais. Em seguida, utilize a cópia para definir as permissões personalizadas.  
 
 Quando o ficheiro está protegido com as permissões personalizadas, utilize o seu mecanismo de partilha padrão para partilhar o ficheiro. Se esta for a primeira vez que estas pessoas com as quais está a partilhar receberam um ficheiro protegido, poderão precisar de instruções para o visualizar. Para estas pessoas, pode copiar e colar a seguinte mensagem: **Protegi este ficheiro com o Microsoft Azure Information Protection. Para a primeira utilização, veja estas [instruções](https://aka.ms/rms-signup).**
 
@@ -94,6 +92,16 @@ Pode especificar as suas próprias definições de proteção para documentos em
     - **Expirar acesso**: selecione esta opção apenas para os ficheiros sensíveis ao tempo para que as pessoas que especificou não poderá abrir o ficheiro ou ficheiros selecionados após uma data que definir. Ainda poderá abrir o ficheiro original, mas após a meia-noite (o fuso horário atual), no dia em que é definida, as pessoas que especificou não poderão abrir o ficheiro.
 
 5. Clique em **Aplicar** e espere pela mensagem **Permissões personalizadas aplicadas**. Em seguida, clique em **Fechar**.
+
+### <a name="safely-sharing-by-email"></a>Partilha segura por e-mail
+
+Quando partilha documentos do Office por e-mail, pode anexe o documento a uma mensagem de e-mail que protege e o documento está protegido automaticamente com as mesmas restrições que se aplicam a mensagem de correio eletrónico. 
+
+No entanto, recomendamos que primeiro a proteger o documento e, em seguida, ligue-a mensagem de correio eletrónico. Proteger o e-mail, bem como se a mensagem de e-mail contiver informações confidenciais. Duas vantagens de proteger o documento antes de ligar a um e-mail:
+
+- Pode controlar e se for necessário, revogar o documento depois que tenha enviado por e-mail-lo.
+
+- Pode aplicar permissões diferentes para o documento que a mensagem de e-mail.
 
 ## <a name="using-file-explorer-to-classify-and-protect-files"></a>Utilizar o Explorador de Ficheiros para classificar e proteger ficheiros
 

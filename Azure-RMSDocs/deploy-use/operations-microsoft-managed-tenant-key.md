@@ -4,7 +4,7 @@ description: "Informações sobre as operações de ciclo de vida que são relev
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/23/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,17 +12,17 @@ ms.technology: techgroup-identity
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e4a484660aaf5a1820b04892ff006c08cceb5080
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 5aaf4393e39412a8c8b18678f4edea7a61c148dc
+ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 09/23/2017
 ---
-# <a name="microsoft-managed-tenant-key-lifecycle-operations"></a>Operações de ciclo de vida das chaves de inquilino: geridas pela Microsoft
+# <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gerida pela Microsoft: Operações de ciclo de vida de chave de inquilino
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
-Se a Microsoft gerir a sua chave de inquilino para o Azure Information Protection (a predefinição), utilize as secções seguintes para obter mais informações sobre as operações de ciclo de vida que são relevantes para esta topologia.
+Se a Microsoft gere a chave de inquilino do Azure Information Protection (predefinição), utilize as secções seguintes para obter mais informações sobre as operações de ciclo de vida que são relevantes para esta topologia.
 
 ## <a name="revoke-your-tenant-key"></a>Revogar a chave de inquilino
 Quando cancelar a sua subscrição do Azure Information Protection, o Azure Information Protection deixará de utilizar a sua chave de inquilino e não será necessário que faça mais nada.
@@ -38,6 +38,8 @@ Exemplos de quando poderá ter de recodificação para o Azure Information Prote
 
 - A sua empresa foi dividida em duas ou mais empresas. Quando efetua a recodificação da chave de inquilino, a nova empresa não terá acesso ao conteúdo novo que os seus funcionários publicam. Estes podem aceder ao conteúdo antigo se tiverem uma cópia da chave de inquilino antiga.
 
+- Pretender mover de uma topologia de gestão de chaves para outro.
+
 - Considerar que a cópia principal da sua chave de inquilino é comprometida.
 
 Para recodificação, pode selecionar uma chave diferente para se tornar a sua chave de inquilino gerida pela Microsoft, mas não é possível criar uma nova chave gerida pela Microsoft. Para criar uma nova chave, tem de alterar a topologia de chave a ser gerida pelo cliente (BYOK).
@@ -48,7 +50,7 @@ Para selecionar uma chave diferente para ser a sua chave de inquilino do Active 
 
     (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-Para alterar a topologia de chave a ser gerida pelo cliente (BYOK), consulte [implementar a sua chave de inquilino do Azure Information Protection](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key).
+Para alterar a topologia de chave a ser gerida pelo cliente (BYOK), consulte [implementar o BYOK para a sua chave de inquilino do Azure Information Protection](../plan-design/plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
 
 ## <a name="backup-and-recover-your-tenant-key"></a>Efetuar cópia de segurança e recuperar a chave de inquilino
 A Microsoft é responsável pela cópia de segurança da sua chave de inquilino e não é necessária qualquer ação da sua parte.
@@ -62,11 +64,11 @@ Pode exportar a configuração do Azure Information Protection e a chave de inqu
 
 ### <a name="step-2-wait-for-verification"></a>Passo 2: aguardar pela verificação
 
--   A Microsoft verifica se o seu pedido para libertar a chave de inquilino do Azure Information Protection é legítimo. Este processo pode demorar até três semanas.
+- A Microsoft verifica se o seu pedido para libertar a chave de inquilino do Azure Information Protection é legítimo. Este processo pode demorar até três semanas.
 
 ### <a name="step-3-receive-key-instructions-from-css"></a>Passo 3: receber instruções relativamente à chave do CSS
 
--   O Suporte ao Cliente da Microsoft (CSS) enviar-lhe-á a configuração do Azure Information Protection e a chave de inquilino encriptadas num ficheiro protegido por palavra-passe. O ficheiro tem uma extensão de nome de ficheiro **.tpd**. Para o fazer, o CSS primeiro envia-lhe (como a pessoa que iniciou a exportação) uma ferramenta por e-mail. Tem de executar a ferramenta numa linha de comandos da seguinte forma:
+- O Suporte ao Cliente da Microsoft (CSS) enviar-lhe-á a configuração do Azure Information Protection e a chave de inquilino encriptadas num ficheiro protegido por palavra-passe. O ficheiro tem uma extensão de nome de ficheiro **.tpd**. Para o fazer, o CSS primeiro envia-lhe (como a pessoa que iniciou a exportação) uma ferramenta por e-mail. Tem de executar a ferramenta numa linha de comandos da seguinte forma:
 
     ```
     AadrmTpd.exe -createkey
@@ -95,7 +97,7 @@ Se o motivo para exportar sua a chave do inquilino for o facto de já não quere
 ## <a name="respond-to-a-breach"></a>Responder a uma violação
 Nenhum sistema de segurança, por mais forte que seja, está completo sem um processo de resposta a violações. A sua chave de inquilino pode estar comprometida ou ter sido roubada. Mesmo quando este é também protegido, podem existir vulnerabilidades na tecnologia de chave de geração atual ou nos algoritmos e comprimentos de chave atuais.
 
-A Microsoft tem uma equipa dedicada para responder a incidentes de segurança nos seus produtos e serviços. Assim que existir um relatório credível de um incidente, esta equipa investiga o âmbito, a causa raiz e as resoluções. Se este incidente afetar os seus recursos, a Microsoft irá notificar os administradores de inquilinos do Azure Information Protection por e-mail através do endereço que especificou aquando da subscrição.
+A Microsoft tem uma equipa dedicada para responder a incidentes de segurança nos seus produtos e serviços. Assim que existir um relatório credível de um incidente, esta equipa investiga o âmbito, a causa raiz e as resoluções. Se este incidente afetar os recursos, a Microsoft irá notificar os administradores de inquilinos do Azure Information Protection por e-mail, utilizando o endereço de e-mail que especificou ao subscrever.
 
 Se ocorrer uma violação, a melhor ação que o utilizador ou a Microsoft pode efetuar depende do âmbito da violação; a Microsoft irá trabalhar consigo ao longo deste processo. A tabela seguinte mostra algumas situações típicas e a resposta provável, embora a resposta exata dependa de todas as informações que são reveladas durante a investigação.
 

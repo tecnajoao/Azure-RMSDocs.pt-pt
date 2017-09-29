@@ -4,7 +4,7 @@ description: "Compreender as restrições quando utilizar chaves gerida pelo cli
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/07/2017
+ms.date: 09/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3c8fb56d33c1aa745975254dc9a2134db857b352
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: afc25e638cff4bddc342ed29dee7fab304d67bd7
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="byok-pricing-and-restrictions"></a>Preços e restrições de BYOK
 
@@ -25,9 +25,9 @@ ms.lasthandoff: 08/30/2017
 
 As organizações que têm uma subscrição que inclui o Azure Information Protection podem configurar o respetivo inquilino do Azure Information Protection para utilizar uma chave gerida pelo cliente (BYOK) e [registar a sua utilização](../deploy-use/log-analyze-usage.md) sem custos adicionais. 
 
-A chave tem de ser armazenada no Azure Key Vault, o que requer uma subscrição paga (ou de avaliação) do Azure além de que tem de utilizar a camada de serviço Azure Key Vault Premium para suportar chaves protegidas por HSM. A utilização de uma chave protegida por HSM no Azure Key Vault implica um custo mensal. Para obter mais informações, veja a [página de Preços do Azure Key Vault](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
+A chave deve ser armazenada no Cofre de chaves do Azure, o que necessita de uma subscrição do Azure. Para utilizar uma chave protegida por HSM, tem de utilizar a camada de serviços do Azure Premium do Cofre de chave. A utilização de uma chave no Cofre de Chaves do Azure implica uma cobrança mensal. Para obter mais informações, veja a [página de Preços do Azure Key Vault](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
 
-Quando utilizar o Azure Key Vault para a sua chave de inquilino do Azure Information Protection, recomendamos que tenha um cofre de chaves dedicado para esta chave com uma subscrição dedicada, para garantir que só é utilizada pelo serviço Azure Rights Management. 
+Quando utiliza o Cofre de chaves do Azure para a sua chave de inquilino do Azure Information Protection, recomendamos que utilize um cofre de chaves dedicado para esta chave com uma subscrição dedicada. Esta configuração ajuda a garantir que é utilizada pelo apenas o serviço Azure Rights Management. 
 
 ## <a name="benefits-of-using-azure-key-vault"></a>Vantagens de utilizar o Azure Key Vault
 
@@ -45,38 +45,17 @@ Outras vantagens de utilizar o Azure Key Vault para a sua chave de inquilino do 
 
 Além da gestão de chaves, o Azure Key Vault proporciona aos seus administradores de segurança a mesma experiência em gestão para armazenar, aceder e gerir certificados e segredos (por exemplo, palavras-passe) de outros serviços e aplicações que utilizam encriptação. 
 
-Para mais informações sobre o Azure Key Vault, consulte [O que é o Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) e aceda ao [blogue de equipa do Azure Key Vault](https://blogs.technet.microsoft.com/kv/) para consultar as informações mais recentes e saber como os outros serviços utilizam esta tecnologia.
-
+Para mais informações sobre o Azure Key Vault, consulte [O que é o Azure Key Vault?](/azure/key-vault/key-vault-whatis) e aceda ao [blogue de equipa do Azure Key Vault](https://blogs.technet.microsoft.com/kv/) para consultar as informações mais recentes e saber como os outros serviços utilizam esta tecnologia.
 
 ## <a name="restrictions-when-using-byok"></a>Restrições de utilização de BYOK
 
-O BYOK e o registo de utilização funcionam perfeitamente com todas as aplicações integradas no serviço Azure Rights Management (Azure RMS) utilizado pelo Azure Information Protection. Isto inclui serviços na cloud como o SharePoint Online, servidores no local que executam o Exchange e SharePoint e que funcionam com o Azure RMS ao utilizar o conector RMS e aplicações de cliente como o Office 2016 e o Office 2013. Irá obter registos de utilização da chave, independentemente da aplicação que efetua os pedidos do Azure RMS.
+O BYOK e o registo de utilização funcionam perfeitamente com todas as aplicações que se integra com o serviço Azure Rights Management, que é utilizado pelo Azure Information Protection. Isto inclui serviços em nuvem como o SharePoint Online, servidores que executam o Exchange e SharePoint que utilizam o serviço Azure Rights Management utilizando o conector RMS e aplicações de cliente, tais como o Office 2016 ou Office 2013 no local a pedido. Irá obter registos de utilização de chave, independentemente da que aplicação fizer pedidos para o serviço Azure Rights Management.
 
-Existe uma exceção: atualmente, o **BYOK do Azure RMS não é compatível com o Exchange Online**:
+Se anteriormente tiver ativado a IRM do Exchange Online ao importar o domínio de publicação fidedigno (TPD) do Azure RMS, siga as instruções em [configurar novas capacidades de encriptação de mensagens do Office 365 desenvolvidas Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) para ativar as novas funcionalidades no Exchange Online, que suportam a utilizar uma BYOK do Azure Information Protection.
 
-![O BYOK não suporta o Exchange Online](../media/RMS_BYOK_noExchange.png)
+## <a name="next-steps"></a>Próximos passos
 
-Se desejar utilizar o Exchange Online, recomendamos que implemente agora o Azure RMS no modo de gestão de chaves predefinido, em que a Microsoft gera e faz a gestão da sua chave. Pode mudar para o BYOK posteriormente, por exemplo, quando o Exchange Online suportar o BYOK do Azure RMS. No entanto, se não puder aguardar, pode implementar o Azure RMS com o BYOK agora, com a funcionalidade do RMS reduzida no Exchange Online (os e-mails e anexos desprotegidos permanecem totalmente funcionais):
-
--   Os e-mails e anexos protegidos no Outlook Web Access não podem ser apresentados.
-
--   Os e-mails protegidos em dispositivos móveis que utilizem a IRM do Exchange ActiveSync não podem ser apresentados.
-
--   Não é possível realizar a desencriptação de transporte (por exemplo, para procurar software maligno) e a desencriptação do diário, por isso, os e-mails e anexos protegidos serão ignorados.
-
--   As regras de proteção de transporte e a prevenção de perda de dados (DLP) que impõem as políticas IRM não podem ser executadas, pelo que não é possível aplicar a proteção RMS com estes métodos.
-
--   A pesquisa baseada no servidor não abrange e-mails protegidos, por isso, estes serão ignorados.
-
-Quando utilizar o BYOK do Azure RMS com funcionalidade reduzida do RMS no Exchange Online, o RMS irá funcionar com os clientes de e-mail no Outlook, Windows e Mac e noutros clientes de e-mail que não utilizem a IRM do Exchange ActiveSync.
-
-Caso esteja a migrar para o Azure RMS a partir do AD RMS, pode ter importado a chave como um domínio de publicação fidedigno (TPD) para o Exchange Online (também denominado BYOK na terminologia do Exchange, que é diferente do BYOK do Azure Key Vault). Neste cenário, tem de remover o TPD do Exchange Online para evitar que os modelos e políticas entrem em conflito. Para mais informações, consulte [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx) na biblioteca de cmdlets do Exchange Online.
-
-Por vezes, a exceção do BYOK do Azure RMS para o Exchange Online não é um problema a níveis práticos. Por exemplo, as organizações que precisam do BYOK e do registo executam as suas aplicações de dados (Exchange, SharePoint, Office) no local e utilizam o Azure RMS para obter funcionalidades que não estão facilmente disponíveis no AD RMS no local (por exemplo, a colaboração com outras empresas e o acesso a partir de clientes móveis). O BYOK e o registo funcionam bem neste cenário e permitem que a organização tenha um controlo total sobre a sua subscrição do Azure RMS.
-
-## <a name="next-steps"></a>Passos seguintes
-
-Se tiver tomado a decisão de gerir a sua própria chave, aceda a [Implementar a sua chave de inquilino do Azure Rights Management](plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key).
+Se tiver tomado a decisão de gerir a sua própria chave, aceda a [Implementar a sua chave de inquilino do Azure Rights Management](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
 
 Se tiver decidido manter a configuração predefinida, em que a Microsoft gere a sua chave de inquilino, consulte a secção [Passos seguintes](plan-implement-tenant-key.md#next-steps) do artigo Planear e implementar a sua chave de inquilino do Azure Rights Management.
 

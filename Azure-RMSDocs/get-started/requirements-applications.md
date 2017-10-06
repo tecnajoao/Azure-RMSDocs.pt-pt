@@ -4,7 +4,7 @@ description: "Identifique as aplicações que utilizam APIs de RMS para suportar
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2017
+ms.date: 09/29/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d5371ad1a5fb89176e47406b6c051efd1fa33b37
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: ba8dbc42771a590e18ede4e45782741b12ef897e
+ms.sourcegitcommit: 2bca892231ca8393b88bd5da7d0890a573770a09
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/03/2017
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Aplicações que suportam a proteção de dados do Azure Rights Management
 
@@ -48,7 +48,7 @@ Informações acerca das colunas da tabela:
 |**iOS**|Office Mobile (ver e editar documentos protegidos)<br /><br />Office Online [[1]](#footnote-1)<br /><br />GigaTrust<br /><br /> TITUS Docs<br /><br />Browser da Web [[2]](#footnote-2)|Aplicação de proteção de informações do Azure (ver documentos protegidos)<br /><br /> Foxit Reader<br /><br />TITUS Docs|Aplicação de proteção de informações do Azure (ver a mensagem de e-mail protegida)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook para iPad e iPhone [[4]](#footnote-4)<br /><br />TITUS Mail <br /><br />Browser da Web [[3]](#footnote-3)|Aplicação de Azure Information Protection (proteger texto e as imagens de visualização)<br /><br />TITUS Docs: Pfile|
 |**Android**|GigaTrust App for Android<br /><br />Office Online [[1]](#footnote-1)<br /><br />Office Mobile (ver documentos protegidos) <br /><br />Browser da Web [[2]](#footnote-2)|Aplicação de proteção de informações do Azure (ver documentos protegidos) <br /><br />GigaTrust App for Android<br /><br />Foxit Reader|9Folders [[4]](#footnote-4)<br /><br />Aplicação de proteção de informações do Azure (ver os e-mails protegidos)<br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook para Android [[4]](#footnote-4)<br /><br />Samsung Email (S3 e posterior) [[4]](#footnote-4)<br /><br />TITUS Classification for Mobile <br /><br />Browser da Web [[3]](#footnote-3)|Aplicação de proteção de informações do Azure (ver texto protegido e imagens)|
 |**macOS**|Office 2011 (apenas para AD RMS)<br /><br />Office 2016 para Mac<br /><br />Office Online [[1]](#footnote-1)<br /><br />Browser da Web [[2]](#footnote-2)|Foxit Reader<br /><br />(Ver documentos protegidos) de aplicação de partilha RMS|Outlook 2011 (apenas para AD RMS)<br /><br />Outlook 2016 para Mac<br /><br />Outlook para Mac <br /><br />Browser da Web [[3]](#footnote-3)|(Visualização protegido texto, imagens, ficheiros protegidos genericamente) de aplicação de partilha RMS|
-|**Windows 10 Mobile**|Aplicações móveis do Office (ver documentação protegido com o Azure RMS) <br /><br />Browser da Web [[2]](#footnote-2)|Não suportado|Citrix WorxMail <br /><br />Correio do Outlook <br /><br />Browser da Web [[3]](#footnote-3)|Não suportado|
+|**Windows 10 Mobile**|Aplicações móveis do Office (ver documentos protegidos com o Azure RMS) <br /><br />Browser da Web [[2]](#footnote-2)|Não suportado|Citrix WorxMail <br /><br />Correio do Outlook (ver os e-mails protegidos) <br /><br />Browser da Web [[3]](#footnote-3)|Não suportado|
 |**Windows RT**|Office 2013 RT<br /><br />Office Online [[1]](#footnote-1)<br /><br />Browser da Web [[2]](#footnote-2)|Não suportado|Outlook 2013 RT<br /><br />Aplicação Correio para Windows<br /><br />Browser da Web [[3]](#footnote-3)<br /><br />Windows Mail [[4]](#footnote-4)|Siemens JT2Go: ficheiros JT|
 |**Windows Phone 8.1**|Office Mobile (apenas para AD RMS)<br /><br />Browser da Web [[2]](#footnote-2)|(Ver documentos protegidos) de aplicação de partilha RMS|Outlook Mobile [[4]](#footnote-4) <br /><br />Browser da Web [[3]](#footnote-3)|(Visualização protegido texto, imagens, ficheiros protegidos genericamente) de aplicação de partilha RMS|
 |**Blackberry 10**|Browser da Web [[2]](#footnote-2)|Não suportado|E-mail Blackberry [[4]](#footnote-4) <br /><br />Browser da Web [[3]](#footnote-3)|Não suportado|

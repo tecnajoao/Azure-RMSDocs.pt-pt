@@ -4,7 +4,7 @@ description: "Recursos para administradores que incluem informações sobre nova
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/26/2017
+ms.date: 10/03/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0b788b8a380132d830fb6593f579dca9c8ac61bc
-ms.sourcegitcommit: dd567f8395bb55e4ca174ef1d72b1a14cf7735e1
+ms.openlocfilehash: 83148b97e7aca46365aa681c4a08c2029924fdd0
+ms.sourcegitcommit: 4d730631ea8c16c7150b794722bb23921f1b2008
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informações e suporte do Azure Information Protection
 
@@ -51,7 +51,7 @@ As secções seguintes fornecem informações sobre as opções de suporte e de 
 
 Se tiver Suporte Premier, visite o [portal clientes do Suporte Premier](https://premier.microsoft.com/) para submeter incidentes, procurar soluções e obter ajuda.
 
-Pode ser elegível para **FastTrack**: pode utilizar o benefício do FastTrack Center ao adquirir pelo menos 150 licenças num plano elegível para o Azure Information Protection. O Benefício do FastTrack Center permite-lhe trabalhar com especialistas da Microsoft para avaliar, corrigir e ativar serviços elegíveis. Para obter mais informações, veja [Benefício do FastTrack Center do Azure Rights Management](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
+Pode ser elegível para **FastTrack**: pode utilizar o benefício do FastTrack Center ao adquirir pelo menos 150 licenças num plano elegível para o Azure Information Protection. O Benefício do FastTrack Center permite-lhe trabalhar com especialistas da Microsoft para avaliar, corrigir e ativar serviços elegíveis. Para obter mais informações, consulte [benefício do FastTrack Center para Enterprise Mobility + Security (EMS)](/enterprise-mobility-security/Solutions/fasttrack-center-benefit-process-for-enterprise-mobility-suite-ems).
 
 Para outros clientes, utilize os canais de suporte na tabela seguinte, consoante a sua subscrição do Azure Information Protection.
 

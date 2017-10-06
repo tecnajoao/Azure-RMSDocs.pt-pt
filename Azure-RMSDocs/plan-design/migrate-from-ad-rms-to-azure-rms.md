@@ -4,7 +4,7 @@ description: "Instruções para migrar a implementação dos Serviços de Gestã
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/11/2017
+ms.date: 10/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a4337d197e08cd75b974594fdd797c9bb383c1f9
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 6651c812c207494bc98d5a1b22e359910a94c3cc
+ms.sourcegitcommit: 7d07b82da9aca52fe9e38fa1bada144226168a6b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 10/05/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrar do AD RMS para o Azure Information Protection
 
@@ -111,8 +111,6 @@ Para confirmar o Modo Criptográfico do AD RMS:
 - Para o Windows Server 2008 R2: Verifique se o [comprimento de chave RSA é aumentado para 2048 bits para o AD RMS no Windows Server 2008 R2 e no Windows Server 2008](https://support.microsoft.com/help/2627272/rsa-key-length-is-increased-to-2048-bits-for-ad-rms-in-windows-server ) correção está instalada. Se não for, o cluster do AD RMS está em execução no modo criptográfico 1.
 
 ### <a name="migration-limitations"></a>Limitações da migração
-
--   Embora o processo de migração permita migrar a chave do certificado de licenciamento de servidor (SLC) para um módulo de segurança de hardware (HSM) para o Azure Information Protection, o Exchange Online não suporta atualmente esta configuração para o serviço Rights Management utilizado pelo Azure Information Protection. Se quiser todas as funcionalidades de IRM com o Exchange Online após a migração para o Azure Information Protection, a chave de inquilino do Azure Information Protection tem de ser [gerida pela Microsoft](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok). Em alternativa, pode executar a IRM com funcionalidade reduzida no Exchange Online quando a sua chave de inquilino do Azure Information Protection for gerida por si (BYOK). Para obter mais informações sobre a utilização do Exchange Online com o serviço Azure Rights Management, veja o [Passo 8. Configurar a integração de IRM para o Exchange Online](migrate-from-ad-rms-phase4.md#step-8-configure-irm-integration-for-exchange-online) nestas instruções de migração.
 
 -   Se tiver software e clientes que não são suportados pelo serviço Rights Management utilizado pelo Azure Information Protection, estes não poderão proteger ou consumir conteúdos protegidos pelo Azure Rights Management. Certifique-se de que verifica as secções de aplicações e clientes suportados no artigo [Requisitos para o Azure Rights Management](../get-started/requirements-azure-rms.md).
 

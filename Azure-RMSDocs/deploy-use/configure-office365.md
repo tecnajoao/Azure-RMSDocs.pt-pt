@@ -4,7 +4,7 @@ description: "Informações e instruções para administradores para configurare
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2017
+ms.date: 09/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 53d93a36d4b18c93f54349633046e5fc242e7c2b
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: 5d652f938ac7a9008e36ee75b52f2b4b7b6612d1
+ms.sourcegitcommit: 9ed2c454a7aaf965ff1cceda0447928111001488
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="office-365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Configuração para clientes e serviços online utilizar o serviço Azure Rights Management
 
@@ -31,7 +31,7 @@ Para obter mais informações sobre como o IRM do Exchange Online funciona com o
 
 Para configurar o Exchange Online utilizar o serviço Azure Rights Management, consulte [configurar novas capacidades de encriptação de mensagens do Office 365 desenvolvidas Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).
 
-Se anteriormente tiver configurado o Exchange Online utilizar o serviço Azure Rights Management ao importar o domínio de publicação fidedigno (TPD), utilize o mesmo conjunto de instruções para ativar as novas funcionalidades no Exchange Online.
+Se tiver configurado anteriormente Exchange Online para IRM ao importar o domínio de publicação fidedigno (TPD) do serviço de gestão de direitos do Azure, utilize o mesmo conjunto de instruções para ativar as novas funcionalidades no Exchange Online.
 
 Depois de ter configurado o Exchange Online utilizar o serviço Azure Rights Management, agora pode configurar funcionalidades que se aplicam a proteção de informações automaticamente, tal como [regras de transporte](https://technet.microsoft.com/library/dd302432.aspx), [(de prevenção de perda de dados Políticas DLP)](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx), e [voice mail protegido](https://technet.microsoft.com/library/dn198211%28v=exchg.150%29.aspx) (Unified Messaging).
 

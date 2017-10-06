@@ -4,7 +4,7 @@ description: "As instruções e as informações para os administradores gerirem
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 10/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 99cb5d1ca256977cb07c41bbe153e5ca248b9efd
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: c0fc9052199486653cb0d9ac3865af4e2174d30f
+ms.sourcegitcommit: 4d730631ea8c16c7150b794722bb23921f1b2008
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Utilizar o PowerShell com o cliente do Azure Information Protection
 
@@ -33,7 +33,7 @@ O módulo de AzureInformationProtection inclui todos os cmdlets do Rights Manage
 |[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)|Para uma pasta partilhada, identifique todos os ficheiros com uma etiqueta específica.|
 |[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)|Para uma pasta partilhada, inspecione o conteúdo do ficheiro e etiquete automaticamente os ficheiros sem etiqueta, de acordo com as condições que especificou.|
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|Para uma pasta partilhada, aplique uma etiqueta especificada a todos os ficheiros que não têm uma etiqueta.|
-|[Conjunto AIPAuthentication](/powershell/module/azureinformationprotection/set-aipsuthentication)|Etiqueta ficheiros de forma não interativa, por exemplo, utilizando um script que é executado numa agenda.|
+|[Conjunto AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Etiqueta ficheiros de forma não interativa, por exemplo, utilizando um script que é executado numa agenda.|
 
 
 Para obter uma lista de todos os cmdlets e o artigo de ajuda correspondente, veja [AzureInformationProtection Module (Módulo AzureInformationProtection)](/powershell/module/azureinformationprotection). Numa sessão do PowerShell, escreva `Get-Help <cmdlet name> -online` para ver a ajuda mais recente e obter outros idiomas diferentes do inglês.  
@@ -116,6 +116,7 @@ $newServicePrincipalName="<new service principal name>"
 Connect-AadrmService
 $bposTenantID=(Get-AadrmConfiguration).BPOSId
 Disconnect-AadrmService
+Connect-MsolService
 New-MsolServicePrincipal -DisplayName $servicePrincipalName
 
 # Copy the value of the generated symmetric key

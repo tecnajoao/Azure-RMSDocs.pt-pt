@@ -4,7 +4,7 @@ description: "Detalhes técnicos sobre tipos de ficheiro suportados, extensões 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 10/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9db73573eb6ccb6ab5f09d926e395a31f94404ea
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 5a3d13861e3eff0cfaf4a92eb005b8192f2b447c
+ms.sourcegitcommit: 4d730631ea8c16c7150b794722bb23921f1b2008
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="file-types-supported-by-the-azure-information-protection-client"></a>Tipos de ficheiro suportados pelo cliente do Azure Information Protection
 
@@ -177,8 +177,24 @@ Para ajudar a impedir que os utilizadores alterem os ficheiros que são crítico
     - \ProgramData 
     - \AppData (para todos os utilizadores)
 
+### <a name="files-that-cannot-be-protected-by-default"></a>Ficheiros que não podem ser protegidos por predefinição
 
-## <a name="next-steps"></a>Passos seguintes
+Qualquer ficheiro que está protegida por palavra-passe não pode ser protegido nativamente pelo cliente Azure Information Protection. Ver ficheiros PDF que são protegidos por palavra-passe com mais frequência, mas outras aplicações, tais como aplicações do Office, também oferecem esta funcionalidade.
+
+Além disso, o cliente Azure Information Protection para o Windows não é possível nativamente proteger (ou desproteger) ficheiros PDF em qualquer uma das seguintes circunstâncias:
+
+- Um ficheiro PDF que é baseado em formulários.
+
+- Ficheiros PDF protegidos que tem uma extensão de nome de ficheiro. pdf. 
+    
+    O cliente Azure Information Protection pode proteger um ficheiro PDF desprotegido e voltar a proteger um ficheiro PDF protegido que tem uma extensão de nome de ficheiro. ppdf.
+
+Como uma solução para estes ficheiros, foi genericamente protegê-los ao seguir as instruções no [alterar o nível de proteção predefinido dos ficheiros](#changing-the-default-protection-level-of-files) secção. No entanto, este método altera o nível de proteção para todos os ficheiros que tenham uma extensão de nome de ficheiro. pdf, ao nível do computador. Não é possível definir a proteção genérica para apenas os ficheiros que cumprem os critérios indicados.
+
+Se proteger estes ficheiros é importante, foi temporariamente copiá-los para outro computador para os proteger, genericamente e, em seguida, copie-os novamente novamente.
+
+
+## <a name="next-steps"></a>Próximos passos
 Agora que identificou os tipos de ficheiro suportados pelo cliente do Azure Information Protection, veja o seguinte para obter informações adicionais que poderá precisar para suportar este cliente:
 
 - [Personalizações](client-admin-guide-customizations.md)

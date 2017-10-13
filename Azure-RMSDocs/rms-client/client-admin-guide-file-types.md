@@ -4,7 +4,7 @@ description: "Detalhes técnicos sobre tipos de ficheiro suportados, extensões 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5a3d13861e3eff0cfaf4a92eb005b8192f2b447c
-ms.sourcegitcommit: 4d730631ea8c16c7150b794722bb23921f1b2008
+ms.openlocfilehash: 0bd9bbdc6b29e8cd9497712dddb7205f3d8372b1
+ms.sourcegitcommit: bcc2f69475f811245d2beaf79c67a3d8569c4821
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/11/2017
 ---
 # <a name="file-types-supported-by-the-azure-information-protection-client"></a>Tipos de ficheiro suportados pelo cliente do Azure Information Protection
 
@@ -34,7 +34,7 @@ Utilize as seguintes informações para verificar que tipos de ficheiro são sup
 
 ## <a name="file-types-supported-for-classification-only"></a>Tipos de ficheiro suportados apenas para classificação
 
-Os seguintes tipos de ficheiros suportam apenas a classificação. Existem tipos de ficheiro adicionais que suportam a classificação quando estes também estão protegidos (veja a secção [Tipos de ficheiros suportados para a classificação e proteção](#supported-file-types-for-classification-and-protection)).
+Os seguintes tipos de ficheiro podem ser classificados, mesmo quando não estão protegidas.
 
 - **Formato Adobe Portable Document Format**: .pdf
 
@@ -45,15 +45,22 @@ Os seguintes tipos de ficheiros suportam apenas a classificação. Existem tipos
 - **Microsoft Publisher**: .pub
 
 - **Microsoft Office 97, Office 2010, Office 2003**: .xls, .xlt, .doc, .dot, .ppt, .pps, .pot
+
 - **Microsoft XPS**: .xps .oxps
 
-- **Imagens**: .jpg, .jpe, .jpeg, .jif, .jfif, .jfi.png, .tif, .tiff
+- **Imagens**:. jpg, .jpe, JPEG, .jif, .jfif, .jfi. PNG, *.TIF,. tiff
 
 - **Design Review 2013 da Autodesk**: .dwfx
 
 - **Adobe Photoshop**: .psd
 
 - **Digital Negative**: .dng
+
+Tipos de ficheiro adicionais suportam classificação quando também estão protegidos. Para estes tipos de ficheiros, consulte o [tipos de ficheiro suportados para classificação e a proteção](#supported-file-types-for-classification-and-protection) secção.
+
+Por exemplo, no atual [política predefinida](../deploy-use/configure-policy-default.md), a **geral** etiqueta aplica-se a classificação e não aplicar a proteção. Pode aplicar o **geral** etiqueta para um ficheiro denominado sales.pdf mas não é possível aplicar esta etiqueta num ficheiro denominado sales.txt. 
+
+Também na política predefinida atual, o **confidencial \ todos os funcionários** aplica-se a classificação e a proteção. Pode aplicar esta etiqueta num ficheiro denominado sales.pdf e um ficheiro denominado sales.txt. Também pode aplicar proteção apenas a estes ficheiros, sem classificação.
 
 ## <a name="file-types-supported-for-protection"></a>Tipos de ficheiro suportados para proteção
 
@@ -108,13 +115,15 @@ Estes tipos de ficheiro são identificados separadamente, uma vez que, quando s�
 |.jfif|.pjfif|
 |.jt|.pjt|
 
+
 A seguinte tabela apresenta os tipos de ficheiros restantes que suportam a proteção nativa pelo cliente do Azure Information Protection e que também podem ser classificados. Irá reconhecê-los como tipos de ficheiro das aplicações do Microsoft Office. 
 
 Nestes ficheiros, a extensão de nome de ficheiro permanece igual depois de o ficheiro ser protegido pelo serviço Rights Management.
 
 |Tipos de ficheiro suportados pelo Office|Tipos de ficheiro suportados pelo Office|
 |----------------------------------|----------------------------------|
-|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm|.pptx<br /><br />.thmx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
+|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.pptx<br /><br />.thmx|.vsdm<br /><br />. vsdx<br /><br />.vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
+
 
 ### <a name="changing-the-default-protection-level-of-files"></a>Alterar o nível de proteção predefinido dos ficheiros
 Pode alterar a forma como o cliente do Azure Information Protection protege os ficheiros ao editar o registo. Por exemplo, pode forçar os ficheiros que suportam a proteção nativa a serem protegidos genericamente pelo cliente do Azure Information Protection.
@@ -181,15 +190,15 @@ Para ajudar a impedir que os utilizadores alterem os ficheiros que são crítico
 
 Qualquer ficheiro que está protegida por palavra-passe não pode ser protegido nativamente pelo cliente Azure Information Protection. Ver ficheiros PDF que são protegidos por palavra-passe com mais frequência, mas outras aplicações, tais como aplicações do Office, também oferecem esta funcionalidade.
 
-Além disso, o cliente Azure Information Protection para o Windows não é possível nativamente proteger (ou desproteger) ficheiros PDF em qualquer uma das seguintes circunstâncias:
+Além disso, o cliente Azure Information Protection para o Windows pode ver os seguintes ficheiros, mas não é possível nativamente proteger ou desproteger ficheiros PDF em qualquer uma das seguintes circunstâncias:
 
 - Um ficheiro PDF que é baseado em formulários.
 
 - Ficheiros PDF protegidos que tem uma extensão de nome de ficheiro. pdf. 
     
-    O cliente Azure Information Protection pode proteger um ficheiro PDF desprotegido e voltar a proteger um ficheiro PDF protegido que tem uma extensão de nome de ficheiro. ppdf.
+    O cliente Azure Information Protection pode proteger um ficheiro PDF desprotegido, e podem desproteger e voltar a proteger um ficheiro PDF protegido quando tem uma extensão de nome de ficheiro. ppdf.
 
-Como uma solução para estes ficheiros, foi genericamente protegê-los ao seguir as instruções no [alterar o nível de proteção predefinido dos ficheiros](#changing-the-default-protection-level-of-files) secção. No entanto, este método altera o nível de proteção para todos os ficheiros que tenham uma extensão de nome de ficheiro. pdf, ao nível do computador. Não é possível definir a proteção genérica para apenas os ficheiros que cumprem os critérios indicados.
+Como uma solução para proteger estes ficheiros, foi genericamente protegê-los ao seguir as instruções no [alterar o nível de proteção predefinido dos ficheiros](#changing-the-default-protection-level-of-files) secção. No entanto, este método altera o nível de proteção para todos os ficheiros que tenham uma extensão de nome de ficheiro. pdf, ao nível do computador. Não é possível definir a proteção genérica para apenas os ficheiros que cumprem os critérios indicados.
 
 Se proteger estes ficheiros é importante, foi temporariamente copiá-los para outro computador para os proteger, genericamente e, em seguida, copie-os novamente novamente.
 

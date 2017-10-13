@@ -10,18 +10,18 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
-ms.openlocfilehash: 33666be46b9b2fc022e541ec710a0be596f4ede0
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: 76650461c0af6e705f7ab124d31cdb598889bbc8
+ms.sourcegitcommit: bcc2f69475f811245d2beaf79c67a3d8569c4821
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 10/11/2017
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Como configurar as etiquetas e modelos para idiomas diferentes no Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection*
 
 >[!NOTE]
->Esta funcionalidade está atualmente em pré-visualização, a ser utilizado em conjunto com a atual **pré-visualização** versão do cliente Azure Information Protection que pode transferir a partir de [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+>Esta funcionalidade está atualmente em pré-visualização.
 
 Embora as etiquetas predefinidas para o Azure Information Protection suportam vários idiomas, tem de configurar o suporte para os nomes das etiquetas e descrições que especificar. Esta configuração requer que efetue o seguinte:
 

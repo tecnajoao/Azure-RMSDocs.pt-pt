@@ -4,7 +4,7 @@ description: "Conheça os direitos específicos utilizados quando protege fichei
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2017
+ms.date: 10/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a1fa8edb262f7ee35b91e069ac5556124c0bc754
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: f82eb8bc415b064793c1efd9b7b88795b1ec6ff2
+ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/10/2017
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuração de direitos de utilização para o Azure Rights Management
 
@@ -27,19 +27,19 @@ Quando definir a proteção em ficheiros ou e-mails com o serviço Azure Rights 
 Utilize este artigo para o ajudar a configurar os direitos de utilização que pretende para a aplicação que está a utilizar e para compreender como estes direitos são interpretados pelas aplicações.
 
 ## <a name="usage-rights-and-descriptions"></a>Direitos de utilização e descrições
-A tabela seguinte lista e descreve os direitos de utilização suportados pelo Rights Management e de que forma são utilizados e interpretados. São listados pelo **Nome comum**, que é, geralmente, a forma como poderá ver o direito de utilização apresentado ou referenciado, como uma versão mais amigável do valor de palavra única que é utilizado no código (o valor **Codificação na política**). 
+A tabela seguinte lista e descreve os direitos de utilização suportados pelo Rights Management e de que forma são utilizados e interpretados. São listados pelo respetivo **nome comum**, que é normalmente como poderá ver a direito de utilização apresentado ou referenciado, como uma versão mais amigável do valor de palavra única que é utilizado no código (o **codificação na política** valor). 
 
 A **Constante ou o Valor de API** é o nome do SDK para uma chamada à API MSIPC, utilizada quando escreve uma aplicação otimizada por RMS que verifica a existência de um direito de utilização ou adiciona um direito de utilização a uma política.
 
 
-|Direita|Descrição|Implementação|
+|Direito de utilização|Descrição|Implementação|
 |-------------------------------|---------------------------|-----------------|
 |Nome comum: **Editar Conteúdo, Editar** <br /><br />Codificação na política: **DOCEDIT**|Permite ao utilizador modificar, reorganizar, formatar ou filtrar o conteúdo dentro da aplicação. Não concede o direito para guardar a cópia editada.|Direitos personalizados do Office: como parte das opções **Alterar** e **Controlo Total**. <br /><br />Nome no portal clássico do Azure: **Editar Conteúdo**<br /><br />Nome no portal do Azure: incluído em **Editar e guardar**<br /><br />Nome em modelos do AD RMS: **Editar** <br /><br />Constante ou valor de API: não aplicável.|
 |Nome comum: **Guardar** <br /><br />Codificação na política: **EDIT**|Permite ao utilizador guardar o documento na sua localização atual.<br /><br />Nas aplicações do Office, este direito também permite que o utilizador modifique o documento.|Direitos personalizados do Office: como parte das opções **Alterar** e **Controlo Total**. <br /><br />Nome no portal clássico do Azure: **Guardar Ficheiro**<br /><br />Nome no portal do Azure: incluído em **Editar e guardar**<br /><br />Nome em modelos do AD RMS: **Guardar** <br /><br />Valor ou constante de API: `IPC_GENERIC_WRITE L"EDIT"`|
 |Nome comum: **Comentário** <br /><br />Codificação na política: **COMMENT**|Ativa a opção para adicionar anotações ou comentários ao conteúdo.<br /><br />Este direito está disponível no SDK, disponível como uma política ad hoc no módulo AzureInformationProtection e Proteção RMS para o Windows PowerShell e foi implementado em certas aplicações de fornecedores de software. No entanto, não é amplamente utilizado e atualmente não é suportado por aplicações do Office.|Direitos personalizados do Office: não implementados. <br /><br />Nome no portal clássico do Azure: não implementado.<br /><br />Nome no portal do Azure: não implementado.<br /><br />Nome nos modelos do AD RMS: não implementado. <br /><br />Valor ou constante de API: `IPC_GENERIC_COMMENT L"COMMENT`|
 |Nome comum: **Guardar Como, Exportar** <br /><br />Codificação na política: **EXPORT**|Ativa a opção para guardar o conteúdo com um nome de ficheiro diferente (Guardar Como). Para documentos do Office e o cliente do Azure Information Protection, pode guardar o ficheiro sem proteção.<br /><br />Este direito também permite que o utilizador efetue outras opções de exportação em aplicações, tais como **Enviar para o OneNote**.<br /><br /> Nota: se este direito não for concedido, as aplicações do Office permitirão que os utilizadores guardem um documento com um novo nome se o formato de ficheiro selecionado suportar nativamente a proteção do Rights Management.|Direitos personalizados do Office: como parte das opções **Alterar** e **Controlo Total**. <br /><br />Nome no portal clássico do Azure: **Exportar Conteúdo (Guardar Como)** <br /><br />Nome no portal do Azure: incluído em **Controlo total**<br /><br />Nome em modelos do AD RMS: **Exportar (Guardar Como)** <br /><br />Valor ou constante de API: `IPC_GENERIC_EXPORT L"EXPORT"`|
 |Nome comum: **Reencaminhar** <br /><br />Codificação na política: **FORWARD**|Ativa a opção para reencaminhar uma mensagem de e-mail e para adicionar destinatários às linhas **Para** e **Cc**. Este direito não se aplica a documentos; apenas a mensagens de e-mail.<br /><br />Não permite que o reencaminhador conceda direitos a outros utilizadores como parte da ação de reencaminhar. <br /><br />Quando conceder este direito, também concede o direito **Editar Conteúdo, Editar** (nome comum) para garantir que o e-mail original é enviado como parte da mensagem de e-mail reencaminhada e não como anexo. Este direito também é necessário quando envia um e-mail para outra organização que utilize o cliente do Outlook ou Outlook Web App. Ou, para os utilizadores na sua organização que estão excluídos utilizando o Azure Rights Management service porque que implementou [controlos de inclusão](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy).|Direitos personalizados do Office: negados ao utilizar a política padrão **Não Reencaminhar**.<br /><br />Nome no portal clássico do Azure: **Reencaminhar**<br /><br />Nome no portal do Azure: **Reencaminhar**<br /><br />Nome em modelos do AD RMS: **Reencaminhar** <br /><br />Valor ou constante de API: `IPC_EMAIL_FORWARD L"FORWARD"`|
-|Nome comum: **Controlo Total** <br /><br />Codificação na política: **OWNER**|Concede todos os direitos ao documento e podem ser efetuadas todas as ações disponíveis.<br /><br />Inclui a capacidade para remover a proteção e voltar a proteger um documento. <br /><br />Tenha em atenção que este direito de utilização não é igual ao [proprietário do Rights Management](#rights-management-issuer-and-rights-management-owner).|Direitos personalizados do Office: como a opção personalizada **Controlo Total**.<br /><br />Nome no portal clássico do Azure: **Controlo Total**<br /><br />Nome no portal do Azure: **Controlo total**<br /><br />Nome em modelos do AD RMS: **Controlo Total** <br /><br />Valor ou constante de API: `IPC_GENERIC_ALL L"OWNER"`|
+|Nome comum: **Controlo Total** <br /><br />Codificação na política: **OWNER**|Concede todos os direitos ao documento e podem ser efetuadas todas as ações disponíveis.<br /><br />Inclui a capacidade de remover a proteção e voltar a proteger um documento. <br /><br />Tenha em atenção que este direito de utilização não é igual ao [proprietário do Rights Management](#rights-management-issuer-and-rights-management-owner).|Direitos personalizados do Office: como a opção personalizada **Controlo Total**.<br /><br />Nome no portal clássico do Azure: **Controlo Total**<br /><br />Nome no portal do Azure: **Controlo total**<br /><br />Nome em modelos do AD RMS: **Controlo Total** <br /><br />Valor ou constante de API: `IPC_GENERIC_ALL L"OWNER"`|
 |Nome comum: **Imprimir** <br /><br />Codificação na política: **PRINT**|Ativa as opções para imprimir o conteúdo.|Direitos personalizados do Office: como a opção **Imprimir Conteúdo** em permissões personalizadas. Não é uma definição por destinatário.<br /><br />Nome no portal clássico do Azure: **Imprimir**<br /><br />Nome no portal do Azure: **Imprimir**<br /><br />Nome em modelos do AD RMS: **Imprimir** <br /><br />Valor ou constante de API: `IPC_GENERIC_PRINT L"PRINT"`|
 |Nome comum: **Responder** <br /><br />Codificação na política: **REPLY**|Ativa a opção **Responder** num cliente de e-mail, sem permitir alterações nas linhas **Para** ou **Cc**.<br /><br />Quando conceder este direito, também concede o direito **Editar Conteúdo, Editar** (nome comum) para garantir que o e-mail original é enviado como parte da mensagem de e-mail reencaminhada e não como anexo. Este direito também é necessário quando envia um e-mail para outra organização que utilize o cliente do Outlook ou Outlook Web App. Ou, para os utilizadores na sua organização que estão excluídos utilizando o Azure Rights Management service porque que implementou [controlos de inclusão](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy).|Direitos personalizados do Office: não aplicável.<br /><br />Nome no portal clássico do Azure: **Responder**<br /><br />Nome em modelos do AD RMS: **Responder** <br /><br />Valor ou constante de API: `IPC_EMAIL_REPLY`|
 |Nome comum: **Responder a Todos** <br /><br />Codificação na política: **REPLYALL**|Ativa a opção **Responder a Todos** num cliente de e-mail, mas não permite que o utilizador adicione destinatários às linhas **Para** ou **Cc**.<br /><br />Quando conceder este direito, também concede o direito **Editar Conteúdo, Editar** (nome comum) para garantir que o e-mail original é enviado como parte da mensagem de e-mail reencaminhada e não como anexo. Este direito também é necessário quando envia um e-mail para outra organização que utilize o cliente do Outlook ou Outlook Web App. Ou, para os utilizadores na sua organização que estão excluídos utilizando o Azure Rights Management service porque que implementou [controlos de inclusão](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy).|Direitos personalizados do Office: não aplicável.<br /><br />Nome no portal clássico do Azure: **Responder a Todos**<br /><br />Nome no portal do Azure: **Responder a todos**<br /><br />Nome em modelos do AD RMS: **Responder a Todos** <br /><br />Valor ou constante de API: `IPC_EMAIL_REPLYALL L"REPLYALL"`|
@@ -51,9 +51,9 @@ A **Constante ou o Valor de API** é o nome do SDK para uma chamada à API MSIPC
 
 Algumas aplicações agrupam os direitos de utilização em níveis de permissões, para facilitar a seleção de direitos de utilização que são normalmente utilizados em conjunto. Estes níveis de permissões ajudam a abstrair um nível de complexidade dos utilizadores, para que possam escolher opções baseadas em funções.  Por exemplo, **Revisor** e **Coautor**. Apesar de estas opções mostrarem frequentemente aos utilizadores um resumo dos direitos, podem não incluir todos os direitos listados na tabela anterior.
 
-Utilize a tabela seguinte para obter uma lista destes níveis de permissões e uma lista completa dos direitos que contêm.
+Utilize a tabela seguinte para obter uma lista destes níveis de permissões e uma lista completa dos direitos de utilização que contêm. Os direitos de utilização são listados pelo respetivo [nome comum](#usage-rights-and-descriptions).
 
-|Nível de Permissões|Aplicações|Direitos incluídos (nome comum)|
+|Nível de permissões|Aplicações|Direitos de utilização incluídos|
 |---------------------|----------------|---------------------------------|
 |Visualizador|Portal clássico do Azure <br /><br />Portal do Azure<br /><br /> Aplicação de partilha Rights Management para Windows<br /><br />Cliente do Azure Information Protection para Windows|Ver, Abrir, Ler; Responder; Responder a Todos; Permitir Macros [[1]](#footnote-1)<br /><br />Nota: para e-mails utilize Revisor, em vez deste nível de permissão, para garantir que a resposta é recebida como uma mensagem de e-mail e não como um anexo. O Revisor também é necessário quando envia um e-mail para outra organização que utilize o cliente do Outlook ou Outlook Web App. Ou, para os utilizadores na sua organização que estão excluídos utilizando o Azure Rights Management service porque que implementou [controlos de inclusão](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy).|
 |Revisor|Portal clássico do Azure <br /><br />Portal do Azure<br /><br />Aplicação de partilha Rights Management para Windows<br /><br />Cliente do Azure Information Protection para Windows|Ver, Abrir, Ler; Guardar; Editar Conteúdo, Editar; Responder: Responder a Todos [[2]](#footnote-2); Reencaminhar [[2]](#footnote-2); Permitir Macros [[1]](#footnote-1)|
@@ -74,12 +74,14 @@ Não incluído no cliente do Azure Information Protection para Windows. Neste cl
 
 
 ## <a name="rights-included-in-the-default-templates"></a>Direitos incluídos nos modelos predefinidos
-Os direitos incluídos com os modelos predefinidos são os seguintes:
+A tabela seguinte lista os direitos de utilização que estão incluídos quando são criados os modelos predefinidos. Os direitos de utilização são listados pelo respetivo [nome comum](#usage-rights-and-descriptions).
 
-|Nome a Apresentar|Direitos incluídos (nome comum)|
-|----------------|---------------------------------|
-|&lt;*nome da organização*&gt; *– Apenas Visualização Confidencial* <br /><br />ou<br /><br /> *Altamente Confidencial\Todos os Funcionários*|Ver, Abrir, Ler|
-|&lt;*nome da organização*&gt; *– Confidencial* <br /><br />ou <br /><br />*Confidencial\Todos os Funcionários*|Ver, Abrir, Ler; Guardar; Editar Conteúdos, Editar; Ver Direitos; Permitir Macros; Reencaminhar; Responder; Responder a Todos|
+Estes modelos predefinidos são criados quando foi comprada a sua subscrição e os nomes e os direitos de utilização podem ser [alterado](configure-policy-templates.md) no portal do Azure. 
+
+|Nome a apresentar do modelo|Direitos de utilização 6 de Outubro de 2017 até à data atual|Direitos de utilização antes de 6 de Outubro de 2017|
+|----------------|--------------------|----------|
+|\<*nome da organização >-apenas visualização confidencial* <br /><br />ou<br /><br /> *Altamente Confidencial\Todos os Funcionários*|Ver, abrir, ler; Copiem; Permitir Macros; Impressão; Reencaminhar; Responder a; Responder a todos; Guardar; Editar conteúdo, editar|Ver, Abrir, Ler|
+|\<*nome da organização > – confidencial* <br /><br />ou <br /><br />*Confidencial\Todos os Funcionários*|Ver, abrir, ler; Guardar como, exportar; Copiem; Permitir Macros; Impressão; Reencaminhar; Responder a; Responder a todos; Guardar; Editar conteúdo, editar; Controlo total|Ver, abrir, ler; Guardar como, exportar; Editar conteúdo, editar; Permitir Macros; Reencaminhar; Responder a; Responder a todos|
 
 ## <a name="do-not-forward-option-for-emails"></a>Opção Não Reencaminhar para e-mails
 
@@ -122,11 +124,30 @@ Nestes cenários, o emissor do Rights Management pode atribuir o proprietário d
 
 Quando o emissor do Rights Management efetua a proteção em nome dos utilizadores, a atribuição do proprietário do Rights Management garante que o documento original ou o proprietário do e-mail tem o mesmo nível de controlo sob os seus conteúdos protegidos, como se tivessem sido os próprios a iniciar a proteção. 
 
-Por exemplo, o utilizador que criou o documento pode imprimi-lo, apesar de agora estar protegido com um modelo que não inclui o direito de utilização Imprimir. O mesmo utilizador pode sempre aceder ao seu documento, independentemente da definição de acesso offline ou da data de expiração que possa ter sido configurada nesse modelo. Além disso, como o proprietário do Rights Management tem o direito Controlo Total, este utilizador também pode proteger novamente o documento para conceder acesso a utilizadores adicionais (nessa altura o utilizador, para além de proprietário, também passa a ser emissor do Rights Management) e até remover a proteção. No entanto, apenas o emissor do Rights Management pode controlar e revogar um documento.
+Por exemplo, o utilizador que criou o documento pode imprimi-lo, apesar de agora estar protegido com um modelo que não inclui o direito de utilização Imprimir. O mesmo utilizador pode sempre aceder ao seu documento, independentemente da definição de acesso offline ou da data de expiração que possa ter sido configurada nesse modelo. Além disso, porque o proprietário de Rights Management tem o direito de utilização de controlo total, este utilizador pode também voltar a proteger o documento para conceder a utilizadores adicionais acesso (ponto em que o utilizador, em seguida, torna-se o emissor de Rights Management, bem como o proprietário de Rights Management), e este utilizador mesmo pode remover a proteção. No entanto, apenas o emissor do Rights Management pode controlar e revogar um documento.
 
 O proprietário do Rights Management de um documento ou e-mail é registado no campo **owner-email** nos [registos de utilização](log-analyze-usage.md#how-to-interpret-your-azure-rights-management-usage-logs).
 
 Tenha em atenção que o proprietário do Rights Management é independente do Proprietário do sistema de ficheiros do Windows. Normalmente são iguais, mas podem ser diferentes, mesmo se não utilizar SDKs ou o PowerShell.
+
+## <a name="rights-management-use-license"></a>Licença de utilização do Rights Management
+
+Quando um utilizador abre um documento ou e-mail que tenha sido protegido pelo Azure Rights Management, uma licença de utilização do Rights Management para esse conteúdo é concedida ao utilizador. Esta licença de utilização é um certificado que contém os direitos de utilização do utilizador para o documento ou mensagem de correio eletrónico e a chave de encriptação que foi utilizada para encriptar o conteúdo. A licença de utilização também contém uma data de expiração se esta tiver sido definida e quanto a licença de utilização do é válida.
+
+Durante a duração da licença de utilização, o utilizador não autenticado novamente ou não está autorizado novamente. Isto permite ao utilizador continuar a abrir o documento protegido ou o e-mail sem uma ligação à Internet. Quando o período de validade da licença de utilização expira, da próxima vez que o utilizador acede ao documento protegido ou e-mail, o utilizador tem de ser novamente autenticado e autorizado novamente. 
+
+Quando as mensagens de e-mail e documentos estão protegidas através da utilização de uma etiqueta ou um modelo que especifica as definições de proteção, pode alterar estas definições na etiqueta ou modelo sem ter de voltar a proteger o conteúdo. Se o utilizador acedeu já o conteúdo, as alterações entram em vigor após a respetiva licença de utilização expirou. No entanto, quando os utilizadores aplicar permissões personalizadas (também conhecido como uma política de direitos do ad-hoc) e estas permissões precisam de alterar depois do documento ou correio eletrónico está protegido, esse conteúdo deve ser protegido novamente com as permissões de novo. Permissões personalizadas para uma mensagem de e-mail são implementadas com a opção não reencaminhar.
+
+A predefinição utilizar validade da licença período para um inquilino é 30 dias e pode configurar este valor utilizando o cmdlet do PowerShell, [conjunto AadrmMaxUseLicenseValidityTime](/powershell/module/aadrm/set-aadrmmaxuselicensevaliditytime). Pode configurar uma definição mais restritiva para quando a proteção é aplicada ao utilizar um modelo ou etiqueta:
+
+- Quando configurar uma etiqueta ou um modelo no portal do Azure, o período de validade da licença de utilização tem o valor da **permite a definição de acesso offline**. 
+    
+    Para obter mais informações e orientações para configurar esta definição no portal do Azure, consulte a tabela no passo 9 da [como configurar uma etiqueta para a proteção Rights Management](configure-policy-protection.md).
+
+- Quando configurar um modelo com o PowerShell, o período de validade da licença de utilização tem o valor da *LicenseValidityDuration* parâmetro o [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) e [ Adicionar-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate) cmdlets.
+    
+    Para obter mais informações e orientações para configurar esta definição utilizando o PowerShell, consulte a ajuda para cada cmdlet.
+
 
 ## <a name="see-also"></a>Consulte Também
 [Configurar e gerir modelos do Azure Information Protection](configure-policy-templates.md)

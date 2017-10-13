@@ -4,7 +4,7 @@ description: "Veja as novidades ou alterações ao lançamento do cliente do Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2b6e6e4d824c8f76be605d9e728c0405aba960e5
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
-ms.translationtype: MT
+ms.openlocfilehash: ccd6d0cec6a71527fad0303369baad90dd733958
+ms.sourcegitcommit: bcc2f69475f811245d2beaf79c67a3d8569c4821
+ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 10/11/2017
 ---
 # <a name="azure-information-protection-client-version-release-history"></a>Cliente do Azure Information Protection: histórico de lançamento de versões
 
@@ -47,6 +47,8 @@ Esta versão inclui o MSIPC versão 1.0.3219.0619 do cliente RMS.
 
 - As etiquetas são apresentadas a partir do **proteger** botão no friso Office, para além de apresentação na barra de Information Protection. 
 
+- Proteção nativa para os seguintes tipos de ficheiro do Visio: .vsdm. vsdx, .vssm, .vssx, .vstm, .vstx
+
 - Suporte para configurações de cliente avançado que configurar no portal do Azure. Estas configurações incluem o seguinte:
     
     - [Ocultar o botão não reencaminhar no Outlook](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook)
@@ -59,7 +61,7 @@ Esta versão inclui o MSIPC versão 1.0.3219.0619 do cliente RMS.
 
 - Para o PowerShell, suporte para ficheiros de etiqueta forma não interativa utilizando os novos cmdlets do PowerShell, [conjunto AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) e [limpar AIPAuthentication](/powershell/module/azureinformationprotection/clear-aipauthentication). Para obter mais informações como utilizar estes cmdlets, consulte o [PowerShell secção](../rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) do Guia do administrador.
 
-- Para os cmdlets do PowerShell, [conjunto AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) e [conjunto AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), existem novos parâmetros: **proprietário** e **PreserveFileDetails **. Estes parâmetros permitem-lhe especificar um endereço de e-mail para a propriedade personalizada de proprietário e deixe a data inalterada para documentos que a etiqueta.
+- Para os cmdlets do PowerShell, [conjunto AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) e [conjunto AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), existem novos parâmetros: **proprietário** e **PreserveFileDetails** . Estes parâmetros permitem-lhe especificar um endereço de e-mail para a propriedade personalizada de proprietário e deixe a data inalterada para documentos que a etiqueta.
 
 **Correções**:
 

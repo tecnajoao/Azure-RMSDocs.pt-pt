@@ -4,7 +4,7 @@ description: "Informações sobre as operações de ciclo de vida que são relev
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 10/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2f3ae7a0558cf209f3ec710a5114dbbc9a0dda9d
-ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
+ms.openlocfilehash: 47f2e19e7eed107a44ac1bed744015c878876e9f
+ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/23/2017
+ms.lasthandoff: 10/10/2017
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Gerida pelo cliente: Operações de ciclo de vida de chave de inquilino
 
@@ -57,9 +57,11 @@ Para obter mais informações sobre cada um destes passos:
 - A recodificar, alterar para uma chave pela Microsoft gere por si, consulte o [recodificar a chave de inquilino](operations-microsoft-managed-tenant-key.md#rekey-your-tenant-key) secção para operações de gerida pela Microsoft.
 
 ## <a name="backup-and-recover-your-tenant-key"></a>Efetuar cópia de segurança e recuperar a chave de inquilino
-É responsável pela cópia de segurança da sua chave de inquilino. Se gerou a chave de inquilino num HSM da Thales, para efetuar a cópia de segurança da chave, basta efetuar uma cópia de segurança do Ficheiro de Chave com Token, do ficheiro de Universo e dos Cartões de Administrador.
+Porque está a gerir a chave de inquilino, o utilizador é responsável pela cópia de segurança da chave que utiliza o Azure Information Protection. 
 
-Porque transferiu a chave ao seguir os procedimentos [implementar o BYOK para a sua chave de inquilino do Azure Information Protection](../plan-design/plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key), Cofre de chaves irá manter o ficheiro de chave com token, para proteger contra falhas de quaisquer nós de serviço. Este ficheiro está vinculado ao mundo da segurança da instância ou região do Azure específica. No entanto, não considere que esta seja uma cópia de segurança completa. Por exemplo, se alguma vez precisar de uma cópia de texto simples da sua chave para utilizar fora de um HSM da Thales, Cofre de chaves do Azure não é possível recuperá-la, porque tem apenas uma cópia não recuperável.
+Se gerou a chave de inquilino no local, num HSM da Thales: fazer uma cópia de segurança da chave, criar cópias de segurança do ficheiro de chave tokenized, o ficheiro de universo e os cartões de administrador. Quando transferir a chave ao Cofre de chaves do Azure, o serviço guarda o ficheiro de chave tokenized, para proteger contra falhas de quaisquer nós de serviço. Este ficheiro está vinculado ao mundo da segurança da instância ou região do Azure específica. No entanto, não considere que esta seja uma cópia de segurança completa. Por exemplo, se alguma vez precisar de uma cópia de texto simples da sua chave para utilizar fora de um HSM da Thales, Cofre de chaves do Azure não é possível recuperá-la, porque tem apenas uma cópia não recuperável.
+
+O Cofre de chaves do Azure tem um [cmdlet de cópia de segurança](/powershell/module/azurerm.keyvault/Backup-AzureKeyVaultKey) que pode utilizar para uma chave de cópia de segurança, transferindo-a e armazená-la num ficheiro. Porque o conteúdo transferido é encriptado, não pode ser utilizado fora do Cofre de chaves do Azure. 
 
 ## <a name="export-your-tenant-key"></a>Exportar a chave de inquilino
 Se utiliza o BYOK, não pode exportar a chave de inquilino do Azure Key Vault ou do Azure Information Protection. A cópia no Azure Key Vault não é recuperável. 

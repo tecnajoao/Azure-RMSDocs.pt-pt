@@ -4,7 +4,7 @@ description: "Fase 5 da migração do AD RMS para o Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 11775c64cbd5abd7c10a145a2d48f335db2d5b69
-ms.sourcegitcommit: 8251e4db274519a2eb8033d3135a22c27130bd30
+ms.openlocfilehash: db6cb1c6327808616ee98b9e5b14f2a92a590bff
+ms.sourcegitcommit: 45c23b3b353ad0e438292cb1cd8d1b13061620e1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/25/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Fase 5 da migração – tarefas de pós-migração
 
@@ -48,11 +48,35 @@ Depois de ter desaprovisionada seus servidores AD RMS, pode querer aproveitar a 
 >[!IMPORTANT]
 > No final desta migração, o seu cluster do AD RMS não pode ser utilizado com o Azure Information Protection e a opção "tenha a sua própria chave" (HYOK). Se optar por utilizar o HYOK para uma etiqueta do Azure Information Protection, por causa dos redirecionamentos que estão em vigor, o cluster do AD RMS que utilizar tem de ter URLs de licenciamento diferentes do que tem nos clusters que migrou.
 
-## <a name="step-11-remove-onboarding-controls"></a>Passo 11: remover os controlos de inclusão
+## <a name="step-11-reconfigure-mobile-device-clients-and-mac-computers-and-remove-onboarding-controls"></a>Passo 11: Reconfigurar clientes de dispositivos móveis e computadores Mac e remover controlos de inclusão
 
-Quando todos os clientes existentes tiverem migrado para o Azure Information Protection, não precisa de continuar a utilizar controlos de inclusão e manter o grupo **AIPMigrated** que criou para o processo de migração. 
+Para clientes de dispositivos móveis e computadores Mac: remover os registos SRV de DNS que criou quando implementou o [extensão de dispositivo móvel do AD RMS](http://technet.microsoft.com/library/dn673574.aspx).
 
-Remova primeiro os controlos de inclusão e, em seguida, pode eliminar o **AIPMigrated** grupo e as tarefas de implementação de software que criou para implementar os redirecionamentos.
+Quando estas alterações DNS tem propogated, estes clientes irão detetar automaticamente e começar a utilizar o serviço Azure Rights Management. No entanto, os computadores Mac que executem Office Mac cache as informações do AD RMS. Para estes computadores, este processo pode demorar até 30 dias. 
+
+Para forçar computadores Mac para executar o processo de deteção imediatamente, na keychain, procure "adal" e elimine todas as entradas ADAL. Em seguida, execute os seguintes comandos nestes computadores:
+
+````
+
+rm -r ~/Library/Cache/MSRightsManagement
+
+rm -r ~/Library/Caches/com.microsoft.RMS-XPCService
+
+rm -r ~/Library/Caches/Microsoft\ Rights\ Management\ Services
+
+rm -r ~/Library/Containers/com.microsoft.RMS-XPCService
+
+rm -r ~/Library/Containers/com.microsoft.RMSTestApp
+
+rm ~/Library/Group\ Containers/UBF8T346G9.Office/DRM.plist
+
+killall cfprefsd
+
+````
+
+Quando todos os seus computadores Windows existentes tem migrado para o Azure Information Protection, não há nenhuma razão para continuar a utilizar controlos de inclusão e manter o **AIPMigrated** grupo que criou para o processo de migração. 
+
+Remova primeiro os controlos de inclusão e, em seguida, pode eliminar o **AIPMigrated** grupo e qualquer método de implementação de software que criou para implementar os scripts de migração.
 
 Para remover os controlos de inclusão:
 
@@ -63,6 +87,8 @@ Para remover os controlos de inclusão:
 2. Execute o seguinte comando e introduza **Y** para confirmar:
 
         Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
+    
+    Tenha em atenção que este comando remove quaisquer imposição de licença para o serviço de proteção do Azure Rights Management, para que todos os computadores possam proteger documentos e e-mails.
 
 3. Confirme que os controlos de inclusão já não estão definidos:
 

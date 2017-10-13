@@ -4,7 +4,7 @@ description: "Instruções para migrar a implementação dos Serviços de Gestã
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6651c812c207494bc98d5a1b22e359910a94c3cc
-ms.sourcegitcommit: 7d07b82da9aca52fe9e38fa1bada144226168a6b
+ms.openlocfilehash: 910d131ece4bae0cf5ef2685291431a3dc319264
+ms.sourcegitcommit: 45c23b3b353ad0e438292cb1cd8d1b13061620e1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/05/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrar do AD RMS para o Azure Information Protection
 
@@ -181,12 +181,9 @@ Os passos de migração podem ser divididos em cinco fases que podem ser efetuad
 
 [**FASE 3: CONFIGURAÇÃO DO LADO DO CLIENTE**](migrate-from-ad-rms-phase3.md)
 
-- **Passo 7: reconfigurar os clientes para utilizarem o Azure Information Protection**
+- **Passo 7: Reconfigurar computadores Windows para utilizar o Azure Information Protection**
 
     Os computadores Windows existentes têm de ser reconfigurados para utilizar o serviço Azure Rights Management em vez do AD RMS. Este passo aplica-se aos computadores na sua organização e aos computadores nas organizações parceiras, caso tenha colaborado com as mesmas enquanto executou o AD RMS.
-
-    Além disso, se tiver implementado a [extensão de dispositivo móvel](http://technet.microsoft.com/library/dn673574.aspx) para suportar dispositivos móveis, tais como iPads e telemóveis iOS, tablets e telemóveis Android, telemóveis Windows e computadores Mac, tem de remover os registos SRV no DNS que redirecionou estes clientes para utilizarem o AD RMS.
-
 
 [**FASE 4: CONFIGURAÇÃO DE SERVIÇOS DE SUPORTE**](migrate-from-ad-rms-phase4.md)
 
@@ -203,13 +200,15 @@ Os passos de migração podem ser divididos em cinco fases que podem ser efetuad
 
 - **Passo 10: desaprovisionar o AD RMS**
 
-    Quando tiver confirmado que todos os clientes estão a utilizar o serviço Azure Rights Management e já não estão a aceder aos seus servidores do AD RMS, pode desaprovisionar a sua implementação do AD RMS.
+    Quando tiver confirmado que todos os computadores Windows estiver a utilizar o serviço Azure Rights Management e já não acedem aos seus servidores AD RMS, pode desaprovisionar a implementação do AD RMS.
 
-- **Passo 11: remover os controlos de inclusão**
+- **Passo 11: Reconfigurar clientes de dispositivos móveis e computadores Mac e remover controlos de inclusão**
 
+    Se tiver implementado o [extensão do dispositivo móvel](http://technet.microsoft.com/library/dn673574.aspx) para suportar dispositivos móveis, como telemóveis de iOS e iPads, telemóveis Android e tablets, Windows phone e computadores Mac, tem de remover os registos SRV no DNS que redirecionou estes clientes Para utilizar o AD RMS. 
+    
     Os controlos de inclusão que configurou durante a fase de preparação já não são necessários.
 
-- **Passo 12: recodificar a sua chave de inquilino do Azure Information Protection**
+- **Passo 12: Recodificar a chave de inquilino do Azure Information Protection**
 
     Este passo é recomendado se não estivesse a executar no modo criptográfico 2 antes da migração.
 

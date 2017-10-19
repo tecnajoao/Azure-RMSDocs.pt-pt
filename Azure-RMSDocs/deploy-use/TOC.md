@@ -28,6 +28,7 @@
 #### [Referência do PowerShell](configure-templates-with-powershell.md)
 #### [Migrar a partir do portal clássico do Azure](migrate-portal.md)
 ### [Configurar idiomas](configure-policy-languages.md)
+## [Implementar o scanner do Azure Information Protection](deploy-aip-scanner.md)
 ## [Implementar o conector RMS](deploy-rms-connector.md)
 ### [Instalar e configurar o conector](install-configure-rms-connector.md)
 ### [Configurar servidores](configure-servers-rms-connector.md)

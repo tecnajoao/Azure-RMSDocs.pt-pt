@@ -4,7 +4,7 @@ description: "Informações sobre o registo de utilização e ficheiros do clien
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d1802fbd3c659b154d585224a3f7b412b8995e5b
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 64e6e17beb134fca1e51b35b39ff9f130c88ecbb
+ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="azure-information-protection-client-files-and-client-usage-logging"></a>Registo de utilização do cliente e de ficheiros do cliente do Azure Information Protection
+# <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guia do administrador: Ficheiros do cliente Azure Information Protection e registo de utilização do cliente
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Depois de instalar o cliente do Azure Information Protection, poderá precisar de saber onde estão localizados os ficheiros e monitorizar a forma como o cliente está a ser utilizado.
 
@@ -76,9 +76,9 @@ O cliente regista a atividade do utilizador no registo de eventos locais **Aplic
     
     - Sistema (para iniciar sessão e transferir a política)
     
-    - DefaultAutomatic
+    - Predefinido
         
-        Isto **DefaultAutomatic** acção de origem é para o cliente de pré-visualização só e refere-se a etiqueta definida utilizando o **selecione a etiqueta predefinida** na política do Azure Information Protection.
+        Isto **predefinido** acção de origem é para o cliente de pré-visualização só e refere-se a etiqueta definida utilizando o **selecione a etiqueta predefinida** na política do Azure Information Protection.
 
     
 - Etiqueta antes e depois da ação 

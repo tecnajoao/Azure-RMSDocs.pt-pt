@@ -4,17 +4,17 @@ description: "Pode proteger os seus documentos e e-mails mais confidenciais ao c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/21/2017
+ms.date: 10/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: dccd5f86dd75cf053336426df161e927b4cd9e5b
-ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
+ms.openlocfilehash: f6661668a73b708f292261dde70181bd22bdf332
+ms.sourcegitcommit: 8c02aa2c6abc301a52a7f8ad9ee9d0ecd0b810f7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/30/2017
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Como configurar uma etiqueta para a proteção do Rights Management
 
@@ -79,27 +79,19 @@ Exchange não tem de ser configurado para gestão de direitos de informação (I
     
 7. Selecione uma das seguintes opções:
     
-    - **Selecione um modelo predefinido**: para utilizar um dos modelos predefinidos ou um modelo personalizado que configurou. Este modelo tem de ser publicado (não arquivado) e não deve ser ligado já a outra etiqueta. Quando seleciona esta opção, pode utilizar o **Editar modelo** botão para [converter o modelo para uma etiqueta](configure-policy-templates.md#to-convert-templates-to-labels).
-    
-    Sugestão: Se utilizar o **Editar modelo** botão, poderá ser útil para referência [tarefas que utilizou para fazer com o portal clássico do Azure](migrate-portal.md).
-    
     - **Definir permissões**: definir as definições de proteção novo neste portal.
     
-    - **Definido de utilizador do conjunto de permissões (pré-visualização)**: para permitir que os utilizadores que especifique que devem ser concedidas permissões e quais são essas permissões. Em seguida, pode refinar esta opção e escolha apenas Outlook (predefinição), ou Word, Excel, PowerPoint e Explorador de ficheiros. 
+    - **Definido de utilizador do conjunto de permissões (pré-visualização)**: para permitir que os utilizadores que especifique que devem ser concedidas permissões e quais são essas permissões. Em seguida, pode refinar esta opção e escolha Outlook apenas, ou Word, Excel, PowerPoint e Explorador de ficheiros. Esta opção não é suportada e não funcionará, quando uma etiqueta está configurada para [classificação automática](configure-policy-classification.md).
         
         Se escolher a opção para o Outlook: A etiqueta é apresentada no Outlook e o comportamento resultante quando os utilizadores aplicam a etiqueta é o mesmo que a opção não reencaminhar.
         
         Se escolher a opção para Word, Excel, PowerPoint e Explorador de ficheiros: quando esta opção estiver definida, a etiqueta é apresentada nestas aplicações. O comportamento resultante quando os utilizadores aplicam a etiqueta é para apresentar a caixa de diálogo aos utilizadores selecionar permissões personalizadas. Na caixa de diálogo, os utilizadores tem de especificar as permissões, os utilizadores ou grupos e quaisquer data de expiração. Certifique-se de que os utilizadores têm instruções e orientações sobre como fornecer estes valores.
+    
+    - **Selecione um modelo predefinido**: para utilizar um dos modelos predefinidos ou um modelo personalizado que configurou. Este modelo tem de ser publicado (não arquivado) e não deve ser ligado já a outra etiqueta. Quando seleciona esta opção, pode utilizar o **Editar modelo** botão para [converter o modelo para uma etiqueta](configure-policy-templates.md#to-convert-templates-to-labels).
+    
+    Sugestão: Se utilizar o **Editar modelo** botão, poderá ser útil para referência [tarefas que utilizou para fazer com o portal clássico do Azure](migrate-portal.md).
 
-8. Se tiver selecionado **selecionar um modelo predefinido** para **Azure (chave de nuvem)**, clique na caixa pendente e selecione o [modelo](../deploy-use/configure-policy-templates.md) que pretende utilizar para proteger documentos e e-mails com esta etiqueta. Não veem modelos arquivados ou modelos que já estão selecionados para outra etiqueta.
-    
-    Se selecionar um **modelo departamental**, ou se tiver configurado [controlos de inclusão](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment):
-    
-    - Os utilizadores que estão fora do âmbito configurado do modelo ou que estão excluídos de aplicarem a proteção do Azure Rights Management continuarão a ver a etiqueta mas não poderão aplicá-la. Se selecionarem a etiqueta, verão a seguinte mensagem: **O Azure Information Protection não pode aplicar esta etiqueta. Se este problema persistir, contacte o seu administrador.**
-        
-        Tenha em atenção que todos os modelos publicados são sempre apresentados, mesmo se estiver a configurar uma política de âmbito. Por exemplo, está a configurar uma política de âmbito para o grupo de Marketing. Os modelos que pode selecionar não estão limitados a modelos que estão no âmbito do grupo de Marketing e é possível selecionar um modelo departamental que não é possível utilizar os seus utilizadores selecionados. Para facilitar a configuração e para minimizar a resolução de problemas, considere atribuir ao modelo departamental o mesmo nome da etiqueta na sua política de âmbito. 
-            
-9. Se tiver selecionado **definir permissões** para **Azure (chave de nuvem)**, esta opção permite-lhe configurar as mesmas definições que pode configurar num modelo. 
+8. Se tiver selecionado **definir permissões** para **Azure (chave de nuvem)**, esta opção permite-lhe configurar as mesmas definições que pode configurar num modelo. 
     
     Selecione **adicionar permissões**e o **adicionar permissões** painel, selecione o primeiro conjunto de utilizadores e grupos que irão ter direitos para utilizar o conteúdo que será protegido pela etiqueta selecionada:
     
@@ -132,11 +124,19 @@ Exchange não tem de ser configurado para gestão de direitos de informação (I
     
     Este agrupamento de definições cria um modelo personalizado para o serviço Azure Rights Management. Estes modelos podem ser utilizados com aplicações e serviços que se integram no Azure Rights Management. Para obter mais informações sobre como os computadores e os serviços transferem e atualizam estes modelos, veja [Atualizar modelos para utilizadores e serviços](refresh-templates.md).
 
+9. Se tiver selecionado **selecionar um modelo predefinido** para **Azure (chave de nuvem)**, clique na caixa pendente e selecione o [modelo](../deploy-use/configure-policy-templates.md) que pretende utilizar para proteger documentos e e-mails com esta etiqueta. Não veem modelos arquivados ou modelos que já estão selecionados para outra etiqueta.
+    
+    Se selecionar um **modelo departamental**, ou se tiver configurado [controlos de inclusão](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment):
+    
+    - Os utilizadores que estão fora do âmbito configurado do modelo ou que estão excluídos de aplicarem a proteção do Azure Rights Management continuarão a ver a etiqueta mas não poderão aplicá-la. Se selecionarem a etiqueta, verão a seguinte mensagem: **O Azure Information Protection não pode aplicar esta etiqueta. Se este problema persistir, contacte o seu administrador.**
+        
+        Tenha em atenção que todos os modelos publicados são sempre apresentados, mesmo se estiver a configurar uma política de âmbito. Por exemplo, está a configurar uma política de âmbito para o grupo de Marketing. Os modelos que pode selecionar não estão limitados a modelos que estão no âmbito do grupo de Marketing e é possível selecionar um modelo departamental que não é possível utilizar os seus utilizadores selecionados. Para facilitar a configuração e para minimizar a resolução de problemas, considere atribuir ao modelo departamental o mesmo nome da etiqueta na sua política de âmbito. 
+
 10. Se tiver selecionado **HYOK (AD RMS)**, selecione **detalhes de modelos de conjunto de AD RMS** ou **definido de utilizador do conjunto de permissões (pré-visualização)**, e, em seguida, especifique o URL de licenciamento do seu AD RMS cluster.
     
     Para obter instruções para especificar um modelo GUID e o URL de licenciamento, consulte [localizar as informações para especificar proteção do AD RMS com uma etiqueta de Azure Information Protection](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label).
     
-    A opção de permissões definidas pelo utilizador permite aos utilizadores que especifique que devem ser concedidas permissões e quais são essas permissões. Em seguida, pode refinar esta opção e escolha apenas Outlook (predefinição), ou Word, Excel, PowerPoint e Explorador de ficheiros. 
+    A opção de permissões definidas pelo utilizador permite aos utilizadores que especifique que devem ser concedidas permissões e quais são essas permissões. Em seguida, pode refinar esta opção e escolha apenas Outlook (predefinição), ou Word, Excel, PowerPoint e Explorador de ficheiros. Esta opção não é suportada e não funcionará, quando uma etiqueta está configurada para [classificação automática](configure-policy-classification.md).
     
     Se escolher a opção para o Outlook: A etiqueta é apresentada no Outlook e o comportamento resultante quando os utilizadores aplicam a etiqueta é o mesmo que a opção não reencaminhar.
     
@@ -156,7 +156,93 @@ Exchange não tem de ser configurado para gestão de direitos de informação (I
 
 13. Para disponibilizar as alterações aos utilizadores, clique em **Publicar**.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="example-configurations"></a>Configurações de exemplo
+
+O **todos os funcionários** e **destinatários apenas** subplano de etiquetas do **confidencial** e **elevada confidencial** etiquetas do [política predefinida](configure-policy-default.md) fornecem exemplos de como pode configurar as etiquetas que se aplicam a proteção. Também pode utilizar os exemplos seguintes para o ajudar a configurar a proteção para diferentes cenários. 
+
+Para cada exemplo que se segue, no seu \< *nome de etiqueta*> painel, selecione **proteger** e, em seguida, selecione **proteção** para abrir o  **Proteção** painel.
+
+### <a name="example-1-label-that-applies-do-not-forward-to-send-a-protected-email-to-a-gmail-account"></a>Exemplo 1: Etiqueta que aplica-se não reencaminhar para enviar um e-mail protegido para uma conta do Gmail
+
+Esta etiqueta está disponível apenas no Outlook e é adequada ao Exchange Online está configurado para o [novas capacidades na encriptação de mensagens do Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Instrua os utilizadores selecionem esta etiqueta quando precisarem de enviar um e-mail protegido para as pessoas com uma conta do Gmail (ou qualquer outra conta de e-mail fora da sua organização). 
+
+Os utilizadores escrevem o endereço de e-mail do Gmail o **para** caixa.  Em seguida, selecionarem a etiqueta e a opção não reencaminhar for adicionada automaticamente a mensagem de correio eletrónico, de modo a que os destinatários não podem reencaminhá-lo, imprimi-lo, copiá-lo ou guardar anexos ou guardar como um nome diferente. 
+
+1. No **proteção** painel, certifique-se de que **Azure (chave de nuvem)** está selecionada.
+    
+2. Selecione **definido de utilizador do conjunto de permissões (pré-visualização)**.
+
+3. Certifique-se de que está selecionado as seguintes opções: **no Outlook não reencaminhar aplicar**.
+
+4. Se selecionado, desmarque a opção seguinte: **no Word, Excel, PowerPoint e Explorador de ficheiros pedir ao utilizador para permissões personalizadas**.
+
+5. Clique em **OK** no **proteção** painel e, em seguida, publicar as suas alterações.
+
+
+### <a name="example-2-label-that-restricts-read-only-permission-to-all-users-in-another-organization-and-that-supports-immediate-revocation"></a>Exemplo 2: Etiqueta que restringe a permissão só de leitura para todos os utilizadores noutra organização, e que suporte a revogação imediata
+
+Esta etiqueta é adequada para partilhar documentos confidenciais muito (só de leitura) que necessitam sempre de uma ligação à Internet para o visualizar. Se revogado, os utilizadores não será possível visualizar o documento da próxima vez que tentarem abri-lo.
+
+Esta etiqueta não é adequada para e-mails.
+
+1. No **proteção** painel, certifique-se de que **Azure (chave de nuvem)** está selecionada.
+    
+2. Certifique-se de que **definir permissões** está selecionado e, em seguida, selecione **adicionar permissões**.
+
+3. No **adicionar permissões** painel, selecione **Introduza detalhes**.
+
+4. Introduza o nome de um domínio a partir de outra organização, por exemplo, **fabrikam.com**. Em seguida, selecione **adicionar**.
+
+5. De **escolher permissões predefinição**, selecione **Visualizador**e, em seguida, selecione **OK**.
+
+6. Reverter o **proteção** painel, para **permite a definição de acesso offline**, selecione **nunca**.
+
+7. Clique em **OK** no **proteção** painel e, em seguida, publicar as suas alterações.
+
+
+### <a name="example-3-add-external-users-to-an-existing-label"></a>Exemplo 3: Adicionar utilizadores externos para uma etiqueta existente
+
+Os novos utilizadores que adicionar será capaz de documentos aberta e e-mails que já tenham sido protegidos com esta etiqueta. As permissões a conceder a estes utilizadores podem ser diferentes das permissões que têm dos utilizadores existentes.
+
+1. No **proteção** painel, certifique-se **Azure (chave de nuvem)** está selecionada.
+    
+2. Certifique-se de que **definir permissões** está selecionado e, em seguida, selecione **adicionar permissões**.
+
+3. No **adicionar permissões** painel, selecione **Introduza detalhes**.
+
+4. Introduza o endereço de e-mail do primeiro utilizador (ou grupo) para adicionar e, em seguida, selecione **adicionar**.
+
+5. Selecione as permissões para este utilizador (ou grupo).
+
+6. Repita os passos 4 e 5 para cada utilizador (ou grupo) que pretende adicionar a esta etiqueta. Em seguida, clique em **OK**.
+
+7. Clique em **OK** no **proteção** painel e, em seguida, publicar as suas alterações.
+
+### <a name="example-4-label-for-protected-email-that-supports-less-restrictive-permissions-than-do-not-forward"></a>Exemplo 4: Etiqueta de e-mail protegidas que suporte permissões menos restritivas do que a opção não reencaminhar
+
+Esta etiqueta não pode ser restringida ao Outlook mas fornece controlos menos restritivos do que utilizar não reencaminhar. Por exemplo, pretende que os destinatários para poder copiar a partir do e-mail ou um anexo ou imprimir e guardar um anexo. Se especificar os utilizadores externos que não dispõe de uma conta no Azure AD, lembre-se de que instruir os utilizadores que esta etiqueta não deve ser utilizada para documentos, apenas o e-mail. Além disso, para suportar estes utilizadores externos, Exchange Online tem de ser configurado para o [novas capacidades na encriptação de mensagens do Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).  
+
+Quando os utilizadores, especifique os endereços de e-mail no **para** caixa, os endereços tem de ser para os mesmos utilizadores que especificar para esta configuração de etiqueta. Uma vez que os utilizadores podem pertencem a grupos e tem mais do que um endereço de e-mail, o endereço de e-mail especificarem tem de corresponder exatamente o endereço de e-mail que especificar para conhecer as permissões, apesar de não ser a forma mais fácil para se certificar de que o destinatário será autorizado com êxito. Para obter mais informações sobre como os utilizadores estão autorizados para permissões, consulte [preparar os utilizadores e grupos do Azure Information Protection](../plan-design/prepare.md). 
+
+1. No **proteção** painel, certifique-se de que **Azure (chave de nuvem)** está selecionada.
+    
+2. Certifique-se **definir permissões** está selecionado e selecione **adicionar permissões**.
+
+3. No **adicionar permissões** painel, para conceder permissões a utilizadores na sua organização, selecione **adicionar \<nome da organização >-todos os membros** para selecionar todos os utilizadores no seu inquilino, ou selecione  **Procurar no diretório** para selecionar um grupo específico. Para conceder permissões a utilizadores externos, selecione **Introduza detalhes** e escreva o endereço de e-mail do utilizador ou grupo do Azure AD.
+    
+    Repita este passo para especificar os utilizadores adicionais que devem ter as mesmas permissões.
+
+4. Para **escolher permissões predefinição**, selecione **Coproprietário**, **Coautor**, **revisor**, ou **personalizada**para seleccionar as permissões que pretende conceder. 
+    
+    Nota: Não selecione **Visualizador** para mensagens de correio eletrónico e se selecionar **personalizada**, certifique-se de que inclui **editar e guardar**. 
+
+5. Para especificar os utilizadores adicionais que devem ter permissões diferentes, repita os passos 3 e 4.
+
+6. Clique em **OK** no **adicionar permissões** painel. 
+
+7. Clique em **OK** no **proteção** painel e, em seguida, publicar as suas alterações.
+
+## <a name="next-steps"></a>Próximos passos
 
 Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).  
 

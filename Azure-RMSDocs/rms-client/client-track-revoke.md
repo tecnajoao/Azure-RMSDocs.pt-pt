@@ -4,7 +4,7 @@ description: "Depois de ter protegido os seus documentos, pode controlar a forma
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8a908097e4207889b6441e3224e7e4110fa2f9ae
-ms.sourcegitcommit: ea03477312b64c0a846701e46d991fe2c85b3a1f
+ms.openlocfilehash: d5c8d326b68b5f60e8223112d2d5bd28ed3925bc
+ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Controlar e revogar os documentos quando utiliza o Azure Information Protection
+# <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Guia do utilizador: Controlar e revogar os documentos quando utiliza o Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
 
@@ -49,6 +49,8 @@ Ao aceder a este site, inicie sessão para controlar os seus documentos. Desde q
     - Os administradores do Azure Information Protection podem clicar no ícone Administrador para controlar e revogar documentos protegidos de utilizadores quando esses utilizadores registarem os seus documentos no site de controlo de documentos. Apenas os administradores veem este ícone:
         
         ![Ícone Administrador no site de controlo de documentos](../media/tracking-site-admin-icon.png)
+        
+        Se não vir este ícone, apesar de ser um administrador global, é porque ainda não partilhou documentos. Neste caso, utilize o seguinte URL para aceder ao site de controlo de documentos: https://portal.azurerms.com/#/admin
 
 A menos que seja um administrador, pode controlar e revogar apenas os documentos protegidos. Não pode controlar os seus e-mails protegidos com o site de controlo de documentos.
 
@@ -109,5 +111,8 @@ Depois de ter registado o documento protegido através das aplicações do Offic
 Pode obter mais instruções sobre os procedimentos no guia do utilizador do Azure Information Protection:
 
 - [O que pretende fazer?](client-user-guide.md#what-do-you-want-to-do)
+
+## <a name="additional-information-for-administrators"></a>Informações adicionais para administradores    
+Consulte [configurar e utilizar o controlo de documentos para o Azure Information Protection](client-admin-guide-document-tracking.md) do [Guia do administrador](client-admin-guide.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

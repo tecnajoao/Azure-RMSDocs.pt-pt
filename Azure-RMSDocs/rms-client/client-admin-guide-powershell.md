@@ -4,7 +4,7 @@ description: "As instruções e as informações para os administradores gerirem
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c0fc9052199486653cb0d9ac3865af4e2174d30f
-ms.sourcegitcommit: 4d730631ea8c16c7150b794722bb23921f1b2008
+ms.openlocfilehash: 197e3c8e908849665231040fd86cd79bd47cd1eb
+ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="using-powershell-with-the-azure-information-protection-client"></a>Utilizar o PowerShell com o cliente do Azure Information Protection
+# <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guia do administrador: Utilizar o PowerShell com o cliente Azure Information Protection
 
 >*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
@@ -36,7 +36,9 @@ O módulo de AzureInformationProtection inclui todos os cmdlets do Rights Manage
 |[Conjunto AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Etiqueta ficheiros de forma não interativa, por exemplo, utilizando um script que é executado numa agenda.|
 
 
-Para obter uma lista de todos os cmdlets e o artigo de ajuda correspondente, veja [AzureInformationProtection Module (Módulo AzureInformationProtection)](/powershell/module/azureinformationprotection). Numa sessão do PowerShell, escreva `Get-Help <cmdlet name> -online` para ver a ajuda mais recente e obter outros idiomas diferentes do inglês.  
+Além disso, o [scanner do Azure Information Protection](../deploy-use/deploy-aip-scanner.md) (atualmente em pré-visualização), utiliza os cmdlets para instalar e configurar um serviço no Windows Server. Esta análise, em seguida, permite-lhe detetar, classificar e proteger os ficheiros nos arquivos de dados.
+
+Para obter uma lista de todos os cmdlets e o artigo de ajuda correspondente, veja [AzureInformationProtection Module (Módulo AzureInformationProtection)](/powershell/module/azureinformationprotection). Dentro de uma sessão do PowerShell, escreva `Get-Help <cmdlet name> -online` para ver a ajuda mais recente.  
 
 Este módulo é instalado em **ProgramFiles (x86) \Microsoft Azure Information Protection** e adiciona esta pasta à variável do sistema **PSModulePath**. O ficheiro .dll deste módulo é denominado **AIP.dll**.
 

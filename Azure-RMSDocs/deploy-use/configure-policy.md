@@ -4,7 +4,7 @@ description: "Para configurar a classificação, a etiquetagem e a proteção, t
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/21/2017
+ms.date: 10/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 660f29506e22feb742edf4041d7baed0cf749b8c
-ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
+ms.openlocfilehash: b04c7881f982b33094107b6de33920a83b17b960
+ms.sourcegitcommit: a7cdf911088fdf663e43894484530ea15150284f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/23/2017
+ms.lasthandoff: 10/25/2017
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurar a política do Azure Information Protection
 
@@ -44,14 +44,30 @@ Se a sua organização tem uma combinação de subscrições, é da responsabili
 
 Para obter mais informações sobre as subscrições, veja [De que subscrição preciso para o Azure Information Protection e que funcionalidades estão incluídas?](../get-started/faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
 
+## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Para aceder ao painel do Azure Information Protection pela primeira vez
+
+1. Iniciar sessão para o [portal do Azure](https://portal.azure.com) como um administrador global ou o administrador de segurança para o seu inquilino.
+
+2. No menu do hub, clique em **Novo** e, em seguida, na lista **MARKETPLACE**, selecione **Security + Identity**. 
+    
+3. No **segurança + identidade** painel, do **aplicações em destaque** lista, selecione **Azure Information Protection**. Em seguida, no **Azure Information Protection** painel, clique em **criar**.
+    
+    Esta ação cria o **Azure Information Protection** painel para o seu inquilino para que a próxima vez iniciar sessão no portal, pode selecionar o serviço do hub **mais serviços** lista. 
+    
+    > [!TIP] 
+    > Selecione **Afixar ao dashboard** para criar um mosaico do **Azure Information Protection** no seu dashboard. Assim, não terá de procurar o serviço da próxima vez que iniciar sessão no portal.
+
+4. Pode ver o **início rápido** página que abre automaticamente na primeira vez que o se ligar ao serviço. Procurar os recursos sugeridos ou utilizar as outras opções de menu. Para configurar as etiquetas que os utilizadores podem selecionar, utilize o procedimento seguinte.
+
+Tempo junto de acesso a **Azure Information Protection** painel,-seleciona automaticamente o **políticas** > **política Global** opção para que possa Configure as etiquetas para todos os utilizadores. Poderá regressar ao **início rápido** página selecionando-à partir de **geral** menu.
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Como configurar a política do Azure Information Protection
 
-1. Numa nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com) como administrador de segurança ou administrador global.
+1. Certifique-se de que tem sessão iniciada para o [portal do Azure](https://portal.azure.com) como um administrador de segurança ou um administrador global.
 
-2. Navegue para o painel **Azure Information Protection**: por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information Protection** na caixa Filtro. Na lista de resultados, selecione **Azure Information Protection**. 
+2. Se necessário, navegue para o **Azure Information Protection** painel: por exemplo, no hub menu, clique em **mais serviços** e comece a escrever **Information Protection** no Caixa de filtro. Na lista de resultados, selecione **Azure Information Protection**. 
     
-    Na primeira vez que se ligar ao serviço, o **Azure Information Protection - início rápido** automaticamente é aberto o painel. Para configurar a política que todos os utilizadores obtêm, do **políticas** selecção de menu, selecione **política Global** para abrir o **Azure Information Protection - política Global** painel. Este painel é aberto automaticamente para ligações subsequentes ao serviço, para ver e editar a política global que todos os utilizadores obtêm. 
+    O **Azure Information Protection - política Global** painel abre-se automaticamente para que possa ver e editar a política global que obtêm todos os utilizadores. 
     
     A política do Azure Information Protection contém os elementos seguintes que pode configurar:
     
@@ -69,7 +85,9 @@ Para obter mais informações sobre as subscrições, veja [De que subscrição 
     
     - A opção para fornecer uma ligação de ajuda personalizada para os utilizadores.
 
-O Azure Information Protection tem uma [política predefinida](configure-policy-default.md) que contém cinco etiquetas principais. Estas etiquetas podem ser utilizadas com o intervalo de dados completo que uma organização normalmente cria e armazena, desde a classificação mais baixa de dados pessoais à classificação mais elevada de dados altamente confidenciais. 
+O Azure Information Protection tem uma [política predefinida](configure-policy-default.md) que contém cinco etiquetas principais. Dois destas etiquetas contém etiquetas secundárias ao fornecer subcategorias, quando necessário. Quando uma etiqueta está configurada para etiquetas secundárias, os utilizadores não é possível selecionar a etiqueta principal, mas tem de selecionar uma das etiquetas secundárias.
+
+As etiquetas de Azure Information Protection podem ser utilizadas com o intervalo completo de dados que uma organização, normalmente, cria e armazena a classificação mais baixo de dados pessoais, para a classificação máxima de dados altamente confidenciais. 
 
 Pode utilizar as etiquetas predefinidas sem alterações ou pode personalizá-las, eliminá-las ou criar novas etiquetas. Para obter mais informações, utilize as ligações na próxima secção, para o ajudar a encontrar as opções relevantes e como as configurar.
 
@@ -86,6 +104,9 @@ O cliente do Azure Information Protection verifica se existem alterações sempr
 - Execução dos [cmdlets do PowerShell](../rms-client/client-admin-guide-powershell.md) para etiquetagem e proteção (Get-AIPFileStatus, Set-AIPFileClassification e Set-AIPFileLabel).
 
 - A cada 24 horas.
+
+- Para o [Scanner de proteção de informações do Azure](deploy-aip-scanner.md): quando inicia o serviço de mensagens em fila e a cada hora.
+
 
 >[!NOTE]
 >Quando o cliente transferir a política, poderá ter de aguardar alguns minutos até que fique totalmente operacional. O tempo em questão varia devido a fatores como o tamanho e a complexidade da configuração da política e a conectividade de rede. Se a ação resultante das suas etiquetas não corresponder às suas alterações mais recentes, aguarde 15 minutos e tente novamente.

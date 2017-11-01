@@ -5,7 +5,7 @@ keywords: "Como ver e-mails ou ficheiros com a aplicação Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 10/16/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -13,19 +13,26 @@ ms.technology: techgroup-identity
 ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 351074937c45866f882d51b19e3cd3e4792ae649
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: db44f73c20d7440d403b1d3a7a7ea0201f8a7abb
+ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 10/17/2017
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Introdução à aplicação Microsoft Azure Information Protection para iOS e Android
 
 *Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection*
 
-Normalmente, a maioria dos utilizadores utiliza a aplicação Azure Information Protection automaticamente quando precisa de abrir um e-mail ou ficheiro protegido. No entanto, se for um administrador que pretende testar a aplicação para os seus utilizadores ou simplesmente experimentá-la antes de precisar dela, pode utilizar as instruções seguintes.
+Antes de utilizar as instruções nesta página, certifique-se de que leu o [perguntas mais frequentes para a aplicação do Azure Information Protection para iOS e Android](mobile-app-faq.md). Nessa página explica o que é a aplicação para, os dispositivos que são suportados e informações básicas sobre como utilizar a aplicação.
 
-No seu dispositivo móvel, precisa de acesso a um dos ficheiros suportados pela aplicação para ver o visualizador em ação. Por exemplo:
+Maioria dos utilizadores, normalmente, irá utilizar a aplicação do Azure Information Protection quando precisar de abrir um ficheiro ou e-mail protegido. No entanto, se for um administrador que pretende testar a aplicação para os seus utilizadores ou simplesmente experimentá-la antes de precisar dela, pode utilizar as instruções seguintes.
+
+> [!NOTE]
+> Não primeiro abra a aplicação e, em seguida, selecione a documentos e e-mails para ver. Em vez disso, abra o documento ou e-mail e, em seguida, selecione esta aplicação para ver o documento ou e-mail.
+>
+> Da mesma forma, não tente iniciar sessão na aplicação, até que lhe for pedido.
+
+Para utilizar as instruções seguintes, precisa de acesso do dispositivo móvel para um dos ficheiros que suporta a aplicação. Por exemplo:
 
 - **Um ficheiro .rpmsg**: trata-se de uma mensagem de e-mail com proteção de direitos que é apresentada como anexo numa mensagem de e-mail, quando a aplicação de e-mail no seu dispositivo móvel não suporta nativamente a proteção de dados da gestão de direitos. 
     
@@ -37,10 +44,10 @@ No seu dispositivo móvel, precisa de acesso a um dos ficheiros suportados pela 
 
 Para ver estes ficheiros na aplicação de visualização do Azure Information Protection, toque no anexo de e-mail ou na ligação. Quando lhe for pedido para selecionar uma aplicação com a qual abri-lo, selecione a aplicação **AIP Viewer**. Ser-lhe-á pedido que inicie sessão com a sua conta escolar ou profissional, ou que selecione um certificado. Depois de as suas credenciais serem autenticadas, a aplicação Azure Information Protection mostra o e-mail ou o ficheiro para que o possa ler.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
-Se tiver outras perguntas sobre esta aplicação, verifique se estão na secção [FAQs sobre a aplicação Azure Information Protection para iOS e Android](mobile-app-faq.md). 
+Para questões ou comentários sobre esta aplicação que não são resolvidos no [perguntas mais frequentes](mobile-app-faq.md), visite a nossa [Yammer site](https://www.yammer.com/AskIPTeam).
 
-Para outras questões, aceda ao nosso [site do Yammer](https://www.yammer.com/AskIPTeam) ou [envie um e-mail para a equipa do Information Protection](mailto:askIPteam@microsoft.com?subject=Question%20about%20Azure%20Information%20Protection%20app).
+Se a aplicação não está a funcionar conforme descrito, consulte os recursos listados em nosso [alojam regras](../house-rules.md) página.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

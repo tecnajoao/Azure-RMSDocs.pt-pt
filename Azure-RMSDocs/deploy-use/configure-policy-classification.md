@@ -4,40 +4,27 @@ description: "Quando configurar as condições para uma etiqueta, pode atribuir 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: aa41d4f34f0ed43682f9ba426ec18204457980c3
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 1c37f1b05126b8e8d9a5e64f033c503f27a8a1fc
+ms.sourcegitcommit: a8140a7215c8704f34c247f602e1f12eb7b49aa2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 10/23/2017
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Como configurar as condições para classificação automática e recomendada para o Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection*
 
-Quando configurar as condições para uma etiqueta, pode atribuir automaticamente uma etiqueta a um documento ou a um e-mail. Em alternativa, pode pedir aos utilizadores que selecionem a etiqueta que lhes recomende: 
+Quando configurar as condições para uma etiqueta, pode atribuir automaticamente uma etiqueta a um documento ou a um e-mail. Em alternativa, pode pedir aos utilizadores que selecionem a etiqueta recomendada. 
 
-- A classificação automática aplica-se ao Word, ao Excel e ao PowerPoint quando os ficheiros são guardados e aplica-se ao Outlook quando os e-mails são enviados. Não é possível utilizar a classificação automática para ficheiros que foram anteriormente etiquetados de forma manual.
- 
-- A classificação recomendada aplica-se ao Word, ao Excel e ao PowerPoint quando os ficheiros são guardados.
+Quando configurar estas condições, pode utilizar padrões predefinidos, tais como **número de cartão de crédito** ou **número de Segurança Social dos E.U.A. (SSN)**. Em alternativa, pode definir uma cadeia personalizada ou um padrão como condição para classificação automática. Estas condições aplicam-se ao corpo de texto em documentos e e-mails, bem como a cabeçalhos e rodapés. Para obter mais informações sobre as condições, consulte o passo 5 do [seguir o procedimento](#to-configure-recommended-or-automatic-classification-for-a-label).
 
-Quando configurar as condições, pode utilizar padrões predefinidos, tais como **número de cartão de crédito** ou **número de Segurança Social dos E.U.A. (SSN)**. Em alternativa, pode definir uma cadeia personalizada ou um padrão como condição para classificação automática. Estas condições aplicam-se ao corpo de texto em documentos e e-mails, bem como a cabeçalhos e rodapés. Para obter mais informações sobre as condições, consulte o passo 5 do [seguir o procedimento](#to-configure-recommended-or-automatic-classification-for-a-label).
-
-Como são avaliadas várias condições quando estas são aplicadas a mais do que uma etiqueta:
-
-1. As etiquetas são ordenadas para avaliação de acordo com a respetiva posição que especificou na política: a etiqueta posicionada em primeiro tem a posição mais baixa (menos confidencial) e a etiqueta posicionada em último tem a posição mais elevada (mais confidencial).
-
-2. A etiqueta mais confidencial é aplicada.
- 
-3. É aplicada a última subetiqueta.
-
-> [!TIP]
->Para a melhor experiência de utilizador e para assegurar a continuidade do negócio, recomendamos que comece pela classificação recomendada ao utilizador em vez da classificação automática. Esta configuração permite aos utilizadores aceitar a ação de etiquetagem ou proteção ou substituir estas sugestões se não forem adequados para o seu documento ou mensagem de e-mail.
+Para a melhor experiência de utilizador e para assegurar a continuidade do negócio, recomendamos que comece pela classificação recomendada ao utilizador em vez da classificação automática. Esta configuração permite aos utilizadores aceitar a classificação e qualquer proteção associado ou substituir estas sugestões se não forem adequados para o seu documento ou mensagem de e-mail.
 
 Um exemplo de aviso para quando configura uma condição para aplicar uma etiqueta como uma ação recomendada, com uma sugestão de política personalizada:
 
@@ -45,10 +32,54 @@ Um exemplo de aviso para quando configura uma condição para aplicar uma etique
 
 Neste exemplo, o utilizador pode clicar em **alterar agora** para aplicar a etiqueta recomendada ou substituir a recomendação selecionando **dispensar**.
 
+> [!IMPORTANT]
+>Não configure uma etiqueta para a classificação automática e uma permissão definido pelo utilizador. A opção de permissões definidas pelo utilizador é um [definição de proteção](configure-policy-protection.md) que permita aos utilizadores que especifique que devem ser concedidas permissões.
+>
+>Quando uma etiqueta está configurada para classificação automática e permissões definidas pelo utilizador, o conteúdo é verificado para as condições e a definição de permissão definido pelo utilizador não é aplicada. Pode utilizar a classificação recomendada e permissões definidas pelo utilizador.
+
+## <a name="how-automatic-or-recommended-labels-are-applied"></a>Como são aplicadas as etiquetas automáticas ou recomendadas
+
+**Para a versão de disponibilidade geral do cliente Azure Information Protection:**
+
+- A classificação automática aplica-se ao Word, Excel e PowerPoint quando os documentos são guardados e aplicam-se ao Outlook quando os e-mails são enviados. 
+    
+    Não é possível utilizar a classificação automática para documentos e e-mails que foram anteriormente etiquetados de forma manual ou anteriormente automaticamente com a etiqueta com uma classificação superior. 
+
+- A classificação recomendada aplica-se ao Word, Excel e PowerPoint quando os documentos são guardados. Não é possível utilizar a classificação recomendada para o Outlook.
+    
+    Pode utilizar a classificação recomendada para os documentos que foram anteriormente com a etiqueta, com ou sem uma classificação superior. 
+
+
+**Para a versão de pré-visualização atual do cliente Azure Information Protection:**
+
+- A classificação automática aplica-se ao Word, Excel, PowerPoint e Outlook. Para documentos, a classificação automática é executada [continuamente em segundo plano](#more-information-about-running-continuously). Para o Outlook, a classificação automática é executada quando os e-mails são enviados. 
+    
+    Não é possível utilizar a classificação automática para documentos que foram anteriormente etiquetados de forma manual ou anteriormente automaticamente com a etiqueta com uma classificação superior. A exceção a este comportamento é se utilizar a análise do Azure Information Protection com o parâmetro de OverrideLabel definido no.
+
+- A classificação recomendada aplica-se ao Word, Excel e PowerPoint. Para estes documentos, recomendado execuções de classificação [continuamente em segundo plano](#more-information-about-running-continuously). Não é possível utilizar a classificação recomendada para o Outlook.
+    
+    Pode utilizar a classificação recomendada para os documentos que foram anteriormente com a etiqueta, com ou sem uma classificação superior. 
+
+#### <a name="more-information-about-running-continuously"></a>Obter mais informações sobre como executar continuamente
+
+A versão de pré-visualização atual do cliente Azure Information Protection verifica periodicamente a documentos para as regras de condição que especificar. Este comportamento permite que a classificação automática e recomendada e a proteção de documentos que estão armazenados no SharePoint Online. Ficheiros grandes também guardar mais rapidamente porque as regras de condição já estiver a executar. 
+
+As regras da condição não são executados em tempo real como tipos de utilizador. Em vez disso, executam periodicamente como uma tarefa em segundo plano se o documento está modificado. 
+
+### <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>São avaliadas como várias condições quando estas são aplicadas a mais do que uma etiqueta
+
+Para a versão de disponibilidade geral do cliente Azure Information Protection e o cliente de pré-visualização atual:
+
+1. As etiquetas são ordenadas para avaliação de acordo com a respetiva posição que especificou na política: a etiqueta posicionada em primeiro tem a posição mais baixa (menos confidencial) e a etiqueta posicionada em último tem a posição mais elevada (mais confidencial).
+
+2. A etiqueta mais confidencial é aplicada.
+ 
+3. É aplicada a última subetiqueta.
+
+
 ## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>Para configurar a classificação recomendada ou automática para uma etiqueta
 
-1. Se ainda não o tiver feito, abra uma nova janela do browser e inicie sessão para o [portal do Azure](https://portal.azure.com) como um administrador de segurança ou um administrador global. Em seguida, navegue para o painel **Azure Information Protection**. 
-    
+1. Se ainda não o tiver feito, abra uma nova janela do browser e inicie sessão para o [portal do Azure](https://portal.azure.com) como um administrador de segurança ou um administrador global. Em seguida, navegue para o painel **Azure Information Protection**.     
     Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
 2. Se a etiqueta que pretende configurar será aplicada a todos os utilizadores, permaneça o **Azure Information Protection - política Global** painel.
@@ -86,8 +117,9 @@ Neste exemplo, o utilizador pode clicar em **alterar agora** para aplicar a etiq
 
 ## <a name="next-steps"></a>Próximos passos
 
-Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).  
+Considere implementar o [scanner do Azure Information Protection](deploy-aip-scanner.md), que pode utilizar as regras de classificação automática para detetar, classificar e proteger os ficheiros nos arquivos de ficheiros de locais e partilhas de rede.  
+
+Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 

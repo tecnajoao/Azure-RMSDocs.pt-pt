@@ -4,7 +4,7 @@ description: "Detalhes técnicos sobre tipos de ficheiro suportados, extensões 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/09/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0bd9bbdc6b29e8cd9497712dddb7205f3d8372b1
-ms.sourcegitcommit: bcc2f69475f811245d2beaf79c67a3d8569c4821
+ms.openlocfilehash: a6a1c477a06c695a2183ad379c22492ea59d4bee
+ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/11/2017
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="file-types-supported-by-the-azure-information-protection-client"></a>Tipos de ficheiro suportados pelo cliente do Azure Information Protection
+# <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guia do administrador: Tipos de ficheiro suportados pelo cliente Azure Information Protection
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 O cliente do Azure Information Protection pode aplicar o seguinte aos documentos e aos e-mails:
 
@@ -88,7 +88,11 @@ Há tamanhos de ficheiro máximos que o cliente do Azure Information Protection 
     |Excel 2007 (suportado apenas pelo AD RMS)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016|32 bits: 2 GB<br /><br />64 bits: limitado apenas pela memória e espaço disponível no disco|
     |PowerPoint 2007 (suportado apenas pelo AD RMS)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016|32 bits: limitado apenas pela memória e espaço disponível no disco<br /><br />64 bits: limitado apenas pela memória e espaço disponível no disco
 
-- **Para todos os outros ficheiros**: só limitado pelo espaço em disco disponível e memória.
+- **Para todos os outros ficheiros**: 
+    
+    - Para proteger estes ficheiros: tamanho de ficheiro só está limitado pelo espaço em disco disponível e memória.
+    
+    - Para abrir estes ficheiros no Visualizador do Azure Information Protection: tamanho de ficheiro máximo suportado para ficheiros baseados em texto (. ptxt e. pxml) é de 20 MB. Para ficheiros de imagem e ficheiros PDF, o tamanho máximo do ficheiro está limitado apenas por memória.
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>Tipos de ficheiros suportados para a classificação e proteção
 
@@ -202,6 +206,13 @@ Como uma solução para proteger estes ficheiros, foi genericamente protegê-los
 
 Se proteger estes ficheiros é importante, foi temporariamente copiá-los para outro computador para os proteger, genericamente e, em seguida, copie-os novamente novamente.
 
+### <a name="limitations-for-container-files-such-as-zip-files"></a>Limitações para ficheiros de contentor, tais como ficheiros. zip
+
+Ficheiros de contentor são ficheiros que incluem a outros ficheiros, com um exemplo típico que está a ser ficheiros. zip que contém os ficheiros comprimidos. Outros exemplos incluem .rar, .7z, e. tarifas de mensagens.
+
+Pode classificar e proteger estes ficheiros de contentor, mas a classificação e a proteção não se aplica a cada ficheiro no interior do contentor.
+
+Se tiver um ficheiro de contentor que inclui ficheiros classificados e protegidos, tem primeiro de extrair os ficheiros para alterar as definições de classificação de recursos de proteção. No entanto, pode remover a proteção para todos os ficheiros nos ficheiros de contentor suportadas utilizando o [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet.
 
 ## <a name="next-steps"></a>Próximos passos
 Agora que identificou os tipos de ficheiro suportados pelo cliente do Azure Information Protection, veja o seguinte para obter informações adicionais que poderá precisar para suportar este cliente:

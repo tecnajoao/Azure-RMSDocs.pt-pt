@@ -4,17 +4,17 @@ description: "Conheça a forma como a política predefinida do Azure Information
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: 712d273e735d2c9fc791a1f15c3f8dc9e917a1c3
-ms.sourcegitcommit: 5bcb916106021f624a69d620bbcc2c4a51398771
+ms.openlocfilehash: 86b04d47797f7e3201dd4fd7b7e5a9c662254d12
+ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Política do Azure Information Protection predefinida
 
@@ -44,7 +44,7 @@ Se estas etiquetas secundárias não são automaticamente configuradas para prot
 
 Quando a proteção é aplicada para a **todos os funcionários** etiquetas secundárias, a proteção é configurada utilizando os modelos predefinidos que são automaticamente convertidos para etiquetas no portal do Azure. Para obter mais informações sobre estes modelos, consulte [configurar e gerir modelos do Azure Information Protection](configure-policy-templates.md).
 
-A partir de 30 de Agosto de 2017, esta versão da política predefinida inclui traduzidas versões dos nomes de etiqueta e descrições. 
+A partir de 30 de Agosto de 2017, esta versão da política predefinida inclui multilingues versões dos nomes de etiqueta e descrições. 
 
 #### <a name="more-information-about-the-recipients-only-sub-label"></a>Obter mais informações sobre a etiqueta secundária apenas os destinatários
 
@@ -68,10 +68,10 @@ Quando os utilizadores selecionarem esta etiqueta, a Outlook opção não reenca
 
 |Etiqueta|Descrição|Definições|
 |-------------------------------|---------------------------|-----------------|
-|Confidencial\Todos os Funcionários|Dados confidenciais que necessitam de proteção, o que permite que todos os funcionários tenham todas as permissões. Os proprietários de dados podem monitorizar e revogar os conteúdos.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (documentos e e-mails)<br /><br />Classificado como Confidencial<br /><br />**Condições**: nenhuma<br /><br />**Proteção**: o Azure RMS [[1]](#footnote-1)|
+|Confidencial\Todos os Funcionários|Dados confidenciais que necessitam de proteção, o que permite que todos os funcionários tenham todas as permissões. Os proprietários de dados podem monitorizar e revogar os conteúdos.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (documentos e e-mails)<br /><br />Classificado como Confidencial<br /><br />**Condições**: nenhuma<br /><br />**Proteção**: Azure (chave de nuvem) [[1]](#footnote-1)|
 |Confidencial\Todos (não protegidos)|Dados que não necessitam de proteção. Utilize esta opção com cuidado e com uma justificação comercial adequada.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (documentos e e-mails)<br /><br />Classificado como Confidencial <br /><br />**Condições**: nenhuma<br /><br />**Proteção**: nenhuma|
 |Confidencial \ destinatários apenas|Dados confidenciais que requer a proteção e que podem ser visualizados, apenas os destinatários.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (e-mail)<br /><br />Classificado como Confidencial <br /><br />**Condições**: nenhuma<br /><br />**Proteção**: defina definidas pelo utilizador as permissões (pré-visualização), no Outlook aplicam não reencaminhar|
-|Altamente Confidencial\Todos os Funcionários|Dados altamente confidenciais que fornecem a todos os funcionários permissões de visualização, edição e resposta para estes conteúdos. Os proprietários de dados podem monitorizar e revogar os conteúdos.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (documentos e e-mails)<br /><br />Classificado como Altamente Confidencial<br /><br />**Condições**: nenhuma<br /><br />**Proteção**: o Azure RMS [[2]](#footnote-2)|
+|Altamente Confidencial\Todos os Funcionários|Dados altamente confidenciais que fornecem a todos os funcionários permissões de visualização, edição e resposta para estes conteúdos. Os proprietários de dados podem monitorizar e revogar os conteúdos.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (documentos e e-mails)<br /><br />Classificado como Altamente Confidencial<br /><br />**Condições**: nenhuma<br /><br />**Proteção**: Azure (chave de nuvem) [[2]](#footnote-2)|
 |Altamente Confidencial\Todos (não protegidos)|Dados que não necessitam de proteção. Utilize esta opção com cuidado e com uma justificação comercial adequada.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (documentos e e-mails)<br /><br />Classificado como Altamente Confidencial<br /><br />**Condições**: nenhuma<br /><br />**Proteção**: nenhuma|
 |Altamente confidenciais \ destinatários apenas|Dados altamente confidenciais que requer a proteção e que podem ser visualizados, apenas os destinatários.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (e-mail)<br /><br />Classificado como Altamente Confidencial <br /><br />**Condições**: nenhuma<br /><br />**Proteção**: defina definidas pelo utilizador as permissões (pré-visualização), no Outlook aplicam não reencaminhar|
 
@@ -103,7 +103,7 @@ As permissões de proteção correspondem aos existentes no [modelo predefinido]
 
 ## <a name="default-policy-before-july-31-2017"></a>Política predefinida antes de 31 de Julho de 2017
 
-Tenha em atenção que as descrições nesta política se referem aos dados que necessitam de proteção, bem como à monitorização e revogação dos mesmos. A política não configura esta proteção para estas etiquetas, por isso tem de efetuar passos adicionais para cumprir esta descrição. Por exemplo, configure a etiqueta para aplicar a proteção do Azure RMS ou utilize uma solução DLP (proteção contra a perda de dados). Antes de poder controlar e revogar um documento, utilizando o site de controlo de documentos, o documento tem de ser protegido pelo Azure RMS e controlado pela pessoa que o documento protegido. 
+Tenha em atenção que as descrições nesta política se referem aos dados que necessitam de proteção, bem como à monitorização e revogação dos mesmos. A política não configura esta proteção para estas etiquetas, por isso tem de efetuar passos adicionais para cumprir esta descrição. Por exemplo, configure a etiqueta para aplicar a proteção ou utilizar uma solução de (DLP) de prevenção de perda de dados. Antes de poder controlar e revogar um documento, utilizando o site de controlo de documentos, o documento tem de ser protegido pelo serviço Azure Rights Management e controlado pela pessoa que o documento protegido. 
 
 
 ### <a name="labels"></a>Etiquetas

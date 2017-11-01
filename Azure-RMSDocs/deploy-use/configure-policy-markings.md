@@ -4,17 +4,17 @@ description: "Quando atribui uma etiqueta a um documento ou a um e-mail pode sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/21/2017
+ms.date: 10/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 0da5df139d98f0468f49e7e3f17cd1cd2358a015
-ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
+ms.openlocfilehash: ff444afb1912239ec817882c76fc735f6d35ed1e
+ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/17/2017
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Como configurar uma etiqueta para marcas visuais para o Azure Information Protection
 
@@ -93,6 +93,8 @@ Exemplo: se especificar a cadeia `Document: ${item.name}  Classification: ${item
 Esta definição está atualmente em pré-visualização.
 
 Calibri é o tipo de letra predefinido para cabeçalhos, rodapés de página e texto da marca de água. Se especificar um nome de tipo de letra alternativo, certifique-se de que está disponível nos dispositivos cliente que serão aplicadas as marcas visuais. Caso contrário, o tipo de letra que será utilizado não é determinística. 
+
+Se tiver a versão de pré-visualização do cliente Azure Information Protection e o tipo de letra especificado não está disponível, o cliente utilizará o tipo de letra Calibri.
 
 ### <a name="setting-the-font-color"></a>Definir a cor do tipo de letra
 

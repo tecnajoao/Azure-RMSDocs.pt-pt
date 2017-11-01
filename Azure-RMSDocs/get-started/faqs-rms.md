@@ -4,7 +4,7 @@ description: "Algumas perguntas mais frequentes sobre o serviço de proteção d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/09/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9983b088b5856f8c2223d05624c3bee21b80fd15
-ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
+ms.openlocfilehash: 190ad05c5f505f2c0247c04bf271c8c12cac2ea9
+ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Perguntas mais frequentes sobre a proteção de dados no Azure Information Protection
 
@@ -133,7 +133,7 @@ Para a maioria dos cenários, pode utilizar qualquer tipo de grupo no Azure AD q
 
 ## <a name="how-do-i-send-a-protected-email-to-a-gmail-or-hotmail-account"></a>Como envio um e-mail protegido a uma conta do Gmail ou do Hotmail?
 
-Quando utiliza o Exchange Online e o serviço Azure Rights Management, apenas enviar mensagem de correio eletrónico como uma mensagem protegida. Por exemplo, pode selecionar o novo **proteger** botão na barra de comando no Outlook na Web, utilize a opção do Outlook não reencaminhar, selecione uma etiqueta de Azure Information Protection aplica proteção do Azure Rights Management, ou a proteção pode ser aplicada por regras de transporte do Exchange Online.
+Quando utiliza o Exchange Online e o serviço Azure Rights Management, apenas enviar o e-mail para o utilizador como uma mensagem protegida. Por exemplo, pode selecionar o novo **proteger** botão na barra de comando no Outlook na Web, utilize o Outlook **não reencaminhar** opção botão ou menu. Em alternativa, pode selecionar uma etiqueta de Azure Information Protection que aplica-se não reencaminhar para si e automaticamente classifica o e-mail. 
 
 O destinatário verá uma opção para iniciar sessão na sua conta Gmail, Yahoo ou Microsoft e, em seguida, poderá ler o e-mail protegido. Em alternativa, que possam escolher a opção para um código de acesso único ler o e-mail num browser.
 

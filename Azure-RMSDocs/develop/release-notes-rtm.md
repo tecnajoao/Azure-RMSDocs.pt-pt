@@ -1,11 +1,11 @@
 ---
-title: "Notas de versão | Azure RMS"
-description: 
+title: "Notas de versão"
+description: "Atualizações de SDK pela revisão e outras informações de programador."
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/27/2017
+ms.date: 10/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,22 +14,27 @@ ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 875584683bcf1d35037691f21ac7d78d17806a07
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 52733dd7cac356879408e774c79331d705a71ea0
+ms.sourcegitcommit: 02e48f0e5137ba777ec9a2bccde08130e6075c20
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 10/19/2017
 ---
 # <a name="release-notes"></a>Notas de versão
 
-Este tópico contém informações importantes sobre isto e sobre versões anteriores do SDK RMS 2.1.
+Este artigo contém informações importantes sobre isto e sobre versões anteriores do SDK RMS 2.1.
+
+## <a name="october-2017---update"></a>Atualização de Outubro de 2017-
+
+- Adição de duas novas APIs para o ambiente inintialization e uninitialization. Para informações, consulte [IpcInitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx) e [IpcUninitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx).
+- Tipos de ficheiro do Visio agora são suportados. Para obter mais informações, veja [Configuração da API de Ficheiros](file-api-configuration.md).
 
 ## <a name="february-2016---sdk-documentation-update"></a>Atualização da documentação do SDK de fevereiro de 2016
 
 >[!Note]
 > As atualizações da documentação da funcionalidade nesta secção aplicam-se à transferência do SDK com a data de 11/12/2015.
 
-- **Fluxo de autenticação melhorado** – utilizar a autenticação com base no token OAuth2 através da [Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-libraries/). Para obter mais informações sobre este processo e as extensões da API para o mesmo, veja [Autenticação ADAL para a aplicação com permissão para RMS](how-to-use-adal-authentication.md).
+- **Fluxo de autenticação melhorado** -através da autenticação baseada em tokens do OAuth2 através de [do Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-libraries/). Para obter mais informações sobre este processo e as extensões da API para o mesmo, veja [Autenticação ADAL para a aplicação com permissão para RMS](how-to-use-adal-authentication.md).
 
 - **Atualizar para a ADAL** – ao atualizar a sua aplicação para utilizar a autenticação ADAL em vez do Assistente de Início de Sessão Online da Microsoft, o utilizador e os seus clientes poderão:
 
@@ -37,7 +42,7 @@ Este tópico contém informações importantes sobre isto e sobre versões anter
  - Instalar o cliente RMS 2.1 sem necessidade de privilégios administrativos no computador
  - Certificar a aplicação para o Windows 10
 
-- **O suporte para o Assistente de Início de Sessão Online da Microsoft (SIA) com o SDK RMS está a ser removido.** Vamos continuar a suportar a utilização do SIA durante 6 meses, terminando o suporte após esse período.
+- **O suporte para o Assistente de Início de Sessão Online da Microsoft (SIA) com o SDK RMS está a ser removido.** Vamos continuar a suportar a utilização do SIA durante seis meses após o tempo irá parar o suporte.
 
 
 ## <a name="december-2015-update"></a>Atualização de dezembro de 2015
@@ -48,11 +53,11 @@ Este tópico contém informações importantes sobre isto e sobre versões anter
 
 - Muitas atualizações para melhorar a experiência de resolução de problemas e de mensagens de erro.
 - Note também que a lista das [Plataformas suportadas](supported-platforms.md) também está atualizada.
-- A necessidade para o ambiente de pré-produção e a utilização de manifestos de aplicação foi removida a partir do SDK RMS 2.1. Estas secções deste conjunto de documentação para programadores foram removidas e a documentação geral simplificada e reorganizada.
+- A necessidade de ambiente de pré-produção e a utilização de um manifesto de aplicação foi removida do SDK RMS 2.1. Estas secções deste conjunto de documentação para programadores foram removidas e a documentação geral simplificada e reorganizada.
 
 ## <a name="may-2015-update"></a>Atualização de maio de 2015
 
--   **Aplicações do serviço e RMS baseado na cloud** - [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) precisa de três tipos de informações; a chave simétrica, **AppPrincipalId** e **TenantBposId**. O tópico relativo a este tema foi atualizado para fornecer orientações sobre o processamento destas informações. Para esta atualização, veja a versão revista de [Permitir que a aplicação do serviço funcione com o RMS baseado na cloud](how-to-use-file-api-with-aadrm-cloud.md).
+-   **Serviço de aplicações e baseado na nuvem RMS** - [IPC\_CREDENCIAL\_SYMMETRIC\_chave](https://msdn.microsoft.com/library/dn133062.aspx) precisa de três tipos de informações; a chave simétrica,  **AppPrincipalId**, e **TenantBposId**. O artigo para este foi atualizado para fornecer orientações sobre a processar estas informações. Para esta atualização, veja a versão revista de [Permitir que a aplicação do serviço funcione com o RMS baseado na cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## <a name="april-2015-update"></a>Atualização de abril de 2015
 
@@ -68,7 +73,7 @@ Este tópico contém informações importantes sobre isto e sobre versões anter
 ## <a name="january-2015-update"></a>Atualização de janeiro de 2015
 
 -   **Aumento do tamanho do ficheiro protegido (pfile)** – agora suporta tamanhos de pfile maiores do que um gigabyte (1 GB). Para obter mais informações sobre pfiles, veja [Formatos de Ficheiro Suportados](supported-file-formats.md).
--   **Registo melhorado para um melhor diagnóstico** –os níveis de registo apresentarão um **ERRO** ou **AVISO** nas mensagens que devem ser revistas. Todas as outras mensagens, incluindo as exceções que ainda são apresentadas, serão registadas como **INFORMAÇÕES**.
+-   **Registo melhorado para um melhor diagnóstico** –os níveis de registo apresentarão um **ERRO** ou **AVISO** nas mensagens que devem ser revistas. Todas as outras mensagens, incluindo as exceções que ainda são apresentadas, serão registadas como **informações**.
 
     Escolhemos esta abordagem para nenhum detalhe seja perdido. Agora, apenas as mensagens importantes são apresentadas com o nível de AVISO.
 
@@ -78,18 +83,18 @@ Este tópico contém informações importantes sobre isto e sobre versões anter
 ## <a name="october-2014-update"></a>Atualização de outubro de 2014
 
 -   Foram atualizados os comportamentos predefinidos do componente da API de Ficheiros do SDK. Para obter mais informações, veja [Configuração da API de Ficheiros](file-api-configuration.md).
--   A nova funcionalidade de notificação por e-mail é descrita no tópico Notas do programador, [Permitir notificação por e-mail](how-to-enable-email-notification.md).
+-   Notificação por e-mail, a nova funcionalidade descrita no artigo de notas do programador, [permitir notificação por e-mail](how-to-enable-email-notification.md).
 
 ## <a name="july-2014-update"></a>Atualização de julho de 2014
 
-Os componentes da API de Ficheiros do SDK foram expandidos e oferecem as seguintes funcionalidades:
+O componente de API de ficheiros do SDK foi expandido e oferece as seguintes funcionalidades:
 
 -   Identifica o protetor a utilizar.
 -   Fornece a proteção do RMS ao nível de granularidade de um ficheiro.
 
     Funções adicionadas a esta versão:
 
-    **Nota:** foram adicionadas estruturas e tipos de dados de suporte, não listados aqui, às extensões da API de Ficheiros. Todos os tópicos atualizados nesta versão estão marcados como **preliminares e estão sujeitos a alterações**.
+    **Nota:** foram adicionadas estruturas e tipos de dados de suporte, não listados aqui, às extensões da API de Ficheiros. Todos os artigos que tenham sido atualizados nesta versão estão marcados como **preliminares e estão sujeitos a alterações**.
 
     -   [IpcfOpenFileOnHandle](https://msdn.microsoft.com/library/dn771751.aspx)
     -   [IpcfOpenFileOnILockBytes](https://msdn.microsoft.com/library/dn771752.aspx)
@@ -132,7 +137,7 @@ Os componentes da API de Ficheiros do SDK foram expandidos e oferecem as seguint
 
       - Todos os ficheiros, exceto ficheiros do sistema e ficheiros do Office, podem ser protegidos através do formato de Ficheiro Protegido (PFile) do RMS.
 
-    A API de ficheiro é implementada através das seguintes quatro novas funções: [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx), [IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx), [IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx) e [IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx).
+    A API de ficheiro é implementada através de seguintes quatro novas funções: [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx), [IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx), [IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx)e [IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx).
 
     A API de Ficheiro necessita que o Rights Management Service Client 2.1 seja instalado no computador cliente e que o computador tenha conectividade com um servidor RMS. Para obter mais informações sobre o servidor RMS, o cliente RMS e a respetiva funcionalidade, veja o conteúdo do TechNet relativo à [Documentação do RMS para Profissionais de TI](https://technet.microsoft.com/en-us/library/cc771234(v=ws.10).aspx).
 

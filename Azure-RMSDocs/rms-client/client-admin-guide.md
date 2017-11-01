@@ -4,7 +4,7 @@ description: "Instruções e informações para administradores numa rede empres
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 09/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6786ffde8d9903ee5c9d553159710052a6d5e7a2
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 96eb4a9fde5c5664a41ad7f68c550af697e8216f
+ms.sourcegitcommit: 73973986ae7086e6f30cab579187241fd98bef61
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 10/21/2017
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guia do administrador do cliente do Azure Information Protection
 
@@ -46,13 +46,15 @@ Por exemplo:
 
 O cliente do Azure Information Protection inclui o seguinte:
 
-- Um suplemento do Office, que instala a barra do Azure Information Protection para os utilizadores selecionarem etiquetas de classificação e um botão **Proteger** no friso para opções adicionais.
+- Um suplemento Office, que instala a barra do Azure Information Protection aos utilizadores selecionar etiquetas de classificação, e um **proteger** botão no friso para obter opções adicionais. Para o Outlook, um **não reencaminhar** botão também é adicionado ao Friso.
 
 - Opções de clique com o botão direito do rato do Explorador de Ficheiros do Windows para os utilizadores aplicarem etiquetas de classificação e proteção a ficheiros.
 
 - Um visualizador para apresentar ficheiros protegidos quando uma aplicação nativa não consegue abri-los.
 
-- Um módulo do PowerShell para aplicar e remover etiquetas de classificação e proteção de ficheiros.
+- Um módulo do PowerShell para aplicar e remover etiquetas de classificação e proteção de ficheiros. 
+    
+    Este módulo inclui cmdlets para instalar e configurar o [scanner do Azure Information Protection](../deploy-use/deploy-aip-scanner.md) (atualmente em pré-visualização) que é executado como um serviço no Windows Server. Este serviço permite-lhe detetar, classificar e proteger os ficheiros nos arquivos de dados, como partilhas de rede e de bibliotecas do SharePoint Server.
 
 - O cliente do Rights Management que comunica com o Azure Rights Management (Azure RMS) ou os Serviços de Gestão de Direitos do Active Directory (AD RMS).
 
@@ -71,6 +73,8 @@ Implemente o cliente do Azure Information Protection no caso de se aplicar algum
 
 - Quer executar scripts que classificam (e, opcionalmente, protegem) documentos ao utilizar comandos do PowerShell.
 
+- Pretende executar um serviço que Deteta, classifica (e, opcionalmente, protege) ficheiros que estão armazenados no local. Este serviço de scanner está atualmente em pré-visualização.
+
 - Quer ver documentos protegidos quando uma aplicação nativa para apresentar o ficheiro não está instalada ou não consegue abrir estes documentos.
 
 - Quer apenas proteger os ficheiros através do Explorador de Ficheiros ou através de comandos do PowerShell.
@@ -81,187 +85,25 @@ Implemente o cliente do Azure Information Protection no caso de se aplicar algum
 
 - Utiliza o Office 2010 e quer proteger documentos e e-mails através do serviço Azure Rights Management.
 
-Exemplo que mostra o suplemento do cliente do Azure Information Protection numa aplicação do Office a apresentar as etiquetas de classificação da sua organização e o novo botão **Proteger** no friso:
+O exemplo que mostra o cliente Azure Information Protection suplemento para uma aplicação do Office, que apresenta as etiquetas de classificação para a sua organização e a nova **proteger** botão no Friso:
 
 ![Barra do Azure Information Protection com a política predefinida](../media/word2016-calloutsv2.png)
 
-## <a name="how-to-install-the-azure-information-protection-client-for-users"></a>Como instalar o cliente do Azure Information Protection para os utilizadores
+## <a name="installing-and-supporting-the-azure-information-protection-client"></a>Instalar e que suportam o cliente Azure Information Protection
 
-Antes de instalar o cliente, verifique se os computadores têm as versões de sistema operativo e as aplicações necessárias para o Azure Information Protection: [Requisitos do Azure Information Protection](../get-started/requirements-azure-rms.md). 
+Pode instalar o cliente Azure Information Protection utilizando o Windows Update, um executável ou um ficheiro do Windows installer. Para obter mais informações sobre cada opção e instruções, consulte [instalar o cliente Azure Information Protection para os utilizadores](client-admin-guide-install.md).  
 
-Em seguida, verifique os pré-requisitos adicionais que o cliente do Azure Information Protection possa precisar.
+Utilize as secções seguintes para informações sobre como instalar o cliente de suporte. 
 
-### <a name="additional-prerequisites-for-the-azure-information-protection-client"></a>Pré-requisitos adicionais para o cliente do Azure Information Protection
+### <a name="installation-checks-and-troubleshooting"></a>Verificações de instalação e a resolução de problemas
 
-- Microsoft .NET Framework 4.6.2
-    
-    A instalação completa do cliente do Azure Information Protection requer, por predefinição, a versão mínima do Microsoft .NET Framework 4.6.2 e, se estiver em falta, o instalador tentará transferir e instalar este pré-requisito. Quando este pré-requisito é instalado como parte da instalação do cliente, o computador tem de ser reiniciado. Embora não seja recomendado, pode ignorar este pré-requisito com um [parâmetro de instalação personalizada](#more-information-about-the-downgradedotnetrequirement-installation-parameter).
-
-- Microsoft .NET Framework 4.5.2
-    
-    Se o Visualizador do Azure Information Protection for instalado à parte, precisará da versão mínima do Microsoft .NET Framework 4.5.2 e, se esta estiver em falta, o instalador não a transfere nem a instala.
-
-- Versão do Windows PowerShell 4.0
-    
-    O módulo do PowerShell para o cliente requer o Windows PowerShell versão 4.0, que poderá ter de ser instalado em sistemas operativos mais antigos. Para obter mais informações, veja [Como Instalar o Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). O instalador não verifica nem instala este pré-requisito automaticamente. Para verificar que versão do Windows PowerShell está a executar, escreva `$PSVersionTable` numa sessão do PowerShell.
-
-- Assistente de Início de Sessão do Microsoft Online Services 7.250.4303.0
-    
-    Os computadores com o Office 2010 necessitam do Assistente de Início de Sessão do Microsoft Online Services versão 7.250.4303.0. Esta versão está incluída na instalação do cliente. Se tiver uma versão posterior do Assistente de Início de Sessão, desinstale-a antes de instalar o cliente do Azure Information Protection. Por exemplo, verifique a versão e desinstale o Assistente de Início de Sessão através do **Painel de Controlo** > **Programa e Funcionalidades** > **Desinstalar ou alterar um programa**.
-
-- KB 2533623
-    
-    Os computadores que executem o Windows 7 Service Pack 1 requerem a KB 2533623. Para obter mais informações sobre esta atualização, veja [Aviso de Segurança da Microsoft: o carregamento de bibliotecas não seguro pode permitir a execução remota de códigos](https://support.microsoft.com/en-us/kb/2533623). Poderá instalar diretamente esta atualização ou ser substituída por outra atualização que a instala por si.
-    
-    Se esta atualização for obrigatória e não estiver instalada, a instalação do cliente avisa-o de que tem de ser instalada. Esta atualização pode ser instalada após a instalação do cliente, mas algumas ações serão bloqueadas e a mensagem é apresentada novamente.  
-
-- Não desative o suplemento **Microsoft Azure Information Protection** para as aplicações do Office
-    
-    Se configurou a definição de política de grupo **Lista de suplementos geridos**, adicione o suplemento Microsoft Azure Information Protection às aplicações do Office ao especificar os seguintes identificadores programáticos (ProgID) para o Azure Information Protection e definir a opção para **1: o suplemento está sempre ativado**.
-    
-    - Para o Outlook: `MSIP.OutlookAddin`
-    
-    - Para o Word: `MSIP.WordAddin`
-    
-    - Para o Excel: `MSIP.ExcelAddin`
-    
-    - Para o PowerPoint: `MSIP.PowerPointAddin`
-    
-    Mesmo que ainda não tenha configurado esta definição de política de grupo **Lista de suplementos geridos**, poderá ter de a configurar se receber relatórios a informar que o suplemento Microsoft Azure Information Protection será desativado. Quando este suplemento é desativado, os utilizadores não veem a barra Azure Information Protection na aplicação do Office.
-    
-    Para obter mais informações sobre esta definição de política de grupo, veja [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off) (Os suplementos não são carregados devido às definições de política de grupo dos programas do Office 2013 e do Office 2016).
-
-> [!IMPORTANT]
-> A instalação do cliente do Azure Information Protection requer permissões administrativas locais.
-
-
-### <a name="options-to-install-the-azure-information-protection-client-for-users"></a>Opções para instalar o cliente do Azure Information Protection para os utilizadores
-
-Existem três opções para instalar o cliente para os utilizadores:
-
-**Windows Update**: o cliente Azure Information Protection está incluído no catálogo Microsoft Update, pelo que pode instalar e atualizar este cliente através de qualquer serviço de atualização de software que utilize o catálogo.
-
-**Execute a versão do executável (.exe) do cliente**: o método de instalação recomendado que pode executar interativamente ou silenciosamente. Este método tem mais flexibilidade e é recomendado porque o instalador verifica muitos dos pré-requisitos e pode instalar automaticamente pré-requisitos ausentes. [Instruções](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)
-
-**Implementar a versão do instalador do Windows (.msi) do cliente**: suportado apenas para instalações silenciosas que utilizam um mecanismo de implementação central, como uma política de grupo, o Configuration Manager e o Microsoft Intune. Este método é necessário para computadores com Windows 10 geridos pelo Intune e pela gestão de dispositivos móveis (MDM) porque para estes computadores, os ficheiros executáveis não têm suporte para instalação. No entanto, quando utilizar este método de instalação, deve verificar e instalar manualmente ou desinstalar o software dependente que o instalador do executável deve executar para cada computador. [Instruções](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)
-
-### <a name="to-install-the-azure-information-protection-client-by-using-the-executable-installer"></a>Instalar o cliente do Azure Information Protection através do instalador executável
-
-Utilize as instruções a seguir para instalar o cliente quando não estiver a utilizar o catálogo do Microsoft Update ou implemente o .msi com um método de implementação central como o Intune.
-
-1. Transfira a versão executável do cliente do Azure Information Protection a partir do [Centro de Transferências da Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
-    
-    Se existir uma versão de pré-visualização disponível, mantenha esta versão apenas para teste. Não se destina a utilizadores finais num ambiente de produção. 
-
-2. Para uma instalação predefinida, basta executar o ficheiro **AzInfoProtection.exe**, por exemplo. Porém, para ver as opções de instalação, execute primeiro o ficheiro com **/help**: `AzInfoProtection.exe /help`
-
-    Exemplo de como instalar automaticamente o cliente: `AzInfoProtection.exe /quiet`
-    
-    Exemplo de como instalar automaticamente apenas os cmdlets do PowerShell: `AzInfoProtection.exe  PowerShellOnly=true /quiet`
-    
-    Parâmetros adicionais que não estão listados no ecrã de ajuda:
-    
-    - **ServiceLocation**: utilize este parâmetro se estiver a instalar o cliente em computadores com o Office 2010 e se os utilizadores não forem administradores locais nos computadores deles ou se não quiser que lhes seja pedido. [Mais informações](#more-information-about-the-servicelocation-installation-parameter) 
-    
-    - **DowngradeDotNetRequirement**: utilize este parâmetro para ignorar o requisito para o Microsoft Framework .NET versão 4.6.2. [Mais informações](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
-    
-    - **AllowTelemetry=0**: utilize este parâmetro para desativar a opção de instalação **Ajude a melhorar o Azure Information Protection ao enviar estatísticas de utilização para a Microsoft**. 
-    
-3. Se estiver a instalar interativamente, selecione a opção para instalar uma **política de demonstração** se não puder ligar-se ao Office 365 ou ao Azure Active Directory e quiser ver e experimentar o lado do cliente do Azure Information Protection com uma política local para efeitos de demonstração. Quando o cliente se liga a um serviço Azure Information Protection, esta política de demonstração é substituída pela política do Azure Information Protection da organização.
-    
-4. Para concluir a instalação: 
-
-    - Se o computador estiver a executar o Office 2010, reinicie o computador. 
-        
-        Se o cliente não tiver sido instalado com o parâmetro ServiceLocation, quando abre uma das aplicações do Office que utilizam a barra do Azure Information Protection (por exemplo, o Word) pela primeira vez, terá de confirmar todos os pedidos para atualizar o registo para esta primeira utilização. A [deteção do serviço](../rms-client/client-deployment-notes.md#rms-service-discovery) é utilizada para preencher as chaves de registo. 
-    
-    - Para outras versões do Office, reinicie todas as aplicações do Office e todas as instâncias do Explorador de Ficheiros. 
-        
-5. Pode confirmar que a instalação foi concluída com êxito ao verificar o ficheiro de registo de instalação que, por predefinição, é criado na pasta %temp%. Pode alterar esta localização com o parâmetro de instalação **/log**. 
- 
-    Este ficheiro tem o seguinte formato de nomes: `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`
-    
-    Por exemplo: **Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
-    
-    Procure a seguinte cadeia neste ficheiro de registo: **Product: Microsoft Azure Information Protection -- Installation completed successfully.** Se a instalação falhou, este ficheiro de registo contém detalhes que o ajudam a identificar e resolver qualquer tipo de problemas.
-
-#### <a name="more-information-about-the-servicelocation-installation-parameter"></a>Mais informações sobre o parâmetro de instalação ServiceLocation
-
-Quando instala o cliente para utilizadores que têm o Office 2010 e não têm permissões administrativas locais, especifique o parâmetro ServiceLocation e o URL para o serviço Azure Rights Management. O parâmetro e o valor criam e definem as seguintes chaves de registo:
-
-HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\Activation
-
-HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
-
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
-
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
-
-Utilize o seguinte procedimento para identificar o valor a especificar para o parâmetro ServiceLocation. 
-
-##### <a name="to-identify-the-value-to-specify-for-the-servicelocation-parameter"></a>Para identificar o valor a especificar para o parâmetro ServiceLocation
-
-1. A partir de uma sessão do PowerShell, primeiro execute [Connect-AadrmService](https://docs.microsoft.com/powershell/aadrm/vlatest/connect-aadrmservice) e especifique as suas credenciais de administrador para ligar ao serviço Azure Rights Management. Em seguida, execute [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/aadrm/vlatest/get-aadrmconfiguration). 
- 
-    Se ainda não tiver instalado o módulo do PowerShell para o serviço Azure Rights Management, veja [Instalar o Windows PowerShell para o Azure Rights Management](../deploy-use/install-powershell.md).
-
-2. A partir da saída, identifique o valor **LicensingIntranetDistributionPointUrl**.
-
-    Por exemplo: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
-
-3. No valor, remova **/_wmcs/licensing** desta cadeia. Por exemplo: **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
-
-    A cadeia restante é o valor a especificar para o parâmetro ServiceLocation.
-
-Exemplo de como instalar automaticamente o cliente para o Office 2010 e para o Azure RMS: `AzInfoProtection.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
-
-
-#### <a name="more-information-about-the-downgradedotnetrequirement-installation-parameter"></a>Mais informações sobre o parâmetro de instalação DowngradeDotNetRequirement
-
-Para suportar as atualizações automáticas através do Windows Update e para integração fiável com aplicações do Office, o cliente do Azure Information Protection utiliza o Microsoft .NET Framework versão 4.6.2. Por predefinição, a instalação procura esta versão e tenta instalá-la se estiver em falta. A instalação depois exige que o computador seja reiniciado.
-
-Se a instalação desta versão posterior do Microsoft .NET Framework não for conveniente, poderá instalar o cliente com o parâmetro e valor **DowngradeDotNetRequirement=True**, que ignorará este requisito se o Microsoft .NET Framework 4.5.1 estiver instalado.
-
-Por exemplo: `AzInfoProtection.exe DowngradeDotNetRequirement=True`
-
-Recomendamos que utilize este parâmetro com cuidado e com o conhecimento de que existem problemas comunicados com aplicações do Office pendentes quando o cliente do Azure Information Protection é utilizado com esta versão mais antiga do Microsoft .NET Framework. Se surgirem problemas de aplicações pendentes, atualize para a versão recomendada antes de experimentar outras soluções para resolução de problemas. 
-
-Lembre-se também de que, se utilizar o Windows Update para manter atualizado o cliente do Azure Information Protection, tem de ter de outro mecanismo de implementação de software para atualizar o cliente para versões posteriores.
-
-### <a name="to-install-the-azure-information-protection-client-by-using-the-msi-installer"></a>Instalar o cliente do Azure Information Protection através do instalador .msi
-
-Para implementação central, utilize as seguintes informações específicas da versão de instalação .msi do cliente do Azure Information Protection. 
-
-Se utilizar o Intune enquanto método de implementação de software, utilize estas instruções em conjunto com [Adicionar aplicações com o Microsoft Intune](/intune/deploy-use/add-apps).
-
-1. Transfira a versão .msi do cliente do Azure Information Protection a partir do [Centro de Transferências da Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
-    
-    Se existir uma versão de pré-visualização disponível, mantenha esta versão apenas para teste. Não se destina a utilizadores finais num ambiente de produção. 
-
-2. Para cada computador que executar o ficheiro .msi, deve garantir que as seguintes dependências de software estão em vigor. Por exemplo, envie estes com a versão .msi do cliente ou implemente apenas em computadores que cumprem estas dependências:
-    
-    |Versão do Office|Sistema operativo|Software|Ação|
-    |--------------------|--------------|----------------|---------------------|
-    |Office 2016|Todas as versões suportadas|64 bits: [KB317866](https://www.microsoft.com/en-us/download/details.aspx?id=55073)<br /><br />32 bits: [KB317866](https://www.microsoft.com/en-us/download/details.aspx?id=55058)<br /><br /> Versão: 1.0|Instalar|
-    |Office 2013|Todas as versões suportadas|64 bits: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32 bits: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Versão: 1.0|Instalar|
-    |Office 2010|Todas as versões suportadas|[Assistente de Início de Sessão do Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Versão: 2.1|Instalar|
-    |Office 2010|Windows 8.1 e Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Número da versão incluído no nome de ficheiro: v3|Instalar se KB2843630 ou KB2919355 não está instalado|
-    |Office 2010|Windows 8 e Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Número da versão incluído no nome de ficheiro: v3|Instalar|
-    |Office 2010|Windows 7|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Número da versão incluído no nome de ficheiro: v3|Instalar se KB3125574 não está instalado|
-    |Não aplicável|Windows 7|KB2627273 <br /><br /> Número da versão incluído no nome de ficheiro: v4|Desinstalar|
-    
-
-3. Para uma instalação predefinida, execute o .msi com **/quiet**, por exemplo, `AzInfoProtection.msi /quiet`. No entanto, irá precisar de especificar parâmetros adicionais de instalação que estão documentados nas [instruções de instalação executáveis](#to-install-the-azure-information-protection-client-by-using-the-executable-installer).  
-
-## <a name="additional-checks-and-troubleshooting"></a>Verificações adicionais e resolução de problemas
-
-Utilize a opção **Ajuda e Feedback** para abrir a caixa de diálogo **Microsoft Azure Information Protection**:
+Quando o cliente é instalado, utilize o **ajuda e comentários** opção para abrir o **Microsoft Azure Information Protection** caixa de diálogo:
 
 - A partir de uma aplicação do Office: no separador **Base**, no grupo **Proteção**, clique em **Proteger** e, em seguida, selecione **Ajuda e Feedback**.
 
 - No Explorador de Ficheiros: selecione com o botão direito do rato um ficheiro, ficheiros ou pasta, selecione **Classificar e proteger** e, em seguida, selecione **Ajuda e Feedback**. 
 
-### <a name="help-and-feedback-section"></a>Secção **Ajuda e Feedback**
+#### <a name="help-and-feedback-section"></a>Secção **Ajuda e Feedback**
 
 A **ligação Mais informações** direciona-o, por predefinição, para o site do [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection), mas pode configurá-la para um URL personalizado, de acordo com uma das [definições da política](../deploy-use/configure-policy-settings.md) da política do Azure Information Protection.
 
@@ -271,7 +113,7 @@ Utilize a ligação **Enviar Comentários** para enviar pedidos ou sugestões pa
 
 O **repor definições** termina a sessão do utilizador, elimina a política do Azure Information Protection atualmente transferida e repõe as definições de utilizador para o serviço Azure Rights Management.
 
-#### <a name="more-information-about-the-reset-settings-option"></a>Obter mais informações sobre a opção Repor definições
+##### <a name="more-information-about-the-reset-settings-option"></a>Obter mais informações sobre a opção Repor definições
 
 - Não precisa de ser um administrador local para utilizar esta opção e esta ação não é registada no Visualizador de Eventos. 
 
@@ -299,7 +141,7 @@ O **repor definições** termina a sessão do utilizador, elimina a política do
 
 - É terminada a sessão do utilizador com sessão iniciada atualmente.
 
-### <a name="client-status-section"></a>Secção **Estado de cliente**
+#### <a name="client-status-section"></a>Secção **Estado de cliente**
 
 Utilize o valor **Ligado como** para confirmar que o nome de utilizador apresentado identifica a conta a ser utilizada para autenticação do Azure Information Protection. Este nome de utilizador tem de corresponder a uma conta utilizada no Office 365 ou no Azure Active Directory. A conta também tem de pertencer a um inquilino configurado para o Azure Information Protection.
 
@@ -319,9 +161,9 @@ Estes idiomas, opções de menu, caixas de diálogo e mensagens do Azure Informa
 
 No entanto, a etiqueta nomes e descrições que especificou não são convertidas automaticamente quando configurar as etiquetas na política do Azure Information Protection. A partir de 30 de Agosto de 2017, atual [política predefinida](../deploy-use/configure-policy-default.md) inclui suporte para alguns idiomas. Para os utilizadores vejam as etiquetas no respetivo idioma preferencial, fornecem as suas próprias traduções e configure a política do Azure Information Protection para utilizar estes traduções. Para obter mais informações, veja [Como configurar etiquetas para diferentes idiomas no Azure Information Protection](../deploy-use/configure-policy-languages.md). Marcas visuais não são convertidos e não suportam mais do que um idioma.
 
-## <a name="to-uninstall-the-azure-information-protection-client"></a>Para instalar o cliente do Azure Information Protection
+## <a name="uninstalling-the-azure-information-protection-client"></a>Desinstalar o cliente Azure Information Protection
 
-Pode utilizar uma das seguintes opções:
+Pode utilizar qualquer uma das seguintes opções para desinstalar o cliente:
 
 - Utilize o Painel de Controlo para desinstalar um programa: clique em **Microsoft Azure Information Protection** > **Desinstalar**
 
@@ -330,7 +172,9 @@ Pode utilizar uma das seguintes opções:
 - Execute o ficheiro executável com **/uninstall**. Por exemplo: `AzInfoProtection.exe /uninstall`
 
 ## <a name="next-steps"></a>Próximos passos
-Agora que instalou o cliente do Azure Information Protection, veja o seguinte para obter informações adicionais que poderá precisar para suportar este cliente:
+Para instalar o cliente, consulte [instalar o cliente Azure Information Protection para os utilizadores](client-admin-guide-install.md).
+
+Se já tiver instalado o cliente, consulte o seguinte para obter informações adicionais que poderá ter para suportar este cliente:
 
 - [Personalizações](client-admin-guide-customizations.md)
 

@@ -4,7 +4,7 @@ description: "Instruções e informações para os administradores configurarem 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/11/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: dd8b2dcf785d47ec779b314072fb5edddf556163
-ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
+ms.openlocfilehash: bca186ebe78d79926a6ef775b1f5be7006e89df5
+ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="configuring-and-using-document-tracking-for-azure-information-protection"></a>Configurar e utilizar o controlo de documentos do Azure Information Protection
+# <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guia do administrador: Configurar e utilizar o controlo de documentos para o Azure Information Protection
 
 >*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
@@ -64,6 +64,9 @@ Estes URLs são standard para o serviço Azure Rights Management, com a exceçã
 Quando os utilizadores iniciam sessão no site de controlo de documentos, podem controlar e revogar documentos que protegeram através do cliente do Azure Information Protection ou que partilharam através da aplicação de partilha Rights Management. Ao iniciar sessão como um administrador do Azure Information Protection (administrador global), pode clicar no ícone Administrador, que muda para o Modo de administrador. Este modo permite-lhe ver os documentos que os utilizadores na sua organização selecionaram para controlar com o cliente do Azure Information Protection ou partilharam com a aplicação de partilha Rights Management:
 
 ![Ícone Administrador no site de controlo de documentos](../media/tracking-site-admin-icon.png)
+
+> [!NOTE] 
+> Se não vir este ícone, apesar de ser um administrador global, é porque ainda não ainda partilhou documentos por si. Neste caso, utilize o seguinte URL para aceder ao site de controlo de documentos: https://portal.azurerms.com/#/admin
 
 As ações que executar no modo de Administrador são auditadas e registadas nos ficheiros de registo de utilização e tem de confirmar para continuar. Para obter mais informações sobre este registo, veja a secção seguinte.
 

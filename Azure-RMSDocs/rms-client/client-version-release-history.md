@@ -4,7 +4,7 @@ description: "Veja as novidades ou alterações ao lançamento do cliente do Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/09/2017
+ms.date: 10/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ccd6d0cec6a71527fad0303369baad90dd733958
-ms.sourcegitcommit: bcc2f69475f811245d2beaf79c67a3d8569c4821
-ms.translationtype: HT
+ms.openlocfilehash: ab9af432222b6973b329beffebe14dd8f3ef79b0
+ms.sourcegitcommit: 8c02aa2c6abc301a52a7f8ad9ee9d0ecd0b810f7
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/11/2017
+ms.lasthandoff: 10/30/2017
 ---
 # <a name="azure-information-protection-client-version-release-history"></a>Cliente do Azure Information Protection: histórico de lançamento de versões
 
@@ -26,12 +26,18 @@ A equipa do Azure Information Protection atualiza regularmente o cliente do Azur
 
 As versões de pré-visualização não devem ser implementadas para os utilizadores finais em redes de produção. Em vez disso, utilize as versões de pré-visualização para ver e experimentar as novas funcionalidades ou correções disponíveis na futura versão de DG. 
 
-Utilize as seguintes informações para ver o que há de novo ou o que foi alterado num determinado lançamento de DG. A versão mais atual aparece em primeiro na lista. Para que as alterações na versão de pré-visualização atual, consulte as informações na página de transferência.
+Utilize as seguintes informações para ver o que há de novo ou o que foi alterado num determinado lançamento de DG. A versão mais atual aparece em primeiro na lista. 
 
 > [!NOTE]
 > As pequenas correções não se encontram listadas, pelo que se encontrar um problema com o cliente do Azure Information Protection, primeiro deverá verificar se é ou não um problema com a versão de DG mais recente. Se for, verifique a versão de pré-visualização atual.
 >  
-> Se o problema continuar, veja as informações em [Opções de suporte e recursos da comunidade](../get-started/information-support.md#support-options-and-community-resources). Também o incentivamos a interagir com a equipa do Azure Information Protection, no [site Yammer](https://www.yammer.com/askipteam/).
+> Para obter suporte técnico, consulte o [opções de suporte e recursos da Comunidade](../get-started/information-support.md#support-options-and-community-resources) informações. Também o incentivamos a interagir com a equipa do Azure Information Protection, no [site Yammer](https://www.yammer.com/askipteam/).
+
+## <a name="versions-later-than-110560"></a>Versões posteriores 1.10.56.0
+
+Se tiver uma versão do cliente que é posterior à 1.10.56.0, é uma versão de pré-visualização para fins de avaliação e teste. 
+
+Para o que é nova ou alterada na versão de pré-visualização atual desde a última versão GA do cliente, consulte o **detalhes** secção no [página de transferência](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
 
 ## <a name="version-110560"></a>Versão 1.10.56.0
 
@@ -41,9 +47,9 @@ Esta versão inclui o MSIPC versão 1.0.3219.0619 do cliente RMS.
 
 **Novas funcionalidades**:
 
-- Suporte para as etiquetas que estão configurados para as ações definidas pelo utilizador. Para o Outlook, esta etiqueta aplica automaticamente a Outlook opção não reencaminhar. Para Word, Excel, PowerPoint e Explorador de ficheiros, esta etiqueta pede ao utilizador para especificar permissões personalizadas. Para obter mais informações, consulte [configurar uma etiqueta de Azure Information Protection para proteção](../deploy-use/configure-policy-protection.md).
-
 - Suporte para as condições de DLP do Office 365 novo que pode configurar para uma etiqueta. Para obter mais informações, consulte [configurar condições para uma etiqueta de Azure Information Protection](../deploy-use/configure-policy-classification.md).
+
+- Suporte para as etiquetas que estão configurados para as ações definidas pelo utilizador. Para o Outlook, esta etiqueta aplica automaticamente a Outlook opção não reencaminhar. Para Word, Excel, PowerPoint e Explorador de ficheiros, esta etiqueta pede ao utilizador para especificar permissões personalizadas. Para obter mais informações, consulte [configurar uma etiqueta de Azure Information Protection para proteção](../deploy-use/configure-policy-protection.md).
 
 - As etiquetas são apresentadas a partir do **proteger** botão no friso Office, para além de apresentação na barra de Information Protection. 
 
@@ -115,7 +121,7 @@ Esta versão inclui a versão MSIPC 1.0.2217.1 do cliente RMS.
 
 **Alteração nos requisitos:**
 
-A versão anterior introduziu o novo pré-requisito do Microsoft .NET Framework 4.6.2 para o cliente completo. Embora não seja recomendado, pode ignorar este pré-requisito com um parâmetro de instalação personalizada, **DowngradeDotNetRequirement**. Para obter mais informações, veja a [secção de instalação do cliente](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users) no guia do administrador.
+A versão anterior introduziu o novo pré-requisito do Microsoft .NET Framework 4.6.2 para o cliente completo. Embora não seja recomendado, pode ignorar este pré-requisito com um parâmetro de instalação personalizada, **DowngradeDotNetRequirement**. Para obter mais informações, consulte [instalar o cliente Azure Information Protection para os utilizadores](client-admin-guide-install.md) do guia de administração.
 
 **Novas funcionalidades**:
 
@@ -149,7 +155,7 @@ Microsoft .NET Framework
 
 - Um cliente novo e unificado que combina as funcionalidades da aplicação de partilha Rights Management para Windows com o cliente do Azure Information Protection. Inclui:
     
-    - Integração com o Explorador de Ficheiros do Windows (clique com o botão direito do rato) para aplicar as etiquetas e a proteção. Suporta a secção de vários ficheiros e formatos de ficheiro adicionais.
+    - Integração com o Explorador de Ficheiros do Windows (clique com o botão direito do rato) para aplicar as etiquetas e a proteção. Suporta os formatos de ficheiro adicionais e a seleção de vários ficheiros.
     - Um visualizador para documentos protegidos (inclui o PDF protegido para SharePoint).
     - Cmdlets do PowerShell para obter e definir etiquetas para os ficheiros que estão armazenados localmente ou em partilhas de rede. Estes cmdlets são instalados com os cmdlets anteriormente enviados com a Ferramenta de Proteção RMS (módulo RMSProtection).
     - Registos da utilização do cliente que registam as informações como a etiqueta que foi aplicada, como e por quem.
@@ -169,7 +175,7 @@ Esta versão do cliente é a [Versão de Disponibilidade Geral](https://blogs.te
 
 - Os testes de diagnóstico e a opção de reposição que um utilizador pode executar a partir da aplicação do Office quando o cliente do Azure Information Protection está instalado: no separador **Base**, no grupo **Proteção**, clique em **Proteger** e em **Ajuda e comentários** e, em seguida, clique em **Executar diagnósticos**. 
 
-    Para obter mais informações sobre esta opção, veja a secção [Verificações adicionais e resolução de problemas](client-admin-guide.md#additional-checks-and-troubleshooting) no guia do administrador.
+    Para obter mais informações sobre esta opção, veja a secção [Verificações adicionais e resolução de problemas](client-admin-guide.md#installation-checks-and-troubleshooting) no guia do administrador.
 
 **Correções**:
 

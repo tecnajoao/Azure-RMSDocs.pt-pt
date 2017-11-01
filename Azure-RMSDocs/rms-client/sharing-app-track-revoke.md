@@ -4,7 +4,7 @@ description: "Após proteger os seus documentos utilizando a aplicação de part
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 10/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 34025b7080b4365c0c1fdd77355e78a7c8742ce2
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 71f08e7500fbc9326bed3a5b37d694ecc5e37984
+ms.sourcegitcommit: 02e48f0e5137ba777ec9a2bccde08130e6075c20
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 10/19/2017
 ---
 # <a name="track-and-revoke-your-documents-when-you-use-the-rms-sharing-application"></a>Controlar e revogar os documentos quando utiliza a aplicação de partilha RMS
 
@@ -37,6 +37,8 @@ Ao aceder a este site, inicie sessão para controlar os seus documentos. Desde q
 -   Se pretender configurar notificações por e-mail: clique em **Definições** e selecione como e se deve receber um e-mail quando alguém aceder ao documento.
 
 - Se quiser controlar e revogar documentos partilhados para outras pessoas: os administradores do Azure Information Protection podem controlar e revogar documentos para outras pessoas ao clicar no ícone Administrador. Apenas os administradores veem este ícone.
+    
+    Nota: Se não vir este ícone, apesar de ser um administrador global, é porque ainda não partilhou documentos. Neste caso, utilize o seguinte URL para aceder ao site de controlo de documentos: https://portal.azurerms.com/#/admin
 
 -   Se tiver dúvidas ou quiser fornecer feedback sobre o site de controlo de documentos: clique no ícone de Ajuda para aceder às [FAQ acerca do Controlo de Documentos](http://go.microsoft.com/fwlink/?LinkId=523977).
 

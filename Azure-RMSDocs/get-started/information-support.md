@@ -4,7 +4,7 @@ description: "Recursos para administradores que incluem informações sobre nova
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/10/2017
+ms.date: 10/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 00167de7ff0c4448c558473bbd429e08a5615c6b
-ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
+ms.openlocfilehash: 25a3baea4b1a25f23e06cc785d12f439c28ca8ea
+ms.sourcegitcommit: 73973986ae7086e6f30cab579187241fd98bef61
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 10/21/2017
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informações e suporte do Azure Information Protection
 
@@ -83,7 +83,7 @@ Resolva os problemas:
 
 - Se tiver implementado o conector do Rights Management para os servidores no local: consulte as informações de [monitorização](../deploy-use/monitor-rms-connector.md) que incluem detalhes sobre as entradas do registo de eventos, contadores de desempenho e registo.
 
-- Para o cliente do Azure Information Protection para Windows: veja a secção [Verificações adicionais e resolução de problemas](../rms-client/client-admin-guide.md#additional-checks-and-troubleshooting) do guia do administrador.
+- Para o cliente Azure Information Protection para Windows: consulte a [verificações de instalação e a resolução de problemas](../rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) secção do Guia do administrador.
 
 ### <a name="community-resources"></a>Recursos comunitários
 

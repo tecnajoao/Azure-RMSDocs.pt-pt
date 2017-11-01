@@ -4,24 +4,21 @@ description: "Pode adicionar suporte para idiomas diferentes para as etiquetas q
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 10/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
-ms.openlocfilehash: 76650461c0af6e705f7ab124d31cdb598889bbc8
-ms.sourcegitcommit: bcc2f69475f811245d2beaf79c67a3d8569c4821
+ms.openlocfilehash: 7a77b517531d5b4586871abbcb22d2158673d56c
+ms.sourcegitcommit: 222318da363a45c3a533f7b77b02f4e31a258979
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/11/2017
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Como configurar as etiquetas e modelos para idiomas diferentes no Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection*
-
->[!NOTE]
->Esta funcionalidade está atualmente em pré-visualização.
 
 Embora as etiquetas predefinidas para o Azure Information Protection suportam vários idiomas, tem de configurar o suporte para os nomes das etiquetas e descrições que especificar. Esta configuração requer que efetue o seguinte:
 
@@ -47,11 +44,11 @@ Selecione os idiomas que correspondem à definição de idioma do Office e do Wi
     
     Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
-2. Do **GERIR** selecção de menu, selecione **idiomas (pré-visualização)**.
+2. Do **GERIR** selecção de menu, selecione **idiomas**.
 
-3. No **Azure Information Protection - idiomas (pré-visualização)** painel, selecione **adicionar um novo idioma para tradução**. Selecione os idiomas que pretende adicionar e, em seguida, selecione **OK**. Pode escrever o nome do idioma na caixa de pesquisa ou deslocar a lista dos idiomas disponíveis
+3. No **Azure Information Protection - idiomas** painel, selecione **adicionar um novo idioma para tradução**. Selecione os idiomas que pretende adicionar e, em seguida, selecione **OK**. Pode escrever o nome do idioma na caixa de pesquisa ou deslocar a lista dos idiomas disponíveis
 
-4. Os idiomas selecionados agora a apresentar no **Azure Information Protection - idiomas (pré-visualização)** painel:
+4. Os idiomas selecionados agora a apresentar no **Azure Information Protection - idiomas** painel:
     
     - Para adicionar outro idioma, selecione **adicionar um novo idioma para tradução** e repita o passo anterior. 
         
@@ -70,7 +67,7 @@ Selecione os idiomas que correspondem à definição de idioma do Office e do Wi
 
 8. Quando tiver editado cada ficheiro .xml, crie uma nova pasta comprimida (zipada) que contém estes ficheiros. A pasta comprimida pode ter qualquer nome, mas deve ter uma extensão .zip.
 
-9. Volte à **Azure Information Protection - idiomas (pré-visualização)** painel e selecione **importação**. Note que, se essa opção não estiver disponível, primeiro desmarque a caixa de verificação **NOME DO IDIOMA** ou as caixas de verificação para os idiomas selecionados individualmente.
+9. Volte à **Azure Information Protection - idiomas** painel e selecione **importação**. Note que, se essa opção não estiver disponível, primeiro desmarque a caixa de verificação **NOME DO IDIOMA** ou as caixas de verificação para os idiomas selecionados individualmente.
     
     Quando a importação estiver concluída, a transferência de nomes e descrições localizada para os utilizadores depois de publicar junto a política do Azure Information Protection. Pode clicar em **Publicar** a partir do painel **Política global** ou **Políticas de âmbito**.
 

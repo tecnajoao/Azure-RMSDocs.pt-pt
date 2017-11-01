@@ -4,7 +4,7 @@ description: "Algumas perguntas mais frequentes sobre o Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/11/2017
+ms.date: 10/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 54116659e37c22dbc20221d335e2e55443dff899
-ms.sourcegitcommit: bcc2f69475f811245d2beaf79c67a3d8569c4821
+ms.openlocfilehash: 324eb3eb5d749021da93213e807f6316ca784485
+ms.sourcegitcommit: a8140a7215c8704f34c247f602e1f12eb7b49aa2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/11/2017
+ms.lasthandoff: 10/23/2017
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Perguntas mais frequentes sobre o Azure Information Protection
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 10/11/2017
 
 Tem uma pergunta sobre o Azure Information Protection ou o serviço Azure Rights Management (Azure RMS)? Verifique se a resposta está aqui.
 
-Estas páginas de FAQ serão atualizadas regularmente e as novas adições serão indicadas nos anúncios mensais de atualizações de documentação no [Blogue do Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services).
+Estas páginas de FAQ são atualizadas regularmente, com novas adições indicadas nos anúncios de atualização de documentação mensal no [blogue Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates).
 
 ## <a name="whats-the-difference-between-azure-information-protection-and-azure-rights-management"></a>Qual é a diferença entre o Azure Information Protection e o Azure Rights Management?
 
@@ -45,7 +45,7 @@ Não. Embora a maioria das apresentações e demonstrações que viu do cliente 
 
 Quando o cliente do Azure Information Protection para o Windows estiver instalado e não tiver uma política do Azure Information Protection, o cliente funciona automaticamente no [modo apenas de proteção](../rms-client/client-protection-only-mode.md). Neste modo, os utilizadores podem facilmente aplicar modelos e permissões personalizadas do Rights Management. Se posteriormente comprar uma subscrição que inclui classificação e etiquetagem, o cliente mudará automaticamente para o modo padrão quando transfere a política do Azure Information Protection.
 
-Se atualmente utilizar a aplicação de partilha Rights Management para Windows, recomendamos que a substitua pelo cliente do Azure Information Protection. Suporte para a aplicação de partilha vai terminar 31 de Janeiro de 2019. Para ajudar com a transição, veja [Tarefas que costumava realizar com a aplicação de partilha RMS](../rms-client/upgrade-client-app.md).
+Se utilizar atualmente a aplicação para Windows de partilha Rights Management, recomendamos que substituem esta aplicação com o cliente Azure Information Protection. Suporte para a aplicação de partilha vai terminar 31 de Janeiro de 2019. Para ajudar com a transição, veja [Tarefas que costumava realizar com a aplicação de partilha RMS](../rms-client/upgrade-client-app.md).
 
 ## <a name="does-azure-information-protection-support-on-premises-and-hybrid-scenarios"></a>O Azure Information Protection suporta cenários no local e híbridos?
 
@@ -55,12 +55,29 @@ Se tiver servidores de ficheiros do Exchange Server, do SharePoint Server e do W
 
 O serviço Azure Rights Management gera e faz a gestão automática de certificados XrML conforme necessário, para não ter de utilizar um PKI no local. Para obter mais informações sobre como o Azure Rights Management utiliza certificados, veja a secção [Explicação passo a passo sobre como funciona o Azure RMS: primeira utilização, proteção de conteúdos, consumo de conteúdos](../understand-explore/how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) no artigo [Como funciona o Azure RMS?](../understand-explore/how-does-it-work.md).
 
+## <a name="i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work"></a>Posso ver o Azure Information Protection está indicado como uma aplicação de nuvem disponíveis para o acesso condicional — como funciona este trabalho?
+
+Sim, como uma pré-visualização pública oferta, agora pode configurar o acesso condicional do Azure AD para o Azure Information Protection.
+
+Quando um utilizador abre um documento protegido pelo Azure Information Protection, os administradores agora podem bloquear ou conceder acesso aos utilizadores no seu inquilino, com base nos controlos padrão de acesso condicional. Que exigem que a autenticação multifator (MFA) é uma das condições mais pedidas. Outro um é que dispositivos tem de ser [em conformidade com as políticas do Intune](/intune/conditional-access-intune-common-ways-use) para que, por exemplo, dispositivos móveis cumprem os requisitos de palavra-passe e uma versão mínima do sistema operativo e computadores têm de estar associados a um domínio.
+
+Para obter mais informações e alguns exemplos de instruções, consulte a seguinte mensagem de blogue: [políticas de acesso condicional para o Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2017/10/17/conditional-access-policies-for-azure-information-protection/).
+
+Informações adicionais:
+
+- Para computadores Windows: para a versão de pré-visualização atual, são avaliadas as políticas de acesso condicional para o Azure Information Protection quando o [ambiente do utilizador é inicializado](../understand-explore/how-does-it-work.md#initializing-the-user-environment) (este processo também é conhecido como bootstrapping), e em seguida, cada 30 dias.
+
+- Pode querer ajustar a frequência obterem avaliadas as políticas de acesso condicional. Pode fazê-lo ao configurar a duração do token. Para obter mais informações, consulte [configuráveis durações token no Azure Active Directory](/azure/active-directory/active-directory-configurable-token-lifetimes).
+
+- Recomendamos que não o adicione contas de administrador para as políticas de acesso condicional porque estas contas não conseguirá aceder ao painel do Azure Information Protection no portal do Azure.
+
+- Se utilizar uma grande quantidade de aplicações em nuvem para o acesso condicional, não poderá ver **Microsoft Azure Information Protection** apresentado na lista de selecção. Neste caso, utilize a caixa de pesquisa na parte superior da lista. Comece a escrever "Microsoft Azure Information Protection" para filtrar as aplicações disponíveis. Desde que tiver uma subscrição suportada, em seguida, verá **Microsoft Azure Information Protection** para selecionar. 
+
 ## <a name="whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365"></a>O que é a diferença entre as etiquetas no Azure Information Protection e as etiquetas no Office 365?
 
 As etiquetas no Azure Information Protection permitem-lhe aplicar uma política de classificação e a proteção consistente para documentos e e-mails, quer sejam no local ou na nuvem. Esta classificação e a proteção é independente de onde o conteúdo está armazenado ou como é movido. [Etiquetas no Office 365 segurança & conformidade](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) permitem-lhe classificar documentos e e-mails de auditoria e retenção de quando esse conteúdo está em serviços do Office 365. 
 
 Hoje em dia, aplicam-se e gerir estes etiquetas em separado, mas a Microsoft está a trabalhar para uma estratégia de etiquetas abrangente e unificada para vários serviços que incluem o Azure Information Protection, o Office 365, o Microsoft Cloud App Security e o Windows Proteção de informações. Este mesmo esquema de etiquetas e arquivo também estará disponíveis para fornecedores de software. Para obter mais informações, consulte a sessão do Microsoft Ignite 2017, [ciclo de vida de dados completo Protecting utilizando as capacidades de proteção de informações do Microsoft](https://myignite.microsoft.com/videos/55397).
-
 
 ## <a name="ive-heard-a-new-release-is-going-to-be-available-soon-for-azure-information-protectionwhen-will-it-be-released"></a>Já ouvi falar que uma nova versão irá estar disponível em breve para o Azure Information Protection. Quando será lançada?
 
@@ -74,11 +91,13 @@ Veja [Informações de suporte e conformidade do Azure Information Protection](.
 
 Em alternativa, utilize os canais de suporte padrão ou [contacte o Suporte da Microsoft](information-support.md#to-contact-microsoft-support).
 
-Para enviar feedback, como sugestões de melhorias ou novas funcionalidades: na aplicação do Office, no separador **Base** no grupo **Proteção**, clique em **Proteger** e, em seguida, clique em **Ajuda e Feedback**. Na caixa de diálogo **Microsoft Azure Information Protection**, clique em **Envie-nos Os Seus Comentários**. Esta ação abre uma mensagem de e-mail para ser enviado à equipa do Information Protection. É também convidado a interagir com a nossa equipa de engenharia, no [site Yammer do Azure Information Protection](https://www.yammer.com/askipteam/). 
+Para enviar feedback, como sugestões de melhorias ou novas funcionalidades: na aplicação do Office, no separador **Base** no grupo **Proteção**, clique em **Proteger** e, em seguida, clique em **Ajuda e Feedback**. Na caixa de diálogo **Microsoft Azure Information Protection**, clique em **Envie-nos Os Seus Comentários**. Esta opção abre uma mensagem de e-mail para serem enviadas a equipa do Information Protection.
+
+É também convidado a interagir com a nossa equipa de engenharia, no [site Yammer do Azure Information Protection](https://www.yammer.com/askipteam/). 
 
 ## <a name="what-do-i-do-if-my-question-isnt-here"></a>O que posso fazer se a minha pergunta não constar aqui?
 
-Em primeiro lugar, reveja as perguntas mais frequentes específicas sobre classificação e etiquetagem ou específicas sobre proteção de dados. O serviço Azure Rights Management (Azure RMS) fornece a tecnologia de proteção de dados do Azure Information Protection e o Azure RMS pode ser utilizado com ou sem classificação e etiquetagem: 
+Em primeiro lugar, reveja as seguintes perguntas mais frequentes sobre que são específicas para classificação e etiquetagem ou específicas para proteção de dados. O serviço Azure Rights Management (Azure RMS) fornece a tecnologia de proteção de dados do Azure Information Protection. O Azure RMS pode ser utilizado com a classificação e etiquetagem ou por si só. 
 
 - [FAQs sobre a classificação e etiquetagem](faqs-infoprotect.md)
 
@@ -86,7 +105,7 @@ Em primeiro lugar, reveja as perguntas mais frequentes específicas sobre classi
 
 Se não encontrar respostas às suas perguntas, utilize as ligações e os recursos indicados em [Informações e suporte do Azure Information Protection](information-support.md).
 
-Além disso, existem FAQ criadas para utilizadores finais:
+Além disso, existem FAQs criadas para os utilizadores finais:
 
 - [FAQ sobre a aplicação Azure Information Protection para iOS e Android](../rms-client/mobile-app-faq.md)
 

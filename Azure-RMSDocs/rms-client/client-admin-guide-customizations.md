@@ -4,7 +4,7 @@ description: "Informações sobre a personalização do cliente do Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 10/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d5345f794fb69ddbfb4d6ffcddfcffd41ecacff5
-ms.sourcegitcommit: ff2fadacf9ef4c6ee27d9d08c4c455ffd48f21f8
+ms.openlocfilehash: 304425a2c64fb306615bbd5c6edf5e78e10b8e80
+ms.sourcegitcommit: 8c02aa2c6abc301a52a7f8ad9ee9d0ecd0b810f7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 10/30/2017
 ---
-# <a name="custom-configurations-for-the-azure-information-protection-client"></a>Configurações personalizadas do cliente do Azure Information Protection
+# <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia de administração: Configurações personalizadas para o cliente Azure Information Protection
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Utilize as seguintes informações para as configurações avançadas que poderá precisar para cenários específicos ou um subconjunto de utilizadores ao gerir o cliente do Azure Information Protection.
 
@@ -32,7 +32,7 @@ Algumas destas definições requerem a edição do registo e algumas utilizam de
 
 2. No painel inicial do Azure Information Protection, selecione **Políticas de âmbito**.
 
-3. No painel **Azure Information Protection - Políticas de âmbito**, selecione o menu de contexto (**... **) junto à política que contém as definições avançadas. Em seguida, selecione **Definições avançadas**.
+3. No painel **Azure Information Protection - Políticas de âmbito**, selecione o menu de contexto (**...** ) junto à política que contém as definições avançadas. Em seguida, selecione **Definições avançadas**.
     
     Pode configurar as definições avançadas para a Política global, bem como para as políticas de âmbito.
 
@@ -40,7 +40,7 @@ Algumas destas definições requerem a edição do registo e algumas utilizam de
 
 5. Clique em **Publicar**e garanta que os utilizadores desta política reiniciam as aplicações do Office que tinham abertas.
 
-6. Caso já não precise da definição e pretenda reverter para o comportamento predefinido: no painel **Definições avançadas**, selecione o menu de contexto (**... **) junto à definição que já não é precisa e, em seguida, selecione **Eliminar**. Em seguida, clique em **Guardar e fechar**e publique novamente a política modificada.
+6. Caso já não precise da definição e pretenda reverter para o comportamento predefinido: no painel **Definições avançadas**, selecione o menu de contexto (**...** ) junto à definição que já não é precisa e, em seguida, selecione **Eliminar**. Em seguida, clique em **Guardar e fechar**e publique novamente a política modificada.
 
 ## <a name="prevent-sign-in-prompts-for-ad-rms-only-computers"></a>Impedir pedidos de início de sessão para computadores só com AD RMS
 
@@ -167,6 +167,8 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 ## <a name="enable-recommended-classification-in-outlook"></a>Ativar a classificação recomendada no Outlook
 
+Esta opção de configuração está atualmente em pré-visualização e está sujeita a alterações.
+
 Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure.
 
 Quando configurar uma etiqueta para a classificação recomendada, os utilizadores recebem um pedido para aceitar ou ignorar a etiqueta recomendada no Word, Excel e PowerPoint. Esta definição prolonga esta recomendação de etiqueta a apresentar também no Outlook.
@@ -180,11 +182,11 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Definir uma etiqueta predefinida diferente para o Outlook
 
-Esta opção de configuração está atualmente em pré-visualização e requer a versão de pré-visualização do cliente.
+Esta opção de configuração está atualmente em pré-visualização e está sujeita a alterações. Além disso, esta opção de configuração requer a versão de pré-visualização do cliente.
 
 Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
 
-Quando configurar esta definição, Outlook não se aplica a etiqueta predefinida que está configurada na política de proteção de informações do Azure para a definição **selecione a etiqueta predefinida**. Em vez disso, o Outlook pode aplicar uma etiqueta diferente ou sem etiqueta.
+Quando configurar esta definição, Outlook não se aplica a etiqueta predefinida que está configurada na política de proteção de informações do Azure para a definição **selecione a etiqueta predefinida**. Em vez disso, o Outlook pode aplicar uma etiqueta predefinida diferente ou sem etiqueta.
 
 Para aplicar uma etiqueta diferente, tem de especificar o ID da etiqueta. O valor de ID da etiqueta é apresentado no **etiqueta** painel, ao ver ou configurar a política do Azure Information Protection no portal do Azure. Para os ficheiros que tenham etiquetas aplicadas, também pode executar o [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) cmdlet do PowerShell para identificar o ID de etiqueta (MainLabelId ou SubLabelId). Quando uma etiqueta tiver etiquetas secundárias, sempre especificar o ID de apenas uma etiqueta secundária e não a etiqueta principal.
 

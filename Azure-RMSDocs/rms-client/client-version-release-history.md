@@ -12,17 +12,17 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ab9af432222b6973b329beffebe14dd8f3ef79b0
-ms.sourcegitcommit: 8c02aa2c6abc301a52a7f8ad9ee9d0ecd0b810f7
+ms.openlocfilehash: ec73c1e0c0c2d5ef959f15975b2a972086a3bcff
+ms.sourcegitcommit: 91585427fe62956fd78d4e7897ec8abe55b3c11d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="azure-information-protection-client-version-release-history"></a>Cliente do Azure Information Protection: histórico de lançamento de versões
 
 >*Aplica-se a: Azure Information Protection*
 
-A equipa do Azure Information Protection atualiza regularmente o cliente do Azure Information Protection com correções e novas funcionalidades. O cliente está incluído no catálogo Microsoft Update (categoria: **Azure Information Protection**) e podem sempre transferir a versão mais recente disponibilidade geral (DG) e a versão futura (a versão de pré-visualização) do o [Centro de transferências da Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+A equipa do Azure Information Protection atualiza regularmente o cliente do Azure Information Protection com correções e novas funcionalidades. O cliente está incluído no catálogo Microsoft Update (categoria: **Azure Information Protection**) e podem sempre transferir a versão mais recente disponibilidade geral (DG) e a versão de pré-visualização atual do [Centro de transferências da Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
 
 As versões de pré-visualização não devem ser implementadas para os utilizadores finais em redes de produção. Em vez disso, utilize as versões de pré-visualização para ver e experimentar as novas funcionalidades ou correções disponíveis na futura versão de DG. 
 

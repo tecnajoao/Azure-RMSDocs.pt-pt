@@ -4,7 +4,7 @@ description: "Algumas perguntas mais frequentes sobre o serviço de proteção d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 11/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 190ad05c5f505f2c0247c04bf271c8c12cac2ea9
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: 038cb3a81bac9f16055038f33d825daed6642479
+ms.sourcegitcommit: 91585427fe62956fd78d4e7897ec8abe55b3c11d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Perguntas mais frequentes sobre a proteção de dados no Azure Information Protection
 
@@ -124,9 +124,17 @@ Se proteger um e-mail com um anexo de documento do Office para um utilizador nã
 
 ## <a name="can-i-add-external-users-people-from-outside-my-company-to-custom-templates"></a>Posso adicionar utilizadores externos (pessoas que não pertencem à minha empresa) a modelos personalizados?
 
-Sim. Quando converter um modelo para uma etiqueta no portal do Azure, pode configurar o [as definições de proteção](../deploy-use/configure-policy-protection.md) para adicionar permissões a utilizadores e grupos a partir de fora da sua organização e até mesmo todos os utilizadores noutra organização. Em alternativa, pode efetuar esta configuração utilizando o PowerShell.
+Sim. O [as definições de proteção](../deploy-use/configure-policy-protection.md) que pode configurar no portal do Azure permitem-lhe adicionar permissões a utilizadores e grupos a partir de fora da sua organização e até mesmo todos os utilizadores noutra organização. A menos que será utilizado exclusivamente para enviar e-mail utilizando o modelo de [novas capacidades de encriptação de mensagens do Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e), não adicionar contas de redes sociais identidades (tais como o Gmail e Microsoft) ou outras contas que não estão em Azure AD.
 
-Para obter mais informações sobre a conversão de modelos personalizados para as etiquetas para que possa, em seguida, facilmente adicionar utilizadores externos, consulte [configurar e gerir modelos do Azure Information Protection](../deploy-use/configure-policy-templates.md).
+Tenha em atenção que se tiver etiquetas do Azure Information Protection, deve primeiro converta o modelo personalizado para uma etiqueta antes de poder configurar estas definições de proteção no portal do Azure. Para obter mais informações, consulte [configurar e gerir modelos do Azure Information Protection](../deploy-use/configure-policy-templates.md).
+
+Em alternativa, pode adicionar utilizadores externos para modelos personalizados (e as etiquetas) utilizando o PowerShell. Esta configuração requer a utilização de um objeto de definição de direitos que utiliza para atualizar o modelo:
+
+1. Especifique os endereços de e-mail externos e os seus direitos num objeto de definição de direitos, utilizando o [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) cmdlet para criar uma variável.
+
+2. Fornecer esta variável ao parâmetro RightsDefinition com o [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet.
+    
+    Para adicionar utilizadores a um modelo existente, tem de definir os objetos de definição de direitos para os utilizadores existentes nos modelos, além dos novos utilizadores. Para este cenário, poderá achar útil **exemplo 3: adicionar novos utilizadores e direitos para um modelo personalizado** do [exemplos](/powershell/module/aadrm/set-aadrmtemplateproperty#examples) secção para o cmdlet. 
 
 ## <a name="what-type-of-groups-can-i-use-with-azure-rms"></a>Tipo de grupos que pode utilizar com o Azure RMS?
 Para a maioria dos cenários, pode utilizar qualquer tipo de grupo no Azure AD que tenha um endereço de e-mail. Esta regra prática aplica-se sempre ao atribuir direitos de utilização, mas existem algumas exceções para administrar o serviço Azure Rights Management. Para obter mais informações, consulte [requisitos do Azure Information Protection para contas de grupo](../plan-design/prepare.md#azure-information-protection-requirements-for-group-accounts).

@@ -4,7 +4,7 @@ description: "Instruções para instalar, configurar e executar o Verificador de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/20/2017
+ms.date: 11/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 81c82ab010d07734ab2c0fea611b0857cc6de32f
-ms.sourcegitcommit: 2a3bc760999e50685b4054aa82f19e71123d6e77
+ms.openlocfilehash: 924a9e0b19203f60827693adecc9b74fa62edef1
+ms.sourcegitcommit: 92bbef77091c66300e0d2acce60c064ffe314752
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>O scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente a implementar
 
@@ -75,9 +75,9 @@ Antes de instalar o scanner do Azure Information Protection, certifique-se de qu
         
     - Para uma instância predefinida:`Install-AIPScanner -SqlServerInstance SQLSERVER1`
     
-    - Para uma instância nomeada:`Install-AIPScanner -SQLSERVER1\AIPSCANNER`
+    - Para uma instância nomeada:`Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER`
     
-    - Para SQL Server Express:`SQLSERVER1\SQLEXPRESS`
+    - Para SQL Server Express:`Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS`
 
 4. Certifique-se de que o serviço está agora instalado utilizando **ferramentas administrativas** > **serviços**. 
     
@@ -133,7 +133,9 @@ Com a configuração predefinida da análise, agora, está pronto para executar 
 
 3. Reveja os relatórios que são armazenados em %*localappdata*%\Microsoft\MSIP\Scanner\Reports e que têm um formato de ficheiro. csv. A configuração predefinida do scanner, apenas os ficheiros que cumprem as condições para classificação automática estão incluídos nestes relatórios.
     
-    Se os resultados não estão como esperado, poderá ter de otimizar as condições que especificou na política de Azure Information Protection. Se for esse o caso, repita os passos 1 a 3 até estar pronto para alterar a configuração para aplicar a classificação e, opcionalmente, a proteção. 
+    Se os resultados não estão como esperado, poderá ter de otimizar as condições que especificou na política de Azure Information Protection. Se for esse o caso, repita os passos 1 a 3 até estar pronto para alterar a configuração para aplicar a classificação e, opcionalmente, a proteção. Sempre que repita estes passos, primeiro execute o seguinte comando do PowerShell no computador do servidor do Windows:
+    
+        Set-AIPScannerConfiguration -Schedule OneTime
 
 Quando estiver pronto para etiquetar automaticamente os ficheiros que Deteta scanner, avance para o procedimento seguinte. 
 

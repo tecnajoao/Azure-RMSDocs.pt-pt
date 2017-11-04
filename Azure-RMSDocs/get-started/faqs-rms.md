@@ -4,19 +4,20 @@ description: "Algumas perguntas mais frequentes sobre o serviço de proteção d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/01/2017
+ms.date: 11/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
+ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 038cb3a81bac9f16055038f33d825daed6642479
-ms.sourcegitcommit: 91585427fe62956fd78d4e7897ec8abe55b3c11d
+ms.openlocfilehash: fb2af56222f686149e40afcd54b20c04114c2a1f
+ms.sourcegitcommit: 79aa9838956f755994efcb97cef6dd5d1892f06f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Perguntas mais frequentes sobre a proteção de dados no Azure Information Protection
 
@@ -55,7 +56,7 @@ Para obter mais informações sobre esta alteração, consulte o anúncio de blo
 
 ## <a name="where-can-i-find-information-about-third-party-solutions-that-integrate-with-azure-rms"></a>Onde posso encontrar informações sobre soluções de terceiros que se integram com o Azure RMS?
 
-Muitos fornecedores de software já têm soluções ou estão a implementar soluções que se integram no Azure Rights Management e a lista está a crescer rapidamente. Poderá achar útil para verificar o [soluções de RMS englightened](requirements-applications.md#rms-enlightened-solutions) lista e obter as atualizações mais recentes do [Microsoft Mobility@MSFTMobility ](https://twitter.com/MSFTMobility) no Twitter. No entanto, se tiver uma pergunta específica, envie uma mensagem de e-mail à equipa do Information Protection: askipteam@microsoft.com.
+Muitos fornecedores de software já têm soluções ou estão a implementar soluções que se integram no Azure Rights Management e a lista está a crescer rapidamente. Poderá achar útil para verificar o [soluções de RMS englightened](requirements-applications.md#rms-enlightened-solutions) lista e obter as atualizações mais recentes do [Microsoft Mobility@MSFTMobility ](https://twitter.com/MSFTMobility) no Twitter. Consulte também o [guia para programadores](../develop/developers-guide.md) e publique alguma questão de integração específico no Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam).
 
 ## <a name="is-there-a-management-pack-or-similar-monitoring-mechanism-for-the-rms-connector"></a>Existe um pacote de gestão ou o mecanismo de monitorização semelhante para o conector RMS?
 
@@ -103,8 +104,6 @@ Absolutamente. Além disso, a vantagem é que os utilizadores poderão proteger 
 
 ## <a name="if-i-use-this-protection-for-my-production-environment-is-my-company-then-locked-into-the-solution-or-risk-losing-access-to-content-that-we-protected-with-azure-rms"></a>Se utilizar esta proteção para o meu ambiente de produção, a minha empresa fica presa a essa solução ou arrisca-se a perder o acesso aos conteúdos que protegemos com o Azure RMS?
 Não, permanece sempre no controlo dos seus dados e pode continuar a aceder aos mesmos, mesmo se optar por deixar de utilizar o serviço Azure Rights Management. Para obter mais informações, veja [Desativar o Azure Rights Management](../deploy-use/decommission-deactivate.md).
-
-No entanto, antes de desativar o serviço Azure Rights Management, gostaríamos de ouvir do utilizador e compreender por que motivo tomou esta decisão. Se a proteção do Azure Rights Management não satisfizer os seus requisitos empresariais, contacte-nos no caso de estarmos a planear novas funcionalidades para um futuro próximo ou no caso de existirem alternativas. Envie uma mensagem de e-mail para [AskIPTeam@Microsoft.com](mailto:askipteam@microsoft.com?subject=Planning%20to%20decommission%20Azure%20RMS) e teremos todo o gosto em falar sobre os seus requisitos técnicos e empresariais.
 
 ## <a name="can-i-control-which-of-my-users-can-use-azure-rms-to-protect-content"></a>Posso controlar que utilizadores podem aceder ao Azure RMS para proteger o conteúdo?
 Sim, o serviço Azure Rights Management tem controlos de integração do utilizador para este cenário. Para obter mais informações, veja a secção [Configurar os controlos de inclusão para uma implementação faseada](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) no artigo [Ativar o Azure Rights Management](../deploy-use/activate-service.md).

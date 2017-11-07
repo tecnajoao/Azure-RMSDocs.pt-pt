@@ -4,7 +4,7 @@ description: "Instruções sobre como classificar e proteger os seus documentos 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 11/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: bbd2d81149dd860d7707b6eee83dacce9c13dd54
-ms.sourcegitcommit: 92bbef77091c66300e0d2acce60c064ffe314752
+ms.openlocfilehash: 13d751bf9754ba3645cb7bb7417e7f5be394eb27
+ms.sourcegitcommit: 769057f5ffb366fc645bff542a32b2eab4f20c70
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 11/06/2017
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Guia do utilizador: Classificar e proteger um ficheiro ou e-mail ao utilizar o Azure Information Protection
 
 >*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8 e Windows 7 com SP1*
 
 > [!NOTE]
-> Utilize estas instruções para classificar e proteger os seus documentos e e-mails. Se precisar de apenas classificar e proteger os seus documentos e e-mails não, consulte o [instruções apenas de classificar](client-classify-protect.md). Se não tem a certeza de que conjunto de instruções para utilizar, consulte o seu administrador ou suporte técnico.
+> Utilize estas instruções para classificar e proteger os seus documentos e e-mails. Se precisar de apenas classificar e proteger os seus documentos e e-mails não, consulte o [instruções apenas de classificar](client-classify.md). Se não tem a certeza de que conjunto de instruções para utilizar, consulte o seu administrador ou suporte técnico.
 
 A forma mais fácil de classificar e proteger os seus documentos e e-mails é durante a criação ou edição nas aplicações de ambiente de trabalho do Office: **Word**, **Excel**, **PowerPoint** e **Outlook**. 
 

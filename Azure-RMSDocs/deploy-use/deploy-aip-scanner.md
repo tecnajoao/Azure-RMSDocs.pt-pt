@@ -4,7 +4,7 @@ description: "Instruções para instalar, configurar e executar o Verificador de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/02/2017
+ms.date: 11/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 924a9e0b19203f60827693adecc9b74fa62edef1
-ms.sourcegitcommit: 92bbef77091c66300e0d2acce60c064ffe314752
+ms.openlocfilehash: 22e7ba9589e75013862f008f76fcc4082a847262
+ms.sourcegitcommit: f8efd2e462ad44b77205abd6249696c681790937
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>O scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente a implementar
 
@@ -129,7 +129,7 @@ Com a configuração predefinida da análise, agora, está pronto para executar 
 
 1. Utilizar **ferramentas administrativas** > **serviços**, iniciar a **Scanner de proteção de informações do Azure** serviço.
 
-2. Aguarde scanner concluir o respetivo ciclo. Quando o verificador tem pesquisado através de todos os ficheiros nos arquivos de dados que especificou, interrompe o serviço. Pode utilizar o Windows **aplicação** registo de eventos, **Scanner de proteção de informações do Azure**, para confirmar se o serviço está parado. Procure o ID de evento informativo **911**.
+2. Aguarde scanner concluir o respetivo ciclo. Quando o verificador tem pesquisado através de todos os ficheiros nos arquivos de dados que especificou, interrompe o serviço. Pode utilizar o Windows local **aplicações e serviços** registo de eventos, **Azure Information Protection**, para confirmar se o serviço está parado. Procure o ID de evento informativo **911**.
 
 3. Reveja os relatórios que são armazenados em %*localappdata*%\Microsoft\MSIP\Scanner\Reports e que têm um formato de ficheiro. csv. A configuração predefinida do scanner, apenas os ficheiros que cumprem as condições para classificação automática estão incluídos nestes relatórios.
     
@@ -178,7 +178,7 @@ Outros cmdlets para scanner permitem-lhe alterar a conta de serviço e a base de
 
 ## <a name="event-log-ids-and-descriptions"></a>IDs e descrições do registo de eventos
 
-Utilize as secções seguintes para identificar os IDs de eventos possíveis e as descrições de scanner.
+Utilize as secções seguintes para identificar os IDs de eventos possíveis e as descrições de scanner. Estes eventos são registados no servidor que executa o serviço de análise, nas janelas **aplicações e serviços** registo de eventos, **Azure Information Protection**.
 
 -----
 
@@ -202,9 +202,9 @@ Informações **913**
 
 **Scanner está parada porque scanner está definida para nunca.**
 
-Este evento é registado quando scanner está configurado para ser executada uma vez em vez de continuamente, e o serviço de análise de proteção de informações do Azure foi manualmente reiniciado desde que o computador foi iniciado.  
+Este evento é registado quando scanner está configurado para ser executada uma vez em vez de continuamente, e o serviço de análise do Azure Information Protection tiver sido manualmente reiniciado desde que o computador foi iniciado.  
 
-Analise os ficheiros novamente, tem de iniciar manualmente o serviço. Para alterar este comportamento para que a análise é executada continuamente, utilize o [AIPScannerConfiguration conjunto](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet e defina o **agenda** parâmetro **Continuous**.
+Analise os ficheiros novamente, tem de definir a agenda **OneTime** ou **Continuous**e, em seguida, reinicie manualmente o serviço. Para alterar a agenda, utilize o [conjunto AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet e os **agenda** parâmetro.
 
 ----
 

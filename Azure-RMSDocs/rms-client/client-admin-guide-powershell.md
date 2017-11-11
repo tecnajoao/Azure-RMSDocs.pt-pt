@@ -4,7 +4,7 @@ description: "As instruções e as informações para os administradores gerirem
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 11/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 197e3c8e908849665231040fd86cd79bd47cd1eb
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: 15f292dbd132449a4abb77ca2d3452b6c4575e55
+ms.sourcegitcommit: bcb04f0383a8f16a4991277a6b99309fddf61312
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/10/2017
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guia do administrador: Utilizar o PowerShell com o cliente Azure Information Protection
 
@@ -512,6 +512,13 @@ Após ter executado este cmdlet, pode executar os cmdlets de etiquetagem no cont
     
     Concluiu agora a configuração das duas aplicações e tem os valores necessários para executar o cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) com parâmetros.
 
+
+> [!TIP]
+> Se o conjunto AIPAuthentication não for bem sucedida e utilizou as aplicações existentes em vez de criar novas aplicações ao utilizar as instruções anteriores, poderá ter de repor as permissões necessárias para as suas aplicações. Também pode ser o caso se seguiu as instruções para criar novas aplicações para Set-AIPAuthentication, mas, em seguida, modificar as definições da aplicação.
+> 
+> Para repor as permissões necessárias, para ambas as aplicações, utilize os seguintes passos de configuração: selecione **todas as definições** > **as permissões necessárias** > **conceder Permissões**e clique em **Sim** para confirmar.
+> 
+> Em alternativa, crie novas aplicações utilizando as instruções anteriores.
 
 ## <a name="next-steps"></a>Próximos passos
 Para obter a ajuda do cmdlet quando estiver numa sessão do PowerShell, escreva `Get-Help <cmdlet name> cmdlet` e utilize o parâmetro online para ler as informações mais atualizadas. Por exemplo: 

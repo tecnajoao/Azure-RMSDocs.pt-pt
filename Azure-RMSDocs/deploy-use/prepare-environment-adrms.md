@@ -4,7 +4,7 @@ description: "Orientações para o caso de ter o Azure Rights Management com o A
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 11/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 11ffa730-c5dc-4b6b-9c1e-c58eff8aafc2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2e8f6596216e06e2af773c0a19a2c5eaafd096b8
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: b20bbc1fe0de90b9b0151098e1b77d3c7a98c431
+ms.sourcegitcommit: e9a24fc5303b21f5eeebf16afed44db0d163ac77
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="preparing-the-environment-for-azure-rights-management-when-you-also-have-active-directory-rights-management-services-ad-rms"></a>Preparar o ambiente para o Azure Rights Management quando também tem os Serviços de Gestão de Direitos do Active Directory (AD RMS)
 
@@ -24,9 +24,9 @@ ms.lasthandoff: 08/30/2017
 
 Orientações importantes se já estiver a utilizar os Serviços de Gestão de Direitos do Active Directory (AD RMS) e o seguinte cenário se aplicar:
 
-## <a name="you-see-an-option-to-activate-azure-rms-when-you-configure-azure-information-protection"></a>Vê uma opção para ativar o Azure RMS quando configura o Azure Information Protection
+## <a name="you-see-an-option-to-activate-protection-when-you-configure-azure-information-protection"></a>Verá uma opção para ativar a proteção, quando configurar o Azure Information Protection
 
-O **Azure Information Protection - definições do RMS** painel tem uma opção para ativar o serviço Azure Rights Management (Azure RMS). 
+O **Azure Information Protection - ativação da proteção** painel tem uma opção para ativar o serviço Azure Rights Management (Azure RMS). 
 
 Se também estiver a utilizar os Serviços de Gestão de Direitos do Active Directory (AD RMS), não selecione a opção **Ativar**. Se tiver o AD RMS, a ativação do Azure Rights Management também não é uma opção compatível. Este cenário não é suportado e tem resultados pouco fiáveis, pelo que é importante que não ative o Azure Rights Management nesta fase. 
 

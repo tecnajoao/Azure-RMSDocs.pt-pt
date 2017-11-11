@@ -4,17 +4,17 @@ description: "Passo 2 de um tutorial de introdução para experimentar o Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/12/2017
+ms.date: 11/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 4fb571f84e9916fb5573d551ec0f0bf374e5df2f
-ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
+ms.openlocfilehash: c1e086c1d0dd5024322e745fdea2d38c139ecf76
+ms.sourcegitcommit: e9a24fc5303b21f5eeebf16afed44db0d163ac77
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passo 2: configurar e publicar a política do Azure Information Protection
 
@@ -37,7 +37,7 @@ Apesar de o Azure Information Protection ser fornecido com uma política predefi
     
     ![Passo 3 do tutorial de início rápido do Azure Information Protection – política predefinida](../media/info-protect-policy-default-labelsv2.png)
     
-3. Também verá que existem algumas definições de política que não estejam definidas. Todos os documentos e e-mails não têm de ter uma etiqueta, há qualquer etiqueta predefinida e os utilizadores têm de fornecer justificação quando são alterados etiquetas:
+3. Também verá que existem algumas definições de política. Por exemplo, documentos e e-mails não têm de ter uma etiqueta, há qualquer etiqueta predefinida e os utilizadores têm de fornecer justificação quando são alterados etiquetas:
     
     ![Passo 3 do tutorial de início rápido do Azure Information Protection – política predefinida](../media/info-protect-policy-default-settings.png)
 
@@ -113,7 +113,7 @@ Vamos agora criar uma nova etiqueta secundária **confidencial**.
     
     Clique em **guardar** para voltar para o **subetiqueta** painel.
 
-10. No **subetiqueta** painel, verá que **número de cartão de crédito** é apresentado como o **nome da condição**, com **1** ** As OCORRÊNCIAS**:
+10. No **subetiqueta** painel, verá que **número de cartão de crédito** é apresentado como o **nome da condição**, com **1**  **As OCORRÊNCIAS**:
     
     ![Passo 3 do tutorial de início rápido do Azure Information Protection – configurar condição de cartão de crédito](../media/step2-see-condition.png)
 

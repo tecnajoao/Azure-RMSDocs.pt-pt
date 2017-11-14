@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 15f292dbd132449a4abb77ca2d3452b6c4575e55
-ms.sourcegitcommit: bcb04f0383a8f16a4991277a6b99309fddf61312
+ms.openlocfilehash: dc3545c8212907786aa2fcf11e819b4cbdcf1ab5
+ms.sourcegitcommit: 4c6d9c55ff5dc5dbb10dc8a5abed9319fd3efb98
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/10/2017
+ms.lasthandoff: 11/13/2017
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guia do administrador: Utilizar o PowerShell com o cliente Azure Information Protection
 
@@ -454,11 +454,14 @@ A saída pode ser semelhante ao seguinte:
 
 ## <a name="how-to-label-files-non-interactively-for-azure-information-protection"></a>Como etiquetar ficheiros de forma não interativa para o Azure Information Protection
 
-Pode executar os cmdlets de etiquetas não interativamente utilizando a **conjunto AIPAuthentication** cmdlet.
+Pode executar os cmdlets de etiquetas não interativamente utilizando a **conjunto AIPAuthentication** cmdlet. Operação não interativo é também necessária para análise do Azure Information Protection, atualmente em pré-visualização.
 
 Por predefinição, quando executa os cmdlets de etiquetagem, os comandos são executados no seu próprio contexto de utilizador numa sessão interativa do PowerShell. Para executá-los de modo autónomo, crie uma nova conta de utilizador do Azure AD para este fim. Em seguida, no contexto desse utilizador, execute o cmdlet Set-AIPAuthentication para definir e armazenar credenciais através de um token de acesso do Azure AD. Esta conta de utilizador é, em seguida, autenticada e reiniciada para o serviço Azure Rights Management. A conta transfere a política do Azure Information Protection e quaisquer modelos do Rights Management utilizados pelas etiquetas.
 
-Na primeira vez que executar este cmdlet, é pedido que inicie sessão no Azure Information Protection. Especifique o nome da conta e a palavra-passe de utilizador que criou para o utilizador autónomo. Em seguida, esta conta pode executar os cmdlets de etiquetagem de forma não interativa até o token de autenticação expirar. Quando o token expirar, execute o cmdlet novamente para comprar um novo token:
+> [!NOTE]
+> Se utilizar [âmbito políticas](../deploy-use/configure-policy-scope.md), lembre-se de que poderá ter de adicionar esta conta para as políticas de âmbito.
+
+Na primeira vez que executar este cmdlet, é pedido que inicie sessão no Azure Information Protection. Especifique o nome de conta de utilizador e palavra-passe que criou para o utilizador automático. Em seguida, esta conta pode executar os cmdlets de etiquetagem de forma não interativa até o token de autenticação expirar. Quando o token expirar, execute o cmdlet novamente para comprar um novo token:
 
 Se executar este cmdlet sem parâmetros, a conta compra um token de acesso que é válido durante 90 dias ou até a sua palavra-passe expirar.  
 

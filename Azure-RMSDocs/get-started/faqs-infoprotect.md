@@ -4,7 +4,7 @@ description: "Tem uma pergunta específica sobre classificação e etiquetagem a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2017
+ms.date: 11/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 2ac8211b338b9d35bb7962455a117d02f9c1fa32
-ms.sourcegitcommit: 4b7f025e9f78d25c6f3079cceb42bc33f3f3a612
+ms.openlocfilehash: 4332b37a3c89cb68d8e090e44666f2620d5b0064
+ms.sourcegitcommit: fd3932ab19a00229b56efc3e301abaf9cff3f70b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Perguntas mais frequentes sobre a classificação e a etiquetagem no Azure Information Protection
 
@@ -64,7 +64,13 @@ Não. Quando coloca uma etiqueta numa mensagem de e-mail com anexos, esses anexo
 
 ## <a name="how-can-dlp-solutions-and-other-applications-integrate-with-azure-information-protection"></a>Como podem as soluções DLP e outras aplicações ser integradas com o Azure Information Protection?
 
-Uma vez que o Azure Information Protection utiliza metadados persistentes para classificação, que incluem uma etiqueta de texto não encriptado, estas informações podem ser lidas por soluções DLP e outras aplicações. Nos ficheiros, estes metadados são armazenados nas propriedades personalizadas. Nos e-mails, estas informações estão nos cabeçalhos do e-mail.
+Uma vez que o Azure Information Protection utiliza metadados persistentes para classificação, que incluem uma etiqueta de texto não encriptado, estas informações podem ser lidas por soluções DLP e outras aplicações. 
+
+- Para documentos do Word (. doc e. docx), folhas de cálculo do Excel (xls e ou), apresentações do PowerPoint (.ppt e .pptx) e documentos PDF (. pdf), estes metadados são armazenados na propriedade personalizada seguinte: **MSIP_Label_\<GUID > _ Ativado = True**  
+
+- Nos e-mails, estas informações são armazenadas no cabeçalho de x: **msip_labels: MSIP_Label_\<GUID > _Enabled = True;**  
+
+Para identificar o GUID para uma etiqueta, localize o valor de ID da etiqueta no painel de etiqueta, ao ver ou configurar a política do Azure Information Protection no portal do Azure. Para os ficheiros que tenham etiquetas aplicadas, também pode executar o [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) cmdlet do PowerShell para identificar o GUID (MainLabelId ou SubLabelId). Quando uma etiqueta tiver etiquetas secundárias, especifique sempre o GUID de apenas uma etiqueta secundária e não a etiqueta principal.
 
 ## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>Qual a diferença entre a classificação do Azure Information Protection para e-mails e a classificação de mensagens do Exchange?
 

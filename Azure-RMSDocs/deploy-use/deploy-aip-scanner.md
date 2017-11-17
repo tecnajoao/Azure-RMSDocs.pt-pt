@@ -4,7 +4,7 @@ description: "Instruções para instalar, configurar e executar o Verificador de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/07/2017
+ms.date: 11/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 5df68e177d9e3d77a4fd9441e07f1779fa714b23
-ms.sourcegitcommit: a63b3ac3949e66cc38e20d7f14ac129b8e3224c3
+ms.openlocfilehash: 89772a9239308fbd60c34ec9a3e122061bbf9dbe
+ms.sourcegitcommit: 63a8186d727bec185903a5201f3b1efc9b4fa8b5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>O scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente a implementar
 
@@ -53,10 +53,10 @@ Antes de instalar o scanner do Azure Information Protection, certifique-se de qu
 |Requisito|Mais informações|
 |---------------|--------------------|
 |Computador Windows Server para executar o serviço de análise:<br /><br />-4 processos<br /><br />-4 GB de RAM|Windows Server 2016 ou o Windows Server 2012 R2. <br /><br />Nota: Para fins de teste ou avaliação num ambiente de não produção, pode utilizar um sistema de operativo de cliente Windows é [suportadas pelo cliente Azure Information Protection](../get-started/requirements.md#client-devices).<br /><br />Este computador pode ser um computador físico ou virtual que tenha uma ligação de rede rápida e fiável para os arquivos de dados ser analisados. <br /><br />Certifique-se de que este computador tem o [conectividade à Internet](../get-started/requirements.md#firewalls-and-network-infrastructure) que necessita para o Azure Information Protection. Em alternativa, tem de o configurar como um [computadores desligados](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). |
-|SQL Server para armazenar a configuração de scanner:<br /><br />-Instância local ou remota|SQL Server 2012 R2 é a versão mínima para as seguintes edições:<br /><br />-SQL Server para empresas<br /><br />-SQL Server Standard<br /><br />-SQL Server Express|
+|SQL Server para armazenar a configuração de scanner:<br /><br />-Instância local ou remota|SQL Server 2012 é a versão mínima para as seguintes edições:<br /><br />-SQL Server para empresas<br /><br />-SQL Server Standard<br /><br />-SQL Server Express|
 |Conta de serviço para executar o serviço de análise|Esta conta tem de ser uma conta do Active Directory que está sincronizada com o Azure AD, com os seguintes requisitos adicionais:<br /><br />- **Iniciar sessão localmente** à direita. Este direito é necessário para a instalação e configuração do scanner, mas não para a operação. Tem de conceder este direito para a conta de serviço, mas pode remover este direito depois de confirmar que o verificador pode detetar, classificar e proteger os ficheiros.<br /><br />- **Inicie sessão como um serviço** à direita. Este direito é concedido automaticamente para a conta de serviço durante a instalação do scanner e este direito é necessário para a instalação, configuração e operação do scanner. <br /><br />-Permissões para os repositórios de dados: tem de conceder **leitura** e **escrever** permissões para analisar os ficheiros e, em seguida, aplicar classificação e a proteção para os ficheiros que cumprem as condições no Política de proteção de informações do Azure. Para executar o verificador no modo de deteção apenas, **leitura** permissão é suficiente.<br /><br />-Para etiquetas que proteja novamente ou remova a proteção: para se certificar de que o verificador tem sempre acesso aos ficheiros protegidos, tornar esta conta um [Superutilizador](configure-super-users.md) para o Azure Rights Management service e certifique-se de que a funcionalidade de Superutilizador é ativada . Para obter mais informações sobre os requisitos de conta para aplicar a proteção, consulte [preparar os utilizadores e grupos do Azure Information Protection](../plan-design/prepare.md).|
 |O cliente Azure Information Protection está instalado no computador do servidor do Windows|Atualmente, a análise do Azure Information Protection requer a versão de pré-visualização do cliente Azure Information Protection.<br /><br />Se preferencial, pode instalar o cliente com apenas o módulo do PowerShell (AzureInformationProtection) que é utilizado para instalar e Configurar scanner.<br /><br />Para obter instruções de instalação de cliente, consulte o [Guia do administrador](../rms-client/client-admin-guide.md).|
-|Configurado etiquetas que se aplicam a classificação automática e, opcionalmente, a proteção|Para obter mais informações sobre como configurar as condições, consulte [como configurar condições para classificação automática e recomendada para o Azure Information Protection](/deploy-use/configure-policy-classification.md).<br /><br />Para obter mais informações sobre como configurar as etiquetas para aplicar proteção aos ficheiros, consulte [como configurar uma etiqueta para a proteção Rights Management](../deploy-use/configure-policy-protection.md). |
+|Configurado etiquetas que se aplicam a classificação automática e, opcionalmente, a proteção|Para obter mais informações sobre como configurar as condições, consulte [como configurar condições para classificação automática e recomendada para o Azure Information Protection](configure-policy-classification.md).<br /><br />Para obter mais informações sobre como configurar as etiquetas para aplicar proteção aos ficheiros, consulte [como configurar uma etiqueta para a proteção Rights Management](configure-policy-protection.md).<br /><br />Estas etiquetas podem ser política global, ou um ou mais [âmbito políticas](configure-policy-scope.md).|
 
 
 ## <a name="install-the-azure-information-protection-scanner"></a>Instalar o scanner do Azure Information Protection
@@ -154,6 +154,14 @@ Na sua predefinição, a análise é executada uma hora e no modo só de relató
 3. Como anteriormente, monitorize o registo de eventos e os relatórios para ver os ficheiros que foram etiqueta, que classificação foi aplicada e se foi aplicada proteção.
 
 Porque configurámos o agendamento para ser executada continuamente, quando a analista trabalhou a forma através de todos os ficheiros, inicia um ciclo de novo para que os ficheiros de novos e alterados são detetados.
+
+## <a name="when-files-are-rescanned-by-the-azure-information-protection-scanner"></a>Quando os ficheiros estão a ser reanalisados por scanner Azure Information Protection
+
+O ciclo de análise primeiro, scanner inspeciona todos os ficheiros nos arquivos de dados configurados e, em seguida, para análises subsequentes, ficheiros novos ou modificados apenas serão inspecionados. 
+
+Pode forçar scanner inspecionar todos os ficheiros novamente executando [conjunto AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) com o `-Type` parâmetro definido como **completa**. Esta configuração é útil quando pretender que os relatórios para incluir todos os ficheiros e é normalmente utilizado quando a análise é executada no modo de deteção. Quando uma análise completa estiver concluída, o tipo de análise altera automaticamente a incremental para que para análises subsequentes, são analisados ficheiros apenas novos ou modificados.
+
+Além disso, todos os ficheiros serão inspecionados quando scanner transfere uma política do Azure Information Protection com condições novas ou alteradas. O scanner atualiza a política de cada hora e quando inicia o serviço.
 
 ## <a name="list-of-cmdlets-for-the-azure-information-protection-scanner"></a>Lista de cmdlets para a análise do Azure Information Protection 
 

@@ -4,7 +4,7 @@ description: "Instruções para migrar a implementação dos Serviços de Gestã
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/11/2017
+ms.date: 11/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 910d131ece4bae0cf5ef2685291431a3dc319264
-ms.sourcegitcommit: 45c23b3b353ad0e438292cb1cd8d1b13061620e1
+ms.openlocfilehash: 1b1c7a084aa5d81a0abfd50021b95ae8af32d034
+ms.sourcegitcommit: e9a24fc5303b21f5eeebf16afed44db0d163ac77
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrar do AD RMS para o Azure Information Protection
 
@@ -28,9 +28,9 @@ Após a migração, os servidores do AD RMS já não estão em utilização mas 
 
 Não tem a certeza se esta migração do AD RMS é adequada para a sua organização?
 
--   Para obter uma introdução ao Azure Information Protection, veja [O que é o Azure Information Protection?](../understand-explore/what-is-information-protection.md)
+- Para obter uma introdução ao Azure Information Protection, veja [O que é o Azure Information Protection?](../understand-explore/what-is-information-protection.md)
 
--   Para obter uma comparação entre o Azure Information Protection e o AD RMS, veja [Comparar o Azure Information Protection e o AD RMS](../understand-explore/compare-azure-rms-ad-rms.md).
+- Para obter uma comparação entre o Azure Information Protection e o AD RMS, veja [Comparar o Azure Information Protection e o AD RMS](../understand-explore/compare-azure-rms-ad-rms.md).
 
 ## <a name="recommended-reading-before-you-migrate-to-azure-information-protection"></a>Leitura recomendada antes de migrar para o Azure Information Protection
 
@@ -112,10 +112,10 @@ Para confirmar o Modo Criptográfico do AD RMS:
 
 ### <a name="migration-limitations"></a>Limitações da migração
 
--   Se tiver software e clientes que não são suportados pelo serviço Rights Management utilizado pelo Azure Information Protection, estes não poderão proteger ou consumir conteúdos protegidos pelo Azure Rights Management. Certifique-se de que verifica as secções de aplicações e clientes suportados no artigo [Requisitos para o Azure Rights Management](../get-started/requirements-azure-rms.md).
+- Se tiver software e clientes que não são suportados pelo serviço Rights Management utilizado pelo Azure Information Protection, estes não poderão proteger ou consumir conteúdos protegidos pelo Azure Rights Management. Certifique-se de que verifica as secções de aplicações e clientes suportados no artigo [Requisitos para o Azure Rights Management](../get-started/requirements-azure-rms.md).
 
--   Se a sua implementação do AD RMS estiver configurada para colaborar com parceiros externos (por exemplo, ao utilizar federações ou domínios de utilizadores fidedignos), estes também devem migrar para o Azure Information Protection em simultâneo com a sua migração ou logo que seja possível posteriormente. Para continuarem a aceder a conteúdos que a sua organização protegeu anteriormente com o Azure Information Protection, têm de fazer alterações na configuração de clientes semelhantes às que foram feitas por si e que estão incluídas neste documento.
-
+- Se a sua implementação do AD RMS estiver configurada para colaborar com parceiros externos (por exemplo, ao utilizar federações ou domínios de utilizadores fidedignos), estes também devem migrar para o Azure Information Protection em simultâneo com a sua migração ou logo que seja possível posteriormente. Para continuarem a aceder a conteúdos que a sua organização protegeu anteriormente com o Azure Information Protection, têm de fazer alterações na configuração de clientes semelhantes às que foram feitas por si e que estão incluídas neste documento.
+    
     Devido às possíveis variações de configuração que os seus parceiros possam ter, as instruções exatas para esta reconfiguração não estão incluídas neste documento. No entanto, pode consultar a secção seguinte para obter orientações de planeamento e se precisar de ajuda adicional, [contacte o Suporte da Microsoft](../get-started/information-support.md#support-options-and-community-resources).
 
 ## <a name="migration-planning-if-you-collaborate-with-external-partners"></a>Planeamento da migração se colaborar com parceiros externos
@@ -146,11 +146,11 @@ Os passos de migração podem ser divididos em cinco fases que podem ser efetuad
 
 - **Passo 2: preparar a migração de clientes**
 
-     Se não conseguir migrar todos os clientes de uma só vez e os migrar em lotes, utilize os controlos de inclusão e implemente um script de pré-migração.
+    Se não conseguir migrar todos os clientes de uma só vez e os migrar em lotes, utilize os controlos de inclusão e implemente um script de pré-migração. No entanto, se irá migrar tudo em simultâneo em vez de efetuar uma migração faseada, pode ignorar este passo.
 
 - **Passo 3: preparar a implementação do Exchange para a migração**
 
-    Este passo é necessário se utilizar atualmente a funcionalidade da IRM do Exchange Online ou Exchange no local para proteger e-mails.
+    Este passo é necessário se utilizar atualmente a funcionalidade da IRM do Exchange Online ou Exchange no local para proteger e-mails. No entanto, se irá migrar tudo em simultâneo em vez de efetuar uma migração faseada, pode ignorar este passo.
 
 [**FASE 2: CONFIGURAÇÃO DO AD RMS DO LADO DO SERVIDOR**](migrate-from-ad-rms-phase2.md)
 
@@ -206,7 +206,7 @@ Os passos de migração podem ser divididos em cinco fases que podem ser efetuad
 
     Se tiver implementado o [extensão do dispositivo móvel](http://technet.microsoft.com/library/dn673574.aspx) para suportar dispositivos móveis, como telemóveis de iOS e iPads, telemóveis Android e tablets, Windows phone e computadores Mac, tem de remover os registos SRV no DNS que redirecionou estes clientes Para utilizar o AD RMS. 
     
-    Os controlos de inclusão que configurou durante a fase de preparação já não são necessários.
+    Os controlos de inclusão que configurou durante a fase de preparação já não são necessários. No entanto, se não utilizou controlos de inclusão porque optar por migrar tudo ao mesmo tempo, em vez de efetuar uma migração faseada, pode ignorar as instruções para remover os controlos de inclusão.
 
 - **Passo 12: Recodificar a chave de inquilino do Azure Information Protection**
 

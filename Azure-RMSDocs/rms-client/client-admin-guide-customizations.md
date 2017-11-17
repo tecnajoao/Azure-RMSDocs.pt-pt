@@ -4,7 +4,7 @@ description: "Informações sobre a personalização do cliente do Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/30/2017
+ms.date: 11/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 304425a2c64fb306615bbd5c6edf5e78e10b8e80
-ms.sourcegitcommit: 8c02aa2c6abc301a52a7f8ad9ee9d0ecd0b810f7
+ms.openlocfilehash: 67ef633fe429eef208f1f24e71a274959ad7077b
+ms.sourcegitcommit: 8810f9d68489a89601c43ce0aacff737728b1d02
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia de administração: Configurações personalizadas para o cliente Azure Information Protection
 
@@ -198,6 +198,33 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 - Valor: \< **etiqueta ID**> ou **None**
 
+## <a name="label-an-office-document-by-using-an-existing-custom-property"></a>Etiqueta de um documento do Office através da utilização de uma propriedade personalizada existente
+
+Esta opção de configuração está atualmente em pré-visualização e está sujeita a alterações. 
+
+Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
+
+Quando configurar esta definição, pode classificar (e, opcionalmente, proteger) um documento do Office quando tem uma propriedade personalizada existente com um valor que corresponde a um dos nomes de etiqueta. Esta propriedade personalizada pode ser definida a partir de outra solução de classificação, ou pode ser definida como uma propriedade pelo SharePoint.
+
+Como resultado esta configuração, quando um documento sem uma etiqueta de Azure Information Protection é aberto e guardado pelo utilizador numa aplicação do Office, o documento é, em seguida, com a etiqueta para corresponder ao valor de propriedade correspondente. 
+
+Esta configuração requer que especifique duas definições avançadas que trabalham em conjunto. O primeiro nome **SyncPropertyName**, que é o nome de propriedade personalizada que foi definido por outra solução de classificação ou uma propriedade que é definida pelo SharePoint. O segundo é denominado **SyncPropertyState** e tem de ser definida para OneWay.
+
+Para configurar esta definição avançada, introduza as cadeias seguintes:
+
+- Chave 1: **SyncPropertyName**
+
+- Valor de chave 1: \< **nome da propriedade**> 
+
+- Chave 2: **SyncPropertyState**
+
+- Valor de chave 2: **OneWay**
+
+Como exemplo, tem uma coluna do SharePoint com o nome **classificação** que tem os valores possíveis de **pública**, **geral**, e **confidencial**. Documentos são armazenados no SharePoint e tem um dos seguintes valores definido para a propriedade de classificação.
+
+Para identificar um documento do Office com um dos seguintes valores de classificação, defina **SyncPropertyName** para **classificação**, e **SyncPropertyState** para  **OneWay**. 
+
+Agora, quando um utilizador abre e guarda um destes documentos do Office, irá ser assinalada como **pública**, **geral**, ou **confidencial** se tiver etiquetas com estes nomes no seu Azure Política de proteção de informações. Se tiver etiquetas com estes nomes, o documento permanece sem etiqueta.
 
 ## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Integração com a classificação de mensagem do Exchange para uma solução de etiquetagem do dispositivo móvel
 

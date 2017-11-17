@@ -4,7 +4,7 @@ description: "As instruções e as informações para os administradores gerirem
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 11/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 197e3c8e908849665231040fd86cd79bd47cd1eb
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: dc3545c8212907786aa2fcf11e819b4cbdcf1ab5
+ms.sourcegitcommit: 4c6d9c55ff5dc5dbb10dc8a5abed9319fd3efb98
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/13/2017
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guia do administrador: Utilizar o PowerShell com o cliente Azure Information Protection
 
@@ -454,11 +454,14 @@ A saída pode ser semelhante ao seguinte:
 
 ## <a name="how-to-label-files-non-interactively-for-azure-information-protection"></a>Como etiquetar ficheiros de forma não interativa para o Azure Information Protection
 
-Pode executar os cmdlets de etiquetas não interativamente utilizando a **conjunto AIPAuthentication** cmdlet.
+Pode executar os cmdlets de etiquetas não interativamente utilizando a **conjunto AIPAuthentication** cmdlet. Operação não interativo é também necessária para análise do Azure Information Protection, atualmente em pré-visualização.
 
 Por predefinição, quando executa os cmdlets de etiquetagem, os comandos são executados no seu próprio contexto de utilizador numa sessão interativa do PowerShell. Para executá-los de modo autónomo, crie uma nova conta de utilizador do Azure AD para este fim. Em seguida, no contexto desse utilizador, execute o cmdlet Set-AIPAuthentication para definir e armazenar credenciais através de um token de acesso do Azure AD. Esta conta de utilizador é, em seguida, autenticada e reiniciada para o serviço Azure Rights Management. A conta transfere a política do Azure Information Protection e quaisquer modelos do Rights Management utilizados pelas etiquetas.
 
-Na primeira vez que executar este cmdlet, é pedido que inicie sessão no Azure Information Protection. Especifique o nome da conta e a palavra-passe de utilizador que criou para o utilizador autónomo. Em seguida, esta conta pode executar os cmdlets de etiquetagem de forma não interativa até o token de autenticação expirar. Quando o token expirar, execute o cmdlet novamente para comprar um novo token:
+> [!NOTE]
+> Se utilizar [âmbito políticas](../deploy-use/configure-policy-scope.md), lembre-se de que poderá ter de adicionar esta conta para as políticas de âmbito.
+
+Na primeira vez que executar este cmdlet, é pedido que inicie sessão no Azure Information Protection. Especifique o nome de conta de utilizador e palavra-passe que criou para o utilizador automático. Em seguida, esta conta pode executar os cmdlets de etiquetagem de forma não interativa até o token de autenticação expirar. Quando o token expirar, execute o cmdlet novamente para comprar um novo token:
 
 Se executar este cmdlet sem parâmetros, a conta compra um token de acesso que é válido durante 90 dias ou até a sua palavra-passe expirar.  
 
@@ -512,6 +515,13 @@ Após ter executado este cmdlet, pode executar os cmdlets de etiquetagem no cont
     
     Concluiu agora a configuração das duas aplicações e tem os valores necessários para executar o cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) com parâmetros.
 
+
+> [!TIP]
+> Se o conjunto AIPAuthentication não for bem sucedida e utilizou as aplicações existentes em vez de criar novas aplicações ao utilizar as instruções anteriores, poderá ter de repor as permissões necessárias para as suas aplicações. Também pode ser o caso se seguiu as instruções para criar novas aplicações para Set-AIPAuthentication, mas, em seguida, modificar as definições da aplicação.
+> 
+> Para repor as permissões necessárias, para ambas as aplicações, utilize os seguintes passos de configuração: selecione **todas as definições** > **as permissões necessárias** > **conceder Permissões**e clique em **Sim** para confirmar.
+> 
+> Em alternativa, crie novas aplicações utilizando as instruções anteriores.
 
 ## <a name="next-steps"></a>Próximos passos
 Para obter a ajuda do cmdlet quando estiver numa sessão do PowerShell, escreva `Get-Help <cmdlet name> cmdlet` e utilize o parâmetro online para ler as informações mais atualizadas. Por exemplo: 

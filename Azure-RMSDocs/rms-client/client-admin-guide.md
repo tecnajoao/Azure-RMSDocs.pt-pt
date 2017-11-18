@@ -4,7 +4,7 @@ description: "Instruções e informações para administradores numa rede empres
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/20/2017
+ms.date: 11/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 96eb4a9fde5c5664a41ad7f68c550af697e8216f
-ms.sourcegitcommit: 73973986ae7086e6f30cab579187241fd98bef61
+ms.openlocfilehash: b77ee56fdee5f26797a2ea6ff2b40dd22633516b
+ms.sourcegitcommit: 0ef66a8479b4105c00bf1b1df46d2ddf044b7670
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guia do administrador do cliente do Azure Information Protection
 
@@ -127,7 +127,9 @@ O **repor definições** termina a sessão do utilizador, elimina a política do
     
     - %LocalAppData%\Microsoft\MSIP\TokenCache
 
-- As seguintes chaves do registo e definições são eliminadas. Se tiver configurado definições para alguma destas chaves do registo, terá de as reconfigurar após efetuar a reposição do cliente. Por exemplo, configurou as definições de forma a redirecionar para o seu inquilino do Azure Information Protection porque está a migrar a partir do AD RMS e ainda tem um Ponto de Ligação de Serviço na sua rede:
+- As seguintes chaves do registo e definições são eliminadas. Se as definições de qualquer uma destas chaves de registo têm valores personalizados, estes têm de ser reconfiguradas depois de repor o cliente. 
+    
+    Normalmente, para redes empresariais, estas definições são configuradas pela política de grupo, caso em que estes são automaticamente reaplicadas quando a política de grupo é atualizada no computador. No entanto, poderão existir algumas definições que estão configuradas uma vez com um script ou configuradas manualmente. Nestes casos, tem de efetuar passos adicionais para reconfigurar estas definições. Por exemplo, computadores poderão executar um script uma vez para configurar as definições para o redirecionamento para o Azure Information Protection, porque está a migrar do AD RMS e continuará a ter um ponto de ligação de serviço na sua rede. Depois de repor o cliente, o computador tem de executar este script novamente.
     
     - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
     

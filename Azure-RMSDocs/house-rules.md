@@ -4,7 +4,7 @@ description: "Âmbito e intenção dos comentários e barras laterais do Livefyr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.custom: askipteam
 ms.assetid: 4eafbe72-f537-4e66-80ae-d11894d373f7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 64f354ed87fbfaccfcc6a102c6d8c2ea88b75b39
-ms.sourcegitcommit: 79aa9838956f755994efcb97cef6dd5d1892f06f
+ms.openlocfilehash: 4040e67a7bae2ee5a208d61134b842762ef4ace1
+ms.sourcegitcommit: 9de66368b75ffd003289f998c7b1e78736736524
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="house-rules-for-comments-on-the-azure-information-protection-documentation"></a>Regras básicas para os comentários na documentação do Azure Information Protection
 
@@ -29,7 +29,9 @@ Antes de publicar o comentário, verifique se é relevante para a página em que
  
 Não utilize Livefyre comentários e notas laterais para o seguinte:
  
-- **Suporte técnico**. Por exemplo, uma funcionalidade não está a funcionar e já verificou todos os requisitos e seguiu as instruções da documentação ou tem uma dúvida sobre o licenciamento. Em vez disso, [contacte a Microsoft Support](./get-started/information-support.md#to-contact-microsoft-support) ou utilize os canais de suporte padrão. Em alternativa, interagir com a Comunidade do Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam).
+- **Perguntas de subscrição para a sua organização**. Por exemplo, se as suas subscrições existentes suportam uma funcionalidade que pretende utilizar e que verificou o [requisitos da subscrição do Azure Information Protection](./get-started/requirements.md#subscription-for-azure-information-protection). Em vez disso, contacte o seu Gestor de conta Microsoft ou [Microsoft Support](./get-started/information-support.md#to-contact-microsoft-support).
+
+- **Suporte técnico**. Por exemplo, uma funcionalidade não está a funcionar e já verificou todos os requisitos e seguiu as instruções da documentação Que também verificou que estiver a utilizar um [versão suportada](./rms-client/client-version-release-history.md#servicing-information-and-timelines) do cliente Azure Information Protection. Em vez disso, contacte [Microsoft Support](./get-started/information-support.md#to-contact-microsoft-support) ou utilize os canais de suporte padrão. Em alternativa, interagir com a Comunidade do Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam).
 
 - **Informações de calendário**. Por exemplo, quando estará disponível uma nova versão ou para quando estão planeadas funcionalidades adicionais. Para obter estas informações, visite o [blogue Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services) ou colocar sobre-lo no Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam). Também pode verificar o [site voz do utilizador](https://msip.uservoice.com) para o Azure Information Protection e utilizar este recurso para pedir novas funcionalidades.
 

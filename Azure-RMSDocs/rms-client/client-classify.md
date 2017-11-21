@@ -4,7 +4,7 @@ description: "Instruções como classificar os documentos e e-mails."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/02/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d65c7690-fab7-4823-845c-8c73903e9c79
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: cb8e7bab70ab6b135b7741a8f7ae6ba82b3585a7
-ms.sourcegitcommit: 92bbef77091c66300e0d2acce60c064ffe314752
+ms.openlocfilehash: aee3ec8673217cf130c4705e750532c7aeefe084
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-azure-information-protection"></a>Guia do utilizador: Classificar um ficheiro ou e-mail utilizando o Azure Information Protection
 
@@ -53,7 +53,9 @@ Além de selecionar etiquetas manualmente, as etiquetas também podem ser aplica
 ##### <a name="dont-see-this-information-protection-bar-in-your-office-apps"></a>Não vê esta barra do Information Protection nas suas aplicações do Office?
 
 - Poderá não ter o cliente Azure Information Protection [instalado](install-client-app.md).
- 
+
+- Ter o cliente instalado, mas o administrador configurou uma definição de que não apresenta a barra. Em vez disso, selecione as etiquetas do **proteger** no botão de **ficheiro** separador a partir do friso Office. 
+
 ##### <a name="is-the-label-that-you-expect-to-see-not-displayed-on-the-bar"></a>A etiqueta que pretende ver não é apresentada na barra? 
 
 - Se o administrador tiver configurado recentemente uma nova etiqueta para si, experimente fechar todas as instâncias da sua aplicação do Office e voltar a abrir-la. Esta ação verifica se as suas etiquetas sofreram alguma alteração.

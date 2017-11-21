@@ -4,7 +4,7 @@ description: "Instruções e informações para administradores numa rede empres
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/17/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b77ee56fdee5f26797a2ea6ff2b40dd22633516b
-ms.sourcegitcommit: 0ef66a8479b4105c00bf1b1df46d2ddf044b7670
+ms.openlocfilehash: c338fe4258d6d8b20a4d8c285bc821981810b409
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guia do administrador do cliente do Azure Information Protection
 
@@ -46,7 +46,7 @@ Por exemplo:
 
 O cliente do Azure Information Protection inclui o seguinte:
 
-- Um suplemento Office, que instala a barra do Azure Information Protection aos utilizadores selecionar etiquetas de classificação, e um **proteger** botão no friso para obter opções adicionais. Para o Outlook, um **não reencaminhar** botão também é adicionado ao Friso.
+- Um suplemento Office, que instala a barra do Azure Information Protection aos utilizadores selecionar etiquetas de classificação, e um **proteger** botão no friso para obter opções adicionais. Para o Outlook, um **não reencaminhar** botão também está disponível para o Friso.
 
 - Opções de clique com o botão direito do rato do Explorador de Ficheiros do Windows para os utilizadores aplicarem etiquetas de classificação e proteção a ficheiros.
 

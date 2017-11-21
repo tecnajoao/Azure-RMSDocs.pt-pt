@@ -4,7 +4,7 @@ description: "Ver o que é nova ou alterada uma versão do cliente Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e107d796ebda1b1942e19ede8c794f79defbf64e
-ms.sourcegitcommit: fd3932ab19a00229b56efc3e301abaf9cff3f70b
+ms.openlocfilehash: c3c0acad413ddbbcd1caccd4f1a73c7b0884ae7c
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: política de suporte e histórico da versão versão
 
@@ -28,14 +28,13 @@ Pode transferir a versão GA mais recente e a versão de pré-visualização atu
 
 ### <a name="servicing-information-and-timelines"></a>Informações e linhas cronológicas de manutenção
 
-São suportadas as versões de disponibilidade geral (DG) do cliente Azure Information Protection durante um período de 6 meses contar da data da respetiva versão. Correções e novas funcionalidades sempre são aplicadas para a última versão GA e não serão aplicadas a versões mais antigas do GA.
+São suportadas as versões de disponibilidade geral (DG) do cliente Azure Information Protection durante um período de seis meses contar da data da respetiva versão. Correções e novas funcionalidades sempre são aplicadas para a última versão GA e não serão aplicadas a versões mais antigas do GA.
 
 As versões de pré-visualização não devem ser implementadas para os utilizadores finais em redes de produção. Em alternativa, utilize a versão de pré-visualização mais recente para ver e experimentar novas funcionalidades ou correções que são provenientes na próxima versão GA. Versões de pré-visualização não são atuais não são suportadas.
 
 ### <a name="release-history"></a>Histórico de versões
 
 Utilize as seguintes informações para ver o que é nova ou alterada para uma versão suportada do cliente Azure Information Protection para o Windows. A versão mais atual aparece em primeiro na lista. 
-
 
 > [!NOTE]
 > Correções secundárias não são listadas pelo se ocorrer um problema com o cliente Azure Information Protection, que recomendamos que verifique se é fixa com a versão GA mais recente. Se o problema continuar, verifique a versão de pré-visualização atual.
@@ -60,17 +59,19 @@ Esta versão inclui o MSIPC versão 1.0.3219.0619 do cliente RMS.
 
 - Suporte para as etiquetas que estão configurados para as ações definidas pelo utilizador. Para o Outlook, esta etiqueta aplica automaticamente a Outlook opção não reencaminhar. Para Word, Excel, PowerPoint e Explorador de ficheiros, esta etiqueta pede ao utilizador para especificar permissões personalizadas. Para obter mais informações, consulte [configurar uma etiqueta de Azure Information Protection para proteção](../deploy-use/configure-policy-protection.md).
 
+- Etiquetas de suportem de vários idiomas. A partir de 30 de Agosto de 2017, o [política predefinida](../deploy-use/configure-policy-default.md) inclui suporte para vários idiomas que esta versão do cliente apresenta aos utilizadores. Para os utilizadores vejam as etiquetas na respetiva linguagem preferencial a partir de uma política predefinida antes desta data e para as etiquetas que configurar, consulte [como configurar as etiquetas para idiomas diferentes no Azure Information Protection](../deploy-use/configure-policy-languages.md).
+
 - As etiquetas são apresentadas a partir do **proteger** botão no friso Office, para além de apresentação na barra de Information Protection. 
 
 - Proteção nativa para os seguintes tipos de ficheiro do Visio: .vsdm. vsdx, .vssm, .vssx, .vstm, .vstx
 
 - Suporte para configurações de cliente avançado que configurar no portal do Azure. Estas configurações incluem o seguinte:
     
-    - [Ocultar o botão não reencaminhar no Outlook](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook)
+    - [Ocultar ou mostrar o botão não reencaminhar no Outlook](../rms-client/client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook)
     
-    - [Fazer com que as opções de permissões personalizadas disponíveis aos utilizadores](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-unavailable-to-users)
+    - [Se as opções de permissões personalizadas disponível ou não está disponível para utilizadores](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users)
     
-    - [Permanentemente ocultar a barra do Azure Information Protection](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-unavailable-to-users)
+    - [Permanentemente ocultar a barra do Azure Information Protection](../rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar)
     
     - [Ativar a classificação recomendada no Outlook](../rms-client/client-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
 
@@ -98,7 +99,7 @@ Correções para uma melhor experiência de utilizador, que incluem:
 
 - Validação de e-mail quando os utilizadores especificarem permissões personalizadas. Além disso, vários endereços de e-mail agora podem ser especificados, premindo Enter.
 
-- A etiqueta principal não é apresentada quando todas as etiquetas secundárias são configuradas para proteção e o cliente não tem uma edição do Office que suporta a proteção. 
+- A etiqueta principal não é apresentada quando todos os respetivos sublabels estão configuradas para proteção e o cliente não tem uma edição do Office que suporta a proteção. 
 
 ## <a name="version-172100"></a>Versão 1.7.210.0
 

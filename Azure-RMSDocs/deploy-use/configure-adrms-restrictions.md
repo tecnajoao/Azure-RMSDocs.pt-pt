@@ -4,17 +4,17 @@ description: "Conheça as limitações, pré-requisitos e recomendações se sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: cceacbe94983e66bdde6de0947ae59b44e29a54e
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 8684188a4c01f9e90ee073d1d378e55dba1fc1eb
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>Requisitos e restrições de Tenha a sua própria chave (HYOK) para proteção do AD RMS
 
@@ -65,7 +65,7 @@ Além de não suportar as vantagens indicadas que obtém quando utiliza a prote�
 
     Embora seja possível configurar uma etiqueta para **não reencaminhar** para utilizar HYOK ou o serviço Azure Rights Management, os utilizadores podem também selecionar não reencaminhar próprios. Pode selecionar esta opção, utilizando o **não reencaminhar** botão no **mensagem** separador do friso Office ou ao utilizar opções de menu do Outlook. O **não reencaminhar** opções de menu estão localizadas em **ficheiro** > **permissões**e o **permissões** botão do o **opções** separador no Friso. 
     
-    O cliente Azure Information Protection utiliza sempre o Azure RMS quando os utilizadores selecionam a **não reencaminhar** botão no Outlook. Se não quiser este comportamento, pode ocultar o botão **Não Reencaminhar** no Outlook ao configurar uma [definição de cliente avançado](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook). 
+    O cliente Azure Information Protection utiliza sempre o Azure RMS quando os utilizadores selecionam a **não reencaminhar** botão no Outlook. Se não pretender que este comportamento, pode ocultar neste botão, definindo o [definição de política](../deploy-use/configure-policy-settings.md) **adicionar botão não reencaminhar para o Friso Outlook** para **desativar**. 
     
     Quando os utilizadores selecionam **não reencaminhar** de uma opção de menu do Outlook, podem escolher de entre o Azure RMS ou o AD RMS, mas poderão não saber qual é a opção para selecionar para a sua mensagem de correio eletrónico. Se o AD RMS é utilizado quando deve ser utilizado o Azure RMS, as pessoas que partilha com externamente não é possível abrir estas mensagens de e-mail
 

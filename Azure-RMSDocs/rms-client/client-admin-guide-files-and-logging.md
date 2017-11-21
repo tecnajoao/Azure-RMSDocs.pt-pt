@@ -4,7 +4,7 @@ description: "Informações sobre o registo de utilização e ficheiros do clien
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 64e6e17beb134fca1e51b35b39ff9f130c88ecbb
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: 33047865430004f91eb85ec7e32bbfc3f2f6bbde
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guia do administrador: Ficheiros do cliente Azure Information Protection e registo de utilização do cliente
 
@@ -38,7 +38,7 @@ Ficheiros de registo de cliente e ficheiro da política atualmente instalada:
 
 ## <a name="usage-logging-for-the-azure-information-protection-client"></a>Registo de utilização do cliente do Azure Information Protection
 
-O cliente regista a atividade do utilizador no registo de eventos locais **Aplicações e Serviços** do Windows, **Azure Information Protection**. Os eventos incluem as seguintes informações:
+O cliente regista a atividade de utilizador para o registo de eventos do Windows local **registos de serviços e aplicações** > **Azure Information Protection**. Os eventos incluem as seguintes informações:
 
 - Data, versão do cliente, ID de política
 

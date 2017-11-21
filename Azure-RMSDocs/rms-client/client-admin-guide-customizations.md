@@ -4,7 +4,7 @@ description: "Informações sobre a personalização do cliente do Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/13/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 67ef633fe429eef208f1f24e71a274959ad7077b
-ms.sourcegitcommit: 8810f9d68489a89601c43ce0aacff737728b1d02
+ms.openlocfilehash: 0bd05c0553cdcab792c674c6945d7dfea5f02eaf
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia de administração: Configurações personalizadas para o cliente Azure Information Protection
 
@@ -117,46 +117,40 @@ Ao exportar a política, esta ação transfere um ficheiro zipped com várias ve
 2. Mudar o nome do ficheiro identificado para **Policy.msip**e, em seguida, copie-o para o **%LocalAppData%\Microsoft\MSIP** pasta em computadores que tenham o cliente do Azure information protection instalado. 
 
 
-## <a name="hide-the-do-not-forward-button-in-outlook"></a>Ocultar o botão Não Reencaminhar no Outlook
+## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Ocultar ou mostrar o botão não reencaminhar no Outlook
 
-Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure.
+O método recomendado para configurar esta opção é utilizar o [definição de política](../deploy-use/configure-policy-settings.md) **adicionar botão não reencaminhar para o Friso Outlook**. No entanto, também pode configurar esta opção, utilizando um [definição de cliente avançado](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que configurar no portal do Azure.
 
-Quando configura esta definição, oculta o botão **Não Reencaminhar** no friso do Outlook. Não oculta esta opção a partir dos menus do Office.
+Quando configurar esta definição, oculta ou mostra o **não reencaminhar** botão no Friso do Outlook. Esta definição não tem efeito a opção não reencaminhar de menus do Office.
 
 Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 - Chave: **DisableDNF**
 
-- Valor: **Verdadeiro**
+- Valor: **verdadeiro** para ocultar o botão de ou **falso** para mostrar o botão
 
-## <a name="make-the-custom-permissions-options-unavailable-to-users"></a>Tornar as opções de permissões personalizadas indisponíveis para os utilizadores
+## <a name="make-the-custom-permissions-options-available-or-unavailable-to-users"></a>Se as opções de permissões personalizadas disponível ou não está disponível para utilizadores
 
-> [!IMPORTANT]
-> A menos que utilize a versão de pré-visualização atual do cliente, não utilize esta opção se tiver etiquetas que estão configuradas para permissões definidas pelo utilizador para Word, Excel, PowerPoint e Explorador de ficheiros. Se o fizer, quando a etiqueta é aplicada, os utilizadores não recebem um pedido para configurar as permissões personalizadas. O resultado é que o documento tem o nome, mas não está protegido como esperados.
+O método recomendado para configurar esta opção é utilizar o [definição de política](../deploy-use/configure-policy-settings.md) **tornar a opção de permissões personalizadas disponíveis para os utilizadores**. No entanto, também pode configurar esta opção, utilizando um [definição de cliente avançado](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que configurar no portal do Azure. 
 
-Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
-
-Quando configura esta definição e publica a política para os utilizadores, as opções de permissões personalizadas das seguintes localizações ficam indisponíveis para seleção pelos utilizadores:
-
-- Nas aplicações do Office: separador **Base** > grupo de **Proteção** > **Proteger** > **Permissões Personalizadas**
-
-- No Explorador de Ficheiros: clique com o botão direito do rato > **Classificar e proteger** > **Permissões personalizadas**
-
-Esta definição não tem efeito nas permissões personalizadas que pode configurar a partir das opções do menu do Office. 
+Quando configurar esta definição e publicar a política para utilizadores, as opções de permissões personalizadas tornar-se disponível para os utilizadores selecionem as suas próprias definições de proteção ou não está disponível para que os utilizadores não é possível selecionar as suas próprias definições de proteção, a menos que lhe for pedido.
 
 Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 - Chave: **EnableCustomPermissions**
 
-- Valor: **Falso**
+- Valor: **verdadeiro** para disponibilizar a opção de permissões personalizadas, ou **falso** para tornar esta opção indisponível
+
+> [!IMPORTANT]
+> A menos que utilize a versão de pré-visualização atual do cliente, não defina esta opção **falso** se tiver etiquetas que estão configuradas para permissões definidas pelo utilizador para Word, Excel, PowerPoint e Explorador de ficheiros. Se o fizer, quando a etiqueta é aplicada, os utilizadores não recebem um pedido para configurar as permissões personalizadas. O resultado é que o documento tem o nome, mas não está protegido como esperados.
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Ocultar permanentemente a barra do Azure Information Protection
 
-Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
+Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. Utilizá-lo apenas quando o [definição de política](../deploy-use/configure-policy-settings.md) **apresentar a barra do Information Protection em aplicações do Office** está definido como **no**.
 
 Quando configura esta definição e publica a política para os utilizadores, se um utilizador optar por não mostrar a barra do Azure Information Protection nas aplicações do Office, a barra permanece oculta. Tal acontece quando o utilizador desmarca a opção **Mostrar Barra** do separador **Base**, grupo de **Proteção**, botão **Proteger**. Esta definição não tem qualquer efeito caso o utilizador feche a barra através do ícone **Fechar esta barra**.
 
-Apesar de a barra do Azure Information Protection permanecer oculta, os utilizadores ainda podem selecionar uma etiqueta na barra apresentada temporariamente caso tenha configurado a classificação recomendada ou um documento ou um e-mail tenha de ter uma etiqueta. A definição não tem igualmente qualquer efeito nas etiquetas configuradas por si ou por terceiros, tais como a classificação manual ou automática, ou na definição de uma etiqueta predefinida.
+Apesar de a barra do Azure Information Protection permanecer oculta, os utilizadores ainda podem selecionar uma etiqueta na barra apresentada temporariamente caso tenha configurado a classificação recomendada ou um documento ou um e-mail tenha de ter uma etiqueta. 
 
 Para configurar esta definição avançada, introduza as cadeias seguintes:
 
@@ -219,6 +213,8 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 - Chave 2: **SyncPropertyState**
 
 - Valor de chave 2: **OneWay**
+
+Utilize estas chaves e valores correspondentes para apenas uma propriedade personalizada.
 
 Como exemplo, tem uma coluna do SharePoint com o nome **classificação** que tem os valores possíveis de **pública**, **geral**, e **confidencial**. Documentos são armazenados no SharePoint e tem um dos seguintes valores definido para a propriedade de classificação.
 

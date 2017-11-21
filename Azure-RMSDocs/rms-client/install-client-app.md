@@ -4,7 +4,7 @@ description: "Instruções para os utilizadores instalarem o cliente do Azure In
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/20/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 406ca5f8a1bdfec87dbec7743145ddfb2c4d18fb
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: 190a6a371e67417139e033c0b5472042a24b2502
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-client"></a>Guia do utilizador: Transferir e instalar o cliente Azure Information Protection
 
@@ -58,7 +58,8 @@ Depois de ter instalado o cliente do Azure Information Protection através das i
 
 2. Na caixa de diálogo **Microsoft Azure Information Protection**, clique em **OK**.
 
-3. Se vir a caixa de diálogo **Controlo de Acesso do Utilizador** clique em **Sim** para o cliente do Azure Information Protection poder atualizar o registo.   
+3. Se vir a caixa de diálogo **Controlo de Acesso do Utilizador** clique em **Sim** para o cliente do Azure Information Protection poder atualizar o registo.
+
 A instalação está agora concluída e pode utilizar o Azure Information Protection para identificar e proteger os seus documentos e e-mails.
 
 ## <a name="other-instructions"></a>Outras instruções    

@@ -4,7 +4,7 @@ description: "Instruções sobre como classificar e proteger os seus documentos 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/02/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 13d751bf9754ba3645cb7bb7417e7f5be394eb27
-ms.sourcegitcommit: 769057f5ffb366fc645bff542a32b2eab4f20c70
+ms.openlocfilehash: 683764d005e3223f6e5bdaa49b1d4c881a8daed4
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Guia do utilizador: Classificar e proteger um ficheiro ou e-mail ao utilizar o Azure Information Protection
 
@@ -41,16 +41,13 @@ Quando o ficheiro está protegido com as permissões personalizadas, utilize o s
 
 ## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Utilizar aplicações do Office para classificar e proteger os seus documentos e e-mails
 
-Utilize a barra do Azure Information Protection e selecione uma das etiquetas que tenha sido configurada para si. 
+Utilizar a barra do Azure Information Protection ou o **proteger** botão no friso para selecionar uma das etiquetas que tenha sido configurada por si. 
 
-Por exemplo, a imagem seguinte mostra que o documento ainda não foi etiquetado porque a **Sensibilidade** indica **Não definido**. Para definir uma etiqueta, tais como "Geral", clique em **geral**. Se não estiver certo sobre que etiqueta aplicar ao e-mail ou documento atual, utilize as descrições de etiquetas para saber mais sobre cada etiqueta e quando a aplicar. 
+Por exemplo, a imagem seguinte mostra que o documento ainda não foram etiqueta porque o **sensibilidade** mostra **não definido** na barra de Azure Information Protection. Para definir uma etiqueta, tais como "Geral", clique em **geral**. Se não estiver certo sobre que etiqueta aplicar ao e-mail ou documento atual, utilize as descrições de etiquetas para saber mais sobre cada etiqueta e quando a aplicar. 
 
 ![Exemplo de barra do Azure Information Protection](../media/info-protect-bar-not-set-callout.png)
 
 Se uma etiqueta já estiver aplicada ao documento e pretender alterá-la, poderá selecionar uma diferente. Se as etiquetas não forem apresentadas na barra, clique primeiro no ícone **Editar Etiqueta**, junto ao valor da etiqueta atual.
-
-> [!TIP]
-> Também pode selecionar etiquetas do **proteger** no botão de **ficheiro** separador.
 
 Além de selecionar etiquetas manualmente, as etiquetas também podem ser aplicadas das seguintes formas:
 
@@ -62,9 +59,17 @@ Além de selecionar etiquetas manualmente, as etiquetas também podem ser aplica
 
 ##### <a name="dont-see-this-information-protection-bar-in-your-office-apps"></a>Não vê esta barra do Information Protection nas suas aplicações do Office?
 
-- Poderá não ter o cliente do Azure Information Protection [instalado](install-client-app.md) ou o cliente está em execução no [modo apenas de proteção](client-protection-only-mode.md).
+Motivos possíveis:
+
+- Não tem o cliente Azure Information Protection [instalado](install-client-app.md).
+
+- Ter o cliente instalado, mas o administrador configurou uma definição de que não apresenta a barra. Em vez disso, selecione as etiquetas do **proteger** no botão de **ficheiro** separador a partir do friso Office. 
+
+- O cliente está em execução no [modo só de proteção](client-protection-only-mode.md).
  
-##### <a name="is-the-label-that-you-expect-to-see-not-displayed-on-the-bar"></a>A etiqueta que pretende ver não é apresentada na barra? 
+##### <a name="is-the-label-that-you-expect-to-see-not-displayed"></a>É a etiqueta que pretende ver não apresentada? 
+
+Motivos possíveis:
 
 - Se o administrador tiver configurado recentemente uma nova etiqueta para si, experimente fechar todas as instâncias da sua aplicação do Office e voltar a abrir-la. Esta ação verifica se as suas etiquetas sofreram alguma alteração.
 
@@ -74,11 +79,13 @@ Além de selecionar etiquetas manualmente, as etiquetas também podem ser aplica
 
 ### <a name="set-custom-permissions-for-a-document"></a>Definir permissões personalizadas num documento
 
-Pode especificar as suas próprias definições de proteção para documentos em vez de utilizar as definições de proteção que o administrador possa ter incluído com a etiqueta escolhida.
+Se permitida pelo seu administrador, pode especificar as suas próprias definições de proteção para documentos em vez de utilizar as definições de proteção que o administrador poderá ter incluídas com a etiqueta selecionada.
 
 1. No separador **Base**, no grupo **Proteção**, clique em **Proteger** > **Permissões Personalizadas**:
 
     ![Opção Permissões Personalizadas](../media/custom-permissions-callout.png)
+    
+    Se puder seleccionar **permissões personalizadas**, o administrador não lhe permitem utilizar esta opção.
     
     Tenha em atenção que todas as permissões personalizadas que especificar substituem as definições de proteção que o administrador possa ter definido para a etiqueta escolhida em vez de as complementarem.  
 
@@ -135,7 +142,9 @@ O guia do administrador contém uma lista completa dos tipos de ficheiro suporta
     
     ![Não há etiquetas na caixa de diálogo Classificar e proteger – Azure Information Protection**](../media/info-protect-dialog-labels-protection-only.png)
     
-3. Se quiser especificar as suas próprias definições de proteção em vez de utilizar as definições de proteção que o administrador possa ter incluído com a etiqueta escolhida, selecione **Proteger com permissões personalizadas**.
+3. Se permitido pela sua adminsitrator, pode especificar as suas próprias definições de proteção em vez de utilizar as definições de proteção que o administrador poderá ter incluídas com a etiqueta selecionada. Para tal, selecione **proteger com permissões personalizadas**.
+    
+    Se puder seleccionar **proteger com permissões personalizadas**, o administrador não lhe permitem utilizar esta opção.
     
     Todas as permissões personalizadas que especificar substituem as definições de proteção que o administrador possa ter definido para a etiqueta escolhida em vez de as complementarem.  
 

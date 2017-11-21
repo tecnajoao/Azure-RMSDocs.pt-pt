@@ -4,17 +4,17 @@ description: "Pode proteger os seus documentos e e-mails mais confidenciais ao c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/30/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: f6661668a73b708f292261dde70181bd22bdf332
-ms.sourcegitcommit: 8c02aa2c6abc301a52a7f8ad9ee9d0ecd0b810f7
+ms.openlocfilehash: 17f95d9875320c64d2983fcd176e371ee45d2f48
+ms.sourcegitcommit: 9de66368b75ffd003289f998c7b1e78736736524
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Como configurar uma etiqueta para a proteção do Rights Management
 
@@ -87,9 +87,11 @@ Exchange não tem de ser configurado para gestão de direitos de informação (I
         
         Se escolher a opção para Word, Excel, PowerPoint e Explorador de ficheiros: quando esta opção estiver definida, a etiqueta é apresentada nestas aplicações. O comportamento resultante quando os utilizadores aplicam a etiqueta é para apresentar a caixa de diálogo aos utilizadores selecionar permissões personalizadas. Na caixa de diálogo, os utilizadores tem de especificar as permissões, os utilizadores ou grupos e quaisquer data de expiração. Certifique-se de que os utilizadores têm instruções e orientações sobre como fornecer estes valores.
     
-    - **Selecione um modelo predefinido**: para utilizar um dos modelos predefinidos ou um modelo personalizado que configurou. Este modelo tem de ser publicado (não arquivado) e não deve ser ligado já a outra etiqueta. Quando seleciona esta opção, pode utilizar o **Editar modelo** botão para [converter o modelo para uma etiqueta](configure-policy-templates.md#to-convert-templates-to-labels).
+    - **Selecione um modelo predefinido**: para utilizar um dos modelos predefinidos ou um modelo personalizado que configurou. Tenha em atenção que esta opção não é apresentado se estiver a editar uma etiqueta que tenha utilizado o **definir permissões** opção.
     
-    Sugestão: Se utilizar o **Editar modelo** botão, poderá ser útil para referência [tarefas que utilizou para fazer com o portal clássico do Azure](migrate-portal.md).
+    Para seleccionar um modelo predefinido, o modelo tem de ser publicado (não arquivado) e não deve ser ligado já a outra etiqueta. Quando seleciona esta opção, pode utilizar um **Editar modelo** botão para [converter o modelo para uma etiqueta](configure-policy-templates.md#to-convert-templates-to-labels).
+    
+    Sugestão: Se forem utilizados para criação e edição de modelos personalizados, poderá ser útil para referência [tarefas que utilizou para fazer com o portal clássico do Azure](migrate-portal.md).
 
 8. Se tiver selecionado **definir permissões** para **Azure (chave de nuvem)**, esta opção permite-lhe configurar as mesmas definições que pode configurar num modelo. 
     

@@ -4,7 +4,7 @@ description: "Instruções para migrar a implementação dos Serviços de Gestã
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/10/2017
+ms.date: 11/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1b1c7a084aa5d81a0abfd50021b95ae8af32d034
-ms.sourcegitcommit: e9a24fc5303b21f5eeebf16afed44db0d163ac77
+ms.openlocfilehash: a65e1178594e14c7d8f4faaedee96d827a9412e5
+ms.sourcegitcommit: 9b975e66b12a3836003c6c4de139ded4bbf370bf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrar do AD RMS para o Azure Information Protection
 
@@ -202,11 +202,13 @@ Os passos de migração podem ser divididos em cinco fases que podem ser efetuad
 
     Quando tiver confirmado que todos os computadores Windows estiver a utilizar o serviço Azure Rights Management e já não acedem aos seus servidores AD RMS, pode desaprovisionar a implementação do AD RMS.
 
-- **Passo 11: Reconfigurar clientes de dispositivos móveis e computadores Mac e remover controlos de inclusão**
+- **Passo 11: Concluir tarefas de migração de cliente**
 
     Se tiver implementado o [extensão do dispositivo móvel](http://technet.microsoft.com/library/dn673574.aspx) para suportar dispositivos móveis, como telemóveis de iOS e iPads, telemóveis Android e tablets, Windows phone e computadores Mac, tem de remover os registos SRV no DNS que redirecionou estes clientes Para utilizar o AD RMS. 
     
     Os controlos de inclusão que configurou durante a fase de preparação já não são necessários. No entanto, se não utilizou controlos de inclusão porque optar por migrar tudo ao mesmo tempo, em vez de efetuar uma migração faseada, pode ignorar as instruções para remover os controlos de inclusão.
+    
+    Se os computadores com o Windows estiver a executar o Office 2010, verifique se tem de desativar o **gestão de modelos de política de direitos de RMS do AD (automatizada)** tarefas.
 
 - **Passo 12: Recodificar a chave de inquilino do Azure Information Protection**
 

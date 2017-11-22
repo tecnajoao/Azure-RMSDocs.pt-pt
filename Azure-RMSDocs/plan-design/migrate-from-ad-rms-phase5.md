@@ -4,7 +4,7 @@ description: "Fase 5 da migração do AD RMS para o Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/11/2017
+ms.date: 11/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: db6cb1c6327808616ee98b9e5b14f2a92a590bff
-ms.sourcegitcommit: 45c23b3b353ad0e438292cb1cd8d1b13061620e1
+ms.openlocfilehash: 2cf486a5319d6addcd150351054d44db62c250b0
+ms.sourcegitcommit: 9b975e66b12a3836003c6c4de139ded4bbf370bf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Fase 5 da migração – tarefas de pós-migração
 
@@ -48,7 +48,7 @@ Depois de ter desaprovisionada seus servidores AD RMS, pode querer aproveitar a 
 >[!IMPORTANT]
 > No final desta migração, o seu cluster do AD RMS não pode ser utilizado com o Azure Information Protection e a opção "tenha a sua própria chave" (HYOK). Se optar por utilizar o HYOK para uma etiqueta do Azure Information Protection, por causa dos redirecionamentos que estão em vigor, o cluster do AD RMS que utilizar tem de ter URLs de licenciamento diferentes do que tem nos clusters que migrou.
 
-## <a name="step-11-reconfigure-mobile-device-clients-and-mac-computers-and-remove-onboarding-controls"></a>Passo 11: Reconfigurar clientes de dispositivos móveis e computadores Mac e remover controlos de inclusão
+## <a name="step-11-complete-client-migration-tasks"></a>Passo 11: Tarefas de migração de cliente completa
 
 Para clientes de dispositivos móveis e computadores Mac: remover os registos SRV de DNS que criou quando implementou o [extensão de dispositivo móvel do AD RMS](http://technet.microsoft.com/library/dn673574.aspx).
 
@@ -95,6 +95,8 @@ Para remover os controlos de inclusão:
         Get-AadrmOnboardingControlPolicy
 
     No resultado, a opção **License** deve apresentar **False** e não é apresentado um GUID para **SecurityGroupOjbectId**
+
+Por fim, se estiver a utilizar o Office 2010 e tiver ativado o **gestão de modelos de política de direitos de RMS do AD (automatizada)** tarefas na biblioteca do Programador de tarefas do Windows, desative esta tarefa porque não está a ser utilizado pelas informações do Azure Cliente de proteção. Esta tarefa estiver ativada, normalmente, utilizando a política de grupo e suporta uma implementação de AD RMS. Pode encontrar esta tarefa na seguinte localização: **Microsoft** > **Windows** > **cliente do Active Directory Rights Management Services**
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Passo 12: recodificar a chave de inquilino do Azure Information Protection
 

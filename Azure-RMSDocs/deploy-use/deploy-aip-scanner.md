@@ -4,7 +4,7 @@ description: "Instruções para instalar, configurar e executar o Verificador de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/22/2017
+ms.date: 11/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 6dfda21368713c652df6c815dbb3895517182af1
-ms.sourcegitcommit: 228953e96609b3c5ec8deddaab91be59650d9006
+ms.openlocfilehash: 3bdaf11d6d20e0f162ba27fd0844fd6f43a333be
+ms.sourcegitcommit: 230eac207dc2276246db7997804644c9930051a6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>O scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente a implementar
 
@@ -162,6 +162,48 @@ O ciclo de análise primeiro, scanner inspeciona todos os ficheiros nos arquivos
 Pode forçar scanner inspecionar todos os ficheiros novamente executando [conjunto AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) com o `-Type` parâmetro definido como **completa**. Esta configuração é útil quando pretender que os relatórios para incluir todos os ficheiros e é normalmente utilizado quando a análise é executada no modo de deteção. Quando uma análise completa estiver concluída, o tipo de análise altera automaticamente a incremental para que para análises subsequentes, são analisados ficheiros apenas novos ou modificados.
 
 Além disso, todos os ficheiros serão inspecionados quando scanner transfere uma política do Azure Information Protection com condições novas ou alteradas. O scanner atualiza a política de cada hora e quando inicia o serviço.
+
+## <a name="optimizing-the-performance-of-the-azure-information-protection-scanner"></a>Otimizar o desempenho do scanner Azure Information Protection
+
+Para maximizar o desempenho de scanner:
+
+- **Ter uma alta velocidade e a ligação de rede fiável entre o computador de scanner e o arquivo de dados digitalizados**
+    
+    Por exemplo, coloque o computador de scanner no mesma LAN ou (preferencial) no mesmo segmento de rede, como o arquivo de dados digitalizados.
+    
+    A qualidade da ligação de rede afeta o desempenho de scanner porque para inspecionar os ficheiros, scanner transfere o conteúdo dos ficheiros para o computador que executa o serviço de análise. Quando reduzir (ou eliminar) o número de saltos de rede que tem de viajam estes dados, também reduzir a carga na sua rede. 
+
+- **Certifique-se que o computador de scanner tem recursos do processador disponíveis**
+    
+    A inspecionar os conteúdos do ficheiro para uma correspondência com as condições configuradas e encriptar e desencriptar ficheiros são ações de processador intensivas. Monitorizar típicos ciclos de análise para os arquivos de dados especificado identificar se uma falta de recursos do processador é afetar negativamente o desempenho de análise.
+    
+- **Não analisarão a pastas locais no computador que executa o serviço de análise**
+    
+    Se tiver pastas para análise num servidor Windows, instale scanner num computador diferente e configurar essas pastas como partilhas de análise de rede. Separar as duas funções que alojem ficheiros e análise de ficheiros significa que os recursos informáticos para estes serviços não competir com outro.
+
+Outros fatores que afetam o desempenho de scanner:
+
+- A carga atual e os tempos de resposta de arquivos de dados que contêm os ficheiros para analisar
+
+- Indica se o verificador é executado no modo de deteção ou impor modo
+    
+    Modo de deteção, normalmente, tem uma maior impor a taxa de análise que impor modo porque a deteção necessita de um único ficheiro ler ação, enquanto que requer o modo de leitura e escrita ações.
+
+- Alterar as condições em que o Azure Information Protection
+    
+    O ciclo de análise primeiro quando scanner tem Inspecione cada ficheiro obviamente irá demorar mais que ciclos de análise subsequentes que, por predefinição, inspecionar ficheiros apenas novos e alterados. No entanto, se alterar as condições de política do Azure Information Protection, todos os ficheiros são analisados novamente, conforme descrito no [anterior a secção](#when-files-are-rescanned-by-the-azure-information-protection-scanner).
+
+- O nível de registo que escolheu
+    
+    Pode escolher entre **depurar**, **informações**, **erro** e **desativar** para os relatórios de análise. **Desativar** resulta numa melhor desempenho; **Depurar** consideravelmente atrasar scanner e deve ser utilizado apenas para resolução de problemas. Para obter mais informações, consulte o *ReportLevel* parâmetro para o [conjunto AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet.
+
+- Próprios ficheiros:
+    
+    - Ficheiros do Office são mais rapidamente digitalizados que ficheiros PDF.
+    
+    - Ficheiros não protegidos são mais rápidos de verificar que os ficheiros protegidos.
+    
+    - Ficheiros grandes obviamente demorar mais tempo a análise de ficheiros pequenos.
 
 ## <a name="list-of-cmdlets-for-the-azure-information-protection-scanner"></a>Lista de cmdlets para a análise do Azure Information Protection 
 

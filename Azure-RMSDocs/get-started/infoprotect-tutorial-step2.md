@@ -4,17 +4,17 @@ description: "Passo 2 de um tutorial de introdução para experimentar o Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/17/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 0e10a1809aaf792ac8c5960e30917aabd5c44548
-ms.sourcegitcommit: 0ef66a8479b4105c00bf1b1df46d2ddf044b7670
+ms.openlocfilehash: 51688d173bbc71f9cf2774393ebd468e7897e00a
+ms.sourcegitcommit: f6ba613445463c3c4c64b1620095d54b48194650
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passo 2: configurar e publicar a política do Azure Information Protection
 
@@ -50,6 +50,8 @@ Para o nosso tutorial, vamos alterar algumas dessas definições de política pa
     Se não tiver esta etiqueta porque tem uma versão mais antiga da política, selecione **Interno** como etiqueta equivalente.
 
 2. Para **os utilizadores têm de fornecer justificação para definir uma etiqueta de classificação inferior, remova uma etiqueta ou remova a proteção**, defina esta opção **no**.
+
+3. Além disso, localize a definição **disponibilizar a opção de permissões personalizadas aos utilizadores**. Se estiver definido como **desativar**, esta opção para alterar **no**.
 
 ## <a name="creating-a-new-label-for-protection-visual-markers-and-a-condition-to-prompt-for-classification"></a>Criar uma nova etiqueta para proteção, marcas visuais e uma condição para a linha de comandos para classificação
 

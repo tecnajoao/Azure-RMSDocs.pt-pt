@@ -4,7 +4,7 @@ description: "Recursos para administradores que incluem informações sobre nova
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/22/2017
+ms.date: 11/29/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0e0bcdb343ec1428c59bc63f149b5590e01d7d93
-ms.sourcegitcommit: 230eac207dc2276246db7997804644c9930051a6
+ms.openlocfilehash: 91ba855bb9bd9c41c81ae819b7b3afee1f04adb8
+ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informações e suporte do Azure Information Protection
 
@@ -26,9 +26,9 @@ Utilize os seguintes recursos para o ajudar a obter mais informações, implemen
 
 |Para...|... efetue o seguinte:|
 |----------------|---------------|
-|Consulte utilizado com mais frequência a documentação|Leia as páginas de início cinco: <br /><br />[Introdução ao - AIP aplicação para iOS e Android](../rms-client/mobile-app-get-started.md) <br /><br /> [O que é o Azure Information Protection?](../understand-explore/what-is-information-protection.md)<br /><br /> [O que é o Azure Rights Management?](../understand-explore/what-is-azure-rms.md)<br /><br />[Ativar o Azure Rights Management](../deploy-use/activate-service.md)<br /><br />[Requisitos do Azure Information Protection](../get-started/requirements.md)|
+|Consulte utilizado com mais frequência a documentação|Leia as páginas de início cinco:<br /><br /> - [O que é o Azure Information Protection?](../understand-explore/what-is-information-protection.md)<br /> - [O que é o Azure Rights Management?](../understand-explore/what-is-azure-rms.md)<br />- [Introdução ao - AIP aplicação para iOS e Android](../rms-client/mobile-app-get-started.md) <br />- [Ativar o Azure Rights Management](../deploy-use/activate-service.md)<br />- [Requisitos do Azure Information Protection](../get-started/requirements.md)|
 |Envolver a equipa de produto e os seus parceiros|Visite o [Yammer site](https://www.yammer.com/AskIPTeam) para o Azure Information Protection.|
-|Solicitar uma nova funcionalidade ou alteração de funcionalidade|Visite o [site voz do utilizador](https://msip.uservoice.com) para o Azure Information Protection|
+|Solicitar uma nova funcionalidade ou alteração de funcionalidade|Visite o [voz do utilizador](https://msip.uservoice.com) site para o Azure Information Protection|
 |Receba tweets do grupo de produtos|Siga [Microsoft Mobility@MSFTMobility ](https://twitter.com/MSFTMobility) no Twitter.|
 |Ver as informações de subscrição e as funcionalidades suportadas|Utilize as [informações da subscrição](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) e a [lista de funcionalidades](https://www.microsoft.com/cloud-platform/azure-information-protection-features) no site do Azure Information Protection.|
 
@@ -89,6 +89,8 @@ Resolva os problemas:
 
 Recomendamos o [site do Yammer para o Azure Information Protection](https://www.yammer.com/AskIPTeam). Este recurso fornece respostas diretas da equipa do Azure Information Protection, para além das vantagens de experiência partilhada e o conhecimento dos outros administradores e consultores.
 
-Se não tiver acesso ao Yammer, tente o [Fórum do TechNet para Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
+Veja a crescer fast [técnico Comunidade](https:/techcommunity.microsoft.com), que tem um [espaço do Azure Information Protection](https:/techcommunity.microsoft.com/t5/Azure-Information-Protection/bd-p/Azure-Information-Protection) colocar questões e partilhar informações.
+
+Se não tiver acesso a estes sites, experimente o [fórum TechNet do Microsoft RMS (nuvem)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

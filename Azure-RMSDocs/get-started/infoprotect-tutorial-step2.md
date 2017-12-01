@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 51688d173bbc71f9cf2774393ebd468e7897e00a
-ms.sourcegitcommit: f6ba613445463c3c4c64b1620095d54b48194650
+ms.openlocfilehash: 3dd58454709dd5a73edc23578f12e79d85a9b9c9
+ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passo 2: configurar e publicar a política do Azure Information Protection
 
@@ -52,6 +52,8 @@ Para o nosso tutorial, vamos alterar algumas dessas definições de política pa
 2. Para **os utilizadores têm de fornecer justificação para definir uma etiqueta de classificação inferior, remova uma etiqueta ou remova a proteção**, defina esta opção **no**.
 
 3. Além disso, localize a definição **disponibilizar a opção de permissões personalizadas aos utilizadores**. Se estiver definido como **desativar**, esta opção para alterar **no**.
+    
+    Não poderá ter de alterar esta definição, porque a predefinição depende da altura em que obteve a sua subscrição. Utilizamos permissões personalizadas mais tarde no tutorial para partilhar um documento protegido com um utilizador que especificou quando clique com botão direito do ficheiro a partir do Explorador de ficheiros.
 
 ## <a name="creating-a-new-label-for-protection-visual-markers-and-a-condition-to-prompt-for-classification"></a>Criar uma nova etiqueta para proteção, marcas visuais e uma condição para a linha de comandos para classificação
 
@@ -144,7 +146,7 @@ Agora que conhece o que é a política predefinida e efetuou algumas alteraçõe
 |Se pretender mais informações|Informações adicionais|
 |--------------------------------|--------------------------|
 |Sobre a política predefinida e as versões diferentes|[A política do Azure Information Protection predefinida](../deploy-use/configure-policy-default.md)|
-|Sobre as opções de configuração para a política|[Configurar a política do Azure Information Protection](../deploy-use/configure-policy.md)|
+|Sobre como configurar a política|[Configurar a política do Azure Information Protection](../deploy-use/configure-policy.md)|
 |Instruções detalhadas para configurar uma etiqueta para a proteção|[Como configurar uma etiqueta para a proteção Rights Management](../deploy-use/configure-policy-protection.md)|
 |Informações detalhadas sobre as permissões|[Configurar direitos de utilização do Azure Rights Management](../deploy-use/configure-usage-rights.md)|
 

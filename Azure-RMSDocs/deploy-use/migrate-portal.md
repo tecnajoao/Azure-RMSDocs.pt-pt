@@ -4,7 +4,7 @@ description: "Tarefas de administração de uma rapidamente no portal do Azure q
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/19/2017
+ms.date: 12/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 8462a0c351ef8a75a7cd31bae923fd5ec3b8999f
-ms.sourcegitcommit: f7ef0f040ae4af4bf1283ebcb0750b65b6939313
+ms.openlocfilehash: 3beb637b4a9ffe662455f32281e24ecfeb230bca
+ms.sourcegitcommit: 43d77093d97509170bbdfa72bc28e1c2100228ee
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/20/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Tarefas que utilizou para fazer com o portal clássico do Azure
 
@@ -25,7 +25,9 @@ ms.lasthandoff: 09/20/2017
 Utilizado para o portal clássico do Azure para gerir o serviço Azure Rights Management e precisarem de alguns ajudar a transição para o portal do Azure? 
 
 > [!NOTE]
-> Portal clássico do Azure vai ser reformado no **30 de Novembro de 2017**. Para obter mais informações, consulte o anúncio de mensagem de blogue [Marching no futuro da experiência de administração do Azure AD: extinguir o portal clássico do Azure](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/).
+> Portal clássico do Azure será descontinuado **08 de Janeiro de 2018**. Após esta data, se tentar utilizar este portal, será automaticamente redirecionado para o novo portal do Azure. 
+> 
+> Para obter mais informações, consulte o anúncio de mensagem de blogue [Marching no futuro da experiência de administração do Azure AD: extinguir o portal clássico do Azure](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/). Para a extensão temporária para a data de retirada, consulte [atualizações de extinção de experiência do portal clássica do Azure AD e a migração de políticas de acesso condicional](https://cloudblogs.microsoft.com/enterprisemobility/2017/11/29/update-on-retirement-of-azure-ad-classic-portal-experience-and-migration-of-conditional-access-policies/).
 
 ## <a name="how-to-do-your-familiar-admin-tasks"></a>Como fazer as tarefas administrativas familiar
 

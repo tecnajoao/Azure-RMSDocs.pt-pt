@@ -4,17 +4,17 @@ description: "Uma descrição geral sobre o serviço Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2017
+ms.date: 12/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: c17453cddec7d570901ccf18287e8d1db2fd3f01
-ms.sourcegitcommit: 8c02aa2c6abc301a52a7f8ad9ee9d0ecd0b810f7
+ms.openlocfilehash: 7e16be928a12142b695f2eac60bdbd3e353c3119
+ms.sourcegitcommit: 43d77093d97509170bbdfa72bc28e1c2100228ee
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="what-is-azure-information-protection"></a>O que é o Azure Information Protection?
 
@@ -43,19 +43,17 @@ A tecnologia de proteção utiliza o *Azure Rights Management* (frequentemente a
 
 Esta tecnologia de proteção utiliza políticas de autorização, encriptação e identidade. De forma semelhante às etiquetas que são aplicadas, a proteção aplicada através do Rights Management mantém-se associada aos documentos e e-mails independentemente da sua localização, quer estejam dentro ou fora da sua organização, redes, servidores de ficheiros e aplicações. Esta solução de proteção de informações mantém o utilizador no controlo dos seus dados, mesmo quando são partilhados com outras pessoas.
 
-Por exemplo, pode configurar um documento de relatório ou uma folha de cálculo de previsão de vendas para que só possa ser acedido por pessoas na sua organização e controlar se esse documento pode ser editado, restringi-lo para acesso só de leitura ou impedi-lo de ser impresso. Pode configurar os e-mails da mesma forma e, além disso, impedir que sejam encaminhados ou impedir a utilização da opção Responder a Todos. Estas tarefas de proteção podem ser simplificadas e dinamizadas ao utilizar *modelos de Rights Management*.
+Por exemplo, pode configurar um documento de relatório ou uma folha de cálculo de previsão de vendas para que só possa ser acedido por pessoas na sua organização e controlar se esse documento pode ser editado, restringi-lo para acesso só de leitura ou impedi-lo de ser impresso. Pode configurar os e-mails da mesma forma e, além disso, impedir que sejam encaminhados ou impedir a utilização da opção Responder a Todos. 
+
+Estas definições de proteção podem fazer parte da sua configuração de etiqueta, para que os utilizadores de classificarem e proteger documentos e e-mails, simplesmente ao aplicar uma etiqueta. No entanto, as mesmas definições de proteção também podem ser utilizadas por aplicações e serviços que suportam a proteção, mas não a etiquetagem. Para estas aplicações e serviços, as definições de proteção estão anexadas como *modelos de Rights Management*.
 
 ### <a name="rights-management-templates"></a>Modelos de gestão de direitos
 
 Assim que a ativar o serviço Azure Rights Management, dois modelos predefinidos estão disponíveis para que restringe o acesso a dados para os utilizadores dentro da sua organização. Pode utilizar estes modelos para ajudar imediatamente a impedir a fuga de dados da sua organização. Também pode complementar estes modelos predefinidos ao configurar as suas próprias definições de proteção que se aplicam controlos mais restritivos.
 
-Modelos podem ser parte da configuração de uma etiqueta. Quando esse etiqueta é aplicada a uma documento ou mensagem de e-mail, os dados são classificados e automaticamente protegidos. Os modelos também podem ser selecionados por utilizadores ou administradores em produtos e serviços que suportam a tecnologia Azure Rights Management.
+Quando criar uma etiqueta para o Azure Information Protection, que inclui as definições de proteção, nos bastidores, esta ação cria um modelo de Rights Management correspondente. Em seguida, pode utilizar esse modelo com aplicações e serviços que suportam o Azure Rights Management.
 
-Este exemplo mostra como pode selecionar um modelo para uma etiqueta ao configurar a política do Azure Information Protection a partir do portal do Azure:
-
-![Exemplo de seleção de modelos no portal do Azure](../media/info-protect-template-callout.png)
-
-Estes modelos podem ser selecionados a partir do centro de administração do Exchange. Por exemplo, pode configurar as regras de fluxo de correio do Exchange Online para utilizar estes modelos, uma vez que o Exchange suporta a tecnologia Azure Rights Management:
+Por exemplo, a partir do Centro de administração do Exchange, pode configurar regras de fluxo de correio eletrónico Exchange Online para utilizar estes modelos:
 
 ![Exemplo de seleção de modelos para o Exchange Online](../media/templates-exchangeonline-callouts.png)
 

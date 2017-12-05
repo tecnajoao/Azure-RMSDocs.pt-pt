@@ -4,7 +4,7 @@ description: "Informações sobre instalação, sistemas operativos suportados, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/07/2017
+ms.date: 12/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b7879dd85c2e46823cfe9c8f1f4482952a8db8aa
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 6ddf4e43a087a9eb283651567244d96c69b4071f
+ms.sourcegitcommit: 07456cc544bc3383e05e0ee99638964d9968f257
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="rms-client-deployment-notes"></a>Notas de implementação do cliente do RMS
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 7 com SP1, Windows 8, Windows 8.1, Windows 10, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Vista*
+>*Aplica-se a: serviços de gestão, o Azure Information Protection, o Windows 7 com SP1, Windows 8, Windows 8.1, Windows 10, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 de direitos do Active Directory*
 
 A versão 2 do cliente de Rights Management Service (cliente do RMS) é também conhecida como cliente MSIPC. É o software para computadores com o Windows que comunica com os serviços do Microsoft Rights Management no local ou na cloud, para ajudar a proteger o acesso e a utilização de informações que fluem através de aplicações e dispositivos, dentro dos limites da sua organização ou fora desses limites geridos. 
 
@@ -62,7 +62,7 @@ O cliente do RMS é suportado nos seguintes sistemas operativos:
 |Windows Server 2012 R2|Windows 8.1|
 |Windows Server 2012|Windows 8|
 |Windows Server 2008 R2|Windows 7 com, pelo menos, o SP1|
-|Windows Server 2008 (apenas AD RMS)|Windows Vista com, pelo menos, o SP2 (apenas AD RMS)|
+
 
 ### <a name="which-processors-or-platforms-support-the--rms-client"></a>Que processadores ou plataformas suportam o cliente do RMS?
 O cliente do RMS é suportado nas plataformas de processamento x86 e x64.

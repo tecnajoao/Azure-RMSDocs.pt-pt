@@ -4,7 +4,7 @@ description: "Fase 2 da migração do AD RMS para o Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/31/2017
+ms.date: 12/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b65e3d803f94e6c8a494217e2a494c704640e5fc
-ms.sourcegitcommit: 3952fc01c6182c143df7f0d2e748594e49bf1da8
+ms.openlocfilehash: 0dff1b664cbac830dda2750cc6120ab4476c8183
+ms.sourcegitcommit: c5408506170bdb00d9e677b02161b9f61d4d5d3c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Fase 2 da migração – configuração do AD RMS do lado do servidor
 
@@ -138,7 +138,7 @@ Se tiver criado modelos personalizados antes da migração, antes ou depois de a
 
 2. Exportar os modelos utilizando o cmdlet do PowerShell do Azure RMS, [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate).
 
-3. Exportar os modelos utilizando o cmdlet do PowerShell do Azure RMS, [Import-AadrmTemplate](/powershell/aadrm/vlatest/Import-AadrmTpd).
+3. Exportar os modelos utilizando o cmdlet do PowerShell do Azure RMS, [Import-AadrmTemplate](/powershell/module/aadrm/import-aadrmtemplate).
 
 Em seguida, pode publicar ou arquivar estes modelos como faria com qualquer modelo criado após a migração.
 

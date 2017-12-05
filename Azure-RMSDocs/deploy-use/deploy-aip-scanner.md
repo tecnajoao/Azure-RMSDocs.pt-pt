@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 690cbc194be79a4e4fe9d85cda0e731d31d33822
-ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
+ms.openlocfilehash: 986603d54b69fcf85bafecef2691fbd44af94942
+ms.sourcegitcommit: c5408506170bdb00d9e677b02161b9f61d4d5d3c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>O scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente a implementar
 
@@ -79,7 +79,7 @@ Antes de instalar o scanner do Azure Information Protection, certifique-se de qu
     
     - Para SQL Server Express:`Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS`
     
-    Utilizar a ajuda online para este cmdlet, se precisar de mais [detalhadas exemplos](/powershell/module/azureinformationprotection/set-aipscannerconfiguration#examples).
+    Utilizar a ajuda online para este cmdlet, se precisar de mais [detalhadas exemplos](/powershell/module/azureinformationprotection/install-aipscanner#examples).
 
 4. Certifique-se de que o serviço está agora instalado utilizando **ferramentas administrativas** > **serviços**. 
     

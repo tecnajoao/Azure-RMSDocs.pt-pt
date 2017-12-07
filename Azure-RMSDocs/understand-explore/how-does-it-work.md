@@ -4,7 +4,7 @@ description: "Descrição detalhada de como o Azure RMS funciona, os controlos c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/23/2017
+ms.date: 12/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,17 +12,17 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 26c82884c706c8397eae63197ed0307faa3562d3
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 1a7075287eebe2c68534de95d01cef455ebe63b5
+ms.sourcegitcommit: f185b1d742c345a465927f88e606413421fe1150
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Como funciona o Azure RMS? Os bastidores
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
-Um dos aspetos importantes que deve saber sobre o funcionamento do Azure RMS é que o serviço Rights Management (e a Microsoft) não vê nem armazena os seus dados como parte do processo de proteção de informações. As informações que protege nunca são enviadas para ou armazenadas no Azure, a menos que as armazene explicitamente no Azure ou utilize outro serviço cloud que as armazene no Azure. O Azure RMS simplesmente torna os dados num documento ilegível para todas as pessoas que não sejam utilizadores e serviços autorizados:
+Um mais importante para compreender sobre como funciona o Azure RMS, é que este serviço de proteção de dados do Azure Information Protection, consulte ou armazenam os seus dados como parte do processo de proteção. Informações que protege nunca são enviadas para ou armazenadas no Azure, a menos que explicitamente armazene-o no Azure ou utilize outro serviço em nuvem que as armazene no Azure. O Azure RMS simplesmente torna os dados num documento ilegível para todas as pessoas que não sejam utilizadores e serviços autorizados:
 
 - Os dados são encriptados ao nível da aplicação e incluem uma política que define a utilização autorizada para esse documento.
 
@@ -39,7 +39,7 @@ Para obter uma descrição detalhada do processo, consulte a secção [Explicaç
 Para obter detalhes técnicos sobre os algoritmos e os comprimentos de chave utilizados pelo Azure RMS, consulte a secção seguinte.
 
 ## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Controlos criptográficos utilizados pelo Azure RMS: comprimentos de chave e algoritmos
-Embora não tenha de saber como funciona o RMS, poderão ser-lhe pedidas informações sobre os controlos criptográficos que o RMS utiliza, para certificar que a proteção de segurança está em conformidade com a norma da indústria.
+Mesmo que não precisa de saber em detalhe como funciona esta tecnologia, poderá ser-lhe pedido sobre os controlos criptográficos que utiliza. Por exemplo, para confirmar que a proteção de segurança padrão da indústria.
 
 
 |Controlos criptográficos|Função no Azure RMS|
@@ -54,15 +54,15 @@ O controlo de 256 bits é utilizado pelo cliente do Azure Information Protectio
 
 ###### <a name="footnote-2"></a>Nota de rodapé 2
 
-O comprimento da chave é de 2048 bits quando o serviço Azure Rights Management está ativado. São suportados 1024 bits nos seguintes cenários opcionais:
+2048 bits é o comprimento de chave quando o serviço Azure Rights Management está ativado. 1024 bits é suportada para os seguintes cenários opcionais:
 
 - Durante uma migração no local se o cluster de AD RMS está em execução no modo criptográfico 1.
 
 - Depois de uma migração no local, se o cluster de AD RMS estava a utilizar o Exchange Online.
 
-- Para as chaves arquivadas que foram criadas no local antes da migração para que o conteúdo que foi protegido pelo AD RMS possa continuar a ser aberto após migrar para o Azure Rights Management.
+- Para obter chaves arquivadas que foram criadas no local antes da migração, para que o conteúdo que foi anteriormente protegido pelo AD RMS pode continuar a ser aberta pelo serviço Azure Rights Management após a migração.
 
-- Se os clientes optarem por trazer a sua própria chave (BYOK) através do Cofre de Chaves do Azure. O Azure Information Protection suporta comprimentos de chave de 1024 bits e 2048 bits. Para uma maior segurança, recomendamos um comprimento de chave de 2048 bits.
+- Se os clientes optarem por trazer a sua própria chave (BYOK) através do Cofre de Chaves do Azure. O Azure Information Protection suporta comprimentos de chave de 1024 e 2048 bits. Para uma maior segurança, recomendamos um comprimento de chave de 2048 bits.
 
 ### <a name="how-the-azure-rms-cryptographic-keys-are-stored-and-secured"></a>Como as chaves criptográficas do Azure RMS são armazenadas e protegidas
 
@@ -107,7 +107,7 @@ Quando um utilizador protege um documento, o cliente de RMS efetua as seguintes 
 
 ![Proteção de documentos pelo RMS – passo 2, a política é criada](../media/AzRMS_documentprotection2.png)
 
-**I que acontece no passo 2**: em seguida, o cliente de RMS cria um certificado que adiciona uma política para o documento, que inclui os [direito de utilização](../deploy-use/configure-usage-rights.md) para utilizadores e grupos e outras restrições, como a data de expiração. Estas definições podem ser definidas num modelo que um administrador tenha configurado anteriormente ou especificadas quando o conteúdo é protegido (por vezes denominado "política ad-hoc").   
+**I que acontece no passo 2**: em seguida, o cliente de RMS cria um certificado que adiciona uma política para o documento, que inclui os [direito de utilização](../deploy-use/configure-usage-rights.md) para utilizadores e grupos e outras restrições, como a data de expiração. Estas definições podem ser definidas num modelo que um administrador anteriormente configurado ou especificado no momento, que o conteúdo é protegido (por vezes referido como uma "política ad hoc").   
 
 O principal atributo do Azure AD utilizado para identificar os utilizadores e grupos selecionados é o atributo ProxyAddresses do Azure AD, que armazena todos os endereços de e-mail de um utilizador ou grupo. No entanto, se uma conta de utilizador não tiver nenhum valor no atributo ProxyAddresses do AD, o valor UserPrincipalName do utilizador é utilizado.
 

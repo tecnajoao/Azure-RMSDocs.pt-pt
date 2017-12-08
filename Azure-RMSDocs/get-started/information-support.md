@@ -4,7 +4,7 @@ description: "Recursos para administradores que incluem informações sobre nova
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2017
+ms.date: 12/07/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 91ba855bb9bd9c41c81ae819b7b3afee1f04adb8
-ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
+ms.openlocfilehash: d6937e86fd0fd544ff2030e52d03c32daa67a134
+ms.sourcegitcommit: a9376b5431dc6ae9819833146a84fc1dd5e685fb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informações e suporte do Azure Information Protection
 
@@ -89,8 +89,6 @@ Resolva os problemas:
 
 Recomendamos o [site do Yammer para o Azure Information Protection](https://www.yammer.com/AskIPTeam). Este recurso fornece respostas diretas da equipa do Azure Information Protection, para além das vantagens de experiência partilhada e o conhecimento dos outros administradores e consultores.
 
-Veja a crescer fast [técnico Comunidade](https:/techcommunity.microsoft.com), que tem um [espaço do Azure Information Protection](https:/techcommunity.microsoft.com/t5/Azure-Information-Protection/bd-p/Azure-Information-Protection) colocar questões e partilhar informações.
-
-Se não tiver acesso a estes sites, experimente o [fórum TechNet do Microsoft RMS (nuvem)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
+Se não tiver acesso a este site, experimente o [fórum TechNet do Microsoft RMS (nuvem)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

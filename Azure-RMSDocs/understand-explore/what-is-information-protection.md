@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 9affd9681748c3e5c9da166c14d56fe3ad7e205f
-ms.sourcegitcommit: 8ff20119a9ce26c1dc7db729742d4e8ade083981
+ms.openlocfilehash: 18ec6241d09eb8de2417dd939237de0544a401e8
+ms.sourcegitcommit: 9b229852c59441f9387bab1d5f28a3c5d9017696
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/11/2017
 ---
 # <a name="what-is-azure-information-protection"></a>O que é o Azure Information Protection?
 
@@ -83,11 +83,11 @@ Depois de proteger um documento, os utilizadores e os administradores podem util
 
 Quando utilizar o Azure Information Protection com o Exchange Online, obter um benefício adicional: A capacidade para enviar e-mails protegidos a qualquer utilizador, com a garantia que pode lê-lo em qualquer dispositivo.
 
-Por exemplo, os utilizadores precisam de enviar informações confidenciais num e-mail, para contas de e-mail pessoais que utiliza **Gmail**, **Hotmail**, ou um **Microsoft** conta. Ou, para os utilizadores que não tenham uma conta para o Office 365 ou no Azure AD. Estas mensagens de correio eletrónico devem ser encriptadas em descanso e em trânsito e só ser lidas pelos destinatários originais.
+Por exemplo, os utilizadores precisam de enviar informações confidenciais para as contas de e-mail pessoais que utiliza **Gmail**, **Hotmail**, ou um **Microsoft** conta. Ou, para os utilizadores que não tenham uma conta para o Office 365 ou no Azure AD. Estas mensagens de correio eletrónico devem ser encriptadas em descanso e em trânsito e só ser lidas pelos destinatários originais.
 
 Este cenário requer a [novas capacidades de encriptação de mensagens do Office 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801). Se os destinatários não é possível abrir o e-mail protegido no cliente de e-mail nativo, podem utilizar um código de acesso único para ler as informações confidenciais num browser.
 
-Por exemplo, um utilizador do Gmail poderá ver o seguinte numa mensagem de e-mail:
+Por exemplo, um utilizador do Gmail vê o seguinte numa mensagem de e-mail:
 
 ![Experiência de destinatário Gmail para OME e AIP](../media/ome-message.png)
 

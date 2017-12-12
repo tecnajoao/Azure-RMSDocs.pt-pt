@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 981f7349c9ae279d48f5cb4795ffc2087f5ae4d8
-ms.sourcegitcommit: 850869505942f9d1b74720085d253de4b54b19c1
+ms.openlocfilehash: 837026a45529312dbdb1657cc563e8b02bff6675
+ms.sourcegitcommit: 9b229852c59441f9387bab1d5f28a3c5d9017696
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/11/2017
 ---
 # <a name="byok-pricing-and-restrictions"></a>Preços e restrições de BYOK
 
@@ -45,7 +45,7 @@ Outras vantagens de utilizar o Azure Key Vault para a sua chave de inquilino do 
 
 - O Azure Key Vault proporciona uma separação de funções, como melhor prática de segurança comprovada. Os administradores do Azure Information Protection podem concentrar-se na gestão da proteção e classificação de dados e os administradores do Azure Key Vault podem concentrar-se na gestão de chaves de encriptação e todas as políticas especiais que possam ser necessárias para a segurança ou conformidade.
 
-- Algumas organizações têm restrições relativamente ao local em que a chave mestra tem de ser armazenada. O Azure Key Vault fornece um elevado nível de controlo sobre o local onde armazena a chave mestra, uma vez que o serviço se encontra disponível em muitas regiões do Azure. Neste momento, dispõe de 28 regiões à escolha [regiões do Azure e é provável que este número aumente. Para mais informações, consulte a página [Produtos disponíveis por região] (https://azure.microsoft.com/regions/services/) no site do Azure.
+- Algumas organizações têm restrições relativamente ao local em que a chave mestra tem de ser armazenada. O Azure Key Vault fornece um elevado nível de controlo sobre o local onde armazena a chave mestra, uma vez que o serviço se encontra disponível em muitas regiões do Azure. Atualmente, pode escolher entre 28 regiões do Azure e que pode esperar aumentar este número. Para mais informações, consulte a página [Produtos disponíveis por região] (https://azure.microsoft.com/regions/services/) no site do Azure.
 
 Além da gestão de chaves, o Azure Key Vault proporciona aos seus administradores de segurança a mesma experiência em gestão para armazenar, aceder e gerir certificados e segredos (por exemplo, palavras-passe) de outros serviços e aplicações que utilizam encriptação. 
 

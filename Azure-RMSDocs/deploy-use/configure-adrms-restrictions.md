@@ -4,17 +4,17 @@ description: "Conheça as limitações, pré-requisitos e recomendações se sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 12/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: 8684188a4c01f9e90ee073d1d378e55dba1fc1eb
-ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
+ms.openlocfilehash: d7788b909da4219ae80475bac4bd26b2a2ec8da9
+ms.sourcegitcommit: 9b229852c59441f9387bab1d5f28a3c5d9017696
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/11/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>Requisitos e restrições de Tenha a sua própria chave (HYOK) para proteção do AD RMS
 
@@ -43,13 +43,13 @@ Neste cenário de HYOK, as políticas de direitos e a chave privada da organiza�
 >
 > Normalmente, mesmo para as organizações que utilizam esta configuração, é adequada para menos de 10% de todos os conteúdos que têm de ser protegidos. Como orientação, utilize-a apenas para documentos ou e-mails que correspondam a todos os seguintes critérios:
 > 
-> - Os conteúdos possuem a classificação mais elevada na sua organização ("Confidencial") e o acesso é restringido a apenas algumas pessoas.
+> **O conteúdo contém a classificação mais elevada na sua organização ("Top segredo") e o acesso é restringido a apenas algumas pessoas**
 > 
-> - Os conteúdos nunca serão partilhados fora da organização.
+> **O conteúdo nunca é partilhado fora da organização**
 > 
-> - Os conteúdos só serão consumidos na rede interna.
+> **O conteúdo apenas consumido na rede interna**
 > 
-> - Os conteúdos não precisam de ser consumidos em computadores Mac ou dispositivos móveis.
+> **O conteúdo não precisa de ser utilizada em computadores Mac ou o dispositivo móvel**
 
 Os utilizadores não sabem quando uma etiqueta utiliza a proteção do AD RMS em vez da proteção do Azure RMS. Devido às limitações e restrições inerentes da proteção do AD RMS, certifique-se de que fornece orientações claras sobre as exceções para quando os utilizadores devem selecionar etiquetas que aplicam a proteção do AD RMS. 
 

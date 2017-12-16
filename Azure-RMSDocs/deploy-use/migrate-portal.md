@@ -4,7 +4,7 @@ description: "Tarefas de administração de uma rapidamente no portal do Azure q
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/01/2017
+ms.date: 12/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 194c746298024ef294c8a6a6fa0361d21cbd869e
-ms.sourcegitcommit: 9b229852c59441f9387bab1d5f28a3c5d9017696
+ms.openlocfilehash: c329e4832133ef5adb12cadaf45d822c9a759ba2
+ms.sourcegitcommit: e006cd829c7fba1b5a856e9e0a821b624415a7ed
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 12/16/2017
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Tarefas que utilizou para fazer com o portal clássico do Azure
 
@@ -31,7 +31,9 @@ Utilizado para o portal clássico do Azure para gerir o serviço Azure Rights Ma
 
 ## <a name="how-to-do-your-familiar-admin-tasks"></a>Como fazer as tarefas administrativas familiar
 
-Utilize as seguintes informações para ajudá-lo rapidamente transição o mais recente do portal:
+Utilize as seguintes informações para ajudá-lo rapidamente transição o mais recente do portal.
+
+No entanto, os clientes que tem uma subscrição para o Office 365 US Government (nuvem de Comunidade Government) atualmente não é possível utilizar o portal do Azure em, em vez disso, tem de utilizar [PowerShell](configure-templates-with-powershell.md) para gerir os seus modelos. 
 
 |Portal clássico do Azure|Como efetuar esta tarefa no portal do Azure
 |-----------|--------------------|

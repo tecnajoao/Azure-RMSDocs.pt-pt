@@ -4,17 +4,17 @@ description: "Configurar as definições na política do Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 12/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: f651a621b961bfba63ad43e5372eec9a68c170d4
-ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
+ms.openlocfilehash: 49eb10a999f541cb9979576faac55ca28ff35a0b
+ms.sourcegitcommit: e089661f23f199b122b0ca9ba4748792b349bc27
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Como configurar as definições de política do Azure Information Protection
 
@@ -39,7 +39,7 @@ Configurar estas definições:
 3. Do **Azure Information Protection - política Global** painel, ou o **política:\<nome >** painel, configure as definições:
     
     - **Selecione a etiqueta predefinida**: quando definir esta opção, selecione a etiqueta para atribuir a documentos e e-mails que não tenham uma etiqueta. Não é possível definir uma etiqueta como predefinição se tiver etiquetas secundárias. 
-        
+    
     - **Todos os documentos e e-mails devem ter uma etiqueta**: quando configurar esta opção como **Ativado**, todos os todos os documentos guardado e e-mails enviados devem ter uma etiqueta aplicada. As etiquetas podem ser atribuídas manualmente por um utilizador, automaticamente como resultado de uma [Condição](configure-policy-classification.md) ou pode ser atribuída por predefinição (definindo opção **Selecionar etiqueta predefinida**).
         
         Se uma etiqueta não estiver atribuída quando os utilizadores guardar um documento ou envia uma mensagem de e-mail, são-lhe pedidos para selecionar uma etiqueta. Por exemplo:
@@ -55,12 +55,15 @@ Configurar estas definições:
     - **Para mensagens de e-mail com anexos, aplique uma etiqueta que corresponda à classificação mais elevada desses anexos**: quando define esta opção como **Recomendado**, é pedido aos utilizadores que apliquem uma etiqueta à respetiva mensagem de e-mail. A etiqueta é selecionada de forma dinâmica com base nas etiquetas de classificação aplicadas aos anexos e é selecionada a etiqueta de classificação mais elevada. O anexo tem de ser um ficheiro físico e não pode ser uma ligação a um ficheiro (por exemplo, uma ligação a um ficheiro no SharePoint ou no OneDrive para Empresas). Os utilizadores podem aceitar a recomendação ou ignorá-la. Quando define esta opção como **Ativado**, a etiqueta é automaticamente aplicada mas os utilizadores podem removê-la ou selecionar uma etiqueta diferente antes de enviarem o e-mail.  
     
     - **Apresentar a barra do Information Protection em aplicações do Office**: quando esta definição estiver desativada, os utilizadores não é possível selecionar etiquetas de uma barra no Word, Excel, PowerPoint e Outlook. Em vez disso, os utilizadores devem selecionar etiquetas do **proteger** botão no Friso. Quando esta definição está ativada, os utilizadores podem selecionar etiquetas da barra de ou no botão.
-    
-    Quando esta definição está ativada, esta pode ser utilizada em conjunto com um cliente avançado definição para que os utilizadores podem [permanentemente ocultar a barra do Azure Information Protection](../rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar) se escolherem não mostrar a barra. Pode fazê-lo ao desmarcar a **Mostrar barra** opção do **proteger** botão.
+        
+        > [!IMPORTANT]
+        > Esta definição está em pré-visualização e requer a versão de pré-visualização atual do cliente Azure Information Protection.
+        
+        Quando esta definição está ativada, esta pode ser utilizada em conjunto com um cliente avançado definição para que os utilizadores podem [permanentemente ocultar a barra do Azure Information Protection](../rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar) se escolherem não mostrar a barra. Pode fazê-lo ao desmarcar a **Mostrar barra** opção do **proteger** botão.
     
     - **Adicionar o botão não reencaminhar para o Friso Outlook**: quando esta definição está ativada, os utilizadores podem selecionar este botão do **proteção** grupo no Friso Outlook, além de selecionar o **não reencaminhar** opção de menus do Outlook. Para ajudar a garantir que os utilizadores classificar os e-mails, bem como proteger, poderá preferir não, mas em vez disso, a adicionar este botão [configurar uma etiqueta para a proteção](configure-policy-protection.md) e um utilizador definido permissão para o Outlook. Esta definição de proteção é funcionalmente o mesmo como selecionar o **não reencaminhar** botão, mas quando esta funcionalidade está incluída com uma etiqueta, os e-mails são classificados, bem como protegidos.
     
-    Esta definição de política também pode ser configurada com um cliente avançado definir como um [personalização de cliente](../rms-client/client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook).
+        Esta definição de política também pode ser configurada com um cliente avançado definir como um [personalização de cliente](../rms-client/client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook).
     
     - **Tornar disponível a opção de permissões personalizadas aos utilizadores**: quando esta definição está ativada, os utilizadores podem configurar as suas próprias definições de proteção e substituir as definições de proteção que tiver incluído com uma configuração de etiqueta. Quando esta definição estiver desativada, as opções de permissões personalizadas não estão disponíveis para os utilizadores selecionem o.
         

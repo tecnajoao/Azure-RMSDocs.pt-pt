@@ -4,7 +4,7 @@ description: "Está confuso com uma palavra, expressão ou acrónimo relacionado
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 12/15/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f2c0053a8f1f4cde5193b65e5b8e521a2b6934c1
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: da20ac2ea327b5b97f021c85f62d97b9aa1b9824
+ms.sourcegitcommit: fc205eae0c0b378d41da5f1eceb0c699e60ad66f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 12/18/2017
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologia do Azure Information Protection
 
@@ -26,8 +26,8 @@ Está confuso com uma palavra, expressão ou acrónimo relacionado com o Microso
 
 |Termo|Definição|
 |--------|--------------|
-|AADRM|O nome do módulo do Windows PowerShell para o serviço Azure Rights Management, derivado da abreviatura não oficial do [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], anteriormente denominado (Windows) Azure Active Directory Rights Management.|
-|ativar|Ativar o serviço [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] para que uma organização possa proteger os respetivos documentos e e-mails. Esta ação também ativa as funcionalidades do Rights Management no Exchange Online e no SharePoint Online.|
+|AADRM|O nome do módulo do Windows PowerShell para o serviço Azure Rights Management, derivado da abreviatura não para o Azure Rights Management quando era anteriormente denominado (Windows) Azure Active Directory Rights Management.|
+|ativar|Para ativar o serviço Azure Rights Management para que uma organização pode proteger os seus documentos e e-mails. Esta ação também ativa as funcionalidades do Rights Management no Exchange Online e no SharePoint Online.|
 |Serviços de Gestão de Direitos do Active Directory|Frequentemente abreviado para *AD RMS*.<br /><br />Uma função do Windows Server que fornece proteção de gestão de direitos através de encriptação e políticas para o ajudar a proteger documentos, ficheiros e e-mails.|
 |AD RMS|Consulte *Serviços de Gestão de Direitos do Active Directory*.|
 |Azure Information Protection|Um serviço baseado na nuvem que utiliza classificação, etiquetagem e proteção para o ajudar a proteger documentos e e-mails. O Azure Rights Management fornece a proteção utilizando as políticas de encriptação, de identidade e de autorização.|
@@ -58,6 +58,8 @@ Está confuso com uma palavra, expressão ou acrónimo relacionado com o Microso
 |proteger|Aplicar controlos de gestão de direitos a ficheiros ou mensagens de e-mail através de políticas de controlo de acesso, encriptação e identidade para ajudar a proteger os seus dados.|
 |publicar|Proteger um ficheiro de modo a salvaguardá-lo contra o acesso e a utilização não autorizados.|
 |Conector Rights Management|Um reencaminhamento de proxy de saída que pode implementar para serviços no local, como o Exchange Server e o SharePoint, para proteger dados através do serviço Azure Rights Management.|
+|Emissor de gestão de direitos|A conta que proteger um documento ou e-mail.|
+|Proprietário de gestão de direitos|A conta que mantém o controlo total de um documento protegido ou e-mail pelo facto de ser automaticamente concedidos o direito de utilização de controlo total do Rights Management e está isento de qualquer definição offline ou data de expiração.|
 |Serviços de Gestão de Direitos|O termo genérico que se aplica tanto à versão na nuvem do [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] ([!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]) como à versão no local do [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] (AD RMS).|
 |Aplicação de partilha Rights Management|Foi agora substituída pelo cliente do Azure Information Protection, uma aplicação opcional para o Windows e para os dispositivos móveis mais populares, que suporta a partilha segura de ficheiros no local e por e-mail.|
 |RMS|Consulte *Serviços de Gestão de Direitos*.|

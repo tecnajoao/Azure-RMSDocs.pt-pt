@@ -4,7 +4,7 @@ description: "Ver o que é nova ou alterada uma versão do cliente Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 12/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c3c0acad413ddbbcd1caccd4f1a73c7b0884ae7c
-ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
+ms.openlocfilehash: 20ee380a48fa8fb303a5c71f43df17b8740b0cb4
+ms.sourcegitcommit: fc9a4487e2a0bc3481a814c7c308939868d52db9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: política de suporte e histórico da versão versão
 
@@ -28,7 +28,7 @@ Pode transferir a versão GA mais recente e a versão de pré-visualização atu
 
 ### <a name="servicing-information-and-timelines"></a>Informações e linhas cronológicas de manutenção
 
-São suportadas as versões de disponibilidade geral (DG) do cliente Azure Information Protection durante um período de seis meses contar da data da respetiva versão. Correções e novas funcionalidades sempre são aplicadas para a última versão GA e não serão aplicadas a versões mais antigas do GA.
+Cada versão de disponibilidade geral (DG) do cliente Azure Information Protection é suportada para até seis meses após o lançamento da versão GA subsequente. Versões não suportadas do cliente não estão incluídas nesta página. Correções e novas funcionalidades sempre são aplicadas para a última versão GA e não serão aplicadas a versões mais antigas do GA.
 
 As versões de pré-visualização não devem ser implementadas para os utilizadores finais em redes de produção. Em alternativa, utilize a versão de pré-visualização mais recente para ver e experimentar novas funcionalidades ou correções que são provenientes na próxima versão GA. Versões de pré-visualização não são atuais não são suportadas.
 

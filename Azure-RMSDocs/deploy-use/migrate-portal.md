@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: c329e4832133ef5adb12cadaf45d822c9a759ba2
-ms.sourcegitcommit: e006cd829c7fba1b5a856e9e0a821b624415a7ed
+ms.openlocfilehash: 2764c1349847ca862147a5cc9f21fbd9c4a83624
+ms.sourcegitcommit: 2a7f20684a041385e2d2425ab886e46917d2da9a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/16/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Tarefas que utilizou para fazer com o portal clássico do Azure
 
@@ -44,7 +44,7 @@ No entanto, os clientes que tem uma subscrição para o Office 365 US Government
 |Criar um modelo de âmbito|Criar uma política no âmbito e criar uma etiqueta neste âmbito que se aplica proteção. <br /><br />Para obter mais informações, consulte [como configurar a política do Azure Information Protection para utilizadores específicos através da utilização de políticas de âmbito](configure-policy-scope.md).
 |Copiar um modelo|Não é possível copiar um modelo no portal do Azure. Se quiser duas etiquetas ter as mesmas definições de proteção, tem de definir as permissões em cada etiqueta. <br /><br />Para obter mais informações, consulte [para configurar uma etiqueta para a proteção Rights Management](configure-policy-protection.md#to-configure-a-label-for-rights-management-protection).
 |Eliminar um modelo|Eliminar modelos pode resultar em dados inacessíveis, pelo que o portal do Azure não suporta esta ação. No entanto, pode eliminar a etiqueta e, em seguida, utilizar o PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) cmdlet para remover o modelo. <br /><br />Para obter mais informações, consulte [como eliminar ou reordenar uma etiqueta para o Azure Information Protection](configure-policy-delete-reorder.md).
-|Suporte de vários idiomas|Do **GERIR** selecção de menu, selecione **idiomas (pré-visualização)** para exportar os campos personalizáveis, que incluem o nome do modelo e a descrição. Traduzir as cadeias e, em seguida, importe estes cadeias para o portal. <br /><br />Para obter mais informações, consulte [como configurar as etiquetas e modelos para idiomas diferentes no Azure Information Protection](configure-policy-languages.md).
+|Suporte de vários idiomas|Do **GERIR** selecção de menu, selecione **idiomas** para exportar os campos personalizáveis, que incluem o nome do modelo e a descrição. Traduzir as cadeias e, em seguida, importe estes cadeias para o portal. <br /><br />Para obter mais informações, consulte [como configurar as etiquetas e modelos para idiomas diferentes no Azure Information Protection](configure-policy-languages.md).
 |Os relatórios de gestão de direitos|Utilizar o PowerShell [Get-AadrmUsageLog](/powershell/module/aadrm/Get-AadrmUsageLog) cmdlet para transferir os registos de utilização para o serviço Azure Rights Management. Em seguida, pode utilizar estes dados para criar relatórios personalizados. <br /><br />Para obter mais informações, consulte [Registar e analisar a utilização do serviço Azure Rights Management](log-analyze-usage.md).<br /><br />Sugestão: Procure anúncios no [blogue Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) para uma solução de relatórios nova e centralizada para o Azure Information Protection. 
 |Ativar e desativar o serviço Rights Management|Do **GERIR** opções de menu, selecionadas **definições RMS** ou **ativação da proteção**. Esta opção está no processo de ser mudado.<br /><br />Para obter mais informações, consulte [como ativar o Azure Rights Management a partir do portal do Azure](activate-azure.md).
 

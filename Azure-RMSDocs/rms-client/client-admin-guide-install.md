@@ -4,7 +4,7 @@ description: "As instruções e informações para os administradores implementa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/26/2017
+ms.date: 01/04/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 24a145ed79d3e0d74cdf3dd9e320e2755e121ce9
-ms.sourcegitcommit: 8fd7dfaea6d5f5b3387e6972fd1454d283a57227
+ms.openlocfilehash: d4ad7c3419d3ad83389baece95c1e30c32f06da6
+ms.sourcegitcommit: 7b90b3692bbef6fafab41c0f8c56bd4350985f37
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/28/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guia do administrador: Instalar o cliente Azure Information Protection para os utilizadores
 
@@ -71,6 +71,14 @@ Em seguida, verifique os pré-requisitos adicionais que podem ser necessários p
     Mesmo que ainda não tenha configurado esta definição de política de grupo **Lista de suplementos geridos**, poderá ter de a configurar se receber relatórios a informar que o suplemento Microsoft Azure Information Protection será desativado. Quando este suplemento é desativado, os utilizadores não veem a barra Azure Information Protection na aplicação do Office.
     
     Para obter mais informações sobre esta definição de política de grupo, veja [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off) (Os suplementos não são carregados devido às definições de política de grupo dos programas do Office 2013 e do Office 2016).
+
+- Para versões do Office 16.0.8628.2010 e posterior (clique para execução): Ativar o suporte legacy monitores
+    
+    Para impedir a apresentação de barra de Azure Information Protection fora de aplicações do Office para estas versões do Office, ative o suporte legacy para monitores. Para configurar as aplicações do Office: **ficheiro** > **geral** > **opções de Interface de utilizador**:
+    
+    - Se vir a opção **quando utilizar apresenta várias** está definido como **otimizar para melhor aspeto**, selecione **otimizar para compatibilidade (é necessário um reinício aplicação)** em vez disso. 
+        
+    - Se vir que a opção **utilizar das melhores definições para os meus apresentação** é selecionado, remover esta seleção.
 
 > [!IMPORTANT]
 > A instalação do cliente do Azure Information Protection requer permissões administrativas locais.

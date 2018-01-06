@@ -14,11 +14,11 @@ ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 7a575b869adec5da1b8a61eed772256fe7469551
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 098ff506a2ca321d8ee2de00f9649cd47ef021ef
+ms.sourcegitcommit: 78e2cf5acd48dbf50ed4c7be1b2f3bae95362cec
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="android-setup"></a>Configuração do Android
 
@@ -126,15 +126,20 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
 
 -   Pode verificar o passo do manifesto ao visualizar o manifesto na vista de editor de texto. Certifique-se de que as linhas seguintes são apresentadas:
 
-
-    <uses-sdk      android:minSdkVersion="15"      android:targetSdkVersion="19"/> <uses-permission android:name="android.permission.INTERNET"/> <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> <uses-permission/>
-
+   ```
+    <uses-sdk
+         android:minSdkVersion="15"
+         android:targetSdkVersion="19"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission/>
+   ```
 
 **Nota** O SDK utiliza o *android.support.v4*
 
 -   Agora, está pronto para criar as suas novas aplicações Android.
 
-### <a name="see-also"></a>Consulte Também
+### <a name="see-also"></a>Veja Também
 
 [Introdução](get-started.md)
 

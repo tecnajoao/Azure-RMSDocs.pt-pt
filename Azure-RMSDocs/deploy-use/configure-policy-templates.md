@@ -4,7 +4,7 @@ description: "Configurar e gerir modelos de gestão de direitos do portal do Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2017
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,20 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: bb6aeea8f939614b9c1903d8e006815228f99723
-ms.sourcegitcommit: f6ba613445463c3c4c64b1620095d54b48194650
+ms.openlocfilehash: f69a163566a9654ee6286c4bf9ca4d018e8f8db5
+ms.sourcegitcommit: fc789ce08821e031d3a2b22d850b4318302d3585
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurar e gerir modelos do Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection*
 
 >[!NOTE]
->Esta funcionalidade substitui configurar modelos personalizados no portal clássico do Azure. Para um mapeamento de procedimentos rápido, consulte [tarefas que utilizou para fazer com o portal clássico do Azure](migrate-portal.md).
->
->Apesar de ainda pode criar e gerir modelos no portal clássico do Azure, não recomendamos que gerir os mesmos modelos a partir do portal clássico do Azure e o portal do Azure. A implementação para a configuração de modelos nestes portais diferentes foi alterada, para que configurar o mesmo modelo no portais diferentes pode resultar numa configuração instável.
+>Esta funcionalidade substitui configurar modelos personalizados no portal clássico do Azure. É retirado agora o portal clássico, pelo que deverá utilizar o portal do Azure. Para um mapeamento de procedimentos rápido, consulte [tarefas que utilizou para fazer com o portal clássico do Azure](migrate-portal.md).
 
 
 Modelos de gestão de direitos agora estão integrados com a política do Azure Information Protection. 
@@ -36,11 +34,11 @@ Modelos de gestão de direitos agora estão integrados com a política do Azure 
 
 **Quando tem uma subscrição que inclui apenas proteção (uma subscrição do Office 365 que inclui o serviço Azure Rights Management):**
 
-- Modelos de gestão de direitos para o seu inquilino são apresentados no **Azure Information Protection - política Global** painel, no **modelos proteção** secção. Não são apresentadas etiquetas. Consulte também as definições de configuração que são específicas para classificação e etiquetagem, mas estas não tem qualquer efeito nos seus modelos ou não pode ser configurados. 
+- Modelos de gestão de direitos para o seu inquilino são apresentados no **Azure Information Protection - política Global** painel, no **modelos proteção** secção. Não são apresentadas etiquetas. Consulte também as definições de configuração que são específicas para classificação e etiquetagem, mas estas definições não tem qualquer efeito nos seus modelos ou não podem ser configuradas. 
 
 ## <a name="default-templates"></a>Modelos predefinidos
 
-Quando obtiver a sua subscrição do Azure Information Protection ou uma subscrição do Office 365 que inclui o serviço Azure Rights Management, dois modelos predefinidos são criados automaticamente para o seu inquilino que restringem o acesso aos utilizadores autorizados na sua organização. Quando são criados estes dois modelos, têm as permissões que estão listadas no [configurar direitos de utilização do Azure Rights Management](configure-usage-rights.md#rights-included-in-the-default-templates) documentação.
+Quando obtiver a sua subscrição do Azure Information Protection ou uma subscrição do Office 365 que inclui o serviço Azure Rights Management, dois modelos predefinidos são criados automaticamente para o seu inquilino. Estes modelos restringem o acesso aos utilizadores autorizados na sua organização. Quando estes modelos são criados, têm as permissões que estão listadas no [configurar direitos de utilização do Azure Rights Management](configure-usage-rights.md#rights-included-in-the-default-templates) documentação.
 
 Além disso, os modelos são configurados para permitir acesso offline durante sete dias e não dispõe de uma data de expiração.
 
@@ -85,7 +83,7 @@ Antes de editar estes modelos ou convertê-las em etiquetas, certifique-se de qu
     - **Permitir Macros** (nome comum) é adicionado automaticamente. Este direito de utilização é preciso para a barra do Azure Information Protection nas aplicações do Office.
     
 
-- As definições **Publicado** e **Arquivado** são apresentadas como **Ativado**: **Ligado** e **Ativado**: **Desligado** respetivamente no painel **Etiqueta**. Para modelos que pretende manter, mas não é visível para utilizadores ou serviços, colocá-los **ativado**: **desativar**.
+- As definições **Publicado** e **Arquivado** são apresentadas como **Ativado**: **Ligado** e **Ativado**: **Desligado** respetivamente no painel **Etiqueta**. Para modelos que pretende manter, mas não é visível para utilizadores ou serviços, defina estes modelos como **ativado**: **desativar**.
 
 - Não é possível copiar ou eliminar um modelo no portal do Azure. Quando o modelo é convertido para uma etiqueta, pode configurar a etiqueta para deixar de utilizar o modelo selecionando **não configurado** para o **definir as permissões para documentos e e-mails que contêm esta etiqueta** opção. Em alternativa, pode eliminar a etiqueta. Em ambos os cenários no entanto, o modelo não é eliminado e permanece num Estado arquivado.
     
@@ -102,6 +100,7 @@ Antes de editar estes modelos ou convertê-las em etiquetas, certifique-se de qu
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Para configurar os modelos na política do Azure Information Protection
 
 1. Se ainda não o tiver feito, abra uma nova janela do browser e inicie sessão para o [portal do Azure](https://portal.azure.com) como um administrador de segurança ou um administrador global. Em seguida, navegue para o painel **Azure Information Protection**.     
+    
     Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
 2. Se o modelo que pretende configurar para todos os utilizadores, permaneça o **Azure Information Protection - política Global** painel.
@@ -127,7 +126,7 @@ Antes de editar estes modelos ou convertê-las em etiquetas, certifique-se de qu
 
 ## <a name="to-convert-templates-to-labels"></a>Converter modelos em etiquetas
 
-Quando tem uma subscrição que inclui a classificação, a etiquetagem e a proteção, pode converter um modelo numa etiqueta. Quando o faz, o modelo original é mantido mas, no portal do Azure, é apresentado agora como incluído numa nova etiqueta.
+Quando tem uma subscrição que inclui a classificação, a etiquetagem e a proteção, pode converter um modelo numa etiqueta. Quando converter um modelo, o modelo original é mantido, mas no portal do Azure, apresenta agora incluído numa nova etiqueta.
 
 Por exemplo, se converter uma etiqueta denominada **Marketing** que concede direitos de utilização ao grupo de marketing, no portal do Azure é agora apresentada como uma etiqueta denominada **Marketing** que tem as mesmas definições de proteção. Se alterar as definições de proteção nesta etiqueta criada recentemente, está a alterá-las no modelo e qualquer utilizador ou serviço que utilize este modelo irá obter as novas definições de proteção com a próxima atualização do modelo. 
 
@@ -149,7 +148,7 @@ Ao converter um modelo numa etiqueta:
 
 ## <a name="to-create-a-new-template"></a>Criar um novo modelo
 
-Quando cria uma nova etiqueta com a definição de proteção da **Azure RMS** ou **Azure (chave de nuvem)**, nos bastidores, esta ação cria um novo modelo personalizado que possam ser acedido por aplicações e serviços que Integre com modelos do Rights Management.
+Quando cria uma nova etiqueta com a definição de proteção da **Azure RMS** ou **Azure (chave de nuvem)**, nos bastidores, esta ação cria um novo modelo personalizado que possam ser acedido por serviços e aplicações que se integram com modelos do Rights Management.
 
 1. Se o novo modelo for para todos os utilizadores, permaneça o **Azure Information Protection - política Global** painel.
     

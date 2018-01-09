@@ -4,7 +4,7 @@ description: "Tarefas de administração de uma rapidamente no portal do Azure q
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/14/2017
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 2764c1349847ca862147a5cc9f21fbd9c4a83624
-ms.sourcegitcommit: 2a7f20684a041385e2d2425ab886e46917d2da9a
+ms.openlocfilehash: 367189865266e85df967c398b17153d970241e98
+ms.sourcegitcommit: fc789ce08821e031d3a2b22d850b4318302d3585
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Tarefas que utilizou para fazer com o portal clássico do Azure
 
@@ -24,16 +24,16 @@ ms.lasthandoff: 01/03/2018
 
 Utilizado para o portal clássico do Azure para gerir o serviço Azure Rights Management e precisarem de alguns ajudar a transição para o portal do Azure? 
 
-> [!NOTE]
-> Portal clássico do Azure será descontinuado **08 de Janeiro de 2018**. Após esta data, se tentar utilizar este portal, será automaticamente redirecionado para o novo portal do Azure. 
-> 
-> Para obter mais informações, consulte o anúncio de mensagem de blogue [Marching no futuro da experiência de administração do Azure AD: extinguir o portal clássico do Azure](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/). Para a extensão temporária para a data de retirada original, consulte [atualizações de extinção de experiência do portal clássica do Azure AD e a migração de políticas de acesso condicional](https://cloudblogs.microsoft.com/enterprisemobility/2017/11/29/update-on-retirement-of-azure-ad-classic-portal-experience-and-migration-of-conditional-access-policies/).
+Portal clássico do Azure extinto **08 de Janeiro de 2018**. Após esta data, não será capaz de gerir o serviço Azure Rights Management e os modelos personalizados no portal clássico. Se tentar aceder ao portal clássico, verá uma ligação que leva-o para o novo portal do Azure. 
+
+Para mais informações sobre a extinção do portal clássica, consulte o anúncio de mensagem de blogue: [Marching no futuro da experiência de administração do Azure AD: extinguir o portal clássico do Azure](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/). Para a extensão temporária para a data de retirada original, consulte [atualizações de extinção de experiência do portal clássica do Azure AD e a migração de políticas de acesso condicional](https://cloudblogs.microsoft.com/enterprisemobility/2017/11/29/update-on-retirement-of-azure-ad-classic-portal-experience-and-migration-of-conditional-access-policies/).
 
 ## <a name="how-to-do-your-familiar-admin-tasks"></a>Como fazer as tarefas administrativas familiar
 
-Utilize as seguintes informações para ajudá-lo rapidamente transição o mais recente do portal.
+Utilize as seguintes informações para ajudá-lo rapidamente transição para o portal atual.
 
 No entanto, os clientes que tem uma subscrição para o Office 365 US Government (nuvem de Comunidade Government) atualmente não é possível utilizar o portal do Azure em, em vez disso, tem de utilizar [PowerShell](configure-templates-with-powershell.md) para gerir os seus modelos. 
+
 
 |Portal clássico do Azure|Como efetuar esta tarefa no portal do Azure
 |-----------|--------------------|

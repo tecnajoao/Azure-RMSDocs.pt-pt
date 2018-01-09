@@ -4,7 +4,7 @@ description: "Informações e instruções sobre como utilizar os registos de ut
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2017
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a7a983ed075e41ee6f3328634b451107e579134d
-ms.sourcegitcommit: e089661f23f199b122b0ca9ba4748792b349bc27
+ms.openlocfilehash: cf919749b74727412ab6fa76cc52a5c71b69efcd
+ms.sourcegitcommit: fc789ce08821e031d3a2b22d850b4318302d3585
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Registar e analisar a utilização do serviço Azure Rights Management
 
@@ -45,7 +45,6 @@ Além deste registo de utilização, também tem as seguintes opções de regist
 |Opção de registo|Descrição|
 |----------------|---------------|
 |Registo de Admin|Regista tarefas administrativas para o serviço Azure Rights Management. Por exemplo, se o serviço estiver desativado, quando a funcionalidade de Superutilizador é ativada e quando os utilizadores têm permissões de administrador delegado para o serviço. <br /><br />Para obter mais informações, consulte o cmdlet do PowerShell, [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog).|
-|Relatórios Web do|Relatórios de alto nível de utilização do portal clássico do Azure: **resumo do RMS**, **utilizadores ativos do RMS**, **plataformas de dispositivos do RMS**, e **utilização da aplicação do RMS**. <br /><br />Para aceder a estes relatórios do portal clássico do Azure, clique em **do Active Directory**, selecione e abra um diretório e, em seguida, clique em **relatórios**.|
 |controlo de documentos|Permite que os utilizadores controlarem e revogarem os seus documentos que possam tem controlados com o cliente Azure Information Protection ou a aplicação de partilha RMS. Os administradores globais também podem controlar estes documentos em nome dos utilizadores. <br /><br />Para obter mais informações, consulte [configurar e utilizar o controlo de documentos para o Azure Information Protection](../rms-client/client-admin-guide-document-tracking.md).|
 |Registos de eventos de cliente|Atividade de utilização para o cliente Azure Information Protection, a sessão do Windows local **aplicações e serviços** registo de eventos, **Azure Information Protection**. <br /><br />Para obter mais informações, consulte [registo de utilização para o cliente Azure Information Protection](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
 |Ficheiros de registo de cliente|Resolução de problemas registos f ou o cliente Azure Information Protection, localizado na **%localappdata%\Microsoft\MSIP**. <br /><br />Estes ficheiros são concebidos para Support da Microsoft.|

@@ -4,7 +4,7 @@ description: "Conheça os direitos específicos utilizados quando protege fichei
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/02/2018
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5d57f1cc7728fef1b877fc25fce01bbc9c768b3c
-ms.sourcegitcommit: 24b35e27b3aa861ae8ba6bacab571b0071b058d7
+ms.openlocfilehash: 9c10c7c4afdc6269b3bab23b3aba4da76e383e8b
+ms.sourcegitcommit: fc789ce08821e031d3a2b22d850b4318302d3585
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuração de direitos de utilização para o Azure Rights Management
 
@@ -25,6 +25,11 @@ ms.lasthandoff: 01/03/2018
 Quando definir a proteção em ficheiros ou e-mails com o serviço Azure Rights Management do Azure Information Protection e não utilizar um modelo, terá de configurar os direitos de utilização. Além disso, quando configurar modelos ou as etiquetas para proteção do Azure Rights Management, selecione os direitos de utilização que serão, em seguida, ser automaticamente aplicados quando o modelo ou etiqueta está selecionada por utilizadores, administradores ou serviços configurados. Por exemplo, no portal do Azure, pode selecionar funções que configuram um agrupamento lógico de direitos de utilização, ou pode configurar os direitos individuais.
 
 Utilize este artigo para o ajudar a configurar os direitos de utilização que pretende para a aplicação que está a utilizar e para compreender como estes direitos são interpretados pelas aplicações.
+
+> [!NOTE] 
+> Por questões de exaustividade, este artigo inclui os valores do portal clássico do Azure, que extinguidas 08 de Janeiro de 2018. Após esta data, se tentar utilizar este portal, será automaticamente redirecionado para o novo portal do Azure.
+>
+> Para ajudar a migrar para o novo portal, consulte [tarefas que utilizou para fazer com o portal clássico do Azure](migrate-portal.md).
 
 ## <a name="usage-rights-and-descriptions"></a>Direitos de utilização e descrições
 A tabela seguinte lista e descreve os direitos de utilização suportados pelo Rights Management e de que forma são utilizados e interpretados. São listados pelo respetivo **nome comum**, que é normalmente como poderá ver a direito de utilização apresentado ou referenciado, como uma versão mais amigável do valor de palavra única que é utilizado no código (o **codificação na política** valor). 
@@ -148,7 +153,7 @@ A predefinição utilizar validade da licença período para um inquilino é 30 
     Para obter mais informações e orientações para configurar esta definição utilizando o PowerShell, consulte a ajuda para cada cmdlet.
 
 
-## <a name="see-also"></a>Veja Também
+## <a name="see-also"></a>Consulte Também
 [Configurar e gerir modelos do Azure Information Protection](configure-policy-templates.md)
 
 [Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados](configure-super-users.md)

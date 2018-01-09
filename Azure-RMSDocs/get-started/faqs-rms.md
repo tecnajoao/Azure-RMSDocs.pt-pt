@@ -4,7 +4,7 @@ description: "Algumas perguntas mais frequentes sobre o serviço de proteção d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/03/2018
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b23fe95721c442529237ea72d30b3df490ad02dc
-ms.sourcegitcommit: 6c7874f54b8b983d3ac547bb23a51e02c68ee67b
+ms.openlocfilehash: d2f88d35550b47a4f73e87eeca9ecd6309a3c73e
+ms.sourcegitcommit: fc789ce08821e031d3a2b22d850b4318302d3585
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Perguntas mais frequentes sobre a proteção de dados no Azure Information Protection
 
@@ -70,7 +70,7 @@ Como estes nomes de função sugerem, a primeira função atribui permissões pa
 
 Factos a ter em conta:
 
-- Apenas os administradores globais para o Office 365 e os administradores globais para o Azure AD podem utilizar o Centro de administração do Office 365 ou portal clássico do Azure para configurar o Azure RMS. Se utilizar o portal do Azure para o Azure Information Protection, também pode iniciar sessão como um administrador de segurança.
+- Apenas os administradores globais para o Office 365 e os administradores globais para o Azure AD podem utilizar o Centro de administração do Office 365 para configurar o Azure RMS. Se utilizar o portal do Azure para o Azure Information Protection, pode iniciar sessão como um administrador global ou como um administrador de segurança.
 
 - Os utilizadores aos quais atribui a função de administrador global para o Azure RMS têm de utilizar os comandos do PowerShell do Azure RMS para configurarem o Azure RMS. Para ajudar a encontrar os cmdlets certos para tarefas específicas, veja [Administrar o Azure Rights Management Utilizando o Windows PowerShell](../deploy-use/administer-powershell.md).
 

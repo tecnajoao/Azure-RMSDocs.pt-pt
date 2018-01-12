@@ -1,8 +1,8 @@
 ---
 title: Guia para Programadores do Azure Information Protection
 description: Os programadores podem utilizar o Azure Information Protection para proteger e gerir ficheiros de todos os tipos
-author: BrucePerlerMS
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 10/11/2017
 ms.topic: article
@@ -11,11 +11,11 @@ ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 2aba222457dfb56cca29e1a2948cc08041552d9f
-ms.sourcegitcommit: f3d5a1de317b9bd114d802b3965bf6b679d7ccf2
+ms.openlocfilehash: a32f4d774b67007ccc6638e3151bd6038e3f274c
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guia para Programadores do Azure Information Protection
 
@@ -98,15 +98,9 @@ Cada um dos seguintes tópicos apresenta instruções específicas para um aspet
 - [Como utilizar direitos incorporados (utilizador)](built-in-rights-usage-restriction-reference.md)
 - [Como ativar registo de erros e de desempenho (utilizador)](enabling-logging.md)
 
-## <a name="videos"></a>Vídeos
+## <a name="introduction-and-datasheets"></a>Introdução e datasheets
 
 [Introdução ao Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection)
-
-Estes vídeos pertençam a Conferência Microsoft Ignite de 2016
-
-- [Email security inside your org (Segurança de e-mails na sua organização)](https://myignite.microsoft.com/videos/2787)
-- [Adopt a comprehensive identity-driven solution for protecting and sharing data securely (Adotar uma solução condicionada por identidade abrangente para proteger e partilhar dados de forma segura)](https://myignite.microsoft.com/videos/2784)
-- [Saiba como a classificação, etiquetagem e, proteção fornece proteção de dados persistente](https://myignite.microsoft.com/videos/2786)
 
 ## <a name="other-resources"></a>Outros recursos
 

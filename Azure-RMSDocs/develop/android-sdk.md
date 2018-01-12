@@ -2,8 +2,8 @@
 title: "Configuração do Android | Azure RMS"
 description: "As aplicações Android podem utilizar o SDK Microsoft Rights Management 4.2 para ativar a proteção de informações integrada nas respetivas aplicações."
 keywords: 
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 098ff506a2ca321d8ee2de00f9649cd47ef021ef
-ms.sourcegitcommit: 78e2cf5acd48dbf50ed4c7be1b2f3bae95362cec
+ms.openlocfilehash: cf81959a7ef4f20ab550dcec1c295e5045f321f3
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="android-setup"></a>Configuração do Android
 
@@ -139,7 +139,7 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
 
 -   Agora, está pronto para criar as suas novas aplicações Android.
 
-### <a name="see-also"></a>Veja Também
+### <a name="see-also"></a>Consulte Também
 
 [Introdução](get-started.md)
 

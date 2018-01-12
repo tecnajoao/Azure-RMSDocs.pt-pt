@@ -2,8 +2,8 @@
 title: "Orientação para programadores sobre o SDK 4.2 do Azure Information Protection | Documentos da Microsoft"
 description: "Uma coleção de tópicos com instruções sobre como programar o SDK 4.2 do AIP"
 keywords: 
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: ae67523a-c094-44da-86b8-739bedba7111
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 42318313069017869a9e061b06774faae4ce2f3c
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 1cd646a7c4685b2cda270fca23a8201e80c2222e
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="developer-guidance"></a>Orientação para programadores
 O objetivo do SDK Microsoft Rights Management 4.2 é ajudá-lo a criar aplicações com suporte para o AD RMS que tiram partido dos Active Directory Right Management Services (AD RMS), da forma mais simples possível.

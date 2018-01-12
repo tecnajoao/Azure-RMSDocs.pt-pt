@@ -2,8 +2,8 @@
 title: Servidor AD RMS | Azure RMS
 description: "O componente de servidor do Rights Management Services (RMS) é implementado por um conjunto de serviços Web que são executados nos Serviços de Informação de Internet da Microsoft."
 keywords: 
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: 17B05780-B0EF-4805-8304-52DCDEB3AADB
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: a1f4fa03ed6e8a96289ddbe10d0fffa7a1676674
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: bb611b01129e1c79421621485606adc30fedfeae
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="server"></a>Servidor
 

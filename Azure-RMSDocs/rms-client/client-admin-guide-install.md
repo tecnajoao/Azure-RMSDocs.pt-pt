@@ -4,7 +4,7 @@ description: "As instruções e informações para os administradores implementa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2018
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d5fbeef236fa16327048cbaf42638a2354b74e19
-ms.sourcegitcommit: 3a2177df7a23d65f93d3ce2eea3fc3e042ea901c
+ms.openlocfilehash: 3ff9a63f5b8565cac131e7b69a674fc8be902d0f
+ms.sourcegitcommit: dca4534a0aa7f63c0c525c9a3ce445088d1362bb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guia do administrador: Instalar o cliente Azure Information Protection para os utilizadores
 
@@ -74,7 +74,7 @@ Em seguida, verifique os pré-requisitos adicionais que podem ser necessários p
 
 - Para versões do Office 16.0.8628.2010 e posterior (clique para execução): Ativar o suporte legacy monitores
     
-    Para impedir a apresentação de barra de Azure Information Protection fora de aplicações do Office para estas versões do Office, ative o suporte legacy para monitores. Para configurar as aplicações do Office: **ficheiro** > **geral** > **opções de Interface de utilizador**:
+    Para impedir a apresentação de barra de Azure Information Protection fora de aplicações do Office para estas versões do Office, ative o suporte legacy para monitores. Para configurar as aplicações do Office: **ficheiro** > **opções** > **geral** > **Interface de utilizador Opções de**:
     
     - Se vir a opção **quando utilizar apresenta várias** está definido como **otimizar para melhor aspeto**, selecione **otimizar para compatibilidade (é necessário um reinício aplicação)** em vez disso. 
         

@@ -4,7 +4,7 @@ description: "Identifique os pré-requisitos para implementar o Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2017
+ms.date: 01/18/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e6fa7c2912f2598f8eb2ad31d237caab80fd0273
-ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
+ms.openlocfilehash: 21faf358d5e0aa137e615dab9b411ecdcd5a7a73
+ms.sourcegitcommit: dca4534a0aa7f63c0c525c9a3ce445088d1362bb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisitos para o Azure Information Protection
 
@@ -97,10 +97,15 @@ Além das informações no artigo do Office, específico para o Azure Informatio
 
 - Permitir tráfego HTTPS em TCP 443 para **api.informationprotection.azure.com**.
 
-- Não termine a ligação cliente para serviço TLS (por exemplo, para fazer uma inspeção ao nível do pacote). Se o fizer, quebrará a afixação de certificado que os clientes de RMS utilizam com as AC geridas pela Microsoft para ajudar a proteger as comunicações com o Azure RMS.
-
 - Se utilizar um proxy Web que requer autenticação, tem de o configurar para utilizar a autenticação integrada do Windows com as credenciais de início de sessão do utilizador do Active Directory.
 
+- Não termine a ligação cliente para serviço TLS (por exemplo, para fazer uma inspeção ao nível do pacote). Se o fizer, interrompe o certificado que os clientes de RMS utilizam com as ACs gerida pela Microsoft para ajudar a proteger as comunicações com o serviço Azure Rights Management de afixação.
+    
+    - Sugestão: Devido a forma como o Chrome apresenta ligações seguras na barra de endereço, pode utilizar este browser para rapidamente verificar se a ligação de cliente é terminada antes de atingir o serviço Azure Rights Management. Introduza o seguinte URL na barra de endereço do browser:`https://admin.na.aadrm.com/admin/admin.svc` 
+    
+        Não se preocupe que apresenta a janela do browser. Clique em vez disso, o cadeado na barra de endereço para ver as informações do site. As informações do site permite-lhe ver a autoridade de certificação (AC) emissora. Se o certificado não é emitido por uma CA Microsoft, é muito provável que a ligação de serviço de cliente está a ser terminada e tem de reconfiguração na sua firewall. A imagem seguinte mostra um exemplo de um Microsoft AC emissora. Se vir que uma AC interna emitiu o certificado, esta configuração não é compatível com o Azure Information Protection.
+        
+        ![A verificar o certificado emitido para ligações do Azure Information Protection](../media/certificate-checking.png)
 
 ### <a name="on-premises-servers"></a>Servidores no local
 
@@ -120,7 +125,7 @@ O seguinte cenário de implementação não é suportado, exceto se estiver a ut
 
 - Executar o AD RMS e o Azure RMS lado a lado na mesma organização, exceto durante a migração, conforme descrito em [Migrar do AD RMS para o Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
-Existe um caminho de migração suportado [do AD RMS para o Azure Information Protection](http://technet.microsoft.com/library/Dn858447.aspx) e do [Azure Information Protection para o AD RMS](/powershell/module/aadrm/Set-AadrmMigrationUrl). Se implementar o Azure Information Protection e, em seguida, decidir que já não quer utilizar este serviço cloud, consulte [Encerrar e desativar o Azure Information Protection](../deploy-use/decommission-deactivate.md).
+Existe um caminho de migração suportado [do AD RMS para o Azure Information Protection](http://technet.microsoft.com/library/Dn858447.aspx) e do [Azure Information Protection para o AD RMS](/powershell/module/aadrm/Set-AadrmMigrationUrl). Se implementar o Azure Information Protection e, em seguida, decidir que já não quer utilizar este serviço na cloud, consulte [Encerrar e desativar o Azure Information Protection](../deploy-use/decommission-deactivate.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 21faf358d5e0aa137e615dab9b411ecdcd5a7a73
-ms.sourcegitcommit: dca4534a0aa7f63c0c525c9a3ce445088d1362bb
+ms.openlocfilehash: 9286be6e9feb6be87494db0be8e625bdbbf30ddd
+ms.sourcegitcommit: ad628bcc2eea26ed69511870b36924e58e4c2fc8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 01/19/2018
@@ -103,7 +103,7 @@ Além das informações no artigo do Office, específico para o Azure Informatio
     
     - Sugestão: Devido a forma como o Chrome apresenta ligações seguras na barra de endereço, pode utilizar este browser para rapidamente verificar se a ligação de cliente é terminada antes de atingir o serviço Azure Rights Management. Introduza o seguinte URL na barra de endereço do browser:`https://admin.na.aadrm.com/admin/admin.svc` 
     
-        Não se preocupe que apresenta a janela do browser. Clique em vez disso, o cadeado na barra de endereço para ver as informações do site. As informações do site permite-lhe ver a autoridade de certificação (AC) emissora. Se o certificado não é emitido por uma CA Microsoft, é muito provável que a ligação de serviço de cliente está a ser terminada e tem de reconfiguração na sua firewall. A imagem seguinte mostra um exemplo de um Microsoft AC emissora. Se vir que uma AC interna emitiu o certificado, esta configuração não é compatível com o Azure Information Protection.
+        Não se preocupe que apresenta a janela do browser. Clique em vez disso, o cadeado na barra de endereço para ver as informações do site. As informações do site permite-lhe ver a autoridade de certificação (AC) emissora. Se o certificado não é emitido por uma CA Microsoft, é muito provável que a ligação de serviço de cliente segura está a ser terminada e tem de reconfiguração na sua firewall. A imagem seguinte mostra um exemplo de um Microsoft AC emissora. Se vir que uma AC interna emitiu o certificado, esta configuração não é compatível com o Azure Information Protection.
         
         ![A verificar o certificado emitido para ligações do Azure Information Protection](../media/certificate-checking.png)
 

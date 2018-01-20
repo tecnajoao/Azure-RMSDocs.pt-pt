@@ -4,7 +4,7 @@ description: "Informações e instruções para administradores para configurare
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/28/2017
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5d652f938ac7a9008e36ee75b52f2b4b7b6612d1
-ms.sourcegitcommit: 9ed2c454a7aaf965ff1cceda0447928111001488
+ms.openlocfilehash: 546b7c6af71c83f853fc7b486239fa0db3213b7c
+ms.sourcegitcommit: ad628bcc2eea26ed69511870b36924e58e4c2fc8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="office-365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Configuração para clientes e serviços online utilizar o serviço Azure Rights Management
 
@@ -42,7 +42,7 @@ Para obter mais informações sobre como o IRM do SharePoint Online funciona com
 Para configurar o SharePoint Online e o OneDrive para Empresas para suportar o serviço Azure Rights Management, primeiro tem de ativar o serviço de gestão de direitos de informação (IRM) para o SharePoint Online através do centro de administração do SharePoint. Assim, os proprietários de sites podem proteger as respetivas listas e bibliotecas de documentos do SharePoint com IRM e, além disso, os utilizadores podem proteger a respetiva biblioteca do OneDrive para Empresas com a IRM, para que os documentos aí guardados e partilhados com outras pessoas sejam automaticamente protegidos pelo serviço Azure Rights Management.
 
 > [!NOTE]
-> Bibliotecas protegidas de IRM para o SharePoint e o OneDrive para empresas requerem o [versão de pré-visualização](https://support.office.com/article/6778d4de-b5f8-423c-af43-a1b2449e9b99) do novo cliente de sincronização do OneDrive (OneDrive.exe). Em alternativa, utilizar o cliente de sincronização mais antigo, o OneDrive para o cliente de sincronização de negócio (Groove.exe). Ambas as versões de clientes podem ser executadas ao mesmo tempo. Para obter mais informações, veja [Restrições e limitações ao sincronizar ficheiros e pastas](https://support.microsoft.com/help/3125202/restrictions-and-limitations-when-you-sync-files-and-folders).
+> Bibliotecas protegidas de IRM para o SharePoint e o OneDrive para empresas requerem a versão mais recente do cliente novo OneDrive de sincronização (OneDrive.exe). Para obter mais informações, consulte [sincronizar ficheiros com o novo cliente de sincronização do OneDrive no Windows](https://support.office.com/article/615391c4-2bd3-4aae-a42a-858262e42a49).
 
 Para ativar o serviço de gestão de direitos de informação (IRM) para o SharePoint Online, consulte as seguintes instruções a partir do site do Office:
 

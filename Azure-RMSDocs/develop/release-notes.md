@@ -26,7 +26,7 @@ Este tópico descreve as funcionalidades nesta versão nova do v4.x RMS SDK e al
 
 A atualização para a nossa versão de Julho incluídos incrementando a revisão do SDK, 4.2.5 agora.
 
-- Android SDK: A aplicação pode agora **definir o registo ao nível no-a-momento** com o SDK Android. Para obter mais informações, consulte [Como: ativar registo de erros e de desempenho](https://docs.microsoft.com/en-us/information-protection/develop/enabling-logging)
+- Android SDK: A aplicação pode agora **definir o registo ao nível no-a-momento** com o SDK Android. Para obter mais informações, consulte [Como: ativar registo de erros e de desempenho](https://docs.microsoft.com/information-protection/develop/enabling-logging)
 - O SDK iOS não suporta o nível de registo. 
 - O SDK agora devolve um erro para obter um token de acesso nula.
 

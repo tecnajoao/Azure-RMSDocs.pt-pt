@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 75c0bf83c84cb8b5d2116b05dbf2def790562b4e
-ms.sourcegitcommit: fd3932ab19a00229b56efc3e301abaf9cff3f70b
+ms.openlocfilehash: e8fede85cddc44318ce93497a9ac454c689673d3
+ms.sourcegitcommit: c3d57b175a4e7b5e136f7183c837fa08e7ac982e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="activating-azure-rights-management"></a>Ativar o Azure Rights Management
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
 
 Quando o serviço Azure Rights Management para o Azure Information Protection é ativado para o seu inquilino, a sua organização pode começar a proteger dados importantes através da utilização de aplicações e serviços que suportam esta solução de proteção de informações. Os administradores também podem gerir e monitorizar e-mails e ficheiros protegidos de que a sua organização é proprietária. Este serviço tem de ser ativado antes de poder começar a utilizar as funcionalidades de gestão de direitos de informação (IRM) no Office, no SharePoint e no Exchange, e a proteger ficheiros confidenciais.
 
-Se quiser saber mais acerca do serviço Azure Rights Management antes de o ativar (por exemplo, os problemas empresariais que resolve, alguns casos de utilização típicos e como funciona), veja [O que é o Azure Rights Management?](../understand-explore/what-is-azure-rms.md)
+Se pretender saber mais sobre o serviço Azure Rights Management antes que a ativa — por exemplo, os problemas empresariais que resolve, alguns casos de utilização típicos e como funciona, consulte [que é o Azure Rights Management?](../understand-explore/what-is-azure-rms.md)
 
 > [!IMPORTANT]
 > Não ative o serviço Azure Rights Management se tiver o Active Directory Rights Management Services (AD RMS) implementado na sua organização. [Mais informações](prepare-environment-adrms.md)
@@ -92,7 +92,7 @@ Para obter mais informações sobre este cmdlet e exemplos adicionais, consulte 
 Quando utilizar estes controlos de inclusão, todos os utilizadores na organização podem sempre consumir conteúdo protegido que foi protegido pelo seu subconjunto de utilizadores, mas não poderão aplicar a proteção de informações a partir de aplicações de cliente. Por exemplo, não poderão ver nos seus clientes do Office os modelos predefinidos que são automaticamente publicados quando o Azure Rights Management está ativado ou os modelos personalizados que poderá configurar.  As aplicações do lado do servidor, como o Exchange, podem implementar os seus próprios controlos por utilizador para integrar o Rights Management, de forma a alcançar o mesmo resultado.
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 Uma vez que ativou o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] para a sua organização, utilize o [Plano de implementação do Azure Information Protection](../plan-design/deployment-roadmap.md) para verificar se existem outros passos de configuração que necessite de realizar antes de implementar o Azure Information Protection para utilizadores e administradores. 
 
 Por exemplo, pode querer utilizar [modelos](configure-policy-templates.md) para tornar mais fácil para os utilizadores aplicar proteção de informações aos ficheiros, ligar os servidores no local para utilizar [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] instalando o [conector Rights Management](deploy-rms-connector.md)e implementar o [cliente Azure Information Protection](../rms-client/aip-client.md) que suporta a proteção de todos os tipos de ficheiro em todos os dispositivos. 

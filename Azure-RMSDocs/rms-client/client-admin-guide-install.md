@@ -4,7 +4,7 @@ description: "As instruções e informações para os administradores implementa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/21/2018
+ms.date: 01/24/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 61640375cc84ffb9dd23f571fdaccbcd0f357bcb
-ms.sourcegitcommit: 9e45bd026a71e63f87bc0f0a693bf57760509d55
+ms.openlocfilehash: 0af9b6847c920d486d727cb6748b84aa581012d1
+ms.sourcegitcommit: d3b82dd8dbafb86ddbe698cdcd0edee445fff416
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guia do administrador: Instalar o cliente Azure Information Protection para os utilizadores
 
@@ -74,13 +74,15 @@ Em seguida, verifique os pré-requisitos adicionais que podem ser necessários p
 
 - Para versões do Office 16.0.8628.2010 e posterior (clique para execução): Ativar o suporte legacy monitores
     
-    Para impedir a apresentação de barra de Azure Information Protection fora de aplicações do Office para estas versões do Office, ative o suporte legacy para monitores. Quando a barra de não ser apresentados corretamente neste cenário, poderá ver que apresentado como **AdxTaskPane**. 
+    Para impedir a apresentação de barra de Azure Information Protection fora de aplicações do Office para estas versões do Office, poderá ter de ativar o suporte legacy para monitores. Quando a barra de não ser apresentados corretamente neste cenário, poderá ver que apresentado como **AdxTaskPane**. 
     
     Para configurar as aplicações do Office para este requisito: **ficheiro** > **opções** > **geral**  >   **As opções de Interface de utilizador**:
     
     - Se vir a opção **quando utilizar apresenta várias** está definido como **otimizar para melhor aspeto**, selecione **otimizar para compatibilidade (é necessário um reinício aplicação)** em vez disso. 
         
     - Se vir que a opção **utilizar das melhores definições para os meus apresentação** é selecionado, remover esta seleção.
+    
+    - Se vir nenhuma destas opções, é necessária nenhuma configuração adicional.
 
 > [!IMPORTANT]
 > A instalação do cliente do Azure Information Protection requer permissões administrativas locais.

@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: a722675d6de6f6791c567646fed5d8ba262674d9
-ms.sourcegitcommit: d3b82dd8dbafb86ddbe698cdcd0edee445fff416
+ms.openlocfilehash: 0eeb9a6cf8eb819c19a32dbcf76e4d0104c18b99
+ms.sourcegitcommit: ae4cdee7211796182c47a11c1853232464673834
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="what-is-azure-information-protection"></a>O que é o Azure Information Protection?
 
@@ -131,8 +131,8 @@ Pode [pesquisar e localizar](https://myignite.microsoft.com/videos?q=%2522azure%
 
 Leia a publicação do blogue [Azure Information Protection: Ready, set, protect! (Azure Information Protection: deixar tudo a postos para proteger informações)](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/)
 
-Configure e veja o Azure Information Protection, com o nosso [Tutorial de início rápido do Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md) em 5 passos. Ou, se estiver pronto para implementar este serviço para a sua organização, consulte o [plano de implementação do Azure Information Protection](../plan-design/deployment-roadmap.md).
+Configurar e ver o Azure Information Protection para si, com o nosso passo 5 [tutorial de início rápido](../get-started/infoprotect-quick-start-tutorial.md). Ou, se estiver pronto para implementar este serviço para a sua organização, consulte o [plano de implementação do Azure Information Protection](../plan-design/deployment-roadmap.md).
 
-Talvez saber Azure Information Protection por outro nome? Veja a [nossa lista de termos alternativos para o serviço](azure-rms-aka.md).
+Talvez saber Azure Information Protection por outro nome? Consulte a nossa [lista de termos alternativos para o serviço](azure-rms-aka.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -4,7 +4,7 @@ description: "Recursos para administradores que incluem informações sobre nova
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/08/2018
+ms.date: 01/26/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1021d9ddfef8a9fcb256aaf71c7dc575e3befe2e
-ms.sourcegitcommit: fc789ce08821e031d3a2b22d850b4318302d3585
+ms.openlocfilehash: 815f20a1640a6e433c5e28d0180930e29e75d0ad
+ms.sourcegitcommit: c3534be992877ace564c165395c5b0fccc8c9bfd
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informações e suporte do Azure Information Protection
 
@@ -34,11 +34,9 @@ Utilize os seguintes recursos para o ajudar a obter mais informações, implemen
 
 
 ## <a name="information-about-new-releases-and-updates"></a>Informações sobre atualizações e novas versões
-A equipa de produto do Azure Information Protection mensagens anúncios sobre lançamentos de novos para o [blogue Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection). Estas publicações no blogue completam a documentação do produto e as informações de suporte.
+A equipa de produtos do Azure Information Protection publica anúncios sobre as novas versões e atualizações no [Blogue sobre a Segurança e a Mobilidade nas Grandes Empresas – em inglês](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection). Estas publicações no blogue completam a documentação do produto e as informações de suporte.
 
-Além disso, o Gestor de PM do grupo Principal para obter informações e proteção contra ameaças publica regular [atualizações](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) para ajudar a manter-se atualizado.
-
-Um resumo das alterações à documentação são publicadas por mês para o [blogue técnica do Azure Information Protection](https://aka.ms/AIPblog). Resumos anteriores foram publicados no [blogue Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection). Estas atualizações da documentação incluem informações de quaisquer novos lançamentos, as atualizações para suportar as instruções bem como as correções e clarificações versões existentes. Estas mensagens são intituladas: "**atualização documentação de proteção de informações do Azure para \<mês ano >**".
+Um resumo das alterações à documentação está publicado por mês para o [blogue técnica do Azure Information Protection](https://aka.ms/AIPblog). Resumos anteriores foram publicados no [blogue Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates). Estas atualizações da documentação incluem informações de quaisquer novos lançamentos, as atualizações para suportar as instruções bem como as correções e clarificações versões existentes. Estas mensagens são intituladas: "**atualização documentação de proteção de informações do Azure para \<mês ano >**".
 
 ## <a name="support-options-and-community-resources"></a>Opções de suporte e recursos da comunidade
 As secções seguintes fornecem informações sobre as opções de suporte e de resolução de problemas e os recursos da comunidade.
@@ -85,6 +83,6 @@ Resolva os problemas:
 
 Recomendamos o [site do Yammer para o Azure Information Protection](https://www.yammer.com/AskIPTeam). Este recurso fornece respostas diretas da equipa do Azure Information Protection, para além das vantagens de experiência partilhada e o conhecimento dos outros administradores e consultores.
 
-Se não tiver acesso a este site, experimente o [fórum TechNet do Microsoft RMS (nuvem)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
+Se não tiver acesso a este site, experimente o [espaço Comunidade técnico do Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bd-p/Azure-Information-Protection), ou o [fórum TechNet do Microsoft RMS (nuvem)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

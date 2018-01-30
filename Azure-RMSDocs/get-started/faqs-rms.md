@@ -13,11 +13,11 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d2f88d35550b47a4f73e87eeca9ecd6309a3c73e
-ms.sourcegitcommit: fc789ce08821e031d3a2b22d850b4318302d3585
+ms.openlocfilehash: 776293c73b5ca63d0bfd409d8330bfe8295c792e
+ms.sourcegitcommit: 972acdb468ac32a28e3e24c90694aff4b75206fc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Perguntas mais frequentes sobre a proteção de dados no Azure Information Protection
 
@@ -95,7 +95,7 @@ Se o ficheiro foi protegido utilizando um modelo ou de etiqueta, não é necess�
 
 - Quando um utilizador acedeu já o documento, estas alterações entram em vigor quando os respetivos [utilizar licença](../deploy-use/configure-usage-rights.md#rights-management-use-license) expira. Proteja o documento apenas se não puder aguardar a licença de utilização para expirar. Trocar de forma eficaz cria uma nova versão do documento e, por conseguinte, uma nova licença de utilização para o utilizador.
 
-Em alternativa, se já tiver configurado um grupo para as permissões necessárias, pode alterar a associação de grupo para incluir ou excluir utilizadores e não é necessário para alterar a etiqueta ou modelo. Pode existir um pequeno atraso antes das alterações surtam efeito, porque é a associação ao grupo [em cache](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management) pelo serviço do Azure Rights Management.
+Em alternativa, se já tiver configurado um grupo para as permissões necessárias, pode alterar a associação de grupo para incluir ou excluir utilizadores e não é necessário para alterar a etiqueta ou modelo. Pode existir um pequeno atraso antes das alterações surtam efeito, porque é a associação ao grupo [em cache](../plan-design/prepare.md#group-membership-caching-by-azure-information-protection) pelo serviço do Azure Rights Management.
 
 Se o ficheiro foi protegido através da utilização de permissões personalizadas, não é possível alterar as permissões para o documento existente. Tem de proteger o documento novamente e especifique todos os utilizadores e todos os direitos de utilização que são necessários para esta nova versão do documento. Para voltar a proteger um documento protegido, tem de ter o direito de utilização de controlo total.
 

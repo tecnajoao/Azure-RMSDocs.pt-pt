@@ -4,7 +4,7 @@ description: "Verifique se tem as contas de utilizador e de grupo de que precisa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/29/2017
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8f29aec107c344489ae38afabfa79129fd3fa000
-ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
+ms.openlocfilehash: de06bc202ff60e6850ba217fe7ded79c0753d925
+ms.sourcegitcommit: 972acdb468ac32a28e3e24c90694aff4b75206fc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Preparar utilizadores e grupos para o Azure Information Protection
 
@@ -211,15 +211,15 @@ Se não pode fazer isto, o utilizador ou grupo com os riscos de endereço de cor
 
 Tenha em atenção que é raro um grupo alterar o seu endereço de e-mail e, se atribuir direitos de utilização a um grupo em vez de utilizadores individuais, é irrelevante se o endereço de e-mail do utilizador é alterado. Neste cenário, os direitos de utilização são atribuídos ao endereço de e-mail de grupo e não a endereços de e-mail do utilizador individuais. Este é o método mais provável (e recomendado) para um administrador configurar os direitos de utilização que protegem documentos e e-mails. No entanto, os utilizadores podem atribuir permissões personalizadas a utilizadores individuais com maior frequência. Uma vez que nem sempre é possível saber se foi utilizado um grupo ou uma conta de utilizador para conceder acesso, é mais seguro adicionar sempre o endereço de e-mail antigo como um endereço de e-mail secundário.
 
-## <a name="group-membership-caching-by-azure-rights-management"></a>Colocação em cache da associação a grupos pelo Azure Rights Management
+## <a name="group-membership-caching-by-azure-information-protection"></a>Grupo de associação a colocação em cache pelo Azure Information Protection
 
-Por motivos de desempenho, a associação a grupos é colocada em cache pelo serviço Azure Rights Management. Tal significa que qualquer alteração feita à associação a grupos no Azure AD pode demorar até três horas para entrar em vigor quando estes grupos são utilizados pelo Azure Rights Management, estando também este período de tempo sujeito a alterações. 
+Por motivos de desempenho do Azure Information Protection coloca em cache associação ao grupo. Isto significa que quaisquer alterações à associação de grupo no Azure AD, podem demorar até três horas, entre em vigor quando estes grupos são utilizados pelo Azure Information Protection e este período de tempo está sujeita a alterações. 
 
-Não se esqueça de ter em consideração este atraso quando fizer alterações ou testes ao utilizar grupos com o Azure Rights Management, tais como atribuir direitos de utilização ou configurar o serviço Azure Rights Management.
+Não se esqueça de fator este atraso para quaisquer alterações ou de teste que fazer quando utilizar grupos para conceder direitos de utilização ou configurar o serviço Azure Rights Management, ou quando configurar o âmbito de políticas.
 
 
 ## <a name="next-steps"></a>Próximos passos
 
-Quando tiver confirmado que os utilizadores e os grupos podem ser utilizados com o Azure Information Protection e que está pronto para começar a proteger documentos e e-mails, ative o serviço Rights Management para ativar este serviço de proteção de dados. Para obter mais informações, consulte [Ativar o Azure Rights Management](../deploy-use/activate-service.md).
+Quando tiver confirmado que os utilizadores e os grupos podem ser utilizados com o Azure Information Protection e que está pronto para começar a proteger documentos e e-mails, ative o serviço Rights Management para ativar este serviço de proteção de dados. Para obter mais informações, veja [Ativar o Azure Rights Management](../deploy-use/activate-service.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

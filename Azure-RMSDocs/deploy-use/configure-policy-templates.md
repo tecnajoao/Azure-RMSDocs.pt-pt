@@ -4,7 +4,7 @@ description: "Configurar e gerir modelos de gestão de direitos do portal do Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/08/2018
+ms.date: 01/29/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f69a163566a9654ee6286c4bf9ca4d018e8f8db5
-ms.sourcegitcommit: fc789ce08821e031d3a2b22d850b4318302d3585
+ms.openlocfilehash: 671d1d5d706225fcd5c680ddc8687aa889b59b59
+ms.sourcegitcommit: 972acdb468ac32a28e3e24c90694aff4b75206fc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurar e gerir modelos do Azure Information Protection
 
@@ -76,12 +76,9 @@ Modelos são arquivados apresentam como indisponíveis no **Azure Information Pr
 
 Antes de editar estes modelos ou convertê-las em etiquetas, certifique-se de que está ciente das seguintes alterações e considerações. Devido a alterações de implementação, a lista seguinte é especialmente importante se anteriormente a gerido modelos no portal clássico do Azure.
 
-- Depois de editar ou converter um modelo e guardar a política do Azure Information Protection, as seguintes alterações são feitas nos [direitos de utilização](configure-usage-rights.md) originais. Se for preciso, pode adicionar ou remover direitos de utilização individuais através do PowerShell com os cmdlets [New-AadrmRightsDefinition](/powershell/module/aadrm/set-aadrmtemplateproperty) e [Set-AadrmTemplateProperty](/powershell/module/aadrm/new-aadrmrightsdefinition).
-    
-    - **Guardar como, Exportar** (nome comum) é removido. No portal do Azure, não pode especificar manualmente este direito de utilização, mas este está incluído no direito de utilização do Controlo Total, que pode adicionar se for apropriado.
+- Depois de editar ou converter um modelo e guardar a política do Azure Information Protection, as seguintes alterações são feitas nos [direitos de utilização](configure-usage-rights.md) originais. Se necessário, pode adicionar ou remover direitos de utilização individuais utilizando o portal do Azure. Em alternativa, utilizar o PowerShell com o [New-AadrmRightsDefinition](/powershell/module/aadrm/set-aadrmtemplateproperty) e [Set-AadrmTemplateProperty](/powershell/module/aadrm/new-aadrmrightsdefinition) cmdlets.
     
     - **Permitir Macros** (nome comum) é adicionado automaticamente. Este direito de utilização é preciso para a barra do Azure Information Protection nas aplicações do Office.
-    
 
 - As definições **Publicado** e **Arquivado** são apresentadas como **Ativado**: **Ligado** e **Ativado**: **Desligado** respetivamente no painel **Etiqueta**. Para modelos que pretende manter, mas não é visível para utilizadores ou serviços, defina estes modelos como **ativado**: **desativar**.
 
@@ -89,9 +86,9 @@ Antes de editar estes modelos ou convertê-las em etiquetas, certifique-se de qu
     
     Agora pode eliminar o modelo utilizando o PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) cmdlet. Também pode utilizar este cmdlet do PowerShell para modelos que não são convertidos em etiquetas. No entanto, se eliminar um modelo que foi utilizado para proteger conteúdo, esse conteúdo já não pode ser aberto. Elimine modelos apenas se tiver a certeza de que não foram utilizadas para proteger documentos ou e-mails na produção. Como precaução, poderá considerar conferir pela primeira vez ao exportar o modelo de cópia de segurança, utilizando o [Export-AadrmTemplate](/powershell/module/aadrm/export-aadrmtemplate) cmdlet. 
 
-- Os modelos departamentais (modelos que estão configurados para um âmbito) são apresentados na política Global. Atualmente, se editar e guardar um modelo departamental, este remove a configuração do âmbito. O equivalente de um modelo com âmbito na política do Azure Information Protection é uma [política com âmbito](configure-policy-scope.md). Se converter o modelo numa etiqueta, pode selecionar um âmbito existente.
+- Apresentam os modelos departamentais (modelos que estão configurados para um âmbito) na política de global. Atualmente, se editar e guardar um modelo departamental, este remove a configuração do âmbito. O equivalente de um modelo com âmbito na política do Azure Information Protection é uma [política com âmbito](configure-policy-scope.md). Se converter o modelo numa etiqueta, pode selecionar um âmbito existente.
     
-    Além disso, atualmente não pode definir a definição de compatibilidade aplicacional para um modelo departamental. Se necessário, pode definir a definição de compatibilidade de aplicação utilizando o PowerShell e o [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet.
+    Além disso, atualmente não pode definir a definição de compatibilidade aplicacional para um modelo departamental. Se necessário, pode definir a definição de compatibilidade de aplicação utilizando o [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet e os *EnableInLegacyApps* parâmetro.
 
 - Quando converter ou ligar um modelo para uma etiqueta, já não pode ser utilizada por outras etiquetas. Além disso, este modelo já não apresenta na **modelos proteção** secção. 
 
@@ -113,7 +110,7 @@ Antes de editar estes modelos ou convertê-las em etiquetas, certifique-se de qu
     
     - Quando tem uma subscrição que inclui apenas proteção: os modelos são apresentados como etiquetas.
 
-4. Selecione o modelo e, no painel **Etiqueta**, pode alterar o nome do modelo e a descrição, se necessário, ao editar o **Nome da etiqueta** e a **Descrição**. Em seguida, selecione **proteção** que tem um valor de **Azure (chave de nuvem)**, para abrir o **proteção** painel.
+4. Selecione o modelo e o **etiqueta** painel, pode alterar o nome do modelo e a descrição, se necessário, editando o **nome a apresentar etiqueta** e **Descrição**. Em seguida, selecione **proteção** que tem um valor de **Azure (chave de nuvem)**, para abrir o **proteção** painel.
 
 5. No painel **Proteção**, pode alterar as permissões, a expiração de conteúdo e as definições de acesso offline. Para obter mais informações, sobre a configuração das definições de proteção, veja [Como configurar uma etiqueta para a proteção do Rights Management](configure-policy-protection.md)
     

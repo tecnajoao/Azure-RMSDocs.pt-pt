@@ -1,9 +1,23 @@
-# <a name="required-metadata"></a>metadados necessários
-
-Título: Novidades e versão notas Descrição: Descreve funcionalidades neste e alterações importantes e das versões anteriores.
-autor: lleonard msft Author: alleonar manager: mbaldwin MS. Date: MS. topic de 25/09/2017: article MS. Service: MS. Technology de proteção de informações: techgroup-identity MS: 4fa1c686-b00b-4734-9abb-141ce582a6af audiência: programador Reviewer: kartikk ms.suite: ems
 ---
-
+title: "Novidades e notas de versão"
+description: "Descreve as funcionalidades neste e alterações importantes e das versões anteriores."
+author: lleonard-msft
+ms.author: alleonar
+manager: mbaldwin
+ms.date: 09/25/2017
+ms.topic: article
+ms.service: information-protection
+ms.technology: techgroup-identity
+ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
+audience: developer
+ms.reviewer: kartikk
+ms.suite: ems
+ms.openlocfilehash: 130da5ecf3fb95297f9bc335b1ea5023d53c589f
+ms.sourcegitcommit: 972acdb468ac32a28e3e24c90694aff4b75206fc
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 01/29/2018
+---
 # <a name="whats-new-and-release-notes"></a>Novidades e Notas de versão
 
 ## <a name="whats-new"></a>Novidades

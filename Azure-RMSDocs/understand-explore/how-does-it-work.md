@@ -4,7 +4,7 @@ description: "Descrição detalhada de como o Azure RMS funciona, os controlos c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2017
+ms.date: 01/29/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1a7075287eebe2c68534de95d01cef455ebe63b5
-ms.sourcegitcommit: f185b1d742c345a465927f88e606413421fe1150
+ms.openlocfilehash: eb65f99d1a0fbc2c9aaee25a585561bd2511b723
+ms.sourcegitcommit: 972acdb468ac32a28e3e24c90694aff4b75206fc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Como funciona o Azure RMS? Os bastidores
 
@@ -124,7 +124,7 @@ Se um utilizador quiser consumir um documento protegido, o cliente de RMS começ
 
 ![Consumo de documentos pelo RMS – passo 1, o utilizador é autenticado e obtém a lista de direitos](../media/AzRMS_documentconsumption1.png)
 
-**O que acontece no passo 1**: o utilizador autenticado envia a política do documento e os certificados do utilizador para o serviço Azure Rights Management. O serviço desencripta e avalia a política e cria uma lista de direitos (se aplicável) que o utilizador tem sobre o documento. Para identificar o utilizador, é utilizado o atributo ProxyAddresses do Azure AD para a conta do utilizador e para os grupos dos quais este é membro. Por motivos de desempenho, a associação a grupos é [colocada em cache](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management). Se a conta de utilizador não tiver nenhum valor para o atributo ProxyAddresses do Azure AD, é utilizado o valor no atributo UserPrincipalName do Azure AD.
+**O que acontece no passo 1**: o utilizador autenticado envia a política do documento e os certificados do utilizador para o serviço Azure Rights Management. O serviço desencripta e avalia a política e cria uma lista de direitos (se aplicável) que o utilizador tem sobre o documento. Para identificar o utilizador, é utilizado o atributo ProxyAddresses do Azure AD para a conta do utilizador e para os grupos dos quais este é membro. Por motivos de desempenho, a associação a grupos é [colocada em cache](../plan-design/prepare.md#group-membership-caching-by-azure-information-protection). Se a conta de utilizador não tiver nenhum valor para o atributo ProxyAddresses do Azure AD, é utilizado o valor no atributo UserPrincipalName do Azure AD.
 
 ![Consumo de documentos pelo RMS – passo 2, a licença de utilização é dada ao cliente](../media/AzRMS_documentconsumption2.png)
 

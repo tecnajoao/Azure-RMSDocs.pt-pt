@@ -4,7 +4,7 @@ description: "Para configurar definições e etiquetas diferentes para utilizado
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 01/29/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e790b669298bb40b3397150d1b2c3ed7e26c10ab
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: c7aa1c3aa18a246457c00a5a61c6004e55f76b4b
+ms.sourcegitcommit: 972acdb468ac32a28e3e24c90694aff4b75206fc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Como configurar a política do Azure Information Protection para utilizadores específicos com políticas de âmbito
 
@@ -28,10 +28,9 @@ Todos os utilizadores recebem a política global, a qual contém o título da ba
 
 As políticas de âmbito, tal como as etiquetas, são ordenadas no portal do Azure. Se um utilizador estiver configurado para vários âmbitos, será calculada uma política eficaz para esse utilizador antes de ser transferida. De acordo com a ordem das políticas, a última definição de política é aplicada. O utilizador vê as etiquetas da política global e, simultaneamente, etiquetas adicionais das políticas de âmbito às quais pertence. 
 
-Como uma política de âmbito herda sempre as etiquetas e as definições da política global, as etiquetas da política global são apresentadas quando cria ou edita uma política de âmbito. No entanto, não pode editar as etiquetas da política global quando edita uma política de âmbito. Pode, porém, adicionar subetiquetas para estas etiquetas herdadas.
+Como uma política de âmbito herda sempre as etiquetas e as definições da política global, as etiquetas da política global são apresentadas quando cria ou edita uma política de âmbito. No entanto, não pode editar as etiquetas da política global quando edita uma política de âmbito. No entanto, pode adicionar sublabels para estas etiquetas herdadas.
 
-Por exemplo, se tiver uma etiqueta com o nome **Confidencial** na política global, todos os utilizadores veem esta etiqueta. Não a pode remover ou reordenar com uma política de âmbito. Contudo, poderá querer criar uma política de âmbito para o departamento de Marketing que adiciona uma nova subetiqueta a Confidencial, para que estes utilizadores vejam **Confidencial\Promoções**. Também pode criar outra política de âmbito para o departamento de Vendas que adiciona uma nova subetiqueta a Confidencial, para que estes utilizadores vejam **Confidencial\Parceiros**. Cada subetiqueta pode ser, então, configurada para diferentes definições e esta fica visível apenas para os utilizadores nos respetivos departamentos.
-
+Por exemplo, se tiver uma etiqueta com o nome **Confidencial** na política global, todos os utilizadores veem esta etiqueta. Não a pode remover ou reordenar com uma política de âmbito. Mas pode querer criar uma política com âmbito definido para o departamento de Marketing que adiciona um novo sublabel a confidencial, para que estes utilizadores vejam **confidencial \ promoções**. Também criar outra política no âmbito para o departamento de vendas que adiciona um novo sublabel a confidencial, para que estes utilizadores vejam **confidencial \ parceiros**. Cada sublabel, em seguida, pode ser configurado para diferentes definições e o sublabel está visível apenas para os utilizadores os respetivos departamentos.
 
 Para configurar uma política de âmbito para o Azure Information Protection:
 
@@ -44,6 +43,8 @@ Para configurar uma política de âmbito para o Azure Information Protection:
 3. No **Azure Information Protection - políticas de âmbito** painel, selecione **adicionar uma nova política**. Em seguida, consulte o **política** painel que mostra a política global existente, onde agora, pode configurar a nova, âmbito política.
 
 4. Especifique um nome e uma descrição da política que apenas os administradores veem no portal do Azure. O nome do inquilino deve ser exclusivo. Em seguida, selecione **especifique quais os utilizadores/grupos obter esta política**, e os painéis subsequentes, pode procurar e selecione os utilizadores e grupos para esta política. As etiquetas e as definições que configurou nesta política de âmbito serão aplicadas apenas a esses utilizadores.
+    
+    Por motivos de desempenho, a associação a grupos para políticas de âmbito é [em cache](../plan-design/prepare.md#group-membership-caching-by-azure-information-protection).
 
 5. Agora, crie novas etiquetas ou configure as definições da política de âmbito. A política global é aplicada sempre em primeiro lugar, desta forma, pode complementar a política global com novas etiquetas e pode substituir as definições globais. Por exemplo, a política global poderá não ter uma etiqueta predefinida especificada e pode configurar uma etiqueta predefinida diferente em políticas de âmbito diferentes para departamentos específicos.
 

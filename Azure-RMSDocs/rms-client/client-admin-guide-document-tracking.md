@@ -4,7 +4,7 @@ description: "Instruções e informações para os administradores configurarem 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 01/29/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: bca186ebe78d79926a6ef775b1f5be7006e89df5
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: bbbc9a274ea815577109276bceb0b08617f03809
+ms.sourcegitcommit: 972acdb468ac32a28e3e24c90694aff4b75206fc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guia do administrador: Configurar e utilizar o controlo de documentos para o Azure Information Protection
 
@@ -40,7 +40,7 @@ Ao utilizar esta configuração, todos os utilizadores ainda podem utilizar o si
 
 Esta definição afeta apenas a utilizadores finais. Os administradores do Azure Information Protection sempre podem controlar as atividades de todos os utilizadores, mesmo quando esses utilizadores são especificados utilizando Set-AadrmDoNotTrackUserGroup. Para obter mais informações sobre como os administradores podem controlar os documentos para utilizadores, consulte o [controlar e revogar documentos para utilizadores](#tracking-and-revoking-documents-for-users) secção.
 
-Pode utilizar o cmdlet [Clear-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Clear-AadrmDoNotTrackUserGroup) se já não precisar desta opção. Ou para remover seletivamente os utilizadores, remova-os do grupo, mas lembre-se da [colocação em cache de grupo](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management). Pode verificar se esta opção está atualmente em utilização através do [Get-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/get-AadrmDoNotTrackUserGroup). Para executar os cmdlets para esta configuração de grupo, tem de ter no mínimo a versão **2.10.0.0** do módulo do Azure Rights Management (AADRM) para o PowerShell.
+Pode utilizar o cmdlet [Clear-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Clear-AadrmDoNotTrackUserGroup) se já não precisar desta opção. Ou para remover seletivamente os utilizadores, remova-os do grupo, mas lembre-se da [colocação em cache de grupo](../plan-design/prepare.md#group-membership-caching-by-azure-information-protection). Pode verificar se esta opção está atualmente em utilização através do [Get-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/get-AadrmDoNotTrackUserGroup). Para executar os cmdlets para esta configuração de grupo, tem de ter no mínimo a versão **2.10.0.0** do módulo do Azure Rights Management (AADRM) para o PowerShell.
 
 Para obter mais informações sobre cada um destes cmdlets, utilize as ligações apresentadas. Para obter instruções de instalação do módulo do PowerShell, veja [Instalar o Windows PowerShell para o Azure Rights Management](../deploy-use/install-powershell.md). Se já transferiu e instalou o módulo anteriormente, verifique o número da versão ao executar: `(Get-Module aadrm –ListAvailable).Version`
 

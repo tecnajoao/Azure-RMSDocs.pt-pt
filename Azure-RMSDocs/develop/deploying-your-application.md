@@ -14,11 +14,11 @@ ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 9275bce1e56107648905875c19b2e4e78a05afe6
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 300fb1d14bc4eda93b0e40ffbd9e6c2329c88517
+ms.sourcegitcommit: e21fb3385de6f0e251167e5dc973e90f0e7f2bcf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="deploy-into-production"></a>Implementar em produção
 
@@ -88,7 +88,7 @@ Pode optar por instalar o RMS Client 2.1 de forma interativa ao iniciar o instal
 -   Transferir o instalador do RMS Client 2.1
 -   Integrar o instalador do RMS Client 2.1 para ser executado com o instalador da sua aplicação
 
-Um exemplo da integração do RMS Client 2.1 com a sua aplicação é o pacote [Rights Protected Folder Explorer](https://technet.microsoft.com/en-us/library/rights-protected-folder-explorer(v=ws.10).aspx). Tente instalá-lo por si para compreender a abordagem.
+Um exemplo da integração do RMS Client 2.1 com a sua aplicação é o pacote [Rights Protected Folder Explorer](https://technet.microsoft.com/library/rights-protected-folder-explorer(v=ws.10).aspx). Tente instalá-lo por si para compreender a abordagem.
 
 ### <a name="make-rms-client-21-a-pre-requisite-for-your-application-install"></a>Tornar o RMS Client 2.1 um pré-requisito para a instalação da sua aplicação
 
@@ -111,18 +111,18 @@ Para o utilizador final tirar partido dos serviços do Information Protection, t
 > Se executar a aplicação cliente com o RMS baseado no Azure, terá de solicitar os seus próprios inquilinos. Para obter mais informações, consulte [Requisitos do Azure RMS: Subscrições na cloud que suportam o Azure RMS](../get-started/requirements-subscriptions.md).
 > Para obter mais informações sobre a execução com o Azure RMS, consulte [Permitir que a aplicação do serviço funcione com o RMS baseado na cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
--   Transfira o [Assistente de Início de Sessão do Microsoft Online Services](http://www.microsoft.com/en-us/download/details.aspx?id=28177) do Centro de Transferências da Microsoft.
+-   Transfira o [Assistente de Início de Sessão do Microsoft Online Services](http://www.microsoft.com/download/details.aspx?id=28177) do Centro de Transferências da Microsoft.
 -   Certifique-se de que a implementação de uma aplicação com capacidade para direitos inclui uma verificação de pré-requisitos para esta seleção de serviço.
--   Para os seus próprios testes e para a utilização do serviço online por parte dos utilizadores finais, consulte o tópico da TechNet [Configurar o Rights Management](https://TechNet.Microsoft.Com/en-us/library/jj585002.aspx).
+-   Para os seus próprios testes e para a utilização do serviço online por parte dos utilizadores finais, consulte o tópico da TechNet [Configurar o Rights Management](https://TechNet.Microsoft.Com/library/jj585002.aspx).
 
-Também terá de utilizar este guia para configurar a sua aplicação – [How to configure your App Service application to use Azure Active Directory login (Como configurar a aplicação do Serviço de Aplicações para utilizar o início de sessão do Azure Active Directory)](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication).
+Também terá de utilizar este guia para configurar a sua aplicação – [How to configure your App Service application to use Azure Active Directory login (Como configurar a aplicação do Serviço de Aplicações para utilizar o início de sessão do Azure Active Directory)](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication).
 
 Para obter mais informações sobre como permitir que a aplicação utilize o RMS para serviços de Gestão de Direitos do Azure, consulte [Permitir que a aplicação funcione com o RMS baseado na cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Assistente de Início de Sessão do Microsoft Online Services](http://www.microsoft.com/en-us/download/details.aspx?id=28177)
-* [Configurar o Rights Management](https://TechNet.Microsoft.Com/en-us/library/jj585002.aspx)
+* [Assistente de Início de Sessão do Microsoft Online Services](http://www.microsoft.com/download/details.aspx?id=28177)
+* [Configurar o Rights Management](https://TechNet.Microsoft.Com/library/jj585002.aspx)
 * [Permitir que a aplicação funcione com o RMS baseado na cloud](how-to-use-file-api-with-aadrm-cloud.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a8cfa6a5baf1661495fc8b485ac0a6535c22233d
-ms.sourcegitcommit: 2a1c690ca84611e5774ac8fac0fb4caba09fef2e
+ms.openlocfilehash: 3e4aabc3c571ca132327748935ab3aeafa002db0
+ms.sourcegitcommit: e21fb3385de6f0e251167e5dc973e90f0e7f2bcf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Instalar e configurar o conector Azure Rights Management
 
@@ -42,11 +42,11 @@ Antes de começar, certifique-se de que consultou e verificou os [pré-requisito
 
     -   Se posteriormente quiser configurar o conector de um computador de 32 bits, transfira também o ficheiro RMSConnectorAdminToolSetup_x86.exe.
 
-    -   Se quiser utilizar a ferramenta de configuração do servidor para o conector RMS, para automatizar a configuração das definições de registo nos seus servidores no local, transfira também o ficheiro GenConnectorConfig.ps1.
+    -   Se pretender utilizar a ferramenta de configuração do servidor para o conector RMS, para automatizar a configuração das definições de registo nos seus servidores no local, transfira também GenConnectorConfig.ps1.
 
 3.  No computador em que pretende instalar o conector RMS, execute o ficheiro **RMSConnectorSetup.exe** com privilégios de Administrador.
 
-4.  Na página de boas-vindas da página Configuração do Conector do Microsoft Rights Management, selecione **Instalar o conector do Microsoft Rights Management no computador** e, em seguida, clique em **Seguinte**.
+4.  Na página de boas-vindas da configuração de conector do Microsoft Rights Management, selecione **conector de instalar o Microsoft Rights Management no computador**e, em seguida, clique em **seguinte**.
 
 5.  Leia e aceite os termos de licença do conector RMS e, em seguida, clique em **Seguinte**.
 
@@ -57,7 +57,7 @@ Antes de configurar o conector RMS, tem de introduzir as credenciais da conta qu
 
 Esta conta não deve exigir a autenticação multifator (MFA) porque a ferramenta de administração do Microsoft Rights Management não suporta a MFA para esta conta. 
 
-O conector também tem algumas restrições de carateres para esta palavra-passe. Não pode utilizar uma palavra-passe que tenha os seguintes carateres: "E" comercial ( **&** ); parêntese reto esquerdo ( **[** ); parêntese reto direito ( **]** ); aspas direitas ( **"** ) e apóstrofo ( **'** ). Se a sua palavra-passe tiver algum destes carateres, a autenticação do conector RMS irá falhar e receberá a mensagem de erro **Essa combinação de nome de utilizador e palavra-passe não está correta**, mesmo que já tenha conseguido iniciar sessão com esta conta e palavra-passe noutros cenários. Se este cenário se aplicar à sua palavra-passe, utilize uma conta com uma palavra-passe que não tenha nenhum destes carateres especiais ou reponha a palavra-passe para remover os carateres especiais.
+O conector também tem algumas restrições de carateres para esta palavra-passe. Não pode utilizar uma palavra-passe que tenha os seguintes carateres: "E" comercial ( **&** ); parêntese reto esquerdo ( **[** ); parêntese reto direito ( **]** ); aspas direitas ( **"** ) e apóstrofo ( **'** ). Se a sua palavra-passe tiver algum destes carateres, a autenticação do conector RMS irá falhar e receberá a mensagem de erro **Essa combinação de nome de utilizador e palavra-passe não está correta**, mesmo que já tenha conseguido iniciar sessão com esta conta e palavra-passe noutros cenários. Se este cenário aplica-se a sua palavra-passe, utilize uma conta diferente com uma palavra-passe que não têm qualquer um dos seguintes carateres especiais ou reponha a palavra-passe, pelo que não tem qualquer um dos seguintes carateres especiais.
 
 Além disso, se tiver implementado [controlos de integração](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), certifique-se de que a conta especificada tem a capacidade de proteger conteúdos. Por exemplo, se tiver restringido a capacidade de proteger conteúdos ao grupo "Departamento de TI", a conta que especificar tem de ser membro desse grupo. Se não vir a mensagem de erro: **Falha ao tentar descobrir a localização do serviço de administração e organização. Certifique-se de que o serviço Microsoft Rights Management está ativado para a sua organização.**
 
@@ -74,7 +74,7 @@ Pode utilizar uma conta que tenha um dos seguintes privilégios:
     > 
     > Para executar o conector do RMS com o mínimo de privilégios, crie uma conta dedicada para este efeito que depois atribui a função de administrador do conector do Azure RMS através do seguinte procedimento:
     >
-    > 1.  Se ainda não o fez, transfira e instale o Windows PowerShell para o Rights Management. Para obter mais informações, consulte [Instalar o Windows PowerShell para o Azure Rights Management](install-powershell.md).
+    > 1.  Se ainda não o fez, transfira e instale o Windows PowerShell para o Rights Management. Para mais informações, consulte [Instalar o Windows PowerShell para o Azure Rights Management](install-powershell.md).
     >
     >     Inicie o Windows PowerShell com o comando **Executar como administrador** e estabeleça ligação ao serviço Azure RMS através do comando [Connect-AadrmService](/powershell/module/aadrm/connect-aadrmservice):
     >

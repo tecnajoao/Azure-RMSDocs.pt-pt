@@ -4,7 +4,7 @@ description: "Instruções para instalar, configurar e executar o Verificador de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/08/2018
+ms.date: 02/01/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 7dfd670df89b652f8ff55452198d8483b55c59cd
-ms.sourcegitcommit: 2a7f20684a041385e2d2425ab886e46917d2da9a
+ms.openlocfilehash: 79a021fa9ffe271d1497a3fc7a42a9ee4c91c007
+ms.sourcegitcommit: bc47834ae7180491ed1d9bc9f69eab398bcdc0a8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>O scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente a implementar
 
@@ -53,7 +53,7 @@ Antes de instalar o scanner do Azure Information Protection, certifique-se de qu
 |Requisito|Mais informações|
 |---------------|--------------------|
 |Computador Windows Server para executar o serviço de análise:<br /><br />-4 processadores<br /><br />-4 GB de RAM|Windows Server 2016 ou o Windows Server 2012 R2. <br /><br />Nota: Para fins de teste ou avaliação num ambiente de não produção, pode utilizar um sistema de operativo de cliente Windows é [suportadas pelo cliente Azure Information Protection](../get-started/requirements.md#client-devices).<br /><br />Este computador pode ser um computador físico ou virtual que tenha uma ligação de rede rápida e fiável para os arquivos de dados ser analisados. <br /><br />Certifique-se de que este computador tem o [conectividade à Internet](../get-started/requirements.md#firewalls-and-network-infrastructure) que necessita para o Azure Information Protection. Em alternativa, tem de o configurar como um [computadores desligados](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). |
-|SQL Server para armazenar a configuração de scanner:<br /><br />-Instância local ou remota|SQL Server 2012 é a versão mínima para as seguintes edições:<br /><br />-SQL Server para empresas<br /><br />-SQL Server Standard<br /><br />-SQL Server Express|
+|SQL Server para armazenar a configuração de scanner:<br /><br />-Instância local ou remota|SQL Server 2012 é a versão mínima para as seguintes edições:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express|
 |Conta de serviço para executar o serviço de análise|Esta conta tem de ser uma conta do Active Directory que está sincronizada com o Azure AD, com os seguintes requisitos adicionais:<br /><br />- **Iniciar sessão localmente** à direita. Este direito é necessário para a instalação e configuração do scanner, mas não para a operação. Tem de conceder este direito para a conta de serviço, mas pode remover este direito depois de confirmar que o verificador pode detetar, classificar e proteger os ficheiros.<br /><br />- **Inicie sessão como um serviço** à direita. Este direito é concedido automaticamente para a conta de serviço durante a instalação do scanner e este direito é necessário para a instalação, configuração e operação do scanner. <br /><br />-Permissões para os repositórios de dados: tem de conceder **leitura** e **escrever** permissões para analisar os ficheiros e, em seguida, aplicar classificação e a proteção para os ficheiros que cumprem as condições no Política de proteção de informações do Azure. Para executar o verificador no modo de deteção apenas, **leitura** permissão é suficiente.<br /><br />-Para etiquetas que proteja novamente ou remova a proteção: para se certificar de que o verificador tem sempre acesso aos ficheiros protegidos, tornar esta conta um [Superutilizador](configure-super-users.md) para o Azure Rights Management service e certifique-se de que a funcionalidade de Superutilizador é ativada . Para obter mais informações sobre os requisitos de conta para aplicar a proteção, consulte [preparar os utilizadores e grupos do Azure Information Protection](../plan-design/prepare.md).|
 |O cliente Azure Information Protection está instalado no computador do servidor do Windows|Atualmente, a análise do Azure Information Protection requer a versão de pré-visualização do cliente Azure Information Protection.<br /><br />Tem de instalar o cliente completo para a análise. Não instale o cliente com apenas o módulo do PowerShell.<br /><br />Para obter instruções de instalação de cliente, consulte o [Guia do administrador](../rms-client/client-admin-guide.md).|
 |Configurado etiquetas que se aplicam a classificação automática e, opcionalmente, a proteção|Para obter mais informações sobre como configurar as condições, consulte [como configurar condições para classificação automática e recomendada para o Azure Information Protection](configure-policy-classification.md).<br /><br />Para obter mais informações sobre como configurar as etiquetas para aplicar proteção aos ficheiros, consulte [como configurar uma etiqueta para a proteção Rights Management](configure-policy-protection.md).<br /><br />Estas etiquetas podem ser política global, ou um ou mais [âmbito políticas](configure-policy-scope.md).|
@@ -159,6 +159,46 @@ Na sua predefinição, a análise é executada uma hora e no modo só de relató
 
 Porque configurámos o agendamento para ser executada continuamente, quando a analista trabalhou a forma através de todos os ficheiros, inicia um ciclo de novo para que os ficheiros de novos e alterados são detetados.
 
+
+## <a name="how-files-are-scanned-by-the-azure-information-protection-scanner"></a>Como os ficheiros são analisados pelo scanner Azure Information Protection
+
+Scanner ignora automaticamente ficheiros que estão [excluída da proteção e classificação](../rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-client), tais como executáveis e sistema de ficheiros.
+
+Em seguida, scanner utiliza iFilter do Windows para analisar os seguintes tipos de ficheiro. Para estes tipos de ficheiro, o documento será possível com a etiqueta utilizando as condições que especificou para as etiquetas.
+
+|Tipo de aplicação|Tipo de ficheiro|
+|--------------------------------|-------------------------------------|
+|Word|.docx; .docm; .dotm; .dotx|
+|Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
+|PowerPoint|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
+|projeto|.mpp; .mpt|
+|PDF|.pdf|
+|Texto|.txt; .xml; .csv|
+
+
+Por fim, para os restantes tipos de ficheiro, scanner aplica-se a etiqueta predefinida na política do Azure Information Protection.
+
+|Tipo de aplicação|Tipo de ficheiro|
+|--------------------------------|-------------------------------------|
+|projeto|.mpp; .mpt|
+|Publisher|.pub|
+|Visio|.vsd; .vdw; .vst; .vss; .vsdx; .vsdm; .vssx; .vssm; .vstx; .vstm|
+|XPS|.xps; .oxps; .dwfx|
+|Solidworks|.sldprt; .slddrw; .sldasm|
+|JPEG |.jpg; .jpeg; .jpe; .jif; .jfif; .jfi|
+|PNG |.png|
+|GIF|.gif|
+|Mapa de bits|*.bmp; .giff|
+|TIFF|.tif; .tiff|
+|PhotoShop|.psdv|
+|DigitalNegative|.dng|
+|Pfile|.pfile|
+
+Tenha em atenção que quando uma etiqueta aplica proteção genérica a documentos, a extensão de nome de ficheiro é alterado para. pfile. Além disso, o ficheiro torna-se só de leitura até ser aberto por um utilizador autorizado e guardado no formato nativo. Ficheiros de texto e imagens também podem alterar a respetiva extensão de nome de ficheiro e passam a ser só de leitura. Se não pretender que este comportamento, pode impedir que os ficheiros que tenham um ficheiro específico, escreva-se de que está a ser protegidos. Por exemplo, impedir que um ficheiro PDF se tornar um ficheiro PDF (. ppdf) protegido e impedir que um ficheiro. txt se tornar um ficheiro de texto protegido (. ptxt).
+
+Para mais informações sobre os diferentes níveis de proteção de diferentes tipos de ficheiro e como controlar o comportamento de proteção, consulte o [tipos suportados para proteção de ficheiros](../rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection) secção do Guia do administrador.
+
+
 ## <a name="when-files-are-rescanned-by-the-azure-information-protection-scanner"></a>Quando os ficheiros estão a ser reanalisados por scanner Azure Information Protection
 
 O ciclo de análise primeiro, scanner inspeciona todos os ficheiros nos arquivos de dados configurados e, em seguida, para análises subsequentes, ficheiros novos ou modificados apenas serão inspecionados. 
@@ -213,21 +253,21 @@ Outros fatores que afetam o desempenho de scanner:
 
 Outros cmdlets para scanner permitem-lhe alterar a conta de serviço e a base de dados para scanner, obter as definições atuais scanner e desinstale o serviço de análise. O scanner utiliza os seguintes cmdlets:
 
-- [AIPScannerRepository adicionar](/powershell/module/azureinformationprotection/Add-AIPScannerRepository)
+- [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository)
 
 - [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration)
 
 - [Get-AIPScannerRepository](/powershell/module/azureinformationprotection/Get-AIPScannerRepository)
 
-- [Instalação AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)
+- [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)
 
-- [Remover AIPScannerRepository](/powershell/module/azureinformationprotection/Remove-AIPScannerRepository)
+- [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/Remove-AIPScannerRepository)
 
-- [Conjunto AIPScanner](/powershell/module/azureinformationprotection/Set-AIPScanner)
+- [Set-AIPScanner](/powershell/module/azureinformationprotection/Set-AIPScanner)
 
-- [Conjunto AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration)
+- [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration)
 
-- [AIPScanner desinstalar](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
+- [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
 
 
 ## <a name="event-log-ids-and-descriptions"></a>IDs e descrições do registo de eventos

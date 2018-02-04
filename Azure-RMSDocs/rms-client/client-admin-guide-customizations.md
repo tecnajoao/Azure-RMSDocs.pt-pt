@@ -4,7 +4,7 @@ description: "Informações sobre a personalização do cliente do Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 02/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 0bd05c0553cdcab792c674c6945d7dfea5f02eaf
-ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
+ms.openlocfilehash: 3ee5bd789b62261867d6de4f56efaa3890dc1a57
+ms.sourcegitcommit: bc47834ae7180491ed1d9bc9f69eab398bcdc0a8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia de administração: Configurações personalizadas para o cliente Azure Information Protection
 
@@ -52,6 +52,15 @@ Localize o nome do valor seguinte e, em seguida, defina os dados do valor como *
 
 Independentemente desta definição, o cliente do Azure Information Protection segue o [processo de deteção do serviço RMS](../rms-client/client-deployment-notes.md#rms-service-discovery) padrão, para localizar o respetivo cluster AD RMS.
 
+## <a name="suppress-the-initial-congratulations-welcome-page"></a>Suprimir as iniciais "parabéns!" Página de boas-vindas
+
+Quando o cliente Azure Information Protection é instalado pela primeira vez num computador e um utilizador abre o Word, Excel, PowerPoint ou o Outlook, um **Parabéns!** página é apresentada com instruções abreviadas como utilizar a nova barra do Information Protection para selecionar etiquetas. Pode suprimir esta página ao editar o registo.
+
+Localize o seguinte nome de valor e defina os dados do valor para **0**:
+
+**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnableWelcomeExperience** 
+
+
 ## <a name="sign-in-as-a-different-user"></a>Iniciar sessão como um utilizador diferente
 
 Num ambiente de produção, normalmente, os utilizadores não precisam de iniciar sessão como um utilizador diferente quando estão a utilizar o cliente do Azure Information Protection. No entanto, como administrador, poderá ter de iniciar sessão como um utilizador diferente durante uma fase de teste. 
@@ -73,6 +82,7 @@ Além disso,
 - Se estiver a utilizar o início de sessão único, tem de terminar sessão no Windows e iniciar sessão com a sua outra conta de utilizador após editar o registo. O cliente do Azure Information Protection faz, em seguida, a autenticação automaticamente através da conta de utilizador com sessão iniciada.
 
 - Pode utilizar o **repor definições** opção de **ajuda e comentários** para terminar sessão e eliminar a política do Azure Information Protection atualmente transferida.
+
 
 ## <a name="enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses"></a>Impor o modo só de proteção quando a sua organização tem uma combinação de licenças
 
@@ -188,7 +198,7 @@ Por isso que Outlook não se aplica a etiqueta predefinida, especifique **nenhum
 
 Para configurar esta definição avançada, introduza as cadeias seguintes:
 
-- Chave: **OutlookDefaultLabel**
+- Key: **OutlookDefaultLabel**
 
 - Valor: \< **etiqueta ID**> ou **None**
 

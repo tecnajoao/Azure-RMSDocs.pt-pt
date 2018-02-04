@@ -4,17 +4,17 @@ description: "Pode proteger os seus documentos e e-mails mais confidenciais ao c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2017
+ms.date: 02/01/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: d42a561e61991a6299e83c5054ceb2ed8151ebf6
-ms.sourcegitcommit: 972acdb468ac32a28e3e24c90694aff4b75206fc
+ms.openlocfilehash: e53b0f1508762001b58d60a68a5d606c87dd7c1c
+ms.sourcegitcommit: bc47834ae7180491ed1d9bc9f69eab398bcdc0a8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Como configurar uma etiqueta para a proteção do Rights Management
 
@@ -101,7 +101,7 @@ Exchange não tem de ser configurado para gestão de direitos de informação (I
         
         Os utilizadores ou grupos tem de ter um endereço de e-mail. Num ambiente de produção, utilizadores e grupos que têm quase sempre um endereço de e-mail, mas num ambiente de teste simple, poderá ter de adicionar endereços de e-mail a contas de utilizador ou grupos.
         
-    - Escolha **Introduza detalhes** especificar manualmente o e-mail endereços para utilizadores individuais ou grupos (internos ou externos). Em alternativa, utilize esta opção para especificar todos os utilizadores noutra organização ao introduzir um nome de domínio da organização. Ao introduzir apenas um nome de domínio, introduza os nomes de domínio de fornecedores de redes sociais que suportam contas de e-mail pessoal. Por exemplo, não introduza **gmail.com**, **hotmail.com**, ou **outlook.com**.
+    - Escolha **Introduza detalhes** especificar manualmente o e-mail endereços para utilizadores individuais ou grupos (internos ou externos). Em alternativa, utilize esta opção para especificar todos os utilizadores noutra organização ao introduzir qualquer nome de domínio da organização. Também pode utilizar esta opção para fornecedores de redes sociais, introduzindo o respetivo nome de domínio, tal como **gmail.com**, **hotmail.com**, ou **outlook.com**.
         
     >[!NOTE]
     >Se um endereço de e-mail for alterada depois de selecionar o utilizador ou grupo, consulte o [considerações se a alteração de endereços de e-mail](../plan-design/prepare.md#considerations-for-azure-information-protection-if-email-addresses-change) secção na documentação do planeamento.
@@ -222,7 +222,9 @@ Os novos utilizadores que adicionar será capaz de documentos aberta e e-mails q
 
 ### <a name="example-4-label-for-protected-email-that-supports-less-restrictive-permissions-than-do-not-forward"></a>Exemplo 4: Etiqueta de e-mail protegidas que suporte permissões menos restritivas do que a opção não reencaminhar
 
-Esta etiqueta não pode ser restringida ao Outlook mas fornece controlos menos restritivos do que utilizar não reencaminhar. Por exemplo, pretende que os destinatários para poder copiar a partir do e-mail ou um anexo ou imprimir e guardar um anexo. Se especificar os utilizadores externos que não dispõe de uma conta no Azure AD, lembre-se de que Instrua os seus utilizadores para não utilizar esta etiqueta de documentos, apenas o e-mail. Além disso, para suportar estes utilizadores externos, Exchange Online tem de ser configurado para o [novas capacidades na encriptação de mensagens do Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).  
+Esta etiqueta não pode ser restringida ao Outlook mas fornece controlos menos restritivos do que utilizar não reencaminhar. Por exemplo, pretende que os destinatários para poder copiar a partir do e-mail ou um anexo ou imprimir e guardar um anexo.
+
+Se especificar os utilizadores externos que não dispõe de uma conta no Azure AD, lembre-se de que Instrua os seus utilizadores para não utilizar esta etiqueta de documentos, apenas o e-mail. Além disso, para suportar estes utilizadores externos, Exchange Online tem de ser configurado para o [novas capacidades na encriptação de mensagens do Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).  
 
 Quando os utilizadores, especifique os endereços de e-mail no **para** caixa, os endereços tem de ser para os mesmos utilizadores que especificar para esta configuração de etiqueta. Porque os utilizadores podem pertencem a grupos e tem mais do que um endereço de e-mail, o endereço de e-mail especificarem tem de corresponder ao endereço de e-mail que especificar para conhecer as permissões. No entanto, especificando o mesmo endereço de correio eletrónico é a forma mais fácil para se certificar de que o destinatário irá ser autorizado com êxito. Para obter mais informações sobre como os utilizadores estão autorizados para permissões, consulte [preparar os utilizadores e grupos do Azure Information Protection](../plan-design/prepare.md). 
 
@@ -230,7 +232,7 @@ Quando os utilizadores, especifique os endereços de e-mail no **para** caixa, o
     
 2. Certifique-se **definir permissões** está selecionado e selecione **adicionar permissões**.
 
-3. No **adicionar permissões** painel: para conceder permissões a utilizadores na sua organização, selecione **adicionar \<nome da organização >-todos os membros** para selecionar todos os utilizadores no seu inquilino, ou selecione  **Procurar no diretório** para selecionar um grupo específico. Para conceder permissões a utilizadores externos ou se preferir escreva o endereço de e-mail, selecione **Introduza detalhes** e escreva o endereço de e-mail do utilizador ou grupo do Azure AD.
+3. No **adicionar permissões** painel: para conceder permissões a utilizadores na sua organização, selecione **adicionar \<nome da organização >-todos os membros** para selecionar todos os utilizadores no seu inquilino, ou selecione  **Procurar no diretório** para selecionar um grupo específico. Para conceder permissões a utilizadores externos ou se preferir escreva o endereço de e-mail, selecione **Introduza detalhes** e escreva o endereço de e-mail do utilizador ou grupo do Azure AD ou um nome de domínio.
     
     Repita este passo para especificar os utilizadores adicionais que devem ter as mesmas permissões.
 

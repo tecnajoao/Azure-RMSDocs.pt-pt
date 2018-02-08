@@ -148,7 +148,7 @@ Ao utilizar esta pasta, não é necessária qualquer convenção de nomenclatura
     
     REG_SZ:*\<url_ou_nomedoanfitrião >*
     
-    **Valor:** os valores de cadeia nesta localização da chave de registo podem ser um formato de nome de domínio DNS (por exemplo, **adrms.contoso.com**) ou URLs completos para servidores do AD RMS fidedignos (por exemplo, **https:// adrms.contoso.com**). Se um URL especificado começar por **https://**, o cliente RMS utiliza SSL ou TLS para contactar o servidor de AD RMS especificado.
+    **Valor:** os valores de cadeia nesta localização da chave de registo podem ser um formato de nome de domínio DNS (por exemplo, **adrms.contoso.com**) ou URLs completos para servidores do AD RMS fidedignos (por exemplo, **https://adrms.contoso.com**). Se um URL especificado começar por **https://**, o cliente RMS utiliza SSL ou TLS para contactar o servidor de AD RMS especificado.
 
 ## <a name="rms-service-discovery"></a>Deteção do serviço RMS
 A deteção do serviço RMS permite que o cliente do RMS verifique com que servidor ou serviço RMS irá comunicar antes de proteger os conteúdos. Deteção do serviço também poderá ocorrer quando o cliente do RMS consumir conteúdo protegido, mas este tipo de deteção é pouco provável, uma vez que a política anexada ao conteúdo contém a preferencial servidor ou serviço RMS. Apenas se as origens são sem o cliente, em seguida, executa a deteção do serviço.

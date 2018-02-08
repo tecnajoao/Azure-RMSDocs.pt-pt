@@ -205,7 +205,7 @@ Esta secção apresenta as informações sobre as versões atuais e anteriores d
 
 **P**: de que forma obtenho novos inquilinos organizacionais para experimentar o SDK e as aplicações de exemplo?
 
-**A**: para pedir credenciais para as organizações de teste do Azure AD RMS, enviar correio eletrónico para < rmcstbeta@microsoft.com >.
+**A**: para pedir credenciais para as organizações de teste do Azure AD RMS, enviar correio eletrónico para <rmcstbeta@microsoft.com>.
 
 **P**: não vejo qualquer debate sobre a hierarquia de testes aqui na documentação. Por que motivo?
 

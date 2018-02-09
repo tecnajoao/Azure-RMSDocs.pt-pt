@@ -4,7 +4,7 @@ description: "Instruções para ver e utilizar um documento protegido que requer
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/10/2018
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: aa222d484e67d5f1e08ac08b3839100de8390e4e
-ms.sourcegitcommit: d4c63df8436b2e490f196585fcb78afe8c2e8de8
+ms.openlocfilehash: 87ae9b546a791c20b71625f938265c584980ae43
+ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Guia do utilizador: Ver e utilizar ficheiros que foram protegidos pelo Rights Management
 
@@ -71,6 +71,8 @@ Se a sua organização tiver uma conta baseada na nuvem para a utilização (par
     Para obter mais informações detalhadas sobre as permissões e os direitos de utilização de cada um, veja [Direitos incluídos nos níveis de permissões](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels).
 
 4. Para editar o ficheiro, clique em **Guardar como**, o que lhe permite guardar o ficheiro sem proteção na sua extensão de nome de ficheiro original. Em seguida, pode editar o ficheiro com a aplicação associada a esse tipo de ficheiro.
+    
+    Se utilizar o Explorador de ficheiros para este ficheiro recentemente guardado com o botão direito mais tarde e tentar novamente a protegê-lo, não poderá fazê-lo. Este problema conhecido é tratado na versão de pré-visualização atual do cliente de informações do Azure. Para o cliente de pré-visualização, escolher **guardar como** remove a etiqueta para além da proteção. Quando é, em seguida, clique com botão direito do ficheiro, pode voltar a aplicar a etiqueta, que por sua vez volta a proteção.
 
 5. Se tiver ficheiros protegidos adicionais para abrir, pode navegar diretamente até aos mesmos a partir do visualizador, através da opção **Abrir**. O ficheiro selecionado substitui o ficheiro original no visualizador. 
 

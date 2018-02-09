@@ -4,7 +4,7 @@ description: "As instruções e as informações para os administradores gerirem
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/03/2018
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: aee9a9f665d3aa0a0e8a8c568f3abbd044469fc7
-ms.sourcegitcommit: 6c7874f54b8b983d3ac547bb23a51e02c68ee67b
+ms.openlocfilehash: 27799ff64e8c224c64b0ffc858b79818650d74af
+ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guia do administrador: Utilizar o PowerShell com o cliente Azure Information Protection
 
@@ -33,7 +33,7 @@ O módulo de AzureInformationProtection inclui todos os cmdlets do Rights Manage
 |[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)|Para uma pasta partilhada, identifique todos os ficheiros com uma etiqueta específica.|
 |[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)|Para uma pasta partilhada, inspecione o conteúdo do ficheiro e etiquete automaticamente os ficheiros sem etiqueta, de acordo com as condições que especificou.|
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|Para uma pasta partilhada, aplique uma etiqueta especificada a todos os ficheiros que não têm uma etiqueta.|
-|[Conjunto AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Etiqueta ficheiros de forma não interativa, por exemplo, utilizando um script que é executado numa agenda.|
+|[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Etiqueta ficheiros de forma não interativa, por exemplo, utilizando um script que é executado numa agenda.|
 
 
 Além disso, o [scanner do Azure Information Protection](../deploy-use/deploy-aip-scanner.md) (atualmente em pré-visualização), utiliza os cmdlets para instalar e configurar um serviço no Windows Server. Esta análise, em seguida, permite-lhe detetar, classificar e proteger os ficheiros nos arquivos de dados.
@@ -461,7 +461,11 @@ Por predefinição, quando executa os cmdlets de etiquetagem, os comandos são e
 > [!NOTE]
 > Se utilizar [âmbito políticas](../deploy-use/configure-policy-scope.md), lembre-se de que poderá ter de adicionar esta conta para as políticas de âmbito.
 
-Na primeira vez que executar este cmdlet, é pedido que inicie sessão no Azure Information Protection. Especifique o nome de conta de utilizador e palavra-passe que criou para o utilizador automático. Em seguida, esta conta pode executar os cmdlets de etiquetagem de forma não interativa até o token de autenticação expirar. Quando o token expirar, execute o cmdlet novamente para comprar um novo token:
+Na primeira vez que executar este cmdlet, é pedido que inicie sessão no Azure Information Protection. Especifique o nome de conta de utilizador e palavra-passe que criou para o utilizador automático. Em seguida, esta conta pode executar os cmdlets de etiquetagem de forma não interativa até o token de autenticação expirar. 
+
+Para a conta de utilizador conseguir iniciar sessão interativamente pela primeira vez, a conta deve ter o **iniciar sessão localmente** à direita. Este direito é padrão para contas de utilizador, mas as políticas da empresa poderão proibir esta configuração para as contas de serviço. Se for esse o caso, pode executar Set-AIPAuthentication com o *Token* parâmetro, para que a autenticação concluída sem o pedido de início de sessão. Pode executar este comando como uma tarefa agendada e conceda à conta canto inferior direito da **iniciar sessão como uma tarefa de lote**. Para obter mais informações, consulte as secções seguintes. 
+
+Quando o token expira, execute o cmdlet novamente para adquirir um novo token.
 
 Se executar este cmdlet sem parâmetros, a conta compra um token de acesso que é válido durante 90 dias ou até a sua palavra-passe expirar.  
 
@@ -517,7 +521,85 @@ Após ter executado este cmdlet, pode executar os cmdlets de etiquetagem no cont
 
 12. Reverter o **as permissões necessárias** painel, selecione **conceder permissões**, clique em **Sim** para confirmar e, em seguida, feche este painel.
     
-Concluiu agora a configuração das duas aplicações e tem os valores necessários para executar o cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) com parâmetros.
+Agora concluiu a configuração das duas aplicações e tem os valores que tem de executar [conjunto AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) com os parâmetros *WebAppId*, *WebAppKey* e *NativeAppId*. Por exemplo:
+
+`Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
+
+Execute este comando no contexto da conta que será Etiquetar e proteger os documentos de forma não interativa. Por exemplo, uma conta de utilizador para os scripts do PowerShell ou a conta de serviço para executar o Verificador de Azure Information Protection.  
+
+Quando executar este comando pela primeira vez, são-lhe pedido para iniciar sessão, que cria e em segurança armazena o token de acesso para a sua conta em % localappdata%\Microsoft\MSIP. Após este inicial de início de sessão, pode Etiquetar e proteger os ficheiros de forma não interativa no computador. No entanto, o se utilizar uma conta de serviço para etiquetar e proteger ficheiros e esta conta de serviço não pode iniciar sessão interativamente, utilize as instruções na secção seguinte para que a conta de serviço pode autenticar utilizando um token.
+
+### <a name="specify-and-use-the-token-parameter-for-set-aipauthentication"></a>Especificar e utilizar o parâmetro de Token para Set-AIPAuthentication
+
+> [!NOTE]
+> Esta opção está em pré-visualização e requer a versão de pré-visualização atual do cliente Azure Information Protection.
+
+Utilize os seguintes passos adicionais e instruções para evitar o inicial interativo início de sessão para uma conta que etiquetas e protege os ficheiros. Normalmente, estes são necessários passos adicionais apenas se esta conta não é possível conceder a **iniciar sessão localmente** botão direito do rato, mas é concedida a **iniciar sessão como uma tarefa de lote** à direita. Por exemplo, pode ser o caso da sua conta de serviço que executa o Verificador de Azure Information Protection.
+
+1. Crie um script do PowerShell no computador local.
+
+2. Execute Set-AIPAuthentication obtenha o token de acesso e copie-a para a área de transferência.
+
+2. Modificar o script do PowerShell para incluir o token.
+
+3. Crie uma tarefa que executa o script do PowerShell no contexto da conta de serviço que será Etiquetar e proteger os ficheiros.
+
+4. Confirme que o token é guardado para a conta de serviço e eliminar o script do PowerShell.
+
+
+#### <a name="step-1-create-a-powershell-script-on-your-local-computer"></a>Passo 1: Criar um script do PowerShell no computador local
+
+1. No seu computador, crie um novo script do PowerShell com o nome Aipauthentication.ps1.
+
+2. Copie e cole o seguinte comando para este script:
+    
+         Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application > -Token <token value>
+
+3. Utilizar as instruções na secção anterior, modifique este comando, especificando os seus próprios valores para o **WebAppId**, **WebAppkey**, e **NativeAppId** parâmetros. Neste momento, não tem o valor para o **Token** parâmetro, que pode especificar mais tarde. 
+    
+    Por exemplo: `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>`
+    
+#### <a name="step-2-run-set-aipauthentication-to-get-an-access-token-and-copy-it-to-the-clipboard"></a>Passo 2: Execute Set-AIPAuthentication para obter um token de acesso e copie-a para a área de transferência
+
+1. Abra uma sessão do Windows PowerShell.
+
+2. Utilizar os mesmos valores como que especificou no script, execute o seguinte comando:
+    
+        (Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application >).token | clip
+    
+    Por exemplo: `(Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
+
+#### <a name="step-3-modify-the-powershell-script-to-supply-the-token"></a>Passo 3: Modificar o script do PowerShell para fornecer o token
+
+1. No seu script do PowerShell, especifique o valor de token através da colagem a cadeia da área de transferência e guarde o ficheiro.
+
+2. Assine o script. Se não assinar o script (mais seguro), tem de configurar o Windows PowerShell no computador que irá executar os comandos de etiquetas. Por exemplo, executar uma sessão do Windows PowerShell com o **executar como administrador** opção e escreva: `Set-ExecutionPolicy RemoteSigned`. No entanto, esta configuração permite executar quando estes estão armazenados neste computador (menos seguro) de scripts de todos os não atribuídos.
+    
+    Para obter mais informações sobre como assinar os scripts do Windows PowerShell, veja [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) na biblioteca de documentação do PowerShell.
+
+3. Copie este script do PowerShell para o computador que irá Etiquetar e proteger ficheiros e eliminar original no seu computador. Por exemplo, copie o script do PowerShell para C:\Scripts\Aipauthentication.ps1 num computador Windows Server.
+
+#### <a name="step-4-create-a-task-that-runs-the-powershell-script"></a>Passo 4: Criar uma tarefa que executa o script do PowerShell
+
+1. Certifique-se de que a conta de serviço que será Etiquetar e proteger ficheiros tem o **iniciar sessão como uma tarefa de lote** à direita.
+
+2. No computador que irá Etiquetar e proteger ficheiros, abra o Programador de tarefas e criar uma nova tarefa. Configure esta tarefa para ser executado como conta de serviço que irão Etiquetar e proteger ficheiros e, em seguida, configure os seguintes valores para o **ações**:
+    
+    - **Ação**:`Start a program`
+    - **Programa/script**:`Powershell.exe`
+    - **Adicionar argumentos (opcionais)**:`-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
+    
+    Para a linha de argumento, especifique o seu próprio nome de ficheiro e caminho, se estes forem diferentes do exemplo.
+
+3. Executar manualmente esta tarefa.
+
+#### <a name="step-4-confirm-that-the-token-is-saved-and-delete-the-powershell-script"></a>Passo 4: Confirme que é guardado o token e eliminar o script do PowerShell
+
+1. Certifique-se de que o token agora é armazenado na pasta %localappdata%\Microsoft\MSIP para o perfil de conta de serviço. Este valor está protegido pela conta de serviço.
+
+2. Elimine o script do PowerShell que contém o valor do token (por exemplo, Aipauthentication.ps1).
+    
+    Opcionalmente, elimine a tarefa. Se o seu token expira, tem de repetir este processo, no, nesse caso, poderá ser mais prático deixar a tarefa configurada para que fique pronto para executar novamente quando copiá-los através do PowerShell novo script com o novo valor de token.
 
 ## <a name="next-steps"></a>Próximos passos
 Para obter a ajuda do cmdlet quando estiver numa sessão do PowerShell, escreva `Get-Help <cmdlet name> cmdlet` e utilize o parâmetro online para ler as informações mais atualizadas. Por exemplo: 

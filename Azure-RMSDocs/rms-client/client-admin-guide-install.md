@@ -4,7 +4,7 @@ description: "As instruções e informações para os administradores implementa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/24/2018
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 0af9b6847c920d486d727cb6748b84aa581012d1
-ms.sourcegitcommit: d3b82dd8dbafb86ddbe698cdcd0edee445fff416
+ms.openlocfilehash: d91c52ac5ae1f70ed664e54a549c906d934fdb16
+ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guia do administrador: Instalar o cliente Azure Information Protection para os utilizadores
 
@@ -73,6 +73,8 @@ Em seguida, verifique os pré-requisitos adicionais que podem ser necessários p
     Para obter mais informações sobre esta definição de política de grupo, veja [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off) (Os suplementos não são carregados devido às definições de política de grupo dos programas do Office 2013 e do Office 2016).
 
 - Para versões do Office 16.0.8628.2010 e posterior (clique para execução): Ativar o suporte legacy monitores
+    
+    Nota: Esta pré-requisito não é necessária para a versão de pré-visualização atual do cliente Azure Information Protection. 
     
     Para impedir a apresentação de barra de Azure Information Protection fora de aplicações do Office para estas versões do Office, poderá ter de ativar o suporte legacy para monitores. Quando a barra de não ser apresentados corretamente neste cenário, poderá ver que apresentado como **AdxTaskPane**. 
     
@@ -200,7 +202,7 @@ Se utilizar o Intune enquanto método de implementação de software, utilize es
     |Office 2010|Todas as versões suportadas|[Assistente de Início de Sessão do Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Versão: 2.1|Instalar|
     |Office 2010|Windows 8.1 e Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Número da versão incluído no nome de ficheiro: v3|Instalar se KB2843630 ou KB2919355 não está instalado|
     |Office 2010|Windows 8 e Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Número da versão incluído no nome de ficheiro: v3|Instalar|
-    |Office 2010|Windows 7|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Número da versão incluído no nome de ficheiro: v3|Instalar se KB3125574 não está instalado|
+    |Office 2010|Windows 7 e Windows Server 2008 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Número da versão incluído no nome de ficheiro: v3|Instalar se KB3125574 não está instalado|
     |Não aplicável|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|Instalar|
     |Não aplicável|Windows 7|KB2627273 <br /><br /> Número da versão incluído no nome de ficheiro: v4|Desinstalar|
 

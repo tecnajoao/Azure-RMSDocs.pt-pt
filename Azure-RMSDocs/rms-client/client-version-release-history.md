@@ -4,7 +4,7 @@ description: "Ver o que é nova ou alterada uma versão do cliente Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/22/2017
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 20ee380a48fa8fb303a5c71f43df17b8740b0cb4
-ms.sourcegitcommit: fc9a4487e2a0bc3481a814c7c308939868d52db9
+ms.openlocfilehash: 19390c05719ebfee7e3442437d3f5bdfd303c652
+ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: política de suporte e histórico da versão versão
 
@@ -43,9 +43,63 @@ Utilize as seguintes informações para ver o que é nova ou alterada para uma v
 
 ## <a name="versions-later-than-110560"></a>Versões posteriores 1.10.56.0
 
-Se tiver uma versão do cliente que é posterior à 1.10.56.0, é uma versão de pré-visualização para fins de avaliação e teste. 
+Se tiver uma versão do cliente que é posterior à 1.10.56.0, é uma versão de pré-visualização para fins de avaliação e teste.
 
-Para o que é nova ou alterada na versão de pré-visualização atual desde a última versão GA do cliente, consulte o **detalhes** secção no [página de transferência](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+A versão de pré-visualização atual é **1.21.203.0** e tem as seguintes alterações desde a versão GA atual do cliente.
+
+Esta versão inclui o MSIPC versão 1.0.3403.1224 do cliente RMS.
+
+**Novas funcionalidades**:
+
+- O scanner do Azure Information Protection: módulo do PowerShell a que está incluído com o cliente tem novos cmdlets para instalar e Configurar scanner para que possam detetar, classificar e proteger ficheiros no seu arquivos de dados no local. Para obter instruções, consulte [implementar a análise do Azure Information Protection para classificar e proteger ficheiros automaticamente](../deploy-use/deploy-aip-scanner.md). 
+
+- Para aplicações do Office, a classificação automática e recomendada é executada continuamente em segundo plano, em vez de executar quando os documentos são guardados. Com esta alteração no comportamento, agora pode aplicar a classificação automática e recomendada para os documentos que estão armazenados no SharePoint Online. [Mais informações](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) 
+
+- Agora pode definir diferentes marcas visuais para o Word, Excel, PowerPoint e Outlook utilizando uma instrução de variável "If.App" na cadeia de texto e identifique o tipo de aplicação. [Mais informações](../deploy-use/configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
+
+- Suporte para o [definição de política](../deploy-use/configure-policy-settings.md), **apresentar a barra do Information Protection em aplicações do Office**. Quando esta definição estiver desativada, os utilizadores selecionar etiquetas do **proteger** botão no Friso.
+
+- Uma nova avançado definição de cliente, de modo que Outlook não se aplica a etiqueta predefinida que está configurada na política do Azure Information Protection. Em vez disso, o Outlook pode aplicar uma etiqueta predefinida diferente ou sem etiqueta. [Mais informações](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook) 
+
+- Para aplicações do Office, ao especificar permissões personalizadas, pode procurar e selecione os utilizadores a partir de um ícone de livro de endereços. Esta opção coloca paridade à experiência de utilizador quando especificar permissões personalizadas, utilizando o Explorador de ficheiros.
+
+- Suporte para um método de autenticação completamente não interativa, para contas de serviço que utilize o PowerShell e que não é possível conceder a **iniciar sessão localmente** à direita. Este método de autenticação requer que utilize a nova *Token* parâmetro com [conjunto AIPAuthentication](/powershell/module/azureinformationprotection/Set-AIPAuthentication), e executar um script do PowerShell como uma tarefa. [Mais informações](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)
+
+- Novo parâmetro, *IntegratedAuth* para [Set-RMSServerAuthentication](/powershell/module/azureinformationprotection/set-rmsserverauthentication). Este parâmetro suporta o modo de servidor para AD RMS, que é necessário para o AD RMS suportar a FCI do Windows Server.
+
+
+**Correções**:
+
+Correções para estabilidade e para cenários específicos que incluem:
+
+- Para versões do Office 16.0.8628.2010 e posterior (clique para execução), a barra do Azure Information Protection suporta as opções de visualização mais recentes do monitor que anteriormente poderão resultar na barra de apresentar fora das aplicações do Office.
+
+- Quando dois organização através do Azure Information Protection partilhar identificados documentos e e-mails, as suas próprias etiquetas são mantidas e não são substituídas por etiquetas de outra organização.
+
+- Suporte para células no Excel que contêm cross-references, que anteriormente provocou a existência de danos no texto nessa célula.
+
+- Suporte para a alteração de temas do Office ou temas do Windows, que anteriormente provocou o Excel para não apresentar todos os dados depois do tema foi alterado.
+
+- Agora podem ser inspecionados os ficheiros que tenham uma extensão de nome de ficheiro. XML para a classificação recomendada ou automática.
+
+- O Visualizador pode agora abrir baseado em texto ficheiros protegidos (. ptxt e. pxml) com mais de 20 MB. 
+
+- Evitar pendente Outlook quando são utilizados lembretes Outlook.
+
+- O arranque de configuração é concluída com êxito no Office 64 bits, para que possam proteger documentos e e-mails.
+
+- Pode agora configurar uma etiqueta para permissões definidas pelo utilizador para Word, Excel, PowerPoint e Explorador de ficheiros e também utilizar a definição para ocultar as opções de permissões personalizadas de cliente avançado. [Mais informações](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users) 
+
+- Reverter para o tipo de letra Calibri se marcas visuais na política do Azure Information Protection estão configurados para um nome de tipo de letra que não está instalado no cliente.
+
+- Impedir que as falhas do Office depois do cliente Azure Information Protection é atualizado.
+
+- Para aplicações do Office, melhore o consumo de memória e desempenho.
+
+- Quando configurar uma etiqueta de utilizador definido permissões e a proteção de HYOK (AD RMS), a proteção já não utiliza incorretamente o serviço Azure Rights Management.
+
+- Para uma experiência mais consistente de gestão, sublabels deixa de herdar marcações visuais e as definições de proteção da respetiva etiqueta principal.
+
 
 ## <a name="version-110560"></a>Versão 1.10.56.0
 

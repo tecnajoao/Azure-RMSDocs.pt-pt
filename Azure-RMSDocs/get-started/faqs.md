@@ -4,7 +4,7 @@ description: "Algumas perguntas mais frequentes sobre o Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/22/2017
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: da0ba7876b1098671428e87117bed97c4f464071
-ms.sourcegitcommit: 228953e96609b3c5ec8deddaab91be59650d9006
+ms.openlocfilehash: 23c2b24a830b6d1ab7e0712fc1d1d70056f5d736
+ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Perguntas mais frequentes sobre o Azure Information Protection
 
@@ -96,7 +96,7 @@ Atualmente, não há uma diferença na definição de [proprietário de Rights M
 
 - Para o Windows Server FCI: Pode definir o proprietário de Rights Management seja uma conta única para todos os ficheiros ou dinamicamente definir o proprietário de Rights Management para cada ficheiro. Para definir dinamicamente o proprietário de Rights Management, utilize o **- OwnerMail [Source File Owner Email]** parâmetro e valor. Esta configuração obtém o endereço de correio eletrónico do utilizador do Active Directory utilizando o nome da conta de utilizador na propriedade proprietário do ficheiro.
 
-- Para a análise do Azure Information Protection: pode definir o proprietário de Rights Management seja uma conta única para todos os ficheiros, mas dinamicamente não é possível definir o proprietário de Rights Management para cada ficheiro. Para configurar a conta, especifique o **- DefaultOwner** parâmetro opcional para o [configuração scanner](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration?view=azureipps#optional-parameters).
+- Para a análise do Azure Information Protection: pode definir o proprietário de Rights Management seja uma conta única para todos os ficheiros no arquivo de dados especificado, mas dinamicamente não é possível definir o proprietário de Rights Management para cada ficheiro. Para configurar a conta, especifique o **- DefaultOwner** parâmetro para o [perfil do repositório de dados](/powershell/module/azureinformationprotection/Set-AIPScannerRepository?view=azureipps#optional-parameters).
 
 Quando o verificador protege os ficheiros em sites do SharePoint e bibliotecas, o proprietário de Rights Management dinamicamente definido para cada ficheiro ao utilizar o valor de autor do SharePoint.
 

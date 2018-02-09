@@ -4,17 +4,17 @@ description: "Quando atribui uma etiqueta a um documento ou a um e-mail pode sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2017
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 99aba6560f9dcdbd564f317e8d9e0ce89845f4a9
-ms.sourcegitcommit: f78f5209f0e19c6edfd1815d76e0e9750b4ce71d
+ms.openlocfilehash: 01208dda12b5989e546c1042b48c17e166d48687
+ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Como configurar uma etiqueta para marcas visuais para o Azure Information Protection
 
@@ -87,6 +87,38 @@ Pode utilizar as seguintes variáveis na cadeia de texto para o seu cabeçalho, 
 - `${Event.DateTime}` para a data e hora quando a etiqueta selecionada foi definida. Por exemplo: 16/8/2016 13:30
 
 Exemplo: se especificar a cadeia `Document: ${item.name}  Classification: ${item.label}` para o rodapé de etiqueta **Geral**, o texto do rodapé aplicado a um documento chamado projeto.docx será **Documento: projeto.docx Classificação: Geral**.
+
+## <a name="setting-different-visual-markings-for-word-excel-powerpoint-and-outlook"></a>Definição diferentes visuais para Word, Excel, PowerPoint e Outlook
+
+Esta definição está atualmente em pré-visualização e requer a versão de pré-visualização do cliente Azure Information Protection.
+
+Por predefinição, as marcas visuais que especificar são aplicadas entre Word, Excel, PowerPoint e Outlook. No entanto, pode especificar marcas visuais por tipo de aplicação do Office quando utilizar uma instrução de variável "If.App" na cadeia de texto e identifique o tipo de aplicação utilizando os valores **Word**, **Excel**, **PowerPoint**, ou **Outlook**. Também pode abbreviate estes valores, que é necessário se pretender especificar mais do que um na mesma instrução If.App.
+
+Utilize a seguinte sintaxe:
+
+    ${If.App.<application type>}<your visual markings text> ${If.End}
+
+Esta sintaxe nesta instrução diferencia maiúsculas de minúsculas.
+
+Exemplos:
+
+- **Definir o texto do cabeçalho para documentos do Word apenas:**
+    
+    `${If.App.Word}This Word document is sensitive ${If.End}`
+    
+    No Word documento cabeçalhos só, a etiqueta se aplica o texto do cabeçalho "neste documento do Word é sensível a maiúsculas e minúsculas". O texto do cabeçalho não é aplicado a outras aplicações do Office.
+
+- **Definir o texto do rodapé para Word, Excel e o Outlook e o texto do rodapé diferente para o PowerPoint:**
+    
+    `${If.App.WXO}This content is confidential. ${If.End}${If.App.PowerPoint}This presentation is confidential. ${If.End}`
+    
+    No Word, Excel e o Outlook, a etiqueta aplica-se o texto do rodapé "este conteúdo é confidencial." Nos PowerPoint, a etiqueta aplica-se o texto do rodapé "desta apresentação é confidencial."
+
+- **Definir o texto da marca de água específico para Word e ao PowerPoint e, em seguida, marca d'água texto para Word, Excel e PowerPoint:**
+    
+    `${If.App.WP}This content is ${If.End}Confidential`
+    
+    No Word e PointPoint, a etiqueta se aplica o texto da marca de água "este conteúdo é confidencial". No Excel, a etiqueta aplica-se o texto da marca de água "Confidencial". No Outlook, a etiqueta não qualquer texto da marca de água porque as marcas d'água como marcas visuais não são suportadas para o Outlook.
 
 ### <a name="setting-the-font-name"></a>O nome de tipo de letra da definição
 

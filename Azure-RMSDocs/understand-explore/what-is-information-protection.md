@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 0eeb9a6cf8eb819c19a32dbcf76e4d0104c18b99
-ms.sourcegitcommit: ae4cdee7211796182c47a11c1853232464673834
+ms.openlocfilehash: c3bbf2a9e0fee14ddeb2f18fa5671209ad92cfd4
+ms.sourcegitcommit: 6bfbf08b935a7a60e437af44aab72db13f87eff1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="what-is-azure-information-protection"></a>O que é o Azure Information Protection?
 
@@ -112,7 +112,7 @@ Quando anexa documentos do Office para estes e-mails, estes documentos são auto
 - Yammer: [Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
 
-Além disso, **Microsoft Ignite 2017** tem demasiadas sessões para o Azure Information Protection, que estão disponíveis a pedido. Para obter um resumo dos anúncios que tiverem sido feitas este conferência, consulte [Novidades do Azure Information Protection @ Ignite 2017](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/). 
+Além disso, **Microsoft Ignite 2017** tem demasiadas sessões para o Azure Information Protection, que estão disponíveis a pedido. Para obter um resumo dos anúncios que tiverem sido feitas este conferência, consulte [Novidades do Azure Information Protection @ Ignite 2017](https://cloudblogs.microsoft.com/ENTERPRISEMOBILITY/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/). 
 
 Pode [pesquisar e localizar](https://myignite.microsoft.com/videos?q=%2522azure%2520information%2520protection%2522) as sessões que estão marcadas para o Azure Information Protection no Web site do Ignite. No entanto, recomendamos que comece com as sessões seguintes:
 
@@ -129,7 +129,7 @@ Pode [pesquisar e localizar](https://myignite.microsoft.com/videos?q=%2522azure%
 
 ## <a name="next-steps"></a>Próximos passos
 
-Leia a publicação do blogue [Azure Information Protection: Ready, set, protect! (Azure Information Protection: deixar tudo a postos para proteger informações)](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/)
+Leia a publicação do blogue [Azure Information Protection: Ready, set, protect! (Azure Information Protection: deixar tudo a postos para proteger informações)](https://cloudblogs.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/)
 
 Configurar e ver o Azure Information Protection para si, com o nosso passo 5 [tutorial de início rápido](../get-started/infoprotect-quick-start-tutorial.md). Ou, se estiver pronto para implementar este serviço para a sua organização, consulte o [plano de implementação do Azure Information Protection](../plan-design/deployment-roadmap.md).
 

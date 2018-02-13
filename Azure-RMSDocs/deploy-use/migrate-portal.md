@@ -12,27 +12,27 @@ ms.technology: techgroup-identity
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 367189865266e85df967c398b17153d970241e98
-ms.sourcegitcommit: fc789ce08821e031d3a2b22d850b4318302d3585
+ms.openlocfilehash: 64d0ab217bd6e79edb606a07c0aedc4af3e60a9f
+ms.sourcegitcommit: 6bfbf08b935a7a60e437af44aab72db13f87eff1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Tarefas que utilizou para fazer com o portal clássico do Azure
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
-Utilizado para o portal clássico do Azure para gerir o serviço Azure Rights Management e precisarem de alguns ajudar a transição para o portal do Azure? 
+Utilizado para o portal clássico do Azure para gerir o serviço Azure Rights Management e precisarem de alguns ajudar a transição para o portal do Azure?
 
-Portal clássico do Azure extinto **08 de Janeiro de 2018**. Após esta data, não será capaz de gerir o serviço Azure Rights Management e os modelos personalizados no portal clássico. Se tentar aceder ao portal clássico, verá uma ligação que leva-o para o novo portal do Azure. 
+Portal clássico do Azure extinto **08 de Janeiro de 2018**. Após esta data, não será capaz de gerir o serviço Azure Rights Management e os modelos personalizados no portal clássico. Se tentar aceder ao portal clássico, verá uma ligação que leva-o para o novo portal do Azure.
 
-Para mais informações sobre a extinção do portal clássica, consulte o anúncio de mensagem de blogue: [Marching no futuro da experiência de administração do Azure AD: extinguir o portal clássico do Azure](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/). Para a extensão temporária para a data de retirada original, consulte [atualizações de extinção de experiência do portal clássica do Azure AD e a migração de políticas de acesso condicional](https://cloudblogs.microsoft.com/enterprisemobility/2017/11/29/update-on-retirement-of-azure-ad-classic-portal-experience-and-migration-of-conditional-access-policies/).
+Para mais informações sobre a extinção do portal clássica, consulte o anúncio de mensagem de blogue: [Marching no futuro da experiência de administração do Azure AD: extinguir o portal clássico do Azure](https://cloudblogs.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/). Para a extensão temporária para a data de retirada original, consulte [atualizações de extinção de experiência do portal clássica do Azure AD e a migração de políticas de acesso condicional](https://cloudblogs.microsoft.com/enterprisemobility/2017/11/29/update-on-retirement-of-azure-ad-classic-portal-experience-and-migration-of-conditional-access-policies/).
 
 ## <a name="how-to-do-your-familiar-admin-tasks"></a>Como fazer as tarefas administrativas familiar
 
 Utilize as seguintes informações para ajudá-lo rapidamente transição para o portal atual.
 
-No entanto, os clientes que tem uma subscrição para o Office 365 US Government (nuvem de Comunidade Government) atualmente não é possível utilizar o portal do Azure em, em vez disso, tem de utilizar [PowerShell](configure-templates-with-powershell.md) para gerir os seus modelos. 
+No entanto, os clientes que tem uma subscrição para o Office 365 US Government (nuvem de Comunidade Government) atualmente não é possível utilizar o portal do Azure em, em vez disso, tem de utilizar [PowerShell](configure-templates-with-powershell.md) para gerir os seus modelos.
 
 
 |Portal clássico do Azure|Como efetuar esta tarefa no portal do Azure
@@ -45,7 +45,7 @@ No entanto, os clientes que tem uma subscrição para o Office 365 US Government
 |Copiar um modelo|Não é possível copiar um modelo no portal do Azure. Se quiser duas etiquetas ter as mesmas definições de proteção, tem de definir as permissões em cada etiqueta. <br /><br />Para obter mais informações, consulte [para configurar uma etiqueta para a proteção Rights Management](configure-policy-protection.md#to-configure-a-label-for-rights-management-protection).
 |Eliminar um modelo|Eliminar modelos pode resultar em dados inacessíveis, pelo que o portal do Azure não suporta esta ação. No entanto, pode eliminar a etiqueta e, em seguida, utilizar o PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) cmdlet para remover o modelo. <br /><br />Para obter mais informações, consulte [como eliminar ou reordenar uma etiqueta para o Azure Information Protection](configure-policy-delete-reorder.md).
 |Suporte de vários idiomas|Do **GERIR** selecção de menu, selecione **idiomas** para exportar os campos personalizáveis, que incluem o nome do modelo e a descrição. Traduzir as cadeias e, em seguida, importe estes cadeias para o portal. <br /><br />Para obter mais informações, consulte [como configurar as etiquetas e modelos para idiomas diferentes no Azure Information Protection](configure-policy-languages.md).
-|Os relatórios de gestão de direitos|Utilizar o PowerShell [Get-AadrmUsageLog](/powershell/module/aadrm/Get-AadrmUsageLog) cmdlet para transferir os registos de utilização para o serviço Azure Rights Management. Em seguida, pode utilizar estes dados para criar relatórios personalizados. <br /><br />Para obter mais informações, consulte [Registar e analisar a utilização do serviço Azure Rights Management](log-analyze-usage.md).<br /><br />Sugestão: Procure anúncios no [blogue Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) para uma solução de relatórios nova e centralizada para o Azure Information Protection. 
+|Os relatórios de gestão de direitos|Utilizar o PowerShell [Get-AadrmUsageLog](/powershell/module/aadrm/Get-AadrmUsageLog) cmdlet para transferir os registos de utilização para o serviço Azure Rights Management. Em seguida, pode utilizar estes dados para criar relatórios personalizados. <br /><br />Para obter mais informações, consulte [Registar e analisar a utilização do serviço Azure Rights Management](log-analyze-usage.md).<br /><br />Sugestão: Procure anúncios no [blogue Enterprise Mobility and Security](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection) para uma solução de relatórios nova e centralizada para o Azure Information Protection.
 |Ativar e desativar o serviço Rights Management|Do **GERIR** opções de menu, selecionadas **definições RMS** ou **ativação da proteção**. Esta opção está no processo de ser mudado.<br /><br />Para obter mais informações, consulte [como ativar o Azure Rights Management a partir do portal do Azure](activate-azure.md).
 
 Antes de editar os modelos ou convertê-las em etiquetas no portal do Azure, consulte [considerações para modelos no portal do Azure](configure-policy-templates.md#considerations-for-templates-in-the-azure-portal).
@@ -59,7 +59,7 @@ Nova funcionalidade no portal do Azure:
 
 - Pode converter modelos etiquetas, para que gerir um único objeto em vez de gerir um modelo e etiqueta de forma independente. Para obter instruções, consulte [converter modelos etiquetas](configure-policy-templates.md#to-convert-templates-to-labels).
 
-Suporte para a função de administrador de segurança: enquanto tiver de iniciar sessão no portal clássico do Azure como um administrador global para configurar o Azure Rights Management, pode iniciar sessão portal do Azure para configurar o Azure Information Protection utilizando uma conta que tenha o administrador global ou função de administrador de segurança. 
+Suporte para a função de administrador de segurança: enquanto tiver de iniciar sessão no portal clássico do Azure como um administrador global para configurar o Azure Rights Management, pode iniciar sessão portal do Azure para configurar o Azure Information Protection utilizando uma conta que tenha o administrador global ou função de administrador de segurança.
 
 Os cmdlets do PowerShell para criar e gerir modelos e para ativar ou desativar o remain de serviço suportados sem alterações.
 

@@ -13,20 +13,20 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 776293c73b5ca63d0bfd409d8330bfe8295c792e
-ms.sourcegitcommit: 972acdb468ac32a28e3e24c90694aff4b75206fc
+ms.openlocfilehash: ca3af42d227c349779a07f61deb8feb7571e6250
+ms.sourcegitcommit: 6bfbf08b935a7a60e437af44aab72db13f87eff1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Perguntas mais frequentes sobre a proteção de dados no Azure Information Protection
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
-Tem uma pergunta sobre o serviço de proteção de dados, o Azure Rights Management, do Azure Information Protection? Verifique se a resposta está aqui. 
+Tem uma pergunta sobre o serviço de proteção de dados, o Azure Rights Management, do Azure Information Protection? Verifique se a resposta está aqui.
 
 ## <a name="do-files-have-to-be-in-the-cloud-to-be-protected-by-azure-rights-management"></a>Os ficheiros têm de estar na cloud para serem protegidos pelo Azure Rights Management?
-Não, este é um equívoco comum. O serviço Azure Rights Management (e a Microsoft) não vê nem armazena os seus dados como parte do processo de proteção das informações. As informações que protege nunca são enviadas para ou armazenadas no Azure, a menos que as armazene explicitamente no Azure ou utilize outro serviço cloud que as armazene no Azure. 
+Não, este é um equívoco comum. O serviço Azure Rights Management (e a Microsoft) não vê nem armazena os seus dados como parte do processo de proteção das informações. As informações que protege nunca são enviadas para ou armazenadas no Azure, a menos que as armazene explicitamente no Azure ou utilize outro serviço cloud que as armazene no Azure.
 
 Para obter mais informações, veja [Como funciona o Azure RMS Under the hood (Como funciona o Azure RMS? Nos bastidores)](../understand-explore/how-does-it-work.md) para compreender como uma fórmula de cola secreta criada e armazenada no local é protegida pelo serviço Azure Rights Management, mas permanece no local.
 
@@ -40,9 +40,9 @@ Estas tecnologias de encriptação são complementares e para as utilizar tem de
 
 **Bring Your Own Key – Traga a Sua Própria Chave** (BYOK), no contexto do Azure Information Protection, é quando cria a sua própria chave no local para a proteção do Azure Rights Management. Em seguida, transfere essa chave para um módulo de segurança de hardware (HSM) no Azure Key Vault, onde continua a ser o proprietário e a gerir a sua chave. Se não o fizer, a proteção do Azure Rights Management utilizará uma chave criada e gerida automaticamente no Azure. Esta configuração predefinida é referida como "gerida pela Microsoft" em vez de "gerida pelo cliente" (opção BYOK).
 
-Para obter mais informações sobre o BYOK e se deve escolher esta topologia de chaves para a sua organização, veja [Planear e implementar a sua chave de inquilino do Azure Information Protection](../plan-design/plan-implement-tenant-key.md). 
+Para obter mais informações sobre o BYOK e se deve escolher esta topologia de chaves para a sua organização, veja [Planear e implementar a sua chave de inquilino do Azure Information Protection](../plan-design/plan-implement-tenant-key.md).
 
-**Hold your own key – tenha a sua própria chave** (HYOK), no contexto do Azure Information Protection, destina-se a poucas organizações com um subconjunto de documentos ou e-mails que não podem ser protegidos por uma chave armazenada na cloud. Para estas organizações, esta restrição aplica-se mesmo que tenham criado e gerido a chave através de BYOK. A restrição pode dever-se muitas vezes a motivos de regulamentação e conformidade e a configuração HYOK só deve ser aplicada a informações "Confidenciais", que nunca serão partilhadas fora da organização, que serão consumidas apenas na rede interna e que não precisam de ser acedidas a partir de dispositivos móveis. 
+**Hold your own key – tenha a sua própria chave** (HYOK), no contexto do Azure Information Protection, destina-se a poucas organizações com um subconjunto de documentos ou e-mails que não podem ser protegidos por uma chave armazenada na cloud. Para estas organizações, esta restrição aplica-se mesmo que tenham criado e gerido a chave através de BYOK. A restrição pode dever-se muitas vezes a motivos de regulamentação e conformidade e a configuração HYOK só deve ser aplicada a informações "Confidenciais", que nunca serão partilhadas fora da organização, que serão consumidas apenas na rede interna e que não precisam de ser acedidas a partir de dispositivos móveis.
 
 Para estas exceções (normalmente, menos de 10% de todos os conteúdos que têm de ser protegidos), as organizações podem utilizar uma solução no local, os Serviços de Gestão de Direitos do Active Directory, para criar a chave que permanece no local. Com esta solução, os computadores obtêm a política do Azure Information Protection a partir da cloud, mas estes conteúdos identificados podem ser protegidos com a chave no local.
 
@@ -64,7 +64,7 @@ Embora o conector do Rights Management registe mensagens de erro, aviso e inform
 
 ## <a name="do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators"></a>Tenho de ser um administrador global para configurar o Azure RMS ou posso delegar noutros administradores?
 
-Os administradores globais de um inquilino do Office 365 ou inquilino do Azure AD podem obviamente executar todas as tarefas administrativas do serviço Azure Rights Management. No entanto, se quiser atribuir permissões administrativas a outros utilizadores, pode fazê-lo utilizando o cmdlet do PowerShell do Azure RMS, [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator). Pode atribuir esta função administrativa por conta de utilizador ou por grupo. Existem duas funções disponíveis: **Administrador Global** e **Administrador do Conector**. 
+Os administradores globais de um inquilino do Office 365 ou inquilino do Azure AD podem obviamente executar todas as tarefas administrativas do serviço Azure Rights Management. No entanto, se quiser atribuir permissões administrativas a outros utilizadores, pode fazê-lo utilizando o cmdlet do PowerShell do Azure RMS, [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator). Pode atribuir esta função administrativa por conta de utilizador ou por grupo. Existem duas funções disponíveis: **Administrador Global** e **Administrador do Conector**.
 
 Como estes nomes de função sugerem, a primeira função atribui permissões para executar todas as tarefas administrativas do Azure Rights Management (sem torná-los administrador global para outros serviços cloud) e a segunda função concede permissões para executar apenas o conector do Rights Management (RMS).
 
@@ -74,12 +74,12 @@ Factos a ter em conta:
 
 - Os utilizadores aos quais atribui a função de administrador global para o Azure RMS têm de utilizar os comandos do PowerShell do Azure RMS para configurarem o Azure RMS. Para ajudar a encontrar os cmdlets certos para tarefas específicas, veja [Administrar o Azure Rights Management Utilizando o Windows PowerShell](../deploy-use/administer-powershell.md).
 
-- Se tiver configurado [controlos de inclusão](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), esta configuração não afeta a capacidade para administrar o Azure RMS, exceto o conector RMS. Por exemplo, se tiver configurado controlos de inclusão de para restringir a capacidade de proteger conteúdo ao grupo "Departamento de TI", a conta utilizada para instalar e configurar o conector do RMS tem de ser um membro desse grupo. 
+- Se tiver configurado [controlos de inclusão](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), esta configuração não afeta a capacidade para administrar o Azure RMS, exceto o conector RMS. Por exemplo, se tiver configurado controlos de inclusão de para restringir a capacidade de proteger conteúdo ao grupo "Departamento de TI", a conta utilizada para instalar e configurar o conector do RMS tem de ser um membro desse grupo.
 
-- Nenhum administrador para o Azure RMS (por exemplo, administrador global do inquilino ou um administrador global do Azure RMS) pode remover automaticamente a proteção de documentos ou e-mails que foram protegidos pelo Azure RMS. Apenas os utilizadores aos quais estão atribuídos superutilizadores para o Azure RMS podem fazê-lo, desde que a funcionalidade de superutilizador esteja ativada. No entanto, o administrador global do inquilino e qualquer administrador global do Azure RMS pode atribuir utilizadores como superutilizadores, incluindo a sua própria conta. Também pode ativar a funcionalidade de superutilizador. Estas ações são registadas no registo de administrador do Azure RMS. Para obter mais informações, veja a secção de melhores práticas em [Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados](../deploy-use/configure-super-users.md). 
+- Nenhum administrador para o Azure RMS (por exemplo, administrador global do inquilino ou um administrador global do Azure RMS) pode remover automaticamente a proteção de documentos ou e-mails que foram protegidos pelo Azure RMS. Apenas os utilizadores aos quais estão atribuídos superutilizadores para o Azure RMS podem fazê-lo, desde que a funcionalidade de superutilizador esteja ativada. No entanto, o administrador global do inquilino e qualquer administrador global do Azure RMS pode atribuir utilizadores como superutilizadores, incluindo a sua própria conta. Também pode ativar a funcionalidade de superutilizador. Estas ações são registadas no registo de administrador do Azure RMS. Para obter mais informações, veja a secção de melhores práticas em [Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados](../deploy-use/configure-super-users.md).
 
 >[!NOTE]
-> Modelos e as novas opções de configuração da proteção do Azure Rights Management movido para o portal do Azure, que suporta a administradores de segurança para além de acesso de administrador global. 
+> Modelos e as novas opções de configuração da proteção do Azure Rights Management movido para o portal do Azure, que suporta a administradores de segurança para além de acesso de administrador global.
 
 ## <a name="how-do-i-create-a-new-custom-template-in-the-azure-portal"></a>Como posso criar um novo modelo personalizado no portal do Azure?
 
@@ -91,7 +91,7 @@ Para obter mais informações sobre os modelos no portal do Azure, consulte [con
 
 Se o ficheiro foi protegido utilizando um modelo ou de etiqueta, não é necessário para voltar a proteger o documento. Modificar o modelo ou uma etiqueta ao fazer as alterações para os direitos de utilização ou adicionar novos grupos (ou os utilizadores) e, em seguida, guarde e publicar estas alterações:
 
-- Quando um utilizador não aceder ao documento antes de efetuar as alterações, as alterações entram em vigor assim que o utilizador abre o documento. 
+- Quando um utilizador não aceder ao documento antes de efetuar as alterações, as alterações entram em vigor assim que o utilizador abre o documento.
 
 - Quando um utilizador acedeu já o documento, estas alterações entram em vigor quando os respetivos [utilizar licença](../deploy-use/configure-usage-rights.md#rights-management-use-license) expira. Proteja o documento apenas se não puder aguardar a licença de utilização para expirar. Trocar de forma eficaz cria uma nova versão do documento e, por conseguinte, uma nova licença de utilização para o utilizador.
 
@@ -134,15 +134,15 @@ Em alternativa, pode adicionar utilizadores externos para modelos personalizados
 1. Especifique os endereços de e-mail externos e os seus direitos num objeto de definição de direitos, utilizando o [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) cmdlet para criar uma variável.
 
 2. Fornecer esta variável ao parâmetro RightsDefinition com o [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet.
-    
-    Para adicionar utilizadores a um modelo existente, tem de definir os objetos de definição de direitos para os utilizadores existentes nos modelos, além dos novos utilizadores. Para este cenário, poderá achar útil **exemplo 3: adicionar novos utilizadores e direitos para um modelo personalizado** do [exemplos](/powershell/module/aadrm/set-aadrmtemplateproperty#examples) secção para o cmdlet. 
+
+    Para adicionar utilizadores a um modelo existente, tem de definir os objetos de definição de direitos para os utilizadores existentes nos modelos, além dos novos utilizadores. Para este cenário, poderá achar útil **exemplo 3: adicionar novos utilizadores e direitos para um modelo personalizado** do [exemplos](/powershell/module/aadrm/set-aadrmtemplateproperty#examples) secção para o cmdlet.
 
 ## <a name="what-type-of-groups-can-i-use-with-azure-rms"></a>Tipo de grupos que pode utilizar com o Azure RMS?
 Para a maioria dos cenários, pode utilizar qualquer tipo de grupo no Azure AD que tenha um endereço de e-mail. Esta regra prática aplica-se sempre ao atribuir direitos de utilização, mas existem algumas exceções para administrar o serviço Azure Rights Management. Para obter mais informações, consulte [requisitos do Azure Information Protection para contas de grupo](../plan-design/prepare.md#azure-information-protection-requirements-for-group-accounts).
 
 ## <a name="how-do-i-send-a-protected-email-to-a-gmail-or-hotmail-account"></a>Como envio um e-mail protegido a uma conta do Gmail ou do Hotmail?
 
-Quando utiliza o Exchange Online e o serviço Azure Rights Management, apenas enviar o e-mail para o utilizador como uma mensagem protegida. Por exemplo, pode selecionar o novo **proteger** botão na barra de comando no Outlook na Web, utilize o Outlook **não reencaminhar** opção botão ou menu. Em alternativa, pode selecionar uma etiqueta de Azure Information Protection que aplica-se não reencaminhar para si e automaticamente classifica o e-mail. 
+Quando utiliza o Exchange Online e o serviço Azure Rights Management, apenas enviar o e-mail para o utilizador como uma mensagem protegida. Por exemplo, pode selecionar o novo **proteger** botão na barra de comando no Outlook na Web, utilize o Outlook **não reencaminhar** opção botão ou menu. Em alternativa, pode selecionar uma etiqueta de Azure Information Protection que aplica-se não reencaminhar para si e automaticamente classifica o e-mail.
 
 O destinatário verá uma opção para iniciar sessão na sua conta Gmail, Yahoo ou Microsoft e, em seguida, poderá ler o e-mail protegido. Em alternativa, que possam escolher a opção para um código de acesso único ler o e-mail num browser.
 
@@ -165,8 +165,8 @@ Abra o Outlook e crie um perfil com a conta escolar ou profissional do Office 36
 
 1. Na nova mensagem, no separador **Opções**, clique em **Permissões** e, em seguida, clique em **Verificar Credenciais**.
 
-2. Quando solicitado, especifique os detalhes da conta escolar ou profissional do Office 365 novamente e selecione **Iniciar sessão**. 
-    
+2. Quando solicitado, especifique os detalhes da conta escolar ou profissional do Office 365 novamente e selecione **Iniciar sessão**.
+
     Esta ação irá transferir os modelos do Azure Rights Management e **Verificar Credenciais** foi agora substituído por opções que incluem **Sem Restrições**, **Não Encaminhar** e quaisquer modelos do Azure Rights Management que estejam publicados para o seu inquilino. Já pode cancelar esta nova mensagem.
 
 Para proteger uma mensagem de e-mail ou um documento: no separador **Opções**, clique em **Permissões** e escolha uma opção ou um modelo que protege o seu e-mail ou documento.
@@ -179,7 +179,7 @@ Não. Neste cenário, o ficheiro temporário associado não contém dados do doc
 ## <a name="a-feature-i-am-looking-for-doesnt-seem-to-work-with-sharepoint-protected-librariesis-support-for-my-feature-planned"></a>A funcionalidade que procuro não funciona com bibliotecas protegidas do SharePoint. Planeiam oferecer suporte para a minha funcionalidade?
 Atualmente, o SharePoint suporta protegidos pelo RMS documentos ao utilizar IRM protegido bibliotecas, o que não suportam modelos de Rights Management, controlo de documentos e outras funcionalidades. Para obter mais informações veja a secção [SharePoint Online e SharePoint Server](../understand-explore/office-apps-services-support.md#sharepoint-online-and-sharepoint-server) no artigo [Aplicações e serviços do Office ](../understand-explore/office-apps-services-support.md).
 
-Se estiver interessado numa funcionalidade específica que ainda não é suportada, fique atento aos anúncios no [Blogue Enterprise Mobility and Security (em inglês)](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
+Se estiver interessado numa funcionalidade específica que ainda não é suportada, fique atento aos anúncios no [Blogue Enterprise Mobility and Security (em inglês)](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
 
 ## <a name="how-do-i-configure-one-drive-for-business-in-sharepoint-online-so-that-users-can-safely-share-their-files-with-people-inside-and-outside-the-company"></a>Como posso configurar o OneDrive para Empresas no SharePoint Online, para que os utilizadores possam partilhar os seus ficheiros de forma segura com pessoas dentro e fora da empresa?
 Por predefinição, enquanto administrador do Office 365, não lhe cabe a si configurar isto, mas sim aos utilizadores.
@@ -197,11 +197,11 @@ Utilize o [funcionalidade de Superutilizador](../deploy-use/configure-super-user
 
 ## <a name="when-i-test-revocation-in-the-document-tracking-site-i-see-a-message-that-says-people-can-still-access-the-document-for-up-to-30-daysis-this-time-period-configurable"></a>Quando testo a revogação no site de controlo do documento, vejo uma mensagem a indicar que as pessoas ainda podem aceder ao documento durante até 30 dias. Este período de tempo é configurável?
 
-Sim. Esta mensagem reflete o [utilizar licença](../deploy-use/configure-usage-rights.md#rights-management-use-license) para esse ficheiro específico. 
+Sim. Esta mensagem reflete o [utilizar licença](../deploy-use/configure-usage-rights.md#rights-management-use-license) para esse ficheiro específico.
 
 Se revogar um ficheiro, essa ação só poderá ser aplicada quando o utilizador autenticar para o serviço Azure Rights Management. Por isso, se um ficheiro tiver um período de validade de licença de utilização de 30 dias e o utilizador já tiver aberto o documento, esse utilizador continuará a ter acesso ao documento enquanto a licença de utilização durar. Quando a licença de utilização expirar, o utilizador terá de ser novamente autenticado. Nessa altura, será rejeitado o acesso ao utilizador porque o documento já estará revogado.
 
-O utilizador que protegeu o documento, o [emissor do Rights Management](../deploy-use/configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) está isento desta revogação e terá sempre acesso aos respetivos documentos. 
+O utilizador que protegeu o documento, o [emissor do Rights Management](../deploy-use/configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) está isento desta revogação e terá sempre acesso aos respetivos documentos.
 
 O valor predefinido para o período de validade da licença de utilização para um inquilino é 30 dias e esta definição pode ser substituída por uma definição mais restritiva num etiqueta ou modelo. Para obter mais informações sobre a licença de utilização e como configurá-lo, consulte o [utilizar a gestão de direitos de licença](../deploy-use/configure-usage-rights.md#rights-management-use-license) documentação.
 
@@ -217,5 +217,3 @@ Conforme estes exemplos demonstram, mesmo que todas as plataformas e todos os so
 Apesar do nome e do aspeto, **Não Reencaminhar** não é o oposto do direito de Reencaminhar ou um modelo. Na realidade, é um conjunto de direitos que incluem restringir a cópia, impressão e gravação de anexos, para além de restringir o reencaminhamento de e-mails. Os direitos são aplicados dinamicamente aos utilizadores através de destinatários escolhidos e não estaticamente atribuídos pelo administrador. Para obter mais informações, veja a secção [Opção Não Reencaminhar para e-mails](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) em [Configurar os direitos de utilização do Azure Rights Management](../deploy-use/configure-usage-rights.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-

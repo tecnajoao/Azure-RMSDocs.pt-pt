@@ -4,7 +4,7 @@ description: "As instruções e as informações para os administradores gerirem
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/06/2018
+ms.date: 02/12/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 27799ff64e8c224c64b0ffc858b79818650d74af
-ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
+ms.openlocfilehash: 33489f3d1b7b4d5e4b34b95ea5fd1f9641d0ff0c
+ms.sourcegitcommit: 6bfbf08b935a7a60e437af44aab72db13f87eff1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guia do administrador: Utilizar o PowerShell com o cliente Azure Information Protection
 
@@ -24,9 +24,7 @@ ms.lasthandoff: 02/09/2018
 
 Quando instala o cliente Azure Information Protection, os comandos do PowerShell são instalados automaticamente. Isto permite-lhe gerir o cliente através da execução de comandos que pode colocar em scripts para a automatização.
 
-Os cmdlets são instalados com o módulo do PowerShell **AzureInformationProtection**. Este módulo substitui o módulo RMSProtection que é instalado com a Ferramenta de Proteção RMS. Se tiver a ferramenta RMSProtection instalada ao instalar o cliente do Azure Information Protection, o módulo RMSProtection é automaticamente desinstalado.
-
-O módulo de AzureInformationProtection inclui todos os cmdlets do Rights Management da ferramenta de proteção do RMS. Também existem novos cmdlets que utilizam o serviço de proteção de informações do Azure (AIP) para etiquetagem. Por exemplo:
+Os cmdlets são instalados com o módulo do PowerShell **AzureInformationProtection**. Este módulo inclui todos os cmdlets de gestão de direitos que foram anteriormente na ferramenta de proteção do RMS. Também existem novos cmdlets que utilizam o serviço de proteção de informações do Azure (AIP) para etiquetagem. Por exemplo:
 
 |Cmdlet de etiquetagem|Utilização de exemplo|
 |----------------|---------------|
@@ -42,7 +40,7 @@ Para obter uma lista de todos os cmdlets e o artigo de ajuda correspondente, vej
 
 Este módulo é instalado em **ProgramFiles (x86) \Microsoft Azure Information Protection** e adiciona esta pasta à variável do sistema **PSModulePath**. O ficheiro .dll deste módulo é denominado **AIP.dll**.
 
-Como com o módulo RMSProtection, a versão atual do módulo AzureInformationProtection tem as seguintes limitações:
+A versão atual do módulo AzureInformationProtection tem as seguintes limitações:
 
 - Pode desproteger pastas pessoais do Outlook (ficheiros .pst). No entanto, atualmente, não pode proteger nativamente estes ficheiros ou outros ficheiros de contentor através deste módulo do PowerShell.
 

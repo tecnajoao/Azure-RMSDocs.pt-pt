@@ -4,7 +4,7 @@ description: "Instruções para a ativação de proteção no portal do Azure pa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/17/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.custom: askipteam
 ms.assetid: 4e886f5a-f535-4207-b8c4-8e0376c0758e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 430e84ac0a634052eb48e19347eafca436c47659
-ms.sourcegitcommit: 0ef66a8479b4105c00bf1b1df46d2ddf044b7670
+ms.openlocfilehash: 4c492f3a9075d5c560c2ec83b1371dc374b77bba
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-azure-portal"></a>Como ativar o Azure Rights Management a partir do portal do Azure
 
@@ -25,9 +25,9 @@ ms.lasthandoff: 11/18/2017
 
 Utilize estas instruções se pretender ativar o serviço Azure Rights Management (Azure RMS) do portal do Azure.
 
-1. Se ainda não o tiver feito, abra uma nova janela do browser e inicie sessão para o [portal do Azure](https://portal.azure.com) como um administrador de segurança ou um administrador global. Em seguida, navegue para o painel **Azure Information Protection**.
+1. Se ainda não o tiver feito, abra uma nova janela do browser e [inicie sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal). Em seguida, navegue para o painel **Azure Information Protection**.
     
-    Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
+    Por exemplo, no menu hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
     
     Se ainda não a aceder ao painel do Azure Information Protection antes, consulte o uso [passos adicionais](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time) para adicionar este painel no portal.
     

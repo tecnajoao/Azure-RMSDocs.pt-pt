@@ -4,7 +4,7 @@ description: "Tarefas de administração de uma rapidamente no portal do Azure q
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/08/2018
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 64d0ab217bd6e79edb606a07c0aedc4af3e60a9f
-ms.sourcegitcommit: 6bfbf08b935a7a60e437af44aab72db13f87eff1
+ms.openlocfilehash: 5f160d766abb4a81864ac1ff466362b8ae24027d
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Tarefas que utilizou para fazer com o portal clássico do Azure
 
@@ -37,7 +37,7 @@ No entanto, os clientes que tem uma subscrição para o Office 365 US Government
 
 |Portal clássico do Azure|Como efetuar esta tarefa no portal do Azure
 |-----------|--------------------|
-|As definições de configuração de acesso pela primeira vez|1. Inicie sessão no portal do Azure como um administrador global ou o administrador de segurança para o seu inquilino.<br /><br />2. No menu do hub, clique em **Novo** e, em seguida, na lista **MARKETPLACE**, selecione **Security + Identity**.<br /><br />3. No **segurança + identidade** painel, do **aplicações em destaque** lista, selecione **Azure Information Protection**. Em seguida, no **Azure Information Protection** painel, clique em **criar**.<br /><br />Esta ação cria o **Azure Information Protection** painel para que a próxima vez que iniciar sessão no portal, pode selecionar o serviço do hub **mais serviços** lista.
+|As definições de configuração de acesso pela primeira vez|1. [Inicie sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal).<br /><br />2. No menu do hub, clique em **Novo** e, em seguida, na lista **MARKETPLACE**, selecione **Security + Identity**.<br /><br />3. No **segurança + identidade** painel, do **aplicações em destaque** lista, selecione **Azure Information Protection**. Em seguida, no **Azure Information Protection** painel, clique em **criar**.<br /><br />Esta ação cria o **Azure Information Protection** painel para que a próxima vez que iniciar sessão no portal, pode selecionar o serviço do hub **mais serviços** lista.
 |Criar um novo modelo|Criar uma etiqueta que se aplica a proteção e utilizar **definir permissões** para definir as permissões, a expiração e acesso offline. <br /><br />Nos bastidores, esta configuração cria um novo modelo personalizado que possam ser acedido por serviços e aplicações que se integram com modelos do Rights Management.<br /><br />Para obter mais informações, consulte [para criar um novo modelo](configure-policy-templates.md#to-create-a-new-template).
 |Edite propriedades do modelo: <br /><br />-Modelo nome e descrição<br /><br />-Direitos de utilização, a expiração de conteúdo e definições de acesso offline|Se ainda não o tiver feito deste modo, [converter o modelo para uma etiqueta](configure-policy-templates.md#to-convert-templates-to-labels), e, em seguida, efetue o seguinte<br /><br />1. Alterar o nome de etiqueta e descrição<br /><br />2. Altere as definições de proteção na etiqueta para atualizar as permissões, a expiração e as definições de acesso offline.<br /><br />Para obter mais informações, consulte [para configurar uma etiqueta para a proteção Rights Management](configure-policy-protection.md#to-configure-a-label-for-rights-management-protection).
 |Arquivar um modelo|Defina o estado da etiqueta **desativado**.
@@ -59,10 +59,9 @@ Nova funcionalidade no portal do Azure:
 
 - Pode converter modelos etiquetas, para que gerir um único objeto em vez de gerir um modelo e etiqueta de forma independente. Para obter instruções, consulte [converter modelos etiquetas](configure-policy-templates.md#to-convert-templates-to-labels).
 
-Suporte para a função de administrador de segurança: enquanto tiver de iniciar sessão no portal clássico do Azure como um administrador global para configurar o Azure Rights Management, pode iniciar sessão portal do Azure para configurar o Azure Information Protection utilizando uma conta que tenha o administrador global ou função de administrador de segurança.
+- Suporte para outras funções de administrador: enquanto tiver de iniciar sessão no portal clássico do Azure como um Administrador Global para configurar o Azure Rights Management, pode iniciar sessão portal do Azure para configurar o Azure Information Protection utilizando uma conta que tenha o funções administrativas a seguir: Administrador Global, o administrador de segurança ou o administrador de proteção de informações. Para obter mais informações sobre cada uma destas funções, consulte o [funções disponíveis](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) secção de documentação do Azure Active Directory.
 
-Os cmdlets do PowerShell para criar e gerir modelos e para ativar ou desativar o remain de serviço suportados sem alterações.
-
+Os cmdlets do PowerShell para criar e gerir modelos e para ativar ou desativar o serviço, permanecem suportados sem alterações.
 
 ## <a name="see-also"></a>Consulte também
 Para obter mais informações, consulte [configurar e gerir modelos de política do Azure Information Protection](../deploy-use/configure-policy-templates.md).

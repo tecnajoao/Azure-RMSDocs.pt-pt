@@ -4,7 +4,7 @@ description: "Para configurar definições e etiquetas diferentes para utilizado
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2018
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c7aa1c3aa18a246457c00a5a61c6004e55f76b4b
-ms.sourcegitcommit: 972acdb468ac32a28e3e24c90694aff4b75206fc
+ms.openlocfilehash: 9917abdc9b2f609064e221c31b2d793d963a61c0
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Como configurar a política do Azure Information Protection para utilizadores específicos com políticas de âmbito
 
@@ -30,13 +30,13 @@ As políticas de âmbito, tal como as etiquetas, são ordenadas no portal do Azu
 
 Como uma política de âmbito herda sempre as etiquetas e as definições da política global, as etiquetas da política global são apresentadas quando cria ou edita uma política de âmbito. No entanto, não pode editar as etiquetas da política global quando edita uma política de âmbito. No entanto, pode adicionar sublabels para estas etiquetas herdadas.
 
-Por exemplo, se tiver uma etiqueta com o nome **Confidencial** na política global, todos os utilizadores veem esta etiqueta. Não a pode remover ou reordenar com uma política de âmbito. Mas pode querer criar uma política com âmbito definido para o departamento de Marketing que adiciona um novo sublabel a confidencial, para que estes utilizadores vejam **confidencial \ promoções**. Também criar outra política no âmbito para o departamento de vendas que adiciona um novo sublabel a confidencial, para que estes utilizadores vejam **confidencial \ parceiros**. Cada sublabel, em seguida, pode ser configurado para diferentes definições e o sublabel está visível apenas para os utilizadores os respetivos departamentos.
+Por exemplo, se tiver uma etiqueta com o nome **Confidencial** na política global, todos os utilizadores veem esta etiqueta. Não é possível remover ou reordená-lo com a política de âmbito. Mas pode querer criar uma política com âmbito definido para o departamento de Marketing que adiciona um novo sublabel a confidencial, para que estes utilizadores vejam **confidencial \ promoções**. Também criar outra política no âmbito para o departamento de vendas que adiciona um novo sublabel a confidencial, para que estes utilizadores vejam **confidencial \ parceiros**. Cada sublabel, em seguida, pode ser configurado para diferentes definições e o sublabel está visível apenas para os utilizadores os respetivos departamentos.
 
 Para configurar uma política de âmbito para o Azure Information Protection:
 
-1. Se ainda não o tiver feito, abra uma nova janela do browser e inicie sessão para o [portal do Azure](https://portal.azure.com) como um administrador de segurança ou um administrador global. Em seguida, navegue para o painel **Azure Information Protection**. 
+1. Se ainda não o tiver feito, abra uma nova janela do browser e [inicie sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal). Em seguida, navegue para o painel **Azure Information Protection**.
 
-    Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
+    Por exemplo, no menu hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
 2. Do **políticas** selecção de menu, selecione **âmbito políticas**.
 

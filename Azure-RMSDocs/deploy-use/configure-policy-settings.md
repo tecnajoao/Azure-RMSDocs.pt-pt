@@ -4,17 +4,17 @@ description: "Configurar as definições na política do Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/13/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 49eb10a999f541cb9979576faac55ca28ff35a0b
-ms.sourcegitcommit: e089661f23f199b122b0ca9ba4748792b349bc27
+ms.openlocfilehash: be050f7307a83dcb229cf7a71fcf7bb5d2ec1380
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Como configurar as definições de política do Azure Information Protection
 
@@ -28,9 +28,9 @@ Tenha em atenção que as definições de política podem ter valores predefinid
 
 Configurar estas definições:
 
-1. Se que ainda não o fez, numa nova janela do browser, inicie sessão no [portal do Azure](https://portal.azure.com) como um administrador de segurança ou um administrador global. Em seguida, navegue para o painel **Azure Information Protection**. 
+1. Se ainda não o tiver feito, abra uma nova janela do browser e [inicie sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal). Em seguida, navegue para o painel **Azure Information Protection**.
     
-    Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
+    Por exemplo, no menu hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
 2. Se as definições que pretende configurar serão aplicada a todos os utilizadores, permaneça o **Azure Information Protection - política Global** painel.
     
@@ -46,7 +46,7 @@ Configurar estas definições:
         
         ![Aviso do Azure Information Protection se a etiqueta for imposta](../media/info-protect-enforce-labelv2.png)
         
-    - **Os utilizadores têm de fornecer uma justificação para reduzir a segurança da etiqueta de classificação, remover uma etiqueta ou remover a proteção**: quando define esta opção como **Ativado** e um utilizador realiza uma destas ações (como alterar a etiqueta **Público** para **Pessoal**), é-lhe pedido que forneça uma explicação para esta ação. Por exemplo, o utilizador pode explicar que o documento já não contém informações confidenciais. A ação e a justificação pelo motivo é registado no respetivo registo de eventos do Windows local: **registos de serviços e aplicações** > **Azure Information Protection**.  
+    - **Os utilizadores têm de fornecer uma justificação para reduzir a segurança da etiqueta de classificação, remover uma etiqueta ou remover a proteção**: quando define esta opção como **Ativado** e um utilizador realiza uma destas ações (como alterar a etiqueta **Público** para **Pessoal**), é-lhe pedido que forneça uma explicação para esta ação. Por exemplo, o utilizador pode explicar que o documento já não contém informações confidenciais. A ação e o motivo de justificação são registadas no respetivo registo de eventos do Windows local: **registos de serviços e aplicações** > **Azure Information Protection**.  
         
         ![Aviso do Azure Information Protection se a nova classificação for inferior](../media/info-protect-lower-justification.png)
         

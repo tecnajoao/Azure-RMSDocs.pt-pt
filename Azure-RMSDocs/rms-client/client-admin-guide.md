@@ -4,7 +4,7 @@ description: "Instruções e informações para administradores numa rede empres
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c338fe4258d6d8b20a4d8c285bc821981810b409
-ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
+ms.openlocfilehash: a7412378655ea75500bd1339c0ba41f677fe4d9a
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guia do administrador do cliente do Azure Information Protection
 
@@ -54,13 +54,13 @@ O cliente do Azure Information Protection inclui o seguinte:
 
 - Um módulo do PowerShell para aplicar e remover etiquetas de classificação e proteção de ficheiros. 
     
-    Este módulo inclui cmdlets para instalar e configurar o [scanner do Azure Information Protection](../deploy-use/deploy-aip-scanner.md) (atualmente em pré-visualização) que é executado como um serviço no Windows Server. Este serviço permite-lhe detetar, classificar e proteger os ficheiros nos arquivos de dados, como partilhas de rede e de bibliotecas do SharePoint Server.
+    Este módulo inclui cmdlets para instalar e configurar o [scanner do Azure Information Protection](../deploy-use/deploy-aip-scanner.md) que é executado como um serviço no Windows Server. Este serviço permite-lhe detetar, classificar e proteger os ficheiros nos arquivos de dados, como partilhas de rede e de bibliotecas do SharePoint Server.
 
 - O cliente do Rights Management que comunica com o Azure Rights Management (Azure RMS) ou os Serviços de Gestão de Direitos do Active Directory (AD RMS).
 
 O cliente do Azure Information Protection é mais adequado para funcionar com os respetivos serviços do Azure; o Azure Information Protection e o respetivo serviço de proteção de dados, o Azure Rights Management. No entanto, com algumas limitações, o cliente do Azure Information Protection também funciona com a versão no local do Rights Management, o AD RMS. Para ver uma comparação detalhada das funcionalidades suportadas pelo Azure Information Protection e pelo AD RMS, veja [Comparar o Azure Information Protection e o AD RMS](../understand-explore/compare-azure-rms-ad-rms.md). 
 
-Se tiver o AD RMS e quiser migrar para o Azure Information Protection, veja [Migrar do AD RMS para o Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+Se tiver o AD RMS e quiser migrar para o Azure Information Protection, consulte [Migrar do AD RMS para o Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
 
 ## <a name="should-you-deploy-the-azure-information-protection-client"></a>Deve implementar o cliente do Azure Information Protection?
@@ -73,7 +73,7 @@ Implemente o cliente do Azure Information Protection no caso de se aplicar algum
 
 - Quer executar scripts que classificam (e, opcionalmente, protegem) documentos ao utilizar comandos do PowerShell.
 
-- Pretende executar um serviço que Deteta, classifica (e, opcionalmente, protege) ficheiros que estão armazenados no local. Este serviço de scanner está atualmente em pré-visualização.
+- Pretende executar um serviço que Deteta, classifica (e, opcionalmente, protege) ficheiros que estão armazenados no local.
 
 - Quer ver documentos protegidos quando uma aplicação nativa para apresentar o ficheiro não está instalada ou não consegue abrir estes documentos.
 

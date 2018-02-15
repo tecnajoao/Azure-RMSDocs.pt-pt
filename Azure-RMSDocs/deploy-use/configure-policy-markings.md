@@ -4,17 +4,17 @@ description: "Quando atribui uma etiqueta a um documento ou a um e-mail pode sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/06/2018
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 01208dda12b5989e546c1042b48c17e166d48687
-ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
+ms.openlocfilehash: 53a6e42ef0ecdb1388c82e3af4090bb3d6778983
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Como configurar uma etiqueta para marcas visuais para o Azure Information Protection
 
@@ -52,9 +52,9 @@ Para documentos, as marcas visuais são aplicadas da seguinte forma:
 
 Utilize as seguintes instruções para configurar marcas visuais para uma etiqueta.
 
-1. Se ainda não o tiver feito, abra uma nova janela do browser e inicie sessão para o [portal do Azure](https://portal.azure.com) como um administrador de segurança ou um administrador global. Em seguida, navegue para o painel **Azure Information Protection**. 
+1. Se ainda não o tiver feito, abra uma nova janela do browser e [inicie sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal). Em seguida, navegue para o painel **Azure Information Protection**. 
     
-    Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
+    Por exemplo, no menu hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
 2. Se a etiqueta que pretende configurar será aplicada a todos os utilizadores, permaneça o **Azure Information Protection - política Global** painel.
     
@@ -92,7 +92,7 @@ Exemplo: se especificar a cadeia `Document: ${item.name}  Classification: ${item
 
 Esta definição está atualmente em pré-visualização e requer a versão de pré-visualização do cliente Azure Information Protection.
 
-Por predefinição, as marcas visuais que especificar são aplicadas entre Word, Excel, PowerPoint e Outlook. No entanto, pode especificar marcas visuais por tipo de aplicação do Office quando utilizar uma instrução de variável "If.App" na cadeia de texto e identifique o tipo de aplicação utilizando os valores **Word**, **Excel**, **PowerPoint**, ou **Outlook**. Também pode abbreviate estes valores, que é necessário se pretender especificar mais do que um na mesma instrução If.App.
+Por predefinição, as marcas visuais que especificar são aplicadas entre Word, Excel, PowerPoint e Outlook. No entanto, pode especificar marcas visuais por tipo de aplicação do Office quando utilizar uma instrução de variável "If.App" na cadeia de texto e identifique o tipo de aplicação utilizando os valores **Word**, **Excel**, **PowerPoint**, ou **Outlook**. Também pode abbreviate estes valores e abbreiwhich é necessário se pretender especificar mais do que um na mesma instrução If.App.
 
 Utilize a seguinte sintaxe:
 

@@ -4,7 +4,7 @@ description: "Informações sobre a personalização do cliente do Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/02/2018
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3ee5bd789b62261867d6de4f56efaa3890dc1a57
-ms.sourcegitcommit: bc47834ae7180491ed1d9bc9f69eab398bcdc0a8
+ms.openlocfilehash: 662ed627fc6138e1ff16efb731b209964784432f
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia de administração: Configurações personalizadas para o cliente Azure Information Protection
 
@@ -28,7 +28,7 @@ Algumas destas definições requerem a edição do registo e algumas utilizam de
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>Como configurar as definições avançadas de configuração de cliente no portal
 
-1. Caso ainda não o tenha feito, numa nova janela de browser, inicie sessão no [portal do Azure](https://portal.azure.com) como administrador de segurança ou administrador global e navegue para o painel **Azure Information Protection**.
+1. Se ainda não o tiver feito deste modo, numa nova janela do browser, [inicie sessão no portal do Azure](../deploy-use/configure-policy.md#signing-in-to-the-azure-portal)e, em seguida, navegue para o **Azure Information Protection** painel.
 
 2. No painel inicial do Azure Information Protection, selecione **Políticas de âmbito**.
 
@@ -54,7 +54,7 @@ Independentemente desta definição, o cliente do Azure Information Protection s
 
 ## <a name="suppress-the-initial-congratulations-welcome-page"></a>Suprimir as iniciais "parabéns!" Página de boas-vindas
 
-Quando o cliente Azure Information Protection é instalado pela primeira vez num computador e um utilizador abre o Word, Excel, PowerPoint ou o Outlook, um **Parabéns!** página é apresentada com instruções abreviadas como utilizar a nova barra do Information Protection para selecionar etiquetas. Pode suprimir esta página ao editar o registo.
+Quando o cliente Azure Information Protection é instalado pela primeira vez num computador e um utilizador abre o Word, Excel, PowerPoint ou Outlook, um **Parabéns!** página é apresentada com instruções abreviadas como utilizar a nova barra do Information Protection para selecionar etiquetas. Pode suprimir esta página ao editar o registo.
 
 Localize o seguinte nome de valor e defina os dados do valor para **0**:
 
@@ -192,7 +192,7 @@ Esta configuração utiliza uma [definição avançada de cliente](#how-to-confi
 
 Quando configurar esta definição, Outlook não se aplica a etiqueta predefinida que está configurada na política de proteção de informações do Azure para a definição **selecione a etiqueta predefinida**. Em vez disso, o Outlook pode aplicar uma etiqueta predefinida diferente ou sem etiqueta.
 
-Para aplicar uma etiqueta diferente, tem de especificar o ID da etiqueta. O valor de ID da etiqueta é apresentado no **etiqueta** painel, ao ver ou configurar a política do Azure Information Protection no portal do Azure. Para os ficheiros que tenham etiquetas aplicadas, também pode executar o [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) cmdlet do PowerShell para identificar o ID de etiqueta (MainLabelId ou SubLabelId). Quando uma etiqueta tiver etiquetas secundárias, sempre especificar o ID de apenas uma etiqueta secundária e não a etiqueta principal.
+Para aplicar uma etiqueta diferente, tem de especificar o ID da etiqueta. O valor de ID da etiqueta é apresentado no **etiqueta** painel, ao ver ou configurar a política do Azure Information Protection no portal do Azure. Para os ficheiros que tenham etiquetas aplicadas, também pode executar o [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) cmdlet do PowerShell para identificar o ID de etiqueta (MainLabelId ou SubLabelId). Quando uma etiqueta tem sublabels, sempre especificar o ID de apenas um sublabel e não a etiqueta principal.
 
 Por isso que Outlook não se aplica a etiqueta predefinida, especifique **nenhum**.
 
@@ -230,7 +230,7 @@ Como exemplo, tem uma coluna do SharePoint com o nome **classificação** que te
 
 Para identificar um documento do Office com um dos seguintes valores de classificação, defina **SyncPropertyName** para **classificação**, e **SyncPropertyState** para  **OneWay**. 
 
-Agora, quando um utilizador abre e guarda um destes documentos do Office, irá ser assinalada como **pública**, **geral**, ou **confidencial** se tiver etiquetas com estes nomes no seu Azure Política de proteção de informações. Se tiver etiquetas com estes nomes, o documento permanece sem etiqueta.
+Agora, quando um utilizador abre e guarda um destes documentos do Office, está assinalada como **pública**, **geral**, ou **confidencial** se tiver etiquetas com estes nomes no seu Azure Política de proteção de informações. Se tiver etiquetas com estes nomes, o documento permanece sem etiqueta.
 
 ## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Integração com a classificação de mensagem do Exchange para uma solução de etiquetagem do dispositivo móvel
 

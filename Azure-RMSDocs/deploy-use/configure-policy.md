@@ -4,7 +4,7 @@ description: "Para configurar a classificação, a etiquetagem e a proteção, t
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/25/2017
+ms.date: 02/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b04c7881f982b33094107b6de33920a83b17b960
-ms.sourcegitcommit: a7cdf911088fdf663e43894484530ea15150284f
+ms.openlocfilehash: 6b0556755597fe20755e7b798a24498a780b87b5
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/25/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurar a política do Azure Information Protection
 
@@ -44,9 +44,24 @@ Se a sua organização tem uma combinação de subscrições, é da responsabili
 
 Para obter mais informações sobre as subscrições, veja [De que subscrição preciso para o Azure Information Protection e que funcionalidades estão incluídas?](../get-started/faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
 
+## <a name="signing-in-to-the-azure-portal"></a>Iniciar sessão no portal do Azure
+
+Para iniciar sessão no portal do Azure, para configurar e gerir o Azure Information Protection:
+
+- Utilize a seguinte hiperligação: https://portal.azure.com
+
+- Utilizar uma conta que tenha um dos seguintes [funções de administrador](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
+    
+    - **Administrador de proteção de informações** (atualmente em pré-visualização)
+
+    - **Administrador de segurança**
+
+    - **Administrador global / administrador de empresa**
+
+
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Para aceder ao painel do Azure Information Protection pela primeira vez
 
-1. Iniciar sessão para o [portal do Azure](https://portal.azure.com) como um administrador global ou o administrador de segurança para o seu inquilino.
+1. Inicie sessão no portal do Azure.
 
 2. No menu do hub, clique em **Novo** e, em seguida, na lista **MARKETPLACE**, selecione **Security + Identity**. 
     
@@ -63,7 +78,7 @@ Tempo junto de acesso a **Azure Information Protection** painel,-seleciona autom
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Como configurar a política do Azure Information Protection
 
-1. Certifique-se de que tem sessão iniciada para o [portal do Azure](https://portal.azure.com) como um administrador de segurança ou um administrador global.
+1. Certifique-se de que tem sessão iniciada portal do Azure, utilizando uma dessas funções administrativas: administrador de proteção de informações, o administrador de segurança ou o Administrador Global. Consulte o [anterior a secção](#signing-in-to-the-azure-portal) para obter mais informações sobre estas funções administrativas.
 
 2. Se necessário, navegue para o **Azure Information Protection** painel: por exemplo, no hub menu, clique em **mais serviços** e comece a escrever **Information Protection** no Caixa de filtro. Na lista de resultados, selecione **Azure Information Protection**. 
     
@@ -85,7 +100,7 @@ Tempo junto de acesso a **Azure Information Protection** painel,-seleciona autom
     
     - A opção para fornecer uma ligação de ajuda personalizada para os utilizadores.
 
-O Azure Information Protection tem uma [política predefinida](configure-policy-default.md) que contém cinco etiquetas principais. Dois destas etiquetas contém etiquetas secundárias ao fornecer subcategorias, quando necessário. Quando uma etiqueta está configurada para etiquetas secundárias, os utilizadores não é possível selecionar a etiqueta principal, mas tem de selecionar uma das etiquetas secundárias.
+O Azure Information Protection tem uma [política predefinida](configure-policy-default.md) que contém cinco etiquetas principais. Dois destas etiquetas contenham sublabels para fornecer subcategorias, quando necessário. Quando uma etiqueta está configurada para sublabels, os utilizadores não é possível selecionar a etiqueta principal, mas tem de selecionar uma dos sublabels.
 
 As etiquetas de Azure Information Protection podem ser utilizadas com o intervalo completo de dados que uma organização, normalmente, cria e armazena a classificação mais baixo de dados pessoais, para a classificação máxima de dados altamente confidenciais. 
 

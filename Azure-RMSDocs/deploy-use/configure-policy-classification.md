@@ -4,17 +4,17 @@ description: "Quando configurar as condições para uma etiqueta, pode atribuir 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 1c37f1b05126b8e8d9a5e64f033c503f27a8a1fc
-ms.sourcegitcommit: a8140a7215c8704f34c247f602e1f12eb7b49aa2
+ms.openlocfilehash: 94d7f3a743597ef61472c5b03b5b931a0c1eecd8
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/23/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Como configurar as condições para classificação automática e recomendada para o Azure Information Protection
 
@@ -74,13 +74,14 @@ Para a versão de disponibilidade geral do cliente Azure Information Protection 
 
 2. A etiqueta mais confidencial é aplicada.
  
-3. É aplicada a última subetiqueta.
+3. A última sublabel é aplicada.
 
 
 ## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>Para configurar a classificação recomendada ou automática para uma etiqueta
 
-1. Se ainda não o tiver feito, abra uma nova janela do browser e inicie sessão para o [portal do Azure](https://portal.azure.com) como um administrador de segurança ou um administrador global. Em seguida, navegue para o painel **Azure Information Protection**.     
-    Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
+1. Se ainda não o tiver feito, abra uma nova janela do browser e [inicie sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal). Em seguida, navegue para o painel **Azure Information Protection**. 
+    
+    Por exemplo, no menu hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
 2. Se a etiqueta que pretende configurar será aplicada a todos os utilizadores, permaneça o **Azure Information Protection - política Global** painel.
     

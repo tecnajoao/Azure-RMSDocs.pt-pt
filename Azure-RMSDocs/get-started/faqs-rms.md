@@ -4,7 +4,7 @@ description: "Algumas perguntas mais frequentes sobre o serviço de proteção d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/08/2018
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ca3af42d227c349779a07f61deb8feb7571e6250
-ms.sourcegitcommit: 6bfbf08b935a7a60e437af44aab72db13f87eff1
+ms.openlocfilehash: bf640c7faf6bcd5ce7467547095b44f09e72fa8c
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Perguntas mais frequentes sobre a proteção de dados no Azure Information Protection
 
@@ -64,22 +64,7 @@ Embora o conector do Rights Management registe mensagens de erro, aviso e inform
 
 ## <a name="do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators"></a>Tenho de ser um administrador global para configurar o Azure RMS ou posso delegar noutros administradores?
 
-Os administradores globais de um inquilino do Office 365 ou inquilino do Azure AD podem obviamente executar todas as tarefas administrativas do serviço Azure Rights Management. No entanto, se quiser atribuir permissões administrativas a outros utilizadores, pode fazê-lo utilizando o cmdlet do PowerShell do Azure RMS, [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator). Pode atribuir esta função administrativa por conta de utilizador ou por grupo. Existem duas funções disponíveis: **Administrador Global** e **Administrador do Conector**.
-
-Como estes nomes de função sugerem, a primeira função atribui permissões para executar todas as tarefas administrativas do Azure Rights Management (sem torná-los administrador global para outros serviços cloud) e a segunda função concede permissões para executar apenas o conector do Rights Management (RMS).
-
-Factos a ter em conta:
-
-- Apenas os administradores globais para o Office 365 e os administradores globais para o Azure AD podem utilizar o Centro de administração do Office 365 para configurar o Azure RMS. Se utilizar o portal do Azure para o Azure Information Protection, pode iniciar sessão como um administrador global ou como um administrador de segurança.
-
-- Os utilizadores aos quais atribui a função de administrador global para o Azure RMS têm de utilizar os comandos do PowerShell do Azure RMS para configurarem o Azure RMS. Para ajudar a encontrar os cmdlets certos para tarefas específicas, veja [Administrar o Azure Rights Management Utilizando o Windows PowerShell](../deploy-use/administer-powershell.md).
-
-- Se tiver configurado [controlos de inclusão](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), esta configuração não afeta a capacidade para administrar o Azure RMS, exceto o conector RMS. Por exemplo, se tiver configurado controlos de inclusão de para restringir a capacidade de proteger conteúdo ao grupo "Departamento de TI", a conta utilizada para instalar e configurar o conector do RMS tem de ser um membro desse grupo.
-
-- Nenhum administrador para o Azure RMS (por exemplo, administrador global do inquilino ou um administrador global do Azure RMS) pode remover automaticamente a proteção de documentos ou e-mails que foram protegidos pelo Azure RMS. Apenas os utilizadores aos quais estão atribuídos superutilizadores para o Azure RMS podem fazê-lo, desde que a funcionalidade de superutilizador esteja ativada. No entanto, o administrador global do inquilino e qualquer administrador global do Azure RMS pode atribuir utilizadores como superutilizadores, incluindo a sua própria conta. Também pode ativar a funcionalidade de superutilizador. Estas ações são registadas no registo de administrador do Azure RMS. Para obter mais informações, veja a secção de melhores práticas em [Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados](../deploy-use/configure-super-users.md).
-
->[!NOTE]
-> Modelos e as novas opções de configuração da proteção do Azure Rights Management movido para o portal do Azure, que suporta a administradores de segurança para além de acesso de administrador global.
+Com a função de administrador de proteção de informações introduzidas recentemente, esta pergunta (e resposta) agora foi movido para a página de FAQ principal: [tem de ser um administrador global para configurar o Azure Information Protection ou posso delegar noutros administradores?](faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-information-protection-or-can-i-delegate-to-other-administrators)
 
 ## <a name="how-do-i-create-a-new-custom-template-in-the-azure-portal"></a>Como posso criar um novo modelo personalizado no portal do Azure?
 
@@ -102,7 +87,7 @@ Se o ficheiro foi protegido através da utilização de permissões personalizad
 Sugestão: Para verificar se um documento foi protegido por um modelo ou ao utilizar a permissão personalizada, utilize o [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) cmdlet do PowerShell. Sempre a ver uma descrição modelo **acesso restrito** para permissões personalizadas, com um ID de modelo exclusiva que não é apresentada quando executar [Get-RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate).
 
 ## <a name="i-have-a-hybrid-deployment-of-exchange-with-some-users-on-exchange-online-and-others-on-exchange-serveris-this-supported-by-azure-rms"></a>Tenho uma implementação híbrida do Exchange com alguns utilizadores no Exchange Online e outros no Exchange Server. Isto é suportado pelo Azure RMS?
-Absolutamente. Além disso, a vantagem é que os utilizadores poderão proteger e consumir de forma totalmente integrada e-mails e anexos protegidos nas duas implementações do Exchange. Para esta configuração, [ative o Azure RMS](../deploy-use/activate-service.md) e [ative a IRM para o Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx) e, em seguida, [implemente e configure o conetor RMS](../deploy-use/deploy-rms-connector.md) para o Exchange Server.
+Absolutamente e a coisa nice é, os utilizadores têm capacidade para proteger e consumir e-mails e anexos protegidos nas duas implementações do Exchange de forma totalmente integrada. Para esta configuração, [ative o Azure RMS](../deploy-use/activate-service.md) e [ative a IRM para o Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx) e, em seguida, [implemente e configure o conetor RMS](../deploy-use/deploy-rms-connector.md) para o Exchange Server.
 
 ## <a name="if-i-use-this-protection-for-my-production-environment-is-my-company-then-locked-into-the-solution-or-risk-losing-access-to-content-that-we-protected-with-azure-rms"></a>Se utilizar esta proteção para o meu ambiente de produção, a minha empresa fica presa a essa solução ou arrisca-se a perder o acesso aos conteúdos que protegemos com o Azure RMS?
 Não, permanece sempre no controlo dos seus dados e pode continuar a aceder aos mesmos, mesmo se optar por deixar de utilizar o serviço Azure Rights Management. Para obter mais informações, veja [Desativar o Azure Rights Management](../deploy-use/decommission-deactivate.md).
@@ -144,7 +129,7 @@ Para a maioria dos cenários, pode utilizar qualquer tipo de grupo no Azure AD q
 
 Quando utiliza o Exchange Online e o serviço Azure Rights Management, apenas enviar o e-mail para o utilizador como uma mensagem protegida. Por exemplo, pode selecionar o novo **proteger** botão na barra de comando no Outlook na Web, utilize o Outlook **não reencaminhar** opção botão ou menu. Em alternativa, pode selecionar uma etiqueta de Azure Information Protection que aplica-se não reencaminhar para si e automaticamente classifica o e-mail.
 
-O destinatário verá uma opção para iniciar sessão na sua conta Gmail, Yahoo ou Microsoft e, em seguida, poderá ler o e-mail protegido. Em alternativa, que possam escolher a opção para um código de acesso único ler o e-mail num browser.
+O destinatário verá uma opção para iniciar sessão na sua conta Gmail, Yahoo ou Microsoft e, em seguida, podem ler o e-mail protegido. Em alternativa, que possam escolher a opção para um código de acesso único ler o e-mail num browser.
 
 Para suportar este cenário, Exchange Online tem de estar ativada para o serviço Azure Rights Management e as novas funcionalidades na encriptação de mensagens do Office 365. Para obter mais informações sobre esta configuração, consulte [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration).
 

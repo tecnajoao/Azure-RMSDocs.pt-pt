@@ -4,17 +4,17 @@ description: "Apesar do Azure Information Protection ter etiquetas predefinidas 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
-ms.openlocfilehash: 540cd59c2df0653c449f495124334920c2cff305
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: cb7af6831040bb42a3c7e3a7e8ea355f72fc433c
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Como criar uma nova etiqueta para o Azure Information Protection
 
@@ -22,13 +22,13 @@ ms.lasthandoff: 08/30/2017
 
 Apesar do Azure Information Protection ter etiquetas predefinidas que pode personalizar, também pode criar as suas próprias etiquetas que os utilizadores veem na barra Information Protection.
 
-Pode adicionar uma nova etiqueta ou adicionar uma nova etiqueta secundária a uma etiqueta existente quando precisar de um nível adicional de classificação. Por exemplo, a última etiqueta na [política predefinida](configure-policy-default.md) contém subetiquetas.
+Pode adicionar uma nova etiqueta ou adicionar um novo sublabel para uma etiqueta existente quando precisar de um nível adicional de classificação. Por exemplo, a etiqueta na última o [política predefinida](configure-policy-default.md), contém sublabels.
 
 Utilize as seguintes instruções para adicionar uma nova etiqueta à política do Azure Information Protection.
 
-1. Se que ainda não o fez, numa nova janela do browser, inicie sessão no [portal do Azure](https://portal.azure.com) como um administrador de segurança ou um administrador global. Em seguida, navegue para o painel **Azure Information Protection**. 
+1. Se ainda não o tiver feito, abra uma nova janela do browser e [inicie sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal). Em seguida, navegue para o painel **Azure Information Protection**.
     
-    Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
+    Por exemplo, no menu hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
 2. Se a nova etiqueta que pretende adicionar for para todos os utilizadores, permaneça o **Azure Information Protection - política Global** painel.
     
@@ -38,7 +38,7 @@ Utilize as seguintes instruções para adicionar uma nova etiqueta à política 
     
     - Para criar uma nova etiqueta: clique em **Adicionar uma nova etiqueta**.
     
-    - Para criar uma nova etiqueta secundária: faça duplo clique ou selecione o menu de contexto (**…**) da etiqueta para a qual pretende criar uma etiqueta secundária e, em seguida, clique em **Adicionar uma etiqueta secundária**.
+    - Para criar um novo sublabel: faça duplo clique ou selecione o menu de contexto (**...** ) para a etiqueta que pretende criar um sublabel para e, em seguida, clique em **adicionar uma etiqueta secundária**.
 
 4. No painel **Etiqueta** ou **Etiqueta secundária**, selecione as opções que pretende para esta nova etiqueta e, em seguida, clique em **Guardar**.
     

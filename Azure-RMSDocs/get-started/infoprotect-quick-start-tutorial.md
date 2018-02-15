@@ -4,17 +4,17 @@ description: "Um tutorial de introdução, com uma duração de aproximadamente 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: c851eb1ecf1551caee1ab2a6aac6f05c550cb96b
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: a93b226f80382d4c751ca88d037398939db9d61b
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Tutorial de início rápido do Azure Information Protection 
 
@@ -36,7 +36,7 @@ Para concluir este tutorial, precisa de ter o seguinte:
   > [!TIP] 
   > Se precisar de pedir uma subscrição, faça o seguinte procedimento com antecedência porque este processo, por vezes, pode demorar algum tempo a concluir.
 
-- Uma conta de administrador global ou a conta de administrador de segurança para iniciar sessão no portal do Azure para ativar a proteção e configure a política do Azure Information Protection. Esta conta também tem de ter um endereço de e-mail e um serviço de e-mail de trabalho, como o Exchange Online.
+- Uma conta de administrador global para iniciar sessão no portal do Azure para ativar a proteção e configure a política do Azure Information Protection. Em alternativa, pode utilizar uma conta que tenha uma das seguintes funções administrativas: [proteção de informações de administrador ou administrador de segurança](/azure/active-directory/active-directory-assign-admin-roles-azure-portal). Esta conta também tem de ter um endereço de e-mail e um serviço de e-mail de trabalho, como o Exchange Online.
 
 - Um computador que execute o Windows (no mínimo o Windows 7 com Service Pack 1) e que tenha instalado o Office 365 ProPlus com aplicações da versão 2016 ou 2013, o Office Professional Plus 2016, o Office Professional Plus 2013 com Service Pack 1 ou o Office Professional Plus 2010 com Service Pack 2. 
     

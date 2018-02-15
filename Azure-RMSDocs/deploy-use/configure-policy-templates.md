@@ -4,7 +4,7 @@ description: "Configurar e gerir modelos de gestão de direitos do portal do Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2018
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 671d1d5d706225fcd5c680ddc8687aa889b59b59
-ms.sourcegitcommit: 972acdb468ac32a28e3e24c90694aff4b75206fc
+ms.openlocfilehash: 66008a89f04c99b2255027f4defc22cf97bc1e0d
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurar e gerir modelos do Azure Information Protection
 
@@ -96,9 +96,9 @@ Antes de editar estes modelos ou convertê-las em etiquetas, certifique-se de qu
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Para configurar os modelos na política do Azure Information Protection
 
-1. Se ainda não o tiver feito, abra uma nova janela do browser e inicie sessão para o [portal do Azure](https://portal.azure.com) como um administrador de segurança ou um administrador global. Em seguida, navegue para o painel **Azure Information Protection**.     
+1. Se ainda não o tiver feito, abra uma nova janela do browser e [inicie sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal). Em seguida, navegue para o painel **Azure Information Protection**.
     
-    Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
+    Por exemplo, no menu hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
 2. Se o modelo que pretende configurar para todos os utilizadores, permaneça o **Azure Information Protection - política Global** painel.
     

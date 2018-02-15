@@ -14,11 +14,11 @@ ms.assetid: A348541C-17E0-4024-BF97-84B0099B0E69
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: bd987e1433554ddb55dc06babf4e4b6f5e0d93fe
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: e6ae24f35aa03996bd26ff891a9cb5a14d751d44
+ms.sourcegitcommit: 2733b1df2ebdda02b60d9471db29e545552f99ff
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="linux-setup"></a>Configuração do Linux
 
@@ -38,8 +38,8 @@ Bibliotecas e amostras foram compiladas com êxito no Windows e no OSX, bem como
  
 ## <a name="how-to-build-and-use"></a>Como criar e utilizar
 
-- [Como criar bibliotecas e aplicações de exemplo](https://github.com/AzureAD/rms-sdk-for-cpp/blob/master/docs/how_to_build_it.md)
-- [Como instalar e utilizar a aplicação em sistemas de utilizador](https://github.com/AzureAD/rms-sdk-for-cpp/blob/master/docs/how_to_use_it.md)
+- [Como criar bibliotecas e aplicações de exemplo](https://github.com/AzureAD/rms-sdk-for-cpp/wiki/How-to-Build)
+- [Como instalar e utilizar a aplicação em sistemas de utilizador](https://github.com/AzureAD/rms-sdk-for-cpp/wiki/How-to-Use)
 
 ## <a name="see-also"></a>Veja Também
 

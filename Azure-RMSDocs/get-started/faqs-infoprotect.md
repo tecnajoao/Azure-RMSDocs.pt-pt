@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 640c3daf6d5158f8aa28c62d5c26ca91a4674df9
-ms.sourcegitcommit: 6bfbf08b935a7a60e437af44aab72db13f87eff1
+ms.openlocfilehash: b9885f020f78bd20bec39c8c1ede2018d6254a7b
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Perguntas mais frequentes sobre a classificação e a etiquetagem no Azure Information Protection
 
@@ -40,9 +40,9 @@ Pedir novas funcionalidades e votar em pedidos, visitando o [site voz do utiliza
 
 ## <a name="do-i-need-to-be-a-global-admin-to-configure-classification-and-labels"></a>É necessário ser um administrador global para configurar a classificação e etiquetas?
 
-Para configurar a política do Azure Information Protection, já não tem de iniciar sessão no portal do Azure como um administrador global do Azure Active Directory. Agora também pode utilizar uma conta que tenha a função de administrador de segurança.
+Com a função de administrador de proteção de informações introduzidas recentemente, esta questão está agora respondida na página de FAQ principal: [tem de ser um administrador global para configurar o Azure Information Protection ou posso delegar noutros administradores?](faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-information-protection-or-can-i-delegate-to-other-administrators)
 
-Se selecionar a opção para instalar a política de demonstração quando instalar o [cliente do Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018), não precisa de iniciar sessão no portal para ver e experimentar a funcionalidade de etiquetagem. A política de demonstração instala localmente uma política predefinida para o Azure Information Protection. Por isso, pode tentar etiquetar documentos e e-mails, mas não poderá alterar ou adicionar novas etiquetas sem iniciar sessão no portal do Azure. 
+Se selecionar a opção para instalar a política de demonstração quando instalar o [cliente do Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018), não precisa de iniciar sessão no portal para ver e experimentar a funcionalidade de etiquetagem. Localmente a política de demonstração instala uma política predefinida para o Azure Information Protection, que pode tentar Etiquetar documentos e e-mails, mas não é possível alterar ou adicionar novas etiquetas sem iniciar sessão no portal do Azure. 
 
 ## <a name="which-options-in-the-azure-portal-are-p2"></a>Que opções no portal do Azure são P2?
 
@@ -50,11 +50,11 @@ As opções no portal do Azure que necessitam de uma subscrição do **Azure Inf
 
 ## <a name="can-a-file-have-more-than-one-classification"></a>Um ficheiro pode conter mais do que uma classificação?
 
-Os utilizadores podem selecionar apenas uma etiqueta de cada vez para cada documento ou e-mail, o que habitualmente acaba por criar apenas uma classificação. No entanto, se os utilizadores selecionarem uma subetiqueta, esta aplica habitualmente duas etiquetas ao mesmo tempo; uma etiqueta principal e uma etiqueta secundária. Ao utilizar subetiquetas, um ficheiro pode ter duas classificações que indicam uma relação principal\subordinado e permitem um nível adicional de controlo.
+Os utilizadores podem selecionar apenas uma etiqueta de cada vez para cada documento ou e-mail, o que habitualmente acaba por criar apenas uma classificação. No entanto, se os utilizadores selecionarem um sublabel, isto, na verdade, aplica-se duas etiquetas em simultâneo; uma etiqueta principal e uma etiqueta secundária. Ao utilizar sublabels, um ficheiro pode ter duas classificações denotam uma relação de parent\child para um nível adicional de controlo.
 
-Por exemplo, a etiqueta **Confidencial** pode conter subetiquetas como **Informações jurídicas** e **Finanças**. Pode aplicar diferentes marcas de classificação visual e diferentes modelos do Rights Management a estas subetiquetas. Um utilizador não pode selecionar a etiqueta **Confidencial**, mas apenas uma das respetivas subetiquetas, como **Informações jurídicas**. Como resultado, a etiqueta definida será **Confidencial\Informações jurídicas**. Os metadados do ficheiro em questão incluem uma propriedade de texto personalizado para **Confidencial**, uma propriedade de texto personalizado para **Informações jurídicas** e outra com ambos os valores (**Confidencial/Informações jurídicas**). 
+Por exemplo, a etiqueta **confidencial** pode conter sublabels como **legais** e **financeiro**. Pode aplicar marcações visuais de classificação diferentes e modelos de Rights Management diferentes a estes sublabels. Não é possível selecionar um utilizador a **confidencial** etiqueta autonomamente; apenas um dos respetivos sublabels, tais como **legais**. Como resultado, a etiqueta definida será **Confidencial\Informações jurídicas**. Os metadados do ficheiro em questão incluem uma propriedade de texto personalizado para **Confidencial**, uma propriedade de texto personalizado para **Informações jurídicas** e outra com ambos os valores (**Confidencial/Informações jurídicas**). 
 
-Quando utilizar subetiquetas, não configure as marcas visuais, a proteção e as condições na etiqueta principal. Quando utilizar subetiquetas, configure esta definição apenas na subetiqueta. Se configurar estas definições na etiqueta principal e na respetiva subetiqueta, as definições da subetiqueta têm prioridade.
+Quando utilizar sublabels, não configure marcas visuais, proteção e condições em que a etiqueta principal. Quando utiliza subníveis, configure estas definições no sublabel apenas. Se configurar estas definições na etiqueta principal e o respetivo sublabel, as definições no sublabel precedência.
 
 ## <a name="when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling"></a>Quando um e-mail tem uma etiqueta, os anexos também recebem a mesma etiqueta automaticamente?
 
@@ -68,7 +68,7 @@ Uma vez que o Azure Information Protection utiliza metadados persistentes para c
 
 - Nos e-mails, estas informações são armazenadas no cabeçalho de x: **msip_labels: MSIP_Label_\<GUID > _Enabled = True;**  
 
-Para identificar o GUID para uma etiqueta, localize o valor de ID da etiqueta no painel de etiqueta, ao ver ou configurar a política do Azure Information Protection no portal do Azure. Para os ficheiros que tenham etiquetas aplicadas, também pode executar o [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) cmdlet do PowerShell para identificar o GUID (MainLabelId ou SubLabelId). Quando uma etiqueta tiver etiquetas secundárias, especifique sempre o GUID de apenas uma etiqueta secundária e não a etiqueta principal.
+Para identificar o GUID para uma etiqueta, localize o valor de ID da etiqueta no painel de etiqueta, ao ver ou configurar a política do Azure Information Protection no portal do Azure. Para os ficheiros que tenham etiquetas aplicadas, também pode executar o [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) cmdlet do PowerShell para identificar o GUID (MainLabelId ou SubLabelId). Quando uma etiqueta tem sublabels, especifique sempre o GUID de apenas um sublabel e não a etiqueta principal.
 
 ## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>Qual a diferença entre a classificação do Azure Information Protection para e-mails e a classificação de mensagens do Exchange?
 

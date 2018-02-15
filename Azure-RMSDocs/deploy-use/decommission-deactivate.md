@@ -4,7 +4,7 @@ description: "Informações e instruções se decidir que já não pretendem uti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/20/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 39eec911cd6506bd24fb48f5fdd931db68099269
-ms.sourcegitcommit: 73973986ae7086e6f30cab579187241fd98bef61
+ms.openlocfilehash: 14887bb14599b24d95a19ee111ec3ab30ea95612
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="decommissioning-and-deactivating-protection-for-azure-information-protection"></a>Encerrar e desativar a proteção do Azure Information Protection
 
@@ -26,7 +26,7 @@ São sempre no controlo dos se a organização protege conteúdo utilizando o se
 
 Se não precisa de acesso contínuo ao conteúdo anteriormente protegido, desativar o serviço e permita que a sua subscrição do Azure Information Protection expirar. Por exemplo, isto poderá ser adequado para quando terminar de testar o Azure Information Protection antes de o implementar num ambiente de produção.
 
-No entanto, se tiver implementado o Azure Information Protection na produção e proteger documentos e e-mails, certifique-se de que tem uma cópia da sua chave de inquilino do Azure Information Protection antes de desativar o serviço Azure Rights Management. Certifique-se de que tem uma cópia da sua chave antes da sua subscrição expirar para se certificar de que pode manter o acesso ao conteúdo que foi protegido pelo Azure Rights Management depois do serviço ser desativado. Se utilizou a solução traga a sua própria chave (BYOK), em que gera e faz a gestão da sua própria chave num HSM, já terá a chave de inquilino do Azure Information Protection. Mas se foi gerida pela Microsoft (predefinição), consulte as instruções para exportar a chave de inquilino no artigo [Operações para a chave de inquilino do Azure Rights Management](operations-tenant-key.md).
+No entanto, se tiver implementado o Azure Information Protection na produção e proteger documentos e e-mails, certifique-se de que tem uma cópia da sua chave de inquilino do Azure Information Protection antes de desativar o serviço Azure Rights Management. Certifique-se de que tem uma cópia da sua chave antes da sua subscrição expirar para se certificar de que pode manter o acesso ao conteúdo que foi protegido pelo Azure Rights Management depois do serviço ser desativado. Se utilizou a traga a sua própria solução de chave (BYOK), a qual gerar e gerir a sua própria chave num HSM, já tem a chave de inquilino do Azure Information Protection. Mas se foi gerida pela Microsoft (predefinição), consulte as instruções para exportar a chave de inquilino no artigo [Operações para a chave de inquilino do Azure Rights Management](operations-tenant-key.md).
 
 > [!TIP]
 > Mesmo após a sua subscrição expirar, o seu inquilino do Azure Information Protection permanecerá disponível para consumir conteúdos durante um período prolongado. No entanto, vai deixar de poder exportar a sua chave de inquilino.
@@ -71,9 +71,9 @@ Já deverá estar visível **O Rights Management não está ativado** e a opçã
 
 #### <a name="to-deactivate-rights-management-from-the-azure-portal"></a>Para desativar o Rights Management a partir do portal do Azure
 
-1. Se ainda não o tiver feito, abra uma nova janela do browser e inicie sessão para o [portal do Azure](https://portal.azure.com) como um administrador de segurança ou um administrador global. Em seguida, navegue para o painel **Azure Information Protection**.
+1. Se ainda não o tiver feito, abra uma nova janela do browser e [inicie sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal). Em seguida, navegue para o painel **Azure Information Protection**.
     
-    Por exemplo, no menu do hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
+    Por exemplo, no menu hub, clique em **Mais serviços** e comece a escrever **Information** na caixa Filtrar. Selecione **Azure Information Protection**.
 
 2. No iniciais **Azure Information Protection** painel, selecione **ativação da proteção**. 
 

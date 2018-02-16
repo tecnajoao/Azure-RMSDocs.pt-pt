@@ -4,7 +4,7 @@ description: "As instruções e as informações para os administradores gerirem
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/12/2018
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 33489f3d1b7b4d5e4b34b95ea5fd1f9641d0ff0c
-ms.sourcegitcommit: 6bfbf08b935a7a60e437af44aab72db13f87eff1
+ms.openlocfilehash: a6ca8145768559a556b051974f59620a0750c660
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guia do administrador: Utilizar o PowerShell com o cliente Azure Information Protection
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 02/12/2018
 
 Quando instala o cliente Azure Information Protection, os comandos do PowerShell são instalados automaticamente. Isto permite-lhe gerir o cliente através da execução de comandos que pode colocar em scripts para a automatização.
 
-Os cmdlets são instalados com o módulo do PowerShell **AzureInformationProtection**. Este módulo inclui todos os cmdlets de gestão de direitos que foram anteriormente na ferramenta de proteção do RMS. Também existem novos cmdlets que utilizam o serviço de proteção de informações do Azure (AIP) para etiquetagem. Por exemplo:
+Os cmdlets são instalados com o módulo do PowerShell **AzureInformationProtection**. Este módulo inclui todos os cmdlets do Rights Management da ferramenta de proteção do RMS (já não é suportada). Também existem novos cmdlets que utilizam o serviço de proteção de informações do Azure (AIP) para etiquetagem. Por exemplo:
 
 |Cmdlet de etiquetagem|Utilização de exemplo|
 |----------------|---------------|
@@ -34,7 +34,7 @@ Os cmdlets são instalados com o módulo do PowerShell **AzureInformationProtect
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Etiqueta ficheiros de forma não interativa, por exemplo, utilizando um script que é executado numa agenda.|
 
 
-Além disso, o [scanner do Azure Information Protection](../deploy-use/deploy-aip-scanner.md) (atualmente em pré-visualização), utiliza os cmdlets para instalar e configurar um serviço no Windows Server. Esta análise, em seguida, permite-lhe detetar, classificar e proteger os ficheiros nos arquivos de dados.
+Além disso, o [scanner do Azure Information Protection](../deploy-use/deploy-aip-scanner.md) utiliza cmdlets para instalar e configurar um serviço no Windows Server. Esta análise, em seguida, permite-lhe detetar, classificar e proteger os ficheiros nos arquivos de dados.
 
 Para obter uma lista de todos os cmdlets e o artigo de ajuda correspondente, veja [AzureInformationProtection Module (Módulo AzureInformationProtection)](/powershell/module/azureinformationprotection). Dentro de uma sessão do PowerShell, escreva `Get-Help <cmdlet name> -online` para ver a ajuda mais recente.  
 
@@ -145,7 +145,7 @@ Execute o cmdlet Get-AadrmConfiguration a partir do módulo do Windows PowerShel
     
 4. Execute `Get-AadrmConfiguration` e faça uma cópia do valor BPOSId.
     
-    O exemplo abaixo mostra a saída de Get-AadrmConfiguration:
+    Um exemplo de saída de Get-AadrmConfiguration:
     
             BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
         
@@ -452,7 +452,7 @@ A saída pode ser semelhante ao seguinte:
 
 ## <a name="how-to-label-files-non-interactively-for-azure-information-protection"></a>Como etiquetar ficheiros de forma não interativa para o Azure Information Protection
 
-Pode executar os cmdlets de etiquetas não interativamente utilizando a **conjunto AIPAuthentication** cmdlet. Operação não interativo é também necessária para análise do Azure Information Protection, atualmente em pré-visualização.
+Pode executar os cmdlets de etiquetas não interativamente utilizando a **conjunto AIPAuthentication** cmdlet. Operação não interativo é também necessária para a análise do Azure Information Protection.
 
 Por predefinição, quando executa os cmdlets de etiquetagem, os comandos são executados no seu próprio contexto de utilizador numa sessão interativa do PowerShell. Para executá-los de modo autónomo, crie uma nova conta de utilizador do Azure AD para este fim. Em seguida, no contexto desse utilizador, execute o cmdlet Set-AIPAuthentication para definir e armazenar credenciais através de um token de acesso do Azure AD. Esta conta de utilizador é, em seguida, autenticada e reiniciada para o serviço Azure Rights Management. A conta transfere a política do Azure Information Protection e quaisquer modelos do Rights Management utilizados pelas etiquetas.
 
@@ -461,7 +461,7 @@ Por predefinição, quando executa os cmdlets de etiquetagem, os comandos são e
 
 Na primeira vez que executar este cmdlet, é pedido que inicie sessão no Azure Information Protection. Especifique o nome de conta de utilizador e palavra-passe que criou para o utilizador automático. Em seguida, esta conta pode executar os cmdlets de etiquetagem de forma não interativa até o token de autenticação expirar. 
 
-Para a conta de utilizador conseguir iniciar sessão interativamente pela primeira vez, a conta deve ter o **iniciar sessão localmente** à direita. Este direito é padrão para contas de utilizador, mas as políticas da empresa poderão proibir esta configuração para as contas de serviço. Se for esse o caso, pode executar Set-AIPAuthentication com o *Token* parâmetro, para que a autenticação concluída sem o pedido de início de sessão. Pode executar este comando como uma tarefa agendada e conceda à conta canto inferior direito da **iniciar sessão como uma tarefa de lote**. Para obter mais informações, consulte as secções seguintes. 
+Para a conta de utilizador conseguir iniciar sessão interativamente pela primeira vez, a conta deve ter o **iniciar sessão localmente** à direita. Este direito é padrão para contas de utilizador, mas as políticas da empresa poderão proibir esta configuração para as contas de serviço. Se for esse o caso, pode executar Set-AIPAuthentication com o *Token* parâmetro, para que a autenticação concluída sem o pedido de início de sessão. Pode executar este comando como uma tarefa agendada e conceda à conta canto inferior direito da **iniciar sessão como um trabalho do batch**. Para obter mais informações, consulte as secções seguintes. 
 
 Quando o token expira, execute o cmdlet novamente para adquirir um novo token.
 
@@ -519,18 +519,19 @@ Após ter executado este cmdlet, pode executar os cmdlets de etiquetagem no cont
 
 12. Reverter o **as permissões necessárias** painel, selecione **conceder permissões**, clique em **Sim** para confirmar e, em seguida, feche este painel.
     
+
 Agora concluiu a configuração das duas aplicações e tem os valores que tem de executar [conjunto AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) com os parâmetros *WebAppId*, *WebAppKey* e *NativeAppId*. Por exemplo:
 
 `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
 
 Execute este comando no contexto da conta que será Etiquetar e proteger os documentos de forma não interativa. Por exemplo, uma conta de utilizador para os scripts do PowerShell ou a conta de serviço para executar o Verificador de Azure Information Protection.  
 
-Quando executar este comando pela primeira vez, são-lhe pedido para iniciar sessão, que cria e em segurança armazena o token de acesso para a sua conta em % localappdata%\Microsoft\MSIP. Após este inicial de início de sessão, pode Etiquetar e proteger os ficheiros de forma não interativa no computador. No entanto, o se utilizar uma conta de serviço para etiquetar e proteger ficheiros e esta conta de serviço não pode iniciar sessão interativamente, utilize as instruções na secção seguinte para que a conta de serviço pode autenticar utilizando um token.
+Quando executar este comando pela primeira vez, são-lhe pedido para iniciar sessão, que cria e em segurança armazena o token de acesso para a sua conta em % localappdata%\Microsoft\MSIP. Após este inicial início de sessão, pode Etiquetar e proteger os ficheiros de forma não interativa no computador. No entanto, o se utilizar uma conta de serviço para etiquetar e proteger ficheiros e esta conta de serviço não pode iniciar sessão interativamente, utilize as instruções na secção seguinte para que a conta de serviço pode autenticar utilizando um token.
 
 ### <a name="specify-and-use-the-token-parameter-for-set-aipauthentication"></a>Especificar e utilizar o parâmetro de Token para Set-AIPAuthentication
 
 > [!NOTE]
-> Esta opção está em pré-visualização e requer a versão de pré-visualização atual do cliente Azure Information Protection.
+> Esta opção requer a versão de disponibilidade geral (DG) do scanner Azure Information Protection, ou a versão de pré-visualização atual do cliente Azure Information Protection.
 
 Utilize os seguintes passos adicionais e instruções para evitar o inicial interativo início de sessão para uma conta que etiquetas e protege os ficheiros. Normalmente, estes são necessários passos adicionais apenas se esta conta não é possível conceder a **iniciar sessão localmente** botão direito do rato, mas é concedida a **iniciar sessão como uma tarefa de lote** à direita. Por exemplo, pode ser o caso da sua conta de serviço que executa o Verificador de Azure Information Protection.
 
@@ -538,12 +539,11 @@ Utilize os seguintes passos adicionais e instruções para evitar o inicial inte
 
 2. Execute Set-AIPAuthentication obtenha o token de acesso e copie-a para a área de transferência.
 
-2. Modificar o script do PowerShell para incluir o token.
+3. Modificar o script do PowerShell para incluir o token.
 
-3. Crie uma tarefa que executa o script do PowerShell no contexto da conta de serviço que será Etiquetar e proteger os ficheiros.
+4. Crie uma tarefa que executa o script do PowerShell no contexto da conta de serviço que será Etiquetar e proteger os ficheiros.
 
-4. Confirme que o token é guardado para a conta de serviço e eliminar o script do PowerShell.
-
+5. Confirme que o token é guardado para a conta de serviço e eliminar o script do PowerShell.
 
 #### <a name="step-1-create-a-powershell-script-on-your-local-computer"></a>Passo 1: Criar um script do PowerShell no computador local
 
@@ -583,9 +583,9 @@ Utilize os seguintes passos adicionais e instruções para evitar o inicial inte
 
 2. No computador que irá Etiquetar e proteger ficheiros, abra o Programador de tarefas e criar uma nova tarefa. Configure esta tarefa para ser executado como conta de serviço que irão Etiquetar e proteger ficheiros e, em seguida, configure os seguintes valores para o **ações**:
     
-    - **Ação**:`Start a program`
-    - **Programa/script**:`Powershell.exe`
-    - **Adicionar argumentos (opcionais)**:`-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
+    - **Ação**: `Start a program`
+    - **Programa/script**: `Powershell.exe`
+    - **Adicionar argumentos (opcionais)**: `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
     
     Para a linha de argumento, especifique o seu próprio nome de ficheiro e caminho, se estes forem diferentes do exemplo.
 

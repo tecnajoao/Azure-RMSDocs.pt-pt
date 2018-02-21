@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4cd74b6fcee53acc99e0c89d7cbb606d8aab2d54
-ms.sourcegitcommit: d7bdf865a06df2150b261c98b66503c1db7fed11
+ms.openlocfilehash: 46ed6ac05e696ec65527d39ab38c312f6aba8411
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="rights-management-sharing-application-administrator-guide"></a>Guia do administrador da aplicação de partilha Rights Management
 
@@ -344,7 +344,7 @@ Dado que a aplicação de partilha RMS não é suportada pelo WSUS, pode utiliza
 ## <a name="azure-information-protection-only-configuring-document-tracking"></a>Apenas Azure Information Protection: configurar o controlo de documentos
 Se tiver uma [subscrição que suporta o controlo de documentos](https://www.microsoft.com/cloud-platform/azure-information-protection-features), o site de controlo de documentos é ativado por predefinição para todos os utilizadores da sua organização. O controlo de documentos apresenta informações como os endereços de e-mail das pessoas que tentaram aceder a documentos protegidos partilhados por utilizadores, quando essas pessoas tentaram aceder aos mesmos e a sua localização. Se a apresentação deste tipo de informações for proibida dentro da sua organização devido a requisitos de privacidade, pode desativar o acesso ao site de controlo de documentos através do cmdlet [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature). Pode reativar o acesso ao site em qualquer altura através de [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) e ainda verificar se o acesso ao site está ativado ou desativado com [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature).
 
-Para executar estes cmdlets, tem de ter no mínimo a versão **2.3.0.0** do módulo do Azure Rights Management para o Windows PowerShell. Para obter instruções de instalação, consulte [Installing Windows PowerShell for Azure Rights Management (Instalar o Windows PowerShell para o Azure Rights Management – em inglês)](../deploy-use/install-powershell.md).
+Para executar estes cmdlets, tem de ter no mínimo a versão **2.3.0.0** do módulo do Azure Rights Management para o Windows PowerShell. Para obter instruções de instalação, consulte [instalar o módulo do AADRM PowerShell](../deploy-use/install-powershell.md).
 
 > [!TIP]
 > Se já transferiu e instalou o módulo anteriormente, verifique o número da versão ao executar: `(Get-Module aadrm –ListAvailable).Version`
@@ -401,7 +401,7 @@ Se utilizar o AD RMS e os utilizadores da sua organização tiverem múltiplos d
 Se não fizer esta alteração de registo, é possível que os utilizadores não consigam consumir conteúdos que foram protegidos por outros utilizadores da organização. Esta edição de registo não é necessária se utilizar o Azure Information Protection.
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 Para obter informações técnicas adicionais com explicações sobre os diferentes níveis de proteção (nativa e genérica), os tipos de ficheiro e as extensões de nome de ficheiro suportados e como pode alterar o nível de proteção predefinido, consulte [Descrição geral técnica da aplicação de partilha Rights Management](sharing-app-admin-guide-technical.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

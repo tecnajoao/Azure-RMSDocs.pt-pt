@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 14887bb14599b24d95a19ee111ec3ab30ea95612
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: 87375ba815fb869740e25bc7ab92bafe3be52f6b
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="decommissioning-and-deactivating-protection-for-azure-information-protection"></a>Encerrar e desativar a proteção do Azure Information Protection
 
@@ -45,7 +45,7 @@ Para obter mais informações sobre os procedimentos nesta tabela, consulte os r
 
 - Para obter instruções para importar a sua chave de inquilino do Azure Information Protection como um ficheiro TPD, consulte [Adicionar um Domínio de Publicação Fidedigno](https://technet.microsoft.com/library/cc771460.aspx).
 
-- Para instalar o módulo do Windows PowerShell para o Azure Rights Management, para definir o URL de migração, consulte [Instalar o Windows PowerShell para o Azure Rights Management](install-powershell.md).
+- Para instalar o módulo do Windows PowerShell para o Azure Rights Management, para definir o URL de migração, consulte [instalar o módulo do AADRM PowerShell](install-powershell.md).
 
 - Para utilizar o PowerShell com o cliente Azure Information Protection, consulte o artigo [utilizando o PowerShell com o cliente Azure Information Protection](../rms-client/client-admin-guide-powershell.md).
 

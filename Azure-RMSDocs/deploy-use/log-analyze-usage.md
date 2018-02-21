@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cf919749b74727412ab6fa76cc52a5c71b69efcd
-ms.sourcegitcommit: fc789ce08821e031d3a2b22d850b4318302d3585
+ms.openlocfilehash: 09d076299f70718b65bb3746486f559a880a2660
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Registar e analisar a utilização do serviço Azure Rights Management
 
@@ -67,7 +67,7 @@ O serviço Azure Rights Management escreve registos na sua conta de armazenament
 
 Após uma ação do Azure Rights Management, os registos poderão demorar algum tempo a serem apresentados na sua conta de armazenamento. A maioria dos registos é apresentada no espaço de 15 minutos. Recomendamos que transfira os registos para o armazenamento local, por exemplo para uma pasta local, uma base de dados ou um repositório MapReduce.
 
-Para transferir os seus registos de utilização, deverá utilizar o módulo de administração do Azure Rights Management para o Windows PowerShell. Para obter instruções de instalação, veja [Installing Windows PowerShell for Azure Rights Management (Instalar o Windows PowerShell para o Azure Rights Management – em inglês)](install-powershell.md). Caso já tenha transferido este módulo do Windows PowerShell, execute o seguinte comando para verificar se o seu número de versão é **2.4.0.0** ou posterior: `(Get-Module aadrm -ListAvailable).Version` 
+Para transferir os seus registos de utilização, deverá utilizar o módulo de administração do Azure Rights Management para o Windows PowerShell. Para obter instruções de instalação, consulte [instalar o módulo do AADRM PowerShell](install-powershell.md). Caso já tenha transferido este módulo do Windows PowerShell, execute o seguinte comando para verificar se o seu número de versão é **2.4.0.0** ou posterior: `(Get-Module aadrm -ListAvailable).Version` 
 
 ### <a name="to-download-your-usage-logs-by-using-powershell"></a>Para transferir os seus registos de utilização através do PowerShell
 

@@ -4,7 +4,7 @@ description: "Instruções para migrar a implementação dos Serviços de Gestã
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a65e1178594e14c7d8f4faaedee96d827a9412e5
-ms.sourcegitcommit: 9b975e66b12a3836003c6c4de139ded4bbf370bf
+ms.openlocfilehash: 2ba3ae79308ddee15dc77700b7b660fd4bd91b49
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrar do AD RMS para o Azure Information Protection
 
@@ -140,9 +140,9 @@ Os passos de migração podem ser divididos em cinco fases que podem ser efetuad
 
 [**FASE 1: PREPARAÇÃO DA MIGRAÇÃO**](migrate-from-ad-rms-phase1.md)
 
-- **Passo 1: transferir a Ferramenta de Administração do Azure RMS Management e identificar o URL de inquilino**
+- **Passo 1: Instalar o módulo AADRM PowerShell e identificar o seu URL de inquilino**
 
-    O processo de migração requer a execução de um ou mais cmdlets do PowerShell do módulo do Azure RMS que é instalado com a Ferramenta de Administração do Azure RMS Management. Também precisará de saber o URL do serviço Azure Rights Management do seu inquilino para concluir vários passos da migração. Pode identificar este valor através do PowerShell.
+    O processo de migração requer a execução de um ou mais dos cmdlets do PowerShell do módulo AADRM. Terá de saber o URL do serviço Azure Rights Management seu inquilino para concluir a muitos dos passos de migração e pode identidade este valor utilizando o PowerShell.
 
 - **Passo 2: preparar a migração de clientes**
 

@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 23a7a835c4df149453303cbe1bcc3a34b6597842
-ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
+ms.openlocfilehash: e8d7f34d020157ed38bb8458c4d5f4ddb6986f75
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Atualizar modelos para os utilizadores e os serviços
 
@@ -79,7 +79,7 @@ Ao editar o registo nos computadores ao executar o Office 2016, Office 2013 ou a
     > [!TIP]
         > No caminho do registo, *MicrosoftRMS_FQDN*> refere-se ao seu FQDN do serviço Microsoft RMS. Se quiser verificar este valor:
 
-    > 1.  Execute o cmdlet [Get-AadrmConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) para o Azure RMS. Se ainda não instalou o módulo do Windows PowerShell para o Azure RMS, consulte [Instalar o Windows PowerShell para o Azure Rights Management](install-powershell.md).
+    > 1.  Execute o cmdlet [Get-AadrmConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) para o Azure RMS. Se já ainda não instalou o módulo Windows PowerShell para o Azure RMS, consulte [instalar o módulo do AADRM PowerShell](install-powershell.md).
     > 2.  A partir da saída, identifique o valor **LicensingIntranetDistributionPointUrl**.
     >
     >     Por exemplo: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
@@ -92,7 +92,7 @@ Ao editar o registo nos computadores ao executar o Office 2016, Office 2013 ou a
 3.  Reinicie as suas aplicações do Office e instâncias do Explorador de Ficheiros.
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 [Configurar e gerir modelos de política do Azure Information Protection](../deploy-use/configure-policy-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

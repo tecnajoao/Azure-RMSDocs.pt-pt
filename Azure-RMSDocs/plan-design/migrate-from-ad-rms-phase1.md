@@ -4,7 +4,7 @@ description: "Fase 1 da migração do AD RMS para o Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/11/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 198698bbef8fbb778545c2599798afd1255a01bc
-ms.sourcegitcommit: 45c23b3b353ad0e438292cb1cd8d1b13061620e1
+ms.openlocfilehash: c74bbf88adced03ba73c2431c4c3ccd2ea3359d1
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="migration-phase-1---preparation"></a>Fase 1 da migração – preparação
 
@@ -25,11 +25,11 @@ ms.lasthandoff: 10/12/2017
 Utilize as seguintes informações para a Fase 1 da migração do AD RMS para o Azure Information Protection. Estes procedimentos abrangem os passos 1 a 3 de [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) e preparam o seu ambiente para a migração sem qualquer impacto para os seus utilizadores.
 
 
-## <a name="step-1-download-the-azure-rights-management-administration-tool-and-identify-your-tenant-url"></a>Passo 1: transferir a Ferramenta de Administração do Azure Rights Management e identificar o URL de inquilino
+## <a name="step-1-install-the-aadrm-powershell-module-and-identify-your-tenant-url"></a>Passo 1: Instalar o módulo AADRM PowerShell e identificar o seu URL de inquilino
 
-Aceda ao Centro de Transferências da Microsoft e transfira a [Ferramenta de Administração do Azure Rights Management](https://go.microsoft.com/fwlink/?LinkId=257721), que contém o módulo de administração do Azure Rights Management para o Windows PowerShell. O Azure Rights Management (Azure RMS) é o serviço que fornece a proteção de dados para o Azure Information Protection.
+Instale o módulo AADRM para que possa configurar e gerir o serviço que fornece a proteção de dados do Azure Information Protection.
 
-Instale a ferramenta. Para obter instruções, veja [Instalar o Windows PowerShell para o Azure Rights Management](../deploy-use/install-powershell.md).
+Para obter instruções, consulte [instalar o módulo do AADRM PowerShell](../deploy-use/install-powershell.md).
 
 > [!NOTE]
 > Se já transferiu anteriormente este módulo do Windows PowerShell, execute o seguinte comando para verificar se tem a versão número **2.9.0.0** ou posterior: `(Get-Module aadrm -ListAvailable).Version`
@@ -74,7 +74,7 @@ Na maioria das migrações, não é prático migrar todos os clientes de uma só
 
 3. [Transfira o ficheiro seguinte](https://go.microsoft.com/fwlink/?LinkId=524619) que contém scripts de migração de clientes:
     
-    **Migração Scripts.zip**
+    **Migration-Scripts.zip**
     
 4. Extraia os ficheiros e siga as instruções em **preparar Client.cmd** para que contém o nome do servidor para o cluster da extranet licenciamento URL de AD RMS. 
     

@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9e8b7f3bbebe50fb6f219142a17961dc8b565f6c
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: 7a3ed134c84c5293ecc2391fdaec32ccfc425910
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planear e implementar a sua chave de inquilino do Azure Information Protection
 
@@ -110,7 +110,7 @@ Consulte a seguinte tabela para obter uma lista de pré-requisitos para o BYOK (
 |---------------|--------------------|
 |O inquilino do Azure Information Protection tem de ter uma subscrição do Azure. Se não tiver uma, pode inscrever-se para obter um [conta gratuita](https://azure.microsoft.com/pricing/free-trial/). <br /><br /> Para utilizar uma chave protegida por HSM, tem de ter a camada de serviços do Azure Premium do Cofre de chave.|A subscrição gratuita do Azure que fornece acesso para configurar o Azure Active Directory e a configuração dos modelos personalizados do Azure Rights Management (**Aceder ao Azure Active Directory**) não são suficientes para utilizar o Azure Key Vault. Para confirmar se tem uma subscrição do Azure que pode utilizar para o BYOK, utilize os cmdlets [Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx) do PowerShell: <br /><br /> 1. Inicie uma sessão do PowerShell do Azure com a opção **Executar como administrador** e inicie sessão como um administrador global do seu inquilino do Azure Information Protection com o seguinte comando: `Login-AzureRmAccount`<br /><br />2. Escreva o que se segue e confirme se os valores apresentados para o nome e ID da sua subscrição, o ID do seu inquilino do Azure Information Protection e o estado estão ativos: `Get-AzureRmSubscription`<br /><br />Se não forem apresentados valores e regressar ao pedido, significa que não tem uma subscrição do Azure que possa ser utilizada para o BYOK. <br /><br />**Nota**: além dos pré-requisitos para BYOK, se estiver a migrar do AD RMS para o Azure Information Protection através da utilização de chave de software para chave de hardware, tem de ter uma versão de firmware da Thales igual ou superior à 11.62.|
 |Para utilizar uma chave protegida por HSM que criar no local: todos os pré-requisitos listados para o BYOK do Cofre de chave. |Veja [Pré-requisitos para BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) na documentação do Azure Key Vault. <br /><br /> **Nota**: além dos pré-requisitos para BYOK, se estiver a migrar do AD RMS para o Azure Information Protection através da utilização de chave de software para chave de hardware, tem de ter uma versão de firmware da Thales igual ou superior à 11.62.|
-|O módulo de administração do Azure Rights Management para o Windows PowerShell.|Para obter instruções de instalação, consulte [Installing Windows PowerShell for Azure Rights Management (Instalar o Windows PowerShell para o Azure Rights Management – em inglês)](../deploy-use/install-powershell.md). <br /><br />Caso já tenha instalado este módulo do Windows PowerShell, execute o seguinte comando para verificar se o seu número de versão é, pelo menos, **2.9.0.0**: `(Get-Module aadrm -ListAvailable).Version`|
+|O módulo de administração do Azure Rights Management para o Windows PowerShell.|Para obter instruções de instalação, consulte [instalar o módulo do AADRM PowerShell](../deploy-use/install-powershell.md). <br /><br />Caso já tenha instalado este módulo do Windows PowerShell, execute o seguinte comando para verificar se o seu número de versão é, pelo menos, **2.9.0.0**: `(Get-Module aadrm -ListAvailable).Version`|
 
 Para obter mais informações sobre HSMs da Thales e como são utilizados com o Azure Key Vault, consulte o [site da Thales](https://www.thales-esecurity.com/msrms/cloud).
 
@@ -134,11 +134,11 @@ Utilize a tabela seguinte para identificar a que região do Azure ou a instânci
 
 |Região do Azure ou de instância|Localização recomendada para o seu Cofre de chaves|
 |---------------|--------------------|
-|RMS.**na**. aadrm.com|**EUA Centro-Norte** ou **EUA leste**|
-|RMS.**eu**. aadrm.com|**Europa do Norte** ou **Europa Ocidental**|
-|RMS.**ap**. aadrm.com|**Ásia Oriental** ou **Sudeste asiático**|
-|RMS.**sa**. aadrm.com|**EUA oeste** ou **EUA leste**|
-|RMS.**govus**. aadrm.com|**E.u. a central** ou **EUA Leste 2**|
+|rms.**na**.aadrm.com|**EUA Centro-Norte** ou **EUA leste**|
+|rms.**eu**.aadrm.com|**Europa do Norte** ou **Europa Ocidental**|
+|rms.**ap**.aadrm.com|**Ásia Oriental** ou **Sudeste asiático**|
+|rms.**sa**.aadrm.com|**EUA oeste** ou **EUA leste**|
+|rms.**govus**.aadrm.com|**E.u. a central** ou **EUA Leste 2**|
 
 
 ### <a name="instructions-for-byok"></a>Instruções para BYOK

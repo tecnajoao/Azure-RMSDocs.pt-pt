@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: A1C99424-D986-4A5A-B2E1-6D18EEF11B21
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: 833cd9ea62b33c780eb40288784880962585cb38
-ms.sourcegitcommit: 0fd2e63822280ec96ab957e22868c63de9ef3d47
+ms.openlocfilehash: a75b67f72410170500bf9ad3b93bdd6165c5af2d
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="add-aadrmkey"></a>Add-AadrmKey
 
@@ -24,5 +24,5 @@ Este cmdlet foi agora removido da versão mais recente do módulo do Azure Right
 
 Em alternativa, utilize o [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey). Para obter mais informações, consulte [Planear e implementar a sua chave de inquilino do Azure Information Protection](../plan-design/plan-implement-tenant-key.md).
 
-Além disso, atualize a versão do módulo para a versão **2.9.0.0** ou posterior. Para obter instruções, veja [Instalar o Windows PowerShell para o Azure Rights Management](install-powershell.md).
+Além disso, atualize a versão do módulo para a versão **2.9.0.0** ou posterior. Para obter instruções, consulte [instalar o módulo do AADRM PowerShell](install-powershell.md).
 

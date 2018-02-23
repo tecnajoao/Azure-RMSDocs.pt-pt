@@ -101,7 +101,7 @@ Pode também forçar a aplicação de partilha RMS a bloquear a proteção dos f
 
 Para configurar a aplicação de partilha RMS para aplicar uma proteção genérica a todos os ficheiros que, por predefinição, teriam uma proteção nativa aplicada, efetue as seguintes edições de registo. Tenha em atenção que, se as chaves RmsSharingApp ou FileProtection não existirem, tem de as criar manualmente.
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: crie uma nova chave com o nome *.
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: crie uma nova chave com o nome \*.
 
     Esta definição indica ficheiros com qualquer extensão de nome de ficheiro.
 

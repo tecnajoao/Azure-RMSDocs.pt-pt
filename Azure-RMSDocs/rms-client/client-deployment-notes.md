@@ -35,7 +35,7 @@ O cliente do RMS pode ser livremente redistribuído e incluído com outras aplic
 - Tornar o cliente do RMS um pré-requisito da sua aplicação. Com esta opção, poderá ser necessário fornecer aos utilizadores instruções adicionais para que obtenham, instalem e atualizem os seus computadores com o cliente, para poderem utilizar a aplicação.
 
 ## <a name="installing-the-rms-client"></a>Instalar o cliente do RMS
-O cliente do RMS está contido no ficheiro executável do instalador denominado  **setup_msipc*\<arquitetura\>*.exe * *, onde  *\<arquitetura >*está **x86** (para computadores de cliente de 32 bits) ou **x64** (para computadores de cliente de 64 bits). O pacote do instalador de 64 bits (x64) instala um executável de 32 bits, para compatibilidade com aplicações de 32 bits executadas numa instalação de sistema operativo de 64 bits, e um executável de 64 bits, para suportar aplicações de 64 bits nativas. O instalador de 32 bits (x86) não é executado numa instalação do Windows de 64 bits.
+O cliente do RMS está contido no ficheiro executável do instalador denominado **setup_msipc*\<arquitetura\>*.exe**, onde *\<arquitetura >*está **x86** (para computadores de cliente de 32 bits) ou **x64** (para computadores de cliente de 64 bits). O pacote do instalador de 64 bits (x64) instala um executável de 32 bits, para compatibilidade com aplicações de 32 bits executadas numa instalação de sistema operativo de 64 bits, e um executável de 64 bits, para suportar aplicações de 64 bits nativas. O instalador de 32 bits (x86) não é executado numa instalação do Windows de 64 bits.
 
 > [!NOTE]
 > Tem de ter privilégios elevados para instalar o cliente do RMS, por exemplo enquanto membro do grupo Administradores no computador local.

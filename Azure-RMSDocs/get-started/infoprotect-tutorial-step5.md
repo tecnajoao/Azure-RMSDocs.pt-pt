@@ -41,7 +41,7 @@ Em seguida, está pronto para partilhar de forma segura este documento por e-mai
 
 4. Em **Selecionar utilizadores**, escreva um ou mais endereços de e-mail empresariais, como faria ao enviar um documento a alguém com quem a sua organização trabalha. Para especificar mais de um endereço, utilize um ponto e vírgula ou prima Enter. 
 
-    Certifique-se de que especificou um endereço de e-mail da empresa, tais como ** janetm@contoso.com ** ou ** p.dover@fabrikam.com ** porque, atualmente, o Azure Information Protection não suporta endereços de e-mail pessoais para este cenário. 
+    Certifique-se de que especificou um endereço de e-mail da empresa, tais como **janetm@contoso.com** ou **p.dover@fabrikam.com** porque, atualmente, o Azure Information Protection não suporta endereços de e-mail pessoais para este cenário. 
 
     Em alternativa, clique em de **selecionar utilizadores, grupos ou organização** ícone para selecionar o endereço de correio eletrónico de um co-worker:
 

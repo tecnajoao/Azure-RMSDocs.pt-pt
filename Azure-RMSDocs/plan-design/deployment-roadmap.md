@@ -4,7 +4,7 @@ description: "Utilize estes passos para preparar, implementar e gerir o Azure In
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/02/2017
+ms.date: 02/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ac22594c76ba9247be08dd48a3208d4b5c42e319
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: d0ebe0456933fd3b5940d50479038200008d9a44
+ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Plano de implementação do Azure Information Protection
 
@@ -84,7 +84,7 @@ Quando os utilizadores estiverem mais confortáveis a etiquetar documentos e e-m
 
 3. Se estiver a utilizar serviços de Gestão de Direitos no local: efetue uma migração para mover as chaves, os modelos e os URLs para a cloud. Para obter mais informações, consulte [Migrar do AD RMS para o Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-4. Ative o serviço Azure Rights Management para começar a proteger documentos e e-mails. Se for necessária uma implementação faseada, configure os controlos de inclusão do utilizador para restringir a utilização a utilizadores específicos. Para obter mais informações, consulte [Ativar o Azure Rights Management](../deploy-use/activate-service.md).
+4. Certifique-se de que o serviço Azure Rights Management está ativado para que pode começar a proteger documentos e e-mails. Se for necessária uma implementação faseada, configure os controlos de inclusão do utilizador para restringir a utilização a utilizadores específicos. Para obter mais informações, consulte [Ativar o Azure Rights Management](../deploy-use/activate-service.md).
 
 Opcionalmente, considere configurar o seguinte:
 
@@ -150,7 +150,7 @@ Antes de começar a utilizar o [!INCLUDE[aad_rightsmanagement_2](../includes/aad
 
 4. Se estiver a utilizar serviços de Gestão de Direitos no local: efetue uma migração para mover as chaves, os modelos e os URLs para a cloud. Para obter mais informações, consulte [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-5. Ative o Rights Management de modo a poder começar a utilizar o serviço. Se for necessária uma implementação faseada, configure os controlos de inclusão do utilizador para restringir a utilização a utilizadores específicos. Para obter mais informações, consulte [Ativar o Azure Rights Management](../deploy-use/activate-service.md).
+5. Certifique-se de que o serviço Azure Rights Management está ativado para que pode começar a proteger documentos e e-mails. Se for necessária uma implementação faseada, configure os controlos de inclusão do utilizador para restringir a utilização a utilizadores específicos. Para obter mais informações, consulte [Ativar o Azure Rights Management](../deploy-use/activate-service.md).
 
 Opcionalmente, considere configurar o seguinte:
 

@@ -4,7 +4,7 @@ description: "Verifique se tem as contas de utilizador e de grupo de que precisa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/18/2018
+ms.date: 02/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: de06bc202ff60e6850ba217fe7ded79c0753d925
-ms.sourcegitcommit: 972acdb468ac32a28e3e24c90694aff4b75206fc
+ms.openlocfilehash: 45f75834d687247808107708e082ff61d8510899
+ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Preparar utilizadores e grupos para o Azure Information Protection
 
@@ -43,8 +43,8 @@ Quando cria utilizadores e grupos através dos primeiros três métodos desta li
 Existem três cenários de utilização de utilizadores e grupos com o Azure Information Protection:
 
 - **Para atribuir etiquetas aos utilizadores** quando utilizar a classificação e etiquetagem. Apenas os administradores selecionar estes grupos:
-
-    - A política do Azure Information Protection predefinida é atribuída automaticamente a todos os utilizadores no Azure AD do seu inquilino. No entanto, também pode atribuir etiquetas adicionais a utilizadores ou grupos especificados através de políticas de âmbito.     
+    
+    - A política do Azure Information Protection predefinida é atribuída automaticamente a todos os utilizadores no Azure AD do seu inquilino. No entanto, também pode atribuir etiquetas adicionais a utilizadores ou grupos especificados através de políticas de âmbito.
 
 - **Para atribuir direitos de utilização e controlos de acesso** quando utiliza o serviço Azure Rights Management para proteger documentos e e-mails. Os administradores e os utilizadores podem selecionar estes utilizadores e grupos:
 
@@ -220,6 +220,12 @@ Não se esqueça de fator este atraso para quaisquer alterações ou de teste qu
 
 ## <a name="next-steps"></a>Próximos passos
 
-Quando tiver confirmado que os utilizadores e os grupos podem ser utilizados com o Azure Information Protection e que está pronto para começar a proteger documentos e e-mails, ative o serviço Rights Management para ativar este serviço de proteção de dados. Para obter mais informações, veja [Ativar o Azure Rights Management](../deploy-use/activate-service.md).
+Quando tiver confirmado que os utilizadores e grupos podem ser utilizados com o Azure Information Protection e está pronto para começar a proteger documentos e e-mails, verifique se tem de ativar o serviço Azure Rights Management. Este serviço tem de ser ativado para poder proteger documentos e e-mails da sua organização: 
+
+- Começando com Fevereiro de 2018: se a sua subscrição que inclui o Azure Rights Management ou do Azure Information Protection foi obtida durante ou após esta mês, o serviço é ativado automaticamente para si. 
+
+- Se a sua subscrição foi obtida antes de Fevereiro de 2018: tem de ativar o serviço manualmente. 
+
+Para obter mais informações, que inclui a verificar o estado de ativação, consulte [Activating Azure Rights Management](../deploy-use/activate-service.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

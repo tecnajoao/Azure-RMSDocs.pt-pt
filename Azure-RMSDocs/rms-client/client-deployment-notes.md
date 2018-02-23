@@ -48,7 +48,7 @@ Pode instalar o cliente do RMS através de um dos seguintes métodos de instala�
     setup_msipc_x64.exe /quiet
     ```
 
-- **Modo interativo.** Em alternativa, pode instalar o cliente do RMS utilizando o programa de configuração baseado na GUI, que é fornecido pelo Assistente de instalação de cliente do RMS. Para instalar de forma interativa, faça duplo clique o pacote de instalador do cliente de RMS (**setup_msipc*\<arquitetura\>*.exe * *) na pasta à qual foi copiado ou transferido no seu computador local.
+- **Modo interativo.** Em alternativa, pode instalar o cliente do RMS utilizando o programa de configuração baseado na GUI, que é fornecido pelo Assistente de instalação de cliente do RMS. Para instalar de forma interativa, faça duplo clique o pacote de instalador do cliente de RMS (**setup_msipc*\<arquitetura\>*.exe**) na pasta à qual foi copiado ou transferido no seu computador local.
 
 ## <a name="questions-and-answers-about-the-rms-client"></a>Perguntas e respostas sobre o cliente do RMS
 A secção seguinte contém as perguntas mais frequentes sobre o cliente do RMS e as respostas às mesmas.

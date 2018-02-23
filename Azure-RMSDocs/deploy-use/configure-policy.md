@@ -4,7 +4,7 @@ description: "Para configurar a classificação, a etiquetagem e a proteção, t
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6b0556755597fe20755e7b798a24498a780b87b5
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: 67d38d19408c67c5da8db188395e00a7d3f9d999
+ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurar a política do Azure Information Protection
 
@@ -63,11 +63,11 @@ Para iniciar sessão no portal do Azure, para configurar e gerir o Azure Informa
 
 1. Inicie sessão no portal do Azure.
 
-2. No menu do hub, clique em **Novo** e, em seguida, na lista **MARKETPLACE**, selecione **Security + Identity**. 
+2. No hub menu, clique em **crie um recurso**e, em seguida, o **MARKETPLACE** lista, selecione **segurança + identidade**. 
     
 3. No **segurança + identidade** painel, do **aplicações em destaque** lista, selecione **Azure Information Protection**. Em seguida, no **Azure Information Protection** painel, clique em **criar**.
     
-    Esta ação cria o **Azure Information Protection** painel para o seu inquilino para que a próxima vez iniciar sessão no portal, pode selecionar o serviço do hub **mais serviços** lista. 
+    Esta ação cria o **Azure Information Protection** painel para o seu inquilino para que a próxima vez iniciar sessão no portal, pode selecionar o serviço do hub **todos os serviços** lista. 
     
     > [!TIP] 
     > Selecione **Afixar ao dashboard** para criar um mosaico do **Azure Information Protection** no seu dashboard. Assim, não terá de procurar o serviço da próxima vez que iniciar sessão no portal.
@@ -80,7 +80,7 @@ Tempo junto de acesso a **Azure Information Protection** painel,-seleciona autom
 
 1. Certifique-se de que tem sessão iniciada portal do Azure, utilizando uma dessas funções administrativas: administrador de proteção de informações, o administrador de segurança ou o Administrador Global. Consulte o [anterior a secção](#signing-in-to-the-azure-portal) para obter mais informações sobre estas funções administrativas.
 
-2. Se necessário, navegue para o **Azure Information Protection** painel: por exemplo, no hub menu, clique em **mais serviços** e comece a escrever **Information Protection** no Caixa de filtro. Na lista de resultados, selecione **Azure Information Protection**. 
+2. Se necessário, navegue para o **Azure Information Protection** painel: por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **Information Protection** no Caixa de filtro. Na lista de resultados, selecione **Azure Information Protection**. 
     
     O **Azure Information Protection - política Global** painel abre-se automaticamente para que possa ver e editar a política global que obtêm todos os utilizadores. 
     

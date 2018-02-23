@@ -4,17 +4,17 @@ description: "Conheça a forma como a política predefinida do Azure Information
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 02/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: 86b04d47797f7e3201dd4fd7b7e5a9c662254d12
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: da8557be0a70cee0e7a207a8ed285f6e843ac626
+ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Política do Azure Information Protection predefinida
 
@@ -30,7 +30,7 @@ Pode usar os seguintes valores como referência para voltar à política predefi
 
 Esta versão da política predefinida é de 31 de Julho de 2017.
 
-Esta política predefinida é criada apenas se o serviço Azure Rights Management foi ativado quando a política foi criada. Se este serviço não foi ativado, a política predefinida não configurar a proteção para as seguintes etiquetas secundárias:
+Esta política predefinida é criada apenas se o serviço Azure Rights Management foi [ativado](activate-service.md) quando a política foi criada. Se este serviço não foi ativado, a política predefinida não configurar a proteção para os sublabels seguintes:
 
 - **Confidencial\Todos os Funcionários**
 
@@ -40,13 +40,13 @@ Esta política predefinida é criada apenas se o serviço Azure Rights Managemen
 
 - **Altamente confidenciais \ destinatários apenas** 
 
-Se estas etiquetas secundárias não são automaticamente configuradas para proteção, a política predefinida continua a ser o mesmo que o [anterior política predefinida](#default-policy-before-july-31-2017).
+Quando estes sublabels não são automaticamente configuradas para proteção, a política predefinida permanece o mesmo que o [anterior política predefinida](#default-policy-before-july-31-2017).
 
-Quando a proteção é aplicada para a **todos os funcionários** etiquetas secundárias, a proteção é configurada utilizando os modelos predefinidos que são automaticamente convertidos para etiquetas no portal do Azure. Para obter mais informações sobre estes modelos, consulte [configurar e gerir modelos do Azure Information Protection](configure-policy-templates.md).
+Quando a proteção é aplicada para a **todos os funcionários** sublabels, a proteção é configurada utilizando os modelos predefinidos que são automaticamente convertidos para etiquetas no portal do Azure. Para obter mais informações sobre estes modelos, consulte [configurar e gerir modelos do Azure Information Protection](configure-policy-templates.md).
 
 A partir de 30 de Agosto de 2017, esta versão da política predefinida inclui multilingues versões dos nomes de etiqueta e descrições. 
 
-#### <a name="more-information-about-the-recipients-only-sub-label"></a>Obter mais informações sobre a etiqueta secundária apenas os destinatários
+#### <a name="more-information-about-the-recipients-only-sublabel"></a>Obter mais informações sobre o sublabel apenas os destinatários
 
 Os utilizadores veem apenas esta etiqueta no Outlook. Se não vir esta etiqueta no Word, Excel, PowerPoint ou do Explorador de ficheiros. 
 
@@ -64,7 +64,7 @@ Quando os utilizadores selecionarem esta etiqueta, a Outlook opção não reenca
 |Altamente Confidencial|Dados empresariais altamente confidenciais que iriam causar danos à empresa se fossem partilhados com pessoas não autorizadas. Os exemplos incluem informações dos funcionários e clientes, palavras-passe, código de origem e relatórios financeiros previamente anunciados.|**Ativado**: ligado <br /><br />**Cor**: vermelho<br /><br />**Marcas visuais**: desligado<br /><br />**Condições**: nenhuma<br /><br />**Proteção**: nenhuma|
 
 
-### <a name="sub-labels"></a>Etiquetas secundárias
+### <a name="sublabels"></a>Sublabels
 
 |Etiqueta|Descrição|Definições|
 |-------------------------------|---------------------------|-----------------|
@@ -86,7 +86,7 @@ As permissões de proteção correspondem aos existentes no [modelo predefinido]
 
 |Definição|Valor|
 |-------------------------------|---------------------------|
-|Título|Sensibilidade|
+|Title|Sensibilidade|
 |Descrição|A etiqueta atual para estes conteúdos. Esta definição identifica o risco para a empresa se estes conteúdos forem partilhados com pessoas não autorizadas dentro ou fora da organização.|
 
 
@@ -117,7 +117,7 @@ Tenha em atenção que as descrições nesta política se referem aos dados que 
 |Altamente Confidencial|Dados empresariais altamente confidenciais que iriam causar danos à empresa se fossem partilhados com pessoas não autorizadas. Os exemplos incluem informações dos funcionários e clientes, palavras-passe, código de origem e relatórios financeiros previamente anunciados.|**Ativado**: ligado <br /><br />**Cor**: vermelho<br /><br />**Marcas visuais**: desligado<br /><br />**Condições**: nenhuma<br /><br />**Proteção**: nenhuma|
 
 
-### <a name="sub-labels"></a>Etiquetas secundárias
+### <a name="sublabels"></a>Sublabels
 
 |Etiqueta|Descrição|Definições|
 |-------------------------------|---------------------------|-----------------|
@@ -130,7 +130,7 @@ Tenha em atenção que as descrições nesta política se referem aos dados que 
 
 |Definição|Valor|
 |-------------------------------|---------------------------|
-|Título|Sensibilidade|
+|Title|Sensibilidade|
 |Descrição|A etiqueta atual para estes conteúdos. Esta definição identifica o risco para a empresa se estes conteúdos forem partilhados com pessoas não autorizadas dentro ou fora da organização.|
 
 
@@ -157,7 +157,7 @@ Tenha em atenção que as descrições nesta política se referem aos dados que 
 |Secreto|Estes dados incluem informações altamente confidenciais para as empresas e têm de ser protegidas. A exposição de dados Secretos a utilizadores não autorizados pode causar graves danos na organização. Exemplos de informações secretas são informações de identificação pessoal, registos de clientes, código de origem e relatórios financeiros previamente anunciados.|**Ativado**: ligado <br /><br />**Cor**: vermelho<br /><br />**Marcas visuais**: rodapé (documentos e e-mails):<br /><br /> Sensibilidade: secreto<br /><br />**Condições**: nenhuma<br /><br />**Proteção**: nenhuma|
 
 
-### <a name="sub-labels"></a>Etiquetas secundárias
+### <a name="sublabels"></a>Sublabels
 
 |Etiqueta|Descrição|Definições|
 |-------------------------------|---------------------------|-----------------|
@@ -168,7 +168,7 @@ Tenha em atenção que as descrições nesta política se referem aos dados que 
 
 |Definição|Valor|
 |-------------------------------|---------------------------|
-|Título|Sensibilidade|
+|Title|Sensibilidade|
 |Descrição|A confidencialidade das informações consiste em quatro níveis diferente (Público, Interno, Confidencial, Secreto), permitindo que o utilizador identifique o risco de exposição das informações para utilizadores não autorizados dentro ou fora da empresa.|
 
 

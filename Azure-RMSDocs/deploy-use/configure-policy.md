@@ -4,7 +4,7 @@ description: "Para configurar a classificação, a etiquetagem e a proteção, t
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 02/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 67d38d19408c67c5da8db188395e00a7d3f9d999
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: 9ff8109240dee992563a0dde68a4980d0ebd955e
+ms.sourcegitcommit: 240378d216e386ad760460c50b7a664099c669e9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 02/23/2018
@@ -120,7 +120,7 @@ O cliente do Azure Information Protection verifica se existem alterações sempr
 
 - A cada 24 horas.
 
-- Para o [Scanner de proteção de informações do Azure](deploy-aip-scanner.md): quando inicia o serviço de mensagens em fila e a cada hora.
+- Para o [Scanner de proteção de informações do Azure](deploy-aip-scanner.md): quando inicia o serviço (se a política é mais antiga do que uma hora) de mensagens em fila e a hora a hora durante a operação.
 
 
 >[!NOTE]

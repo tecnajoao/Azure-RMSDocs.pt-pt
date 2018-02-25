@@ -4,14 +4,14 @@ description: "Apesar do Azure Information Protection ter etiquetas predefinidas 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
-ms.openlocfilehash: 5fb49e5472ea200a7c19e240585940bcf440278c
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: 8628fa5b17659a49ff9f63ae6dad32f073e8ced6
+ms.sourcegitcommit: 240378d216e386ad760460c50b7a664099c669e9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 02/23/2018
@@ -23,6 +23,8 @@ ms.lasthandoff: 02/23/2018
 Apesar do Azure Information Protection ter etiquetas predefinidas que pode personalizar, também pode criar as suas próprias etiquetas que os utilizadores veem na barra Information Protection.
 
 Pode adicionar uma nova etiqueta ou adicionar um novo sublabel para uma etiqueta existente quando precisar de um nível adicional de classificação. Por exemplo, a etiqueta na última o [política predefinida](configure-policy-default.md), contém sublabels.
+
+Ao criar a primeira sublabel para uma etiqueta, os utilizadores já não podem selecionar a original, a etiqueta principal. Se necessário, crie um novo sublabel para recriar as definições de etiqueta principal, para que os utilizadores podem aplicar as mesmas definições.
 
 Utilize as seguintes instruções para adicionar uma nova etiqueta à política do Azure Information Protection.
 

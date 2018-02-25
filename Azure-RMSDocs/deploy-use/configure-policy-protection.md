@@ -4,17 +4,17 @@ description: "Pode proteger os seus documentos e e-mails mais confidenciais ao c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: e4f4ced3495af71cd36caf8fc54258cd77befd99
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: b5184921dceba060f600590533e7d429d59c7be4
+ms.sourcegitcommit: 85250f5ea80c2ee22197058ff2f65a79503b0f0c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Como configurar uma etiqueta para a proteção do Rights Management
 
@@ -60,10 +60,14 @@ Exchange não tem de ser configurado para gestão de direitos de informação (I
 4. No **etiqueta** painel, localize **definir as permissões para documentos e e-mails que contêm esta etiqueta** e selecione uma das seguintes opções:
     
     - **Não configurada**: selecione esta opção se a etiqueta estiver configurada para aplicar a proteção e já não quiser que a etiqueta selecionada aplique a proteção. Em seguida, avance para o passo 11.
+        
+        A proteção configurada anteriormente, as definições são mantidas como um modelo de proteção arquivado e voltará a ser apresentadas se alterar a opção de volta para **proteger**. Não vir este modelo no portal do Azure, mas se necessário, ainda assim pode gerir o modelo utilizando [PowerShell](configure-templates-with-powershell.md). Isto significa de comportamento do conteúdo permanece acessível se tiver esta etiqueta com as definições de proteção anteriormente aplicada.
     
     - **Proteger**: selecione esta opção para aplicar a proteção e, em seguida, avance para o passo 5.
     
     - **Remova a proteção**: selecione esta opção para remover a proteção se um documento ou correio eletrónico está protegido. Em seguida, avance para o passo 11.
+        
+        A proteção configurada anteriormente, as definições são mantidas como um modelo de proteção arquivado e voltará a ser apresentadas se alterar a opção de volta para **proteger**. Não vir este modelo no portal do Azure, mas se necessário, ainda assim pode gerir o modelo utilizando [PowerShell](configure-templates-with-powershell.md). Isto significa de comportamento do conteúdo permanece acessível se tiver esta etiqueta com as definições de proteção anteriormente aplicada.
         
         Tenha em atenção que para os utilizadores aplicarem uma etiqueta que tem esta opção, têm de ter permissões para remover a proteção Rights Management. Este requisito, significa que os utilizadores têm de ter o **exportar** ou **controlo total** [direito de utilização](../deploy-use/configure-usage-rights.md). Ou, tem de ser o proprietário de Rights Management (que automaticamente concede o direito de utilização do controlo total) ou ser um [Superutilizador do Azure Rights Management](../deploy-use/configure-super-users.md). Os modelos do Azure Rights Management predefinido não incluem os direitos de utilização que permitem que os utilizadores a remover a proteção. 
         
@@ -113,7 +117,7 @@ Exchange não tem de ser configurado para gestão de direitos de informação (I
     Se necessário, agora pode adicionar um segundo conjunto de utilizadores e grupos com direitos de utilização. Repita até que especificou todos os utilizadores e grupos com as suas respetivas permissões.
 
     >[!TIP]
-    >Considere adicionar o **copiar e extrair conteúdo** permissão personalizada e conceder esta permissão para administradores de recuperação de dados ou pessoal nas outras funções que tenham responsabilidades de recuperação de informações. Se for necessário, estes utilizadores, em seguida, podem remover a proteção de ficheiros e e-mails que irão ser protegidos utilizando esta etiqueta ou modelo. Esta capacidade para remover a proteção ao nível da permissão para um documento ou e-mail fornece controlo mais detalhado do que o [funcionalidade de Superutilizador](configure-super-users.md).
+    >Considere adicionar o **guardar como, exportar (EXPORTAR)** permissão personalizada e conceder esta permissão para administradores de recuperação de dados ou pessoal nas outras funções que tenham responsabilidades de recuperação de informações. Se for necessário, estes utilizadores, em seguida, podem remover a proteção de ficheiros e e-mails que irão ser protegidos utilizando esta etiqueta ou modelo. Esta capacidade para remover a proteção ao nível da permissão para um documento ou e-mail fornece controlo mais detalhado do que o [funcionalidade de Superutilizador](configure-super-users.md).
     
     Para todos os utilizadores e grupos que especificou, no **proteção** painel, agora, verifique se pretende efetuar alterações às seguintes definições. Note que estas definições, assim como acontece com as permissões, não se aplicam ao [Emissor ou proprietário do Rights Management](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner), ou qualquer [super utilizador](configure-super-users.md) que atribuiu.
     

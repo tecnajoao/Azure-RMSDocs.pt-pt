@@ -4,7 +4,7 @@ description: "Algumas perguntas mais frequentes sobre o Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/14/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 78d6e75b432635420405f9cb7280c5e2548b65f2
-ms.sourcegitcommit: 2733b1df2ebdda02b60d9471db29e545552f99ff
+ms.openlocfilehash: 28b0e73fe8761cac230392479b664c000d9eba79
+ms.sourcegitcommit: 85250f5ea80c2ee22197058ff2f65a79503b0f0c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Perguntas mais frequentes sobre o Azure Information Protection
 
@@ -133,8 +133,15 @@ Quando o verificador protege os ficheiros em sites do SharePoint e bibliotecas, 
 
 A documentação técnica não contém informações sobre os lançamentos futuros. Para este tipo de informações e anúncios de lançamento, verifique o [blogue Enterprise Mobility and Security](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services) e obter as atualizações mais recentes do [Microsoft Mobility@MSFTMobility ](https://twitter.com/MSFTMobility) no Twitter. Se estiver interessado numa versão do Office, certifique-se de que vê também o [blogue do Office](https://blogs.office.com/).
 
-## <a name="where-can-i-find-supporting-information-for-azure-information-protectionsuch-as-legal-compliance-and-slas"></a>Onde posso encontrar informações de suporte para o Azure Information Protection, como informações legais, sobre conformidade e SLAs?
+## <a name="is-azure-information-protection-suitable-for-my-country"></a>Azure Information Protection é adequado para a minha país?
 
+Países/regiões diferentes têm requisitos diferentes e regulamentos. Para ajudar a responder a esta questão para a sua organização, consulte [adequabilidade diferentes países](../understand-explore/compliance.md#suitability-for-different-countries).
+
+## <a name="how-can-azure-information-protection-help-with-gdpr"></a>Como o Azure Information Protection pode ajudar com GDPR?
+
+Para ver como o Azure Information Protection o podem ajudar a satisfazer as regulamento de proteção de dados (GDPR) em geral, veja o anúncio de mensagem de blogue seguinte, com as vídeo: [Microsoft 365 fornece uma estratégia de proteção de informações para ajudar a GDPR](https://blogs.office.com/2018/02/22/microsoft-365-provides-an-information-protection-strategy-to-help-with-the-gdpr).
+
+## <a name="where-can-i-find-supporting-information-for-azure-information-protectionsuch-as-legal-compliance-and-slas"></a>Onde posso encontrar informações de suporte para o Azure Information Protection, como informações legais, sobre conformidade e SLAs?
 Veja [Informações de suporte e conformidade do Azure Information Protection](../understand-explore/compliance.md).
 
 ## <a name="how-can-i-report-a-problem-or-send-feedback-for-azure-information-protection"></a>Como posso comunicar um problema ou enviar feedback do Azure Information Protection?

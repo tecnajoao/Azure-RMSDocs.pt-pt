@@ -1,10 +1,10 @@
 ---
-title: "PowerShell para modelos personalizados do Azure RMS – AIP"
-description: "Tudo o que pode fazer no portal do Azure para criar e gerir modelos de gestão de direitos, que pode fazer na linha de comandos, utilizando o PowerShell. Além disso, pode exportar e importar modelos para poder copiar modelos entre inquilinos ou fazer edições em volume de propriedades complexas nos modelos, como nomes e descrições multilingues."
+title: "PowerShell para modelos de proteção - Azure Information Protection"
+description: "Tudo o que pode fazer no portal do Azure para criar e gerir modelos de proteção, pode fazer a partir da linha de comandos, utilizando o PowerShell. Além disso, pode exportar e importar modelos para poder copiar modelos entre inquilinos ou fazer edições em volume de propriedades complexas nos modelos, como nomes e descrições multilingues."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,28 +12,25 @@ ms.technology: techgroup-identity
 ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c3b1662275b051ea75dcc104c4f09b5db53dbe3e
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 051144562b1c26a22953f6e83a41b4902404fd2f
+ms.sourcegitcommit: 85250f5ea80c2ee22197058ff2f65a79503b0f0c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="powershell-reference-for-custom-templates"></a>Referência do PowerShell para modelos personalizados
+# <a name="powershell-reference-for-protection-templates"></a>Referência do PowerShell para modelos de proteção
 
 >*Aplica-se a: Azure Information Protection, Office 365*
 
-Tudo o que pode fazer no portal do Azure para criar e gerir modelos, pode fazer a partir da linha de comandos, utilizando o PowerShell. Além disso, pode exportar e importar modelos para poder copiar modelos entre inquilinos ou fazer edições em volume de propriedades complexas nos modelos, como nomes e descrições multilingues.
+As definições de proteção do Azure Information Protection são guardadas em modelos de proteção. Tudo o que pode fazer no portal do Azure para criar e gerir as definições de proteção, pode efetuar na linha de comandos, utilizando o PowerShell. 
 
-Também pode utilizar a exportação e importação para criar uma cópia de segurança e restaurar os modelos personalizados. De acordo com as melhores práticas, crie uma cópia de segurança dos seus modelos personalizados regularmente, pois se fizer uma alteração que não pretendia, pode facilmente reverter para uma versão anterior.
+Além disso, pode exportar e importar modelos de proteção. Estas duas ações permitem-lhe proteção copiar modelos entre inquilinos ou em massa edições de propriedades complexas, tais como nomes e descrições multilingues.
 
-> [!IMPORTANT]
-> Para utilizar o PowerShell para criar e gerir modelos do Azure Rights Management, tem de ter, pelo menos, a versão 2.0.0.0 do [módulo do Windows PowerShell para o Azure RMS](https://go.microsoft.com/fwlink/?LinkId=257721).
-> 
-> Se já tiver instalado este módulo do PowerShell, execute o seguinte comando numa janela do PowerShell para verificar o número da versão: `(Get-Module aadrm -ListAvailable).Version`
+Também pode utilizar a exportação e importação para criar cópias de segurança e restaurar os modelos de proteção. Como melhor prática, regularmente cópia de segurança de modelos. Em seguida, se fizer uma alteração às definições de proteção que não foi concebida, pode facilmente reverter para uma versão anterior.
 
-Para obter instruções de instalação, consulte [Installing Windows PowerShell for Azure Rights Management (Instalar o Windows PowerShell para o Azure Rights Management – em inglês)](install-powershell.md).
+Para obter instruções de instalação, consulte [instalar o módulo do AADRM PowerShell](install-powershell.md).
 
-Os cmdlets que suportam a criação e gestão de modelos:
+Os cmdlets que suportam a criar e gerir modelos de proteção:
 
 - [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate)
 
@@ -53,7 +50,7 @@ Os cmdlets que suportam a criação e gestão de modelos:
 
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 [Configurar e gerir modelos do Azure Information Protection](configure-policy-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -4,7 +4,7 @@ description: "Conheça os direitos específicos utilizados quando protege fichei
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2018
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ceada043abfa1bee18c6407b3804815d95e89453
-ms.sourcegitcommit: 972acdb468ac32a28e3e24c90694aff4b75206fc
+ms.openlocfilehash: 6d3090a74e5fefc3fd383d8846879dd513a7dbc1
+ms.sourcegitcommit: 240378d216e386ad760460c50b7a664099c669e9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuração de direitos de utilização para o Azure Rights Management
 
@@ -39,10 +39,10 @@ A **Constante ou o Valor de API** é o nome do SDK para uma chamada à API MSIPC
 
 |Direito de utilização|Descrição|Implementação|
 |-------------------------------|---------------------------|-----------------|
-|Nome comum: **Editar Conteúdo, Editar** <br /><br />Codificação na política: **DOCEDIT**|Permite ao utilizador modificar, reorganizar, formatar ou filtrar o conteúdo dentro da aplicação. Não concede o direito para guardar a cópia editada.|Direitos personalizados do Office: como parte das opções **Alterar** e **Controlo Total**. <br /><br />Nome no portal clássico do Azure: **Editar Conteúdo**<br /><br />Nome no portal do Azure: **editar conteúdo, editar (DOCEDIT)**<br /><br />Nome em modelos do AD RMS: **Editar** <br /><br />Constante ou valor de API: não aplicável.|
+|Nome comum: **Editar Conteúdo, Editar** <br /><br />Codificação na política: **DOCEDIT**|Permite ao utilizador modificar, reorganizar, formato, ou filtrar o conteúdo dentro da aplicação. Não concede o direito para guardar a cópia editada.|Direitos personalizados do Office: como parte das opções **Alterar** e **Controlo Total**. <br /><br />Nome no portal clássico do Azure: **Editar Conteúdo**<br /><br />Nome no portal do Azure: **editar conteúdo, editar (DOCEDIT)**<br /><br />Nome em modelos do AD RMS: **Editar** <br /><br />Constante ou valor de API: não aplicável.|
 |Nome comum: **Guardar** <br /><br />Codificação na política: **EDIT**|Permite ao utilizador guardar o documento na sua localização atual.<br /><br />Nas aplicações do Office, este direito também permite que o utilizador modifique o documento.|Direitos personalizados do Office: como parte das opções **Alterar** e **Controlo Total**. <br /><br />Nome no portal clássico do Azure: **Guardar Ficheiro**<br /><br />Nome no portal do Azure: **guardar (editar)**<br /><br />Nome em modelos do AD RMS: **Guardar** <br /><br />Valor ou constante de API: `IPC_GENERIC_WRITE L"EDIT"`|
 |Nome comum: **Comentário** <br /><br />Codificação na política: **COMMENT**|Ativa a opção para adicionar anotações ou comentários ao conteúdo.<br /><br />Este direito está disponível no SDK, disponível como uma política ad hoc no módulo AzureInformationProtection e Proteção RMS para o Windows PowerShell e foi implementado em certas aplicações de fornecedores de software. No entanto, não é amplamente utilizado e atualmente não é suportado por aplicações do Office.|Direitos personalizados do Office: não implementados. <br /><br />Nome no portal clássico do Azure: não implementado.<br /><br />Nome no portal do Azure: não implementado.<br /><br />Nome nos modelos do AD RMS: não implementado. <br /><br />Valor ou constante de API: `IPC_GENERIC_COMMENT L"COMMENT`|
-|Nome comum: **Guardar Como, Exportar** <br /><br />Codificação na política: **EXPORT**|Ativa a opção para guardar o conteúdo com um nome de ficheiro diferente (Guardar Como). Para documentos do Office e o cliente do Azure Information Protection, pode guardar o ficheiro sem proteção.<br /><br />Este direito também permite que o utilizador efetue outras opções de exportação em aplicações, tais como **Enviar para o OneNote**.<br /><br /> Nota: se este direito não for concedido, as aplicações do Office permitirão que os utilizadores guardem um documento com um novo nome se o formato de ficheiro selecionado suportar nativamente a proteção do Rights Management.|Direitos personalizados do Office: como parte das opções **Alterar** e **Controlo Total**. <br /><br />Nome no portal clássico do Azure: **Exportar Conteúdo (Guardar Como)** <br /><br />Nome no portal do Azure: **guardar como, exportar (EXPORTAR)**<br /><br />Nome em modelos do AD RMS: **Exportar (Guardar Como)** <br /><br />Valor ou constante de API: `IPC_GENERIC_EXPORT L"EXPORT"`|
+|Nome comum: **Guardar Como, Exportar** <br /><br />Codificação na política: **EXPORT**|Ativa a opção para guardar o conteúdo com um nome de ficheiro diferente (Guardar Como). <br /><br />Para documentos do Office e o cliente Azure Information Protection, o ficheiro pode ser guardado sem proteção e também proteger com permissões e as novas definições. Estes das ações permitidas significam que um utilizador que tenha este direito pode alterar ou remover uma etiqueta de Azure Information Protection a partir de um documento protegido ou e-mail. <br /><br />Este direito também permite que o utilizador efetue outras opções de exportação em aplicações, tais como **Enviar para o OneNote**.<br /><br /> Nota: se este direito não for concedido, as aplicações do Office permitirão que os utilizadores guardem um documento com um novo nome se o formato de ficheiro selecionado suportar nativamente a proteção do Rights Management.|Direitos personalizados do Office: como parte das opções **Alterar** e **Controlo Total**. <br /><br />Nome no portal clássico do Azure: **Exportar Conteúdo (Guardar Como)** <br /><br />Nome no portal do Azure: **guardar como, exportar (EXPORTAR)**<br /><br />Nome em modelos do AD RMS: **Exportar (Guardar Como)** <br /><br />Valor ou constante de API: `IPC_GENERIC_EXPORT L"EXPORT"`|
 |Nome comum: **Reencaminhar** <br /><br />Codificação na política: **FORWARD**|Ativa a opção para reencaminhar uma mensagem de e-mail e para adicionar destinatários às linhas **Para** e **Cc**. Este direito não se aplica a documentos; apenas a mensagens de e-mail.<br /><br />Não permite que o reencaminhador conceda direitos a outros utilizadores como parte da ação de reencaminhar. <br /><br />Quando conceder este direito, também concede o direito **Editar Conteúdo, Editar** (nome comum) para garantir que o e-mail original é enviado como parte da mensagem de e-mail reencaminhada e não como anexo. Este direito também é necessário quando envia um e-mail para outra organização que utilize o cliente do Outlook ou Outlook Web App. Ou, para os utilizadores na sua organização que estão excluídos utilizando o Azure Rights Management service porque que implementou [controlos de inclusão](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy).|Direitos personalizados do Office: negados ao utilizar a política padrão **Não Reencaminhar**.<br /><br />Nome no portal clássico do Azure: **Reencaminhar**<br /><br />Nome no portal do Azure: **reencaminhar (DIRETA)**<br /><br />Nome em modelos do AD RMS: **Reencaminhar** <br /><br />Valor ou constante de API: `IPC_EMAIL_FORWARD L"FORWARD"`|
 |Nome comum: **Controlo Total** <br /><br />Codificação na política: **OWNER**|Concede todos os direitos ao documento e podem ser efetuadas todas as ações disponíveis.<br /><br />Inclui a capacidade de remover a proteção e voltar a proteger um documento. <br /><br />Tenha em atenção que este direito de utilização não é igual ao [proprietário do Rights Management](#rights-management-issuer-and-rights-management-owner).|Direitos personalizados do Office: como a opção personalizada **Controlo Total**.<br /><br />Nome no portal clássico do Azure: **Controlo Total**<br /><br />Nome no portal do Azure: **controlo total (OWNER)**<br /><br />Nome em modelos do AD RMS: **Controlo Total** <br /><br />Valor ou constante de API: `IPC_GENERIC_ALL L"OWNER"`|
 |Nome comum: **Imprimir** <br /><br />Encoding na política: **PRINT**|Ativa as opções para imprimir o conteúdo.|Direitos personalizados do Office: como a opção **Imprimir Conteúdo** em permissões personalizadas. Não é uma definição por destinatário.<br /><br />Nome no portal clássico do Azure: **Imprimir**<br /><br />Nome no portal do Azure: **impressão (imprimir)**<br /><br />Nome em modelos do AD RMS: **Imprimir** <br /><br />Valor ou constante de API: `IPC_GENERIC_PRINT L"PRINT"`|
@@ -95,11 +95,11 @@ Estes modelos predefinidos são criados quando foi comprada a sua subscrição e
 
 ## <a name="do-not-forward-option-for-emails"></a>Opção Não Reencaminhar para e-mails
 
-Os clientes e serviços do Exchange (por exemplo, o cliente Outlook, a aplicação Outlook Web Access e as regras de transporte do Exchange) têm uma opção de proteção dos direitos de informação para e-mails adicional: **Não Reencaminhar**. 
+Os clientes do Exchange e serviços (por exemplo, o cliente Outlook, a aplicação Outlook Web Access e as regras de transporte do Exchange) têm uma opção de proteção de direitos de informação adicional para e-mails: **não reencaminhar**. 
 
 Embora esta opção seja apresentada aos utilizadores (e os administradores do Exchange) como se fosse um modelo de Gestão de Direitos predefinido que podem selecionar, **Não Reencaminhar** não é um modelo. Isto explica por que motivo não pode vir no portal do Azure quando visualiza e gere modelos para o Azure Rights Management. Em vez disso, a opção **Não Reencaminhar** é um conjunto de direitos aplicados dinamicamente por utilizadores aos seus destinatários de e-mail.
 
-Quando a opção **Não Reencaminhar** é aplicada a um e-mail, os destinatários não podem reencaminhá-lo, imprimi-lo, copiá-lo ou guardar anexos ou guardar com um nome diferente. Por exemplo, no cliente Outlook, o botão Reencaminhar não está disponível, as opções de menu **Guardar Como**, **Guardar Anexo** e **Imprimir** não estão disponíveis e não é possível adicionar ou alterar os destinatários nas caixas **Para**, **Cc** ou **Bcc**.
+Quando o **não reencaminhar** opção é aplicada a um e-mail, o e-mail é encriptada e os destinatários tem de ser autenticados. Em seguida, os destinatários não é possível reencaminhá-lo, imprimi-lo, copiá-lo ou guardar anexos ou guardar com um nome diferente. Por exemplo, no cliente Outlook, o botão reencaminhar não está disponível, o **guardar como**, **Guardar anexo**, e **impressão** opções de menu não estão disponíveis e não é possível adicionar ou alterar os destinatários no **para**, **Cc**, ou **Bcc** caixas.
 
 Existe uma diferença importante entre aplicar a opção **Não Reencaminhar** e aplicar um modelo que não conceda o direito de Reencaminhar a um e-mail: a opção **Não Reencaminhar** utiliza uma lista dinâmica de utilizadores autorizados que se baseia nos destinatários escolhidos pelo utilizador do e-mail original; enquanto os direitos no modelo têm uma lista estática de utilizadores autorizados especificados anteriormente pelo administrador. Qual a diferença? Vejamos um exemplo: 
 
@@ -111,6 +111,14 @@ Um utilizador pretende enviar algumas informações por e-mail a pessoas especí
 
 > [!NOTE] 
 > Utilize **Não Reencaminhar** quando for importante que restringir o acesso às informações do e-mail apenas os destinatários escolhidos pelo remetente. Utilize um modelo para e-mails para restringir os direitos a um grupo de pessoas especificadas anteriormente pelo administrador, independentemente dos destinatários escolhidos pelo remetente.
+
+## <a name="encrypt-only-option-for-emails"></a>Opção de encriptar apenas para e-mails
+
+Quando o Exchange Online utilizar as novas funcionalidades para a encriptação de mensagens do Office 365, fica disponível uma nova opção de e-mail: **só de encriptar**.
+
+Esta opção está a ser implementada para os inquilinos que utilizam o Exchange Online, inicialmente apenas para o Outlook web e como outra opção de proteção de direitos para uma regra de transporte. Para obter mais informações, consulte o seguinte anúncio de mensagem de blogue da equipa do Office: [encriptar agora disponível apenas na encriptação de mensagens do Office 365](https://aka.ms/omefeb2018).
+
+Quando esta opção está selecionada, o e-mail é encriptada e os destinatários tem de ser autenticados. Em seguida, os destinatários tem todos os direitos de utilização, exceto o controlo total. Esta combinação de direitos de utilização significa que os destinatários têm sem restrições, exceto que, que não é possível remover a proteção. Por exemplo, um destinatário pode copiar, imprimir e reencaminhar o e-mail. Da mesma forma, os documentos do Office que são ligados e automaticamente protegidos podem ser guardados copiado e impressos.
 
 ## <a name="rights-management-issuer-and-rights-management-owner"></a>Emissor e proprietário do Rights Management
 
@@ -144,7 +152,7 @@ Tenha em atenção que o proprietário do Rights Management é independente do P
 
 Quando um utilizador abre um documento ou e-mail que tenha sido protegido pelo Azure Rights Management, uma licença de utilização do Rights Management para esse conteúdo é concedida ao utilizador. Esta licença de utilização é um certificado que contém os direitos de utilização do utilizador para o documento ou mensagem de correio eletrónico e a chave de encriptação que foi utilizada para encriptar o conteúdo. A licença de utilização também contém uma data de expiração se esta tiver sido definida e quanto a licença de utilização do é válida.
 
-Durante a duração da licença de utilização, o utilizador não autenticado novamente ou não está autorizado novamente. Isto permite ao utilizador continuar a abrir o documento protegido ou o e-mail sem uma ligação à Internet. Quando o período de validade da licença de utilização expira, da próxima vez que o utilizador acede ao documento protegido ou e-mail, o utilizador tem de ser novamente autenticado e autorizado novamente. 
+Durante a duração da licença de utilização, o utilizador não é reautenticar ou reauthorized. Isto permite ao utilizador continuar a abrir o documento protegido ou o e-mail sem uma ligação à Internet. Quando o período de validade da licença de utilização expira, da próxima vez que o utilizador acede ao documento protegido ou e-mail, o utilizador tem de ser reautenticar e reauthorized. 
 
 Quando as mensagens de e-mail e documentos estão protegidas através da utilização de uma etiqueta ou um modelo que especifica as definições de proteção, pode alterar estas definições na etiqueta ou modelo sem ter de voltar a proteger o conteúdo. Se o utilizador acedeu já o conteúdo, as alterações entram em vigor após a respetiva licença de utilização expirou. No entanto, quando os utilizadores aplicar permissões personalizadas (também conhecido como uma política de direitos do ad-hoc) e estas permissões precisam de alterar depois do documento ou correio eletrónico está protegido, esse conteúdo deve ser protegido novamente com as permissões de novo. Permissões personalizadas para uma mensagem de e-mail são implementadas com a opção não reencaminhar.
 
@@ -159,7 +167,7 @@ A predefinição utilizar validade da licença período para um inquilino é 30 
     Para obter mais informações e orientações para configurar esta definição utilizando o PowerShell, consulte a ajuda para cada cmdlet.
 
 
-## <a name="see-also"></a>Veja Também
+## <a name="see-also"></a>Consulte Também
 [Configurar e gerir modelos do Azure Information Protection](configure-policy-templates.md)
 
 [Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados](configure-super-users.md)

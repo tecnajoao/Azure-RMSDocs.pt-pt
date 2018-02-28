@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 64daf1510ebec26f3f0604b726045933ebc31e4e
-ms.sourcegitcommit: 240378d216e386ad760460c50b7a664099c669e9
+ms.openlocfilehash: d3f82cde42985bb837fe47f7d01d7180462bccd3
+ms.sourcegitcommit: 23d98a405057d61a737313c8dfef042996131d3e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Perguntas mais frequentes sobre a classificação e a etiquetagem no Azure Information Protection
 
@@ -59,7 +59,8 @@ Quando utilizar sublabels, não configure marcas visuais, proteção e condiçõ
 ## <a name="how-do-i-prevent-somebody-from-removing-or-changing-a-label"></a>Como impedir alguém da remover ou alterar uma etiqueta?
 
 Apesar de não existe um [definição de política](../deploy-use/configure-policy-settings.md) que requer que os utilizadores indicar a razão pela qual está a reduzir uma etiqueta de classificação, a remover uma etiqueta, ou remover a proteção, esta definição não impede estas ações. Para impedir que utilizadores remover ou alterar uma etiqueta, o conteúdo já deve ser protegido e as permissões de proteção não conceder ao utilizador a exportação ou controlo total [direito de utilização](../deploy-use/configure-usage-rights.md). 
-## <a name="when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling"></a>Quando um e-mail tem uma etiqueta, os anexos também recebem a mesma etiqueta automaticamente?
+
+# <a name="when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling"></a>Quando um e-mail tem uma etiqueta, os anexos também recebem a mesma etiqueta automaticamente?
 
 Não. Quando coloca uma etiqueta numa mensagem de e-mail com anexos, esses anexos não herdam a mesma etiqueta. Os anexos permanecem sem uma etiqueta ou retêm uma etiqueta aplicada separadamente. No entanto, se a etiqueta do e-mail aplicar proteção, essa proteção é aplicada aos anexos.
 

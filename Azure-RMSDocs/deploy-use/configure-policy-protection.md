@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: b5184921dceba060f600590533e7d429d59c7be4
-ms.sourcegitcommit: 85250f5ea80c2ee22197058ff2f65a79503b0f0c
+ms.openlocfilehash: a00c6e669f01a8166b53ae1ae0a5a63737253d61
+ms.sourcegitcommit: 23d98a405057d61a737313c8dfef042996131d3e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Como configurar uma etiqueta para a proteção do Rights Management
 
@@ -229,6 +229,8 @@ Os novos utilizadores que adicionar será capaz de documentos aberta e e-mails q
 Esta etiqueta não pode ser restringida ao Outlook mas fornece controlos menos restritivos do que utilizar não reencaminhar. Por exemplo, pretende que os destinatários para poder copiar a partir do e-mail ou um anexo ou imprimir e guardar um anexo.
 
 Se especificar os utilizadores externos que não dispõe de uma conta no Azure AD, lembre-se de que Instrua os seus utilizadores para não utilizar esta etiqueta de documentos, apenas o e-mail. Além disso, para suportar estes utilizadores externos, Exchange Online tem de ser configurado para o [novas capacidades na encriptação de mensagens do Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).  
+> [!NOTE]
+> Exchange Online está a implementar uma nova opção [só de encriptar](configure-usage-rights.md#encrypt-only-option-for-emails). Esta opção não está disponível para configuração de etiqueta.
 
 Quando os utilizadores, especifique os endereços de e-mail no **para** caixa, os endereços tem de ser para os mesmos utilizadores que especificar para esta configuração de etiqueta. Porque os utilizadores podem pertencem a grupos e tem mais do que um endereço de e-mail, o endereço de e-mail especificarem tem de corresponder ao endereço de e-mail que especificar para conhecer as permissões. No entanto, especificando o mesmo endereço de correio eletrónico é a forma mais fácil para se certificar de que o destinatário irá ser autorizado com êxito. Para obter mais informações sobre como os utilizadores estão autorizados para permissões, consulte [preparar os utilizadores e grupos do Azure Information Protection](../plan-design/prepare.md). 
 

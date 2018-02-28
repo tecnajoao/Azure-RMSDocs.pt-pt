@@ -4,7 +4,7 @@ description: "Algumas perguntas mais frequentes sobre o Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/22/2018
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 28b0e73fe8761cac230392479b664c000d9eba79
-ms.sourcegitcommit: 85250f5ea80c2ee22197058ff2f65a79503b0f0c
+ms.openlocfilehash: a6316872d3d3d0987da731a634c13fc4f4a0887b
+ms.sourcegitcommit: 23d98a405057d61a737313c8dfef042996131d3e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Perguntas mais frequentes sobre o Azure Information Protection
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 02/24/2018
 
 Tem uma pergunta sobre o Azure Information Protection ou o serviço Azure Rights Management (Azure RMS)? Verifique se a resposta está aqui.
 
-Estas páginas de FAQ são atualizadas regularmente, com novas adições indicadas nos anúncios de atualização de documentação mensal no [blogue Enterprise Mobility and Security](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates).
+Estas páginas de FAQ são atualizadas regularmente, com novas adições indicadas nos anúncios de atualização de documentação mensal no [blogue técnica do Azure Information Protection](https://aka.ms/AIPblog).
 
 ## <a name="whats-the-difference-between-azure-information-protection-and-azure-rights-management"></a>Qual é a diferença entre o Azure Information Protection e o Azure Rights Management?
 
@@ -37,7 +37,7 @@ Um utilizador deve ter um nome de utilizador válido e uma palavra-passe para ac
 ## <a name="what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included"></a>De que subscrição preciso para o Azure Information Protection e que funcionalidades estão incluídas?
 Veja as [informações da subscrição](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) e a [lista de funcionalidades](https://www.microsoft.com/cloud-platform/azure-information-protection-features) no site do Azure Information Protection. 
 
-Se tiver uma subscrição do Office 365 que inclui o Rights Management, transfira a [folha de dados de licenciamento do Azure Information Protection](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) a partir da página **Funcionalidades**.
+Se tiver uma subscrição do Office 365 que inclui o Rights Management, transfira o [datasheet de licenciamento do Azure Information Protection](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf), que inclui também algumas frequentemente mais frequentes sobre o licenciamento.
 
 ## <a name="is-the-azure-information-protection-client-only-for-subscriptions-that-include-classification-and-labeling"></a>O cliente do Azure Information Protection destina-se apenas a subscrições que incluem classificação e etiquetagem?
 
@@ -106,7 +106,7 @@ Informações adicionais:
 
 As etiquetas no Azure Information Protection permitem-lhe aplicar uma política de classificação e a proteção consistente para documentos e e-mails, quer sejam no local ou na nuvem. Esta classificação e a proteção é independente de onde o conteúdo está armazenado ou como é movido. [Etiquetas no Office 365 segurança & conformidade](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) permitem-lhe classificar documentos e e-mails de auditoria e retenção de quando esse conteúdo está em serviços do Office 365. 
 
-Hoje em dia, aplicam-se e gerir estes etiquetas em separado, mas a Microsoft está a trabalhar para uma estratégia de etiquetas abrangente e unificada para vários serviços que incluem o Azure Information Protection, o Office 365, o Microsoft Cloud App Security e o Windows Proteção de informações. Este mesmo esquema de etiquetas e arquivo também estará disponíveis para fornecedores de software. Para obter mais informações, consulte a sessão do Microsoft Ignite 2017, [ciclo de vida de dados completo Protecting utilizando as capacidades de proteção de informações do Microsoft](https://myignite.microsoft.com/videos/55397).
+Hoje em dia, aplicam-se e gerir estes etiquetas em separado, mas a Microsoft está a trabalhar para uma estratégia de etiquetas abrangente e unificada para vários serviços que incluem o Azure Information Protection, o Office 365, o Microsoft Cloud App Security e o Windows Proteção de informações. Poderá ter teve esta estratégia referida como "Microsoft Information Protection" (MIP). Este mesmo esquema de etiquetas e arquivo também estará disponíveis para fornecedores de software. Para obter mais informações, consulte o artigo de blogue, [políticas consistentes de etiquetagem e proteção proveniente para Office 365 e o Azure Information Protection](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Consistent-labeling-and-protection-policies-coming-to-Office-365/ba-p/161553).
 
 ## <a name="whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner"></a>O que é a diferença entre a FCI do Windows Server e a análise do Azure Information Protection?
 

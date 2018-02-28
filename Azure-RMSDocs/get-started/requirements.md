@@ -4,7 +4,7 @@ description: "Identifique os pré-requisitos para implementar o Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/22/2018
+ms.date: 02/26/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9496696791c343b01f5c311cb140333bcbbe7b2c
-ms.sourcegitcommit: eeeb1123349ab5e7eb2d352509670af6217123de
+ms.openlocfilehash: f256d8d972c8f74152f40b92bc5adb8bbc340fc7
+ms.sourcegitcommit: 23d98a405057d61a737313c8dfef042996131d3e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisitos para o Azure Information Protection
 
@@ -26,14 +26,20 @@ Antes de implementar o Azure Information Protection na sua organização, certif
 
 ## <a name="subscription-for-azure-information-protection"></a>Subscrição do Azure Information Protection
 
-Para classificação, etiquetagem e proteção, tem de ter um [plano do Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing). 
+**Para classificação, etiquetagem e proteção**: tem de ter um [plano do Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing). 
 
-Para obter apenas proteção, deve ter um [plano do Office 365 que inclui o Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+**Para apenas proteção**: tem de ter um [plano do Office 365 que inclui o Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 Para se certificar de que a subscrição da sua organização inclui as funcionalidades do Azure Information Protection que pretende utilizar, veja as [informações de subscrição](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) e a [lista de funcionalidades](https://www.microsoft.com/cloud-platform/azure-information-protection-features) no site do Azure Information Protection.
 
-> [!NOTE]
-> Se tiver dúvidas sobre subscrições ou licenciamento, não as publique nesta página. em alternativa, entre em contacto com o seu Gestor de Conta Microsoft ou com o [Suporte da Microsoft](information-support.md#to-contact-microsoft-support).
+> [!TIP]
+> Procurar para ver se planear do Office 365 ou Exchange Online autónomo planear suporta o [novas capacidades de encriptação de mensagens do Office 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801), para enviar e-mails protegidos para endereços de e-mail pessoais? Por exemplo, Gmail, Yahoo e da Microsoft. Verifique os seguintes recursos:
+>
+> [Descrição de serviço Online do Exchange](https://technet.microsoft.com/library/exchange-online-service-description.aspx)
+>
+> [Office 365 educação](https://technet.microsoft.com/library/mt844095.aspx)
+
+Se tiver dúvidas sobre subscrições ou licenciamento, não as publique nesta página. em alternativa, entre em contacto com o seu Gestor de Conta Microsoft ou com o [Suporte da Microsoft](information-support.md#to-contact-microsoft-support).
 
 ## <a name="azure-active-directory"></a>Azure Active Directory
 
@@ -103,7 +109,7 @@ Além das informações no artigo do Office, específico para o Azure Informatio
 
 - Não termine a ligação cliente para serviço TLS (por exemplo, para fazer uma inspeção ao nível do pacote). Se o fizer, interrompe o certificado que os clientes de RMS utilizam com as ACs gerida pela Microsoft para ajudar a proteger as comunicações com o serviço Azure Rights Management de afixação.
     
-    - Sugestão: Devido a forma como o Chrome apresenta ligações seguras na barra de endereço, pode utilizar este browser para rapidamente verificar se a ligação de cliente é terminada antes de atingir o serviço Azure Rights Management. Introduza o seguinte URL na barra de endereço do browser:`https://admin.na.aadrm.com/admin/admin.svc` 
+    - Sugestão: Devido a forma como o Chrome apresenta ligações seguras na barra de endereço, pode utilizar este browser para rapidamente verificar se a ligação de cliente é terminada antes de atingir o serviço Azure Rights Management. Introduza o seguinte URL na barra de endereço do browser: `https://admin.na.aadrm.com/admin/admin.svc` 
     
         Não se preocupe que apresenta a janela do browser. Clique em vez disso, o cadeado na barra de endereço para ver as informações do site. As informações do site permite-lhe ver a autoridade de certificação (AC) emissora. Se o certificado não é emitido por uma CA Microsoft, é muito provável que a ligação de serviço de cliente segura está a ser terminada e tem de reconfiguração na sua firewall. A imagem seguinte mostra um exemplo de um Microsoft AC emissora. Se vir que uma AC interna emitiu o certificado, esta configuração não é compatível com o Azure Information Protection.
         

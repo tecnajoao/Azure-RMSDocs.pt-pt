@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4817736329fe78084d66467f68ea2f5392ec95e2
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: d521b105b3cc8077a5e30a825007e18f9b5a59f0
+ms.sourcegitcommit: 23d98a405057d61a737313c8dfef042996131d3e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="activating-azure-rights-management"></a>Ativar o Azure Rights Management
 
@@ -36,7 +36,7 @@ Quando o serviço do Azure Rights Management para o Azure Information Protection
 
 Quando tiver um plano de serviço que inclui o Azure Rights Management, não poderá ter de ativar o serviço:
 
-- Se a sua subscrição que inclui o Azure Rights Management ou do Azure Information Protection foi obtida na ou após **Fevereiro de 2018**, o serviço é ativado automaticamente para si. Não é necessário ativar o serviço, a menos que o utilizador ou outro administrador global para a sua organização desativou o Azure Rights Management.
+- Se a sua subscrição que inclui o Azure Rights Management ou do Azure Information Protection foi obtida para o fim do **Fevereiro de 2018** ou mais tarde, o serviço é ativado automaticamente para si. Não é necessário ativar o serviço, a menos que o utilizador ou outro administrador global para a sua organização desativou o Azure Rights Management.
 
 - Se a sua subscrição foi obtida antes deste mês, deve ativar o serviço. 
 

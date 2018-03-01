@@ -4,7 +4,7 @@ description: "Tarefas de administração de uma rapidamente no portal do Azure q
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 25604d8537aedb4421b460850ce34723c8047964
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: 066e6e028012aa47953f0fe9ce80556f0f0ac6d4
+ms.sourcegitcommit: bb6be1812beb6adf73203c352f73ef3006416848
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Tarefas que utilizou para fazer com o portal clássico do Azure
 
@@ -46,7 +46,7 @@ No entanto, os clientes que tem uma subscrição para o Office 365 US Government
 |Eliminar um modelo|Eliminar modelos pode resultar em dados inacessíveis, pelo que o portal do Azure não suporta esta ação. No entanto, pode eliminar a etiqueta e, em seguida, utilizar o PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) cmdlet para remover o modelo. <br /><br />Para obter mais informações, consulte [como eliminar ou reordenar uma etiqueta para o Azure Information Protection](configure-policy-delete-reorder.md).
 |Suporte de vários idiomas|Do **GERIR** selecção de menu, selecione **idiomas** para exportar os campos personalizáveis, que incluem o nome do modelo e a descrição. Traduzir as cadeias e, em seguida, importe estes cadeias para o portal. <br /><br />Para obter mais informações, consulte [como configurar as etiquetas e modelos para idiomas diferentes no Azure Information Protection](configure-policy-languages.md).
 |Os relatórios de gestão de direitos|Utilizar o PowerShell [Get-AadrmUsageLog](/powershell/module/aadrm/Get-AadrmUsageLog) cmdlet para transferir os registos de utilização para o serviço Azure Rights Management. Em seguida, pode utilizar estes dados para criar relatórios personalizados. <br /><br />Para obter mais informações, consulte [Registar e analisar a utilização do serviço Azure Rights Management](log-analyze-usage.md).<br /><br />Sugestão: Procure anúncios no [blogue Enterprise Mobility and Security](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection) para uma solução de relatórios nova e centralizada para o Azure Information Protection.
-|Ativar e desativar o serviço Rights Management|Do **GERIR** opções de menu, selecionadas **definições RMS** ou **ativação da proteção**. Esta opção está no processo de ser mudado.<br /><br />Para obter mais informações, consulte [como ativar o Azure Rights Management a partir do portal do Azure](activate-azure.md).
+|Ativar e desativar o serviço Rights Management|Do **GERIR** opções de menu, selecionadas **ativação da proteção**.<br /><br />Para obter mais informações, consulte [como ativar o Azure Rights Management a partir do portal do Azure](activate-azure.md).
 
 Antes de editar os modelos ou convertê-las em etiquetas no portal do Azure, consulte [considerações para modelos no portal do Azure](configure-policy-templates.md#considerations-for-templates-in-the-azure-portal).
 
@@ -59,7 +59,7 @@ Nova funcionalidade no portal do Azure:
 
 - Pode converter modelos etiquetas, para que gerir um único objeto em vez de gerir um modelo e etiqueta de forma independente. Para obter instruções, consulte [converter modelos etiquetas](configure-policy-templates.md#to-convert-templates-to-labels).
 
-- Suporte para outras funções de administrador: enquanto tiver de iniciar sessão no portal clássico do Azure como um Administrador Global para configurar o Azure Rights Management, pode iniciar sessão portal do Azure para configurar o Azure Information Protection utilizando uma conta que tenha o funções administrativas a seguir: Administrador Global, o administrador de segurança ou o administrador de proteção de informações. Para obter mais informações sobre cada uma destas funções, consulte o [funções disponíveis](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) secção de documentação do Azure Active Directory.
+- Suporte para outras funções de administrador: enquanto tiver de iniciar sessão no portal clássico do Azure como um Administrador Global para configurar o Azure Rights Management, pode iniciar sessão portal do Azure para configurar o Azure Information Protection utilizando uma conta que tenha o funções administrativas a seguir: **Administrador Global**, **administrador de segurança**, ou **administrador de proteção de informações**. Para obter mais informações sobre cada uma destas funções, consulte o [funções disponíveis](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) secção de documentação do Azure Active Directory.
 
 Os cmdlets do PowerShell para criar e gerir modelos e para ativar ou desativar o serviço, permanecem suportados sem alterações.
 

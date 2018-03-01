@@ -4,7 +4,7 @@ description: "Fase 4 da migração do AD RMS para o Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/22/2017
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: beda6273c306a55130223c7b4b9ed9fc4d088fac
-ms.sourcegitcommit: 228953e96609b3c5ec8deddaab91be59650d9006
+ms.openlocfilehash: d516d9c82ce0c7bfd35dbb839cd861a301c3443f
+ms.sourcegitcommit: bb6be1812beb6adf73203c352f73ef3006416848
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Fase 4 da migração – configuração de serviços de suporte
 
@@ -31,9 +31,15 @@ Utilize as seguintes informações para a Fase 4 da migração do AD RMS para o 
 
 Independentemente do inquilino do Azure Information Protection topologia de chaves que escolheu, efetue o seguinte:
 
-1. Para configurar o Exchange Online utilizar o serviço Azure Rights Management, consulte [configurar novas capacidades de encriptação de mensagens do Office 365 desenvolvidas Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
+1. Executar o Exchange Online [Get-IRMConfiguration] (https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx) comando. Se necessitar de ajuda para executar este comando, consulte as instruções passo a passo do [Exchange Online: IRM Configuration](/..deploy-use/configure-office365.md#exchange-online-irm-configuration).
+    
+    O resultado, verifique se **AzureRMSLicensingEnabled** está definido como **verdadeiro**:
+    
+    - Se AzureRMSLicensingEnabled estiver definido como **verdadeiro**, é necessária nenhuma configuração adicional para este passo. 
+    
+    - Se estiver definido AzureRMSLicensingEnabled **falso**, execute os comandos numa [configurar novas capacidades de encriptação de mensagens do Office 365 desenvolvidas Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
 
-2. Para além da configuração padrão para ativar a IRM para o Exchange Online, execute os seguintes comandos do PowerShell para garantir que os utilizadores conseguirão ler e-mails que foram enviados ao utilizar a proteção do AD RMS.
+2. Execute os comandos PowerShell seguintes para se certificar de que os utilizadores conseguirão ler os e-mails que foram enviados utilizando a proteção do AD RMS.
 
     Substitua o nome de domínio da organização para *\<asuaempresa.dominio>*.
 
@@ -54,7 +60,7 @@ Este passo indica como instalar e configurar o conector, desativar a IRM para o 
 > [!NOTE]
 > Antes de começar, verifique as versões dos servidores no local que o serviço Azure Rights Management suporta em [Servidores no local que suportam o Azure RMS](../get-started/requirements-servers.md).
 
-### <a name="install-and-configure-the-rms-connector"></a>Instalar e configurar o conector RMS
+### <a name="install-and-configure-the-rms-connector"></a>Instalar e configurar o conetor RMS
 
 Utilize as instruções no artigo [Implementar o conector Azure Rights Management](../deploy-use/deploy-rms-connector.md) e efetue os passos 1 a 4. Ainda não inicie o passo 5 das instruções de conector. 
 
@@ -115,7 +121,7 @@ Utilize as instruções no artigo [Implementar o conector Azure Rights Managemen
 
     -   Substitua o *conector FQDN* pelo nome que definiu no DNS para o conector. Por exemplo, **rmsconnector.contoso.com**.
 
-    -   Utilize o prefixo HTTP ou HTTPS para o URL do conector, dependendo se configurou o conector para utilizar HTTP ou HTTPS para comunicar com os servidores no local.
+    -   Utilize o prefixo HTTP ou HTTPS para o URL do conetor, dependendo se configurou o conetor para utilizar HTTP ou HTTPS para comunicar com os servidores no local.
 
 #### <a name="registry-edits-for-exchange"></a>Edições de registo do Exchange
 
@@ -139,7 +145,7 @@ HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
 
 **Dados:**
 
-Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange Server para o conector RMS:
+Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange Server para o conetor RMS:
 
 - http://\<conector FQDN\>/_wmcs/licensing
 
@@ -160,7 +166,7 @@ HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
 
 **Dados:**
 
-Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange Server para o conector RMS:
+Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange Server para o conetor RMS:
 
 - http://\<conector FQDN\>/_wmcs/licensing
 
@@ -181,7 +187,7 @@ HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
 **Dados:**
 
-Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange Server para o conector RMS:
+Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange Server para o conetor RMS:
 
 - http://\<conector FQDN\>/_wmcs/licensing
 
@@ -203,7 +209,7 @@ HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
 **Dados:**
 
-Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange Server para o conector RMS:
+Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange Server para o conetor RMS:
 
 - http://\<conector FQDN\>/_wmcs/licensing
 
@@ -212,7 +218,7 @@ Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange Serve
 ---
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 Para continuar a migração, aceda a [fase 5 – tarefas de pós-migração](migrate-from-ad-rms-phase5.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

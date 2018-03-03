@@ -4,7 +4,7 @@ description: "Utilize estes passos para preparar, implementar e gerir o Azure In
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 03/01/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d0ebe0456933fd3b5940d50479038200008d9a44
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: 9285468a267578f01cd3a65b745cceaed346d21f
+ms.sourcegitcommit: 25146c649d5f4c95debebdf3823785139f2d9ea1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Plano de implementação do Azure Information Protection
 
@@ -80,7 +80,7 @@ Quando os utilizadores estiverem mais confortáveis a etiquetar documentos e e-m
 
 1. Decida se pretende que a Microsoft efetue a gestão da sua chave de inquilino (predefinição) ou se pretende gerar e gerir a sua chave de inquilino sozinho (conhecido como traga a sua própria chave ou BYOK). Para obter mais informações, consulte [Planear e implementar a sua chave de inquilino do Azure Information Protection](plan-implement-tenant-key.md).
 
-2. Instale o módulo do Windows PowerShell para o [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] em, pelo menos, um computador que tenha acesso à Internet. Pode efetuar este passo agora ou mais tarde. Para obter mais informações, consulte [Instalar o Windows PowerShell para o serviço Azure Rights Management](../deploy-use/install-powershell.md).
+2. Instalar o módulo do PowerShell para [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] em, pelo menos, um computador que tenha acesso à Internet. Pode efetuar este passo agora ou mais tarde. Para obter mais informações, consulte [instalar o módulo do AADRM PowerShell](../deploy-use/install-powershell.md).
 
 3. Se estiver a utilizar serviços de Gestão de Direitos no local: efetue uma migração para mover as chaves, os modelos e os URLs para a cloud. Para obter mais informações, consulte [Migrar do AD RMS para o Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
@@ -146,7 +146,7 @@ Antes de começar a utilizar o [!INCLUDE[aad_rightsmanagement_2](../includes/aad
 
 2. Decida se pretende que a Microsoft efetue a gestão da sua chave de inquilino (predefinição) ou se pretende gerar e gerir a sua chave de inquilino sozinho (conhecido como traga a sua própria chave ou BYOK). Para obter mais informações, consulte [Planear e implementar a sua chave de inquilino do Azure Information Protection](plan-implement-tenant-key.md).
 
-3. Instale o módulo do Windows PowerShell para o [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] em, pelo menos, um computador que tenha acesso à Internet. Pode efetuar este passo agora ou mais tarde. Para obter mais informações, consulte [instalar o módulo do AADRM PowerShell](../deploy-use/install-powershell.md).
+3. Instalar o módulo do PowerShell para [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] em, pelo menos, um computador que tenha acesso à Internet. Pode efetuar este passo agora ou mais tarde. Para obter mais informações, consulte [instalar o módulo do AADRM PowerShell](../deploy-use/install-powershell.md).
 
 4. Se estiver a utilizar serviços de Gestão de Direitos no local: efetue uma migração para mover as chaves, os modelos e os URLs para a cloud. Para obter mais informações, consulte [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 

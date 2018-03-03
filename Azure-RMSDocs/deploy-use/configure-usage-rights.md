@@ -4,7 +4,7 @@ description: "Conheça os direitos específicos utilizados quando protege fichei
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2018
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6d3090a74e5fefc3fd383d8846879dd513a7dbc1
-ms.sourcegitcommit: 240378d216e386ad760460c50b7a664099c669e9
+ms.openlocfilehash: faa00eee76e6c084db1a4dfb1d477e491fae5fee
+ms.sourcegitcommit: 3e9b3c2206807e82cc4721a50862b74152906f63
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuração de direitos de utilização para o Azure Rights Management
 
@@ -116,7 +116,7 @@ Um utilizador pretende enviar algumas informações por e-mail a pessoas especí
 
 Quando o Exchange Online utilizar as novas funcionalidades para a encriptação de mensagens do Office 365, fica disponível uma nova opção de e-mail: **só de encriptar**.
 
-Esta opção está a ser implementada para os inquilinos que utilizam o Exchange Online, inicialmente apenas para o Outlook web e como outra opção de proteção de direitos para uma regra de transporte. Para obter mais informações, consulte o seguinte anúncio de mensagem de blogue da equipa do Office: [encriptar agora disponível apenas na encriptação de mensagens do Office 365](https://aka.ms/omefeb2018).
+Esta opção está a ser implementada para os inquilinos que utilizam o Exchange Online, inicialmente apenas para o Outlook web e como outra opção de proteção de direitos para uma regra de transporte. Para obter mais informações, consulte o seguinte anúncio de mensagem de blogue da equipa do Office: [encriptar apenas disponibilizando na encriptação de mensagens do Office 365](https://aka.ms/omefeb2018).
 
 Quando esta opção está selecionada, o e-mail é encriptada e os destinatários tem de ser autenticados. Em seguida, os destinatários tem todos os direitos de utilização, exceto o controlo total. Esta combinação de direitos de utilização significa que os destinatários têm sem restrições, exceto que, que não é possível remover a proteção. Por exemplo, um destinatário pode copiar, imprimir e reencaminhar o e-mail. Da mesma forma, os documentos do Office que são ligados e automaticamente protegidos podem ser guardados copiado e impressos.
 
@@ -167,7 +167,7 @@ A predefinição utilizar validade da licença período para um inquilino é 30 
     Para obter mais informações e orientações para configurar esta definição utilizando o PowerShell, consulte a ajuda para cada cmdlet.
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 [Configurar e gerir modelos do Azure Information Protection](configure-policy-templates.md)
 
 [Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados](configure-super-users.md)

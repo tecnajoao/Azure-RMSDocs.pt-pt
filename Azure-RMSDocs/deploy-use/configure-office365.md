@@ -4,7 +4,7 @@ description: "Informações e instruções para administradores para configurare
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/18/2018
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 367c41d91d4e4250370016bdff80bd9e2e366924
-ms.sourcegitcommit: e21fb3385de6f0e251167e5dc973e90f0e7f2bcf
+ms.openlocfilehash: 25ba730c38261c035c63e8137260cbee55c828ad
+ms.sourcegitcommit: 01249fc29fccf6931ebf2f5d0138706e6ae2db9c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/01/2018
 ---
 # <a name="office-365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Configuração para clientes e serviços online utilizar o serviço Azure Rights Management
 
@@ -29,11 +29,49 @@ No entanto, recomendamos que complemente estas aplicações com o cliente do Azu
 ## <a name="exchange-online-irm-configuration"></a>Exchange Online: configuração de IRM
 Para obter mais informações sobre como o IRM do Exchange Online funciona com o serviço Azure Rights Management, veja [Exchange Online e Exchange Server](../understand-explore/office-apps-services-support.md#exchange-online-and-exchange-server), na secção **Compreender e explorar**.
 
-Para configurar o Exchange Online utilizar o serviço Azure Rights Management, consulte [configurar novas capacidades de encriptação de mensagens do Office 365 desenvolvidas Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).
+Exchange Online já pode ser ativado para utilizar o serviço Azure Rights Management. Para verificar, execute os seguintes comandos:
 
-Se tiver configurado anteriormente Exchange Online para IRM ao importar o domínio de publicação fidedigno (TPD) do serviço de gestão de direitos do Azure, utilize o mesmo conjunto de instruções para ativar as novas funcionalidades no Exchange Online.
+1. Se esta é a primeira vez que utiliza o Windows PowerShell para o Exchange Online no seu computador, tem de configurar o Windows PowerShell para executar scripts assinados. Inicie sessão do Windows PowerShell através da opção **Executar como administrador** e, em seguida, escreva:
+    
+        Set-ExecutionPolicy RemoteSigned
+    
+    Prima **Y** para confirmar.
 
-Depois de ter configurado o Exchange Online utilizar o serviço Azure Rights Management, agora pode configurar funcionalidades que se aplicam a proteção de informações automaticamente, tal como [regras de transporte](https://technet.microsoft.com/library/dd302432.aspx), [(de prevenção de perda de dados Políticas DLP)](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx), e [voice mail protegido](https://technet.microsoft.com/library/dn198211%28v=exchg.150%29.aspx) (Unified Messaging).
+2. Na sessão do Windows PowerShell, inicie sessão no Exchange Online com uma conta ativada para acesso remoto à Shell. Por predefinição, todas as contas criadas no Exchange Online têm o acesso remoto à Shell ativado, embora possa desativar (e ativar) esta funcionalidade através do comando [Set-User &lt;UserIdentity&gt; -RemotePowerShellEnabled](https://technet.microsoft.com/library/jj984292%28v=exchg.160%29.aspx).
+    
+    Para iniciar sessão, primeiro tipo:
+    
+        $Cred = Get-Credential
+   
+    Em seguida, no **pedido de credencial do Windows PowerShell** diálogo caixa, forneça o nome de utilizador do Office 365 e a palavra-passe.
+
+3. Liga ao serviço Exchange Online, primeiro, definindo uma variável:
+    
+        $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell/ -Credential $Cred -Authentication Basic –AllowRedirection
+    
+    Em seguida, execute o seguinte comando:
+    
+        Import-PSSession $Session
+
+4. Executar [Get-IRMConfiguration] (https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx) comando para ver a configuração do Exchange Online para o serviço de proteção:
+    
+        Get-IRMConfiguration
+    
+    O resultado, localize o **AzureRMSLicensingEnabled** valor:
+    
+    - Se AzureRMSLicensingEnabled estiver definido como **verdadeiro**, Exchange Online já está ativada para o serviço Azure Rights Management. 
+    
+    - Se estiver definido AzureRMSLicensingEnabled **falso**, execute os comandos numa [configurar novas capacidades de encriptação de mensagens do Office 365 desenvolvidas Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
+
+5. Para testar que Exchange Online está configurado com êxito, execute o seguinte comando:
+    ```
+    Test-IRMConfiguration -Sender <user email address>
+    ```
+    Por exemplo: **Test-IRMConfiguration -Sender  adams@contoso.com**
+    
+    Este comando executa um conjunto de verificações que inclui a verificação da conectividade ao serviço, a obtenção da configuração, a obtenção de URIs, licenças e modelos. Na sessão do Windows PowerShell, verá os resultados de cada verificação e, no final, se nenhuma delas encontrar problemas, verá a mensagem: **RESULTADO GERAL: APROVADO**
+
+Quando o Exchange Online está ativado para utilizar o serviço Azure Rights Management, pode configurar funcionalidades que se aplicam a proteção de informações automaticamente, tal como [regras de transporte](https://technet.microsoft.com/library/dd302432.aspx), [políticas de prevenção (DLP) de perda de dados ](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx), e [voice mail protegido](https://technet.microsoft.com/library/dn198211%28v=exchg.150%29.aspx) (Unified Messaging).
 
 ## <a name="sharepoint-online-and-onedrive-for-business-irm-configuration"></a>SharePoint Online e OneDrive para Empresas: configuração de IRM
 
@@ -68,7 +106,7 @@ Dê estas instruções aos utilizadores para que possam configurar o OneDrive pa
 
 1.  No OneDrive, clique no ícone **Definições** para abrir o menu Definições e, em seguida, clique em **Conteúdos do Site**.
 
-2.  Paire o rato sobre o mosaico **Documentos**, selecione as reticências (**...**) e, em seguida, clique em **DEFINIÇÕES**.
+2.  Paire o rato sobre o **documentos** mosaico, selecione as reticências (**...** ) e, em seguida, clique em **definições.**
 
 3.  Na página **Definições**, na secção **Permissões e Gestão**, clique em **Gestão de Direitos de Informação**.
 

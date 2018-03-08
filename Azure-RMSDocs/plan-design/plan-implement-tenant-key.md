@@ -4,7 +4,7 @@ description: "Informações para o ajudar a planear e gerir a sua chave de inqui
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2017
+ms.date: 03/05/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7a3ed134c84c5293ecc2391fdaec32ccfc425910
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: 05b6a4facc4158cc7e2cb7ab4067c6b19566ef69
+ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planear e implementar a sua chave de inquilino do Azure Information Protection
 
@@ -46,7 +46,7 @@ Decida que topologia de chaves de inquilino é melhor para a sua organização. 
 
 Decida que topologia de chave de inquilino é melhor para a sua organização:
 
-- **Gerida pela Microsoft**: Azure Information Protection gera automaticamente uma chave de inquilino para a sua organização. Por predefinição, a Microsoft utiliza esta chave para o seu inquilino e gere a maioria dos aspetos do seu ciclo de vida de chave de inquilino. 
+- **Gerida pela Microsoft**: Microsoft gera automaticamente uma chave de inquilino para a sua organização e esta chave é utilizada exclusivamente para o Azure Information Protection. Por predefinição, a Microsoft utiliza esta chave para o seu inquilino e gere a maioria dos aspetos do seu ciclo de vida de chave de inquilino. 
     
     Esta é a opção mais simples e com menos tarefas administrativas adicionais. Na maioria dos casos, nem precisa de saber que tem uma chave de inquilino. Basta inscrever-se no Azure Information Protection e o processo de gestão de chaves restante será processado pela Microsoft.
 

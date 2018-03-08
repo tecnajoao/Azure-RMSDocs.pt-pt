@@ -4,7 +4,7 @@ description: "Informações sobre as operações de ciclo de vida que são relev
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5aaf4393e39412a8c8b18678f4edea7a61c148dc
-ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
+ms.openlocfilehash: dea6fffc32876b548e5daa33a76e7891088f1e9b
+ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gerida pela Microsoft: Operações de ciclo de vida de chave de inquilino
 
@@ -103,9 +103,9 @@ Se ocorrer uma violação, a melhor ação que o utilizador ou a Microsoft pode 
 
 |Descrição do incidente|Resposta provável|
 |------------------------|-------------------|
-|Ocorreu uma fuga da chave de inquilino.|Recodifique a sua chave de inquilino. Veja a secção [Recodificar a sua chave de inquilino](operations-microsoft-managed-tenant-key.md#rekey-your-tenant-key) neste artigo.|
+|Ocorreu uma fuga da chave de inquilino.|Recodifique a sua chave de inquilino. Veja a secção [Recodificar a sua chave de inquilino](#rekey-your-tenant-key) neste artigo.|
 |Um indivíduo não autorizado ou um software maligno obteve direitos para utilizar a sua chave de inquilino, mas não houve uma fuga da própria chave.|Efetuar a recodificação da chave de inquilino não ajuda neste caso e requer a análise da causa principal. Se um erro no processo ou software tiver sido responsável pelo acesso que o indivíduo não autorizado obteve, essa situação tem de ser resolvida.|
-|Foi detetada uma vulnerabilidade no algoritmo RSA, ou no comprimento da chave, ou ataques de força bruta tornaram-se exequíveis a nível informático.|A Microsoft tem de atualizar o Azure Information Protection para suportar os novos algoritmos e maiores comprimentos de chaves para serem resilientes e instruir todos os clientes a renovarem as respetivas chaves de inquilino.|
+|Foi detetada uma vulnerabilidade no algoritmo RSA, ou no comprimento da chave, ou ataques de força bruta tornaram-se exequíveis a nível informático.|Microsoft tem de atualizar o Azure Information Protection para suportar novos algoritmos e maiores comprimentos de chaves que são resilientes e instruir todos os clientes a recodificar a respetiva chave de inquilino.|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

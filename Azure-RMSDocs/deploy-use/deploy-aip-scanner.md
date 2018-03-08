@@ -4,7 +4,7 @@ description: "Instruções para instalar, configurar e executar o Verificador de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/22/2018
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: badc9ea2db84e0537ab394ccb616c0d172469e35
-ms.sourcegitcommit: 240378d216e386ad760460c50b7a664099c669e9
+ms.openlocfilehash: dac55b0aae070ab798efacad0e9e121be198a7eb
+ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>O scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente a implementar
 
@@ -202,10 +202,14 @@ O ciclo de análise primeiro, scanner inspeciona todos os ficheiros nos arquivos
 
 Pode forçar scanner inspecionar todos os ficheiros novamente executando [conjunto AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) com o `-Type` parâmetro definido como **completa**. Esta configuração é útil quando pretender que os relatórios para incluir todos os ficheiros e é normalmente utilizado quando a análise é executada no modo de deteção. Quando uma análise completa estiver concluída, o tipo de análise altera automaticamente a incremental para que para análises subsequentes, são analisados ficheiros apenas novos ou modificados.
 
-Além disso, todos os ficheiros serão inspecionados quando scanner transfere uma política do Azure Information Protection com condições novas ou alteradas. O scanner atualiza a política de cada hora, e quando é iniciado o serviço e a política é mais antiga do que uma hora.
+Além disso, todos os ficheiros serão inspecionados quando scanner transfere uma política do Azure Information Protection com condições novas ou alteradas. O scanner atualiza a política de cada hora, e quando é iniciado o serviço e a política é mais antiga do que uma hora.  
 
 > [!TIP]
 > Se precisar de atualizar a política mais cedo do que este intervalo de uma hora, por exemplo, durante um período de teste: elimine manualmente o ficheiro de política, **%LocalAppData%\Microsoft\MSIP\Policy.msip**e reiniciar o Verificador de informações do Azure serviço.
+> 
+> Se tiver alterado as definições de proteção na política, também aguarde pela 15 minutos de quando guardar as definições de proteção antes de reiniciar o serviço.
+
+Se scanner transferido uma política que não tinha nenhum condições automáticas configuradas, é guardada uma cópia do ficheiro de política no **%LocalAppData%\Microsoft\MSIP\Scanner**. Tem de eliminar o ficheiro de Policy.msip nesta pasta scanner pode utilizar um ficheiro de política transferido recentemente tem etiquetas corretamente figured para condições automáticas.
 
 ## <a name="optimizing-the-performance-of-the-azure-information-protection-scanner"></a>Otimizar o desempenho do scanner Azure Information Protection
 

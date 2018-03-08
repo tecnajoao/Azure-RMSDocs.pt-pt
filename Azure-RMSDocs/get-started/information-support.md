@@ -4,7 +4,7 @@ description: "Recursos para administradores que incluem informações sobre nova
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2018
+ms.date: 03/07/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7b1c039f17bcf332036b0e84a8b03bb213742535
-ms.sourcegitcommit: 6bfbf08b935a7a60e437af44aab72db13f87eff1
+ms.openlocfilehash: 2822f05392c9ed07fda6556e8f3b1b8aa59fa7e1
+ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informações e suporte do Azure Information Protection
 
@@ -26,17 +26,19 @@ Utilize os seguintes recursos para o ajudar a obter mais informações, implemen
 
 |Para efetuar este procedimento...|… .do isto:|
 |----------------|---------------|
-|Consulte utilizado com mais frequência a documentação|Leia as páginas de início cinco:<br /><br /> - [O que é o Azure Information Protection?](../understand-explore/what-is-information-protection.md)<br /> - [O que é o Azure Rights Management?](../understand-explore/what-is-azure-rms.md)<br />- [Introdução ao - AIP aplicação para iOS e Android](../rms-client/mobile-app-get-started.md) <br />- [Ativar o Azure Rights Management](../deploy-use/activate-service.md)<br />- [Requisitos do Azure Information Protection](../get-started/requirements.md)|
+|Consulte utilizado com mais frequência a documentação|Leia as páginas de início cinco:<br /><br /> - [Começar a utilizar a aplicação do Azure Information Protection para iOS e Android](../rms-client/mobile-app-get-started.md)<br /> - [Ativar o Azure Rights Management](../deploy-use/activate-service.md)<br />- [Requisitos do Azure Information Protection](requirements.md) <br />- [Implementar a análise do Azure Information Protection](../deploy-use/deploy-aip-scanner.md)<br />- [Ativar o Azure Rights Management a partir do Centro de administração do Office 365](../deploy-use/activate-office365.md)|
 |Envolver a equipa de produto e os seus parceiros|Visite o [Yammer site](https://www.yammer.com/AskIPTeam) para o Azure Information Protection.|
 |Solicitar uma nova funcionalidade ou alteração de funcionalidade|Visite o [voz do utilizador](https://msip.uservoice.com) site para o Azure Information Protection.|
 |Receba tweets do grupo de produtos|Siga [Microsoft Mobility@MSFTMobility ](https://twitter.com/MSFTMobility) no Twitter.|
-|Ver as informações de subscrição e as funcionalidades suportadas|Utilize as [informações da subscrição](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) e a [lista de funcionalidades](https://www.microsoft.com/cloud-platform/azure-information-protection-features) no site do Azure Information Protection.|
+|Ver as informações de subscrição e as funcionalidades suportadas|Utilize a lista de informações e a funcionalidade de subscrição do [preços de proteção de informações do Azure](https://azure.microsoft.com/pricing/details/information-protection) página.|
 
 
 ## <a name="information-about-new-releases-and-updates"></a>Informações sobre atualizações e novas versões
 A equipa de produtos do Azure Information Protection publica anúncios sobre as novas versões e atualizações no [Blogue sobre a Segurança e a Mobilidade nas Grandes Empresas – em inglês](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection). Estas publicações no blogue completam a documentação do produto e as informações de suporte.
 
-Um resumo das alterações à documentação está publicado por mês para o [blogue técnica do Azure Information Protection](https://aka.ms/AIPblog). Resumos anteriores foram publicados no [blogue Enterprise Mobility and Security](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates). Estas atualizações da documentação incluem informações de quaisquer novos lançamentos, as atualizações para suportar as instruções bem como as correções e clarificações versões existentes. Estas mensagens são intituladas: "**atualização documentação de proteção de informações do Azure para \<mês ano >**".
+Além disso, um resumo das alterações à documentação está publicado por mês para o [blogue técnica do Azure Information Protection](https://aka.ms/AIPblog). Estas atualizações da documentação incluem informações de quaisquer novos lançamentos, as atualizações para suportar as instruções bem como as correções e clarificações versões existentes. Estas mensagens são intituladas: "**atualização documentação de proteção de informações do Azure para \<mês ano >**".
+
+Resumos anteriores foram publicados no [blogue Enterprise Mobility and Security](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates). 
 
 ## <a name="support-options-and-community-resources"></a>Opções de suporte e recursos da comunidade
 As secções seguintes fornecem informações sobre as opções de suporte e de resolução de problemas e os recursos da comunidade.

@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f256d8d972c8f74152f40b92bc5adb8bbc340fc7
-ms.sourcegitcommit: 23d98a405057d61a737313c8dfef042996131d3e
+ms.openlocfilehash: 94d20bea3dcbb1f3e23969361223d6b7a89c0e95
+ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisitos para o Azure Information Protection
 
@@ -26,9 +26,9 @@ Antes de implementar o Azure Information Protection na sua organização, certif
 
 ## <a name="subscription-for-azure-information-protection"></a>Subscrição do Azure Information Protection
 
-**Para classificação, etiquetagem e proteção**: tem de ter um [plano do Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing). 
+**Para classificação, etiquetagem e proteção**: tem de ter um [plano do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). 
 
-**Para apenas proteção**: tem de ter um [plano do Office 365 que inclui o Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+**Para apenas proteção**: tem de ter um [plano do Office 365 que inclua o Azure Information Protection](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 Para se certificar de que a subscrição da sua organização inclui as funcionalidades do Azure Information Protection que pretende utilizar, veja as [informações de subscrição](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) e a [lista de funcionalidades](https://www.microsoft.com/cloud-platform/azure-information-protection-features) no site do Azure Information Protection.
 

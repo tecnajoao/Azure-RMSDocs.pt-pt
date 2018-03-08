@@ -1,10 +1,11 @@
 ---
 layout: LandingPage
-ms.openlocfilehash: 7b26e03c121847008f5f507e6fef3263871c1621
-ms.sourcegitcommit: c37b7a95dbef32377ddfba4b24e063a3ede2642a
+ms.topic: landing-page
+ms.openlocfilehash: 16adbfde4f2b0cf3673b0f9d51b63065b6817d95
+ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="azure-information-protection-documentation"></a>Documentação do Azure Information Protection
 
@@ -130,7 +131,7 @@ Controle e ajude a proteger e-mails, documentos e dados confidenciais que partil
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <p><a href="/enterprise-mobility-security/solutions/infoprotect-secure-classify-scenario">Guia para programadores</a></p>
+                        <p><a href="/information-protection/develop/developers-guide">Guia para programadores</a></p>
                     </div>
                 </div>
             </div>

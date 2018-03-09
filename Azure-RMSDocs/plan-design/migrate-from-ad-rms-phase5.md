@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2cf486a5319d6addcd150351054d44db62c250b0
-ms.sourcegitcommit: 9b975e66b12a3836003c6c4de139ded4bbf370bf
+ms.openlocfilehash: 0c15bcca607992a2782611286205509377f9fd4d
+ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Fase 5 da migração – tarefas de pós-migração
 
@@ -104,8 +104,6 @@ Este passo é recomendado quando a migração estiver concluída se a sua implem
 
 Mesmo que a implementação do AD RMS estava a utilizar o modo criptográfico 2, recomendamos que execute este passo porque uma nova chave ajuda a proteger o seu inquilino contra potenciais falhas de segurança para a sua chave de AD RMS.
 
-No entanto, não recodificar se foram a utilizar o Exchange Online com o AD RMS. Exchange Online não suporta a alteração modos criptográficos. 
-
 Quando a recodificar a chave de inquilino do Azure Information Protection (também conhecido como "implementar a chave"), a chave atualmente ativa é arquivada e Azure Information Protection começa a utilizar uma chave diferente que especificar. Esta chave diferente pode ser uma nova chave que criar no Cofre de chaves do Azure ou a chave predefinida que foi criada automaticamente para o seu inquilino.
 
 Mover de uma chave para outra não ocorre imediatamente mas ao longo de algumas semanas. Porque não é imediata, não espere até suspeitar uma violação na chave original, mas efetue este passo, assim que a migração estar concluída.
@@ -116,12 +114,12 @@ Para recodificar a chave de inquilino do Azure Information Protection:
     
         (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- **Se a sua chave de inquilino é gerida por si (BYOK)**: no Cofre de chaves do Azure, repita o processo de criação de chaves para o seu inquilino do Azure Information Protection e, em seguida, execute o [utilize AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) cmdlet novamente para especificar o URI para esta chave de novo. 
+- **Se a sua chave de inquilino é gerida por si (BYOK)**: no Cofre de chaves do Azure, repita o processo de criação de chaves para o seu inquilino do Azure Information Protection e, em seguida, execute o [utilize AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) cmdlet novamente para especificar o URI para Esta nova chave. 
 
 Para obter mais informações sobre a gestão da chave de inquilino do Azure Information Protection, veja [Operações para a chave de inquilino do Azure Rights Management](../deploy-use/operations-tenant-key.md).
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Agora que concluiu a migração, veja o [plano de implementação](deployment-roadmap.md) para identificar quaisquer outras tarefas de implementação que tenha de efetuar.
 

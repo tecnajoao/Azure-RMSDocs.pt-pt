@@ -4,7 +4,7 @@ description: "Identifique os pré-requisitos para implementar o Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/26/2018
+ms.date: 03/07/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 94d20bea3dcbb1f3e23969361223d6b7a89c0e95
-ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
+ms.openlocfilehash: 20726f99a10328fac777dc22cb59372db0ab384d
+ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisitos para o Azure Information Protection
 
@@ -30,7 +30,7 @@ Antes de implementar o Azure Information Protection na sua organização, certif
 
 **Para apenas proteção**: tem de ter um [plano do Office 365 que inclua o Azure Information Protection](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
-Para se certificar de que a subscrição da sua organização inclui as funcionalidades do Azure Information Protection que pretende utilizar, veja as [informações de subscrição](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) e a [lista de funcionalidades](https://www.microsoft.com/cloud-platform/azure-information-protection-features) no site do Azure Information Protection.
+Para se certificar de que a subscrição da sua organização inclui as funcionalidades do Azure Information Protection que pretende utilizar, reveja a lista de funcionalidades do [preços do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection) página.
 
 > [!TIP]
 > Procurar para ver se planear do Office 365 ou Exchange Online autónomo planear suporta o [novas capacidades de encriptação de mensagens do Office 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801), para enviar e-mails protegidos para endereços de e-mail pessoais? Por exemplo, Gmail, Yahoo e da Microsoft. Verifique os seguintes recursos:

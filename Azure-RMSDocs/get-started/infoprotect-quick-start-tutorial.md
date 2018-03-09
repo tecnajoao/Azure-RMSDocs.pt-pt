@@ -4,17 +4,17 @@ description: "Um tutorial de introdução, com uma duração de aproximadamente 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: a93b226f80382d4c751ca88d037398939db9d61b
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: e20b3e4d84b2230cf7bcbc64c31970fd53d5a7ae
+ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Tutorial de início rápido do Azure Information Protection 
 
@@ -29,7 +29,7 @@ Se tiver alguma dificuldade em concluir este tutorial ou em utilizar o Azure Inf
 ## <a name="prerequisites"></a>Pré-requisitos 
 Para concluir este tutorial, precisa de ter o seguinte:
 
-- Uma subscrição que inclui o Azure Information Protection para classificação, etiquetagem e proteção. Este tutorial inclui algumas das funcionalidades avançadas, tais como a classificação automática de dados com recomendações de utilizador e o site de controlo de documentos. Confirme se tem uma subscrição para suportar estas funcionalidades para este tutorial. Para obter mais informações, consulte as [informações da subscrição](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) e a [lista de funcionalidades](https://www.microsoft.com/cloud-platform/azure-information-protection-features) no site do Azure Information Protection.
+- Uma subscrição que inclui o Azure Information Protection para classificação, etiquetagem e proteção. Este tutorial inclui algumas das funcionalidades avançadas, tais como a classificação automática de dados com recomendações de utilizador e o site de controlo de documentos. Confirme se tem uma subscrição para suportar estas funcionalidades para este tutorial. Para obter mais informações, consulte a lista de funcionalidades do [preços do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection) página.
     
     Se não tiver uma subscrição para estas funcionalidades, pode inscrever-se numa versão de avaliação gratuita do [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7).
     

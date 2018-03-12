@@ -4,17 +4,17 @@ description: "Conheça a forma como a política predefinida do Azure Information
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 03/09/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: da8557be0a70cee0e7a207a8ed285f6e843ac626
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: d89acde3a2d9e4db529c429fdedf2f3ed05e2fe5
+ms.sourcegitcommit: 335c854eb5c6f387a9369d4b6f1e22160517e6ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Política do Azure Information Protection predefinida
 
@@ -30,7 +30,11 @@ Pode usar os seguintes valores como referência para voltar à política predefi
 
 Esta versão da política predefinida é de 31 de Julho de 2017.
 
-Esta política predefinida é criada apenas se o serviço Azure Rights Management foi [ativado](activate-service.md) quando a política foi criada. Se este serviço não foi ativado, a política predefinida não configurar a proteção para os sublabels seguintes:
+Esta política predefinida é criada quando o serviço Azure Rights Management está ativado, que é o caso dos novos inquilinos a partir de Fevereiro de 2018. Para obter mais informações, consulte o anúncio de mensagem de blogue [melhoramentos para a proteção da pilha no Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection).
+
+Esta política predefinida também é criada se tiver manualmente [ativar o serviço](activate-service.md) antes da política foi criada. 
+
+Se o serviço não foi ativado, a política predefinida não configurar a proteção para os sublabels seguintes:
 
 - **Confidencial\Todos os Funcionários**
 

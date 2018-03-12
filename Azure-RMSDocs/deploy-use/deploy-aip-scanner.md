@@ -4,7 +4,7 @@ description: "Instruções para instalar, configurar e executar o Verificador de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/08/2018
+ms.date: 03/09/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 3c15fe1e43f5a9d93ad70e6ac401592bbd41754b
-ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
+ms.openlocfilehash: f3c302b2379262a6dac87873cb607cf3cd408bcd
+ms.sourcegitcommit: 335c854eb5c6f387a9369d4b6f1e22160517e6ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>O scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente a implementar
 
@@ -58,7 +58,7 @@ Antes de instalar o scanner do Azure Information Protection, certifique-se de qu
 
 ## <a name="install-the-azure-information-protection-scanner"></a>Instalar o scanner do Azure Information Protection
 
-1. Utilizando a conta de serviço que criou para executar o verificador, inicie sessão no computador do servidor do Windows que irão executar o verificador.
+1. Inicie sessão no computador do servidor do Windows que irão executar o verificador. Utilize uma conta que tenha direitos de administrador local e que tem permissões para escrever na base de dados mestra do SQL Server.
 
 2. Abra uma sessão do Windows PowerShell com o **executar como administrador** opção.
 
@@ -92,15 +92,17 @@ Agora que instalou scanner, terá de obter um Azure AD token para a conta de ser
     
     Para criar estas aplicações, siga as instruções em [como ficheiros de etiqueta forma não interativa do Azure Information Protection](../rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) do guia de administração.
 
-2. A partir do computador do servidor do Windows, ainda com sessão iniciado com a conta de serviço de análise, execute [conjunto AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), especificar os valores que copiou no passo anterior:
+2. No computador Windows Server, se a sua conta de serviço de análise tiver sido concedida a **iniciar sessão localmente** à direita para a instalação: Inicie sessão com esta conta e inicie a sessão do PowerShell. Executar [conjunto AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), especificar os valores que copiou no passo anterior:
     
     ```
     Set-AIPAuthentication -webAppId <ID of the "Web app / API" application>  -webAppKey <key value generated in the "Web app / API" application> -nativeAppId <ID of the "Native" application >
     ```
+    
+    Quando lhe for pedido, especifique a palavra-passe para as credenciais da conta de serviço para o Azure AD e, em seguida, clique em **aceitar**.
+    
+    Se a sua conta de serviço de scanner não é possível conceder a **iniciar sessão localmente** à direita para a instalação: Siga as instruções no [especificar e utilize o parâmetro de Token para Set-AIPAuthentication](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) secção do guia de administração. 
 
-3. Quando lhe for pedido, especifique a palavra-passe para as credenciais da conta de serviço para o Azure AD e, em seguida, clique em **aceitar**.
-
-Scanner tem agora um token para autenticar com o Azure AD, que é válido durante um ano, dois anos, ou nunca expira, de acordo com a configuração do **Web app /API** no Azure AD. Quando o token expira, terá de repetir os passos 1 a 3.
+Scanner tem agora um token para autenticar com o Azure AD, que é válido durante um ano, dois anos, ou nunca expira, de acordo com a configuração do **Web app /API** no Azure AD. Quando o token expira, terá de repetir os passos 1 e 2.
 
 Agora, está pronto para especificar os arquivos de dados para análise. 
 
@@ -209,7 +211,7 @@ Além disso, todos os ficheiros serão inspecionados quando scanner transfere um
 > 
 > Se tiver alterado as definições de proteção na política, também aguarde pela 15 minutos de quando guardar as definições de proteção antes de reiniciar o serviço.
 
-Se o verificador transferido uma política que não tinha nenhum condições automáticas configurados, a cópia do ficheiro de política na pasta de scanner não atualizar. Neste cenário, tem de eliminar o **%LocalAppData%\Microsoft\MSIP\Scanner\Policy.msip** antes de scanner pode utilizar um ficheiro de política transferido recentemente tem etiquetas corretamente figured para condições automáticas de ficheiros.
+Se o verificador transferido uma política que não tinha nenhum condições automáticas configurados, a cópia do ficheiro de política na pasta de scanner não atualizar. Neste cenário, tem de eliminar o ficheiro de política, **Policy.msip** partir **%LocalAppData%\Microsoft\MSIP\Policy.msip** e **%LocalAppData%\Microsoft\MSIP\Scanner**antes de scanner pode utilizar um ficheiro de política transferido recentemente tem etiquetas corretamente figured para condições automáticas.
 
 ## <a name="optimizing-the-performance-of-the-azure-information-protection-scanner"></a>Otimizar o desempenho do scanner Azure Information Protection
 

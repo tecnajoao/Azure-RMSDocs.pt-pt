@@ -4,7 +4,7 @@ description: "As instruções e as informações para os administradores gerirem
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 03/09/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 714afa8c839d91ba61043a643433c5045a4aad7d
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: 5bd2af4da402c0096cb58bba1d44684ad73656d6
+ms.sourcegitcommit: 335c854eb5c6f387a9369d4b6f1e22160517e6ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guia do administrador: Utilizar o PowerShell com o cliente Azure Information Protection
 
@@ -534,6 +534,8 @@ Quando executar este comando pela primeira vez, são-lhe pedido para iniciar ses
 > Esta opção requer a versão de disponibilidade geral (DG) do scanner Azure Information Protection, ou a versão de pré-visualização atual do cliente Azure Information Protection.
 
 Utilize os seguintes passos adicionais e instruções para evitar o inicial interativo início de sessão para uma conta que etiquetas e protege os ficheiros. Normalmente, estes são necessários passos adicionais apenas se esta conta não é possível conceder a **iniciar sessão localmente** botão direito do rato, mas é concedida a **iniciar sessão como uma tarefa de lote** à direita. Por exemplo, pode ser o caso da sua conta de serviço que executa o Verificador de Azure Information Protection.
+
+Passos de alto nível:
 
 1. Crie um script do PowerShell no computador local.
 

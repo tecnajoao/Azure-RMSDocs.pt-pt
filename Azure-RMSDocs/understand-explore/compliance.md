@@ -4,7 +4,7 @@ description: "As informações de suporte do Azure Information Protection inclue
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 03/12/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ef0b40db5dbbb66d7cbf45028862576a58886051
-ms.sourcegitcommit: 240378d216e386ad760460c50b7a664099c669e9
+ms.openlocfilehash: 2980032c72905ec237dea799e8d6d13e11746df3
+ms.sourcegitcommit: 29d3d4760131eb2642e17b0732f852b6d8cfe314
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="compliance-and-supporting-information-for-azure-information-protection"></a>Informações de suporte e conformidade do Azure Information Protection
 
@@ -56,11 +56,11 @@ Para obter informações técnicas detalhadas sobre como funciona a tecnologia d
 
 ## <a name="service-level-agreements"></a>Contratos de nível de serviço
 
-- Contrato de nível de serviço para o Azure Information Protection, por região selecionada: [Transferir a partir da página Pesquisa de Licenciamento de Produtos](http://microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&amp;DocumentTypeId=37)
+- [SLA do Azure Information Protection](https://azure.microsoft.com/support/legal/sla/information-protection/v1_0/)
 
-    - Por exemplo, clique em **OnlineSvcsConsolidatedSLA(WW)(inglês)(março de2016)** para transferir o contrato de nível de serviço de março de 2016 da América do Norte.
+- [SLA do Azure Active Directory](https://azure.microsoft.com/en-us/support/legal/sla/active-directory/v1_0/)
 
--   Contrato de nível de serviço para o Azure Active Directory: [Contratos de Nível de Serviço](http://azure.microsoft.com/support/legal/sla/)
+- [SLA para o Cofre de chaves do Azure](https://azure.microsoft.com/en-us/support/legal/sla/key-vault/v1_0/)
 
 ## <a name="documentation"></a>Documentação
 

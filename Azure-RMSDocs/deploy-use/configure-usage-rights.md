@@ -4,7 +4,7 @@ description: "Conheça os direitos específicos utilizados quando protege fichei
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2018
+ms.date: 03/14/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: faa00eee76e6c084db1a4dfb1d477e491fae5fee
-ms.sourcegitcommit: 3e9b3c2206807e82cc4721a50862b74152906f63
+ms.openlocfilehash: 8411fd46305da69e8fe06ae3851d5066695cdc24
+ms.sourcegitcommit: 29d3d4760131eb2642e17b0732f852b6d8cfe314
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuração de direitos de utilização para o Azure Rights Management
 
@@ -95,7 +95,7 @@ Estes modelos predefinidos são criados quando foi comprada a sua subscrição e
 
 ## <a name="do-not-forward-option-for-emails"></a>Opção Não Reencaminhar para e-mails
 
-Os clientes do Exchange e serviços (por exemplo, o cliente Outlook, a aplicação Outlook Web Access e as regras de transporte do Exchange) têm uma opção de proteção de direitos de informação adicional para e-mails: **não reencaminhar**. 
+Os clientes do Exchange e serviços (por exemplo, o cliente Outlook, a aplicação Outlook Web Access e as regras de fluxo de correio do Exchange) têm uma opção de proteção de direitos de informação adicional para e-mails: **não reencaminhar**. 
 
 Embora esta opção seja apresentada aos utilizadores (e os administradores do Exchange) como se fosse um modelo de Gestão de Direitos predefinido que podem selecionar, **Não Reencaminhar** não é um modelo. Isto explica por que motivo não pode vir no portal do Azure quando visualiza e gere modelos para o Azure Rights Management. Em vez disso, a opção **Não Reencaminhar** é um conjunto de direitos aplicados dinamicamente por utilizadores aos seus destinatários de e-mail.
 
@@ -116,7 +116,7 @@ Um utilizador pretende enviar algumas informações por e-mail a pessoas especí
 
 Quando o Exchange Online utilizar as novas funcionalidades para a encriptação de mensagens do Office 365, fica disponível uma nova opção de e-mail: **só de encriptar**.
 
-Esta opção está a ser implementada para os inquilinos que utilizam o Exchange Online, inicialmente apenas para o Outlook web e como outra opção de proteção de direitos para uma regra de transporte. Para obter mais informações, consulte o seguinte anúncio de mensagem de blogue da equipa do Office: [encriptar apenas disponibilizando na encriptação de mensagens do Office 365](https://aka.ms/omefeb2018).
+Esta opção está a ser implementada para os inquilinos que utilizam o Exchange Online, inicialmente apenas para o Outlook web e como outra opção de proteção de direitos para uma regra de fluxo de correio. Para obter mais informações, consulte o seguinte anúncio de mensagem de blogue da equipa do Office: [encriptar apenas disponibilizando na encriptação de mensagens do Office 365](https://aka.ms/omefeb2018).
 
 Quando esta opção está selecionada, o e-mail é encriptada e os destinatários tem de ser autenticados. Em seguida, os destinatários tem todos os direitos de utilização, exceto o controlo total. Esta combinação de direitos de utilização significa que os destinatários têm sem restrições, exceto que, que não é possível remover a proteção. Por exemplo, um destinatário pode copiar, imprimir e reencaminhar o e-mail. Da mesma forma, os documentos do Office que são ligados e automaticamente protegidos podem ser guardados copiado e impressos.
 
@@ -165,7 +165,6 @@ A predefinição utilizar validade da licença período para um inquilino é 30 
 - Quando configurar um modelo com o PowerShell, o período de validade da licença de utilização tem o valor da *LicenseValidityDuration* parâmetro o [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) e [ Adicionar-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate) cmdlets.
     
     Para obter mais informações e orientações para configurar esta definição utilizando o PowerShell, consulte a ajuda para cada cmdlet.
-
 
 ## <a name="see-also"></a>Veja Também
 [Configurar e gerir modelos do Azure Information Protection](configure-policy-templates.md)

@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 18eff00f6b316c48dbca5a9a8ec2c2ab4e58f76c
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: fc2fd8d043c04c3820de30d2087ff498b4ea4e90
+ms.sourcegitcommit: 758e0cfeb6c05f4c6f5310dc36fbf0c02c256eed
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="decommissioning-and-deactivating-protection-for-azure-information-protection"></a>Encerrar e desativar a proteção do Azure Information Protection
 
@@ -26,7 +26,7 @@ São sempre no controlo dos se a organização protege conteúdo utilizando o se
 
 Se não precisa de acesso contínuo ao conteúdo anteriormente protegido, desativar o serviço e permita que a sua subscrição do Azure Information Protection expirar. Por exemplo, isto poderá ser adequado para quando terminar de testar o Azure Information Protection antes de o implementar num ambiente de produção.
 
-No entanto, se tiver implementado o Azure Information Protection na produção e proteger documentos e e-mails, certifique-se de que tem uma cópia da sua chave de inquilino do Azure Information Protection antes de desativar o serviço Azure Rights Management. Certifique-se de que tem uma cópia da sua chave antes da sua subscrição expirar para se certificar de que pode manter o acesso ao conteúdo que foi protegido pelo Azure Rights Management depois do serviço ser desativado. Se utilizou a traga a sua própria solução de chave (BYOK), a qual gerar e gerir a sua própria chave num HSM, já tem a chave de inquilino do Azure Information Protection. Mas se foi gerida pela Microsoft (predefinição), consulte as instruções para exportar a chave de inquilino no artigo [Operações para a chave de inquilino do Azure Rights Management](operations-tenant-key.md).
+No entanto, se tiver implementado o Azure Information Protection na produção e proteger documentos e e-mails, certifique-se de que tem uma cópia da sua chave de inquilino do Azure Information Protection antes de desativar o serviço Azure Rights Management. Certifique-se de que tem uma cópia da sua chave antes da sua subscrição expirar para se certificar de que pode manter o acesso ao conteúdo que foi protegido pelo Azure Rights Management depois do serviço ser desativado. Se utilizou a traga a sua própria solução de chave (BYOK), a qual gerar e gerir a sua própria chave num HSM, já tem a chave de inquilino do Azure Information Protection. Mas se foi gerida pela Microsoft (predefinição), consulte as instruções para exportar a chave de inquilino no [operações para a chave de inquilino do Azure Information Protection](operations-tenant-key.md) artigo.
 
 > [!TIP]
 > Mesmo após a sua subscrição expirar, o seu inquilino do Azure Information Protection permanecerá disponível para consumir conteúdos durante um período prolongado. No entanto, vai deixar de poder exportar a sua chave de inquilino.

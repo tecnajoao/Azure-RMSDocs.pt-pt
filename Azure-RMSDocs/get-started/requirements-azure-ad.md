@@ -4,7 +4,7 @@ description: "Conheça os requisitos do Azure AD para utilizar o Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2017
+ms.date: 03/19/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2a079dbc1df01c8c9402d7d79e3f587f13b44654
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 62c9bba17c561fda86393ed4e76c00895613d0e3
+ms.sourcegitcommit: 1b44f6bd25b756fa85fa5f47aa4c0486f9486832
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Requisitos do Azure Active Directory para o Azure Information Protection
 
@@ -89,7 +89,13 @@ Em seguida, configure a sua solução de MFA:
 
         Para obter mais informações acerca deste cenário, veja [Trabalhos no Office 365 – o programa de identidade está mais simples](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) no blogue do Office.
 
-O conector do Rights Management não suporta a MFA. Se implementar este conector nos seus servidores no local, tem de utilizar uma conta para o conector que não exija a MFA.
+O conector Rights Management e a análise do Azure Information Protection não suportam MFA. Se implementar o conector ou scanner, as seguintes contas não devem necessitar de MFA:
+
+- A conta que instala e configura o conector.
+
+- A conta do principal de serviço no Azure AD, **Aadrm_S-1-7-0**, que cria o conector.
+ 
+- A conta de serviço que executa o verificador.
 
 ## <a name="next-steps"></a>Próximos passos
 Para verificar outros requisitos, veja [Requisitos do Azure Information Protection](requirements-azure-rms.md).

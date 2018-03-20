@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6560381eb07d582d817d00cc76be880998f676f2
-ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
+ms.openlocfilehash: 87746ad526f191907ad2670604c357e5e926b84e
+ms.sourcegitcommit: 758e0cfeb6c05f4c6f5310dc36fbf0c02c256eed
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Implementar o conetor Azure Rights Management
 
@@ -51,7 +51,7 @@ Pode utilizar o conector RMS num cenário híbrido, mesmo que alguns dos seus ut
 
 Se gerir a sua própria chave de inquilino do Azure RMS (o cenário traga a sua própria chave ou BYOK), o conector RMS e os servidores no local que a utilizam não acedem ao módulo de hardware de segurança (HSM) que contém a chave de inquilino. Isto acontece porque todas as operações de criptografia que utilizam a chave de inquilino são executadas no Azure RMS e não no local.
 
-Se quiser saber mais sobre este cenário onde gere a sua chave de inquilino, consulte [Planear e implementar a sua chave de inquilino do Azure Rights Management](../plan-design\plan-implement-tenant-key.md).
+Se pretender saber mais sobre este cenário onde irá gerir a sua chave, consulte de inquilino [planear e implementar a sua chave de inquilino do Azure Information Protection](../plan-design\plan-implement-tenant-key.md).
 
 ## <a name="prerequisites-for-the-rms-connector"></a>Pré-requisitos do conector RMS
 Antes de instalar o conector RMS, certifique-se de que os seguintes requisitos são cumpridos.
@@ -91,7 +91,7 @@ O conector não verificar automaticamente a todos os o [pré-requisitos](deploy-
     -   [Configurar um servidor de ficheiros para a Infraestrutura de Classificação de Ficheiros para utilizar o conector](configure-servers-rms-connector.md#configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector)
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Aceda ao Passo 1: [instalar e configurar o conector Azure Rights Management](install-configure-rms-connector.md).
 

@@ -4,7 +4,7 @@ description: "Ver o que é nova ou alterada uma versão do cliente Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/06/2018
+ms.date: 03/19/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 19390c05719ebfee7e3442437d3f5bdfd303c652
-ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
+ms.openlocfilehash: 10fe839ff24994af0c50fff6aeac303d57a19ea6
+ms.sourcegitcommit: 65d6b0ecfbca5071afe29e63aea6226ad7a911b8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: política de suporte e histórico da versão versão
 
@@ -154,30 +154,6 @@ Correções para uma melhor experiência de utilizador, que incluem:
 - Validação de e-mail quando os utilizadores especificarem permissões personalizadas. Além disso, vários endereços de e-mail agora podem ser especificados, premindo Enter.
 
 - A etiqueta principal não é apresentada quando todos os respetivos sublabels estão configuradas para proteção e o cliente não tem uma edição do Office que suporta a proteção. 
-
-## <a name="version-172100"></a>Versão 1.7.210.0
-
-**Lançada**: 06/06/2017
-
-Esta versão inclui a versão MSIPC 1.0.2217.1 do cliente RMS.
-
-**Novas funcionalidades**:
-
-- Novo cmdlet do PowerShell, [Set-AIPFileClassification](/powershell/module/azureinformationprotection/Set-AIPFileClassification). Ao executar este cmdlet, ele inspeciona os conteúdos do ficheiro e aplica automaticamente etiquetas em ficheiros sem etiqueta, de acordo com as condições que especificar na política do Azure Information Protection.
-
-**Correções**:
-
-- Todos os cmdlets de classificação e etiquetagem são agora suportados em computadores que não estão ligados à Internet, mas têm uma política do Azure Information Protection válida.
-
-- Para obter consistência, um parâmetro de saída do cmdlet [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) é alterado de inglês britânico (**IsLabelled**) para inglês americano (**IsLabeled**). Se tiver scripts ou processos automatizados que procuram este parâmetro, atualize a ortografia desse parâmetro.
-
-- As correções gerais para estabilidade são:
-
-    - Para Outlook: correções para falhas de sistema, alto consumo de memória e problemas de exibição para menus.
-    
-    - Para Word, Excel e PowerPoint: correções de alta utilização da CPU, problemas de exibição ao guardar grandes ficheiros Excel ou a aplicação para de responder. 
-    
-    Também para estas aplicações, para melhorar o desempenho do Office 2016 com o SharePoint Online e o OneDrive para Empresas, a etiquetagem automática e recomendada é aplicada quando o ficheiro é fechado, em vez de quando o ficheiro é guardado (guarda automaticamente ou o utilizador opta por guardar). Da mesma forma, se a definição **todos os documentos e e-mails devem ter uma etiqueta** está ativada, os utilizadores não recebem pedidos para selecionar uma etiqueta até que o ficheiro for fechado. A exceção é para Word 2016 e Excel 2016 e o utilizador seleciona a opção **Guardar como**. Em seguida, esta ação aciona estes comportamentos de etiquetagem se forem configurados. 
 
 ## <a name="next-steps"></a>Próximos passos
 

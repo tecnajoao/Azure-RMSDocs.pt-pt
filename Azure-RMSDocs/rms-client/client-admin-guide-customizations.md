@@ -4,7 +4,7 @@ description: "Informações sobre a personalização do cliente do Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 03/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 662ed627fc6138e1ff16efb731b209964784432f
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: e5c71068f979c13b2d8c9ee7c9c5c43e2ad3a7ad
+ms.sourcegitcommit: 32b233bc1f8cef0885d9f4782874f1781170b83d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia de administração: Configurações personalizadas para o cliente Azure Information Protection
 
@@ -52,7 +52,7 @@ Localize o nome do valor seguinte e, em seguida, defina os dados do valor como *
 
 Independentemente desta definição, o cliente do Azure Information Protection segue o [processo de deteção do serviço RMS](../rms-client/client-deployment-notes.md#rms-service-discovery) padrão, para localizar o respetivo cluster AD RMS.
 
-## <a name="suppress-the-initial-congratulations-welcome-page"></a>Suprimir as iniciais "parabéns!" Página de boas-vindas
+## <a name="suppress-the-initial-congratulations-welcome-page"></a>Suprimir as iniciais "parabéns!" página de boas-vindas
 
 Quando o cliente Azure Information Protection é instalado pela primeira vez num computador e um utilizador abre o Word, Excel, PowerPoint ou Outlook, um **Parabéns!** página é apresentada com instruções abreviadas como utilizar a nova barra do Information Protection para selecionar etiquetas. Pode suprimir esta página ao editar o registo.
 
@@ -202,9 +202,91 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 - Valor: \< **etiqueta ID**> ou **None**
 
+## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Migrar as etiquetas de Secure Islands e outras soluções de etiquetas
+
+Esta opção de configuração está atualmente em pré-visualização e está sujeita a alterações. Além disso, esta opção de configuração requer a versão de pré-visualização do cliente.
+
+Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
+
+Para documentos do Office e os documentos PDF que são etiquetados pelo Secure Islands, pode relabel estes documentos com uma etiqueta de Azure Information Protection utilizando um mapeamento por si. Utilize também este método reutilizar as etiquetas de outras soluções quando as etiquetas estão em documentos do Office. 
+
+Como resultado desta opção de configuração, a nova etiqueta do Azure Information Protection é aplicada ao cliente Azure Information Protection da seguinte forma:
+
+- Para documentos do Office: quando o documento é aberto na aplicação do ambiente de trabalho, a nova etiqueta do Azure Information Protection é mostrada como conjunto e é aplicada quando o documento é guardado.
+
+- Explorador de ficheiros: Na caixa de diálogo do Azure Information Protection, a nova etiqueta do Azure Information Protection é mostrada como conjunto e é aplicada quando o utilizador seleciona **aplicar**. Se o utilizador seleciona **Cancelar**, a nova etiqueta não é aplicada.
+
+- Para o PowerShell: [conjunto AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) aplica-se a nova etiqueta do Azure Information Protection. [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) não apresentam a nova etiqueta do Azure Information Protection até que está definido por outro método.
+
+- Para a análise do Azure Information Protection: quando a nova etiqueta do Azure Information Protection seria definida e pode ser aplicada esta etiqueta com o modo de impor a relatórios de deteção.
+
+Esta configuração requer a especificação de um cliente avançado definição denominada **LabelbyCustomProperty** para cada etiqueta do Azure Information Protection que pretende mapear para a etiqueta antiga. Em seguida, para cada entrada, defina o valor utilizando a seguinte sintaxe:
+
+`[Azure Information Protection label ID],[migration rule name],[Secure Islands custom property name],[Secure Islands metadata Regex value]`
+
+O valor de ID da etiqueta é apresentado no **etiqueta** painel, ao ver ou configurar a política do Azure Information Protection no portal do Azure. Para especificar um sublabel, a etiqueta principal tem de ser no mesmo âmbito, ou na política de global.
+
+Especifique a sua escolha de um nome de regra de migração. Utilize um nome descritivo que ajuda a identificar como um ou mais etiquetas da sua solução de etiquetas anterior deve ser mapeado para uma etiqueta de Azure Information Protection. O nome é apresentado nos relatórios do scanner e no Visualizador de eventos. 
+
+### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>Exemplo 1: Mapeamento um para um com o mesmo nome de etiqueta
+
+Devem ser relabeled documentos que tenham uma etiqueta de Secure Islands de "Confidencial" como "Confidencial", pelo Azure Information Protection.
+
+Neste exemplo:
+
+- A etiqueta do Azure Information Protection da **confidencial** tem um ID de etiqueta de 1ace2cc3-14bc-4142-9125-bf946a70542c. 
+
+- A etiqueta de Secure Islands é armazenada na propriedade personalizada com o nome **classificação**.
+
+A definição de cliente avançado:
+
+    
+|Nome|Valor|
+|---------------------|---------|
+|LabelbyCustomProperty|1ace2cc3-14bc-4142-9125-bf946a70542c, "a etiqueta de Secure Islands é confidencial", classificação, confidencial|
+
+### <a name="example-2-one-to-one-mapping-for-a-different-label-name"></a>Exemplo 2: Mapeamento um para um para um nome de etiqueta diferentes
+
+Documentos etiquetados como "Confidencial" pelo Secure Islands devem ser relabeled "Altamente confidencial" como pelo Azure Information Protection.
+
+Neste exemplo:
+
+- A etiqueta do Azure Information Protection **altamente confidenciais** tem um ID de etiqueta de 3e9df74d-em com 3168-48af-8b11-037e3021813f.
+
+- A etiqueta de Secure Islands é armazenada na propriedade personalizada com o nome **classificação**.
+
+A definição de cliente avançado:
+
+    
+|Nome|Valor|
+|---------------------|---------|
+|LabelbyCustomProperty|3e9df74d-em com 3168-48af-8b11-037e3021813f, "a etiqueta de Secure Islands é confidencial", classificação, sensíveis|
+
+
+### <a name="example-3-many-to-one-mapping-of-label-names"></a>Exemplo 3: Muitos-para-um mapeamento de nomes de etiqueta
+
+Tem duas etiquetas de Secure Islands que incluem a palavra "Interno" e pretende que os documentos que tenham uma das etiquetas destes Secure Islands relabeled como "Geral", pelo Azure Information Protection.
+
+Neste exemplo:
+
+- A etiqueta do Azure Information Protection **geral** tem um ID de etiqueta de 2beb8fe7-8293-444 c-9768-7fdc6f75014d.
+
+- A etiqueta de Secure Islands é armazenada na propriedade personalizada com o nome **classificação**.
+
+A definição de cliente avançado:
+
+    
+|Nome|Valor|
+|---------------------|---------|
+|LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d, "a etiqueta de Secure Islands contém interno", a classificação,. \*Interno.\*|
+
+
 ## <a name="label-an-office-document-by-using-an-existing-custom-property"></a>Etiqueta de um documento do Office através da utilização de uma propriedade personalizada existente
 
-Esta opção de configuração está atualmente em pré-visualização e está sujeita a alterações. 
+Esta opção de configuração está atualmente em pré-visualização e está sujeita a alterações.
+
+> [!NOTE]
+> Se utilizar esta configuração e a configuração da secção anterior para migrar a partir de outra solução de etiquetas, a definição de migração de etiquetas tem precedência. 
 
 Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
 

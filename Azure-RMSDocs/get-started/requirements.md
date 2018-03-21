@@ -4,7 +4,7 @@ description: "Identifique os pré-requisitos para implementar o Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/07/2018
+ms.date: 03/20/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 20726f99a10328fac777dc22cb59372db0ab384d
-ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
+ms.openlocfilehash: 4321513f5323eb7eb8d742b1c86fd05defa85970
+ms.sourcegitcommit: 32b233bc1f8cef0885d9f4782874f1781170b83d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisitos para o Azure Information Protection
 
@@ -38,6 +38,8 @@ Para se certificar de que a subscrição da sua organização inclui as funciona
 > [Descrição de serviço Online do Exchange](https://technet.microsoft.com/library/exchange-online-service-description.aspx)
 >
 > [Office 365 educação](https://technet.microsoft.com/library/mt844095.aspx)
+>
+> [Office 365 dos EUA](https://technet.microsoft.com/library/mt774581.aspx)
 
 Se tiver dúvidas sobre subscrições ou licenciamento, não as publique nesta página. em alternativa, entre em contacto com o seu Gestor de Conta Microsoft ou com o [Suporte da Microsoft](information-support.md#to-contact-microsoft-support).
 

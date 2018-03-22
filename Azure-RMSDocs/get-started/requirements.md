@@ -4,7 +4,7 @@ description: "Identifique os pré-requisitos para implementar o Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/20/2018
+ms.date: 03/21/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4321513f5323eb7eb8d742b1c86fd05defa85970
-ms.sourcegitcommit: 32b233bc1f8cef0885d9f4782874f1781170b83d
+ms.openlocfilehash: 9542eb6f679d931de556f706afa3b51cfd9d2bb8
+ms.sourcegitcommit: 58cd89cc6f6407648854e2e2d28a61325b5c8922
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisitos para o Azure Information Protection
 
@@ -46,6 +46,8 @@ Se tiver dúvidas sobre subscrições ou licenciamento, não as publique nesta p
 ## <a name="azure-active-directory"></a>Azure Active Directory
 
 A sua organização tem de ter um Azure Active Directory (Azure AD) para suportar a autorização e autenticação de utilizador para o Azure Information Protection. Além disso, se pretender utilizar as contas de utilizador do seu diretório no local (AD DS), tem também de configurar a integração de diretórios.
+
+Início de sessão único (SSO) é suportada para o Azure Information Protection, para que os utilizadores não recebem repetidamente para as respetivas credenciais. Se utilizar outra solução de fornecedor de Federação, consulte o fornecedor como configurá-lo para o Azure AD. WS-Trust é um requisito comuns para estas soluções suportar o início de sessão único. 
 
 A autenticação multifator (MFA) é suportada com o Azure Information Protection quando tem o software de cliente necessário e a infraestrutura de suporte de MFA corretamente configurada.
 

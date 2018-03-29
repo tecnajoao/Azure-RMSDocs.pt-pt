@@ -1,26 +1,26 @@
 ---
-title: "Atalhos de teclado na aplicação de partilha RMS – AIP"
-description: "Instruções sobre como utilizar os atalhos de teclado com a aplicação de partilha RMS para Windows."
+title: Atalhos de teclado na aplicação de partilha RMS – AIP
+description: Instruções sobre como utilizar os atalhos de teclado com a aplicação de partilha RMS para Windows.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 72760134-94e0-4699-b20c-07b96aa061f1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ebb40568e63cf51a8b6473ca872f1e0ed9ec30ea
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 39787218e1c9e1d130748aa309ae49790b64275a
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="use-keyboard-shortcuts-in-the-rights-management-sharing-application"></a>Utilizar atalhos de teclado na aplicação de partilha Rights Management
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8 e Windows 8.1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 Ao utilizar a aplicação de partilha RMS, prima a tecla **Alt** para ver as teclas de acesso disponíveis e, em seguida, prima **Alt** + a tecla de acesso para selecionar uma opção.
 
@@ -35,7 +35,7 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 -   [O que pretende fazer?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -1,26 +1,28 @@
 ---
-title: "Tarefas realizadas com a aplicação de partilha RMS – AIP"
-description: "Instruções para utilizadores que atualizaram da aplicação de partilha RMS para o cliente do Azure Information Protection."
+title: Tarefas realizadas com a aplicação de partilha RMS – AIP
+description: Instruções para utilizadores que atualizaram da aplicação de partilha RMS para o cliente do Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: d7bc2478-c22f-4e19-9992-012658362b25
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: dc0345ed289ecc95643c08ad86c1757848026826
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: 58b0ab62b260e407aa9ae6a36b4a063fe147889b
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="user-guide-tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>Guia de utilizador: Tarefas que utilizou para fazer com a aplicação de partilha RMS
 
-Atualizou recentemente da aplicação de partilha Rights Management (também conhecida apenas como “aplicação de partilha RMS”) para o cliente do Azure Information Protection? 
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>
+>Atualizou recentemente da aplicação de partilha Rights Management (também conhecida apenas como “aplicação de partilha RMS”) para o cliente do Azure Information Protection? 
 
 Utilize as seguintes informações para colocar o serviço a funcionar rapidamente.
 

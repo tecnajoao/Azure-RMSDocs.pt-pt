@@ -1,27 +1,27 @@
 ---
-title: "FAQs do Azure RMS – AIP"
-description: "Algumas perguntas mais frequentes sobre o serviço de proteção de dados, o Azure Rights Management (Azure RMS), do Azure Information Protection."
+title: FAQs do Azure RMS – AIP
+description: Algumas perguntas mais frequentes sobre o serviço de proteção de dados, o Azure Rights Management (Azure RMS), do Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/13/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bf640c7faf6bcd5ce7467547095b44f09e72fa8c
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: b1968f277ca7c9237487d4d767b8a85eb15a9331
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Perguntas mais frequentes sobre a proteção de dados no Azure Information Protection
 
->*Aplica-se a: Azure Information Protection, Office 365*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Tem uma pergunta sobre o serviço de proteção de dados, o Azure Rights Management, do Azure Information Protection? Verifique se a resposta está aqui.
 
@@ -144,7 +144,7 @@ Para obter uma lista de extensões de nome de ficheiro que são suportadas nativ
 
 ## <a name="how-do-i-configure-a-mac-computer-to-protect-and-track-documents"></a>Como configurar um computador Mac para proteger e controlar documentos?
 
-Primeiro, confirme se instalou o Office para Mac através da ligação de instalação do software em https://portal.office.com. Para obter instruções completas, veja [Transferir e instalar ou reinstalar o Office 365 ou o Office 2016 num PC ou Mac](https://support.office.com/en-us/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
+Em primeiro lugar, certifique-se de que instalou Office para Mac, utilizando a hiperligação de instalação de software do https://portal.office.com. Para obter instruções completas, veja [Transferir e instalar ou reinstalar o Office 365 ou o Office 2016 num PC ou Mac](https://support.office.com/en-us/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
 
 Abra o Outlook e crie um perfil com a conta escolar ou profissional do Office 365. Em seguida, crie uma nova mensagem e faça o seguinte procedimento para configurar o Office, para que possa proteger documentos e e-mails com o serviço Azure Rights Management:
 
@@ -156,7 +156,7 @@ Abra o Outlook e crie um perfil com a conta escolar ou profissional do Office 36
 
 Para proteger uma mensagem de e-mail ou um documento: no separador **Opções**, clique em **Permissões** e escolha uma opção ou um modelo que protege o seu e-mail ou documento.
 
-Para controlar um documento depois de o proteger: a partir de um computador Windows que tenha o cliente do Azure Information Protection instalado, registe o documento no site de controlo de documentos ao utilizar uma aplicação do Office ou o Explorador de Ficheiros. Para obter instruções, veja [Controlar e revogar os documentos](../rms-client/client-track-revoke.md). No seu computador Mac, agora já pode utilizar o browser para aceder ao site de controlo de documentos (https://track.azurerms.com) para controlar e revogar este documento.
+Para controlar um documento depois de o proteger: a partir de um computador Windows que tenha o cliente do Azure Information Protection instalado, registe o documento no site de controlo de documentos ao utilizar uma aplicação do Office ou o Explorador de Ficheiros. Para obter instruções, veja [Controlar e revogar os documentos](../rms-client/client-track-revoke.md). Do seu computador Mac, agora, pode utilizar o web browser para ir para o site de controlo de documentos (https://track.azurerms.com) para controlar e revogar neste documento.
 
 ## <a name="when-i-open-an-rms-protected-office-document-does-the-associated-temporary-file-become-rms-protected-as-well"></a>Quando abro um documento do Office protegido por RMS, o ficheiro temporário associado também fica protegido por RMS?
 Não. Neste cenário, o ficheiro temporário associado não contém dados do documento original, mas apenas o que o utilizador introduz enquanto o ficheiro está aberto. Ao contrário do ficheiro original, o ficheiro temporário não foi concebido para partilha e permaneceria no dispositivo, protegido por controlos de segurança locais, como o BitLocker e o EFS.

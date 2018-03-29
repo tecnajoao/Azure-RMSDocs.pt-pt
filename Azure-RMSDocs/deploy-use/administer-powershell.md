@@ -1,26 +1,26 @@
 ---
-title: "Administrar o Azure Rights Management com o PowerShell – AIP"
-description: "Saiba como pode utilizar o módulo do PowerShell do serviço Azure Rights Management (AADRM) para o Azure Information Protection para administrar este serviço na sua organização."
+title: Administrar o Azure Rights Management com o PowerShell – AIP
+description: Saiba como pode utilizar o módulo do PowerShell do serviço Azure Rights Management (AADRM) para o Azure Information Protection para administrar este serviço na sua organização.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/13/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cdd35669360b172d456254c1e8e9f1d980117cdb
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: 55142c61b5ba7ee8b800bae94231401e74be9a38
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="administering-the-azure-rights-management-service-by-using-windows-powershell"></a>Administrar o serviço Azure Rights Management através do Windows PowerShell
 
->*Aplica-se a: Azure Information Protection, Office 365*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Precisa de utilizar o PowerShell para administrar o serviço Azure Rights Management para o Azure Information Protection? Não poderá ter de se toda a sua configuração pode ser efetuada no portal do Azure ou no portal do Office 365. No entanto, terá de utilizar o PowerShell para algumas configurações avançadas e também poderá preferir utilizar o PowerShell para o controlo mais eficiente de linha de comandos e idioma de scripting.
 

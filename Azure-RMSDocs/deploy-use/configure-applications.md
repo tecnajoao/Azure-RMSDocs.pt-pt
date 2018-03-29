@@ -1,26 +1,26 @@
 ---
-title: "Configurar aplicações para o Azure Rights Management – AIP"
-description: "Instruções para os administradores configurarem aplicações e serviços para suportar o serviço de proteção do Azure Rights Management para o Azure Information Protection. Por exemplo, aplicações do Office como o Word 2013 e o Word 2010, bem como serviços como o Exchange Online (regras de transporte, prevenção de perda de dados, não reencaminhar e encriptação de mensagens) e o SharePoint Online (bibliotecas protegidas)."
+title: Configurar aplicações para o Azure Rights Management – AIP
+description: Instruções para os administradores configurarem aplicações e serviços para suportar o serviço de proteção do Azure Rights Management para o Azure Information Protection. Por exemplo, aplicações do Office como o Word 2013 e o Word 2010, bem como serviços como o Exchange Online (regras de transporte, prevenção de perda de dados, não reencaminhar e encriptação de mensagens) e o SharePoint Online (bibliotecas protegidas).
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 04/26/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e3030aca9e7b93d93df583934b2a6ad2f0013903
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 2477432e53a3aaeee89781a8bd7a595315e86561
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Configurar aplicações para o Azure Rights Management
 
->*Aplica-se a: Azure Information Protection, Office 365*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!NOTE]
 > Estas informações destinam-se aos administradores de TI e consultores que tenham implementado o Azure Information Protection. Se estiver à procura de ajuda de utilizador e de informações sobre como utilizar a funcionalidade Rights Management para uma aplicação específica ou como abrir um ficheiro protegido por direitos, utilize a ajuda e as orientações incluídas na sua aplicação.
@@ -53,7 +53,7 @@ Para configurar os servidores no local, como o Exchange Server e o SharePoint Se
 
 Além destas aplicações e serviços, existem outras aplicações que suportam as APIs de Rights Management. Esta categoria inclui aplicações de linha de negócio que são escritas internamente através do SDK Rights Management, bem como aplicações de fornecedores de software que são escritas através do SDK Rights Management. Para estas aplicações, siga as instruções fornecidas com a aplicação.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 Depois de configurar as suas aplicações para suportar o serviço Azure Rights Management, utilize o [Plano de implementação do Azure Information Protection](../plan-design/deployment-roadmap.md) para verificar se existem outros passos de configuração que queira realizar antes de implementar o Azure Information Protection para utilizadores e administradores. Caso contrário, as informações operacionais que se seguem podem ser-lhe úteis:
 
 - [Verificar o serviço Azure Rights Management](verify.md)

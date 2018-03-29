@@ -1,26 +1,26 @@
 ---
-title: "Proteger no local com a aplicação de partilha RMS – AIP"
-description: "Instruções sobre como armazenar um ficheiro no seu computador, num servidor ou noutro dispositivo de armazenamento com segurança."
+title: Proteger no local com a aplicação de partilha RMS – AIP
+description: Instruções sobre como armazenar um ficheiro no seu computador, num servidor ou noutro dispositivo de armazenamento com segurança.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a0654dba53f493551b2cc4d1fbb8790f246e0c18
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 0d819fd242e57402a790e9acb40ffa48eeb701b4
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="protect-a-file-on-a-device-protect-in-place-by-using-the-rights-management-sharing-application"></a>Proteger um ficheiro num dispositivo (proteger no local) através da aplicação de partilha Rights Management
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8 e Windows 8.1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 Quando protege um ficheiro no local, este substitui o ficheiro original, que está desprotegido. Em seguida, pode deixar o ficheiro onde se encontra, copiá-lo para outra pasta ou dispositivo ou partilhar a pasta onde está e o ficheiro permanece protegido. Também pode anexar o ficheiro protegido a uma mensagem de e-mail, embora a forma recomendada para partilhar um ficheiro protegido por e-mail seja diretamente a partir do Explorador de Ficheiros ou de uma aplicação do Office (consulte [Proteger um ficheiro que partilha por e-mail ao utilizar a aplicação de partilha Rights Management](sharing-app-protect-by-email.md)).
 

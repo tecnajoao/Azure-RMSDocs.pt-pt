@@ -1,26 +1,26 @@
 ---
 title: Guia do utilizador do Azure Information Protection
-description: "O cliente do Azure Information Protection para Windows ajuda-o a manter os documentos e e-mails importantes protegidos das pessoas que não os devem ver, mesmo que o seu e-mail seja reencaminhado ou que o seu documento seja guardado noutra localização."
+description: O cliente do Azure Information Protection para Windows ajuda-o a manter os documentos e e-mails importantes protegidos das pessoas que não os devem ver, mesmo que o seu e-mail seja reencaminhado ou que o seu documento seja guardado noutra localização.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/02/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2cf46bf9-7d23-4f49-b5c1-7ed7b71c858f
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f1ea192bcacc856b1a4452e2ad3b21f4de45d511
-ms.sourcegitcommit: 92bbef77091c66300e0d2acce60c064ffe314752
+ms.openlocfilehash: 1e6ce5660a0ccc8385c6ab728c4d2c1c202023ed
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="azure-information-protection-user-guide"></a>Guia do utilizador do Azure Information Protection
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8 e Windows 7 com SP1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
 
 O cliente do Azure Information Protection para Windows ajuda-o a manter os documentos e e-mails importantes protegidos das pessoas que não os devem ver, mesmo que o seu e-mail seja reencaminhado ou que o seu documento seja guardado noutra localização. Também pode utilizar este cliente para abrir documentos que tenham sido protegidos por outras pessoas com a tecnologia de proteção do Rights Management a partir do Azure Information Protection.
 

@@ -1,27 +1,27 @@
 ---
-title: "Aplicação de partilha RMS&colon; histórico de lançamento de versões – AIP"
-description: "Veja as novidades ou alterações numa versão da aplicação de partilha Rights Management para Windows."
+title: Aplicação de partilha RMS&colon; histórico de lançamento de versões – AIP
+description: Veja as novidades ou alterações numa versão da aplicação de partilha Rights Management para Windows.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.custom: askipteam
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ed3725f65d5e1b357a2cd1cda1e28a8ddcb8fae6
-ms.sourcegitcommit: 79aa9838956f755994efcb97cef6dd5d1892f06f
+ms.openlocfilehash: 1e3dc88f69b1fb4ed178f3f2d1268c47fae13621
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="rights-management-sharing-application-version-release-history"></a>Aplicação de partilha Rights Management: histórico de lançamento de versões
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8 e Windows 8.1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 A equipa do Azure Information Protection atualiza regularmente a aplicação de partilha Rights Management com correções e novas funcionalidades. Utilize as seguintes informações para ver o que há de novo ou o que foi alterado num lançamento. A versão mais atual aparece em primeiro na lista.
 

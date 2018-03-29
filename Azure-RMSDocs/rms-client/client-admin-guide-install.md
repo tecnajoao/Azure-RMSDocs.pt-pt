@@ -1,26 +1,26 @@
 ---
 title: Instalar o cliente Azure Information Protection para os utilizadores
-description: "As instruções e informações para os administradores implementar o cliente Azure Information Protection para o Windows em redes de empresa."
+description: As instruções e informações para os administradores implementar o cliente Azure Information Protection para o Windows em redes de empresa.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/13/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: a62c8c1c27855b25e5de69bd162d524bf1851890
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: 2a3daec687739956bb0b7bd235b69cea30039171
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guia do administrador: Instalar o cliente Azure Information Protection para os utilizadores
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Antes de instalar o cliente Azure Information Protection na sua rede empresarial, verifique se os computadores têm as aplicações do Azure Information Protection e as versões do sistema operativo necessário: [requisitos para obter informações do Azure Proteção](../get-started/requirements-azure-rms.md). 
 
@@ -162,7 +162,7 @@ Utilize o seguinte procedimento para identificar o valor a especificar para o pa
 
 2. A partir da saída, identifique o valor **LicensingIntranetDistributionPointUrl**.
 
-    Por exemplo: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+    Por exemplo: **LicensingIntranetDistributionPointUrl: https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
 
 3. No valor, remova **/_wmcs/licensing** desta cadeia. Por exemplo: **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 

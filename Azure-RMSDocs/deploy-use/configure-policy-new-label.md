@@ -1,24 +1,24 @@
 ---
 title: Nova etiqueta do Azure Information Protection
-description: "Apesar do Azure Information Protection ter etiquetas predefinidas que pode personalizar, também pode criar as suas próprias etiquetas que os utilizadores veem na barra Information Protection."
+description: Apesar do Azure Information Protection ter etiquetas predefinidas que pode personalizar, também pode criar as suas próprias etiquetas que os utilizadores veem na barra Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 03/20/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
-ms.openlocfilehash: cbfa670d3a80068754e604ebb77892f320095ae9
-ms.sourcegitcommit: 32b233bc1f8cef0885d9f4782874f1781170b83d
+ms.openlocfilehash: f24b4e8ac44377ab1c0b18244a376971ade87ebb
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Como criar uma nova etiqueta para o Azure Information Protection
 
->*Aplica-se a: Azure Information Protection*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Apesar do Azure Information Protection ter etiquetas predefinidas que pode personalizar, também pode criar as suas próprias etiquetas que os utilizadores veem na barra Information Protection.
 
@@ -44,7 +44,7 @@ Utilize as seguintes instruções para adicionar uma nova etiqueta à política 
 
 4. No painel **Etiqueta** ou **Etiqueta secundária**, selecione as opções que pretende para esta nova etiqueta e, em seguida, clique em **Guardar**.
     
-    Quando especificar um nome a apresentar, será impedido de especificação alguns carateres (por exemplo, uma barra invertida e "e" comercial) porque nem todos os serviços e aplicações que utilizam o Azure Information Protection podem suportar estes carateres. Para além dos carateres que estejam bloqueados, não especifique o  **#**  caráter.    
+    Quando especificar um nome a apresentar, será impedido de especificação alguns carateres (por exemplo, uma barra invertida e "e" comercial) porque nem todos os serviços e aplicações que utilizam o Azure Information Protection podem suportar estes carateres. Para além dos carateres que estejam bloqueados, não especifique o **#** caráter.    
     
     Tenha em atenção que a cor preta é automaticamente atribuída às novas etiquetas. Selecione uma cor distinta na lista de cores ou introduza um código terno hexadecimal dos componentes RGB (vermelho, verde e azul) da cor. Por exemplo, **#DAA520**. Se precisar de uma referência para estes códigos, o artigo [Cores por Nome](https://msdn.microsoft.com/library/aa358802\(v=vs.85).aspx) da documentação da MSDN é um ponto de partida útil. Poderá também encontrar estes códigos em muitos programas de edição de imagens, como o Microsoft Paint, onde pode selecionar uma cor personalizada a partir de uma paleta e os valores RGB são automaticamente apresentados.
 

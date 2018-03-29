@@ -1,26 +1,26 @@
 ---
-title: "Cliente do Azure Information Protection&colon; política de suporte e histórico da versão versão"
-description: "Ver o que é nova ou alterada uma versão do cliente Azure Information Protection para o Windows e compreender a política de ciclo de vida de suporte."
+title: Cliente do Azure Information Protection&colon; política de suporte e histórico da versão versão
+description: Ver o que é nova ou alterada uma versão do cliente Azure Information Protection para o Windows e compreender a política de ciclo de vida de suporte.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 03/19/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 10fe839ff24994af0c50fff6aeac303d57a19ea6
-ms.sourcegitcommit: 65d6b0ecfbca5071afe29e63aea6226ad7a911b8
+ms.openlocfilehash: 1da6a647715389f912af5192b5b70a80f0bd35e9
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: política de suporte e histórico da versão versão
 
->*Aplica-se a: Azure Information Protection*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 A equipa do Azure Information Protection atualiza regularmente o cliente do Azure Information Protection com correções e novas funcionalidades. 
 

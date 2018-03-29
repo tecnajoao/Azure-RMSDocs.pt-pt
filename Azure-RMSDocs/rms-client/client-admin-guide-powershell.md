@@ -1,26 +1,26 @@
 ---
 title: Utilizar o PowerShell com o cliente do Azure Information Protection
-description: "As instruções e as informações para os administradores gerirem o cliente do Azure Information Protection através do PowerShell."
+description: As instruções e as informações para os administradores gerirem o cliente do Azure Information Protection através do PowerShell.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/09/2018
+ms.date: 03/26/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5bd2af4da402c0096cb58bba1d44684ad73656d6
-ms.sourcegitcommit: 335c854eb5c6f387a9369d4b6f1e22160517e6ce
+ms.openlocfilehash: 32ae599bc9251fd1504adc2b7c60190e9d78f5fd
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guia do administrador: Utilizar o PowerShell com o cliente Azure Information Protection
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Quando instala o cliente Azure Information Protection, os comandos do PowerShell são instalados automaticamente. Isto permite-lhe gerir o cliente através da execução de comandos que pode colocar em scripts para a automatização.
 
@@ -238,9 +238,11 @@ Quando utilizar uma conta do principal de serviço para proteger ficheiros e tra
 
 1. Execute o cmdlet Get-AadrmConfiguration novamente e tome nota dos valores para **CertificationExtranetDistributionPointUrl** e **LicensingExtranetDistributionPointUrl**.
 
-2. Em cada computador onde irá executar os cmdlets AzureInformationProtection, abra o editor de registo e navegue para:`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC`
+2. Em cada computador onde irá executar os cmdlets AzureInformationProtection, abra o editor de registo.
 
-3. Se não vir uma chave **ServiceLocation**, crie-a para que o caminho do registo mostre **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation**
+3. Navegue para o seguinte caminho: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation`. 
+    
+    Se não vir o **MSIPC** chave ou **ServiceLocation** chave, crie-a.
 
 4. Para a chave **ServiceLocation**, crie duas chaves, caso não existam, com o nome **EnterpriseCertification** e **EnterprisePublishing**. 
     
@@ -485,7 +487,7 @@ Após ter executado este cmdlet, pode executar os cmdlets de etiquetagem no cont
     
     - Tipo de Aplicação: **aplicação Web/API**
     
-    - URL de Início de Sessão: **http://localhost**
+    - URL de início de sessão: **http://localhost**
 
 4. Selecione a aplicação que acabou de criar, por exemplo, **AIPOnBehalfOf**. Em seguida, no painel **Definições**, selecione **Propriedades**. No painel **Propriedades**, copie o valor para o **ID da Aplicação** e, em seguida, feche este painel. 
     
@@ -505,7 +507,7 @@ Após ter executado este cmdlet, pode executar os cmdlets de etiquetagem no cont
     
     - Tipo de Aplicação: **Nativa**
     
-    - URL de Início de Sessão: **http://localhost**
+    - URL de início de sessão: **http://localhost**
 
 8. Selecione a aplicação que acabou de criar, por exemplo, **AIPClient**. Em seguida, no painel **Definições**, selecione **Propriedades**. No painel **Propriedades**, copie o valor para o **ID da Aplicação** e, em seguida, feche este painel.
     

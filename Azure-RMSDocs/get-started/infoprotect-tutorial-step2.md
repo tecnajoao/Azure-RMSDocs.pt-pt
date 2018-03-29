@@ -1,24 +1,24 @@
 ---
-title: "Passo 2 do tutorial de início rápido – AIP"
-description: "Passo 2 de um tutorial de introdução para experimentar o Azure Information Protection rapidamente – Configurar a política."
+title: Passo 2 do tutorial de início rápido – AIP
+description: Passo 2 de um tutorial de introdução para experimentar o Azure Information Protection rapidamente – Configurar a política.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/29/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 3dd58454709dd5a73edc23578f12e79d85a9b9c9
-ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
+ms.openlocfilehash: fecf9887937d3d17347e85759e2ed10b124ae8a1
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passo 2: configurar e publicar a política do Azure Information Protection
 
->*Aplica-se a: Azure Information Protection*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Apesar de o Azure Information Protection ser fornecido com uma política predefinida que pode utilizar sem configuração, iremos ver essa política e fazer algumas alterações.
 

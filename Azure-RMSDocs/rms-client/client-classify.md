@@ -1,26 +1,26 @@
 ---
 title: Classificar ficheiros e e-mails utilizando o Azure Information Protection
-description: "Instruções como classificar os documentos e e-mails."
+description: Instruções como classificar os documentos e e-mails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/20/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: d65c7690-fab7-4823-845c-8c73903e9c79
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: aee3ec8673217cf130c4705e750532c7aeefe084
-ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
+ms.openlocfilehash: 0d3abf33ada7c639c1e7b0bad67c36636a9a0951
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-azure-information-protection"></a>Guia do utilizador: Classificar um ficheiro ou e-mail utilizando o Azure Information Protection
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8 e Windows 7 com SP1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
 
 > [!NOTE]
 > Utilize estas instruções para ajudá-lo classificar (mas não proteger) seus documentos e e-mails. Se precisar de também proteger os seus documentos e e-mails, consulte o [classificar e proteger instruções](client-classify-protect.md). Se não tem a certeza de que conjunto de instruções para utilizar, consulte o seu administrador ou suporte técnico.

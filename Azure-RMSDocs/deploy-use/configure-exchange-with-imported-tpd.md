@@ -1,26 +1,26 @@
 ---
-title: "Configurar a IRM do Exchange Online para o serviço Azure Rights Management do Azure Information Protection"
-description: "Informações e instruções para os administradores configurar o Exchange Online para o serviço Azure Rights Management quando o inquilino do Office 365 não suporta as novas funcionalidades da encriptação de mensagens do Office 365."
+title: Configurar a IRM do Exchange Online para o serviço Azure Rights Management do Azure Information Protection
+description: Informações e instruções para os administradores configurar o Exchange Online para o serviço Azure Rights Management quando o inquilino do Office 365 não suporta as novas funcionalidades da encriptação de mensagens do Office 365.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/22/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
-ms.assetid: 
+ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a0c6fe7f7b6a34eea21b646ce5573ca03b13be3c
-ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
+ms.openlocfilehash: 022eb960ef58e69c0a4c2d8a76962ed792a9ed38
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="exchange-online-irm-configuration-when-you-have-imported-a-trusted-publishing-domain"></a>Configuração de IRM do Exchange Online quando importou um domínio de publicação fidedigno
 
->*Aplica-se a: Azure Information Protection, Office 365*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilize estas instruções apenas se tiver configurado anteriormente Exchange Online para IRM ao importar o domínio de publicação fidedigno (TPD) e tem de conseguir desencriptar mensagens de correio eletrónico que anteriormente foram encriptadas.
 
@@ -128,7 +128,7 @@ Como administrador do Exchange, já pode configurar funcionalidades que apliquem
 
 
 ### <a name="office-365-message-encryption"></a>Encriptação de Mensagens do Office 365
-Execute os mesmos passos conforme documentado na secção anterior, mas se não quiser modelos sejam apresentados, antes do passo 6, execute o seguinte comando para impedir que os modelos IRM estejam disponíveis no Outlook Web App e do cliente do Outlook:`Set-IRMConfiguration -ClientAccessServerEnabled $false`
+Execute os mesmos passos conforme documentado na secção anterior, mas se não quiser modelos sejam apresentados, antes do passo 6, execute o seguinte comando para impedir que os modelos IRM estejam disponíveis no Outlook Web App e do cliente do Outlook: `Set-IRMConfiguration -ClientAccessServerEnabled $false`
 
 Em seguida, estará pronto para configurar [regras de transporte](https://technet.microsoft.com/library/dd302432.aspx), para modificar automaticamente a segurança da mensagem quando os destinatários estão fora da organização, e selecionar a opção **Aplicar a Encriptação de Mensagens do Office 365**.
 

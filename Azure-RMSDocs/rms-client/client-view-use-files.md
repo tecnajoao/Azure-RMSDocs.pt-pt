@@ -1,26 +1,26 @@
 ---
 title: Ver e utilizar documentos protegidos com o cliente do AIP
-description: "Instruções para ver e utilizar um documento protegido que requer que tenha o cliente do Azure Information Protection instalado."
+description: Instruções para ver e utilizar um documento protegido que requer que tenha o cliente do Azure Information Protection instalado.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 01/30/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 87ae9b546a791c20b71625f938265c584980ae43
-ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
+ms.openlocfilehash: a81585ae1acb791dcf33f8d047268a9e4e9f2f2e
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Guia do utilizador: Ver e utilizar ficheiros que foram protegidos pelo Rights Management
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8 e Windows 7 com SP1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
 
 Na maioria das vezes, pode ver um documento protegido. Para tal, basta abri-lo. Por exemplo, pode fazer duplo clique num anexo numa mensagem de e-mail ou num ficheiro no Explorador de Ficheiros ou pode clicar numa ligação para um ficheiro.
 

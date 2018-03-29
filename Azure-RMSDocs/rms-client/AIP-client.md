@@ -1,26 +1,26 @@
 ---
 title: Cliente do Azure Information Protection para Windows
-description: "Recursos de informação para o cliente do Azure Information Protection para Windows. Este cliente transferível gratuito destina-se a organizações que pretendem classificar e proteger documentos e e-mails."
+description: Recursos de informação para o cliente do Azure Information Protection para Windows. Este cliente transferível gratuito destina-se a organizações que pretendem classificar e proteger documentos e e-mails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: dca5f00dcad1e6e1db2e8558f7ce214dd81a9064
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 2abc976c1185d7031af383af96f2da8f19b1493f
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="azure-information-protection-client-for-windows"></a>Cliente do Azure Information Protection para Windows
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2**
 
 O cliente do Azure Information Protection para Windows é um cliente gratuito e transferível para as organizações que utilizam o [Azure Information Protection](../understand-explore/what-is-information-protection.md) classificarem e protegerem documentos e e-mails ou utilizarem um serviço Rights Management para proteger os seus dados. Este cliente também tem um visualizador para organizações que não tem a sua própria infraestrutura de proteção de informações, mas pretendem consumir conteúdo que foi protegido por outras organizações que utilizam um serviço Rights Management da Microsoft.
 

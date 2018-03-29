@@ -1,26 +1,26 @@
 ---
-title: "RMS para indivíduos e Azure Information Protection"
-description: "Informações sobre o RMS para indivíduos, uma subscrição gratuita personalizada para os utilizadores que foram enviados ficheiros protegidos, mas estes utilizadores não podem ser autenticados porque o respetivo departamento de TI não gere uma conta para os mesmos no Azure."
+title: RMS para indivíduos e Azure Information Protection
+description: Informações sobre o RMS para indivíduos, uma subscrição gratuita personalizada para os utilizadores que foram enviados ficheiros protegidos, mas estes utilizadores não podem ser autenticados porque o respetivo departamento de TI não gere uma conta para os mesmos no Azure.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 03/19/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bce7efc1f35f5e455f76a24f2f96e7d62f568425
-ms.sourcegitcommit: 1b44f6bd25b756fa85fa5f47aa4c0486f9486832
+ms.openlocfilehash: fadaac4b5ea7828c53544485b1685226176a2a75
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS para indivíduos e Azure Information Protection
 
->*Aplica-se a: Azure Information Protection*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 RMS para indivíduos é uma subscrição gratuita personalizada para utilizadores que necessitam para abrir ficheiros que foram protegidos pelo Azure Information Protection. Se estes utilizadores não podem ser autenticados pelo Azure Active Directory e respetiva organização não tiver o Active Directory Rights Management (AD RMS), este serviço de inscrição gratuito pode criar uma conta no Azure Active Directory para um utilizador. Como resultado, estes utilizadores podem autenticar-se utilizando o respetivo endereço de e-mail da empresa e, em seguida, ler os ficheiros protegidos em dispositivos móveis ou computadores.
 

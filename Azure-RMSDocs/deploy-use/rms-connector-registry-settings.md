@@ -1,26 +1,26 @@
 ---
-title: "Definições de registo para o conetor Rights Management – AIP"
-description: "Informações sobre as definições de registo em servidores que utilizam o conector RMS. O método recomendado para configurar estas definições é utilizar a ferramenta de configuração do servidor do conetor Microsoft RMS."
+title: Definições de registo para o conetor Rights Management – AIP
+description: Informações sobre as definições de registo em servidores que utilizam o conector RMS. O método recomendado para configurar estas definições é utilizar a ferramenta de configuração do servidor do conetor Microsoft RMS.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/01/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 976493cd23c7690420094f80cade32179c3f7998
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: bc0cb2a7349bf19ee19a42bdb283cd86297748bc
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Definição de registo para o conetor Rights Management
 
->*Aplica-se a: Azure Information Protection, Office 365*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 Utilize as tabelas nas secções seguintes apenas se pretender adicionar manualmente ou verifique as definições de registo nos servidores que executam o Exchange, SharePoint ou Windows Server. Estas definições de registo configuram servidores para utilizar o [conector RMS](deploy-rms-connector.md). O método recomendado para configurar estes servidores é utilizar a ferramenta de configuração do servidor do conetor Microsoft RMS.
@@ -33,7 +33,7 @@ Instruções ao utilizar estas definições:
 
     2.  A partir da saída, identifique o valor **LicensingIntranetDistributionPointUrl**.
 
-        Por exemplo: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+        Por exemplo: **LicensingIntranetDistributionPointUrl: https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
 
     3.  No valor, remova **/_wmcs/licensing** desta cadeia. A cadeia restante é o URL do serviço Azure Rights Management. No nosso exemplo, o URL do serviço Azure Rights Management seria o seguinte valor:
 

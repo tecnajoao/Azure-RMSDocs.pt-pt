@@ -1,26 +1,26 @@
 ---
 title: Tipos de ficheiro suportados pelo Azure Information Protection
-description: "Detalhes técnicos sobre tipos de ficheiro suportados, extensões de nome de ficheiro e níveis de proteção para administradores responsáveis pelo cliente do Azure Information Protection para Windows."
+description: Detalhes técnicos sobre tipos de ficheiro suportados, extensões de nome de ficheiro e níveis de proteção para administradores responsáveis pelo cliente do Azure Information Protection para Windows.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 03/26/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
-ms.assetid: 
+ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e9b281fbce9ad423249137c5dfff5a6f88dd2178
-ms.sourcegitcommit: bf3967c5b74d2bc57b0f93239a297ccd56682178
+ms.openlocfilehash: a8a159813dba899cf79a13f15d10e2ff10c11494
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guia do administrador: Tipos de ficheiro suportados pelo cliente Azure Information Protection
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 O cliente do Azure Information Protection pode aplicar o seguinte aos documentos e aos e-mails:
 
@@ -194,7 +194,7 @@ Para ajudar a impedir que os utilizadores alterem os ficheiros que são crítico
 
 ### <a name="files-that-cannot-be-protected-by-default"></a>Ficheiros que não podem ser protegidos por predefinição
 
-Qualquer ficheiro que está protegida por palavra-passe não pode ser protegido nativamente pelo cliente Azure Information Protection. Ver ficheiros PDF que são protegidos por palavra-passe com mais frequência, mas outras aplicações, tais como aplicações do Office, também oferecem esta funcionalidade.
+Qualquer ficheiro que está protegida por palavra-passe não pode ser protegido nativamente pelo cliente Azure Information Protection, a menos que o ficheiro está atualmente aberto na aplicação que se aplica a proteção. Ver ficheiros PDF que são protegidos por palavra-passe com mais frequência, mas outras aplicações, tais como aplicações do Office, também oferecem esta funcionalidade.
 
 Além disso, o cliente Azure Information Protection para o Windows pode ver os seguintes ficheiros, mas não é possível nativamente proteger ou desproteger ficheiros PDF em qualquer uma das seguintes circunstâncias:
 

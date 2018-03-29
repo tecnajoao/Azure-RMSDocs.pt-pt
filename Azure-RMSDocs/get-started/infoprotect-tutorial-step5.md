@@ -1,33 +1,33 @@
 ---
-title: "Passo 5 do tutorial de início rápido – AIP"
-description: "Passo 5 de um tutorial de introdução para experimentar o Azure Information Protection rapidamente – Partilhar e controlar ficheiros protegidos."
-keywords: 
+title: Passo 5 do tutorial de início rápido – AIP
+description: Passo 5 de um tutorial de introdução para experimentar o Azure Information Protection rapidamente – Partilhar e controlar ficheiros protegidos.
+keywords: ''
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/18/2017
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6d62b6dd588b035ded582a87f5faf04a04df6ab6
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 718c15769e5719d5e8dde612cf66e4215f1e235d
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Passo 5: ver a partilha de ficheiros protegidos em ação e controlar o seu documento 
 
->*Aplica-se a: Azure Information Protection*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Para este passo final do tutorial, localize um documento do Word ou folha de cálculo do Excel que já tenha criado e que irá enviar a um parceiro ou colega. Para este tutorial, é irrelevante o texto que de facto contém, mas é aconselhável que tenha algum texto para que possa mais facilmente confirmar que o destinatário autorizado o conseguiu ler.
 
 Em seguida, está pronto para partilhar de forma segura este documento por e-mail. 
 
-## <a name="to-safely-share-your-document-by-email"></a>Para partilhar de forma segura o seu documento por e-mail
+## <a name="to-safely-share-your-document-by-email"></a>Para partilhar de forma segura o documento por e-mail
 
 1. No Explorador de Ficheiros, clique com o botão direito do rato no documento e selecione **Classificar e proteger**. É aberta a caixa de diálogo **Classificar e proteger – Azure Information Protection**:
 
@@ -59,7 +59,7 @@ Em seguida, está pronto para partilhar de forma segura este documento por e-mai
 
 7. Modifique a descrição da mensagem predefinida para que seja adequada aos seus destinatários. Contudo, adicione o seguinte texto:
 
-    **Protegi este ficheiro com o Microsoft Azure Information Protection. Para a primeira utilização, veja estas instruções: https://aka.ms/rms-signup.** 
+    **Protegi este ficheiro com o Microsoft Azure Information Protection. Na primeira utilização, consulte estas instruções: https://aka.ms/rms-signup.** 
 
     ![Passo 5 do tutorial de início rápido do Azure Information Protection – partilhar documento protegido por e-mail](../media/share-protected-emailv2.png)
 

@@ -1,26 +1,26 @@
 ---
-title: "Outras aplicações que suportam APIs RMS – instalação e configuração – AIP"
-description: "Compreender como o serviço Azure Rights Management do Azure Information Protection pode suportar outras aplicações para proteger os dados da sua organização."
+title: Outras aplicações que suportam APIs RMS – instalação e configuração – AIP
+description: Compreender como o serviço Azure Rights Management do Azure Information Protection pode suportar outras aplicações para proteger os dados da sua organização.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: c50a8cbb-d12f-4a0e-bc29-74c463e6ac3e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0b48cdb5fc233886c41a1c8b963e1353c14dce75
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: b3d0a0e26def8130253369abee6f3180b98aea70
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="other-applications-that-support-the-rights-management-apis"></a>Outras aplicações que suportam as APIs de Rights Management
 
->*Aplica-se a: Azure Information Protection, Office 365*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilize as seguintes informações para compreender como o serviço Azure Rights Management do Azure Information Protection pode suportar outras aplicações para proteger os dados da sua organização.
 
@@ -28,7 +28,7 @@ Ao utilizar os SDKs do Azure Information Protection, os programadores internos p
 
 Da mesma forma, muitos fornecedores de software fornecem aplicações para proporcionar soluções de proteção de informações, também conhecidos como produtos de gestão de direitos de empresa (ERM). Um exemplo popular é um leitor de PDF que suporte o serviço Azure Rights Management para plataformas específicas. Pode utilizar a tabela em [Aplicações que suportam a proteção de dados do Azure Rights Management](../get-started/requirements-applications.md) para identificar as aplicações que suportam Rights Management (aplicações otimizadas por RMS) e, em seguida, efetuar uma pesquisa na Web para comprar ou transferir a aplicação.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Para ver como outras aplicações e serviços suportam o serviço Azure Rights Management, consulte [Como as Aplicações Suportam o serviço Azure Rights Management](applications-support.md).
 

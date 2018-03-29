@@ -1,26 +1,26 @@
 ---
-title: "Opções da caixa de diálogo da aplicação de partilha RMS – AIP"
-description: "Informações para ajudar a especificar as opções na caixa de diálogo Adicionar proteção ou na caixa de diálogo Partilhar protegido da aplicação de partilha RMS. Irá ver esta caixa de diálogo quando proteger um ficheiro a partilhar ou quando proteger um ficheiro no local e escolher permissões personalizadas."
+title: Opções da caixa de diálogo da aplicação de partilha RMS – AIP
+description: Informações para ajudar a especificar as opções na caixa de diálogo Adicionar proteção ou na caixa de diálogo Partilhar protegido da aplicação de partilha RMS. Irá ver esta caixa de diálogo quando proteger um ficheiro a partilhar ou quando proteger um ficheiro no local e escolher permissões personalizadas.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 190d8ac29bec0fc3825eb9fe099e06bd16e2112f
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 429be436bc1a9fec3d31933d9cb6e8f88de7506a
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="dialog-box-options-for-the-rights-management-sharing-application"></a>Opções da caixa de diálogo para a aplicação de partilha Rights Management
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8 e Windows 8.1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 Utilize estas informações para ajudar a especificar as opções na caixa de diálogo **adicionar proteção** da aplicação de partilha RMS ou na caixa de diálogo **partilhar protegido**. Irá ver esta caixa de diálogo quando [proteger um ficheiro para partilhar](sharing-app-protect-by-email.md) ou [proteger um ficheiro no local](sharing-app-protect-in-place.md) e escolher permissões personalizadas.
 
@@ -72,7 +72,7 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 -   [O que pretende fazer?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

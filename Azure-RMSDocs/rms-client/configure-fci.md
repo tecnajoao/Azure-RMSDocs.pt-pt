@@ -1,26 +1,26 @@
 ---
-title: "Proteção do Azure RMS com o Windows Server FCI – AIP"
-description: "Instruções para utilizar o cliente de Rights Management (RMS) com o cliente Azure Information Protection para configurar o Gestor de recursos do servidor de ficheiros e a infraestrutura de classificação de ficheiros (FCI)."
+title: Proteção do Azure RMS com o Windows Server FCI – AIP
+description: Instruções para utilizar o cliente de Rights Management (RMS) com o cliente Azure Information Protection para configurar o Gestor de recursos do servidor de ficheiros e a infraestrutura de classificação de ficheiros (FCI).
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/13/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 49133bec323b00541c92ac3739fafab266cc92cf
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: be2c1a7c0432d3054eb5eced844ba42f402481d6
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Proteção RMS com Infraestrutura de Classificação de Ficheiros (FCI) do Windows Server
 
->*Aplica-se a: Azure Information Protection, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, o Windows Server 2012, Windows Server 2012 R2*
 
 Utilize este artigo para obter instruções e um script para utilizar o cliente do Azure Information Protection e o PowerShell para configurar o Gestor de Recursos do Servidor de Ficheiros e a Infraestrutura de Classificação de Ficheiros (FCI).
 

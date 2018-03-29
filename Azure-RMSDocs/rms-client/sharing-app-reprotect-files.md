@@ -1,27 +1,27 @@
 ---
-title: "Alterar permissões em ficheiros protegidos pelo RMS – AIP"
-description: "Se um ficheiro tiver sido protegido pela Rights Management, pode alterar as permissões voltando a protegê-lo e, em seguida, especificar todos os utilizadores que devem ter acesso à mesma e que permissões pretende conceder-lhes."
-keywords: 
+title: Alterar permissões em ficheiros protegidos pelo RMS – AIP
+description: Se um ficheiro tiver sido protegido pela Rights Management, pode alterar as permissões voltando a protegê-lo e, em seguida, especificar todos os utilizadores que devem ter acesso à mesma e que permissões pretende conceder-lhes.
+keywords: ''
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3290b9436f75c2d0d37c401dd2e0be11bcf2d554
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 766acd68d1c5c5f59530b0b61fadee315185ec4a
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="change-permissions-on-files-that-have-been-protected-by-rights-management"></a>Alterar permissões em ficheiros que tenham sido protegidos pela Rights Management
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8 e Windows 8.1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 Se um ficheiro tiver sido protegido pela Rights Management, pode alterar as permissões voltando a protegê-lo e, em seguida, especificar todos os utilizadores que devem ter acesso à mesma e que permissões pretende conceder-lhes.
 

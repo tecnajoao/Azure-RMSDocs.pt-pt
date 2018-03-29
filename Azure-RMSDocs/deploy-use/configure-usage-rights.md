@@ -1,26 +1,26 @@
 ---
-title: "Configurar os direitos de utilização para o Azure Rights Management – AIP"
-description: "Conheça os direitos específicos utilizados quando protege ficheiros ou e-mails com o serviço Azure Rights Management do Azure Information Protection."
+title: Configurar os direitos de utilização para o Azure Rights Management – AIP
+description: Conheça os direitos específicos utilizados quando protege ficheiros ou e-mails com o serviço Azure Rights Management do Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2018
+ms.date: 03/26/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d597be35e509fae655ee18fe9fc0344603385382
-ms.sourcegitcommit: 58cd89cc6f6407648854e2e2d28a61325b5c8922
+ms.openlocfilehash: 0ec4710618227573fa7442a8fe1f0bd52b2c8f6f
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuração de direitos de utilização para o Azure Rights Management
 
->*Aplica-se a: Azure Information Protection, Office 365*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Quando definir a proteção em ficheiros ou e-mails com o serviço Azure Rights Management do Azure Information Protection e não utilizar um modelo, terá de configurar os direitos de utilização. Além disso, quando configurar modelos ou as etiquetas para proteção do Azure Rights Management, selecione os direitos de utilização que serão, em seguida, ser automaticamente aplicados quando o modelo ou etiqueta está selecionada por utilizadores, administradores ou serviços configurados. Por exemplo, no portal do Azure, pode selecionar funções que configuram um agrupamento lógico de direitos de utilização, ou pode configurar os direitos individuais.
 
@@ -97,11 +97,15 @@ Estes modelos predefinidos são criados quando foi comprada a sua subscrição e
 
 Os clientes do Exchange e serviços (por exemplo, o cliente Outlook, a aplicação Outlook Web Access e as regras de fluxo de correio do Exchange) têm uma opção de proteção de direitos de informação adicional para e-mails: **não reencaminhar**. 
 
-Embora esta opção seja apresentada aos utilizadores (e os administradores do Exchange) como se fosse um modelo de Gestão de Direitos predefinido que podem selecionar, **Não Reencaminhar** não é um modelo. Isto explica por que motivo não pode vir no portal do Azure quando visualiza e gere modelos para o Azure Rights Management. Em vez disso, a opção **Não Reencaminhar** é um conjunto de direitos aplicados dinamicamente por utilizadores aos seus destinatários de e-mail.
+Embora esta opção seja apresentada aos utilizadores (e os administradores do Exchange) como se fosse um modelo de Gestão de Direitos predefinido que podem selecionar, **Não Reencaminhar** não é um modelo. Isto explica por que motivo não pode vir no portal do Azure quando visualizar e gerir modelos de proteção. Em vez disso, o **não reencaminhar** opção é um conjunto de direitos de utilização que é aplicado dinamicamente por utilizadores aos seus destinatários de e-mail.
 
 Quando o **não reencaminhar** opção é aplicada a um e-mail, o e-mail é encriptada e os destinatários tem de ser autenticados. Em seguida, os destinatários não é possível reencaminhá-lo, imprimi-lo, copiá-lo ou guardar anexos ou guardar com um nome diferente. Por exemplo, no cliente Outlook, o botão reencaminhar não está disponível, o **guardar como**, **Guardar anexo**, e **impressão** opções de menu não estão disponíveis e não é possível adicionar ou alterar os destinatários no **para**, **Cc**, ou **Bcc** caixas.
 
-Existe uma diferença importante entre aplicar a opção **Não Reencaminhar** e aplicar um modelo que não conceda o direito de Reencaminhar a um e-mail: a opção **Não Reencaminhar** utiliza uma lista dinâmica de utilizadores autorizados que se baseia nos destinatários escolhidos pelo utilizador do e-mail original; enquanto os direitos no modelo têm uma lista estática de utilizadores autorizados especificados anteriormente pelo administrador. Qual a diferença? Vejamos um exemplo: 
+Desprotegida [documentos do Office](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) que se encontram ligados à mensagem de correio eletrónico automaticamente herda as restrições. Os direitos de utilização aplicados a estes documentos são **editar conteúdo, editar**; **Guardar**; **Ver, abrir, ler**; e **Permitir Macros**. Se pretende direitos de utilização diferentes para um anexo ou o anexo não é um documento do Office que suporte esta proteção herdada, proteja o ficheiro antes de ligar para o e-mail. Em seguida, pode atribuir os direitos de utilização específico que necessita para o ficheiro. 
+
+### <a name="difference-between-do-not-forward-and-not-granting-the-forward-usage-right"></a>Diferença entre não reencaminhar e não conceder o direito de utilização direta
+
+Há uma distinção importante entre aplicar a **não reencaminhar** opção e aplicar um modelo que não conceda a **reencaminhar** utilização direito a um e-mail: A **não reencaminhar** opção utiliza uma lista dinâmica de utilizadores autorizados que se baseia nos destinatários escolhidos pelo utilizador do e-mail original; enquanto os direitos no modelo têm uma lista estática de utilizadores autorizados especificados anteriormente o administrador. Qual a diferença? Vejamos um exemplo: 
 
 Um utilizador pretende enviar algumas informações por e-mail a pessoas específicas no departamento de Marketing que não devem ser partilhadas com outras pessoas. Deverá proteger o e-mail com um modelo que restringe direitos (ver, responder e guardar) para o departamento de Marketing?  Ou deverá escolher a opção **Não Reencaminhar**? Ambas as escolhas impedem os destinatários de reencaminhar o e-mail. 
 
@@ -118,7 +122,9 @@ Quando o Exchange Online utilizar as novas funcionalidades para a encriptação 
 
 Esta opção está a ser implementada para os inquilinos que utilizam o Exchange Online, inicialmente apenas para o Outlook web e como outra opção de proteção de direitos para uma regra de fluxo de correio. Para obter mais informações, consulte o seguinte anúncio de mensagem de blogue da equipa do Office: [encriptar apenas disponibilizando na encriptação de mensagens do Office 365](https://aka.ms/omefeb2018).
 
-Quando esta opção está selecionada, o e-mail é encriptada e os destinatários tem de ser autenticados. Em seguida, os destinatários tem todos os direitos de utilização, exceto o controlo total. Esta combinação de direitos de utilização significa que os destinatários têm sem restrições, exceto que, que não é possível remover a proteção. Por exemplo, um destinatário pode copiar, imprimir e reencaminhar o e-mail. Da mesma forma, os documentos do Office que são ligados e automaticamente protegidos podem ser guardados copiado e impressos.
+Quando esta opção está selecionada, o e-mail é encriptada e os destinatários tem de ser autenticados. Em seguida, os destinatários tem todos os direitos de utilização, exceto **guardar como, exportar** e **controlo total**. Esta combinação de direitos de utilização significa que os destinatários têm sem restrições, exceto que, que não é possível remover a proteção. Por exemplo, um destinatário pode copiar a partir do e-mail, imprimi-lo e reencaminhá-lo. 
+
+Da mesma forma, desprotegidos [documentos do Office](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) que estão ligados ao e-mail de herdar as mesmas permissões. Estes documentos são automaticamente protegidos e pode podem ser guardadas, editar, copiados e impressos pelos destinatários. Quando o documento é guardado por um destinatário, é possível guardar um novo nome e o mesmo formato diferente. No entanto, apenas os formatos de ficheiro que suportam a proteção estão disponíveis para que não é possível guardar o documento sem a proteção original. Se pretende direitos de utilização diferentes para um anexo ou o anexo não é um documento do Office que suporte esta proteção herdada, proteja o ficheiro antes de ligar para o e-mail. Em seguida, pode atribuir os direitos de utilização específico que necessita para o ficheiro.
 
 ## <a name="rights-management-issuer-and-rights-management-owner"></a>Emissor e proprietário do Rights Management
 
@@ -166,7 +172,7 @@ A predefinição utilizar validade da licença período para um inquilino é 30 
     
     Para obter mais informações e orientações para configurar esta definição utilizando o PowerShell, consulte a ajuda para cada cmdlet.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 [Configurar e gerir modelos do Azure Information Protection](configure-policy-templates.md)
 
 [Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados](configure-super-users.md)

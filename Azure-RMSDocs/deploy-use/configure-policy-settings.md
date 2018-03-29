@@ -1,24 +1,24 @@
 ---
-title: "Configurar as definições de política do Azure Information Protection"
-description: "Configurar as definições na política do Azure Information Protection aplicáveis a todos os utilizadores e a todos os dispositivos."
+title: Configurar as definições de política do Azure Information Protection
+description: Configurar as definições na política do Azure Information Protection aplicáveis a todos os utilizadores e a todos os dispositivos.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 0a31316b2f69ffb2640fdd1672af4b740c863f85
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: 0ba75a1898d8618ebe38bcf2680e8a9623c79265
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Como configurar as definições de política do Azure Information Protection
 
->*Aplica-se a: Azure Information Protection*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Para além de título da barra de Information Protection e a descrição, existem algumas definições da política do Azure Information Protection que pode configurar independentemente de etiquetas:
 
@@ -80,7 +80,7 @@ Configurar estas definições:
     
     - **Forneça um URL personalizado para o cliente Azure Information Protection "Informar-me mais" página da web**: os utilizadores veem esta ligação no **Microsoft Azure Information Protection** caixa de diálogo, **ajuda e comentários**secção, quando estes selecionam **proteger** > **ajuda e comentários** do **home page** separador nas aplicações do Office. Por predefinição, esta ligação direciona-o para o site do [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection). Pode introduzir um URL do tipo HTTP ou HTTPS (recomendado) se quiser que esta ligação redirecione o utilizador para uma página Web alternativa. Não é efetuada nenhuma verificação para confirmar que o URL personalizado que introduziu é acessível ou é apresentado corretamente em todos os dispositivos.
         
-        Por exemplo, para suporte técnico, pode introduzir a página de documentação da Microsoft que inclui informações acerca da instalação e da utilização do cliente (**https://docs.microsoft.com/information-protection/rms-client/info-protect-client**) ou informações relativas à versão de lançamento (**https://docs.microsoft.com/information-protection/rms-client/client-version-release-history**). Em alternativa, poderá publicar a sua própria página Web com informações para que os utilizadores contactem o seu suporte técnico ou um vídeo com passos para que os utilizadores saibam como utilizar as etiquetas que configurou.
+        Por exemplo, para o suporte técnico, poderá introduzir a página de documentação do Microsoft que inclui informações sobre como instalar e utilizar o cliente (**https://docs.microsoft.com/information-protection/rms-client/info-protect-client**) ou informações sobre a versão de lançamento (**https://docs.microsoft.com/information-protection/rms-client/client-version-release-history**). Em alternativa, poderá publicar a sua própria página Web com informações para que os utilizadores contactem o seu suporte técnico ou um vídeo com passos para que os utilizadores saibam como utilizar as etiquetas que configurou.
 
 3. Para guardar as alterações, clique em **Guardar**.
 

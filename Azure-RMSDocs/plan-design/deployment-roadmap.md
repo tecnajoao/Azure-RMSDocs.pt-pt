@@ -1,26 +1,26 @@
 ---
-title: "Plano de implementação do Azure Information Protection"
-description: "Utilize estes passos para preparar, implementar e gerir o Azure Information Protection para a sua organização."
+title: Plano de implementação do Azure Information Protection
+description: Utilize estes passos para preparar, implementar e gerir o Azure Information Protection para a sua organização.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 03/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ebfdb466be6dde9b0f1e48865c2af5d61cb038d1
-ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
+ms.openlocfilehash: b459babbf16b536b1cd73d0bb0ec2c36a499f9e1
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Plano de implementação do Azure Information Protection
 
->*Aplica-se a: Azure Information Protection, Office 365*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilize os seguintes passos conforme recomendações para o ajudar a preparar, implementar e gerir o Azure Information Protection na sua organização.
 

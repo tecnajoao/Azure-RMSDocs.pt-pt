@@ -1,26 +1,26 @@
 ---
-title: "Migrar do AD RMS para o Azure Information Protection – fase 2"
-description: "Fase 2 da migração do AD RMS para o Azure Information Protection, que abrange os passos 4 a 6 de Migrar do AD RMS para o Azure Information Protection."
+title: Migrar do AD RMS para o Azure Information Protection – fase 2
+description: Fase 2 da migração do AD RMS para o Azure Information Protection, que abrange os passos 4 a 6 de Migrar do AD RMS para o Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 12/02/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0dff1b664cbac830dda2750cc6120ab4476c8183
-ms.sourcegitcommit: c5408506170bdb00d9e677b02161b9f61d4d5d3c
+ms.openlocfilehash: 9871c5890be8b5aa019d9788ecdfe929cfab0eb9
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Fase 2 da migração – configuração do AD RMS do lado do servidor
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Office 365*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilize as seguintes informações para a Fase 2 da migração do AD RMS para o Azure Information Protection. Estes procedimentos incluem os passos 4 a 6 de [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
@@ -114,7 +114,7 @@ Abra uma sessão do PowerShell e execute os seguintes comandos:
 
 **E se o seu inquilino do Azure Information Protection já estiver ativado?** Se o serviço Azure Rights Management já se encontra ativado para a sua organização e criou modelos personalizados que pretende utilizar após a migração, tem de exportar e importar estes modelos. Este procedimento é descrito no passo seguinte. 
 
-## <a name="step-6-configure-imported-templates"></a>Passo 6: configurar modelos importados
+## <a name="step-6-configure-imported-templates"></a>Passo 6: Configurar modelos importados
 
 Como os modelos que importou estão predefinidos para o estado **Arquivado**, tem de alterar este estado para **Publicado** se quiser que os utilizadores possam utilizar estes modelos com o Azure Rights Management.
 

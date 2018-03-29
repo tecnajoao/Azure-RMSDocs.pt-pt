@@ -1,26 +1,26 @@
 ---
-title: "Registar e analisar a utilização do serviço Azure RMS – AIP"
-description: "Informações e instruções sobre como utilizar os registos de utilização com o Azure Rights Management (Azure RMS)."
+title: Registar e analisar a utilização do serviço Azure RMS – AIP
+description: Informações e instruções sobre como utilizar os registos de utilização com o Azure Rights Management (Azure RMS).
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 01/08/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 09d076299f70718b65bb3746486f559a880a2660
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: b4a9c6b259e5863bb5be276f89beb0de33002ca4
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Registar e analisar a utilização do serviço Azure Rights Management
 
->*Aplica-se a: Azure Information Protection, Office 365*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilize estas informações para o ajudar a compreender como pode utilizar o registo de utilização do serviço Azure Rights Management do Azure Information Protection. Este serviço fornece a proteção de dados de documentos da sua organização e os e-mails e podem registar cada pedido ao mesmo. Estes pedidos incluem quando os utilizadores proteger documentos e e-mails e também consumam este conteúdo, ações realizadas pelos administradores para este serviço e ações realizadas por operadores da Microsoft para suportar a implementação do Azure Information Protection. 
 

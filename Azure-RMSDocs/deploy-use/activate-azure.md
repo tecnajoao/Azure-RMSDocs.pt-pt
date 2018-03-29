@@ -1,27 +1,27 @@
 ---
-title: "Ativar o Azure RMS com o portal do Azure – AIP"
-description: "Instruções para a ativação de proteção no portal do Azure para que a sua organização pode começar a proteger documentos e e-mails."
+title: Ativar o Azure RMS com o portal do Azure – AIP
+description: Instruções para a ativação de proteção no portal do Azure para que a sua organização pode começar a proteger documentos e e-mails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.custom: askipteam
 ms.assetid: 4e886f5a-f535-4207-b8c4-8e0376c0758e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 709af7b7484c39fc52ec60394641656761ad5c5d
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: 976d03abfb512060aecb2e6f6809f8c491d6fc1b
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-azure-portal"></a>Como ativar o Azure Rights Management a partir do portal do Azure
 
->*Aplica-se a: Azure Information Protection*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Utilize estas instruções se pretender ativar o serviço Azure Rights Management (Azure RMS) do portal do Azure.
 

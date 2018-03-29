@@ -1,26 +1,26 @@
 ---
-title: "Implementar o conector Rights Management – AIP"
-description: "Instruções para implementar o conector do RMS, que fornece o serviço de proteção de dados para as implementações no local existentes que utilizam o Exchange Server, o SharePoint Server ou o Windows Server e a Infraestrutura de Classificação de Ficheiros (FCI)."
+title: Implementar o conector Rights Management – AIP
+description: Instruções para implementar o conector do RMS, que fornece o serviço de proteção de dados para as implementações no local existentes que utilizam o Exchange Server, o SharePoint Server ou o Windows Server e a Infraestrutura de Classificação de Ficheiros (FCI).
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/07/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 87746ad526f191907ad2670604c357e5e926b84e
-ms.sourcegitcommit: 758e0cfeb6c05f4c6f5310dc36fbf0c02c256eed
+ms.openlocfilehash: d389816fbe438cbf13ddbe1302872f81afcb6bf5
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Implementar o conetor Azure Rights Management
 
->*Aplica-se a: Azure Information Protection, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 e Windows Server 2008 R2*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, o Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Utilize estas informações para saber mais sobre o conector Azure Rights Management e, em seguida, saiba como implementá-lo com êxito na sua organização. Este conector proporciona proteção de dados para as implementações no local existentes que utilizam o **Microsoft Exchange Server**, o **SharePoint Server** ou servidores de ficheiros que executam o Windows Server e a **Infraestrutura de Classificação de Ficheiros** (FCI).
 

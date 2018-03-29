@@ -1,26 +1,26 @@
 ---
-title: "Notas de implementação do cliente do RMS – AIP"
-description: "Informações sobre instalação, sistemas operativos suportados, definições de registo e deteção de serviços da versão 2 do cliente de Rights Management Service (cliente do RMS), também conhecida como cliente MSIPC."
+title: Notas de implementação do cliente do RMS – AIP
+description: Informações sobre instalação, sistemas operativos suportados, definições de registo e deteção de serviços da versão 2 do cliente de Rights Management Service (cliente do RMS), também conhecida como cliente MSIPC.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 01/08/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6518b9d91e8f73b9ac6c0fb9e4bb5c2bbcebd612
-ms.sourcegitcommit: 704700acf7302d258e9c58c365c3244e833a86cd
+ms.openlocfilehash: edaa24b6e86fc1cacecfa79185b7fe4ddb1d34c9
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="rms-client-deployment-notes"></a>Notas de implementação do cliente do RMS
 
->*Aplica-se a: serviços de gestão, o Azure Information Protection, o Windows 7 com SP1, Windows 8, Windows 8.1, Windows 10, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 de direitos do Active Directory*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 7 com SP1, Windows 8, Windows 8.1, Windows 10, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016*
 
 A versão 2 do cliente de Rights Management Service (cliente do RMS) é também conhecida como cliente MSIPC. É o software para computadores com o Windows que comunica com os serviços do Microsoft Rights Management no local ou na cloud, para ajudar a proteger o acesso e a utilização de informações que fluem através de aplicações e dispositivos, dentro dos limites da sua organização ou fora desses limites geridos. 
 
@@ -35,7 +35,7 @@ O cliente do RMS pode ser livremente redistribuído e incluído com outras aplic
 - Tornar o cliente do RMS um pré-requisito da sua aplicação. Com esta opção, poderá ser necessário fornecer aos utilizadores instruções adicionais para que obtenham, instalem e atualizem os seus computadores com o cliente, para poderem utilizar a aplicação.
 
 ## <a name="installing-the-rms-client"></a>Instalar o cliente do RMS
-O cliente do RMS está contido no ficheiro executável do instalador denominado **setup_msipc*\<arquitetura\>*.exe**, onde *\<arquitetura >*está **x86** (para computadores de cliente de 32 bits) ou **x64** (para computadores de cliente de 64 bits). O pacote do instalador de 64 bits (x64) instala um executável de 32 bits, para compatibilidade com aplicações de 32 bits executadas numa instalação de sistema operativo de 64 bits, e um executável de 64 bits, para suportar aplicações de 64 bits nativas. O instalador de 32 bits (x86) não é executado numa instalação do Windows de 64 bits.
+O cliente do RMS está contido no ficheiro executável do instalador denominado **setup_msipc*\<arquitetura\>*.exe**, onde  *\<arquitetura >*está **x86** (para computadores de cliente de 32 bits) ou **x64** (para computadores de cliente de 64 bits). O pacote do instalador de 64 bits (x64) instala um executável de 32 bits, para compatibilidade com aplicações de 32 bits executadas numa instalação de sistema operativo de 64 bits, e um executável de 64 bits, para suportar aplicações de 64 bits nativas. O instalador de 32 bits (x86) não é executado numa instalação do Windows de 64 bits.
 
 > [!NOTE]
 > Tem de ter privilégios elevados para instalar o cliente do RMS, por exemplo enquanto membro do grupo Administradores no computador local.
@@ -48,7 +48,7 @@ Pode instalar o cliente do RMS através de um dos seguintes métodos de instala�
     setup_msipc_x64.exe /quiet
     ```
 
-- **Modo interativo.** Em alternativa, pode instalar o cliente do RMS utilizando o programa de configuração baseado na GUI, que é fornecido pelo Assistente de instalação de cliente do RMS. Para instalar de forma interativa, faça duplo clique o pacote de instalador do cliente de RMS (**setup_msipc*\<arquitetura\>*.exe**) na pasta à qual foi copiado ou transferido no seu computador local.
+- **Modo interativo.** Em alternativa, pode instalar o cliente do RMS utilizando o programa de configuração baseado na GUI, que é fornecido pelo Assistente de instalação de cliente do RMS. Para instalar de forma interativa, faça duplo clique o pacote de instalador do cliente de RMS (**setup_msipc*\<arquitetura\>*.exe**) na pasta para a qual foi copiado ou transferido no local computador.
 
 ## <a name="questions-and-answers-about-the-rms-client"></a>Perguntas e respostas sobre o cliente do RMS
 A secção seguinte contém as perguntas mais frequentes sobre o cliente do RMS e as respostas às mesmas.
@@ -105,7 +105,7 @@ O cliente do RMS armazena licenças no disco local e também coloca em cache alg
 |Localização do Registo|HKEY_CURRENT_USER<br /> \Software<br /> \Classes<br /> \Local Settings<br /> \Software<br /> \Microsoft<br /> \MSIPC|HKEY_CURRENT_USER<br /> \Software<br /> \Microsoft<br /> \MSIPC<br /> \Server<br /> \\*\<SID*\>|
 
 > [!NOTE]
-> *\<SID*> é o identificador de segurança (SID) para a conta sob a qual a aplicação de servidor está em execução. Por exemplo, se a aplicação está em execução com a conta de serviço de rede incorporada, substitua  *\<SID\>*  com o valor do SID já conhecido dessa conta (S-1-5-20).
+> *\<SID*> é o identificador de segurança (SID) para a conta sob a qual a aplicação de servidor está em execução. Por exemplo, se a aplicação está em execução com a conta de serviço de rede incorporada, substitua *\<SID\>* com o valor do SID já conhecido dessa conta (S-1-5-20).
 
 ### <a name="windows-registry-settings-for-the-rms-client"></a>Definições do registo do Windows para o cliente do RMS
 Pode utilizar as chaves do registo do Windows para definir ou modificar algumas configurações do cliente do RMS. Por exemplo, enquanto administrador de aplicações otimizadas para o RMS que comunicam com servidores do AD RMS, poderá querer atualizar a localização de serviço da empresa (substituir o servidor do AD RMS atualmente selecionado para publicação), dependendo da localização atual do computador cliente na topologia do Active Directory. Em alternativa, poderá querer ativar o controlo de RMS no computador cliente, para ajudar a resolver um problema com uma aplicação otimizada para o RMS. Utilize a seguinte tabela para identificar as definições do registo que podem ser alteradas para o cliente do RMS.
@@ -115,10 +115,10 @@ Pode utilizar as chaves do registo do Windows para definir ou modificar algumas 
 |Se a versão do cliente for 1.03102.0221 ou posterior:<br /><br />**Para controlar a recolha de dados da aplicação**|**Importante**: para respeitar a privacidade dos utilizadores, enquanto administrador deverá pedir autorização aos mesmos antes de ativar a recolha de dados.<br /><br />Se ativar a recolha de dados, está a aceitar o envio de dados para a Microsoft através da Internet. A Microsoft utiliza estes dados para fornecer e melhorar a qualidade, segurança e integridade dos produtos e serviços Microsoft. Por exemplo, Microsoft analisa o desempenho e fiabilidade, tais como quais as funcionalidades utilize, como rapidamente as funcionalidades de respondem, desempenho de dispositivo, interações da interface de utilizador e quaisquer problemas que surgirem com o produto. Dados também incluem informações sobre a configuração do seu software, tais como o software que estão a ser executados e o endereço IP.<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft\MSIPC<br />REG_DWORD: DiagnosticState<br /><br />**Valor:** 0 para a Aplicação definida (predefinição) através da propriedade de ambiente [IPC_EI_DATA_COLLECTION_ENABLED](https://msdn.microsoft.com/library/hh535247(v=vs.85).aspx), 1 para Desativado, 2 para Ativado<br /><br />**Tenha em atenção**: Se estiver a executar a aplicação baseada em MSIPC de 32 bits numa versão de 64 bits do Windows, a localização é HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC.|
 |Apenas AD RMS:<br /><br />**Para atualizar a localização do serviço da empresa para um computador cliente**|Atualize as seguintes chaves do registo:<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterpriseCertification<br />REG_SZ: default<br /><br />**Valor:**\<http ou https>://*RMS_Cluster_Name*/_wmcs/Certification<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterprisePublishing<br />REG_SZ: default<br /><br />**Valor:** \<http ou https>://*RMS_Cluster_Name*/_wmcs/Licensing|
 |**Para ativar e desativar o rastreio**|Atualize a seguinte chave do registo:<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC<br />REG_DWORD: Trace<br /><br />**Valor:** 1 para ativar o rastreio, 0 para desativar o rastreio (predefinição)|
-|**Para alterar a frequência de atualização dos modelos em dias**|Os seguintes valores de registo especificam a frequência atualizar modelos no computador do utilizador, se o valor de TemplateUpdateFrequencyInSeconds não estiver definido.  Se nenhum destes valores estiver definido, o intervalo de atualização predefinido para que as aplicações com o cliente do RMS (versão 1.0.1784.0) transfiram modelos é de 1 dia. As versões anteriores têm um valor predefinido de 7 dias.<br /><br />**Modo de Cliente:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Valor:** um valor inteiro que especifica o número de dias (mínimo de 1) entre transferências.<br /><br />**Modo de Servidor:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\\< SID\><br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Valor:** um valor inteiro que especifica o número de dias (mínimo de 1) entre transferências.|
+|**Para alterar a frequência de atualização dos modelos em dias**|Os seguintes valores de registo especificam a frequência atualizar modelos no computador do utilizador, se o valor de TemplateUpdateFrequencyInSeconds não estiver definido.  Se nenhum destes valores estiver definido, o intervalo de atualização predefinido para que as aplicações com o cliente do RMS (versão 1.0.1784.0) transfiram modelos é de 1 dia. As versões anteriores têm um valor predefinido de 7 dias.<br /><br />**Modo de Cliente:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Valor:** um valor inteiro que especifica o número de dias (mínimo de 1) entre transferências.<br /><br />**Modo de Servidor:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\\<SID\><br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Valor:** um valor inteiro que especifica o número de dias (mínimo de 1) entre transferências.|
 |**Para alterar a frequência de atualização dos modelos em segundos**<br /><br />Importante: Se esta definição for especificada, o valor para a atualização dos modelos em dias será ignorado. Especifique uma das definições, não ambas.|Os seguintes valores de registo especificam a frequência de atualização modelos no computador do utilizador. Se este valor ou o valor para alterar a frequência em dias (TemplateUpdateFrequency) não for definido, o intervalo de atualização predefinido para que as aplicações com o cliente do RMS (versão 1.0.1784.0) transfiram modelos é de 1 dia. As versões anteriores têm um valor predefinido de 7 dias.<br /><br />**Modo de Cliente:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: TemplateUpdateFrequencyInSeconds<br /><br />**Valor:** um valor inteiro que especifica o número de segundos (mínimo de 1) entre transferências.<br /><br />**Modo de Servidor:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\\<*SID*><br />REG_DWORD: TemplateUpdateFrequencyInSeconds<br /><br />**Valor:** um valor inteiro que especifica o número de segundos (mínimo de 1) entre transferências.|
 |Apenas AD RMS:<br /><br />**Para transferir modelos de forma imediata no pedido de publicação seguinte**|No decorrer de testes e avaliações, poderá querer que o cliente do RMS transfira modelos logo que seja possível. Para esta configuração, remova a seguinte chave de registo e o cliente do RMS, em seguida, transfere modelos imediatamente na seguinte publicação do pedido em vez de aguardar que a hora especificada pela definição do registo TemplateUpdateFrequency:<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\<*Nome do Servidor*>\Template <br /><br />**Nota**: o valor \<*Nome do Servidor*> pode ter URLs externos (corprights.contoso.com) e internos (corprights) e, por conseguinte, duas entradas diferentes.|
-|Apenas AD RMS:<br /><br />**Para ativar o suporte para a autenticação federada**|Se o computador do cliente do RMS estiver ligado a um cluster do AD RMS, através de uma fidedignidade federada, é necessário configurar o realm inicial da federação.<br /><br />HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\Federation<br />REG_SZ: FederationHomeRealm<br /><br />**Valor:** o valor desta entrada do registo é o identificador de recurso uniforme (URI) do serviço de federação (por exemplo, "http://TreyADFS.trey.net/adfs/services/trust").<br /><br /> **Nota**: é importante que especifique http e não https para este valor. Além disso, se estiver a executar a aplicação baseada em MSIPC de 32 bits numa versão de 64 bits do Windows, a localização é hkey_local_machine\software\wow6432node\microsoft\msipc\federation. Para uma configuração de exemplo, veja [Implementar os Serviços de Gestão de Direitos do Active Directory com os Serviços de Federação do Active Directory](https://technet.microsoft.com/library/dn758110.aspx).|
+|Apenas AD RMS:<br /><br />**Para ativar o suporte para a autenticação federada**|Se o computador do cliente do RMS estiver ligado a um cluster do AD RMS, através de uma fidedignidade federada, é necessário configurar o realm inicial da federação.<br /><br />HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\Federation<br />REG_SZ: FederationHomeRealm<br /><br />**Valor:** o valor desta entrada do registo é o identificador de recurso uniforme (URI) para o serviço de Federação (por exemplo, "http://TreyADFS.trey.net/adfs/services/trust").<br /><br /> **Nota**: é importante que especifique http e não https para este valor. Além disso, se estiver a executar a aplicação baseada em MSIPC de 32 bits numa versão de 64 bits do Windows, a localização é hkey_local_machine\software\wow6432node\microsoft\msipc\federation. Para uma configuração de exemplo, veja [Implementar os Serviços de Gestão de Direitos do Active Directory com os Serviços de Federação do Active Directory](https://technet.microsoft.com/library/dn758110.aspx).|
 |Apenas AD RMS:<br /><br />**Para suportar servidores de federação parceiros que requerem a autenticação baseada em formulários para a introdução de dados pelo utilizador**|Por predefinição, o cliente do RMS funciona em modo silencioso e não é necessária a introdução de dados pelo utilizador. No entanto, os servidores de federação parceiros poderão ser configurados para exigir a introdução de dados pelo utilizador, através, por exemplo, da autenticação baseada em formulários. Neste caso, é necessário configurar o cliente do RMS para ignorar o modo silencioso, para que o formulário de autenticação federada seja apresentado numa janela do browser e seja pedida autenticação ao utilizador.<br /><br />HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\Federation<br />REG_DWORD: EnableBrowser<br /><br />**Nota**: se o servidor de federação estiver configurado para utilizar a autenticação baseada em formulários, esta chave é necessária. Se o servidor de Federação estiver configurado para utilizar a autenticação integrada do Windows, esta chave não é necessária.|
 |Apenas AD RMS:<br /><br />**Para bloquear o consumo do serviço ILS**|Por predefinição, o cliente do RMS ativa o consumo de conteúdos protegidos pelo serviço ILS, mas é possível configurar o cliente para bloquear este serviço ao definir a seguinte chave do registo. Se esta chave de registo está definida para bloquear o serviço ILS, todas as tentativas para abrir e consumir conteúdo protegido pelo serviço ILS devolve o erro seguinte:<br />HRESULT_FROM_WIN32(ERROR_ACCESS_DISABLED_BY_POLICY)<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: **DisablePassportCertification**<br /><br />**Valor:** 1 para bloquear o consumo de ILS, 0 para permitir o consumo de ILS (predefinição)|
 
@@ -146,7 +146,7 @@ Ao utilizar esta pasta, não é necessária qualquer convenção de nomenclatura
 
 -   HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\TrustedServers\
     
-    REG_SZ:*\<url_ou_nomedoanfitrião >*
+    REG_SZ:*\<URL_or_HostName>*
     
     **Valor:** os valores de cadeia nesta localização da chave de registo podem ser um formato de nome de domínio DNS (por exemplo, **adrms.contoso.com**) ou URLs completos para servidores do AD RMS fidedignos (por exemplo, **https://adrms.contoso.com**). Se um URL especificado começar por **https://**, o cliente RMS utiliza SSL ou TLS para contactar o servidor de AD RMS especificado.
 
@@ -163,7 +163,7 @@ Para efetuar a deteção do serviço, o cliente do RMS verifica o seguinte:
 
     Se estiver registado um SCP, como é documentado na [secção seguinte](#ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory), é devolvido o URL do servidor de AD RMS para o cliente do RMS utilizar.
 
-3. **O serviço de deteção do Azure Rights Management**: o cliente do RMS liga-se a **https://discover.aadrm.com**, que pede ao utilizador para efetuar a autenticação.
+3. **O serviço de deteção do Azure Rights Management**: O cliente de RMS liga ao **https://discover.aadrm.com**, que pede ao utilizador para autenticar.
 
     Quando a autenticação tiver sido concluída com êxito, o nome de utilizador (e o domínio) da autenticação é utilizado para identificar o inquilino do Azure Information Protection a utilizar. O URL do Azure Information Protection a utilizar para essa conta de utilizador é devolvido ao cliente de RMS. O URL é o seguinte formato: **https://**\<Urldeinquilino\>**/_wmcs/Licensing** 
 
@@ -174,7 +174,7 @@ Para efetuar a deteção do serviço, o cliente do RMS verifica o seguinte:
 > [!NOTE]
 > Existem três exceções importantes no fluxo desta deteção de serviço:
 > 
-> - Os dispositivos móveis adequam-se à utilização de um serviço na cloud, pelo que, por predefinição, utilizam a deteção de serviço para o serviço Azure Rights Management (https://discover.aadrm.com). Para substituir esta predefinição, para que os dispositivos móveis utilizarem o AD RMS em vez do serviço Azure Rights Management, especifique os registos SRV no DNS e instale a extensão de dispositivos móveis, conforme documentado no [dispositivos do Active Directory Rights Management serviços móveis Extensão](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx). 
+> - Dispositivos móveis são melhor se adequam possa utilizar um serviço em nuvem, por predefinição que utilizam a deteção do serviço para o serviço Azure Rights Management (https://discover.aadrm.com). Para substituir esta predefinição, para que os dispositivos móveis utilizarem o AD RMS em vez do serviço Azure Rights Management, especifique os registos SRV no DNS e instale a extensão de dispositivos móveis, conforme documentado no [dispositivos do Active Directory Rights Management serviços móveis Extensão](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx). 
 >
 > - Quando o serviço Rights Management é invocado por uma etiqueta do Azure Information Protection, a deteção de serviço não é realizada. Em alternativa, o URL é especificado diretamente na definição da etiqueta que é configurada na política do Azure Information Protection.  
 
@@ -248,9 +248,9 @@ Em alguns casos, poderá ser necessário redirecionar o tráfego durante a dete�
 
     Por exemplo, para redirecionar o licenciamento de um servidor em Contoso.com para outro em Fabrikam.com, poderá introduzir os seguintes valores:
 
-    **Nome:**`https://contoso.com/_wmcs/licensing`
+    **Nome:** `https://contoso.com/_wmcs/licensing`
 
-    **Valor:**`https://fabrikam.com/_wmcs/licensing`
+    **Valor:** `https://fabrikam.com/_wmcs/licensing`
     
     > [!NOTE]
     > Se o servidor de licenciamento antigo tiver URLs da intranet e extranet especificado, um novo nome e o mapeamento de valores devem ser definidas para ambos os URLs no **LicensingRedirection** chave.

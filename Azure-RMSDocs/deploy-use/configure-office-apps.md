@@ -1,26 +1,26 @@
 ---
-title: "Configuração para clientes utilizar aplicações do Office com o Azure RMS do AIP"
-description: "Informações e instruções para administradores para configurarem aplicações do Office para trabalhar com o serviço Azure Rights Management do Azure Information Protection."
+title: Configuração para clientes utilizar aplicações do Office com o Azure RMS do AIP
+description: Informações e instruções para administradores para configurarem aplicações do Office para trabalhar com o serviço Azure Rights Management do Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ec269afe-4e87-4cc1-9144-5fbb594b412e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 52b3942d7918ada46cbdd7b45ed3925817e75f45
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 79c3da1d2fcf9405389f5ceba25b81f4808713b8
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="office-apps-configuration-for-clients-to-use-the-azure-rights-management-service"></a>Aplicações do Office: configuração para os clientes utilizem o serviço Azure Rights Management
 
->*Aplica-se a: Azure Information Protection, Office 365*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 Utilize estas informações para determinar o que precisa de fazer para que as aplicações do Office funcionam com o serviço Azure Rights Management do Azure Information Protection.

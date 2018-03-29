@@ -1,26 +1,26 @@
 ---
-title: "Configurar servidores para o conector Rights Management – AIP"
-description: "Informações para o ajudar a configurar os servidores no local que irão utilizar o conector Azure Rights Management (RMS). Estes procedimentos inclui o passo 5 do artigo Implementar o conector Azure Rights Management."
+title: Configurar servidores para o conector Rights Management – AIP
+description: Informações para o ajudar a configurar os servidores no local que irão utilizar o conector Azure Rights Management (RMS). Estes procedimentos inclui o passo 5 do artigo Implementar o conector Azure Rights Management.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/16/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 674acfafb305d8ac6ff530710ba311160c850288
-ms.sourcegitcommit: 8ba50d1fc813214b6e66baea140e626c74c5a518
+ms.openlocfilehash: c15c18f7d0a0f43e4f91193ee4a11b324f0187f2
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/16/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configurar servidores para o conector Azure Rights Management
 
->*Aplica-se a: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2012, Windows Server 2012 R2*
 
 
 Utilize as seguintes informações para ajudar a configurar os servidores no local que irão utilizar o conector Azure Rights Management (RMS). Estes procedimentos inclui o passo 5 do artigo [Implementar o conector Azure Rights Management](deploy-rms-connector.md).
@@ -214,19 +214,19 @@ Os servidores com o SharePoint 2010 têm de ter instalada uma versão do cliente
 
 3.  Ative a IRM no SharePoint. Para mais informações, consulte o artigo [Configure Information Rights Management (SharePoint Server 2010) (Configurar a Gestão de Direitos de Informação (SharePoint Server 2010) – em inglês)](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx) na biblioteca do SharePoint.
 
-    Quando seguir estas instruções, tem de configurar o SharePoint para utilizar o conector ao especificar a opção **Utilizar este servidor RMS** e, em seguida, introduzir o URL do conector com balanceamento de carga que configurou. Introduza o prefixo do protocolo (HTTP:// ou HTTPS://) e o nome do conector que foram definidos no DNS para o endereço com balanceamento de carga do seu conector. Por exemplo, se o nome do seu conector for https://connector.contoso.com, a sua configuração terá um aspeto semelhante ao da seguinte imagem:
+    Quando seguir estas instruções, tem de configurar o SharePoint para utilizar o conector ao especificar a opção **Utilizar este servidor RMS** e, em seguida, introduzir o URL do conector com balanceamento de carga que configurou. Introduza o prefixo do protocolo (HTTP:// ou HTTPS://) e o nome do conector que foram definidos no DNS para o endereço com balanceamento de carga do seu conector. Por exemplo, se o nome de conector for https://connector.contoso.com, a configuração terá um aspeto semelhante a imagem seguinte:
 
     ![Configurar o SharePoint Server para o conector RMS](../media/AzRMS_SharePointConnector.png)
 
     Depois de a IRM estar ativada num farm do SharePoint, pode ativar a IRM em bibliotecas individuais através da opção **Gestão de Direitos de Informação** na página **Definições da Biblioteca** de cada uma das bibliotecas.
 
 
-## <a name="configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector"></a>Configurar um servidor de ficheiros para a Infraestrutura de Classificação de Ficheiros para utilizar o conector
+## <a name="configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector"></a>Configurar um servidor de ficheiros da Infraestrutura de Classificação de Ficheiros para utilizar o conector
 Para utilizar o conector RMS e a Infraestrutura de Classificação de Ficheiros para proteger documentos do Office, o servidor de ficheiros tem de ter um dos seguintes sistemas operativos em execução:
 
 -   Windows Server 2012 R2
 
--   Windows Server 2012
+-   Windows Server 2012
 
 ### <a name="to-configure-file-servers-to-use-the-connector"></a>Para configurar servidores de ficheiros para utilizarem o conector
 
@@ -246,7 +246,7 @@ Para utilizar o conector RMS e a Infraestrutura de Classificação de Ficheiros 
 
 3.  Crie regras de classificação e tarefas de gestão de ficheiros para proteger os documentos com Encriptação RMS e, em seguida, especifique um modelo de RMS para aplicar automaticamente as políticas de RMS. Para mais informações, consulte o artigo [Descrição Geral do Gestor de Recursos do Servidor de Ficheiros](http://technet.microsoft.com/library/hh831701.aspx) na biblioteca de documentação do Windows Server.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 Agora que o conector RMS está instalado e configurado, estando os servidores configurados para o utilizar, os administradores de TI e os utilizadores podem proteger e tirar partido das mensagens de e-mail e documentos com o serviço Azure Rights Management. Para facilitar o trabalho aos utilizadores, implemente o cliente do Azure Information Protection, que instala um suplemento para o Office e adiciona novas opções de contexto ao Explorador de Ficheiros. Para obter mais informações, veja o [Guia do administrador do Azure Information Protection](../rms-client/client-admin-guide.md).
 
 Tenha em atenção que, se configurar modelos departamentais que pretende utilizar com as regras de transporte do Exchange ou com o Windows Server FCI, a configuração do âmbito tem de incluir a opção de compatibilidade de aplicações e a caixa de verificação **Mostrar este modelo a todos os utilizadores quando as aplicações não suportam a identidade de utilizador** tem de estar selecionada.

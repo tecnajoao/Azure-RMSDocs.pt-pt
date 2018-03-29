@@ -1,26 +1,26 @@
 ---
-title: "Guia do utilizador da aplicação de partilha RMS – AIP"
-description: "A aplicação de partilha Microsoft Rights Management (RMS) para Windows ajuda a manter os documentos e imagens importantes protegidos das pessoas que não os deveriam ver, mesmo que os envie por e-mail ou guarde noutro dispositivo."
+title: Guia do utilizador da aplicação de partilha RMS – AIP
+description: A aplicação de partilha Microsoft Rights Management (RMS) para Windows ajuda a manter os documentos e imagens importantes protegidos das pessoas que não os deveriam ver, mesmo que os envie por e-mail ou guarde noutro dispositivo.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 07/27/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: eaf6d02c-aa36-4915-856e-49bb71ab1484
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 02eab7970b98cbc0ed27a3928a9a3c68ebd2927a
-ms.sourcegitcommit: d7bdf865a06df2150b261c98b66503c1db7fed11
+ms.openlocfilehash: c361c3fadb1bc4a65d94c79f7a41f8aebb6f247a
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="rights-management-sharing-application-user-guide"></a>Guia do utilizador da aplicação de partilha Rights Management
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8 e Windows 8.1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 > [!IMPORTANT]
 > **Notificação de fim do suporte**: a aplicação de partilha Rights Management para Windows está a ser substituída pelo [cliente do Azure Information Protection](aip-client.md). Suporte para esta aplicação anterior irá parar 31 de Janeiro de 2019. 

@@ -1,30 +1,30 @@
 ---
-title: "Melhores Práticas de Segurança | Microsoft Information Protection"
-description: "É recomendável seguir as melhores práticas do Azure Information Protection ao conceber aplicações com suporte RMS."
+title: Melhores Práticas de Segurança | Microsoft Information Protection
+description: É recomendável seguir as melhores práticas do Azure Information Protection ao conceber aplicações com suporte RMS.
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.assetid: 4e9f72d5-9e7c-43e1-bb8a-5972dd22dcee
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 04fc73bac667b461a37e87a1c726c5a645495197
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 6c3669c1ada24afcf3b9ec48ea5bb9c38939b47e
+ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="security-best-practices-for-azure-information-protection"></a>Melhores Práticas de Segurança do Azure Information Protection
 
 O Software Development Kit (SDK) do Azure Information Protection (AIP) proporciona um sistema robusto para publicar e consumir informações protegidas de todos os tipos. Para permitir que um sistema AIP seja tão forte quanto possível, as aplicações com suporte AIP têm de ser concebidas tendo em conta as melhores práticas do AIP. As aplicações com suporte AIP têm a responsabilidade partilhada de ajudar a manter a segurança deste ecossistema. Identificar os riscos de segurança e proporcionar soluções de mitigação para esses riscos introduzidos durante o desenvolvimento da aplicação ajuda a minimizar a probabilidade de uma implementação de software menos segura.
 
 As melhores práticas para a implementação de aplicações com o Software Development Kit (SDK) do Azure Information Protection incluem as seguintes categorias de sugestões:
-- [Modelos de Ameaças e Mitigações](https://msdn.microsoft.com/en-us/library/aa362751.aspx)
-- [Ataques de Segurança](https://msdn.microsoft.com/en-us/library/aa362736.aspx)
+- [Modelos de Ameaças e Mitigações](https://msdn.microsoft.com/library/aa362751.aspx)
+- [Ataques de Segurança](https://msdn.microsoft.com/library/aa362736.aspx)
 
 Estas informações complementam o contrato legal que é preciso assinar para obter os certificados digitais necessários para implementar aplicações com o SDK do AIP.
 
@@ -86,7 +86,7 @@ O sistema AIP organiza os direitos em alguns agrupamentos. Para obter mais infor
 O AIP permite que um utilizador desencripte informações ou não; as informações não têm qualquer proteção inerente. Se um utilizador tiver o direito de desencriptar informações, o AIP permite que o faça e a aplicação é responsável por gerir ou proteger essas informações depois de estarem a salvo. Uma aplicação é responsável por gerir o seu ambiente e interface de modo a impedir a utilização não autorizada de informações. Por exemplo, poderá desativar os botões **Imprimir** e **Copiar** se uma licença conceder apenas o direito REPRODUZIR. O seu conjunto de aplicações de teste deve confirmar se a aplicação atua corretamente em todos os direitos de licença que reconhece.
 
 ### <a name="minimum-standard"></a>Padrão mínimo
-- A implementação do cliente dos direitos de XrML v.1.2 deve ser consistente com as definições desses direitos, conforme descrito nas especificações de XrML, que estão disponíveis no site do XrML (http://www.xrml.org). Quaisquer direitos que sejam específicos da sua aplicação têm de ser definidos para todas as entidades que têm um interesse na mesma.
+- A implementação de cliente de XrML v.1.2 direitos deve ser consistente com as definições destes direitos, conforme descrito nas especificações XrML, que estão disponíveis no site XrML Web (http://www.xrml.org). Quaisquer direitos que sejam específicos da sua aplicação têm de ser definidos para todas as entidades que têm um interesse na mesma.
 - O seu conjunto de aplicações de teste e o seu processo de teste devem confirmar se a aplicação executa corretamente os direitos que suporta e que não atua com base em direitos não suportados.
 - Se estiver a criar uma aplicação de publicação, tem de disponibilizar informações que expliquem que direitos intrínsecos são e não são suportados pela aplicação e como esses direitos devem ser interpretados. Além disso, a interface de utilizador deve explicar claramente ao utilizador final quais são as implicações de cada direito concedido ou negado a uma determinada informação.
 

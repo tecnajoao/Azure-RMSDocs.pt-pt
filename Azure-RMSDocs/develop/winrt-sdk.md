@@ -1,24 +1,24 @@
 ---
-title: "Configuração da Loja Windows | Azure RMS"
-description: "As aplicações da Loja Windows podem utilizar o SDK Microsoft Rights Management 4.2 para ativar a proteção de informações integrada na respetiva aplicação."
-keywords: 
+title: Configuração da Loja Windows | Azure RMS
+description: As aplicações da Loja Windows podem utilizar o SDK Microsoft Rights Management 4.2 para ativar a proteção de informações integrada na respetiva aplicação.
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 4dfbb1ba71aedaa0d818b00b3696b422e57ac0d4
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: dde2b47ddf91c6f79d50df5ad776d981c1494047
+ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="windows-store-setup"></a>Configuração da Loja Windows
 
@@ -40,7 +40,7 @@ Tem de possuir o seguinte software no sistema de desenvolvimento:
 -   O [Windows SDK para Windows 8.1](https://msdn.microsoft.com/windows/desktop/bg162891.aspx)
 -   Microsoft [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview) ou superior, ou Visual Studio Express 2012, que está incluído no Windows SDK para Windows 8.0/8.1
 -   O pacote do SDK MS RMS 4.2 para Aplicações da Loja Windows. Para obter mais informações, consulte [Introdução](get-started.md).
--   Biblioteca de autenticação: recomendamos que utilize a [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/en-us/library/jj573266.aspx), mas é possível utilizar outras bibliotecas de autenticação.
+-   Biblioteca de autenticação: recomendamos que utilize a [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx), mas é possível utilizar outras bibliotecas de autenticação.
 
 Consulte o tópico [Novidades](release-notes.md) para obter informações acerca de atualizações de API, informações de dispositivos e de ambiente, notas de versão e perguntas mais frequentes (FAQ).
 
@@ -70,7 +70,7 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
 
 Agora, está pronto para criar as suas novas aplicações da Loja Windows.
 
-### <a name="see-also"></a>Consulte Também
+### <a name="see-also"></a>Veja Também
 
 [Introdução](get-started.md)
 

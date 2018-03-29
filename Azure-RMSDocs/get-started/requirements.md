@@ -4,7 +4,7 @@ description: Identifique os pré-requisitos para implementar o Azure Information
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2018
+ms.date: 03/26/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 160d897d92f73d22530e81a61c0b2a41dc1722b4
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 91c7ec9b7d9c0ed1d85ccbdd0b4c7750fd5b007c
+ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisitos para o Azure Information Protection
 
@@ -86,6 +86,8 @@ Quando o cliente do Azure Information Protection protege os dados através do se
 O cliente do Azure Information Protection pode etiquetar e proteger documentos e e-mails ao utilizar as aplicações **Word**, **Excel**, **PowerPoint** e **Outlook** a partir de qualquer uma das seguintes edições do Office:
 
 - Office 365 ProPlus com aplicações da versão de 2016 ou 2013 (instalação com tecnologia Clique-e-Use ou baseada no Windows Installer)
+    
+    Estas edições do Office estão incluídas com a maioria das mas nem todas as subscrições do Office 365 que inclua a proteção de dados do Azure Information Protection. Verifique as informações de subscrição para ver se Office 365 ProPlus está incluído. Também irá encontrar estas informações no [Azure Information Protection datasheet](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 - Office Professional Plus 2016
 
@@ -93,7 +95,7 @@ O cliente do Azure Information Protection pode etiquetar e proteger documentos e
 
 - Office Professional Plus 2010 com Service Pack 2
 
-Outras edições do Office não podem proteger documentos e e-mails com um serviço Rights Management. Nestas edições, o Azure Information Protection é suportado apenas para classificação. As etiquetas que aplicam a proteção não são apresentadas na barra do Azure Information Protection. 
+Outras edições do Office não podem proteger documentos e e-mails com um serviço Rights Management. Nestas edições, o Azure Information Protection é suportado apenas para classificação. Por conseguinte, etiquetas que aplicarem a proteção não são apresentados aos utilizadores no Azure Information Protection barra ou do **proteger** botão no Friso do Office. 
 
 O cliente Azure Information Protection suporta várias versões do Office no mesmo computador. Este cliente também não suporta a mudança de contas de utilizador no escritório.
 

@@ -1,24 +1,24 @@
 ---
-title: "Procedimentos para ativar a aplicação do serviço para que funcione com o RMS baseado na nuvem | Azure RMS"
-description: "Este tópico descreve os passos para configurar a aplicação do serviço para utilizar o Azure Rights Management."
-keywords: 
+title: Procedimentos para ativar a aplicação do serviço para que funcione com o RMS baseado na nuvem | Azure RMS
+description: Este tópico descreve os passos para configurar a aplicação do serviço para utilizar o Azure Rights Management.
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: df82a503107aae3db61101eb468009e47f546ceb
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 6c1500b13a0c7ddabd3a01deb08c81fa3d4d72c7
+ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="how-to-enable-your-service-application-to-work-with-cloud-based-rms"></a>Procedimentos: permitir que a aplicação de serviço funcione com o RMS baseado na nuvem
 
@@ -30,7 +30,7 @@ Para utilizar a aplicação de serviço SDK Rights Management Services 2.1 com o
 ## <a name="prerequisites"></a>Pré-requisitos
 
 -   O SDK RMS 2.1 tem de estar instalado e configurado. Para obter mais informações, consulte [Introdução ao SDK RMS 2.1](getting-started-with-ad-rms-2-0.md).
--   Tem de [criar uma identidade do serviço através do ACS](https://msdn.microsoft.com/en-us/library/gg185924.aspx) ao utilizar a opção de chave simétrica ou através de outros meios e registar as informações da chave a partir desse processo.
+-   Tem de [criar uma identidade do serviço através do ACS](https://msdn.microsoft.com/library/gg185924.aspx) ao utilizar a opção de chave simétrica ou através de outros meios e registar as informações da chave a partir desse processo.
 
 ## <a name="connecting-to-the-azure-rights-management-service"></a>Ligar ao Serviço Azure Rights Management
 
@@ -80,7 +80,7 @@ Para utilizar a aplicação de serviço SDK Rights Management Services 2.1 com o
 
 ### <a name="instructions-to-find-out-tenantbposid-and-urls"></a>Instruções para descobrir **TenantBposId** e **Urls**
 
--   Instalar o [Módulo do powershell do Azure RMS](https://technet.microsoft.com/en-us/library/jj585012.aspx).
+-   Instalar o [Módulo do powershell do Azure RMS](https://technet.microsoft.com/library/jj585012.aspx).
 -   Inicie o Powershell e execute os seguintes comandos para obter a configuração do RMS do inquilino.
 
     `Import-Module aadrm`
@@ -164,9 +164,9 @@ Concluiu os passos necessários para permitir que a sua aplicação utilize o Az
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Introdução ao Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx)
+* [Introdução ao Azure Rights Management](https://technet.microsoft.com/library/jj585016.aspx)
 * [Introdução ao SDK RMS 2.1](getting-started-with-ad-rms-2-0.md)
-* [Criar uma identidade do serviço através do ACS](https://msdn.microsoft.com/en-us/library/gg185924.aspx)
+* [Criar uma identidade do serviço através do ACS](https://msdn.microsoft.com/library/gg185924.aspx)
 * [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx)
 * [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx)
 * [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx)

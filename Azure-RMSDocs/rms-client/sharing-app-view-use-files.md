@@ -1,26 +1,26 @@
 ---
-title: "Abrir ficheiros protegidos pelo RMS com a aplicação de partilha RMS – AIP"
-description: "Instruções de visualização e utilização de um ficheiro protegido, que requer a instalação da aplicação de partilha Rights Management (RMS)."
+title: Abrir ficheiros protegidos pelo RMS com a aplicação de partilha RMS – AIP
+description: Instruções de visualização e utilização de um ficheiro protegido, que requer a instalação da aplicação de partilha Rights Management (RMS).
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 07/18/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0a510d559573e942b8a2bf392f36a1300dfbfb7a
-ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
+ms.openlocfilehash: 393db5da6f2a563b073b071e873a8c5d555a76e6
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Ver e utilizar ficheiros que foram protegidos pelo Rights Management
 
->*Aplica-se a: Serviços de Gestão de Direitos do Active Directory, Azure Information Protection, Windows 10, Windows 7 com SP1, Windows 8 e Windows 8.1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 Quando a [Aplicação de partilha Rights Management (RMS) está instalada no computador](install-sharing-app.md), basta fazer duplo clique num ficheiro protegido para o ver. O ficheiro pode ser um anexo numa mensagem de e-mail ou poderá vê-lo ao utilizar o Explorador de Ficheiros.
 
@@ -32,7 +32,7 @@ Quando a [Aplicação de partilha Rights Management (RMS) está instalada no com
 > -   Para se candidatar a esta conta, clique na ligação para aderir ao [RMS para indivíduos](http://go.microsoft.com/fwlink/?LinkId=309469).
 >
 >     Quando se inscrever, utilize o seu endereço de e-mail da empresa em vez de um endereço de e-mail pessoal. Caso se esteja a inscrever porque recebeu um anexo protegido, utilize o mesmo endereço de e-mail que foi utilizado para lhe enviar a mensagem de e-mail.
-> -   Para obter mais informações, consulte [RMS para indivíduos e Azure Rights Management](../understand-explore/rms-for-individuals.md).
+> -   Para mais informações, consulte [RMS para indivíduos e Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
 ## <a name="to-view-a-protected-file"></a>Para ver um ficheiro protegido
 Ao utilizar o Explorador de Ficheiros ou a mensagem de e-mail que contém o anexo, faça duplo clique no ficheiro protegido e introduza as suas credenciais, se lhe for pedido.

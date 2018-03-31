@@ -4,7 +4,7 @@ description: Identifique os pré-requisitos para implementar o Azure Information
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/26/2018
+ms.date: 03/29/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 91c7ec9b7d9c0ed1d85ccbdd0b4c7750fd5b007c
-ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
+ms.openlocfilehash: e8bf7e9400b76f32aa6b63741169e938032cd40a
+ms.sourcegitcommit: d1987b1abb65f3466bbbb8f8c28e30668d629e50
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisitos para o Azure Information Protection
 
@@ -110,6 +110,8 @@ Utilize as instruções neste artigo do Office para se manter atualizado em rela
 Além das informações no artigo do Office, específico para o Azure Information Protection:
 
 - Permitir tráfego HTTPS em TCP 443 para **api.informationprotection.azure.com**.
+
+- Permitir o tráfego HTTPS no TCP 443 para **mobile.pipe.aria.microsoft.com**.
 
 - Se utilizar um proxy Web que requer autenticação, tem de o configurar para utilizar a autenticação integrada do Windows com as credenciais de início de sessão do utilizador do Active Directory.
 

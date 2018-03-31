@@ -4,7 +4,7 @@ description: Instruções sobre como classificar e proteger os seus documentos e
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 03/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 49518c1324ad541c4880c7930b6e661a2aba46d8
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 0d5f4e081ea68f3e8c9ddcb46409370b486f6210
+ms.sourcegitcommit: d1987b1abb65f3466bbbb8f8c28e30668d629e50
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Guia do utilizador: Classificar e proteger um ficheiro ou e-mail ao utilizar o Azure Information Protection
 
@@ -79,7 +79,7 @@ Motivos possíveis:
 
 ### <a name="set-custom-permissions-for-a-document"></a>Definir permissões personalizadas num documento
 
-Se permitida pelo seu administrador, pode especificar as suas próprias definições de proteção para documentos em vez de utilizar as definições de proteção que o administrador poderá ter incluídas com a etiqueta selecionada.
+Se permitida pelo seu administrador, pode especificar as suas próprias definições de proteção para documentos em vez de utilizar as definições de proteção que o administrador poderá ter incluídas com a etiqueta selecionada. Esta opção é específica para documentos e não está disponível com o Outlook.
 
 1. No separador **Base**, no grupo **Proteção**, clique em **Proteger** > **Permissões Personalizadas**:
 

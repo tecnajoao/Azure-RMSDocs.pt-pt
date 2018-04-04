@@ -4,17 +4,17 @@ description: Quando configurar as condições para uma etiqueta, pode atribuir a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 04/02/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 80537b32bee11df72673b869932f2d59cef11469
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: f7242c05d830ecd1b702e4e9bb049e72740843f3
+ms.sourcegitcommit: b17432ed155394111c878eb57b5fa7adf9df9755
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Como configurar as condições para classificação automática e recomendada para o Azure Information Protection
 
@@ -62,9 +62,11 @@ Neste exemplo, o utilizador pode clicar em **alterar agora** para aplicar a etiq
 
 #### <a name="more-information-about-running-continuously"></a>Obter mais informações sobre como executar continuamente
 
-A versão de pré-visualização atual do cliente Azure Information Protection verifica periodicamente a documentos para as regras de condição que especificar. Este comportamento permite que a classificação automática e recomendada e a proteção de documentos que estão armazenados no SharePoint Online. Ficheiros grandes também guardar mais rapidamente porque as regras de condição já estiver a executar. 
+Por predefinição, a versão de pré-visualização atual do cliente Azure Information Protection verifica periodicamente documentos para as regras de condição que especificar. Este comportamento permite que a classificação automática e recomendada e a proteção de documentos que estão armazenados no SharePoint Online. Ficheiros grandes também guardar mais rapidamente porque as regras de condição já estiver a executar. 
 
-As regras da condição não são executados em tempo real como tipos de utilizador. Em vez disso, executam periodicamente como uma tarefa em segundo plano se o documento está modificado. 
+As regras da condição não são executados em tempo real como tipos de utilizador. Em vez disso, executam periodicamente como uma tarefa em segundo plano se o documento está modificado.
+
+Pode alterar este comportamento para que o cliente Azure Information Protection aplica etiquetas automáticas e recomendadas da mesma forma que a versão de disponibilidade geral do cliente. Esta configuração requer um [definição de cliente avançado](../rms-client/client-admin-guide-customizations.md#turn-off-classification-running-continuously-in-the-background).
 
 ### <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>São avaliadas como várias condições quando estas são aplicadas a mais do que uma etiqueta
 

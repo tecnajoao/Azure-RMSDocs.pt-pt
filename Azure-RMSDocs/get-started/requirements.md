@@ -4,7 +4,7 @@ description: Identifique os pré-requisitos para implementar o Azure Information
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/29/2018
+ms.date: 04/04/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e8bf7e9400b76f32aa6b63741169e938032cd40a
-ms.sourcegitcommit: d1987b1abb65f3466bbbb8f8c28e30668d629e50
+ms.openlocfilehash: 380b2f715ead6f3f8c8e497c911ff425c12424e8
+ms.sourcegitcommit: 40ac805183589a1c8ef22bc1bd9556bcc92f65e6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisitos para o Azure Information Protection
 
@@ -115,7 +115,7 @@ Além das informações no artigo do Office, específico para o Azure Informatio
 
 - Se utilizar um proxy Web que requer autenticação, tem de o configurar para utilizar a autenticação integrada do Windows com as credenciais de início de sessão do utilizador do Active Directory.
 
-- Não termine a ligação cliente para serviço TLS (por exemplo, para fazer uma inspeção ao nível do pacote). Se o fizer, interrompe o certificado que os clientes de RMS utilizam com as ACs gerida pela Microsoft para ajudar a proteger as comunicações com o serviço Azure Rights Management de afixação.
+- Não termine as ligações de cliente para serviço TLS (por exemplo, para fazer inspeção ao nível do pacote) para o serviço Azure Rights Management. Se o fizer, interrompe o certificado que os clientes de RMS utilizam com as ACs gerida pela Microsoft para ajudar a proteger as comunicações com o serviço Azure Rights Management de afixação.
     
     - Sugestão: Devido a forma como o Chrome apresenta ligações seguras na barra de endereço, pode utilizar este browser para rapidamente verificar se a ligação de cliente é terminada antes de atingir o serviço Azure Rights Management. Introduza o seguinte URL na barra de endereço do browser: `https://admin.na.aadrm.com/admin/admin.svc` 
     

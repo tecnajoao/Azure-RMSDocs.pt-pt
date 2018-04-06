@@ -4,7 +4,7 @@ description: Informações sobre instalação, sistemas operativos suportados, d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/08/2018
+ms.date: 04/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: edaa24b6e86fc1cacecfa79185b7fe4ddb1d34c9
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: df86d75cd7337fa4642a9b758312923a3577325f
+ms.sourcegitcommit: 40ac805183589a1c8ef22bc1bd9556bcc92f65e6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="rms-client-deployment-notes"></a>Notas de implementação do cliente do RMS
 
@@ -112,7 +112,7 @@ Pode utilizar as chaves do registo do Windows para definir ou modificar algumas 
 
 |Tarefa|Definições|
 |--------|------------|
-|Se a versão do cliente for 1.03102.0221 ou posterior:<br /><br />**Para controlar a recolha de dados da aplicação**|**Importante**: para respeitar a privacidade dos utilizadores, enquanto administrador deverá pedir autorização aos mesmos antes de ativar a recolha de dados.<br /><br />Se ativar a recolha de dados, está a aceitar o envio de dados para a Microsoft através da Internet. A Microsoft utiliza estes dados para fornecer e melhorar a qualidade, segurança e integridade dos produtos e serviços Microsoft. Por exemplo, Microsoft analisa o desempenho e fiabilidade, tais como quais as funcionalidades utilize, como rapidamente as funcionalidades de respondem, desempenho de dispositivo, interações da interface de utilizador e quaisquer problemas que surgirem com o produto. Dados também incluem informações sobre a configuração do seu software, tais como o software que estão a ser executados e o endereço IP.<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft\MSIPC<br />REG_DWORD: DiagnosticState<br /><br />**Valor:** 0 para a Aplicação definida (predefinição) através da propriedade de ambiente [IPC_EI_DATA_COLLECTION_ENABLED](https://msdn.microsoft.com/library/hh535247(v=vs.85).aspx), 1 para Desativado, 2 para Ativado<br /><br />**Tenha em atenção**: Se estiver a executar a aplicação baseada em MSIPC de 32 bits numa versão de 64 bits do Windows, a localização é HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC.|
+|Se a versão do cliente for 1.03102.0221 ou posterior:<br /><br />**Para controlar a recolha de dados da aplicação**|**Importante**: para respeitar a privacidade dos utilizadores, enquanto administrador deverá pedir autorização aos mesmos antes de ativar a recolha de dados.<br /><br />Se ativar a recolha de dados, está a aceitar o envio de dados para a Microsoft através da Internet. A Microsoft utiliza estes dados para fornecer e melhorar a qualidade, segurança e integridade dos produtos e serviços Microsoft. Por exemplo, Microsoft analisa o desempenho e fiabilidade, tais como quais as funcionalidades utilize, como rapidamente as funcionalidades de respondem, desempenho de dispositivo, interações da interface de utilizador e quaisquer problemas que surgirem com o produto. Dados também incluem informações sobre a configuração do seu software, tais como o software que estão a ser executados e o endereço IP.<br /><br />Para a versão 1.0.3356 ou posterior: <br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft\MSIPC<br />REG_DWORD: DiagnosticAvailability<br /><br />Para versões anteriores 1.0.3356: <br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft\MSIPC<br />REG_DWORD: DiagnosticState<br /><br />**Valor:** 0 para a Aplicação definida (predefinição) através da propriedade de ambiente [IPC_EI_DATA_COLLECTION_ENABLED](https://msdn.microsoft.com/library/hh535247(v=vs.85).aspx), 1 para Desativado, 2 para Ativado<br /><br />**Tenha em atenção**: Se estiver a executar a aplicação baseada em MSIPC de 32 bits numa versão de 64 bits do Windows, a localização é HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC.|
 |Apenas AD RMS:<br /><br />**Para atualizar a localização do serviço da empresa para um computador cliente**|Atualize as seguintes chaves do registo:<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterpriseCertification<br />REG_SZ: default<br /><br />**Valor:**\<http ou https>://*RMS_Cluster_Name*/_wmcs/Certification<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterprisePublishing<br />REG_SZ: default<br /><br />**Valor:** \<http ou https>://*RMS_Cluster_Name*/_wmcs/Licensing|
 |**Para ativar e desativar o rastreio**|Atualize a seguinte chave do registo:<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC<br />REG_DWORD: Trace<br /><br />**Valor:** 1 para ativar o rastreio, 0 para desativar o rastreio (predefinição)|
 |**Para alterar a frequência de atualização dos modelos em dias**|Os seguintes valores de registo especificam a frequência atualizar modelos no computador do utilizador, se o valor de TemplateUpdateFrequencyInSeconds não estiver definido.  Se nenhum destes valores estiver definido, o intervalo de atualização predefinido para que as aplicações com o cliente do RMS (versão 1.0.1784.0) transfiram modelos é de 1 dia. As versões anteriores têm um valor predefinido de 7 dias.<br /><br />**Modo de Cliente:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Valor:** um valor inteiro que especifica o número de dias (mínimo de 1) entre transferências.<br /><br />**Modo de Servidor:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\\<SID\><br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Valor:** um valor inteiro que especifica o número de dias (mínimo de 1) entre transferências.|

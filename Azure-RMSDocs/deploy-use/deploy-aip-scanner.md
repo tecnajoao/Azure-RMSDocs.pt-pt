@@ -187,7 +187,7 @@ Por fim, para os restantes tipos de ficheiro, scanner aplica-se a etiqueta prede
 |JPEG |.jpg; .jpeg; .jpe; .jif; .jfif; .jfi|
 |PNG |.png|
 |GIF|.gif|
-|Mapa de bits|*.bmp; .giff|
+|Mapa de bits|.bmp; .giff|
 |TIFF|.tif; .tiff|
 |PhotoShop|.psdv|
 |DigitalNegative|.dng|

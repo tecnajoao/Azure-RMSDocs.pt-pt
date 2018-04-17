@@ -4,7 +4,7 @@ description: Instruções para instalar, configurar e executar o Verificador de 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/09/2018
+ms.date: 04/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: c4e71ec21d6ec06a3bab32bf6bb62e6f614a7e33
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: eed8f7e62f5cc8dd20ebfe1caa68746133a95d6f
+ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>O scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente a implementar
 
@@ -28,7 +28,7 @@ Esta análise é executada como um serviço no Windows Server e permite-lhe Dete
 
 - Pastas locais no computador do servidor do Windows que executa o verificador.
 
-- Utilize caminhos UNC para partilhas de rede que utilizam o protocolo Common Internet File System (CIFS).
+- Utilize caminhos UNC para partilhas de rede que utilizam o protocolo Server Message Block (SMB).
 
 - Sites e bibliotecas para SharePoint Server 2016 e o SharePoint Server 2013.
 
@@ -36,7 +36,7 @@ Esta análise é executada como um serviço no Windows Server e permite-lhe Dete
 
 Quando tiver configurado o [política do Azure Information Protection](configure-policy.md) para etiquetas que se aplicam a classificação automática, ficheiros de que este scanner Deteta, em seguida, podem ser etiqueta. As etiquetas aplicam classificação e, opcionalmente, aplicarem a proteção ou remova a proteção:
 
-![Descrição geral de análise do Azure Information Protection](../media/infoprotect-scanner.png)
+![Proteção de informações scanner arquitetura descrição geral do Azure](../media/infoprotect-scanner.png)
 
 O scanner pode inspecionar ficheiros que o Windows pode indexar, utilizando os iFilters que estão instalados no computador. Em seguida, para determinar se os ficheiros têm de etiquetagem, scanner utiliza o Office 365 incorporada perda prevenção (DLP) sensibilidade informações tipos de dados e deteção de padrão ou padrões de regex do Office 365. Uma vez scanner utiliza o cliente Azure Information Protection, pode classificar e proteger o mesmo [tipos de ficheiros](../rms-client/client-admin-guide-file-types.md).
 
@@ -50,7 +50,7 @@ Antes de instalar o scanner do Azure Information Protection, certifique-se de qu
 |Requisito|Mais informações|
 |---------------|--------------------|
 |Computador Windows Server para executar o serviço de análise:<br /><br />-4 processadores<br /><br />-4 GB de RAM|Windows Server 2016 ou o Windows Server 2012 R2. <br /><br />Nota: Para fins de teste ou avaliação num ambiente de não produção, pode utilizar um sistema de operativo de cliente Windows é [suportadas pelo cliente Azure Information Protection](../get-started/requirements.md#client-devices).<br /><br />Este computador pode ser um computador físico ou virtual que tenha uma ligação de rede rápida e fiável para os arquivos de dados ser analisados. <br /><br />Certifique-se de que este computador tem o [conectividade à Internet](../get-started/requirements.md#firewalls-and-network-infrastructure) que necessita para o Azure Information Protection. Em alternativa, tem de o configurar como um [computadores desligados](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). |
-|SQL Server para armazenar a configuração de scanner:<br /><br />-Instância local ou remota<br /><br />-Função Sysadmin instalar scanner|SQL Server 2012 é a versão mínima para as seguintes edições:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />A conta que instala scanner requer permissões para escrever o mestre de base de dados (tem de ser um membro da função db_datawriter). O processo de instalação atribui a função de proprietário de base de dados para a conta de serviço que executa o verificador. Em alternativa, pode criar manualmente a base de dados AzInfoProtectionScanner antes de instalar scanner e atribuir a função de proprietário da base de dados para a conta de serviço de análise.|
+|SQL Server para armazenar a configuração de scanner:<br /><br />-Instância local ou remota<br /><br />-Função Sysadmin instalar scanner|SQL Server 2012 é a versão mínima para as seguintes edições:<br /><br />-SQL Server para empresas<br /><br />-SQL Server Standard<br /><br />-SQL Server Express<br /><br />A conta que instala scanner requer permissões para escrever o mestre de base de dados (tem de ser um membro da função db_datawriter). O processo de instalação atribui a função de proprietário de base de dados para a conta de serviço que executa o verificador. Em alternativa, pode criar manualmente a base de dados AzInfoProtectionScanner antes de instalar scanner e atribuir a função de proprietário da base de dados para a conta de serviço de análise.|
 |Conta de serviço para executar o serviço de análise|Esta conta tem de ser uma conta do Active Directory que está sincronizada com o Azure AD, com os seguintes requisitos adicionais:<br /><br />- **Iniciar sessão localmente** à direita. Este direito é necessário para a instalação e configuração do scanner, mas não para a operação. Tem de conceder este direito para a conta de serviço, mas pode remover este direito depois de confirmar que o verificador pode detetar, classificar e proteger os ficheiros. <br /><br />Nota: Se políticas internas não permitem contas de serviço para que este contas à direita, mas serviço podem ser concedido a **iniciar sessão como uma tarefa de lote** à direita, pode cumprir este requisito sem configuração adicional. Para obter instruções, consulte [especificar e utilize o parâmetro de Token para Set-AIPAuthentication](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) do guia de administração.<br /><br />- **Inicie sessão como um serviço** à direita. Este direito é concedido automaticamente para a conta de serviço durante a instalação do scanner e este direito é necessário para a instalação, configuração e operação do scanner. <br /><br />-Permissões para os repositórios de dados: tem de conceder **leitura** e **escrever** permissões para analisar os ficheiros e, em seguida, aplicar classificação e a proteção para os ficheiros que cumprem as condições no Política de proteção de informações do Azure. Para executar o verificador no modo de deteção apenas, **leitura** permissão é suficiente.<br /><br />-Para etiquetas que proteja novamente ou remova a proteção: para se certificar de que o verificador tem sempre acesso aos ficheiros protegidos, tornar esta conta um [Superutilizador](configure-super-users.md) para o Azure Rights Management service e certifique-se de que a funcionalidade de Superutilizador é ativada . Para obter mais informações sobre os requisitos de conta para aplicar a proteção, consulte [preparar os utilizadores e grupos do Azure Information Protection](../plan-design/prepare.md).|
 |O scanner do Azure Information Protection está instalado no computador do servidor do Windows|Atualmente, a análise do Azure Information Protection é uma transferência individual com o nome **AzInfoProtectionScanner.exe** no [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Em versões posteriores do scanner serão incluídas no cliente do Azure Information Protection.|
 |Configurado etiquetas que se aplicam a classificação automática e, opcionalmente, a proteção|Para obter mais informações sobre como configurar as condições, consulte [como configurar condições para classificação automática e recomendada para o Azure Information Protection](configure-policy-classification.md).<br /><br />Para obter mais informações sobre como configurar as etiquetas para aplicar proteção aos ficheiros, consulte [como configurar uma etiqueta para a proteção Rights Management](configure-policy-protection.md).<br /><br />Estas etiquetas podem ser política global, ou um ou mais [âmbito políticas](configure-policy-scope.md).|
@@ -169,7 +169,7 @@ Em seguida, scanner utiliza iFilter do Windows para analisar os seguintes tipos 
 |--------------------------------|-------------------------------------|
 |Word|.docx; .docm; .dotm; .dotx|
 |Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
-|PowerPoint|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
+|PowerPoint|.ppt; .pps .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
 |projeto|.mpp; .mpt|
 |PDF|.pdf|
 |Texto|.txt; .xml; .csv|
@@ -188,7 +188,7 @@ Por fim, para os restantes tipos de ficheiro, scanner aplica-se a etiqueta prede
 |PNG |.png|
 |GIF|.gif|
 |Mapa de bits|.bmp; .giff|
-|TIFF|.tif; .tiff|
+|TIFF|*.TIF;. tiff|
 |PhotoShop|.psdv|
 |DigitalNegative|.dng|
 |Pfile|.pfile|

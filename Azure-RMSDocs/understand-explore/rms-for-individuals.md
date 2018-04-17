@@ -12,25 +12,25 @@ ms.technology: techgroup-identity
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fadaac4b5ea7828c53544485b1685226176a2a75
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: df2d97fd8abdf7c2f210d857287d3590838222db
+ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS para indivíduos e Azure Information Protection
 
 >*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-RMS para indivíduos é uma subscrição gratuita personalizada para utilizadores que necessitam para abrir ficheiros que foram protegidos pelo Azure Information Protection. Se estes utilizadores não podem ser autenticados pelo Azure Active Directory e respetiva organização não tiver o Active Directory Rights Management (AD RMS), este serviço de inscrição gratuito pode criar uma conta no Azure Active Directory para um utilizador. Como resultado, estes utilizadores podem autenticar-se utilizando o respetivo endereço de e-mail da empresa e, em seguida, ler os ficheiros protegidos em dispositivos móveis ou computadores.
+RMS para indivíduos é uma subscrição gratuita personalizada para utilizadores que necessitam para abrir ficheiros que foram protegidos pelo Azure Information Protection. Se estes utilizadores não podem ser autenticados pelo Azure Active Directory, este serviço de inscrição gratuito pode criar uma conta no Azure Active Directory para um utilizador. Como resultado, estes utilizadores podem autenticar-se utilizando o respetivo endereço de e-mail da empresa e, em seguida, ler os ficheiros protegidos em dispositivos móveis ou computadores.
 
-RMS para indivíduos utiliza a inscrição self-service do Azure Active Directory. Se os utilizadores criaram contas para a sua organização, como um administrador para a sua organização, pode reclamar a propriedade e assumir o controlo das respetivas contas. 
+RMS para indivíduos utiliza a inscrição self-service do Azure Active Directory. Se os utilizadores criou contas para a sua organização ao utilizar esta subscrição, como um administrador para a sua organização, pode reclamar a propriedade e [assumir o controlo das respetivas contas](/active-directory/domains-admin-takeover#external-admin-takeover). 
 
 
 > [!NOTE]
 > Esta subscrição gratuita é uma opção para ajudar a garantir que as pessoas autorizadas fora da sua organização podem sempre ler ficheiros que protege a sua organização. Outra opção consiste em documentos de e-mail utilizando [encriptação de mensagens do Office 365 com as novas capacidades](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Esta solução de correio eletrónico funciona para todos os endereços de e-mail em todos os dispositivos e é a forma recomendada de forma segura partilhar informações e ver documentos do Office por e-mail com pessoas fora da sua organização. 
 
-Para se inscrever nesta conta gratuita, vá para o [página do Microsoft Azure Information Protection](https://aka.ms/rms-signup)e forneça o seu endereço de e-mail de trabalho. Receberá uma mensagem de e-mail em resposta da Microsoft e, em seguida, conclua o processo de inscrição, introduzindo os detalhes para criar a sua conta. 
+Para se inscrever nesta conta gratuita, os utilizadores aceder ao [página do Microsoft Azure Information Protection](https://aka.ms/rms-signup)e forneça o respetivo endereço de e-mail de trabalho. Recebem uma mensagem de e-mail em resposta da Microsoft e, em seguida, podem concluir o processo de inscrição, introduzindo os detalhes para criar a conta. 
 
 Quando a conta é criada, a página final apresenta ligações para transferir o cliente Azure Information Protection ou visualizador para diferentes dispositivos, uma ligação para o Guia do utilizador e uma ligação para uma lista atualizada das aplicações que suportam nativamente o proteção Rights Management. 
 

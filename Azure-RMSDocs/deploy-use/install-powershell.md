@@ -4,7 +4,7 @@ description: Instruções para instalar o Windows PowerShell para o serviço Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 04/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d061a7e65bce1e5072e4e06fd3ed1ef2132810c8
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: f0365876af77c748cb15dc2ee89d871925591344
+ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="installing-the-aadrm-powershell-module"></a>Instalar o módulo do AADRM PowerShell
 
@@ -34,15 +34,16 @@ Esta tabela lista os pré-requisitos para instalar e utilizar o módulo do AADRM
 |Versão mínima do Windows PowerShell: 3.0|Pode confirmar a versão do Windows PowerShell que está a executar, escrevendo `$PSVersionTable` numa sessão do PowerShell. <br /><br /> Se precisar de instalar uma versão posterior do Windows PowerShell, consulte [atualizar existentes do Windows PowerShell](/powershell/scripting/setup/installing-windows-powershell#upgrading-existing-windows-powershell).|
 |Versão mínima do Microsoft .NET Framework: 4.5<br /><br />Nota: esta versão do Microsoft .NET Framework está incluída em sistemas operativos posteriores, pelo que apenas deve instalá-la manualmente se o sistema operativo cliente for inferior ao Windows 8.0 ou o sistema operativo do servidor for inferior ao Windows Server 2012.|Se a versão mínima do Microsoft .NET Framework não estiver já instalada, pode transferir o [Microsoft .NET Framework 4.5](http://www.microsoft.com/download/details.aspx?id=30653).<br /><br />Esta versão mínima do Microsoft .NET Framework é necessário para algumas das classes que utiliza o módulo AADRM.|
 
+A partir da versão 2.5.0.0 do módulo AADRM, o assistente Microsoft Online Services início de sessão já não é necessário.
+
 > [!NOTE]
-> A partir da versão 2.5.0.0 do módulo AADRM, o assistente Microsoft Online Services início de sessão já não é necessário.
 > 
-> Se tiver uma versão anterior do módulo AADRM instalado, utilize **programas e funcionalidades** desinstalar **administração de gestão do Windows Azure AD Rights** antes de instalar a versão mais recente.
+> Se tiver instalado uma versão do módulo AADRM com a ferramenta de administração do Azure Rights Management, utilize **programas e funcionalidades** desinstalar **administração de gestão do Windows Azure AD Rights** antes Instale a versão mais recente do módulo AADRM da galeria do PowerShell.
 
 
 ## <a name="how-to-install-the-aadrm-module"></a>Como instalar o módulo AADRM
 
-O módulo AADRM está a mover a [galeria do PowerShell](/powershell/gallery/readme), mas para um período de tempo limitado também está disponível no Microsoft Download Center. 
+O módulo AADRM foi movido para o [galeria do PowerShell](/powershell/gallery/readme) e já não está disponível a Microsoft Download Center. 
 
 ### <a name="to-install-the-aadrm-module-from-the-powershell-gallery"></a>Para instalar o módulo AADRM da galeria do PowerShell
 
@@ -55,13 +56,10 @@ Para instalar o módulo AADRM, inicie uma sessão do PowerShell e escreva:
     Install-Module -Name AADRM
 
 
-### <a name="to-install-the-aadrm-module-from-the-microsoft-download-center"></a>Para instalar o módulo AADRM do Microsoft Download Center
+Se tiver uma versão anterior do módulo AADRM instalado a partir da galeria, a atualização para a versão mais recente, escrevendo:
 
-1. Vá para a Microsoft Download Center e localize o [ferramenta de administração do Azure Rights Management](https://go.microsoft.com/fwlink/?LinkId=257721), que contém o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] módulo de administração para o Windows PowerShell.
+    Update-Module -Name AADRM
 
-2. Transfira e guarde o [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] ficheiro instalador, **WindowsAzureADRightsManagementAdministration_x64**. Em seguida, faça duplo clique este ficheiro para iniciar o Azure AD Rights Management administração Assistente de configuração.
-
-3.  Conclua o assistente, que instala o módulo do AADRM PowerShell.
 
 ## <a name="next-steps"></a>Próximos passos
 Numa sessão do Windows PowerShell, confirme a versão do módulo instalado. Esta verificação é particularmente importante se tiver atualizado de uma versão mais antiga:

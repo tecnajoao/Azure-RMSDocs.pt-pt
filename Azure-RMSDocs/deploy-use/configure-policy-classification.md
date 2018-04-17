@@ -10,11 +10,11 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: f7242c05d830ecd1b702e4e9bb049e72740843f3
-ms.sourcegitcommit: b17432ed155394111c878eb57b5fa7adf9df9755
+ms.openlocfilehash: 7f105b8e6d3a6f7761d195a00b15adb2d33cd592
+ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Como configurar as condições para classificação automática e recomendada para o Azure Information Protection
 
@@ -30,7 +30,7 @@ Um exemplo de aviso para quando configura uma condição para aplicar uma etique
 
 ![Deteção e recomendação do Azure Information Protection](../media/info-protect-recommend-calloutsv2.png)
 
-Neste exemplo, o utilizador pode clicar em **alterar agora** para aplicar a etiqueta recomendada ou substituir a recomendação selecionando **dispensar**.
+Neste exemplo, o utilizador pode clicar em **alterar agora** para aplicar a etiqueta recomendada ou substituir a recomendação selecionando **dispensar**. Se o utilizador escolhe a ignorar a recomendação e a condição ainda se aplica quando o documento é aberto em seguida, é apresentada a recomendação de etiqueta. 
 
 > [!IMPORTANT]
 >Não configure uma etiqueta para a classificação automática e uma permissão definido pelo utilizador. A opção de permissões definidas pelo utilizador é um [definição de proteção](configure-policy-protection.md) que permita aos utilizadores que especifique que devem ser concedidas permissões.

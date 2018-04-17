@@ -4,7 +4,7 @@ description: Conheça os direitos específicos utilizados quando protege ficheir
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/26/2018
+ms.date: 04/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0ec4710618227573fa7442a8fe1f0bd52b2c8f6f
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 297e530406c33ca50d1e8287509e4c3a6f3c7a80
+ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuração de direitos de utilização para o Azure Rights Management
 
@@ -158,7 +158,9 @@ Tenha em atenção que o proprietário do Rights Management é independente do P
 
 Quando um utilizador abre um documento ou e-mail que tenha sido protegido pelo Azure Rights Management, uma licença de utilização do Rights Management para esse conteúdo é concedida ao utilizador. Esta licença de utilização é um certificado que contém os direitos de utilização do utilizador para o documento ou mensagem de correio eletrónico e a chave de encriptação que foi utilizada para encriptar o conteúdo. A licença de utilização também contém uma data de expiração se esta tiver sido definida e quanto a licença de utilização do é válida.
 
-Durante a duração da licença de utilização, o utilizador não é reautenticar ou reauthorized. Isto permite ao utilizador continuar a abrir o documento protegido ou o e-mail sem uma ligação à Internet. Quando o período de validade da licença de utilização expira, da próxima vez que o utilizador acede ao documento protegido ou e-mail, o utilizador tem de ser reautenticar e reauthorized. 
+Um utilizador tem de ter uma licença de utilização válido para abrir o conteúdo para além do respetivo certificado de conta de direitos (RAC), que é um certificado que foi concedido quando o [ambiente do utilizador é inicializado](../understand-explore/how-does-it-work.md#initializing-the-user-environment) e, em seguida, renovar 31 dias.
+
+Durante a duração da licença de utilização, o utilizador não é reautenticar ou reauthorized para o conteúdo. Isto permite ao utilizador continuar a abrir o documento protegido ou o e-mail sem uma ligação à Internet. Quando o período de validade da licença de utilização expira, da próxima vez que o utilizador acede ao documento protegido ou e-mail, o utilizador tem de ser reautenticar e reauthorized. 
 
 Quando as mensagens de e-mail e documentos estão protegidas através da utilização de uma etiqueta ou um modelo que especifica as definições de proteção, pode alterar estas definições na etiqueta ou modelo sem ter de voltar a proteger o conteúdo. Se o utilizador acedeu já o conteúdo, as alterações entram em vigor após a respetiva licença de utilização expirou. No entanto, quando os utilizadores aplicar permissões personalizadas (também conhecido como uma política de direitos do ad-hoc) e estas permissões precisam de alterar depois do documento ou correio eletrónico está protegido, esse conteúdo deve ser protegido novamente com as permissões de novo. Permissões personalizadas para uma mensagem de e-mail são implementadas com a opção não reencaminhar.
 
@@ -172,7 +174,7 @@ A predefinição utilizar validade da licença período para um inquilino é 30 
     
     Para obter mais informações e orientações para configurar esta definição utilizando o PowerShell, consulte a ajuda para cada cmdlet.
 
-## <a name="see-also"></a>Veja Também
+## <a name="see-also"></a>Consulte Também
 [Configurar e gerir modelos do Azure Information Protection](configure-policy-templates.md)
 
 [Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados](configure-super-users.md)

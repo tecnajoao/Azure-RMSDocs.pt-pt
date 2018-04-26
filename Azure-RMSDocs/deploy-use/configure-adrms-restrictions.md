@@ -4,17 +4,17 @@ description: Conheça as limitações, pré-requisitos e recomendações se sele
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/14/2018
+ms.date: 04/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: a768b373ad5fbcbeb66e82d72ff263a7ea16e56b
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 8e9a29f01c3fe22a2eb30380510a3c532780fdf2
+ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>Requisitos e restrições de Tenha a sua própria chave (HYOK) para proteção do AD RMS
 
@@ -69,8 +69,6 @@ Além de não suportar as vantagens indicadas que obtém quando utiliza a prote�
     
     Quando os utilizadores selecionam **não reencaminhar** de uma opção de menu do Outlook, podem escolher de entre o Azure RMS ou o AD RMS, mas poderão não saber qual é a opção para selecionar para a sua mensagem de correio eletrónico. Se o AD RMS é utilizado quando deve ser utilizado o Azure RMS, as pessoas que partilha com externamente não é possível abrir estas mensagens de e-mail
 
-- Se configurar permissões de utilizador definida para Word, Excel, PowerPoint e Explorador de ficheiros: no Explorador de ficheiros, a proteção é sempre aplicada ao utilizar o Azure RMS em vez de proteção de HYOK (AD RMS). Esta limitação não se aplica à versão de pré-visualização atual do cliente.
-
 - Se os utilizadores escolherem uma etiqueta no Outlook que aplica a proteção do AD RMS e, em seguida, mudarem de ideias antes de enviar o e-mail e selecionarem uma etiqueta que aplica a proteção do Azure RMS, a última etiqueta selecionada não será aplicada. Os utilizadores verão a seguinte mensagem de erro: **O Azure Information Protection não pode aplicar esta etiqueta. Não tem permissão para efetuar esta ação.**
     
     A única solução é fechar a mensagem de e-mail e começar novamente. A mesma limitação é aplicável se os utilizadores escolherem primeiro uma etiqueta que aplica a proteção do Azure RMS e, em seguida, alterarem a etiqueta para uma que aplica a proteção do AD RMS.
@@ -111,7 +109,10 @@ Verifique se a sua implementação do AD RMS cumpre os requisitos seguintes para
 
 - Se partilhar documentos ou e-mails protegidos pelo AD RMS com outras pessoas fora da sua organização: o AD RMS está configurado para confianças explicitamente definidas numa relação ponto a ponto direta com as outras organizações utilizando domínios de utilizadores fidedignos (TUDs) ou confianças federadas criadas utilizando os Serviços de Federação do Active Directory (AD FS).
 
-- Os utilizadores têm uma versão do Office 2013 Pro Plus com Service Pack 1 ou do Office 2016 Pro Plus em execução no Windows 7 com Service Pack 1 ou posterior. Tenha em atenção que o Office 2010 e o Office 2007 não são suportados neste cenário.
+- Os utilizadores têm uma versão do Office que é o Office 2016 Professional Plus ou Office 2013 Professional Plus com Service Pack 1, com Windows 7 Service Pack 1 ou posterior. Tenha em atenção que o Office 2010 e o Office 2007 não são suportados neste cenário.
+    
+    
+    - Para o Office 2016, Microsoft Installer (. msi)-com base em edição: instalou [atualizar 4018295 para o Microsoft Office 2016, que foram lançadas nos 6 de Março de 2018](https://support.microsoft.com/en-us/help/4018295/march-6-2018-update-for-office-2016-kb4018295).
 
 > [!IMPORTANT]
 > Para cumprir a certeza elevada oferecida por este cenário, recomendamos que os servidores do AD RMS não estejam localizados na sua rede de perímetro e sejam utilizados apenas por computadores bem geridos (por exemplo, sem ser dispositivos móveis ou computadores de grupo de trabalho). 

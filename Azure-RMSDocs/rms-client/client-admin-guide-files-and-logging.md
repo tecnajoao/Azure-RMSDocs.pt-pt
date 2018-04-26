@@ -4,7 +4,7 @@ description: Informações sobre o registo de utilização e ficheiros do client
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 04/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: a60169a2c98a751c787a7ca4a8aee31f99a18590
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 13f82bc12fd77d4f145b059c2962af01094760c3
+ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guia do administrador: Ficheiros do cliente Azure Information Protection e registo de utilização do cliente
 
@@ -40,9 +40,9 @@ Ficheiros de registo de cliente e ficheiro da política atualmente instalada:
 
 O cliente regista a atividade de utilizador para o registo de eventos do Windows local **registos de serviços e aplicações** > **Azure Information Protection**. Os eventos incluem as seguintes informações:
 
-- Data, versão do cliente, ID de política
+- Versão do cliente, ID de política
 
-- Nome de utilizador da sessão iniciada, nome do computador
+- Endereços IP do utilizador com sessão iniciada
 
 - Nome e localização do ficheiro
 
@@ -77,9 +77,6 @@ O cliente regista a atividade de utilizador para o registo de eventos do Windows
     - Sistema (para iniciar sessão e transferir a política)
     
     - Predefinido
-        
-        Isto **predefinido** acção de origem é para o cliente de pré-visualização só e refere-se a etiqueta definida utilizando o **selecione a etiqueta predefinida** na política do Azure Information Protection.
-
     
 - Etiqueta antes e depois da ação 
     

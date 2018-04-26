@@ -4,7 +4,7 @@ description: Para configurar a classificação, a etiquetagem e a proteção, te
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,15 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: a0194b1cf6b1b134c3fd37ae9f042f117570d9ce
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: e8d641fd3165346ab052daad7ec7040b0d9e543f
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurar a política do Azure Information Protection
 
 >*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+
+>[!NOTE]
+> Este artigo reflete as atualizações mais recentes para o portal do Azure, que permitem-lhe criar uma etiqueta de forma independente da política de global ou de uma política de âmbito. A opção de publicar as políticas também é removida. Se o inquilino é ainda não atualizado para que estas alterações — por exemplo, pode ainda ver um **publicar** opção para o Azure Information Protection e não vir o **classificações** opção do menu — Aguarde alguns dias e em seguida, regresse a estas instruções.
 
 Para configurar a classificação, a etiquetagem e a proteção, tem de configurar a política do Azure Information Protection. Esta política é, em seguida, transferida para computadores que têm instalado o [cliente do Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
@@ -74,7 +77,7 @@ Para iniciar sessão no portal do Azure, para configurar e gerir o Azure Informa
 
 4. Pode ver o **início rápido** página que abre automaticamente na primeira vez que o se ligar ao serviço. Procurar os recursos sugeridos ou utilizar as outras opções de menu. Para configurar as etiquetas que os utilizadores podem selecionar, utilize o procedimento seguinte.
 
-Tempo junto de acesso a **Azure Information Protection** painel,-seleciona automaticamente o **políticas** > **política Global** opção para que possa Configure as etiquetas para todos os utilizadores. Poderá regressar ao **início rápido** página selecionando-à partir de **geral** menu.
+Acesso de tempo junto a **Azure Information Protection** painel,-seleciona automaticamente o **etiquetas** opção para que possa ver e configurar as etiquetas para todos os utilizadores. Poderá regressar ao **início rápido** página selecionando-à partir de **geral** menu.
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Como configurar a política do Azure Information Protection
 
@@ -82,21 +85,29 @@ Tempo junto de acesso a **Azure Information Protection** painel,-seleciona autom
 
 2. Se necessário, navegue para o **Azure Information Protection** painel: por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **Information Protection** no Caixa de filtro. Na lista de resultados, selecione **Azure Information Protection**. 
     
-    O **Azure Information Protection - política Global** painel abre-se automaticamente para que possa ver e editar a política global que obtêm todos os utilizadores. 
+    O **Azure Information Protection - etiquetas** painel abre-se automaticamente para que possa ver e editar as etiquetas disponíveis. As etiquetas podem ser disponibilizadas para todos os utilizadores, os utilizadores selecionados ou não adicionando ou removendo-los a partir de uma política.
+
+3. Para ver e editar as políticas, selecione **políticas** entre as opções de menu. Para ver e editar a política que todos os utilizadores obtêm, selecione o **Global** política. Para criar uma política personalizada para utilizadores selecionados, selecione **adicionar uma nova política**.
     
-    A política do Azure Information Protection contém os elementos seguintes que pode configurar:
+    Uma política do Azure Information Protection contém os elementos seguintes que pode configurar:
     
-    - Etiquetas que permitem tanto a si como aos utilizadores classificar documentos e e-mails.
+    - As etiquetas são incluídas que permitem que os administradores e utilizadores classificarem documentos e e-mails.
     
     - Título e descrição para a barra Information Protection que os utilizadores veem nas aplicações do Office.
     
-    - A opção para impor a classificação quando os utilizadores guardam documentos e enviam e-mails.
-    
     - A opção para definir uma etiqueta predefinida como ponto de partida para classificar documentos e e-mails.
+     
+    - A opção para impor a classificação quando os utilizadores guardam documentos e enviam e-mails.
     
     - A opção para solicitar aos utilizadores que indiquem um motivo quando estes selecionam uma etiqueta que tem um nível de sensibilidade inferior ao original.
     
     - A opção para etiquetar automaticamente uma mensagem de e-mail com base nos respetivos anexos.
+
+    - A opção de controlar se a barra do Information Protection é apresentada nas aplicações do Office.
+
+    - A opção para controlar se o botão não reencaminhar é apresentado no Outlook.
+    
+    - A opção para permitir que os utilizadores especifiquem os seus próprios permissões para documentos.
     
     - A opção para fornecer uma ligação de ajuda personalizada para os utilizadores.
 
@@ -108,9 +119,7 @@ Pode utilizar as etiquetas predefinidas sem alterações ou pode personalizá-la
 
 Pode criar qualquer número de etiquetas. No entanto, quando são iniciados obter demasiado elevado para os utilizadores vejam e selecione a etiqueta de direita de facilmente, crie políticas de âmbito para que os utilizadores veem apenas as etiquetas que são relevantes nos mesmos. Não há um limite superior para etiquetas que aplicar a proteção, o que é 500.
 
-Quando efetuar alterações num painel do Azure Information Protection, clique em **Guardar** para guardar as alterações ou clique em **Eliminar** para reverter para as últimas definições guardadas.
-
-Quando terminar de efetuar as alterações que pretende, clique em **Publicar**. 
+Quando efetuar alterações num painel do Azure Information Protection, clique em **Guardar** para guardar as alterações ou clique em **Eliminar** para reverter para as últimas definições guardadas. Quando guardar alterações numa política ou, se alterar as alterações para etiquetas que são adicionadas às políticas, essas alterações são automaticamente publicadas. Não há nenhum separado opção de publicar.
 
 O cliente do Azure Information Protection verifica se existem alterações sempre que uma das aplicações do Office suportada é iniciada e transfere as alterações como política do Azure Information Protection mais recente. Acionadores adicionais que atualizam a política do cliente:
 
@@ -136,6 +145,8 @@ Utilize as seguintes informações para ajudar a configurar a política do Azure
 
 - [Como criar uma nova etiqueta](configure-policy-new-label.md)
 
+- [Como adicionar ou remover uma etiqueta](configure-policy-add-remove-label.md)
+ 
 - [Como eliminar ou reordenar uma etiqueta](configure-policy-delete-reorder.md)
 
 - [Como alterar ou personalizar uma etiqueta existente](configure-policy-change-label.md)

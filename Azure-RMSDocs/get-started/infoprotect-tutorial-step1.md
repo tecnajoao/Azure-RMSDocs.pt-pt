@@ -4,30 +4,30 @@ description: Passo 1 de um tutorial de introdução rapidamente experimentar o A
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: cfeed994bb23469694e906132e175aabf925290e
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 5dcc63f6ffbd7402c94258fe0d8677908c603e1f
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="step-1-activate-protection"></a>Passo 1: Ativar proteção
  
 >*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 > [!NOTE]
->Mesmo que o serviço do Azure Rights Management está ativado para o seu inquilino, conclua este passo para confirmar o estado de ativação. As instruções incluem o início de sessão portal do Azure e criar painel do Azure Information Protection, para que está pronto para o passo 2.
+>Mesmo que a proteção está ativada para o seu inquilino, conclua este passo para confirmar o estado de ativação. As instruções incluem o início de sessão portal do Azure e criar painel do Azure Information Protection, para que está pronto para o passo 2.
 
-Quando o serviço Azure Rights Management está ativado, pode proteger documentos e e-mails mais confidenciais da sua organização. Também pode controlar a forma como estes documentos protegidos são utilizados quando partilhá-los com outras pessoas. 
+Quando a proteção se encontra ativada para o Azure Information Protection, pode proteger documentos mais confidenciais da sua organização e e-mails. Também pode controlar a forma como estes documentos protegidos são utilizados quando partilhá-los com outras pessoas. 
 
 Existem várias formas que pode ativar a proteção. Pode utilizar o PowerShell e os portais de admin. Mas para este tutorial, iremos utilizar o portal do Azure, o que é onde também configurar as etiquetas para utilizadores. 
 
-## <a name="to-activate-the-azure-rights-management-service"></a>Para ativar o serviço Azure Rights Management
+## <a name="to-activate-protection"></a>Para ativar a proteção
 
 1. Iniciar sessão para o [portal do Azure](https://portal.azure.com) utilizando a conta de administrador global para o seu inquilino. 
     
@@ -42,19 +42,19 @@ Existem várias formas que pode ativar a proteção. Pode utilizar o PowerShell 
     > [!TIP] 
     > Selecione **Afixar ao dashboard** para criar um mosaico do **Azure Information Protection** no seu dashboard. Assim, não terá de procurar o serviço da próxima vez que iniciar sessão no portal.
 
-4. Preste atenção às informações na página **Início rápido** que se abre automaticamente ao ligar ao serviço pela primeira vez. Pode regressar aqui mais tarde. Para este tutorial, selecione **ativação da proteção**. 
+4. Preste atenção às informações na página **Início rápido** que se abre automaticamente ao ligar ao serviço pela primeira vez. Pode regressar aqui mais tarde. Para este tutorial, selecione **GERIR** > **ativação da proteção**. 
 
-5. Pode agora ver se o serviço do Azure Rights Management está ativado para o seu inquilino. 
+5. Pode agora ver se a proteção está ativada para o seu inquilino. 
     
-    - Se o serviço está ativado, consulte a confirmação do seguinte:
+    - Se estiver ativada a proteção, consulte a confirmação do seguinte:
         
         ![Estado de proteção de informações do Azure para o Azure RMS](../media/info-protect-azurerms-activated.png)
         
-    - Se o serviço não está ativado, consulte que este serão refletidas nas informações de estado e a opção para ativar:
+    - Se não estiver ativada a proteção, consulte que este serão refletidas nas informações de estado e a opção para ativar:
         
         ![Estado de proteção de informações do Azure para o Azure RMS](../media/info-protect-azurerms-deactivated.png)
 
-6. Se o serviço não está ativado, selecione **ativar**. 
+6. Se não se encontra ativada a proteção, selecione **ativar**. 
 
     Quando a ativação estiver concluída, a barra de informações apresenta **ativação foi concluído com sucesso**.
 
@@ -62,7 +62,7 @@ Existem várias formas que pode ativar a proteção. Pode utilizar o PowerShell 
 
 |Se pretender mais informações|Informações adicionais|
 |--------------------------------|--------------------------|
-|Como ativar o Azure Rights Management|[Ativar o Azure Rights Management](../deploy-use/activate-service.md)|
+|Sobre a ativação da proteção|[Ativar o Azure Rights Management](../deploy-use/activate-service.md)|
 
 
 >[!div class="step-by-step"]

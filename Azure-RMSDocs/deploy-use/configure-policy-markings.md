@@ -4,21 +4,24 @@ description: Quando atribui uma etiqueta a um documento ou a um e-mail pode sele
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: c5b0c4c82fc35ab560b55c4884cf67fe126ede2b
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 0b8bef6acd02abb664b274bc04fe77eea06de356
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Como configurar uma etiqueta para marcas visuais para o Azure Information Protection
 
 >*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+
+>[!NOTE]
+> Este artigo reflete as atualizações mais recentes para o portal do Azure, que permitem-lhe criar uma etiqueta de forma independente da política de global ou de uma política de âmbito. A opção de publicar as políticas também é removida. Se o inquilino é ainda não atualizado para que estas alterações — por exemplo, pode ainda ver um **publicar** opção para o Azure Information Protection e não vir o **classificações** opção do menu — Aguarde alguns dias e em seguida, regresse a estas instruções.
 
 Quando atribui uma etiqueta a um documento ou a um e-mail pode selecionar várias opções para tornar a classificação escolhida facilmente visível. Estas marcas visuais são um cabeçalho, um rodapé e uma marca d'água.
 
@@ -56,9 +59,7 @@ Utilize as seguintes instruções para configurar marcas visuais para uma etique
     
     Por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
 
-2. Se a etiqueta que pretende configurar será aplicada a todos os utilizadores, permaneça o **Azure Information Protection - política Global** painel.
-    
-    Se a etiqueta que pretende configurar está a ser um [âmbito política](configure-policy-scope.md) para que o se aplica apenas a utilizadores selecionados do **políticas** selecção de menu, selecione **âmbito políticas**. Em seguida, selecione a política de âmbito do **políticas do Azure Information Protection - âmbito** painel.
+2. Do **classificações** > **etiquetas** opção do menu: no **Azure Information Protection - etiquetas** painel, selecione a etiqueta que contém o visual visuais que pretende adicionar ou alterar.
 
 3. No painel **Etiqueta**, na secção **Definir marcas visuais (como o cabeçalho ou o rodapé)** configure as definições para as marcas visuais que pretende e, em seguida, clique em **Guardar**:
     
@@ -67,8 +68,9 @@ Utilize as seguintes instruções para configurar marcas visuais para uma etique
     - Para configurar um rodapé: para **Documentos com esta etiqueta têm um rodapé**, selecione **Ativado** se pretender um rodapé e, caso contrário, clique em **Desativar**. Se selecionar **no**, em seguida, especifique o rodapé texto, tamanho, [tipo de letra](#setting-the-font-name), [cor](#setting-the-font-color)e o alinhamento para o rodapé.
     
     - Para configurar uma marca d’água: para **Documentos com esta etiqueta têm uma marca d’água**, selecione **Ativado** se pretender uma marca d’água e, caso contrário, clique em **Desativado**. Se selecionar **no**, em seguida, especifique a marca d'água texto, tamanho, [tipo de letra](#setting-the-font-name), [cor](#setting-the-font-color)e o alinhamento para o limite de tamanho.
+    
+Ao clicar em **guardar**, as alterações são automaticamente disponibilizadas a utilizadores e serviços. Já não é uma opção de publicar separado.
 
-4. Para disponibilizar as alterações aos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
 
 ## <a name="using-variables-in-the-text-string"></a>Utilizar variáveis na cadeia de texto
 
@@ -89,8 +91,6 @@ Pode utilizar as seguintes variáveis na cadeia de texto para o seu cabeçalho, 
 Exemplo: se especificar a cadeia `Document: ${item.name}  Classification: ${item.label}` para o rodapé de etiqueta **Geral**, o texto do rodapé aplicado a um documento chamado projeto.docx será **Documento: projeto.docx Classificação: Geral**.
 
 ## <a name="setting-different-visual-markings-for-word-excel-powerpoint-and-outlook"></a>Definição diferentes visuais para Word, Excel, PowerPoint e Outlook
-
-Esta definição está atualmente em pré-visualização e requer a versão de pré-visualização do cliente Azure Information Protection.
 
 Por predefinição, as marcas visuais que especificar são aplicadas entre Word, Excel, PowerPoint e Outlook. No entanto, pode especificar marcas visuais por tipo de aplicação do Office quando utilizar uma instrução de variável "If.App" na cadeia de texto e identifique o tipo de aplicação utilizando os valores **Word**, **Excel**, **PowerPoint**, ou **Outlook**. Também pode abbreviate estes valores e abbreiwhich é necessário se pretender especificar mais do que um na mesma instrução If.App.
 
@@ -122,11 +122,9 @@ Exemplos:
 
 ### <a name="setting-the-font-name"></a>O nome de tipo de letra da definição
 
-Esta definição está atualmente em pré-visualização.
+Calibri é o tipo de letra predefinido para cabeçalhos, rodapés de página e texto da marca de água. Se especificar um nome de tipo de letra alternativo, certifique-se de que está disponível nos dispositivos cliente que serão aplicadas as marcas visuais. 
 
-Calibri é o tipo de letra predefinido para cabeçalhos, rodapés de página e texto da marca de água. Se especificar um nome de tipo de letra alternativo, certifique-se de que está disponível nos dispositivos cliente que serão aplicadas as marcas visuais. Caso contrário, o tipo de letra que será utilizado não é determinística. 
-
-Se tiver a versão de pré-visualização do cliente Azure Information Protection e o tipo de letra especificado não está disponível, o cliente utilizará o tipo de letra Calibri.
+Se o tipo de letra especificado não está disponível, o cliente utilizará o tipo de letra Calibri.
 
 ### <a name="setting-the-font-color"></a>Definir a cor do tipo de letra
 

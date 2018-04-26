@@ -4,7 +4,7 @@ description: Ver o que é nova ou alterada uma versão do cliente Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/19/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ff9d6a4ce66deed8add68d7b1efc889ee9448f53
-ms.sourcegitcommit: 5866509c17872e274720d3014fe218ed95e86ee3
+ms.openlocfilehash: 02e54d3d1f324aa6d67e9fb81c3f5f83e785fe81
+ms.sourcegitcommit: c207a2f592d167a4a0b6c4427259683e2087f143
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: política de suporte e histórico da versão versão
 
@@ -41,11 +41,9 @@ Utilize as seguintes informações para ver o que é nova ou alterada para uma v
 >  
 > Para obter suporte técnico, consulte o [opções de suporte e recursos da Comunidade](../get-started/information-support.md#support-options-and-community-resources) informações. Também o incentivamos a interagir com a equipa do Azure Information Protection, no [site Yammer](https://www.yammer.com/askipteam/).
 
-## <a name="versions-later-than-110560"></a>Versões posteriores 1.10.56.0
+## <a name="version-12660"></a>Versão 1.26.6.0
 
-Se tiver uma versão do cliente que é posterior à 1.10.56.0, é uma versão de pré-visualização para fins de avaliação e teste.
-
-A versão de pré-visualização atual é **1.21.203.0** e tem as seguintes alterações desde a versão GA atual do cliente.
+**Lançada**: 17/04/2018
 
 Esta versão inclui o MSIPC versão 1.0.3403.1224 do cliente RMS.
 
@@ -53,11 +51,11 @@ Esta versão inclui o MSIPC versão 1.0.3403.1224 do cliente RMS.
 
 - O scanner do Azure Information Protection: módulo do PowerShell a que está incluído com o cliente tem novos cmdlets para instalar e Configurar scanner para que possam detetar, classificar e proteger ficheiros no seu arquivos de dados no local. Para obter instruções, consulte [implementar a análise do Azure Information Protection para classificar e proteger ficheiros automaticamente](../deploy-use/deploy-aip-scanner.md). 
 
-- Para aplicações do Office, a classificação automática e recomendada é executada continuamente em segundo plano, em vez de executar quando os documentos são guardados. Com esta alteração no comportamento, agora pode aplicar a classificação automática e recomendada para os documentos que estão armazenados no SharePoint Online. [Mais informações](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) 
-
 - Agora pode definir diferentes marcas visuais para o Word, Excel, PowerPoint e Outlook utilizando uma instrução de variável "If.App" na cadeia de texto e identifique o tipo de aplicação. [Mais informações](../deploy-use/configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
 
 - Suporte para o [definição de política](../deploy-use/configure-policy-settings.md), **apresentar a barra do Information Protection em aplicações do Office**. Quando esta definição estiver desativada, os utilizadores selecionar etiquetas do **proteger** botão no Friso.
+
+- Uma nova avançado definição de cliente (ainda em pré-visualização) para ativar a classificação a executar continuamente em segundo plano. Quando esta definição estiver ativada, para aplicações do Office, a classificação automática e recomendada é executada continuamente em segundo plano, em vez de executar quando os documentos são guardados. Com esta alteração no comportamento, agora pode aplicar a classificação automática e recomendada para os documentos que estão armazenados no SharePoint Online. [Mais informações](client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)
 
 - Uma nova avançado definição de cliente, de modo que Outlook não se aplica a etiqueta predefinida que está configurada na política do Azure Information Protection. Em vez disso, o Outlook pode aplicar uma etiqueta predefinida diferente ou sem etiqueta. [Mais informações](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook) 
 
@@ -76,14 +74,21 @@ Correções para estabilidade e para cenários específicos que incluem:
 
 - Quando dois organização através do Azure Information Protection partilhar identificados documentos e e-mails, as suas próprias etiquetas são mantidas e não são substituídas por etiquetas de outra organização.
 
-- Suporte para células no Excel que contêm cross-references, que anteriormente provocou a existência de danos no texto nessa célula.
+- Para Excel:
+        
+    - Suporte para a alteração de temas do Office ou temas do Windows, que anteriormente provocou o Excel para não apresentar todos os dados depois do tema foi alterado.
+        
+    - Suporte para as células que contenham cross-references, que anteriormente provocou a existência de danos no texto nessa célula.
+    
+    - Suporte para escrever carateres japonês, chinês ou coreano, que anteriormente fechado uma janela de, pelo que não foi possível selecionar estes carateres.
+    
+    - Suporte para comentários, que anteriormente fechado o comentário, enquanto que estava a ser escrito.
 
-- Suporte para a alteração de temas do Office ou temas do Windows, que anteriormente provocou o Excel para não apresentar todos os dados depois do tema foi alterado.
+- Para o PowerPoint: Suporte para coauthoring, que anteriormente pode provocar a perda de dados.
 
 - Agora podem ser inspecionados os ficheiros que tenham uma extensão de nome de ficheiro. XML para a classificação recomendada ou automática.
 
 - O Visualizador pode agora abrir baseado em texto ficheiros protegidos (. ptxt e. pxml) com mais de 20 MB. 
-
 - Evitar pendente Outlook quando são utilizados lembretes Outlook.
 
 - O arranque de configuração é concluída com êxito no Office 64 bits, para que possam proteger documentos e e-mails.

@@ -4,7 +4,7 @@ description: Informações e instruções para administradores para configurarem
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/27/2018
+ms.date: 04/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ecf30ece9370a732e0bf302be5733273b64eea1a
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 22182613f3bc12e5ed5aec0079c7b3e54ba8f69d
+ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="office-365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Configuração para clientes e serviços online utilizar o serviço Azure Rights Management
 
@@ -110,7 +110,7 @@ Dar aos utilizadores as seguintes instruções para que possam configurar o OneD
 
 3. Selecione o **definições** ícone. No **definições** painel, se o **friso** está definido como **desativar**, selecione esta definição para ativar o Friso.
 
-4. Para configurar o OneDrive todos os ficheiros de negócio para ser protegido, selecione o **biblioteca** separador a partir do Friso e, em seguida, selecione **definições da biblioteca**. Para selecionar todos os ficheiros numa pasta específica para ser protegido, selecione primeiro dessa pasta.
+4. Para configurar o OneDrive todos os ficheiros de negócio para ser protegido, selecione o **biblioteca** separador a partir do Friso e, em seguida, selecione **definições da biblioteca**.
 
 5. No **documentos > definições** na página de **permissões e gestão** secção, selecione **gestão de direitos de informação**.
 

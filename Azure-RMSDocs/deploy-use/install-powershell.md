@@ -4,7 +4,7 @@ description: Instruções para instalar o Windows PowerShell para o serviço Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/13/2018
+ms.date: 04/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f0365876af77c748cb15dc2ee89d871925591344
-ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
+ms.openlocfilehash: e69714fdb983d7235c7fca940bebc37a14892397
+ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installing-the-aadrm-powershell-module"></a>Instalar o módulo do AADRM PowerShell
 
@@ -51,10 +51,11 @@ Se estiver familiarizado com a galeria do PowerShell, consulte o artigo [introdu
 
 Para ver detalhes sobre o módulo AADRM na galeria do PowerShell, visite o [página AADRM](https://www.powershellgallery.com/packages/AADRM).
 
-Para instalar o módulo AADRM, inicie uma sessão do PowerShell e escreva:
+Para instalar o módulo AADRM, inicie uma sessão do PowerShell com o **executar como administrador** opção e escreva:
 
     Install-Module -Name AADRM
 
+Se estiver avisado sobre a instalação de um repositório não fidedigno, pode premir Y para confirmar. Em alternativa, prima N e configurar a galeria do PowerShell como um repositório fidedigno, utilizando o comando `Set-PSRepository -Name PSGallery -InstallationPolicy Trusted` e, em seguida, volte a executar o comando para instalar o módulo AADRM.  
 
 Se tiver uma versão anterior do módulo AADRM instalado a partir da galeria, a atualização para a versão mais recente, escrevendo:
 

@@ -1,32 +1,35 @@
 ---
 title: Eliminar ou reordenar uma etiqueta do Azure Information Protection
-description: Pode eliminar ou reordenar etiquetas que os utilizadores veem na barra do Information Protection, configurando-o na política do Azure Information Protection.
+description: Pode eliminar ou reordenar etiquetas do Azure Information Protection que os utilizadores veem.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: c24cd0bb9aae5b3a6b830151579d70561d56f7e0
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 6b790eddb4e111333cbd78fc0b8ec09963393494
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Como eliminar ou reordenar uma etiqueta para o Azure Information Protection
 
 >*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Pode eliminar ou reordenar etiquetas que os utilizadores veem na barra do Information Protection selecionando estas ações na política do Azure Information Protection.
+>[!NOTE]
+> Este artigo reflete as atualizações mais recentes para o portal do Azure, que permitem-lhe criar uma etiqueta de forma independente da política de global ou de uma política de âmbito. A opção de publicar as políticas também é removida. Se o inquilino é ainda não atualizado para que estas alterações — por exemplo, pode ainda ver um **publicar** opção para o Azure Information Protection e não vir o **classificações** opção do menu — Aguarde alguns dias e em seguida, regresse a estas instruções.
+
+Pode eliminar ou reordenar etiquetas do Azure Information Protection que os utilizadores veem nas aplicações do Office, ao selecionar estas ações para as etiquetas.
 
 ![Eliminar ou reordenar etiquetas na política do Azure Information Protection](../media/info-protect-contextmenu.png)
 
-Quando eliminar uma etiqueta que tenha sido aplicada a documentos e e-mails e, em seguida, publicar a política do Azure Information Protection, essa etiqueta é removida automaticamente estes documentos ou e-mails quando estão seguintes aberto pelo cliente Azure Information Protection.
+Quando elimina uma etiqueta que tenha sido aplicada a documentos e e-mails, os utilizadores veem **não definido** da etiqueta de estado quando estes documentos e e-mails são seguintes aberto pelo cliente Azure Information Protection. No entanto, permanece de informações a etiqueta nos metadados e ainda pode ser lidos pelos serviços procurarem estas informações de etiqueta.
 
-No entanto, se a etiqueta aplicada proteção, o que a proteção não é removida. As definições de proteção da etiqueta permanecem e apresenta na **modelos proteção**. Este modelo pode agora ser convertido para uma nova etiqueta ou ligado a uma etiqueta. Enquanto este modelo permanece, não é possível criar uma nova etiqueta com o mesmo nome que a etiqueta que tenha eliminado. Se pretender fazê-lo, tem as seguintes opções:
+Além disso, se a etiqueta eliminada aplicada proteção, o que a proteção não é removida. As definições de proteção da etiqueta permanecem e apresenta na **modelos proteção** secção. Este modelo pode agora ser convertido para uma nova etiqueta ou ligado a uma etiqueta. Enquanto este modelo permanece, não é possível criar uma nova etiqueta com o mesmo nome que a etiqueta que tenha eliminado. Se pretender fazê-lo, tem as seguintes opções:
 
 - Converta o modelo para uma etiqueta. 
     
@@ -38,7 +41,11 @@ No entanto, se a etiqueta aplicada proteção, o que a proteção não é removi
 
 Para obter mais informações sobre a gestão de modelos de proteção, consulte [configurar e gerir modelos do Azure Information Protection](configure-policy-templates.md).
 
-Antes de eliminar uma etiqueta, pondere desativá-la. Ao desativar uma etiqueta que tenha sido aplicada a documentos e e-mails, a etiqueta aplicada não é removida destes documentos e e-mails, mas já não é apresentada como uma etiqueta que os utilizadores podem selecionar na barra de Information Protection. Desativar uma etiqueta também lhe permite manter a configuração original. Se quiser que os utilizadores selecionem a etiqueta posteriormente, basta reativá-la.
+Antes de eliminar uma etiqueta, em vez disso, considere desativá-lo ou removê-lo da política:
+    
+- Ao desativar uma etiqueta que tenha sido aplicada a documentos e e-mails, a etiqueta aplicada não é removida destes documentos e e-mails. A etiqueta permanece na política, mas já não é apresentado como uma etiqueta que os utilizadores podem selecionar na barra de Information Protection. Desativar uma etiqueta permite-lhe manter a configuração original de quando poderá pretender que os utilizadores na mesma política selecione a etiqueta num momento posterior, quando simplesmente voltar a ativar a etiqueta.
+
+- Quando remover uma etiqueta de uma política, a etiqueta aplicada também não é removida destes documentos e e-mails. Mas, ao remover a etiqueta da política, esta fica disponível para adicionar esta etiqueta à política de outra. Para obter mais informações, consulte [adicionar ou remover uma etiqueta de ou para uma política do Azure Information Protection](configure-policy-add-remove-label.md).
 
 Ordene as etiquetas para que os utilizadores visualizem uma progressão lógica na barra Information Protection. Por exemplo, ordenar as etiquetas de acordo com o aumento de confidencialidade para que os utilizadores vejam a etiqueta menos confidencial em primeiro e a etiqueta mais confidencial em último. A [política predefinida](configure-policy-default.md) utiliza esta configuração e reflete o aumento de confidencialidade nos nomes das etiquetas.
 
@@ -52,19 +59,13 @@ Utilize as seguintes instruções para efetuar as alterações.
     
     Por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
 
-2. Se a etiqueta que pretende configurar será aplicada a todos os utilizadores, permaneça o **Azure Information Protection - política Global** painel.
-    
-    Se a etiqueta que pretende configurar está a ser um [âmbito política](configure-policy-scope.md) para que o se aplica apenas a utilizadores selecionados do **políticas** selecção de menu, selecione **âmbito políticas**. Em seguida, selecione a política de âmbito do **políticas do Azure Information Protection - âmbito** painel.
+2. Do **classificações** > **etiquetas** opção do menu: no **Azure Information Protection - etiquetas** painel, efetue um ou mais das seguintes ações: 
 
-3. Do **Azure Information Protection - política Global** painel, ou o **política:\<nome >** painel, efetue um ou mais das seguintes ações: 
+    - Para eliminar uma etiqueta: faça duplo clique ou selecione o menu de contexto (**...** ) para a etiqueta que pretende eliminar, clique em **eliminar esta etiqueta**e clique em **OK** para confirmar. 
 
-    - Para eliminar uma etiqueta: faça duplo clique ou selecione o menu de contexto (**…**) para a etiqueta que pretende eliminar, clique em **Eliminar esta etiqueta** e clique em **Sim** para confirmar. Em seguida, clique em **Guardar**. 
+    - Para desativar uma etiqueta: selecione a etiqueta que pretende desativar. No **etiqueta** painel, para **ativado**, selecione **desativar**e, em seguida, clique em **guardar**.
 
-    - Para desativar uma etiqueta: selecione a etiqueta que pretende desativar. No painel **Etiqueta**, para **Ativado**, clique em **Desativar**e, em seguida, clique em **Guardar**.
-
-    - Para reordenar uma etiqueta: faça duplo clique ou selecione o menu de contexto (**...** ) para a etiqueta que pretende reordenar, clique em **mover para cima** ou **mover para baixo** até que a etiqueta esteja na ordem em que pretende. Em seguida, clique em **Guardar**. 
-
-4. Para disponibilizar as alterações aos utilizadores, no painel **Azure Information Protection**, clique em **Publicar**.
+    - Para reordenar uma etiqueta: faça duplo clique ou selecione o menu de contexto (**...** ) para a etiqueta que pretende reordenar, clique em **mover para cima** ou **mover para baixo** até que a etiqueta esteja na ordem em que pretende.  
 
 ## <a name="next-steps"></a>Próximos passos
 

@@ -4,7 +4,7 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/02/2018
+ms.date: 04/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 08412c2c1cf1182b6d8bdae6e68d53d0b46f4b41
-ms.sourcegitcommit: b17432ed155394111c878eb57b5fa7adf9df9755
+ms.openlocfilehash: bb48a3e35d18c111d3df1907b7cc7a2832e0ae13
+ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia de administração: Configurações personalizadas para o cliente Azure Information Protection
 
@@ -28,19 +28,22 @@ Algumas destas definições requerem a edição do registo e algumas utilizam de
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>Como configurar as definições avançadas de configuração de cliente no portal
 
+>[!NOTE]
+> Estas instruções refletem as atualizações mais recentes para o portal do Azure. Se não vir um **classificações** opção do menu e ainda ver um **publicar** opção, as instruções de navegação corresponderá não exatamente o que vê. Se for esse o caso, considere regressar a este procedimento em alguns dias quando o seu inquilino está atualizado para que as alterações mais recentes.
+
 1. Se ainda não o tiver feito deste modo, numa nova janela do browser, [inicie sessão no portal do Azure](../deploy-use/configure-policy.md#signing-in-to-the-azure-portal)e, em seguida, navegue para o **Azure Information Protection** painel.
 
-2. No painel inicial do Azure Information Protection, selecione **Políticas de âmbito**.
+2. Do **classificações** > **etiquetas** opção do menu: selecione **políticas**.
 
-3. No painel **Azure Information Protection - Políticas de âmbito**, selecione o menu de contexto (**...** ) junto à política que contém as definições avançadas. Em seguida, selecione **Definições avançadas**.
+3. No **Azure Information Protection - políticas** painel, selecione o menu de contexto (**...** ) junto a política que contém as definições avançadas. Em seguida, selecione **Definições avançadas**.
     
     Pode configurar as definições avançadas para a Política global, bem como para as políticas de âmbito.
 
 4. No painel **Definições avançadas**, escreva o nome e o valor da definição avançada e, em seguida, selecione **Guardar e fechar**.
 
-5. Clique em **Publicar**e garanta que os utilizadores desta política reiniciam as aplicações do Office que tinham abertas.
+5. Certifique-se de que os utilizadores para esta política reinicie as aplicações do Office que tinha abrirem.
 
-6. Caso já não precise da definição e pretenda reverter para o comportamento predefinido: no painel **Definições avançadas**, selecione o menu de contexto (**...** ) junto à definição que já não é precisa e, em seguida, selecione **Eliminar**. Em seguida, clique em **Guardar e fechar**e publique novamente a política modificada.
+6. Caso já não precise da definição e pretenda reverter para o comportamento predefinido: no painel **Definições avançadas**, selecione o menu de contexto (**...** ) junto à definição que já não é precisa e, em seguida, selecione **Eliminar**. Em seguida, clique em **guarde e feche**.
 
 ## <a name="prevent-sign-in-prompts-for-ad-rms-only-computers"></a>Impedir pedidos de início de sessão para computadores só com AD RMS
 
@@ -52,7 +55,7 @@ Localize o nome do valor seguinte e, em seguida, defina os dados do valor como *
 
 Independentemente desta definição, o cliente do Azure Information Protection segue o [processo de deteção do serviço RMS](../rms-client/client-deployment-notes.md#rms-service-discovery) padrão, para localizar o respetivo cluster AD RMS.
 
-## <a name="suppress-the-initial-congratulations-welcome-page"></a>Suprimir as iniciais "parabéns!" página de boas-vindas
+## <a name="suppress-the-initial-congratulations-welcome-page"></a>Suprimir as iniciais "parabéns!" Página de boas-vindas
 
 Quando o cliente Azure Information Protection é instalado pela primeira vez num computador e um utilizador abre o Word, Excel, PowerPoint ou Outlook, um **Parabéns!** página é apresentada com instruções abreviadas como utilizar a nova barra do Information Protection para selecionar etiquetas. Pode suprimir esta página ao editar o registo.
 
@@ -151,8 +154,6 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 - Valor: **verdadeiro** para disponibilizar a opção de permissões personalizadas, ou **falso** para tornar esta opção indisponível
 
-> [!IMPORTANT]
-> A menos que utilize a versão de pré-visualização atual do cliente, não defina esta opção **falso** se tiver etiquetas que estão configuradas para permissões definidas pelo utilizador para Word, Excel, PowerPoint e Explorador de ficheiros. Se o fizer, quando a etiqueta é aplicada, os utilizadores não recebem um pedido para configurar as permissões personalizadas. O resultado é que o documento tem o nome, mas não está protegido como esperados.
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Ocultar permanentemente a barra do Azure Information Protection
 
@@ -171,9 +172,7 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 ## <a name="enable-recommended-classification-in-outlook"></a>Ativar a classificação recomendada no Outlook
 
-Esta opção de configuração está atualmente em pré-visualização e está sujeita a alterações.
-
-Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure.
+Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. Esta definição está em pré-visualização e pode ser alterado.
 
 Quando configurar uma etiqueta para a classificação recomendada, os utilizadores recebem um pedido para aceitar ou ignorar a etiqueta recomendada no Word, Excel e PowerPoint. Esta definição prolonga esta recomendação de etiqueta a apresentar também no Outlook.
 
@@ -186,8 +185,6 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Definir uma etiqueta predefinida diferente para o Outlook
 
-Esta opção de configuração está atualmente em pré-visualização e está sujeita a alterações. Além disso, esta opção de configuração requer a versão de pré-visualização do cliente.
-
 Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
 
 Quando configurar esta definição, Outlook não se aplica a etiqueta predefinida que está configurada na política de proteção de informações do Azure para a definição **selecione a etiqueta predefinida**. Em vez disso, o Outlook pode aplicar uma etiqueta predefinida diferente ou sem etiqueta.
@@ -198,23 +195,49 @@ Por isso que Outlook não se aplica a etiqueta predefinida, especifique **nenhum
 
 Para configurar esta definição avançada, introduza as cadeias seguintes:
 
-- Key: **OutlookDefaultLabel**
+- Chave: **OutlookDefaultLabel**
 
 - Valor: \< **etiqueta ID**> ou **None**
 
-## <a name="turn-off-classification-running-continuously-in-the-background"></a>Desativar a classificação executar continuamente em segundo plano
-
-Esta opção de configuração está atualmente em pré-visualização e está sujeita a alterações. Além disso, esta opção de configuração requer a versão de pré-visualização do cliente.
+## <a name="remove-not-now-for-documents-when-you-use-mandatory-labeling"></a>Remover "Não agora" para documentos quando utiliza a etiquetagem obrigatório
 
 Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
 
-Quando configurar esta definição, a versão de pré-visualização do cliente Azure Information Protection não verificar periodicamente documentos para as regras de condição que especificar. Em vez disso, as etiquetas automáticas e recomendadas são aplicadas no [mesma forma que a versão de disponibilidade geral do cliente Azure Information Protection](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied). Esta definição poderá ser necessário por motivos de desempenho.
+Quando utiliza o [definição de política](../deploy-use/configure-policy-settings.md) de **todos os documentos e e-mails devem ter uma etiqueta**, os utilizadores recebem Selecione uma etiqueta ao guardam primeiro um documento do Office e quando enviam mensagens de correio eletrónico. Para documentos, os utilizadores podem selecionar **não agora** temporariamente dispensar o pedido para selecionar uma etiqueta e voltar para o documento. No entanto, ele não é possível fechar o documento guardado sem etiquetagem-lo. 
+
+Quando configurar esta definição, remove o **não agora** opção para que os utilizadores devem selecionar uma etiqueta, quando o documento é guardado primeiro.
+
+Para configurar esta definição avançada, introduza as cadeias seguintes:
+
+- Chave: **PostponeMandatoryBeforeSave**
+
+- Valor: **Falso**
+
+## <a name="turn-on-classification-to-run-continuously-in-the-background"></a>Ativar a classificação a executar continuamente em segundo plano
+
+Esta opção de configuração está atualmente em pré-visualização e está sujeita a alterações.
+
+Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
+
+Quando configurar esta definição, altera o [predefinido comportamento](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) da forma como o cliente Azure Information Protection aplica etiquetas automáticas e recomendadas da seguinte forma:
+
+- A classificação automática aplica-se ao Word, Excel, PowerPoint e Outlook. Para documentos, a classificação automática é executada continuamente em segundo plano. Para o Outlook, a classificação automática é executada quando os e-mails são enviados. 
+    
+    Não é possível utilizar a classificação automática para documentos que foram anteriormente etiquetados de forma manual ou anteriormente automaticamente com a etiqueta com uma classificação superior. A exceção a este comportamento é se utilizar a análise do Azure Information Protection com o parâmetro de OverrideLabel definido no.
+
+- A classificação recomendada aplica-se ao Word, Excel e PowerPoint. Para estes documentos, recomendado execuções de classificação continuamente em segundo plano. Não é possível utilizar a classificação recomendada para o Outlook.
+    
+    Pode utilizar a classificação recomendada para os documentos que foram anteriormente com a etiqueta, com ou sem uma classificação superior. 
+
+Quando o cliente Azure Information Protection verifica periodicamente a documentos para as regras de condição que especificar, este comportamento permite a classificação automática e recomendada e proteção de documentos que estão armazenados no SharePoint Online. Ficheiros grandes também guardar mais rapidamente porque as regras de condição já estiver a executar. 
+
+As regras da condição não são executados em tempo real como tipos de utilizador. Em vez disso, executam periodicamente como uma tarefa em segundo plano se o documento está modificado.
 
 Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 - Chave: **RunPolicyInBackground**
 
-- Valor: **Falso**
+- Valor: **Verdadeiro**
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Migrar as etiquetas de Secure Islands e outras soluções de etiquetas
 
@@ -296,8 +319,6 @@ A definição de cliente avançado:
 
 
 ## <a name="label-an-office-document-by-using-an-existing-custom-property"></a>Etiqueta de um documento do Office através da utilização de uma propriedade personalizada existente
-
-Esta opção de configuração está atualmente em pré-visualização e está sujeita a alterações.
 
 > [!NOTE]
 > Se utilizar esta configuração e a configuração da secção anterior para migrar a partir de outra solução de etiquetas, a definição de migração de etiquetas tem precedência. 

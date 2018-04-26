@@ -4,21 +4,24 @@ description: Configurar as definições na política do Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 0ba75a1898d8618ebe38bcf2680e8a9623c79265
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: f4b79f66bc3f747285b2811327ea158bb83af03d
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Como configurar as definições de política do Azure Information Protection
 
 >*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+
+>[!NOTE]
+> Este artigo reflete as atualizações mais recentes para o portal do Azure, que permitem-lhe criar uma etiqueta de forma independente da política de global ou de uma política de âmbito. A opção de publicar as políticas também é removida. Se o inquilino é ainda não atualizado para que estas alterações — por exemplo, pode ainda ver um **publicar** opção para o Azure Information Protection e não vir o **classificações** opção do menu — Aguarde alguns dias e em seguida, regresse a estas instruções.
 
 Para além de título da barra de Information Protection e a descrição, existem algumas definições da política do Azure Information Protection que pode configurar independentemente de etiquetas:
 
@@ -32,11 +35,11 @@ Configurar estas definições:
     
     Por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
 
-2. Se as definições que pretende configurar serão aplicada a todos os utilizadores, permaneça o **Azure Information Protection - política Global** painel.
+2. Do **classificações** > **políticas** opção do menu: no **Azure Information Protection - políticas** painel, selecione **Global** se as definições que pretende configurar serão aplicada a todos os utilizadores.
     
-    Se as definições que pretende configurar estão disponíveis num [âmbito política](configure-policy-scope.md) para que se apliquem a utilizadores selecionados apenas, do **políticas** selecção de menu, selecione **âmbito políticas**. Em seguida, selecione a política de âmbito do **políticas do Azure Information Protection - âmbito** painel.
+    Se as definições que pretende configurar estão disponíveis num [âmbito política](configure-policy-scope.md) para que estas são aplicadas apenas a utilizadores selecionados, selecione a política de âmbito em vez disso.
 
-3. Do **Azure Information Protection - política Global** painel, ou o **política:\<nome >** painel, configure as definições:
+3. No **política** painel, configure as definições:
     
     - **Selecione a etiqueta predefinida**: quando definir esta opção, selecione a etiqueta para atribuir a documentos e e-mails que não tenham uma etiqueta. Não é possível definir uma etiqueta como predefinição se tiver etiquetas secundárias. 
     
@@ -50,14 +53,11 @@ Configurar estas definições:
         
         ![Aviso do Azure Information Protection se a nova classificação for inferior](../media/info-protect-lower-justification.png)
         
-        Esta opção não é aplicável a etiquetas secundárias.
+        Esta opção não é aplicável para sublabels.
         
     - **Para mensagens de e-mail com anexos, aplique uma etiqueta que corresponda à classificação mais elevada desses anexos**: quando define esta opção como **Recomendado**, é pedido aos utilizadores que apliquem uma etiqueta à respetiva mensagem de e-mail. A etiqueta é selecionada de forma dinâmica com base nas etiquetas de classificação aplicadas aos anexos e é selecionada a etiqueta de classificação mais elevada. O anexo tem de ser um ficheiro físico e não pode ser uma ligação a um ficheiro (por exemplo, uma ligação a um ficheiro no SharePoint ou no OneDrive para Empresas). Os utilizadores podem aceitar a recomendação ou ignorá-la. Quando define esta opção como **Ativado**, a etiqueta é automaticamente aplicada mas os utilizadores podem removê-la ou selecionar uma etiqueta diferente antes de enviarem o e-mail.  
     
     - **Apresentar a barra do Information Protection em aplicações do Office**: quando esta definição estiver desativada, os utilizadores não é possível selecionar etiquetas de uma barra no Word, Excel, PowerPoint e Outlook. Em vez disso, os utilizadores devem selecionar etiquetas do **proteger** botão no Friso. Quando esta definição está ativada, os utilizadores podem selecionar etiquetas da barra de ou no botão.
-        
-        > [!IMPORTANT]
-        > Esta definição está em pré-visualização e requer a versão de pré-visualização atual do cliente Azure Information Protection.
         
         Quando esta definição está ativada, esta pode ser utilizada em conjunto com um cliente avançado definição para que os utilizadores podem [permanentemente ocultar a barra do Azure Information Protection](../rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar) se escolherem não mostrar a barra. Pode fazê-lo ao desmarcar a **Mostrar barra** opção do **proteger** botão.
     
@@ -66,9 +66,6 @@ Configurar estas definições:
         Esta definição de política também pode ser configurada com um cliente avançado definir como um [personalização de cliente](../rms-client/client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook).
     
     - **Tornar disponível a opção de permissões personalizadas aos utilizadores**: quando esta definição está ativada, os utilizadores podem configurar as suas próprias definições de proteção e substituir as definições de proteção que tiver incluído com uma configuração de etiqueta. Quando esta definição estiver desativada, as opções de permissões personalizadas não estão disponíveis para os utilizadores selecionem o.
-        
-        > [!IMPORTANT]
-        > A menos que utilize a versão de pré-visualização atual do cliente, não utilize o **desativar** definição se tiver etiquetas que estão configuradas para o utilizador definido permissões para Word, Excel, PowerPoint e Explorador de ficheiros. Se o fizer, quando a etiqueta é aplicada, os utilizadores não recebem um pedido para configurar as permissões personalizadas. O resultado é que o documento tem o nome, mas não está protegido como esperados.
         
         Tenha em atenção que esta definição de política não tem efeito em permissões personalizadas que os utilizadores podem configurar a partir das opções de menu do Office. No entanto, também pode ser configurado com um cliente avançado definir como um [personalização de cliente](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users).
         
@@ -82,9 +79,9 @@ Configurar estas definições:
         
         Por exemplo, para o suporte técnico, poderá introduzir a página de documentação do Microsoft que inclui informações sobre como instalar e utilizar o cliente (**https://docs.microsoft.com/information-protection/rms-client/info-protect-client**) ou informações sobre a versão de lançamento (**https://docs.microsoft.com/information-protection/rms-client/client-version-release-history**). Em alternativa, poderá publicar a sua própria página Web com informações para que os utilizadores contactem o seu suporte técnico ou um vídeo com passos para que os utilizadores saibam como utilizar as etiquetas que configurou.
 
-3. Para guardar as alterações, clique em **Guardar**.
+3. Para guardar as alterações e disponibilizá-las aos utilizadores, clique em **guardar**.
 
-4. Para disponibilizar as alterações aos utilizadores, no painel inicial **Azure Information Protection**, clique em **Publicar**.
+Ao clicar em **guardar**, as alterações são automaticamente disponibilizadas a utilizadores e serviços. Já não é uma opção de publicar separado.
 
 ## <a name="next-steps"></a>Próximos passos
 

@@ -4,32 +4,35 @@ description: Passo 2 de um tutorial de introdução para experimentar o Azure In
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2017
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: fecf9887937d3d17347e85759e2ed10b124ae8a1
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: e2850a0f67f18febdbd98e59d01b2f28b00bff2a
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
-# <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passo 2: configurar e publicar a política do Azure Information Protection
+# <a name="step-2-configure-the-azure-information-protection-policy"></a>Passo 2: Configurar a política do Azure Information Protection
 
 >*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
+>[!NOTE]
+> Neste passo do tutorial reflete as atualizações mais recentes para o portal do Azure. Se não vir um **classificações** opção do menu e ainda ver um **publicar** opção, as instruções de navegação corresponderá não exatamente o que vê. Se for esse o caso, considere devolver para este passo do tutorial em alguns dias quando o seu inquilino está atualizado para que as alterações mais recentes.
+
 Apesar de o Azure Information Protection ser fornecido com uma política predefinida que pode utilizar sem configuração, iremos ver essa política e fazer algumas alterações.
 
-1. Continuar de [passo 1](infoprotect-tutorial-step1.md) e ainda no portal do Azure, selecione **política Global** para abrir o **política: Global** painel. Este painel abre-se automaticamente para as ligações subsequentes para o serviço e apresenta a política de Information Protection predefinida que é criada para o seu inquilino.
+1. Continuar de [passo 1](infoprotect-tutorial-step1.md) e ainda no portal do Azure, selecione **classificações** > **políticas** > **Global** para abrir o **política: Global** painel. Este painel mostra a política do Azure Information Protection predefinida que é criada para o seu inquilino.
 
 2. Demora alguns minutos familiarizing por si com as etiquetas que são apresentadas:
     
-    - Etiquetas para classificação: **Pessoal**, **Público**, **Geral**, **Confidencial** e **Altamente Confidencial**. Expanda as últimas duas etiquetas para mostrar etiquetas secundárias que fornecem exemplos de como uma classificação pode ter subcategorias:
+    - Etiquetas para classificação: **Pessoal**, **Público**, **Geral**, **Confidencial** e **Altamente Confidencial**. Expanda as últimas duas etiquetas para mostrar sublabels, que fornecem exemplos de como uma classificação pode ter subcategorias:
     
        > [!NOTE]
-       > A sua política predefinida pode ter um aspeto diferente da que é apresentada neste tutorial. Por exemplo, tem uma etiqueta com o nome **Interno** em vez de **Geral** e **Secreto** em vez de **Altamente Confidencial**. Talvez não tiver etiquetas secundárias denominadas **destinatários apenas**, ou não tem qualquer das etiquetas de todo. Estas alterações são porque existem versões diferentes da política predefinida, dependendo de que foi criada para o seu inquilino. Também é possível que tenha editado a política antes de iniciar o tutorial.
+       > A sua política predefinida pode ter um aspeto diferente da que é apresentada neste tutorial. Por exemplo, tem uma etiqueta com o nome **Interno** em vez de **Geral** e **Secreto** em vez de **Altamente Confidencial**. Talvez não dispõe de sublabels denominados **destinatários apenas**, ou não tem qualquer das etiquetas de todo. Estas alterações são porque existem versões diferentes da política predefinida, dependendo de que foi criada para o seu inquilino. Também é possível que tenha editado a política antes de iniciar o tutorial.
        > 
        > Se a sua política predefinida tiver um aspeto diferente, ainda pode utilizar este tutorial, mas tenha em consideração estas alterações quando utilizar as instruções e as imagens que se seguem. Se quiser modificar a sua política predefinida para que corresponda à atual, veja [Política do Azure Information Protection predefinida](../deploy-use/configure-policy-default.md).
     
@@ -57,7 +60,7 @@ Para o nosso tutorial, vamos alterar algumas dessas definições de política pa
 
 ## <a name="creating-a-new-label-for-protection-visual-markers-and-a-condition-to-prompt-for-classification"></a>Criar uma nova etiqueta para proteção, marcas visuais e uma condição para a linha de comandos para classificação
 
-Vamos agora criar uma nova etiqueta secundária **confidencial**.
+Vamos agora criar um novo sublabel para **confidencial**.
 
 1. Clique com botão direito do **confidencial** etiqueta e selecione **adicionar uma etiqueta secundária**.
     
@@ -127,7 +130,7 @@ Vamos agora criar uma nova etiqueta secundária **confidencial**.
 
 13. Clique em **guardar** neste **subetiqueta** painel. Em seguida, no painel **Política:Global**, clique em **Guardar** novamente.
     
-    Agora, pode ver a nova etiqueta secundária, que é configurada para proteção e marcas visuais. Por exemplo:
+    Agora, ver o seu novo sublabel, que é configurado para proteção e marcas visuais. Por exemplo:
 
     ![Tutorial de início rápido do Azure Information Protection, passo 3 - política predefinida configurada](../media/info-protect-policy-configuredv2.png)
     
@@ -135,10 +138,6 @@ Vamos agora criar uma nova etiqueta secundária **confidencial**.
     
     ![Passo 3 do tutorial de início rápido do Azure Information Protection – definições configuradas](../media/info-protect-settings-configuredv2.png)
     
-14. Agora que fizemos as nossas alterações e guardámo-las, queremos disponibilizá-las aos utilizadores, por isso, clique em **publicar**e clique em **Sim** para confirmar.
-
-    ![Passo 3 do tutorial de início rápido do Azure Information Protection – publicar a política configurada](../media/info-protect-publish.png)
-
 Pode fechar o portal do Azure ou deixá-lo aberto para experimentar opções de configuração adicionais depois de concluir este tutorial.
 
 Agora que conhece o que é a política predefinida e efetuou algumas alterações, o próximo passo é instalar o cliente do Azure Information Protection.

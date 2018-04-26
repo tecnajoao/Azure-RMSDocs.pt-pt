@@ -4,7 +4,7 @@ description: Identifique as aplicações que utilizam APIs de RMS para suportar 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/28/2018
+ms.date: 04/23/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 27187bce4247b2807b75ddc75839daf81a45ed7a
-ms.sourcegitcommit: aca094874febf59eddf84b0da325f4f1f61404d1
+ms.openlocfilehash: b304f65d70361b3fdb4dbf93291f408be93d363f
+ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Aplicações que suportam a proteção de dados do Azure Rights Management
 
@@ -45,8 +45,8 @@ Informações acerca das colunas da tabela:
 |**Sistema operativo do dispositivo**|Word, Excel, PowerPoint|PDF protegido|E-mail|Outros tipos de ficheiro|
 |-------------------------------|---------------------------|-----------------|---------|--------------------|
 |**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Online do Office (ver documentos protegidos) [[1]](#footnote-1)<br /><br />Browser da Web [[2]](#footnote-2)|Cliente do Azure Information Protection para Windows <br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />Aplicação de partilha RMS|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Browser da Web [[3]](#footnote-3)<br /><br />Windows Mail [[4]](#footnote-4) |Cliente do Azure Information Protection para Windows: texto, imagens, pfile<br /><br />Aplicação de partilha RMS para Windows: texto, imagens, pfile<br /><br />Plug-in do SealPath RMS para AutoCAD: DWG|
-|**iOS**|Office Mobile (ver e editar documentos protegidos)<br /><br />Office Online [[1]](#footnote-1)<br /><br />GigaTrust<br /><br /> TITUS Docs<br /><br />Browser da Web [[2]](#footnote-2)|Aplicação de proteção de informações do Azure (ver documentos protegidos)<br /><br /> Foxit Reader<br /><br />TITUS Docs|Aplicação de proteção de informações do Azure (ver a mensagem de e-mail protegida)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook para iPad e iPhone [[4]](#footnote-4)<br /><br />TITUS Mail <br /><br />Browser da Web [[3]](#footnote-3)|Aplicação de Azure Information Protection (proteger texto e as imagens de visualização)<br /><br />TITUS Docs: Pfile|
-|**Android**|GigaTrust App for Android<br /><br />Office Online [[1]](#footnote-1)<br /><br />Office Mobile (ver e editar documentos protegidos) <br /><br />Browser da Web [[2]](#footnote-2)|Aplicação de proteção de informações do Azure (ver documentos protegidos) <br /><br />GigaTrust App for Android<br /><br />Foxit Reader|9Folders [[4]](#footnote-4)<br /><br />Aplicação de proteção de informações do Azure (ver os e-mails protegidos)<br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook para Android [[4]](#footnote-4)<br /><br />Samsung Email (S3 e posterior) [[4]](#footnote-4)<br /><br />TITUS Classification for Mobile <br /><br />Browser da Web [[3]](#footnote-3)|Aplicação de proteção de informações do Azure (ver texto protegido e imagens)|
+|**iOS**|Office Mobile (ver e editar documentos protegidos)<br /><br />Office Online [[1]](#footnote-1)<br /><br />GigaTrust<br /><br /> TITUS Docs<br /><br />Browser da Web [[2]](#footnote-2)|Aplicação de proteção de informações do Azure (ver documentos protegidos)<br /><br /> Foxit Reader<br /><br />TITUS Docs|Aplicação de proteção de informações do Azure (ver a mensagem de e-mail protegida)<br /><br />Trabalho blackBerry<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook para iPad e iPhone [[4]](#footnote-4)<br /><br />TITUS Mail <br /><br />Browser da Web [[3]](#footnote-3)|Aplicação de Azure Information Protection (proteger texto e as imagens de visualização)<br /><br />TITUS Docs: Pfile|
+|**Android**|GigaTrust App for Android<br /><br />Office Online [[1]](#footnote-1)<br /><br />Office Mobile (ver e editar documentos protegidos) <br /><br />Browser da Web [[2]](#footnote-2)|Aplicação de proteção de informações do Azure (ver documentos protegidos) <br /><br />GigaTrust App for Android<br /><br />Foxit Reader|9Folders [[4]](#footnote-4)<br /><br />Aplicação de proteção de informações do Azure (ver os e-mails protegidos)<br /><br />Trabalho blackBerry <br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook para Android [[4]](#footnote-4)<br /><br />Samsung Email (S3 e posterior) [[4]](#footnote-4)<br /><br />TITUS Classification for Mobile <br /><br />Browser da Web [[3]](#footnote-3)|Aplicação de proteção de informações do Azure (ver texto protegido e imagens)|
 |**macOS**|Office 2011 (apenas para AD RMS)<br /><br />Office 2016 para Mac<br /><br />Office Online [[1]](#footnote-1)<br /><br />Browser da Web [[2]](#footnote-2)|Foxit Reader<br /><br />(Ver documentos protegidos) de aplicação de partilha RMS|Outlook 2011 (apenas para AD RMS)<br /><br />Outlook 2016 para Mac<br /><br />Outlook para Mac <br /><br />Browser da Web [[3]](#footnote-3)|(Visualização protegido texto, imagens, ficheiros protegidos genericamente) de aplicação de partilha RMS|
 |**Windows 10 Mobile**|Aplicações móveis do Office (ver documentos protegidos com o Azure RMS) <br /><br />Browser da Web [[2]](#footnote-2)|Não suportado|Citrix WorxMail <br /><br />Correio do Outlook (ver os e-mails protegidos) <br /><br />Browser da Web [[3]](#footnote-3)|Não suportado|
 |**Windows RT**|Office 2013 RT<br /><br />Office Online [[1]](#footnote-1)<br /><br />Browser da Web [[2]](#footnote-2)|Não suportado|Outlook 2013 RT<br /><br />Aplicação Correio para Windows<br /><br />Browser da Web [[3]](#footnote-3)<br /><br />Windows Mail [[4]](#footnote-4)|Siemens JT2Go: ficheiros JT|

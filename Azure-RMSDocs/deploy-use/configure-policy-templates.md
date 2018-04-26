@@ -4,7 +4,7 @@ description: Configurar e gerir modelos de gestão de direitos do portal do Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 4f0cc5be090a425c7be28c81f20b85eef485772d
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: d26b69bc06a4c0d4f9c097e791b8b10bfc9feb1d
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurar e gerir modelos do Azure Information Protection
 
@@ -30,11 +30,11 @@ Modelos de gestão de direitos agora estão integrados com a política do Azure 
 
 **Quando tem uma subscrição que inclui a classificação, a etiquetagem e a proteção (Azure Information Protection P1 ou P2):**
 
-- Modelos de gestão de direitos que não estão integrados com as etiquetas para o seu inquilino são apresentados no **modelos proteção** secção após as etiquetas a **Azure Information Protection - todos os - entre a vista de política**  painel. Pode converter estes modelos das etiquetas, ou pode ligar aos mesmos quando configurar a proteção para as etiquetas. 
+- Modelos de gestão de direitos que não estão integrados com as etiquetas para o seu inquilino são apresentados no **modelos proteção** secção após as etiquetas no **Azure Information Protection - etiquetas** painel. Para navegar para este painel, selecione o **classificações** > **etiquetas** opção do menu. Pode converter estes modelos das etiquetas, ou pode ligar aos mesmos quando configurar a proteção para as etiquetas. 
 
 **Quando tem uma subscrição que inclui apenas proteção (uma subscrição do Office 365 que inclui o serviço Azure Rights Management):**
 
-- Modelos de gestão de direitos para o seu inquilino são apresentados no **Azure Information Protection - todos os - entre a vista de política** painel, no **modelos proteção** secção. Não são apresentadas etiquetas. Consulte também as definições de configuração que são específicas para classificação e etiquetagem, mas estas definições não tem qualquer efeito nos seus modelos ou não podem ser configuradas. 
+- Modelos de gestão de direitos para o seu inquilino são apresentados no **modelos proteção** secção no **Azure Information Protection - etiquetas** painel. Para navegar para este painel, selecione o **classificações** > **etiquetas** opção do menu. Não são apresentadas etiquetas. Consulte também as definições de configuração que são específicas para classificação e etiquetagem, mas estas definições não tem qualquer efeito nos seus modelos ou não podem ser configuradas. 
 
 ## <a name="default-templates"></a>Modelos predefinidos
 
@@ -66,11 +66,11 @@ Se tiver adquirido a subscrição algum tempo há, os modelos predefinidos são 
 Pode mudar o nome (e reconfigurar) estes modelos predefinidos, ao utilizar o portal do Azure.
 
 >[!NOTE]
->Se não vir os modelos predefinidos no **Azure Information Protection - todos os - entre a vista de política** painel, estes são convertidos para as etiquetas ou ligados a uma etiqueta. Ainda existem como modelos, mas no portal do Azure, pode vê-los como parte de uma configuração de etiqueta, que inclui as definições de proteção para uma chave de nuvem. Pode confirmar sempre que modelos tem o inquilino, executando o [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) do [módulo AADRM PowerShell](administer-powershell.md).
+>Se não vir os modelos predefinidos no **Azure Information Protection - etiquetas** painel, estes são convertidos para as etiquetas ou ligados a uma etiqueta. Ainda existem como modelos, mas no portal do Azure, pode vê-los como parte de uma configuração de etiqueta, que inclui as definições de proteção para uma chave de nuvem. Pode confirmar sempre que modelos tem o inquilino, executando o [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) do [módulo AADRM PowerShell](administer-powershell.md).
 >
 >Pode converter manualmente modelos, conforme explicado na secção posterior, [converter modelos etiquetas](#to-convert-templates-to-labels)e, em seguida, renomeie-os se pretender. Ou estes são convertidos automaticamente para si se a política de Azure Information Protection predefinida criada recentemente e o serviço Azure Rights Management para o seu inquilino foi ativado nessa altura.
 
-Modelos são arquivados apresentam como indisponíveis no **Azure Information Protection - todos os - entre a vista de política** painel. Não não possível selecionar estes modelos para etiquetas, mas pode ser convertidos para etiquetas.
+Modelos são arquivados apresentam como indisponíveis no **Azure Information Protection - etiquetas** painel. Não não possível selecionar estes modelos para etiquetas, mas pode ser convertidos para etiquetas.
 
 ## <a name="considerations-for-templates-in-the-azure-portal"></a>Considerações para modelos no portal do Azure
 
@@ -96,24 +96,21 @@ Antes de editar estes modelos ou convertê-las em etiquetas, certifique-se de qu
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Para configurar os modelos na política do Azure Information Protection
 
-1. Se ainda não o tiver feito, abra uma nova janela do browser e [inicie sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal). Em seguida, navegue para o **Azure Information Protection - todos os - entre a vista de política** painel.
+>[!NOTE]
+> Estas instruções refletem as atualizações mais recentes para o portal do Azure. Se não vir um **classificações** opção do menu e ainda ver um **publicar** opção, as instruções de navegação corresponderá não exatamente o que vê. Se for esse o caso, considere regressar a este procedimento em alguns dias quando o seu inquilino está atualizado para que as alterações mais recentes.
+
+1. Se ainda não o tiver feito, abra uma nova janela do browser e [inicie sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal). Em seguida, navegue para o **Azure Information Protection - etiquetas** painel.
     
     Por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
 
-2. Do **Azure Information Protection - todos os - entre a vista de política** painel, localize o modelo que pretende configurar:
+2. Do **classificações** > **etiquetas** opção do menu: no **Azure Information Protection - etiquetas** painel, expanda **proteção modelos**e, em seguida, localize o modelo que pretende configurar.
     
-    - Quando tiver uma subscrição que inclui a classificação, etiquetagem e proteção: expanda **modelos proteção** após as etiquetas.
-    
-    - Quando tem uma subscrição que inclui apenas proteção: os modelos são apresentados como etiquetas.
+3. Selecione o modelo e o **etiqueta** painel, pode alterar o nome do modelo e a descrição, se necessário, editando o **nome a apresentar etiqueta** e **Descrição**. Em seguida, selecione **proteção** que tem um valor de **Azure (chave de nuvem)**, para abrir o **proteção** painel.
 
-4. Selecione o modelo e o **etiqueta** painel, pode alterar o nome do modelo e a descrição, se necessário, editando o **nome a apresentar etiqueta** e **Descrição**. Em seguida, selecione **proteção** que tem um valor de **Azure (chave de nuvem)**, para abrir o **proteção** painel.
-
-5. No painel **Proteção**, pode alterar as permissões, a expiração de conteúdo e as definições de acesso offline. Para obter mais informações, sobre a configuração das definições de proteção, veja [Como configurar uma etiqueta para a proteção do Rights Management](configure-policy-protection.md)
+4. No painel **Proteção**, pode alterar as permissões, a expiração de conteúdo e as definições de acesso offline. Para obter mais informações, sobre a configuração das definições de proteção, veja [Como configurar uma etiqueta para a proteção do Rights Management](configure-policy-protection.md)
     
     Clique em **OK** para manter as suas alterações e, no painel **Etiqueta**, clique em **Guardar**.
     
-    Não é necessário clicar em **publicar** para que esta alteração.
-
 > [!NOTE]
 > Também pode editar um modelo utilizando o **Editar modelo** botão no **proteção** painel se tiver configurado uma etiqueta para utilizar um modelo predefinido. Desde que não existem outra etiqueta também utiliza o modelo selecionado, este botão converte o modelo de uma etiqueta e leva-o para o passo 5. Para obter mais informações sobre o que acontece quando os modelos são convertidos em etiquetas, consulte a secção seguinte.
 
@@ -141,25 +138,36 @@ Ao converter um modelo numa etiqueta:
 
 ## <a name="to-create-a-new-template"></a>Criar um novo modelo
 
+>[!NOTE]
+> Estas instruções refletem as atualizações mais recentes para o portal do Azure. Se não vir um **classificações** opção do menu e ainda ver um **publicar** opção, as instruções de navegação corresponderá não exatamente o que vê. Se for esse o caso, considere regressar a este procedimento em alguns dias quando o seu inquilino está atualizado para que as alterações mais recentes.
+
 Quando cria uma nova etiqueta com a definição de proteção da **Azure (chave de nuvem)**, nos bastidores, esta ação cria um novo modelo personalizado que possam ser acedido por serviços e aplicações que se integram com o Rights Management modelos.
 
-1. Se o novo modelo for para todos os utilizadores, navegue para o **Azure Information Protection - política Global** painel.
-    
-     Se o novo modelo será um modelo departamental, de modo a que se aplica apenas a utilizadores selecionados do **políticas** selecção de menu, selecione **âmbito políticas**. Em seguida, crie ou selecione o [âmbito política](configure-policy-scope.md) do **políticas do Azure Information Protection - âmbito** painel.
+1. Do **classificações** > **etiquetas** opção do menu: no **Azure Information Protection - etiquetas** painel, selecione **adicionar uma nova etiqueta** .
 
-2. Do **Azure Information Protection - política Global** painel, ou o **política:\<nome >** painel, clique em **adicionar uma nova etiqueta**.
+2. No painel **Etiqueta**, mantenha a predefinição de **Ativado**: **Ligado** para publicar este novo modelo, ou altere esta definição para **Desligado** para criar o modelo como arquivado. Em seguida, insira um nome de etiqueta e descrição para o nome do modelo e a descrição.
 
-3. No painel **Etiqueta**, mantenha a predefinição de **Ativado**: **Ligado** para publicar este novo modelo, ou altere esta definição para **Desligado** para criar o modelo como arquivado. Em seguida, insira um nome de etiqueta e descrição para o nome do modelo e a descrição.
-
-4. Para **Defina permissões para documentos e e-mails que contenham esta etiqueta**, selecione **Proteger** e, em seguida, selecione **Proteção**:
+3. Para **Defina permissões para documentos e e-mails que contenham esta etiqueta**, selecione **Proteger** e, em seguida, selecione **Proteção**:
     
      ![Configurar a proteção para uma etiqueta do Azure Information Protection](../media/info-protect-protection-bar-configured.png)
 
-5. No painel **Proteção**, pode alterar as permissões, a expiração de conteúdo e as definições de acesso offline. Para obter mais informações sobre a configuração destas definições de proteção, veja [Como configurar uma etiqueta para a proteção do Rights Management](configure-policy-protection.md)
+4. No painel **Proteção**, pode alterar as permissões, a expiração de conteúdo e as definições de acesso offline. Para obter mais informações sobre a configuração destas definições de proteção, veja [Como configurar uma etiqueta para a proteção do Rights Management](configure-policy-protection.md)
     
     Clique em **OK** para manter as suas alterações e, no painel **Etiqueta**, clique em **Guardar**.
+    
+    No **Azure Information Protection - etiquetas** painel, agora, ver a nova etiqueta apresentada com o **PROTEÇÃO** coluna para indicar que contém as definições de proteção. Estas definições de proteção são apresentadas como modelos para aplicações e serviços que suportam o serviço Azure Rights Management.
 
-6. No iniciais **Azure Information Protection** painel, clique em **publicar**.
+5. Se o modelo criado recentemente não deve estar disponível para todos os utilizadores, tem de adicionar a etiqueta recentemente criada para uma política diferente de política Global:
+    
+    a. Do **classificações** > **políticas** opção de menu, selecione **políticas**.
+    
+    b. Selecione **adicionar uma nova política** e, em seguida, no **política** painel, especifique um nome para o âmbito de utilizadores e uma descrição. Em seguida, utilize a seguinte opção para selecionar o subconjunto de utilizadores: **selecionar quais os utilizadores ou grupos de obter esta política. Grupos tem de ser ativado por correio eletrónico.**
+    
+    Em alternativa, se já existir uma política para o subconjunto de utilizadores, selecione essa política em vez disso, o **política** painel.
+    
+    c. Do **política** painel, selecione **etiquetas de adicionar ou remover**. Em seguida, no **política: Adicionar ou remover etiquetas** painel, selecione a etiqueta recém-criado que contém as definições de proteção e clique em **OK**.
+    
+    d. Reverter o **política** painel, clique em **guardar**.  
 
 
 ## <a name="next-steps"></a>Próximos passos

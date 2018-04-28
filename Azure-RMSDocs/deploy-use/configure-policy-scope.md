@@ -4,7 +4,7 @@ description: Para configurar definições e etiquetas diferentes para utilizador
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 04/27/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 78fb739de9af22f2e1ab8414482ac16b68a1893e
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: b87f7c50a0be335a70c2f68fc0916f4d49fce8e0
+ms.sourcegitcommit: bb183cd3730f5dda34bb00d02f9984ce4a50f5c6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Como configurar a política do Azure Information Protection para utilizadores específicos com políticas de âmbito
 
@@ -27,7 +27,9 @@ ms.lasthandoff: 04/23/2018
 
 Quando a política do Azure Information Protection é transferida para computadores com o [cliente do Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018) instalado, todos os utilizadores recebem as definições e as etiquetas da política predefinida ou as alterações que configurou para a política global. Se quiser complementá-las para utilizadores específicos, ao ter definições e etiquetas diferentes, terá de criar uma **política de âmbito** configurada para esses utilizadores.
 
-Todos os utilizadores recebem a política global, a qual contém o título da barra e a descrição, as definições e as etiquetas globais do Information Protection. Se tiver configurado políticas de âmbito para utilizadores específicos, estes recebem definições e etiquetas adicionais. 
+Para aplicações que suportam o cliente Azure Information Protection, todos os utilizadores recebem a política global, que contém o título da barra de Information Protection e descrição, as definições globais e etiquetas global. Se tiver configurado políticas de âmbito para utilizadores específicos, estes recebem definições e etiquetas adicionais. 
+
+Tenha em atenção que, além das aplicações de ambiente de trabalho Office que suportam o cliente Azure Information Protection, etiquetas também são suportadas com o PowerShell e a análise do Azure Information Protection. Isto significa que pode criar e configurar as políticas de âmbito para contas com comandos do Powershell ou scanner. 
 
 As políticas de âmbito, tal como as etiquetas, são ordenadas no portal do Azure. Se um utilizador estiver configurado para vários âmbitos, será calculada uma política eficaz para esse utilizador antes de ser transferida. De acordo com a ordem das políticas, a última definição de política é aplicada. O utilizador vê as etiquetas da política global e, simultaneamente, etiquetas adicionais das políticas de âmbito às quais pertence. 
 

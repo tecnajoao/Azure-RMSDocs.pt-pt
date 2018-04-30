@@ -16,6 +16,7 @@
 ### [Política predefinida](configure-policy-default.md)
 ### [Configurar as definições de política](configure-policy-settings.md)
 ### [Criar uma nova etiqueta](configure-policy-new-label.md)
+### [Adicionar ou remover uma etiqueta](configure-policy-add-remove-label.md)
 ### [Eliminar ou reordenar uma etiqueta](configure-policy-delete-reorder.md)
 ### [Alterar uma etiqueta](configure-policy-change-label.md)
 ### [Configurar a proteção](configure-policy-protection.md)

@@ -4,7 +4,7 @@ description: Recursos para administradores que incluem informações sobre novas
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/23/2018
+ms.date: 05/01/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9eafa28bb6a259c7f845f54268a30c8cdc6fc988
-ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
+ms.openlocfilehash: 3ed8c53c235520d53c3d0a3666aa4aba45c174f5
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informações e suporte do Azure Information Protection
 
@@ -26,7 +26,7 @@ Utilize os seguintes recursos para o ajudar a obter mais informações, implemen
 
 |Para efetuar este procedimento...|… .do isto:|
 |----------------|---------------|
-|Consulte utilizado com mais frequência a documentação|Leia as páginas de início cinco:<br /><br /> - [Configurar direitos de utilização do Azure Rights Management](../deploy-use/configure-usage-rights.md)<br /> - [Perguntas mais frequentes sobre do Azure Information Protection](../get-started/faqs.md)<br />- [Requisitos do Azure Information Protection](requirements.md) <br />- [Implementar a análise do Azure Information Protection](../deploy-use/deploy-aip-scanner.md)<br />- [A política do Azure Information Protection predefinida](../deploy-use/configure-policy-default.md)|
+|Consulte utilizado com mais frequência a documentação|Leia as páginas de início cinco:<br /><br /> - [O que é o Azure Information Protection?](../understand-explore/what-is-information-protection.md)<br /> - [Instalar o cliente Azure Information Protection para os utilizadores](../rms-client/client-admin-guide-install.md)<br />- [Requisitos do Azure Information Protection](requirements.md) <br />- [Implementar a análise do Azure Information Protection](../deploy-use/deploy-aip-scanner.md)<br />- [A política do Azure Information Protection predefinida](../deploy-use/configure-policy-default.md)|
 |Envolver a equipa de produto e os seus parceiros|Visite o [Yammer site](https://www.yammer.com/AskIPTeam) para o Azure Information Protection.|
 |Solicitar uma nova funcionalidade ou alteração de funcionalidade|Visite o [voz do utilizador](https://msip.uservoice.com) site para o Azure Information Protection.|
 |Receba tweets do grupo de produtos|Siga [Microsoft Mobility@MSFTMobility ](https://twitter.com/MSFTMobility) no Twitter.|
@@ -37,8 +37,6 @@ Utilize os seguintes recursos para o ajudar a obter mais informações, implemen
 A equipa de produtos do Azure Information Protection publica anúncios sobre as novas versões e atualizações no [Blogue sobre a Segurança e a Mobilidade nas Grandes Empresas – em inglês](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection). Estas publicações no blogue completam a documentação do produto e as informações de suporte.
 
 Além disso, um resumo das alterações à documentação está publicado por mês para o [blogue técnica do Azure Information Protection](https://aka.ms/AIPblog). Estas atualizações da documentação incluem informações de quaisquer novos lançamentos, as atualizações para suportar as instruções bem como as correções e clarificações versões existentes. Estas mensagens são intituladas: "**atualização documentação de proteção de informações do Azure para \<mês ano >**".
-
-Resumos anteriores foram publicados no [blogue Enterprise Mobility and Security](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates). 
 
 ## <a name="support-options-and-community-resources"></a>Opções de suporte e recursos da comunidade
 As secções seguintes fornecem informações sobre as opções de suporte e de resolução de problemas e os recursos da comunidade.

@@ -4,24 +4,21 @@ description: Configurar as definições na política do Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: f4b79f66bc3f747285b2811327ea158bb83af03d
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: cfdb1537ad5444ef478c18380b535f38b5f7c667
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Como configurar as definições de política do Azure Information Protection
 
 >*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
->[!NOTE]
-> Este artigo reflete as atualizações mais recentes para o portal do Azure, que permitem-lhe criar uma etiqueta de forma independente da política de global ou de uma política de âmbito. A opção de publicar as políticas também é removida. Se o inquilino é ainda não atualizado para que estas alterações — por exemplo, pode ainda ver um **publicar** opção para o Azure Information Protection e não vir o **classificações** opção do menu — Aguarde alguns dias e em seguida, regresse a estas instruções.
 
 Para além de título da barra de Information Protection e a descrição, existem algumas definições da política do Azure Information Protection que pode configurar independentemente de etiquetas:
 

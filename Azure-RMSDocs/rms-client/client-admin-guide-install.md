@@ -4,7 +4,7 @@ description: As instruções e informações para os administradores implementar
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2a3daec687739956bb0b7bd235b69cea30039171
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: d52026fcffd3a3a0b51e361e6671f247eac5296d
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guia do administrador: Instalar o cliente Azure Information Protection para os utilizadores
 
@@ -71,20 +71,6 @@ Em seguida, verifique os pré-requisitos adicionais que podem ser necessários p
     Mesmo que ainda não tenha configurado esta definição de política de grupo **Lista de suplementos geridos**, poderá ter de a configurar se receber relatórios a informar que o suplemento Microsoft Azure Information Protection será desativado. Quando este suplemento é desativado, os utilizadores não veem a barra Azure Information Protection na aplicação do Office.
     
     Para obter mais informações sobre esta definição de política de grupo, veja [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off) (Os suplementos não são carregados devido às definições de política de grupo dos programas do Office 2013 e do Office 2016).
-
-- Para versões do Office 16.0.8628.2010 e posterior (clique para execução): Ativar o suporte legacy monitores
-    
-    Nota: Esta pré-requisito não é necessária para a versão de pré-visualização atual do cliente Azure Information Protection. 
-    
-    Para impedir a apresentação de barra de Azure Information Protection fora de aplicações do Office para estas versões do Office, poderá ter de ativar o suporte legacy para monitores. Quando a barra de não ser apresentados corretamente neste cenário, poderá ver que apresentado como **AdxTaskPane**. 
-    
-    Para configurar as aplicações do Office para este requisito: **ficheiro** > **opções** > **geral**  >   **As opções de Interface de utilizador**:
-    
-    - Se vir a opção **quando utilizar apresenta várias** está definido como **otimizar para melhor aspeto**, selecione **otimizar para compatibilidade (é necessário um reinício aplicação)** em vez disso. 
-        
-    - Se vir que a opção **utilizar das melhores definições para os meus apresentação** é selecionado, remover esta seleção.
-    
-    - Se vir nenhuma destas opções, é necessária nenhuma configuração adicional.
 
 > [!IMPORTANT]
 > A instalação do cliente do Azure Information Protection requer permissões administrativas locais.
@@ -198,7 +184,7 @@ Se utilizar o Intune enquanto método de implementação de software, utilize es
     |Versão do Office|Sistema operativo|Software|Ação|
     |--------------------|--------------|----------------|---------------------|
     |Office 2016|Todas as versões suportadas|64 bits: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32 bits: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> Versão: 1.0|Instalar|
-    |Office 2013|Todas as versões suportadas|64-bit: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32-bit: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Versão: 1.0|Instalar|
+    |Office 2013|Todas as versões suportadas|64 bits: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32 bits: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Versão: 1.0|Instalar|
     |Office 2010|Todas as versões suportadas|[Assistente de Início de Sessão do Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Versão: 2.1|Instalar|
     |Office 2010|Windows 8.1 e Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Número da versão incluído no nome de ficheiro: v3|Instalar se KB2843630 ou KB2919355 não está instalado|
     |Office 2010|Windows 8 e Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Número da versão incluído no nome de ficheiro: v3|Instalar|
@@ -211,16 +197,9 @@ Se utilizar o Intune enquanto método de implementação de software, utilize es
 
 ## <a name="how-to-install-the-azure-information-protection-scanner"></a>Como instalar o scanner do Azure Information Protection
 
-Atualmente, a versão de disponibilidade geral (DG) do scanner Azure Information Protection é uma transferência individual com o nome **AzInfoProtectionScanner.exe** no [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Em versões posteriores do scanner serão incluídas no cliente do Azure Information Protection.
+O módulo do PowerShell incluído com o cliente Azure Information Protection tem cmdlets para instalar e Configurar scanner. No entanto, para utilizar scanner, que tem de instalar a versão completa do cliente e não é possível instalar apenas o módulo do PowerShell.
 
-A versão de pré-visualização atual do cliente Azure Information Protection também inclui o scanner do Azure Information Protection. 
-
-O módulo do PowerShell incluído com o scanner e o cliente de pré-visualização tem de cmdlets para instalar e Configurar scanner.
-
-Para instalar o cliente para scanner, siga as mesmas instruções nas secções anteriores. Tenha em atenção que, se não precisarem de todos os componentes do cliente, como o suplemento do Office e Visualizador, pode instalar apenas o módulo do PowerShell. Por exemplo, pode executar o executável com `PowerShellOnly=true /quiet`.
-
-Depois de instalar o cliente, em seguida, está pronto para instalar scanner. Para obter instruções, consulte [implementar a análise do Azure Information Protection para classificar e proteger ficheiros automaticamente](../deploy-use/deploy-aip-scanner.md).
-
+Para instalar o cliente para scanner, siga as mesmas instruções nas secções anteriores. Em seguida, está pronto para instalar scanner. Para obter instruções, consulte [implementar a análise do Azure Information Protection para classificar e proteger ficheiros automaticamente](../deploy-use/deploy-aip-scanner.md).
 
 ## <a name="next-steps"></a>Próximos passos
 Agora que instalou o cliente do Azure Information Protection, veja o seguinte para obter informações adicionais que poderá precisar para suportar este cliente:

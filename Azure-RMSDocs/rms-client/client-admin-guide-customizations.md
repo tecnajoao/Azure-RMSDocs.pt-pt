@@ -4,7 +4,7 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/23/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: bb48a3e35d18c111d3df1907b7cc7a2832e0ae13
-ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
+ms.openlocfilehash: 80f0b29b05f3a63972f7bc45e14ee721cf289a86
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia de administração: Configurações personalizadas para o cliente Azure Information Protection
 
@@ -27,9 +27,6 @@ Utilize as seguintes informações para as configurações avançadas que poder�
 Algumas destas definições requerem a edição do registo e algumas utilizam definições avançadas que tem de configurar no portal do Azure e, em seguida, publicar para os clientes transferirem.  
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>Como configurar as definições avançadas de configuração de cliente no portal
-
->[!NOTE]
-> Estas instruções refletem as atualizações mais recentes para o portal do Azure. Se não vir um **classificações** opção do menu e ainda ver um **publicar** opção, as instruções de navegação corresponderá não exatamente o que vê. Se for esse o caso, considere regressar a este procedimento em alguns dias quando o seu inquilino está atualizado para que as alterações mais recentes.
 
 1. Se ainda não o tiver feito deste modo, numa nova janela do browser, [inicie sessão no portal do Azure](../deploy-use/configure-policy.md#signing-in-to-the-azure-portal)e, em seguida, navegue para o **Azure Information Protection** painel.
 

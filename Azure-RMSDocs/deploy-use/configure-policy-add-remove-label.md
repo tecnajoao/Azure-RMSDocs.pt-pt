@@ -4,24 +4,21 @@ description: Adicionar ou remover uma etiqueta de Azure Information Protection p
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
-ms.openlocfilehash: 73152d2202096775d315f874b30269c89213f8e1
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: ad74efff44738c5475e988d861fda8d93686e794
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-or-remove-a-label-to-or-from-an-azure-information-protection-policy"></a>Adicionar ou remover uma etiqueta de ou para uma política do Azure Information Protection
 
 >*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
->[!NOTE]
-> Este artigo reflete as atualizações mais recentes para o portal do Azure, que permitem-lhe criar uma etiqueta de forma independente da política de global ou de uma política de âmbito. A opção de publicar as políticas também é removida. Se o inquilino é ainda não atualizado para que estas alterações — por exemplo, pode ainda ver um **publicar** opção para o Azure Information Protection e não vir o **classificações** opção do menu — Aguarde alguns dias e em seguida, regresse a estas instruções.  
 
 Depois de criar uma etiqueta de Azure Information Protection, pode, em seguida, adicioná-la a uma política para que fique disponível para os utilizadores. Se a etiqueta para todos os utilizadores, adicione a etiqueta para a política global. Se a etiqueta é para um subconjunto de utilizadores, adicione a etiqueta a uma política de âmbito. Atualmente, uma etiqueta pode ser adicionada a apenas uma política. Para adicionar um sublabel, a etiqueta principal tem de ser na mesma política ou na política de global.
 

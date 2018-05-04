@@ -4,24 +4,21 @@ description: Passo 2 de um tutorial de introdução para experimentar o Azure In
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: e2850a0f67f18febdbd98e59d01b2f28b00bff2a
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: 3b9dbbc16fe26d7f111d37dbcd28d6477372a5d9
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-2-configure-the-azure-information-protection-policy"></a>Passo 2: Configurar a política do Azure Information Protection
 
 >*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
->[!NOTE]
-> Neste passo do tutorial reflete as atualizações mais recentes para o portal do Azure. Se não vir um **classificações** opção do menu e ainda ver um **publicar** opção, as instruções de navegação corresponderá não exatamente o que vê. Se for esse o caso, considere devolver para este passo do tutorial em alguns dias quando o seu inquilino está atualizado para que as alterações mais recentes.
 
 Apesar de o Azure Information Protection ser fornecido com uma política predefinida que pode utilizar sem configuração, iremos ver essa política e fazer algumas alterações.
 

@@ -4,7 +4,7 @@ description: Conheça os direitos específicos utilizados quando protege ficheir
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/09/2018
+ms.date: 05/02/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 297e530406c33ca50d1e8287509e4c3a6f3c7a80
-ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
+ms.openlocfilehash: f5006ef3d0401b6a7f018be1f65979c079cf04fc
+ms.sourcegitcommit: fdcfc006108f61fcd380ff6f3c3208c78ecf4056
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuração de direitos de utilização para o Azure Rights Management
 
@@ -40,7 +40,7 @@ A **Constante ou o Valor de API** é o nome do SDK para uma chamada à API MSIPC
 |Direito de utilização|Descrição|Implementação|
 |-------------------------------|---------------------------|-----------------|
 |Nome comum: **Editar Conteúdo, Editar** <br /><br />Codificação na política: **DOCEDIT**|Permite ao utilizador modificar, reorganizar, formato, ou filtrar o conteúdo dentro da aplicação. Não concede o direito para guardar a cópia editada.<br /><br />No Word, este direito não é suficiente para ativar ou desativar **controlar as alterações**, ou utilizar todas as a controlar alterações funcionalidades como um revisor. Para utilizar todas as alterações de controlar as opções de requer o seguinte direito: **controlo total**. |Direitos personalizados do Office: como parte das opções **Alterar** e **Controlo Total**. <br /><br />Nome no portal clássico do Azure: **Editar Conteúdo**<br /><br />Nome no portal do Azure: **editar conteúdo, editar (DOCEDIT)**<br /><br />Nome em modelos do AD RMS: **Editar** <br /><br />Constante ou valor de API: não aplicável.|
-|Nome comum: **Guardar** <br /><br />Codificação na política: **EDIT**|Permite ao utilizador guardar o documento na sua localização atual.<br /><br />Nas aplicações do Office, este direito também permite que o utilizador modifique o documento.|Direitos personalizados do Office: como parte das opções **Alterar** e **Controlo Total**. <br /><br />Nome no portal clássico do Azure: **Guardar Ficheiro**<br /><br />Nome no portal do Azure: **guardar (editar)**<br /><br />Nome em modelos do AD RMS: **Guardar** <br /><br />Valor ou constante de API: `IPC_GENERIC_WRITE L"EDIT"`|
+|Nome comum: **Guardar** <br /><br />Codificação na política: **EDIT**|Permite ao utilizador guardar o documento na localização atual.<br /><br />Nas aplicações do Office, este direito também permite que o utilizador modifique o documento e guardá-lo para uma nova localização e um novo nome, se a proteção Rights Management suporta nativamente o formato de ficheiro selecionado. A restrição de formato do ficheiro garante que a proteção original não é possível remover o ficheiro.|Direitos personalizados do Office: como parte das opções **Alterar** e **Controlo Total**. <br /><br />Nome no portal clássico do Azure: **Guardar Ficheiro**<br /><br />Nome no portal do Azure: **guardar (editar)**<br /><br />Nome em modelos do AD RMS: **Guardar** <br /><br />Valor ou constante de API: `IPC_GENERIC_WRITE L"EDIT"`|
 |Nome comum: **Comentário** <br /><br />Codificação na política: **COMMENT**|Ativa a opção para adicionar anotações ou comentários ao conteúdo.<br /><br />Este direito está disponível no SDK, disponível como uma política ad hoc no módulo AzureInformationProtection e Proteção RMS para o Windows PowerShell e foi implementado em certas aplicações de fornecedores de software. No entanto, não é amplamente utilizado e atualmente não é suportado por aplicações do Office.|Direitos personalizados do Office: não implementados. <br /><br />Nome no portal clássico do Azure: não implementado.<br /><br />Nome no portal do Azure: não implementado.<br /><br />Nome nos modelos do AD RMS: não implementado. <br /><br />Valor ou constante de API: `IPC_GENERIC_COMMENT L"COMMENT`|
 |Nome comum: **Guardar Como, Exportar** <br /><br />Codificação na política: **EXPORT**|Ativa a opção para guardar o conteúdo com um nome de ficheiro diferente (Guardar Como). <br /><br />Para documentos do Office e o cliente Azure Information Protection, o ficheiro pode ser guardado sem proteção e também proteger com permissões e as novas definições. Estes das ações permitidas significam que um utilizador que tenha este direito pode alterar ou remover uma etiqueta de Azure Information Protection a partir de um documento protegido ou e-mail. <br /><br />Este direito também permite que o utilizador efetue outras opções de exportação em aplicações, tais como **Enviar para o OneNote**.<br /><br /> Nota: se este direito não for concedido, as aplicações do Office permitirão que os utilizadores guardem um documento com um novo nome se o formato de ficheiro selecionado suportar nativamente a proteção do Rights Management.|Direitos personalizados do Office: como parte das opções **Alterar** e **Controlo Total**. <br /><br />Nome no portal clássico do Azure: **Exportar Conteúdo (Guardar Como)** <br /><br />Nome no portal do Azure: **guardar como, exportar (EXPORTAR)**<br /><br />Nome em modelos do AD RMS: **Exportar (Guardar Como)** <br /><br />Valor ou constante de API: `IPC_GENERIC_EXPORT L"EXPORT"`|
 |Nome comum: **Reencaminhar** <br /><br />Codificação na política: **FORWARD**|Ativa a opção para reencaminhar uma mensagem de e-mail e para adicionar destinatários às linhas **Para** e **Cc**. Este direito não se aplica a documentos; apenas a mensagens de e-mail.<br /><br />Não permite que o reencaminhador conceda direitos a outros utilizadores como parte da ação de reencaminhar. <br /><br />Quando conceder este direito, também concede o direito **Editar Conteúdo, Editar** (nome comum) para garantir que o e-mail original é enviado como parte da mensagem de e-mail reencaminhada e não como anexo. Este direito também é necessário quando envia um e-mail para outra organização que utilize o cliente do Outlook ou Outlook Web App. Ou, para os utilizadores na sua organização que estão excluídos utilizando o Azure Rights Management service porque que implementou [controlos de inclusão](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy).|Direitos personalizados do Office: negados ao utilizar a política padrão **Não Reencaminhar**.<br /><br />Nome no portal clássico do Azure: **Reencaminhar**<br /><br />Nome no portal do Azure: **reencaminhar (DIRETA)**<br /><br />Nome em modelos do AD RMS: **Reencaminhar** <br /><br />Valor ou constante de API: `IPC_EMAIL_FORWARD L"FORWARD"`|
@@ -174,7 +174,7 @@ A predefinição utilizar validade da licença período para um inquilino é 30 
     
     Para obter mais informações e orientações para configurar esta definição utilizando o PowerShell, consulte a ajuda para cada cmdlet.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 [Configurar e gerir modelos do Azure Information Protection](configure-policy-templates.md)
 
 [Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados](configure-super-users.md)

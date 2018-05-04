@@ -4,25 +4,22 @@ description: Pode alterar ou refinar qualquer uma das etiquetas que os utilizado
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
-ms.openlocfilehash: 9bd9c249cdd969a2742390831c2feef8d515b837
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: a8c745ac51c34139792367d55c5a83592c191571
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-change-or-customize-an-existing-label-for-azure-information-protection"></a>Como alterar ou personalizar uma etiqueta existente para o Azure Information Protection
 
 >*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
->[!NOTE]
-> Este artigo reflete as atualizações mais recentes para o portal do Azure, que permitem-lhe criar uma etiqueta de forma independente da política de global ou de uma política de âmbito. A opção de publicar as políticas também é removida. Se o inquilino é ainda não atualizado para que estas alterações — por exemplo, pode ainda ver um **publicar** opção para o Azure Information Protection e não vir o **classificações** opção do menu — Aguarde alguns dias e em seguida, regresse a estas instruções.
- 
 Pode alterar ou refinar qualquer uma das etiquetas que os utilizadores veem na proteção de informações de barra ou do **proteger** botão no friso Office, configurando as etiquetas no portal do Azure.
 
 Por exemplo, pode alterar um nome de etiqueta ou sublabel, a descrição, a cor e a ordem. Pode alterar se a etiqueta aplica marcas visuais como um rodapé ou marca de água. Pode alterar também se aplica-se a etiqueta da proteção e classificação recomendada ou automática.

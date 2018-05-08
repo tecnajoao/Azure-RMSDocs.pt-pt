@@ -4,7 +4,7 @@ description: Como as aplicações do Office de utilizador final, tais como o Wor
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/29/2018
+ms.date: 05/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f7ca9a9e85a1d76d2d7bdc505c884ee9f02ddb42
-ms.sourcegitcommit: d1987b1abb65f3466bbbb8f8c28e30668d629e50
+ms.openlocfilehash: caf89d6df51adcd556db319a8140cbe936102ef3
+ms.sourcegitcommit: fa64f9c2a4d367d7586d64def0fd02764ad2e00b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 05/06/2018
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Como as aplicações do Office e serviços suportam o Azure Rights Management 
 
@@ -46,7 +46,7 @@ Quando utiliza o Exchange Online ou Exchange Server, pode configurar opções de
 
 -   **Regras de proteção** para clientes do Outlook que um administrador configura para aplicar automaticamente modelos de proteção de e-mail mensagens para os destinatários especificados. Por exemplo, quando os e-mails internos são enviados para o seu departamento jurídico, estes só podem ser lidos por membros do departamento jurídico e não podem ser reencaminhados. Os utilizadores veem a proteção aplicada à mensagem de e-mail antes de a enviar e, por predefinição, podem removê-la se decidirem que não é necessária. Os e-mails são encriptados antes de serem enviados. Para obter mais informações, consulte [Regras de Proteção do Outlook](https://technet.microsoft.com/library/dd638178%28v=exchg.150%29.aspx) e [Criar uma Regra de Proteção do Outlook](https://technet.microsoft.com/library/dd638196%28v=exchg.150%29.aspx) na biblioteca do Exchange.
 
--   **Regras de transporte** que um administrador configura para aplicar automaticamente modelos de proteção de e-mail mensagens. Estas regras são baseadas em propriedades, tais como remetente, destinatário, assunto da mensagem e conteúdo. Estas regras são semelhantes no conceito às regras de proteção, mas não permitem que os utilizadores que remova a proteção. As regras podem ser aplicadas ao Outlook na web e e-mails que são enviados por dispositivos móveis. Além disso, estas regras não encriptam as mensagens de e-mail antes de serem enviados do cliente. Para obter mais informações, consulte [Criar uma Regra de Proteção de Transporte](https://technet.microsoft.com/library/dd302432.aspx) na biblioteca do Exchange.
+-   **Regras do fluxo de correio** que um administrador configura para aplicar automaticamente modelos de proteção de e-mail mensagens. Estas regras são baseadas em propriedades, tais como remetente, destinatário, assunto da mensagem e conteúdo. Estas regras são semelhantes no conceito às regras de proteção, mas não permitem que os utilizadores que remova a proteção. As regras podem ser aplicadas ao Outlook na web e e-mails que são enviados por dispositivos móveis. Além disso, estas regras não encriptam as mensagens de e-mail antes de serem enviados do cliente. Para obter mais informações, consulte [Criar uma Regra de Proteção de Transporte](https://technet.microsoft.com/library/dd302432.aspx) na biblioteca do Exchange.
 
 -   **Políticas de prevenção (DLP) de perda de dados** que contêm conjuntos de condições para filtrar as mensagens de e-mail e tomar ações para ajudar a evitar perda de dados para conteúdos sensíveis ou confidenciais. Exemplos de conteúdos sensíveis ou confidenciais incluem informações pessoais informações ou cartão de crédito. As sugestões de política podem ser utilizadas quando são detetados dados confidenciais, para alertar utilizadores que poderão ter para aplicar a proteção. Para obter mais informações, consulte [prevenção de perda de dados] (https://technet.microsoft.com/library/jj150527(v=exchg.160\). aspx) na biblioteca do Exchange.
 
@@ -63,7 +63,7 @@ Se estiver pronto para configurar o Exchange para a IRM:
 
 ## <a name="sharepoint-online-and-sharepoint-server"></a>SharePoint Online e SharePoint Server
 
-Quando utiliza o SharePoint Online ou o SharePoint Server, pode proteger documentos ao utilizar a funcionalidade de gestão (IRM) de direitos de informações do SharePoint. Esta permite funcionalidade administradores protegerem as listas ou bibliotecas para que quando um utilizador verificações Escalamento um documento, o ficheiro transferido é protegido para que apenas as pessoas autorizadas podem ver e utilizar o ficheiro de acordo com as políticas de proteção de informações que especificou. Por exemplo, o ficheiro poderá ser só de leitura, poderá desativar a cópia de texto, impedir guardar uma cópia local e evitar imprimir o ficheiro.
+Quando utiliza o SharePoint Online ou o SharePoint Server, pode proteger documentos ao utilizar a funcionalidade de gestão (IRM) de direitos de informações do SharePoint. Esta permite funcionalidade administradores protegerem as listas ou bibliotecas para que quando um utilizador der saída um documento, o ficheiro transferido é protegido para que apenas as pessoas autorizadas podem ver e utilizar o ficheiro de acordo com as políticas de proteção de informações que especificou. Por exemplo, o ficheiro poderá ser só de leitura, poderá desativar a cópia de texto, impedir guardar uma cópia local e evitar imprimir o ficheiro.
 
 Documentos do Word, o PowerPoint, o Excel e o PDF suportam esta proteção IRM do SharePoint. Por predefinição, a proteção é restrita à pessoa que transfere o documento. Pode alterar esta predefinição com uma opção de configuração que expande a proteção em todos os utilizadores que têm acesso a documentos do SharePoint, ou a um grupo que especificar.
 
@@ -78,11 +78,11 @@ Se utilizar o SharePoint Server, pode utilizar esta proteção IRM ao implementa
 > [!NOTE]
 > Atualmente, existem algumas limitações ao utilizar a IRM do SharePoint:
 > 
-> - Não pode utilizar os modelos predefinidos ou personalizados que gerir no portal do Azure. 
+> - Não é possível utilizar a predefinição ou modelos de proteção personalizada que gerir no portal do Azure. 
 > 
-> - Os ficheiros que tenham uma extensão de nome de ficheiro. ppdf para ficheiros PDF protegidos não são suportados. Os ficheiros que tenham a extensão de nome de ficheiro. pdf e que foram protegidos nativamente pela Rights Management são suportados quando utiliza um leitor de PDF que suporta nativamente o Rights Management.
+> - Os ficheiros que tenham uma extensão de nome de ficheiro. ppdf para ficheiros PDF protegidos não são suportados. Os ficheiros que tenham a extensão de nome de ficheiro. PDF são suportados e quando transferidos, podem ser abertos por uma aplicação de PDF que suporta nativamente o Rights Management. Por exemplo, o cliente Azure Information Protection para o Windows inclui um visualizador para estes ficheiros PDF protegidos. Visualizadores PDF alternativos constam o [tabela aplicações otimizadas por RMS](../get-started/requirements-applications.md#rms-enlightened-applications).
 > 
-> - Não é suportada a criação de conteúdos conjunta. Porque tem de verificar e transferir um documento numa biblioteca protegida IRM, uma pessoa pode editá-lo a uma hora.
+> - Criação de conteúdos conjunta, quando mais do que uma pessoa edita um documento em simultâneo, não é suportada. Para editar um documento numa biblioteca protegida IRM, deve primeiro consulte o documento e transferi-lo e, em seguida, editá-lo na aplicação do Office. Por conseguinte, apenas uma pessoa pode editar o documento de cada vez.
 
 Para bibliotecas que não são IRM protegida, se proteger um ficheiro que carregar, em seguida, SharePoint ou OneDrive, o seguinte não funcionará com este ficheiro: criação conjunta, Office Online, pesquisa, pré-visualização do documento, miniatura, deteção de dados Eletrónicos e prevenção de perda de dados (DLP).
 

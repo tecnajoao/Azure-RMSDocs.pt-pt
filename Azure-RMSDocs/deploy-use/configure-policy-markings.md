@@ -4,17 +4,17 @@ description: Quando atribui uma etiqueta a um documento ou a um e-mail pode sele
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 1fc9e3babd83368f1fa6389da3e2b66e8080d308
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: 3a732f49a299b4d66af70da3d26df193eaca36ac
+ms.sourcegitcommit: 6a67fc50bd8b8a06974de647c15115a673f0217c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Como configurar uma etiqueta para marcas visuais para o Azure Information Protection
 
@@ -47,6 +47,8 @@ Para documentos, as marcas visuais são aplicadas da seguinte forma:
 - Numa aplicação Office, de uma etiqueta, as marcas visuais são aplicadas quando a etiqueta é aplicada. Marcas visuais também são aplicadas quando um documento com nome é aberto e o documento é guardado primeiro.  
 
 - Quando um documento assinalada como utilizando o Explorador de ficheiros ou o PowerShell, marcas visuais não são aplicadas de imediato, mas são aplicadas quando esse documento é aberto numa aplicação Office e o documento é guardado primeiro.
+    
+    A exceção é quando utiliza [AutoSave](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) com o Office 2016 para ficheiros que são guardados no SharePoint Online, no OneDrive ou OneDrive para empresas: AutoSave quando está ativada, marcas visuais não são aplicadas a menos que configure o [ definição de cliente avançado](../rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) para ativar a classificação a executar continuamente em segundo plano. 
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>Para configurar marcas visuais para uma etiqueta
 

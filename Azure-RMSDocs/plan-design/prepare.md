@@ -4,7 +4,7 @@ description: Verifique se tem as contas de utilizador e de grupo de que precisa 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7d9c58649eb06b614a25e28c909d34318ea80133
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 760fe51d8c864ff28f599dd3cf1f84ae72c03343
+ms.sourcegitcommit: 2b031166026b4b6dd87e0dbaec44a99204c8691c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Preparar utilizadores e grupos para o Azure Information Protection
 
@@ -41,24 +41,6 @@ Quando cria utilizadores e grupos através dos primeiros três métodos desta li
 ## <a name="how-users-and-groups-are-used-by-azure-information-protection"></a>Como o Azure Information Protection utiliza os utilizadores e os grupos
 
 Existem três cenários de utilização de utilizadores e grupos com o Azure Information Protection:
-
-- **Para atribuir etiquetas aos utilizadores** quando utilizar a classificação e etiquetagem. Apenas os administradores selecionar estes grupos:
-    
-    - A política do Azure Information Protection predefinida é atribuída automaticamente a todos os utilizadores no Azure AD do seu inquilino. No entanto, também pode atribuir etiquetas adicionais a utilizadores ou grupos especificados através de políticas de âmbito.
-
-- **Para atribuir direitos de utilização e controlos de acesso** quando utiliza o serviço Azure Rights Management para proteger documentos e e-mails. Os administradores e os utilizadores podem selecionar estes utilizadores e grupos:
-
-    - Os direitos de utilização determinam se um utilizador pode abrir um documento ou e-mail e como o pode utilizar. Por exemplo, se apenas o pode ler, se o pode ler e imprimir ou se o pode ler e editar.
-
-    - Os controlos de acesso incluem uma data de expiração e se o acesso exige uma ligação à Internet.
-
-- **Para configurar o serviço Azure Rights Management** para suportar cenários específicos e, por conseguinte, apenas os administradores podem selecionar estes grupos. Os exemplos incluem a configuração dos seguintes elementos:
-
-    - Superutilizadores, de modo a que as pessoas ou os serviços designados possam abrir conteúdos encriptados, se tal for preciso para a recuperação de dados ou a Deteção de Dados Eletrónicos.
-
-    - Administração delegada do serviço Azure Rights Management.
-
-    - Controlos de inclusão para suportar uma implementação faseada.
 
 **Para atribuir etiquetas aos utilizadores** ao configurar a política do Azure Information Protection para que possam ser aplicadas etiquetas a documentos e e-mails. Apenas os administradores podem selecionar estes utilizadores e grupos:
 

@@ -5,7 +5,7 @@ keywords: ''
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 05/09/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 718c15769e5719d5e8dde612cf66e4215f1e235d
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 7c6acb5a4b5c8f33193cbf5d8833201e0d68287e
+ms.sourcegitcommit: 342b0bd8c57eb621714609ec28234dd07fe95d1e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Passo 5: ver a partilha de ficheiros protegidos em ação e controlar o seu documento 
 
@@ -103,7 +103,7 @@ Agora que o destinatário abriu o anexo e, opcionalmente, o reencaminhou para ou
 
 3.  Na página **Documentos partilhados**, irá ver o nome do documento que partilhou. Neste momento, é o único ficheiro apresentado, mas à medida que partilhar mais documentos protegidos, a lista aumenta.
 
-    Nesta página, verá quando partilhou o documento (quando enviou a mensagem de e-mail com o anexo protegido), a data da última atividade e o nome do destinatário a quem enviou a mensagem de e-mail. Clique no nome do documento para obter mais detalhes.
+    Nesta página, verá quando partilhou o documento (quando enviou a mensagem de e-mail com o anexo protegido), o respetivo estado atual (Active Directory, revogado ou expirado) e o nome do destinatário que enviar o e-mail. Clique no nome do documento para obter mais detalhes.
 
 4.  Na nova página, que tem o nome do ficheiro em que clicou, poderá ver detalhes do resumo apenas desse documento, bem como uma lista de outras opções que estão disponíveis para o documento (**Lista**, **Linha Cronológica**, **Mapa**, **Definições**).
 

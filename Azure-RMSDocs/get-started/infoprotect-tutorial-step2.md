@@ -4,17 +4,17 @@ description: Passo 2 de um tutorial de introdução para experimentar o Azure In
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 05/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 3b9dbbc16fe26d7f111d37dbcd28d6477372a5d9
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: ffae0c9ef0e9ffd1fc9a4c25ef5c60e8da6de5ca
+ms.sourcegitcommit: 342b0bd8c57eb621714609ec28234dd07fe95d1e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="step-2-configure-the-azure-information-protection-policy"></a>Passo 2: Configurar a política do Azure Information Protection
 
@@ -55,11 +55,13 @@ Para o nosso tutorial, vamos alterar algumas dessas definições de política pa
     
     Não poderá ter de alterar esta definição, porque a predefinição depende da altura em que obteve a sua subscrição. Utilizamos permissões personalizadas mais tarde no tutorial para partilhar um documento protegido com um utilizador que especificou quando clique com botão direito do ficheiro a partir do Explorador de ficheiros.
 
+4. Selecione **guardar** neste **política: Global** painel e se lhe for pedido para confirmar a ação, selecione **OK**. Feche este painel.
+
 ## <a name="creating-a-new-label-for-protection-visual-markers-and-a-condition-to-prompt-for-classification"></a>Criar uma nova etiqueta para proteção, marcas visuais e uma condição para a linha de comandos para classificação
 
 Vamos agora criar um novo sublabel para **confidencial**.
 
-1. Clique com botão direito do **confidencial** etiqueta e selecione **adicionar uma etiqueta secundária**.
+1. Do **classificações** > **etiquetas** opção do menu: clique com botão direito a **confidencial** etiqueta e selecione **adicionar uma etiqueta secundária**.
     
     Se não tiver uma etiqueta com o nome **confidencial**, pode selecionar outra etiqueta ou pode criar uma nova etiqueta em vez disso e ainda siga o tutorial com pequenas diferenças.
 
@@ -125,9 +127,13 @@ Vamos agora criar um novo sublabel para **confidencial**.
 
 12. Na caixa **introduzir notas para manutenção interna**, escreva **Apenas para fins de testes**.
 
-13. Clique em **guardar** neste **subetiqueta** painel. Em seguida, no painel **Política:Global**, clique em **Guardar** novamente.
-    
-    Agora, ver o seu novo sublabel, que é configurado para proteção e marcas visuais. Por exemplo:
+13. Clique em **guardar** neste **subetiqueta** painel. Se lhe for pedido para confirmar, clique em **OK**. A nova etiqueta é criada e guardada, mas ainda não foi adicionada a uma política.
+
+14. Do **classificações** > **políticas** opção do menu: selecione **Global** novamente e, em seguida, selecione o **etiquetas de adicionar ou remover**ligação depois das etiquetas.
+
+15. Do **política: Adicionar ou remover etiquetas** painel, selecione a etiqueta que acabou de criar, sublabel denominado **financeiro**e clique em **OK**.
+
+16. No **política: Global** painel, agora, ver o novo sublabel na sua política global, que é configurada para proteção e marcas visuais. Por exemplo:
 
     ![Tutorial de início rápido do Azure Information Protection, passo 3 - política predefinida configurada](../media/info-protect-policy-configuredv2.png)
     
@@ -135,6 +141,9 @@ Vamos agora criar um novo sublabel para **confidencial**.
     
     ![Passo 3 do tutorial de início rápido do Azure Information Protection – definições configuradas](../media/info-protect-settings-configuredv2.png)
     
+
+17. Clique em **guardar** neste **política: Global** painel. Se lhe for pedido para confirmar esta ação, clique em **OK**.
+
 Pode fechar o portal do Azure ou deixá-lo aberto para experimentar opções de configuração adicionais depois de concluir este tutorial.
 
 Agora que conhece o que é a política predefinida e efetuou algumas alterações, o próximo passo é instalar o cliente do Azure Information Protection.

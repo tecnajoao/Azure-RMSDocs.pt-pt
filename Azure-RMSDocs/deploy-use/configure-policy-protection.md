@@ -4,17 +4,17 @@ description: Pode proteger os seus documentos e e-mails mais confidenciais ao co
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 05/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: bcbc3e79da3c158ca3d6582e5dcd4882c327f7b6
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: f7be04dead7cf97f6fb03ba5fd6201c88ff61c00
+ms.sourcegitcommit: 342b0bd8c57eb621714609ec28234dd07fe95d1e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Como configurar uma etiqueta para a proteção do Rights Management
 
@@ -87,7 +87,7 @@ Exchange tem de ser configurada para o Azure Information Protection antes dos ut
     
     - **Definir permissões**: definir as definições de proteção novo neste portal.
     
-    - **Definido de utilizador do conjunto de permissões (pré-visualização)**: para permitir que os utilizadores que especifique que devem ser concedidas permissões e quais são essas permissões. Em seguida, pode refinar esta opção e escolha Outlook apenas, ou Word, Excel, PowerPoint e Explorador de ficheiros. Esta opção não é suportada e não funcionar, quando uma etiqueta está configurada para [classificação automática](configure-policy-classification.md).
+    - **Definir permissões definidas pelo utilizador (pré-visualização)**: para permitir que os utilizadores que especifique que devem ser concedidas permissões e quais são essas permissões. Em seguida, pode refinar esta opção e escolha Outlook apenas, ou Word, Excel, PowerPoint e Explorador de ficheiros. Esta opção não é suportada e não funcionar, quando uma etiqueta está configurada para [classificação automática](configure-policy-classification.md).
         
         Se escolher a opção para o Outlook: A etiqueta é apresentada no Outlook e o comportamento resultante quando os utilizadores aplicam a etiqueta é o mesmo que a opção não reencaminhar.
         
@@ -181,7 +181,7 @@ Os utilizadores escrevem o endereço de e-mail do Gmail o **para** caixa.  Em se
 
 1. No **proteção** painel, certifique-se de que **Azure (chave de nuvem)** está selecionada.
     
-2. Selecione **definido de utilizador do conjunto de permissões (pré-visualização)**.
+2. Selecione **definir permissões definidas pelo utilizador (pré-visualização)**.
 
 3. Certifique-se de que a opção seguinte for selecionada: **no Outlook não reencaminhar aplicar**.
 
@@ -244,7 +244,7 @@ Quando os utilizadores, especifique os endereços de e-mail no **para** caixa, o
     
 2. Certifique-se **definir permissões** está selecionado e selecione **adicionar permissões**.
 
-3. No **adicionar permissões** painel: para conceder permissões a utilizadores na sua organização, selecione **adicionar \<nome da organização >-todos os membros** para selecionar todos os utilizadores no seu inquilino, ou selecione  **Procurar no diretório** para selecionar um grupo específico. Para conceder permissões a utilizadores externos ou se preferir escreva o endereço de e-mail, selecione **Introduza detalhes** e escreva o endereço de e-mail do utilizador ou grupo do Azure AD ou um nome de domínio.
+3. No **adicionar permissões** painel: para conceder permissões a utilizadores na sua organização, selecione **adicionar \<nome da organização >-todos os membros** para selecionar todos os utilizadores no seu inquilino. Esta definição exclui as contas de convidados. Em alternativa, selecione **procurar diretório** para selecionar um grupo específico. Para conceder permissões a utilizadores externos ou se preferir escreva o endereço de e-mail, selecione **Introduza detalhes** e escreva o endereço de e-mail do utilizador ou grupo do Azure AD ou um nome de domínio.
     
     Repita este passo para especificar os utilizadores adicionais que devem ter as mesmas permissões.
 

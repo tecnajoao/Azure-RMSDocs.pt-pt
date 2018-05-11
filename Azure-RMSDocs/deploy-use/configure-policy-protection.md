@@ -4,14 +4,14 @@ description: Pode proteger os seus documentos e e-mails mais confidenciais ao co
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2018
+ms.date: 05/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: f7be04dead7cf97f6fb03ba5fd6201c88ff61c00
-ms.sourcegitcommit: 342b0bd8c57eb621714609ec28234dd07fe95d1e
+ms.openlocfilehash: 8b1024a26e086cb8cbd4696dc37d66350968a0b4
+ms.sourcegitcommit: fbc83d699b9e4e9c8e0e7d36f574630af6a4e3d9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/10/2018
@@ -103,7 +103,7 @@ Exchange tem de ser configurada para o Azure Information Protection antes dos ut
     
     Selecione **adicionar permissões**e o **adicionar permissões** painel, selecione o primeiro conjunto de utilizadores e grupos que irão ter direitos para utilizar o conteúdo que será protegido pela etiqueta selecionada:
     
-    - Escolha **selecione na lista** para adicionar todos os utilizadores da sua organização ou procurar o diretório.
+    - Escolha **selecione na lista** para adicionar todos os utilizadores da sua organização, selecionando **adicionar \<nome da organização >-todos os membros**. Esta definição exclui as contas de convidados. Ou, ou procurar o diretório.
         
         Os utilizadores ou grupos tem de ter um endereço de e-mail. Num ambiente de produção, utilizadores e grupos que têm quase sempre um endereço de e-mail, mas num ambiente de teste simple, poderá ter de adicionar endereços de e-mail a contas de utilizador ou grupos.
         

@@ -4,7 +4,7 @@ description: Informações e instruções sobre como utilizar os registos de uti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/08/2018
+ms.date: 05/16/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b4a9c6b259e5863bb5be276f89beb0de33002ca4
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 989f75361d96680bf0bedff00251b6d60aa999c5
+ms.sourcegitcommit: 373e05ff0c411d29cc5b61c36edaf5a203becc14
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Registar e analisar a utilização do serviço Azure Rights Management
 
@@ -38,7 +38,7 @@ Em seguida, pode utilizar estes registos do serviço Azure Rights Management par
 
 -   **Efetuar análises forenses**
 
-    Se ocorrer uma fuga de informações, é provável que lhe seja pedido para indicar quem acedeu recentemente a documentos específicos e a que tipo de informações uma pessoa suspeita acedeu recentemente. Se utilizar este registo, poderá responder a este tipo de perguntas, porque as pessoas que utilizam conteúdos protegidos têm sempre de obter uma licença de Rights Management para abrir documentos e imagens protegidos pelo serviço Azure Rights Management, mesmo que estes ficheiros sejam movidos por e-mail ou copiados para unidades USB ou para outros dispositivos de armazenamento. Isto significa que, se proteger os seus dados com o serviço Azure Rights Management, pode utilizar os registos do mesmo como fonte definitiva de informações para análises forenses.
+    Se ocorrer uma fuga de informações, é provável que lhe seja pedido para indicar quem acedeu recentemente a documentos específicos e a que tipo de informações uma pessoa suspeita acedeu recentemente. Pode responder a estes tipos de questões quando utiliza este registo porque as pessoas que utilizam conteúdos protegidos têm sempre de obter uma licença de Rights Management para abrir documentos e imagens protegidos pelo serviço do Azure Rights Management, mesmo que estes ficheiros são movidos por e-mail ou copiados para unidades USB ou outros dispositivos de armazenamento. Isto significa que, se proteger os seus dados com o serviço Azure Rights Management, pode utilizar os registos do mesmo como fonte definitiva de informações para análises forenses.
 
 Além deste registo de utilização, também tem as seguintes opções de registo:
 
@@ -47,7 +47,7 @@ Além deste registo de utilização, também tem as seguintes opções de regist
 |Registo de Admin|Regista tarefas administrativas para o serviço Azure Rights Management. Por exemplo, se o serviço estiver desativado, quando a funcionalidade de Superutilizador é ativada e quando os utilizadores têm permissões de administrador delegado para o serviço. <br /><br />Para obter mais informações, consulte o cmdlet do PowerShell, [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog).|
 |controlo de documentos|Permite que os utilizadores controlarem e revogarem os seus documentos que possam tem controlados com o cliente Azure Information Protection ou a aplicação de partilha RMS. Os administradores globais também podem controlar estes documentos em nome dos utilizadores. <br /><br />Para obter mais informações, consulte [configurar e utilizar o controlo de documentos para o Azure Information Protection](../rms-client/client-admin-guide-document-tracking.md).|
 |Registos de eventos de cliente|Atividade de utilização para o cliente Azure Information Protection, a sessão do Windows local **aplicações e serviços** registo de eventos, **Azure Information Protection**. <br /><br />Para obter mais informações, consulte [registo de utilização para o cliente Azure Information Protection](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
-|Ficheiros de registo de cliente|Resolução de problemas registos f ou o cliente Azure Information Protection, localizado na **%localappdata%\Microsoft\MSIP**. <br /><br />Estes ficheiros são concebidos para Support da Microsoft.|
+|Ficheiros de registo de cliente|Os registos de resolução de problemas para o cliente Azure Information Protection, localizado na **%localappdata%\Microsoft\MSIP**. <br /><br />Estes ficheiros são concebidos para Support da Microsoft.|
 
 
 Utilize as secções seguintes para obter mais informações sobre o registo de utilização para o serviço Azure Rights Management. 
@@ -176,7 +176,7 @@ Há muitos tipos de pedido para o serviço Azure Rights Management, mas a seguin
 
 |Tipo de pedido|Descrição|
 |----------------|---------------|
-|AcquireLicense|Um cliente de um computador baseado no Windows está a pedir uma licença para conteúdos protegidos pelo RMS.|
+|AcquireLicense|Um cliente de um computador baseado em Windows está a pedir uma licença para conteúdos protegidos pelo RMS.|
 |AcquirePreLicense|Um cliente está a pedir, em nome do utilizador, uma licença para conteúdos protegidos pelo RMS.|
 |AcquireTemplates|Foi efetuada uma chamada para adquirir modelos com base em IDs de modelo|
 |AcquireTemplateInformation|Foi efetuada uma chamada para obter as ID do modelo a partir do serviço.|

@@ -4,7 +4,7 @@ description: Informações para o ajudar a configurar os servidores no local que
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/16/2017
+ms.date: 05/16/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,15 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c15c18f7d0a0f43e4f91193ee4a11b324f0187f2
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: dd9063cfda08f0b580ca4f669bb5385b91c25acb
+ms.sourcegitcommit: 373e05ff0c411d29cc5b61c36edaf5a203becc14
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configurar servidores para o conector Azure Rights Management
 
->*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2012, Windows Server 2012 R2*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, o Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 
 Utilize as seguintes informações para ajudar a configurar os servidores no local que irão utilizar o conector Azure Rights Management (RMS). Estes procedimentos inclui o passo 5 do artigo [Implementar o conector Azure Rights Management](deploy-rms-connector.md).
@@ -224,15 +224,17 @@ Os servidores com o SharePoint 2010 têm de ter instalada uma versão do cliente
 ## <a name="configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector"></a>Configurar um servidor de ficheiros da Infraestrutura de Classificação de Ficheiros para utilizar o conector
 Para utilizar o conector RMS e a Infraestrutura de Classificação de Ficheiros para proteger documentos do Office, o servidor de ficheiros tem de ter um dos seguintes sistemas operativos em execução:
 
--   Windows Server 2012 R2
+- Windows Server 2016
 
--   Windows Server 2012
+- Windows Server 2012 R2
+
+- Windows Server 2012
 
 ### <a name="to-configure-file-servers-to-use-the-connector"></a>Para configurar servidores de ficheiros para utilizarem o conector
 
-1.  Utilize a ferramenta de administração do conector RMS e as informações da secção [Autorizar os servidores a utilizar o conector RMS](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) para se certificar de que os servidores de ficheiros estão autorizados a utilizar o conector RMS. Esta configuração é necessária para que os servidores de ficheiros podem utilizar o conector RMS.
+1. Utilize a ferramenta de administração do conector RMS e as informações da secção [Autorizar os servidores a utilizar o conector RMS](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) para se certificar de que os servidores de ficheiros estão autorizados a utilizar o conector RMS. Esta configuração é necessária para que os servidores de ficheiros podem utilizar o conector RMS.
 
-2.  Nos servidores de ficheiros configurados para a Infraestrutura de Classificação de Ficheiros e que irão comunicar com o conector RMS, efetue um dos seguintes procedimentos:
+2. Nos servidores de ficheiros configurados para a Infraestrutura de Classificação de Ficheiros e que irão comunicar com o conector RMS, efetue um dos seguintes procedimentos:
 
     -   Execute a ferramenta de configuração do servidor para o conector Microsoft RMS. Para mais informações, consulte [Como utilizar a ferramenta de configuração do servidor para o conector Microsoft RMS](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) neste artigo.
 
@@ -244,7 +246,7 @@ Para utilizar o conector RMS e a Infraestrutura de Classificação de Ficheiros 
 
     - Faça edições de registo manuais com as informações disponíveis no artigo [Registry settings for the RMS connector (Definições de registo para o conector RMS – em inglês)](rms-connector-registry-settings.md) para adicionar as definições de registo manualmente nos servidores. 
 
-3.  Crie regras de classificação e tarefas de gestão de ficheiros para proteger os documentos com Encriptação RMS e, em seguida, especifique um modelo de RMS para aplicar automaticamente as políticas de RMS. Para mais informações, consulte o artigo [Descrição Geral do Gestor de Recursos do Servidor de Ficheiros](http://technet.microsoft.com/library/hh831701.aspx) na biblioteca de documentação do Windows Server.
+3. Crie regras de classificação e tarefas de gestão de ficheiros para proteger os documentos com Encriptação RMS e, em seguida, especifique um modelo de RMS para aplicar automaticamente as políticas de RMS. Para mais informações, consulte o artigo [Descrição Geral do Gestor de Recursos do Servidor de Ficheiros](http://technet.microsoft.com/library/hh831701.aspx) na biblioteca de documentação do Windows Server.
 
 ## <a name="next-steps"></a>Próximos passos
 Agora que o conector RMS está instalado e configurado, estando os servidores configurados para o utilizar, os administradores de TI e os utilizadores podem proteger e tirar partido das mensagens de e-mail e documentos com o serviço Azure Rights Management. Para facilitar o trabalho aos utilizadores, implemente o cliente do Azure Information Protection, que instala um suplemento para o Office e adiciona novas opções de contexto ao Explorador de Ficheiros. Para obter mais informações, veja o [Guia do administrador do Azure Information Protection](../rms-client/client-admin-guide.md).

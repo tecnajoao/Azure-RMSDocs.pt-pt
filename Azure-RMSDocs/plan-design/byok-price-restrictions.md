@@ -4,7 +4,7 @@ description: Compreender as restrições quando utilizar chaves gerida pelo clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2017
+ms.date: 05/18/2017
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ccbca7f0309e03128ebbe0544e55b341ece47d0f
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: f5380dc364255fd085c82fd9c0a834afea368c97
+ms.sourcegitcommit: 10f530fa1a43928581da4830a32f020c96736bc8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/21/2018
 ---
 # <a name="byok-pricing-and-restrictions"></a>Preços e restrições de BYOK
 
 >*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
-As organizações que têm uma subscrição que inclui o Azure Information Protection podem configurar o respetivo inquilino do Azure Information Protection para utilizar uma chave gerida pelo cliente (BYOK) e [registar a sua utilização](../deploy-use/log-analyze-usage.md) sem custos adicionais. 
+As organizações que tenham uma subscrição que inclui o Azure Information Protection podem configurar o seu inquilino do Azure Information Protection para utilizar uma chave gerida pelo cliente (BYOK) e [registar a sua utilização](../deploy-use/log-analyze-usage.md). 
 
 A chave deve ser armazenada no Cofre de chaves do Azure, o que necessita de uma subscrição do Azure. Para utilizar uma chave protegida por HSM, tem de utilizar a camada de serviços do Azure Premium do Cofre de chave. A utilização de uma chave no Cofre de Chaves do Azure implica uma cobrança mensal. Para obter mais informações, veja a [página de Preços do Azure Key Vault](https://azure.microsoft.com/pricing/details/key-vault/).
 

@@ -4,7 +4,7 @@ description: Conheça os direitos específicos utilizados quando protege ficheir
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/02/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f5006ef3d0401b6a7f018be1f65979c079cf04fc
-ms.sourcegitcommit: fdcfc006108f61fcd380ff6f3c3208c78ecf4056
+ms.openlocfilehash: 697fa4674699fd3b24f7f7353ff9f9d476040bd8
+ms.sourcegitcommit: c41490096af48e778947739e320e0dc8511f6c68
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/21/2018
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuração de direitos de utilização para o Azure Rights Management
 
@@ -168,13 +168,13 @@ A predefinição utilizar validade da licença período para um inquilino é 30 
 
 - Quando configurar uma etiqueta ou um modelo no portal do Azure, o período de validade da licença de utilização tem o valor da **permite a definição de acesso offline**. 
     
-    Para obter mais informações e orientações para configurar esta definição no portal do Azure, consulte a tabela no passo 9 da [como configurar uma etiqueta para a proteção Rights Management](configure-policy-protection.md).
+    Para obter mais informações e orientações para configurar esta definição no portal do Azure, consulte o [informações sobre as definições de proteção](../deploy-use/configure-policy-protection.md#information-about-the-protection-settings) tabela das instruções de como configurar uma etiqueta para a proteção Rights Management.
 
 - Quando configurar um modelo com o PowerShell, o período de validade da licença de utilização tem o valor da *LicenseValidityDuration* parâmetro o [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) e [ Adicionar-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate) cmdlets.
     
     Para obter mais informações e orientações para configurar esta definição utilizando o PowerShell, consulte a ajuda para cada cmdlet.
 
-## <a name="see-also"></a>Veja Também
+## <a name="see-also"></a>Consulte Também
 [Configurar e gerir modelos do Azure Information Protection](configure-policy-templates.md)
 
 [Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados](configure-super-users.md)

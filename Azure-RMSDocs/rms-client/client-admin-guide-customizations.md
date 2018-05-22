@@ -4,7 +4,7 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/11/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: de7829532139556b6407506d61bc89de936b3739
-ms.sourcegitcommit: 9e2719ab070fa2d1e3ac8f6f11e57640939a1dff
+ms.openlocfilehash: c0e1011da16c9e3e91595cd06375cb744aa8fe00
+ms.sourcegitcommit: 10f530fa1a43928581da4830a32f020c96736bc8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/21/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia de administração: Configurações personalizadas para o cliente Azure Information Protection
 
@@ -54,6 +54,8 @@ Independentemente desta definição, o cliente do Azure Information Protection s
 
 ## <a name="suppress-the-initial-congratulations-welcome-page"></a>Suprimir as iniciais "parabéns!" Página de boas-vindas
 
+O cliente de pré-visualização já não apresenta este "Parabéns!" página de boas-vindas.
+
 Quando o cliente Azure Information Protection é instalado pela primeira vez num computador e um utilizador abre o Word, Excel, PowerPoint ou Outlook, um **Parabéns!** página é apresentada com instruções abreviadas como utilizar a nova barra do Information Protection para selecionar etiquetas. Pode suprimir esta página ao editar o registo.
 
 1. Se a seguinte chave de registo não existir, crie-o:
@@ -64,13 +66,15 @@ Quando o cliente Azure Information Protection é instalado pela primeira vez num
 
 ## <a name="suppress-the-whats-new-in-azure-information-protection-page"></a>Suprimir a "Novidades do Azure Information Protection?" Página
 
+O cliente de pré-visualização já não apresenta este "Novidades do Azure Information Protection?" .
+
 Quando o cliente Azure Information Protection está instalado ou atualizado num computador pela primeira vez e barra do Azure Information Protection é apresentada no Word, Excel, PowerPoint ou Outlook, um **Novidades do Azure Information Protection?** página apresenta a informar os utilizadores sobre permissões personalizadas e controlar a utilização. Pode suprimir esta página ao editar o registo.
 
 1. Se a seguinte chave de registo não existir, crie-o:
     
     **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP**
 
-2.  Se um valor de cadeia (REG SZ) com o nome **WhatsNewVersion** não existir, crie-o e defina o valor de dados para **1.4**.
+2. Se um valor de cadeia (REG SZ) com o nome **WhatsNewVersion** não existir, crie-o e defina o valor de dados para **1.4**.
 
 ## <a name="sign-in-as-a-different-user"></a>Iniciar sessão como um utilizador diferente
 
@@ -356,6 +360,25 @@ Como exemplo, tem uma coluna do SharePoint com o nome **classificação** que te
 Para identificar um documento do Office com um dos seguintes valores de classificação, defina **SyncPropertyName** para **classificação**, e **SyncPropertyState** para  **OneWay**. 
 
 Agora, quando um utilizador abre e guarda um destes documentos do Office, está assinalada como **pública**, **geral**, ou **confidencial** se tiver etiquetas com estes nomes no seu Azure Política de proteção de informações. Se tiver etiquetas com estes nomes, o documento permanece sem etiqueta.
+
+## <a name="disable-the-low-integrity-level-for-the-scanner"></a>Desativar o nível de integridade baixa scanner
+
+Esta opção de configuração está atualmente em pré-visualização e está sujeita a alterações. Também requer a versão de pré-visualização atual do cliente Azure Information Protection.
+
+Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
+
+Por predefinição, a versão de pré-visualização do scanner Azure Information Protection é executada com um nível de integridade baixa. Esta definição proporciona maior isolamento de segurança mas, ao custo de desempenho. Um nível de integridade baixa é adequado se executar o verificador com uma conta que tem privilegiado direitos (por exemplo, uma conta de administrador local), porque esta definição ajuda a proteger o computador que executa o verificador.
+
+No entanto, quando a conta de serviço que executa o verificador tem apenas os direitos documentados o [pré-requisitos scanner](../deploy-use/deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner), o nível de integridade baixa não é necessário e não é recomendado porque isso afetar negativamente o desempenho. 
+
+Para obter mais informações sobre os níveis de integridade do Windows, consulte [o que é o mecanismo de integridade do Windows?](https://msdn.microsoft.com/library/bb625957.aspx)
+
+Para configurar as definições avançadas para que a análise seja executada com um nível de integridade que é atribuído automaticamente pelo Windows (executa uma conta de utilizador padrão com um nível de integridade média), introduza as cadeias de seguintes:
+
+- Chave: **ProcessUsingLowIntegrity**
+
+- Valor: **Falso**
+
 
 ## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Integração com a classificação de mensagem do Exchange para uma solução de etiquetagem do dispositivo móvel
 

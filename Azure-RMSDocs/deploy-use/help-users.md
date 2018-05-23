@@ -4,7 +4,7 @@ description: Informações para fornecer orientações a utilizadores, administr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/20/2017
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 468550dd2389407b20d66adb814a7487988180bd
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 0243961b4dfdf3bb8c8b04059793098b26880615
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Ajudar os utilizadores a proteger ficheiros com o serviço Azure Rights Management
 
@@ -49,7 +49,7 @@ Após ter implementado e configurado o Azure Information Protection para a sua o
     
     - **Ajuda a iniciar sessão**
         
-        Poderá ser pedido aos utilizadores que introduzam credenciais quando o serviço Azure Rights Management tiver de autenticar um utilizador e não puder utilizar credenciais em cache. As credenciais necessárias são a conta escolar ou profissional e a palavra-passe do utilizador que estão associadas ao seu inquilino do Office 365 ou ao inquilino do Azure Active Directory. As credenciais necessárias não são uma conta Microsoft (anteriormente, Microsoft Live ID) nem a respetiva conta de e-mail pessoal, uma vez que estas contas não são atualmente suportadas pelo serviço Azure Rights Management. 
+        Poderá ser pedido aos utilizadores que introduzam credenciais quando o serviço Azure Rights Management tiver de autenticar um utilizador e não puder utilizar credenciais em cache. As credenciais necessárias são normalmente para o utilizador trabalho ou conta profissional e a palavra-passe que está associado ao seu inquilino do Office 365 ou inquilino do Azure Active Directory. Embora o serviço Azure Rights Management pode autenticar contas do Azure AD, algumas aplicações podem também abrir conteúdos protegidos quando uma conta Microsoft é utilizada para autenticação. [Mais informações](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
         
         Forneça aos utilizadores e o suporte técnico com instruções sobre a conta a utilizar quando os utilizadores forem pedidos as credenciais quando têm as aplicações que utilizam o serviço Azure Rights Management.
         
@@ -57,7 +57,7 @@ Após ter implementado e configurado o Azure Information Protection para a sua o
         
         Certifique-se de que os utilizadores têm as instruções adequadas para as aplicações que utilizam e que utilizam aplicações e dispositivos que são suportados pelo serviço do Azure Rights Management. Para obter mais informações sobre as aplicações e os dispositivos suportados, veja [Requisitos do Azure Rights Management](../get-started/requirements-azure-rms.md).
         
-        A autenticação e a autorização dependem de contas e grupos do Azure Active Directory. Para confirmar que um utilizador ou um grupo específico pode ser autorizado a consumir conteúdo protegido, utilize as verificações em [Preparar os utilizadores e os grupos do Azure Information Protection](../plan-design/prepare.md).
+        Para confirmar que um grupo ou utilizador específico pode ser autorizado por Azure Active Directory para proteger ou consumir conteúdo protegido, utilize as verificações de verificação no [preparar os utilizadores e grupos do Azure Information Protection](../plan-design/prepare.md).
         
         Se os utilizadores comunicarem que podem abrir conteúdo protegido, mas não têm os direitos que necessitam, o problema poderá ser que o utilizador não está no grupo correto que esteja configurado para um modelo de Rights Management. Em alternativa, o problema poderá ser que o [modelo tem de ser reconfigurado](configure-policy-templates.md) para o utilizador ou grupo. 
         

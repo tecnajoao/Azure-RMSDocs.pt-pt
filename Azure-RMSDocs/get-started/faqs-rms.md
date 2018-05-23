@@ -4,7 +4,7 @@ description: Algumas perguntas mais frequentes sobre o serviço de proteção de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b1968f277ca7c9237487d4d767b8a85eb15a9331
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: af2157b8163d9ad5adbb69e057330b3b03259fd0
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Perguntas mais frequentes sobre a proteção de dados no Azure Information Protection
 
@@ -106,11 +106,15 @@ Por predefinição, o serviço Azure Rights Management utiliza uma conta do Azur
 
 O método de autenticação para estas contas pode variar, dependendo da forma como o administrador na outra organização configurou as contas do Azure Active Directory. Por exemplo, podem utilizar palavras-passe que foram criadas para estas contas, autenticação multifator (MFA), federação ou palavras-passe que foram criadas nos Active Directory Domain Services e, em seguida, sincronizadas com o Azure Active Directory.
 
-Se proteger um e-mail com um anexo de documento do Office para um utilizador não tem uma conta no Azure AD, o método de autenticação é alterado. O serviço Azure Rights Management está Federado com alguns fornecedores de identidade de redes sociais populares, tais como o Gmail. Se o fornecedor de e-mail do utilizador é suportada, o utilizador pode iniciar sessão para que o serviço e os respetivos fornecedor de correio eletrónico é responsável por autenticá-los. Se o fornecedor de e-mail do utilizador não é suportado, ou uma preferência, o utilizador pode candidatar-se um código de acesso único que autentica e apresenta o e-mail com o documento protegido num web browser.
+Outros métodos de autenticação:
+
+- Se proteger um e-mail com um anexo de documento do Office para um utilizador não tem uma conta no Azure AD, o método de autenticação é alterado. O serviço Azure Rights Management está Federado com alguns fornecedores de identidade de redes sociais populares, tais como o Gmail. Se o fornecedor de e-mail do utilizador é suportada, o utilizador pode iniciar sessão para que o serviço e os respetivos fornecedor de correio eletrónico é responsável por autenticá-los. Se o fornecedor de e-mail do utilizador não é suportado, ou uma preferência, o utilizador pode candidatar-se um código de acesso único que autentica e apresenta o e-mail com o documento protegido num web browser.
+
+- O Azure Information Protection pode utilizar contas Microsoft para aplicações suportadas. Atualmente, nem todas as aplicações podem abrir conteúdo protegido, quando uma conta Microsoft é utilizada para autenticação. [Mais informações](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 ## <a name="can-i-add-external-users-people-from-outside-my-company-to-custom-templates"></a>Posso adicionar utilizadores externos (pessoas que não pertencem à minha empresa) a modelos personalizados?
 
-Sim. O [as definições de proteção](../deploy-use/configure-policy-protection.md) que pode configurar no portal do Azure permitem-lhe adicionar permissões a utilizadores e grupos a partir de fora da sua organização e até mesmo todos os utilizadores noutra organização. A menos que será utilizado exclusivamente para enviar e-mail utilizando o modelo de [novas capacidades de encriptação de mensagens do Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e), não adicionar contas de redes sociais identidades (tais como o Gmail e Microsoft) ou outras contas que não estão em Azure AD.
+Sim. O [as definições de proteção](../deploy-use/configure-policy-protection.md) que pode configurar no portal do Azure permitem-lhe adicionar permissões a utilizadores e grupos a partir de fora da sua organização e até mesmo todos os utilizadores noutra organização. Poderá achar útil para referenciar o exemplo passo a passo, [proteger colaboração de documentos utilizando o Azure Information Protection](secure-collaboration-documents.md). 
 
 Tenha em atenção que se tiver etiquetas do Azure Information Protection, deve primeiro converta o modelo personalizado para uma etiqueta antes de poder configurar estas definições de proteção no portal do Azure. Para obter mais informações, consulte [configurar e gerir modelos do Azure Information Protection](../deploy-use/configure-policy-templates.md).
 

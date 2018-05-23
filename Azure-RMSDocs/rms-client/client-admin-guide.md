@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 7d9fdcc96db5620c8ad0ee795c84c1fd56806239
-ms.sourcegitcommit: c41490096af48e778947739e320e0dc8511f6c68
-ms.translationtype: HT
+ms.openlocfilehash: 17fa8d2269bce0d6ef01506bcbadafd01fc768b6
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/21/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guia do administrador do cliente do Azure Information Protection
 
@@ -163,7 +163,7 @@ Estes idiomas, opções de menu, caixas de diálogo e mensagens do Azure Informa
 
 No entanto, a etiqueta nomes e descrições que especificou não são convertidas automaticamente quando configurar as etiquetas na política do Azure Information Protection. A partir de 30 de Agosto de 2017, atual [política predefinida](../deploy-use/configure-policy-default.md) inclui suporte para alguns idiomas. Para os utilizadores vejam as etiquetas no respetivo idioma preferencial, fornecem as suas próprias traduções e configure a política do Azure Information Protection para utilizar estes traduções. Para obter mais informações, veja [Como configurar etiquetas para diferentes idiomas no Azure Information Protection](../deploy-use/configure-policy-languages.md). Marcas visuais não são convertidos e não suportam mais do que um idioma.
 
-### <a name="upgrading-and-maintaining-the-azure-information-protection-client"></a>A atualizar e manter o cliente Azure Information Protection
+## <a name="upgrading-and-maintaining-the-azure-information-protection-client"></a>A atualizar e manter o cliente Azure Information Protection
 
 A equipa do Azure Information Protection atualiza regularmente o cliente Azure Information Protection para novas funcionalidades e correções. Anúncios são publicados para a equipa [Yammer site](https://www.yammer.com/AskIPTeam).
 

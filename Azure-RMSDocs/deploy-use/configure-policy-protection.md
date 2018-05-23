@@ -4,17 +4,17 @@ description: Pode proteger os seus documentos e e-mails mais confidenciais ao co
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/10/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 8b1024a26e086cb8cbd4696dc37d66350968a0b4
-ms.sourcegitcommit: fbc83d699b9e4e9c8e0e7d36f574630af6a4e3d9
+ms.openlocfilehash: 00305b1ba4f9ff750dd0fde9eb6a524cead39094
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Como configurar uma etiqueta para a proteção do Rights Management
 
@@ -231,9 +231,14 @@ Os novos utilizadores que adicionar será capaz de documentos aberta e e-mails q
 
 ### <a name="example-4-label-for-protected-email-that-supports-less-restrictive-permissions-than-do-not-forward"></a>Exemplo 4: Etiqueta de e-mail protegidas que suporte permissões menos restritivas do que a opção não reencaminhar
 
-Esta etiqueta não pode ser restringida ao Outlook mas fornece controlos menos restritivos do que utilizar não reencaminhar. Por exemplo, pretende que os destinatários para poder copiar a partir do e-mail ou um anexo ou imprimir e guardar um anexo.
+Esta etiqueta não pode ser restringida ao Outlook mas fornece controlos menos restritivos do que utilizar não reencaminhar. Por exemplo, pretende que os destinatários para poder copiar o e-mail ou anexo, ou guardar e editar um anexo.
 
-Se especificar os utilizadores externos que não dispõe de uma conta no Azure AD, lembre-se de que Instrua os seus utilizadores para não utilizar esta etiqueta de documentos, apenas o e-mail. Além disso, para suportar estes utilizadores externos, Exchange Online tem de ser configurado para o [novas capacidades na encriptação de mensagens do Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).  
+Se especificar os utilizadores externos que não dispõe de uma conta no Azure AD:
+
+- A etiqueta é adequada para o e-mail ao Exchange Online está a utilizar o [novas capacidades na encriptação de mensagens do Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
+ 
+- Para anexos do Office que são automaticamente protegidos, estes documentos estão disponíveis para ver no browser. Para editar estes documentos, transfira e editá-los com o Office 2016 clique para executar e uma conta Microsoft que utiliza o mesmo endereço de correio eletrónico. [Mais informações](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+
 
 > [!NOTE]
 > Exchange Online está a implementar uma nova opção [só de encriptar](configure-usage-rights.md#encrypt-only-option-for-emails). Esta opção não está disponível para configuração de etiqueta. No entanto, pode utilizar este exemplo para configurar uma etiqueta com o mesmo conjunto de direitos de utilização.

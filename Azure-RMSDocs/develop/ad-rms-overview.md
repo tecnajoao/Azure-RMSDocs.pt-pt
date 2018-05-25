@@ -1,24 +1,24 @@
 ---
-title: "Descrição geral - RMS SDK 2.1 | Azure RMS"
-description: "O Rights Management Services (RMS) é uma tecnologia de proteção de informações que ajuda a salvaguardar as informações digitais contra a utilização não autorizada."
-keywords: 
+title: Descrição geral - RMS SDK 2.1 | Azure RMS
+description: O Rights Management Services (RMS) é uma tecnologia de proteção de informações que ajuda a salvaguardar as informações digitais contra a utilização não autorizada.
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: B546B6C1-ADC1-4EBD-95E2-B4A74E4E980B
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: d8f9ac875c0c69d308ab34de45a0d594ae581780
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: fcf72e8c633186424957cde4bb98b5e2051b9dcf
+ms.sourcegitcommit: d1a3f35ea2d2c246a5b1e3f3da75df9c182fd0da
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="overview"></a>Descrição geral
 
@@ -54,6 +54,6 @@ Os tópicos restantes desta secção a Arquitetura RMS e as suas implementaçõe
 
 * [Conceitos do RMS](application-types.md)
 * [Introdução](getting-started-with-ad-rms-2-0.md)
-* [Documentação de profissionais de TI para o AD RMS](https://TechNet.Microsoft.Com/en-us/library/cc771234.aspx)
+* [Documentação de profissionais de TI para o AD RMS](https://technet.microsoft.com/library/cc771234.aspx)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

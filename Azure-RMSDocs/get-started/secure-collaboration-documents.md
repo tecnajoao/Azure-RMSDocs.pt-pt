@@ -4,7 +4,7 @@ description: Fluxo de trabalho ponto-a-ponto para colaborar em documentos que es
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 05/25/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d5c24747bcb05f7004f7d42b0145ce6cc1bbade5
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: ac623ae678994e04d19bbe5758b4b4f1cba7b045
+ms.sourcegitcommit: f5ff4106742a4f12c04993fc0090c65ad8db713f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="secure-document-collaboration-by-using-azure-information-protection"></a>Colaboração de documentos segura utilizando o Azure Information Protection
 
@@ -119,7 +119,7 @@ Antes do documento é aberto, um dos fluxos de autenticação seguintes ocorrem:
 
 Os seguinte tabela resumos de métodos de autenticação diferentes que são suportados para abrir e editar documentos protegidos.
 
-Além disso, o Visualizador do Azure Information Protection para iOS e Android pode abrir ficheiros para uma visualização utilizando uma conta Microsoft.
+Além disso, o Visualizador do Azure Information Protection para o Windows e para iOS e Android pode abrir ficheiros para uma visualização utilizando uma conta Microsoft.
 
 |Plataformas para abrir e editar documentos: <br />Word, Excel, PowerPoint|Método de autenticação:<br />Azure AD|Método de autenticação:<br />Conta Microsoft|
 |---------------|----------|-----------|-----------|

@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30207279"
 ---
 # <a name="other-applications-that-support-the-rights-management-apis"></a>Outras aplicações que suportam as APIs de Rights Management
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30206645"
 ---
 # <a name="download-and-install-the-rights-management-sharing-application"></a>Transferir e instalar a aplicação de partilha Rights Management
 

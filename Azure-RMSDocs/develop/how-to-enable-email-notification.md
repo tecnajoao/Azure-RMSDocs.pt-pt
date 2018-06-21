@@ -1,13 +1,13 @@
 ---
-title: "Ativar notificação por e-mail | Azure RMS"
-description: "A notificação por e-mail permite que um proprietário de conteúdo protegido seja notificado quando o respetivo conteúdo for acedido."
-keywords: 
+title: Ativar notificação por e-mail | Azure RMS
+description: A notificação por e-mail permite que um proprietário de conteúdo protegido seja notificado quando o respetivo conteúdo for acedido.
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 5FB975EE-E4E5-4089-B8E1-CAFD5B9B34EC
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "27765838"
 ---
 # <a name="how-to-enable-email-notification"></a>Procedimentos: ativar notificação por e-mail
 

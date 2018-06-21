@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30204977"
 ---
 # <a name="generate-and-transfer-your-tenant-key--in-person-retired-content"></a>Gerar e transferir a chave de inquilino – pessoalmente: CONTEÚDO RETIRADO
 

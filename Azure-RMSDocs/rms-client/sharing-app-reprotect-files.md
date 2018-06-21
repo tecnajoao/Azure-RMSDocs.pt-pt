@@ -18,6 +18,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30207806"
 ---
 # <a name="change-permissions-on-files-that-have-been-protected-by-rights-management"></a>Alterar permissões em ficheiros que tenham sido protegidos pela Rights Management
 

@@ -1,13 +1,13 @@
 ---
-title: "Referência do SDK 4.2 da API | Documentos da Microsoft"
-description: "O SDK 4.2 do Azure Information Protection suporta vários sistemas operativos, tais como Android, iOS, OS X, Linux, Windows Phone e Windows Store."
-keywords: 
+title: Referência do SDK 4.2 da API | Documentos da Microsoft
+description: O SDK 4.2 do Azure Information Protection suporta vários sistemas operativos, tais como Android, iOS, OS X, Linux, Windows Phone e Windows Store.
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 6a8df1d8-1279-4189-b17d-f128b7ca5643
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "27764318"
 ---
 # <a name="api-sdk-42-reference"></a>Referência do SDK 4.2 da API
 

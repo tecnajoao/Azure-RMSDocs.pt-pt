@@ -1,13 +1,13 @@
 ---
-title: "Desenvolver a aplicação – AIP"
-description: "Documentação de orientação sobre uma aplicação de consola básica a implementar proteção de documentos com o AIP"
-keywords: 
+title: Desenvolver a aplicação – AIP
+description: Documentação de orientação sobre uma aplicação de consola básica a implementar proteção de documentos com o AIP
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 03/13/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "27765821"
 ---
 # <a name="developing-your-application"></a>Desenvolver a sua aplicação
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444321"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS para indivíduos e Azure Information Protection
 

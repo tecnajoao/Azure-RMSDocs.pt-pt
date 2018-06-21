@@ -17,6 +17,7 @@ ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444304"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Como funciona o Azure RMS? Os bastidores
 

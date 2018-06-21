@@ -17,6 +17,7 @@ ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32327318"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>Guia do utilizador: Remover etiquetas e proteção de ficheiros e e-mails que tenham sido etiquetados pelo Azure Information Protection ou protegidos pelo Rights Management
 

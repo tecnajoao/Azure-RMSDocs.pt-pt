@@ -19,6 +19,7 @@ ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444253"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>FAQs sobre a aplicação Microsoft Azure Information Protection para iOS e Android
 

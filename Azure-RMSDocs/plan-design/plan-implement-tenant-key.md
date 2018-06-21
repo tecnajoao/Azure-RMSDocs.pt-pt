@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30208656"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planear e implementar a sua chave de inquilino do Azure Information Protection
 

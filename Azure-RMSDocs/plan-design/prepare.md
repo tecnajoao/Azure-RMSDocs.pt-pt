@@ -17,6 +17,7 @@ ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444117"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Preparar utilizadores e grupos para o Azure Information Protection
 

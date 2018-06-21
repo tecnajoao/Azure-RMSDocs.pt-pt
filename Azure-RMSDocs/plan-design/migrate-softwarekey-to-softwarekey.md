@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30205216"
 ---
 # <a name="step-2-software-protected-key-to-software-protected-key-migration"></a>Passo 2: migração de chave protegida por software para chave protegida por software
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31009173"
 ---
 # <a name="administering-the-azure-rights-management-service-by-using-windows-powershell"></a>Administrar o serviço Azure Rights Management através do Windows PowerShell
 

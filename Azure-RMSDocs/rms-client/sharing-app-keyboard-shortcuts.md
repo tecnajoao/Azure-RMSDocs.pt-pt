@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30206959"
 ---
 # <a name="use-keyboard-shortcuts-in-the-rights-management-sharing-application"></a>Utilizar atalhos de teclado na aplicação de partilha Rights Management
 

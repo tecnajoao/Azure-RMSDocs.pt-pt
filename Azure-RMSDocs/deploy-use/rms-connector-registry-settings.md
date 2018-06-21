@@ -17,6 +17,7 @@ ms.sourcegitcommit: 373e05ff0c411d29cc5b61c36edaf5a203becc14
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34216839"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Definição de registo para o conetor Rights Management
 

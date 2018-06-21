@@ -17,6 +17,7 @@ ms.sourcegitcommit: 09072591f1aa9878d063feb78ffcc4accec63fd1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34308176"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisitos para o Azure Information Protection
 

@@ -15,6 +15,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30208061"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Política do Azure Information Protection predefinida
 

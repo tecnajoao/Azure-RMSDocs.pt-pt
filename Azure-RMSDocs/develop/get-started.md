@@ -1,13 +1,13 @@
 ---
-title: "Introdução | Azure RMS"
-description: "O guia de introdução para uma primeira aplicação é efetuado através de guias de configuração do ambiente de desenvolvimento para cada um dos sistemas operativos/plataformas."
-keywords: 
+title: Introdução | Azure RMS
+description: O guia de introdução para uma primeira aplicação é efetuado através de guias de configuração do ambiente de desenvolvimento para cada um dos sistemas operativos/plataformas.
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 9f4cbd16-58e5-421f-a472-8d279e952760
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "27764548"
 ---
 # <a name="get-started"></a>Introdução
 

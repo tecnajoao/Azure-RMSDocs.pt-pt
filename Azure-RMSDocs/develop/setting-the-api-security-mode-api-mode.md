@@ -1,13 +1,13 @@
 ---
-title: "Procedimentos para definir o modo de segurança da API | Azure RMS"
-description: "Escolha o modo de segurança em que é executada a sua aplicação de API de Ficheiros."
-keywords: 
+title: Procedimentos para definir o modo de segurança da API | Azure RMS
+description: Escolha o modo de segurança em que é executada a sua aplicação de API de Ficheiros.
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3B088F14-81C5-4C78-8DED-F5F153353EE0
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "27765403"
 ---
 # <a name="how-to-set-the-api-security-mode"></a>Procedimentos: definir o modo de segurança da API
 

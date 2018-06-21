@@ -17,6 +17,7 @@ ms.sourcegitcommit: 09072591f1aa9878d063feb78ffcc4accec63fd1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34308210"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Como as aplicações do Office e serviços suportam o Azure Rights Management 
 

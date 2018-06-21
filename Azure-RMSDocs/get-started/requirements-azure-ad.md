@@ -17,6 +17,7 @@ ms.sourcegitcommit: f4a97427d61e4b539c91c49c952658aa2dc729ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/27/2018
+ms.locfileid: "32018489"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Requisitos do Azure Active Directory para o Azure Information Protection
 

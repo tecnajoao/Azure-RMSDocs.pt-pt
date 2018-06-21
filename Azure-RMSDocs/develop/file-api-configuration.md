@@ -1,13 +1,13 @@
 ---
-title: "Configuração da API de Ficheiros | Azure RMS"
-description: "O comportamento da API de Ficheiros pode ser configurado através de definições no registo."
-keywords: 
+title: Configuração da API de Ficheiros | Azure RMS
+description: O comportamento da API de Ficheiros pode ser configurado através de definições no registo.
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 10/11/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "27765804"
 ---
 # <a name="file-api-configuration"></a>Configuração da API de Ficheiros
 

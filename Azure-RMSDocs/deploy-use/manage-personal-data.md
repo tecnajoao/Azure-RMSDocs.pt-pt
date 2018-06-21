@@ -17,6 +17,7 @@ ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444385"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gerir os dados pessoais para o Azure Information Protection
 

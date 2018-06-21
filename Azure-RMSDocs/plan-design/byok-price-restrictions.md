@@ -17,6 +17,7 @@ ms.sourcegitcommit: 10f530fa1a43928581da4830a32f020c96736bc8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/21/2018
+ms.locfileid: "34402154"
 ---
 # <a name="byok-pricing-and-restrictions"></a>Preços e restrições de BYOK
 

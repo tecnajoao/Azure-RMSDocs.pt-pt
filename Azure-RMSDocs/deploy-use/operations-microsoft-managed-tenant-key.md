@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30208197"
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gerida pela Microsoft: Operações de ciclo de vida de chave de inquilino
 

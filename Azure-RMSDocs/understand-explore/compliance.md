@@ -1,12 +1,12 @@
 ---
-title: "Conformidade e informações do Azure Information Protection"
-description: "As informações de suporte do Azure Information Protection incluem informações legais, de conformidade e SLAs."
+title: Conformidade e informações do Azure Information Protection
+description: As informações de suporte do Azure Information Protection incluem informações legais, de conformidade e SLAs.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 03/12/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 29d3d4760131eb2642e17b0732f852b6d8cfe314
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 03/15/2018
+ms.locfileid: "29884178"
 ---
 # <a name="compliance-and-supporting-information-for-azure-information-protection"></a>Informações de suporte e conformidade do Azure Information Protection
 

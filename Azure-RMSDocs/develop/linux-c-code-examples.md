@@ -1,13 +1,13 @@
 ---
-title: "Exemplos de código do Linux | Azure RMS"
-description: "Este tópico apresenta-lhe elementos de código e cenários importantes para a versão do Linux do SDK RMS."
-keywords: 
+title: Exemplos de código do Linux | Azure RMS
+description: Este tópico apresenta-lhe elementos de código e cenários importantes para a versão do Linux do SDK RMS.
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 0F7714CA-1D3E-4846-B187-739825B7DE26
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "27765515"
 ---
 # <a name="linux-code-examples"></a>Exemplos de código do Linux
 

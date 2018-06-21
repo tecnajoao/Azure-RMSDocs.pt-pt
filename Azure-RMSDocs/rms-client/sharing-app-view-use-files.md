@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30208588"
 ---
 # <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Ver e utilizar ficheiros que foram protegidos pelo Rights Management
 
@@ -44,7 +45,7 @@ Se vir duas versões do ficheiro, mas com extensões de nome de ficheiro diferen
 
 O modo como o ficheiro abre depende da forma como foi protegido, o que pode descobrir ao observar a extensão de nome de ficheiro. Em qualquer um dos casos, a abertura do ficheiro pode estar sujeita a auditoria e permanece auditada enquanto este estiver protegido. Além disso, se o ficheiro tiver sido enviado como um anexo de e-mail, o remetente poderá ser notificado por e-mail sempre que abrir o ficheiro.
 
-- **O ficheiro tem uma*.pfile* extensão de nome de ficheiro**
+- **O ficheiro tem uma *.pfile* extensão de nome de ficheiro**
 
     O ficheiro foi protegido genericamente.
 
@@ -73,7 +74,7 @@ Para obter uma lista completa das extensões de nome de ficheiro que os serviço
 ## <a name="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file"></a>Para utilizar ficheiros que foram protegidos (por exemplo, editar e imprimir o ficheiro)
 Se pretender efetuar outras ações além da leitura (por exemplo, editar, copiar e imprimir) depois de abrir o ficheiro protegido, siga as instruções de acordo com a extensão de nome de ficheiro:
 
-- **O ficheiro tem uma*.pfile* extensão de nome de ficheiro**
+- **O ficheiro tem uma *.pfile* extensão de nome de ficheiro**
 
     Guarde o ficheiro aberto e atribua-lhe uma nova extensão de nome de ficheiro que esteja associada à aplicação que pretende utilizar.
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30204820"
 ---
 # <a name="rights-management-sharing-application-installation-and-configuration-for-clients"></a>Aplicação de partilha Rights Management: instalação e configuração para clientes
 

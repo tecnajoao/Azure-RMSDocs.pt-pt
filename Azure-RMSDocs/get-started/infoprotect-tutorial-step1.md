@@ -1,68 +1,69 @@
 ---
 title: Passo 1 do tutorial de início rápido – AIP
-description: Passo 1 de um tutorial de introdução rapidamente experimentar o Azure Information Protection-ativar o serviço de proteção.
+description: Passo 1 de um tutorial de introdução para experimentar o Azure Information Protection rapidamente – a criação de ativar o serviço de proteção.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 05/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: 5dcc63f6ffbd7402c94258fe0d8677908c603e1f
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: f5daff0083e653a9a4a4b2bdeb96daa85075428b
+ms.sourcegitcommit: 1bc4c9d6e773809893d02a6abb09aeb4ae28cb03
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "34562063"
 ---
 # <a name="step-1-activate-protection"></a>Passo 1: Ativar proteção
  
 >*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 > [!NOTE]
->Mesmo que a proteção está ativada para o seu inquilino, conclua este passo para confirmar o estado de ativação. As instruções incluem o início de sessão portal do Azure e criar painel do Azure Information Protection, para que está pronto para o passo 2.
+>Mesmo que a proteção é ativada para o seu inquilino, conclua este passo para confirmar o estado de ativação. As instruções incluem o início de sessão no portal do Azure e criar o painel do Azure Information Protection, para que está pronto para o passo 2.
 
-Quando a proteção se encontra ativada para o Azure Information Protection, pode proteger documentos mais confidenciais da sua organização e e-mails. Também pode controlar a forma como estes documentos protegidos são utilizados quando partilhá-los com outras pessoas. 
+Quando a proteção é ativada para o Azure Information Protection, pode proteger e-mails e documentos mais confidenciais da sua organização. Também pode controlar a forma como estes documentos protegidos são utilizados quando os partilhar com outras pessoas. 
 
-Existem várias formas que pode ativar a proteção. Pode utilizar o PowerShell e os portais de admin. Mas para este tutorial, iremos utilizar o portal do Azure, o que é onde também configurar as etiquetas para utilizadores. 
+Existem várias formas que pode ativar a proteção. Pode utilizar o PowerShell e portais de administração. Mas, neste tutorial, vamos utilizar o portal do Azure, o que é onde também configurar etiquetas para os utilizadores. 
 
 ## <a name="to-activate-protection"></a>Para ativar a proteção
 
-1. Iniciar sessão para o [portal do Azure](https://portal.azure.com) utilizando a conta de administrador global para o seu inquilino. 
+1. Inicie sessão para o [portal do Azure](https://portal.azure.com) utilizando a conta de administrador global do seu inquilino. 
     
-    Se não for administrador global, pode utilizar um dos seguintes [funções administrativas](/azure/active-directory/active-directory-assign-admin-roles-azure-portal): **administrador de proteção de informações** ou **administrador de segurança**.
+    Se não for o administrador global, pode utilizar um dos seguintes [funções administrativas](/azure/active-directory/active-directory-assign-admin-roles-azure-portal): **administrador do Information Protection** ou **administrador de segurança**.
 
-2. No hub menu, clique em **crie um recurso**e, em seguida, o **MARKETPLACE** lista, selecione **segurança + identidade**. 
+2. No hub menu, selecione **criar um recurso**e, em seguida, a partir da caixa de pesquisa para o Marketplace, escreva **do Azure Information Protection**. 
     
-3.  No **segurança + identidade** painel, do **aplicações em destaque** lista, selecione **Azure Information Protection**. Em seguida, no **Azure Information Protection** painel, clique em **criar**.
-    
-    Esta ação cria o **Azure Information Protection** painel para que a próxima vez que iniciar sessão no portal, pode selecionar o serviço do hub **todos os serviços** lista. 
+3. Na lista de resultados, selecione **do Azure Information Protection**. Sobre o **do Azure Information Protection** painel, clique em **criar**.
     
     > [!TIP] 
-    > Selecione **Afixar ao dashboard** para criar um mosaico do **Azure Information Protection** no seu dashboard. Assim, não terá de procurar o serviço da próxima vez que iniciar sessão no portal.
-
-4. Preste atenção às informações na página **Início rápido** que se abre automaticamente ao ligar ao serviço pela primeira vez. Pode regressar aqui mais tarde. Para este tutorial, selecione **GERIR** > **ativação da proteção**. 
-
-5. Pode agora ver se a proteção está ativada para o seu inquilino. 
+    > Opcionalmente, selecione **afixar ao dashboard** para criar um **do Azure Information Protection** mosaico no dashboard, para que não terá de procurar para o serviço da próxima vez que iniciar sessão no portal.
     
-    - Se estiver ativada a proteção, consulte a confirmação do seguinte:
+    Clique em **criar** novamente.
+
+4. Preste atenção às informações na página **Início rápido** que se abre automaticamente ao ligar ao serviço pela primeira vez. Pode regressar aqui mais tarde. Neste tutorial, selecione **MANAGE** > **ativação de proteção**. 
+
+5. Agora, ver se a proteção está ativada para o seu inquilino. 
+    
+    - Se estiver ativada a proteção, verá a confirmação seguinte:
         
         ![Estado de proteção de informações do Azure para o Azure RMS](../media/info-protect-azurerms-activated.png)
         
-    - Se não estiver ativada a proteção, consulte que este serão refletidas nas informações de estado e a opção para ativar:
+    - Se não estiver ativada a proteção, verá que isto refletido nas informações de estado e a opção para ativar:
         
         ![Estado de proteção de informações do Azure para o Azure RMS](../media/info-protect-azurerms-deactivated.png)
 
-6. Se não se encontra ativada a proteção, selecione **ativar**. 
+6. Se a proteção não está ativada, selecione **Activate**. 
 
-    Quando a ativação estiver concluída, a barra de informações apresenta **ativação foi concluído com sucesso**.
+    Quando a ativação estar concluída, a barra de informações apresenta **ativação foi concluído com êxito**.
 
 É tudo o que precisa de fazer neste primeiro passo para concluir este tutorial. Está pronto para ir para o passo 2.
 
 |Se pretender mais informações|Informações adicionais|
 |--------------------------------|--------------------------|
-|Sobre a ativação da proteção|[Ativar o Azure Rights Management](../deploy-use/activate-service.md)|
+|Informações sobre a ativação de proteção|[Ativar o Azure Rights Management](../deploy-use/activate-service.md)|
 
 
 >[!div class="step-by-step"]

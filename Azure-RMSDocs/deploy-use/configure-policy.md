@@ -4,7 +4,7 @@ description: Para configurar a classificação, a etiquetagem e a proteção, te
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 05/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 0b95db2e96ca2fc250e7031f394e2e0bd8d4fdef
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: 43fade205d4d518f6fc8f5dd7c7280a80d2c7eae
+ms.sourcegitcommit: 1bc4c9d6e773809893d02a6abb09aeb4ae28cb03
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "34562182"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurar a política do Azure Information Protection
 
@@ -26,7 +27,7 @@ Para configurar a classificação, a etiquetagem e a proteção, tem de configur
 
 ## <a name="subscription-support"></a>Suporte da subscrição
 
-O Azure Information Protection suporta diferentes níveis de subscrições:
+O Azure Information Protection suporta diferentes níveis de assinaturas:
 
 - Azure Information Protection P2: suporte para todas as funcionalidades de classificação, etiquetagem e proteção.
 
@@ -34,57 +35,57 @@ O Azure Information Protection suporta diferentes níveis de subscrições:
 
 - Office 365 que inclui o serviço Azure Rights Management: suporte para proteção, mas não para classificação e etiquetagem.
 
-As opções que necessitam de uma subscrição do Azure Information Protection P2 são identificadas no portal.
+As opções que requerem uma subscrição do Azure Information Protection P2 estão identificadas no portal.
 
-Se a sua organização tem uma combinação de subscrições, é da responsabilidade do cliente, certifique-se de que os utilizadores não a utilizar funcionalidades que a conta não está licenciada para utilizar. O Azure Information Protection does de cliente não licenças verificação e de imposição. Quando configurar as opções que nem todos os utilizadores possuem uma licença para, utilize confinada políticas ou de uma definição de registo para se certificar de que a sua organização permanece em conformidade com as suas licenças:
+Se sua organização tiver uma mistura de subscrições, é sua responsabilidade certificar-se de que os utilizadores não utilizar funcionalidades que a conta não está licenciada para utilizar. O cliente do Azure Information Protection não fazer para licenciar a verificação e de imposição. Quando configurar as opções que nem todos os utilizadores tenham uma licença para, a utilização no âmbito políticas ou de uma definição de registo para se certificar de que a sua organização se mantém em conformidade com as suas licenças:
 
-- **Quando a sua organização tem uma combinação de licenças do Azure Information Protection P1 e Azure Information Protection P2**: para utilizadores que tenham um P2 de licença, criar e utilizar um ou mais [âmbito políticas](configure-policy-scope.md) quando configurar as opções que requerem uma licença do Azure Information Protection P2. Certifique-se de que a política global não contém opções que requerem uma licença do Azure Information Protection P2.
+- **Quando a sua organização tiver uma mistura de licenças do Azure Information Protection P1 e P2 do Azure Information Protection**: para utilizadores que têm uma P2 licenciar, criar e utilizar um ou mais [políticas de âmbito](configure-policy-scope.md) ao configurar opções que requerem uma licença do Azure Information Protection P2. Certifique-se de que a política global não contém opções que requerem uma licença do Azure Information Protection P2.
 
-- **Quando a sua organização tem uma subscrição do Azure Information Protection, alguns utilizadores tem apenas uma licença para o Office 365 que inclui o serviço Azure Rights Management, mas**: para os utilizadores que não possuem uma licença para o Azure Information Protection, Edite o registo nos respetivos computadores para não transferir política do Azure Information Protection. Para obter instruções, consulte o guia de administração para a personalização seguinte: [impor proteção-modo só de quando a sua organização tiver uma mistura de licenças](../rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses).
+- **Quando a sua organização tem uma subscrição do Azure Information Protection, alguns utilizadores têm apenas uma licença para o Office 365 que inclui o serviço Azure Rights Management, mas**: para os utilizadores que não tem uma licença do Azure Information Protection, Edite o registo em seus computadores para que eles não transferir política do Azure Information Protection. Para obter instruções, consulte o Guia do administrador para a personalização do seguinte: [impor modo apenas de proteção quando a sua organização tiver uma mistura de licenças](../rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses).
 
 Para obter mais informações sobre as subscrições, veja [De que subscrição preciso para o Azure Information Protection e que funcionalidades estão incluídas?](../get-started/faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
 
-## <a name="signing-in-to-the-azure-portal"></a>Iniciar sessão no portal do Azure
+## <a name="signing-in-to-the-azure-portal"></a>O início de sessão no portal do Azure
 
-Para iniciar sessão no portal do Azure, para configurar e gerir o Azure Information Protection:
+Para iniciar sessão no portal do Azure, configurar e gerir o Azure Information Protection:
 
 - Utilize a seguinte hiperligação: https://portal.azure.com
 
 - Utilizar uma conta que tenha um dos seguintes [funções de administrador](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
-    - **Administrador de proteção de informações**
+    - **Administrador do Information Protection**
 
     - **Administrador de segurança**
 
     - **Administrador global / administrador de empresa**
 
 
-## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Para aceder ao painel do Azure Information Protection pela primeira vez
+## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Para aceder ao painel de proteção de informações do Azure pela primeira vez
 
 1. Inicie sessão no portal do Azure.
 
-2. No hub menu, clique em **crie um recurso**e, em seguida, o **MARKETPLACE** lista, selecione **segurança + identidade**. 
+2. No hub menu, selecione **criar um recurso**e, em seguida, a partir da caixa de pesquisa para o Marketplace, escreva **do Azure Information Protection**. 
     
-3. No **segurança + identidade** painel, do **aplicações em destaque** lista, selecione **Azure Information Protection**. Em seguida, no **Azure Information Protection** painel, clique em **criar**.
-    
-    Esta ação cria o **Azure Information Protection** painel para o seu inquilino para que a próxima vez iniciar sessão no portal, pode selecionar o serviço do hub **todos os serviços** lista. 
+3. Na lista de resultados, selecione **do Azure Information Protection**. Sobre o **do Azure Information Protection** painel, clique em **criar**.
     
     > [!TIP] 
-    > Selecione **Afixar ao dashboard** para criar um mosaico do **Azure Information Protection** no seu dashboard. Assim, não terá de procurar o serviço da próxima vez que iniciar sessão no portal.
+    > Opcionalmente, selecione **afixar ao dashboard** para criar um **do Azure Information Protection** mosaico no dashboard, para que não terá de procurar para o serviço da próxima vez que iniciar sessão no portal.
+    
+    Clique em **criar** novamente.
 
-4. Pode ver o **início rápido** página que abre automaticamente na primeira vez que o se ligar ao serviço. Procurar os recursos sugeridos ou utilizar as outras opções de menu. Para configurar as etiquetas que os utilizadores podem selecionar, utilize o procedimento seguinte.
+4. Verá o **guia de introdução** página que abre automaticamente na primeira vez que ligar ao serviço. Procurar os recursos sugeridos ou utilizar as outras opções de menu. Para configurar as etiquetas que os utilizadores podem selecionar, utilize o procedimento seguinte.
 
-Acesso de tempo junto a **Azure Information Protection** painel,-seleciona automaticamente o **etiquetas** opção para que possa ver e configurar as etiquetas para todos os utilizadores. Poderá regressar ao **início rápido** página selecionando-à partir de **geral** menu.
+Acesso de tempo junto a **do Azure Information Protection** painel, ele seleciona automaticamente o **etiquetas** opção para que possa ver e configurar etiquetas para todos os utilizadores. Pode regressar à **início rápido** página selecionando-o a partir do **geral** menu.
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Como configurar a política do Azure Information Protection
 
-1. Certifique-se de que tem sessão iniciada portal do Azure, utilizando uma dessas funções administrativas: administrador de proteção de informações, o administrador de segurança ou o Administrador Global. Consulte o [anterior a secção](#signing-in-to-the-azure-portal) para obter mais informações sobre estas funções administrativas.
+1. Certifique-se de que tem sessão iniciada portal do Azure ao utilizar uma destas funções administrativas: Administrador Global, administrador de segurança ou administrador do Information Protection. Consulte a [secção anterior](#signing-in-to-the-azure-portal) para obter mais informações sobre estas funções administrativas.
 
-2. Se necessário, navegue para o **Azure Information Protection** painel: por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **Information Protection** no Caixa de filtro. Na lista de resultados, selecione **Azure Information Protection**. 
+2. Se necessário, navegue para o **do Azure Information Protection** painel: por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **proteção de informações** no Caixa de filtro. Na lista de resultados, selecione **Azure Information Protection**. 
     
-    O **Azure Information Protection - etiquetas** painel abre-se automaticamente para que possa ver e editar as etiquetas disponíveis. As etiquetas podem ser disponibilizadas para todos os utilizadores, os utilizadores selecionados ou não adicionando ou removendo-los a partir de uma política.
+    O **do Azure Information Protection – etiquetas** painel abre automaticamente para que possa ver e editar as etiquetas disponíveis. As etiquetas podem ser disponibilizadas para todos os utilizadores, os utilizadores selecionados ou não existem utilizadores adicionando ou removendo-los a partir de uma política.
 
-3. Para ver e editar as políticas, selecione **políticas** entre as opções de menu. Para ver e editar a política que todos os utilizadores obtêm, selecione o **Global** política. Para criar uma política personalizada para utilizadores selecionados, selecione **adicionar uma nova política**.
+3. Para ver e editar as políticas, selecione **políticas** entre as opções de menu. Para ver e editar a política que obtém todos os utilizadores, selecione o **Global** política. Para criar uma política personalizada para utilizadores selecionados, selecione **adicionar uma nova política**.
     
     Uma política do Azure Information Protection contém os elementos seguintes que pode configurar:
     
@@ -100,23 +101,23 @@ Acesso de tempo junto a **Azure Information Protection** painel,-seleciona autom
     
     - A opção para etiquetar automaticamente uma mensagem de e-mail com base nos respetivos anexos.
 
-    - A opção de controlar se a barra do Information Protection é apresentada nas aplicações do Office.
+    - A opção de controlar se a barra do Information Protection é apresentada em aplicativos do Office.
 
     - A opção para controlar se o botão não reencaminhar é apresentado no Outlook.
     
-    - A opção para permitir que os utilizadores especifiquem os seus próprios permissões para documentos.
+    - A opção para permitir aos utilizadores especificar suas próprias permissões para documentos.
     
     - A opção para fornecer uma ligação de ajuda personalizada para os utilizadores.
 
-O Azure Information Protection tem uma [política predefinida](configure-policy-default.md) que contém cinco etiquetas principais. Dois destas etiquetas contenham sublabels para fornecer subcategorias, quando necessário. Quando uma etiqueta está configurada para sublabels, os utilizadores não é possível selecionar a etiqueta principal, mas tem de selecionar uma dos sublabels.
+O Azure Information Protection tem uma [política predefinida](configure-policy-default.md) que contém cinco etiquetas principais. Duas destas etiquetas contenham subetiquetas para fornecer subcategorias, quando necessário. Quando uma etiqueta está configurada para subetiquetas, os utilizadores não é possível selecionar a etiqueta principal, mas tem de selecionar uma das subetiquetas.
 
-As etiquetas de Azure Information Protection podem ser utilizadas com o intervalo completo de dados que uma organização, normalmente, cria e armazena a classificação mais baixo de dados pessoais, para a classificação máxima de dados altamente confidenciais. 
+As etiquetas do Azure Information Protection podem ser utilizadas com o intervalo completo de dados que uma organização normalmente cria e armazena, desde a classificação mais baixa de dados pessoais, à classificação mais elevada de dados altamente confidenciais. 
 
 Pode utilizar as etiquetas predefinidas sem alterações ou pode personalizá-las, eliminá-las ou criar novas etiquetas. Para obter mais informações, utilize as ligações na próxima secção, para o ajudar a encontrar as opções relevantes e como as configurar.
 
-Pode criar qualquer número de etiquetas. No entanto, quando são iniciados obter demasiado elevado para os utilizadores vejam e selecione a etiqueta de direita de facilmente, crie políticas de âmbito para que os utilizadores veem apenas as etiquetas que são relevantes nos mesmos. Não há um limite superior para etiquetas que aplicar a proteção, o que é 500.
+Pode criar qualquer número de etiquetas. No entanto, durante o arranque obter demasiado elevado para os utilizadores vejam e selecione a etiqueta de direito de facilmente, crie políticas de âmbito, para que os utilizadores veem apenas as etiquetas que são relevantes para eles. Existe um limite superior para as etiquetas que aplicam a proteção, o que é 500.
 
-Quando efetuar alterações num painel do Azure Information Protection, clique em **Guardar** para guardar as alterações ou clique em **Eliminar** para reverter para as últimas definições guardadas. Quando guardar alterações numa política ou, se alterar as alterações para etiquetas que são adicionadas às políticas, essas alterações são automaticamente publicadas. Não há nenhum separado opção de publicar.
+Quando efetuar alterações num painel do Azure Information Protection, clique em **Guardar** para guardar as alterações ou clique em **Eliminar** para reverter para as últimas definições guardadas. Quando guardar as alterações de uma política ou tornar a alterar as alterações para etiquetas que são adicionadas às políticas, essas alterações são automaticamente publicadas. Não existe nenhum separado opção de publicar.
 
 O cliente do Azure Information Protection verifica se existem alterações sempre que uma das aplicações do Office suportada é iniciada e transfere as alterações como política do Azure Information Protection mais recente. Acionadores adicionais que atualizam a política do cliente:
 
@@ -126,7 +127,7 @@ O cliente do Azure Information Protection verifica se existem alterações sempr
 
 - A cada 24 horas.
 
-- Para o [Scanner de proteção de informações do Azure](deploy-aip-scanner.md): quando inicia o serviço (se a política é mais antiga do que uma hora) de mensagens em fila e a hora a hora durante a operação.
+- Para o [do Azure Information Protection Scanner](deploy-aip-scanner.md): quando o serviço é iniciado (se a política é mais antiga do que uma hora) de mensagens em fila e a cada hora durante a operação.
 
 
 >[!NOTE]

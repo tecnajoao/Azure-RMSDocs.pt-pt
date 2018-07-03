@@ -4,7 +4,7 @@ description: Identifique os pré-requisitos para implementar o Azure Information
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/18/2018
+ms.date: 06/27/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,35 +12,35 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9cdb205488c300f1df1e002be105765a90ce1a1a
-ms.sourcegitcommit: 09072591f1aa9878d063feb78ffcc4accec63fd1
+ms.openlocfilehash: 18168f89c762011146f7f3f131079f5a502820ac
+ms.sourcegitcommit: 3f524c5af39bee39169f86d9c4e72c661c960d83
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/18/2018
-ms.locfileid: "34308176"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37069381"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisitos para o Azure Information Protection
 
->*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Antes de implementar o Azure Information Protection na sua organização, certifique-se de que cumpre os seguintes pré-requisitos. 
 
 ## <a name="subscription-for-azure-information-protection"></a>Subscrição do Azure Information Protection
 
-**Para classificação, etiquetagem e proteção**: tem de ter um [plano do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). 
+**Para classificação, etiquetagem e proteção**: tem de ter uma [plano do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). 
 
-**Para apenas proteção**: tem de ter um [plano do Office 365 que inclua o Azure Information Protection](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+**Para apenas de proteção**: tem de ter uma [plano do Office 365 que inclui o Azure Information Protection](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
-Para se certificar de que a subscrição da sua organização inclui as funcionalidades do Azure Information Protection que pretende utilizar, reveja a lista de funcionalidades do [preços do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection) página.
+Para certificar-se de que a subscrição da sua organização inclui as funcionalidades do Azure Information Protection que pretende utilizar, reveja a lista de recursos a partir da [preços do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection) página.
 
 > [!TIP]
-> Procurar para ver se planear do Office 365 ou Exchange Online autónomo planear suporta o [novas capacidades de encriptação de mensagens do Office 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801), para enviar e-mails protegidos para endereços de e-mail pessoais? Por exemplo, Gmail, Yahoo e da Microsoft. Verifique os seguintes recursos:
+> Procurando saber se planear do Office 365 ou autónomo Exchange Online plano suporta o [novas capacidades de encriptação de mensagens do Office 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801), para enviar e-mails protegidos para endereços de e-mail pessoais? Por exemplo, Gmail, Yahoo e Microsoft. Consulte os seguintes recursos:
 >
 > [Descrição de serviço Online do Exchange](https://technet.microsoft.com/library/exchange-online-service-description.aspx)
 >
 > [Office 365 educação](https://technet.microsoft.com/library/mt844095.aspx)
 >
-> [Office 365 dos EUA](https://technet.microsoft.com/library/mt774581.aspx)
+> [Office 365 administração pública dos EUA](https://technet.microsoft.com/library/mt774581.aspx)
 
 Se tiver dúvidas sobre subscrições ou licenciamento, não as publique nesta página. em alternativa, entre em contacto com o seu Gestor de Conta Microsoft ou com o [Suporte da Microsoft](information-support.md#to-contact-microsoft-support).
 
@@ -48,11 +48,11 @@ Se tiver dúvidas sobre subscrições ou licenciamento, não as publique nesta p
 
 A sua organização tem de ter um Azure Active Directory (Azure AD) para suportar a autorização e autenticação de utilizador para o Azure Information Protection. Além disso, se pretender utilizar as contas de utilizador do seu diretório no local (AD DS), tem também de configurar a integração de diretórios.
 
-Início de sessão único (SSO) é suportada para o Azure Information Protection, para que os utilizadores não recebem repetidamente para as respetivas credenciais. Se utilizar outra solução de fornecedor de Federação, consulte o fornecedor como configurá-lo para o Azure AD. WS-Trust é um requisito comuns para estas soluções suportar o início de sessão único. 
+Início de sessão único (SSO) é suportada para o Azure Information Protection, para que os utilizadores não são um pedido repetidamente as credenciais. Se utilizar outra solução de fornecedor de Federação, consulte esse fornecedor como configurá-lo para o Azure AD. WS-Trust é um requisito comum para estas soluções suportar o início de sessão único. 
 
 A autenticação multifator (MFA) é suportada com o Azure Information Protection quando tem o software de cliente necessário e a infraestrutura de suporte de MFA corretamente configurada.
 
-Acesso condicional é suportado na pré-visualização para documentos protegidos pelo Azure Information Protection. Para obter mais informações, consulte as FAQ seguintes: [vejo Azure Information Protection está indicado como uma aplicação de nuvem disponíveis para o acesso condicional — como funciona este trabalho?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
+Acesso condicional é suportado em pré-visualização para documentos protegidos pelo Azure Information Protection. Para obter mais informações, consulte as FAQ seguintes: [vejo do Azure Information Protection está indicado como uma aplicação de cloud disponível para o acesso condicional, como faz esse trabalho?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
 
 Para obter mais informações sobre os requisitos de autenticação, veja [Requisitos do Azure Active Directory para o Azure Information Protection](requirements-azure-ad.md). 
 
@@ -66,7 +66,7 @@ Os seguintes dispositivos suportam o cliente do Azure Information Protection, o 
 
 - Windows 10 (x86, x64)
     
-    - Nenhum suporte para escrita na compilação do Windows 10 RS4 para Insiders. 
+    - Não há suporte para manuscrito na compilação do Windows 10 RS4 Insiders. 
 
 - Windows 8.1 (x86, x64)
 
@@ -84,13 +84,15 @@ Nas versões de servidor listadas, o cliente do Azure Information Protection é 
 
 Quando o cliente do Azure Information Protection protege os dados através do serviço Azure Rights Management, estes podem ser consumidos pelos [mesmos dispositivos](requirements-client-devices.md) que suportam o serviço Azure Rights Management.
 
+Tem do cliente do Azure Information Protection [pré-requisitos adicionais](../rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client) que estão listadas na guia do administrador.
+
 ## <a name="applications"></a>Aplicações
 
 O cliente do Azure Information Protection pode etiquetar e proteger documentos e e-mails ao utilizar as aplicações **Word**, **Excel**, **PowerPoint** e **Outlook** a partir de qualquer uma das seguintes edições do Office:
 
 - Office 365 ProPlus com aplicações da versão de 2016 ou 2013 (instalação com tecnologia Clique-e-Use ou baseada no Windows Installer)
     
-    Estas edições do Office estão incluídas com a maioria das mas nem todas as subscrições do Office 365 que inclua a proteção de dados do Azure Information Protection. Verifique as informações de subscrição para ver se Office 365 ProPlus está incluído. Também irá encontrar estas informações no [Azure Information Protection datasheet](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+    Estas edições do Office são incluídas com a maioria dos mas nem todas as subscrições do Office 365 que incluem a proteção de dados do Azure Information Protection. Verifique as informações de subscrição para ver se do Office 365 ProPlus está incluído. Também irá encontrar estas informações no [folha de dados do Azure Information Protection](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 - Office Professional Plus 2016
 
@@ -98,9 +100,9 @@ O cliente do Azure Information Protection pode etiquetar e proteger documentos e
 
 - Office Professional Plus 2010 com Service Pack 2
 
-Outras edições do Office não podem proteger documentos e e-mails com um serviço Rights Management. Nestas edições, o Azure Information Protection é suportado apenas para classificação. Por conseguinte, etiquetas que aplicarem a proteção não são apresentados aos utilizadores no Azure Information Protection barra ou do **proteger** botão no Friso do Office. 
+Outras edições do Office não podem proteger documentos e e-mails com um serviço Rights Management. Nestas edições, o Azure Information Protection é suportado apenas para classificação. Conseqüentemente, as etiquetas que aplicam a proteção não são apresentadas aos utilizadores no Azure Information Protection barra ou a partir da **Protect** botão da faixa de opções do Office. 
 
-O cliente Azure Information Protection suporta várias versões do Office no mesmo computador. Este cliente também não suporta a mudança de contas de utilizador no escritório.
+O cliente do Azure Information Protection não suporta várias versões do Office no mesmo computador. Este cliente também não suporta contas de utilizador mudar no Office.
 
 Para obter informações sobre as aplicações do Office que suportam o serviço de proteção de dados, consulte [Aplicações que suportam a proteção de dados do Azure Rights Management](requirements-applications.md).
 
@@ -114,17 +116,17 @@ Além das informações no artigo do Office, específico para o Azure Informatio
 
 - Permitir tráfego HTTPS em TCP 443 para **api.informationprotection.azure.com**.
 
-- Permitir o tráfego HTTPS no TCP 443 para **mobile.pipe.aria.microsoft.com**.
+- Permitir tráfego HTTPS em TCP 443 para **mobile.pipe.aria.microsoft.com**.
 
 - Se utilizar um proxy Web que requer autenticação, tem de o configurar para utilizar a autenticação integrada do Windows com as credenciais de início de sessão do utilizador do Active Directory.
 
-- Não termine as ligações de cliente para serviço TLS (por exemplo, para fazer inspeção ao nível do pacote) para o serviço Azure Rights Management. Se o fizer, interrompe o certificado que os clientes de RMS utilizam com as ACs gerida pela Microsoft para ajudar a proteger as comunicações com o serviço Azure Rights Management de afixação.
+- Não termine as ligações de cliente para serviço TLS (por exemplo, para fazer inspeção ao nível do pacote) para o serviço Azure Rights Management. Se o fizer, quebra a afixação de que os clientes de RMS utilizam com as AC geridas pela Microsoft para ajudar a proteger as comunicações com o serviço Azure Rights Management de certificado.
     
-    - Sugestão: Devido a forma como o Chrome apresenta ligações seguras na barra de endereço, pode utilizar este browser para rapidamente verificar se a ligação de cliente é terminada antes de atingir o serviço Azure Rights Management. Introduza o seguinte URL na barra de endereço do browser: `https://admin.na.aadrm.com/admin/admin.svc` 
+    - Sugestão: Devido à forma como Chrome apresenta ligações seguras na barra de endereço, pode utilizar este browser para verificar rapidamente se a ligação de cliente é encerrada antes de atingir o serviço Azure Rights Management. Introduza o seguinte URL na barra de endereço do browser: `https://admin.na.aadrm.com/admin/admin.svc` 
     
-        Não se preocupe que apresenta a janela do browser. Clique em vez disso, o cadeado na barra de endereço para ver as informações do site. As informações do site permite-lhe ver a autoridade de certificação (AC) emissora. Se o certificado não é emitido por uma CA Microsoft, é muito provável que a ligação de serviço de cliente segura está a ser terminada e tem de reconfiguração na sua firewall. A imagem seguinte mostra um exemplo de um Microsoft AC emissora. Se vir que uma AC interna emitiu o certificado, esta configuração não é compatível com o Azure Information Protection.
+        Não se preocupe no que apresenta a janela do browser. Clique em vez disso, o cadeado na barra de endereço para ver as informações do site. As informações do site permite-lhe ver a autoridade de certificação (AC) emissora. Se o certificado não é emitido por uma CA Microsoft, é muito provável que a ligação segura do serviço de cliente está a ser terminada e tem de reconfiguração na sua firewall. A imagem seguinte mostra um exemplo de um Microsoft AC emissora. Se vir que uma AC interna emitiu o certificado, esta configuração não é compatível com o Azure Information Protection.
         
-        ![A verificar o certificado emitido para ligações do Azure Information Protection](../media/certificate-checking.png)
+        ![A verificar o certificado emitido para ligações de Azure Information Protection](../media/certificate-checking.png)
 
 ### <a name="on-premises-servers"></a>Servidores no local
 
@@ -140,7 +142,7 @@ Para obter informações sobre os requisitos adicionais para este cenário, cons
 
 ### <a name="coexistence-of-ad-rms-with-azure-rms"></a>Coexistência do AD RMS com o Azure RMS
 
-O cenário de implementação seguinte não é suportado a menos que estão a utilizar o AD RMS para [proteção HYOK](../deploy-use/configure-adrms-restrictions.md) com o Azure Information Protection (a configuração "tenha a sua própria chave"):
+O cenário de implementação seguinte não é suportado, exceto se estiver a utilizar o AD RMS para [proteção do HYOK](../deploy-use/configure-adrms-restrictions.md) com o Azure Information Protection (a configuração "tenha a sua própria chave"):
 
 - Executar o AD RMS e o Azure RMS lado a lado na mesma organização, exceto durante a migração, conforme descrito em [Migrar do AD RMS para o Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 

@@ -4,7 +4,7 @@ description: Orientações para o caso de ter o Azure Rights Management com o AD
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 06/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,35 +12,54 @@ ms.technology: techgroup-identity
 ms.assetid: 11ffa730-c5dc-4b6b-9c1e-c58eff8aafc2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a233ddab67832e2de59b1fc0727296a8f3017db7
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 142f8b0683cbf18fb72cec303587481f3e9e3018
+ms.sourcegitcommit: 6bdc1e5c328ad3b63aeb6f60ba9905551261a7a1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37137819"
 ---
 # <a name="preparing-the-environment-for-azure-rights-management-when-you-also-have-active-directory-rights-management-services-ad-rms"></a>Preparar o ambiente para o Azure Rights Management quando também tem os Serviços de Gestão de Direitos do Active Directory (AD RMS)
 
->*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Aplicar a documentação de orientação importante se já estiver a utilizar Active Directory Rights Management Services (AD RMS) e um dos seguintes cenários:
+> [!IMPORTANT]
+> Documentação de orientação se estiver a utilizar o Active Directory Rights Management Services (AD RMS)
 
-- [A subscrição que inclui o Azure Rights Management foi comprada durante ou após Fevereiro de 2018](#your-subscription-was-purchased-during-or-after-february-2018).
+Se o serviço Azure Rights Management está ativado e que também está a utilizar o AD RMS, esta combinação não é compatível. Sem passos adicionais, alguns computadores podem iniciar automaticamente utilizando o serviço Azure Rights Management e também ligar ao cluster do AD RMS. Este cenário não é suportado e tem resultados pouco fiáveis, pelo que é importante que tome medidas adicionais. 
 
-- [Verá uma opção para ativar a proteção, quando configura a política do Azure Information Protection no portal do Azure](#you-see-an-option-to activate-azure-rights-management-when-you-configure-azure-information-protection)
+**Para verificar se implementou o AD RMS:**
 
-## <a name="your-subscription-was-purchased-during-or-after-february-2018"></a>A subscrição foi comprada durante ou após Fevereiro de 2018
+1. Embora seja opcional, a maioria das implementações de AD RMS publique o ponto de ligação de serviço (SCP) do Active Directory para que os computadores do domínio podem detetar o cluster do AD RMS. 
+    
+    Utilize o Editor de ADSI para ver se tem um SCP publicado no Active Directory: `CN=Configuration [server name], CN=Services, CN=RightsManagementServices, CN=SCP`
 
-Para o fim do Fevereiro de 2018, novas subscrições que incluem agora o Azure Information Protection ativar o serviço Azure Rights Management por predefinição. Se este serviço é ativado automaticamente para si e também estiver a utilizar o Active Directory Rights Management Services (AD RMS), esta combinação não é compatível. Sem passos adicionais, alguns computadores podem iniciar automaticamente utilizando o serviço Azure Rights Management e também ligar ao cluster do AD RMS. Este cenário não é suportado e tem resultados pouco fiáveis, pelo que é importante que desative o serviço Azure Rights Management logo que possível. 
+2. Se não estiver a utilizar um SCP, computadores Windows, que se ligam a um cluster do AD RMS tem de ser configurados para a deteção do serviço do lado do cliente ou de redirecionamento do licenciamento através do registo do Windows: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation` ou `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC\ServiceLocation`
+    
+    Para obter mais informações sobre estas configurações de registro, consulte [Ativar deteção de serviço do lado do cliente através do registo do Windows](../rms-client/client-deployment-notes.md#enabling-client-side-service-discovery-by-using-the-windows-registry) e [redirecionar o tráfego de servidor de licenciamento](../rms-client/client-deployment-notes.md#redirecting-licensing-server-traffic).   
 
-Quando estiver pronto para mover computadores do AD RMS para o serviço Azure Rights Management, pode iniciar o processo de migração. Um dos passos de migração é ativar o serviço novamente, mas efetuar este passo depois de exportar as informações de configuração do AD RMS para o serviço Azure Rights Management. Esta ordem garante que os documentos e e-mails que foram protegidos pelo AD RMS ainda podem ser abertos.
+Se o AD RMS é implementado na sua organização, considere se é possível migrar para o Azure Information Protection. O Azure Information Protection tem muitas vantagens ao longo do AD RMS. Por exemplo, um melhor suporte para dispositivos móveis e integração com serviços do Office 365, bem como com o Exchange Server e SharePoint Server. Para obter mais informações, consulte [comparar o Azure Information Protection e o AD RMS](../understand-explore/compare-on-premise.md).
 
-O primeiro passo é necessário desativar o serviço Azure Rights Management.
+Ao migrar para o Azure Information Protection, não perderá o acesso ao conteúdo anteriormente protegido e não tiver a desproteger ou voltar a proteger seu conteúdo. Ainda podem ser abertos a documentos e e-mails que foram protegidos pelo AD RMS, mesmo depois de ter desaprovisionado AD RMS.
+
+Se optar por migrar para o Azure Information Protection ou optar por aceitar as limitações de sessão com a sua implementação atual do AD RMS, primeiro tem de garantir que o serviço Azure Rights Management é desativado. Para obter instruções, siga os passos para o cenário que se aplica a:
+
+- [A subscrição que inclui o Azure Rights Management foi comprada durante ou após Fevereiro de 2018](#your-subscription-was-purchased-during-or-after-february-2018)
+
+- [Sua assinatura tiver sido adquirida antes ou durante a Fevereiro de 2018 e tiver o Exchange Online](#your-subscription-was-purchased-before-or-during-february-2018-and-you-have-exchange-online)
+
+- [Verá uma opção para ativar a proteção quando configurar a política de proteção de informações do Azure no portal do Azure](#you-see-an-option-to-activate-protection-when-you-configure-azure-information-protection)
+
+
+## <a name="your-subscription-was-purchased-during-or-after-february-2018"></a>Sua assinatura tiver sido adquirida durante ou após Fevereiro de 2018
+
+Até o final de Fevereiro de 2018, as subscrições novas que incluem o Azure Information Protection agora ativar o serviço Azure Rights Management por predefinição. Se este serviço é ativado automaticamente para e também estiver a utilizar o Active Directory Rights Management Services (AD RMS), esta combinação não é compatível pelo que é importante que desative o serviço Azure Rights Management logo que possível. 
 
 ### <a name="step-1-deactivate-azure-rights-management"></a>Passo 1: Desativar o Azure Rights Management
 Utilize um dos seguintes procedimentos para desativar o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
 
 > [!TIP]
-> Também pode utilizar o cmdlet do Windows PowerShell, [Disable-Aadrm](http://msdn.microsoft.com/library/windowsazure/dn629422.aspx), para desativar o [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
+> Também pode utilizar o cmdlet Windows PowerShell, [Disable-Aadrm](/powershell/module/aadrm/disable-aadrm), para desativar o serviço Azure Rights Management.
 
 #### <a name="to-deactivate-rights-management-from-the-office-365-admin-center"></a>Para desativar o Rights Management a partir do centro de administração do Office 365
 
@@ -50,7 +69,7 @@ Utilize um dos seguintes procedimentos para desativar o [!INCLUDE[aad_rightsmana
 
 2. Na página **gestão de direitos**, clique em **desativar**.
 
-3.  Quando vir a linha de comandos **que pretende desativar o Rights Management?** clique **desativar**.
+3.  Quando vir a linha de comandos **que pretende desativar o Rights Management?** clique em **desativar**.
 
 Já deverá estar visível **O Rights Management não está ativado** e a opção para ativar.
 
@@ -60,39 +79,53 @@ Já deverá estar visível **O Rights Management não está ativado** e a opçã
     
     Por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
     
-    Se ainda não a aceder ao painel do Azure Information Protection antes, consulte o uso [passos adicionais](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time) para adicionar este painel no portal.
+    Se ainda não tiver acedido o painel do Azure Information Protection antes, consulte o Monouso [passos adicionais](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time) para adicionar este painel para o portal.
 
-2. No iniciais **Azure Information Protection** painel, selecione **ativação da proteção**. 
+2. Selecione **ativação de proteção** entre as opções de menu. 
 
-3.  No **Azure Information Protection - ativação da proteção** painel, selecione **desativar**. Selecione **Sim** para confirmar a sua escolha.
+3.  Sobre o **do Azure Information Protection – ativação de proteção** painel, selecione **desativar**. Selecione **Sim** para confirmar a sua escolha.
 
-Mostra a barra de informações **desativação foi concluído com sucesso** e **desativar** é agora substituída com **ativar**. 
+A barra de informações apresenta **desativação foi concluída com êxito** e **desativar** foi substituída por **ativar**. 
 
 ### <a name="step-2-start-planning-for-migration"></a>Passo 2: começar a planear a migração
 
-Consulte as instruções de migração: [migrar do AD RMS para o Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+Veja as orientações de migração: [migrar do AD RMS para o Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md)
 
-## <a name="you-see-an-option-to-activate-protection-when-you-configure-azure-information-protection"></a>Verá uma opção para ativar a proteção, quando configurar o Azure Information Protection
 
-O **Azure Information Protection - ativação da proteção** painel tem uma opção para ativar o serviço Azure Rights Management (Azure RMS).  
+## <a name="your-subscription-was-purchased-before-or-during-february-2018-and-you-have-exchange-online"></a>Sua assinatura tiver sido adquirida antes ou durante a Fevereiro de 2018 e tiver o Exchange Online
 
-Se também estiver a utilizar os Serviços de Gestão de Direitos do Active Directory (AD RMS), não selecione a opção **Ativar**. Se tiver o AD RMS, a ativação do Azure Rights Management também não é uma opção compatível. Este cenário não é suportado e tem resultados pouco fiáveis, pelo que é importante que não ative o Azure Rights Management nesta fase.  
+Microsoft está a começar a ativar o serviço Azure Rights Management para assinaturas que incluem o Azure Rights Management ou do Azure Information Protection e os inquilinos estiver a utilizar o Exchange Online. Para estes inquilinos, a ativação automática é começar a implementar de 1 de Agosto de 2018.
 
-Quando estiver pronto para mudar os computadores do AD RMS para o serviço Azure Rights Management, pode iniciar um processo de migração. Um dos passos da migração é ativar o serviço. No entanto, só deve fazê-lo depois de exportar as informações de configuração do AD RMS para o serviço Azure Rights Management. Este processo garante que continua a poder abrir os e-mails e documentos que foram protegidos pelo AD RMS. 
+Se o serviço é ativado automaticamente para e também estiver a utilizar o AD RMS, esta combinação não é compatível pelo que é importante que o inquilino é excluído da atualização automática do serviço. 
 
-Quando o serviço Azure Rights Management não está ativado, continua a poder utilizar o Azure Information Protection apenas para etiquetas que aplicam classificação. É criada uma política predefinida especial que não inclui a proteção de dados. Essas opções de configuração permanecem indisponíveis até ativar o serviço Azure Rights Management.
+### <a name="step-1-opt-out-from-the-automatic-service-update"></a>Passo 1: Optar por sair da atualização do serviço automática
+
+Utilize o seguinte procedimento [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration) comando do PowerShell do Exchange Online:`Set-IRMConfiguration -AutomaticServiceUpdateEnabled $false`
+
+[Mais informações](https://support.office.com/article/protection-features-in-azure-information-protection-rolling-out-to-existing-office-365-tenants-7ad6f58e-65d7-4c82-8e65-0b773666634d) 
+
+### <a name="step-2-start-planning-for-migration"></a>Passo 2: começar a planear a migração
+
+Veja as orientações de migração: [migrar do AD RMS para o Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md)
+
+
+## <a name="you-see-an-option-to-activate-protection-when-you-configure-azure-information-protection"></a>Verá uma opção para ativar a proteção quando configurar o Azure Information Protection
+
+O **do Azure Information Protection – ativação de proteção** painel tem uma opção para ativar o serviço Azure Rights Management.  
+
+Se também estiver a utilizar o AD RMS, não selecione a **Activate** opção. Quando o serviço Azure Rights Management não está ativado, continua a poder utilizar o Azure Information Protection apenas para etiquetas que aplicam classificação. É criada uma política predefinida especial que não inclui a proteção de dados. Essas opções de configuração permanecem indisponíveis até ativar o serviço Azure Rights Management.
 
 ### <a name="step-1-configure-your-azure-information-protection-policy-for-classification-and-labeling---without-protection"></a>Passo 1: configurar a política do Azure Information Protection para classificação e etiquetagem (sem proteção)
 
-No painel inicial **Azure Information Protection**, selecione **Política global** para ver e configurar a sua política predefinida que não inclui opções de proteção de dados. Para mais informações, veja [Configurar a política do Azure Information Protection](configure-policy.md).
+Do **do Azure Information Protection – etiquetas** painel, ver e configurar as etiquetas que não incluem as opções de proteção de dados. Para obter mais informações sobre como configurar as etiquetas e as definições de política, consulte [política de configuração do Azure Information Protection](configure-policy.md).
 
 ### <a name="step-2-start-planning-for-migration"></a>Passo 2: começar a planear a migração
 
-Consulte as instruções de migração: [migrar do AD RMS para o Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+Veja as orientações de migração: [migrar do AD RMS para o Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md)
 
-### <a name="step-3-start-to-configure-labels-for-protection"></a>Passo 3: começar a configurar as etiquetas para a proteção
+### <a name="step-3-configure-labels-for-protection"></a>Passo 3: Configurar etiquetas para proteção
 
-Depois de ativar o serviço Azure Rights Management como parte do processo de migração, pode configurar as etiquetas para a proteção de dados. No entanto, se migrar utilizadores em lotes, certifique-se de que as etiquetas que se aplicam a proteção estão no âmbito apenas a utilizadores migrados.
+Depois de ativar o serviço Azure Rights Management como parte do processo de migração, pode configurar as etiquetas para a proteção de dados. No entanto, se migrar utilizadores em lotes, certifique-se de que as etiquetas que aplicam a proteção estão no âmbito apenas a utilizadores migrados.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

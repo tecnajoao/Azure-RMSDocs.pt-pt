@@ -4,7 +4,7 @@ description: Instruções e informações para os administradores configurarem e
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/13/2018
+ms.date: 06/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,22 +12,22 @@ ms.technology: techgroup-identity
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e24d91f04dc3186a9451546c8a962c49129f326b
-ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
+ms.openlocfilehash: fbf672fbdbc5fcc0538a5c5bac6b656fac3fddc7
+ms.sourcegitcommit: e0a47ccee898b50907374cc74fcfd9abf59cd98d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31008986"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36949771"
 ---
-# <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guia do administrador: Configurar e utilizar o controlo de documentos para o Azure Information Protection
+# <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guia do administrador: Configurar e utilizar o controlo de documentos do Azure Information Protection
 
->*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Se tiver uma [subscrição que suporta o controlo de documentos](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features), o site de controlo de documentos é ativado por predefinição para todos os utilizadores da sua organização. O controlo de documentos dispõe de informações para utilizadores e administradores sobre quando um documento protegido foi acedido e, se necessário, um documento controlado pode ser revogado.
 
-## <a name="using-powershell-to-manage-the-document-tracking-site"></a>Utilizar o PowerShell para gerir o site de controlo de documentos
+## <a name="using-powershell-to-manage-the-document-tracking-site"></a>Com o PowerShell para gerir o site de controlo de documentos
 
-As secções seguintes contêm informações sobre como pode gerir o site de controlo através do PowerShell de documentos. Para instruções de instalação para o módulo do PowerShell, consulte [instalar o módulo do AADRM PowerShell](../deploy-use/install-powershell.md). Se já transferiu e instalou o módulo anteriormente, verifique o número da versão ao executar: `(Get-Module aadrm –ListAvailable).Version`
+As secções seguintes contêm informações sobre como pode gerir o site de controlo através do PowerShell de documentos. Para obter instruções de instalação para o módulo do PowerShell, consulte [instalar o módulo do PowerShell do AADRM](../deploy-use/install-powershell.md). Se já transferiu e instalou o módulo anteriormente, verifique o número da versão ao executar: `(Get-Module aadrm –ListAvailable).Version`
 
 Para obter mais informações sobre cada um dos cmdlets, utilize as ligações fornecidas.
 
@@ -35,30 +35,30 @@ Para obter mais informações sobre cada um dos cmdlets, utilize as ligações f
 
 Se a apresentação de informações de controlo de documentos for proibida dentro da sua organização devido a requisitos de privacidade, pode desativar o controlo de documentos através do cmdlet [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature). 
 
-Este cmdlet desativa o acesso ao site de controlo de documentos, para que todos os utilizadores na sua organização não possam controlar ou revogar o acesso a documentos que tenham protegido. Pode reativar o controlo de documentos em qualquer altura através de [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) e ainda verificar se o controlo de documentos está ativado ou desativado com [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature). Para executar estes cmdlets, tem de ter, pelo menos, versão **2.3.0.0** do módulo AADRM para o PowerShell. 
+Este cmdlet desativa o acesso ao site de controlo de documentos, para que todos os utilizadores na sua organização não possam controlar ou revogar o acesso a documentos que tenham protegido. Pode reativar o controlo de documentos em qualquer altura através de [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) e ainda verificar se o controlo de documentos está ativado ou desativado com [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature). Para executar estes cmdlets, tem de ter, pelo menos, versão **2.3.0.0** do módulo do AADRM para o PowerShell. 
 
 Quando o site de controlo de documentos está ativado, por predefinição, apresenta informações como os endereços de e-mail das pessoas que tentaram aceder a documentos protegidos, quando essas pessoas tentaram aceder aos mesmos e a sua localização. Este nível de informações pode ser útil para determinar como os documentos partilhados são utilizados e se devem ser revogados quando for detetada uma atividade suspeita. No entanto, por motivos de privacidade, talvez seja necessário desativar estas informações de utilizador para alguns ou para todos os utilizadores. 
 
-Se tiver utilizadores que não devem ter esta atividade controlada por outros utilizadores, adicioná-las a um grupo que é armazenado no Azure AD e especifique este grupo com o [conjunto AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Set-AadrmDoNotTrackUserGroup) cmdlet. Ao executar este cmdlet, deve especificar um único grupo. No entanto, o grupo pode conter grupos aninhados. 
+Se tiver utilizadores que não devem ter esta atividade controlada por outros utilizadores, adicioná-los a um grupo que é armazenado no Azure AD e especifique este grupo com o [Set-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Set-AadrmDoNotTrackUserGroup) cmdlet. Ao executar este cmdlet, deve especificar um único grupo. No entanto, o grupo pode conter grupos aninhados. 
 
-Para estes membros do grupo, os utilizadores não é possível ver todas as atividades no site de controlo quando dessa atividade está relacionado com a documentos que possam ser partilhados com os mesmos de documentos. Além disso, não são enviadas notificações de e-mail para o utilizador que partilhou o documento.
+Para estes membros do grupo, os utilizadores não podem ver todas as atividades no site de controlo quando o que a atividade está relacionada aos documentos que são partilhados com eles de documentos. Além disso, não são enviadas notificações de e-mail para o utilizador que partilhou o documento.
 
 Ao utilizar esta configuração, todos os utilizadores ainda podem utilizar o site de controlo de documentos e revogar o acesso a documentos que tenham protegido. No entanto, não verão a atividade dos utilizadores que especificou através do cmdlet Set-AadrmDoNotTrackUserGroup.
 
-Esta definição afeta apenas a utilizadores finais. Os administradores do Azure Information Protection sempre podem controlar as atividades de todos os utilizadores, mesmo quando esses utilizadores são especificados utilizando Set-AadrmDoNotTrackUserGroup. Para obter mais informações sobre como os administradores podem controlar os documentos para utilizadores, consulte o [controlar e revogar documentos para utilizadores](#tracking-and-revoking-documents-for-users) secção.
+Esta definição afeta apenas a utilizadores finais. Os administradores do Azure Information Protection sempre podem controlar atividades de todos os utilizadores, mesmo quando esses utilizadores são especificados com Set-AadrmDoNotTrackUserGroup. Para obter mais informações sobre como os administradores podem controlar os documentos para utilizadores, consulte a [controlar e revogar documentos para utilizadores](#tracking-and-revoking-documents-for-users) secção.
 
 
 ### <a name="logging-information-from-the-document-tracking-site"></a>Registo de informações do site de controlo de documentos
 
-Quando tiver uma versão mínima do **2.13.0.0** para o módulo AADRM, pode utilizar os seguintes cmdlets para transferir informações de registo do site de controlo de documentos:
+Se tiver uma versão mínima do **2.13.0.0** para o módulo do AADRM, pode utilizar os seguintes cmdlets para transferir informações de registo a partir do site de controlo de documentos:
 
 - [Get-AadrmTrackingLog](/powershell/module/aadrm/Get-AadrmTrackingLog)
     
-    Este cmdlet devolve informações de controlo sobre documentos protegidos para um utilizador especificado quem protegeu documentos (o emissor de Rights Management) ou a quem acedeu a documentos protegidos. Utilize este cmdlet para ajudar a responder à pergunta "que documentos protegidos teve um utilizador especificado controlar ou aceder?"
+    Este cmdlet devolve informações de controlo sobre os documentos protegidos para um utilizador especificado quem protegeu documentos (o emissor do Rights Management) ou quem acedeu a documentos protegidos. Utilize este cmdlet para o ajudar a responder à pergunta "quais documentos protegidos fizeram um utilizador especificado controlar ou acessar?"
 
 - [Get-AadrmDocumentLog](/powershell/module/aadrm/Get-AadrmDocumentLog)
     
-    Este cmdlet devolve informações de proteção sobre os documentos controladas para um utilizador especificado se esse utilizador protegido documentos (o emissor de Rights Management) ou foi o proprietário de Rights Management para documentos ou documentos protegidos foram configurados para conceder acesso diretamente para o utilizador. Utilize este cmdlet para ajudar a responder à pergunta "Como documentos protegidos de um utilizador específico?"
+    Este cmdlet devolve informações de proteção sobre os documentos rastreados para um utilizador especificado se esse utilizador (o emissor do Rights Management) de documentos protegidos fosse o proprietário do Rights Management para documentos ou documentos protegidos foram configurados para conceder acesso diretamente para o utilizador. Utilize este cmdlet para o ajudar a responder à pergunta "Como são documentos protegidos para um utilizador especificado?"
  
 ## <a name="destination-urls-used-by-the-document-tracking-site"></a>URLs de destino utilizados pelo site de controlo de documentos
 
@@ -76,12 +76,14 @@ Estes URLs são standard para o serviço Azure Rights Management, com a exceçã
 
 ## <a name="tracking-and-revoking-documents-for-users"></a>Controlar e revogar documentos para utilizadores
 
-Quando os utilizadores iniciam sessão no site de controlo de documentos, podem controlar e revogar documentos que protegeram através do cliente do Azure Information Protection ou que partilharam através da aplicação de partilha Rights Management. Ao iniciar sessão como um administrador do Azure Information Protection (administrador global), pode clicar no ícone Administrador, que muda para o Modo de administrador. Este modo permite-lhe ver os documentos que os utilizadores na sua organização selecionaram para controlar com o cliente do Azure Information Protection ou partilharam com a aplicação de partilha Rights Management:
+Quando os utilizadores iniciam sessão no site de controlo de documentos, podem controlar e revogar documentos que protegeram através do cliente do Azure Information Protection ou que partilharam através da aplicação de partilha Rights Management. Quando iniciar sessão como administrador global do Azure AD para o seu inquilino, pode clicar no ícone de administração, que muda para o modo de administrador. Outras funções de administrador não suporta este modo para o site de controlo de documentos. 
 
 ![Ícone Administrador no site de controlo de documentos](../media/tracking-site-admin-icon.png)
 
+O modo de administrador permite-lhe ver os documentos que os utilizadores na sua organização selecionaram para controlar com o cliente do Azure Information Protection ou partilharam com a aplicação de partilha Rights Management.
+
 > [!NOTE] 
-> Se não vir este ícone, apesar de ser um administrador global, é porque ainda não ainda partilhou documentos por si. Neste caso, utilize o seguinte URL para aceder ao site de controlo de documentos: https://portal.azurerms.com/#/admin
+> Se não vir este ícone, apesar de ser um administrador global, é porque não ainda partilhou todos os documentos por conta própria. Neste caso, utilize o seguinte URL para aceder ao site de controlo de documentos: https://portal.azurerms.com/#/admin
 
 As ações que executar no modo de Administrador são auditadas e registadas nos ficheiros de registo de utilização e tem de confirmar para continuar. Para obter mais informações sobre este registo, veja a secção seguinte.
 

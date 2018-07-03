@@ -1,10 +1,10 @@
 ---
-title: Instalar o cliente Azure Information Protection para os utilizadores
-description: As instruções e informações para os administradores implementar o cliente Azure Information Protection para o Windows em redes de empresa.
+title: Instalar o cliente do Azure Information Protection para utilizadores
+description: Instruções e informações para administradores implementar o cliente de Azure Information Protection para Windows em redes corporativas.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 06/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,31 +12,32 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b8cd6aeb13398bdfd65ba3e743e3e12bf3cc5f53
-ms.sourcegitcommit: c41490096af48e778947739e320e0dc8511f6c68
+ms.openlocfilehash: 511fea3a6176cf047eb4c1568d2efa755c46f39c
+ms.sourcegitcommit: e0a47ccee898b50907374cc74fcfd9abf59cd98d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/21/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36949832"
 ---
-# <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guia do administrador: Instalar o cliente Azure Information Protection para os utilizadores
+# <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guia do administrador: Instalar o cliente do Azure Information Protection para utilizadores
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
-Antes de instalar o cliente Azure Information Protection na sua rede empresarial, verifique se os computadores têm as aplicações do Azure Information Protection e as versões do sistema operativo necessário: [requisitos para obter informações do Azure Proteção](../get-started/requirements-azure-rms.md). 
+Antes de instalar o cliente do Azure Information Protection na sua rede empresarial, verifique que os computadores têm as versões de sistema operativo necessária e as aplicações do Azure Information Protection: [requisitos para obter informações do Azure Proteção](../get-started/requirements-azure-rms.md). 
 
-Em seguida, verifique os pré-requisitos adicionais que podem ser necessários para o cliente Azure Information Protection, conforme documentado na secção seguinte. Nem todos os pré-requisitos são verificados pelo programa de instalação.
+Em seguida, verifique os pré-requisitos adicionais que podem ser necessários para o cliente do Azure Information Protection, conforme documentado na próxima seção. Nem todos os pré-requisitos são verificados pelo programa de instalação.
 
 ## <a name="additional-prerequisites-for-the-azure-information-protection-client"></a>Pré-requisitos adicionais para o cliente do Azure Information Protection
 
 - Microsoft .NET Framework 4.6.2
     
-    A instalação completa do cliente Azure Information Protection por predefinição, requer a versão mínima do Microsoft .NET Framework 4.6.2 e se este está em falta, o Assistente de configuração do executável do programa de instalação tenta transferir e instalar este pré-requisito. Quando este pré-requisito é instalado como parte da instalação do cliente, o computador tem de ser reiniciado. Apesar de não recomendado, pode ignorar este pré-requisito quando utilizar o Assistente de configuração utilizando uma [parâmetro de instalação personalizada](#more-information-about-the-downgradedotnetrequirement-installation-parameter).
+    A instalação completa do cliente do Azure Information Protection, por predefinição, requer a versão mínima do Microsoft .NET Framework 4.6.2 e se esta estiver em falta, o Assistente de configuração a partir do instalador executável tentará transferir e instalar este pré-requisito. Quando este pré-requisito é instalado como parte da instalação do cliente, o computador tem de ser reiniciado. Embora não seja recomendado, pode ignorar este pré-requisito quando utiliza o Assistente de configuração ao utilizar um [parâmetro de instalação personalizada](#more-information-about-the-downgradedotnetrequirement-installation-parameter).
     
-    Este pré-requisito não é instalado automaticamente quando instala o cliente automaticamente utilizando o instalador executável, o Windows Update ou do Windows installer. Nestes cenários, tem de instalar este pré-requisito separadamente se for necessário, caso contrário a instalação falha. Pode transferir o Microsoft .NET Framework 4.6.2 (Offline instalador) do [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53344).
+    Este pré-requisito não é instalado automaticamente quando instala automaticamente o cliente utilizando o instalador executável, o Windows Update ou o instalador do Windows. Nestes cenários, tem de instalar este pré-requisito separadamente se for necessário, ou a instalação falha. Pode transferir o Microsoft .NET Framework 4.6.2 (Offline instalador) a partir da [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53344).
 
 - Microsoft .NET Framework 4.5.2
     
-    Se o Visualizador de proteção de informações do Azure está instalado em separado, isto requer a versão mínima do Microsoft .NET Framework 4.5.2 e se este está em falta, o instalador executável não transferir ou instalá-lo.
+    Se o Visualizador do Azure Information Protection está instalado em separado, isto requer a versão mínima do Microsoft .NET Framework 4.5.2 e se esta estiver em falta, o instalador executável não transferir nem instalá-lo.
 
 - Versão do Windows PowerShell 4.0
     
@@ -52,11 +53,11 @@ Em seguida, verifique os pré-requisitos adicionais que podem ser necessários p
     
     Se esta atualização for obrigatória e não estiver instalada, a instalação do cliente avisa-o de que tem de ser instalada. Esta atualização pode ser instalada após a instalação do cliente, mas algumas ações serão bloqueadas e a mensagem é apresentada novamente.  
 
-- Visual C++ Redistributable for Visual Studio 2015 (versão de 32 bits)
+- Visual C++ Redistributable para Visual Studio 2015 (versão de 32 bits)
     
-    Em computadores com Windows 7 Service Pack 1, instalar **vc_redist.x86.exe** seguintes página de transferência: [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
+    Para computadores que executam o Windows 7 Service Pack 1, instale **vc_redist.x86.exe** entre as seguintes opções de página de transferência: [Visual C++ Redistributable para Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
     
-    A instalação do cliente não verifica este pré-requisito, mas é necessário para o cliente Azure Information Protection classificar e proteger os ficheiros PDF.
+    A instalação do cliente não verifica este pré-requisito, mas é necessário para o cliente do Azure Information Protection classificar e proteger ficheiros PDF.
 
 - Não desative o suplemento **Microsoft Azure Information Protection** para as aplicações do Office
     
@@ -73,14 +74,6 @@ Em seguida, verifique os pré-requisitos adicionais que podem ser necessários p
     Mesmo que ainda não tenha configurado esta definição de política de grupo **Lista de suplementos geridos**, poderá ter de a configurar se receber relatórios a informar que o suplemento Microsoft Azure Information Protection será desativado. Quando este suplemento é desativado, os utilizadores não veem a barra Azure Information Protection na aplicação do Office.
     
     Para obter mais informações sobre esta definição de política de grupo, veja [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off) (Os suplementos não são carregados devido às definições de política de grupo dos programas do Office 2013 e do Office 2016).
-
-- Para versões de Outlook clique para execução 16.0.9324.1000 e posterior: Ativar o suporte legacy monitores
-    
-    Para impedir a apresentação de barra de Azure Information Protection fora do Outlook para as versões de clique para execução identificadas, poderá ter de ativar o suporte legacy para monitores. Quando a barra de não ser apresentados corretamente neste cenário, poderá ver que apresentado como **AdxTaskPane**. 
-    
-    Para configurar o Outlook para este requisito: **ficheiro** > **opções** > **geral**:
-    
-    - No **opções de Interface de utilizador** secção, se vir que a opção **utilizar das melhores definições para os meus apresentação** está selecionada, desmarque esta seleção.
 
 > [!IMPORTANT]
 > A instalação do cliente do Azure Information Protection requer permissões administrativas locais.
@@ -154,7 +147,7 @@ Utilize o seguinte procedimento para identificar o valor a especificar para o pa
 
 1. A partir de uma sessão do PowerShell, primeiro execute [Connect-AadrmService](https://docs.microsoft.com/powershell/aadrm/vlatest/connect-aadrmservice) e especifique as suas credenciais de administrador para ligar ao serviço Azure Rights Management. Em seguida, execute [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/aadrm/vlatest/get-aadrmconfiguration). 
  
-    Se ainda não instalou o módulo do PowerShell para o serviço Azure Rights Management, consulte [instalar o módulo do AADRM PowerShell](../deploy-use/install-powershell.md).
+    Se ainda não instalou o módulo do PowerShell para o serviço Azure Rights Management, veja [instalar o módulo do PowerShell do AADRM](../deploy-use/install-powershell.md).
 
 2. A partir da saída, identifique o valor **LicensingIntranetDistributionPointUrl**.
 
@@ -169,7 +162,7 @@ Exemplo de como instalar automaticamente o cliente para o Office 2010 e para o A
 
 #### <a name="more-information-about-the-downgradedotnetrequirement-installation-parameter"></a>Mais informações sobre o parâmetro de instalação DowngradeDotNetRequirement
 
-Para suportar as atualizações automáticas através do Windows Update e para integração fiável com aplicações do Office, o cliente do Azure Information Protection utiliza o Microsoft .NET Framework versão 4.6.2. Por predefinição, uma instalação interativa, utilizando o executável verifica para esta versão e tenta instalá-lo se está em falta. A instalação depois exige que o computador seja reiniciado.
+Para suportar as atualizações automáticas através do Windows Update e para integração fiável com aplicações do Office, o cliente do Azure Information Protection utiliza o Microsoft .NET Framework versão 4.6.2. Por predefinição, uma instalação interativa usando o executável procura esta versão e tenta instalá-la se ela está em falta. A instalação depois exige que o computador seja reiniciado.
 
 Se a instalação desta versão posterior do Microsoft .NET Framework não for conveniente, poderá instalar o cliente com o parâmetro e valor **DowngradeDotNetRequirement=True**, que ignorará este requisito se o Microsoft .NET Framework 4.5.1 estiver instalado.
 
@@ -196,9 +189,9 @@ Se utilizar o Intune enquanto método de implementação de software, utilize es
     |Office 2016|Todas as versões suportadas|64 bits: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32 bits: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> Versão: 1.0|Instalar|
     |Office 2013|Todas as versões suportadas|64 bits: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32 bits: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Versão: 1.0|Instalar|
     |Office 2010|Todas as versões suportadas|[Assistente de Início de Sessão do Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Versão: 2.1|Instalar|
-    |Office 2010|Windows 8.1 e Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Número da versão incluído no nome de ficheiro: v3|Instalar se KB2843630 ou KB2919355 não está instalado|
+    |Office 2010|Windows 8.1 e Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Número da versão incluído no nome de ficheiro: v3|Instale se KB2843630 ou KB2919355 não está instalado|
     |Office 2010|Windows 8 e Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Número da versão incluído no nome de ficheiro: v3|Instalar|
-    |Office 2010|Windows 7 e Windows Server 2008 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Número da versão incluído no nome de ficheiro: v3|Instalar se KB3125574 não está instalado|
+    |Office 2010|O Windows 7 e Windows Server 2008 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Número da versão incluído no nome de ficheiro: v3|Instale se KB3125574 não está instalado|
     |Não aplicável|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|Instalar|
     |Não aplicável|Windows 7|KB2627273 <br /><br /> Número da versão incluído no nome de ficheiro: v4|Desinstalar|
 
@@ -207,9 +200,9 @@ Se utilizar o Intune enquanto método de implementação de software, utilize es
 
 ## <a name="how-to-install-the-azure-information-protection-scanner"></a>Como instalar o scanner do Azure Information Protection
 
-O módulo do PowerShell incluído com o cliente Azure Information Protection tem cmdlets para instalar e Configurar scanner. No entanto, para utilizar scanner, que tem de instalar a versão completa do cliente e não é possível instalar apenas o módulo do PowerShell.
+O módulo do PowerShell que está incluído com o cliente do Azure Information Protection tem de cmdlets para instalar e configurar a deteção de impressão. No entanto, para utilizar o scanner, que tem de instalar a versão completa do cliente e não é possível instalar apenas o módulo do PowerShell.
 
-Para instalar o cliente para scanner, siga as mesmas instruções nas secções anteriores. Em seguida, está pronto para instalar scanner. Para obter instruções, consulte [implementar a análise do Azure Information Protection para classificar e proteger ficheiros automaticamente](../deploy-use/deploy-aip-scanner.md).
+Para instalar o cliente para a deteção de impressão, siga as mesmas instruções nas secções anteriores. Em seguida, está pronto para instalar o scanner. Para obter instruções, consulte [Implantando o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente](../deploy-use/deploy-aip-scanner.md).
 
 ## <a name="next-steps"></a>Próximos passos
 Agora que instalou o cliente do Azure Information Protection, veja o seguinte para obter informações adicionais que poderá precisar para suportar este cliente:

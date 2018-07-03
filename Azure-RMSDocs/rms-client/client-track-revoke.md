@@ -4,7 +4,7 @@ description: Depois de ter protegido os seus documentos, pode controlar a forma 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/04/2018
+ms.date: 06/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,22 +12,22 @@ ms.technology: techgroup-identity
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e4e35659ab964a636c6ca0c7066b1c809cc5958b
-ms.sourcegitcommit: 6a67fc50bd8b8a06974de647c15115a673f0217c
+ms.openlocfilehash: 610a1e5f147ab8ce0cca3adb59191d145d01a1ae
+ms.sourcegitcommit: 78d368a4480cc1febedc8535c6c3e184e69caf7f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33823532"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37088281"
 ---
-# <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Guia do utilizador: Controlar e revogar os documentos quando utiliza o Azure Information Protection
+# <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Guia de utilizador: Controlar e revogar os documentos quando utiliza o Azure Information Protection
 
->*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
+>*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
 
 Após proteger os seus documentos com o Azure Information Protection, pode controlar como as pessoas utilizam esses documentos. Se necessário, também poderá revogar o acesso a estes se não pretender que as pessoas continuem a poder lê-los. Para tal, utilize o **site de controlo de documentos**. Pode aceder a este site a partir de computadores com o Windows, computadores Mac e até mesmo tablets e telemóveis.
 
-Ao aceder a este site, inicie sessão para controlar os seus documentos. Desde que a sua organização tenha uma [subscrição que suporte a revogação e o controlo de documentos](https://www.microsoft.com/cloud-platform/azure-information-protection-features) e lhe tenha sido atribuída uma licença para esta subscrição, pode ver quem tentou abrir os ficheiros que protegeu e se o fizeram com êxito (se a autenticação foi efetuada com êxito) ou não. Também pode ver todas as vezes que alguém tentou aceder ao documento e a respetiva localização nesse momento. No entanto, em casos raros, a localização comunicada poderá não ser exata. Por exemplo, quando um utilizador ao abrir um documento protegido está a utilizar uma ligação VPN ou o respetivo computador tem um endereço IPv6.
+Ao aceder a este site, inicie sessão para controlar os seus documentos. Desde que a sua organização tenha uma [subscrição que suporte a revogação e o controlo de documentos](https://www.microsoft.com/cloud-platform/azure-information-protection-features) e lhe tenha sido atribuída uma licença para esta subscrição, pode ver quem tentou abrir os ficheiros que protegeu e se o fizeram com êxito (se a autenticação foi efetuada com êxito) ou não. Também pode ver todas as vezes que alguém tentou aceder ao documento e a respetiva localização nesse momento. No entanto, em casos raros, a localização comunicada poderá não ser precisa. Por exemplo, quando um utilizador abrir um documento protegido está a utilizar uma ligação VPN ou o computador tem um endereço IPv6.
 
-Ações que pode tomar no site de controlo de documentos:
+Ações que pode realizar no site de controlo de documentos:
 
 - Caso necessite de parar de partilhar um documento: 
     
@@ -64,7 +64,7 @@ Para controlar um documento que protegeu, deve utilizar o seu computador Windows
 
 ## <a name="using-office-to-track-or-revoke-the-document"></a>Utilizar o Office para controlar ou revogar o documento
 
-Nas aplicações do Office, Word, Excel, PowerPoint e Outlook: 
+Para o Office aplicativos, Word, Excel e PowerPoint: 
 
 1. Abra o documento protegido que pretende controlar ou revogar.
 
@@ -116,6 +116,6 @@ Pode obter mais instruções sobre os procedimentos no guia do utilizador do Azu
 - [O que pretende fazer?](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>Informações adicionais para administradores    
-Consulte [configurar e utilizar o controlo de documentos para o Azure Information Protection](client-admin-guide-document-tracking.md) do [Guia do administrador](client-admin-guide.md).
+Ver [configurando e usando o controlo de documentos do Azure Information Protection](client-admin-guide-document-tracking.md) partir a [Guia do administrador](client-admin-guide.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

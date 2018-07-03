@@ -4,7 +4,7 @@ description: Informações sobre o registo de utilização e ficheiros do client
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/26/2018
+ms.date: 05/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,15 +12,16 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: cb6f68e2d2009a67baadf1146f3c52cf7cf36aa2
-ms.sourcegitcommit: f4a97427d61e4b539c91c49c952658aa2dc729ce
+ms.openlocfilehash: 6bda82a913e4a9d8984a0354cde28bef3c119e81
+ms.sourcegitcommit: 2e85f87f7276b284b4f17de1d4e752c790eff651
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34568876"
 ---
-# <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guia do administrador: Ficheiros do cliente Azure Information Protection e registo de utilização do cliente
+# <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guia do administrador: Ficheiros de cliente do Azure Information Protection e o registo de utilização do cliente
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Depois de instalar o cliente do Azure Information Protection, poderá precisar de saber onde estão localizados os ficheiros e monitorizar a forma como o cliente está a ser utilizado.
 
@@ -38,7 +39,7 @@ Ficheiros de registo de cliente e ficheiro da política atualmente instalada:
 
 ## <a name="usage-logging-for-the-azure-information-protection-client"></a>Registo de utilização do cliente do Azure Information Protection
 
-O cliente regista a atividade de utilizador para o registo de eventos do Windows local **registos de serviços e aplicações** > **Azure Information Protection**. Os eventos incluem as seguintes informações:
+O cliente regista a atividade do utilizador para o registo de eventos do Windows local **Applications and Services Logs** > **do Azure Information Protection**. Os eventos incluem as seguintes informações:
 
 - Versão do cliente, ID de política
 
@@ -50,9 +51,9 @@ O cliente regista a atividade de utilizador para o registo de eventos do Windows
 
     - Definir Etiqueta: ID de Informações 101
     
-    - Definir Etiqueta (inferior): ID de Informações 102
+    - Definir etiqueta (inferior): 101 de ID de informações
     
-    - Definir Etiqueta (superior): ID de Informações 103
+    - Definir etiqueta (superior): 101 de ID de informações
     
     - Remover etiqueta: ID de Informações 104
    
@@ -84,9 +85,9 @@ O cliente regista a atividade de utilizador para o registo de eventos do Windows
     
 - Justificação do utilizador (quando aplicável)
 
-- Permissões personalizadas (quando aplicável) que inclui o [direitos de utilização pelo respetivo nome de codificação](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions) para organizações, grupos ou utilizadores especificados
+- Permissões personalizadas (quando aplicável) que inclui a [direitos de utilização pelo respetivo nome de codificação](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions) para os utilizadores especificados, grupos ou organizações
     
-Para obter informações sobre o registo de utilização para o serviço de proteção, consulte [registo e análise da utilização do serviço Azure Rights Management](../deploy-use/log-analyze-usage.md)
+Para obter informações sobre o registo de utilização para o serviço de proteção, consulte [registar e analisar a utilização do serviço Azure Rights Management](../deploy-use/log-analyze-usage.md)
 
 
 

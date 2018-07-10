@@ -4,7 +4,7 @@ description: Instruções para instalar, configurar e executar o scanner do Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/03/2018
+ms.date: 07/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 3df9e33542d40d00f601ded599b454b2a9f8f045
-ms.sourcegitcommit: 666308d042c079b2d6bedfbe85ab0bf2450f255b
+ms.openlocfilehash: 77204e78a46b536d7a5b42c2765d5eaea8cd745a
+ms.sourcegitcommit: f50b9bc28c6fff372651a3af7a6afc086645ba68
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37433636"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37935737"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Implementar o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente
 
@@ -113,7 +113,7 @@ Pode ter uma conta para executar o serviço de scanner e utilizar outra conta pa
 - Para a conta do Azure Active Directory, siga as instruções para [especificar e utilize o parâmetro de Token para Set-AIPAuthentication](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) no Guia do administrador.
 
 
-## <a name="install-the-azure-information-protection-scanner"></a>Instalar o scanner do Azure Information Protection
+## <a name="install-the-scanner"></a>Instalar o scanner
 
 1. Inicie sessão no computador Windows Server que executará a deteção de impressão. Utilizar uma conta que tenha direitos de administrador local e que tenha permissões para escrever na base de dados mestra do SQL Server.
 
@@ -143,7 +143,9 @@ Pode ter uma conta para executar o serviço de scanner e utilizar outra conta pa
 
 Agora que instalou o scanner, terá de obter o token para a conta de serviço do scanner autenticar, para que ele pode executar sem supervisão de um Azure AD. 
 
-## <a name="get-an-azure-ad-token-for-the-scanner-service-account-to-authenticate-to-the-azure-information-protection-service"></a>Obtenha o token para a conta de serviço autenticar para o serviço Azure Information Protection scanner de um Azure AD
+## <a name="get-an-azure-ad-token-for-the-scanner"></a>Obter um Azure AD token para a deteção de impressão
+
+O token do Azure AD permite que a conta de serviço do scanner autenticar para o serviço Azure Information Protection.
 
 1. No mesmo computador Windows Server ou do ambiente de trabalho, inicie sessão no portal do Azure para criar duas aplicações do Azure AD que são necessários para especificar um token de acesso para a autenticação. Após um inicial interativo início de sessão, este token permite o scanner executar de forma não interativa.
     
@@ -163,7 +165,7 @@ O scanner agora tem um token para autenticar para o Azure AD, que é válido dur
 
 Agora, está pronto para especificar os arquivos de dados para análise. 
 
-## <a name="specify-data-stores-for-the-azure-information-protection-scanner"></a>Especificar os arquivos de dados para o scanner do Azure Information Protection
+## <a name="specify-data-stores-for-the-scanner"></a>Especificar os arquivos de dados para a deteção de impressão
 
 Utilize o [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository) armazena do cmdlet para especificar os dados a serem examinados pelo scanner do Azure Information Protection. Pode especificar pastas locais, caminhos UNC e URLs do servidor SharePoint para sites do SharePoint e bibliotecas. 
 
@@ -185,7 +187,7 @@ Versões suportadas do SharePoint: SharePoint Server 2016 e o SharePoint Server 
 
 Com a configuração predefinida do scanner, agora, está pronto para executar a sua primeira análise no modo de deteção.
 
-## <a name="run-a-discovery-cycle-and-view-reports-for-the-azure-information-protection-scanner"></a>Executar um ciclo de deteção e ver relatórios para o scanner do Azure Information Protection
+## <a name="run-a-discovery-cycle-and-view-reports-for-the-scanner"></a>Executar um ciclo de deteção e ver relatórios para a deteção de impressão
 
 1. Usando **ferramentas administrativas** > **serviços**, inicie o **Scanner do Azure Information Protection** serviço.
 
@@ -199,7 +201,7 @@ Com a configuração predefinida do scanner, agora, está pronto para executar a
 
 Quando estiver pronto para etiquetar automaticamente os ficheiros que Deteta o scanner, avance para o procedimento seguinte. 
 
-## <a name="configure-the-azure-information-protection-scanner-to-apply-classification-and-protection-to-discovered-files"></a>Configurar o scanner do Azure Information Protection para aplicar a classificação e proteção a ficheiros detetados
+## <a name="configure-the-scanner-to-apply-classification-and-protection"></a>Configurar a deteção de impressão para aplicar a classificação e proteção
 
 Em sua configuração padrão, o scanner é executado um tempo e no modo só de relatórios. Para alterar estas definições, execute o [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet.
 
@@ -216,9 +218,9 @@ Em sua configuração padrão, o scanner é executado um tempo e no modo só de 
 Porque, configurámos o agendamento para ser executada continuamente, quando o scanner trilhou seu caminho através de todos os ficheiros, inicia um ciclo de novo para que os arquivos novos e alterados são detetados.
 
 
-## <a name="how-files-are-scanned-by-the-azure-information-protection-scanner"></a>Como os ficheiros são analisados pelo scanner do Azure Information Protection
+## <a name="how-files-are-scanned"></a>Como os ficheiros são analisados
 
-O scanner ignora automaticamente ficheiros que estão [excluídos da classificação e proteção](../rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-client), tais como executáveis e de sistema de ficheiros.
+O scanner ignora automaticamente ficheiros que estão [excluídos da classificação e proteção](../rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection), tais como executáveis e de sistema de ficheiros.
 
 Pode alterar este comportamento ao definir uma lista dos tipos de ficheiro de analisar ou excluir da análise. Quando especifica esta lista e não especificar um repositório de dados, a lista se aplica a todos os repositórios de dados que não tem sua própria lista especificada. Para especificar esta lista, utilize [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes). Depois de especificar a lista de tipos de ficheiro, pode adicionar um novo tipo de ficheiro à lista utilizando [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes)e remover um tipo de ficheiro da lista com [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes).
 
@@ -256,7 +258,7 @@ Quando o scanner aplique uma etiqueta com a proteção, por predefinição, apen
 
 Para alterar o comportamento scanner padrão, por exemplo, para protege genericamente outros tipos de ficheiro, tem manualmente de editar o registo e especificar os tipos de ficheiro adicionais que pretende proteger. Para obter instruções, consulte [configuração da API de ficheiros](../develop/file-api-configuration.md) de orientação para programadores. Nesta documentação para desenvolvedores, proteção genérica é referida como "PFile"
 
-## <a name="when-files-are-rescanned-by-the-azure-information-protection-scanner"></a>Quando os ficheiros são ser reanalisados pelo scanner do Azure Information Protection
+## <a name="when-files-are-rescanned"></a>Quando ficheiros estão a ser reanalisados
 
 Para o primeiro ciclo de análise, o scanner inspeciona todos os ficheiros nos arquivos de dados configurada e, em seguida, para análises subsequentes, apenas novos ou modificados arquivos são inspecionados. 
 
@@ -273,7 +275,7 @@ Se o scanner transferido uma política que não tinha nenhuma condição automá
 
 ## <a name="using-the-scanner-with-alternative-configurations"></a>Utilizar o Verificador de com configurações alternativas
 
-Existem dois cenários alternativos que o scanner suporte em que as etiquetas não precisa de ser configurado para todas as condições: 
+Existem dois cenários alternativos que o scanner do Azure Information Protection suporta onde as etiquetas não precisa de ser configurado para todas as condições: 
 
 - Aplicam-se uma etiqueta predefinida para todos os arquivos num repositório de dados.
     
@@ -288,7 +290,7 @@ Existem dois cenários alternativos que o scanner suporte em que as etiquetas n�
     
     O scanner utiliza quaisquer condições personalizadas que tenha especificado para as etiquetas na política do Azure Information Protection e a lista de tipos de informações que estão disponíveis para especificar para etiquetas na política do Azure Information Protection. 
 
-## <a name="optimizing-the-performance-of-the-azure-information-protection-scanner"></a>Otimizar o desempenho do scanner do Azure Information Protection
+## <a name="optimizing-the-performance-of-the-scanner"></a>Otimizar o desempenho do scanner
 
 Para maximizar o desempenho de scanner:
 
@@ -339,7 +341,7 @@ Outros fatores que afetam o desempenho de scanner:
     - O scanner é executado reduzindo mais quando utiliza a [configuração alternativa](#using-the-scanner-with-alternative-configurations) para identificar todas as condições personalizadas e tipos de informações confidenciais conhecidos.
     
 
-## <a name="list-of-cmdlets-for-the-azure-information-protection-scanner"></a>Lista de cmdlets para o scanner do Azure Information Protection 
+## <a name="list-of-cmdlets-for-the-scanner"></a>Lista de cmdlets para a deteção de impressão 
 
 Outros cmdlets para a deteção de impressão permitem-lhe alterar a conta de serviço e a base de dados para o scanner, obter as definições atuais para a deteção de impressão e desinstale o serviço de scanner. O scanner utiliza os seguintes cmdlets:
 
@@ -368,7 +370,7 @@ Outros cmdlets para a deteção de impressão permitem-lhe alterar a conta de se
 - [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
 
 
-## <a name="event-log-ids-and-descriptions"></a>IDs e descrições do registo de eventos
+## <a name="event-log-ids-and-descriptions-for-the-scanner"></a>IDs de registo de eventos e descrições para a deteção de impressão
 
 Utilize as secções seguintes para identificar os IDs de eventos possíveis e descrições para a deteção de impressão. Estes eventos são registados no servidor que executa o serviço de scanner, em que o Windows **aplicativos e serviços** registo de eventos **do Azure Information Protection**.
 

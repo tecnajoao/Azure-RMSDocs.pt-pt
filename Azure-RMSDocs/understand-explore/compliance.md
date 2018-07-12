@@ -12,32 +12,32 @@ ms.technology: techgroup-identity
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2980032c72905ec237dea799e8d6d13e11746df3
-ms.sourcegitcommit: 29d3d4760131eb2642e17b0732f852b6d8cfe314
+ms.openlocfilehash: 21499a1d1badf7901c81cc6ee58b91d058c8a164
+ms.sourcegitcommit: 55c7461f705a46f385a967753187ba2dda642238
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "29884178"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38229785"
 ---
 # <a name="compliance-and-supporting-information-for-azure-information-protection"></a>Informações de suporte e conformidade do Azure Information Protection
 
 O Azure Information Protection suporta outros serviços e também depende de outros serviços. Se estiver à procura de informações sobre o Azure Information Protection, mas não sobre como utilizar o serviço Azure Information Protection, consulte os seguintes recursos:
 
-## <a name="suitability-for-different-countries"></a>Adequabilidade diferentes países
+## <a name="suitability-for-different-countries"></a>Adequação para diferentes países
 
-Tendo em conta a variabilidade entre leis e regulamentos em diferentes países, casos de utilização diferentes e cenários e os requisitos de variando entre setores de negócios diferentes, terá de consultar o adviser válido para o ajudar a responder se do Azure Proteção de informações é adequada para o seu país.
+Tendo em conta a variabilidade entre as leis e regulamentos em diferentes países, diferentes casos de utilização e cenários e os requisitos variados entre os setores de negócios diferentes, terá de consultar o seu consultor legal que o ajudarão a responder se o Azure Proteção de informações é adequada para seu país/região.
 
-No entanto, algumas informações relevantes que o podem ajudar a sua adviser legal se uma determinação:
+No entanto, algumas informações relevantes que ajudem a seu consultor legal tornar a determinação:
 
 - O Azure Information Protection utiliza AES 256 e AES 128 para encriptar documentos. [Mais informações](../understand-explore/how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
 
-- Todas as chaves de encriptação utilizadas pelo Azure Information Protection estão protegidas com uma chave de raiz específica do cliente que utiliza RSA 2048 bits. RSA 1024, mas também é suportada para efeitos de compatibilidade. [Mais informações](../understand-explore/how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
+- Todas as chaves de encriptação utilizadas pelo Azure Information Protection estão protegidas com uma chave de raiz de específicas do cliente que utiliza RSA 2048 bits. RSA 1024, como também é suportado para compatibilidade com versões anteriores. [Mais informações](../understand-explore/how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
 
-- Chaves de raiz específica do cliente são geridas pela Microsoft ou aprovisionadas pelo cliente num HSM da Thales utilizando "[traga a sua própria chave](../plan-design/plan-implement-tenant-key.md)" (BYOK). O Azure Information Protection também suporta a funcionalidade limitada com uma chave no local utilizando "[tenha a sua própria chave](../deploy-use/configure-adrms-restrictions.md)" (HYOK) para o conteúdo que é afetado pelos requisitos que indicam que este não deve ser protegido com uma chave baseado na nuvem.
+- Chaves de raiz de específicas do cliente são geridas pela Microsoft ou aprovisionadas pelo cliente num HSM da Thales através da utilização "[traga a sua própria chave](../plan-design/plan-implement-tenant-key.md)" (BYOK). O Azure Information Protection também suporta a funcionalidade limitada com uma chave no local utilizando "[tenha a sua própria chave](../deploy-use/configure-adrms-restrictions.md)" (HYOK) para o conteúdo que é afetado pelos requisitos que indicam que não devem ser protegidos com uma chave com base na cloud.
 
-- O serviço do Azure Information Protection está alojado nos centros de dados regionais em todo o mundo. Políticas e as chaves de proteção de informações do Azure sempre permanecem na região na qual originalmente é implementado.
+- O serviço Azure Information Protection está alojado em datacenters regionais em todo o mundo. Chaves de proteção de informações e as políticas do Azure sempre permanecerem dentro da região na qual está implementada originalmente.
  
-- O Azure Information Protection não transmitir o conteúdo do documento a partir de clientes para o serviço do Azure Information Protection. Conteúdo operações de encriptação e desencriptação são efetuadas no local no dispositivo cliente. Em alternativa, para baseados no serviço de composição, estas operações são efetuadas no âmbito do serviço que estiver a compor o conteúdo. [Mais informações](../understand-explore/how-does-it-work.md)
+- O Azure Information Protection não transmitir conteúdo de documentos a partir de clientes para o serviço Azure Information Protection. As operações de criptografia e descriptografia conteúdas são executadas no local no dispositivo cliente. Em alternativa, para processamento com base no serviço, estas operações são realizadas no âmbito do serviço que está sendo o conteúdo. [Mais informações](../understand-explore/how-does-it-work.md)
 
 ## <a name="legal-and-privacy"></a>Informações legais e privacidade
 
@@ -59,9 +59,9 @@ Para obter informações técnicas detalhadas sobre como funciona a tecnologia d
 
 - [SLA do Azure Information Protection](https://azure.microsoft.com/support/legal/sla/information-protection/v1_0/)
 
-- [SLA do Azure Active Directory](https://azure.microsoft.com/en-us/support/legal/sla/active-directory/v1_0/)
+- [SLA para o Azure Active Directory](https://azure.microsoft.com/support/legal/sla/active-directory/v1_0/)
 
-- [SLA para o Cofre de chaves do Azure](https://azure.microsoft.com/en-us/support/legal/sla/key-vault/v1_0/)
+- [SLA para o Cofre de chaves do Azure](https://azure.microsoft.com/support/legal/sla/key-vault/v1_0/)
 
 ## <a name="documentation"></a>Documentação
 

@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c078536a3f8501b52c8980b4d71f9138971a8e05
-ms.sourcegitcommit: b1e739bd911579ab9af09654b5517c4d0a23f482
+ms.openlocfilehash: 8cc13eabc504c876c2118a18f1fb7bdb5bb9cfc4
+ms.sourcegitcommit: 0fda9ea4a7b91d4bb3a9e4f9d5cc4106ce1e2d43
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271458"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38973499"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas para o cliente do Azure Information Protection
 
@@ -230,7 +230,7 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Migrar as etiquetas de Secure Islands e outras soluções de etiquetas
 
-Esta opção de configuração está atualmente em pré-visualização e está sujeitas a alterações. Além disso, esta opção de configuração requer a versão de pré-visualização do cliente ou o scanner do Azure Information Protection.
+Esta opção de configuração está atualmente em pré-visualização e está sujeitas a alterações.
 
 Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
 
@@ -310,19 +310,19 @@ A definição de cliente avançado:
 ## <a name="label-an-office-document-by-using-an-existing-custom-property"></a>Etiqueta de um documento do Office usando uma propriedade personalizada existente
 
 > [!NOTE]
-> Nota: Quando a etiqueta é uma subetiqueta, também tem de especificar a etiqueta principal antes da subetiqueta no valor de cabeçalho, usando o mesmo formato. 
+> Se utilizar esta configuração e a configuração da secção anterior para migrar a partir de outra solução de etiquetagem, a definição de migração de etiquetagem tem precedência. 
 
 Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
 
-Por exemplo, se seu subetiqueta tem um GUID de 27efdf94-80a0 - 4d 02-b88c-b615c12d69a9, o valor pode ser semelhante ao seguinte: Antes de testar esta configuração, lembre-se de que é, muitas vezes, um atraso ao criar ou editar as regras de fluxo de correio (por exemplo, aguarde uma hora).
+Quando configura esta definição, pode classificar (e, opcionalmente, proteger) um documento do Office quando tem uma propriedade personalizada existente com um valor que corresponde a um dos seus nomes de etiquetas. Esta propriedade personalizada pode ser definida a partir de outra solução de classificação ou pode ser definida como uma propriedade pelo SharePoint.
 
-Quando a regra entrar em vigor, agora que os seguintes eventos acontecem quando os utilizadores utilizarem o Outlook na web ou um cliente de dispositivo móvel que suporte IRM do Exchange ActiveSync: 
+Como resultado nesta configuração, quando um documento sem uma etiqueta do Azure Information Protection é aberto e salvo por um utilizador da aplicação do Office, o documento tem, em seguida, o nome de acordo com o valor de propriedade correspondente. 
 
-Quando os destinatários internos veem o e-mail no Outlook e têm o cliente do Azure Information Protection instalado, verão a etiqueta do Azure Information Protection atribuída. Se as etiquetas do Azure Information Protection aplicarem a proteção, adicione esta proteção à configuração da regra: selecionar a opção para modificar a segurança de mensagem, aplicar a proteção de direitos e, em seguida, selecione a opção não reencaminhar ou modelo de RMS. Também pode configurar as regras de fluxo de correio para proceder ao mapeamento inverso.
+Esta configuração requer que especifique duas configurações avançadas que funcionam em conjunto. A primeira é denominada **SyncPropertyName**, que é o nome de propriedade personalizada que foi definido de outra solução de classificação ou uma propriedade que é definida pelo SharePoint. A segunda é denominada **SyncPropertyState** e tem de ser definido como OneWay.
 
 Para configurar esta definição avançada, introduza as cadeias seguintes:
 
-- Para cada etiqueta do Azure Information Protection: crie uma regra de fluxo de correio que seja aplicada quando o **msip_labels** cabeçalho inclui o nome da sua etiqueta (por exemplo, geral) e aplique uma mensagem classificação que mapeie esta etiqueta.**
+- Chave 1: **SyncPropertyName**
 
 - Valor de chave 1: \< **nome da propriedade**> 
 

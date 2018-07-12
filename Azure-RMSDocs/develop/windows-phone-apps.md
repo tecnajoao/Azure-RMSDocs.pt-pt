@@ -14,12 +14,12 @@ ms.assetid: e25a446e-b977-4736-9c65-7711171fb0e1
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: e606703aa764f8e4fea009131f41c9394ebb29fb
-ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
+ms.openlocfilehash: d236eaf4f9027a84a36819b5234a43cfc5674c54
+ms.sourcegitcommit: 55c7461f705a46f385a967753187ba2dda642238
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/29/2018
-ms.locfileid: "30258807"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38229958"
 ---
 # <a name="windows-phone-setup"></a>Configuração do Windows Phone
 
@@ -45,7 +45,7 @@ Tem de possuir o seguinte software no sistema de desenvolvimento:
 
 Consulte o tópico [Novidades](release-notes.md) para obter informações acerca de atualizações de API, informações de dispositivos e de ambiente, notas de versão e perguntas mais frequentes (FAQ).
 
-Reveja as informações no guia de [desenvolvimento do Windows Phone](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx) no Windows Phone Dev Center.
+Reveja as informações no guia de [desenvolvimento do Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/ff402535.aspx) no Windows Phone Dev Center.
 
 ## <a name="configuring-your-development-environment"></a>Configurar o ambiente de desenvolvimento
 
@@ -69,7 +69,7 @@ Reveja as informações no guia de [desenvolvimento do Windows Phone](https://ms
 
 Agora, está pronto para criar as suas novas aplicações do Windows Phone.
 
-### <a name="see-also"></a>Veja Também
+### <a name="see-also"></a>Consulte Também
 
 [Introdução](get-started.md)
 
@@ -77,7 +77,7 @@ Agora, está pronto para criar as suas novas aplicações do Windows Phone.
 
 [Conceitos principais](core-concepts.md)
 
-[Desenvolvimento do Windows Phone](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx)
+[Desenvolvimento do Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/ff402535.aspx)
 
 [Referência da API do Windows](https://msdn.microsoft.com/library/dn891914.aspx)
 

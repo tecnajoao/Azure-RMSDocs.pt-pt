@@ -4,7 +4,7 @@ description: Instruções para migrar a implementação dos Serviços de Gestão
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 07/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,16 +12,16 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c99a7a361ad1f22ab0fa819644e7f79fec6c9227
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 740a97298d27f5abb2cda8e0b6f3ce931c1a6d91
+ms.sourcegitcommit: 0fda9ea4a7b91d4bb3a9e4f9d5cc4106ce1e2d43
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30208384"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38973465"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrar do AD RMS para o Azure Information Protection
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilize o seguinte conjunto de instruções para migrar a implementação dos Serviços de Gestão de Direitos do Active Directory (AD RMS) para o Azure Information Protection. 
 
@@ -103,13 +103,13 @@ Antes de iniciar a migração para o Azure Information Protection, certifique-se
 
 ### <a name="cryptographic-mode-considerations"></a>Considerações sobre o modo criptográfico
 
-Se o cluster de AD RMS está atualmente no modo criptográfico 1, não atualize o cluster para o modo criptográfico 2 antes de começar a migração. Em vez disso, migrar através do modo criptográfico 1 e pode recodificar a chave de inquilino no final da migração, como uma das tarefas de migração post.
+Se o cluster do AD RMS está atualmente no modo criptográfico 1, não atualize o cluster para o modo criptográfico 2 antes de iniciar a migração. Em vez disso, migrar com o modo criptográfico 1 e recodificar a sua chave de inquilino no final da migração, como uma das tarefas de migração de post.
 
 Para confirmar o Modo Criptográfico do AD RMS:
  
 - Para o Windows Server 2012 R2 e o Windows 2012: propriedades de cluster do AD RMS > separador **Geral**. 
 
-- Para o Windows Server 2008 R2: Verifique se o [comprimento de chave RSA é aumentado para 2048 bits para o AD RMS no Windows Server 2008 R2 e no Windows Server 2008](https://support.microsoft.com/help/2627272/rsa-key-length-is-increased-to-2048-bits-for-ad-rms-in-windows-server ) correção está instalada. Se não for, o cluster do AD RMS está em execução no modo criptográfico 1.
+- Para o Windows Server 2008 R2: Verifique se o [comprimento de chave RSA é aumentado para 2048 bits para o AD RMS no Windows Server 2008 R2 e no Windows Server 2008](https://support.microsoft.com/help/2627272/rsa-key-length-is-increased-to-2048-bits-for-ad-rms-in-windows-server ) correção está instalada. Se não estiver, o cluster do AD RMS está em execução no modo criptográfico 1.
 
 ### <a name="migration-limitations"></a>Limitações da migração
 
@@ -141,17 +141,17 @@ Os passos de migração podem ser divididos em cinco fases que podem ser efetuad
 
 [**FASE 1: PREPARAÇÃO DA MIGRAÇÃO**](migrate-from-ad-rms-phase1.md)
 
-- **Passo 1: Instalar o módulo AADRM PowerShell e identificar o seu URL de inquilino**
+- **Passo 1: Instalar o módulo PowerShell do AADRM e identificar o URL de inquilino**
 
-    O processo de migração requer a execução de um ou mais dos cmdlets do PowerShell do módulo AADRM. Terá de saber o URL do serviço Azure Rights Management seu inquilino para concluir a muitos dos passos de migração e pode identidade este valor utilizando o PowerShell.
+    O processo de migração requer a execução de um ou mais dos cmdlets do PowerShell do módulo do AADRM. Precisará saber o URL do serviço Azure Rights Management do seu inquilino para concluir vários passos da migração, e pode identificar este valor com o PowerShell.
 
 - **Passo 2: preparar a migração de clientes**
 
-    Se não conseguir migrar todos os clientes de uma só vez e os migrar em lotes, utilize os controlos de inclusão e implemente um script de pré-migração. No entanto, se irá migrar tudo em simultâneo em vez de efetuar uma migração faseada, pode ignorar este passo.
+    Se não conseguir migrar todos os clientes de uma só vez e os migrar em lotes, utilize os controlos de inclusão e implemente um script de pré-migração. No entanto, se irá migrar tudo ao mesmo tempo em vez de fazer uma migração faseada, pode ignorar este passo.
 
 - **Passo 3: preparar a implementação do Exchange para a migração**
 
-    Este passo é necessário se utilizar atualmente a funcionalidade da IRM do Exchange Online ou Exchange no local para proteger e-mails. No entanto, se irá migrar tudo em simultâneo em vez de efetuar uma migração faseada, pode ignorar este passo.
+    Este passo é necessário se utilizar atualmente a funcionalidade da IRM do Exchange Online ou Exchange no local para proteger e-mails. No entanto, se irá migrar tudo ao mesmo tempo em vez de fazer uma migração faseada, pode ignorar este passo.
 
 [**FASE 2: CONFIGURAÇÃO DO AD RMS DO LADO DO SERVIDOR**](migrate-from-ad-rms-phase2.md)
 
@@ -182,7 +182,7 @@ Os passos de migração podem ser divididos em cinco fases que podem ser efetuad
 
 [**FASE 3: CONFIGURAÇÃO DO LADO DO CLIENTE**](migrate-from-ad-rms-phase3.md)
 
-- **Passo 7: Reconfigurar computadores Windows para utilizar o Azure Information Protection**
+- **Passo 7: Reconfigurar os computadores Windows para utilizar o Azure Information Protection**
 
     Os computadores Windows existentes têm de ser reconfigurados para utilizar o serviço Azure Rights Management em vez do AD RMS. Este passo aplica-se aos computadores na sua organização e aos computadores nas organizações parceiras, caso tenha colaborado com as mesmas enquanto executou o AD RMS.
 
@@ -201,19 +201,19 @@ Os passos de migração podem ser divididos em cinco fases que podem ser efetuad
 
 - **Passo 10: desaprovisionar o AD RMS**
 
-    Quando tiver confirmado que todos os computadores Windows estiver a utilizar o serviço Azure Rights Management e já não acedem aos seus servidores AD RMS, pode desaprovisionar a implementação do AD RMS.
+    Quando tiver confirmado que todos os computadores do Windows estiver a utilizar o serviço Azure Rights Management e já não acedem aos servidores do AD RMS, pode desaprovisionar a sua implementação do AD RMS.
 
-- **Passo 11: Concluir tarefas de migração de cliente**
+- **Passo 11: Executar tarefas de migração de cliente**
 
-    Se tiver implementado o [extensão do dispositivo móvel](http://technet.microsoft.com/library/dn673574.aspx) para suportar dispositivos móveis, como telemóveis de iOS e iPads, telemóveis Android e tablets, Windows phone e computadores Mac, tem de remover os registos SRV no DNS que redirecionou estes clientes Para utilizar o AD RMS. 
+    Se tiver implementado o [extensão do dispositivo móvel](http://technet.microsoft.com/library/dn673574.aspx) para suportar dispositivos móveis, como telemóveis com iOS e iPads, telemóveis Android e tablets, Windows phone e computadores Mac, tem de remover os registos SRV no DNS que redirecionou estes clientes Para utilizar o AD RMS. 
     
-    Os controlos de inclusão que configurou durante a fase de preparação já não são necessários. No entanto, se não utilizou controlos de inclusão porque optar por migrar tudo ao mesmo tempo, em vez de efetuar uma migração faseada, pode ignorar as instruções para remover os controlos de inclusão.
+    Os controlos de inclusão que configurou durante a fase de preparação já não são necessários. No entanto, se não utilizou os controlos de inclusão porque optou por migrar tudo ao mesmo tempo, em vez de fazer uma migração faseada, pode ignorar as instruções para remover os controlos de inclusão.
     
-    Se os computadores com o Windows estiver a executar o Office 2010, verifique se tem de desativar o **gestão de modelos de política de direitos de RMS do AD (automatizada)** tarefas.
+    Se seus computadores Windows têm o Office 2010, verifique se tem de desativar o **gestão de modelos de política de direitos de RMS do AD (automatizada)** tarefas.
 
 - **Passo 12: Recodificar a chave de inquilino do Azure Information Protection**
 
-    Este passo é recomendado se não estivesse a executar no modo criptográfico 2 antes da migração.
+    Este passo é recomendado se não estava a executar no modo criptográfico 2 antes da migração.
 
 
 ## <a name="next-steps"></a>Próximos passos

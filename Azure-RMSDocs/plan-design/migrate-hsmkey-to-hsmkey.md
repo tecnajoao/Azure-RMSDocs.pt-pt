@@ -4,7 +4,7 @@ description: Instruções que fazem parte do caminho de migração do AD RMS par
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2017
+ms.date: 07/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c8ed0fd3e8daa2c03f179cf71c0c258b8ef79901
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 757b3af36fb15c3069c5bef7ca4509ff92cee1f9
+ms.sourcegitcommit: 0fda9ea4a7b91d4bb3a9e4f9d5cc4106ce1e2d43
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30207918"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38973329"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Passo 2: migração de chave protegida por HSM para chave protegida por HSM
 
@@ -48,9 +48,9 @@ Estes procedimentos são efetuados pelo administrador para o Azure Key Vault.
 
 1. Para cada chave SLC exportada que pretende armazenar no Azure Key Vault, siga as instruções apresentadas na secção [Implementing bring your own key (BYOK) for Azure Key Vault (Implementar o BYOK (Bring Your Own Key – Traga a sua Própria Chave))](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azurekey-vault) da documentação do Azure Key Vault, com a seguinte exceção:
 
-    - Não efetue os passos para **Gerar a chave de inquilino**, porque já tem o equivalente da sua implementação do AD RMS. Em vez disso, identifique a chave utilizada pelo servidor do AD RMS na instalação da Thales e utilize esta chave durante a migração. Ficheiros de chave encriptados são normalmente denominados de Thales **chave <*keyAppName*><*keyIdentifier* >**  localmente no servidor.
+    - Não efetue os passos para **Gerar a chave de inquilino**, porque já tem o equivalente da sua implementação do AD RMS. Em vez disso, identifique a chave utilizada pelo servidor do AD RMS na instalação da Thales e utilize esta chave durante a migração. Ficheiros de chave encriptados são normalmente denominados de Thales **key <*keyAppName*><*keyIdentifier* >**  localmente no servidor.
 
-    Quando a chave é carregada para o Azure Key Vault, pode ver as propriedades da chave apresentadas, incluindo o ID da chave. -Será semelhante https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Tome nota deste URL, porque o administrador do Azure Information Protection irá precisar dele para indicar ao serviço Azure Rights Management que utilize esta chave para a respetiva chave de inquilino.
+    Quando a chave é carregada para o Azure Key Vault, pode ver as propriedades da chave apresentadas, incluindo o ID da chave. Ela terá um aspeto semelhante ao https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Tome nota deste URL, porque o administrador do Azure Information Protection irá precisar dele para indicar ao serviço Azure Rights Management que utilize esta chave para a respetiva chave de inquilino.
 
 2. Na estação de trabalho com ligação à Internet, numa sessão do PowerShell, utilize o cmdlet [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) para autorizar o principal do serviço Azure Rights Management para aceder ao cofre de chaves que armazenará a chave de inquilino do Azure Information Protection. As permissões necessárias são decrypt, encrypt, unwrapkey, wrapkey, verify e sign.
     

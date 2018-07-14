@@ -4,7 +4,7 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/20/2018
+ms.date: 07/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8cc13eabc504c876c2118a18f1fb7bdb5bb9cfc4
-ms.sourcegitcommit: 0fda9ea4a7b91d4bb3a9e4f9d5cc4106ce1e2d43
+ms.openlocfilehash: 6b5a2856f54ec6d38ae69007e80d9eb22d416799
+ms.sourcegitcommit: 56a49619c0c52fa5296810b27161f23b3380eab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38973499"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39029938"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas para o cliente do Azure Information Protection
 
@@ -135,13 +135,13 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 O método recomendado para configurar esta opção é utilizar o [definição de política](../deploy-use/configure-policy-settings.md) **disponibilizar a opção de permissões personalizadas para utilizadores**. No entanto, também pode configurar esta opção ao utilizar um [definição de cliente avançado](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que configurar no portal do Azure. 
 
-Quando configura esta definição e publica a política para utilizadores, as opções de permissões personalizadas tornam-se disponível para os utilizadores selecionarem suas próprias definições de proteção ou não está disponível para que os utilizadores não é possível selecionar suas próprias definições de proteção, a menos que lhe for pedido.
+Quando configura esta definição e publica a política para utilizadores, as opções de permissões personalizadas ficam visíveis para os utilizadores selecionarem suas próprias definições de proteção ou eles estão ocultos para que os utilizadores não é possível selecionar suas próprias definições de proteção, a menos que lhe for pedido.
 
 Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 - Chave: **EnableCustomPermissions**
 
-- Valor: **True** para disponibilizar a opção de permissões personalizadas, ou **falso** para tornar esta opção indisponível
+- Valor: **True** para fazer com a opção de permissões personalizadas visível, ou **falso** para ocultar esta opção
 
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Ocultar permanentemente a barra do Azure Information Protection

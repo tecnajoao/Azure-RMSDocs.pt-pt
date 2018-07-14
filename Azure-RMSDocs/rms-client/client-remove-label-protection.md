@@ -4,7 +4,7 @@ description: Instruções para remover etiquetas de classificação e proteção
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/01/2018
+ms.date: 07/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,16 +12,16 @@ ms.technology: techgroup-identity
 ms.assetid: ''
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: ce5a6de0c2f0ab1ad374b4a0fbc01e755f28abe3
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: 429af8c070b40f20b67f4e859e0659870dee177c
+ms.sourcegitcommit: 56a49619c0c52fa5296810b27161f23b3380eab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32327318"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39029887"
 ---
-# <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>Guia do utilizador: Remover etiquetas e proteção de ficheiros e e-mails que tenham sido etiquetados pelo Azure Information Protection ou protegidos pelo Rights Management
+# <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>Guia de utilizador: Remover etiquetas e proteção de ficheiros e e-mails que foram etiquetados pelo Azure Information Protection ou protegidos pelo Rights Management
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
 
 Quando o [cliente do Azure Information Protection está instalado no computador](install-client-app.md), pode remover as etiquetas de classificação e a proteção de ficheiros e e-mails.
 
@@ -30,7 +30,7 @@ Se a etiqueta que remover estiver configurada para aplicar proteção, esta aç�
 > [!IMPORTANT]
 > Tem de ser o proprietário do ficheiro para remover a proteção ou de ter recebido permissões para remover a proteção (a permissão Controlo Total ou Extração do Rights Management).
 
-Se pretender escolher uma etiqueta diferente ou um conjunto de definições de proteção diferente, não precisa de remover a etiqueta ou a proteção. Em vez disso, escolha uma nova etiqueta e, se for preciso, pode definir permissões personalizadas. 
+Se pretender escolher uma etiqueta diferente ou um conjunto de definições de proteção diferente, não precisa de remover a etiqueta ou a proteção. Em vez disso, escolha uma nova etiqueta e, se necessário, pode definir permissões personalizadas se o administrador permite esta configuração. 
 
 Pode remover as etiquetas e a proteção dos documentos do Office e e-mails durante a criação ou edição dos mesmos nas aplicações de ambiente de trabalho do Office: **Word**, **Excel**, **PowerPoint** e **Outlook**. 
 
@@ -49,7 +49,7 @@ Se o ícone **Eliminar Etiqueta** não estiver imediatamente disponível, clique
 > [!NOTE]
 > Se não vir esta barra do Information Protection nas suas aplicações do Office:
 >
-> - Se vir um **proteger** botão no Friso: selecione **proteger**e, em seguida, selecione **Mostrar barra**.
+> - Se vir um **Protect** botão na faixa de opções: selecionar **proteger**e, em seguida, selecione **Mostrar barra**.
 > 
 > - Poderá não ter o cliente do Azure Information Protection [instalado](install-client-app.md) ou o cliente está em execução no [modo apenas de proteção](client-protection-only-mode.md).
 
@@ -57,13 +57,17 @@ Se o ícone **Eliminar Etiqueta** não estiver imediatamente disponível, clique
 
 Quando utiliza o Explorador de Ficheiros, pode rapidamente remover as etiquetas e a proteção de um ficheiro único, vários ficheiros ou uma pasta. Quando seleciona uma pasta, todos os ficheiros nessa pasta e eventuais subpastas são automaticamente selecionados. 
 
-1.  No Explorador de Ficheiros, selecione o ficheiro, vários ficheiros ou uma pasta. Clique com o botão direito do rato e selecione **Classificar e proteger**.
+1. No Explorador de Ficheiros, selecione o ficheiro, vários ficheiros ou uma pasta. Clique com o botão direito do rato e selecione **Classificar e proteger**.
 
 2. Para remover uma etiqueta: na caixa de diálogo **Classificar e proteger – Azure Information Protection**, clique em **Eliminar Etiqueta**. Se a etiqueta tiver sido configurada para aplicar a proteção, essa proteção será removida automaticamente.
 
-3. Para remover a proteção personalizada de um único ficheiro: na caixa de diálogo **Classificar e proteger – Azure Information Protection**, desmarque a opção **Proteger com permissões personalizadas**.
+3. Para remover a proteção personalizada de um único ficheiro: na caixa de diálogo **Classificar e proteger – Azure Information Protection**, desmarque a opção **Proteger com permissões personalizadas**. 
+    
+    Se não vir a **proteger com permissões personalizadas** opção, o administrador não permite-lhe utilizar esta opção.
     
 4. Para remover a proteção personalizada de vários ficheiros: na caixa de diálogo **Classificar e proteger – Azure Information Protection**, clique em **Remover permissões personalizadas**.
+    
+    Se não vir a **remover permissões personalizadas** opção, o administrador não permite-lhe utilizar esta opção.
 
 5. Clique em **Aplicar** e aguarde pela mensagem **Trabalho concluído** para ver os resultados. Em seguida, clique em **Fechar**.
 
@@ -72,6 +76,11 @@ Quando utiliza o Explorador de Ficheiros, pode rapidamente remover as etiquetas 
 Pode obter mais instruções sobre os procedimentos no guia do utilizador do Azure Information Protection:
 
 - [O que pretende fazer?](client-user-guide.md#what-do-you-want-to-do)
+
+## <a name="additional-information-for-administrators"></a>Informações adicionais para administradores    
+Para obter instruções de configuração ativar a definição de política **disponibilizar a opção de permissões personalizadas para os usuários**, consulte [configurar as definições de política do Azure Information Protection](../deploy-use/configure-policy-settings.md).
+
+Outras instruções de configuração: [configurar a política do Azure Information Protection](../deploy-use/configure-policy.md).
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

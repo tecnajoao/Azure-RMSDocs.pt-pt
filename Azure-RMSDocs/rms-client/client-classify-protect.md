@@ -1,10 +1,10 @@
 ---
-title: Classificar e proteger ficheiros e e-mails utilizando o Azure Information Protection
+title: Classificar e proteger ficheiros e e-mails ao utilizar o Azure Information Protection
 description: Instruções sobre como classificar e proteger os seus documentos e e-mails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 07/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,42 +12,42 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 223dd5681b6b5c6911a90cf6540b2ab4c9d7f54e
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: 07abfb8da932dea6fe29507cca9f3066eaf546cf
+ms.sourcegitcommit: 56a49619c0c52fa5296810b27161f23b3380eab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444147"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39029904"
 ---
-# <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Guia do utilizador: Classificar e proteger um ficheiro ou e-mail ao utilizar o Azure Information Protection
+# <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Guia de utilizador: Classificar e proteger um ficheiro ou e-mail com o Azure Information Protection
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
 
 > [!NOTE]
-> Utilize estas instruções para classificar e proteger os seus documentos e e-mails. Se precisar de apenas classificar e proteger os seus documentos e e-mails não, consulte o [instruções apenas de classificar](client-classify.md). Se não tem a certeza de que conjunto de instruções para utilizar, consulte o seu administrador ou suporte técnico.
+> Utilize estas instruções para o ajudar a classificar e proteger os seus documentos e e-mails. Se precisar apenas para classificar e proteger os seus documentos e e-mails não, consulte a [instruções de só de classificar](client-classify.md). Se não tiver a certeza de qual conjunto de instruções para utilizar, contacte o administrador ou suporte técnico.
 
 A forma mais fácil de classificar e proteger os seus documentos e e-mails é durante a criação ou edição nas aplicações de ambiente de trabalho do Office: **Word**, **Excel**, **PowerPoint** e **Outlook**. 
 
-No entanto, também pode classificar e proteger ficheiros ao utilizar **Explorador de ficheiros**. Este método suporta tipos de ficheiro adicionais e é uma forma conveniente para classificar e proteger vários ficheiros de uma só vez. Este método suporta proteger documentos do Office, ficheiros PDF, ficheiros de texto e imagem e uma vasta gama de outros ficheiros. 
+No entanto, também pode classificar e proteger ficheiros ao utilizar **Explorador de ficheiros**. Este método suporta tipos de ficheiro adicionais e é uma maneira conveniente de classificar e proteger vários ficheiros ao mesmo tempo. Este método suporta proteger documentos do Office, ficheiros PDF, ficheiros de texto e imagem e uma vasta gama de outros ficheiros. 
 
-Se a etiqueta aplica-se a proteção para um documento, o documento protegido não é adequado ser guardada no SharePoint ou OneDrive. Estas localizações não suportam o seguinte para os ficheiros protegidos: criação conjunta, Office Online, pesquisa, pré-visualização do documento, miniatura e deteção de dados eletrónicos. 
+Se a etiqueta aplicar proteção a um documento, o documento protegido não é adequado para serem salvos no SharePoint ou o OneDrive. Estas localizações não suportam o seguinte procedimento para ficheiros protegidos: coautoria, Office Online, pesquisa, pré-visualização do documento, miniatura e deteção de dados eletrónicos. 
 
 ### <a name="safely-share-a-file-with-people-outside-your-organization"></a>Partilhar um ficheiro de forma segura com pessoas fora da sua organização
 
-Os ficheiros que estão protegidos são seguros para serem partilhados com outras pessoas. Por exemplo, anexe um documento protegido a um e-mail.
+Os ficheiros que estão protegidos são seguros para serem partilhados com outras pessoas. Por exemplo, anexe um documento protegido, a um e-mail.
 
-Antes de partilhar ficheiros com pessoas fora da sua organização, consulte o suporte técnico ou o administrador como pretende proteger os ficheiros para os utilizadores externos.
+Antes de partilhar ficheiros com pessoas fora da sua organização, contacte o suporte técnico ou o administrador como proteger ficheiros para utilizadores externos.
 
-Por exemplo, se a sua organização comunica regularmente com pessoas noutra organização, o administrador poderá ter configurado as etiquetas que define a proteção de forma a que estas pessoas podem ler e utilizar documentos protegidos. Em seguida, selecione estas etiquetas para classificar e proteger os documentos para partilhar.
+Por exemplo, se sua organização comunica regularmente com pessoas noutra organização, o administrador poderá ter configurado as etiquetas que define a proteção, de modo a que estas pessoas podem ler e utilizar documentos protegidos. Em seguida, selecione estas etiquetas para classificar e proteger os documentos para partilhar.
 
-Em alternativa, se os utilizadores externos têm [contas de empresa-empresa (B2B)](/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b) criado para os mesmos, pode utilizar o seu [aplicação do Office para definir permissões personalizadas](#set-custom-permissions-for-a-document) ou utilize [Explorador de ficheiros ao definir permissões personalizadas](#using-file-explorer-to-classify-and-protect-files) para um documento antes de partilhá-lo. Se definir a suas própria permissões personalizadas e o documento já está protegido para utilização interna, primeiro faça uma cópia do mesmo para manter as permissões originais. Em seguida, utilize a cópia para definir as permissões personalizadas.
+Em alternativa, se tiverem dos utilizadores externos [contas de empresa-empresa (B2B)](/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b) criado para eles, pode usar sua [aplicação do Office para definir permissões personalizadas](#set-custom-permissions-for-a-document) ou utilize [Explorador de ficheiros para definir permissões personalizadas](#using-file-explorer-to-classify-and-protect-files) para um documento antes de o partilhar. Se definir suas próprias permissões personalizadas e o documento já está protegido para utilização interna, primeiro, faça uma cópia do mesmo para manter as permissões originais. Em seguida, utilize a cópia para definir as permissões personalizadas.
 
 
 ## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Utilizar aplicações do Office para classificar e proteger os seus documentos e e-mails
 
-Utilizar a barra do Azure Information Protection ou o **proteger** botão no friso para selecionar uma das etiquetas que tenha sido configurada por si. 
+Utilize a barra do Azure Information Protection ou o **Protect** botão da faixa de opções para selecionar uma das etiquetas que tenha sido configurada por si. 
 
-Por exemplo, a imagem seguinte mostra que o documento ainda não foram etiqueta porque o **sensibilidade** mostra **não definido** na barra de Azure Information Protection. Para definir uma etiqueta, tais como "Geral", clique em **geral**. Se não estiver certo sobre que etiqueta aplicar ao e-mail ou documento atual, utilize as descrições de etiquetas para saber mais sobre cada etiqueta e quando a aplicar. 
+Por exemplo, a imagem seguinte mostra que o documento ainda não foi etiquetado porque o **sensibilidade** mostra **nenastaveno** na barra do Azure Information Protection. Para definir uma etiqueta, tal como "Geral", clique em **gerais**. Se não estiver certo sobre que etiqueta aplicar ao e-mail ou documento atual, utilize as descrições de etiquetas para saber mais sobre cada etiqueta e quando a aplicar. 
 
 ![Exemplo de barra do Azure Information Protection](../media/info-protect-bar-not-set-callout.png)
 
@@ -65,11 +65,11 @@ Além de selecionar etiquetas manualmente, as etiquetas também podem ser aplica
 
 Motivos possíveis:
 
-- Não tem o cliente Azure Information Protection [instalado](install-client-app.md).
+- Não tem o cliente do Azure Information Protection [instalado](install-client-app.md).
 
-- Ter o cliente instalado, mas o administrador configurou uma definição de que não apresenta a barra. Em vez disso, selecione as etiquetas do **proteger** no botão de **ficheiro** separador a partir do friso Office. 
+- Ter o cliente instalado, mas o administrador tiver configurado uma definição que não exibe a barra. Em vez disso, selecione as etiquetas do **proteger** no botão, o **ficheiro** separador do Friso do Office. 
 
-- O cliente está em execução no [modo só de proteção](client-protection-only-mode.md).
+- O cliente está em execução [modo apenas de proteção](client-protection-only-mode.md).
  
 ##### <a name="is-the-label-that-you-expect-to-see-not-displayed"></a>É a etiqueta que pretende ver não apresentada? 
 
@@ -77,19 +77,19 @@ Motivos possíveis:
 
 - Se o administrador tiver configurado recentemente uma nova etiqueta para si, experimente fechar todas as instâncias da sua aplicação do Office e voltar a abrir-la. Esta ação verifica se as suas etiquetas sofreram alguma alteração.
 
-- Se a etiqueta em falta aplicar proteção, poderá ter uma edição do Office que não suporta a aplicação da proteção Rights Management. Para verificar, clique em **proteger** > **ajuda e comentários**. Na caixa de diálogo, verifique se possui uma mensagem **estado do cliente** secção indica **este cliente não estiver licenciado para o Office Professional Plus.** 
+- Se a etiqueta em falta aplicar proteção, poderá ter uma edição do Office que não suporta a aplicação da proteção Rights Management. Para verificar, clique em **Protect** > **ajuda e Feedback**. Na caixa de diálogo, verifique se tem uma mensagem na **estado do cliente** secção que diz **este cliente não está licenciado para o Office Professional Plus.** 
 
 - A etiqueta pode estar numa política de âmbito que não inclui a sua conta. Contacte o suporte técnico ou o administrador.
 
 ### <a name="set-custom-permissions-for-a-document"></a>Definir permissões personalizadas num documento
 
-Se permitida pelo seu administrador, pode especificar as suas próprias definições de proteção para documentos em vez de utilizar as definições de proteção que o administrador poderá ter incluídas com a etiqueta selecionada. Esta opção é específica para documentos e não está disponível com o Outlook.
+Se permitido pelo seu administrador, pode especificar as suas próprias definições de proteção para documentos em vez de utilizar as definições de proteção que o administrador possa ter incluído com a etiqueta escolhida. Esta opção é específica para documentos e não está disponível com o Outlook.
 
 1. No separador **Base**, no grupo **Proteção**, clique em **Proteger** > **Permissões Personalizadas**:
 
     ![Opção Permissões Personalizadas](../media/custom-permissions-callout.png)
     
-    Se puder seleccionar **permissões personalizadas**, o administrador não lhe permitem utilizar esta opção.
+    Se não vir **permissões personalizadas**, o administrador não permite que utilize esta opção.
     
     Tenha em atenção que todas as permissões personalizadas que especificar substituem as definições de proteção que o administrador possa ter definido para a etiqueta escolhida em vez de as complementarem.  
 
@@ -101,17 +101,17 @@ Se permitida pelo seu administrador, pode especificar as suas próprias definiç
     
     - **Selecionar utilizadores, grupos ou organizações**: especifique as pessoas que devem ter as permissões que selecionou para o seu ficheiro ou ficheiros. Escreva o endereço de e-mail completo dessas pessoas, um endereço de e-mail de grupo ou um nome de domínio da organização para todos os utilizadores nessa organização. 
         
-        Também pode utilizar o ícone do livro de endereços para selecionar utilizadores ou grupos no livro de endereços do Outlook.
+        Também pode utilizar o ícone de livro de endereços para selecionar utilizadores ou grupos do livro de endereços do Outlook.
     
-    - **Expirar acesso**: selecione esta opção apenas para os ficheiros sensíveis ao tempo para que as pessoas que especificou não poderá abrir o ficheiro ou ficheiros selecionados após uma data que definir. Ainda poderá abrir o ficheiro original, mas após a meia-noite (o fuso horário atual), no dia em que é definida, as pessoas que especificou não poderão abrir o ficheiro.
+    - **Expirar acesso**: selecione esta opção apenas para ficheiros sensíveis ao tempo para que as pessoas que especificou não poderão abrir o ficheiro ou ficheiros selecionados após uma data que definir. Ainda poderá abrir o ficheiro original, mas após a meia-noite (seu fuso horário atual), no dia em que definir, as pessoas que especificou não poderão abrir o ficheiro.
 
 5. Clique em **Aplicar** e espere pela mensagem **Permissões personalizadas aplicadas**. Em seguida, clique em **Fechar**.
 
-### <a name="safely-sharing-by-email"></a>Partilha segura por e-mail
+### <a name="safely-sharing-by-email"></a>Compartilhando com segurança por e-mail
 
-Quando partilha documentos do Office por e-mail, pode anexe o documento a uma mensagem de e-mail que protege e o documento está protegido automaticamente com as mesmas restrições que se aplicam a mensagem de correio eletrónico. 
+Ao partilhar documentos do Office por e-mail, pode anexar o documento a uma mensagem de e-mail que protege, e o documento está protegido automaticamente com as mesmas restrições que se aplicam à mensagem de e-mail. 
 
-No entanto, recomendamos que primeiro a proteger o documento e, em seguida, ligue-a mensagem de correio eletrónico. Proteger o e-mail, bem como se a mensagem de e-mail contiver informações confidenciais. Duas vantagens de proteger o documento antes de ligar a um e-mail:
+No entanto, recomendamos que primeiro a proteger o documento e, em seguida, anexá-lo para o e-mail. Proteger o e-mail também se a mensagem de e-mail contiver informações confidenciais. Dois benefícios de proteger o documento, antes que o anexa a um e-mail:
 
 - Pode controlar e se for necessário, revogar o documento depois que tenha enviado por e-mail-lo.
 
@@ -146,9 +146,9 @@ O guia do administrador contém uma lista completa dos tipos de ficheiro suporta
     
     ![Não há etiquetas na caixa de diálogo Classificar e proteger – Azure Information Protection**](../media/info-protect-dialog-labels-protection-only.png)
     
-3. Se permitido pela sua adminsitrator, pode especificar as suas próprias definições de proteção em vez de utilizar as definições de proteção que o administrador poderá ter incluídas com a etiqueta selecionada. Para tal, selecione **proteger com permissões personalizadas**.
+3. Se permitido pelo seu administrador, pode especificar as suas próprias definições de proteção em vez de utilizar as definições de proteção que o administrador possa ter incluído com a etiqueta escolhida. Para tal, selecione **proteger com permissões personalizadas**.
     
-    Se puder seleccionar **proteger com permissões personalizadas**, o administrador não lhe permitem utilizar esta opção.
+    Se não vir **proteger com permissões personalizadas**, o administrador não permite que utilize esta opção.
     
     Todas as permissões personalizadas que especificar substituem as definições de proteção que o administrador possa ter definido para a etiqueta escolhida em vez de as complementarem.  
 
@@ -158,7 +158,7 @@ O guia do administrador contém uma lista completa dos tipos de ficheiro suporta
     
     - **Selecionar utilizadores, grupos ou organizações**: especifique as pessoas que devem ter as permissões que selecionou para o seu ficheiro ou ficheiros. Escreva o endereço de e-mail completo dessas pessoas, um endereço de e-mail de grupo ou um nome de domínio da organização para todos os utilizadores nessa organização. 
     
-    Em alternativa, pode utilizar o ícone do livro de endereços para selecionar utilizadores ou grupos no livro de endereços do Outlook.
+    Em alternativa, pode utilizar o ícone de livro de endereços para selecionar utilizadores ou grupos do livro de endereços do Outlook.
         
     - **Expirar acesso**: selecione esta opção somente para ficheiros sensíveis ao tempo, para que as pessoas especificadas não possam abrir o ficheiro ou ficheiros selecionados, após uma data definida por si. No entanto, continuará a poder abrir o ficheiro original, mas após a meia-noite (no seu fuso horário atual), no dia definido por si, as pessoas que especificou não poderão abrir o ficheiro.
     
@@ -181,6 +181,8 @@ Pode obter mais instruções sobre os procedimentos no guia do utilizador do Azu
 -   [O que pretende fazer?](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>Informações adicionais para administradores    
-Consulte [configurar a política do Azure Information Protection](../deploy-use/configure-policy.md).
+Para obter instruções de configuração ativar a definição de política **disponibilizar a opção de permissões personalizadas para os usuários**, consulte [configurar as definições de política do Azure Information Protection](../deploy-use/configure-policy-settings.md).
+
+Outras instruções de configuração: [configurar a política do Azure Information Protection](../deploy-use/configure-policy.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

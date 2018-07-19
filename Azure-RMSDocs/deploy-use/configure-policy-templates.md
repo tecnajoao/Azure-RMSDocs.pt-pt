@@ -4,7 +4,7 @@ description: Configurar e gerir modelos de gestão de direitos do portal do Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/28/2018
+ms.date: 07/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 44c1166ce4205d6e77b4877d6aca0eaf16911530
-ms.sourcegitcommit: 1bc4c9d6e773809893d02a6abb09aeb4ae28cb03
+ms.openlocfilehash: ba56e6b165cd378c957b2c54bd41ce54f1830797
+ms.sourcegitcommit: 1b0c387b2848b7dfaee0b0548dde7e41383ffe6e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "34562148"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39138309"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurar e gerir modelos do Azure Information Protection
 
@@ -77,7 +77,7 @@ Os modelos que são arquivados são apresentados como não disponível na **do A
 
 Antes de editar estes modelos ou convertê-los em etiquetas, certifique-se de que está ciente das seguintes alterações e considerações. Devido a alterações na implementação, a lista seguinte é especialmente importante se anteriormente gerida modelos no portal clássico do Azure.
 
-- Depois de editar ou converter um modelo e guardar a política do Azure Information Protection, as seguintes alterações são feitas nos [direitos de utilização](configure-usage-rights.md) originais. Se for necessário, pode adicionar ou remover direitos de utilização individuais através do portal do Azure. Em alternativa, utilizar o PowerShell com o [New-AadrmRightsDefinition](/powershell/module/aadrm/set-aadrmtemplateproperty) e [Set-AadrmTemplateProperty](/powershell/module/aadrm/new-aadrmrightsdefinition) cmdlets.
+- Depois de editar ou converter um modelo e guardar a política do Azure Information Protection, as seguintes alterações são feitas nos [direitos de utilização](configure-usage-rights.md) originais. Se for necessário, pode adicionar ou remover direitos de utilização individuais através do portal do Azure. Em alternativa, utilizar o PowerShell com o [New-AadrmRightsDefinition](/powershell/module/aadrm/set-aadrmtemplateproperty) e [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlets.
     
     - **Permitir Macros** (nome comum) é adicionado automaticamente. Este direito de utilização é preciso para a barra do Azure Information Protection nas aplicações do Office.
 
@@ -156,7 +156,7 @@ Quando cria uma nova etiqueta com a definição de proteção do **Azure (chave 
 
 5. Do **classificações** > **políticas** menu opção, selecione a política que contém as novas definições de proteção. Em seguida, selecione **adicionar ou remover etiquetas**. Partir do **política: Adicionar ou remover as etiquetas** painel, selecione a etiqueta criada recentemente que contém as definições de proteção, selecione **OK**e, em seguida, selecione **guardar**.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 
 Pode demorar até 15 minutos para um computador a executar o cliente do Azure Information Protection para obter estas definições alteradas. Para obter mais informações sobre como os computadores e os serviços transferem e atualizam modelos, veja [Atualizar modelos para utilizadores e serviços](refresh-templates.md).
 

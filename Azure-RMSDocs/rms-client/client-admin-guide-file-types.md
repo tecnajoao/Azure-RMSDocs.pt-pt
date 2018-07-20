@@ -4,7 +4,7 @@ description: Detalhes técnicos sobre tipos de ficheiro suportados, extensões d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/09/2018
+ms.date: 07/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: da4e3a5efec9ba7a19131a1b03fc2ddd5a7651ef
-ms.sourcegitcommit: f50b9bc28c6fff372651a3af7a6afc086645ba68
+ms.openlocfilehash: d8472b8146aa80f00ae8c66f04ee253f7a0777da
+ms.sourcegitcommit: 3276c1f3f32137cb5450f335f4f55e3b5858694d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935720"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39157787"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guia do administrador: Tipos de ficheiro suportados pelo cliente do Azure Information Protection
 
@@ -53,7 +53,9 @@ Os seguintes tipos de ficheiro podem ser classificados, mesmo quando não estão
 
 - **Digital Negative**: .dng
 
-- **Microsoft Office**: tipos de ficheiros na tabela a seguir:
+- **Microsoft Office**: tipos de ficheiro na seguinte tabela.
+    
+    Formatos de ficheiro suportados para estes tipos de ficheiros: mínimo do Office 97-2003 documentos e XML abertos do Office
     
     |Tipo de ficheiro do Office|Tipo de ficheiro do Office|
     |----------------------------------|----------------------------------|
@@ -123,14 +125,13 @@ Estes tipos de ficheiro são identificados separadamente, uma vez que, quando s�
 |.jt|.pjt|
 
 
-A seguinte tabela apresenta os tipos de ficheiros restantes que suportam a proteção nativa pelo cliente do Azure Information Protection e que também podem ser classificados. Irá reconhecê-los como tipos de ficheiro das aplicações do Microsoft Office. 
+A seguinte tabela apresenta os tipos de ficheiros restantes que suportam a proteção nativa pelo cliente do Azure Information Protection e que também podem ser classificados. Irá reconhecê-los como tipos de ficheiro das aplicações do Microsoft Office. Os formatos de ficheiro suportados são aqueles que são um mínimo de documentos do Office 97-2003 e o XML abertos do Office. 
 
 Nestes ficheiros, a extensão de nome de ficheiro permanece igual depois de o ficheiro ser protegido pelo serviço Rights Management.
 
 |Tipos de ficheiro suportados pelo Office|Tipos de ficheiro suportados pelo Office|
 |----------------------------------|----------------------------------|
 |.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vsdm|.vsdx<br /><br />. vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
-
 
 ### <a name="changing-the-default-protection-level-of-files"></a>Alterar o nível de proteção predefinido dos ficheiros
 Pode alterar a forma como o cliente do Azure Information Protection protege os ficheiros ao editar o registo. Por exemplo, pode forçar os ficheiros que suportam a proteção nativa a serem protegidos genericamente pelo cliente do Azure Information Protection.
@@ -229,7 +230,7 @@ Pode classificar e proteger estes ficheiros de contentor, mas a classificação 
 
 Se tiver um arquivo de contêiner que inclui ficheiros classificados e protegidos, tem primeiro de extrair os ficheiros para alterar suas configurações de classificação ou de proteção. No entanto, pode remover a proteção para todos os ficheiros nos ficheiros de contentor suportadas utilizando o [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 Agora que identificou os tipos de ficheiro suportados pelo cliente do Azure Information Protection, consulte os seguintes recursos para obter informações adicionais que poderá precisar para suportar este cliente:
 
 - [Personalizações](client-admin-guide-customizations.md)

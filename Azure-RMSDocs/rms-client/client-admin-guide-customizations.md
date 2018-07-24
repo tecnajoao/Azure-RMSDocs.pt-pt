@@ -4,7 +4,7 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/12/2018
+ms.date: 07/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6b5a2856f54ec6d38ae69007e80d9eb22d416799
-ms.sourcegitcommit: 56a49619c0c52fa5296810b27161f23b3380eab9
+ms.openlocfilehash: fe04cc36f99e641cb11ef832e967699106728749
+ms.sourcegitcommit: dc46351ac5a9646499b90e9565260c3ecd45d305
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39029938"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39217846"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas para o cliente do Azure Information Protection
 
@@ -98,13 +98,13 @@ Crie o nome do valor DWORD seguinte (com quaisquer dados do valor):
 
 ## <a name="support-for-disconnected-computers"></a>Suporte para computadores desligados
 
-Por predefinição, o cliente do Azure Information Protection tenta automaticamente estabelecer ligação ao serviço Azure Information Protection para transferir a política do Azure Information Protection mais recente. Se tiver um computador que sabe que não poderá estabelecer ligação à Internet durante um período de tempo, poderá impedir o cliente de tentar estabelecer ligação ao serviço ao editar o registo. 
+Por predefinição, o cliente do Azure Information Protection tenta automaticamente estabelecer ligação ao serviço Azure Information Protection para transferir a política do Azure Information Protection mais recente. Se tiver computadores que sabe que não será possível estabelecer ligação à Internet durante um período de tempo, pode impedir que o cliente tentar ligar ao serviço ao editar o registo. 
 
 Localize o nome do valor seguinte e defina os dados do valor como **0**:
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
-Certifique-se de que o cliente tem um ficheiro de política válido denominado **msip**, na **%LocalAppData%\Microsoft\MSIP** pasta. Se necessário, pode exportar a política a partir do portal do Azure e copiar o ficheiro exportado para o computador cliente. Também pode utilizar este método para substituir um ficheiro de política desatualizada pela política publicada mais recente.
+Certifique-se de que o cliente tem um ficheiro de política válido denominado **msip**, na **%LocalAppData%\Microsoft\MSIP** pasta. Se necessário, pode exportar a política global ou de uma política de âmbito do portal do Azure e copie o ficheiro exportado para o computador cliente. Também pode utilizar este método para substituir um ficheiro de política desatualizada pela política publicada mais recente. No entanto, exportar a política não suporta o cenário em que um utilizador pertencer a mais do que uma política de âmbito.
 
 Ao exportar a política, esta ação transfere um arquivo zipado com várias versões da política que corresponde a versões diferentes do cliente do Azure Information Protection:
 
@@ -116,7 +116,7 @@ Ao exportar a política, esta ação transfere um arquivo zipado com várias ver
     |Policy1.2.msip |versão 1.3 1.7|
     |Policy1.3.msip |versão 1.8 e posterior|
     
-2. Mudar o nome do ficheiro identificado para **msip**e, em seguida, copie-o para o **%LocalAppData%\Microsoft\MSIP** pasta em computadores que tenham o cliente do Azure information protection instalado. 
+2. Mudar o nome do ficheiro identificado para **msip**e, em seguida, copie-o para o **%LocalAppData%\Microsoft\MSIP** pasta em computadores que tenham o cliente do Azure Information Protection instalado. 
 
 
 ## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Ocultar ou mostrar o botão não reencaminhar no Outlook
@@ -390,7 +390,7 @@ Também pode configurar as regras de fluxo de correio para proceder ao mapeament
 - Para cada etiqueta do Azure Information Protection: crie uma regra de fluxo de correio que seja aplicada quando o **msip_labels** cabeçalho inclui o nome da sua etiqueta (por exemplo, **geral**) e aplique uma mensagem classificação que mapeie esta etiqueta.
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 Agora que personalizou o cliente do Azure Information Protection, veja os seguintes recursos para obter informações adicionais que poderá precisar para suportar este cliente:
 
 - [Ficheiros de cliente e registo de utilização](client-admin-guide-files-and-logging.md)

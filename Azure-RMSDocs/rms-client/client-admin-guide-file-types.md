@@ -4,7 +4,7 @@ description: Detalhes técnicos sobre tipos de ficheiro suportados, extensões d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2018
+ms.date: 07/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d8472b8146aa80f00ae8c66f04ee253f7a0777da
-ms.sourcegitcommit: 3276c1f3f32137cb5450f335f4f55e3b5858694d
+ms.openlocfilehash: cc2c2e9e609cbb35e09d8417cbce23b0f0fb7b35
+ms.sourcegitcommit: dc46351ac5a9646499b90e9565260c3ecd45d305
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39157787"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39217880"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guia do administrador: Tipos de ficheiro suportados pelo cliente do Azure Information Protection
 
@@ -95,9 +95,9 @@ Há tamanhos de ficheiro máximos que o cliente do Azure Information Protection 
 
 - **Para todos os outros ficheiros**: 
     
-    - Para proteger estes ficheiros: tamanho de ficheiro é limitado apenas pela memória e espaço em disco disponível.
+    - Para proteger a outros tipos de arquivo e abrir estes tipos de ficheiro no Visualizador do Azure Information Protection: O tamanho máximo é limitado apenas pela memória e espaço em disco disponível.
     
-    - Para abrir estes ficheiros no Visualizador do Azure Information Protection: a menos que tenha a versão de pré-visualização atual do cliente do Azure Information Protection, o tamanho máximo suportado para ficheiros com base em texto (. ptxt e. pxml) é 20 MB. Para arquivos com base em imagem e ficheiros PDF, o tamanho máximo é limitado apenas pela memória.
+    - Para desproteger ficheiros ao utilizar o [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet: O tamanho de ficheiro máximo suportado para arquivos. pst é 5 GB. Outros tipos de ficheiros estão limitados apenas pela memória e espaço em disco disponível.
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>Tipos de ficheiros suportados para a classificação e proteção
 

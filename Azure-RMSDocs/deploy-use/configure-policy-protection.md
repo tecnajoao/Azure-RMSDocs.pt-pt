@@ -4,18 +4,18 @@ description: Pode proteger os seus documentos e e-mails mais confidenciais ao co
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/26/2018
+ms.date: 07/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 0cac50caf3a7ecf9189d7731f1248e543871be9a
-ms.sourcegitcommit: 3f524c5af39bee39169f86d9c4e72c661c960d83
+ms.openlocfilehash: c551c83a41a7fbf6340a9e5fbd867b825a971ad6
+ms.sourcegitcommit: dc46351ac5a9646499b90e9565260c3ecd45d305
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37068947"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39217897"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Como configurar uma etiqueta para a proteção do Rights Management
 
@@ -94,12 +94,6 @@ Exchange tem de ser configurada para o Azure Information Protection antes dos ut
         
         Se escolher a opção para Word, Excel, PowerPoint e o Explorador de ficheiros: quando esta opção estiver definida, a etiqueta é apresentada nesses aplicativos. O comportamento resultante quando os utilizadores de aplicar a etiqueta é exibir a caixa de diálogo para os utilizadores selecionarem permissões personalizadas. Na caixa de diálogo, os utilizadores tem de especificar as permissões, os utilizadores ou grupos e qualquer data de expiração. Certifique-se de que os utilizadores têm instruções e orientações sobre como fornecer estes valores.
     
-    - **Selecione um modelo predefinido**: para utilizar um dos modelos predefinidos ou um modelo personalizado que configurou. Tenha em atenção que esta opção não é apresentada se estiver a editar uma etiqueta que tenha utilizado o **definir permissões** opção.
-    
-    Para selecionar um modelo predefinido, o modelo tem de ser publicado (não arquivado) e não deve ser vinculado já a outra etiqueta. Quando seleciona esta opção, pode utilizar um **Editar modelo** botão [converter o modelo numa etiqueta](configure-policy-templates.md#to-convert-templates-to-labels).
-    
-    Sugestão: Se forem utilizados para a criação e edição de modelos personalizados, poderá considerar útil para referência [tarefas que costumava realizar com o portal clássico do Azure](migrate-portal.md).
-
     - **Selecione um modelo predefinido**: para utilizar um dos modelos predefinidos ou um modelo personalizado que configurou. Tenha em atenção que esta opção não é apresentada se estiver a editar uma etiqueta que tenha utilizado o **definir permissões** opção.
     
     Para selecionar um modelo predefinido, o modelo tem de ser publicado (não arquivado) e não deve ser vinculado já a outra etiqueta. Quando seleciona esta opção, pode utilizar um **Editar modelo** botão [converter o modelo numa etiqueta](configure-policy-templates.md#to-convert-templates-to-labels).
@@ -297,7 +291,7 @@ Esta configuração tem a vantagem de que não tem de especificar os utilizadore
 6. Sobre o **rótulo** painel, selecione **guardar**.
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 
 Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy). 
 

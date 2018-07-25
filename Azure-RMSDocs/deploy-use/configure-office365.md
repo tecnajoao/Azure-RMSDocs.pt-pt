@@ -54,7 +54,7 @@ Exchange Online já pode ser ativado para utilizar o serviço Azure Rights Manag
     
         Import-PSSession $Session
 
-4. Executar [Get-IRMConfiguration] (https://technet.microsoft.com/library/dd776120(v=exchg.160\). aspx) comando para ver a configuração do Exchange Online para o serviço de proteção:
+4. Executar [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx) comando para ver a configuração do Exchange Online para o serviço de proteção:
     
         Get-IRMConfiguration
     

@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cc2c2e9e609cbb35e09d8417cbce23b0f0fb7b35
-ms.sourcegitcommit: dc46351ac5a9646499b90e9565260c3ecd45d305
+ms.openlocfilehash: 90dac73ce15382b4be58e5eb191e44167bdee56f
+ms.sourcegitcommit: 1f5a5cb650be2b4c302ad4b7a0b109246da3eb80
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39217880"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39295445"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guia do administrador: Tipos de ficheiro suportados pelo cliente do Azure Information Protection
 
@@ -55,7 +55,7 @@ Os seguintes tipos de ficheiro podem ser classificados, mesmo quando não estão
 
 - **Microsoft Office**: tipos de ficheiro na seguinte tabela.
     
-    Formatos de ficheiro suportados para estes tipos de ficheiros: mínimo do Office 97-2003 documentos e XML abertos do Office
+    Os formatos de ficheiro suportados para estes tipos de ficheiro são os 97-2003 formatos de arquivo e formatos XML abertos do Office para os seguintes programas do Office: Word, Excel e PowerPoint. 
     
     |Tipo de ficheiro do Office|Tipo de ficheiro do Office|
     |----------------------------------|----------------------------------|
@@ -125,7 +125,7 @@ Estes tipos de ficheiro são identificados separadamente, uma vez que, quando s�
 |.jt|.pjt|
 
 
-A seguinte tabela apresenta os tipos de ficheiros restantes que suportam a proteção nativa pelo cliente do Azure Information Protection e que também podem ser classificados. Irá reconhecê-los como tipos de ficheiro das aplicações do Microsoft Office. Os formatos de ficheiro suportados são aqueles que são um mínimo de documentos do Office 97-2003 e o XML abertos do Office. 
+A seguinte tabela apresenta os tipos de ficheiros restantes que suportam a proteção nativa pelo cliente do Azure Information Protection e que também podem ser classificados. Irá reconhecê-los como tipos de ficheiro das aplicações do Microsoft Office. Os formatos de ficheiro suportados para estes tipos de ficheiro são os 97-2003 formatos de arquivo e formatos XML abertos do Office para os seguintes programas do Office: Word, Excel e PowerPoint.
 
 Nestes ficheiros, a extensão de nome de ficheiro permanece igual depois de o ficheiro ser protegido pelo serviço Rights Management.
 

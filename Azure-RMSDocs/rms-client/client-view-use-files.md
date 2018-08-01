@@ -12,16 +12,16 @@ ms.technology: techgroup-identity
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: eb631b0153ce047177ef12887c025303acfac1db
-ms.sourcegitcommit: c207a2f592d167a4a0b6c4427259683e2087f143
+ms.openlocfilehash: cfeeb1f9519b94657499be06e448f0eb726a741f
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31441867"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371820"
 ---
-# <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Guia do utilizador: Ver e utilizar ficheiros que foram protegidos pelo Rights Management
+# <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Guia de utilizador: Ver e utilizar ficheiros que foram protegidos pelo Rights Management
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
 
 Na maioria das vezes, pode ver um documento protegido. Para tal, basta abri-lo. Por exemplo, pode fazer duplo clique num anexo numa mensagem de e-mail ou num ficheiro no Explorador de Ficheiros ou pode clicar numa ligação para um ficheiro.
 
@@ -34,28 +34,28 @@ O visualizador é instalado automaticamente como parte do cliente do Azure Infor
 > 
 >-Azure Information Protection
 > 
->-As do azure Rights Management
+>-Azure Rights Management
 > 
->-Serviços de gestão de direitos do Active Active Directory 
+>-Active Directory Rights Management Services 
 > 
 > Instale o visualizador se lhe tiver sido enviado um documento protegido por alguém de outra organização ou se não tiver permissões de administrador local no seu PC.
 
 Para poder abrir um documento protegido, a aplicação deve ser "Habilitada para RMS". As aplicações do Office e o Visualizador do Azure Information Protection são exemplos de aplicações habilitadas para RMS. Para ver uma lista de aplicações por tipo e os dispositivos suportados, veja a tabela [Aplicações habilitadas para RMS](../get-started/requirements-applications.md#rms-enlightened-applications).  
 ## <a name="messagerpmsg-as-an-email-attachment"></a>Message.rpmsg como um anexo de e-mail
 
-Se vir **message.rpmsg** como um anexo de ficheiro num e-mail, este ficheiro não é um documento protegido, mas uma mensagem de e-mail protegida apresentada como um anexo. Não pode utilizar o Visualizador do Azure Information Protection para Windows para ver esta mensagem de e-mail protegida no seu PC Windows. Em vez disso, terá uma aplicação de e-mail para o Windows que suporta a proteção Rights Management, como o Outlook do Office. Ou pode utilizar o Outlook na Web.
+Se vir **message.rpmsg** como um anexo de ficheiro num e-mail, este ficheiro não é um documento protegido, mas uma mensagem de e-mail protegida apresentada como um anexo. Não pode utilizar o Visualizador do Azure Information Protection para Windows para ver esta mensagem de e-mail protegida no seu PC Windows. Em vez disso, precisa de uma aplicação de e-mail para o Windows que suporta a proteção do Rights Management, como o Outlook do Office. Ou pode utilizar o Outlook na Web.
 
 No entanto, se tiver um dispositivo iOS ou Android, pode utilizar a aplicação do Azure Information Protection para abrir estas mensagens de e-mail protegidas. Pode transferir esta aplicação para estes dispositivos móveis a partir da página [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) no site da Microsoft.
 
 ## <a name="prompts-for-authentication"></a>Pedidos de autenticação
 
-Para poder ver o ficheiro protegido, o serviço Rights Management que foi utilizado para proteger o ficheiro tem de confirmar primeiro que está autorizado a ver o ficheiro. O serviço não esta confirmação verificando o seu nome de utilizador e palavra-passe. Em alguns casos, estas credenciais podem ser colocadas em cache e não vir uma linha de comandos pede-lhe para iniciar sessão. Noutros casos, lhe for pedido para fornecer as suas credenciais.
+Para poder ver o ficheiro protegido, o serviço Rights Management que foi utilizado para proteger o ficheiro tem de confirmar primeiro que está autorizado a ver o ficheiro. O serviço faz essa confirmação ao verificar o seu nome de utilizador e palavra-passe. Em alguns casos, estas credenciais podem ser colocados em cache e não vir uma linha de comandos que lhe pede para iniciar sessão. Em outros casos, é solicitado que forneça as credenciais.
 
-Se a sua organização tiver uma conta baseada na nuvem para a utilização (para Office 365 ou do Azure) e não utiliza uma versão equivalente no local (AD RMS), tem duas opções:
+Se a sua organização não tiver uma conta com base na cloud para que possa utilizar (para o Office 365 ou Azure) e utilizar uma versão no local equivalente (AD RMS), tem duas opções:
 
-- Se foi enviada uma mensagem de e-mail protegida, siga as instruções para iniciar sessão com o fornecedor de identidade sociais (tais como o Google para uma conta do Gmail) ou aplicar para um código de acesso único.
+- Se foram enviados um e-mail protegido, siga as instruções para iniciar sessão com o seu fornecedor de identidade social (por exemplo, o Google para uma conta do Gmail) ou Inscreva-se um código de acesso único.
 
-- Pode aplicar-se numa conta gratuita que aceitará as suas credenciais para que pode abrir documentos que estão protegidos pelo Rights Management. Para se candidatar a esta conta, clique na ligação para se candidatar [RMS para indivíduos](http://go.microsoft.com/fwlink/?LinkId=309469) e utilizar o seu endereço de e-mail da empresa em vez de um endereço de e-mail pessoal. 
+- Pode aplicar-se numa conta gratuita que aceitará as suas credenciais, para que possa abrir documentos que estão protegidos pelo Rights Management. Para se candidatar a esta conta, clique na ligação para se candidatar [RMS para indivíduos](http://go.microsoft.com/fwlink/?LinkId=309469) e usar seu endereço de e-mail da empresa, em vez de um endereço de e-mail pessoal. 
 
 ## <a name="to-view-and-use-a-protected-document"></a>Para ver e utilizar um documento protegido
 
@@ -71,21 +71,19 @@ Se a sua organização tiver uma conta baseada na nuvem para a utilização (par
     
     Para obter mais informações detalhadas sobre as permissões e os direitos de utilização de cada um, veja [Direitos incluídos nos níveis de permissões](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels).
 
-4. Para editar o ficheiro, clique em **guardar como**, que lhe permite guardar o ficheiro sem a etiqueta e com sem proteção para a extensão de nome de ficheiro original. Em seguida, pode editar o ficheiro com a aplicação associada a esse tipo de ficheiro. 
+4. Para editar o ficheiro, clique em **guardar como**, que lhe permite guardar o ficheiro sem a etiqueta e sem proteção para a extensão de nome de ficheiro original. Em seguida, pode editar o ficheiro com a aplicação associada a esse tipo de ficheiro. 
     
-    Quando acabar de editar o ficheiro no Explorador de ficheiros, faça duplo clique no ficheiro para voltar a aplicar a etiqueta, que por sua vez volta a proteção.
+    Quando terminar de editar o ficheiro no Explorador de ficheiros, faça duplo clique no ficheiro para voltar a aplicar a etiqueta, que por sua vez volta a aplicar proteção.
 
 5. Se tiver ficheiros protegidos adicionais para abrir, pode navegar diretamente até aos mesmos a partir do visualizador, através da opção **Abrir**. O ficheiro selecionado substitui o ficheiro original no visualizador. 
 
 > [!TIP]
-> Se o ficheiro protegido não for aberto e tenham o cliente Azure Information Protection completo instalado, tente o **repor definições** opção. Para aceder a esta opção, a partir de uma aplicação do Office, selecione o **proteger** botão > **ajuda e comentários** > **repor definições**. 
+> Se o ficheiro protegido não abre, pelo que tenham o cliente do Azure Information Protection completo instalado, experimente o **repor definições** opção. Para aceder a esta opção, a partir de uma aplicação do Office, selecione o **Protect** botão > **ajuda e Feedback** > **repor definições**. 
 > 
-> [Obter mais informações sobre a opção Repor definições](client-admin-guide.md#more-information-about-the-reset-settings-option)
+> [Obter mais informações sobre a opção de repor definições](client-admin-guide.md#more-information-about-the-reset-settings-option)
 
 ## <a name="other-instructions"></a>Outras instruções
 Pode obter mais instruções sobre os procedimentos no guia do utilizador do Azure Information Protection:
 
 -   [O que pretende fazer?](client-user-guide.md#what-do-you-want-to-do)
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

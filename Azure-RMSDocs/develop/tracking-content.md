@@ -14,12 +14,12 @@ ms.assetid: F5089765-9D94-452B-85E0-00D22675D847
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: e632e99f42947afa10223bb1b11fcc18cdec6f7a
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: a3aeddd9a22f93bed1f942b666b8c246761a8a6b
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765430"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39370076"
 ---
 # <a name="how-to-enable-document-tracking-and-revocation"></a>Procedimentos: ativar o controlo e a revogação de documentos
 
@@ -143,7 +143,7 @@ Adicionar um item de IU **Controlar Utilização** à sua aplicação é tão si
 
 - Se não tiver acesso a esses metadados (ou seja, está a examinar a versão não protegida do documento), pode utilizar **Content_Name** no seguinte formato: `https://track.azurerms.com/#/?q={ContentName}`
 
-  Exemplo – https://track.azurerms.com/#/?q=Secret!.txt
+  Exemplo - https://track.azurerms.com/#/?q=Secret!. txt
 
 O cliente só tem de abrir um browser com o URL adequado. O portal de Controlo de Documento RMS processará a autenticação e qualquer redirecionamento necessário.
 
@@ -159,5 +159,3 @@ O cliente só tem de abrir um browser com o URL adequado. O portal de Controlo d
 * [IpcfEncryptFileStreamWithMetadata](https://msdn.microsoft.com/library/dn974051.aspx)
 * [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

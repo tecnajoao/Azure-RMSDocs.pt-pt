@@ -10,12 +10,12 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: c551c83a41a7fbf6340a9e5fbd867b825a971ad6
-ms.sourcegitcommit: dc46351ac5a9646499b90e9565260c3ecd45d305
+ms.openlocfilehash: c788982587487f88b31a130933b6d95c6cf94c42
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39217897"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39373292"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Como configurar uma etiqueta para a proteção do Rights Management
 
@@ -296,5 +296,3 @@ Esta configuração tem a vantagem de que não tem de especificar os utilizadore
 Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy). 
 
 As regras de fluxo de correio do Exchange também podem aplicar a proteção, com base em suas etiquetas. Para obter mais informações e exemplos, consulte [configurar o Exchange Online regras de fluxo de correio etiquetas do Azure Information Protection](configure-exo-rules.md).  
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -12,16 +12,16 @@ ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c5e048c5418b956ddb881ed2eb63ad0cc257bde4
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 95616111b2ed5449e4c65c2df02b7fb181458728
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30206039"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39370198"
 ---
-# <a name="user-guide-download-and-install-the-azure-information-protection-client"></a>Guia do utilizador: Transferir e instalar o cliente Azure Information Protection
+# <a name="user-guide-download-and-install-the-azure-information-protection-client"></a>Guia de utilizador: Transferir e instalar o cliente do Azure Information Protection
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
 
 Se o seu administrador não lhe instalar o Azure Information Protection, pode fazê-lo por si mesmo. Tem de ser administrador local do seu PC para instalar este cliente, de forma a que o mesmo possa etiquetar e proteger os seus documentos e e-mails.
 
@@ -71,7 +71,6 @@ Pode obter mais instruções sobre os procedimentos no guia do utilizador do Azu
 - [O que pretende fazer?](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>Informações adicionais para administradores    
-Consulte [instalar o cliente Azure Information Protection para os utilizadores](client-admin-guide-install.md) do [Guia do administrador](client-admin-guide.md).
+Ver [instalar o cliente do Azure Information Protection para os utilizadores](client-admin-guide-install.md) partir a [Guia do administrador](client-admin-guide.md).
  
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]  
+  

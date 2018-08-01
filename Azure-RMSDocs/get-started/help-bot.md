@@ -1,6 +1,6 @@
 ---
 title: Bot de ajuda para o Azure Information Protection
-description: Ajudar bot para o Azure Information Protection para podem ajudar a responder às perguntas, procure os docs do ou abra um pedido de suporte se precisar de suporte técnico.
+description: Ajudar a bot do Azure Information Protection para ajudar a responder às suas perguntas, pesquise os documentos ou abrir um pedido de suporte se precisar de suporte técnico.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -12,24 +12,23 @@ ms.technology: techgroup-identity
 ms.assetid: 98105d30-ff81-4b9c-9f41-9e9ffd6e7aa6
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4f6f8c8d4b302f515ed2002d5f00ea928eb10178
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: 6c69d3055860f5173d9daa6353b8c83cbccc1c5c
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/23/2018
-ms.locfileid: "29476257"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39369814"
 ---
 # <a name="help-bot-for-azure-information-protection"></a>Bot de ajuda para o Azure Information Protection
 
-Repita o **bot de ajuda do Azure Information Protection**, atualmente na versão beta:
+Experimente o **bot do Azure Information Protection ajuda**, atualmente na versão beta:
 
-- Ver se o bot conheça a resposta à sua pergunta sobre o Azure Information Protection, porque outra pessoa fez a mesma pergunta.
-- Peça bot para procurar os docs do Azure Information Protection para si.
-- Peça bot para ajudar a abrir um pedido de suporte do Azure Information Protection para si.
+- Veja se o bot saberá a resposta à sua pergunta sobre o Azure Information Protection, uma vez que outra pessoa fez a mesma pergunta.
+- Pergunte ao bot para pesquisar os documentos do Azure Information Protection para.
+- Pergunte ao bot para o ajudar a abrir um pedido de suporte do Azure Information Protection para.
 - Tipo **#feedback** para nos informar se este bot é útil.
 
 
 <iframe width="560" height="475" src="https://webchat.botframework.com/embed/AIPformalBOT?s=SwZOTnCyj6w.cwA.zYE.Wdf87z08R7NHjtaev84v0nLC0urEfQJ2_5bUgvtIR9Q"></iframe>
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

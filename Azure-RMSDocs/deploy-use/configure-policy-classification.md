@@ -4,18 +4,18 @@ description: Quando configurar as condições para uma etiqueta, pode atribuir a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/27/2018
+ms.date: 07/31/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: c7ef58cd42a793cacb3b64aec33d2cd0a0b105f4
-ms.sourcegitcommit: 3f524c5af39bee39169f86d9c4e72c661c960d83
+ms.openlocfilehash: 9be846a194e077748aca58e9822db2085d2992dc
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37068886"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39374621"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Como configurar as condições para classificação automática e recomendada para o Azure Information Protection
 
@@ -74,7 +74,10 @@ Pode alterar este comportamento para que o cliente do Azure Information Protecti
         
         Os tipos de informações utilizam os tipos de informações de sensibilidade perda prevenção (DLP) do Office 365 dados e a deteção de padrão. Pode escolher entre vários tipos comuns de informações confidenciais, algumas das quais são específicas para diferentes regiões. Para obter mais informações, consulte [o que procurar os tipos de informações confidenciais](https://support.office.com/article/What-the-sensitive-information-types-look-for-fd505979-76be-4d9f-b459-abef3fc9e86b) na documentação do Office.
         
-        A lista de tipos de informações que pode selecionar a partir do portal do Azure é periodicamente atualizada para incluir quaisquer novas adições de DLP do Office. No entanto, a lista exclui quaisquer tipos de informações confidenciais personalizados que tenha definido e carregado como um pacote de regra para o Centro de conformidade e segurança do Office 365. 
+        A lista de tipos de informações que pode selecionar a partir do portal do Azure é periodicamente atualizada para incluir quaisquer novas adições de DLP do Office. No entanto, a lista exclui quaisquer tipos de informações confidenciais personalizados que tenha definido e carregado como um pacote de regra para o Centro de conformidade e segurança do Office 365.
+        
+        > [!IMPORTANT]
+        > Alguns dos tipos de informações requerem uma versão mínima do cliente. [Mais informações](#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
         
         Quando o Azure Information Protection avalia os tipos de informações que selecionar, ele não utiliza a definição de nível de confiança de DLP do Office, mas coincide de acordo com a confiança de mais baixa.
     
@@ -92,13 +95,28 @@ Pode alterar este comportamento para que o cliente do Azure Information Protecti
     
     - Especifique o texto do aviso ao utilizador ou da sugestão de política: mantenha o texto predefinido ou especifique uma cadeia própria.
 
-Quando clica em **guardar**, as suas alterações estão automaticamente disponíveis para utilizadores e serviços. As permissões que conceder a estes utilizadores podem ser diferentes das permissões que têm dos utilizadores existentes.
+Quando clica em **guardar**, as suas alterações estão automaticamente disponíveis para utilizadores e serviços. Já não existe uma opção de publicar separado.
 
-## <a name="next-steps"></a>Próximos passos
+### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>Tipos de informações confidenciais que requerem uma versão mínima do cliente
+
+Os seguintes tipos de informações confidenciais atualmente requerem a versão de pré-visualização do cliente do Azure Information Protection:
+
+- **Número de telefone da UE**
+- **Número de telefone celular da UE**
+- **Número de Passport da UE**
+- **Número de licença do controlador da UE**
+- **Coordenadas do GPS da UE**
+- **Número de identificação do National da UE**
+- **Número da Previdência Social (SSN) da UE, ou equivalente ID**
+- **Número de identificação de imposto da UE (TIN)**
+- **Código de identificação de população em tailandês**
+- **Número de identificação nacional turco**
+- **Número de cartão de residência japonês**
+
+## <a name="next-steps"></a>Passos Seguintes
 
 Considere implementar o [scanner do Azure Information Protection](deploy-aip-scanner.md), que pode utilizar as regras de classificação automática para detetar, classificar e proteger ficheiros em arquivos de ficheiros de partilhas e no local de rede.  
 
 Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

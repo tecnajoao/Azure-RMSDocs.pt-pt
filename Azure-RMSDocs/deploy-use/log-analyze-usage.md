@@ -12,18 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 989f75361d96680bf0bedff00251b6d60aa999c5
-ms.sourcegitcommit: 373e05ff0c411d29cc5b61c36edaf5a203becc14
+ms.openlocfilehash: 98fe9b957d577cc59a719dbe5a7ba3b532ea8c87
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34216873"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371412"
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Registar e analisar a utilização do serviço Azure Rights Management
 
->*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Utilize estas informações para o ajudar a compreender como pode utilizar o registo de utilização do serviço Azure Rights Management do Azure Information Protection. Este serviço fornece a proteção de dados de documentos da sua organização e os e-mails e podem registar cada pedido ao mesmo. Estes pedidos incluem quando os utilizadores proteger documentos e e-mails e também consumam este conteúdo, ações realizadas pelos administradores para este serviço e ações realizadas por operadores da Microsoft para suportar a implementação do Azure Information Protection. 
+Utilize estas informações para o ajudar a compreender como pode utilizar o registo de utilização do serviço Azure Rights Management do Azure Information Protection. Este serviço fornece a proteção de dados de documentos da sua organização e mensagens de correio eletrónico e pode registar cada solicitação a ele. Estes pedidos incluem quando os utilizadores protegerem documentos e e-mail e a consumam este conteúdo, ações efetuadas pelos seus administradores para este serviço e ações realizadas por operadores da Microsoft para suportar a implementação do Azure Information Protection. 
 
 Em seguida, pode utilizar estes registos do serviço Azure Rights Management para suportar os seguintes cenários empresariais:
 
@@ -39,16 +39,16 @@ Em seguida, pode utilizar estes registos do serviço Azure Rights Management par
 
 -   **Efetuar análises forenses**
 
-    Se ocorrer uma fuga de informações, é provável que lhe seja pedido para indicar quem acedeu recentemente a documentos específicos e a que tipo de informações uma pessoa suspeita acedeu recentemente. Pode responder a estes tipos de questões quando utiliza este registo porque as pessoas que utilizam conteúdos protegidos têm sempre de obter uma licença de Rights Management para abrir documentos e imagens protegidos pelo serviço do Azure Rights Management, mesmo que estes ficheiros são movidos por e-mail ou copiados para unidades USB ou outros dispositivos de armazenamento. Isto significa que, se proteger os seus dados com o serviço Azure Rights Management, pode utilizar os registos do mesmo como fonte definitiva de informações para análises forenses.
+    Se ocorrer uma fuga de informações, é provável que lhe seja pedido para indicar quem acedeu recentemente a documentos específicos e a que tipo de informações uma pessoa suspeita acedeu recentemente. Pode responder a esses tipos de perguntas quando utiliza este registo porque as pessoas que utilizam conteúdos protegidos têm sempre de obter uma licença de Rights Management para abrir documentos e imagens protegidos pelo serviço Azure Rights Management, mesmo que esses arquivos são movidos por e-mail ou copiados para unidades USB ou outros dispositivos de armazenamento. Isto significa que, se proteger os seus dados com o serviço Azure Rights Management, pode utilizar os registos do mesmo como fonte definitiva de informações para análises forenses.
 
 Além deste registo de utilização, também tem as seguintes opções de registo:
 
 |Opção de registo|Descrição|
 |----------------|---------------|
-|Registo de Admin|Regista tarefas administrativas para o serviço Azure Rights Management. Por exemplo, se o serviço estiver desativado, quando a funcionalidade de Superutilizador é ativada e quando os utilizadores têm permissões de administrador delegado para o serviço. <br /><br />Para obter mais informações, consulte o cmdlet do PowerShell, [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog).|
-|controlo de documentos|Permite que os utilizadores controlarem e revogarem os seus documentos que possam tem controlados com o cliente Azure Information Protection ou a aplicação de partilha RMS. Os administradores globais também podem controlar estes documentos em nome dos utilizadores. <br /><br />Para obter mais informações, consulte [configurar e utilizar o controlo de documentos para o Azure Information Protection](../rms-client/client-admin-guide-document-tracking.md).|
-|Registos de eventos de cliente|Atividade de utilização para o cliente Azure Information Protection, a sessão do Windows local **aplicações e serviços** registo de eventos, **Azure Information Protection**. <br /><br />Para obter mais informações, consulte [registo de utilização para o cliente Azure Information Protection](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
-|Ficheiros de registo de cliente|Os registos de resolução de problemas para o cliente Azure Information Protection, localizado na **%localappdata%\Microsoft\MSIP**. <br /><br />Estes ficheiros são concebidos para Support da Microsoft.|
+|Registo de administrador|Regista tarefas administrativas para o serviço Azure Rights Management. Por exemplo, se o serviço estiver desativado, quando a funcionalidade de Superutilizador é ativada e quando os utilizadores estiverem permissões de administrador delegado para o serviço. <br /><br />Para obter mais informações, consulte o cmdlet do PowerShell [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog).|
+|Controlo de documentos|Permite aos utilizadores controlar e revogar os documentos que eles têm controlado com o cliente do Azure Information Protection ou a aplicação de partilha RMS. Os administradores globais também podem controlar esses documentos em nome dos utilizadores. <br /><br />Para obter mais informações, consulte [configurando e usando o controlo de documentos do Azure Information Protection](../rms-client/client-admin-guide-document-tracking.md).|
+|Registos de eventos de cliente|Atividade de utilização para o cliente do Azure Information Protection, iniciou sessão do Windows local **aplicativos e serviços** registo de eventos **do Azure Information Protection**. <br /><br />Para obter mais informações, consulte [registo de utilização para o cliente do Azure Information Protection](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
+|Ficheiros de registo de cliente|Registos de resolução de problemas para o cliente do Azure Information Protection, localizado em **%localappdata%\Microsoft\MSIP**. <br /><br />Estes ficheiros estão concebidos para Support da Microsoft.|
 
 
 Utilize as secções seguintes para obter mais informações sobre o registo de utilização para o serviço Azure Rights Management. 
@@ -68,7 +68,7 @@ O serviço Azure Rights Management escreve registos na sua conta de armazenament
 
 Após uma ação do Azure Rights Management, os registos poderão demorar algum tempo a serem apresentados na sua conta de armazenamento. A maioria dos registos é apresentada no espaço de 15 minutos. Recomendamos que transfira os registos para o armazenamento local, por exemplo para uma pasta local, uma base de dados ou um repositório MapReduce.
 
-Para transferir os seus registos de utilização, deverá utilizar o módulo de administração do Azure Rights Management para o Windows PowerShell. Para obter instruções de instalação, consulte [instalar o módulo do AADRM PowerShell](install-powershell.md). Caso já tenha transferido este módulo do Windows PowerShell, execute o seguinte comando para verificar se o seu número de versão é **2.4.0.0** ou posterior: `(Get-Module aadrm -ListAvailable).Version` 
+Para transferir os seus registos de utilização, deverá utilizar o módulo de administração do Azure Rights Management para o Windows PowerShell. Para obter instruções de instalação, consulte [instalar o módulo do PowerShell do AADRM](install-powershell.md). Caso já tenha transferido este módulo do Windows PowerShell, execute o seguinte comando para verificar se o seu número de versão é **2.4.0.0** ou posterior: `(Get-Module aadrm -ListAvailable).Version` 
 
 ### <a name="to-download-your-usage-logs-by-using-powershell"></a>Para transferir os seus registos de utilização através do PowerShell
 
@@ -186,22 +186,22 @@ Há muitos tipos de pedido para o serviço Azure Rights Management, mas a seguin
 |BECreateEndUserLicenseV1|É efetuada uma chamada a partir de um dispositivo móvel para criar uma licença de utilizador final.|
 |BEGetAllTemplatesV1|É efetuada uma chamada a partir de um dispositivo móvel (back-end) para obter todos os modelos.|
 |Certify|O cliente está a certificar os conteúdos para proteção.|
-|DeleteTemplateById|É efetuada uma chamada do portal do Azure, ao eliminar o ID de modelo pelo modelo.|
+|DeleteTemplateById|Uma chamada é feita a partir do portal do Azure, para eliminar um ID de modelo pelo modelo.|
 |DocumentEventsCsv|É feita uma chamada a partir do site de controlo de documentos para transferir o ficheiro .CSV para um único documento.|
-|ExportTemplateById|É efetuada uma chamada do portal do Azure para exportar um modelo com base no ID de modelo.|
+|ExportTemplateById|Uma chamada é feita a partir do portal do Azure para exportar um modelo com base no ID de modelo.|
 |FECreateEndUserLicenseV1|É semelhante ao pedido AcquireLicense, mas este pedido é efetuado a partir de dispositivos móveis.|
 |FECreatePublishingLicenseV1|É igual à combinação dos pedidos Certify e GetClientLicensorCert, feito a partir de clientes móveis.|
 |FEGetAllTemplates|É efetuada uma chamada a partir de um dispositivo móvel (front-end) para obter os modelos.|
 |FindServiceLocationsForUser|É efetuada uma chamada de consulta de URL, que é utilizada para chamar o pedido Certify ou AcquireLicense.|
 |GetAllDocs|É feita uma chamada a partir do site de controlo de documentos para carregar a página **todos os documentos** para um utilizador ou procurar todos os documentos para o inquilino. Utilize este valor com os campos admin-action e acting-as-admin:<br /><br />- admin-action está vazio: um utilizador vê a página **todos os documentos** para os seus próprios documentos.<br /><br />- admin-action é verdadeiro e acting-as-user está vazio: um administrador vê todos os documentos para o respetivo inquilino.<br /><br />- admin-action é verdadeiro e acting-as-user não está vazio: um administrador vê **todos os documentos** para um utilizador.|
-|GetAllTemplates|É efetuada uma chamada do portal do Azure, para obter todos os modelos.|
+|GetAllTemplates|É efetuada uma chamada a partir do portal do Azure, para obter todos os modelos.|
 |GetClientLicensorCert|O cliente está a pedir um certificado de publicação (que é posteriormente utilizado para proteger conteúdos) a partir de um computador baseado no Windows.|
 |GetConfiguration|É chamado um cmdlet do PowerShell do Azure para obter a configuração do inquilino do Azure RMS.|
 |GetConnectorAuthorizations|É efetuada uma chamada a partir dos conectores do RMS para obter a configuração destes a partir da cloud.|
 |GetRecipients|É feita uma chamada a partir do site de controlo de documentos para navegar para a vista de lista para um único documento.|
 |GetSingle|É feita uma chamada a partir do site de controlo de documentos para navegar para uma página de um **único documento**.|
 |GetTenantFunctionalState|O portal do Azure está a verificar se o serviço Azure Rights Management está ativado.|
-|GetTemplateById|É efetuada uma chamada do portal do Azure para obter um modelo, especificando um ID de modelo.|
+|GetTemplateById|Uma chamada é feita a partir do portal do Azure para obter um modelo ao especificar um ID de modelo.|
 |KeyVaultDecryptRequest|O cliente está a tentar desencriptar os conteúdos protegidos pelo RMS. Aplicável apenas para uma chave de inquilino gerida pelo cliente (BYOK) no Azure Key Vault.|
 |KeyVaultGetKeyInfoRequest|É feita uma chamada para verificar se a chave especificada para ser utilizada no Azure Key Vault para a chave de inquilino do Azure Information Protection está acessível e se ainda não está em utilização.|
 |KeyVaultSignDigest|É feita uma chamada quando uma chave gerida pelo cliente (BYOK) no Azure Key Vault é utilizada para fins de assinatura. Esta opção é normalmente chamada uma vez por cada pedido AcquireLicence (ou FECreateEndUserLicenseV1), Certify e GetClientLicensorCert (ou FECreatePublishingLicenseV1).|
@@ -243,6 +243,5 @@ Se, no seu armazenamento do Azure, tiver registos criados em datas anteriores à
 
 Para mais informações sobre como utilizar o Windows PowerShell para o serviço Azure Rights Management, veja [Administrar o serviço Azure Rights Management através do Windows PowerShell](administer-powershell.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

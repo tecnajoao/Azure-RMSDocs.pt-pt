@@ -12,19 +12,19 @@ ms.technology: techgroup-identity
 ms.assetid: eaf6d02c-aa36-4915-856e-49bb71ab1484
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c361c3fadb1bc4a65d94c79f7a41f8aebb6f247a
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 55a44324df67cbead2dd1b0bcf2169929e747c42
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30207374"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39373129"
 ---
 # <a name="rights-management-sharing-application-user-guide"></a>Guia do utilizador da aplicação de partilha Rights Management
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 > [!IMPORTANT]
-> **Notificação de fim do suporte**: a aplicação de partilha Rights Management para Windows está a ser substituída pelo [cliente do Azure Information Protection](aip-client.md). Suporte para esta aplicação anterior irá parar 31 de Janeiro de 2019. 
+> **Notificação de fim do suporte**: a aplicação de partilha Rights Management para Windows está a ser substituída pelo [cliente do Azure Information Protection](aip-client.md). O suporte para esta aplicação mais antiga será interrompido 31 de Janeiro de 2019. 
 
 A aplicação de partilha Microsoft Rights Management (RMS) para Windows ajuda a manter os documentos e imagens importantes protegidos das pessoas que não os deveriam ver, mesmo que os envie por e-mail ou guarde noutro dispositivo. Também pode utilizar esta aplicação para abrir e utilizar ficheiros que tenham sido protegidos por outras pessoas com a mesma tecnologia de proteção do Rights Management.
 
@@ -66,6 +66,5 @@ Seguem-se apenas alguns exemplos de como pode utilizar a aplicação de partilha
 
 - [Especificar definições na caixa de diálogo](sharing-app-dialog-box.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

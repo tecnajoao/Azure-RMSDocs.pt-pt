@@ -12,16 +12,16 @@ ms.technology: techgroup-identity
 ms.assetid: 2cf46bf9-7d23-4f49-b5c1-7ed7b71c858f
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 1e6ce5660a0ccc8385c6ab728c4d2c1c202023ed
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: d1014f139d0ddf81034708c636f3e13d946f3e06
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30205844"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39370827"
 ---
 # <a name="azure-information-protection-user-guide"></a>Guia do utilizador do Azure Information Protection
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
 
 O cliente do Azure Information Protection para Windows ajuda-o a manter os documentos e e-mails importantes protegidos das pessoas que não os devem ver, mesmo que o seu e-mail seja reencaminhado ou que o seu documento seja guardado noutra localização. Também pode utilizar este cliente para abrir documentos que tenham sido protegidos por outras pessoas com a tecnologia de proteção do Rights Management a partir do Azure Information Protection.
 
@@ -48,5 +48,3 @@ Tudo o que precisa é de um computador que execute, pelo menos, o Windows 7 com
 > [!NOTE]
 > Se for um administrador responsável pelo Azure Information Protection numa rede empresarial, veja o [Guia do administrador do cliente do Azure Information Protection](client-admin-guide.md) para obter informações técnicas adicionais. 
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

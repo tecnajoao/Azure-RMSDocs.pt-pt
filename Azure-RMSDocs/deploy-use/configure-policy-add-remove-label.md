@@ -1,6 +1,6 @@
 ---
 title: Adicionar ou remover uma etiqueta de ou para uma política do Azure Information Protection
-description: Adicionar ou remover uma etiqueta de Azure Information Protection para ou da política global para todos os utilizadores, ou para ou a partir de uma política de âmbito para um subconjunto de utilizadores.
+description: Adicionar ou remover uma etiqueta do Azure Information Protection para ou da política global para todos os utilizadores, ou para ou a partir de uma política de âmbito para um subconjunto de utilizadores.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -10,24 +10,24 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
-ms.openlocfilehash: ad74efff44738c5475e988d861fda8d93686e794
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: bca42c43f8e25ae4a9bb4b1818244834551f9ba1
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32326308"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39373424"
 ---
 # <a name="add-or-remove-a-label-to-or-from-an-azure-information-protection-policy"></a>Adicionar ou remover uma etiqueta de ou para uma política do Azure Information Protection
 
 >*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Depois de criar uma etiqueta de Azure Information Protection, pode, em seguida, adicioná-la a uma política para que fique disponível para os utilizadores. Se a etiqueta para todos os utilizadores, adicione a etiqueta para a política global. Se a etiqueta é para um subconjunto de utilizadores, adicione a etiqueta a uma política de âmbito. Atualmente, uma etiqueta pode ser adicionada a apenas uma política. Para adicionar um sublabel, a etiqueta principal tem de ser na mesma política ou na política de global.
+Depois de criar uma etiqueta do Azure Information Protection, pode, em seguida, adicioná-lo a uma política para que fique disponível para os utilizadores. Se a etiqueta é para todos os utilizadores, adicione a etiqueta para a política global. Se a etiqueta for para um subconjunto de utilizadores, adicione a etiqueta para uma política de âmbito. Atualmente, uma etiqueta pode ser adicionada a apenas uma política. Para adicionar uma subetiqueta, a etiqueta principal tem de ser na mesma política ou na política global.
 
-Para etiquetas que já estão a ser uma política, pode removê-los da política. Esta ação não elimina a etiqueta. Permanece disponível para ser utilizado em outra política.
+Para etiquetas que já estão numa política, pode removê-lo da política. Esta ação não elimina a etiqueta. Continua a ser disponível para serem utilizados na outra política.
 
-Se ainda não criou a etiqueta, consulte o artigo [como criar uma nova etiqueta para o Azure Information Protection](configure-policy-new-label.md).
+Se ainda não criou o rótulo, veja [como criar uma nova etiqueta do Azure Information Protection](configure-policy-new-label.md).
 
-Se precisar de criar uma política de âmbito para que a etiqueta aplica-se a um subconjunto de utilizadores, consulte [como configurar a política do Azure Information Protection para utilizadores específicos através da utilização de políticas de âmbito](configure-policy-scope.md).
+Se precisar de criar uma política de âmbito para que a etiqueta aplica-se a um subconjunto de utilizadores, consulte [como configurar a política do Azure Information Protection para utilizadores específicos com políticas de âmbito](configure-policy-scope.md).
 
 ## <a name="to-add-or-remove-a-label-to-or-from-a-policy"></a>Para adicionar ou remover uma etiqueta de ou para uma política
 
@@ -35,29 +35,28 @@ Se precisar de criar uma política de âmbito para que a etiqueta aplica-se a um
     
     Por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
 
-2. Do **classificações** > **políticas** opção do menu: no **Azure Information Protection** - **políticas** painel, selecione **Global** se a etiqueta para adicionar ou remover aplica-se a todos os utilizadores.
+2. Do **classificações** > **políticas** opção de menu: no **do Azure Information Protection** - **políticas** painel, selecione **Global** se a etiqueta para adicionar ou remover aplica-se a todos os utilizadores.
 
-    Se a etiqueta para adicionar ou remover aplica-se a um subconjunto de utilizadores, selecione a política de âmbito em vez disso.
+    Se a etiqueta para adicionar ou remover aplica-se a um subconjunto de utilizadores, selecione a política de âmbito.
 
-3. No **política** painel, selecione **etiquetas de adicionar ou remover**.
+3. Sobre o **diretiva** painel, selecione **adicionar ou remover etiquetas**.
 
-4. No **política: Adicionar ou remover etiquetas** painel, pode ver todas as etiquetas com uma caixa de verificação selecionada se que já estão a ser uma política e o nome da política correspondente no **política** coluna.
+4. Sobre o **política: Adicionar ou remover as etiquetas** painel, verá todas as suas etiquetas com uma caixa de verificação selecionada se eles já estão numa política e o nome da política correspondente no **política** coluna.
      
-    Apresentar sublabels como avanços. No âmbito, uma política de etiquetas que são herdadas da política global apresentam como indisponíveis.
+    Subetiquetas apresentam como recuada. Numa política de âmbito, as herdadas da política global são apresentadas como indisponível.
     
     Efetue um ou mais das seguintes ações e, em seguida, clique em **OK**:
     
-    - Para adicionar uma etiqueta, selecione-, que adiciona uma caixa de verificação selecionada.
+    - Para adicionar uma etiqueta, selecioná-la, que adiciona uma caixa de verificação selecionada.
     
     - Para remover uma etiqueta, desmarque a caixa de verificação.
   
 5. Para guardar as alterações, clique em **Guardar**.
    
-    As alterações são automaticamente disponibilizadas a utilizadores e serviços. Já não é uma opção de publicar separado.
+    As alterações estão automaticamente disponíveis para utilizadores e serviços. Já não existe uma opção de publicar separado.
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 
 Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).  
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

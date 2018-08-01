@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 814b8f67429ba25969be081e5f0f97f50d4bd8d5
-ms.sourcegitcommit: 0fda9ea4a7b91d4bb3a9e4f9d5cc4106ce1e2d43
+ms.openlocfilehash: eccaf8570704ee5adf13bf3f3d4426fecaa5e08e
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38973441"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39370562"
 ---
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>Passo 2: migração de chave protegida por software para chave protegida por HSM
 
@@ -168,5 +168,4 @@ Se tiver de confirmar mais tarde qual a chave de inquilino do Azure Information 
 
 Agora está pronto para ir para o [Passo 5. Ativar o serviço Azure Rights Management](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

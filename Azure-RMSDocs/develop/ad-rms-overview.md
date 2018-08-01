@@ -14,12 +14,12 @@ ms.assetid: B546B6C1-ADC1-4EBD-95E2-B4A74E4E980B
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: fcf72e8c633186424957cde4bb98b5e2051b9dcf
-ms.sourcegitcommit: d1a3f35ea2d2c246a5b1e3f3da75df9c182fd0da
+ms.openlocfilehash: 3557dbf0d9f659bb5ffebd9afb4d4ef69e749985
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34480243"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39370760"
 ---
 # <a name="overview"></a>Descrição geral
 
@@ -56,5 +56,3 @@ Os tópicos restantes desta secção a Arquitetura RMS e as suas implementaçõe
 * [Conceitos do RMS](application-types.md)
 * [Introdução](getting-started-with-ad-rms-2-0.md)
 * [Documentação de profissionais de TI para o AD RMS](https://technet.microsoft.com/library/cc771234.aspx)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

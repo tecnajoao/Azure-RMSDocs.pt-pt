@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: d7bc2478-c22f-4e19-9992-012658362b25
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 79befd96ba20fa3dcb86dbb5a511e0fec6bc8447
-ms.sourcegitcommit: b993c332e53d7aa48d93d4bbd42c80abcf79b351
+ms.openlocfilehash: 27bc46bd6afb94b4a87836d2cad18d3cb6ea9b9f
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107003"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375577"
 ---
 # <a name="user-guide-tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>Guia de utilizador: Tarefas que costumava realizar com a aplicação de partilha RMS
 
@@ -47,7 +47,7 @@ Se estiver à procura de uma opção específica que está habituado a seleciona
 |**Permitir a revogação instantânea do acesso a estes documentos**|Esta opção já não está disponível. Utilize as definições de proteção definidos pelo administrador que não permitem o acesso offline. Além disso, um administrador pode reduzir o período de validade de licença de utilização para o seu inquilino, executando [Set-AadrmMaxUseLicenseValidityTime](/powershell/aadrm/vlatest/set-aadrmmaxuselicensevaliditytime).
 |**Controlar a utilização** no Outlook|A capacidade de acessar o site de controlo do Outlook de documentos já não está disponível. Em alternativa, utilize o **controlar e revogar** opção do Word, PowerPoint, Excel ou Explorador de ficheiros. Ou, usando um navegador, pode ir diretamente para o [site de controlo de documentos](https://go.microsoft.com/fwlink/?LinkId=529562).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 Pode obter mais instruções sobre os procedimentos no guia do utilizador do Azure Information Protection:
 
 - [O que pretende fazer?](client-user-guide.md#what-do-you-want-to-do)
@@ -55,5 +55,4 @@ Pode obter mais instruções sobre os procedimentos no guia do utilizador do Azu
 ## <a name="additional-information-for-administrators"></a>Informações adicionais para administradores    
 Consulte a [Guia do administrador do Azure Information Protection](client-admin-guide.md).
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]  
+  

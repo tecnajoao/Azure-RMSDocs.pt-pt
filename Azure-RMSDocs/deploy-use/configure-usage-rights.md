@@ -4,7 +4,7 @@ description: Conheça os direitos específicos utilizados quando protege ficheir
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/26/2018
+ms.date: 07/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f632acdb4091967b0d8f5aebab97464d69b0b2e3
-ms.sourcegitcommit: 752368caff1bf5bff64a5d262e7bc4105d906827
+ms.openlocfilehash: b7f018a67808b1d3cf39099f8a22202cbf82bd5f
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270626"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371480"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuração de direitos de utilização para o Azure Rights Management
 
@@ -40,7 +40,7 @@ A **Constante ou o Valor de API** é o nome do SDK para uma chamada à API MSIPC
 
 |Direito de utilização|Descrição|Implementação|
 |-------------------------------|---------------------------|-----------------|
-|Nome comum: **Editar Conteúdo, Editar** <br /><br />Codificação na política: **DOCEDIT**|Permite ao utilizador modificar, reorganizar, formato, ou ordenar o conteúdo dentro do aplicativo. Não concede o direito para guardar a cópia editada.<br /><br />No Word, a menos que tenha do Office 365 ProPlus com uma versão mínima do 1807 (compilação mínima de 10325.20000), este direito não é suficiente para ativar ou desativar **controlar alterações**, ou para utilizar todos o registo de alterações recursos como um revisor. Em vez disso, para utilizar todas as alterações de faixa de opções exige o seguinte à direita: **controlo total**. |Direitos personalizados do Office: como parte das opções **Alterar** e **Controlo Total**. <br /><br />Nome no portal clássico do Azure: **Editar Conteúdo**<br /><br />Nome no portal do Azure: **editar conteúdo, editar (DOCEDIT)**<br /><br />Nome em modelos do AD RMS: **Editar** <br /><br />Constante ou valor de API: não aplicável.|
+|Nome comum: **Editar Conteúdo, Editar** <br /><br />Codificação na política: **DOCEDIT**|Permite ao utilizador modificar, reorganizar, formato, ou ordenar o conteúdo dentro do aplicativo. Não concede o direito para guardar a cópia editada.<br /><br />No Word, a menos que tenha do Office 365 ProPlus com uma versão mínima do [1807](https://docs.microsoft.com/officeupdates/monthly-channel-2018#version-1807-july-25), este direito não é suficiente para ativar ou desativar **controlar alterações**, ou para utilizar todos o registo de alterações recursos como um revisor. Em vez disso, para utilizar todas as alterações de faixa de opções exige o seguinte à direita: **controlo total**. |Direitos personalizados do Office: como parte das opções **Alterar** e **Controlo Total**. <br /><br />Nome no portal clássico do Azure: **Editar Conteúdo**<br /><br />Nome no portal do Azure: **editar conteúdo, editar (DOCEDIT)**<br /><br />Nome em modelos do AD RMS: **Editar** <br /><br />Constante ou valor de API: não aplicável.|
 |Nome comum: **Guardar** <br /><br />Codificação na política: **EDIT**|Permite ao utilizador salvar o documento para a localização atual.<br /><br />Em aplicativos do Office, este direito também permite ao usuário modificar o documento e guarde-o para uma nova localização e um novo nome se o formato de ficheiro selecionado suportar nativamente a proteção do Rights Management. A restrição de formato do ficheiro garante que a proteção original não é possível remover o ficheiro.|Direitos personalizados do Office: como parte das opções **Alterar** e **Controlo Total**. <br /><br />Nome no portal clássico do Azure: **Guardar Ficheiro**<br /><br />Nome no portal do Azure: **guardar (editar)**<br /><br />Nome em modelos do AD RMS: **Guardar** <br /><br />Valor ou constante de API: `IPC_GENERIC_WRITE L"EDIT"`|
 |Nome comum: **Comentário** <br /><br />Codificação na política: **COMMENT**|Ativa a opção para adicionar anotações ou comentários ao conteúdo.<br /><br />Este direito está disponível no SDK, disponível como uma política ad hoc no módulo AzureInformationProtection e Proteção RMS para o Windows PowerShell e foi implementado em certas aplicações de fornecedores de software. No entanto, não é amplamente utilizado e atualmente não é suportado por aplicações do Office.|Direitos personalizados do Office: não implementados. <br /><br />Nome no portal clássico do Azure: não implementado.<br /><br />Nome no portal do Azure: não implementado.<br /><br />Nome nos modelos do AD RMS: não implementado. <br /><br />Valor ou constante de API: `IPC_GENERIC_COMMENT L"COMMENT`|
 |Nome comum: **Guardar Como, Exportar** <br /><br />Codificação na política: **EXPORT**|Ativa a opção para guardar o conteúdo com um nome de ficheiro diferente (Guardar Como). <br /><br />Para documentos do Office e o cliente do Azure Information Protection, o ficheiro pode ser guardado sem proteção e também voltar a proteger com permissões e as novas definições. Estes das ações permitidas significam que um utilizador que tenha este direito, pode alterar ou remover uma etiqueta do Azure Information Protection a partir de um documento protegido ou e-mail. <br /><br />Este direito também permite que o utilizador efetue outras opções de exportação em aplicações, tais como **Enviar para o OneNote**.<br /><br /> Nota: se este direito não for concedido, as aplicações do Office permitirão que os utilizadores guardem um documento com um novo nome se o formato de ficheiro selecionado suportar nativamente a proteção do Rights Management.|Direitos personalizados do Office: como parte das opções **Alterar** e **Controlo Total**. <br /><br />Nome no portal clássico do Azure: **Exportar Conteúdo (Guardar Como)** <br /><br />Nome no portal do Azure: **guardar como, exportar (EXPORTAR)**<br /><br />Nome em modelos do AD RMS: **Exportar (Guardar Como)** <br /><br />Valor ou constante de API: `IPC_GENERIC_EXPORT L"EXPORT"`|
@@ -182,5 +182,4 @@ A predefinição utilizar validade de licença período para um inquilino é 30 
 
 [Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados](configure-super-users.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

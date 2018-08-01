@@ -13,12 +13,12 @@ ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7c6acb5a4b5c8f33193cbf5d8833201e0d68287e
-ms.sourcegitcommit: 342b0bd8c57eb621714609ec28234dd07fe95d1e
+ms.openlocfilehash: d573cffaa45141618bf6cf141eb53f069693d063
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33946441"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372717"
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Passo 5: ver a partilha de ficheiros protegidos em ação e controlar o seu documento 
 
@@ -44,7 +44,7 @@ Em seguida, está pronto para partilhar de forma segura este documento por e-mai
 
     Certifique-se de que especificou um endereço de e-mail da empresa, tais como **janetm@contoso.com** ou **p.dover@fabrikam.com** porque, atualmente, o Azure Information Protection não suporta endereços de e-mail pessoais para este cenário. 
 
-    Em alternativa, clique em de **selecionar utilizadores, grupos ou organização** ícone para selecionar o endereço de correio eletrónico de um co-worker:
+    Em alternativa, clique nas **selecionar utilizadores, grupos ou organização** ícone para selecionar o endereço de e-mail de um colega:
 
     ![Passo 5 do tutorial de início rápido do Azure Information Protection – proteger com permissões personalizadas](../media/protect-custom-permissions.png)  
     
@@ -60,7 +60,7 @@ Em seguida, está pronto para partilhar de forma segura este documento por e-mai
 
 7. Modifique a descrição da mensagem predefinida para que seja adequada aos seus destinatários. Contudo, adicione o seguinte texto:
 
-    **Protegi este ficheiro com o Microsoft Azure Information Protection. Na primeira utilização, consulte estas instruções: https://aka.ms/rms-signup.** 
+    **Protegi este ficheiro com o Microsoft Azure Information Protection. Para a primeira utilização, veja estas instruções: https://aka.ms/rms-signup.** 
 
     ![Passo 5 do tutorial de início rápido do Azure Information Protection – partilhar documento protegido por e-mail](../media/share-protected-emailv2.png)
 
@@ -104,7 +104,7 @@ Agora que o destinatário abriu o anexo e, opcionalmente, o reencaminhou para ou
 
 3.  Na página **Documentos partilhados**, irá ver o nome do documento que partilhou. Neste momento, é o único ficheiro apresentado, mas à medida que partilhar mais documentos protegidos, a lista aumenta.
 
-    Nesta página, verá quando partilhou o documento (quando enviou a mensagem de e-mail com o anexo protegido), o respetivo estado atual (Active Directory, revogado ou expirado) e o nome do destinatário que enviar o e-mail. Clique no nome do documento para obter mais detalhes.
+    Nesta página, verá quando partilhou o documento (quando enviou o e-mail com o anexo protegido) e o nome do destinatário enviado o e-mail para o estado atual (Active Directory, revogado ou expirado). Clique no nome do documento para obter mais detalhes.
 
 4.  Na nova página, que tem o nome do ficheiro em que clicou, poderá ver detalhes do resumo apenas desse documento, bem como uma lista de outras opções que estão disponíveis para o documento (**Lista**, **Linha Cronológica**, **Mapa**, **Definições**).
 
@@ -128,5 +128,3 @@ Agora que viu a política predefinida do Azure Information Protection, como pers
 Experimente partilhar mais documentos e controlar a forma como estão a ser utilizados, e confirme como funciona a revogação de documentos.
 
 Poderá ser-lhe útil voltar à página **Início rápido** no portal do Azure, ler algumas das [perguntas mais frequentes](faqs.md) do Azure Information Protection e explorar alguns dos outros artigos da documentação. No entanto, se estiver pronto para iniciar a implementação do Azure Information Protection para a sua organização, o passo seguinte deverá ser o [plano de implementação do Azure Information Protection](../plan-design/deployment-roadmap.md). 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

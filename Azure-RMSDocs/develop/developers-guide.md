@@ -11,22 +11,22 @@ ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: a32f4d774b67007ccc6638e3151bd6038e3f274c
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 8ede04f6658bf770328cf6ae683d93725bcdc397
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765532"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39369878"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guia para Programadores do Azure Information Protection
 
 Este guia irá direcioná-lo para ferramentas para alargar e integrar com o serviço de gestão de direitos do Azure Information Protection.
 
->O SDK de proteção de informações do Azure atual tem o componente de gestão de direitos. Um componente de etiquetas de classificação e estão em desenvolvimento.
+>O SDK do Azure Information Protection atual possui o componente de gestão de direitos. Uma classificação e etiquetagem componentes estão em desenvolvimento.
 
 ## <a name="service-applications"></a>Aplicações de Serviço
 
-Aplicações de serviço fornecem funcionalidades para proteger informações ao exportar a partir de um sistema de gestão de conteúdos de empresa, uma aplicação empresarial ou uma solução de negócio baseado na nuvem. As aplicações Prevenção de Perda de Dados (DLP) e Cloud Application Security (CAS) são exemplos de aplicações de serviço. O nosso SDK para o desenvolvimento de aplicações de serviço está disponível através de dois modelos de programação.
+Aplicações de serviço fornecem capacidades para proteger as informações ao exportar a partir de um sistema de gerenciamento de conteúdo empresarial, um aplicativo de negócios ou uma solução de negócios baseado na cloud. As aplicações Prevenção de Perda de Dados (DLP) e Cloud Application Security (CAS) são exemplos de aplicações de serviço. O nosso SDK para o desenvolvimento de aplicações de serviço está disponível através de dois modelos de programação.
 
 - [C++](https://www.microsoft.com/download/details.aspx?id=38397)
 - [API Gerida de C#](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcManagedAPI)
@@ -40,12 +40,12 @@ Aplicações de serviço fornecem funcionalidades para proteger informações ao
 
 ## <a name="powershell-guides"></a>Guias do PowerShell
 
-Utilizadas pelos administradores de gestão de direitos do Azure, os cmdlets do PowerShell também são úteis para desenvolver e testar as suas aplicações de serviço. Para obter mais informações, veja [Utilizar o PowerShell com o cliente do Azure Information Protection](/information-protection/rms-client/client-admin-guide-powershell).
+Usado por administradores de gestão de direitos do Azure, PowerShell cmdlets também são úteis para desenvolver e testar seus aplicativos de serviço. Para obter mais informações, veja [Utilizar o PowerShell com o cliente do Azure Information Protection](/information-protection/rms-client/client-admin-guide-powershell).
 
 ## <a name="user-applications"></a>Aplicações de utilizador
 
 As aplicações de utilizador podem ser criadas com o SDK RMS 2.1 ou SDK RMS 4.2.
-A versão 4.2 é baseada em clientes REST com APIs específicas de sistema operativo para vários SO populares: iOS/OSX, Android, Linux, Windows. A versão 2.1 é utilizado para compilar aplicações nativas baseados em Windows.
+A versão 4.2 é baseada em clientes REST com APIs específicas de sistema operativo para vários SO populares: iOS/OSX, Android, Linux, Windows. A versão 2.1 é utilizada para a criação de aplicativos nativos com base em Windows.
 
 ### <a name="user-application-development-guides"></a>Guias de desenvolvimento de aplicações de utilizador
 
@@ -99,7 +99,7 @@ Cada um dos seguintes tópicos apresenta instruções específicas para um aspet
 - [Como utilizar direitos incorporados (utilizador)](built-in-rights-usage-restriction-reference.md)
 - [Como ativar registo de erros e de desempenho (utilizador)](enabling-logging.md)
 
-## <a name="introduction-and-datasheets"></a>Introdução e datasheets
+## <a name="introduction-and-datasheets"></a>Introdução e folhas de dados
 
 [Introdução ao Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection)
 
@@ -115,16 +115,16 @@ Cada um dos seguintes tópicos apresenta instruções específicas para um aspet
 - [Plataformas suportadas](supported-platforms.md)
 - [Compreender as restrições de utilização](understanding-usage-restrictions.md)
 
-### <a name="message-protocol-and-file-formats"></a>Formatos de ficheiro e de protocolo de mensagens
+### <a name="message-protocol-and-file-formats"></a>Formatos de arquivo e protocolo de mensagens
 
 - [Protocolo de cliente-servidor](https://msdn.microsoft.com/library/cc243191.aspx)
 - [Protocolo de objetos geridos de direitos de E-Mail](https://msdn.microsoft.com/library/cc463909(v=EXCHG.80).aspx)
-- [Composta formato de ficheiro binário de ficheiro](https://msdn.microsoft.com/library/dd942138.aspx)
+- [Componha o formato de arquivo binário de ficheiro](https://msdn.microsoft.com/library/dd942138.aspx)
 
 #### <a name="rights-managed-email-message"></a>Mensagem de e-mail gerido de direitos
 
-- [. Formato de ficheiro de tarifas de mensagens (parte 1)](https://blogs.msdn.microsoft.com/openspecification/2009/11/06/msg-file-format-part-1/)
-- [. Formato de ficheiro de tarifas de mensagens (parte 2)](https://blogs.msdn.microsoft.com/openspecification/2010/06/20/msg-file-format-rights-managed-email-message-part-2/)
+- [. Formato de arquivo de mensagem (parte 1)](https://blogs.msdn.microsoft.com/openspecification/2009/11/06/msg-file-format-part-1/)
+- [. Formato de arquivo de mensagem (parte 2)](https://blogs.msdn.microsoft.com/openspecification/2010/06/20/msg-file-format-rights-managed-email-message-part-2/)
 
 ### <a name="api-reference"></a>Referência da API
 
@@ -142,7 +142,6 @@ Cada um dos seguintes tópicos apresenta instruções específicas para um aspet
 
 ### <a name="see-also"></a>Consulte também
 
-- [Terminologia de programador](terms.md)
+- [Terminologia para programadores](terms.md)
 - [Terminologia do Azure Information Protection – ITPro](../get-started/terminology.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

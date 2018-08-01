@@ -10,12 +10,12 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: a30607f0a4be292827a3d8ef20f45332e688ae28
-ms.sourcegitcommit: c7e943700189eeaad3f4c919cc0fa3410fd4df5b
+ms.openlocfilehash: 673171f85f7e19baab452275adcf8e4a853c8de9
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39204497"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371065"
 ---
 # <a name="what-is-azure-information-protection"></a>O que é o Azure Information Protection?
 
@@ -149,4 +149,3 @@ Configure e veja mesmo, Azure Information Protection com o nosso 5-passo [tutori
 
 Será que conhece o Azure Information Protection por outro nome? Consulte nossos [lista de termos alternativos para o serviço](azure-rms-aka.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

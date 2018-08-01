@@ -12,25 +12,25 @@ ms.technology: techgroup-identity
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9334a781378ffdbe76dd9fe9d78f5db5913766d1
-ms.sourcegitcommit: 373e05ff0c411d29cc5b61c36edaf5a203becc14
+ms.openlocfilehash: 3a6c53bf7bb1a983c34936405b8e51afb8427ac7
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34216839"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39374288"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Definição de registo para o conetor Rights Management
 
->*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, o Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 
-Utilize as tabelas nas secções seguintes apenas se pretender adicionar manualmente ou verifique as definições de registo nos servidores que executam o Exchange, SharePoint ou Windows Server. Estas definições de registo configuram servidores para utilizar o [conector RMS](deploy-rms-connector.md). O método recomendado para configurar estes servidores é utilizar a ferramenta de configuração do servidor do conetor Microsoft RMS.
+Utilize as tabelas nas secções seguintes apenas se pretender adicionar manualmente ou verificar as definições de registo nos servidores que executam o Exchange, o SharePoint ou o Windows Server. Estas definições de registo configuram os servidores a utilizar o [conector de RMS](deploy-rms-connector.md). O método recomendado para configurar estes servidores é utilizar a ferramenta de configuração do servidor do conetor Microsoft RMS.
 
 Instruções ao utilizar estas definições:
 
 -   *\<Urldeinquilino >* é o URL do serviço Azure Rights Management para o seu inquilino do Azure Information Protection. Para localizar este valor:
 
-    1.  Execute o [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet para o serviço Azure Rights Management. Se já ainda não instalou o módulo Windows PowerShell para o Azure RMS, consulte [instalar o módulo do AADRM PowerShell](install-powershell.md).
+    1.  Executar o [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet para o serviço Azure Rights Management. Se ainda não instalou o módulo do Windows PowerShell para o Azure RMS, consulte [instalar o módulo do PowerShell do AADRM](install-powershell.md).
 
     2.  A partir da saída, identifique o valor **LicensingIntranetDistributionPointUrl**.
 
@@ -57,7 +57,7 @@ Instruções ao utilizar estas definições:
 
 **Valor:** predefinido
 
-**Dados:** https://*\<Urldeinquilino >*  /wmcs/certification
+**Dados:** https://*\<YourTenantURL >*/_wmcs/certification
 
 ---
 
@@ -67,7 +67,7 @@ Instruções ao utilizar estas definições:
 
 **Valor:** predefinido
 
-**Dados:** https://*\<Urldeinquilino >*/_wmcs/Licensing
+**Dados:** https://*\<YourTenantURL >wmcs/Licensing
 
 ---
 
@@ -75,7 +75,7 @@ Instruções ao utilizar estas definições:
 
 **Tipo:** Reg_SZ
 
-**Valor:** https://*\<Urldeinquilino >*
+**Valor:** https://*\<YourTenantURL >*
 
 
 **Dados:** um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange server para o conetor RMS:
@@ -108,7 +108,7 @@ Instruções ao utilizar estas definições:
 
 **Valor:** predefinido
 
-**Dados:** https://*< \YourTenantURL >*  /wmcs/certification
+**Dados:** https://*< \YourTenantURL >*/_wmcs/certification
 
 ---
 
@@ -118,7 +118,7 @@ Instruções ao utilizar estas definições:
 
 **Valor:** predefinido
 
-**Dados:** https://*< \YourTenantURL >*/_wmcs/Licensing
+**Dados:** https://*< \YourTenantURL >wmcs/Licensing
 
 ---
 
@@ -155,12 +155,12 @@ Instruções ao utilizar estas definições:
 
 **Tipo:** Reg_SZ
 
-**Valor:** https://*< \YourTenantURL >*/_wmcs/Licensing
+**Valor:** https://*< \YourTenantURL >wmcs/licensing
 
 
 **Dados:** um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no SharePoint server para o conetor RMS:
 
-- http://*< \ConnectorFQDN >*/_wmcs/Licensing
+- http://*< \ConnectorFQDN >wmcs/licensing
 
 - https://*<\ConnectorFQDN>*/_wmcs/licensing
 
@@ -189,7 +189,7 @@ Instruções ao utilizar estas definições:
 
 **Dados:** um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no SharePoint server para o conetor RMS:
 
-- http://*< \ConnectorFQDN >*/_wmcs/Licensing
+- http://*< \ConnectorFQDN >wmcs/licensing
 
 - https://*<\ConnectorFQDN>*/_wmcs/licensing
 
@@ -204,7 +204,7 @@ Instruções ao utilizar estas definições:
 
 **Valor:** predefinido
 
-**Dados:** http://*< \ConnectorFQDN >*/_wmcs/Licensing
+**Dados:** http://*< \ConnectorFQDN >wmcs/licensing
 
 ---
 
@@ -214,9 +214,7 @@ Instruções ao utilizar estas definições:
 
 **Valor:** predefinido
 
-**Dados:** http://*< \ConnectorFQDN >*  /wmcs/certification
+**Dados:** http://*< \ConnectorFQDN >*/_wmcs/certification
 
 
 Voltar a [Implementar o conetor Azure Rights Management](deploy-rms-connector.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

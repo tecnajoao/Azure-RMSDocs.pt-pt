@@ -12,16 +12,16 @@ ms.technology: techgroup-identity
 ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c49306a731bf629f3678dc9aa95b23b8ee46190e
-ms.sourcegitcommit: 373e05ff0c411d29cc5b61c36edaf5a203becc14
+ms.openlocfilehash: 9e3a159f1e165671fd8ba83da53b69b75e6fe4d1
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34217027"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372585"
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Implementar o conetor Azure Rights Management
 
->*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, o Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Utilize estas informações para saber mais sobre o conector Azure Rights Management e, em seguida, saiba como implementá-lo com êxito na sua organização. Este conector proporciona proteção de dados para as implementações no local existentes que utilizam o **Microsoft Exchange Server**, o **SharePoint Server** ou servidores de ficheiros que executam o Windows Server e a **Infraestrutura de Classificação de Ficheiros** (FCI).
 
@@ -52,7 +52,7 @@ Pode utilizar o conector RMS num cenário híbrido, mesmo que alguns dos seus ut
 
 Se gerir a sua própria chave de inquilino do Azure RMS (o cenário traga a sua própria chave ou BYOK), o conector RMS e os servidores no local que a utilizam não acedem ao módulo de hardware de segurança (HSM) que contém a chave de inquilino. Isto acontece porque todas as operações de criptografia que utilizam a chave de inquilino são executadas no Azure RMS e não no local.
 
-Se pretender saber mais sobre este cenário onde irá gerir a sua chave, consulte de inquilino [planear e implementar a sua chave de inquilino do Azure Information Protection](../plan-design\plan-implement-tenant-key.md).
+Se quiser saber mais sobre este cenário onde gere a sua chave, consulte de inquilino [planear e implementar a sua chave de inquilino do Azure Information Protection](../plan-design\plan-implement-tenant-key.md).
 
 ## <a name="prerequisites-for-the-rms-connector"></a>Pré-requisitos do conector RMS
 Antes de instalar o conector RMS, certifique-se de que os seguintes requisitos são cumpridos.
@@ -61,12 +61,12 @@ Antes de instalar o conector RMS, certifique-se de que os seguintes requisitos s
 |---------------|--------------------|
 |O serviço Rights Management (RMS) está ativado|[Ativar o Azure Rights Management](activate-service.md)|
 |Sincronização de diretórios entre as suas florestas do Active Directory no local e o Azure Active Directory|Depois de o RMS estar ativado, tem de configurar o Azure Active Directory para funcionar com os utilizadores e os grupos na sua base de dados do Active Directory.<br /><br />**Importante**: é necessário efetuar este passo de sincronização de diretórios para que o conector RMS funcione, inclusivamente para uma rede de teste. Apesar de poder utilizar o Office 365 e o Azure Active Directory através de contas que cria manualmente no Azure Active Directory, este conector requer que as contas no Azure Active Directory estejam sincronizadas com os Serviços de Domínio do Active Directory. A sincronização manual de palavra-passe não é suficiente.<br /><br />Para mais informações, consulte os seguintes recursos:<br /><br />[Integrar as suas identidades no local com o Azure Active Directory](/active-directory/active-directory-aadconnect)<br /><br />[Comparação de ferramentas de integração de diretórios de Identidade Híbrida](/active-directory/active-directory-hybrid-identity-design-considerations-tools-comparison)|
-|Um mínimo de dois computadores membros em que pretende instalar o conector RMS:<br /><br />– Um computador físico ou virtual de 64 bits com um dos seguintes sistemas operativos: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 ou Windows Server 2008 R2.<br /><br />– Um mínimo de 1 GB de RAM.<br /><br />– Um mínimo de 64 GB de espaço em disco.<br /><br />– Pelo menos uma interface de rede.<br /><br />– Acesso à Internet através de uma firewall (ou proxy Web) que não exija autenticação.<br /><br />– Tem de estar numa floresta ou domínio que confie noutras florestas na organização que contêm instalações de servidores do Exchange ou do SharePoint que pretenda utilizar com o conector RMS.|Para conseguir tolerância a falhas e elevada disponibilidade, tem de instalar o conector RMS, no mínimo, em dois computadores.<br /><br />**Sugestão**: se estiver a utilizar o Outlook Web Access ou dispositivos móveis que utilizem o Exchange ActiveSync IRM e se for fundamental manter o acesso a e-mails e anexos que estão protegidos pelo Azure RMS, recomendamos que implemente um grupo com balanceamento de carga de servidores de conector para assegurar a elevada disponibilidade.<br /><br />Não necessita de servidores dedicados para executar o conector, mas tem de instalá-lo num computador separado dos servidores que irão utilizar o conector.<br /><br />**Importante**: não instale o conector num computador que executa o Exchange Server, o SharePoint Server ou um servidor de ficheiros que esteja configurado para a infraestrutura de classificação de ficheiros se pretender utilizar a funcionalidade a partir destes serviços com o Azure RMS. Além disso, não instale este conector num controlador de domínio.<br /><br />Se tiver cargas de trabalho do servidor que pretende utilizar com o conector RMS, mas os respetivos servidores estiverem em domínios que não são considerados fidedignos pelo domínio em que pretende executar o conector, pode instalar servidores adicionais do conector de RMS nestes domínios não fidedignos ou outro domínios na sua floresta. <br /><br />Não existe nenhum limite para o número de servidores do conector que podem ser executados para a sua organização e todos os servidores do conector instalado numa partilha de organização a mesma configuração. No entanto, para configurar o conector para autorizar servidores, tem de ser capazes de navegar para as contas de servidor ou serviço que pretende autorizar, o que significa que tem de executar a ferramenta de administração do RMS numa floresta partir da qual pode navegar dessas contas.|
+|Um mínimo de dois computadores membros em que pretende instalar o conector RMS:<br /><br />– Um computador físico ou virtual de 64 bits com um dos seguintes sistemas operativos: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 ou Windows Server 2008 R2.<br /><br />– Um mínimo de 1 GB de RAM.<br /><br />– Um mínimo de 64 GB de espaço em disco.<br /><br />– Pelo menos uma interface de rede.<br /><br />– Acesso à Internet através de uma firewall (ou proxy Web) que não exija autenticação.<br /><br />– Tem de estar numa floresta ou domínio que confie noutras florestas na organização que contêm instalações de servidores do Exchange ou do SharePoint que pretenda utilizar com o conector RMS.|Para conseguir tolerância a falhas e elevada disponibilidade, tem de instalar o conector RMS, no mínimo, em dois computadores.<br /><br />**Sugestão**: se estiver a utilizar o Outlook Web Access ou dispositivos móveis que utilizem o Exchange ActiveSync IRM e se for fundamental manter o acesso a e-mails e anexos que estão protegidos pelo Azure RMS, recomendamos que implemente um grupo com balanceamento de carga de servidores de conector para assegurar a elevada disponibilidade.<br /><br />Não necessita de servidores dedicados para executar o conector, mas tem de instalá-lo num computador separado dos servidores que irão utilizar o conector.<br /><br />**Importante**: não instale o conector num computador que executa o Exchange Server, o SharePoint Server ou um servidor de ficheiros que esteja configurado para a infraestrutura de classificação de ficheiros se pretender utilizar a funcionalidade a partir destes serviços com o Azure RMS. Além disso, não instale este conector num controlador de domínio.<br /><br />Se tiver cargas de trabalho do servidor que pretende utilizar com o conector RMS, mas os servidores estiverem em domínios que não são considerado fidedigno pelo domínio do qual pretende executar o conector, pode instalar servidores adicionais do conector de RMS nestes domínios não fidedignos ou outro domínios na sua floresta. <br /><br />Não há limite para o número de servidores do conector que pode executar para a sua organização e todos os servidores do conector instalado numa partilha de organização, a mesma configuração. No entanto, para configurar o conector para autorizar servidores, tem de ser capaz de navegar para as contas de servidor ou serviço que pretende autorizar, que significa que tem de executar a ferramenta de administração do RMS numa floresta do qual pode procurar essas contas.|
 
 
 ## <a name="steps-to-deploy-the-rms-connector"></a>Passos para implementar o conector RMS
 
-O conector não verificar automaticamente a todos os o [pré-requisitos](deploy-rms-connector.md#prerequisites-for-the-rms-connector) que necessita de uma implementação bem sucedida, por isso, certifique-se de que estes são cumpridos antes de começar. A implementação necessita que instale o conector, configure o conector e, em seguida, configure os servidores que quer que utilizem o conector. 
+O conector não verifica automaticamente todos os [pré-requisitos](deploy-rms-connector.md#prerequisites-for-the-rms-connector) que necessita para uma implementação bem-sucedida, por isso, certifique-se de que estes foram cumpridos antes de começar. A implementação necessita que instale o conector, configure o conector e, em seguida, configure os servidores que quer que utilizem o conector. 
 
 -   **Passo 1:**  [instalar o conector RMS](install-configure-rms-connector.md#installing-the-rms-connector)
 
@@ -91,8 +91,6 @@ O conector não verificar automaticamente a todos os o [pré-requisitos](deploy-
     -   [Configurar um servidor de ficheiros para a Infraestrutura de Classificação de Ficheiros para utilizar o conector](configure-servers-rms-connector.md#configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector)
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 
 Aceda ao Passo 1: [instalar e configurar o conector Azure Rights Management](install-configure-rms-connector.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

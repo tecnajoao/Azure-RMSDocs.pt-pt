@@ -4,7 +4,7 @@ description: Algumas perguntas mais frequentes sobre o Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/26/2018
+ms.date: 07/31/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f0ae817fb8b60b0086d2684b620fa17da970f8e8
-ms.sourcegitcommit: 92bb6d3163e455250a84281dac62b5af82f8c4f1
+ms.openlocfilehash: 5bd0953f7d9afaaa76ce866393f188438d9b3405
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37043368"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371252"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Perguntas mais frequentes sobre o Azure Information Protection
 
@@ -119,7 +119,7 @@ As principais diferenças entre essas duas soluções:
 
 |Windows Server FCI|Scanner do Azure Information Protection|
 |--------------------------------|-------------------------------------|
-|Arquivos de dados suportados: <br /><br />-Pastas locais no Windows Server|Arquivos de dados suportados: <br /><br />-Pastas locais no Windows Server<br /><br />-Windows ficheiro partilhas e armazenamento ligado à rede<br /><br />-O SharePoint Server 2016 e o SharePoint Server 2013|
+|Arquivos de dados suportados: <br /><br />-Pastas locais no Windows Server|Arquivos de dados suportados: <br /><br />-Pastas locais no Windows Server<br /><br />-Windows ficheiro partilhas e armazenamento ligado à rede<br /><br />-O SharePoint Server 2016 e o SharePoint Server 2013. SharePoint Server 2010 também é suportada para os clientes que tenham [suporte para esta versão do SharePoint estendido](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010) e que estão a utilizar a versão de pré-visualização do scanner.|
 |Modo operacional: <br /><br />-Em Tempo Real|Modo operacional: <br /><br />-Sistematicamente rastreia os arquivos de dados e esse ciclo pode executar uma vez ou repetidamente|
 |Suporte para tipos de ficheiro: <br /><br />-Todos os tipos de ficheiros estão protegidos por predefinição <br /><br />-Tipos de ficheiro específicos podem ser excluídos da proteção ao editar o registo|Suporte para tipos de ficheiro: <br /><br />-Tipos de ficheiro office estão protegidos por predefinição <br /><br />-Tipos de ficheiro específicos podem ser incluídos para proteção ao editar o registo|
 
@@ -173,5 +173,4 @@ Além disso, existem FAQ criadas para os utilizadores finais:
 - [FAQ sobre a Aplicação de Partilha Rights Management para Windows](https://technet.microsoft.com/dn467883)
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

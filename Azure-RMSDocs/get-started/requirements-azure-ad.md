@@ -12,24 +12,24 @@ ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 53d9d9b25ab71c91275bf770a6038eccbaa2659c
-ms.sourcegitcommit: f4a97427d61e4b539c91c49c952658aa2dc729ce
+ms.openlocfilehash: ac60b1dd3325df058340472ceae02d18b32c98dd
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2018
-ms.locfileid: "32018489"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39374475"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Requisitos do Azure Active Directory para o Azure Information Protection
 
->*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Para utilizar o Azure Information Protection, é necessário ter um diretório do Azure AD. Pode utilizar uma conta neste diretório para iniciar sessão no portal do Azure, onde, por exemplo, pode configurar e gerir etiquetas de Azure Information Protection e modelos do Azure Rights Management.
+Para utilizar o Azure Information Protection, é necessário ter um diretório do Azure AD. Utilize uma conta a partir deste diretório para iniciar sessão no portal do Azure, onde, por exemplo, pode configurar e gerir o Azure Information Protection etiquetas e modelos do Azure Rights Management.
 
 Se tiver uma subscrição que inclui o Azure Information Protection ou o Azure Rights Management, o diretório do Azure AD é criado automaticamente para si se for necessário.  
 
-Para obter mais informações acerca do Azure AD, consulte [que é o diretório do Azure AD?](/active-directory/active-directory-whatis)
+Para obter mais informações sobre o Azure AD, consulte [o que é o Azure AD Directory?](/active-directory/active-directory-whatis)
 
-Integrar o diretório do Azure AD no local florestas do AD, consulte [integrar as identidades no local ao Azure Active Directory](/active-directory/active-directory-aadconnect).
+Integrar o diretório do Azure AD no local florestas do AD, consulte [integrar as identidades no local com o Azure Active Directory](/active-directory/active-directory-aadconnect).
 
 ### <a name="scenarios-that-have-specific-requirements"></a>Cenários com requisitos específicos 
 
@@ -86,15 +86,14 @@ Em seguida, configure a sua solução de MFA:
 
         Para obter mais informações acerca deste cenário, veja [Trabalhos no Office 365 – o programa de identidade está mais simples](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) no blogue do Office.
 
-O conector Rights Management e a análise do Azure Information Protection não suportam MFA. Se implementar o conector ou scanner, as seguintes contas não devem necessitar de MFA:
+O conector Rights Management e o scanner do Azure Information Protection suporta a MFA. Se implementar o conector ou o scanner, as seguintes contas não devem exigir a MFA:
 
-- A conta que instala e configura o conector.
+- A conta que é instalado e configurado o conector.
 
 - A conta do principal de serviço no Azure AD, **Aadrm_S-1-7-0**, que cria o conector.
  
-- A conta de serviço que executa o verificador.
+- A conta de serviço que executa a deteção de impressão.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 Para verificar outros requisitos, veja [Requisitos do Azure Information Protection](requirements-azure-rms.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

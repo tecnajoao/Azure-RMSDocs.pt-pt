@@ -4,7 +4,7 @@ description: Instruções para instalar, configurar e executar o scanner do Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/26/2018
+ms.date: 07/31/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 862a89dee32c5715d4380eb9e553e06ace3fa5c5
-ms.sourcegitcommit: 1f5a5cb650be2b4c302ad4b7a0b109246da3eb80
+ms.openlocfilehash: e369a77fb9de150dd83fd48abad53898cd8614f1
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39295479"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372840"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Implementar o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente
 
@@ -31,7 +31,7 @@ Este scanner é executado como um serviço no Windows Server e permite-lhe Detet
 
 - Caminhos UNC para partilhas de rede que utilizam o protocolo de bloco de mensagem de servidor (SMB).
 
-- Os sites e bibliotecas para o SharePoint Server 2016 e o SharePoint Server 2013.
+- Os sites e bibliotecas para o SharePoint Server 2016 e o SharePoint Server 2013. SharePoint 2010 também é suportada para os clientes que tenham [suporte para esta versão do SharePoint estendido](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010) e que estão a utilizar a versão de pré-visualização do scanner.
 
 Para analisar e ficheiros no repositório de nuvem da etiqueta, utilize [Cloud App Security](https://docs.microsoft.com/cloud-app-security/).
 
@@ -170,7 +170,7 @@ Agora, está pronto para especificar os arquivos de dados para análise.
 
 Utilize o [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository) armazena do cmdlet para especificar os dados a serem examinados pelo scanner do Azure Information Protection. Pode especificar pastas locais, caminhos UNC e URLs do servidor SharePoint para sites do SharePoint e bibliotecas. 
 
-Versões suportadas do SharePoint: SharePoint Server 2016 e o SharePoint Server 2013.
+Versões suportadas do SharePoint: SharePoint Server 2016 e o SharePoint Server 2013. SharePoint Server 2010 também é suportada para os clientes que tenham [suporte para esta versão do SharePoint estendido](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010) e que estão a utilizar a versão de pré-visualização do scanner.
 
 1. No mesmo computador do Windows Server, na sessão do PowerShell, adicione que os primeiros dados da loja, executando o seguinte comando:
     
@@ -191,28 +191,42 @@ Com a configuração predefinida do scanner, agora, está pronto para executar a
 ## <a name="run-a-discovery-cycle-and-view-reports-for-the-scanner"></a>Executar um ciclo de deteção e ver relatórios para a deteção de impressão
 
 1. Usando **ferramentas administrativas** > **serviços**, inicie o **Scanner do Azure Information Protection** serviço.
+    
+    Se tiver a versão de pré-visualização atual do scanner, pode executar em alternativa [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) na sessão do PowerShell.
 
 2. Aguarde que o scanner concluir o seu ciclo. Quando a deteção de impressão tem rastreadas por meio de todos os arquivos nos arquivos de dados que especificou, o serviço será interrompido. Pode usar o Windows local **aplicativos e serviços** registo de eventos **do Azure Information Protection**, para confirmar quando o serviço está parado. Procure o ID de evento informativo **911**.
 
 3. Rever os relatórios que são armazenados em %*localappdata*%\Microsoft\MSIP\Scanner\Reports e que tem um formato de ficheiro. csv. Com a configuração padrão do scanner, apenas os ficheiros que cumprem as condições para classificação automática estão incluídos nestes relatórios.
     
-    Se os resultados são não conforme o esperado, poderá ter de ajustar as condições que especificou na política do Azure Information Protection. Se for esse o caso, repita os passos 1 a 3 até estar pronto para alterar a configuração para aplicar a classificação e, opcionalmente, a proteção. Sempre que repetir essas etapas, execute primeiro o seguinte comando do PowerShell no computador do servidor do Windows:
+    Se os resultados são não conforme o esperado, poderá ter de ajustar as condições que especificou na política do Azure Information Protection. Se for esse o caso, repita os passos 1 a 3 até estar pronto para alterar a configuração para aplicar a classificação e, opcionalmente, a proteção. 
     
+    Para a versão atual do GA do scanner: sempre que repetir essas etapas, execute primeiro o seguinte comando do PowerShell no computador do servidor do Windows:
+  
         Set-AIPScannerConfiguration -Schedule OneTime
-
+    
+    Se tiver a versão de pré-visualização atual do scanner, não execute o comando Set-AIPScannerConfiguration.
+  
 Quando estiver pronto para etiquetar automaticamente os ficheiros que Deteta o scanner, avance para o procedimento seguinte. 
 
 ## <a name="configure-the-scanner-to-apply-classification-and-protection"></a>Configurar a deteção de impressão para aplicar a classificação e proteção
 
 Em sua configuração padrão, o scanner é executado um tempo e no modo só de relatórios. Para alterar estas definições, execute o [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet.
 
-1. No computador do servidor do Windows, na sessão do PowerShell, execute o seguinte comando:
+1. No computador do servidor do Windows, na sessão do PowerShell, execute um dos seguintes comandos:
+    
+    Para a versão de DG atual do scanner de:
        
         Set-AIPScannerConfiguration -Enforce On -Schedule Continuous
+    
+    Para a versão de pré-visualização do scanner de:
+       
+        Set-AIPScannerConfiguration -Enforce On -Schedule Always
     
     Existem outras definições de configuração que talvez queira alterar. Por exemplo, se os atributos de ficheiro são alterados e o que é registado nos relatórios. Além disso, se a política do Azure Information Protection inclui a definição que necessita de uma mensagem de justificação para reduzir o nível de classificação ou remover a proteção, especifique que a mensagem utilizando este cmdlet. Utilize o [ajuda online](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#parameters) para obter mais informações sobre cada definição de configuração. 
 
 2. Usando **ferramentas administrativas** > **serviços**, reinicie o **Scanner do Azure Information Protection** serviço.
+    
+    Se tiver a versão de pré-visualização atual do scanner, pode executar em alternativa [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) na sessão do PowerShell.
 
 3. Como antes, monitorize o registo de eventos e os relatórios para ver quais arquivos foram etiquetados, classificação de que foi aplicada e, se a proteção foi aplicada.
 
@@ -232,7 +246,6 @@ Em seguida, o scanner utiliza Windows iFilter para analisar os seguintes tipos d
 |Word|.docx; .docm; .dotm; .dotx|
 |Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
 |PowerPoint|. ppt; .pps; .pot;. pptx; .ppsx;. pptm; .ppsm; .potx; .potm|
-|Projeto|.mpp; .mpt|
 |PDF|.pdf|
 |Texto|.txt; .xml; .csv|
 
@@ -263,7 +276,17 @@ Para alterar o comportamento scanner padrão, por exemplo, para protege generica
 
 Para o primeiro ciclo de análise, o scanner inspeciona todos os ficheiros nos arquivos de dados configurada e, em seguida, para análises subsequentes, apenas novos ou modificados arquivos são inspecionados. 
 
-Pode forçar a deteção de impressão para inspecionar todos os ficheiros novamente executando [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) com o `-Type` parâmetro definido como **completa**. Esta configuração é útil quando pretende que os relatórios para incluir todos os ficheiros e é normalmente utilizado quando o scanner é executado no modo de deteção. Quando uma análise completa estiver concluída, o tipo de análise muda automaticamente para incremental, de modo que para análises subsequentes, os ficheiros novos ou modificados só são analisados.
+Pode forçar a deteção de impressão para inspecionar a todos os ficheiros novamente ao executar o seguinte comando:
+
+- Para a versão de DG atual do scanner de:
+    
+    Execute [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) com o `-Type` parâmetro definido como **completa**.
+
+- Para a versão de pré-visualização do scanner de:
+    
+    Execute [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) com o `-Reset` parâmetro. A deteção de impressão tem de ser configurada para um agendamento manual, o que requer o `-Schedule` parâmetro ser definida como **Manual** com [conjunto AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).
+
+Inspecionar todos os ficheiros novamente é útil quando pretende que os relatórios para incluir todos os ficheiros e esta opção de configuração é normalmente utilizada quando o scanner é executado no modo de deteção. Quando uma análise completa estiver concluída, o tipo de análise muda automaticamente para incremental, de modo que para análises subsequentes, os ficheiros novos ou modificados só são analisados.
 
 Além disso, todos os arquivos são inspecionados quando o scanner transfere uma política do Azure Information Protection que tem condições novas ou alteradas. O scanner é atualizada a política para cada hora, e quando é iniciado o serviço e a política é mais antigo do que uma hora.  
 
@@ -371,6 +394,15 @@ Outros cmdlets para a deteção de impressão permitem-lhe alterar a conta de se
 - [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
 
 
+Obter cmdlets adicionais da versão de pré-visualização:
+
+- [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus)
+
+- [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) 
+
+- [Atualização-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner)
+
+
 ## <a name="event-log-ids-and-descriptions-for-the-scanner"></a>IDs de registo de eventos e descrições para a deteção de impressão
 
 Utilize as secções seguintes para identificar os IDs de eventos possíveis e descrições para a deteção de impressão. Estes eventos são registados no servidor que executa o serviço de scanner, em que o Windows **aplicativos e serviços** registo de eventos **do Azure Information Protection**.
@@ -402,4 +434,3 @@ Deve estar se perguntando: [qual é a diferença entre a FCI do Windows Server e
 Também pode utilizar o PowerShell para classificar e proteger ficheiros a partir de seu computador desktop de interativamente. Para obter mais informações sobre este e outros cenários que utilizam o PowerShell, consulte [utilizar o PowerShell com o cliente do Azure Information Protection](../rms-client/client-admin-guide-powershell.md).
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

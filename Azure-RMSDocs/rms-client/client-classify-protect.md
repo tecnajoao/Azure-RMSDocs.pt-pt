@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 07abfb8da932dea6fe29507cca9f3066eaf546cf
-ms.sourcegitcommit: 56a49619c0c52fa5296810b27161f23b3380eab9
+ms.openlocfilehash: baf3edc435672c8339c15ea74f5b5e14d6951f96
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39029904"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371548"
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Guia de utilizador: Classificar e proteger um ficheiro ou e-mail com o Azure Information Protection
 
@@ -185,4 +185,3 @@ Para obter instruções de configuração ativar a definição de política **di
 
 Outras instruções de configuração: [configurar a política do Azure Information Protection](../deploy-use/configure-policy.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

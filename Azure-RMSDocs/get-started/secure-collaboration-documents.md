@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4a642960e81a7d1a5cb6f8433e4098bed06a663d
-ms.sourcegitcommit: dc98226f339339c10fd01535a1adf7e30a817a41
+ms.openlocfilehash: f6ae088dc551189b264eb3cb5ea1e65b9845e5b8
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36300028"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372772"
 ---
 # <a name="secure-document-collaboration-by-using-azure-information-protection"></a>Colaboração de documentos segura com o Azure Information Protection
 
@@ -147,7 +147,7 @@ Atualmente suportados pelo Office 2016 clique-e-Use apenas.
 
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 
 Ver outros [as configurações de exemplo](../deploy-use/configure-policy-protection.md#example-configurations) para etiquetas aplicar a proteção para cenários comuns. Este artigo também contém mais detalhes sobre as definições de proteção.
 
@@ -156,6 +156,5 @@ Para obter mais informações sobre as opções e definições que pode configur
 A etiqueta que foi configurada neste artigo também cria um modelo de proteção com o mesmo nome. Se tiver aplicações e serviços que se integram nos modelos de proteção do Azure Information Protection, que eles possam aplicar este modelo. Por exemplo, as soluções DLP e as regras de fluxo de correio. Outlook na web apresenta automaticamente modelos de proteção da política global do Azure Information Protection. 
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

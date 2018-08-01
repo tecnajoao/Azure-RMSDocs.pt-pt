@@ -12,16 +12,16 @@ ms.technology: techgroup-identity
 ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2abc976c1185d7031af383af96f2da8f19b1493f
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 8fb199d6a15ee669b4b156e8fae6802795bef8b9
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30204936"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372857"
 ---
 # <a name="azure-information-protection-client-for-windows"></a>Cliente do Azure Information Protection para Windows
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2**
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2**
 
 O cliente do Azure Information Protection para Windows é um cliente gratuito e transferível para as organizações que utilizam o [Azure Information Protection](../understand-explore/what-is-information-protection.md) classificarem e protegerem documentos e e-mails ou utilizarem um serviço Rights Management para proteger os seus dados. Este cliente também tem um visualizador para organizações que não tem a sua própria infraestrutura de proteção de informações, mas pretendem consumir conteúdo que foi protegido por outras organizações que utilizam um serviço Rights Management da Microsoft.
 
@@ -37,4 +37,3 @@ O cliente do Azure Information Protection para Windows é um cliente gratuito e 
 > Para computadores Mac e dispositivos Windows Phone: utilize a aplicação de partilha RMS para dispositivos móveis e leia as [FAQ sobre a Aplicação de Partilha Rights Management para Plataformas Móveis e Mac](http://technet.microsoft.com/dn451248).
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

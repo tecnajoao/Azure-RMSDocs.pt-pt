@@ -12,16 +12,16 @@ ms.technology: techgroup-identity
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c4f37d2c3e7a90171662d91a4f78d61b629dd650
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 9aa69746786100df389997a7dca674a159edcb26
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30207483"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39373809"
 ---
 # <a name="technical-overview-and-protection-details-for-the-microsoft-rights-management-sharing-application"></a>Descrição geral técnica e detalhes de proteção da aplicação de partilha Microsoft Rights Management
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 
 A aplicação de partilha Microsoft Rights Management é uma aplicação transferível e opcional para o Microsoft Windows e outras plataformas que fornece o seguinte:
@@ -135,4 +135,3 @@ Pode efetuar edições de registo semelhantes para outros cenários ao alterar o
 ## <a name="see-also"></a>Consulte Também
 [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

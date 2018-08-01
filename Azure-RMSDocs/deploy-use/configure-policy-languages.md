@@ -1,6 +1,6 @@
 ---
-title: Configurar as etiquetas e modelos para idiomas diferentes no Azure Information Protection
-description: Pode adicionar suporte para idiomas diferentes para as etiquetas que os utilizadores veem na barra do Information Protection e para todos os modelos que os utilizadores veem, ao especificar os idiomas numa política do Azure Information Protection e importar as traduções.
+title: Configurar etiquetas e modelos para diferentes idiomas no Azure Information Protection
+description: Pode adicionar suporte para idiomas diferentes para as etiquetas que os utilizadores veem na barra do Information Protection e para todos os modelos que os utilizadores veem, especificando os idiomas na política do Azure Information Protection e importar as suas traduções.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -10,44 +10,44 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
-ms.openlocfilehash: 4131e3afae338d906011a9fe02a941baa61cf892
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: 191a89d62abcb4faefd7f23f2353ed785450d12e
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32326808"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39370504"
 ---
-# <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Como configurar as etiquetas e modelos para idiomas diferentes no Azure Information Protection
+# <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Como configurar etiquetas e modelos para diferentes idiomas no Azure Information Protection
 
 >*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Embora as etiquetas predefinidas para o Azure Information Protection suportam vários idiomas, tem de configurar o suporte para os nomes das etiquetas e descrições que especificar. Esta configuração requer que efetue o seguinte:
+Embora as etiquetas predefinidas do Azure Information Protection suportam vários idiomas, tem de configurar o suporte para nomes de etiqueta e descrições que especificar. Esta configuração requer que faça o seguinte:
 
-1. Selecione os idiomas que utilizam os seus utilizadores. 
+1. Selecione os idiomas que os utilizadores utilizam. 
 
-2. Exporte os nomes de etiqueta atual e descrições para um ficheiro.
+2. Exporte seus nomes de etiqueta atuais e descrições para um ficheiro.
 
-3. Edite o ficheiro para fornecer as traduções.
+3. Edite o ficheiro para suas traduções.
 
-4. Importe o ficheiro de volta para a política do Azure Information Protection.
+4. Importe o ficheiro novamente para a política do Azure Information Protection.
 
-Também pode configurar modelos para idiomas diferentes quando uma das seguintes condições aplicam-se. Esta configuração é apropriada se os utilizadores ou administradores precisam de ver o nome do modelo atual e a descrição no respetivo idioma localizado.
+Também pode configurar modelos para idiomas diferentes quando uma das seguintes condições aplicam-se. Esta configuração é adequada se os utilizadores ou administradores precisam de ver o nome do modelo atual e a descrição em seus idiomas localizados.
 
-- O modelo foi criado no portal clássico do Azure ou através do PowerShell e o modelo não está ligado a uma etiqueta, utilizando o **selecionar um modelo predefinido** definição de proteção.
+- O modelo foi criado no portal clássico do Azure ou através do PowerShell e o modelo não está ligado a uma etiqueta ao utilizar o **selecionar um modelo predefinido** definição de proteção.
 
-- Não dispõe de uma subscrição que suporta etiquetas, pelo que só pode criar e gerir modelos no portal do Azure.
+- Não tem uma subscrição que suporta etiquetas, pelo que só pode criar e gerir modelos no portal do Azure.
 
 Selecione os idiomas que correspondem à definição de idioma do Office e do Windows. Estes nomes de etiqueta e descrições apresentam então a barra do Azure Information Protection em aplicações do Office, e na caixa de diálogo **Classificar e proteção - Azure Information Protection**, respetivamente. Para obter mais informações sobre os idiomas que são escolhidos, veja a secção [Como o cliente do Azure Information Protection determina o idioma a apresentar](#how-the-azure-information-protection-client-determines-the-language-to- display) nesta página. 
 
-## <a name="to-configure-labels-and-templates-for-different-languages"></a>Para configurar as etiquetas e modelos para idiomas diferentes
+## <a name="to-configure-labels-and-templates-for-different-languages"></a>Configurar etiquetas e modelos para diferentes idiomas
 
 1. Se ainda não o tiver feito, abra uma nova janela do browser e [inicie sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal). Em seguida, navegue para o painel **Azure Information Protection**.
     
     Por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
 
-2. Do **GERIR** > **idiomas** opção do menu: no **Azure Information Protection - idiomas** painel, selecione **adicionar um novo idioma para tradução**. Selecione os idiomas que pretende adicionar e, em seguida, selecione **OK**. Pode escrever o nome do idioma na caixa de pesquisa ou deslocar a lista dos idiomas disponíveis
+2. Do **GERIR** > **idiomas** opção de menu: no **do Azure Information Protection - idiomas** painel, selecione **adicionar um novo idioma para tradução**. Selecione os idiomas que pretende adicionar e, em seguida, selecione **OK**. Pode digitar o nome do idioma na caixa de pesquisa ou percorra a lista de idiomas de disponíveis
 
-3. Os idiomas selecionados agora a apresentar no **Azure Information Protection - idiomas** painel:
+3. Os idiomas selecionados agora apresentam no **do Azure Information Protection - idiomas** painel:
     
     - Para adicionar outro idioma, selecione **adicionar um novo idioma para tradução** e repita o passo anterior. 
         
@@ -66,9 +66,9 @@ Selecione os idiomas que correspondem à definição de idioma do Office e do Wi
 
 7. Quando tiver editado cada ficheiro .xml, crie uma nova pasta comprimida (zipada) que contém estes ficheiros. A pasta comprimida pode ter qualquer nome, mas deve ter uma extensão .zip.
 
-8. Volte à **Azure Information Protection - idiomas** painel e selecione **importação**. Note que, se essa opção não estiver disponível, primeiro desmarque a caixa de verificação **NOME DO IDIOMA** ou as caixas de verificação para os idiomas selecionados individualmente.
+8. Retorno para o **do Azure Information Protection - idiomas** painel e selecione **importação**. Note que, se essa opção não estiver disponível, primeiro desmarque a caixa de verificação **NOME DO IDIOMA** ou as caixas de verificação para os idiomas selecionados individualmente.
     
-    Quando a importação estiver concluída, a transferência de nomes e descrições localizada para os utilizadores.
+    Quando a importação estiver concluída, os nomes localizados e as descrições são transferidos para os utilizadores.
 
 ## <a name="how-the-azure-information-protection-client-determines-the-language-to-display"></a>Como o cliente do Azure Information Protection determina o idioma a apresentar
 
@@ -88,7 +88,7 @@ Quando os utilizadores transferem uma política do Azure Information Protection 
 
 ## <a name="when-localized-label-names-are-not-used"></a>Quando os nomes de etiqueta localizados não são utilizados
 
-Nos seguintes cenários, os nomes de etiqueta (e sublabel) localizados não são utilizados. Para obter consistência com o seu inquilino, o idioma predefinido sempre utilizado é o seguinte:
+Nos seguintes cenários, os nomes de etiqueta (e subetiqueta) localizados não são utilizados. Para obter consistência com o seu inquilino, o idioma predefinido sempre utilizado é o seguinte:
 
 - Registos de utilização do cliente
 
@@ -97,10 +97,9 @@ Nos seguintes cenários, os nomes de etiqueta (e sublabel) localizados não são
 - Metadados de documento e cabeçalhos de e-mail
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 
-Para obter mais informações sobre como configurar as opções que pode efetuar para uma etiqueta e outras definições para as políticas do Azure Information Protection, utilize as ligações no [configurar política da sua organização](configure-policy.md#configuring-your-organizations-policy) secção.
+Para obter mais informações sobre como configurar as opções que pode fazer para uma etiqueta e outras definições para as políticas do Azure Information Protection, utilize as ligações na [configurar a política da sua organização](configure-policy.md#configuring-your-organizations-policy) secção.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

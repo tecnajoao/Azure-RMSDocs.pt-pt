@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6456bb5e124b1ec29090132e0bce750260c10f25
-ms.sourcegitcommit: b993c332e53d7aa48d93d4bbd42c80abcf79b351
+ms.openlocfilehash: e38f2c84e450b11ea8d86aa8b1680e4754a5aae4
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107020"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372656"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planear e implementar a sua chave de inquilino do Azure Information Protection
 
@@ -175,7 +175,7 @@ Se tiver de confirmar que a chave de URL está definida corretamente para o Azur
 Por fim, se o serviço Azure Rights Management já estiver ativado, execute [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) para dizer ao Azure Information Protection para utilizar esta chave como chave de inquilino ativa para o serviço Azure Rights Management. Se não efetuar este passo, o Azure Information Protection irá continuar a utilizar a chave de gerida pela Microsoft de predefinida, que foi criada automaticamente para o seu inquilino.
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 
 Agora que já planeou e, se necessário, criado e configurado a sua chave de inquilino, faça o seguinte:
 
@@ -198,5 +198,3 @@ Agora que já planeou e, se necessário, criado e configurado a sua chave de inq
 3.  Gerir a sua chave de inquilino.
     
     Para obter mais informações sobre as operações de ciclo de vida para a sua chave de inquilino, consulte [operações para a chave de inquilino do Azure Information Protection](../deploy-use/operations-tenant-key.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

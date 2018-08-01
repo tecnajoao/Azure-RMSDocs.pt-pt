@@ -10,12 +10,12 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: c41dcb0a11e61be4a2dfd974d9bf6803a992b858
-ms.sourcegitcommit: ef3d187da900107095d499de7e7dac5c947e4b13
+ms.openlocfilehash: 85f2952dd9abcb6e22e8932e8479ded540af8ea2
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947473"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39374203"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Como configurar uma etiqueta para marcas visuais para o Azure Information Protection
 
@@ -134,8 +134,7 @@ Pode escolher a partir da lista de cores disponíveis ou especificar uma cor per
 
 Se precisar de uma referência para estes códigos [cores por nome](https://msdn.microsoft.com/library/aa358802\(v=vs.85\).aspx) da MSDN documentação é um ponto de partida útil. Também encontrar estes códigos em muitos aplicativos que permitem editar imagens. Por exemplo, o Microsoft Paint permite que escolha uma cor personalizada a partir de uma paleta e os valores RGB são apresentados automaticamente, que, em seguida, pode ser copiado.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 
 Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).  
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

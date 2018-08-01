@@ -12,16 +12,16 @@ ms.technology: techgroup-identity
 ms.assetid: 72760134-94e0-4699-b20c-07b96aa061f1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 39787218e1c9e1d130748aa309ae49790b64275a
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 1c260cd3d27d38328c3e09c71b3db77bb30ecfaa
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30206959"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375390"
 ---
 # <a name="use-keyboard-shortcuts-in-the-rights-management-sharing-application"></a>Utilizar atalhos de teclado na aplicação de partilha Rights Management
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 Ao utilizar a aplicação de partilha RMS, prima a tecla **Alt** para ver as teclas de acesso disponíveis e, em seguida, prima **Alt** + a tecla de acesso para selecionar uma opção.
 
@@ -36,7 +36,5 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 -   [O que pretende fazer?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## <a name="see-also"></a>Veja Também
+## <a name="see-also"></a>Consulte Também
 [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

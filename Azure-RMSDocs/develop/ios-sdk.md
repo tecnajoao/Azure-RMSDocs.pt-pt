@@ -14,12 +14,12 @@ ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: f2cb573f8c347215f130fd76321886ade2877a16
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 34d11dc9b3c54f4b86710ce4f7866f0415f7bc8f
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765645"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39373632"
 ---
 # <a name="ios-and-os-x-setup"></a>Configuração do iOS e OS X
 
@@ -101,7 +101,7 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
 
 -   Agora, está pronto para criar as suas novas aplicações iOS/OS X.
 
-### <a name="see-also"></a>Veja Também
+### <a name="see-also"></a>Consulte Também
 
 * [Introdução](get-started.md)
 
@@ -110,5 +110,3 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
 * [Conceitos e termos de programador](core-concepts.md)
 
 * [Referência da API do iOS/OS X](https://msdn.microsoft.com/library/dn758306.aspx)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

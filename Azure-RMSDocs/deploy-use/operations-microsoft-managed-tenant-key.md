@@ -1,6 +1,6 @@
 ---
-title: Gerida pela Microsoft - AIP operações de ciclo de vida chave inquilino
-description: Informações sobre as operações de ciclo de vida que são relevantes se a Microsoft gere a chave de inquilino do Azure Information Protection (predefinição).
+title: Gerida pela Microsoft – AIP operações de ciclo de vida de chave inquilino
+description: Informações sobre as operações de ciclo de vida que são relevantes se a Microsoft gerir a sua chave de inquilino do Azure Information Protection (predefinição).
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -12,42 +12,42 @@ ms.technology: techgroup-identity
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 47653ccfb7ce512f8b9ac2a1a5540a62a7295ec2
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: fd3a08806c5dfa9e03e3a1cce5731cf09d61aa47
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30208197"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39373316"
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gerida pela Microsoft: Operações de ciclo de vida de chave de inquilino
 
->*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Se a Microsoft gere a chave de inquilino do Azure Information Protection (predefinição), utilize as secções seguintes para obter mais informações sobre as operações de ciclo de vida que são relevantes para esta topologia.
+Se a Microsoft gerir a sua chave de inquilino do Azure Information Protection (predefinição), utilize as secções seguintes para obter mais informações sobre as operações de ciclo de vida que são relevantes para esta topologia.
 
 ## <a name="revoke-your-tenant-key"></a>Revogar a chave de inquilino
 Quando cancelar a sua subscrição do Azure Information Protection, o Azure Information Protection deixará de utilizar a sua chave de inquilino e não será necessário que faça mais nada.
 
 ## <a name="rekey-your-tenant-key"></a>Recodificar a sua chave de inquilino
-A recodificação também é conhecida como implementação da chave. Quando efetuar esta operação, o Azure Information Protection deixa de utilizar a chave de inquilino existente para proteger documentos e e-mails e começa a utilizar uma chave diferente. As políticas e os modelos são imediatamente assinar mas este changeover é gradual de clientes existentes e serviços com o Azure Information Protection. Por isso, há algum tempo, algum conteúdo novo continua a ser protegidos com a chave de inquilino antiga.
+A recodificação também é conhecida como implementação da chave. Quando efetuar esta operação, o Azure Information Protection deixará de utilizar a chave de inquilino existente para proteger documentos e e-mails e começa a utilizar uma chave diferente. As políticas e os modelos são imediatamente está novamente assinados mas esta mudança é gradual para clientes existentes e serviços com o Azure Information Protection. Então, por algum tempo, algum conteúdo novo continua a ser protegida com a chave de inquilino antiga.
 
-Para recodificação, tem de configurar o objeto de chave de inquilino e especificar a chave alternativa a utilizar. Em seguida, a chave utilizada anteriormente automaticamente está marcada como arquivados para o Azure Information Protection. Esta configuração assegura esse conteúdo que foi protegido utilizando esta chave permanece acessível.
+A recodificação, tem de configurar o objeto de chave de inquilino e especificar a chave alternativa a utilizar. Em seguida, a chave utilizada anteriormente está marcada automaticamente como arquivada para o Azure Information Protection. Esta configuração garante que o conteúdo que foi protegido ao utilizar esta chave permanece acessível.
 
 Exemplos de quando poderá ter de recodificação para o Azure Information Protection:
 
-- A migração do Active Directory Rights Management Services (AD RMS) com uma chave de modo criptográfico 1. Quando a migração estiver concluída, pretender alterar a utilizar uma chave que utiliza o modo criptográfico 2.
+- Migração do Active Directory Rights Management Services (AD RMS) com uma chave do modo criptográfico 1. Quando a migração estiver concluída, em que pretende alterar para utilizar uma chave que utiliza o modo criptográfico 2.
 
 - A sua empresa foi dividida em duas ou mais empresas. Quando efetua a recodificação da chave de inquilino, a nova empresa não terá acesso ao conteúdo novo que os seus funcionários publicam. Estes podem aceder ao conteúdo antigo se tiverem uma cópia da chave de inquilino antiga.
 
-- Pretender mover de uma topologia de gestão de chaves para outro.
+- Pretende mover de uma topologia de gestão de chaves para outro.
 
 - Considerar que a cópia principal da sua chave de inquilino é comprometida.
 
-Para recodificação, pode selecionar uma chave diferente para se tornar a sua chave de inquilino gerida pela Microsoft, mas não é possível criar uma nova chave gerida pela Microsoft. Para criar uma nova chave, tem de alterar a topologia de chave a ser gerida pelo cliente (BYOK).
+A recodificação, pode selecionar uma chave diferente para se tornar a sua chave de inquilino gerida pela Microsoft, mas não é possível criar uma nova chave gerida pela Microsoft. Para criar uma nova chave, tem de alterar a topologia de chave a ser gerida pelo cliente (BYOK).
 
-Tiver mais do que uma chave gerida pela Microsoft se migrados a partir do Active Directory Rights Management Services (AD RMS) e escolher a topologia de chave gerida pela Microsoft para o Azure Information Protection. Neste cenário, tem, pelo menos, duas chaves gerida pela Microsoft para o seu inquilino. Chave de um ou mais, são a chave ou chaves importados do AD RMS. Também terá a chave predefinida que foi criada automaticamente para o seu inquilino do Azure Information Protection.
+Tem mais do que uma chave gerida pela Microsoft se migrados do Active Directory Rights Management Services (AD RMS) e escolher a topologia de chaves geridas pela Microsoft para o Azure Information Protection. Neste cenário, tem, pelo menos, duas chaves geridas pela Microsoft para o seu inquilino. Chave de um ou mais, são a chave ou chaves que importou do AD RMS. Também terá a chave predefinida que foi criada automaticamente para o seu inquilino do Azure Information Protection.
 
-Para selecionar uma chave diferente para ser a sua chave de inquilino do Active Directory para o Azure Information Protection, utilize o [conjunto AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) cmdlet do módulo AADRM. Para ajudar a identificar qual a chave a utilizar, utilize o [Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys) cmdlet. Pode identificar a chave predefinida que foi criada automaticamente para o seu inquilino do Azure Information Protection, executando o seguinte comando:
+Para selecionar uma chave diferente para ser a sua chave de inquilino ativa para o Azure Information Protection, utilize o [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) cmdlet do módulo AADRM. Para ajudar a identificar qual chave usar, utilize o [Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys) cmdlet. Pode identificar a chave predefinida que foi criada automaticamente para o seu inquilino do Azure Information Protection ao executar o seguinte comando:
 
     (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
 
@@ -57,11 +57,11 @@ Para alterar a topologia de chave a ser gerida pelo cliente (BYOK), consulte [im
 A Microsoft é responsável pela cópia de segurança da sua chave de inquilino e não é necessária qualquer ação da sua parte.
 
 ## <a name="export-your-tenant-key"></a>Exportar a chave de inquilino
-Pode exportar a configuração do Azure Information Protection e a chave de inquilino ao seguir as instruções seguintes três passos:
+Pode exportar a configuração do Azure Information Protection e a chave de inquilino ao seguir as instruções nos seguintes três passos:
 
 ### <a name="step-1-initiate-export"></a>Passo 1: iniciar a exportação
 
-- [Contacte o Support Microsoft](../get-started/information-support.md#to-contact-microsoft-support) para abrir um **caso de suporte do Azure Information Protection com um pedido de uma exportação de chave do Azure Information Protection**. Tem de provar que é um administrador do inquilino do Azure Information Protection e compreender que este processo demorará vários dias a ser confirmado. São aplicáveis encargos de suporte padrão; a exportação da chave do inquilino não é um serviço de suporte gratuito.
+- [Contacte o Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) para abrir um **incidente de suporte do Azure Information Protection com um pedido de uma exportação de chaves do Azure Information Protection**. Tem de provar que é um administrador do inquilino do Azure Information Protection e compreender que este processo demorará vários dias a ser confirmado. São aplicáveis encargos de suporte padrão; a exportação da chave do inquilino não é um serviço de suporte gratuito.
 
 ### <a name="step-2-wait-for-verification"></a>Passo 2: aguardar pela verificação
 
@@ -76,7 +76,7 @@ Pode exportar a configuração do Azure Information Protection e a chave de inqu
     ```
     Isto gera um par de chaves RSA e guarda os meios públicos e privados como ficheiros na pasta atual. Por exemplo: **PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** e **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**.
 
-    Responda ao e-mail a partir do CSS, anexando o ficheiro que tem um nome que começa com **PublicKey**. CSS junto envia-lhe um ficheiro TPD como um ficheiro. XML que está encriptado com a sua chave RSA. Copie este ficheiro para a mesma pasta que executou a ferramenta AadrmTpd originalmente e execute a ferramenta novamente, utilizando o ficheiro que começa com **PrivateKey** e o ficheiro do CSS. Por exemplo:
+    Responda ao e-mail a partir do CSS, anexando o ficheiro que tem um nome que começa com **PublicKey**. CSS em seguida envia-lhe um ficheiro TPD como um ficheiro. XML que é encriptado com a sua chave RSA. Copie este ficheiro para a mesma pasta que executou a ferramenta AadrmTpd originalmente e execute a ferramenta novamente, utilizando o ficheiro que começa com **PrivateKey** e o ficheiro do CSS. Por exemplo:
 
     ```
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
@@ -96,9 +96,9 @@ Depois de receber a chave de inquilino, mantenha-a bem protegida, uma vez que se
 Se o motivo para exportar sua a chave do inquilino for o facto de já não querer utilizar o Azure Information Protection, uma boa prática é desativar o serviço Azure Rights Management do inquilino do Azure Information Protection. Não adie esta ação depois de receber a sua chave de inquilino porque esta precaução ajuda a minimizar as consequências de um acesso indevido à sua chave de inquilino. Para obter mais informações, consulte [Desativar o Azure Rights Management](decommission-deactivate.md).
 
 ## <a name="respond-to-a-breach"></a>Responder a uma violação
-Nenhum sistema de segurança, por mais forte que seja, está completo sem um processo de resposta a violações. A sua chave de inquilino pode estar comprometida ou ter sido roubada. Mesmo quando este é também protegido, podem existir vulnerabilidades na tecnologia de chave de geração atual ou nos algoritmos e comprimentos de chave atuais.
+Nenhum sistema de segurança, por mais forte que seja, está completo sem um processo de resposta a violações. A sua chave de inquilino pode estar comprometida ou ter sido roubada. Mesmo quando ela é protegida, podem existir vulnerabilidades na tecnologia de chave de geração atual ou nos algoritmos e comprimentos de chaves atuais.
 
-A Microsoft tem uma equipa dedicada para responder a incidentes de segurança nos seus produtos e serviços. Assim que existir um relatório credível de um incidente, esta equipa investiga o âmbito, a causa raiz e as resoluções. Se este incidente afetar os recursos, a Microsoft irá notificar os administradores de inquilinos do Azure Information Protection por e-mail, utilizando o endereço de e-mail que especificou ao subscrever.
+A Microsoft tem uma equipa dedicada para responder a incidentes de segurança nos seus produtos e serviços. Assim que existir um relatório credível de um incidente, esta equipa investiga o âmbito, a causa raiz e as resoluções. Se este incidente afetar os recursos, a Microsoft irá notificar os administradores de inquilinos do Azure Information Protection por e-mail, utilizando o endereço de e-mail que especificou aquando da subscrição.
 
 Se ocorrer uma violação, a melhor ação que o utilizador ou a Microsoft pode efetuar depende do âmbito da violação; a Microsoft irá trabalhar consigo ao longo deste processo. A tabela seguinte mostra algumas situações típicas e a resposta provável, embora a resposta exata dependa de todas as informações que são reveladas durante a investigação.
 
@@ -106,7 +106,6 @@ Se ocorrer uma violação, a melhor ação que o utilizador ou a Microsoft pode 
 |------------------------|-------------------|
 |Ocorreu uma fuga da chave de inquilino.|Recodifique a sua chave de inquilino. Veja a secção [Recodificar a sua chave de inquilino](#rekey-your-tenant-key) neste artigo.|
 |Um indivíduo não autorizado ou um software maligno obteve direitos para utilizar a sua chave de inquilino, mas não houve uma fuga da própria chave.|Efetuar a recodificação da chave de inquilino não ajuda neste caso e requer a análise da causa principal. Se um erro no processo ou software tiver sido responsável pelo acesso que o indivíduo não autorizado obteve, essa situação tem de ser resolvida.|
-|Foi detetada uma vulnerabilidade no algoritmo RSA, ou no comprimento da chave, ou ataques de força bruta tornaram-se exequíveis a nível informático.|Microsoft tem de atualizar o Azure Information Protection para suportar novos algoritmos e maiores comprimentos de chaves que são resilientes e instruir todos os clientes a recodificar a respetiva chave de inquilino.|
+|Foi detetada uma vulnerabilidade no algoritmo RSA, ou no comprimento da chave, ou ataques de força bruta tornaram-se exequíveis a nível informático.|Microsoft tem de atualizar o Azure Information Protection para oferecer suporte a novos algoritmos e maiores comprimentos de chaves que são resilientes e instruir todos os clientes a recodificar a sua chave de inquilino.|
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

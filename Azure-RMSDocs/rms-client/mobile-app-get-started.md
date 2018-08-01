@@ -13,27 +13,27 @@ ms.technology: techgroup-identity
 ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c3f012c58255e86c3a133348733e31327faa0417
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: 076188a7ab99f5926861ff3d3c10919dd929da6c
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32327386"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371939"
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Introdução à aplicação Microsoft Azure Information Protection para iOS e Android
 
 *Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Antes de utilizar as instruções nesta página, certifique-se de que leu o [perguntas mais frequentes para a aplicação do Azure Information Protection para iOS e Android](mobile-app-faq.md). Nessa página explica o que é a aplicação para, os dispositivos que são suportados e informações básicas sobre como utilizar a aplicação.
+Antes de utilizar as instruções nesta página, certifique-se de que leu a [FAQs sobre a aplicação Azure Information Protection para iOS e Android](mobile-app-faq.md). Essa página explica o que é a aplicação para os dispositivos que são suportados e informações básicas sobre como utilizar a aplicação.
 
-Maioria dos utilizadores, normalmente, irá utilizar a aplicação do Azure Information Protection quando precisar de abrir um ficheiro ou e-mail protegido. No entanto, se for um administrador que pretende testar a aplicação para os seus utilizadores ou simplesmente experimentá-la antes de precisar dela, pode utilizar as instruções seguintes.
+A maioria dos usuários, normalmente, irá utilizar a aplicação Azure Information Protection quando precisa de abrir um e-mail ou ficheiro protegido. No entanto, se for um administrador que pretende testar a aplicação para os seus utilizadores ou simplesmente experimentá-la antes de precisar dela, pode utilizar as instruções seguintes.
 
 > [!NOTE]
-> Não primeiro abra a aplicação e, em seguida, selecione a documentos e e-mails para ver. Em vez disso, abra o documento ou e-mail e, em seguida, selecione esta aplicação para ver o documento ou e-mail.
+> Não, primeiro abra a aplicação e, em seguida, selecione a documentos e e-mails para ver. Em vez disso, abrir o documento ou e-mail e, em seguida, selecione esta aplicação para ver o documento ou e-mail.
 >
-> Da mesma forma, não tente iniciar sessão na aplicação, até que lhe for pedido.
+> Da mesma forma, não tente iniciar sessão aplicação até que lhe for pedido.
 
-Para utilizar as instruções seguintes, precisa de acesso do dispositivo móvel para um dos ficheiros que suporta a aplicação. Por exemplo:
+Para utilizar as seguintes instruções, precisa de acesso do dispositivo móvel para um dos ficheiros suportados pela aplicação. Por exemplo:
 
 - **Um ficheiro .rpmsg**: trata-se de uma mensagem de e-mail com proteção de direitos que é apresentada como anexo numa mensagem de e-mail, quando a aplicação de e-mail no seu dispositivo móvel não suporta nativamente a proteção de dados da gestão de direitos. 
     
@@ -45,10 +45,8 @@ Para utilizar as instruções seguintes, precisa de acesso do dispositivo móvel
 
 Para ver estes ficheiros na aplicação de visualização do Azure Information Protection, toque no anexo de e-mail ou na ligação. Quando lhe for pedido para selecionar uma aplicação com a qual abri-lo, selecione a aplicação **AIP Viewer**. Ser-lhe-á pedido que inicie sessão com a sua conta escolar ou profissional, ou que selecione um certificado. Depois de as suas credenciais serem autenticadas, a aplicação Azure Information Protection mostra o e-mail ou o ficheiro para que o possa ler.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 
-Para questões ou comentários sobre esta aplicação que não são resolvidos no [perguntas mais frequentes](mobile-app-faq.md), visite a nossa [Yammer site](https://www.yammer.com/AskIPTeam).
+Para perguntas ou comentários sobre esta aplicação que não são abordadas no [FAQs](mobile-app-faq.md), visite nosso [site do Yammer](https://www.yammer.com/AskIPTeam).
 
-Se a aplicação não está a funcionar conforme descrito, consulte os recursos listados em nosso [alojam regras](../house-rules.md) página.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
+Se a aplicação não está a funcionar conforme descrito, consulte os recursos listados no nosso [regras básicas](../house-rules.md) página.

@@ -12,19 +12,19 @@ ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e1f3520a74b3ae57984e635ca68ba429dd6ad131
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 4434cb25e06bd26f2080eaf01f5b0da29212fa71
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30208554"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371337"
 ---
 # <a name="rights-management-sharing-application-administrator-guide"></a>Guia do administrador da aplicação de partilha Rights Management
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 > [!IMPORTANT]
-> **Notificação de fim do suporte**: a aplicação de partilha Rights Management para Windows está a ser substituída pelo [cliente do Azure Information Protection](aip-client.md). Suporte para esta aplicação anterior irá parar 31 de Janeiro de 2019. 
+> **Notificação de fim do suporte**: a aplicação de partilha Rights Management para Windows está a ser substituída pelo [cliente do Azure Information Protection](aip-client.md). O suporte para esta aplicação mais antiga será interrompido 31 de Janeiro de 2019. 
 
 Utilize as seguintes informações se for o responsável pela aplicação de partilha Microsoft Rights Management numa rede empresarial ou se quiser obter mais informações técnicas além das que se encontram no [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md) ou nas [FAQ sobre a Aplicação de Partilha Microsoft Rights Management do Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
 
@@ -45,7 +45,7 @@ Os únicos pré-requisitos de instalação são que os computadores consigam exe
 
 3.  Pode extrair os ficheiros dos pacotes de instalação comprimidos ao fazer duplo clique sobre os mesmos, por exemplo. Em seguida, copie os ficheiros extraídos para uma localização na rede à qual os computadores cliente possam aceder.
 
-Os pacotes de configuração para a aplicação de partilha RMS suportam diferentes cenários de implementação e incluem o seguinte:
+Os pacotes de configuração para a aplicação de partilha RMS suportam diferentes cenários de implantação e inclui o seguinte:
 
 |Descrição|Cenário de implementação|
 |---------------|-----------------------|
@@ -188,7 +188,7 @@ Para confirmar o êxito da operação, consulte a secção [Confirmar o êxito d
 
     Por exemplo: `\\server5\apps\rms\x64\setup_ipviewer.exe /norestart /quiet /msicl "MSIRESTARTMANAGERCONTROL=Disable" /log "C:\Log files\ipviewerinstall.log"`
     
-    Se este comando não conseguir executar com êxito, não visualizará quaisquer mensagens de erro porque o **lightweightserver /quiet** parâmetro. Para ajudar a apurar o motivo pelo qual a instalação falhou, volte a executar o comando sem /quiet para ver as mensagens de erro.
+    Se este comando não for executada com êxito, não verá quaisquer mensagens de erro devido a **lightweightserver /quiet** parâmetro. Para ajudar a apurar o motivo pelo qual a instalação falhou, volte a executar o comando sem /quiet para ver as mensagens de erro.
 
 2.  Instale o suplemento do Office através dos seguintes comandos, especificando uma pasta existente para criar o ficheiro de registo:
 
@@ -206,7 +206,7 @@ Para confirmar o êxito da operação, consulte a secção [Confirmar o êxito d
 
     Por exemplo: `\\server5\apps\rms\msiexec.exe /norestart /quiet MSIRESTARTMANAGERCONTROL=Disable /i "x64\Setup64.msi" /L*v "C:\Log files\rmsofficeinstall.log"`
     
-    Se este comando não conseguir executar com êxito, não visualizará quaisquer mensagens de erro porque o **lightweightserver /quiet** parâmetro. Para ajudar a apurar o motivo pelo qual a instalação falhou, volte a executar o comando sem /quiet para ver as mensagens de erro.
+    Se este comando não for executada com êxito, não verá quaisquer mensagens de erro devido a **lightweightserver /quiet** parâmetro. Para ajudar a apurar o motivo pelo qual a instalação falhou, volte a executar o comando sem /quiet para ver as mensagens de erro.
 
 Para confirmar o êxito da operação, consulte a secção [Confirmar o êxito da instalação](#verifying-installation-success) neste artigo.
 
@@ -345,7 +345,7 @@ Dado que a aplicação de partilha RMS não é suportada pelo WSUS, pode utiliza
 ## <a name="azure-information-protection-only-configuring-document-tracking"></a>Apenas Azure Information Protection: configurar o controlo de documentos
 Se tiver uma [subscrição que suporta o controlo de documentos](https://www.microsoft.com/cloud-platform/azure-information-protection-features), o site de controlo de documentos é ativado por predefinição para todos os utilizadores da sua organização. O controlo de documentos apresenta informações como os endereços de e-mail das pessoas que tentaram aceder a documentos protegidos partilhados por utilizadores, quando essas pessoas tentaram aceder aos mesmos e a sua localização. Se a apresentação deste tipo de informações for proibida dentro da sua organização devido a requisitos de privacidade, pode desativar o acesso ao site de controlo de documentos através do cmdlet [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature). Pode reativar o acesso ao site em qualquer altura através de [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) e ainda verificar se o acesso ao site está ativado ou desativado com [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature).
 
-Para executar estes cmdlets, tem de ter no mínimo a versão **2.3.0.0** do módulo do Azure Rights Management para o Windows PowerShell. Para obter instruções de instalação, consulte [instalar o módulo do AADRM PowerShell](../deploy-use/install-powershell.md).
+Para executar estes cmdlets, tem de ter no mínimo a versão **2.3.0.0** do módulo do Azure Rights Management para o Windows PowerShell. Para obter instruções de instalação, consulte [instalar o módulo do PowerShell do AADRM](../deploy-use/install-powershell.md).
 
 > [!TIP]
 > Se já transferiu e instalou o módulo anteriormente, verifique o número da versão ao executar: `(Get-Module aadrm –ListAvailable).Version`
@@ -402,7 +402,6 @@ Se utilizar o AD RMS e os utilizadores da sua organização tiverem múltiplos d
 Se não fizer esta alteração de registo, é possível que os utilizadores não consigam consumir conteúdos que foram protegidos por outros utilizadores da organização. Esta edição de registo não é necessária se utilizar o Azure Information Protection.
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 Para obter informações técnicas adicionais com explicações sobre os diferentes níveis de proteção (nativa e genérica), os tipos de ficheiro e as extensões de nome de ficheiro suportados e como pode alterar o nível de proteção predefinido, consulte [Descrição geral técnica da aplicação de partilha Rights Management](sharing-app-admin-guide-technical.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

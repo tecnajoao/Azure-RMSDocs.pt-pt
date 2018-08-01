@@ -1,6 +1,6 @@
 ---
 title: Notas de versão
-description: Atualizações de SDK pela revisão e outras informações de programador.
+description: Atualizações do SDK, revisão e outras informações do desenvolvedor.
 keywords: ''
 author: lleonard-msft
 ms.author: alleonar
@@ -14,28 +14,28 @@ ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 74f4eacb7601d137e8eb459fad3853ac5ec52e97
-ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
+ms.openlocfilehash: 7f634e554b342e35b359fe870a5b0f033794b9c1
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/29/2018
-ms.locfileid: "30259035"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39373707"
 ---
 # <a name="release-notes"></a>Notas de versão
 
-Este artigo contém informações importantes sobre isto e sobre versões anteriores do SDK RMS 2.1.
+Este artigo contém informações importantes sobre isto e versões anteriores do SDK RMS 2.1.
 
 ## <a name="october-2017---update"></a>Atualização de Outubro de 2017-
 
-- Adição de duas novas APIs para o ambiente inintialization e uninitialization. Para informações, consulte [IpcInitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx) e [IpcUninitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx).
-- Tipos de ficheiro do Visio agora são suportados. Para obter mais informações, veja [Configuração da API de Ficheiros](file-api-configuration.md).
+- Adição de duas novas APIs para o ambiente inintialization e desinicialização. Para obter informações, consulte [IpcInitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx) e [IpcUninitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx).
+- Tipos de ficheiro do Visio são agora suportados. Para obter mais informações, veja [Configuração da API de Ficheiros](file-api-configuration.md).
 
 ## <a name="february-2016---sdk-documentation-update"></a>Atualização da documentação do SDK de fevereiro de 2016
 
 >[!Note]
 > As atualizações da documentação da funcionalidade nesta secção aplicam-se à transferência do SDK com a data de 11/12/2015.
 
-- **Fluxo de autenticação melhorado** -através da autenticação baseada em tokens do OAuth2 através de [do Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/). Para obter mais informações sobre este processo e as extensões da API para o mesmo, veja [Autenticação ADAL para a aplicação com permissão para RMS](how-to-use-adal-authentication.md).
+- **Fluxo de autenticação melhorado** -através da autenticação baseada em tokens do OAuth2 através do [do Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/). Para obter mais informações sobre este processo e as extensões da API para o mesmo, veja [Autenticação ADAL para a aplicação com permissão para RMS](how-to-use-adal-authentication.md).
 
 - **Atualizar para a ADAL** – ao atualizar a sua aplicação para utilizar a autenticação ADAL em vez do Assistente de Início de Sessão Online da Microsoft, o utilizador e os seus clientes poderão:
 
@@ -43,7 +43,7 @@ Este artigo contém informações importantes sobre isto e sobre versões anteri
  - Instalar o cliente RMS 2.1 sem necessidade de privilégios administrativos no computador
  - Certificar a aplicação para o Windows 10
 
-- **O suporte para o Assistente de Início de Sessão Online da Microsoft (SIA) com o SDK RMS está a ser removido.** Vamos continuar a suportar a utilização do SIA durante seis meses após o tempo irá parar o suporte.
+- **O suporte para o Assistente de Início de Sessão Online da Microsoft (SIA) com o SDK RMS está a ser removido.** Vamos continuar a suportar a utilização do SIA durante seis meses após o qual irá parar de suporte.
 
 
 ## <a name="december-2015-update"></a>Atualização de dezembro de 2015
@@ -54,11 +54,11 @@ Este artigo contém informações importantes sobre isto e sobre versões anteri
 
 - Muitas atualizações para melhorar a experiência de resolução de problemas e de mensagens de erro.
 - Note também que a lista das [Plataformas suportadas](supported-platforms.md) também está atualizada.
-- A necessidade de ambiente de pré-produção e a utilização de um manifesto de aplicação foi removida do SDK RMS 2.1. Estas secções deste conjunto de documentação para programadores foram removidas e a documentação geral simplificada e reorganizada.
+- A necessidade de ambiente de pré-produção e a utilização de um manifesto de aplicativo foi removida do SDK RMS 2.1. Estas secções deste conjunto de documentação para programadores foram removidas e a documentação geral simplificada e reorganizada.
 
 ## <a name="may-2015-update"></a>Atualização de maio de 2015
 
--   **Serviço de aplicações e baseado na nuvem RMS** - [IPC\_CREDENCIAL\_SYMMETRIC\_chave](https://msdn.microsoft.com/library/dn133062.aspx) precisa de três tipos de informações; a chave simétrica,  **AppPrincipalId**, e **TenantBposId**. O artigo para este foi atualizado para fornecer orientações sobre a processar estas informações. Para esta atualização, veja a versão revista de [Permitir que a aplicação do serviço funcione com o RMS baseado na cloud](how-to-use-file-api-with-aadrm-cloud.md).
+-   **Serviço de aplicações e baseado na nuvem RMS** - [IPC\_CREDENTIAL\_SYMMETRIC\_chave](https://msdn.microsoft.com/library/dn133062.aspx) precisa de três partes de informações; a chave simétrica,  **AppPrincipalId**, e **TenantBposId**. O artigo para que isso foi atualizado para fornecer orientações sobre o processamento destas informações. Para esta atualização, veja a versão revista de [Permitir que a aplicação do serviço funcione com o RMS baseado na cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## <a name="april-2015-update"></a>Atualização de abril de 2015
 
@@ -74,7 +74,7 @@ Este artigo contém informações importantes sobre isto e sobre versões anteri
 ## <a name="january-2015-update"></a>Atualização de janeiro de 2015
 
 -   **Aumento do tamanho do ficheiro protegido (pfile)** – agora suporta tamanhos de pfile maiores do que um gigabyte (1 GB). Para obter mais informações sobre pfiles, veja [Formatos de Ficheiro Suportados](supported-file-formats.md).
--   **Registo melhorado para um melhor diagnóstico** –os níveis de registo apresentarão um **ERRO** ou **AVISO** nas mensagens que devem ser revistas. Todas as outras mensagens, incluindo as exceções que ainda são apresentadas, serão registadas como **informações**.
+-   **Registo melhorado para um melhor diagnóstico** –os níveis de registo apresentarão um **ERRO** ou **AVISO** nas mensagens que devem ser revistas. Todas as outras mensagens, incluindo as exceções, que ainda são apresentadas, serão registadas como **informações**.
 
     Escolhemos esta abordagem para nenhum detalhe seja perdido. Agora, apenas as mensagens importantes são apresentadas com o nível de AVISO.
 
@@ -84,18 +84,18 @@ Este artigo contém informações importantes sobre isto e sobre versões anteri
 ## <a name="october-2014-update"></a>Atualização de outubro de 2014
 
 -   Foram atualizados os comportamentos predefinidos do componente da API de Ficheiros do SDK. Para obter mais informações, veja [Configuração da API de Ficheiros](file-api-configuration.md).
--   Notificação por e-mail, a nova funcionalidade descrita no artigo de notas do programador, [permitir notificação por e-mail](how-to-enable-email-notification.md).
+-   Notificação por e-mail, uma nova funcionalidade, é descrita no artigo de notas do programador, [permitir notificação por e-mail](how-to-enable-email-notification.md).
 
 ## <a name="july-2014-update"></a>Atualização de julho de 2014
 
-O componente de API de ficheiros do SDK foi expandido e oferece as seguintes funcionalidades:
+O componente da API de ficheiros do SDK foram expandido e oferece as seguintes funcionalidades:
 
 -   Identifica o protetor a utilizar.
 -   Fornece a proteção do RMS ao nível de granularidade de um ficheiro.
 
     Funções adicionadas a esta versão:
 
-    **Nota:** foram adicionadas estruturas e tipos de dados de suporte, não listados aqui, às extensões da API de Ficheiros. Todos os artigos que tenham sido atualizados nesta versão estão marcados como **preliminares e estão sujeitos a alterações**.
+    **Nota:** foram adicionadas estruturas e tipos de dados de suporte, não listados aqui, às extensões da API de Ficheiros. Todos os artigos que foram atualizados nesta versão estão marcados como **preliminares e estão sujeitas a alterações**.
 
     -   [IpcfOpenFileOnHandle](https://msdn.microsoft.com/library/dn771751.aspx)
     -   [IpcfOpenFileOnILockBytes](https://msdn.microsoft.com/library/dn771752.aspx)
@@ -122,7 +122,7 @@ O componente de API de ficheiros do SDK foi expandido e oferece as seguintes fun
 
     Para obter mais informações sobre tipos de ficheiro suportados, veja [Configuração da API de Ficheiros](file-api-configuration.md).
 
--   Os **computadores Windows 7 SP1 e Windows Server 2008 R2 SP1** sem a atualização [KB2533623](https://support.microsoft.com/kb/2533623) poderão apresentar o seguinte erro ao proteger um ficheiro do Office: “O parâmetro está incorreto. Código de erro 0x80070057”. Se vir isto, instale a atualização e tente novamente. Se tiver problemas persistirem, contacte o alias de comentários Beta do SDK RMS <rmcstbeta@microsoft.com>.
+-   Os **computadores Windows 7 SP1 e Windows Server 2008 R2 SP1** sem a atualização [KB2533623](https://support.microsoft.com/kb/2533623) poderão apresentar o seguinte erro ao proteger um ficheiro do Office: “O parâmetro está incorreto. Código de erro 0x80070057”. Se vir isto, instale a atualização e tente novamente. Se os problemas persistirem, contacte o alias de comentários do RMS SDK Beta <rmcstbeta@microsoft.com>.
 
     **Nota:** na versão de abril de 2015, foi adicionada uma verificação ao processo de instalação deste KB.
 
@@ -138,7 +138,7 @@ O componente de API de ficheiros do SDK foi expandido e oferece as seguintes fun
 
       - Todos os ficheiros, exceto ficheiros do sistema e ficheiros do Office, podem ser protegidos através do formato de Ficheiro Protegido (PFile) do RMS.
 
-    A API de ficheiro é implementada através de seguintes quatro novas funções: [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx), [IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx), [IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx)e [IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx).
+    A API de ficheiros é implementada através de seguintes quatro novas funções: [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx), [IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx), [IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx)e [IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx).
 
     A API de Ficheiro necessita que o Rights Management Service Client 2.1 seja instalado no computador cliente e que o computador tenha conectividade com um servidor RMS. Para obter mais informações sobre o servidor RMS, o cliente RMS e a respetiva funcionalidade, veja o conteúdo do TechNet relativo à [Documentação do RMS para Profissionais de TI](https://technet.microsoft.com/library/cc771234(v=ws.10).aspx).
 
@@ -165,5 +165,3 @@ O componente de API de ficheiros do SDK foi expandido e oferece as seguintes fun
     3 - The first available language specified in the Rights Management Server (RMS) template.
 
 Se não for possível obter um nome e uma descrição, é devolvido um erro. Apenas pode existir um nome e descrição para um LCID específico.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -12,16 +12,16 @@ ms.technology: techgroup-identity
 ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 429be436bc1a9fec3d31933d9cb6e8f88de7506a
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 8fc94edec250fd0cef1be5f3030e19ce8628cc92
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30207442"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39370164"
 ---
 # <a name="dialog-box-options-for-the-rights-management-sharing-application"></a>Opções da caixa de diálogo para a aplicação de partilha Rights Management
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 Utilize estas informações para ajudar a especificar as opções na caixa de diálogo **adicionar proteção** da aplicação de partilha RMS ou na caixa de diálogo **partilhar protegido**. Irá ver esta caixa de diálogo quando [proteger um ficheiro para partilhar](sharing-app-protect-by-email.md) ou [proteger um ficheiro no local](sharing-app-protect-in-place.md) e escolher permissões personalizadas.
 
@@ -73,7 +73,6 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 -   [O que pretende fazer?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## <a name="see-also"></a>Veja Também
+## <a name="see-also"></a>Consulte Também
 [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

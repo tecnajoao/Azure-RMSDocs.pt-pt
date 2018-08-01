@@ -14,12 +14,12 @@ ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 1d7a5a41c16a8a1354933b13449875de7ec0902e
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: cb9e5ef5cd60fff43174071938525b7544e5eb9e
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765396"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39369603"
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Como registar-se e ativar o RMS na aplicação com o Azure AD
 
@@ -266,5 +266,3 @@ e provém do passo de registo anterior através do portal do Azure.
         throw;
       }
     }
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

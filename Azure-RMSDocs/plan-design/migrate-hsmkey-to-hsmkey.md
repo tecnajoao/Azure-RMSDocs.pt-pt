@@ -4,7 +4,7 @@ description: Instruções que fazem parte do caminho de migração do AD RMS par
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2018
+ms.date: 07/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 757b3af36fb15c3069c5bef7ca4509ff92cee1f9
-ms.sourcegitcommit: 0fda9ea4a7b91d4bb3a9e4f9d5cc4106ce1e2d43
+ms.openlocfilehash: ccd62b7a539906c6e1f375e8bfc51e461f4cd547
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38973329"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39370521"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Passo 2: migração de chave protegida por HSM para chave protegida por HSM
 
@@ -80,7 +80,7 @@ Estes procedimentos são efetuados pelo administrador para o Azure Information P
     Introduza a palavra-passe que especificou para exportar o ficheiro de dados de configuração. Em seguida, execute o seguinte comando e confirme que pretende realizar esta ação:
     
     ```
-    Import-AadrmTpd -TpdFile "C:\contoso-tpd1.xml" -ProtectionPassword $TPD_Password –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
+    Import-AadrmTpd -TpdFile "C:\contoso-tpd1.xml" -ProtectionPassword $TPD_Password –KeyVaultKeyUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
     ```
     
     Como parte desta importação, a chave SLC é importada e definida automaticamente como arquivada.
@@ -97,5 +97,4 @@ Se tiver de confirmar mais tarde qual a chave de inquilino do Azure Information 
 
 Agora está pronto para ir para o [Passo 5. Ativar o serviço Azure Rights Management](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

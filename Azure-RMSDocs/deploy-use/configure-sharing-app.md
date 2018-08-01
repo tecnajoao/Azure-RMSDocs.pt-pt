@@ -12,19 +12,19 @@ ms.technology: techgroup-identity
 ms.assetid: b9af5dc3-73d4-4147-b7ef-f6803b0d5216
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6acedb72d270bb5d4153701a6d42aa2757fbacbd
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 4da8df0696ce011e2bbe91ee8a1fd53fd5e854f5
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30204820"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371922"
 ---
 # <a name="rights-management-sharing-application-installation-and-configuration-for-clients"></a>Aplicação de partilha Rights Management: instalação e configuração para clientes
 
->*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
-> **Notificação de fim do suporte**: a aplicação de partilha Rights Management para Windows está a ser substituída pelo [cliente do Azure Information Protection](../rms-client/aip-client.md). Suporte para esta aplicação anterior irá parar 31 de Janeiro de 2019. 
+> **Notificação de fim do suporte**: a aplicação de partilha Rights Management para Windows está a ser substituída pelo [cliente do Azure Information Protection](../rms-client/aip-client.md). O suporte para esta aplicação mais antiga será interrompido 31 de Janeiro de 2019. 
  
 A aplicação de partilha RMS fornece suporte de autenticação para o Office 2010 e integra-se com aplicações do Office através da instalação de um suplemento do Office para que os utilizadores possam facilmente proteger os ficheiros e os e-mails diretamente do friso. Esta aplicação também proporciona proteção genérica a tipos de ficheiros que não são suportados nativamente pelo serviço Azure Rights Management e possibilita um site de controlo de documentos para os utilizadores controlarem e revogarem ficheiros protegidos por eles.
 
@@ -40,6 +40,5 @@ Pode transferir e instalar a aplicação de partilha RMS para computadores Mac e
 Já não pode transferir a aplicação de partilha RMS para iOS e Android a partir desta página; as ligações para estes dispositivos móveis agora transferem o cliente do Azure Information Protection. 
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

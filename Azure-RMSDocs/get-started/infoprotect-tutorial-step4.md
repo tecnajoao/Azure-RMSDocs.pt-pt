@@ -10,12 +10,12 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
-ms.openlocfilehash: f92953acfe652238ef8a36f67cdd8051324c6f18
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 1d89801f69023f512d068f06e4cd024cd701e602
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30207466"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39370113"
 ---
 # <a name="step-4-see-classification-labeling-and-protection-in-action"></a>Passo 4: ver classificação, etiquetas e proteção em ação 
 
@@ -55,23 +55,23 @@ Na barra Information Protection, clique novamente no ícone **Editar Etiqueta**.
 
 Desta vez, quando lhe for apresentada uma mensagem, escreva "Este documento não precisa de ser classificado" e clique em **Confirmar**.  
 
-Pode ver o **sensibilidade** valor apresentar **não definido**, que é o que veem os utilizadores inicialmente se não definir uma etiqueta predefinida.
+Verá o **sensibilidade** valor a apresentar **nenastaveno**, que é que os utilizadores veem inicialmente se não definir uma etiqueta predefinida.
 
 ## <a name="to-see-a-recommendation-prompt-for-labeling-and-automatic-protection"></a>Para ver um pedido de recomendação para etiquetagem e proteção automática
 
 1. No documento do Word, escreva um número de cartão de crédito válido, por exemplo: **4242-4242-4242-4242**. 
 
-2. Guarde o documento localmente, com um nome de ficheiro. 
+2. Guarde localmente, o documento com um nome de ficheiro. 
 
 3. Verá um pedido para aplicar a etiqueta que configurou para proteção quando forem detetados números de cartão de crédito. Se não concordar com a recomendação, a definição da política permite rejeitá-la ao selecionar **Dispensar**. Fornecer uma recomendação mas deixar que o utilizador a ignore ajuda a reduzir os falsos positivos quando utiliza a classificação automática. Para este tutorial, clique em **Alterar agora**.
 
     ![Passo 4 do tutorial de início rápido do Azure Information Protection – recomendar pedido](../media/change-nowv2.png)
 
-    Para além do documento agora que mostra que a nossa etiqueta configurada é aplicada (por exemplo, **confidencial \ financeiro**), pode ver imediatamente a marca d'água do nome da sua organização através da página e rodapé  **Classificados como confidenciais** também é aplicada. 
+    Para além do documento a mostrar que a etiqueta configurada foi aplicada (por exemplo, **confidencial \ Finanças**), verá imediatamente a marca d'água do nome da organização em toda a página e rodapé de  **Classificado como confidencial** também é aplicado. 
 
-    O documento é também protegido com as permissões que especificou para esta etiqueta. Pode confirmar que o documento está protegido clicando a **ficheiro** separador e ver as informações de **Proteger documento**. Verá que o documento está protegido por **confidencial \ financeiro** e a descrição da etiqueta. 
+    O documento é também protegido com as permissões que especificou para esta etiqueta. Pode confirmar que o documento é protegido ao clicar o **arquivo** separador e ver as informações de **Proteger documento**. Verá que o documento é protegido pelo **confidencial \ Finanças** e a descrição da etiqueta. 
     
-    Devido à configuração de proteção da etiqueta, apenas os funcionários podem abrir o documento e algumas ações estão limitadas para os mesmos. Por exemplo, porque não têm o imprimir e a cópia e extrair conteúdas permissões, estes não é possível imprimir o documento ou uma cópia do mesmo. Estas restrições ajudam a evitar perda de dados. Como o proprietário do documento, pode imprimir e copiar a partir do mesmo, mas se por e-mail o documento para outro utilizador na sua organização, não é possível efetuar estas ações.
+    Devido a configuração da proteção da etiqueta, apenas os funcionários podem abrir o documento e algumas ações são restritas para eles. Por exemplo, porque eles não têm a impressão e a cópia e extrair conteúdas permissões, eles não é possível imprimir o documento ou uma cópia do mesmo. Essas restrições quanto ajuda a evitar a perda de dados. Como o proprietário do documento, pode imprimi-lo e a cópia dos mesmos, mas se enviar por e-mail o documento para outro utilizador na sua organização, eles não podem fazer estas ações.
 
 4. Agora, pode fechar este documento.
 
@@ -86,5 +86,3 @@ Agora que viu a classificação, a etiquetagem e a proteção em ação, vamos v
 >[!div class="step-by-step"]
 [&#171; Passo 3](infoprotect-tutorial-step3.md)
 [Passo 5 &#187;](infoprotect-tutorial-step5.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

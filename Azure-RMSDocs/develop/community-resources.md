@@ -14,12 +14,12 @@ ms.assetid: e3bdaa6d-e8ca-421a-a429-553bfc54b78b
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: daec2cd2d27245f2eb741eedc1f84ea69c8c0e4f
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 1ce9cd377484aac8bbb65c7c994b232bd1225a87
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27764576"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372153"
 ---
 # <a name="community-resources"></a>Recursos comunitários
 
@@ -35,10 +35,8 @@ A secção Serviços de Gestão de Direitos no site do Connect é onde pode enco
 >
 >Se ainda não se registou no Microsoft Connect, efetue o seguinte:
 >
->-   Navegue até [Microsoft Connect](http://connect.microsoft.com) (http://connect.microsoft.com)
+>-   Navegue para [do Microsoft Connect](http://connect.microsoft.com) (http://connect.microsoft.com)
 >-   Inicie sessão com a sua conta Microsoft
 >-   Clique em **Diretório** na barra de comandos
 >-   Procure "Serviços de Gestão de Direitos"
 >-   Clique em **Aderir** para se registar
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 254e3ecc1292d2b9db0e291f9c45af343f3ccb9c
-ms.sourcegitcommit: 93e83ed71250e408e11fb098551e486282494013
+ms.openlocfilehash: 50cfe76f46105225b2ac65468a21d890a0dce19f
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324325"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372347"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Fase 4 da migração – configuração de serviços de suporte
 
@@ -211,7 +211,5 @@ Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange Serve
 ---
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 Para continuar a migração, aceda a [fase 5 – tarefas de pós-migração](migrate-from-ad-rms-phase5.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

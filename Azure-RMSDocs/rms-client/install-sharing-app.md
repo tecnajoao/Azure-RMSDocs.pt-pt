@@ -12,19 +12,19 @@ ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6c9fe3e28cb44812a6f3a5830546128975522b5f
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 80ae87e28e02a208af9ea4ece2b74df1a7f841b0
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30206645"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39374563"
 ---
 # <a name="download-and-install-the-rights-management-sharing-application"></a>Transferir e instalar a aplicação de partilha Rights Management
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 > [!IMPORTANT]
-> **Notificação de fim do suporte**: a aplicação de partilha Rights Management para Windows está a ser substituída pelo [cliente do Azure Information Protection](aip-client.md). Suporte para esta aplicação anterior irá parar 31 de Janeiro de 2019.
+> **Notificação de fim do suporte**: a aplicação de partilha Rights Management para Windows está a ser substituída pelo [cliente do Azure Information Protection](aip-client.md). O suporte para esta aplicação mais antiga será interrompido 31 de Janeiro de 2019.
 
 Não é necessário ser um administrador local para instalar a aplicação de partilha RMS. No entanto, se não for e utilizar o Office 2010, existem algumas limitações. Para obter mais informações, consulte a secção [Se não for um administrador local e utilizar o Office 2010](#if-you-are-not-a-local-administrator-and-use-office-2010) nesta página.
 
@@ -67,7 +67,6 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 -   [O que pretende fazer?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## <a name="see-also"></a>Veja Também
+## <a name="see-also"></a>Consulte Também
 [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

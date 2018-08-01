@@ -10,12 +10,12 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: f5daff0083e653a9a4a4b2bdeb96daa85075428b
-ms.sourcegitcommit: 1bc4c9d6e773809893d02a6abb09aeb4ae28cb03
+ms.openlocfilehash: 38b52aa528fe87a03522a8790ef3261429b07189
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "34562063"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39370324"
 ---
 # <a name="step-1-activate-protection"></a>Passo 1: Ativar proteção
  
@@ -70,4 +70,3 @@ Existem várias formas que pode ativar a proteção. Pode utilizar o PowerShell 
 [&#171; Introdução](infoprotect-quick-start-tutorial.md)
 [Passo 2 &#187;](infoprotect-tutorial-step2.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -12,16 +12,16 @@ ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 393db5da6f2a563b073b071e873a8c5d555a76e6
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 80a0f73b8df342cda4155aeb5d475fa9f6547119
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30208588"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39370681"
 ---
 # <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Ver e utilizar ficheiros que foram protegidos pelo Rights Management
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 Quando a [Aplicação de partilha Rights Management (RMS) está instalada no computador](install-sharing-app.md), basta fazer duplo clique num ficheiro protegido para o ver. O ficheiro pode ser um anexo numa mensagem de e-mail ou poderá vê-lo ao utilizar o Explorador de Ficheiros.
 
@@ -102,5 +102,3 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 ## <a name="see-also"></a>Consulte Também
 [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

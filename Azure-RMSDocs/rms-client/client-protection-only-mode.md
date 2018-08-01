@@ -12,41 +12,41 @@ ms.technology: techgroup-identity
 ms.assetid: 16042717-0d7a-41f5-87e3-12826fda35df
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: aed3c59465f822e27411eb84df793bf7ad63b061
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: d55ef8caa7540cba2cd783613f5ea373ba1d545c
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30206211"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372398"
 ---
-# <a name="user-guide-protection-only-mode-for-the-azure-information-protection-client"></a>Guia do utilizador: O modo só de proteção para o cliente Azure Information Protection
+# <a name="user-guide-protection-only-mode-for-the-azure-information-protection-client"></a>Guia de utilizador: Modo apenas de proteção para o cliente do Azure Information Protection
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
 
 
-Quando o cliente Azure Information Protection não tem etiquetas para classificar os documentos e e-mails, é executada no **só de proteção** modo. Por exemplo, neste modo, poderá ver o seguinte quando utilizar o Explorador de ficheiros do Windows, rato, **classificar e proteger**:
+Quando o cliente do Azure Information Protection não tem etiquetas para classificar os documentos e e-mails, ele é executado **apenas de proteção** modo. Por exemplo, neste modo, poderá ver o seguinte ao utilizar o Explorador de ficheiros do Windows, rato, **classificar e proteger**:
 
 ![Modo de apenas de proteção](../media/protection-only-mode.png)
 
-Modo só de proteção é executado nos seguintes cenários:
+Modo apenas de proteção é executado nos seguintes cenários:
 
-- A organização não tiver uma subscrição do Azure Information Protection, que inclui a classificação e etiquetas funcionalidades, mas tem uma subscrição do Office 365 que inclui proteção de dados utilizando o serviço Azure Rights Management. 
+- Sua organização não tem uma subscrição do Azure Information Protection, que inclui a classificação e etiquetas de recursos, mas tem uma subscrição do Office 365 que inclui proteção de dados com o serviço Azure Rights Management. 
     
-    - Pode utilizar o cliente Azure Information Protection para proteger ficheiros e ver ficheiros protegidos. Não é possível classificar ou Etiquetar documentos e e-mails.
+    - Pode utilizar o cliente do Azure Information Protection para proteger ficheiros e ver ficheiros protegidos. Não é possível classificar ou Etiquetar documentos e e-mails.
 
-- A sua organização tem uma subscrição do Azure Information Protection para apenas um subconjunto de utilizadores:
+- Sua organização tem uma subscrição do Azure Information Protection para apenas um subconjunto de utilizadores:
     
-    - Para esta combinação de subscrições, é responsabilidade do administrador para se certificar de que apenas o subconjunto de utilizadores pode utilizar a classificação e etiquetagem funcionalidades. O resto dos utilizadores deve estar a executar o cliente Azure Information Protection no modo só de proteção. 
+    - Para esta combinação de subscrições, é responsabilidade do administrador para se certificar de que apenas o subconjunto de utilizadores pode utilizar a classificação e etiquetagem funcionalidades. O restante dos usuários deve executar o cliente do Azure Information Protection no modo apenas de proteção. 
 
-- A sua organização tem uma subscrição do Azure Information Protection, mas não tem qualquer das etiquetas configuradas por si.
+- A sua organização tem uma subscrição do Azure Information Protection, mas não tem quaisquer etiquetas configuradas por si.
     
-    - Isto pode acontecer quando estão desativadas todas as etiquetas na política de global e não a sua conta é adicionada a uma política de âmbito. Isto pode acontecer porque o departamento de TI apenas começou a implementar o Azure Information Protection, mas ainda não foi fornecido, com as etiquetas para classificar os documentos e e-mails. Entretanto, pode utilizar o cliente Azure Information Protection para proteger ficheiros e ver ficheiros protegidos.
+    - Isto pode acontecer quando estão desativadas todas as etiquetas na política global e a sua conta não é adicionada a uma política de âmbito. Isso poderá ser porque o departamento de TI tem apenas começar a implementar o Azure Information Protection, mas ainda não foi fornecido a as etiquetas para classificar os documentos e e-mails. Entretanto, pode utilizar o cliente do Azure Information Protection para proteger ficheiros e ver ficheiros protegidos.
 
 - A sua organização tem uma subscrição para o Azure Information Protection, mas não pode transferir a política do Azure Information Protection. 
     
     - Isto pode acontecer devido a uma configuração incorreta ou porque o seu início de sessão não é efetuada com êxito. Contacte o suporte técnico ou o administrador, mas, entretanto, pode conseguir utilizar o cliente do Azure Information Protection para proteger ficheiros e visualizar ficheiros protegidos.
 
-- A organização utiliza o Active Directory Rights Management Services (AD RMS) apenas. 
+- Sua organização utiliza o Active Directory Rights Management Services (AD RMS) apenas. 
 
 
 ## <a name="limitations-for-protection-only-mode"></a>Limitações para o modo de apenas de proteção
@@ -64,5 +64,4 @@ Modo só de proteção é executado nos seguintes cenários:
 - Veja ficheiros protegidos através do Visualizador do Azure Information Protection.
 
 - Aceda ao site de controlo de documentos a partir das aplicações do Office. No entanto, tem de ter uma subscrição válida para controlar e revogar documentos a partir deste site.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]  
+  

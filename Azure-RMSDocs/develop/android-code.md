@@ -14,37 +14,37 @@ ms.assetid: 58CC2E50-1E4D-4621-A947-25312C3FF519
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: f23f8d1d4deddb1a0ee70a755cf94637396337c0
-ms.sourcegitcommit: dca4534a0aa7f63c0c525c9a3ce445088d1362bb
+ms.openlocfilehash: 96872a15d99e72c467ad968189fdd5e6e26ebf61
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/19/2018
-ms.locfileid: "27927129"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39370579"
 ---
 # <a name="android-code-examples"></a>Exemplos de código do Android
 
 Este artigo mostra como codificar elementos para a versão Android do RMS SDK.
 
-**Tenha em atenção** neste artigo, o termo _MSIPC_ (Microsoft Information Protection e controlo) refere-se ao processo de cliente.
+**Tenha em atenção** neste artigo, o termo _MSIPC_ (Microsoft Information Protection e o controle) é o processo de cliente.
 
 
 ## <a name="using-the-microsoft-rights-management-sdk-42---key-scenarios"></a>Utilizar o SDK Microsoft Rights Management 4.2 – cenários principais
 
-Estes exemplos de código são obtidos a partir da aplicação de exemplo maior que representam cenários de desenvolvimento importantes para se orientar neste SDK. Estes mostram como utilizar:
+Estas amostras de código são obtidas a partir de uma aplicação de exemplo maior que representam cenários de desenvolvimento importantes para se orientar neste SDK. Eles mostram como utilizar:
 
 - O formato de ficheiro protegido do Microsoft, também designado por um _ficheiro protegido_.
-- Formatos de ficheiro protegido do personalizado
-- Controlos de interface (IU) do utilizador personalizado
+- Formatos de arquivo protegido de personalizado
+- Controles de interface (IU) de usuário personalizados
 
-O *MSIPCSampleApp* aplicação de exemplo está disponível para utilização com este SDK para o sistema operativo Android. Para obter mais informações, consulte [rms-sdk-ui-for-android](https://github.com/AzureAD/rms-sdk-ui-for-android).
+O *MSIPCSampleApp* aplicativo de exemplo está disponível para utilização com este SDK para o sistema operativo Android. Para obter mais informações, consulte [rms-sdk-ui-for-android](https://github.com/AzureAD/rms-sdk-ui-for-android).
 
 ### <a name="scenario-consume-an-rms-protected-file"></a>Cenário: consumir um ficheiro de RMS protegido
 
-- **Passo 1**: criar um [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx).
+- **Passo 1**: crie uma [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx).
 
     **Origem**: *MsipcAuthenticationCallback.java*
 
-    **Descrição**: instanciar um [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) de objeto e implementar a autenticação do serviço.  Utilize o [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758250.aspx) para obter um token transferindo uma instância de **AuthenticationRequestCallback**, como o parâmetro *mRmsAuthCallback*, para o MSIPC API. Consulte a chamada para [ProtectedFileInputStream.create](https://msdn.microsoft.com/library/dn790851.aspx) perto do fim da seguinte secção de código de exemplo.
+    **Descrição**: criar uma instância de um [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) de objeto e implementar a autenticação de serviço.  Utilize o [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758250.aspx) para obter um token transferindo uma instância de **AuthenticationRequestCallback**, como o parâmetro *mRmsAuthCallback*, para o MSIPC API. Consulte a chamada para [ProtectedFileInputStream.create](https://msdn.microsoft.com/library/dn790851.aspx) perto do fim da seguinte secção de código de exemplo.
 
     ``` java
         public void startContentConsumptionFromPtxtFileFormat(InputStream inputStream)
@@ -106,11 +106,11 @@ O *MSIPCSampleApp* aplicação de exemplo está disponível para utilização co
         }
     ```
 
-- **Passo 2**: configurar a autenticação utilizando o Active Directory Authentication Library (ADAL).
+- **Passo 2**: configurar a autenticação com o Active Directory Authentication Library (ADAL).
 
     **Origem**: *MsipcAuthenticationCallback.java*.
 
-    **Descrição**: este passo utiliza a ADAL para implementar um [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) com parâmetros de autenticação de exemplo. Para obter mais informações, consulte o [do Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx).
+    **Descrição**: este passo utiliza a ADAL para implementar um [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) com parâmetros de autenticação de exemplo. Para obter mais informações, consulte a [do Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx).
 
 
     ``` java
@@ -531,7 +531,7 @@ Este cenário começa com a obtenção de uma lista de modelo ao selecionar o pr
 
     **Origem**: *MsipcTaskFragment.java*
 
-    **Descrição**: na prática, seriam possível criar os seguintes objetos utilizando entradas do utilizador a partir da interface do dispositivo; [UserRights](https://msdn.microsoft.com/library/dn790911.aspx) e [PolicyDescriptor](https://msdn.microsoft.com/library/dn790843.aspx).
+    **Descrição**: na prática, seria possível criar os objetos seguintes com entradas do utilizador a partir da interface do dispositivo; [UserRights](https://msdn.microsoft.com/library/dn790911.aspx) e [PolicyDescriptor](https://msdn.microsoft.com/library/dn790843.aspx).
 
     ``` java
       // create userRights list
@@ -627,5 +627,3 @@ Este cenário começa com a obtenção de uma lista de modelo ao selecionar o pr
           …
         }
     ```
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

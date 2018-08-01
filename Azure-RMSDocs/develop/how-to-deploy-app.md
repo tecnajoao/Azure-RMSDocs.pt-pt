@@ -14,12 +14,12 @@ ms.assetid: 34dc6d6f-cfe4-4848-9b11-8d90c4b38ef7
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 3b7ff758abeb3f1ddc1ae82349233e437d05dacc
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 3299981f6e45cc8c82da66e2fce07cece552c81f
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
-ms.locfileid: "20232841"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372279"
 ---
 # <a name="deploying-a-service-application-into-a-different-tenant"></a>Implementar uma aplicação de serviço num inquilino diferente
 
@@ -51,5 +51,3 @@ Se a experiência pretendida não tiver como objetivo fornecer ao administrador 
 ## <a name="flow-2-abc-it-administrator-provides-the-key-to-the-coolapp-team"></a>Fluxo 2: o Administrador de TI da *ABC* fornece a chave à equipa da *CoolApp*
 
 Assim que o Administrador de TI da *ABC* criar o principal de serviço, conforme exemplificado na **Figura 1**, a *ABC* irá fornecer as informações à equipa da *CoolApp*. Em seguida, a equipa da *CoolApp* irá incorporar essas informações na aplicação da *CoolApp* para serem utilizadas pelo inquilino da *ABC*.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

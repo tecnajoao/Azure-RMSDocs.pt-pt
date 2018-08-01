@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 033504a26ae04bae3e4f1179503855bcfce63d73
-ms.sourcegitcommit: 0fda9ea4a7b91d4bb3a9e4f9d5cc4106ce1e2d43
+ms.openlocfilehash: d37f6fa84cc59645cb58213958f760a82fb1c810
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38973407"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375407"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Fase 2 da migração – configuração do AD RMS do lado do servidor
 
@@ -193,7 +193,5 @@ Remove-PSDrive MyRmsAdmin -force
 ```
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 Avance para a [fase 3 – configuração do lado do cliente](migrate-from-ad-rms-phase3.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

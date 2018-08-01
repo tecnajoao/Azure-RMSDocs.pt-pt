@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: cbb34f8417f3f4d63369399ffe962e7c957f65a6
-ms.sourcegitcommit: 3f524c5af39bee39169f86d9c4e72c661c960d83
+ms.openlocfilehash: cebfc618e4d1660bbae371d1f54f764b67f642b0
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37069923"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372789"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configurar regras de fluxo de correio Exchange Online etiquetas do Azure Information Protection
 
@@ -124,11 +124,10 @@ Esta etiqueta é utilizada para classificar e proteger os documentos que utiliza
 Para obter mais informações sobre a opção de criptografar, consulte [opção de criptografar apenas para e-mails](configure-usage-rights.md#encrypt-only-option-for-emails).
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 
 Para obter informações sobre como criar e configurar as etiquetas para utilizar com as regras de fluxo de correio Exchange Online, consulte [política de configuração do Azure Information Protection](../deploy-use/configure-policy.md).
 
 Além disso, para ajudar a classificar as mensagens de e-mail que contenham anexos, considere a utilização do Azure Information Protection seguintes [definição de política](configure-policy-settings.md): **para mensagens de e-mail com anexos, aplique uma etiqueta que corresponda a a classificação mais elevada desses anexos**.
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

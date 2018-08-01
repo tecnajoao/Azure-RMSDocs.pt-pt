@@ -14,12 +14,12 @@ ms.assetid: 8A13494E-C1D7-407D-BCD1-A406915EA578
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 9c142de580e6e77c0f1c84f12d60158f11751c15
-ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
+ms.openlocfilehash: afa2b49a8ff918a02852fba1b6947be2def43e23
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/29/2018
-ms.locfileid: "30258824"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375258"
 ---
 # <a name="overview"></a>Descrição geral
 
@@ -56,5 +56,3 @@ Utilize o guia de [Introdução](get-started.md) para iniciar o projeto de aplic
 * [Introdução](get-started.md)
 * [Azure AD Authentication Library](https://msdn.microsoft.com/library/jj573266.aspx)
 * [Conta do GitHub](https://github.com/AzureAD/)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

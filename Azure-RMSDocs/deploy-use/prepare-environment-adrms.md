@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 11ffa730-c5dc-4b6b-9c1e-c58eff8aafc2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 142f8b0683cbf18fb72cec303587481f3e9e3018
-ms.sourcegitcommit: 6bdc1e5c328ad3b63aeb6f60ba9905551261a7a1
+ms.openlocfilehash: c8557ebead5bf145960c77f36d56a769aaed651a
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37137819"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39373361"
 ---
 # <a name="preparing-the-environment-for-azure-rights-management-when-you-also-have-active-directory-rights-management-services-ad-rms"></a>Preparar o ambiente para o Azure Rights Management quando também tem os Serviços de Gestão de Direitos do Active Directory (AD RMS)
 
@@ -56,7 +56,7 @@ Se optar por migrar para o Azure Information Protection ou optar por aceitar as 
 Até o final de Fevereiro de 2018, as subscrições novas que incluem o Azure Information Protection agora ativar o serviço Azure Rights Management por predefinição. Se este serviço é ativado automaticamente para e também estiver a utilizar o Active Directory Rights Management Services (AD RMS), esta combinação não é compatível pelo que é importante que desative o serviço Azure Rights Management logo que possível. 
 
 ### <a name="step-1-deactivate-azure-rights-management"></a>Passo 1: Desativar o Azure Rights Management
-Utilize um dos seguintes procedimentos para desativar o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
+Utilize um dos seguintes procedimentos para desativar o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1.md)].
 
 > [!TIP]
 > Também pode utilizar o cmdlet Windows PowerShell, [Disable-Aadrm](/powershell/module/aadrm/disable-aadrm), para desativar o serviço Azure Rights Management.
@@ -127,5 +127,4 @@ Veja as orientações de migração: [migrar do AD RMS para o Azure Information 
 
 Depois de ativar o serviço Azure Rights Management como parte do processo de migração, pode configurar as etiquetas para a proteção de dados. No entanto, se migrar utilizadores em lotes, certifique-se de que as etiquetas que aplicam a proteção estão no âmbito apenas a utilizadores migrados.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

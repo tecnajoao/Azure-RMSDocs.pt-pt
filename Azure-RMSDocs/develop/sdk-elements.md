@@ -14,12 +14,12 @@ ms.assetid: B57AC6F3-733C-42A8-AF83-0E15FBF27C99
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: f79c0d60bf460c0f8cca68f6b0447303a383c686
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 2fe2745a0966c7ff6d9d0c9a2c1b3dd5d73156ac
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765787"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39369960"
 ---
 # <a name="development-environment-files"></a>Ficheiros do ambiente de desenvolvimento
 
@@ -48,5 +48,3 @@ O SDK Rights Management Services 2.1 inclui os seguintes ficheiros, instalados 
 |Msipc.lib|\lib\x64|Biblioteca de ligação ao utilizar o SDK RMS 2.1 para criar aplicações x64.|
 |Msipc_s.lib|\lib\x64|Fornece o ponto de entrada de [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) para aplicações x64.|
 |Genmanifest.exe|\tools|Gera um manifesto para utilização durante o desenvolvimento de uma aplicação com capacidade para RMS.|
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

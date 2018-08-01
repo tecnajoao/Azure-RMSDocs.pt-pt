@@ -12,16 +12,16 @@ ms.technology: techgroup-identity
 ms.assetid: c50a8cbb-d12f-4a0e-bc29-74c463e6ac3e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b3d0a0e26def8130253369abee6f3180b98aea70
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 11a54f80d9b6b71b19decd3871cd0d324de41caa
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30207279"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371871"
 ---
 # <a name="other-applications-that-support-the-rights-management-apis"></a>Outras aplicações que suportam as APIs de Rights Management
 
->*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilize as seguintes informações para compreender como o serviço Azure Rights Management do Azure Information Protection pode suportar outras aplicações para proteger os dados da sua organização.
 
@@ -29,8 +29,6 @@ Ao utilizar os SDKs do Azure Information Protection, os programadores internos p
 
 Da mesma forma, muitos fornecedores de software fornecem aplicações para proporcionar soluções de proteção de informações, também conhecidos como produtos de gestão de direitos de empresa (ERM). Um exemplo popular é um leitor de PDF que suporte o serviço Azure Rights Management para plataformas específicas. Pode utilizar a tabela em [Aplicações que suportam a proteção de dados do Azure Rights Management](../get-started/requirements-applications.md) para identificar as aplicações que suportam Rights Management (aplicações otimizadas por RMS) e, em seguida, efetuar uma pesquisa na Web para comprar ou transferir a aplicação.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 
 Para ver como outras aplicações e serviços suportam o serviço Azure Rights Management, consulte [Como as Aplicações Suportam o serviço Azure Rights Management](applications-support.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

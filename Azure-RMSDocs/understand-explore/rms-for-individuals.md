@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3885dfcdf9c5858fe6e3a43b3980e0862dc4cb51
-ms.sourcegitcommit: 85a56a778973be1c95df08bcd5b56e4f0bc12ad7
+ms.openlocfilehash: 43890652ab65ff55182bdf954cf3f1e473fea20a
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39104935"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39370538"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS para indivíduos e Azure Information Protection
 
@@ -64,4 +64,3 @@ Agora sua conta é criada, se lhe for pedido para iniciar sessão ler ficheiros 
 ## <a name="next-steps"></a>Passos Seguintes
 RMS para indivíduos é um exemplo de como utilizar a inscrição self-service, que é suportada pelo Azure Active Directory. Para obter mais informações sobre como isto funciona, consulte [O que é a Inscrição Self-Service para o Azure?](/active-directory/active-directory-self-service-signup) na documentação do Azure Active Directory.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

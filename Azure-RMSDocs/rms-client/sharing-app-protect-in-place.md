@@ -12,16 +12,16 @@ ms.technology: techgroup-identity
 ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0d819fd242e57402a790e9acb40ffa48eeb701b4
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: f687e82965d3a5b219d4fbb0f1054b72f9b0f7f6
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30206065"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39374323"
 ---
 # <a name="protect-a-file-on-a-device-protect-in-place-by-using-the-rights-management-sharing-application"></a>Proteger um ficheiro num dispositivo (proteger no local) através da aplicação de partilha Rights Management
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 Quando protege um ficheiro no local, este substitui o ficheiro original, que está desprotegido. Em seguida, pode deixar o ficheiro onde se encontra, copiá-lo para outra pasta ou dispositivo ou partilhar a pasta onde está e o ficheiro permanece protegido. Também pode anexar o ficheiro protegido a uma mensagem de e-mail, embora a forma recomendada para partilhar um ficheiro protegido por e-mail seja diretamente a partir do Explorador de Ficheiros ou de uma aplicação do Office (consulte [Proteger um ficheiro que partilha por e-mail ao utilizar a aplicação de partilha Rights Management](sharing-app-protect-by-email.md)).
 
@@ -64,5 +64,3 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 ## <a name="see-also"></a>Consulte Também
 [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

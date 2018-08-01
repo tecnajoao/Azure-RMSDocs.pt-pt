@@ -10,12 +10,12 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 994b9fb3db3c4a1616896ffac7fcd68b0aff7887
-ms.sourcegitcommit: c7e943700189eeaad3f4c919cc0fa3410fd4df5b
+ms.openlocfilehash: fca6e6e2ee2c229b718c74ee3c26a2644911a241
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39204463"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372313"
 ---
 # <a name="step-2-configure-the-azure-information-protection-policy"></a>Passo 2: Configurar a política do Azure Information Protection
 
@@ -161,5 +161,3 @@ Agora que conhece o que é a política predefinida e efetuou algumas alteraçõe
 >[!div class="step-by-step"]
 [&#171; Passo 1](infoprotect-tutorial-step1.md)
 [Passo 3 &#187;](infoprotect-tutorial-step3.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

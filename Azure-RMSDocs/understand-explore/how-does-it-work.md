@@ -12,18 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f9df2e96e4194e3bf9b1bdcb91bad09242ba07a9
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: ed2f66ba5fe953f2717d8c0ad9e0730ffbcc30fc
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444304"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371004"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Como funciona o Azure RMS? Os bastidores
 
->*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Um mais importante para compreender sobre como funciona o Azure RMS, é que este serviço de proteção de dados do Azure Information Protection, consulte ou armazenam os seus dados como parte do processo de proteção. Informações que protege nunca são enviadas para ou armazenadas no Azure, a menos que explicitamente armazene-o no Azure ou utilize outro serviço em nuvem que as armazene no Azure. O Azure RMS simplesmente torna os dados num documento ilegível para todas as pessoas que não sejam utilizadores e serviços autorizados:
+Uma coisa importante para entender sobre como funciona o Azure RMS, é que este serviço de proteção de dados do Azure Information Protection, veja ou armazenar seus dados como parte do processo de proteção. Informações que proteger nunca são enviadas para ou armazenadas no Azure, a menos que explicitamente armazená-la no Azure ou utilize outro serviço em nuvem que as armazene no Azure. O Azure RMS simplesmente torna os dados num documento ilegível para todas as pessoas que não sejam utilizadores e serviços autorizados:
 
 - Os dados são encriptados ao nível da aplicação e incluem uma política que define a utilização autorizada para esse documento.
 
@@ -40,7 +40,7 @@ Para obter uma descrição detalhada do processo, consulte a secção [Explicaç
 Para obter detalhes técnicos sobre os algoritmos e os comprimentos de chave utilizados pelo Azure RMS, consulte a secção seguinte.
 
 ## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Controlos criptográficos utilizados pelo Azure RMS: comprimentos de chave e algoritmos
-Mesmo que não precisa de saber em detalhe como funciona esta tecnologia, poderá ser-lhe pedido sobre os controlos criptográficos que utiliza. Por exemplo, para confirmar que a proteção de segurança padrão da indústria.
+Mesmo que não precise se conheça detalhadamente como funciona essa tecnologia, pode ser solicitado sobre os controlos criptográficos que utiliza. Por exemplo, para confirmar que a proteção de segurança padrão do setor.
 
 
 |Controlos criptográficos|Função no Azure RMS|
@@ -55,15 +55,15 @@ O controlo de 256 bits é utilizado pelo cliente do Azure Information Protectio
 
 ###### <a name="footnote-2"></a>Nota de rodapé 2
 
-2048 bits é o comprimento de chave quando o serviço Azure Rights Management está ativado. 1024 bits é suportada para os seguintes cenários opcionais:
+2048 bits é o comprimento da chave de quando o serviço Azure Rights Management está ativado. 1024 bits é suportada para os seguintes cenários opcionais:
 
-- Durante uma migração no local se o cluster de AD RMS está em execução no modo criptográfico 1.
+- Durante uma migração no local se o cluster de AD RMS estiver em execução no modo criptográfico 1.
 
-- Depois de uma migração no local, se o cluster de AD RMS estava a utilizar o Exchange Online.
+- Após uma migração no local, se o cluster de AD RMS estava a utilizar o Exchange Online.
 
-- Para obter chaves arquivadas que foram criadas no local antes da migração, para que o conteúdo que foi anteriormente protegido pelo AD RMS pode continuar a ser aberta pelo serviço Azure Rights Management após a migração.
+- Para obter chaves arquivadas que foram criadas no local antes da migração, para que o conteúdo que foi anteriormente protegido pelo AD RMS pode continuar a ser aberto pelo serviço Azure Rights Management após a migração.
 
-- Se os clientes optarem por trazer a sua própria chave (BYOK) através do Cofre de Chaves do Azure. O Azure Information Protection suporta comprimentos de chave de 1024 e 2048 bits. Para uma maior segurança, recomendamos um comprimento de chave de 2048 bits.
+- Se os clientes optarem por trazer a sua própria chave (BYOK) através do Cofre de Chaves do Azure. O Azure Information Protection suporta comprimentos de chave de 1024 bits e 2048 bits. Para uma maior segurança, recomendamos um comprimento de chave de 2048 bits.
 
 ### <a name="how-the-azure-rms-cryptographic-keys-are-stored-and-secured"></a>Como as chaves criptográficas do Azure RMS são armazenadas e protegidas
 
@@ -71,7 +71,7 @@ O Azure RMS cria uma chave AES única (a "chave de conteúdo") para cada documen
 
 A chave de conteúdo é protegida com a chave RSA da organização (a "chave de inquilino do Azure Information Protection") como parte da política no documento e a política também é assinada pelo autor do documento. Esta chave de inquilino é comum a todos os documentos e e-mails protegidos pelo serviço Azure Rights Management da organização e esta chave só poderá ser alterada por um administrador do Azure Information Protection se a organização estiver a utilizar uma chave de inquilino gerida pelo cliente, conhecida como BYOK (Bring Your Own Key – Traga a Sua Própria Chave). 
 
-Esta chave de inquilino está protegida nos serviços online da Microsoft, num ambiente altamente controlado e sob monitorização rigorosa. Quando utiliza uma chave de inquilino gerida pelo cliente (BYOK), esta segurança é melhorada pela utilização de uma matriz de módulos de segurança de hardware de alta gama (HSMs) em cada região do Azure, sem a capacidade para as chaves a ser extraído, exportação ou partilha em circunstância alguma. Para obter mais informações sobre a chave de inquilino e a BYOK, veja [Planear e implementar a sua chave de inquilino do Azure Information Protection](../plan-design/plan-implement-tenant-key.md).
+Esta chave de inquilino está protegida nos serviços online da Microsoft, num ambiente altamente controlado e sob monitorização rigorosa. Quando utiliza uma chave de inquilino gerida pelo cliente (BYOK), esta segurança é melhorada pela utilização de uma matriz de módulos de segurança de hardware de ponta (HSMs) em cada região do Azure, sem a capacidade para as chaves ser extraídos, exportação ou partilha em nenhuma circunstância. Para obter mais informações sobre a chave de inquilino e a BYOK, veja [Planear e implementar a sua chave de inquilino do Azure Information Protection](../plan-design/plan-implement-tenant-key.md).
 
 As licenças e certificados enviados para um dispositivo Windows estão protegidos pela chave privada do dispositivo do cliente, que é criada quando um utilizador usa o Azure RMS pela primeira vez num dispositivo. Por sua vez, esta chave privada está protegida com a DPAPI do cliente, que protege estes segredos com uma chave derivada da palavra-passe do utilizador. Em dispositivos móveis, as chaves são utilizadas apenas uma vez, pois como não estão armazenadas nos clientes, não precisam de ser protegidas no dispositivo. 
 
@@ -97,9 +97,9 @@ Quando a conta do utilizador está federada com o Azure Active Directory, esta a
 
 **O que acontece no passo 2**: após o utilizador ser autenticado, a ligação é automaticamente redirecionada para o inquilino do Azure Information Protection da organização, que emite certificados que permitem ao utilizador efetuar a autenticação no serviço Azure Rights Management para poder consumir conteúdos protegidos e proteger conteúdos offline.
 
-Uma destes certificados é o certificado de conta de direitos, muitas vezes, abreviado para RAC. Este certificado autentica o utilizador ao Azure Active Directory e é válido para o dia 31. O certificado é renovado automaticamente pelo cliente de RMS, fornecendo a conta de utilizador ainda está a ser Azure Active Directory e a conta está ativada. Este certificado não é configurável por um administrador. 
+Um destes certificados é o certificado de conta de direitos, frequentemente abreviado para RAC. Este certificado autentica o utilizador ao Azure Active Directory e é válido durante 31 dias. O certificado é renovado automaticamente pelo cliente do RMS, fornecendo a conta de utilizador ainda está no Azure Active Directory e a conta está ativada. Este certificado não é configurável por um administrador. 
 
-Uma cópia deste certificado é armazenada no Azure, para que o se o utilizador usar outro dispositivo, os certificados são criados utilizando as mesmas chaves.
+Uma cópia deste certificado é armazenada no Azure, para que se o utilizador usar outro dispositivo, os certificados sejam criados usando as mesmas chaves.
 
 ### <a name="content-protection"></a>Proteção de conteúdos
 Quando um utilizador protege um documento, o cliente de RMS efetua as seguintes ações num documento não protegido:
@@ -110,7 +110,7 @@ Quando um utilizador protege um documento, o cliente de RMS efetua as seguintes 
 
 ![Proteção de documentos pelo RMS – passo 2, a política é criada](../media/AzRMS_documentprotection2.png)
 
-**I que acontece no passo 2**: em seguida, o cliente de RMS cria um certificado que adiciona uma política para o documento, que inclui os [direito de utilização](../deploy-use/configure-usage-rights.md) para utilizadores e grupos e outras restrições, como a data de expiração. Estas definições podem ser definidas num modelo que um administrador anteriormente configurado ou especificado no momento, que o conteúdo é protegido (por vezes referido como uma "política ad hoc").   
+**I que acontece no passo 2**: em seguida, o cliente de RMS cria um certificado que adiciona uma política para o documento, que inclui os [direito de utilização](../deploy-use/configure-usage-rights.md) para utilizadores e grupos e outras restrições, como a data de expiração. Estas definições podem ser definidas num modelo que um administrador anteriormente configurado, ou ser especificada no momento que o conteúdo é protegido (por vezes referido como uma "política ad hoc").   
 
 O principal atributo do Azure AD utilizado para identificar os utilizadores e grupos selecionados é o atributo ProxyAddresses do Azure AD, que armazena todos os endereços de e-mail de um utilizador ou grupo. No entanto, se uma conta de utilizador não tiver nenhum valor no atributo ProxyAddresses do AD, o valor UserPrincipalName do utilizador é utilizado.
 
@@ -135,7 +135,7 @@ Se um utilizador quiser consumir um documento protegido, o cliente de RMS começ
 
 A chave de conteúdo encriptada novamente é incorporada numa licença de utilização encriptada com a lista de direitos de utilizador que, em seguida, é devolvida ao cliente de RMS.
 
-![Documento consumo pelo RMS – passo 3, documento é desencriptado e são impostos direitos](../media/AzRMS_documentconsumption3.png)
+![Documento consumo pelo RMS – passo 3, o documento é desencriptado e são impostos direitos](../media/AzRMS_documentconsumption3.png)
 
 **O que acontece no passo 3**: por fim, o cliente de RMS obtém a licença de utilização encriptada e desencripta a mesma com a sua própria chave privada de utilizador. Isto permite que o cliente de RMS desencripte o corpo do documento conforme necessário e o apresente no ecrã.
 
@@ -148,7 +148,7 @@ O cliente também desencripta a lista de direitos e passa-a para a aplicação, 
 ### <a name="variations"></a>Variações
 Os passos anteriores abrangem os cenários padrão, mas existem algumas variações:
 
-- **Proteção de e-mail**: ao Exchange Online e de encriptação de mensagens do Office 365 com as novas capacidades é utilizado para proteger mensagens de e-mail, a autenticação para consumo também pode utilizar Federação, com um fornecedor de identidade de redes sociais ou utilizando uma única código de acesso. Em seguida, os fluxos do processo são muito semelhantes, exceto que o consumo de conteúdos acontece lado do serviço numa sessão de browser web através de uma cópia da mensagem de e-mail de saída temporariamente em cache.
+- **Proteção de e-mail**: ao Exchange Online e encriptação de mensagens do Office 365 com os novos recursos é utilizado para proteger mensagens de e-mail, a autenticação para consumo também pode utilizar o federação com um fornecedor de identidade social ou por meio de uma única código de acesso. Em seguida, os fluxos do processo são muito semelhantes, exceto pelo fato de consumo de conteúdo do lado do serviço acontece numa sessão de navegador da web através de uma cópia temporariamente em cache da mensagem de e-mail de saída.
 
 - **Dispositivos móveis**: quando os dispositivos móveis protegem ou consomem ficheiros com o serviço Azure Rights Management, os fluxos do processo são muito mais simples. Os dispositivos móveis não passam pelo processo de inicialização do utilizador efetuado em primeiro lugar, pois cada transação (para proteger ou consumir conteúdos) é independente. À semelhança dos computadores Windows, os dispositivos móveis ligam-se ao serviço Azure Rights Management e efetuam a autenticação. Para proteger os conteúdos, os dispositivos móveis submetem uma política e o serviço Azure Rights Management envia-lhes uma licença de publicação e uma chave simétrica para proteger o documento. Para consumir conteúdos, quando os dispositivos móveis se ligam ao serviço Azure Rights Management e efetuam a autenticação, os mesmos enviam a política do documento para o serviço Azure Rights Management e pedem uma licença de utilização para consumir o documento. Em resposta, o serviço Azure Rights Management envia as chaves e restrições necessárias para os dispositivos móveis. Ambos os processos utilizam o TLS para proteger a troca de chaves e outras comunicações.
 
@@ -156,11 +156,11 @@ Os passos anteriores abrangem os cenários padrão, mas existem algumas variaç�
 
 - **Proteção genérica (.pfile)**: quando o serviço Azure Rights Management protege genericamente um ficheiro, o fluxo é basicamente o mesmo para a proteção de conteúdos com a exceção do facto de ser o cliente de RMS a criar uma política que concede todos os direitos. Quando o ficheiro é consumido, é desencriptado antes de ser transmitido para a aplicação de destino. Este cenário permite-lhe proteger todos os ficheiros, mesmo que não suportem o RMS originalmente.
 
-- **PDF protegido (.ppdf)**: quando o serviço Azure Rights Management protege originalmente um ficheiro do Office, também cria uma cópia desse ficheiro e protege-o da mesma forma. A única diferença é que a cópia do ficheiro está no formato de ficheiro PPDF, que o visualizador do cliente do Azure Information Protection e a aplicação de partilha RMS sabem como abrir no modo só de visualização. Este cenário permite-lhe enviar anexos protegidos por e-mail, sabendo que o destinatário num dispositivo móvel pode sempre lê-los, mesmo se o dispositivo móvel não tem uma aplicação que suporta nativamente protegidos ficheiros do Office.
+- **PDF protegido (.ppdf)**: quando o serviço Azure Rights Management protege originalmente um ficheiro do Office, também cria uma cópia desse ficheiro e protege-o da mesma forma. A única diferença é que a cópia do ficheiro está no formato de ficheiro PPDF, que o visualizador do cliente do Azure Information Protection e a aplicação de partilha RMS sabem como abrir no modo só de visualização. Este cenário permite-lhe enviar anexos protegidos por e-mail, sabendo que o destinatário num dispositivo móvel pode sempre lê-los, mesmo que o dispositivo móvel não tem uma aplicação que suporta nativamente protegidos de arquivos do Office.
 
-- **Contas Microsoft**: Azure Information Protection podem autorizar endereços de correio eletrónico para o consumo de quando estes são autenticadas com uma conta Microsoft. No entanto, nem todas as aplicações podem abrir conteúdo protegido, quando uma conta Microsoft é utilizada para autenticação. [Obter mais informações](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).
+- **As contas Microsoft**: Azure Information Protection podem autorizar os endereços de e-mail para consumo, quando os utilizadores são autenticados com uma conta Microsoft. No entanto, nem todos os aplicativos podem abrir conteúdo protegido, quando uma conta Microsoft é utilizada para autenticação. [Obter mais informações](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 
 Para saber mais sobre o serviço Azure Rights Management, utilize os outros artigos na secção **Compreender e Explorar**, por exemplo [Como as aplicações suportam o serviço Azure Rights Management](applications-support.md) para saber como é que as suas aplicações existentes se podem integrar com o serviço Azure Rights Management para fornecer uma solução de proteção de informações. 
 
@@ -170,5 +170,3 @@ Se estiver pronto para iniciar a implementação da proteção de dados na sua o
 
 > [!TIP]
 > Para obter ajuda e informações adicionais, utilize os recursos e ligações em [Informações e suporte do Azure Information Protection](../get-started/information-support.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -1,6 +1,6 @@
 ---
 title: Preços e restrições de BYOK – AIP
-description: Compreender as restrições quando utilizar chaves gerida pelo cliente (conhecido como "traga a sua própria chave", ou BYOK) com o Azure Information Protection.
+description: Compreender as restrições ao utilizar chaves geridas pelo cliente (conhecido como "traga a sua própria chave" ou BYOK) com o Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -12,27 +12,27 @@ ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f5380dc364255fd085c82fd9c0a834afea368c97
-ms.sourcegitcommit: 10f530fa1a43928581da4830a32f020c96736bc8
+ms.openlocfilehash: c40e1b628c4a6160d6ab665293c37b9cefa3fe0c
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34402154"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375261"
 ---
 # <a name="byok-pricing-and-restrictions"></a>Preços e restrições de BYOK
 
->*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
-As organizações que tenham uma subscrição que inclui o Azure Information Protection podem configurar o seu inquilino do Azure Information Protection para utilizar uma chave gerida pelo cliente (BYOK) e [registar a sua utilização](../deploy-use/log-analyze-usage.md). 
+As organizações que tenham uma subscrição que inclui o Azure Information Protection podem configurar o respetivo inquilino do Azure Information Protection para utilizar uma chave gerida pelo cliente (BYOK) e [registar a sua utilização](../deploy-use/log-analyze-usage.md). 
 
-A chave deve ser armazenada no Cofre de chaves do Azure, o que necessita de uma subscrição do Azure. Para utilizar uma chave protegida por HSM, tem de utilizar a camada de serviços do Azure Premium do Cofre de chave. A utilização de uma chave no Cofre de Chaves do Azure implica uma cobrança mensal. Para obter mais informações, veja a [página de Preços do Azure Key Vault](https://azure.microsoft.com/pricing/details/key-vault/).
+A chave deve ser armazenada no Azure Key Vault, que requer uma subscrição do Azure. Para utilizar uma chave protegida por HSM, tem de utilizar a camada de serviços do Azure Key Vault Premium. A utilização de uma chave no Cofre de Chaves do Azure implica uma cobrança mensal. Para obter mais informações, veja a [página de Preços do Azure Key Vault](https://azure.microsoft.com/pricing/details/key-vault/).
 
-Quando utiliza o Cofre de chaves do Azure para a sua chave de inquilino do Azure Information Protection, recomendamos que utilize um cofre de chaves dedicado para esta chave para ajudar a garantir que é utilizada pelo apenas o serviço Azure Rights Management. Esta configuração assegura que as chamadas por outros serviços não resultar exceder o [os limites de serviço](/azure/key-vault/key-vault-service-limits) para o Cofre de chaves, que pode limitar os tempos de resposta para o serviço Azure Rights Management.  
+Ao utilizar o Azure Key Vault para a sua chave de inquilino do Azure Information Protection, recomendamos que utilize um cofre de chaves dedicado para esta chave para ajudar a garantir que é utilizado pelo apenas o serviço Azure Rights Management. Esta configuração garante que as chamadas por outros serviços não implicam em que exceda o [limites de serviço](/azure/key-vault/key-vault-service-limits) para o Cofre de chaves, que pode limitar os tempos de resposta para o serviço Azure Rights Management.  
 
-Além disso, uma vez cada serviço que utiliza o Cofre de chaves do Azure normalmente tem requisitos de gestão de chaves diferentes, recomendamos que uma subscrição do Azure separada para este Cofre de chaves ajudar a salvaguardar contra uma configuração incorreta. 
+Além disso, uma vez cada serviço que utiliza o Azure Key Vault normalmente tem requisitos de gestão de chaves diferentes, recomendamos uma subscrição separada do Azure para este Cofre de chaves para o ajudar a proteger contra uma configuração incorreta. 
 
-No entanto, se pretender partilhar uma subscrição do Azure com outros serviços que utilizam o Cofre de chaves do Azure, certifique-se de que a subscrição partilhas de um conjunto comum de administradores. Esta precaução significa que os administradores que utilizam essa subscrição têm uma boa compreensão de todas as chaves que têm acesso, para que fiquem menor probabilidade de misconfigure-los. Por exemplo, uma partilhado subscrição do Azure se os administradores para a sua chave de inquilino do Azure Information Protection são as pessoas mesmas que administrar chaves para a chave de cliente do Office 365 e CRM Online. Mas se a administradores que gerem as chaves para a chave de cliente ou CRM Online não são as pessoas mesmas que administrar a sua chave de inquilino do Azure Information Protection, em seguida, recomendamos que não partilha a sua subscrição do Azure para o Azure Information Protection.
+No entanto, se pretender partilhar uma subscrição do Azure com outros serviços que utilizam o Azure Key Vault, certifique-se de que a subscrição partilhas de um conjunto comum de administradores. Esta precaução significa que os administradores que utilizam a mesma tem uma boa compreensão de todas as chaves que têm acesso, para que fiquem menos provável que misconfigure-los. Por exemplo, uma partilhado subscrição do Azure se os administradores para a sua chave de inquilino do Azure Information Protection são as mesmas pessoas que administrar as chaves para a chave de cliente do Office 365 e CRM Online. Mas se a administradores que gerem as chaves para a chave de cliente ou CRM Online não são as mesmas pessoas que administrar a sua chave de inquilino do Azure Information Protection, em seguida, recomendamos que não partilham sua subscrição do Azure para o Azure Information Protection.
 
 ## <a name="benefits-of-using-azure-key-vault"></a>Vantagens de utilizar o Azure Key Vault
 
@@ -46,7 +46,7 @@ Outras vantagens de utilizar o Azure Key Vault para a sua chave de inquilino do 
 
 - O Azure Key Vault proporciona uma separação de funções, como melhor prática de segurança comprovada. Os administradores do Azure Information Protection podem concentrar-se na gestão da proteção e classificação de dados e os administradores do Azure Key Vault podem concentrar-se na gestão de chaves de encriptação e todas as políticas especiais que possam ser necessárias para a segurança ou conformidade.
 
-- Algumas organizações têm restrições relativamente ao local em que a chave mestra tem de ser armazenada. O Azure Key Vault fornece um elevado nível de controlo sobre o local onde armazena a chave mestra, uma vez que o serviço se encontra disponível em muitas regiões do Azure. Atualmente, pode escolher entre 28 regiões do Azure e que pode esperar aumentar este número. Para obter mais informações, consulte [produtos disponíveis por região] (https://azure.microsoft.com/regions/services/) página no site do Azure.
+- Algumas organizações têm restrições relativamente ao local em que a chave mestra tem de ser armazenada. O Azure Key Vault fornece um elevado nível de controlo sobre o local onde armazena a chave mestra, uma vez que o serviço se encontra disponível em muitas regiões do Azure. Atualmente, pode escolher a partir de 28 regiões do Azure, e pode esperar que este número aumente. Para obter mais informações, consulte os [produtos disponíveis por região] (https://azure.microsoft.com/regions/services/) página no site do Azure.
 
 Além da gestão de chaves, o Azure Key Vault proporciona aos seus administradores de segurança a mesma experiência em gestão para armazenar, aceder e gerir certificados e segredos (por exemplo, palavras-passe) de outros serviços e aplicações que utilizam encriptação. 
 
@@ -54,14 +54,13 @@ Para mais informações sobre o Azure Key Vault, consulte [O que é o Azure Key 
 
 ## <a name="restrictions-when-using-byok"></a>Restrições de utilização de BYOK
 
-O BYOK e o registo de utilização funcionam perfeitamente com todas as aplicações que se integra com o serviço Azure Rights Management, que é utilizado pelo Azure Information Protection. Isto inclui serviços em nuvem como o SharePoint Online, servidores que executam o Exchange e SharePoint que utilizam o serviço Azure Rights Management utilizando o conector RMS e aplicações de cliente, tais como o Office 2016 ou Office 2013 no local a pedido. Obter registos de utilização de chave, independentemente da que aplicação fizer pedidos para o serviço Azure Rights Management.
+O BYOK e o registo de utilização funcionam perfeitamente com todas as aplicações que se integra com o serviço Azure Rights Management, que é utilizado pelo Azure Information Protection. Isto inclui serviços cloud, como o SharePoint Online, servidores que executam o Exchange e SharePoint que utilizam o serviço Azure Rights Management ao utilizar o conector RMS e aplicações de cliente, como o Office 2016 e Office 2013 no local a pedido. Obter registos de utilização de chave, independentemente do que o aplicativo faz solicitações para o serviço Azure Rights Management.
 
-Se anteriormente tiver ativado a IRM do Exchange Online ao importar o domínio de publicação fidedigno (TPD) do Azure RMS, siga as instruções em [configurar novas capacidades de encriptação de mensagens do Office 365 desenvolvidas Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) para ativar as novas funcionalidades no Exchange Online, que suportam a utilizar uma BYOK do Azure Information Protection.
+Se anteriormente tiver ativado o IRM do Exchange Online através da importação de seu domínio de publicação fidedigno (TPD) do Azure RMS, siga as instruções em [configurar novas capacidades de encriptação de mensagens do Office 365 criadas com base no Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) para permitir que os novos recursos no Exchange Online, que suportam a utilização de BYOK do Azure Information Protection.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 
 Se tiver tomado a decisão de gerir a sua própria chave, aceda a [implementar a sua chave de inquilino do Azure Information Protection](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
 
-Se tiver decidido manter a configuração predefinida onde a Microsoft gere a chave, consulte de inquilino de [passos](plan-implement-tenant-key.md#next-steps) secção de planear e implementar o seu artigo de chave de inquilino do Azure Information Protection.
+Se tiver decidido manter-se com a configuração padrão em que a Microsoft gere o inquilino chave, consulte a [próximos passos](plan-implement-tenant-key.md#next-steps) secção de planear e implementar o seu artigo de chave de inquilino do Azure Information Protection.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

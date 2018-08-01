@@ -12,38 +12,38 @@ ms.technology: techgroup-identity
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 62f854264f48b51e6177c033d95dabaf75e2dc5d
-ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
+ms.openlocfilehash: 07da614bf7971ee4ef89ec9ec3830be188483201
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31009122"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371769"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Fase 3 da migração – configuração do lado do cliente
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilize as seguintes informações para a Fase 3 da migração do AD RMS para o Azure Information Protection. Estes procedimentos incluem o passo 7 de [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-## <a name="step-7-reconfigure-windows-computers-to-use-azure-information-protection"></a>Passo 7: Reconfigure os computadores com o Windows para utilizar o Azure Information Protection
+## <a name="step-7-reconfigure-windows-computers-to-use-azure-information-protection"></a>Passo 7: Reconfigure os computadores Windows para utilizar o Azure Information Protection
 
-Para computadores com Windows que utilizam aplicações de ambiente de trabalho do Office 2016 clique para execução:
+Para computadores Windows que utilizam aplicações de ambiente de trabalho de clique-e-Use do Office 2016:
 
-- Pode reconfigurar a estes clientes para utilizarem o Azure Information Protection utilizando o redirecionamento de DNS. Este é o método preferencial de migração de cliente, porque é o mais simples. No entanto, este método está restrito a aplicações de ambiente de trabalho clique para execução do Office 2016 (ou posterior) para computadores Windows.
+- Pode reconfigurar a estes clientes para utilizarem o Azure Information Protection com o redirecionamento de DNS. Este é o método preferencial de migração de clientes, porque é a forma mais simples. No entanto, esse método é restrito a aplicações de ambiente de trabalho clique-e-Use do Office 2016 (ou posterior) para computadores Windows.
     
-    Este método requer a criação de um novo SRV registar e conjunto um NTFS neguem a permissão para os utilizadores no ponto final publicação AD RMS.
+    Este método requer que crie um novo SRV registe e conjunto um NTFS neguem a permissão para os utilizadores no ponto de final de publicação de AD RMS.
 
-- Para computadores com Windows que não utilizam o Office 2016 clique para execução:
+- Para computadores Windows que não usam o Office 2016 click-to-run:
     
-    Não é possível utilizar o redirecionamento de DNS e, em vez disso, tem de utilizar as edições de registo. Se tiver uma mistura de Office 2016 e outras versões do Office, pode utilizar este método único para todos os computadores Windows ou uma combinação de redirecionamento de DNS e editar o registo. 
+    Não é possível utilizar o redirecionamento de DNS e em vez disso, tem de utilizar edições de registo. Se tiver uma mistura de Office 2016 e outras versões do Office, pode utilizar este método único para todos os computadores Windows ou uma combinação de redirecionamento de DNS e editar o registo. 
     
-    As alterações de registo que são efetuadas mais fácil para si, editar e implementação de scripts que pode transferir. 
+    As alterações de registo são mais fácil para editando e implantação de scripts que pode baixar. 
 
-Consulte as secções seguintes para obter mais informações sobre como reconfigurar clientes do Windows.
+Veja as secções seguintes para obter mais informações sobre como reconfigurar os clientes do Windows.
 
-## <a name="client-reconfiguration-by-using-dns-redirection"></a>Reconfiguração de cliente através da utilização de redirecionamento de DNS
+## <a name="client-reconfiguration-by-using-dns-redirection"></a>Reconfiguração de clientes com o redirecionamento de DNS
 
-Este método é adequado apenas para clientes do Windows que executem aplicações de ambiente de trabalho do Office 2016 (ou posterior) clique para execução. 
+Este método só é adequado para clientes de Windows que executam aplicações de ambiente de trabalho de clique-e-Use do Office 2016 (ou posterior). 
 
 1. Crie um registo SRV de DNS com o seguinte formato:
     
@@ -51,11 +51,11 @@ Este método é adequado apenas para clientes do Windows que executem aplicaçõ
     
     Para  *\<cluster AD RMS >*, especifique o FQDN do cluster do AD RMS. Por exemplo, **rmscluster.contoso.com**.
     
-    Em alternativa, se tiver apenas um cluster de AD RMS no domínio, pode especificar apenas o nome de domínio do cluster do AD RMS. No nosso exemplo, que seria **contoso.com**. Quando especificar o nome de domínio neste registo, o redirecionamento é aplicada a todos os clusters de AD RMS nesse domínio.
+    Em alternativa, se tiver apenas um cluster de AD RMS nesse domínio, pode especificar apenas o nome de domínio do cluster do AD RMS. No nosso exemplo, isso seria **contoso.com**. Quando especificar o nome de domínio neste registo, o redirecionamento aplica-se a todos os clusters do AD RMS nesse domínio.
     
-    O  *\<porta >* número será ignorado.
+    O  *\<porta >* número é ignorado.
     
-    Para  *\<o seu URL de inquilino\>*, especificar a sua própria [URL do serviço Azure Rights Management para o seu inquilino](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
+    Para  *\<o URL de inquilino\>*, especificar a sua própria [URL do serviço Azure Rights Management para o seu inquilino](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
     
     Se utilizar a função de servidor DNS no Windows Server, pode utilizar a tabela seguinte como exemplo como especificar as propriedades de registo SRV na consola do Gestor de DNS.
     
@@ -65,81 +65,79 @@ Este método é adequado apenas para clientes do Windows que executem aplicaçõ
     |**Serviço**|_rmsredir|  
     |**Protocolo**|_http|  
     |**prioridade**|0|  
-    |**Peso**|0|  
+    |**peso**|0|  
     |**Número de porta**|80|  
     |**Anfitrião que oferece este serviço**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
 
-2. Defina uma permissão recusar para os utilizadores do Office 2016 no ponto final publicação AD RMS:
+2. Defina uma permissão de negação para os utilizadores do Office 2016 no ponto de final de publicação de AD RMS:
 
-    a. Dos seus servidores do AD RMS no cluster, inicie a consola do Gestor de serviços de informação Internet (IIS).
+    a. Dos servidores do AD RMS no cluster, inicie a consola do Gestor de serviços de informação Internet (IIS).
 
     b. Navegue para **Web Site predefinido** > **wmcs** > **licenciamento** > **licensing.asmx**
 
-    c. Clique com botão direito **licensing.asmx** > **propriedades** > **editar**
+    c. Com o botão direito **licensing.asmx** > **propriedades** > **editar**
 
-    d. No **permissões para licensing.asmx** caixa de diálogo, selecione **utilizadores** se pretende definir o redirecionamento para todos os utilizadores ou clique em **adicionar** e, em seguida, especifique um grupo que contém os utilizadores que pretende redirecionar.
+    d. Na **permissões para licensing.asmx** caixa de diálogo, selecione **utilizadores** se pretender definir o redirecionamento para todos os utilizadores ou clique em **Add** e, em seguida, especifique um grupo que contém os utilizadores que pretende redirecionar.
     
-    Mesmo se todos os seus utilizadores estão a utilizar o Office 2016, poderá preferir inicialmente especificar um subconjunto de utilizadores para uma migração faseada.
+    Mesmo que todos os seus utilizadores estão a utilizar o Office 2016, poderá preferir inicialmente especificar um subconjunto de utilizadores para uma migração faseada.
     
-    e. Para o grupo selecionado, selecione **negar** para o **leitura & executar** e **leitura** permissão e, em seguida, clique em **OK** duas vezes.
+    e. Para o seu grupo selecionado, selecione **negar** para o **leitura & Execute** e o **leitura** permissão e clique em **OK** duas vezes.
 
-    f. Para confirmar que esta configuração está a funcionar conforme esperado, tente estabelecer ligação com o ficheiro licensing.asmx diretamente a partir de um browser. Deverá ver a seguinte mensagem de erro, o que aciona o cliente com o Office 2016 para procurar o registo SRV:
+    f. Para confirmar que esta configuração está a funcionar conforme esperado, tente ligar-se para o ficheiro de licensing.asmx diretamente a partir de um browser. Deverá ver a seguinte mensagem de erro, que dispara o cliente a executar o Office 2016 para procurar o registo SRV:
     
-    **Mensagem de erro 401.3: não tem permissões para visualizar este diretório ou página com as credenciais fornecidas (acesso negado devido a listas de controlo de acesso).**
+    **Chybová zpráva 401.3: não tem permissões para visualizar este diretório ou página com as credenciais que forneceu (acesso negado devido a listas de controlo de acesso).**
 
 
 ## <a name="client-reconfiguration-by-using-registry-edits"></a>Reconfiguração de clientes com edições de registo
 
-Este método é adequado para todos os clientes Windows e deve ser utilizado se não executar o Office 2016, mas uma versão anterior. Este método utiliza dois scripts de migração para reconfigurar clientes de AD RMS:
+Esse método é adequado para todos os clientes do Windows e deve ser utilizado se não executam o Office 2016, mas uma versão anterior. Este método utiliza dois scripts de migração para reconfigurar clientes de AD RMS:
 
 - Migrate-Client.cmd
 
 - User.cmd migrar
 
-O script de configuração de cliente (migrar Client.cmd) configura as definições de nível de computador no registo, o que significa que tem de ser executada no contexto de segurança que pode efetuar essas alterações. Isto significa habitualmente um dos seguintes métodos:
+O script de configuração de cliente (Migrate-Client.cmd) configura definições ao nível do computador no Registro, o que significa que deve ser executado num contexto de segurança que pode efetuar essas alterações. Isso normalmente significa que um dos seguintes métodos:
 
-- Utilize a política de grupo para executar o script como um script de arranque do computador.
+- Utilize a política de grupo para executar o script como um script de inicialização do computador.
 
-- Utilize a instalação de software de política de grupo para atribuir o script para o computador.
+- Utilize a instalação de software da diretiva de grupo para atribuir o script no computador.
 
-- Utilize uma solução de implementação de software para implementar o script para os computadores. Por exemplo, utilizar o System Center Configuration Manager [pacotes e programas](/sccm/apps/deploy-use/packages-and-programs). Nas propriedades do pacote e programa, em **modo de execução**, especifique que o script é executado com permissões administrativas no dispositivo. 
+- Utilize uma solução de implantação de software para implementar o script nos computadores. Por exemplo, utilizar o System Center Configuration Manager [pacotes e programas](/sccm/apps/deploy-use/packages-and-programs). Nas propriedades do pacote e programa, sob **modo de execução**, especifique que o script é executado com permissões administrativas no dispositivo. 
 
-- Utilize um script de início de sessão se o utilizador possui privilégios de administrador local.
+- Utilize um script de início de sessão se o utilizador tiver privilégios de administrador local.
 
-O script de configuração de utilizador (migrar User.cmd) configura as definições de nível de utilizador e limpa o arquivo de licença de cliente. Isto significa que este script tem de executar no contexto do utilizador real. Por exemplo:
+O script de configuração de utilizador (Migrate-User.cmd) configura as definições de nível de usuário e limpa o arquivo de licença de cliente. Isso significa que este script deve ser executado no contexto de utilizador reais. Por exemplo:
 
 - Utilize um script de início de sessão.
 
-- Utilize a instalação de software de política de grupo para publicar o script para o utilizador executar.
+- Utilize a instalação de software da diretiva de grupo para publicar o script para o utilizador executar.
 
-- Utilize uma solução de implementação de software para implementar o script para os utilizadores. Por exemplo, utilizar o System Center Configuration Manager [pacotes e programas](/sccm/apps/deploy-use/packages-and-programs). Nas propriedades do pacote e programa, em **modo de execução**, especifique que o script é executado com as permissões do utilizador. 
+- Utilize uma solução de implantação de software para implementar o script para os utilizadores. Por exemplo, utilizar o System Center Configuration Manager [pacotes e programas](/sccm/apps/deploy-use/packages-and-programs). Nas propriedades do pacote e programa, sob **modo de execução**, especifique que o script é executado com as permissões do utilizador. 
 
 - Pedir ao utilizador para executar o script quando iniciar a sessão aos respetivos computadores.
 
-Os dois scripts incluem um número de versão e não volte a executar até que este número de versão é alterado. Isto significa que pode deixar os scripts em vigor até que a migração estar concluída. No entanto, se efetuar alterações para os scripts de que pretende que sejam computadores e utilizadores a voltar a executar nos respetivos computadores Windows, atualize a seguinte linha em ambos os scripts para um valor superior:
+Os dois scripts incluem um número de versão e não volte a executar até que este número de versão é alterado. Isso significa que pode deixar os scripts em vigor até que a migração estiver concluída. No entanto, se fizer alterações aos scripts de que pretende que computadores e utilizadores para voltar a executar em seus computadores Windows, atualize a seguinte linha em ambos os scripts para um valor mais alto:
 
     SET Version=20170427
 
-O script de configuração do utilizador foi concebido para ser executada após o script de configuração de cliente e utiliza o número de versão nesta verificação. Interrompe se não tiver executado o script de configuração de cliente com a mesma versão. Esta verificação garante que os dois scripts executadas na sequência correta. 
+O script de configuração do utilizador foi concebido para ser executado após o script de configuração do cliente e utiliza o número de versão nesta verificação. Ele será interrompido se não tiver executado o script de configuração de cliente com a mesma versão. Esta verificação assegura que os dois scripts executado na sequência correta. 
 
-Quando não é possível migrar todos os seus clientes do Windows de uma só vez, execute os seguintes procedimentos para lotes de clientes. Para cada utilizador com um computador Windows que pretende migrar no seu lote, adicione o utilizador ao grupo **AIPMigrated** que criou anteriormente.
+Quando não é possível migrar todos os seus clientes de Windows de uma só vez, execute os seguintes procedimentos em lotes de clientes. Para cada utilizador com um computador Windows que pretende migrar no seu lote, adicione o utilizador ao grupo **AIPMigrated** que criou anteriormente.
 
 ### <a name="modifying-the-scripts-for-registry-edits"></a>Modificar os scripts para edições de registo
 
-1. Regressar para os scripts de migração, **migrar Client.cmd** e **migrar User.cmd**, que anteriormente extraiu quando tiver transferido estes scripts no [fase de preparação](migrate-from-ad-rms-phase1.md#step-2-prepare-for-client-migration).
+1. Voltar para os scripts de migração **Client.cmd para migrar** e **User.cmd para migrar**, que extraiu anteriormente quando transferiu esses scripts no [fase de preparação](migrate-from-ad-rms-phase1.md#step-2-prepare-for-client-migration).
 
-2.  Siga as instruções em **migrar Client.cmd** para modificar o script para que este contém o URL do serviço do seu inquilino do Azure Rights Management e também os nomes de servidor para o AD RMS cluster URL de licenciamento de extranet e da intranet URL de licenciamento. Em seguida, aumentar a versão do script, que foi explicada anteriormente. É uma boa prática para controlar as versões de script para utilizar a data de hoje no seguinte formato: AAAAMMDD
+2.  Siga as instruções em **migrar Client.cmd** para modificar o script para que ele contém o URL de serviço do Azure Rights Management do seu inquilino, e também os nomes de servidores para o AD RMS cluster URL de licenciamento na extranet e da intranet URL de licenciamento. Em seguida, incremente a versão do script, o que foi explicada anteriormente. Uma boa prática para controlo de versões de script é usar a data de hoje no seguinte formato: AAAAMMDD
     
     > [!IMPORTANT]
     > Tal como anteriormente, tenha cuidado para não introduzir espaços adicionais antes ou depois dos seus endereços.
     > 
-    > Além disso, se os seus servidores do AD RMS utilizarem certificados de servidor SSL/TLS, verifique se os valores de URL de licenciamento incluem o número de porta **443** na cadeia. Por exemplo: https://rms.treyresearch.net:443/_wmcs/licensing. Pode encontrar estas informações na consola de serviços de gestão de direitos do Active Directory quando clicar no nome do cluster e ver o **os detalhes do Cluster** informações. Se vir o número de porta 443 incluído no URL, inclua este valor quando modificar o script. Por exemplo, https://rms.treyresearch.net:**443**. 
+    > Além disso, se os seus servidores do AD RMS utilizarem certificados de servidor SSL/TLS, verifique se os valores de URL de licenciamento incluem o número de porta **443** na cadeia. Por exemplo: https://rms.treyresearch.net:443/_wmcs/licensing. Pode encontrar estas informações na consola de serviços de gestão de direitos do Active Directory quando clica no nome do cluster e veja a **detalhes do Cluster** informações. Se vir o número de porta 443 incluído no URL, inclua este valor quando modificar o script. Por exemplo, https://rms.treyresearch.net:**443**. 
     
     Se precisar de obter o URL do serviço Azure Rights Management para *&lt;YourTenantURL&gt;*, veja novamente [Para identificar o URL do serviço Azure Rights Management](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
 
-3. Utilizar as instruções no início deste passo, a configurar os métodos de implementação de script para executar **migrar Client.cmd** e **migrar User.cmd** nos computadores de cliente do Windows que são utilizados pelo membros do grupo AIPMigrated. 
+3. Usando as instruções no início deste passo, a configurar seus métodos de implementação de script para executar **Client.cmd para migrar** e **migrar User.cmd** nos computadores cliente Windows que são utilizados pela membros do grupo AIPMigrated. 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 Para continuar a migração, veja a [fase 4 – configuração de serviços de suporte](migrate-from-ad-rms-phase4.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -12,12 +12,12 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 6c3669c1ada24afcf3b9ec48ea5bb9c38939b47e
-ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
+ms.openlocfilehash: 194e676807145dffdf326fe782f4b4051876552d
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/29/2018
-ms.locfileid: "30258780"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371854"
 ---
 # <a name="security-best-practices-for-azure-information-protection"></a>Melhores Práticas de Segurança do Azure Information Protection
 
@@ -87,12 +87,10 @@ O sistema AIP organiza os direitos em alguns agrupamentos. Para obter mais infor
 O AIP permite que um utilizador desencripte informações ou não; as informações não têm qualquer proteção inerente. Se um utilizador tiver o direito de desencriptar informações, o AIP permite que o faça e a aplicação é responsável por gerir ou proteger essas informações depois de estarem a salvo. Uma aplicação é responsável por gerir o seu ambiente e interface de modo a impedir a utilização não autorizada de informações. Por exemplo, poderá desativar os botões **Imprimir** e **Copiar** se uma licença conceder apenas o direito REPRODUZIR. O seu conjunto de aplicações de teste deve confirmar se a aplicação atua corretamente em todos os direitos de licença que reconhece.
 
 ### <a name="minimum-standard"></a>Padrão mínimo
-- A implementação de cliente de XrML v.1.2 direitos deve ser consistente com as definições destes direitos, conforme descrito nas especificações XrML, que estão disponíveis no site XrML Web (http://www.xrml.org). Quaisquer direitos que sejam específicos da sua aplicação têm de ser definidos para todas as entidades que têm um interesse na mesma.
+- A implementação de cliente direitos de XrML v.1.2 deve ser consistente com as definições desses direitos, conforme descrito nas especificações de XrML, que estão disponíveis no site do XrML (http://www.xrml.org). Quaisquer direitos que sejam específicos da sua aplicação têm de ser definidos para todas as entidades que têm um interesse na mesma.
 - O seu conjunto de aplicações de teste e o seu processo de teste devem confirmar se a aplicação executa corretamente os direitos que suporta e que não atua com base em direitos não suportados.
 - Se estiver a criar uma aplicação de publicação, tem de disponibilizar informações que expliquem que direitos intrínsecos são e não são suportados pela aplicação e como esses direitos devem ser interpretados. Além disso, a interface de utilizador deve explicar claramente ao utilizador final quais são as implicações de cada direito concedido ou negado a uma determinada informação.
 
 - Quaisquer direitos que sejam abstraídos por inclusão em novos direitos implementados por uma aplicação têm de ser mapeados para a nova terminologia. Por exemplo, um novo direito denominado GESTOR pode incluir como direitos abstraídos os direitos IMPRIMIR, COPIAR e EDITAR.
 Padrão recomendado    Nenhum neste momento.
 Padrão preferencial  Nenhum neste momento.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

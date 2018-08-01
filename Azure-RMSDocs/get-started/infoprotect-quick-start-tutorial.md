@@ -10,12 +10,12 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: 997c4c873eb7c9340fb765f513c1e06cd3725fdd
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: bf1285c86429c367da5a3bc39c1a527ef8c7297d
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30205436"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39373775"
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Tutorial de início rápido do Azure Information Protection 
 
@@ -30,23 +30,22 @@ Se tiver alguma dificuldade em concluir este tutorial ou em utilizar o Azure Inf
 ## <a name="prerequisites"></a>Pré-requisitos 
 Para concluir este tutorial, precisa de ter o seguinte:
 
-- Uma subscrição que inclui o Azure Information Protection para classificação, etiquetagem e proteção. Este tutorial inclui algumas das funcionalidades avançadas, tais como a classificação automática de dados com recomendações de utilizador e o site de controlo de documentos. Confirme se tem uma subscrição para suportar estas funcionalidades para este tutorial. Para obter mais informações, consulte a lista de funcionalidades do [preços do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection) página.
+- Uma subscrição que inclui o Azure Information Protection para classificação, etiquetagem e proteção. Este tutorial inclui algumas das funcionalidades avançadas, tais como a classificação automática de dados com recomendações de utilizador e o site de controlo de documentos. Confirme se tem uma subscrição para suportar estas funcionalidades para este tutorial. Para obter mais informações, consulte a lista de recursos a partir da [preços do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection) página.
     
     Se não tiver uma subscrição para estas funcionalidades, pode inscrever-se numa versão de avaliação gratuita do [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7).
     
   > [!TIP] 
   > Se precisar de pedir uma subscrição, faça o seguinte procedimento com antecedência porque este processo, por vezes, pode demorar algum tempo a concluir.
 
-- Uma conta de administrador global para iniciar sessão no portal do Azure para ativar a proteção e configure a política do Azure Information Protection. Em alternativa, pode utilizar uma conta que tenha uma das seguintes funções administrativas: [proteção de informações de administrador ou administrador de segurança](/azure/active-directory/active-directory-assign-admin-roles-azure-portal). Esta conta também tem de ter um endereço de e-mail e um serviço de e-mail de trabalho, como o Exchange Online.
+- Uma conta de administrador global para iniciar sessão no portal do Azure para ativar a proteção e configurar a política do Azure Information Protection. Em alternativa, pode utilizar uma conta que tenha qualquer uma das seguintes funções administrativas: [administrador do Information Protection ou o administrador de segurança](/azure/active-directory/active-directory-assign-admin-roles-azure-portal). Esta conta também tem de ter um endereço de e-mail e um serviço de e-mail de trabalho, como o Exchange Online.
 
 - Um computador que execute o Windows (no mínimo o Windows 7 com Service Pack 1) e que tenha instalado o Office 365 ProPlus com aplicações da versão 2016 ou 2013, o Office Professional Plus 2016, o Office Professional Plus 2013 com Service Pack 1 ou o Office Professional Plus 2010 com Service Pack 2. 
     
-    Para utilizar estas aplicações com o Azure Information Protection, tem de ter um [subscrição do Office 365 que inclua a utilizar o serviço Azure Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Por exemplo, do Office 365 E3 ou Office 365 E5 subscrição. Utilizar uma licença desta subscrição, têm de ser assinados às suas aplicações do Office.
+    Para utilizar estas aplicações com o Azure Information Protection, tem de ter uma [subscrição do Office 365 que inclui a utilizar o serviço Azure Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Por exemplo, do Office 365 E3 subscrição ou do Office 365 E5. Utilizar uma licença desta subscrição, precisa ser conectado às suas aplicações do Office.
 
 Vamos começar.
 
 >[!div class="step-by-step"]
 [&#187; Passo 1](infoprotect-tutorial-step1.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

@@ -12,16 +12,16 @@ ms.technology: techgroup-identity
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 54e66d8ffde33e3e73b24e39fa609686fa2601b0
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 6953d72b3114c00a25c135754d9eea0db6563cb1
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30204803"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372256"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Cliente do Azure Information Protection: instalação e configuração para clientes
 
->*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Os computadores que executam o Office 2010 requerem o cliente do Azure Information Protection (ou a aplicação de partilha Rights Management) para se autenticarem no serviço Azure Rights Management e no serviço Azure Information Protection. Este cliente também é recomendado para todos os computadores Windows e dispositivos iOS e Android que suportam o serviço Azure Rights Management e o Azure Information Protection. 
 
@@ -41,6 +41,5 @@ Para instalar o cliente do Azure Information Protection para estas plataformas m
 
 **Se tiver o Microsoft Intune**: uma vez que a aplicação Azure Information Protection inclui o Microsoft Intune App Software Development Kit, quando os dispositivos iOS e Android forem inscritos pelo Intune, poderá implementar e gerir o Visualizador do Azure Information Protection para esses dispositivos. Para obter mais informações, consulte [Configurar e implementar políticas de gestão de aplicações móveis na consola do Microsoft Intune](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console) na documentação do Intune. Para o Passo 2, utilize as instruções para publicar uma aplicação gerida por política.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

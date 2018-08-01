@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 43fade205d4d518f6fc8f5dd7c7280a80d2c7eae
-ms.sourcegitcommit: 1bc4c9d6e773809893d02a6abb09aeb4ae28cb03
+ms.openlocfilehash: 6dcc5aaa5ff2a5a765091a56847358f302082b16
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "34562182"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39369746"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurar a política do Azure Information Protection
 
@@ -161,8 +161,7 @@ Utilize as seguintes informações para ajudar a configurar a política do Azure
 
 - [Como configurar etiquetas para diferentes idiomas](configure-policy-languages.md)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 
 Para obter um exemplo de como personalizar a política predefinida e ver o comportamento resultante de uma aplicação do Office, experimente o [Tutorial de início rápido do Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -1,6 +1,6 @@
 ---
 title: Configuração do Linux
-description: Várias versões dos sistemas operativos Linux podem agora utilizar o Rights Management SDK 4. x.
+description: Várias versões dos sistemas operativos Linux podem agora utilizar o Rights Management SDK 4.x.
 keywords: ''
 author: lleonard-msft
 ms.author: alleonar
@@ -14,16 +14,16 @@ ms.assetid: A348541C-17E0-4024-BF97-84B0099B0E69
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: e6ae24f35aa03996bd26ff891a9cb5a14d751d44
-ms.sourcegitcommit: 2733b1df2ebdda02b60d9471db29e545552f99ff
+ms.openlocfilehash: 0487620c83b5e99b9f54a28c0415afec6ee6ac3f
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/15/2018
-ms.locfileid: "29349785"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375441"
 ---
 # <a name="linux-setup"></a>Configuração do Linux
 
-Várias versões dos sistemas operativos Linux podem agora efetuar a utilizar o SDK Microsoft Rights Management 4. x para ativar a proteção de informações integrada na respetiva aplicação utilizando o Azure Active Directory Rights Management (AAD RM).
+Várias versões dos sistemas operativos Linux podem agora fazer o uso do SDK do Microsoft Rights Management 4.x para ativar a proteção de informações integrada na respetiva aplicação utilizando o Azure Active Directory Rights Management (AAD RM).
 
 - [Sistemas operativos suportados](#supported-operating-systems)
 - [Como criar e utilizar](#how-to-build-and-use)
@@ -35,17 +35,15 @@ Várias versões dos sistemas operativos Linux podem agora efetuar a utilizar o 
 - OpenSUSE 13.2
 - CentOS 7
 
-Bibliotecas e amostras foram compiladas com êxito no Windows e no OSX, bem como, mas estas não são totalmente suportadas neste momento.
+Bibliotecas e amostras tem foram compiladas com êxito no Windows e no OSX, bem, mas estas não são totalmente suportadas neste momento.
  
 ## <a name="how-to-build-and-use"></a>Como criar e utilizar
 
 - [Como criar bibliotecas e aplicações de exemplo](https://github.com/AzureAD/rms-sdk-for-cpp/wiki/How-to-Build)
 - [Como instalar e utilizar a aplicação em sistemas de utilizador](https://github.com/AzureAD/rms-sdk-for-cpp/wiki/How-to-Use)
 
-## <a name="see-also"></a>Veja Também
+## <a name="see-also"></a>Consulte Também
 
 - [Introdução](get-started.md)
 - [Novidades](release-notes.md)
 - [Conceitos e termos de programador](core-concepts.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

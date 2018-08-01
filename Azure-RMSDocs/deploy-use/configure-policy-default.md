@@ -10,12 +10,12 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: 57c7321f9bcff12ff0afe4030038495ad4668020
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: e8830047e57352d71810d43315ca033ec4ae91e5
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30208061"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371429"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Política do Azure Information Protection predefinida
 
@@ -31,31 +31,31 @@ Pode usar os seguintes valores como referência para voltar à política predefi
 
 Esta versão da política predefinida é de 31 de Julho de 2017.
 
-Esta política predefinida é criada quando o serviço Azure Rights Management está ativado, que é o caso dos novos inquilinos a partir de Fevereiro de 2018. Para obter mais informações, consulte o anúncio de mensagem de blogue [melhoramentos para a proteção da pilha no Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection).
+Esta política predefinida é criada quando o serviço Azure Rights Management está ativado, que é o caso dos novos inquilinos a partir de Fevereiro de 2018. Para obter mais informações, consulte o anúncio do blogue [melhorias para a proteção da pilha no Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection).
 
-Esta política predefinida também é criada se tiver manualmente [ativar o serviço](activate-service.md) antes da política foi criada. 
+Esta política predefinida também é criada, se tiver manualmente [ativar o serviço](activate-service.md) antes da política foi criada. 
 
-Se o serviço não foi ativado, a política predefinida não configurar a proteção para os sublabels seguintes:
+Se o serviço não foi ativado, a política predefinida não configurar a proteção para as subetiquetas seguintes:
 
 - **Confidencial\Todos os Funcionários**
 
-- **Confidencial \ destinatários apenas**
+- **Confidencial \ apenas Recetores**
 
 - **Altamente Confidencial\Todos os Funcionários** 
 
-- **Altamente confidenciais \ destinatários apenas** 
+- **Altamente confidencial \ apenas Recetores** 
 
-Quando estes sublabels não são automaticamente configuradas para proteção, a política predefinida permanece o mesmo que o [anterior política predefinida](#default-policy-before-july-31-2017).
+Quando estas subetiquetas não são automaticamente configuradas para proteção, a política predefinida permanece igual a [política de padrão anterior](#default-policy-before-july-31-2017).
 
-Quando a proteção é aplicada para a **todos os funcionários** sublabels, a proteção é configurada utilizando os modelos predefinidos que são automaticamente convertidos para etiquetas no portal do Azure. Para obter mais informações sobre estes modelos, consulte [configurar e gerir modelos do Azure Information Protection](configure-policy-templates.md).
+Quando a proteção é aplicada para o **todos os funcionários** subetiquetas, a proteção é configurada utilizando os modelos predefinidos que são automaticamente convertidos em etiquetas no portal do Azure. Para obter mais informações sobre estes modelos, consulte [configurando e gerenciando modelos do Azure Information Protection](configure-policy-templates.md).
 
-A partir de 30 de Agosto de 2017, esta versão da política predefinida inclui multilingues versões dos nomes de etiqueta e descrições. 
+A partir de 30 de Agosto de 2017, esta versão da política predefinida inclui as versões de vários idiomas dos nomes de etiqueta e descrições. 
 
-#### <a name="more-information-about-the-recipients-only-sublabel"></a>Obter mais informações sobre o sublabel apenas os destinatários
+#### <a name="more-information-about-the-recipients-only-sublabel"></a>Obter mais informações sobre a subetiqueta apenas os destinatários
 
-Os utilizadores veem apenas esta etiqueta no Outlook. Se não vir esta etiqueta no Word, Excel, PowerPoint ou do Explorador de ficheiros. 
+Os utilizadores veem esta etiqueta no Outlook apenas. Eles não veem esta etiqueta no Word, Excel, PowerPoint, ou no Explorador de ficheiros. 
 
-Quando os utilizadores selecionarem esta etiqueta, a Outlook opção não reencaminhar é aplicada automaticamente a mensagem de correio eletrónico. Os destinatários que os utilizadores especifiquem não é possível reencaminhar o e-mail e não é possível copiar ou imprimir os conteúdos ou guarde os anexos.
+Quando os utilizadores selecionarem esta etiqueta, a opção do Outlook não reencaminhar é automaticamente aplicada à mensagem de e-mail. Os destinatários que os usuários especifiquem não é possível reencaminhar o e-mail e não é possível copiar ou imprimir o conteúdo ou guardar os anexos.
 
 
 ### <a name="labels"></a>Etiquetas
@@ -69,22 +69,22 @@ Quando os utilizadores selecionarem esta etiqueta, a Outlook opção não reenca
 |Altamente Confidencial|Dados empresariais altamente confidenciais que iriam causar danos à empresa se fossem partilhados com pessoas não autorizadas. Os exemplos incluem informações dos funcionários e clientes, palavras-passe, código de origem e relatórios financeiros previamente anunciados.|**Ativado**: ligado <br /><br />**Cor**: vermelho<br /><br />**Marcas visuais**: desligado<br /><br />**Condições**: nenhuma<br /><br />**Proteção**: nenhuma|
 
 
-### <a name="sublabels"></a>Sublabels
+### <a name="sublabels"></a>Subetiquetas
 
 |Etiqueta|Descrição|Definições|
 |-------------------------------|---------------------------|-----------------|
-|Confidencial\Todos os Funcionários|Dados confidenciais que necessitam de proteção, o que permite que todos os funcionários tenham todas as permissões. Os proprietários de dados podem monitorizar e revogar os conteúdos.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (documentos e e-mails)<br /><br />Classificado como Confidencial<br /><br />**Condições**: nenhuma<br /><br />**Proteção**: Azure (chave de nuvem) [[1]](#footnote-1)|
+|Confidencial\Todos os Funcionários|Dados confidenciais que necessitam de proteção, o que permite que todos os funcionários tenham todas as permissões. Os proprietários de dados podem monitorizar e revogar os conteúdos.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (documentos e e-mails)<br /><br />Classificado como Confidencial<br /><br />**Condições**: nenhuma<br /><br />**Proteção**: o Azure (chave da cloud) [[1]](#footnote-1)|
 |Confidencial\Todos (não protegidos)|Dados que não necessitam de proteção. Utilize esta opção com cuidado e com uma justificação comercial adequada.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (documentos e e-mails)<br /><br />Classificado como Confidencial <br /><br />**Condições**: nenhuma<br /><br />**Proteção**: nenhuma|
-|Confidencial \ destinatários apenas|Dados confidenciais que requer a proteção e que podem ser visualizados, apenas os destinatários.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (e-mail)<br /><br />Classificado como Confidencial <br /><br />**Condições**: nenhuma<br /><br />**Proteção**: defina definidas pelo utilizador as permissões (pré-visualização), no Outlook aplicam não reencaminhar|
-|Altamente Confidencial\Todos os Funcionários|Dados altamente confidenciais que fornecem a todos os funcionários permissões de visualização, edição e resposta para estes conteúdos. Os proprietários de dados podem monitorizar e revogar os conteúdos.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (documentos e e-mails)<br /><br />Classificado como Altamente Confidencial<br /><br />**Condições**: nenhuma<br /><br />**Proteção**: Azure (chave de nuvem) [[2]](#footnote-2)|
+|Confidencial \ apenas Recetores|Dados confidenciais que requerem proteção e que podem ser visualizados apenas por destinatários.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (e-mail)<br /><br />Classificado como Confidencial <br /><br />**Condições**: nenhuma<br /><br />**Proteção**: definir permissões de definidas pelo utilizador (pré-visualização), no Outlook aplicam-se não reencaminhar|
+|Altamente Confidencial\Todos os Funcionários|Dados altamente confidenciais que fornecem a todos os funcionários permissões de visualização, edição e resposta para estes conteúdos. Os proprietários de dados podem monitorizar e revogar os conteúdos.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (documentos e e-mails)<br /><br />Classificado como Altamente Confidencial<br /><br />**Condições**: nenhuma<br /><br />**Proteção**: o Azure (chave da cloud) [[2]](#footnote-2)|
 |Altamente Confidencial\Todos (não protegidos)|Dados que não necessitam de proteção. Utilize esta opção com cuidado e com uma justificação comercial adequada.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (documentos e e-mails)<br /><br />Classificado como Altamente Confidencial<br /><br />**Condições**: nenhuma<br /><br />**Proteção**: nenhuma|
-|Altamente confidenciais \ destinatários apenas|Dados altamente confidenciais que requer a proteção e que podem ser visualizados, apenas os destinatários.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (e-mail)<br /><br />Classificado como Altamente Confidencial <br /><br />**Condições**: nenhuma<br /><br />**Proteção**: defina definidas pelo utilizador as permissões (pré-visualização), no Outlook aplicam não reencaminhar|
+|Altamente confidencial \ apenas Recetores|Dados altamente confidenciais que requerem proteção e que podem ser visualizados apenas por destinatários.|**Ativado**: ligado <br /><br />**Marcas visuais**: rodapé (e-mail)<br /><br />Classificado como Altamente Confidencial <br /><br />**Condições**: nenhuma<br /><br />**Proteção**: definir permissões de definidas pelo utilizador (pré-visualização), no Outlook aplicam-se não reencaminhar|
 
 ###### <a name="footnote-1"></a>Nota de rodapé 1
-As permissões de proteção correspondem aos existentes no [modelo predefinido](configure-policy-templates.md#default-templates), **confidencial \ todos os funcionários**.
+As permissões de proteção correspondem à [modelo predefinido](configure-policy-templates.md#default-templates), **confidencial \ todos os funcionários**.
 
 ###### <a name="footnote-2"></a>Nota de rodapé 2 
-As permissões de proteção correspondem aos existentes no [modelo predefinido](configure-policy-templates.md#default-templates), **altamente confidenciais \ todos os funcionários**.
+As permissões de proteção correspondem à [modelo predefinido](configure-policy-templates.md#default-templates), **altamente confidencial \ todos os funcionários**.
 
 
 ### <a name="information-protection-bar"></a>Barra Information Protection
@@ -108,7 +108,7 @@ As permissões de proteção correspondem aos existentes no [modelo predefinido]
 
 ## <a name="default-policy-before-july-31-2017"></a>Política predefinida antes de 31 de Julho de 2017
 
-Tenha em atenção que as descrições nesta política se referem aos dados que necessitam de proteção, bem como à monitorização e revogação dos mesmos. A política não configura esta proteção para estas etiquetas, por isso tem de efetuar passos adicionais para cumprir esta descrição. Por exemplo, configure a etiqueta para aplicar a proteção ou utilizar uma solução de (DLP) de prevenção de perda de dados. Antes de poder controlar e revogar um documento, utilizando o site de controlo de documentos, o documento tem de ser protegido pelo serviço Azure Rights Management e controlado pela pessoa que o documento protegido. 
+Tenha em atenção que as descrições nesta política se referem aos dados que necessitam de proteção, bem como à monitorização e revogação dos mesmos. A política não configura esta proteção para estas etiquetas, por isso tem de efetuar passos adicionais para cumprir esta descrição. Por exemplo, configure a etiqueta para aplicar a proteção ou utilizar uma solução de (DLP) de prevenção de perda de dados. Antes de poder controlar e revogar um documento através do site de controlo de documentos, o documento tem de ser protegido pelo serviço Azure Rights Management e controlado pela pessoa que protegeu o documento. 
 
 
 ### <a name="labels"></a>Etiquetas
@@ -122,7 +122,7 @@ Tenha em atenção que as descrições nesta política se referem aos dados que 
 |Altamente Confidencial|Dados empresariais altamente confidenciais que iriam causar danos à empresa se fossem partilhados com pessoas não autorizadas. Os exemplos incluem informações dos funcionários e clientes, palavras-passe, código de origem e relatórios financeiros previamente anunciados.|**Ativado**: ligado <br /><br />**Cor**: vermelho<br /><br />**Marcas visuais**: desligado<br /><br />**Condições**: nenhuma<br /><br />**Proteção**: nenhuma|
 
 
-### <a name="sublabels"></a>Sublabels
+### <a name="sublabels"></a>Subetiquetas
 
 |Etiqueta|Descrição|Definições|
 |-------------------------------|---------------------------|-----------------|
@@ -162,7 +162,7 @@ Tenha em atenção que as descrições nesta política se referem aos dados que 
 |Secreto|Estes dados incluem informações altamente confidenciais para as empresas e têm de ser protegidas. A exposição de dados Secretos a utilizadores não autorizados pode causar graves danos na organização. Exemplos de informações secretas são informações de identificação pessoal, registos de clientes, código de origem e relatórios financeiros previamente anunciados.|**Ativado**: ligado <br /><br />**Cor**: vermelho<br /><br />**Marcas visuais**: rodapé (documentos e e-mails):<br /><br /> Sensibilidade: secreto<br /><br />**Condições**: nenhuma<br /><br />**Proteção**: nenhuma|
 
 
-### <a name="sublabels"></a>Sublabels
+### <a name="sublabels"></a>Subetiquetas
 
 |Etiqueta|Descrição|Definições|
 |-------------------------------|---------------------------|-----------------|
@@ -187,8 +187,6 @@ Tenha em atenção que as descrições nesta política se referem aos dados que 
 |Fornecer um URL personalizado para a página Web "Mais informações" do cliente do Azure Information Protection|Em Branco|
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 
 Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy). 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

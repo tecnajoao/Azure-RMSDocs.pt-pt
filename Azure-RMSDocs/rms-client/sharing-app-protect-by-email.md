@@ -12,16 +12,16 @@ ms.technology: techgroup-identity
 ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 71bc303aaadf6856cce2f63db0acf5280fbe172b
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: a8ab30fc9b4f8775ef2bb9503c620a8811b18b8d
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30206500"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39373690"
 ---
 # <a name="protect-a-file-that-you-share-by-email-by-using-the-rights-management-sharing-application"></a>Proteger um ficheiro que partilha por e-mail ao utilizar a aplicação de partilha Rights Management
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 Quando protege um ficheiro que partilha por e-mail, cria uma nova versão do ficheiro original. O ficheiro original permanece desprotegido e a nova versão é protegida e automaticamente anexada a uma mensagem de e-mail que envia em seguida.
 
@@ -88,7 +88,5 @@ Para obter exemplos de como pode utilizar a aplicação de partilha Rights Manag
 
 -   [O que pretende fazer?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## <a name="see-also"></a>Veja Também
+## <a name="see-also"></a>Consulte Também
 [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -14,12 +14,12 @@ ms.assetid: 70E10936-7953-49B0-B0DC-A5E7C4772E60
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 1caac2301fd41930856e13b634ead28f7335728f
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: a16425b891329e1cb7b8e2179c05bd0e8d6c3a93
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27764603"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372874"
 ---
 # <a name="how-to-use-document-tracking"></a>Como: utilizar o controlo de documentos
 
@@ -53,5 +53,3 @@ Selecione o tipo de política (modelo ou ad-hoc):
 -   Por fim, chame o método de registo de plataforma para o controlo de documentos
   - Android – [UserPolicy.registerForDocTracking assíncrono](https://msdn.microsoft.com/library/mt573699.aspx) ou [UserPolicy.registerForDocTracking síncrono](https://msdn.microsoft.com/library/mt631387.aspx)
   - iOS – [MSUserPolicy.registerForDocTracking](https://msdn.microsoft.com/library/mt573694.aspx)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

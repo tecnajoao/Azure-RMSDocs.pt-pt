@@ -14,12 +14,12 @@ ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 84b0f1ec7e5ef647161c5e44059140ea59ffab77
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: d9dce9a1335bfa8b6f26f43cedebe0297a4d79c0
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765804"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39373105"
 ---
 # <a name="file-api-configuration"></a>Configuração da API de Ficheiros
 
@@ -31,7 +31,7 @@ A API de Ficheiros fornece dois tipos de proteção: a proteção nativa e a pro
 -   **Proteção nativa** – o ficheiro é protegido para um formato do AD RMS baseado no respetivo tipo de MIME (extensão de nome de ficheiro).
 -   **Proteção PFile** – o ficheiro é protegido para o formato de Ficheiro Protegido (PFile) do AD RMS.
 
-Para obter mais informações sobre os formatos de ficheiro suportados, consulte **detalhes de suporte de ficheiros de API de ficheiros** neste artigo.
+Para obter mais informações sobre formatos de ficheiro suportados, consulte **detalhes de suporte do arquivo de API de ficheiro** neste artigo.
 
 ## <a name="keykey-value-types-and-descriptions"></a>Tipos e descrições de Chaves/Valores de Chave
 
@@ -49,11 +49,11 @@ As secções seguintes descrevem as chaves e os valores de chave que controlam a
 
 **Descrição**: especifica as informações de configuração de uma extensão de ficheiro específica. Por exemplo, TXT, JPG, entre outras.
 
-- O caráter universal, ' *', é permitido. No entanto, uma definição para uma extensão específica tem precedência sobre a definição de caráter universal. O caráter universal não afeta as definições de ficheiros do Microsoft Office. Estas devem ser explicitamente desativadas por tipo de ficheiro.
+- O caráter universal, ' *', é permitido. No entanto, uma definição para uma extensão específica tem prioridade sobre a definição de caráter universal. O caráter universal não afeta as definições de ficheiros do Microsoft Office. Estas devem ser explicitamente desativadas por tipo de ficheiro.
 - Para especificar os ficheiros que não tenham uma extensão, utilize '.'
-- Não especifique o '.' caráter quando especificar a chave para uma extensão de ficheiro específico Por exemplo, utilizar `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\TXT` para especificar definições para os ficheiros. txt. (Não utilize `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\.TXT`).
+- Não especifique o '.' quando especificar a chave para uma extensão de ficheiro específicos; de carateres Por exemplo, utilizar `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\TXT` para especificar as definições de ficheiros. txt. (Não utilize `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\.TXT`).
 
-Para especificar o comportamento de proteção, defina o **encriptação** valor na chave. Se o valor de **Encriptação** não for definido, é aplicado o comportamento predefinido para o tipo de ficheiro.
+Para especificar o comportamento de proteção, defina o **Encryption** valor na chave. Se o valor de **Encriptação** não for definido, é aplicado o comportamento predefinido para o tipo de ficheiro.
 
 
 ### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\<EXT>\Encryption*`
@@ -67,7 +67,7 @@ Para especificar o comportamento de proteção, defina o **encriptação** valor
 > [!Note]
 > Esta definição não tem efeito na desencriptação. Qualquer ficheiro encriptado, seja ele encriptado com a proteção nativa ou Pfile, pode ser desencriptado, desde que o utilizador tenha o direito **EXTRAIR**.
 
-- **Nativa**: a encriptação nativa é utilizada. Para ficheiros do Office, o ficheiro encriptado terá a mesma extensão que o ficheiro original. Por exemplo, um ficheiro com a extensão de ficheiro .docx será encriptado para um ficheiro com uma extensão .docx. Para outros ficheiros que podem ter a proteção nativa aplicada, o ficheiro será encriptado para um ficheiro com uma extensão no formato p*zzz*, em que *zzz* é a extensão do ficheiro original. Por exemplo, os ficheiros. txt serão encriptados para um ficheiro com extensão. ptxt. Uma lista de extensões de ficheiro que podem ter a proteção nativa aplicada segue.
+- **Nativa**: a encriptação nativa é utilizada. Para ficheiros do Office, o ficheiro encriptado terá a mesma extensão que o ficheiro original. Por exemplo, um ficheiro com a extensão de ficheiro .docx será encriptado para um ficheiro com uma extensão .docx. Para outros ficheiros que podem ter a proteção nativa aplicada, o ficheiro será encriptado para um ficheiro com uma extensão no formato p*zzz*, em que *zzz* é a extensão do ficheiro original. Por exemplo, os arquivos. txt serão encriptados para um ficheiro com extensão. ptxt. Segue uma lista de extensões de ficheiro que podem ter a proteção nativa aplicada.
 
 - **Pfile**: a encriptação PFile é utilizada. O ficheiro encriptado terá .pfile anexado à extensão original. Por exemplo, depois da encriptação, um ficheiro .txt terá uma extensão .txt.pfile.
 
@@ -151,5 +151,3 @@ HKEY_LOCAL_MACHINE
 
 - [Notas do programador](developer-notes.md)
 - [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

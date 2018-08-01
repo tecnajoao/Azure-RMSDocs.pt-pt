@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 683609cd2da2d13e11f92599813753a2a4747bd2
-ms.sourcegitcommit: 0fda9ea4a7b91d4bb3a9e4f9d5cc4106ce1e2d43
+ms.openlocfilehash: 4ab4ff7e0e22cfd477a17052a1d46efa2ecb9f25
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38973376"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39374148"
 ---
 # <a name="migration-phase-1---preparation"></a>Fase 1 da migração – preparação
 
@@ -149,7 +149,6 @@ Comandos do PowerShell para executar individualmente ou num script
 Após executar estes comandos para o Exchange Online ou o Exchange no local, se a sua implementação do Exchange tiver sido configurada para suportar conteúdo protegido pelo AD RMS, também suportará conteúdo protegido pelo Azure RMS após a migração. A implementação do Exchange continuará a utilizar o AD RMS para suportar conteúdo protegido até um passo posterior na migração.
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 Avance para a [fase 2 – configuração do lado do servidor](migrate-from-ad-rms-phase2.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

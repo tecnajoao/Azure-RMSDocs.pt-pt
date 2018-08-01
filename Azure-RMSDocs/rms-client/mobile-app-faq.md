@@ -14,12 +14,12 @@ ms.custom: askipteam
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 190fce3f1725775ae699dbc523a810dc79b96f88
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: ba2a9b5a491d6527f15661d88e7f6db539d619c5
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444253"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375458"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>FAQs sobre a aplicação Microsoft Azure Information Protection para iOS e Android
 
@@ -55,15 +55,15 @@ No entanto, se não quiser esperar, pode utilizar as seguintes instruções para
 
 ## <a name="what-credentials-should-i-use-to-sign-in-to-this-app"></a>Que credenciais devo utilizar para iniciar sessão nesta aplicação?
 
-Se a sua organização já tem AD RMS no local (com a extensão de dispositivo móvel) ou utiliza o serviço Azure Rights Management, utilize as suas credenciais de trabalho para iniciar sessão. 
+Se a sua organização já tiver AD RMS no local (com a extensão do dispositivo móvel) ou utiliza o serviço Azure Rights Management, utilize as suas credenciais de trabalho para iniciar sessão. 
 
-Se o seu endereço de e-mail pessoal foi utilizado para proteger o ficheiro, utilize as credenciais de um livre [conta Microsoft](https://signup.live.com) para iniciar sessão.
+Se seu endereço de e-mail pessoal foi usado para proteger o ficheiro, utilize as credenciais de um gratuito [conta Microsoft](https://signup.live.com) para iniciar sessão.
 
 ## <a name="can-i-sign-up-for-the-free-account-with-my-personal-email-address-such-as-a-hotmail-or-gmail-account"></a>Posso inscrever-me na conta gratuita com o meu endereço de e-mail pessoal, como uma conta do Hotmail ou Gmail?
 
-Sim, quando aplicam-se numa conta Microsoft, pode especificar o endereço de correio eletrónico Hotmail ou Gmail ou qualquer outro endereço de correio eletrónico que é proprietário. 
+Sim, quando aplica-se para uma conta Microsoft, pode especificar o endereço de e-mail do Hotmail ou Gmail, ou qualquer outro endereço de e-mail que é proprietário. 
 
-No entanto, embora este Visualizador pode abrir ficheiros protegidos com esta conta, nem todas as aplicações podem abrir conteúdos protegidos quando uma conta Microsoft é utilizada para autenticação. [Mais informações](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+No entanto, embora este Visualizador pode abrir ficheiros protegidos com esta conta, nem todos os aplicativos podem abrir conteúdo protegido quando uma conta Microsoft é utilizada para autenticação. [Mais informações](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 ## <a name="which-file-extensions-can-i-open-with-this-app"></a>Que extensões de ficheiro posso abrir com esta aplicação?
 
@@ -78,6 +78,4 @@ Na aplicação, aceda a **Definições** > **Enviar feedback**.
 
 ## <a name="my-question-has-not-been-answeredwhat-should-i-do"></a>A minha pergunta não foi respondida – o que posso fazer?
 
-Após a sua pergunta nos nossos [Yammer site](https://www.yammer.com/AskIPTeam).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
+Publique sua pergunta no nosso [site do Yammer](https://www.yammer.com/AskIPTeam).

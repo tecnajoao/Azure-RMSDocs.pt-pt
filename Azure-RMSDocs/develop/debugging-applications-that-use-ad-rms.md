@@ -14,12 +14,12 @@ ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: adab957779dac2baec22cb73b060f9a8a0075a1a
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: e778b734e3fb41477f3991c843f02621139b27d9
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765447"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375124"
 ---
 # <a name="how-to-debug-a-rights-enabled-application"></a>Procedimentos: depurar uma aplicação com permissão para direitos
 
@@ -65,5 +65,3 @@ Por exemplo, o comando seguinte ativa o registo de eventos MSIPC e define o nív
 **wevtutil sl Microsoft-RMS-MSIPC/Debug /e:true /l:4**
 
 **Nota** No Visualizador de Eventos do Windows, no menu **Ver**, selecione **Mostrar Registos Analíticos e de Depuração** para tornar visível o registo de depuração MSIPC.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

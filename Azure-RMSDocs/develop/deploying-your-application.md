@@ -14,12 +14,12 @@ ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 300fb1d14bc4eda93b0e40ffbd9e6c2329c88517
-ms.sourcegitcommit: e21fb3385de6f0e251167e5dc973e90f0e7f2bcf
+ms.openlocfilehash: 1e69ab449b3be6d3a081b6b5ca16767a69ee54da
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/01/2018
-ms.locfileid: "28908090"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39373503"
 ---
 # <a name="deploy-into-production"></a>Implementar em produção
 
@@ -38,7 +38,7 @@ No corpo do e-mail, inclua:
 - Nome próprio e apelido do autor do pedido
 - Endereço de e-mail do autor do pedido
 
-### <a name="next-steps"></a>Próximos passos
+### <a name="next-steps"></a>Passos Seguintes
 Após a receção do seu pedido de IPIA, ser-lhe-á enviado um formulário (como um documento do Word).
 Analise os termos e condições do IPIA e devolva o formulário para o e-mail **IPIA@microsoft.com** com as seguintes informações:
 - Denominação legal da Empresa
@@ -126,4 +126,3 @@ Para obter mais informações sobre como permitir que a aplicação utilize o RM
 * [Configurar o Rights Management](https://TechNet.Microsoft.Com/library/jj585002.aspx)
 * [Permitir que a aplicação funcione com o RMS baseado na cloud](how-to-use-file-api-with-aadrm-cloud.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

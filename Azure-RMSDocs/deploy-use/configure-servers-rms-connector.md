@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9662f9346cc3d14f07f1dfd7522237e3214a6c6d
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: c598f4a2bbf0e1926cb05eaa7ef2b51ad87dbc88
+ms.sourcegitcommit: 6cbd03b28873b192dc730556c6dd5a7da6e705df
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39372425"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39411058"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configurar servidores para o conector Azure Rights Management
 
@@ -254,6 +254,6 @@ Agora que o conector RMS está instalado e configurado, estando os servidores co
 
 Tenha em atenção que, se configurar modelos departamentais que pretende utilizar com as regras de transporte do Exchange ou com o Windows Server FCI, a configuração do âmbito tem de incluir a opção de compatibilidade de aplicações e a caixa de verificação **Mostrar este modelo a todos os utilizadores quando as aplicações não suportam a identidade de utilizador** tem de estar selecionada.
 
-Pode utilizar o [Plano de implementação do Azure Information Protection](../plan-design/deployment-roadmap.md) para verificar se existem outros passos de configuração que seja necessário efetuar antes de implementar o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1.md)] para os utilizadores e administradores.
+Pode utilizar o [plano de implementação do Azure Information Protection](../plan-design/deployment-roadmap.md) para verificar se existem outros passos de configuração que talvez queira realizar antes de implementar o Azure Rights Management para utilizadores e administradores.
 
 Para monitorizar o conector RMS, consulte o artigo [Monitorizar o conector do Azure Rights Management](monitor-rms-connector.md). 

@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: e369a77fb9de150dd83fd48abad53898cd8614f1
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: b092878490538afa4a73b3845de6bcf2fca9c0c8
+ms.sourcegitcommit: 95d26d88a5898e0afc1dde863119afd05ea4427d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39372840"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401086"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Implementar o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente
 
@@ -155,7 +155,7 @@ O token do Azure AD permite que a conta de serviço do scanner autenticar para o
 2. Do computador Windows Server, se a sua conta de serviço do scanner recebeu o **iniciar sessão localmente** diretamente para a instalação: Inicie sessão com esta conta e iniciar uma sessão do PowerShell. Execute [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), especificar os valores que copiou no passo anterior:
     
     ```
-    Set-AIPAuthentication -webAppId <ID of the "Web app / API" application>  -webAppKey <key value generated in the "Web app / API" application> -nativeAppId <ID of the "Native" application >
+    Set-AIPAuthentication -webAppId <ID of the "Web app / API" application> -webAppKey <key value generated in the "Web app / API" application> -nativeAppId <ID of the "Native" application>
     ```
     
     Quando lhe for pedido, especifique a palavra-passe para as credenciais da conta de serviço para o Azure AD e, em seguida, clique em **Accept**.

@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5acf00dc1b3bac0673208d1a9bc6e09e98edf40a
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 7853cfc577329e04a1f378a419f0e1ef3eca0f2a
+ms.sourcegitcommit: 6cbd03b28873b192dc730556c6dd5a7da6e705df
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39375526"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39411075"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guia do administrador: Utilizar o PowerShell com o cliente do Azure Information Protection
 
@@ -559,7 +559,7 @@ Passos de alto nível:
 
 2. Copie e cole o seguinte comando para este script:
     
-         Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application > -Token <token value>
+         Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application> -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application > -Token <token value>
 
 3. Com as instruções na secção anterior, modifique este comando, especificando os seus próprios valores para o **WebAppId**, **WebAppkey**, e **NativeAppId** parâmetros. Neste momento, não tem o valor para o **Token** parâmetro, que pode especificar mais tarde. 
     

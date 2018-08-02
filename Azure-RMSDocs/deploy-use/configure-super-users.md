@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 57cf471c614734c6183853b900750c9fef333100
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 7d52bd4547b24acad3e9b2db8c8ade8b632d517d
+ms.sourcegitcommit: 6cbd03b28873b192dc730556c6dd5a7da6e705df
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39369763"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39411347"
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados
 
@@ -46,7 +46,7 @@ Se precisar de ativar manualmente a funcionalidade de superutilizador, utilize o
 Embora utilizar um grupo para os seus superutilizadores seja mais fácil de gerir, tenha em atenção que, por motivos de desempenho, o Azure Rights Management [coloca a associação do grupo em cache](../plan-design/prepare.md#group-membership-caching-by-azure-information-protection). Por isso, se precisa de atribuir um novo utilizador como superutilizador para desencriptar conteúdos imediatamente, adicione esse utilizador através do cmdlet Add-AadrmSuperUser em vez de o adicionar a um grupo existente que configurou ao utilizar o cmdlet Set-AadrmSuperUserGroup.
 
 > [!NOTE]
-> Se ainda não instalou o módulo Windows PowerShell para [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1.md)], consulte [instalar o módulo do PowerShell do AADRM](install-powershell.md).
+> Se ainda não instalou o módulo do Windows PowerShell para o Azure Rights Management, veja [instalar o módulo do PowerShell do AADRM](install-powershell.md).
 
 Não importa quando ativa a funcionalidade de Superutilizador ou ao adicionar os utilizadores como superutilizadores. Por exemplo, se ativar a funcionalidade na quinta-feira e, em seguida, adicionar um utilizador na sexta-feira, esse utilizador pode abrir imediatamente conteúdo que foi protegido logo no início da semana.
 
@@ -73,7 +73,7 @@ Neste exemplo, o administrador da Contoso Ltd confirma que a funcionalidade de s
 `2015-08-01T19:01:45    admin@contoso.com   SetSuperUserFeatureState -state Enabled Passed  True`
 
 ## <a name="scripting-options-for-super-users"></a>Opções de scripting para superutilizadores
-É frequente que uma pessoa a quem seja atribuído um superutilizador para o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1.md)] venha a ter de remover a proteção de vários ficheiros, em várias localizações. Embora seja possível fazê-lo manualmente, é mais eficaz (e, muitas vezes, mais fiável) efetuar um script disto. Em seguida, pode utilizar o cmdlet [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) e o cmdlet [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile), conforme necessário. 
+Muitas vezes, alguém que é atribuído um Superutilizador do Azure Rights Management tem de remover a proteção de vários ficheiros, em várias localizações. Embora seja possível fazê-lo manualmente, é mais eficaz (e, muitas vezes, mais fiável) efetuar um script disto. Em seguida, pode utilizar o cmdlet [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) e o cmdlet [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile), conforme necessário. 
 
 Se estiver a utilizar a classificação e a proteção, também poderá utilizar o [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) para aplicar uma nova etiqueta que não aplique proteção ou remover a etiqueta que aplicou a proteção. 
 

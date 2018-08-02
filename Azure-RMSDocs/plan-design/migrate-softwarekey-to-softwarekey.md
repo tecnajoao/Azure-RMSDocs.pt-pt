@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: dc84864b8bbd196a2a90ea2ac2924be9f40efc23
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 5de0a80687da0af2329493b6f9ce97238a6ec90f
+ms.sourcegitcommit: 6cbd03b28873b192dc730556c6dd5a7da6e705df
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39375288"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39411364"
 ---
 # <a name="step-2-software-protected-key-to-software-protected-key-migration"></a>Passo 2: migração de chave protegida por software para chave protegida por software
 
@@ -37,7 +37,7 @@ Utilize o seguinte procedimento para importar a configuração do AD RMS para o 
     ```
     Connect-AadrmService
     ```
-    Quando for solicitado, introduza as credenciais de administrador de inquilinos do [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1.md)] (normalmente, utilizará uma conta de um administrador global do Azure Active Directory ou do Office 365).
+    Quando lhe for pedido, introduza as credenciais de administrador de inquilinos do Azure Rights Management (normalmente, utilizará uma conta que seja um administrador global do Azure Active Directory ou Office 365).
 
 2. Utilize o cmdlet [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) para carregar cada ficheiro de domínio de publicação fidedigno exportado (.xml). Por exemplo, deverá ter pelo menos um ficheiro adicional para importar se tiver atualizado o seu cluster AD RMS para o Modo Criptográfico 2. 
     

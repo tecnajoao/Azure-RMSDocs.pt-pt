@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a5320f016426fd26f2742ce0a3e49f25fc3bbc03
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: fcf31485505b1daff3571c33e5262fd6f7586b77
+ms.sourcegitcommit: 6cbd03b28873b192dc730556c6dd5a7da6e705df
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39370487"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39411007"
 ---
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Comparar o Azure Information Protection e o AD RMS
 
@@ -47,7 +47,7 @@ Além disso, uma vez que o Azure Information Protection é um serviço na cloud,
 Para obter mais detalhes e outras diferenças, utilize a seguinte tabela para ver uma comparação lado a lado das funcionalidades e vantagens do Azure Information Protection e do AD RMS. Se tiver dúvidas de comparação específicas em relação à segurança, consulte a secção [Controlos criptográficos para assinatura e encriptação](#cryptographic-controls-for-signing-and-encryption) neste artigo.
 
 > [!NOTE]
-> Para facilitar esta comparação, algumas destas informações são repetidas com base nos [Requisitos do Azure Information Protection](../get-started/requirements-azure-rms.md). Utilize essa origem para obter informações mais específicas sobre o suporte e as versões do [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1.md)].
+> Para facilitar esta comparação, algumas destas informações são repetidas com base nos [Requisitos do Azure Information Protection](../get-started/requirements-azure-rms.md). Utilize essa origem para as informações mais específicas sobre o suporte e as versões do Azure Rights Management.
 
 |Azure Information Protection|AD RMS|
 |-----------------------------------------------------------------------------------------|--------------------------------------------------------|

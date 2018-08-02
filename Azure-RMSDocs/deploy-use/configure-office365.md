@@ -4,7 +4,7 @@ description: Informações e instruções para administradores para configurarem
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/24/2018
+ms.date: 08/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 02961228ddaf02e8b3754ff72b20ef81aec02737
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: b533ef628f65647922a39688b8bf7e26560e3798
+ms.sourcegitcommit: 6cbd03b28873b192dc730556c6dd5a7da6e705df
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39372296"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39410891"
 ---
 # <a name="office-365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Configuração para clientes e serviços online utilizar o serviço Azure Rights Management
 
 >*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Como o Office 365 suporta nativamente o serviço Azure Rights Management do Azure Information Protection, é necessária nenhuma configuração de computador do cliente para suportar as funcionalidades de gestão (IRM) direitos de informação para aplicativos como Word, Excel, PowerPoint, Outlook e Outlook na web. Todos os utilizadores têm de fazer, iniciar sessão nas aplicações do Office com seus [!INCLUDE[o365_1](../includes/o365_1.md)] credenciais. Em seguida, podem proteger ficheiros e e-mails e utilizar ficheiros e e-mails que foram protegidos por outras pessoas.
+Como o Office 365 suporta nativamente o serviço Azure Rights Management do Azure Information Protection, é necessária nenhuma configuração de computador do cliente para suportar as funcionalidades de gestão (IRM) direitos de informação para aplicativos como Word, Excel, PowerPoint, Outlook e Outlook na web. Todos os utilizadores têm de fazer, iniciar sessão nas respetivas aplicações do Office com as respetivas credenciais de gestão de direitos. Em seguida, podem proteger ficheiros e e-mails e utilizar ficheiros e e-mails que foram protegidos por outras pessoas.
 
 No entanto, recomendamos que complemente estas aplicações com o cliente do Azure Information Protection para que os utilizadores possam beneficiar do suplemento do Office e do suporte para tipos de ficheiros adicionais. Para obter mais informações, veja [Cliente do Azure Information Protection: instalação e configuração para clientes](configure-client.md).
 
@@ -62,7 +62,7 @@ O Exchange Online já pode ser ativado para utilizar o serviço Azure Rights Man
     
     - Se AzureRMSLicensingEnabled estiver definido como **True**, Exchange Online já está ativada para o serviço Azure Rights Management. 
     
-    - Se estiver definido AzureRMSLicensingEnabled **False**, execute os comandos [configurar novas capacidades de encriptação de mensagens do Office 365 criadas com base no Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
+    - Se estiver definido AzureRMSLicensingEnabled **False**, execute o comando de seguir para ativar o Exchange Online para o serviço Azure Rights Management: `Set-IRMConfiguration -AzureRMSLicensingEnabled $true`
 
 5. Para testar esse Exchange Online está configurado com êxito, execute o seguinte comando:
     ```
@@ -72,7 +72,7 @@ O Exchange Online já pode ser ativado para utilizar o serviço Azure Rights Man
     
     Este comando executa um conjunto de verificações que inclui a verificação da conectividade ao serviço, a obtenção da configuração, a obtenção de URIs, licenças e modelos. Na sessão do Windows PowerShell, verá os resultados de cada verificação e, no final, se nenhuma delas encontrar problemas, verá a mensagem: **RESULTADO GERAL: APROVADO**
 
-Quando o Exchange Online está ativado para utilizar o serviço Azure Rights Management, pode configurar funcionalidades que se aplicam a proteção de informações automaticamente, tal como [regras de transporte](https://technet.microsoft.com/library/dd302432.aspx), [políticas de prevenção (DLP) de perda de dados ](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx), e [voice mail protegido](https://technet.microsoft.com/library/dn198211%28v=exchg.150%29.aspx) (unificação de mensagens).
+Quando o Exchange Online está ativado para utilizar o serviço Azure Rights Management, pode configurar funcionalidades que se aplicam a proteção de informações automaticamente, tal como [as regras de fluxo de correio](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8), [políticas de prevenção (DLP) de perda de dados ](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx), e [voice mail protegido](https://technet.microsoft.com/library/dn198211%28v=exchg.150%29.aspx) (unificação de mensagens).
 
 ## <a name="sharepoint-online-and-onedrive-for-business-irm-configuration"></a>SharePoint Online e OneDrive para Empresas: configuração de IRM
 

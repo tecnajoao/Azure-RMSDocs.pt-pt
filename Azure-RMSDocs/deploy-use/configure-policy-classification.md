@@ -4,18 +4,18 @@ description: Quando configurar as condições para uma etiqueta, pode atribuir a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2018
+ms.date: 08/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 9be846a194e077748aca58e9822db2085d2992dc
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 49d8e060e337b16967407932b22f90c55e9fad3c
+ms.sourcegitcommit: 95d26d88a5898e0afc1dde863119afd05ea4427d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39374621"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401069"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Como configurar as condições para classificação automática e recomendada para o Azure Information Protection
 
@@ -99,6 +99,9 @@ Quando clica em **guardar**, as suas alterações estão automaticamente dispon�
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>Tipos de informações confidenciais que requerem uma versão mínima do cliente
 
+> [!NOTE]
+> Os seguintes tipos de informações de sensibilidade agora a implementar aos inquilinos, mas não poderão ser apresentados para o selecionar. No entanto, se configurar o scanner do Azure Information Protection para [identificar todas as condições personalizadas e tipos de informações confidenciais conhecidos](deploy-aip-scanner.md#using-the-scanner-with-alternative-configurations), a versão de pré-visualização do scanner pode detectar esses novos tipos de informações, mesmo se não for possível Selecione-os no portal do Azure.
+
 Os seguintes tipos de informações confidenciais atualmente requerem a versão de pré-visualização do cliente do Azure Information Protection:
 
 - **Número de telefone da UE**
@@ -112,6 +115,7 @@ Os seguintes tipos de informações confidenciais atualmente requerem a versão 
 - **Código de identificação de população em tailandês**
 - **Número de identificação nacional turco**
 - **Número de cartão de residência japonês**
+
 
 ## <a name="next-steps"></a>Passos Seguintes
 

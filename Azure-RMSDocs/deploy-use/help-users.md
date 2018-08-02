@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9410ffa21b4f5d905f7bc68ba80afa46122155da
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: fc42e122d8cf16cb9a05907e8244f6b6de4579c0
+ms.sourcegitcommit: 6cbd03b28873b192dc730556c6dd5a7da6e705df
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39373251"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39411024"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Ajudar os utilizadores a proteger ficheiros com o serviço Azure Rights Management
 
@@ -90,7 +90,7 @@ Se estiver a utilizar o serviço Azure Rights Management e não tiver instalado 
 3. Selecione um modelo para aplicar rapidamente os direitos de utilização adequados ou selecione **Restringir Acesso** e selecione os direitos de utilização.
 
     > [!NOTE]
-    > Se tiver não utilizado anteriormente o Rights Management no seu computador, a opção **Restringir Acesso** estabelece ligação ao serviço [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1.md)] e são pedidas as credenciais para configurar o cliente IRM do Office. Em seguida, pode escolher um modelo ou os direitos de utilização.
+    > Se não tiver utilizado anteriormente Rights Management no seu computador, o **restringir acesso** opção liga ao serviço Azure Rights Management e são-lhe pedidas as credenciais para configurar o cliente Office IRM. Em seguida, pode escolher um modelo ou os direitos de utilização.
 
 3.  Guarde o documento.
 

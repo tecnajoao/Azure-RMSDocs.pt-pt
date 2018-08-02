@@ -12,19 +12,19 @@ ms.technology: techgroup-identity
 ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 26d3c011867204ee62512da54638f0a84f0153bb
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: f41b33abb2b05cf7b0ad2cebbe927de1829f653c
+ms.sourcegitcommit: 6cbd03b28873b192dc730556c6dd5a7da6e705df
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39375107"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39411187"
 ---
 # <a name="how-file-servers-that-run-windows-server-and-use-file-classification-infrastructure-fci-support-azure-rights-management"></a>Como os servidores de ficheiros que executam o Windows Server e utilizam a infraestrutura de classificação de ficheiros (FCI) suportam o Azure Rights Management
 
 >*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
-Quando configura o Windows Server para utilizar a Infraestrutura de Classificação de Ficheiros, esta funcionalidade do Gestor de Recursos de Servidor de Ficheiros pode analisar ficheiros locais e determinar se contêm dados sensíveis. Os ficheiros que obedecem a estes critérios são etiquetados com propriedades de classificação definidas por um administrador. A Infraestrutura de Classificação de Ficheiros pode então tomar uma ação automática, de acordo com a classificação. Uma destas ações inclui aplicar proteção de informações ao utilizar o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1.md)] e a implementação do conector Rights Management (também conhecido como conector RMS). Os ficheiros do Office são então automaticamente protegidos pelo Azure RMS.
+Quando configura o Windows Server para utilizar a Infraestrutura de Classificação de Ficheiros, esta funcionalidade do Gestor de Recursos de Servidor de Ficheiros pode analisar ficheiros locais e determinar se contêm dados sensíveis. Os ficheiros que obedecem a estes critérios são etiquetados com propriedades de classificação definidas por um administrador. A Infraestrutura de Classificação de Ficheiros pode então tomar uma ação automática, de acordo com a classificação. Uma destas ações inclui aplicar a proteção de dados com o Azure Rights Management e a implementação do conector Rights Management (também conhecido como conector RMS). Os ficheiros do Office são então automaticamente protegidos pelo Azure RMS.
 
 Para proteger todos os tipos de ficheiro, não utilize o conector RMS, mas em vez disso, executar um script de Windows PowerShell que utiliza os cmdlets dos [módulo do Azure Information Protection](../rms-client/client-admin-guide-powershell.md).
 

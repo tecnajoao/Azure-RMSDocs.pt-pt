@@ -4,7 +4,7 @@ description: Fase 4 da migração do AD RMS para o Azure Information Protection,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/20/2018
+ms.date: 08/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 50cfe76f46105225b2ac65468a21d890a0dce19f
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 0c5af3a9ac19542c547a97e705aee5a79a6a3dc4
+ms.sourcegitcommit: 6cbd03b28873b192dc730556c6dd5a7da6e705df
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39372347"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39411221"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Fase 4 da migração – configuração de serviços de suporte
 
@@ -45,7 +45,7 @@ Independentemente do inquilino do Azure Information Protection, topologia de cha
     
     - Se AzureRMSLicensingEnabled estiver definido como **True**, nenhuma configuração adicional é necessária para este passo. 
     
-    - Se estiver definido AzureRMSLicensingEnabled **False**, execute os comandos [configurar novas capacidades de encriptação de mensagens do Office 365 criadas com base no Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
+    - Se estiver definido AzureRMSLicensingEnabled **False**, execute `Set-IRMConfiguration -AzureRMSLicensingEnabled $true` e, em seguida, utilize os passos de verificação da [configurar novas capacidades de encriptação de mensagens do Office 365 criadas com base no Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)para confirmar que Exchange Online está agora pronto para utilizar o serviço Azure Rights Management. 
 
 ## <a name="step-9-configure-irm-integration-for-exchange-server-and-sharepoint-server"></a>Passo 9: configurar a integração de IRM para o Exchange Server e SharePoint Server
 

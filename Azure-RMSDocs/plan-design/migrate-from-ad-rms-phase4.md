@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0c5af3a9ac19542c547a97e705aee5a79a6a3dc4
-ms.sourcegitcommit: 6cbd03b28873b192dc730556c6dd5a7da6e705df
+ms.openlocfilehash: d34c9069d7486c4a7cab78ccffe49b608e8a2825
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 08/02/2018
-ms.locfileid: "39411221"
+ms.locfileid: "39473462"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Fase 4 da migração – configuração de serviços de suporte
 
@@ -54,7 +54,7 @@ Se tiver utilizado a funcionalidade de Gestão de Direitos de Informação (IRM)
 Este passo indica como instalar e configurar o conector, desativar a IRM para o Exchange e SharePoint e configurar estes servidores para utilizar o conector. Por fim, se tiver importado ficheiros de configuração de dados do AD RMS (.xml) para o Azure Information Protection que foram utilizados para proteger mensagens de e-mail, terá de editar manualmente o registo nos computadores do Exchange Server para redirecionar todos os URLs de domínio de publicação fidedigno para o conector RMS.
 
 > [!NOTE]
-> Antes de começar, verifique as versões dos servidores no local que o serviço Azure Rights Management suporta em [Servidores no local que suportam o Azure RMS](../get-started/requirements-servers.md).
+> Antes de começar, verifique as versões dos servidores no local que o serviço Azure Rights Management suporta em [Servidores no local que suportam o Azure RMS](../requirements-servers.md).
 
 ### <a name="install-and-configure-the-rms-connector"></a>Instalar e configurar o conetor RMS
 

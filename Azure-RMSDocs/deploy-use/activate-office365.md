@@ -13,12 +13,12 @@ ms.custom: askipteam
 ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9e22cf3fb0eaf8230fd7adcd45e85517eed64cbf
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 9cc8d49b62155354b96ad04f76c335be2124f15a
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39374727"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473513"
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-office-365-admin-center"></a>Como ativar o Azure Rights Management a partir do centro de administração do Office 365
 
@@ -44,7 +44,7 @@ Utilize estas instruções se tiver acesso ao serviço Azure Rights Management d
     >
     >Para ativar o serviço Azure Rights Management, precisa de ter um [plano Premium do Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) ou um [plano do Office 365 que inclua o Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). 
     
-    Se precisar de ajuda para ativar o serviço ou tiver dúvidas sobre os requisitos de assinatura [contacte o Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) ou utilize os canais de suporte padrão.
+    Se precisar de ajuda para ativar o serviço ou tiver dúvidas sobre os requisitos de assinatura [contacte o Microsoft Support](../information-support.md#to-contact-microsoft-support) ou utilize os canais de suporte padrão.
 
 4. Na página **rights management**, clique em **ativar**.
 

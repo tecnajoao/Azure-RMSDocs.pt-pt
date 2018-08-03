@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4434cb25e06bd26f2080eaf01f5b0da29212fa71
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 65fa46d7a978eb87b455d34075bdb3f939a133f7
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39371337"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39474043"
 ---
 # <a name="rights-management-sharing-application-administrator-guide"></a>Guia do administrador da aplicação de partilha Rights Management
 
@@ -28,7 +28,7 @@ ms.locfileid: "39371337"
 
 Utilize as seguintes informações se for o responsável pela aplicação de partilha Microsoft Rights Management numa rede empresarial ou se quiser obter mais informações técnicas além das que se encontram no [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md) ou nas [FAQ sobre a Aplicação de Partilha Microsoft Rights Management do Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
 
-A aplicação de partilha RMS funciona melhor com o Azure Information Protection, porque esta configuração de implementação suporta o envio de anexos protegidos para utilizadores de outra organização e opções como notificações por e-mail e o controlo de documentos com revogação. No entanto, a aplicação também funciona com a versão no local, o AD RMS, embora com algumas limitações. Para ver uma comparação detalhada das funcionalidades suportadas pelo Azure Information Protection e pelo AD RMS, consulte [Comparar o Azure Information Protection e o AD RMS](../understand-explore/compare-azure-rms-ad-rms.md). Se tiver o AD RMS e quiser migrar para o Azure Information Protection, consulte [Migrar do AD RMS para o Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+A aplicação de partilha RMS funciona melhor com o Azure Information Protection, porque esta configuração de implementação suporta o envio de anexos protegidos para utilizadores de outra organização e opções como notificações por e-mail e o controlo de documentos com revogação. No entanto, a aplicação também funciona com a versão no local, o AD RMS, embora com algumas limitações. Para ver uma comparação detalhada das funcionalidades suportadas pelo Azure Information Protection e pelo AD RMS, consulte [Comparar o Azure Information Protection e o AD RMS](../compare-on-premise.md). Se tiver o AD RMS e quiser migrar para o Azure Information Protection, consulte [Migrar do AD RMS para o Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
 Para obter uma descrição geral técnica da aplicação Rights Management, informações sobre a proteção nativa e genérica, e os tipos de ficheiro suportados, as extensões de nome de ficheiro e como pode alterar o nível de proteção predefinido, consulte [Descrição geral técnica e detalhes de proteção da aplicação de partilha Rights Management](sharing-app-admin-guide-technical.md). 
 

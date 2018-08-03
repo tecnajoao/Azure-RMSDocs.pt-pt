@@ -14,12 +14,12 @@ ms.custom: askipteam
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ba2a9b5a491d6527f15661d88e7f6db539d619c5
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 09e75b1d8fd841295924dccfbacf8dcb6d753182
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39375458"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473479"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>FAQs sobre a aplicação Microsoft Azure Information Protection para iOS e Android
 
@@ -63,7 +63,7 @@ Se seu endereço de e-mail pessoal foi usado para proteger o ficheiro, utilize a
 
 Sim, quando aplica-se para uma conta Microsoft, pode especificar o endereço de e-mail do Hotmail ou Gmail, ou qualquer outro endereço de e-mail que é proprietário. 
 
-No entanto, embora este Visualizador pode abrir ficheiros protegidos com esta conta, nem todos os aplicativos podem abrir conteúdo protegido quando uma conta Microsoft é utilizada para autenticação. [Mais informações](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+No entanto, embora este Visualizador pode abrir ficheiros protegidos com esta conta, nem todos os aplicativos podem abrir conteúdo protegido quando uma conta Microsoft é utilizada para autenticação. [Mais informações](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 ## <a name="which-file-extensions-can-i-open-with-this-app"></a>Que extensões de ficheiro posso abrir com esta aplicação?
 

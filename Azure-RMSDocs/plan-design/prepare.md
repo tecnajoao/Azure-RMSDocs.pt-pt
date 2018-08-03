@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2a377076536dfebcf642b81616d41fd439b56382
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: e14844a5bd1b0ace4085eaaa9c15be6b3c814146
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39374811"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473751"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Preparar utilizadores e grupos para o Azure Information Protection
 
@@ -87,7 +87,7 @@ Além de utilizar os atributos proxyAddresses e userPrincipalName do Azure AD p
 
 Outros métodos de autorização:
 
-- Para endereços de e-mail que não estão no Azure AD, Azure Information Protection pode autorizar estes quando os utilizadores são autenticados com uma conta Microsoft. No entanto, nem todos os aplicativos podem abrir conteúdo protegido, quando uma conta Microsoft é utilizada para autenticação. [Mais informações](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+- Para endereços de e-mail que não estão no Azure AD, Azure Information Protection pode autorizar estes quando os utilizadores são autenticados com uma conta Microsoft. No entanto, nem todos os aplicativos podem abrir conteúdo protegido, quando uma conta Microsoft é utilizada para autenticação. [Mais informações](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 - Quando é enviado um e-mail ao utilizar a encriptação de mensagens do Office 365 com novos recursos para um utilizador que não tem uma conta no Azure AD, o utilizador é primeiramente autenticado utilizando o federação com um fornecedor de identidade social ou com um código de acesso único. Em seguida, o endereço de e-mail especificado no e-mail protegido é utilizado para autorizar o utilizador.
 

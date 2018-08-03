@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: 302a7506a0bdfbf7acb4c50d77d20b7e010c47b8
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: f42e1318e8be0d805216cffd402a9b87a1259e1e
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39372534"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473853"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gerir dados pessoais para o Azure Information Protection
 
@@ -254,7 +254,7 @@ Para eliminar os dados pessoais nos ficheiros de registo de cliente e registos d
 Utilize os seguintes três passos para pedir que a Microsoft elimina os dados pessoais em registos, de logs de administração ou registos de utilização para o serviço Azure Rights Management de controlo de documentos. 
 
 **Passo 1: Iniciar Eliminar pedido**
-[contacte o suporte da Microsoft](../get-started/information-support.md#to-contact-microsoft-support) para abrir um incidente de suporte do Azure Information Protection com um pedido para a eliminação de dados do seu inquilino. Tem de provar que é um administrador inquilino do Azure Information Protection e compreender que este processo demorará vários dias para confirmar. Ao submeter o pedido, terá de fornecer informações adicionais, consoante os dados que precisam de eliminar.
+[contacte o suporte da Microsoft](../information-support.md#to-contact-microsoft-support) para abrir um incidente de suporte do Azure Information Protection com um pedido para a eliminação de dados do seu inquilino. Tem de provar que é um administrador inquilino do Azure Information Protection e compreender que este processo demorará vários dias para confirmar. Ao submeter o pedido, terá de fornecer informações adicionais, consoante os dados que precisam de eliminar.
 
 - Para eliminar o registo de administração, forneça o **data de fim**. Todos os registos de administrador, até que a data de fim serão eliminados.
 - Para eliminar os registos de utilização, forneça o **data de fim**. Todos os registos da utilização até que a data de fim será eliminada.

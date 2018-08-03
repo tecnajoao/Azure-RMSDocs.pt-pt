@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 534d8823aca560d758e2bcc3d2c6f4a26dcf66c0
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: a9780e355839edaa4b6eccea9692b2a1058affaa
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39375305"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39474193"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Proteção RMS com Infraestrutura de Classificação de Ficheiros (FCI) do Windows Server
 
@@ -293,5 +293,5 @@ Agora, tudo o que precisa de fazer é criar uma nova tarefa de gestão de fichei
 
 ## <a name="next-steps"></a>Passos Seguintes
 
-Deve estar se perguntando: [qual é a diferença entre a FCI do Windows Server e o scanner do Azure Information Protection?](../get-started/faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner) 
+Deve estar se perguntando: [qual é a diferença entre a FCI do Windows Server e o scanner do Azure Information Protection?](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner) 
 

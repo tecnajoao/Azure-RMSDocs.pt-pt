@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fd3a08806c5dfa9e03e3a1cce5731cf09d61aa47
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: cac2506f7c98431048c29291ca95f197a02c7fcd
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39373316"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473768"
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gerida pela Microsoft: Operações de ciclo de vida de chave de inquilino
 
@@ -61,7 +61,7 @@ Pode exportar a configuração do Azure Information Protection e a chave de inqu
 
 ### <a name="step-1-initiate-export"></a>Passo 1: iniciar a exportação
 
-- [Contacte o Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) para abrir um **incidente de suporte do Azure Information Protection com um pedido de uma exportação de chaves do Azure Information Protection**. Tem de provar que é um administrador do inquilino do Azure Information Protection e compreender que este processo demorará vários dias a ser confirmado. São aplicáveis encargos de suporte padrão; a exportação da chave do inquilino não é um serviço de suporte gratuito.
+- [Contacte o Microsoft Support](../information-support.md#to-contact-microsoft-support) para abrir um **incidente de suporte do Azure Information Protection com um pedido de uma exportação de chaves do Azure Information Protection**. Tem de provar que é um administrador do inquilino do Azure Information Protection e compreender que este processo demorará vários dias a ser confirmado. São aplicáveis encargos de suporte padrão; a exportação da chave do inquilino não é um serviço de suporte gratuito.
 
 ### <a name="step-2-wait-for-verification"></a>Passo 2: aguardar pela verificação
 

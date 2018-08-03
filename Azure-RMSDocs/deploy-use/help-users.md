@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fc42e122d8cf16cb9a05907e8244f6b6de4579c0
-ms.sourcegitcommit: 6cbd03b28873b192dc730556c6dd5a7da6e705df
+ms.openlocfilehash: e5f6c4eab955baf7585bf4071a23239cf8229e8d
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 08/02/2018
-ms.locfileid: "39411024"
+ms.locfileid: "39473812"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Ajudar os utilizadores a proteger ficheiros com o serviço Azure Rights Management
 
@@ -38,7 +38,7 @@ Após ter implementado e configurado o Azure Information Protection para a sua o
     
     Algumas aplicações aplicam automaticamente a proteção de informações através da utilização de políticas e de definições que os administradores configuram. Para estas aplicações, poderá ter de fornecer instruções aos outros administradores que gerem estas aplicações e serviços. 
     
-    Para obter mais informações, veja [Como é que as aplicações suportam o serviço Azure Rights Management](../understand-explore/applications-support.md) e [Configurar aplicações para o serviço Azure Rights Management](configure-applications.md).
+    Para obter mais informações, veja [Como é que as aplicações suportam o serviço Azure Rights Management](../applications-support.md) e [Configurar aplicações para o serviço Azure Rights Management](configure-applications.md).
     
 -   **Informações do suporte técnico**
     
@@ -50,13 +50,13 @@ Após ter implementado e configurado o Azure Information Protection para a sua o
     
     - **Inicie sessão na ajuda**
         
-        Poderá ser pedido aos utilizadores que introduzam credenciais quando o serviço Azure Rights Management tiver de autenticar um utilizador e não puder utilizar credenciais em cache. As credenciais necessárias são, normalmente, para o utilizador ou conta da instituição de ensino e palavra-passe que está associado com o seu inquilino do Office 365 ou inquilino do Azure Active Directory. Embora o serviço Azure Rights Management pode autenticar contas do Azure AD, alguns aplicativos também podem abrir conteúdo protegido quando uma conta Microsoft é utilizada para autenticação. [Mais informações](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
+        Poderá ser pedido aos utilizadores que introduzam credenciais quando o serviço Azure Rights Management tiver de autenticar um utilizador e não puder utilizar credenciais em cache. As credenciais necessárias são, normalmente, para o utilizador ou conta da instituição de ensino e palavra-passe que está associado com o seu inquilino do Office 365 ou inquilino do Azure Active Directory. Embora o serviço Azure Rights Management pode autenticar contas do Azure AD, alguns aplicativos também podem abrir conteúdo protegido quando uma conta Microsoft é utilizada para autenticação. [Mais informações](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
         
         Forneça aos utilizadores e o suporte técnico instruções sobre a conta a utilizar quando os utilizadores são pedidos as credenciais com aplicativos que utilizam o serviço Azure Rights Management.
         
     - **Problemas ao proteger ou consumir conteúdos**
         
-        Certifique-se de que os utilizadores têm as instruções adequadas para as aplicações que utilizam e que utilizam aplicações e dispositivos que são suportados pelo serviço Azure Rights Management. Para obter mais informações sobre as aplicações e os dispositivos suportados, veja [Requisitos do Azure Rights Management](../get-started/requirements-azure-rms.md).
+        Certifique-se de que os utilizadores têm as instruções adequadas para as aplicações que utilizam e que utilizam aplicações e dispositivos que são suportados pelo serviço Azure Rights Management. Para obter mais informações sobre as aplicações e os dispositivos suportados, veja [Requisitos do Azure Rights Management](../requirements.md).
         
         Para confirmar que um utilizador específico ou grupo pode ser autorizado pelo Azure Active Directory para proteger ou consumir conteúdo protegido, utilize as verificações em [preparar utilizadores e grupos do Azure Information Protection](../plan-design/prepare.md).
         

@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f9cc93de344f6aef603cdc4c52771133dea13bfe
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: fed57de220a5448a16a866fae76969eb4f9332de
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39371320"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473870"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurar e gerir modelos do Azure Information Protection
 
@@ -46,7 +46,7 @@ Além disso, os modelos são configurados para permitir o acesso offline durante
 >[!NOTE]
 > Pode alterar estas definições e os nomes e descrições dos modelos predefinidos. Esta capacidade não era possível com o portal clássico do Azure e continua sem suporte para o PowerShell.
 
-Estes modelos predefinidos tornam mais fácil para e a outras pessoas, começar imediatamente a proteger os dados confidenciais da sua organização. Estes modelos podem ser utilizados com o Azure Information Protection etiquetas ou por conta própria com [aplicativos e serviços](../understand-explore/applications-support.md) que pode utilizar modelos do Rights Management.
+Estes modelos predefinidos tornam mais fácil para e a outras pessoas, começar imediatamente a proteger os dados confidenciais da sua organização. Estes modelos podem ser utilizados com o Azure Information Protection etiquetas ou por conta própria com [aplicativos e serviços](../applications-support.md) que pode utilizar modelos do Rights Management.
 
 Também pode criar seus próprios modelos personalizados. Embora provavelmente necessite de apenas alguns modelos, pode ter um máximo de 500 modelos personalizados guardados no Azure.
 

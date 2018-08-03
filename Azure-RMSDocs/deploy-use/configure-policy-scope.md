@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b11db1634896782afe0fe8caaabb316f4b0b6ff5
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 2119bf25aa83b9f764ba753b0c8b975dc8528e2d
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39370922"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473496"
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Como configurar a política do Azure Information Protection para utilizadores específicos com políticas de âmbito
 
@@ -59,5 +59,5 @@ O cliente do Azure Information Protection verifica a existência de alterações
 
 ## <a name="next-steps"></a>Passos Seguintes
 
-Para obter um exemplo de como personalizar a política predefinida e ver o comportamento resultante de uma aplicação do Office, experimente o [Tutorial de início rápido do Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
+Para obter um exemplo de como personalizar a política predefinida e ver o comportamento resultante de uma aplicação do Office, experimente o [Tutorial de início rápido do Azure Information Protection](../infoprotect-quick-start-tutorial.md).
 

@@ -4,18 +4,18 @@ description: Pode proteger os seus documentos e e-mails mais confidenciais ao co
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/23/2018
+ms.date: 08/02/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: c788982587487f88b31a130933b6d95c6cf94c42
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: a1e480f8a071e8c5582169193a8e17ea2ec38e6f
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39373292"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39474142"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Como configurar uma etiqueta para a proteção do Rights Management
 
@@ -37,7 +37,7 @@ Quando um documento ou e-mail é protegido por um serviço de Rights Management,
 
 - A lista de preços atual enviada para os parceiros de negócios não pode ser aberta após uma data especificada.
 
-Para obter mais informações sobre a proteção Azure Rights Management e como ele funciona, consulte [o que é o Azure Rights Management?](../understand-explore/what-is-azure-rms.md)
+Para obter mais informações sobre a proteção Azure Rights Management e como ele funciona, consulte [o que é o Azure Rights Management?](../what-is-azure-rms.md)
 
 > [!IMPORTANT]
 > Para configurar uma etiqueta para aplicar esta proteção, o serviço Azure Rights Management tem de ser ativado para a sua organização. Para obter mais informações, veja [Ativar o Azure Rights Management](../deploy-use/activate-service.md).
@@ -94,7 +94,7 @@ Exchange tem de ser configurada para o Azure Information Protection antes dos ut
         
         Se escolher a opção para Word, Excel, PowerPoint e o Explorador de ficheiros: quando esta opção estiver definida, a etiqueta é apresentada nesses aplicativos. O comportamento resultante quando os utilizadores de aplicar a etiqueta é exibir a caixa de diálogo para os utilizadores selecionarem permissões personalizadas. Na caixa de diálogo, os utilizadores tem de especificar as permissões, os utilizadores ou grupos e qualquer data de expiração. Certifique-se de que os utilizadores têm instruções e orientações sobre como fornecer estes valores.
     
-    - **Selecione um modelo predefinido**: para utilizar um dos modelos predefinidos ou um modelo personalizado que configurou. Tenha em atenção que esta opção não é apresentada se estiver a editar uma etiqueta que tenha utilizado o **definir permissões** opção.
+    - **Selecione um modelo predefinido**: para utilizar um dos modelos predefinidos ou um modelo personalizado que configurou. Tenha em atenção que esta opção não é apresentada para novas etiquetas, ou se estiver a editar uma etiqueta que tenha utilizado o **definir permissões** opção.
     
     Para selecionar um modelo predefinido, o modelo tem de ser publicado (não arquivado) e não deve ser vinculado já a outra etiqueta. Quando seleciona esta opção, pode utilizar um **Editar modelo** botão [converter o modelo numa etiqueta](configure-policy-templates.md#to-convert-templates-to-labels).
     
@@ -245,7 +245,7 @@ Se especificar utilizadores externos que não tem uma conta no Azure AD:
 
 - A etiqueta é adequada para e-mail ao Exchange Online está a utilizar o [novas capacidades de encriptação de mensagens do Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
  
-- Para os anexos do Office são automaticamente protegidos, esses documentos estão disponíveis para ver num browser. Para editar estes documentos, transferir e edite-los com o Office 2016 Click-to-Run e uma conta Microsoft que utiliza o mesmo endereço de e-mail. [Mais informações](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+- Para os anexos do Office são automaticamente protegidos, esses documentos estão disponíveis para ver num browser. Para editar estes documentos, transferir e edite-los com o Office 2016 Click-to-Run e uma conta Microsoft que utiliza o mesmo endereço de e-mail. [Mais informações](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 
 > [!NOTE]

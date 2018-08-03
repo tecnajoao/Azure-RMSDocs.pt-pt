@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b533ef628f65647922a39688b8bf7e26560e3798
-ms.sourcegitcommit: 6cbd03b28873b192dc730556c6dd5a7da6e705df
+ms.openlocfilehash: c48ae6179dc34ecc58e0ddda798e8b9d30f35051
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 08/02/2018
-ms.locfileid: "39410891"
+ms.locfileid: "39474096"
 ---
 # <a name="office-365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Configuração para clientes e serviços online utilizar o serviço Azure Rights Management
 
@@ -28,7 +28,7 @@ Como o Office 365 suporta nativamente o serviço Azure Rights Management do Azur
 No entanto, recomendamos que complemente estas aplicações com o cliente do Azure Information Protection para que os utilizadores possam beneficiar do suplemento do Office e do suporte para tipos de ficheiros adicionais. Para obter mais informações, veja [Cliente do Azure Information Protection: instalação e configuração para clientes](configure-client.md).
 
 ## <a name="exchange-online-irm-configuration"></a>Exchange Online: configuração de IRM
-Para obter mais informações sobre como o IRM do Exchange Online funciona com o serviço Azure Rights Management, veja [Exchange Online e Exchange Server](../understand-explore/office-apps-services-support.md#exchange-online-and-exchange-server), na secção **Compreender e explorar**.
+Para obter mais informações sobre como o IRM do Exchange Online funciona com o serviço Azure Rights Management, veja [Exchange Online e Exchange Server](../office-apps-services-support.md#exchange-online-and-exchange-server), na secção **Compreender e explorar**.
 
 O Exchange Online já pode ser ativado para utilizar o serviço Azure Rights Management. Para verificar, execute os seguintes comandos:
 
@@ -76,7 +76,7 @@ Quando o Exchange Online está ativado para utilizar o serviço Azure Rights Man
 
 ## <a name="sharepoint-online-and-onedrive-for-business-irm-configuration"></a>SharePoint Online e OneDrive para Empresas: configuração de IRM
 
-Para obter mais informações sobre como o IRM do SharePoint Online funciona com o serviço do Azure Rights Management, veja [SharePoint Online e SharePoint Server](../understand-explore/office-apps-services-support.md#sharepoint-online-and-sharepoint-server), na secção **Compreender e explorar**.
+Para obter mais informações sobre como o IRM do SharePoint Online funciona com o serviço do Azure Rights Management, veja [SharePoint Online e SharePoint Server](../office-apps-services-support.md#sharepoint-online-and-sharepoint-server), na secção **Compreender e explorar**.
 
 Para configurar o SharePoint Online e o OneDrive para Empresas para suportar o serviço Azure Rights Management, primeiro tem de ativar o serviço de gestão de direitos de informação (IRM) para o SharePoint Online através do centro de administração do SharePoint. Assim, os proprietários de sites podem proteger as respetivas listas e bibliotecas de documentos do SharePoint com IRM e, além disso, os utilizadores podem proteger a respetiva biblioteca do OneDrive para Empresas com a IRM, para que os documentos aí guardados e partilhados com outras pessoas sejam automaticamente protegidos pelo serviço Azure Rights Management.
 

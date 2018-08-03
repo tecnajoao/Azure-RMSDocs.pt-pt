@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2542442e251cceb1de4ef9a09a945793ca9e4c68
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 4cdf429527bfc97b4e02438ae45aae80754e5fe1
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39373996"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39474356"
 ---
 # <a name="verifying-the-azure-rights-management-service"></a>Verificar o serviço Azure Rights Management
 
@@ -32,7 +32,7 @@ Para obter instruções para concluir este teste, veja as informações em [Ajud
 Se o seu teste não for bem-sucedido, reveja os passos de configuração no [Plano de implementação do Azure Information Protection](../plan-design/deployment-roadmap.md).
 
 > [!TIP]
-> Se precisar de mais ajuda, consulte a secção [Opções de suporte e recursos da comunidade](../get-started/information-support.md#support-options-and-community-resources) no artigo [Informações e suporte do Azure Information Protection](../get-started/information-support.md).
+> Se precisar de mais ajuda, consulte a secção [Opções de suporte e recursos da comunidade](../information-support.md#support-options-and-community-resources) no artigo [Informações e suporte do Azure Information Protection](../information-support.md).
 
 ## <a name="next-steps"></a>Passos Seguintes
 

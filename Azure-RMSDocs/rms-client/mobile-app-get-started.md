@@ -13,12 +13,12 @@ ms.technology: techgroup-identity
 ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 22bf71b5fa50c08cb5085cc5741766e07a16581b
-ms.sourcegitcommit: 6cbd03b28873b192dc730556c6dd5a7da6e705df
+ms.openlocfilehash: 6c8561a54f80ff623881713c8dd05e334ec56ead
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 08/02/2018
-ms.locfileid: "39411161"
+ms.locfileid: "39474414"
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Introdução à aplicação Microsoft Azure Information Protection para iOS e Android
 
@@ -37,7 +37,7 @@ Para utilizar as seguintes instruções, precisa de acesso do dispositivo móvel
 
 - **Um ficheiro .rpmsg**: trata-se de uma mensagem de e-mail com proteção de direitos que é apresentada como anexo numa mensagem de e-mail, quando a aplicação de e-mail no seu dispositivo móvel não suporta nativamente a proteção de dados da gestão de direitos. 
     
-    Utilize outro dispositivo para enviar a si mesmo uma mensagem de e-mail com proteção de direitos à qual pode aceder no seu dispositivo móvel. Por exemplo, utilize o Outlook a partir de um computador Windows. Para obter uma lista de clientes de e-mail que suportam a gestão de direitos nativamente, consulte a coluna E-MAIL na página [Aplicações que suportam a proteção de dados do Azure Rights Management](../get-started/requirements-applications.md).
+    Utilize outro dispositivo para enviar a si mesmo uma mensagem de e-mail com proteção de direitos à qual pode aceder no seu dispositivo móvel. Por exemplo, utilize o Outlook a partir de um computador Windows. Para obter uma lista de clientes de e-mail que suportam a gestão de direitos nativamente, consulte a coluna E-MAIL na página [Aplicações que suportam a proteção de dados do Azure Rights Management](../requirements-applications.md).
 
 - **Um ficheiro PDF protegido por direitos**: num computador Windows, utilize o cliente do Azure Information Protection para [proteger um ficheiro PDF](client-classify-protect.md) e, em seguida, envie para si próprio este ficheiro PDF protegido por direitos PDF como um anexo de e-mail. Em alternativa, carregue um ficheiro PDF para uma biblioteca protegida do SharePoint e partilhe-o com o seu endereço de e-mail.
 

@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 80a0f73b8df342cda4155aeb5d475fa9f6547119
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 4143cd12138e82bcf94331ef0911033acdb1942c
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39370681"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39474380"
 ---
 # <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Ver e utilizar ficheiros que foram protegidos pelo Rights Management
 
@@ -33,7 +33,7 @@ Quando a [Aplicação de partilha Rights Management (RMS) está instalada no com
 > -   Para se candidatar a esta conta, clique na ligação para aderir ao [RMS para indivíduos](http://go.microsoft.com/fwlink/?LinkId=309469).
 >
 >     Quando se inscrever, utilize o seu endereço de e-mail da empresa em vez de um endereço de e-mail pessoal. Caso se esteja a inscrever porque recebeu um anexo protegido, utilize o mesmo endereço de e-mail que foi utilizado para lhe enviar a mensagem de e-mail.
-> -   Para mais informações, consulte [RMS para indivíduos e Azure Rights Management](../understand-explore/rms-for-individuals.md).
+> -   Para mais informações, consulte [RMS para indivíduos e Azure Rights Management](../rms-for-individuals.md).
 
 ## <a name="to-view-a-protected-file"></a>Para ver um ficheiro protegido
 Ao utilizar o Explorador de Ficheiros ou a mensagem de e-mail que contém o anexo, faça duplo clique no ficheiro protegido e introduza as suas credenciais, se lhe for pedido.

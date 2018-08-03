@@ -4,7 +4,7 @@ description: Para configurar a classificação, a etiquetagem e a proteção, te
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/28/2018
+ms.date: 08/02/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,18 +12,24 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6dcc5aaa5ff2a5a765091a56847358f302082b16
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 2b3d0d3f5f49d02ba738ffd900d3d54b5390443a
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39369746"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473836"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurar a política do Azure Information Protection
 
 >*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Para configurar a classificação, a etiquetagem e a proteção, tem de configurar a política do Azure Information Protection. Esta política é, em seguida, transferida para computadores que têm instalado o [cliente do Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+
+A política contém etiquetas e as definições:
+
+- As etiquetas aplicam-se um valor de classificação a documentos e e-mails e, opcionalmente, podem proteger este conteúdo. O cliente do Azure Information Protection apresenta estas etiquetas para os seus utilizadores nas aplicações do Office, e quando os utilizadores com o botão direito no Explorador de ficheiros. Estas etiquetas também podem ser aplicadas através da utilização do PowerShell e o scanner do Azure Information Protection.
+
+- As definições de alterar o comportamento padrão do cliente do Azure Information Protection. Por exemplo, pode selecionar uma etiqueta predefinida, se todos os documentos e e-mails devem ter uma etiqueta e se a barra do Azure Information Protection é apresentada nas aplicações do Office.
 
 ## <a name="subscription-support"></a>Suporte da subscrição
 
@@ -43,7 +49,7 @@ Se sua organização tiver uma mistura de subscrições, é sua responsabilidade
 
 - **Quando a sua organização tem uma subscrição do Azure Information Protection, alguns utilizadores têm apenas uma licença para o Office 365 que inclui o serviço Azure Rights Management, mas**: para os utilizadores que não tem uma licença do Azure Information Protection, Edite o registo em seus computadores para que eles não transferir política do Azure Information Protection. Para obter instruções, consulte o Guia do administrador para a personalização do seguinte: [impor modo apenas de proteção quando a sua organização tiver uma mistura de licenças](../rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses).
 
-Para obter mais informações sobre as subscrições, veja [De que subscrição preciso para o Azure Information Protection e que funcionalidades estão incluídas?](../get-started/faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
+Para obter mais informações sobre as subscrições, veja [De que subscrição preciso para o Azure Information Protection e que funcionalidades estão incluídas?](../faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
 
 ## <a name="signing-in-to-the-azure-portal"></a>O início de sessão no portal do Azure
 
@@ -87,27 +93,30 @@ Acesso de tempo junto a **do Azure Information Protection** painel, ele selecion
 
 3. Para ver e editar as políticas, selecione **políticas** entre as opções de menu. Para ver e editar a política que obtém todos os utilizadores, selecione o **Global** política. Para criar uma política personalizada para utilizadores selecionados, selecione **adicionar uma nova política**.
     
-    Uma política do Azure Information Protection contém os elementos seguintes que pode configurar:
-    
-    - As etiquetas são incluídas que permitem que os administradores e utilizadores classificarem documentos e e-mails.
-    
-    - Título e descrição para a barra Information Protection que os utilizadores veem nas aplicações do Office.
-    
-    - A opção para definir uma etiqueta predefinida como ponto de partida para classificar documentos e e-mails.
-     
-    - A opção para impor a classificação quando os utilizadores guardam documentos e enviam e-mails.
-    
-    - A opção para solicitar aos utilizadores que indiquem um motivo quando estes selecionam uma etiqueta que tem um nível de sensibilidade inferior ao original.
-    
-    - A opção para etiquetar automaticamente uma mensagem de e-mail com base nos respetivos anexos.
 
-    - A opção de controlar se a barra do Information Protection é apresentada em aplicativos do Office.
+### <a name="overview-of-the-policy"></a>Descrição geral da política
 
-    - A opção para controlar se o botão não reencaminhar é apresentado no Outlook.
+Uma política do Azure Information Protection contém os elementos seguintes que pode configurar:
     
-    - A opção para permitir aos utilizadores especificar suas próprias permissões para documentos.
-    
-    - A opção para fornecer uma ligação de ajuda personalizada para os utilizadores.
+- As etiquetas são incluídas que permitem que os administradores e utilizadores classificar (e, opcionalmente, proteger) documentos e e-mails.
+
+- Título e descrição para a barra Information Protection que os utilizadores veem nas aplicações do Office.
+
+- A opção para definir uma etiqueta predefinida como ponto de partida para classificar documentos e e-mails.
+
+- A opção para impor a classificação quando os utilizadores guardam documentos e enviam e-mails.
+
+- A opção para solicitar aos utilizadores que indiquem um motivo quando estes selecionam uma etiqueta que tem um nível de sensibilidade inferior ao original.
+
+- A opção para etiquetar automaticamente uma mensagem de e-mail com base nos respetivos anexos.
+
+- A opção de controlar se a barra do Information Protection é apresentada em aplicativos do Office.
+
+- A opção para controlar se o botão não reencaminhar é apresentado no Outlook.
+
+- A opção para permitir aos utilizadores especificar suas próprias permissões para documentos.
+
+- A opção para fornecer uma ligação de ajuda personalizada para os utilizadores.
 
 O Azure Information Protection tem uma [política predefinida](configure-policy-default.md) que contém cinco etiquetas principais. Duas destas etiquetas contenham subetiquetas para fornecer subcategorias, quando necessário. Quando uma etiqueta está configurada para subetiquetas, os utilizadores não é possível selecionar a etiqueta principal, mas tem de selecionar uma das subetiquetas.
 
@@ -163,5 +172,5 @@ Utilize as seguintes informações para ajudar a configurar a política do Azure
 
 ## <a name="next-steps"></a>Passos Seguintes
 
-Para obter um exemplo de como personalizar a política predefinida e ver o comportamento resultante de uma aplicação do Office, experimente o [Tutorial de início rápido do Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
+Para obter um exemplo de como personalizar a política predefinida e ver o comportamento resultante de uma aplicação do Office, experimente o [Tutorial de início rápido do Azure Information Protection](../infoprotect-quick-start-tutorial.md).
 

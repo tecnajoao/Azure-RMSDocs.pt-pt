@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2487d775c9a1e6fb7ecdef77d9969841a65ea8b7
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 61762157ff6419bb325d92470d5264dc9b55f840
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39371456"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39474220"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: política de histórico e suporte de lançamento de versão
 
@@ -42,7 +42,7 @@ Utilize as seguintes informações para ver o que há de novo ou alterado para u
 > [!NOTE]
 > Pequenas correções não são listadas para que se ocorrer um problema com o cliente do Azure Information Protection, recomendamos que verifique se ser corrigido com o lançamento de DG mais recente. Se o problema persistir, verifique a versão de pré-visualização atual.
 >  
-> Para obter suporte técnico, consulte a [opções de suporte e recursos da Comunidade](../get-started/information-support.md#support-options-and-community-resources) informações. Também o incentivamos a interagir com a equipa do Azure Information Protection, no [site Yammer](https://www.yammer.com/askipteam/).
+> Para obter suporte técnico, consulte a [opções de suporte e recursos da Comunidade](../information-support.md#support-options-and-community-resources) informações. Também o incentivamos a interagir com a equipa do Azure Information Protection, no [site Yammer](https://www.yammer.com/askipteam/).
 
 ## <a name="versions-later-than-12950"></a>Versões mais tarde do que 1.29.5.0
 

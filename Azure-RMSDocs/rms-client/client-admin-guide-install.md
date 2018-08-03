@@ -12,18 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8a888ffbcecb3f5fe714201a950a59162e295c4f
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: af9cfca4d328dba7646c1c319744476fe0e6b43f
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39371531"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39474176"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guia do administrador: Instalar o cliente do Azure Information Protection para utilizadores
 
 >*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
-Antes de instalar o cliente do Azure Information Protection na sua rede empresarial, verifique que os computadores têm as versões de sistema operativo necessária e as aplicações do Azure Information Protection: [requisitos para obter informações do Azure Proteção](../get-started/requirements-azure-rms.md). 
+Antes de instalar o cliente do Azure Information Protection na sua rede empresarial, verifique que os computadores têm as versões de sistema operativo necessária e as aplicações do Azure Information Protection: [requisitos para obter informações do Azure Proteção](../requirements.md). 
 
 Em seguida, verifique os pré-requisitos adicionais que podem ser necessários para o cliente do Azure Information Protection, conforme documentado na próxima seção. Nem todos os pré-requisitos são verificados pelo programa de instalação.
 

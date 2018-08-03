@@ -13,12 +13,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 68ce556a9771df4ed8f51d417e12f511a1acfa77
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: a503c4232847828bf32d889f4702fbfed39463ad
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39374448"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473717"
 ---
 # <a name="change-permissions-on-files-that-have-been-protected-by-rights-management"></a>Alterar permissões em ficheiros que tenham sido protegidos pela Rights Management
 
@@ -70,7 +70,7 @@ Se quiser remover por completo todas as permissões de modo a que o ficheiro já
 > -   Para se candidatar a esta conta, clique na ligação para aderir ao [RMS para indivíduos](http://go.microsoft.com/fwlink/?LinkId=309469).
 >
 >     Quando se inscrever, utilize o seu endereço de e-mail da empresa em vez de um endereço de e-mail pessoal. Caso se esteja a inscrever porque recebeu um anexo protegido, utilize o mesmo endereço de e-mail que foi utilizado para lhe enviar a mensagem de e-mail.
-> -   Para mais informações, consulte [RMS para indivíduos e Azure Rights Management](../understand-explore/rms-for-individuals.md).
+> -   Para mais informações, consulte [RMS para indivíduos e Azure Rights Management](../rms-for-individuals.md).
 
 ## <a name="to-re-protect-a-file-that-you-have-emailed"></a>Voltar a proteger um ficheiro enviado por si por e-mail
 

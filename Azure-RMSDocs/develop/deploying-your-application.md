@@ -14,12 +14,12 @@ ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 1e69ab449b3be6d3a081b6b5ca16767a69ee54da
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 365d1bf0e36fda964f185713f5514a91f4c6df53
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39373503"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473638"
 ---
 # <a name="deploy-into-production"></a>Implementar em produção
 
@@ -109,7 +109,7 @@ Para o utilizador final tirar partido dos serviços do Information Protection, t
 
 
 > [!IMPORTANT]
-> Se executar a aplicação cliente com o RMS baseado no Azure, terá de solicitar os seus próprios inquilinos. Para obter mais informações, consulte [Requisitos do Azure RMS: Subscrições na cloud que suportam o Azure RMS](../get-started/requirements-subscriptions.md).
+> Se executar a aplicação cliente com o RMS baseado no Azure, terá de solicitar os seus próprios inquilinos. Para obter mais informações, consulte [Requisitos do Azure RMS: Subscrições na cloud que suportam o Azure RMS](./requirements-subscriptions.md).
 > Para obter mais informações sobre a execução com o Azure RMS, consulte [Permitir que a aplicação do serviço funcione com o RMS baseado na cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
 -   Transfira o [Assistente de Início de Sessão do Microsoft Online Services](http://www.microsoft.com/download/details.aspx?id=28177) do Centro de Transferências da Microsoft.

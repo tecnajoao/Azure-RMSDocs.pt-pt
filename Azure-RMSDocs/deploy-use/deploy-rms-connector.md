@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9e3a159f1e165671fd8ba83da53b69b75e6fe4d1
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 5e7003c2b2dbcd81ee980dda1dfab14291e81088
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39372585"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473404"
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Implementar o conetor Azure Rights Management
 
@@ -41,7 +41,7 @@ O conector RMS suporta os seguintes servidores no local: Exchange Server, ShareP
 > [!NOTE]
 > Se quiser proteger vários tipos de ficheiro (e não apenas os documentos do Office) ao utilizar a Infraestrutura de Classificação de Ficheiros, não utilize o conector RMS, mas sim os [cmdlets AzureInformationProtection](/powershell/azureinformationprotection/vlatest/aip).
 
-Para as versões destes servidores no local que são suportadas pelo conector RMS, consulte [Servidores no local que suportam o Azure RMS](..\get-started\requirements-servers.md).
+Para as versões destes servidores no local que são suportadas pelo conector RMS, consulte [Servidores no local que suportam o Azure RMS](../requirements-servers.md).
 
 
 ### <a name="support-for-hybrid-scenarios"></a>Suporte para cenários híbridos

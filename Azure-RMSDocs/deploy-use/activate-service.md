@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c32a57198cd75d83fefff976cfb01563de391679
-ms.sourcegitcommit: 6cbd03b28873b192dc730556c6dd5a7da6e705df
+ms.openlocfilehash: ec1de298a5baa09132af524f0556badbf99d7955
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 08/02/2018
-ms.locfileid: "39411041"
+ms.locfileid: "39473887"
 ---
 # <a name="activating-azure-rights-management"></a>Ativar o Azure Rights Management
 
@@ -28,7 +28,7 @@ ms.locfileid: "39411041"
 >
 > Por exemplo, para aplicações do Office, clique no ícone Ajuda e introduza termos de pesquisa, como **Rights Management** ou **IRM**. Para o cliente do Azure Information Protection para o Windows, veja o [Guia do utilizador do cliente do Azure Information Protection](../rms-client/client-user-guide.md).
 >
-> Para obter suporte técnico e outras perguntas sobre o serviço, consulte a [opções de suporte e recursos da Comunidade](../get-started/information-support.md#support-options-and-community-resources) informações.
+> Para obter suporte técnico e outras perguntas sobre o serviço, consulte a [opções de suporte e recursos da Comunidade](../information-support.md#support-options-and-community-resources) informações.
 
 Quando o serviço Azure Rights Management do Azure Information Protection é ativado para a sua organização, os administradores e utilizadores, podem começar a proteger dados importantes através da utilização de aplicações e serviços que suportam esta solução de proteção de informações. Os administradores também podem gerir e monitorizar a documentos protegidos e e-mails que sua organização é proprietária. 
 
@@ -114,6 +114,6 @@ Quando o serviço Azure Rights Management está ativado para a sua organização
 
 Por exemplo, pode querer utilizar [modelos](configure-policy-templates.md) para tornar mais fácil para os utilizadores aplicarem a proteção de informações aos ficheiros, ligar os servidores no local para utilizar o Azure Rights Management, instalando o [Rights Management conector](deploy-rms-connector.md)e implementar o [cliente Azure Information Protection](../rms-client/aip-client.md) que suporta a proteção de todos os tipos de ficheiro em todos os dispositivos. 
 
-Os serviços do Office, como o Exchange Online e o SharePoint Online, necessitam de configuração adicional antes de poder utilizar as respetivas funcionalidades de Gestão de Direitos de Informação (IRM). Para obter informações sobre a interação das suas aplicações com o serviço Rights Management, veja [Como as aplicações suportam o serviço Azure Rights Management](../understand-explore/applications-support.md).
+Os serviços do Office, como o Exchange Online e o SharePoint Online, necessitam de configuração adicional antes de poder utilizar as respetivas funcionalidades de Gestão de Direitos de Informação (IRM). Para obter informações sobre a interação das suas aplicações com o serviço Rights Management, veja [Como as aplicações suportam o serviço Azure Rights Management](../applications-support.md).
 
 

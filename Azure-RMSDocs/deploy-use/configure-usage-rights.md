@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b7f018a67808b1d3cf39099f8a22202cbf82bd5f
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 960c8070a03622407c5a4c68c90abb0e14eb7f96
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39371480"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39474159"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuração de direitos de utilização para o Azure Rights Management
 
@@ -61,7 +61,7 @@ Algumas aplicações agrupam os direitos de utilização em níveis de permissõ
 
 Utilize a tabela seguinte para obter uma lista destes níveis de permissões e uma lista completa dos direitos de utilização que contêm. Os direitos de utilização são apresentados pela respetiva [nome comum](#usage-rights-and-descriptions).
 
-|Nível de permissões|Aplicações|Direitos de utilização incluídos|
+|nível de permissões|Aplicações|Direitos de utilização incluídos|
 |---------------------|----------------|---------------------------------|
 |Visualizador|Portal clássico do Azure <br /><br />Portal do Azure<br /><br /> Aplicação de partilha Rights Management para Windows<br /><br />Cliente do Azure Information Protection para Windows|Ver, abrir, ler; Ver direitos; Resposta [[1]](#footnote-1); Responder a todos [[1]](#footnote-1); Permitir Macros [[2]](#footnote-2)<br /><br />Nota: para e-mails utilize Revisor, em vez deste nível de permissão, para garantir que a resposta é recebida como uma mensagem de e-mail e não como um anexo. O Revisor também é necessário quando envia um e-mail para outra organização que utilize o cliente do Outlook ou Outlook Web App. Ou, para utilizadores na sua organização que estão excluídos com o Azure Rights Management service uma vez que implementou [controlos de inclusão](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy).|
 |Revisor|Portal clássico do Azure <br /><br />Portal do Azure<br /><br />Aplicação de partilha Rights Management para Windows<br /><br />Cliente do Azure Information Protection para Windows|Ver, abrir, ler; Guardar; Editar conteúdo, editar; Ver direitos; Resposta: Responder a todos [[3]](#footnote-3); Para a frente [[3]](#footnote-3); Permitir Macros [[2]](#footnote-2)|
@@ -127,7 +127,7 @@ Quando esta opção estiver selecionada, o e-mail é encriptada e os destinatár
 
 Da mesma forma, por predefinição, desprotegidos [documentos do Office](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) que estão anexados à mensagem de e-mail herdam as mesmas permissões. Esses documentos são automaticamente protegidos e quando são transferidos, pode podem ser guardadas, editados, copiados e impressas a partir de aplicações do Office pelos destinatários. Quando o documento é salvo por um destinatário, podem ser guardado para um novo nome e até mesmo um formato diferente. No entanto, apenas os formatos de ficheiro que suportam a proteção estão disponíveis para que o documento não é possível guardar sem a proteção original. Se pretender que os direitos de utilização diferentes para um anexo ou o anexo não é um documento do Office que suporte esta proteção herdada, proteja o ficheiro antes de ligá-los para o e-mail. Em seguida, pode atribuir os direitos de utilização específico que necessita para o ficheiro.
 
-Em alternativa, pode alterar essa herança de encriptação de documentos para os destinatários que visualizar o documento no browser. Considere utilizar esta configuração quando não precisar de manter a proteção original para o documento depois do utilizador é autenticado. Para efetuar esta alteração, utilize o comando do PowerShell do Exchange Online: `Set-IRMConfiguration -DecryptAttachmentFromPortal $true`. Em seguida, quando esses destinatários transferir o documento, a proteção é removida. Para obter mais informações, consulte a postagem no blog Office [controlo de administração para anexos já está disponíveis na encriptação de mensagens do Office 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Admin-control-for-attachments-now-available-in-Office-365/ba-p/204007). Se precisar do documento para manter a proteção original depois de transferida, consulte [proteger colaboração de documentos utilizando o Azure Information Protection](../get-started/secure-collaboration-documents.md).      
+Em alternativa, pode alterar essa herança de encriptação de documentos para os destinatários que visualizar o documento no browser. Considere utilizar esta configuração quando não precisar de manter a proteção original para o documento depois do utilizador é autenticado. Para efetuar esta alteração, utilize o comando do PowerShell do Exchange Online: `Set-IRMConfiguration -DecryptAttachmentFromPortal $true`. Em seguida, quando esses destinatários transferir o documento, a proteção é removida. Para obter mais informações, consulte a postagem no blog Office [controlo de administração para anexos já está disponíveis na encriptação de mensagens do Office 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Admin-control-for-attachments-now-available-in-Office-365/ba-p/204007). Se precisar do documento para manter a proteção original depois de transferida, consulte [proteger colaboração de documentos utilizando o Azure Information Protection](../secure-collaboration-documents.md).      
 
 ## <a name="rights-management-issuer-and-rights-management-owner"></a>Emissor e proprietário do Rights Management
 
@@ -161,7 +161,7 @@ Tenha em atenção que o proprietário do Rights Management é independente do P
 
 Quando um utilizador abre um documento ou e-mail que tenha sido protegido pelo Azure Rights Management, uma licença de utilização do Rights Management para esse conteúdo é concedida ao utilizador. Esta licença de utilização é um certificado que contém os direitos de utilização do utilizador para o documento ou mensagem de e-mail e a chave de encriptação que foi utilizada para encriptar o conteúdo. A licença de utilização também contém uma data de expiração se isso tiver sido definido, e quanto a licença de utilização do é válida.
 
-Um utilizador tem de ter uma licença de uso válidos para abrir o conteúdo, além do respetivo certificado de conta de direitos (RAC), que é um certificado que tenha concedido quando o [ambiente do utilizador é inicializado](../understand-explore/how-does-it-work.md#initializing-the-user-environment) e, em seguida, renovada de 31 dias.
+Um utilizador tem de ter uma licença de uso válidos para abrir o conteúdo, além do respetivo certificado de conta de direitos (RAC), que é um certificado que tenha concedido quando o [ambiente do utilizador é inicializado](../how-does-it-work.md#initializing-the-user-environment) e, em seguida, renovada de 31 dias.
 
 Durante o período de licença de utilização, o utilizador não é reautenticar ou reauthorized para o conteúdo. Isso permite que o usuário continue e abra o documento protegido ou o e-mail sem uma ligação à Internet. Quando o período de validade de licença de utilização expira, da próxima vez que o usuário acessa o documento protegido ou o e-mail, o utilizador tem de ser reautenticar e reauthorized. 
 

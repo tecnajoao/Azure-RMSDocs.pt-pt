@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 11ffa730-c5dc-4b6b-9c1e-c58eff8aafc2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2bfe729edadbaebe78bc22e52bec91be6d3dad5e
-ms.sourcegitcommit: 6cbd03b28873b192dc730556c6dd5a7da6e705df
+ms.openlocfilehash: 094088ac8f33a4a6bfaf3f0eec2401785bd0ccdc
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 08/02/2018
-ms.locfileid: "39410983"
+ms.locfileid: "39473557"
 ---
 # <a name="preparing-the-environment-for-azure-rights-management-when-you-also-have-active-directory-rights-management-services-ad-rms"></a>Preparar o ambiente para o Azure Rights Management quando também tem os Serviços de Gestão de Direitos do Active Directory (AD RMS)
 
@@ -38,7 +38,7 @@ Se o serviço Azure Rights Management está ativado e que também está a utiliz
     
     Para obter mais informações sobre estas configurações de registro, consulte [Ativar deteção de serviço do lado do cliente através do registo do Windows](../rms-client/client-deployment-notes.md#enabling-client-side-service-discovery-by-using-the-windows-registry) e [redirecionar o tráfego de servidor de licenciamento](../rms-client/client-deployment-notes.md#redirecting-licensing-server-traffic).   
 
-Se o AD RMS é implementado na sua organização, considere se é possível migrar para o Azure Information Protection. O Azure Information Protection tem muitas vantagens ao longo do AD RMS. Por exemplo, um melhor suporte para dispositivos móveis e integração com serviços do Office 365, bem como com o Exchange Server e SharePoint Server. Para obter mais informações, consulte [comparar o Azure Information Protection e o AD RMS](../understand-explore/compare-on-premise.md).
+Se o AD RMS é implementado na sua organização, considere se é possível migrar para o Azure Information Protection. O Azure Information Protection tem muitas vantagens ao longo do AD RMS. Por exemplo, um melhor suporte para dispositivos móveis e integração com serviços do Office 365, bem como com o Exchange Server e SharePoint Server. Para obter mais informações, consulte [comparar o Azure Information Protection e o AD RMS](../compare-on-premise.md).
 
 Ao migrar para o Azure Information Protection, não perderá o acesso ao conteúdo anteriormente protegido e não tiver a desproteger ou voltar a proteger seu conteúdo. Ainda podem ser abertos a documentos e e-mails que foram protegidos pelo AD RMS, mesmo depois de ter desaprovisionado AD RMS.
 

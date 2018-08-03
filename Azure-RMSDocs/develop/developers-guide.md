@@ -11,12 +11,12 @@ ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 8ede04f6658bf770328cf6ae683d93725bcdc397
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: cfd090df79e640ef6106f2c72001b2b05969cdf6
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39369878"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473904"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guia para Programadores do Azure Information Protection
 
@@ -143,5 +143,5 @@ Cada um dos seguintes tópicos apresenta instruções específicas para um aspet
 ### <a name="see-also"></a>Consulte também
 
 - [Terminologia para programadores](terms.md)
-- [Terminologia do Azure Information Protection – ITPro](../get-started/terminology.md)
+- [Terminologia do Azure Information Protection – ITPro](./terminology.md)
 

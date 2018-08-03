@@ -10,12 +10,12 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: fc4715900d77b12d812b01af369f7268296d5a4f
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 5c8e918bd467d1d7540a129bca266c0f0c077a56
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39371218"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39474261"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Manter a proteção da sua própria chave (HYOK) para o Azure Information Protection
 
@@ -37,7 +37,7 @@ Quando protege os documentos e e-mails mais confidenciais utilizando o Azure Inf
 
 Uma chave com base na cloud protege os documentos e e-mails da sua organização através de uma chave privada para a organização que é gerida pela Microsoft (predefinição) ou gerida por si (o "traga a sua própria chave" ou cenário BYOK). Para obter mais informações sobre as opções de chave de inquilino, consulte [Planear e implementar a sua chave de inquilino do Azure Information Protection](../plan-design/plan-implement-tenant-key.md).
 
-Documentos e e-mails que protege poderiam ser armazenados na cloud ou no local. Para obter mais informações sobre como funciona o o processo de proteção para esta chave com base na cloud, consulte [o que é o Azure Rights Management?](../understand-explore/what-is-azure-rms.md )
+Documentos e e-mails que protege poderiam ser armazenados na cloud ou no local. Para obter mais informações sobre como funciona o o processo de proteção para esta chave com base na cloud, consulte [o que é o Azure Rights Management?](../what-is-azure-rms.md )
 
 Serviços do Office 365 e aplicações baseadas na cloud para o seu inquilino podem integrar com o Azure Information Protection para que as funções empresariais importantes, como serviços de pesquisa, indexação, arquivamento e antimalware continuem a funcionar de forma totalmente integrada para o conteúdo que está protegida pelo Azure Information Protection. Esta capacidade de ler o conteúdo encriptado para esses cenários é frequentemente referida como "raciocínio através de dados". Por exemplo, é esta capacidade que permite o Exchange Online desencriptar mensagens de correio eletrónico de verificação de malware e para executar regras de (DLP) de prevenção de perda de dados nos e-mails encriptados.
 

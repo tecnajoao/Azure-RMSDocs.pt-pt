@@ -10,12 +10,12 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 403d5d2222438136e5d449dbe4b26b693ad566d0
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: eb99fb447702dd2f453c1caacbb8ccd341ed127b
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39475239"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489489"
 ---
 # <a name="step-2-configure-the-azure-information-protection-policy"></a>Passo 2: Configurar a política do Azure Information Protection
 
@@ -32,7 +32,7 @@ Apesar de o Azure Information Protection ser fornecido com uma política predefi
        > [!NOTE]
        > A sua política predefinida pode ter um aspeto diferente da que é apresentada neste tutorial. Por exemplo, tem uma etiqueta com o nome **Interno** em vez de **Geral** e **Secreto** em vez de **Altamente Confidencial**. Talvez não tiver subetiquetas com o nome **apenas os destinatários**, ou não tem quaisquer etiquetas em todos os. Estas alterações são porque existem versões diferentes da política predefinida, dependendo de quando foi criado para o seu inquilino. Também é possível que tenha editado a política antes de iniciar o tutorial.
        > 
-       > Se a sua política predefinida tiver um aspeto diferente, ainda pode utilizar este tutorial, mas tenha em consideração estas alterações quando utilizar as instruções e as imagens que se seguem. Se quiser modificar a sua política predefinida para que corresponda à atual, veja [Política do Azure Information Protection predefinida](./deploy-use/configure-policy-default.md).
+       > Se a sua política predefinida tiver um aspeto diferente, ainda pode utilizar este tutorial, mas tenha em consideração estas alterações quando utilizar as instruções e as imagens que se seguem. Se quiser modificar a sua política predefinida para que corresponda à atual, veja [Política do Azure Information Protection predefinida](configure-policy-default.md).
     
     - Com a configuração predefinida, algumas etiquetas não têm marcas visuais configuradas. As marcas visuais são um rodapé, cabeçalho e marca d'água. Dependendo da sua diretiva padrão, alguns rótulos, talvez também tenha proteção definida. Por exemplo: 
     
@@ -151,10 +151,10 @@ Agora que conhece o que é a política predefinida e efetuou algumas alteraçõe
 
 |Se pretender mais informações|Informações adicionais|
 |--------------------------------|--------------------------|
-|Sobre a política predefinida e as versões diferentes|[A política do Azure Information Protection predefinida](./deploy-use/configure-policy-default.md)|
-|Sobre como configurar a política|[Configurar a política do Azure Information Protection](./deploy-use/configure-policy.md)|
-|Instruções detalhadas para configurar uma etiqueta para a proteção|[Como configurar uma etiqueta para proteção do Rights Management](./deploy-use/configure-policy-protection.md)|
-|Informações detalhadas sobre as permissões|[Configurar direitos de utilização do Azure Rights Management](./deploy-use/configure-usage-rights.md)|
+|Sobre a política predefinida e as versões diferentes|[A política do Azure Information Protection predefinida](configure-policy-default.md)|
+|Sobre como configurar a política|[Configurar a política do Azure Information Protection](configure-policy.md)|
+|Instruções detalhadas para configurar uma etiqueta para a proteção|[Como configurar uma etiqueta para proteção do Rights Management](configure-policy-protection.md)|
+|Informações detalhadas sobre as permissões|[Configurar direitos de utilização do Azure Rights Management](configure-usage-rights.md)|
 
 
 

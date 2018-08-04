@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a9780e355839edaa4b6eccea9692b2a1058affaa
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: da68db95148acd128b26ca311fe8682c0d67cf26
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474193"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489717"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Proteção RMS com Infraestrutura de Classificação de Ficheiros (FCI) do Windows Server
 
@@ -28,7 +28,7 @@ Utilize este artigo para obter instruções e um script para utilizar o cliente 
 Esta solução permite-lhe proteger automaticamente todos os ficheiros numa pasta num servidor de ficheiros com o Windows Server ou proteger automaticamente ficheiros que cumpram critérios específicos. Por exemplo, ficheiros que tenham sido classificados como contendo informações confidenciais. Esta solução liga-se diretamente ao serviço Azure Rights Management do Azure Information Protection para proteger os ficheiros, pelo que tem de ter este serviço implementado na sua organização.
 
 > [!NOTE]
-> Embora o Azure Information Protection inclua um [conector](../deploy-use/deploy-rms-connector.md) que suporta a Infraestrutura de Classificação de Ficheiros, essa solução só suporta a proteção nativa — por exemplo, ficheiros do Office.
+> Embora o Azure Information Protection inclua um [conector] implementar-rms-connector.md) que suporta a infraestrutura de classificação de ficheiros, essa solução suporta apenas a proteção nativa — por exemplo, ficheiros do Office.
 > 
 > Para suportar vários tipos de ficheiro com a infraestrutura de classificação de ficheiros do Windows Server, tem de utilizar o módulo **AzureInformationProtection** do PowerShell, conforme documentado neste artigo. Os cmdlets do Azure Information Protection, tal como o cliente do Azure Information Protection, suportam a proteção genérica, bem como a proteção nativa, o que significa que os tipos de ficheiro diferentes dos documentos do Office podem ser protegidos. Para obter mais informações, veja [Tipos de ficheiro suportados pelo cliente do Azure Information Protection](client-admin-guide-file-types.md) no guia do administrador do cliente do Azure Information Protection.
 
@@ -53,7 +53,7 @@ Pré-requisitos para estas instruções:
     
     - Tem uma ligação à Internet e que configurou as definições de computador, se elas são necessárias para um servidor proxy. Por exemplo: `netsh winhttp import proxy source=ie`
     
-- Sincronizou as suas contas de utilizador do Active Directory no local com o Azure Active Directory ou o Office 365, incluindo os endereços de e-mail. Isto é necessário para todos os utilizadores que possam necessitar de aceder a ficheiros protegidos pela FCI e pelo serviço Azure Rights Management. Se não efetuar este passo (por exemplo, num ambiente de teste), os utilizadores poderão ficar bloqueados de aceder a estes ficheiros. Se precisar de mais informações sobre este requisito, veja [Preparar utilizadores e grupos para o Azure Information Protection](../plan-design/prepare.md).
+- Sincronizou as suas contas de utilizador do Active Directory no local com o Azure Active Directory ou o Office 365, incluindo os endereços de e-mail. Isto é necessário para todos os utilizadores que possam necessitar de aceder a ficheiros protegidos pela FCI e pelo serviço Azure Rights Management. Se não efetuar este passo (por exemplo, num ambiente de teste), os utilizadores poderão ficar bloqueados de aceder a estes ficheiros. Se precisar de mais informações sobre este requisito, veja [Preparar utilizadores e grupos para o Azure Information Protection](../prepare.md).
     
 - Transferiu os modelos do Rights Management para o servidor de ficheiros e identificou o ID do modelo que irá proteger os ficheiros. Para o fazer, utilize o cmdlet [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate). Este cenário não suporta modelos departamentais, pelo que tem de utilizar um modelo que não esteja configurado para um âmbito ou a configuração do âmbito tem de incluir a opção de compatibilidade de aplicações para marcar a caixa de verificação **Mostrar este modelo a todos os utilizadores quando as aplicações não suportam a identidade de utilizador**.
 

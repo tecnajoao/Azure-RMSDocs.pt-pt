@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: eb50971c3bdfd464927866a72e2657f7acffd515
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 8fccb3dccfdef523bf1ffdee4bc5be175b3f94fd
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39475288"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39488955"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Perguntas mais frequentes sobre o Azure Information Protection
 
@@ -52,30 +52,30 @@ Se utilizar atualmente o aplicativo para Windows de partilha Rights Management, 
 
 Os administradores globais de um inquilino do Office 365 ou inquilino do Azure AD podem obviamente executar todas as tarefas administrativas do Azure Information Protection. No entanto, se pretender atribuir permissões administrativas a outros utilizadores, tem as seguintes opções:
 
-- **Administrador do Information Protection**: função de administrador neste Azure Active Directory permite que um administrador configurar todos os aspetos do Azure Information Protection, mas não a outros serviços. Um administrador com esta função pode ativar e desativar o serviço de proteção do Azure Rights Management, configurar as definições de proteção e as etiquetas e configurar a política do Azure Information Protection. Além disso, um administrador com esta função pode executar todos os cmdlets do PowerShell para o [cliente Azure Information Protection](./rms-client/client-admin-guide-powershell.md) e para o [módulo AADRM](./deploy-use/administer-powershell.md). 
+- **Administrador do Information Protection**: função de administrador neste Azure Active Directory permite que um administrador configurar todos os aspetos do Azure Information Protection, mas não a outros serviços. Um administrador com esta função pode ativar e desativar o serviço de proteção do Azure Rights Management, configurar as definições de proteção e as etiquetas e configurar a política do Azure Information Protection. Além disso, um administrador com esta função pode executar todos os cmdlets do PowerShell para o [cliente Azure Information Protection](./rms-client/client-admin-guide-powershell.md) e para o [módulo AADRM](administer-powershell.md). 
     
     Para atribuir um utilizador a esta função administrativa, veja [atribuir um utilizador a funções de administrador no Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 
-- **Administrador de segurança**: função de administrador neste Azure Active Directory permite que um administrador configurar todos os aspetos do Azure Information Protection no portal do Azure, além de configurar alguns aspetos dos outros serviços do Azure. Um administrador com esta função não é possível executar qualquer um da [cmdlets do PowerShell do módulo do AADRM](./deploy-use/administer-powershell.md).
+- **Administrador de segurança**: função de administrador neste Azure Active Directory permite que um administrador configurar todos os aspetos do Azure Information Protection no portal do Azure, além de configurar alguns aspetos dos outros serviços do Azure. Um administrador com esta função não é possível executar qualquer um da [cmdlets do PowerShell do módulo do AADRM](administer-powershell.md).
     
     Para atribuir um utilizador a esta função administrativa, veja [atribuir um utilizador a funções de administrador no Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). Para ver quais outras permissões que um utilizador com esta função tem, consulte a [funções disponíveis](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) secção da documentação do Azure Active Directory.
 
-- O Azure Rights Management **Administrador Global** e **administrador do conector**: para estas funções de administrador do Azure Rights Management, a primeira concede aos usuários permissões para executar todos [ Cmdlets do PowerShell do módulo do AADRM](./deploy-use/administer-powershell.md) sem o tornar um administrador global para outros serviços em nuvem e a segunda função concede permissões para executar apenas o conector do Rights Management (RMS). Nenhuma destas funções administrativas concedem permissões para consolas de gestão ou para utilizar o modo de administrador no site de controlo de documentos.
+- O Azure Rights Management **Administrador Global** e **administrador do conector**: para estas funções de administrador do Azure Rights Management, a primeira concede aos usuários permissões para executar todos [ Cmdlets do PowerShell do módulo do AADRM](administer-powershell.md) sem o tornar um administrador global para outros serviços em nuvem e a segunda função concede permissões para executar apenas o conector do Rights Management (RMS). Nenhuma destas funções administrativas concedem permissões para consolas de gestão ou para utilizar o modo de administrador no site de controlo de documentos.
 
     Para atribuir qualquer uma destas funções administrativas, utilize o cmdlet do PowerShell do AADRM [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator).
 
 Factos a ter em conta:
 
-- Se tiver configurado [controlos de inclusão](./deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), esta configuração não afeta a capacidade para administrar o Azure Information Protection, exceto o conector RMS. Por exemplo, se tiver configurado controlos de inclusão de para restringir a capacidade de proteger conteúdo ao grupo "Departamento de TI", a conta utilizada para instalar e configurar o conector do RMS tem de ser um membro desse grupo. 
+- Se tiver configurado [controlos de inclusão](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), esta configuração não afeta a capacidade para administrar o Azure Information Protection, exceto o conector RMS. Por exemplo, se tiver configurado controlos de inclusão de para restringir a capacidade de proteger conteúdo ao grupo "Departamento de TI", a conta utilizada para instalar e configurar o conector do RMS tem de ser um membro desse grupo. 
 
-- Os utilizadores que são atribuídos uma função administrativa automaticamente não é possível remover a proteção de documentos ou e-mails que foram protegidos pelo Azure Information Protection. Os utilizadores que estão atribuídos superutilizadores podem fazê-lo, e somente quando a funcionalidade de Superutilizador é ativada. No entanto, qualquer utilizador que atribuir permissões administrativas para o Azure Information Protection pode atribuir utilizadores como superutilizadores, incluindo a sua própria conta. Também pode ativar a funcionalidade de superutilizador. Estas ações são registadas no registo de um administrador. Para obter mais informações, veja a secção de melhores práticas em [Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados](./deploy-use/configure-super-users.md). 
+- Os utilizadores que são atribuídos uma função administrativa automaticamente não é possível remover a proteção de documentos ou e-mails que foram protegidos pelo Azure Information Protection. Os utilizadores que estão atribuídos superutilizadores podem fazê-lo, e somente quando a funcionalidade de Superutilizador é ativada. No entanto, qualquer utilizador que atribuir permissões administrativas para o Azure Information Protection pode atribuir utilizadores como superutilizadores, incluindo a sua própria conta. Também pode ativar a funcionalidade de superutilizador. Estas ações são registadas no registo de um administrador. Para obter mais informações, veja a secção de melhores práticas em [Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados](configure-super-users.md). 
 
 
 ## <a name="does-azure-information-protection-support-on-premises-and-hybrid-scenarios"></a>O Azure Information Protection suporta cenários no local e híbridos?
 
 Sim. Embora o Azure Information Protection seja uma solução baseada na cloud, o mesmo consegue classificar, etiquetar e proteger documentos e e-mails armazenados tanto no local como na cloud.
 
-Se tiver servidores de ficheiros do Exchange Server, do SharePoint Server e do Windows, pode implementar o [conector do Rights Management](./deploy-use/deploy-rms-connector.md) para que estes servidores no local possam utilizar o serviço Azure Rights Management para proteger os seus e-mails e documentos. Também pode sincronizar e federar os seus controladores de domínio do Active Directory com o Azure AD para uma experiência de autenticação mais integrada para os utilizadores, por exemplo, ao utilizar o [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/).
+Se tiver servidores de ficheiros do Exchange Server, do SharePoint Server e do Windows, pode implementar o [conector do Rights Management](deploy-rms-connector.md) para que estes servidores no local possam utilizar o serviço Azure Rights Management para proteger os seus e-mails e documentos. Também pode sincronizar e federar os seus controladores de domínio do Active Directory com o Azure AD para uma experiência de autenticação mais integrada para os utilizadores, por exemplo, ao utilizar o [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/).
 
 O serviço Azure Rights Management gera e faz a gestão automática de certificados XrML conforme necessário, para não ter de utilizar um PKI no local. Para obter mais informações sobre como o Azure Rights Management utiliza certificados, veja a secção [Explicação passo a passo sobre como funciona o Azure RMS: primeira utilização, proteção de conteúdos, consumo de conteúdos](./how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) no artigo [Como funciona o Azure RMS?](./how-does-it-work.md).
 
@@ -111,9 +111,9 @@ Hoje em dia, aplicam-se e gerir estas etiquetas em separado, mas a Microsoft est
 
 ## <a name="whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner"></a>O que é a diferença entre a FCI do Windows Server e o scanner do Azure Information Protection?
 
-Há algum tempo, foi possível utilizar a infraestrutura de classificação de ficheiros do Windows Server para classificar documentos e, em seguida, protegê-los utilizando o [conector Rights Management](./deploy-use/deploy-rms-connector.md) (Office documenta apenas) ou um [PowerShell script](./rms-client/configure-fci.md) (todos os tipos de ficheiros). 
+Há algum tempo, foi possível utilizar a infraestrutura de classificação de ficheiros do Windows Server para classificar documentos e, em seguida, protegê-los utilizando o [conector Rights Management](deploy-rms-connector.md) (Office documenta apenas) ou um [PowerShell script](./rms-client/configure-fci.md) (todos os tipos de ficheiros). 
 
-Agora, pode utilizar o [scanner do Azure Information Protection](./deploy-use/deploy-aip-scanner.md). O scanner utiliza o cliente do Azure Information Protection e a sua política do Azure Information Protection para documentos de etiqueta (todos os tipos de ficheiro), para que esses documentos são, em seguida, classificados e, opcionalmente, protegidos.
+Agora, pode utilizar o [scanner do Azure Information Protection](deploy-aip-scanner.md). O scanner utiliza o cliente do Azure Information Protection e a sua política do Azure Information Protection para documentos de etiqueta (todos os tipos de ficheiro), para que esses documentos são, em seguida, classificados e, opcionalmente, protegidos.
 
 As principais diferenças entre essas duas soluções:
 
@@ -123,7 +123,7 @@ As principais diferenças entre essas duas soluções:
 |Modo operacional: <br /><br />-Em Tempo Real|Modo operacional: <br /><br />-Sistematicamente rastreia os arquivos de dados e esse ciclo pode executar uma vez ou repetidamente|
 |Suporte para tipos de ficheiro: <br /><br />-Todos os tipos de ficheiros estão protegidos por predefinição <br /><br />-Tipos de ficheiro específicos podem ser excluídos da proteção ao editar o registo|Suporte para tipos de ficheiro: <br /><br />-Tipos de ficheiro office estão protegidos por predefinição <br /><br />-Tipos de ficheiro específicos podem ser incluídos para proteção ao editar o registo|
 
-Atualmente, existe uma diferença na definição do [proprietário do Rights Management](./deploy-use/configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) para ficheiros que estão protegidos num compartilhamento de rede ou pasta local. Por predefinição, para ambas as soluções, o proprietário do Rights Management é definido para a conta que protege o ficheiro, mas pode substituir esta definição:
+Atualmente, existe uma diferença na definição do [proprietário do Rights Management](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) para ficheiros que estão protegidos num compartilhamento de rede ou pasta local. Por predefinição, para ambas as soluções, o proprietário do Rights Management é definido para a conta que protege o ficheiro, mas pode substituir esta definição:
 
 - Para o Windows Server FCI: Pode definir o proprietário do Rights Management para ser uma única conta para todos os ficheiros ou definir dinamicamente o proprietário do Rights Management para cada ficheiro. Para definir dinamicamente o proprietário do Rights Management, utilize o **- OwnerMail [Source File Owner Email]** parâmetro e valor. Esta configuração obtém o endereço de e-mail do utilizador do Active Directory utilizando o nome da conta de utilizador na propriedade proprietário do ficheiro.
 

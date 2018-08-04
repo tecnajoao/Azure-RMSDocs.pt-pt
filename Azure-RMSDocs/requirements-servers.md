@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: e7d91f2d-d6a7-4c7e-821f-c94e4be9967d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8cc1ac191b33177e5a20e6cecbdb8e1c711b4c59
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 6bbd9422159627d8e8e94b6ff7c1993590b3069d
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39475505"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39488690"
 ---
 # <a name="on-premises-servers-that-support-azure-rights-management-data-protection"></a>Servidores no local que suportam a proteção de dados do Azure Rights Management
 
@@ -58,7 +58,7 @@ Para utilizar este conector, tem de configurar a sincronização de diretórios 
 
 O conector Rights Management é suportado no Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 e no Windows Server 2008 R2.
 
-Para mais informações sobre como configurar o conector Rights Management para estes servidores no local, consulte [Implementar o conector do Azure Rights Management](./deploy-use/deploy-rms-connector.md).
+Para mais informações sobre como configurar o conector Rights Management para estes servidores no local, consulte [Implementar o conector do Azure Rights Management](deploy-rms-connector.md).
 
 ## <a name="next-steps"></a>Passos Seguintes
 Para verificar outros requisitos, consulte [Requisitos do Azure Rights Management](requirements.md).

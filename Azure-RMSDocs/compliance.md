@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1e4db3996a201909fcf861a4190cbe6647a7326c
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 55d3b303a84a557ad5f65760d963221878a7b521
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39475225"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39488856"
 ---
 # <a name="compliance-and-supporting-information-for-azure-information-protection"></a>Informações de suporte e conformidade do Azure Information Protection
 
@@ -33,7 +33,7 @@ No entanto, algumas informações relevantes que ajudem a seu consultor legal to
 
 - Todas as chaves de encriptação utilizadas pelo Azure Information Protection estão protegidas com uma chave de raiz de específicas do cliente que utiliza RSA 2048 bits. RSA 1024, como também é suportado para compatibilidade com versões anteriores. [Mais informações](./how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
 
-- Chaves de raiz de específicas do cliente são geridas pela Microsoft ou aprovisionadas pelo cliente num HSM da Thales através da utilização "[traga a sua própria chave](./plan-design/plan-implement-tenant-key.md)" (BYOK). O Azure Information Protection também suporta a funcionalidade limitada com uma chave no local utilizando "[tenha a sua própria chave](./deploy-use/configure-adrms-restrictions.md)" (HYOK) para o conteúdo que é afetado pelos requisitos que indicam que não devem ser protegidos com uma chave com base na cloud.
+- Chaves de raiz de específicas do cliente são geridas pela Microsoft ou aprovisionadas pelo cliente num HSM da Thales através da utilização "[traga a sua própria chave](plan-implement-tenant-key.md)" (BYOK). O Azure Information Protection também suporta a funcionalidade limitada com uma chave no local utilizando "[tenha a sua própria chave](configure-adrms-restrictions.md)" (HYOK) para o conteúdo que é afetado pelos requisitos que indicam que não devem ser protegidos com uma chave com base na cloud.
 
 - O serviço Azure Information Protection está alojado em datacenters regionais em todo o mundo. Chaves de proteção de informações e as políticas do Azure sempre permanecerem dentro da região na qual está implementada originalmente.
  

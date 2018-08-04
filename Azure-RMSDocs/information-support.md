@@ -4,7 +4,7 @@ description: Recursos para administradores que incluem informações sobre novas
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/31/2018
+ms.date: 08/02/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 427f758dd541c111f5a5554221983f10072b6ffd
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: d61908e26085619c61d31780514cdd09e46f0761
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39475267"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489581"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informações e suporte do Azure Information Protection
 
@@ -27,11 +27,12 @@ Utilize os seguintes recursos para o ajudar a obter mais informações, implemen
 
 |Para fazer isso...|... .do isso:|
 |----------------|---------------|
-|Consulte utilizada com mais frequência a documentação|Leia as páginas de cinco principais:<br /><br /> - [O que é o Azure Information Protection?](./what-is-information-protection.md)<br /> - [Instalar o cliente do Azure Information Protection para utilizadores](./rms-client/client-admin-guide-install.md)<br />- [Requisitos do Azure Information Protection](requirements.md) <br />- [Implementar o scanner do Azure Information Protection](./deploy-use/deploy-aip-scanner.md)<br />- [A política do Azure Information Protection predefinida](./deploy-use/configure-policy-default.md)|
+|Consulte a documentação referenciada mais frequentemente|Leia as páginas de cinco principais:<br /><br /> - [O que é o Azure Information Protection?](./what-is-information-protection.md)<br /> - [Instalar o cliente do Azure Information Protection para utilizadores](./rms-client/client-admin-guide-install.md)<br />- [Requisitos do Azure Information Protection](requirements.md) <br />- [Implementar o scanner do Azure Information Protection](deploy-aip-scanner.md)<br />- [A política do Azure Information Protection predefinida](configure-policy-default.md)|
 |Interaja com a equipe do produto e seus colegas|Visite o [site do Yammer](https://www.yammer.com/AskIPTeam) do Azure Information Protection.|
 |Pedir uma nova função ou alteração de funcionalidade|Visite o [UserVoice](https://msip.uservoice.com) do site do Azure Information Protection e a utilizar o seu endereço de e-mail da empresa para iniciar sessão.|
 |Receber tweets do grupo de produtos|Siga [Microsoft Mobility@MSFTMobility ](https://twitter.com/MSFTMobility) no Twitter.|
 |Ver as informações de subscrição e as funcionalidades suportadas|Utilize a lista de informações e recursos de subscrição do [preços do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection) página.|
+|Compreender uma condição específica do Azure Information Protection|Procure o termo ou abreviatura no [página de terminologia](terminology.md).|
 
 
 ## <a name="information-about-new-releases-and-updates"></a>Informações sobre novas versões e atualizações
@@ -76,9 +77,9 @@ Resolva os problemas:
 
 - Se tiver uma pergunta sobre uma declaração de suporte do Azure Information Protection: consulte as informações sobre [Requisitos](requirements.md) que são atualizadas regularmente.
 
-- Para obter informações para dar suporte aos seus utilizadores finais, suporte técnico e administradores que estão a configurar serviços e aplicações que utilizam o Azure Information Protection: veja [Ajudar os utilizadores a proteger ficheiros](./deploy-use/help-users.md).
+- Para obter informações para dar suporte aos seus utilizadores finais, suporte técnico e administradores que estão a configurar serviços e aplicações que utilizam o Azure Information Protection: veja [Ajudar os utilizadores a proteger ficheiros](help-users.md).
 
-- Se tiver implementado o conector do Rights Management para os servidores no local: consulte as informações de [monitorização](./deploy-use/monitor-rms-connector.md) que incluem detalhes sobre as entradas do registo de eventos, contadores de desempenho e registo.
+- Se tiver implementado o conector do Rights Management para os servidores no local: consulte as informações de [monitorização](monitor-rms-connector.md) que incluem detalhes sobre as entradas do registo de eventos, contadores de desempenho e registo.
 
 - Para o cliente do Azure Information Protection para Windows: veja a [verificações de instalação e resolução de problemas](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) secção no Guia do administrador e verifique que está a utilizar um [versão suportada](./rms-client/client-version-release-history.md#servicing-information-and-timelines).
 

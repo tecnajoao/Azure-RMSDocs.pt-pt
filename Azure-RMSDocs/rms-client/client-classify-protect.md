@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: baf3edc435672c8339c15ea74f5b5e14d6951f96
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: dfe9edc5c2ee4546ad6ac2ef18e9f4393cae7a0f
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39371548"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489109"
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Guia de utilizador: Classificar e proteger um ficheiro ou e-mail com o Azure Information Protection
 
@@ -181,7 +181,7 @@ Pode obter mais instruções sobre os procedimentos no guia do utilizador do Azu
 -   [O que pretende fazer?](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>Informações adicionais para administradores    
-Para obter instruções de configuração ativar a definição de política **disponibilizar a opção de permissões personalizadas para os usuários**, consulte [configurar as definições de política do Azure Information Protection](../deploy-use/configure-policy-settings.md).
+Para obter instruções de configuração ativar a definição de política **disponibilizar a opção de permissões personalizadas aos utilizadores**, veja [configurar as definições de política do Azure Information Protection] configurar-política-settings.md).
 
-Outras instruções de configuração: [configurar a política do Azure Information Protection](../deploy-use/configure-policy.md).
+Outras instruções de configuração: [configurar a política do Azure Information Protection] configurar-policy.md).
 

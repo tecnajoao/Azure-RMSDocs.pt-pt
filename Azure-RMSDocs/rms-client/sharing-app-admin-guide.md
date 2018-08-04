@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 65fa46d7a978eb87b455d34075bdb3f939a133f7
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 0d4770194b806b7dfa2e3972cc62712fa18086f4
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474043"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489632"
 ---
 # <a name="rights-management-sharing-application-administrator-guide"></a>Guia do administrador da aplicação de partilha Rights Management
 
@@ -28,7 +28,7 @@ ms.locfileid: "39474043"
 
 Utilize as seguintes informações se for o responsável pela aplicação de partilha Microsoft Rights Management numa rede empresarial ou se quiser obter mais informações técnicas além das que se encontram no [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md) ou nas [FAQ sobre a Aplicação de Partilha Microsoft Rights Management do Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
 
-A aplicação de partilha RMS funciona melhor com o Azure Information Protection, porque esta configuração de implementação suporta o envio de anexos protegidos para utilizadores de outra organização e opções como notificações por e-mail e o controlo de documentos com revogação. No entanto, a aplicação também funciona com a versão no local, o AD RMS, embora com algumas limitações. Para ver uma comparação detalhada das funcionalidades suportadas pelo Azure Information Protection e pelo AD RMS, consulte [Comparar o Azure Information Protection e o AD RMS](../compare-on-premise.md). Se tiver o AD RMS e quiser migrar para o Azure Information Protection, consulte [Migrar do AD RMS para o Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+A aplicação de partilha RMS funciona melhor com o Azure Information Protection, porque esta configuração de implementação suporta o envio de anexos protegidos para utilizadores de outra organização e opções como notificações por e-mail e o controlo de documentos com revogação. No entanto, a aplicação também funciona com a versão no local, o AD RMS, embora com algumas limitações. Para ver uma comparação detalhada das funcionalidades suportadas pelo Azure Information Protection e pelo AD RMS, consulte [Comparar o Azure Information Protection e o AD RMS](../compare-on-premise.md). Se tiver o AD RMS e quiser migrar para o Azure Information Protection, consulte [Migrar do AD RMS para o Azure Information Protection](../migrate-from-ad-rms-to-azure-rms.md).
 
 Para obter uma descrição geral técnica da aplicação Rights Management, informações sobre a proteção nativa e genérica, e os tipos de ficheiro suportados, as extensões de nome de ficheiro e como pode alterar o nível de proteção predefinido, consulte [Descrição geral técnica e detalhes de proteção da aplicação de partilha Rights Management](sharing-app-admin-guide-technical.md). 
 
@@ -345,7 +345,7 @@ Dado que a aplicação de partilha RMS não é suportada pelo WSUS, pode utiliza
 ## <a name="azure-information-protection-only-configuring-document-tracking"></a>Apenas Azure Information Protection: configurar o controlo de documentos
 Se tiver uma [subscrição que suporta o controlo de documentos](https://www.microsoft.com/cloud-platform/azure-information-protection-features), o site de controlo de documentos é ativado por predefinição para todos os utilizadores da sua organização. O controlo de documentos apresenta informações como os endereços de e-mail das pessoas que tentaram aceder a documentos protegidos partilhados por utilizadores, quando essas pessoas tentaram aceder aos mesmos e a sua localização. Se a apresentação deste tipo de informações for proibida dentro da sua organização devido a requisitos de privacidade, pode desativar o acesso ao site de controlo de documentos através do cmdlet [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature). Pode reativar o acesso ao site em qualquer altura através de [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) e ainda verificar se o acesso ao site está ativado ou desativado com [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature).
 
-Para executar estes cmdlets, tem de ter no mínimo a versão **2.3.0.0** do módulo do Azure Rights Management para o Windows PowerShell. Para obter instruções de instalação, consulte [instalar o módulo do PowerShell do AADRM](../deploy-use/install-powershell.md).
+Para executar estes cmdlets, tem de ter no mínimo a versão **2.3.0.0** do módulo do Azure Rights Management para o Windows PowerShell. Para obter instruções de instalação, consulte powershell.md install [instalar o módulo do PowerShell do AADRM]).
 
 > [!TIP]
 > Se já transferiu e instalou o módulo anteriormente, verifique o número da versão ao executar: `(Get-Module aadrm –ListAvailable).Version`
@@ -388,7 +388,7 @@ São aplicáveis dois campos nos ficheiros de registo de utilização ao control
 Também existem tipos de pedido que registam a forma como os utilizadores e os administradores estão a utilizar o site de controlo de documentos. Por exemplo, **RevokeAccess** é o tipo de pedido quando um utilizador ou um administrador em nome de um utilizador revogou um documento no site de controlo de documentos. Utilize este tipo de pedido juntamente com o campo AdminAction para determinar se o utilizador revogou o seu próprio documento (o campo AdminAction está vazio) ou um administrador revogou um documento em nome de um utilizador (AdminAction é true).
 
 
-Para obter mais informações sobre o registo de utilização, consulte [Registar e analisar a utilização do serviço Azure Rights Management](../deploy-use/log-analyze-usage.md)
+Para obter mais informações sobre o registo de utilização, consulte [utilização e análise de registo do serviço Azure Rights Management] log-analisar-usage.md)
 
 ## <a name="ad-rms-only-support-for-multiple-email-domains-within-your-organization"></a>Apenas AD RMS: suporte para múltiplos domínios de e-mail dentro da sua organização
 Se utilizar o AD RMS e os utilizadores da sua organização tiverem múltiplos domínios de e-mail, possivelmente como resultado de uma fusão ou aquisição, tem de criar a seguinte edição de registo:

@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 93e5af9843ef215ec074024179c71d577722096b
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: cebca1f9ce2bb7d73f29e3e1ea7d6fd2fc6a5742
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39475316"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489887"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Como funciona o Azure RMS? Os bastidores
 
@@ -71,13 +71,13 @@ O Azure RMS cria uma chave AES única (a "chave de conteúdo") para cada documen
 
 A chave de conteúdo é protegida com a chave RSA da organização (a "chave de inquilino do Azure Information Protection") como parte da política no documento e a política também é assinada pelo autor do documento. Esta chave de inquilino é comum a todos os documentos e e-mails protegidos pelo serviço Azure Rights Management da organização e esta chave só poderá ser alterada por um administrador do Azure Information Protection se a organização estiver a utilizar uma chave de inquilino gerida pelo cliente, conhecida como BYOK (Bring Your Own Key – Traga a Sua Própria Chave). 
 
-Esta chave de inquilino está protegida nos serviços online da Microsoft, num ambiente altamente controlado e sob monitorização rigorosa. Quando utiliza uma chave de inquilino gerida pelo cliente (BYOK), esta segurança é melhorada pela utilização de uma matriz de módulos de segurança de hardware de ponta (HSMs) em cada região do Azure, sem a capacidade para as chaves ser extraídos, exportação ou partilha em nenhuma circunstância. Para obter mais informações sobre a chave de inquilino e a BYOK, veja [Planear e implementar a sua chave de inquilino do Azure Information Protection](./plan-design/plan-implement-tenant-key.md).
+Esta chave de inquilino está protegida nos serviços online da Microsoft, num ambiente altamente controlado e sob monitorização rigorosa. Quando utiliza uma chave de inquilino gerida pelo cliente (BYOK), esta segurança é melhorada pela utilização de uma matriz de módulos de segurança de hardware de ponta (HSMs) em cada região do Azure, sem a capacidade para as chaves ser extraídos, exportação ou partilha em nenhuma circunstância. Para obter mais informações sobre a chave de inquilino e a BYOK, veja [Planear e implementar a sua chave de inquilino do Azure Information Protection](plan-implement-tenant-key.md).
 
 As licenças e certificados enviados para um dispositivo Windows estão protegidos pela chave privada do dispositivo do cliente, que é criada quando um utilizador usa o Azure RMS pela primeira vez num dispositivo. Por sua vez, esta chave privada está protegida com a DPAPI do cliente, que protege estes segredos com uma chave derivada da palavra-passe do utilizador. Em dispositivos móveis, as chaves são utilizadas apenas uma vez, pois como não estão armazenadas nos clientes, não precisam de ser protegidas no dispositivo. 
 
 
 ## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Explicação passo a passo sobre como funciona o Azure RMS: primeira utilização, proteção de conteúdos, consumo de conteúdos
-Para compreender melhor como funciona o Azure RMS, iremos mostrar-lhe um fluxo típico após o [serviço Azure Rights Management ser ativado](./deploy-use/activate-service.md) e o que acontece quando um utilizador usa pela primeira vez o serviço Rights Management no seu computador Windows (um processo por vezes conhecido como **inicializar o ambiente de utilizador** ou arranque do sistema), **protege conteúdos** (um documento ou e-mail) e, em seguida, **consome** (abre e utiliza) os conteúdos que foram protegidos por outra pessoa.
+Para compreender melhor como funciona o Azure RMS, iremos mostrar-lhe um fluxo típico após o [serviço Azure Rights Management ser ativado](activate-service.md) e o que acontece quando um utilizador usa pela primeira vez o serviço Rights Management no seu computador Windows (um processo por vezes conhecido como **inicializar o ambiente de utilizador** ou arranque do sistema), **protege conteúdos** (um documento ou e-mail) e, em seguida, **consome** (abre e utiliza) os conteúdos que foram protegidos por outra pessoa.
 
 Após o ambiente de utilizador ser iniciado, esse utilizador pode proteger documentos ou consumir documentos protegidos nesse computador.
 
@@ -110,7 +110,7 @@ Quando um utilizador protege um documento, o cliente de RMS efetua as seguintes 
 
 ![Proteção de documentos pelo RMS – passo 2, a política é criada](./media/AzRMS_documentprotection2.png)
 
-**I que acontece no passo 2**: em seguida, o cliente de RMS cria um certificado que adiciona uma política para o documento, que inclui os [direito de utilização](./deploy-use/configure-usage-rights.md) para utilizadores e grupos e outras restrições, como a data de expiração. Estas definições podem ser definidas num modelo que um administrador anteriormente configurado, ou ser especificada no momento que o conteúdo é protegido (por vezes referido como uma "política ad hoc").   
+**I que acontece no passo 2**: em seguida, o cliente de RMS cria um certificado que adiciona uma política para o documento, que inclui os [direito de utilização](configure-usage-rights.md) para utilizadores e grupos e outras restrições, como a data de expiração. Estas definições podem ser definidas num modelo que um administrador anteriormente configurado, ou ser especificada no momento que o conteúdo é protegido (por vezes referido como uma "política ad hoc").   
 
 O principal atributo do Azure AD utilizado para identificar os utilizadores e grupos selecionados é o atributo ProxyAddresses do Azure AD, que armazena todos os endereços de e-mail de um utilizador ou grupo. No entanto, se uma conta de utilizador não tiver nenhum valor no atributo ProxyAddresses do AD, o valor UserPrincipalName do utilizador é utilizado.
 
@@ -127,7 +127,7 @@ Se um utilizador quiser consumir um documento protegido, o cliente de RMS começ
 
 ![Consumo de documentos pelo RMS – passo 1, o utilizador é autenticado e obtém a lista de direitos](./media/AzRMS_documentconsumption1.png)
 
-**O que acontece no passo 1**: o utilizador autenticado envia a política do documento e os certificados do utilizador para o serviço Azure Rights Management. O serviço desencripta e avalia a política e cria uma lista de direitos (se aplicável) que o utilizador tem sobre o documento. Para identificar o utilizador, é utilizado o atributo ProxyAddresses do Azure AD para a conta do utilizador e para os grupos dos quais este é membro. Por motivos de desempenho, a associação a grupos é [colocada em cache](./plan-design/prepare.md#group-membership-caching-by-azure-information-protection). Se a conta de utilizador não tiver nenhum valor para o atributo ProxyAddresses do Azure AD, é utilizado o valor no atributo UserPrincipalName do Azure AD.
+**O que acontece no passo 1**: o utilizador autenticado envia a política do documento e os certificados do utilizador para o serviço Azure Rights Management. O serviço desencripta e avalia a política e cria uma lista de direitos (se aplicável) que o utilizador tem sobre o documento. Para identificar o utilizador, é utilizado o atributo ProxyAddresses do Azure AD para a conta do utilizador e para os grupos dos quais este é membro. Por motivos de desempenho, a associação a grupos é [colocada em cache](prepare.md#group-membership-caching-by-azure-information-protection). Se a conta de utilizador não tiver nenhum valor para o atributo ProxyAddresses do Azure AD, é utilizado o valor no atributo UserPrincipalName do Azure AD.
 
 ![Consumo de documentos pelo RMS – passo 2, a licença de utilização é dada ao cliente](./media/AzRMS_documentconsumption2.png)
 
@@ -166,7 +166,7 @@ Para saber mais sobre o serviço Azure Rights Management, utilize os outros arti
 
 Consulte a [Terminologia do Azure Information Protection](./terminology.md) para se familiarizar com os termos que possam ser apresentados quando estiver a configurar e utilizar o serviço Azure Rights Management e certifique-se de que também consulta os [Requirements for Azure Information Protection (Requisitos para o Azure Information Protection – em inglês)](requirements.md) antes de iniciar a implementação. Se quiser começar já e experimentar, utilize o [Tutorial de início rápido do Azure Information Protection](infoprotect-quick-start-tutorial.md).
 
-Se estiver pronto para iniciar a implementação da proteção de dados na sua organização, utilize o [Plano de implementação do Azure Information Protection](./plan-design/deployment-roadmap.md) para obter os passos da sua implementação e ligações para instruções sobre como proceder.
+Se estiver pronto para iniciar a implementação da proteção de dados na sua organização, utilize o [Plano de implementação do Azure Information Protection](deployment-roadmap.md) para obter os passos da sua implementação e ligações para instruções sobre como proceder.
 
 > [!TIP]
 > Para obter ajuda e informações adicionais, utilize os recursos e ligações em [Informações e suporte do Azure Information Protection](information-support.md).

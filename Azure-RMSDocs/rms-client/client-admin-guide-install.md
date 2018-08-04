@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: af9cfca4d328dba7646c1c319744476fe0e6b43f
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 522e188e93aa055454f312ba90059d5f030b326e
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474176"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489768"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guia do administrador: Instalar o cliente do Azure Information Protection para utilizadores
 
@@ -117,7 +117,7 @@ Utilize as instruções a seguir para instalar o cliente quando não estiver a u
 
     - Se o computador estiver a executar o Office 2010, reinicie o computador. 
         
-        Se o cliente não tiver sido instalado com o parâmetro ServiceLocation, quando abre uma das aplicações do Office que utilizam a barra do Azure Information Protection (por exemplo, o Word) pela primeira vez, terá de confirmar todos os pedidos para atualizar o registo para esta primeira utilização. A [deteção do serviço](../rms-client/client-deployment-notes.md#rms-service-discovery) é utilizada para preencher as chaves de registo. 
+        Se o cliente não tiver sido instalado com o parâmetro ServiceLocation, quando abre uma das aplicações do Office que utilizam a barra do Azure Information Protection (por exemplo, o Word) pela primeira vez, terá de confirmar todos os pedidos para atualizar o registo para esta primeira utilização. A [deteção do serviço](client-deployment-notes.md#rms-service-discovery) é utilizada para preencher as chaves de registo. 
     
     - Para outras versões do Office, reinicie todas as aplicações do Office e todas as instâncias do Explorador de Ficheiros. 
         
@@ -147,7 +147,7 @@ Utilize o seguinte procedimento para identificar o valor a especificar para o pa
 
 1. A partir de uma sessão do PowerShell, primeiro execute [Connect-AadrmService](https://docs.microsoft.com/powershell/aadrm/vlatest/connect-aadrmservice) e especifique as suas credenciais de administrador para ligar ao serviço Azure Rights Management. Em seguida, execute [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/aadrm/vlatest/get-aadrmconfiguration). 
  
-    Se ainda não instalou o módulo do PowerShell para o serviço Azure Rights Management, veja [instalar o módulo do PowerShell do AADRM](../deploy-use/install-powershell.md).
+    Se ainda não instalou o módulo do PowerShell para o serviço Azure Rights Management, consulte powershell.md install [instalar o módulo do PowerShell do AADRM]).
 
 2. A partir da saída, identifique o valor **LicensingIntranetDistributionPointUrl**.
 
@@ -202,7 +202,7 @@ Se utilizar o Intune enquanto método de implementação de software, utilize es
 
 O módulo do PowerShell que está incluído com o cliente do Azure Information Protection tem de cmdlets para instalar e configurar a deteção de impressão. No entanto, para utilizar o scanner, que tem de instalar a versão completa do cliente e não é possível instalar apenas o módulo do PowerShell.
 
-Para instalar o cliente para a deteção de impressão, siga as mesmas instruções nas secções anteriores. Em seguida, está pronto para instalar o scanner. Para obter instruções, consulte [Implantando o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente](../deploy-use/deploy-aip-scanner.md).
+Para instalar o cliente para a deteção de impressão, siga as mesmas instruções nas secções anteriores. Em seguida, está pronto para instalar o scanner. Para obter instruções, consulte [implementar o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente] implementar-aip-scanner.md).
 
 ## <a name="next-steps"></a>Passos Seguintes
 Agora que instalou o cliente do Azure Information Protection, veja o seguinte para obter informações adicionais que poderá precisar para suportar este cliente:

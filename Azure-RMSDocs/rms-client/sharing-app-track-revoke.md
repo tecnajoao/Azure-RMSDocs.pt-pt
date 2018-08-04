@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d6d53635a7f86c9ecc27f654885f9d66569f2b1e
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 4c515388df31d0541ee88a21fa88da761a5cde30
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39374244"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489057"
 ---
 # <a name="track-and-revoke-your-documents-when-you-use-the-rms-sharing-application"></a>Controlar e revogar os documentos quando utiliza a aplicação de partilha RMS
 
@@ -54,7 +54,7 @@ Ações que pode realizar no site de controlo de documentos:
 Se não vir estas opções do RMS, é provável que a aplicação de partilha RMS não esteja instalada no seu computador, que a versão mais recente não esteja instalada ou que seja necessário reiniciar o computador para concluir a instalação. Para obter mais informações sobre como instalar a aplicação de partilha, consulte [Transferir e instalar a aplicação de partilha Rights Management](install-sharing-app.md).
 
 > [!NOTE] 
-> Se tiver instalado o [cliente do Azure Information Protection](../rms-client/info-protect-client.md), também pode aceder ao site de controlo de documentos através do botão **Proteger**: 
+> Se tiver instalado o [cliente do Azure Information Protection](info-protect-client.md), também pode aceder ao site de controlo de documentos através do botão **Proteger**: 
 > 
 > - Numa aplicação do Office, no separador **Base**, no grupo **Proteção**, clique em **Proteger** e, em seguida, clique em  > **Controlar utilização**. 
 

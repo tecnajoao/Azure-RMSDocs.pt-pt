@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 691bf76154689e69966f173a19e047120748687b
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 154c4beb398bdd772f91b85ea2d7d05fe3e3fd16
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39475281"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489176"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Perguntas mais frequentes sobre a classificação e a etiquetagem no Azure Information Protection
 
@@ -55,7 +55,7 @@ Quando utilizar subetiquetas, não configure marcas visuais, proteção e as con
 
 ## <a name="how-do-i-prevent-somebody-from-removing-or-changing-a-label"></a>Como posso impedir alguém da remover ou alterar uma etiqueta?
 
-Embora haja uma [definição de política](./deploy-use/configure-policy-settings.md) requer que os utilizadores para o estado por que motivo está a reduzir uma etiqueta de classificação, remover uma etiqueta ou remover a proteção, esta definição não impede que estas ações. Para impedir que os utilizadores de remover ou alterar uma etiqueta, o conteúdo já deve ser protegido e as permissões de proteção não conceder ao utilizador a exportação ou controlo total [direito de utilização](./deploy-use/configure-usage-rights.md). 
+Embora haja uma [definição de política](configure-policy-settings.md) requer que os utilizadores para o estado por que motivo está a reduzir uma etiqueta de classificação, remover uma etiqueta ou remover a proteção, esta definição não impede que estas ações. Para impedir que os utilizadores de remover ou alterar uma etiqueta, o conteúdo já deve ser protegido e as permissões de proteção não conceder ao utilizador a exportação ou controlo total [direito de utilização](configure-usage-rights.md). 
 
 ## <a name="when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling"></a>Quando um e-mail tem uma etiqueta, os anexos também recebem a mesma etiqueta automaticamente?
 
@@ -65,7 +65,7 @@ Não. Quando coloca uma etiqueta numa mensagem de e-mail com anexos, esses anexo
 
 Porque o Azure Information Protection utiliza metadados persistentes para classificação, que incluem uma etiqueta de texto não encriptado, estas informações podem ser lidos por soluções DLP e outras aplicações. 
 
-Para obter mais informações e exemplos de como utilizar estes metadados com as regras de fluxo de correio Exchange Online, consulte [configurar o Exchange Online regras de fluxo de correio etiquetas do Azure Information Protection](./deploy-use/configure-exo-rules.md).
+Para obter mais informações e exemplos de como utilizar estes metadados com as regras de fluxo de correio Exchange Online, consulte [configurar o Exchange Online regras de fluxo de correio etiquetas do Azure Information Protection](configure-exo-rules.md).
 
 ## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>Qual a diferença entre a classificação do Azure Information Protection para e-mails e a classificação de mensagens do Exchange?
 

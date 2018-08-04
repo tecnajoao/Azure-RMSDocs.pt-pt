@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 751f1a5bf2728a848bd450ce1081a15ea1e35456
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 571545905a0fac6bb1ea9b80c351b96f9f70899b
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376591"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489448"
 ---
 # <a name="rms-client-deployment-notes"></a>Notas de implementação do cliente do RMS
 
@@ -158,7 +158,7 @@ Para efetuar a deteção do serviço, o cliente do RMS verifica o seguinte:
 
 1. **O registo do Windows no computador local**: se as definições de deteção do serviço estiverem configuradas no registo, estas definições são experimentadas em primeiro lugar. 
 
-    Por predefinição, estas definições não são configuradas no registo, mas um administrador pode configurá-las para o AD RMS, tal como documentado numa das [secções seguintes](#enabling-client-side-service-discovery-by-using-the-windows-registry). Normalmente um administrador configura essas definições para o serviço Azure Rights Management durante o [processo de migração](../plan-design/migrate-from-ad-rms-phase2.md) a partir do AD RMS para o Azure Information Protection.
+    Por predefinição, estas definições não são configuradas no registo, mas um administrador pode configurá-las para o AD RMS, tal como documentado numa das [secções seguintes](#enabling-client-side-service-discovery-by-using-the-windows-registry). Normalmente um administrador configura essas definições para o serviço Azure Rights Management durante o [processo de migração](../migrate-from-ad-rms-phase2.md) a partir do AD RMS para o Azure Information Protection.
 
 2. **Active Directory Domain Services**: um computador associado a um domínio consulta o Active Directory para procurar um ponto de ligação de serviço (SCP). 
 
@@ -181,7 +181,7 @@ Para efetuar a deteção do serviço, o cliente do RMS verifica o seguinte:
 >  
 > - Quando um utilizador inicia sessão a partir de uma aplicação do Office, o nome de utilizador (e o domínio) da autenticação é utilizado para identificar qual o inquilino do Azure Information Protection a utilizar. Neste caso, as definições de registo não são necessárias e o SCP não é verificado.
 > 
-> - Quando tiver configurado [redirecionamento de DNS](../plan-design/migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) para aplicações de ambiente de trabalho de clique-e-Use do Office 2016, o cliente do RMS localiza o serviço Azure Rights Management, que está a ser negado o acesso ao cluster do AD RMS que localizou anteriormente. Negar os acionadores de ação do cliente para procurar o registo SRV, que redireciona o cliente para o serviço Azure Rights Management para o seu inquilino. Este registo SRV também permite Exchange Online desencriptar e-mails que foram protegidos pelo cluster do AD RMS. 
+> - Quando tiver configurado [redirecionamento de DNS](../migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) para aplicações de ambiente de trabalho de clique-e-Use do Office 2016, o cliente do RMS localiza o serviço Azure Rights Management, que está a ser negado o acesso ao cluster do AD RMS que localizou anteriormente. Negar os acionadores de ação do cliente para procurar o registo SRV, que redireciona o cliente para o serviço Azure Rights Management para o seu inquilino. Este registo SRV também permite Exchange Online desencriptar e-mails que foram protegidos pelo cluster do AD RMS. 
 
 ### <a name="ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory"></a>Apenas AD RMS: ativar a deteção do serviço do lado do servidor através do Active Directory
 Se a sua conta tem privilégios suficientes (administradores da empresa e administrador local para o servidor AD RMS), pode registar automaticamente um ponto de ligação de serviço (SCP) quando instala o servidor de cluster de raiz do AD RMS. Se já existir um SCP na floresta, tem de eliminar primeiro o SCP existente para poder registar um novo.

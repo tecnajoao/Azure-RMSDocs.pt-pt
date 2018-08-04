@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cdf710737c4bcf5ffbfdd3ab6476f6b5cd118854
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 9c1c6848d86ff6e2f3e066eb9a89803ae5de6893
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39371286"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489700"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guia do administrador: Tipos de ficheiro suportados pelo cliente do Azure Information Protection
 
@@ -63,7 +63,7 @@ Os seguintes tipos de ficheiro podem ser classificados, mesmo quando não estão
 
 Tipos de ficheiro adicionais suportam a classificação quando também estão protegidos. Para estes tipos de ficheiros, consulte a [tipos de ficheiros suportados para classificação e proteção](#supported-file-types-for-classification-and-protection) secção.
 
-Por exemplo, no atual [política predefinida](../deploy-use/configure-policy-default.md), o **geral** etiqueta aplica-se a classificação e não se aplica a proteção. Pode aplicar a **gerais** rótulo num arquivo chamado sales.pdf mas não foi possível aplicar esta etiqueta num arquivo chamado sales.txt. 
+Por exemplo, no atual [política predefinida] configurar-política-default.md), o **gerais** etiqueta aplica-se a classificação e não se aplica a proteção. Pode aplicar a **gerais** rótulo num arquivo chamado sales.pdf mas não foi possível aplicar esta etiqueta num arquivo chamado sales.txt. 
 
 Também na política predefinida atual, o **confidencial \ todos os funcionários** aplica-se a classificação e proteção. Pode aplicar esta etiqueta num arquivo chamado sales.pdf e um ficheiro denominado sales.txt. Também pode aplicar proteção apenas a estes ficheiros, sem classificação.
 
@@ -79,7 +79,7 @@ O cliente do Azure Information Protection suporta a proteção em dois níveis d
 
 Pode alterar o nível de proteção predefinido que o cliente do Azure Information Protection aplica. Pode alterar o nível predefinido de nativo para genérico, de genérico para nativo e até mesmo impedir que o cliente do Azure Information Protection aplique proteção. Para obter mais informações, consulte a secção [Alterar o nível de proteção predefinido dos ficheiros](#changing-the-default-protection-level-of-files) neste artigo.
 
-Esta proteção de dados pode ser aplicada automaticamente quando um utilizador seleciona uma etiqueta que um administrador tenha configurado ou, em alternativa, os utilizadores podem especificar as suas próprias definições de proteção personalizadas ao utilizar [níveis de permissão](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels). 
+A proteção de dados pode ser aplicada automaticamente quando um usuário selecionar uma etiqueta que um administrador tenha configurado ou os utilizadores podem especificar configuram suas próprias definições de proteção personalizada utilizando [níveis de permissão]-utilização-rights.md # direitos-incluído-em--níveis de permissões). 
 
 ### <a name="file-sizes-supported-for-protection"></a>Tamanhos de ficheiro suportados para proteção
 

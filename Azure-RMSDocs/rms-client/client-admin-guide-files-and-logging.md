@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 74cd50008213b9a78745a14e7753d252b1adcf53
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: faafadc3c5f45e5407ea108365b1c57678b21c48
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39374642"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39488748"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guia do administrador: Ficheiros de cliente do Azure Information Protection e o registo de utilização do cliente
 
@@ -85,9 +85,9 @@ O cliente regista a atividade do utilizador para o registo de eventos do Windows
     
 - Justificação do utilizador (quando aplicável)
 
-- Permissões personalizadas (quando aplicável) que inclui a [direitos de utilização pelo respetivo nome de codificação](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions) para os utilizadores especificados, grupos ou organizações
+- Permissões personalizadas (quando aplicável) que inclui o [direitos de utilização por seus name]configure-usage-rights.md#usage-rights-and-descriptions codificação) para os utilizadores especificados, grupos ou organizações
     
-Para obter informações sobre o registo de utilização para o serviço de proteção, consulte [registar e analisar a utilização do serviço Azure Rights Management](../deploy-use/log-analyze-usage.md)
+Para obter informações sobre o registo de utilização para o serviço de proteção, consulte [utilização e análise de registo do serviço Azure Rights Management] log-analisar-usage.md)
 
 
 

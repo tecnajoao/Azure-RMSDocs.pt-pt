@@ -11,12 +11,12 @@ ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: cfd090df79e640ef6106f2c72001b2b05969cdf6
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 096f5d02e4bcb39390bcd6f6ed64476f4a74d5eb
+ms.sourcegitcommit: 7ed2a257f68435fe6807af8975a5477801ec2537
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39473904"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39501273"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guia para Programadores do Azure Information Protection
 
@@ -40,7 +40,7 @@ Aplicações de serviço fornecem capacidades para proteger as informações ao 
 
 ## <a name="powershell-guides"></a>Guias do PowerShell
 
-Usado por administradores de gestão de direitos do Azure, PowerShell cmdlets também são úteis para desenvolver e testar seus aplicativos de serviço. Para obter mais informações, veja [Utilizar o PowerShell com o cliente do Azure Information Protection](/information-protection/rms-client/client-admin-guide-powershell).
+Usado por administradores de gestão de direitos do Azure, PowerShell cmdlets também são úteis para desenvolver e testar seus aplicativos de serviço. Para obter mais informações, veja [Utilizar o PowerShell com o cliente do Azure Information Protection](/azure/information-protection/rms-client/client-admin-guide-powershell).
 
 ## <a name="user-applications"></a>Aplicações de utilizador
 
@@ -143,5 +143,5 @@ Cada um dos seguintes tópicos apresenta instruções específicas para um aspet
 ### <a name="see-also"></a>Consulte também
 
 - [Terminologia para programadores](terms.md)
-- [Terminologia do Azure Information Protection – ITPro](./terminology.md)
+- [Terminologia do Azure Information Protection – ITPro](../terminology.md)
 

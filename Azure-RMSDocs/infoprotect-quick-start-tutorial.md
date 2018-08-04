@@ -10,18 +10,18 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: 601b60d7ece2cf1c67865b25b6e897b8f2905dc8
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: b060288efd080397f754d6aecd71abc4bbaabf81
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39475596"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39488815"
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Tutorial de início rápido do Azure Information Protection 
 
 >*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Utilize este tutorial, com uma duração de aproximadamente 20 minutos, para experimentar rapidamente o Azure Information Protection em apenas 5 passos. Este tutorial foi concebido para ser uma demonstração auto-configurada para mostrar rapidamente algumas das funcionalidades disponibilizadas pelo Azure Information Protection. Não inclui todas as funcionalidades disponíveis e não se destina a ser um guia de implementação para a sua organização. Se quiser implementar o Azure Information Protection na sua organização, consulte a [documentação com informações gerais sobre a implementação](./plan-design/deployment-roadmap.md). 
+Utilize este tutorial, com uma duração de aproximadamente 20 minutos, para experimentar rapidamente o Azure Information Protection em apenas 5 passos. Este tutorial foi concebido para ser uma demonstração auto-configurada para mostrar rapidamente algumas das funcionalidades disponibilizadas pelo Azure Information Protection. Não inclui todas as funcionalidades disponíveis e não se destina a ser um guia de implementação para a sua organização. Se quiser implementar o Azure Information Protection na sua organização, consulte a [documentação com informações gerais sobre a implementação](deployment-roadmap.md). 
 
 Este tutorial destina-se a administradores de TI e consultores, para os ajudar a avaliar o Azure Information Protection como uma solução de proteção de informações empresariais para uma organização. Num ambiente de produção, os passos para configurar a política do Information Protection e instalar o cliente para os utilizadores teriam de ser feitos por um administrador. Os passos para etiquetar o documento, partilhá-lo em segurança por e-mail e controlá-lo seriam efetuados pelos utilizadores finais. Este tutorial inclui todos estes passos para demonstrar cenários comuns completos de classificação, etiquetagem e proteção dos dados da sua organização. 
 

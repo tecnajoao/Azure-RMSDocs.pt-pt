@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ''
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2b7973c2f0a0edeeba262d647243bfce643f7f88
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: cc6be93a829a6374590bd1516ec3e880e997d434
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39373010"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489204"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>Guia de utilizador: Remover etiquetas e proteção de ficheiros e e-mails que foram etiquetados pelo Azure Information Protection ou protegidos pelo Rights Management
 
@@ -78,7 +78,7 @@ Pode obter mais instruções sobre os procedimentos no guia do utilizador do Azu
 - [O que pretende fazer?](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>Informações adicionais para administradores    
-Para obter instruções de configuração ativar a definição de política **disponibilizar a opção de permissões personalizadas para os usuários**, consulte [configurar as definições de política do Azure Information Protection](../deploy-use/configure-policy-settings.md).
+Para obter instruções de configuração ativar a definição de política **disponibilizar a opção de permissões personalizadas aos utilizadores**, veja [configurar as definições de política do Azure Information Protection] configurar-política-settings.md).
 
-Outras instruções de configuração: [configurar a política do Azure Information Protection](../deploy-use/configure-policy.md).
+Outras instruções de configuração: [configurar a política do Azure Information Protection] configurar-policy.md).
 

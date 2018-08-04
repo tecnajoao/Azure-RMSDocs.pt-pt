@@ -12,12 +12,12 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 194e676807145dffdf326fe782f4b4051876552d
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 9f1d0409881628afa785c8d7ce7a78518371f084
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39371854"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489870"
 ---
 # <a name="security-best-practices-for-azure-information-protection"></a>Melhores Práticas de Segurança do Azure Information Protection
 
@@ -81,7 +81,7 @@ O AIP não suporta a modificação do código durante o tempo de execução nem 
 
 Se a sua aplicação não interpretar e impuser corretamente os direitos expressos na licença de emissão do AIP, poderá disponibilizar as informações de formas que o proprietário das mesmas não tencionava. Por exemplo, uma aplicação pode permitir a um utilizador guardar informações não encriptadas num novo suporte de dados quando a licença de emissão confere apenas o direito de ver as informações.
 
-O sistema AIP organiza os direitos em alguns agrupamentos. Para obter mais informações, veja [Configuração de direitos de utilização para o Azure Rights Management](../deploy-use/configure-usage-rights.md).
+O sistema AIP organiza os direitos em alguns agrupamentos. Para obter mais informações, veja [Configurar direitos de utilização do Azure Rights Management] configurar-utilização-rights.md).
 
 ### <a name="azure-information-protection"></a>Azure Information Protection  
 O AIP permite que um utilizador desencripte informações ou não; as informações não têm qualquer proteção inerente. Se um utilizador tiver o direito de desencriptar informações, o AIP permite que o faça e a aplicação é responsável por gerir ou proteger essas informações depois de estarem a salvo. Uma aplicação é responsável por gerir o seu ambiente e interface de modo a impedir a utilização não autorizada de informações. Por exemplo, poderá desativar os botões **Imprimir** e **Copiar** se uma licença conceder apenas o direito REPRODUZIR. O seu conjunto de aplicações de teste deve confirmar se a aplicação atua corretamente em todos os direitos de licença que reconhece.

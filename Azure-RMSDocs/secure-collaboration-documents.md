@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e8f2facdeda749987bb1fffae84a3f1bf033e1ad
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: f08c458ce779149d34d573ba145452f98d612c8c
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39475295"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489506"
 ---
 # <a name="secure-document-collaboration-by-using-azure-information-protection"></a>Colaboração de documentos segura com o Azure Information Protection
 
@@ -25,7 +25,7 @@ ms.locfileid: "39475295"
 
 Quando utiliza o Azure Information Protection, pode proteger os seus documentos sem sacrificar a colaboração para os utilizadores autorizados. A maioria dos documentos que um usuário cria e, em seguida, partilhar com outras pessoas para ver e editar irá ser documentos do Office do Word, Excel e PowerPoint. Estes documentos suportam a proteção nativa, o que significa que as funcionalidades de proteção de autorização e criptografia, além de também suportarem permissão restrita para um controlo mais detalhado. 
 
-Estas permissões são chamadas de direitos de utilização e incluir permissões como ver, editar, imprimir. Pode definir os direitos de utilização individuais quando um documento está protegido, ou pode definir um agrupamento de direitos de utilização, chamado níveis de permissão. Níveis de permissão mais fácil selecionar os direitos de utilização que são normalmente utilizados em conjunto, por exemplo, revisor e Coautor. Para obter mais informações sobre direitos de utilização e níveis de permissão, consulte [configurar direitos de utilização do Azure Rights Management](./deploy-use/configure-usage-rights.md).
+Estas permissões são chamadas de direitos de utilização e incluir permissões como ver, editar, imprimir. Pode definir os direitos de utilização individuais quando um documento está protegido, ou pode definir um agrupamento de direitos de utilização, chamado níveis de permissão. Níveis de permissão mais fácil selecionar os direitos de utilização que são normalmente utilizados em conjunto, por exemplo, revisor e Coautor. Para obter mais informações sobre direitos de utilização e níveis de permissão, consulte [configurar direitos de utilização do Azure Rights Management](configure-usage-rights.md).
 
 Quando configurar estas permissões, pode especificar quais os utilizadores que são para:
 
@@ -44,7 +44,7 @@ Como administrador, pode configurar uma etiqueta do Azure Information Protection
 
 Este exemplo descreve como configurar uma etiqueta existente para aplicar a proteção para que os utilizadores da sua organização podem colaborar com documentos com todos os utilizadores de outra organização que tenha o Office 365 ou do Azure AD, um grupo a partir de uma organização diferente que tenha Office 365 ou do Azure AD e um utilizador que não tem uma conta no Azure AD e em vez disso, irá utilizar o endereço de e-mail do Gmail.
 
-Uma vez que o cenário restringe o acesso a pessoas específicas, ele não inclui a definição para utilizadores autenticados. Para obter um exemplo de como pode configurar uma etiqueta com esta definição, consulte [exemplo 5: etiqueta, que criptografa o conteúdo, mas não restringe quem pode acessá-lo](./deploy-use/configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
+Uma vez que o cenário restringe o acesso a pessoas específicas, ele não inclui a definição para utilizadores autenticados. Para obter um exemplo de como pode configurar uma etiqueta com esta definição, consulte [exemplo 5: etiqueta, que criptografa o conteúdo, mas não restringe quem pode acessá-lo](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
 
 1. Selecione a etiqueta que já se encontra na política global ou de uma política de âmbito. Sobre o **proteção** painel, certifique-se **Azure (chave da cloud)** está selecionada.
     
@@ -79,10 +79,10 @@ Agora que esta etiqueta está configurada, pode ser aplicada a documentos de div
 |Diferentes formas de aplicar a etiqueta|Mais informações|
 |---------------|----------|
 |Um usuário selecionar manualmente a etiqueta quando o documento é criado na respetiva aplicação do Office.|Os utilizadores selecionem a etiqueta do **Protect** botão da faixa de opções do Office ou a partir da barra Azure Information Protection.|
-|É pedido aos utilizadores para selecionar uma etiqueta, quando um novo documento é guardado.|Configurar o Azure Information Protection [definição de política](./deploy-use/configure-policy-settings.md) com o nome **todos os documentos e e-mails devem ter uma etiqueta**.|
+|É pedido aos utilizadores para selecionar uma etiqueta, quando um novo documento é guardado.|Configurar o Azure Information Protection [definição de política](configure-policy-settings.md) com o nome **todos os documentos e e-mails devem ter uma etiqueta**.|
 |Um usuário compartilha o documento por e-mail e manualmente seleciona a etiqueta no Outlook.|Os utilizadores selecionem a etiqueta do **Protect** botão da faixa de opções do Office ou a partir da barra Azure Information Protection e o documento anexado está protegido automaticamente com as mesmas definições.|
 |Um administrador aplica-se a etiqueta para o documento com o PowerShell.|Utilize o [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet para aplicar a etiqueta a um documento específico ou de todos os documentos numa pasta.|
-|Além disso tiver configurado a etiqueta para aplicar a classificação automática que agora pode ser aplicada ao utilizar o scanner do Azure Information Protection ou o PowerShell.|Ver [como configurar condições para classificação automática e recomendada para o Azure Information Protection](./deploy-use/configure-policy-classification.md).|
+|Além disso tiver configurado a etiqueta para aplicar a classificação automática que agora pode ser aplicada ao utilizar o scanner do Azure Information Protection ou o PowerShell.|Ver [como configurar condições para classificação automática e recomendada para o Azure Information Protection](configure-policy-classification.md).|
 
 Para concluir este passo a passo, aplica manualmente a etiqueta quando criar o documento na aplicação do Office: 
 
@@ -149,9 +149,9 @@ Atualmente suportados pelo Office 2016 clique-e-Use apenas.
 
 ## <a name="next-steps"></a>Passos Seguintes
 
-Ver outros [as configurações de exemplo](./deploy-use/configure-policy-protection.md#example-configurations) para etiquetas aplicar a proteção para cenários comuns. Este artigo também contém mais detalhes sobre as definições de proteção.
+Ver outros [as configurações de exemplo](configure-policy-protection.md#example-configurations) para etiquetas aplicar a proteção para cenários comuns. Este artigo também contém mais detalhes sobre as definições de proteção.
 
-Para obter mais informações sobre as opções e definições que pode configurar para a etiqueta, consulte [política de configuração do Azure Information Protection](./deploy-use/configure-policy.md). 
+Para obter mais informações sobre as opções e definições que pode configurar para a etiqueta, consulte [política de configuração do Azure Information Protection](configure-policy.md). 
 
 A etiqueta que foi configurada neste artigo também cria um modelo de proteção com o mesmo nome. Se tiver aplicações e serviços que se integram nos modelos de proteção do Azure Information Protection, que eles possam aplicar este modelo. Por exemplo, as soluções DLP e as regras de fluxo de correio. Outlook na web apresenta automaticamente modelos de proteção da política global do Azure Information Protection. 
 

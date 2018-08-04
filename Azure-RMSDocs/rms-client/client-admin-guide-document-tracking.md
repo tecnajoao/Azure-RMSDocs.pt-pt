@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8153b189a6e4f77e2a4c1f7d630fbb2f32b667f1
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 30f9074b6dda4a2a8af7fc267cdbae1be41c784f
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39373741"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39488972"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guia do administrador: Configurar e utilizar o controlo de documentos do Azure Information Protection
 
@@ -27,7 +27,7 @@ Se tiver uma [subscrição que suporta o controlo de documentos](https://www.mic
 
 ## <a name="using-powershell-to-manage-the-document-tracking-site"></a>Com o PowerShell para gerir o site de controlo de documentos
 
-As secções seguintes contêm informações sobre como pode gerir o site de controlo através do PowerShell de documentos. Para obter instruções de instalação para o módulo do PowerShell, consulte [instalar o módulo do PowerShell do AADRM](../deploy-use/install-powershell.md). Se já transferiu e instalou o módulo anteriormente, verifique o número da versão ao executar: `(Get-Module aadrm –ListAvailable).Version`
+As secções seguintes contêm informações sobre como pode gerir o site de controlo através do PowerShell de documentos. Para obter instruções de instalação para o módulo do PowerShell, consulte powershell.md install [instalar o módulo do PowerShell do AADRM]). Se já transferiu e instalou o módulo anteriormente, verifique o número da versão ao executar: `(Get-Module aadrm –ListAvailable).Version`
 
 Para obter mais informações sobre cada um dos cmdlets, utilize as ligações fornecidas.
 
@@ -108,7 +108,7 @@ São aplicáveis dois campos nos ficheiros de registo de utilização ao control
 Também existem tipos de pedido que registam a forma como os utilizadores e os administradores estão a utilizar o site de controlo de documentos. Por exemplo, **RevokeAccess** é o tipo de pedido quando um utilizador ou um administrador em nome de um utilizador revogou um documento no site de controlo de documentos. Utilize este tipo de pedido juntamente com o campo AdminAction para determinar se o utilizador revogou o seu próprio documento (o campo AdminAction está vazio) ou um administrador revogou um documento em nome de um utilizador (AdminAction é true).
 
 
-Para obter mais informações sobre o registo de utilização, consulte [Registar e analisar a utilização do serviço Azure Rights Management](../deploy-use/log-analyze-usage.md)
+Para obter mais informações sobre o registo de utilização, consulte [utilização e análise de registo do serviço Azure Rights Management] log-analisar-usage.md)
 
 
 

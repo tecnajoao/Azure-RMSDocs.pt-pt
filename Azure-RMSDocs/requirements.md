@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f126fe6b76a0d637e202d86bde9f257561c5a72e
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 98c4f32e0964b736c16d28ada37a1d59ee565d41
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39475274"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489370"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisitos para o Azure Information Protection
 
@@ -56,7 +56,7 @@ Acesso condicional é suportado em pré-visualização para documentos protegido
 
 Para obter mais informações sobre os requisitos de autenticação, veja [Requisitos do Azure Active Directory para o Azure Information Protection](requirements-azure-ad.md). 
 
-Para obter mais informações sobre os requisitos para as contas de utilizador e de grupo a autorizar, veja [Preparar utilizadores e grupos para o Azure Information Protection](./plan-design/prepare.md).
+Para obter mais informações sobre os requisitos para as contas de utilizador e de grupo a autorizar, veja [Preparar utilizadores e grupos para o Azure Information Protection](prepare.md).
 
 ## <a name="client-devices"></a>Dispositivos cliente
 
@@ -142,11 +142,11 @@ Para obter informações sobre os requisitos adicionais para este cenário, cons
 
 ### <a name="coexistence-of-ad-rms-with-azure-rms"></a>Coexistência do AD RMS com o Azure RMS
 
-O cenário de implementação seguinte não é suportado, exceto se estiver a utilizar o AD RMS para [proteção do HYOK](./deploy-use/configure-adrms-restrictions.md) com o Azure Information Protection (a configuração "tenha a sua própria chave"):
+O cenário de implementação seguinte não é suportado, exceto se estiver a utilizar o AD RMS para [proteção do HYOK](configure-adrms-restrictions.md) com o Azure Information Protection (a configuração "tenha a sua própria chave"):
 
-- Executar o AD RMS e o Azure RMS lado a lado na mesma organização, exceto durante a migração, conforme descrito em [Migrar do AD RMS para o Azure Information Protection](./plan-design/migrate-from-ad-rms-to-azure-rms.md).
+- Executar o AD RMS e o Azure RMS lado a lado na mesma organização, exceto durante a migração, conforme descrito em [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-Existe um caminho de migração suportado [do AD RMS para o Azure Information Protection](http://technet.microsoft.com/library/Dn858447.aspx) e do [Azure Information Protection para o AD RMS](/powershell/module/aadrm/Set-AadrmMigrationUrl). Se implementar o Azure Information Protection e, em seguida, decidir que já não quer utilizar este serviço na cloud, consulte [Encerrar e desativar o Azure Information Protection](./deploy-use/decommission-deactivate.md).
+Existe um caminho de migração suportado [do AD RMS para o Azure Information Protection](http://technet.microsoft.com/library/Dn858447.aspx) e do [Azure Information Protection para o AD RMS](/powershell/module/aadrm/Set-AadrmMigrationUrl). Se implementar o Azure Information Protection e, em seguida, decidir que já não quer utilizar este serviço na cloud, consulte [Encerrar e desativar o Azure Information Protection](decommission-deactivate.md).
 
 
 

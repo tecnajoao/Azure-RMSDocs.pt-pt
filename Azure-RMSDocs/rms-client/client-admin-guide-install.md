@@ -4,7 +4,7 @@ description: Instruções e informações para administradores implementar o cli
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/26/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 522e188e93aa055454f312ba90059d5f030b326e
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 5c162b1a25332c977d2c4976338854904abfcc54
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39489768"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575554"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guia do administrador: Instalar o cliente do Azure Information Protection para utilizadores
 
@@ -147,7 +147,7 @@ Utilize o seguinte procedimento para identificar o valor a especificar para o pa
 
 1. A partir de uma sessão do PowerShell, primeiro execute [Connect-AadrmService](https://docs.microsoft.com/powershell/aadrm/vlatest/connect-aadrmservice) e especifique as suas credenciais de administrador para ligar ao serviço Azure Rights Management. Em seguida, execute [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/aadrm/vlatest/get-aadrmconfiguration). 
  
-    Se ainda não instalou o módulo do PowerShell para o serviço Azure Rights Management, consulte powershell.md install [instalar o módulo do PowerShell do AADRM]).
+    Se ainda não instalou o módulo do PowerShell para o serviço Azure Rights Management, veja [instalar o módulo do PowerShell do AADRM](../install-powershell.md).
 
 2. A partir da saída, identifique o valor **LicensingIntranetDistributionPointUrl**.
 
@@ -202,7 +202,7 @@ Se utilizar o Intune enquanto método de implementação de software, utilize es
 
 O módulo do PowerShell que está incluído com o cliente do Azure Information Protection tem de cmdlets para instalar e configurar a deteção de impressão. No entanto, para utilizar o scanner, que tem de instalar a versão completa do cliente e não é possível instalar apenas o módulo do PowerShell.
 
-Para instalar o cliente para a deteção de impressão, siga as mesmas instruções nas secções anteriores. Em seguida, está pronto para instalar o scanner. Para obter instruções, consulte [implementar o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente] implementar-aip-scanner.md).
+Para instalar o cliente para a deteção de impressão, siga as mesmas instruções nas secções anteriores. Em seguida, está pronto para instalar o scanner. Para obter instruções, consulte [Implantando o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente](../deploy-aip-scanner.md).
 
 ## <a name="next-steps"></a>Passos Seguintes
 Agora que instalou o cliente do Azure Information Protection, veja o seguinte para obter informações adicionais que poderá precisar para suportar este cliente:

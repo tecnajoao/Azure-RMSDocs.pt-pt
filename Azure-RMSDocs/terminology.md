@@ -4,7 +4,7 @@ description: Está confuso com uma palavra, expressão ou acrónimo relacionado 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/03/2018
+ms.date: 08/04/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c83ba7be8abd14813896846977b8fa691e1d0aa8
-ms.sourcegitcommit: 7ed2a257f68435fe6807af8975a5477801ec2537
+ms.openlocfilehash: 0921e853efac8e6a8a4924a8062c694ad013476a
+ms.sourcegitcommit: edc51fdbcff9a2bdb09a3ff05f2dd4edc2330aba
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39501324"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39572044"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologia do Azure Information Protection
 
@@ -27,17 +27,20 @@ Está confuso com uma palavra, expressão ou acrónimo relacionado com o Microso
 
 |Termo|Definição|
 |--------|--------------|
-|AADRM|O nome do módulo do Windows PowerShell para o serviço Azure Rights Management, derivado da abreviatura não oficial do Azure Rights Management quando, anteriormente denominado (Windows) Azure Active Directory Rights Management.|
+|AADRM|O nome do módulo do PowerShell para o serviço Azure Rights Management, derivado da abreviatura não oficial do Azure Rights Management quando, anteriormente denominado (Windows) Azure Active Directory Rights Management.|
 |ativar|Para ativar o serviço Azure Rights Management para que uma organização possa proteger os respetivos documentos e e-mails. Esta ação também permite que as funcionalidades da IRM no Exchange Online e SharePoint Online.|
 |Serviços de Gestão de Direitos do Active Directory|Frequentemente abreviado para *AD RMS*.<br /><br />Uma função do Windows Server que fornece proteção de gestão de direitos através de encriptação e políticas para o ajudar a proteger documentos, ficheiros e e-mails.|
 |AD RMS|Consulte *Serviços de Gestão de Direitos do Active Directory*.|
+AzureInformationProtection|O nome do módulo do PowerShell para o cliente do Azure Information Protection.
 |Azure Information Protection|Um serviço baseado na nuvem que utiliza as etiquetas para classificar e proteger documentos e e-mails. O Azure Rights Management fornece a proteção utilizando as políticas de encriptação, de identidade e de autorização.|
+Cliente do Azure Information Protection|Lado do cliente do Azure Information Protection, que permite que os utilizadores, administradores e os serviços utilizam as etiquetas e as definições de política do Azure Information Protection.|
 |Etiqueta do Azure Information Protection|Um item que aplica-se uma classificação a documentos e e-mails de valor e, opcionalmente, pode protegê-los.|
 |Política do Azure Information Protection|Configuração para clientes e serviços que utilizam o Azure Information Protection etiquetas e as definições de política definida pelo administrador.|
 |Scanner do Azure Information Protection|Um serviço que é executado no Windows Server e permite-lhe detetar, classificar e proteger os documentos em pastas locais, compartilhamentos de rede e sites do SharePoint Server e bibliotecas.|
 |Visualizador do Azure Information Protection|Uma aplicação que é executado em computadores Windows e dispositivos móveis, para apresentar ficheiros protegidos.|
 |Azure Rights Management|Frequentemente abreviado para *Azure RMS*.<br /><br />Um serviço do Azure utilizado pelo Azure Information Protection que utiliza encriptação e políticas para o ajudar a proteger documentos, ficheiros e e-mails.  Também conhecido como *serviço Azure Rights Management*. Os nomes anteriores incluem:<br /><br />- *Windows Azure Active Directory Rights Management*: abreviado frequentemente para Windows Azure AD Rights Management Service.<br /><br />- *RMS Online*: o nome originalmente proposto, que por vezes poderá ver em mensagens de erro e em entradas de ficheiros de registo.|
 |Azure RMS|Consulte *Azure Rights Management*.|
+|modelo predefinido|Um modelo de proteção que é criado automaticamente para quando obtém uma subscrição do Azure Information Protection, para que pode começar a proteger os documentos e e-mails que contêm informações confidenciais.|
 |BYOK|Consulte *traga a sua própria chave*.|
 |traga a sua própria chave|Frequentemente abreviado para *BYOK*.<br /><br />Uma opção de configuração e topologia escolhida por uma organização que pretenda gerar e gerir as próprias chaves de inquilino do Azure Information Protection.|
 |chave de conteúdo|Uma chave exclusiva que é criada por aplicações otimizadas por RMS para cada documento ou e-mail que é protegido com o Rights Management e que ajuda a limitar o risco de divulgação de informações.|
@@ -60,17 +63,15 @@ Está confuso com uma palavra, expressão ou acrónimo relacionado com o Microso
 |MSIPC|Por vezes apresentado como referência para o cliente RMS 2.0, que substituiu o cliente RMS mais antigo, MSDRM. Este cliente mais recente suporta as aplicações que são desenvolvidas com o SDK RMS 2.0 e suporta o Office 2016 e o Office 2013, o SharePoint 2013, a aplicação de partilha RMS e o cliente do Azure Information Protection.|
 |proteção nativa|Um nível de proteção disponível em todas as aplicações otimizadas que impede que pessoas não autorizadas abram um ficheiro e que também possam aplicar políticas mais restritas, tais como só de leitura e que não são impressas. Além disso, esta proteção permanece com o ficheiro, mesmo quando o ficheiro é reencaminhado para outras pessoas ou guardado numa localização pública à qual outras pessoas possam aceder.|
 |.pfile|A extensão de nome de ficheiro que é acrescentada a todos os ficheiros que o serviço de gestão de direitos protege genericamente.|
-|.ppdf|A extensão de nome de ficheiro que o serviço de gestão de direitos cria quando este cria automaticamente uma cópia em PDF de um ficheiro (Word, Excel, PowerPoint ou PDF) que partilha por e-mail, para que o ficheiro possa ser lido (mas não editado) em todos os dispositivos.|
 |nível de permissões|Um agrupamento de direitos de utilização lógico que faz com que seja mais fácil para os utilizadores finais e os administradores escolherem opções de configuração baseadas em funções. Por exemplo, Revisor e Coautor.|
 |proteger|Aplicar controlos de gestão de direitos a ficheiros ou mensagens de e-mail através de políticas de controlo de acesso, encriptação e identidade para ajudar a proteger os seus dados.|
 |modelo de proteção|Também conhecido como um *modelo de política de direitos*, *modelo do Rights Management*, e *modelo RMS*.<br /><br />Um grupo de definições de proteção que são geridos por um administrador e que incluem os direitos de utilização definidos para os utilizadores autorizados e acessar os controles de expiração e acesso offline. |
-|publicar|Proteger um ficheiro de modo a salvaguardá-lo contra o acesso e a utilização não autorizados.|
-|publicar|Proteger um ficheiro de modo a salvaguardá-lo contra o acesso e a utilização não autorizados.|
+|publicar|Proteger um ficheiro de modo a salvaguardá-lo contra o acesso e a utilização não autorizados. Também utilizado como um termo em conjunto com modelos de proteção e a política do Azure Information Protection, para que estes itens disponíveis para utilização por clientes e serviços.|
 |Conector Rights Management|Um reencaminhamento de proxy de saída que pode implementar para serviços no local, como o Exchange Server e o SharePoint, para proteger dados através do serviço Azure Rights Management.|
 |Emissor do Rights Management|A conta que protegeu um documento ou e-mail.|
 |Proprietário do Rights Management|A conta que mantém o controlo total de um documento protegido ou e-mail pelo facto de ser automaticamente concedido o direito de utilização controlo total do Rights Management e está isento de qualquer data de expiração ou a definição offline.|
 |Serviços de Gestão de Direitos|O termo genérico que aplica-se para a versão de nuvem do Rights Management (Azure Rights Management) e a versão no local do Rights Management (AD RMS).|
-|Aplicação de partilha Rights Management|Foi agora substituída pelo cliente do Azure Information Protection, uma aplicação opcional para o Windows e para os dispositivos móveis mais populares, que suporta a partilha segura de ficheiros no local e por e-mail.|
+|Aplicação de partilha Rights Management|Agora substituída pelo cliente do Azure Information Protection, uma aplicação opcional para o Windows e dispositivos móveis, que suporta a partilha segura de ficheiros no local e por e-mail.|
 |RMS|Consulte *Serviços de Gestão de Direitos*.|
 |Conector RMS|Consulte *Conector Rights Management*.|
 |RMS para indivíduos|Uma subscrição gratuita para um utilizador utilizar o Rights Management quando a sua organização não tiver uma subscrição do Office 365 ou Azure Active Directory.|
@@ -80,6 +81,6 @@ Está confuso com uma palavra, expressão ou acrónimo relacionado com o Microso
 |scanner|Ver *scanner do Azure Information Protection*.|
 |superutilizador|Um grupo de administradores altamente fidedignos que pode desencriptar e aceder a ficheiros que a organização protegeu através de um serviço de gestão de direitos. Normalmente, este nível de acesso é necessário para a Deteção de Dados Eletrónicos jurídicos e as equipas de auditoria.|
 |chave de inquilino|Também conhecida como a chave do certificado de licenciante para servidor (SLC).<br /><br />A chave que é exclusiva de uma organização e, por fim, protege todas as funções criptográficas do Rights Management que se encadeiam nesta chave de inquilino.|
-|desproteger|Remover controlos de gestão de direitos de ficheiros ou mensagens de e-mail, que utilizaram políticas de controlo de acesso, encriptação e identidade para ajudar a proteger os seus dados.|
+|desproteger|Remover controlos de proteção de ficheiros ou mensagens de e-mail, que utilizaram a encriptação, identidade, direitos de utilização, e aceder a políticas de controlo para ajudar a proteger seus dados.|
 |licença de utilização|Um certificado por documento que é concedido a um utilizador que abre um ficheiro ou e-mail que tenha sido protegido por um serviço de gestão de direitos. Este certificado contém direitos desse utilizador para o ficheiro ou a mensagem de e-mail e a chave de encriptação que foi utilizada para encriptar o conteúdo, bem como restrições de acesso adicionais definidas na política do documento.|
 

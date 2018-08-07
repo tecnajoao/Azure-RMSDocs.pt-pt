@@ -4,7 +4,7 @@ description: Instruções para ver e utilizar um documento protegido que requer 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/17/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 21839457716c97f02181d09005318a7838ea5386
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 84a41cb828d2ccd931191f5f0fcf094e3903fb21
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39489207"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575503"
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Guia de utilizador: Ver e utilizar ficheiros que foram protegidos pelo Rights Management
 
@@ -69,7 +69,7 @@ Se a sua organização não tiver uma conta com base na cloud para que possa uti
 
     Pode verificar as suas permissões para o ficheiro clicar em **Permissões**. Na caixa de diálogo **Permissões**, também pode identificar o proprietário do ficheiro para o contactar caso pretenda solicitar uma nova versão do ficheiro com permissões adicionais.
     
-    Para obter informações mais detalhadas sobre as permissões e os direitos de utilização de cada um, veja [direitos incluídos nos permissões levels]configure-usage-rights.md#rights-included-in-permissions-levels).
+    Para obter mais informações detalhadas sobre as permissões e os direitos de utilização de cada um, veja [Direitos incluídos nos níveis de permissões](../configure-usage-rights.md#rights-included-in-permissions-levels).
 
 4. Para editar o ficheiro, clique em **guardar como**, que lhe permite guardar o ficheiro sem a etiqueta e sem proteção para a extensão de nome de ficheiro original. Em seguida, pode editar o ficheiro com a aplicação associada a esse tipo de ficheiro. 
     

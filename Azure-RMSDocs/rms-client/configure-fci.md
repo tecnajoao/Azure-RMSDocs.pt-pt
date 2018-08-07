@@ -4,7 +4,7 @@ description: Instruções para utilizar o cliente de Rights Management (RMS) com
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: da68db95148acd128b26ca311fe8682c0d67cf26
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 850f57534287a7df0a93bfd88399e3417f6aff09
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39489717"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575629"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Proteção RMS com Infraestrutura de Classificação de Ficheiros (FCI) do Windows Server
 
@@ -28,7 +28,7 @@ Utilize este artigo para obter instruções e um script para utilizar o cliente 
 Esta solução permite-lhe proteger automaticamente todos os ficheiros numa pasta num servidor de ficheiros com o Windows Server ou proteger automaticamente ficheiros que cumpram critérios específicos. Por exemplo, ficheiros que tenham sido classificados como contendo informações confidenciais. Esta solução liga-se diretamente ao serviço Azure Rights Management do Azure Information Protection para proteger os ficheiros, pelo que tem de ter este serviço implementado na sua organização.
 
 > [!NOTE]
-> Embora o Azure Information Protection inclua um [conector] implementar-rms-connector.md) que suporta a infraestrutura de classificação de ficheiros, essa solução suporta apenas a proteção nativa — por exemplo, ficheiros do Office.
+> Embora o Azure Information Protection inclua um [conector](../deploy-rms-connector.md) que suporta a Infraestrutura de Classificação de Ficheiros, essa solução só suporta a proteção nativa — por exemplo, ficheiros do Office.
 > 
 > Para suportar vários tipos de ficheiro com a infraestrutura de classificação de ficheiros do Windows Server, tem de utilizar o módulo **AzureInformationProtection** do PowerShell, conforme documentado neste artigo. Os cmdlets do Azure Information Protection, tal como o cliente do Azure Information Protection, suportam a proteção genérica, bem como a proteção nativa, o que significa que os tipos de ficheiro diferentes dos documentos do Office podem ser protegidos. Para obter mais informações, veja [Tipos de ficheiro suportados pelo cliente do Azure Information Protection](client-admin-guide-file-types.md) no guia do administrador do cliente do Azure Information Protection.
 

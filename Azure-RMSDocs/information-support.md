@@ -1,10 +1,10 @@
 ---
-title: Informações e suporte de administração para o Azure Information Protection
+title: Informações e suporte do Azure Information Protection
 description: Recursos para administradores que incluem informações sobre novas versões, opções de suporte e como contactar a Microsoft para reportar um problema.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/02/2018
+ms.date: 08/06/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d61908e26085619c61d31780514cdd09e46f0761
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 0b0c83e987ad2fa1e6e8638970e2f4450024997a
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39489581"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575537"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informações e suporte do Azure Information Protection
 
@@ -27,16 +27,15 @@ Utilize os seguintes recursos para o ajudar a obter mais informações, implemen
 
 |Para fazer isso...|... .do isso:|
 |----------------|---------------|
-|Consulte a documentação referenciada mais frequentemente|Leia as páginas de cinco principais:<br /><br /> - [O que é o Azure Information Protection?](./what-is-information-protection.md)<br /> - [Instalar o cliente do Azure Information Protection para utilizadores](./rms-client/client-admin-guide-install.md)<br />- [Requisitos do Azure Information Protection](requirements.md) <br />- [Implementar o scanner do Azure Information Protection](deploy-aip-scanner.md)<br />- [A política do Azure Information Protection predefinida](configure-policy-default.md)|
-|Interaja com a equipe do produto e seus colegas|Visite o [site do Yammer](https://www.yammer.com/AskIPTeam) do Azure Information Protection.|
-|Pedir uma nova função ou alteração de funcionalidade|Visite o [UserVoice](https://msip.uservoice.com) do site do Azure Information Protection e a utilizar o seu endereço de e-mail da empresa para iniciar sessão.|
-|Receber tweets do grupo de produtos|Siga [Microsoft Mobility@MSFTMobility ](https://twitter.com/MSFTMobility) no Twitter.|
+|Saiba mais sobre futuros e novas versões|Consulte a [informações sobre novas versões e atualizações](#information-about-new-releases-and-updates) secção nesta página.|
+|Obtenha ajuda com o produto|Consulte a [opções de suporte e recursos da Comunidade](#support-options-and-community-resources) secção nesta página.|
 |Ver as informações de subscrição e as funcionalidades suportadas|Utilize a lista de informações e recursos de subscrição do [preços do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection) página.|
-|Compreender uma condição específica do Azure Information Protection|Procure o termo ou abreviatura no [página de terminologia](terminology.md).|
-
+|Pedir uma nova função ou alteração de funcionalidade|Visite o [UserVoice](https://msip.uservoice.com) do site do Azure Information Protection e a utilizar o seu endereço de e-mail da empresa para iniciar sessão.|
+|Interaja com a equipe do produto e seus colegas|Visite o [site do Yammer](https://www.yammer.com/AskIPTeam) do Azure Information Protection.|
+|Compreender uma condição específica do Azure Information Protection|Procure o termo ou abreviatura no [terminologia](terminology.md) página.|
 
 ## <a name="information-about-new-releases-and-updates"></a>Informações sobre novas versões e atualizações
-A equipa de produtos do Azure Information Protection publica anúncios sobre as novas versões e atualizações no [Blogue sobre a Segurança e a Mobilidade nas Grandes Empresas – em inglês](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection). Estas publicações no blogue completam a documentação do produto e as informações de suporte.
+A equipe de produto do Azure Information Protection publica anúncios sobre as principais novas versões no [blogue Enterprise Mobility and Security](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection). Versões menores sejam anunciados no Azure Information Protection [site do Yammer](https://www.yammer.com/AskIPTeam), e poderá também considerar útil ler o [site do UserVoice](https://msip.uservoice.com) para o estado dos recursos solicitados.
 
 Além disso, um resumo das alterações de documentação está publicado por mês, para o [blog técnico do Azure Information Protection](https://aka.ms/AIPblog). Estas atualizações de documentação incluem informações de quaisquer novas versões, as atualizações para oferecer suporte a declarações e também as correções e esclarecimentos sobre as versões existentes. Estas mensagens são intituladas: "**atualização da documentação do Azure Information Protection para \<mês, ano >**".
 
@@ -77,7 +76,7 @@ Resolva os problemas:
 
 - Se tiver uma pergunta sobre uma declaração de suporte do Azure Information Protection: consulte as informações sobre [Requisitos](requirements.md) que são atualizadas regularmente.
 
-- Para obter informações para dar suporte aos seus utilizadores finais, suporte técnico e administradores que estão a configurar serviços e aplicações que utilizam o Azure Information Protection: veja [Ajudar os utilizadores a proteger ficheiros](help-users.md).
+- Para obter informações suportar os utilizadores finais, ajudar o suporte técnico e administradores que estão a configurar serviços e aplicações que utilizam o serviço de proteção do Azure Information Protection: veja [ajudar os utilizadores a proteger ficheiros](help-users.md).
 
 - Se tiver implementado o conector do Rights Management para os servidores no local: consulte as informações de [monitorização](monitor-rms-connector.md) que incluem detalhes sobre as entradas do registo de eventos, contadores de desempenho e registo.
 

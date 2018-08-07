@@ -4,7 +4,7 @@ description: Instruções e informações para administradores numa rede empresa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 13e0d037cd616bb52d446f9da0101f1f2448c2d5
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: f9189de08c7089087ba37964a9d7acee3f537d02
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39489523"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575680"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guia do administrador do cliente do Azure Information Protection
 
@@ -55,7 +55,7 @@ O cliente do Azure Information Protection inclui o seguinte:
 
 - Um módulo do PowerShell para aplicar e remover etiquetas de classificação e proteção de ficheiros. 
     
-    Este módulo inclui cmdlets para instalar e configurar o [scanner do Azure Information Protection] implementar-aip-scanner.md) que é executado como um serviço no Windows Server. Este serviço permite-lhe detetar, classificar e proteger ficheiros em arquivos de dados, como compartilhamentos de rede e de bibliotecas do SharePoint Server.
+    Este módulo inclui cmdlets para instalar e configurar o [scanner do Azure Information Protection](../deploy-aip-scanner.md) que é executado como um serviço no Windows Server. Este serviço permite-lhe detetar, classificar e proteger ficheiros em arquivos de dados, como compartilhamentos de rede e de bibliotecas do SharePoint Server.
 
 - O cliente do Rights Management que comunica com o Azure Rights Management (Azure RMS) ou os Serviços de Gestão de Direitos do Active Directory (AD RMS).
 
@@ -106,7 +106,7 @@ Quando o cliente é instalado, utilize o **ajuda e Feedback** opção para abrir
 
 #### <a name="help-and-feedback-section"></a>Secção **Ajuda e Feedback**
 
-Quanto **ligação mais informações** por predefinição, vai para o [do Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) Web site, mas pode configurá-la para um URL personalizado como um de [definições de política] configurar-política-settings.md) no Azure Política de proteção de informações.
+A **ligação Mais informações** direciona-o, por predefinição, para o site do [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection), mas pode configurá-la para um URL personalizado, de acordo com uma das [definições da política](../configure-policy-settings.md) da política do Azure Information Protection.
 
 Utilize a ligação **Enviar Comentários** para enviar pedidos ou sugestões para a equipa do Information Protection. Não utilize esta opção para o suporte técnico e, em vez disso, veja [Opções de suporte e recursos da comunidade](../information-support.md#support-options-and-community-resources). 
 
@@ -162,7 +162,7 @@ O cliente do Azure Information Protection suporta os mesmos idiomas que suporta 
 
 Para estes idiomas, opções de menu, caixas de diálogo e mensagens do Azure Information Protection cliente apresentar no idioma do utilizador. Há um único instalador para Deteta o idioma, para que nenhuma configuração adicional é necessário para instalar o cliente do Azure Information Protection para diferentes idiomas. 
 
-No entanto, os nomes de etiqueta e descrições que especificou não são traduzidas automaticamente quando configurar as etiquetas na política do Azure Information Protection. A partir de 30 de Agosto de 2017, o atual [política predefinida] configurar-política-default.md) inclui suporte para alguns idiomas. Para os utilizadores verem as etiquetas em seu idioma preferencial, fornecem suas próprias traduções e configurar a política do Azure Information Protection para utilizar essas conversões. Para obter mais informações, veja [como configurar etiquetas para diferentes idiomas no Azure Information Protection] configurar-política-languages.md). Marcas visuais não são traduzidas e não suportam mais de um idioma.
+No entanto, os nomes de etiqueta e descrições que especificou não são traduzidas automaticamente quando configurar as etiquetas na política do Azure Information Protection. A partir do dia 30 de Agosto de 2017, o atual [política predefinida](../configure-policy-default.md) inclui suporte para alguns idiomas. Para os utilizadores verem as etiquetas em seu idioma preferencial, fornecem suas próprias traduções e configurar a política do Azure Information Protection para utilizar essas conversões. Para obter mais informações, veja [Como configurar etiquetas para diferentes idiomas no Azure Information Protection](../configure-policy-languages.md). Marcas visuais não são traduzidas e não suportam mais de um idioma.
 
 ## <a name="post-installation-tasks"></a>Tarefas de pós-instalação
 

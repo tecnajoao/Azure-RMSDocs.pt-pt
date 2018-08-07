@@ -4,7 +4,7 @@ description: Informações sobre o registo de utilização e ficheiros do client
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/29/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: faafadc3c5f45e5407ea108365b1c57678b21c48
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 517113c447857800a585dccadd66314b131523a4
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39488748"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575884"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guia do administrador: Ficheiros de cliente do Azure Information Protection e o registo de utilização do cliente
 
@@ -85,9 +85,9 @@ O cliente regista a atividade do utilizador para o registo de eventos do Windows
     
 - Justificação do utilizador (quando aplicável)
 
-- Permissões personalizadas (quando aplicável) que inclui o [direitos de utilização por seus name]configure-usage-rights.md#usage-rights-and-descriptions codificação) para os utilizadores especificados, grupos ou organizações
+- Permissões personalizadas (quando aplicável) que inclui a [direitos de utilização pelo respetivo nome de codificação](../configure-usage-rights.md#usage-rights-and-descriptions) para os utilizadores especificados, grupos ou organizações
     
-Para obter informações sobre o registo de utilização para o serviço de proteção, consulte [utilização e análise de registo do serviço Azure Rights Management] log-analisar-usage.md)
+Para obter informações sobre o registo de utilização para o serviço de proteção, consulte [registar e analisar a utilização do serviço Azure Rights Management](../log-analyze-usage.md)
 
 
 

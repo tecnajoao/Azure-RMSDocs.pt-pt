@@ -4,7 +4,7 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 57aed12b627a435c3707cbd95fc51e1e0837bd07
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 82b2e3b9caa0015c094974c7e09c2b11248e86ec
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39489751"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575578"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas para o cliente do Azure Information Protection
 
@@ -29,7 +29,7 @@ Algumas destas definições requerem a edição do registo e algumas utilizam de
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>Como configurar as definições avançadas de configuração de cliente no portal
 
-1. Se ainda não o tiver feito, numa nova janela do browser, [iniciar sessão para o Azure portal]configure-policy.md#signing-in-to-the-azure-portal) e, em seguida, navegue para o **do Azure Information Protection** painel.
+1. Se ainda não o tiver feito, numa nova janela do browser, [inicie sessão no portal do Azure](../configure-policy.md#signing-in-to-the-azure-portal)e, em seguida, navegue para o **do Azure Information Protection** painel.
 
 2. Do **classificações** > **etiquetas** opção de menu: selecione **políticas**.
 
@@ -122,7 +122,7 @@ Ao exportar a política, esta ação transfere um arquivo zipado com várias ver
 
 ## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Ocultar ou mostrar o botão não reencaminhar no Outlook
 
-O método recomendado para configurar esta opção é utilizando o [definição de política] configurar-política-settings.md) **adicionar o botão não reencaminhar ao Friso do Outlook**. No entanto, também pode configurar esta opção ao utilizar um [definição de cliente avançado](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que configurar no portal do Azure.
+O método recomendado para configurar esta opção é utilizar o [definição de política](../configure-policy-settings.md) **adicionar o botão não reencaminhar ao Friso do Outlook**. No entanto, também pode configurar esta opção ao utilizar um [definição de cliente avançado](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que configurar no portal do Azure.
 
 Quando configura esta definição, oculta ou mostra os **não reencaminhar** botão da faixa de opções no Outlook. Esta definição não tem nenhum efeito sobre a opção não reencaminhar de menus do Office.
 
@@ -134,7 +134,7 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 ## <a name="make-the-custom-permissions-options-available-or-unavailable-to-users"></a>Tornar as opções de permissões personalizadas disponíveis ou não está disponível para utilizadores
 
-O método recomendado para configurar esta opção é utilizando o [definição de política] configurar-política-settings.md) **disponibilizar a opção de permissões personalizadas para utilizadores**. No entanto, também pode configurar esta opção ao utilizar um [definição de cliente avançado](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que configurar no portal do Azure. 
+O método recomendado para configurar esta opção é utilizar o [definição de política](../configure-policy-settings.md) **disponibilizar a opção de permissões personalizadas para utilizadores**. No entanto, também pode configurar esta opção ao utilizar um [definição de cliente avançado](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que configurar no portal do Azure. 
 
 Quando configura esta definição e publica a política para utilizadores, as opções de permissões personalizadas ficam visíveis para os utilizadores selecionarem suas próprias definições de proteção ou eles estão ocultos para que os utilizadores não é possível selecionar suas próprias definições de proteção, a menos que lhe for pedido.
 
@@ -147,7 +147,7 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Ocultar permanentemente a barra do Azure Information Protection
 
-Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. Usá-lo apenas quando o [definição de política] configurar-política-settings.md) **apresentar a barra de Information Protection nas aplicações do Office** está definida como **no**.
+Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. Usá-lo apenas quando os [definição de política](../configure-policy-settings.md) **apresentar a barra de Information Protection nas aplicações do Office** está definida como **no**.
 
 Quando configura esta definição e publica a política para os utilizadores, se um utilizador optar por não mostrar a barra do Azure Information Protection nas aplicações do Office, a barra permanece oculta. Tal acontece quando o utilizador desmarca a opção **Mostrar Barra** do separador **Base**, grupo de **Proteção**, botão **Proteger**. Esta definição não tem qualquer efeito caso o utilizador feche a barra através do ícone **Fechar esta barra**.
 
@@ -193,7 +193,7 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
 
-Quando utiliza o [definição de política] configurar-política-settings.md) de **todos os documentos e e-mails devem ter uma etiqueta**, é pedido aos utilizadores para selecionar uma etiqueta quando eles primeiramente salvarem um documento do Office e quando eles enviam uma mensagem de e-mail. Para documentos, os utilizadores podem selecionar **agora não** temporariamente dispensar o pedido para selecionar uma etiqueta e retornar ao documento. No entanto, eles não é possível fechar o documento guardado sem rotulando-o. 
+Quando utiliza a [definição de política](../configure-policy-settings.md) dos **todos os documentos e e-mails devem ter uma etiqueta**, é pedido aos utilizadores para selecionar uma etiqueta quando eles primeiramente salvarem um documento do Office e quando eles enviam uma mensagem de e-mail. Para documentos, os utilizadores podem selecionar **agora não** temporariamente dispensar o pedido para selecionar uma etiqueta e retornar ao documento. No entanto, eles não é possível fechar o documento guardado sem rotulando-o. 
 
 Quando configurar esta definição, remove a **agora não** opção para que os utilizadores devem selecionar uma etiqueta, quando o documento é salvo em primeiro lugar.
 
@@ -209,7 +209,7 @@ Esta opção de configuração está atualmente em pré-visualização e está s
 
 Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
 
-Quando configura esta definição, ele altera o [default behavior]configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) de como o cliente do Azure Information Protection aplica etiquetas automáticas e recomendadas da seguinte forma :
+Quando configura esta definição, ele altera a [predefinição de comportamento](../configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) de como o cliente do Azure Information Protection aplica etiquetas automáticas e recomendadas da seguinte forma:
 
 - A classificação automática aplica-se ao Word, Excel, PowerPoint e Outlook. Para documentos, a classificação automática seja executada continuamente em segundo plano. Para o Outlook, a classificação automática é executada quando os e-mails são enviados. 
     
@@ -393,7 +393,7 @@ Esta configuração utiliza uma [definição avançada de cliente](#how-to-confi
 
 Por predefinição, o scanner do Azure Information Protection é executado com um nível de baixa integridade. Esta definição proporciona maior isolamento de segurança, mas ao custo de desempenho. Um nível de baixa integridade é adequado se executar a deteção de impressão com uma conta que tem direitos (por exemplo, uma conta de administrador local) privilegiado porque esta definição ajuda a proteger o computador que executa a deteção de impressão.
 
-No entanto, quando a conta de serviço que executa a deteção de impressão tem apenas os direitos documentados no [scanner prerequisites]deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner), nível baixo de integridade não é necessário e não é recomendado porque ele afeta negativamente o desempenho. 
+No entanto, quando a conta de serviço que executa a deteção de impressão tem apenas os direitos documentados no [pré-requisitos do scanner](../deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner), nível baixo de integridade não é necessário e não é recomendado porque ele afeta negativamente o desempenho. 
 
 Para obter mais informações sobre os níveis de integridade do Windows, consulte [o que é o mecanismo de integridade do Windows?](https://msdn.microsoft.com/library/bb625957.aspx)
 

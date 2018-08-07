@@ -13,12 +13,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7698821891b92733f887cddc329363bfbc4fa0ae
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 15df93cfe3a88e3aaafefcb0df05579a726e6d84
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39489557"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575833"
 ---
 # <a name="change-permissions-on-files-that-have-been-protected-by-rights-management"></a>Alterar permissões em ficheiros que tenham sido protegidos pela Rights Management
 
@@ -33,7 +33,7 @@ Se um ficheiro tiver sido protegido pela Rights Management, pode alterar as perm
 >
 > Do mesmo modo, se quiser adicionar ou remover uma permissão, não é possível apenas especificar essa permissão para adicionar ou remover, tem de especificar todas as permissões que pretende que as pessoas tenham.
 
-Se for o proprietário do ficheiro que pretende proteger novamente (por exemplo, se o tiver protegido originalmente utilizando a aplicação de partilha), terá automaticamente permissões para proteger de novo o ficheiro. Se não for o proprietário, poderá ou poderá não ter permissões para proteger novamente o ficheiro, consoante as permissões que o ficheiro protegido tenha atualmente. Terá do [controlo total utilização right]configure-usage-rights.md#usage-rights-and-descriptions) para voltar a proteger um ficheiro.
+Se for o proprietário do ficheiro que pretende proteger novamente (por exemplo, se o tiver protegido originalmente utilizando a aplicação de partilha), terá automaticamente permissões para proteger de novo o ficheiro. Se não for o proprietário, poderá ou poderá não ter permissões para proteger novamente o ficheiro, consoante as permissões que o ficheiro protegido tenha atualmente. Precisa do [direito de utilização de Controlo Completo](../configure-usage-rights.md#usage-rights-and-descriptions) para voltar a proteger um ficheiro.
 
 Por exemplo, se outra pessoa protegeu o ficheiro utilizando a aplicação de partilha Rights Management e a pessoa especificou um grupo ao qual pertence e **Coproprietário** como a permissão personalizada, será capaz de voltar a proteger o ficheiro. No entanto, se não especificou um nome ou um grupo ao que pertence ou se tiver selecionado **Revisor - Ver e Editar**, ou um modelo que não lhe permita remover permissões, não poderá voltar a proteger o ficheiro. A forma mais fácil para descobrir é tentar voltar a proteger o ficheiro.
 

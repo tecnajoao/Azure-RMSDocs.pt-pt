@@ -4,7 +4,7 @@ description: Instruções para remover etiquetas de classificação e proteção
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/12/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ''
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: cc6be93a829a6374590bd1516ec3e880e997d434
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: f74354ea3c588093b4fefcf98ce0b4cbf807aedb
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39489204"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575782"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>Guia de utilizador: Remover etiquetas e proteção de ficheiros e e-mails que foram etiquetados pelo Azure Information Protection ou protegidos pelo Rights Management
 
@@ -78,7 +78,7 @@ Pode obter mais instruções sobre os procedimentos no guia do utilizador do Azu
 - [O que pretende fazer?](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>Informações adicionais para administradores    
-Para obter instruções de configuração ativar a definição de política **disponibilizar a opção de permissões personalizadas aos utilizadores**, veja [configurar as definições de política do Azure Information Protection] configurar-política-settings.md).
+Para obter instruções de configuração ativar a definição de política **disponibilizar a opção de permissões personalizadas para os usuários**, consulte [configurar as definições de política do Azure Information Protection](../configure-policy-settings.md).
 
-Outras instruções de configuração: [configurar a política do Azure Information Protection] configurar-policy.md).
+Outras instruções de configuração: [configurar a política do Azure Information Protection](../configure-policy.md).
 

@@ -4,7 +4,7 @@ description: Instruções sobre como classificar e proteger os seus documentos e
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/12/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: dfe9edc5c2ee4546ad6ac2ef18e9f4393cae7a0f
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: dbe983b1c777308a01a2c1c9b7a97571cb9a7d08
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39489109"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575462"
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Guia de utilizador: Classificar e proteger um ficheiro ou e-mail com o Azure Information Protection
 
@@ -181,7 +181,7 @@ Pode obter mais instruções sobre os procedimentos no guia do utilizador do Azu
 -   [O que pretende fazer?](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>Informações adicionais para administradores    
-Para obter instruções de configuração ativar a definição de política **disponibilizar a opção de permissões personalizadas aos utilizadores**, veja [configurar as definições de política do Azure Information Protection] configurar-política-settings.md).
+Para obter instruções de configuração ativar a definição de política **disponibilizar a opção de permissões personalizadas para os usuários**, consulte [configurar as definições de política do Azure Information Protection](../configure-policy-settings.md).
 
-Outras instruções de configuração: [configurar a política do Azure Information Protection] configurar-policy.md).
+Outras instruções de configuração: [configurar a política do Azure Information Protection](../configure-policy.md).
 

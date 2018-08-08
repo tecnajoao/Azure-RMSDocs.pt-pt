@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 82b2e3b9caa0015c094974c7e09c2b11248e86ec
-ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
+ms.openlocfilehash: 2c092d49a3b6174266937ee6e9ee43c65f208199
+ms.sourcegitcommit: 0798501d78865e2fc3b1a4cd7f705fbab73d5354
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39575578"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39623684"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas para o cliente do Azure Information Protection
 
@@ -104,9 +104,9 @@ Localize o nome do valor seguinte e defina os dados do valor como **0**:
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
-Certifique-se de que o cliente tem um ficheiro de política válido denominado **msip**, na **%LocalAppData%\Microsoft\MSIP** pasta. Se necessário, pode exportar a política global ou de uma política de âmbito do portal do Azure e copie o ficheiro exportado para o computador cliente. Também pode utilizar este método para substituir um ficheiro de política desatualizada pela política publicada mais recente. No entanto, exportar a política não suporta o cenário em que um utilizador pertencer a mais do que uma política de âmbito.
+Certifique-se de que o cliente tem um ficheiro de política válido denominado **msip**, na **%LocalAppData%\Microsoft\MSIP** pasta. Se necessário, pode exportar a política global ou de uma política de âmbito do portal do Azure e copie o ficheiro exportado para o computador cliente. Também pode utilizar este método para substituir um ficheiro de política desatualizada pela política publicada mais recente. No entanto, exportar a política não suporta o cenário em que um utilizador pertencer a mais do que uma política de âmbito. Também tenha em atenção que se os utilizadores selecionarem a **repor definições** opção partir [ajuda e feedback](client-admin-guide.md#help-and-feedback-section), esta ação elimina o ficheiro de política e apresenta-o cliente inoperável até que substitua manualmente o ficheiro de política ou o cliente liga-se ao serviço transferir a política.
 
-Ao exportar a política, esta ação transfere um arquivo zipado com várias versões da política que corresponde a versões diferentes do cliente do Azure Information Protection:
+Ao exportar a política do portal do Azure, será transferido um arquivo zipado contém várias versões da política. Estas versões de política correspondem a diferentes versões do cliente do Azure Information Protection:
 
 1. Deszipe o ficheiro e utilize a seguinte tabela para identificar qual arquivo de política que precisa. 
     

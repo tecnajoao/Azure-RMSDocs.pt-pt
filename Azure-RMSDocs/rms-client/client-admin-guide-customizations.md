@@ -4,7 +4,7 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2c092d49a3b6174266937ee6e9ee43c65f208199
-ms.sourcegitcommit: 0798501d78865e2fc3b1a4cd7f705fbab73d5354
+ms.openlocfilehash: 2008a40e03e502c4dad85826d957434b218b151e
+ms.sourcegitcommit: 1eddd81dc659ffa38872b81a1bf4b5f69f71c30e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 08/08/2018
-ms.locfileid: "39623684"
+ms.locfileid: "39631576"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas para o cliente do Azure Information Protection
 
@@ -33,7 +33,7 @@ Algumas destas definições requerem a edição do registo e algumas utilizam de
 
 2. Do **classificações** > **etiquetas** opção de menu: selecione **políticas**.
 
-3. Sobre o **do Azure Information Protection - políticas** painel, selecione o menu de contexto (**...** ) junto à política que contém as definições avançadas. Em seguida, selecione **Definições avançadas**.
+3. Sobre o **do Azure Information Protection - políticas** painel, selecione o menu de contexto (**...**) junto à política que contém as definições avançadas. Em seguida, selecione **Definições avançadas**.
     
     Pode configurar as definições avançadas para a Política global, bem como para as políticas de âmbito.
 
@@ -41,7 +41,7 @@ Algumas destas definições requerem a edição do registo e algumas utilizam de
 
 5. Certifique-se de que os utilizadores desta política reiniciam as aplicações do Office que tinham abertas.
 
-6. Caso já não precise da definição e pretenda reverter para o comportamento predefinido: no painel **Definições avançadas**, selecione o menu de contexto (**...** ) junto à definição que já não é precisa e, em seguida, selecione **Eliminar**. Em seguida, clique em **guarde e feche**.
+6. Caso já não precise da definição e pretenda reverter para o comportamento predefinido: no painel **Definições avançadas**, selecione o menu de contexto (**...**) junto à definição que já não é precisa e, em seguida, selecione **Eliminar**. Em seguida, clique em **guarde e feche**.
 
 ## <a name="prevent-sign-in-prompts-for-ad-rms-only-computers"></a>Impedir pedidos de início de sessão para computadores só com AD RMS
 
@@ -209,15 +209,11 @@ Esta opção de configuração está atualmente em pré-visualização e está s
 
 Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
 
-Quando configura esta definição, ele altera a [predefinição de comportamento](../configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) de como o cliente do Azure Information Protection aplica etiquetas automáticas e recomendadas da seguinte forma:
+Quando configura esta definição, ele altera a [predefinição de comportamento](../configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) de como o cliente do Azure Information Protection aplica etiquetas automáticas e recomendadas para documentos: 
 
-- A classificação automática aplica-se ao Word, Excel, PowerPoint e Outlook. Para documentos, a classificação automática seja executada continuamente em segundo plano. Para o Outlook, a classificação automática é executada quando os e-mails são enviados. 
-    
-    Não é possível utilizar a classificação automática para documentos que foram anteriormente etiquetados de forma manual ou anteriormente identificados automaticamente com uma classificação mais elevada. A exceção a este comportamento é se usar o scanner do Azure Information Protection com o parâmetro de OverrideLabel definido como ativado.
+- Para Word, Excel e PowerPoint, a classificação automática seja executada continuamente em segundo plano.  
 
-- Classificação recomendada aplica-se ao Word, Excel e PowerPoint. Para esses documentos, recomendado execuções de classificação continuamente em segundo plano. Não é possível utilizar a classificação recomendada para o Outlook.
-    
-    Pode utilizar a classificação recomendada para documentos que foram identificados anteriormente, com ou sem uma classificação mais elevada. 
+O comportamento não é alterada para o Outlook.
 
 Quando o cliente do Azure Information Protection verifica periodicamente a documentos para as regras de condição que especificar, este comportamento permite a classificação automática e recomendada e proteção para documentos armazenados no SharePoint Online. Ficheiros grandes também poupar mais rapidamente porque as regras de condição já estiver a executar. 
 
@@ -383,7 +379,7 @@ Utilize estas chaves e valores correspondentes para apenas uma propriedade perso
 
 Por exemplo, tem uma coluna de SharePoint com o nome **classificação** que tem valores possíveis dos **pública**, **geral**, e **altamente confidencial todos Os funcionários**. Documentos são armazenados no SharePoint e ter **pública**, **gerais**, ou **altamente confidencial todos os funcionários** como valores definidos para a propriedade de classificação.
 
-Para um documento do Office com um dos seguintes valores de classificação de etiqueta, defina **SyncPropertyName** ao **classificação**, e **SyncPropertyState** para  **OneWay**. 
+Para um documento do Office com um dos seguintes valores de classificação de etiqueta, defina **SyncPropertyName** ao **classificação**, e **SyncPropertyState** para **OneWay**. 
 
 Agora, quando um utilizador abre e salva um desses documentos do Office, ele tem o nome **pública**, **gerais**, ou **altamente confidencial \ todos os funcionários** se tiver etiquetas com estes nomes na sua política do Azure Information Protection. Se não tiver etiquetas com esses nomes, o documento permanece sem etiqueta.
 

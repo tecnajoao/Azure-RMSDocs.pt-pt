@@ -67,7 +67,7 @@ Instruções ao utilizar estas definições:
 
 **Valor:** predefinido
 
-**Dados:** https://*\<YourTenantURL >wmcs/Licensing
+**Dados:** https://*\<YourTenantURL>*/_wmcs/Licensing
 
 ---
 
@@ -118,7 +118,7 @@ Instruções ao utilizar estas definições:
 
 **Valor:** predefinido
 
-**Dados:** https://*< \YourTenantURL >wmcs/Licensing
+**Dados:** https://*<\YourTenantURL>*/_wmcs/Licensing
 
 ---
 

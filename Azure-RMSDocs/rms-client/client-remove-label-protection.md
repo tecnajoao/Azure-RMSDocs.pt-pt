@@ -4,7 +4,7 @@ description: Instruções para remover etiquetas de classificação e proteção
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 08/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ''
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f74354ea3c588093b4fefcf98ce0b4cbf807aedb
-ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
+ms.openlocfilehash: 60748ca0cd84a887781e4842d784dd3c496fa7d5
+ms.sourcegitcommit: 970b476d13c45f1070483ba8f7c910ccfe39c419
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39575782"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "40255742"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>Guia de utilizador: Remover etiquetas e proteção de ficheiros e e-mails que foram etiquetados pelo Azure Information Protection ou protegidos pelo Rights Management
 
@@ -28,7 +28,7 @@ Quando o [cliente do Azure Information Protection está instalado no computador]
 Se a etiqueta que remover estiver configurada para aplicar proteção, esta ação removerá também a proteção do ficheiro. Poderá ter que indicar o motivo pelo qual está a remover a etiqueta.
 
 > [!IMPORTANT]
-> Tem de ser o proprietário do ficheiro para remover a proteção ou de ter recebido permissões para remover a proteção (a permissão Controlo Total ou Extração do Rights Management).
+> Tem de ser o proprietário do ficheiro para remover a proteção, ou foram concedidas permissões para remover a proteção (a permissão de gestão de direitos de **exportar** ou **controlo total**).
 
 Se pretender escolher uma etiqueta diferente ou um conjunto de definições de proteção diferente, não precisa de remover a etiqueta ou a proteção. Em vez disso, escolha uma nova etiqueta e, se necessário, pode definir permissões personalizadas se o administrador permite esta configuração. 
 

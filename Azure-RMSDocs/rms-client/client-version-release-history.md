@@ -4,7 +4,7 @@ description: Veja o que há de novo ou alterado numa versão do cliente do Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/09/2018
+ms.date: 08/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1c41e1e6622dc76a2a2afe68a48d0761573ccf06
-ms.sourcegitcommit: 6eab0086306a4e12cbcf7d8578cb5fd42abe1e66
+ms.openlocfilehash: a1e4af54642253b6941ebf90a0beb33e00cfe585
+ms.sourcegitcommit: bfb5a9d63a9ab4f9c77293f19782313c59cd1168
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020605"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40255693"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: política de histórico e suporte de lançamento de versão
 
@@ -62,7 +62,7 @@ Esta versão inclui a versão 1.0.3557.524 do cliente RMS MSIPC.
 
 - Para o scanner do Azure Information Protection:
 
-    - Novo cmdlet, [AIPScanner atualização](/powershell/module/azureinformationprotection/Update-AIPScanner): necessário para executar uma vez após a atualização da versão 1.26.6.0 ou anterior.
+    - Novo cmdlet, [AIPScanner atualização](/powershell/module/azureinformationprotection/Update-AIPScanner): necessário para executar uma vez após a atualização de todas as versões anteriores.
     
     - Novo cmdlet, [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus): obtém o estado atual do serviço para a deteção de impressão.  
     
@@ -247,7 +247,7 @@ Esta versão inclui a versão 1.0.3219.0619 do cliente RMS MSIPC.
 
 - Para o PowerShell, suportam a etiquetar ficheiros de forma não interativa com os novos cmdlets do PowerShell, [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) e [Clear-AIPAuthentication](/powershell/module/azureinformationprotection/clear-aipauthentication). Para obter mais informações como utilizar estes cmdlets, consulte a [secção do PowerShell](client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) do Guia do administrador.
 
-- Para os cmdlets do PowerShell [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) e [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), existem novos parâmetros: **proprietário** e **PreserveFileDetails**. Estes parâmetros permitem-lhe especificar um endereço de e-mail para a propriedade personalizada de proprietário e a data inalterado para documentos que coloca uma etiqueta.
+- Para os cmdlets do PowerShell [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) e [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), existem novos parâmetros: **proprietário** e **PreserveFileDetails** . Estes parâmetros permitem-lhe especificar um endereço de e-mail para a propriedade personalizada de proprietário e a data inalterado para documentos que coloca uma etiqueta.
 
 **Correções**:
 

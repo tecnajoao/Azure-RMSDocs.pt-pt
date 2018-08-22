@@ -4,7 +4,7 @@ description: Instruções e informações para administradores implementar o cli
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 08/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5c162b1a25332c977d2c4976338854904abfcc54
-ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
+ms.openlocfilehash: 3bdcec63ca08c6d80f8f53c431080e8269ab21d4
+ms.sourcegitcommit: 970b476d13c45f1070483ba8f7c910ccfe39c419
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39575554"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "40255620"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guia do administrador: Instalar o cliente do Azure Information Protection para utilizadores
 
@@ -81,13 +81,13 @@ Em seguida, verifique os pré-requisitos adicionais que podem ser necessários p
 
 ## <a name="options-to-install-the-azure-information-protection-client-for-users"></a>Opções para instalar o cliente do Azure Information Protection para os utilizadores
 
-Existem três opções para instalar o cliente para os utilizadores:
-
-**Windows Update**: o cliente Azure Information Protection está incluído no catálogo Microsoft Update, pelo que pode instalar e atualizar este cliente através de qualquer serviço de atualização de software que utilize o catálogo.
+Existem duas opções para instalar o cliente para utilizadores:
 
 **Execute a versão do executável (.exe) do cliente**: o método de instalação recomendado que pode executar interativamente ou silenciosamente. Este método tem mais flexibilidade e é recomendado porque o instalador verifica muitos dos pré-requisitos e pode instalar automaticamente pré-requisitos ausentes. [Instruções](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)
 
 **Implementar a versão do instalador do Windows (.msi) do cliente**: suportado apenas para instalações silenciosas que utilizam um mecanismo de implementação central, como uma política de grupo, o Configuration Manager e o Microsoft Intune. Este método é necessário para computadores com Windows 10 geridos pelo Intune e pela gestão de dispositivos móveis (MDM) porque para estes computadores, os ficheiros executáveis não têm suporte para instalação. No entanto, quando utilizar este método de instalação, deve verificar e instalar manualmente ou desinstalar o software dependente que o instalador do executável deve executar para cada computador. [Instruções](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)
+
+Depois do Azure Information Protection é instalado, pode atualizar este cliente, repetindo o seu método de instalação escolhido, ou utilizar o Windows Update para manter o cliente atualizado automaticamente. Para obter mais informações sobre a atualização, consulte a [Upgrading e manter o cliente do Azure Information Protection](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client) secção.
 
 ### <a name="to-install-the-azure-information-protection-client-by-using-the-executable-installer"></a>Instalar o cliente do Azure Information Protection através do instalador executável
 

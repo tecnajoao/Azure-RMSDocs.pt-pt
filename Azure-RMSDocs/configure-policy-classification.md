@@ -4,18 +4,18 @@ description: Quando configurar as condições para uma etiqueta, pode atribuir a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/01/2018
+ms.date: 08/16/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 1df91b83935054e6437f0f7d6922c483ca02cf09
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 98a30b777704c5383ce7814e4afcec4bd2877e87
+ms.sourcegitcommit: b03bab553db64c2ed43a4a673689602a490be173
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39491404"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40255658"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Como configurar as condições para classificação automática e recomendada para o Azure Information Protection
 
@@ -83,7 +83,7 @@ Pode alterar este comportamento para que o cliente do Azure Information Protecti
     
     - Para **Personalizada**: especifique um nome e uma expressão correspondente, que tem de excluir aspas e carateres especiais. Em seguida, especifique se para fazer corresponder como uma expressão regular, utilize maiúsculas e minúsculas e o número mínimo de ocorrências e se a ocorrência deve ter um valor único a ser incluído na ocorrência contagem.
         
-        As expressões regulares, use os padrões de regex do Office 365. Para obter mais informações, consulte [definir a expressão regular com base em correspondências](https://technet.microsoft.com/library/jj674702(v=exchg.150).aspx#Anchor_2) na documentação do Office. Além disso, poderá considerar útil para referência [sintaxe de expressão Regular do Perl](http://www.boost.org/doc/libs/1_66_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) de aumento.
+        As expressões regulares, use os padrões de regex do Office 365. Para ajudar a especificar expressões regulares para suas condições personalizadas, consulte a seguinte versão específica do [sintaxe de expressão Regular do Perl](https://www.boost.org/doc/libs/1_37_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) de aumento.
         
 5. Decida se é preciso alterar a **número mínimo de ocorrências** e o **contagem de ocorrências com apenas o valor exclusivo**e, em seguida, selecione **guardar**. 
     

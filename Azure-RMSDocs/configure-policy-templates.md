@@ -4,7 +4,7 @@ description: Configurar e gerir modelos de gestão de direitos do portal do Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2018
+ms.date: 08/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,30 +12,29 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 9f3dc55f8443b4280cd5e108f1b5c5e3093748d4
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 80238cbacbe1fb6e171738e42e3b915d2267ff38
+ms.sourcegitcommit: 5802bd9df60cc664f896e78c0f402f63ba59ffe8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39491278"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40256163"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurar e gerir modelos do Azure Information Protection
 
->*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
->[!NOTE]
->Esta funcionalidade substitui a configurar modelos personalizados no portal clássico do Azure. O portal clássico agora é extinto, pelo que tem de utilizar o portal do Azure. Para um mapeamento de referência rápido, consulte [tarefas que costumava realizar com o portal clássico do Azure](migrate-portal.md).
-
-
-Modelos de gestão de direitos estão agora integrados com a política do Azure Information Protection. 
+Modelos de proteção, também conhecido como modelos do Rights Management, são um agrupamento de definições de proteção definidos pelo administrador do Azure Information Protection. Estas definições incluem a escolhida [direitos de utilização](configure-usage-rights.md) para os utilizadores autorizados e controlos de acesso para a expiração e acesso offline. Estes modelos são integrados com a política do Azure Information Protection: 
 
 **Quando tem uma subscrição que inclui a classificação, a etiquetagem e a proteção (Azure Information Protection P1 ou P2):**
 
-- Modelos de gestão de direitos que não estão integrados com as etiquetas para o seu inquilino são apresentados no **modelos de proteção** secção depois das suas etiquetas no **do Azure Information Protection – etiquetas** painel. Para navegar para este painel, selecione o **classificações** > **etiquetas** opção de menu. Pode converter estes modelos em etiquetas ou pode ligá-los ao configurar a proteção das suas etiquetas. 
+- Os modelos que não estão integrados com as etiquetas para o seu inquilino são apresentados no **modelos de proteção** secção depois das suas etiquetas no **do Azure Information Protection – etiquetas** painel. Para navegar para este painel, selecione o **classificações** > **etiquetas** opção de menu. Pode converter estes modelos em etiquetas ou pode ligá-los ao configurar a proteção das suas etiquetas. 
 
 **Quando tem uma subscrição que inclui apenas proteção (uma subscrição do Office 365 que inclui o serviço Azure Rights Management):**
 
-- Modelos de gestão de direitos para o seu inquilino são apresentados no **modelos de proteção** secção sobre o **do Azure Information Protection – etiquetas** painel. Para navegar para este painel, selecione o **classificações** > **etiquetas** opção de menu. Não são apresentadas etiquetas. Também pode ver as definições de configuração que são específicas para classificação e etiquetagem, mas estas definições não têm efeito nos seus modelos ou não podem ser configuradas. 
+- Modelos para o seu inquilino são apresentados no **modelos de proteção** secção sobre o **do Azure Information Protection – etiquetas** painel. Para navegar para este painel, selecione o **classificações** > **etiquetas** opção de menu. Não são apresentadas etiquetas. Também pode ver as definições de configuração que são específicas para classificação e etiquetagem, mas estas definições não têm efeito nos seus modelos ou não podem ser configuradas. 
+
+>[!NOTE]
+>Em alguns aplicativos e serviços, poderá ver [não reencaminhar](configure-usage-rights.md#do-not-forward-option-for-emails) e [só Encrypt](configure-usage-rights.md#encrypt-only-option-for-emails) (ou **Encrypt**) exibida como um modelo. Essas não são modelos que pode editar ou eliminar, mas as opções que são fornecidos por predefinição com o serviço do Exchange.
 
 ## <a name="default-templates"></a>Modelos predefinidos
 
@@ -49,6 +48,7 @@ Além disso, os modelos são configurados para permitir o acesso offline durante
 Estes modelos predefinidos tornam mais fácil para e a outras pessoas, começar imediatamente a proteger os dados confidenciais da sua organização. Estes modelos podem ser utilizados com o Azure Information Protection etiquetas ou por conta própria com [aplicativos e serviços](applications-support.md) que pode utilizar modelos do Rights Management.
 
 Também pode criar seus próprios modelos personalizados. Embora provavelmente necessite de apenas alguns modelos, pode ter um máximo de 500 modelos personalizados guardados no Azure.
+
 
 ### <a name="default-template-names"></a>Nomes de modelo padrão
 

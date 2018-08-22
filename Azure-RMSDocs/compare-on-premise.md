@@ -4,7 +4,7 @@ description: Se conhecer ou se tiver implementado anteriormente os Serviços de 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 08/16/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a5bf7bd4a4d82c40346694d243403ea2684174d9
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 395dbd474d241eb277a9d664f7e2143f36f79de3
+ms.sourcegitcommit: b03bab553db64c2ed43a4a673689602a490be173
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39489302"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40255720"
 ---
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Comparar o Azure Information Protection e o AD RMS
 
@@ -55,7 +55,7 @@ Para obter mais detalhes e outras diferenças, utilize a seguinte tabela para ve
 |Permite a colaboração segura em documentos com qualquer organização que também utiliza o Azure AD para autenticação automaticamente. Isso significa que as organizações podem proteger documentos que partilham internamente ou com outras organizações.|Colaboração segura em documentos fora da organização necessita de relações de confiança de autenticação para ser explicitamente definidas numa relação ponto a ponto direta entre duas organizações. Tem de configurar qualquer um dos domínios de utilizadores fidedignos (TUDs) ou confianças cria ao utilizar os serviços de Federação do Active Directory (AD FS) federadas.|
 |Envie um e-mail protegido (opcionalmente, com os anexos de documento do Office que são automaticamente protegidos) aos utilizadores quando não existe nenhuma relação de confiança de autenticação. Este cenário se tornou possível com o federação com fornecedores de redes sociais ou de um navegador da web e de código de acesso Monouso para visualização.|Não suporta o envio de e-mail protegido quando não existe nenhuma relação de confiança de autenticação.|
 |Fornece dois modelos de política de direitos predefinidos que restringem o acesso do conteúdo à sua própria organização. Um modelo que proporciona a visualização só de leitura de conteúdo protegido e outro que proporciona permissões de escrita ou modificação no conteúdo protegido.<br /><br />Também pode criar seus próprios modelos personalizados, que incluem modelos departamentais que estão visíveis para apenas um subconjunto de utilizadores. Para obter mais informações, consulte [configurando e gerenciando modelos do Azure Information Protection](configure-policy-templates.md).<br /><br />Além disso, os utilizadores podem definir o seu próprio conjunto de permissões se os modelos não forem suficientes.|Existem não existem modelos predefinidos; tem de criar e, em seguida, distribuir seus próprios modelos. Para mais informações, consulte [Considerações sobre os Modelos de Política do AD RMS](http://go.microsoft.com/fwlink/?LinkId=154765).<br /><br />Além disso, os utilizadores podem definir o seu próprio conjunto de permissões se os modelos não forem suficientes.|
-|A versão mínima suportada do Microsoft Office é o Office 2010, que requer o [cliente do Azure Information Protection](./rms-client/aip-client.md) ou a aplicação de partilha RMS.<br /><br />Microsoft Office para Mac:<br /><br />- Microsoft Office para Mac 2016: suportado<br /><br />- Microsoft Office para Mac 2011: não suportado|A versão mínima suportada do Microsoft Office é o Office 2007.<br /><br />Microsoft Office para Mac:<br /><br />- Microsoft Office para Mac 2016: suportado<br /><br />- Microsoft Office para Mac 2011: suportado|
+|A versão mínima suportada do Microsoft Office é o Office 2010, que requer o [cliente do Azure Information Protection](./rms-client/aip-client.md) ou a aplicação de partilha RMS.<br /><br />Microsoft Office para Mac:<br /><br />- Microsoft Office para Mac 2016: suportado|Versão mínima suportada do Microsoft Office é o Office 2010.<br /><br />Microsoft Office para Mac:<br /><br />- Microsoft Office para Mac 2016: suportado|
 |Suporta o [cliente do Azure Information Protection](./rms-client/aip-client.md) para Windows, iOS e Android. Computadores Mac e Windows Phone continuam a ser suportada pela aplicação de partilha RMS.<br /><br />Além disso, o cliente do Azure Information Protection suporta o seguinte:<br /><br />- A partilha com pessoas noutra organização.<br /><br />- Um site de controlo de documentos para utilizadores, que inclui a capacidade para revogar um documento.|Suporta o [cliente do Azure Information Protection](./rms-client/aip-client.md) para Windows, iOS e Android. Os computadores Mac e dispositivos Windows Phone continuam a ser suportados pela aplicação de partilha RMS. No entanto, a partilha não suporta a partilha com pessoas noutra organização ou o site de controlo de documentos, nem a capacidade para os utilizadores revogarem documentos.|
 |A maioria dos [tipos de ficheiro](./rms-client/client-admin-guide-file-types.md) pode ser classificada e protegida ao utilizar o cliente do Azure Information Protection.<br /><br />Para outras aplicações, consulte a tabela em [Aplicações que suportam a proteção de dados do Azure Rights Management](./requirements-applications.md).|A maioria dos [tipos de ficheiro](./rms-client/client-admin-guide-file-types.md) pode ser protegida ao utilizar o cliente do Azure Information Protection.<br /><br />Para outras aplicações, consulte a tabela em [Aplicações que suportam a proteção de dados do Azure Rights Management](./requirements-applications.md).|
 |A versão mínima suportada do cliente Windows é o Windows 7 SP1.|A versão mínima suportada do cliente Windows é o Windows 7 SP1.|

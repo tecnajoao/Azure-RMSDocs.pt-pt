@@ -4,7 +4,7 @@ description: Instruções para instalar, configurar e executar o scanner do Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2018
+ms.date: 08/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 1545c7bd931ab6aa4a76ddfd256a916d31d262bc
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: a56b8e32b6bdb4c0e00652d4c9390f83fa4fe6ac
+ms.sourcegitcommit: d0d7732cd68d75c4c0f9700422b82ff71ebfa274
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39491628"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42464296"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Implementar o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente
 
@@ -246,9 +246,14 @@ Em seguida, o scanner utiliza Windows iFilter para analisar os seguintes tipos d
 |Word|.docx; .docm; .dotm; .dotx|
 |Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
 |PowerPoint|. ppt; .pps; .pot;. pptx; .ppsx;. pptm; .ppsm; .potx; .potm|
-|PDF|.pdf|
+|PDF |.pdf|
 |Texto|.txt; .xml; .csv|
 
+Por predefinição, apenas os tipos de ficheiro do Office protegidos pelo scanner, para que os ficheiros PDF e de texto não estão protegidos, a menos que [editar o registo](develop/file-api-configuration.md) para especificar os tipos de ficheiro:
+
+- Se não adicionar o tipo de ficheiro de. pdf para o registo: serão identificados como ficheiros que tenham esta extensão de nome de ficheiro, mas se a etiqueta estiver configurada para proteção, a proteção não é aplicada.
+
+- Se não adicionar os tipos de ficheiro. txt,. XML ou. csv para o registo: ficheiros com estas extensões de nome de ficheiro serão não identificados como porque estes tipos de ficheiro não suportam apenas a classificação.
 
 Por fim, para os tipos de ficheiros restantes, o scanner aplica-se a etiqueta predefinida na política do Azure Information Protection ou a etiqueta predefinida que configurou para a deteção de impressão.
 
@@ -270,7 +275,11 @@ Por fim, para os tipos de ficheiros restantes, o scanner aplica-se a etiqueta pr
 
 Quando o scanner aplique uma etiqueta com a proteção, por predefinição, apenas os tipos de ficheiro do Office são protegidos. Pode alterar este comportamento para que outros tipos de ficheiro são protegidos. No entanto, quando uma etiqueta aplicar proteção genérica a documentos, a extensão de nome de ficheiro é alterado para. pfile. Além disso, o arquivo torna-se só de leitura até que ele é aberto por um usuário autorizado e guardado em seu formato nativo. Ficheiros de texto e imagens também podem alterar a extensão de nome e passam a ser só de leitura. 
 
-Para alterar o comportamento scanner padrão, por exemplo, para protege genericamente outros tipos de ficheiro, tem manualmente de editar o registo e especificar os tipos de ficheiro adicionais que pretende proteger. Para obter instruções, consulte [configuração da API de ficheiros](develop/file-api-configuration.md) de orientação para programadores. Nesta documentação para programadores, a proteção genérica é referida como "PFile". Para o scanner, tem de especificar extensões de nome de ficheiro específicas e não é possível utilizar o `*` com carateres universais.
+Para alterar o comportamento scanner padrão, por exemplo, para protege genericamente outros tipos de ficheiro, tem manualmente de editar o registo e especificar os tipos de ficheiro adicionais que pretende proteger. Para obter instruções, consulte [configuração da API de ficheiros](develop/file-api-configuration.md) de orientação para programadores. Nesta documentação para programadores, a proteção genérica é referida como "PFile". Além disso, específico para a deteção de impressão:
+
+- Tem de especificar extensões de nome de ficheiro específicas e não é possível utilizar o `*` com carateres universais.
+
+- O scanner tem seu próprio comportamento padrão: formatos de arquivo do Office só estão protegidos por predefinição. Qualquer outro formato de ficheiro não adicionado ao registo não será protegido pelo leitor.
 
 ## <a name="when-files-are-rescanned"></a>Quando ficheiros estão a ser reanalisados
 

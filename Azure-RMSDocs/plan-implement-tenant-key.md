@@ -4,7 +4,7 @@ description: Informações para o ajudar a planear e gerir a sua chave de inquil
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/26/2018
+ms.date: 08/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 05aee77b60b5fd5a7239b51665e2afb122704afb
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 6dd40e4b0527d9db3de962073dbac118565e63d4
+ms.sourcegitcommit: 5802bd9df60cc664f896e78c0f402f63ba59ffe8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39491320"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42464245"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planear e implementar a sua chave de inquilino do Azure Information Protection
 
@@ -36,14 +36,13 @@ O que é a chave de inquilino do Azure Information Protection?
 |Necessidade comercial|Topologia de chaves de inquilino recomendada|
 |------------------------|-----------------------------------|
 |Implemente o Azure Information Protection rapidamente e sem hardware especial, software adicional ou uma subscrição do Azure.<br /><br />Por exemplo: testar ambientes e quando a sua organização não tem os requisitos regulamentares de gestão de chaves.|Gerida pela Microsoft|
-|Normas de conformidade, segurança adicional e controle sobre todas as operações de ciclo de vida. <br /><br />Por exemplo: A chave deve ser protegida por um módulo de segurança de hardware (HSM).|BYOK [[1]](#footnote-1)|
+|Normas de conformidade, segurança adicional e controle sobre todas as operações de ciclo de vida. <br /><br />Por exemplo: A chave deve ser protegida por um módulo de segurança de hardware (HSM).|BYOK|
 
 
 Se for necessário, pode alterar a topologia da sua chave de inquilino após a implementação, utilizando o cmdlet [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties).
 
 
 ## <a name="choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok"></a>Selecione a sua topologia de chaves de inquilino: gerida pela Microsoft (predefinição) ou gerida por si (BYOK)
-Decida que topologia de chaves de inquilino é melhor para a sua organização. Por predefinição, o Azure Information Protection gera a sua chave de inquilino e gere a maioria dos aspetos do ciclo de vida da chave de inquilino. Esta é a opção mais simples e com menos tarefas administrativas adicionais. Na maioria dos casos, nem precisa de saber que tem uma chave de inquilino. Basta inscrever-se no Azure Information Protection e o processo de gestão de chaves restante será processado pela Microsoft.
 
 Decida que topologia de chave de inquilino é melhor para sua organização:
 
@@ -93,7 +92,7 @@ Se optar por permitir que a Microsoft gerir a sua chave de inquilino:
 
 - A menos que estiver a migrar do AD RMS, nenhuma ação adicional é necessária para a gerar a chave para o seu inquilino e pode ir diretamente para [próximos passos](plan-implement-tenant-key.md#next-steps).
 
-- Se atualmente tiver o AD RMS e quiser migrar para o Azure Information Protection, utilize as instruções de migração: migração do AD RMS para o Azure Information Protection. 
+- Se atualmente tiver o AD RMS e quiser migrar para o Azure Information Protection, utilize as instruções de migração: [migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md). 
 
 Se optar por gerir a sua chave de inquilino, leia as secções seguintes para obter mais informações.
 
@@ -172,7 +171,7 @@ Em seguida, execute o [cmdlet Use-AadrmKeyVaultKey](/powershell/module/aadrm/use
 
 Se tiver de confirmar que a chave de URL está definida corretamente para o Azure Information Protection: no Azure Key Vault, execute [Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault\get-azurekeyvaultkey) para ver a chave de URL.
 
-Por fim, se o serviço Azure Rights Management já estiver ativado, execute [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) para dizer ao Azure Information Protection para utilizar esta chave como chave de inquilino ativa para o serviço Azure Rights Management. Se não efetuar este passo, o Azure Information Protection irá continuar a utilizar a chave de gerida pela Microsoft de predefinida, que foi criada automaticamente para o seu inquilino.
+Por fim, se o serviço Azure Rights Management já estiver ativado, execute [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) para dizer ao Azure Information Protection para utilizar esta chave como chave de inquilino ativa para o serviço Azure Rights Management. Se não efetuar este passo, Azure Information Protection irá continuar a utilizar a chave de gerida pela Microsoft para predefinida que foi criada automaticamente para o seu inquilino.
 
 
 ## <a name="next-steps"></a>Passos Seguintes
@@ -181,11 +180,11 @@ Agora que já planeou e, se necessário, criado e configurado a sua chave de inq
 
 1.  Comece a utilizar a sua chave de inquilino:
     
-    - Se ainda não o fez, tem agora de ativar o serviço de Gestão de Direitos para que a sua organização possa começar a utilizar o Azure Information Protection. Os utilizadores imediatamente começam a utilizar a sua chave de inquilino (gerida pela Microsoft ou gerida por si no Azure Key Vault).
+    - Se o serviço de proteção não estiver alreay ativado, tem agora de ativar o serviço Rights Management para que sua organização pode começar a utilizar o Azure Information Protection. Os utilizadores imediatamente começam a utilizar a sua chave de inquilino (gerida pela Microsoft ou gerida por si no Azure Key Vault).
     
         Para obter mais informações sobre a ativação, consulte [Ativar o Azure Rights Management](./activate-service.md).
         
-    - Se já tinha ativado o serviço Gestão de Direitos e depois decidiu gerir a sua própria chave de inquilino, a transição dos utilizadores da chave de inquilino antiga para a nova chave de inquilino será efetuada gradualmente. A conclusão desta transição escalonada poderá demorar algumas semanas. Os documentos e ficheiros que foram protegidos com a chave de inquilino antiga permanecem acessíveis aos utilizadores autorizados.
+    - Se o serviço Rights Management já estava ativado e, em seguida, decidiu gerir a sua própria chave de inquilino, gradualmente transição dos utilizadores a chave de inquilino antiga para a nova chave de inquilino. Desta transição escalonada poderá demorar algumas semanas para concluir. Os documentos e ficheiros que foram protegidos com a chave de inquilino antiga permanecem acessíveis aos utilizadores autorizados.
         
 2. Pondere utilizar registos de utilização, que lhe permitem registar todas as transações efetuadas pelo serviço Azure Rights Management.
     

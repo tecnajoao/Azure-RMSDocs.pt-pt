@@ -6,18 +6,16 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 05/16/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3a6c53bf7bb1a983c34936405b8e51afb8427ac7
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 9b99f914e78adafbcfd0f01f0937c6d636f43159
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39491257"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42808701"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Definição de registo para o conetor Rights Management
 
@@ -57,7 +55,7 @@ Instruções ao utilizar estas definições:
 
 **Valor:** predefinido
 
-**Dados:** https://*\<YourTenantURL >*/_wmcs/certification
+**Dados:** https://*\<YourTenantURL>*/_wmcs/certification
 
 ---
 
@@ -75,7 +73,7 @@ Instruções ao utilizar estas definições:
 
 **Tipo:** Reg_SZ
 
-**Valor:** https://*\<YourTenantURL >*
+**Valor:** https:// *\<YourTenantURL>*
 
 
 **Dados:** um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange server para o conetor RMS:
@@ -90,7 +88,7 @@ Instruções ao utilizar estas definições:
 
 **Tipo:** Reg_SZ
 
-**Valor:** https://*< \YourTenantURL >*
+**Valor:** https://*<\YourTenantURL>*
 
 
 **Dados:** um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange server para o conetor RMS:
@@ -108,7 +106,7 @@ Instruções ao utilizar estas definições:
 
 **Valor:** predefinido
 
-**Dados:** https://*< \YourTenantURL >*/_wmcs/certification
+**Dados:** https://*<\YourTenantURL>*/_wmcs/certification
 
 ---
 
@@ -126,7 +124,7 @@ Instruções ao utilizar estas definições:
 
 **Tipo:** Reg_SZ
 
-**Valor:** https://*< \YourTenantURL >*
+**Valor:** https://*<\YourTenantURL>*
 
 **Dados:** um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange server para o conetor RMS:
 
@@ -140,7 +138,7 @@ Instruções ao utilizar estas definições:
 
 **Tipo:** Reg_SZ
 
-**Valor:** https://*< \YourTenantURL >*
+**Valor:** https://*<\YourTenantURL>*
 
 **Dados:** um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange server para o conetor RMS:
 
@@ -155,12 +153,12 @@ Instruções ao utilizar estas definições:
 
 **Tipo:** Reg_SZ
 
-**Valor:** https://*< \YourTenantURL >wmcs/licensing
+**Dados:** https://*<\YourTenantURL>*/_wmcs/Licensing
 
 
 **Dados:** um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no SharePoint server para o conetor RMS:
 
-- http://*< \ConnectorFQDN >wmcs/licensing
+- http://*<\ConnectorFQDN>*/_wmcs/licensing
 
 - https://*<\ConnectorFQDN>*/_wmcs/licensing
 
@@ -189,7 +187,7 @@ Instruções ao utilizar estas definições:
 
 **Dados:** um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no SharePoint server para o conetor RMS:
 
-- http://*< \ConnectorFQDN >wmcs/licensing
+- http://*<\ConnectorFQDN>*/_wmcs/licensing
 
 - https://*<\ConnectorFQDN>*/_wmcs/licensing
 
@@ -204,7 +202,7 @@ Instruções ao utilizar estas definições:
 
 **Valor:** predefinido
 
-**Dados:** http://*< \ConnectorFQDN >wmcs/licensing
+**Dados:** http://*ConnectorFQDN*/_wmcs/licensing
 
 ---
 
@@ -214,7 +212,7 @@ Instruções ao utilizar estas definições:
 
 **Valor:** predefinido
 
-**Dados:** http://*< \ConnectorFQDN >*/_wmcs/certification
+**Dados:** http://*ConnectorFQDN*/_wmcs/certification
 
 
 Voltar a [Implementar o conetor Azure Rights Management](deploy-rms-connector.md)

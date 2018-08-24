@@ -6,18 +6,16 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/08/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2008a40e03e502c4dad85826d957434b218b151e
-ms.sourcegitcommit: 1eddd81dc659ffa38872b81a1bf4b5f69f71c30e
+ms.openlocfilehash: bb724f8c35ae5ae34f81cfec01fcbabffcbcff44
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39631576"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42805120"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas para o cliente do Azure Information Protection
 
@@ -33,7 +31,7 @@ Algumas destas definições requerem a edição do registo e algumas utilizam de
 
 2. Do **classificações** > **etiquetas** opção de menu: selecione **políticas**.
 
-3. Sobre o **do Azure Information Protection - políticas** painel, selecione o menu de contexto (**...**) junto à política que contém as definições avançadas. Em seguida, selecione **Definições avançadas**.
+3. Sobre o **do Azure Information Protection - políticas** painel, selecione o menu de contexto (**...** ) junto à política que contém as definições avançadas. Em seguida, selecione **Definições avançadas**.
     
     Pode configurar as definições avançadas para a Política global, bem como para as políticas de âmbito.
 
@@ -379,7 +377,7 @@ Utilize estas chaves e valores correspondentes para apenas uma propriedade perso
 
 Por exemplo, tem uma coluna de SharePoint com o nome **classificação** que tem valores possíveis dos **pública**, **geral**, e **altamente confidencial todos Os funcionários**. Documentos são armazenados no SharePoint e ter **pública**, **gerais**, ou **altamente confidencial todos os funcionários** como valores definidos para a propriedade de classificação.
 
-Para um documento do Office com um dos seguintes valores de classificação de etiqueta, defina **SyncPropertyName** ao **classificação**, e **SyncPropertyState** para **OneWay**. 
+Para um documento do Office com um dos seguintes valores de classificação de etiqueta, defina **SyncPropertyName** ao **classificação**, e **SyncPropertyState** para  **OneWay**. 
 
 Agora, quando um utilizador abre e salva um desses documentos do Office, ele tem o nome **pública**, **gerais**, ou **altamente confidencial \ todos os funcionários** se tiver etiquetas com estes nomes na sua política do Azure Information Protection. Se não tiver etiquetas com esses nomes, o documento permanece sem etiqueta.
 

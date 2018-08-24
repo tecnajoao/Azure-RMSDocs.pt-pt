@@ -7,16 +7,14 @@ manager: mbaldwin
 ms.author: alleonar
 ms.date: 03/27/2017
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: a0b8c8f0-6ed5-48bb-8155-ac4f319ec178
-ms.openlocfilehash: 159e5b58883490e4417ecbdb9815340c9ccaa66d
-ms.sourcegitcommit: dca4534a0aa7f63c0c525c9a3ce445088d1362bb
+ms.openlocfilehash: b369a9644698f1ad9fbd1c1e037a5a9be7bc6dc6
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/19/2018
-ms.locfileid: "27927112"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42806975"
 ---
 # <a name="how-to-renew-the-symmetric-key-in-azure-information-protection"></a>Procedimentos: como renovar a chave simétrica no Azure Information Protection
 
@@ -61,7 +59,7 @@ EndDate : 3/22/2018 3:27:53 PM
 Usage : Verify
 ```
 
-Esta chave simétrica expira em 3/22/2018 às 3:27:53 PM. Para utilizar o principal de serviço para além de momento, terá de renovar a chave simétrica. Para tal, utilize o [ `New-MsolServicePrincipalCredential` ](https://docs.microsoft.com/powershell/msonline/v1/new-msolserviceprincipalcredential) comando. 
+Essa chave simétrica expira em 3/22/2018 às 15:00: 27:53. Para utilizar o principal de serviço para além desse tempo, terá de renovar a chave simétrica. Para tal, utilize o [ `New-MsolServicePrincipalCredential` ](https://docs.microsoft.com/powershell/msonline/v1/new-msolserviceprincipalcredential) comando. 
 
 ```
 New-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963
@@ -72,7 +70,7 @@ Esta ação cria uma nova chave simétrica para o **AppPrincipalId** especificad
 ```
 The following symmetric key was created as one was not supplied ON8YYaMYNmwSfMX625Ei4eC6N1zaeCxbc219W090v28-
 ```
-Pode utilizar o comando [`GetMsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/get-msolserviceprincipalcredential) para verificar se a nova chave simétrica está associada ao principal de serviço correto conforme apresentado. Tenha em atenção que o comando apresenta uma lista de todas as chaves que atualmente associados com o principal de serviço.
+Pode utilizar o comando [`GetMsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/get-msolserviceprincipalcredential) para verificar se a nova chave simétrica está associada ao principal de serviço correto conforme apresentado. Tenha em atenção que o comando indica todas as chaves que atualmente associados com o principal de serviço.
 
 ```
 Get-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963 -ReturnKeyValues $true

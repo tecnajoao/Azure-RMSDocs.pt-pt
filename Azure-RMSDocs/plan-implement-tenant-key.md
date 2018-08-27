@@ -4,18 +4,18 @@ description: Informações para o ajudar a planear e gerir a sua chave de inquil
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/21/2018
+ms.date: 08/24/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 65f1b158e9745efa39d4088dcb615016ddecb206
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 01951cde812a18e6b3869844b9e02c48af144f15
+ms.sourcegitcommit: b2d5c77bf8a0271d8d23f170314c0f49c3a328b1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42807274"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42920705"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planear e implementar a sua chave de inquilino do Azure Information Protection
 
@@ -147,6 +147,8 @@ Utilize a documentação do Azure Key Vault para criar um cofre de chaves e a ch
 Certifique-se de que o comprimento da chave é 2048 bits (recomendados) ou de 1024 bits. Outros comprimentos de chave não são suportados pelo Azure Information Protection.
 
 Para criar um protegida por HSM chave no local e transferi-la para o seu Cofre de chaves como uma chave protegida por HSM, siga os procedimentos [como gerar e transferir chaves protegidas por HSM para o Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/).
+
+Para o Azure Information Protection utilizar a chave, todas as operações do Cofre de chaves devem ser permitidas para a chave. Esta é a configuração padrão e as operações são encriptar, desencriptar, moldar, anular a moldagem, iniciar sessão e certifique-se.
 
 Uma chave armazenada no Cofre de chaves tem uma chave de ID. Esta chave de ID é um URL que contém o nome do Cofre de chaves, o contentor de chaves, o nome da chave e a versão da chave. Por exemplo: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Tem de configurar o Azure Information Protection para utilizar esta chave, especificando o URL do Key Vault.
 

@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 61d57cb33175c3c3e87d615cee65e2b82f21ab74
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 9f7c9ef4e6a6eccc1f42fa60a78550f53d4a64b6
+ms.sourcegitcommit: b2d5c77bf8a0271d8d23f170314c0f49c3a328b1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808777"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42920674"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuração de direitos de utilização para o Azure Rights Management
 
@@ -98,7 +98,7 @@ Clientes do Exchange e serviços (por exemplo, o cliente do Outlook, a aplicaç�
 
 Embora esta opção seja apresentada aos utilizadores (e os administradores do Exchange) como se fosse um modelo de Gestão de Direitos predefinido que podem selecionar, **Não Reencaminhar** não é um modelo. Isto explica por que não é possível vê-lo no portal do Azure quando visualizar e gerir modelos de proteção. Em vez disso, o **não reencaminhar** opção é um conjunto de direitos de utilização que é aplicado dinamicamente por utilizadores aos seus destinatários de e-mail.
 
-Quando o **não reencaminhar** opção é aplicada a um e-mail, o e-mail é encriptada e os destinatários têm de ser autenticados. Em seguida, os destinatários não é possível reencaminhá-lo, ou imprimi-lo, copiá-lo ou guardar anexos ou guardar como um nome diferente. Por exemplo, no cliente do Outlook, o botão reencaminhar não está disponível, o **guardar como**, **Guardar anexo**, e **impressão** não estão disponíveis opções de menu, e não é possível adicionar ou alterar os destinatários na **para**, **Cc**, ou **Bcc** caixas.
+Quando o **não reencaminhar** opção é aplicada a um e-mail, o e-mail é encriptada e os destinatários têm de ser autenticados. Em seguida, os destinatários não podem reencaminhá-lo, imprimi-lo ou copiá-los. Por exemplo, no cliente do Outlook, o botão reencaminhar não está disponível, o **guardar como** e **impressão** não estão disponíveis opções de menu, e não é possível adicionar ou alterar os destinatários no **para**, **Cc**, ou **Bcc** caixas.
 
 Desprotegido [documentos do Office](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) que estão anexados à mensagem de e-mail automaticamente herdam as mesmas restrições. Os direitos de uso aplicadas a estes documentos **editar conteúdo, editar**; **Guardar**; **Ver, abrir, ler**; e **Permitir Macros**. Se pretender que os direitos de utilização diferentes para um anexo ou o anexo não é um documento do Office que suporte esta proteção herdada, proteja o ficheiro antes de ligá-los para o e-mail. Em seguida, pode atribuir os direitos de utilização específico que necessita para o ficheiro. 
 
@@ -127,9 +127,9 @@ Da mesma forma, por predefinição, desprotegidos [documentos do Office](https:/
 
 Em alternativa, pode alterar essa herança de proteção de documentos, utilizando qualquer um dos seguintes parâmetros de configuração que definiu com o [PowerShell do Exchange Online](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps) comando, **Set-IRMConfiguration** . Quando não precisa manter a proteção original para o documento depois do utilizador é autenticado, utilize estas opções:
 
-- Para remover a proteção do documento apenas para os destinatários que visualizar o documento no browser (normalmente, uma vez que ele é enviado para um endereço do fornecedor de redes sociais, como o Gmail): `Set-IRMConfiguration -DecryptAttachmentFromPortal $true`. Quando esses destinatários transferir o documento, a proteção é removida.
+- Para remover a proteção do documento para todos os destinatários: `Set-IRMConfiguration -DecryptAttachmentForEncryptOnly $true`. Quando esses destinatários abrem a mensagem de e-mail, o documento não está protegido.
 
-- Sempre remover a proteção do documento para todos os destinatários: `Set-IRMConfiguration -DecryptAttachmentForEncryptOnly $true`. Quando esses destinatários abrem a mensagem de e-mail, o documento não está protegido.
+- Para remover a proteção do documento apenas para os destinatários que visualizar o documento no browser (normalmente, uma vez que ele é enviado para um endereço do fornecedor de redes sociais, como o Gmail): `Set-IRMConfiguration -DecryptAttachmentFromPortal $true`. Quando esses destinatários transferir o documento, a proteção é removida.
 
 Para obter mais informações sobre como remover a proteção apenas para os destinatários que visualizar o documento no browser, consulte a postagem no blog Office [controlo de administração para anexos já está disponíveis na encriptação de mensagens do Office 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Admin-control-for-attachments-now-available-in-Office-365/ba-p/204007). Se precisar de um documento anexado para manter a proteção original, consulte [proteger colaboração de documentos utilizando o Azure Information Protection](secure-collaboration-documents.md).
 

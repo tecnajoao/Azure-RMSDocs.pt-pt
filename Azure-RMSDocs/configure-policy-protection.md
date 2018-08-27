@@ -4,16 +4,16 @@ description: Pode proteger os seus documentos e e-mails mais confidenciais ao co
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/14/2018
+ms.date: 08/24/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 16cb22a7f16b82056d58d569dc0d65b3b16d0ae1
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: bc60f1791cd7c36f179851b1759a46ba3980dd96
+ms.sourcegitcommit: b2d5c77bf8a0271d8d23f170314c0f49c3a328b1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42807067"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42920308"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Como configurar uma etiqueta para a proteção do Rights Management
 
@@ -62,9 +62,7 @@ Exchange tem de ser configurada para o Azure Information Protection antes dos ut
         
         De volta para a proteção configurada anteriormente, as definições são mantidas como um modelo de proteção arquivados e vão a ser apresentadas se alterar a opção **Protect**. Não vê este modelo no portal do Azure, mas se for necessário, pode continuar a gerir o modelo usando [PowerShell](configure-templates-with-powershell.md). Isso significa de comportamento que o conteúdo permanece acessível se tiver esta etiqueta com as definições de proteção aplicada anteriormente.
     
-    - **Proteger**: selecione esta opção para aplicar a proteção e, em seguida, avance para o passo 5 para configurar definições de proteção.
-    
-    Nota: Foi possível guardar uma nova etiqueta nesse estágio sem configuração adicional. Se o fizer, a etiqueta é configurada para aplicar a proteção, de modo a que apenas a pessoa que aplica-se a etiqueta pode abrir o documento ou e-mail sem restrições de utilização. Em alguns casos, isso pode ser o resultado necessário, para que um usuário pode salvar um arquivo para qualquer localização e ter a garantia de que apenas estes poderão abri-lo. Se esse resultado corresponde aos seus requisitos e outros não são necessárias para colaborar em conteúdos protegidos, vá diretamente para o passo de 12 em vez do passo 5.
+    - **Proteger**: selecione esta opção para aplicar a proteção e, em seguida, avance para o passo 4.
     
     - **Remover a proteção**: selecione esta opção para remover a proteção se um documento ou e-mail é protegido. Em seguida, avance para o passo 11.
         

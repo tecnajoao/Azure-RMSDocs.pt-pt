@@ -4,18 +4,18 @@ description: Instruções e informações para administradores numa rede empresa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/13/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f0f3c6a5f46024083d8e4d105dd535abc1b46552
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 7510350957c867e144704af261053b73fa04651a
+ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42805447"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118011"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guia do administrador do cliente do Azure Information Protection
 
@@ -106,7 +106,9 @@ Quando o cliente é instalado, utilize o **ajuda e Feedback** opção para abrir
 
 A **ligação Mais informações** direciona-o, por predefinição, para o site do [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection), mas pode configurá-la para um URL personalizado, de acordo com uma das [definições da política](../configure-policy-settings.md) da política do Azure Information Protection.
 
-Utilize a ligação **Enviar Comentários** para enviar pedidos ou sugestões para a equipa do Information Protection. Não utilize esta opção para o suporte técnico e, em vez disso, veja [Opções de suporte e recursos da comunidade](../information-support.md#support-options-and-community-resources). 
+Utilize o **enviar comentários** link (versões de disponibilidade geral) para enviar pedidos ou sugestões para a equipa do Information Protection. Não utilize esta opção para o suporte técnico e, em vez disso, veja [Opções de suporte e recursos da comunidade](../information-support.md#support-options-and-community-resources). 
+
+O **comunicar um problema** ligação substitui o **enviar comentários** link na versão de pré-visualização do cliente. Por predefinição, esta opção envia um e-mail à Microsoft, mas pode configurar a cadeia de caracteres HTTP para os seus utilizadores, especificando uma [definição de cliente avançado](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link). Por exemplo, especifique o endereço de e-mail do suporte técnico.
 
 **Exportar Registos** recolhe e anexa automaticamente ficheiros de registo para o cliente de Azure Information Protection se lhe tiver sido pedido para os enviar ao Suporte da Microsoft. Esta opção também serve para os utilizadores finais enviarem estes ficheiros de registo ao suporte técnico.
 
@@ -206,7 +208,7 @@ Para a versão de DG atual:
 
 Para a versão de pré-visualização: 
 
-- Execute [AIPScanner atualização](/powershell/module/azureinformationprotection/Update-AIPScanner) depois de instalar o cliente. As definições de configuração para o scanner e repositórios serão mantidas. Executar este cmdlet é necessário para atualizar o esquema de base de dados para a deteção de impressão e se necessário, a conta de serviço do scanner também recebe eliminar as permissões para a base de dados do scanner. 
+- Execute [AIPScanner atualização](/powershell/module/azureinformationprotection/Update-AIPScanner) depois de ter atualizado o cliente do Azure Information Protection a partir da versão de disponibilidade geral 1.29.5.0, ou anterior. As definições de configuração para o scanner e repositórios serão mantidas. Executar este cmdlet é necessário para atualizar o esquema de base de dados para a deteção de impressão e se necessário, a conta de serviço do scanner também recebe eliminar as permissões para a base de dados do scanner. 
     
     Até que executar este cmdlet de atualização, o scanner não é executado e verá o ID de evento normalmente **1000** no registo de eventos do Windows, com a seguinte mensagem de erro: **nome de objeto inválido 'ScannerStatus'**.
 

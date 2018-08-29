@@ -4,18 +4,18 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/08/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: bb724f8c35ae5ae34f81cfec01fcbabffcbcff44
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: f27f04fc46ee608fdd1698134da1566f1ade7fab
+ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42805120"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118028"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas para o cliente do Azure Information Protection
 
@@ -87,6 +87,20 @@ Localize o nome do valor seguinte e defina os dados do valor como **0**:
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
 Além disso, verifique que estes computadores não têm um arquivo chamado **msip** no **%LocalAppData%\Microsoft\MSIP** pasta. Se este ficheiro já existir, elimine-o. Este ficheiro contém a política do Azure Information Protection e poderá ter transferido antes de editar o registo ou se o cliente do Azure Information Protection foi instalado com a opção de demonstração.
+
+## <a name="modify-the-email-address-for-the-report-an-issue-link"></a>Modificar o endereço de e-mail para o relatório de uma ligação de problema
+
+Esta opção de configuração está atualmente em pré-visualização e está sujeitas a alterações. Também requer a versão de pré-visualização do cliente do Azure Information Protection.
+
+Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
+
+Quando os utilizadores selecionam a **comunicar um problema** uma ligação a **ajuda e Feedback** caixa de diálogo de cliente, por predefinição, um endereço é preenchido numa mensagem de e-mail da Microsoft. Utilize o seguinte avançada de definição de cliente para modificar esse endereço. Por exemplo, especificar `mailto:helpdesk@contoso.com` para o endereço de e-mail do suporte técnico. 
+
+Para configurar esta definição avançada, introduza as cadeias seguintes:
+
+- Chave: **ReportAnIssueLink**
+
+- Valor:  **\<cadeia de caracteres HTTP >**
 
 ## <a name="hide-the-classify-and-protect-menu-option-in-windows-file-explorer"></a>Ocultar a opção de menu Classificar e Proteger no Explorador de Ficheiros do Windows
 
@@ -223,25 +237,21 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 - Valor: **Verdadeiro**
 
-## <a name="protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>Proteger ficheiros PDF com a norma ISO para a encriptação de PDF
+## <a name="dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>Não proteger ficheiros PDF com a norma ISO para a encriptação de PDF
 
 Esta opção de configuração está atualmente em pré-visualização e está sujeitas a alterações. Também requer a versão de pré-visualização do cliente do Azure Information Protection.
 
 Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
 
-Por predefinição, quando o cliente do Azure Information Protection protege um ficheiro PDF, o arquivo resultante tem uma extensão de nome de ficheiro. ppdf. Pode alterar este comportamento para que a extensão de nome de ficheiro permanece como. pdf e em conformidade com a norma ISO para a encriptação de PDF. Para obter mais informações sobre este padrão, consulte a secção **encriptação 7.6** partir a [documento que é derivado da ISO 32000-1](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) e publicado por Incorporated de sistemas do Adobe.  
+Quando a versão de disponibilidade geral (GA) do cliente do Azure Information Protection protege um ficheiro PDF, o arquivo resultante tem uma extensão de nome de ficheiro. ppdf. No entanto, quando a versão de pré-visualização atual do cliente do Azure Information Protection protege um ficheiro PDF, a extensão de nome de ficheiro resultante permanece como. pdf e cumpre a norma ISO para a encriptação de PDF. Para obter mais informações sobre este padrão, consulte a secção **encriptação 7.6** partir a [documento que é derivado da ISO 32000-1](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) e publicado por Incorporated de sistemas do Adobe.
 
-Para configurar esta definição avançada, introduza a seguinte cadeia:
+Se tiver a versão de pré-visualização atual do cliente para reverter para o comportamento de disponibilidade geral, use a seguinte configuração avançada ao introduzir a seguinte cadeia:
 
 - Chave: **EnablePDFv2Protection**
 
-- Valor: **Verdadeiro**
-
-Como resultado desta opção de configuração, quando o cliente do Azure Information Protection protege um ficheiro PDF, esta ação cria um documento PDF protegido, que pode ser aberto com a versão de pré-visualização do cliente do Azure Information Protection para Windows e outro PDF leitores que suportam a norma ISO para a encriptação de PDF. A aplicação Azure Information Protection para iOS e Android não suporta atualmente a norma ISO para a encriptação de PDF.
+- Valor: **Falso**
 
 Para o scanner do Azure Information Protection utilizar a nova definição, é necessário reiniciar o serviço de scanner.
-
-Problema com a pré-visualização atual conhecido: nas propriedades do documento, o PDF protegido apresenta um valor incorreto para o autor.
 
 ## <a name="support-for-files-protected-by-secure-islands"></a>Suporte para ficheiros protegidos por Secure Islands
 

@@ -4,18 +4,18 @@ description: Instruções para ver e utilizar um documento protegido que requer 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 518fd44053f6a6ee0c4b45024d5be0ac0122ec22
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 54042dfd49c1f12fc50eca127dfc0441686b1513
+ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808226"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43117963"
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Guia de utilizador: Ver e utilizar ficheiros que foram protegidos pelo Rights Management
 
@@ -23,25 +23,19 @@ ms.locfileid: "42808226"
 
 Na maioria das vezes, pode ver um documento protegido. Para tal, basta abri-lo. Por exemplo, pode fazer duplo clique num anexo numa mensagem de e-mail ou num ficheiro no Explorador de Ficheiros ou pode clicar numa ligação para um ficheiro.
 
-Se os ficheiros não abrem imediatamente, o **Visualizador do Azure Information Protection** poderá abri-lo. Este visualizador pode abrir ficheiros de texto protegido, ficheiros de imagem protegidos, ficheiros PDF protegidos e todos os ficheiros que têm uma extensão de nome de ficheiro **.pfile**.
+Se os ficheiros não abrem imediatamente, o **Visualizador do Azure Information Protection** poderá conseguir abri-lo. Este visualizador pode abrir ficheiros de texto protegido, ficheiros de imagem protegidos, ficheiros PDF protegidos e todos os ficheiros que têm uma extensão de nome de ficheiro **.pfile**.
 
 O visualizador é instalado automaticamente como parte do cliente do Azure Information Protection ou pode instalá-lo em separado. Pode instalar o cliente e o visualizador a partir da página [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) no site da Microsoft. Para obter mais informações sobre como instalar o cliente, veja [Transferir e instalar o cliente do Azure Information Protection](install-client-app.md).
 
 > [!NOTE]
-> Apesar de a instalação do cliente proporcionar mais funcionalidades, requer permissões de administrador local e a funcionalidade completa requer um serviço correspondente para a sua organização:
-> 
->-Azure Information Protection
-> 
->-Azure Rights Management
-> 
->-Active Directory Rights Management Services 
+> Embora a instalação do cliente proporciona mais funcionalidades, requer permissões de administrador local e a funcionalidade completa requer um serviço correspondente para a sua organização. Por exemplo, o Azure Information Protection ou serviços de gestão de direitos do Active Directory.
 > 
 > Instale o visualizador se lhe tiver sido enviado um documento protegido por alguém de outra organização ou se não tiver permissões de administrador local no seu PC.
 
-Para poder abrir um documento protegido, a aplicação deve ser "Habilitada para RMS". As aplicações do Office e o Visualizador do Azure Information Protection são exemplos de aplicações habilitadas para RMS. Para ver uma lista de aplicações por tipo e os dispositivos suportados, veja a tabela [Aplicações habilitadas para RMS](../requirements-applications.md#rms-enlightened-applications).  
+Para poder abrir um documento protegido, a aplicação deve ser "Habilitada para RMS". Aplicações do Office e o Visualizador do Azure Information Protection são exemplos de aplicações otimizadas por RMS. Para ver uma lista de aplicações por tipo e os dispositivos suportados, veja a tabela [Aplicações habilitadas para RMS](../requirements-applications.md#rms-enlightened-applications).  
 ## <a name="messagerpmsg-as-an-email-attachment"></a>Message.rpmsg como um anexo de e-mail
 
-Se vir **message.rpmsg** como um anexo de ficheiro num e-mail, este ficheiro não é um documento protegido, mas uma mensagem de e-mail protegida apresentada como um anexo. Não pode utilizar o Visualizador do Azure Information Protection para Windows para ver esta mensagem de e-mail protegida no seu PC Windows. Em vez disso, precisa de uma aplicação de e-mail para o Windows que suporta a proteção do Rights Management, como o Outlook do Office. Ou pode utilizar o Outlook na Web.
+Se vir **message.rpmsg** como um anexo de ficheiro num e-mail, este ficheiro não é um documento protegido, mas uma mensagem de e-mail protegida apresentada como um anexo. Não é possível utilizar o Visualizador do Azure Information Protection para Windows para ver esta mensagem de e-mail protegida no seu PC Windows. Em vez disso, precisa de uma aplicação de e-mail para o Windows que suporta a proteção do Rights Management, como o Outlook do Office. Ou pode utilizar o Outlook na Web.
 
 No entanto, se tiver um dispositivo iOS ou Android, pode utilizar a aplicação do Azure Information Protection para abrir estas mensagens de e-mail protegidas. Pode transferir esta aplicação para estes dispositivos móveis a partir da página [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) no site da Microsoft.
 

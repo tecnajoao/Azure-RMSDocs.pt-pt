@@ -4,18 +4,18 @@ description: Instruções para instalar, configurar e executar o scanner do Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/21/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 77d24243d4f6b38338b2a6d709a252cc4859a2b3
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: ddf9ebcdce4cf51e35dfc76b099194873796919f
+ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42806056"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43117890"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Implementar o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente
 
@@ -275,9 +275,9 @@ Quando o scanner aplique uma etiqueta com a proteção, por predefinição, apen
 
 Para alterar o comportamento scanner padrão, por exemplo, para protege genericamente outros tipos de ficheiro, tem manualmente de editar o registo e especificar os tipos de ficheiro adicionais que pretende proteger. Para obter instruções, consulte [configuração da API de ficheiros](develop/file-api-configuration.md) de orientação para programadores. Nesta documentação para programadores, a proteção genérica é referida como "PFile". Além disso, específico para a deteção de impressão:
 
-- Tem de especificar extensões de nome de ficheiro específicas e não é possível utilizar o `*` com carateres universais.
+- O scanner tem seu próprio comportamento padrão: formatos de arquivo do Office só estão protegidos por predefinição. Se o registo não for modificado, outros tipos de ficheiro não serão protegidos pelo leitor.
 
-- O scanner tem seu próprio comportamento padrão: formatos de arquivo do Office só estão protegidos por predefinição. Qualquer outro formato de ficheiro não adicionado ao registo não será protegido pelo leitor.
+- A menos que utilize a versão de pré-visualização atual do scanner, tem de especificar extensões de nome de ficheiro específicas e não é possível utilizar o `*` com carateres universais. A versão de pré-visualização do scanner de oferece suporte a este caráter universal.
 
 ## <a name="when-files-are-rescanned"></a>Quando ficheiros estão a ser reanalisados
 

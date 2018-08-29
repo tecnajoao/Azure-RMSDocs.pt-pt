@@ -4,18 +4,18 @@ description: Veja o que há de novo ou alterado numa versão do cliente do Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/13/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b9f7381daac2398af459adbb945c548a6ca194c4
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 945b05a99122b7caf1d9a73ea8b75717a5522660
+ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42806243"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43117932"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: política de histórico e suporte de lançamento de versão
 
@@ -46,21 +46,23 @@ Utilize as seguintes informações para ver o que há de novo ou alterado para u
 
 Se tiver uma versão do cliente posterior 1.29.5.0, é uma versão de pré-visualização para fins de teste e avaliação.
 
-Esta versão inclui a versão 1.0.3557.524 do cliente RMS MSIPC.
+Esta versão inclui a versão 1.0.3592.627 do cliente RMS MSIPC.
 
 **Novas funcionalidades**: 
+
+- Suporte para o ISO padrão para a encriptação de PDF, de modo a que os documentos que protege reter a respetiva extensão de nome de ficheiro. pdf por predefinição e podem ser abertos por leitores PDF que suportam esta norma ISO. Atualmente, deve instruir os utilizadores para abrir estas PDFs protegidos manualmente ao utilizar o Visualizador do Azure Information Protection. Para ajudar os usuários a fazer isso, quando abrir um destes PDFs protegidos, verão uma página com ícones para selecionar para seu sistema operativo. Se não quiser este comportamento e em vez disso, necessitam de paridade com a versão de disponibilidade geral do cliente do Azure Information Protection, pode configurar uma [configuração de cliente avançado](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
 
 - Suporte para novos tipos de informações confidenciais para o ajudar a classificar documentos que contenham informações pessoais. [Mais informações](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
 
 - Suporte de etiquetagem **Strict documento de XML aberto** formato em arquivos do Word, Excel e PowerPoint. Para obter mais informações sobre os formatos XML abertos, consulte a postagem no blog Office [novas opções de formato de ficheiro do novo Office](https://www.microsoft.com/en-us/microsoft-365/blog/2012/08/13/new-file-format-options-in-the-new-office/). 
 
-- Suporte para a norma ISO para a encriptação de PDF, ao configurar uma nova [configuração de cliente avançado](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). Quando esta opção estiver configurada, documentos PDF que protege reter a respetiva extensão de nome de ficheiro. pdf (em vez de alterar para. ppdf) e podem ser abertos por leitores PDF que suportam esta norma ISO. 
-
 - Suporte para ficheiros que foram protegidos pelo Secure Islands quando os ficheiros que não documentos PDF e do Office. Por exemplo, texto e imagem os ficheiros protegidos. Em alternativa, a extensão de nome de ficheiro de ficheiros que tenham um. pfile. Este suporte permite novos cenários, como o scanner do Azure Information Protection poder inspecionar esses arquivos de informações confidenciais e relabeling-las automaticamente para o Azure Information Protection. [Mais informações](client-admin-guide-customizations.md#support-for-files-protected-by-secure-islands)
+
+- O **enviar comentários** ligação na **ajuda e Feedback** caixa de diálogo é substituída pelo **comunicar um problema**, que podem ser personalizados. Por predefinição, esta opção, envia um e-mail à Microsoft. Pode alterar este endereço de e-mail para que quando os utilizadores selecionarem esta opção, ele usa uma cadeia de caracteres HTTP que especificar. Por exemplo, uma página da web personalizada para os utilizadores comuniquem problemas, ou um endereço de e-mail que vai para o suporte técnico. Para modificar este endereço, utilize um [definição de cliente avançado](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link).
 
 - Para o scanner do Azure Information Protection:
 
-    - Novo cmdlet, [AIPScanner atualização](/powershell/module/azureinformationprotection/Update-AIPScanner): necessário para executar uma vez após a atualização de todas as versões anteriores.
+    - Novo cmdlet, [AIPScanner atualização](/powershell/module/azureinformationprotection/Update-AIPScanner): necessário para executar uma vez após a atualização da versão de DG (1.29.5.0) atual ou anterior.
     
     - Novo cmdlet, [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus): obtém o estado atual do serviço para a deteção de impressão.  
     
@@ -74,7 +76,7 @@ Esta versão inclui a versão 1.0.3557.524 do cliente RMS MSIPC.
     
     - Para documentos protegidos em bibliotecas do SharePoint, que o *DefaultOwner* parâmetro não for utilizado para o repositório de dados, o valor de Editor do SharePoint agora é utilizado como o valor predefinido em vez do valor de autor.
     
-    - Os relatórios de scanner incluem "Última modificação por" para documentos do Office. 
+    - Os relatórios de scanner incluem "Última modificação por" para documentos do Office.
 
 - Quando classifica e protege utilizando o PowerShell ou o scanner, os metadados de documento do Office não é removido ou criptografados.
 
@@ -82,7 +84,11 @@ Esta versão inclui a versão 1.0.3557.524 do cliente RMS MSIPC.
 
 - Permissões personalizadas suporta endereços de e-mail do destinatário que contêm um apóstrofe.
 
-- O ambiente de computador será inicializado com sucesso (arranque) quando esta ação é iniciada, abrindo um documento protegido que é armazenado no SharePoint Online. 
+- O ambiente de computador será inicializado com sucesso (arranque) quando esta ação é iniciada, abrindo um documento protegido que é armazenado no SharePoint Online.
+
+- Ao utilizar o cliente para o botão direito do rato no Explorador de ficheiros, o PowerShell ou o scanner, etiquetagem está bloqueada para ficheiros em localizações de WebDav porque se trata de um cenário não suportado.
+
+- O ícone Eliminar etiqueta não apresenta nas aplicações de cliente (Word, Excel, PowerPoint e Outlook) ao configurar o [definição de política](../configure-policy-settings.md) dos **todos os documentos e e-mails devem ter uma etiqueta**.
 
 **Alterações adicionais**:
    
@@ -92,10 +98,9 @@ Esta versão inclui a versão 1.0.3557.524 do cliente RMS MSIPC.
         
     - O *tipo* parâmetro é removido, pelo que também é removido da saída quando executa [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration). Por predefinição, os ficheiros apenas novos ou modificados são inspecionados após a primeira análise ciclo. Se definiu anteriormente a *tipo* parâmetro para **completo** para executar a reanálise todos os ficheiros, agora, execute [AIPScan início](/powershell/module/azureinformationprotection/Start-AIPScan) com o *repor* parâmetro. A deteção de impressão também tem de ser configurada para um agendamento manual, o que requer o *agenda* parâmetro para ser definido como **Manual** com [conjunto AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).
     
-- Para o scanner, a lista de exclusão predefinida agora inclui arquivos. rtf. [Mais informações](client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner)
+- Para o scanner, a lista de exclusão predefinida agora inclui arquivos msg, rar,. rtf e. zip. [Mais informações](client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner)
 
-- A versão de política é alterada para 1.4. Identificar o número de versão é necessária para [configurar computadores desligados](client-admin-guide-customizations.md#support-for-disconnected-computers). 
-
+- A versão de política é alterada para 1.4. Identificar o número de versão é necessária para [configurar computadores desligados](client-admin-guide-customizations.md#support-for-disconnected-computers).
 
 ## <a name="version-12950"></a>Versão 1.29.5.0 
 

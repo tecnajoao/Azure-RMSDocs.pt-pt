@@ -4,18 +4,18 @@ description: Detalhes técnicos sobre tipos de ficheiro suportados, extensões d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c147b6ac668e27f4e07257b3189e272a1c8093af
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: d5ff45ee8c48e1843010692cbd22d146a3fa9970
+ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808299"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43117915"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guia do administrador: Tipos de ficheiro suportados pelo cliente do Azure Information Protection
 
@@ -30,6 +30,8 @@ O cliente do Azure Information Protection pode aplicar o seguinte aos documentos
 - Apenas proteção
 
 Utilize as seguintes informações para verificar que tipos de ficheiro, o cliente do Azure Information Protection suporta, compreender os diferentes níveis de proteção e como alterar o nível de proteção predefinido e para identificar quais arquivos estão automaticamente excluídos ( ignorado) da classificação e proteção.
+
+Para os tipos de ficheiro listados, localizações de WebDav não são suportadas.
 
 ## <a name="file-types-supported-for-classification-only"></a>Tipos de ficheiro suportados apenas para classificação
 
@@ -53,7 +55,7 @@ Os seguintes tipos de ficheiro podem ser classificados, mesmo quando não estão
 
 - **Microsoft Office**: tipos de ficheiro na seguinte tabela.
     
-    Os formatos de ficheiro suportados para estes tipos de ficheiro são os 97-2003 formatos de arquivo e formatos XML abertos do Office para os seguintes programas do Office: Word, Excel e PowerPoint. A menos que tenha a versão de pré-visualização do cliente do Azure Information Protection, o formato de documento de XML aberto Strict não é suportado
+    Os formatos de ficheiro suportados para estes tipos de ficheiro são os 97-2003 formatos de arquivo e formatos XML abertos do Office para os seguintes programas do Office: Word, Excel e PowerPoint. A menos que tenha a versão de pré-visualização do cliente do Azure Information Protection, o formato de documento de XML aberto Strict não é suportado.
     
     |Tipo de ficheiro do Office|Tipo de ficheiro do Office|
     |----------------------------------|----------------------------------|
@@ -123,7 +125,7 @@ Estes tipos de ficheiro são identificados separadamente, uma vez que, quando s�
 |.jt|.pjt|
 
 ###### <a name="footnote-1"></a>Nota de rodapé 1
-Se utilizar a versão de pré-visualização do cliente do Azure Information Protection e configurá-lo para [proteger ficheiros PDF com a norma ISO para a encriptação de PDF](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), a extensão de nome de ficheiro do documento PDF protegido permanece como. pdf.
+Se utilizar a versão de pré-visualização do cliente do Azure Information Protection, [por predefinição](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), a extensão de nome de ficheiro do documento PDF protegido permanece como. pdf.
 
 A seguinte tabela apresenta os tipos de ficheiros restantes que suportam a proteção nativa pelo cliente do Azure Information Protection e que também podem ser classificados. Irá reconhecê-los como tipos de ficheiro das aplicações do Microsoft Office. Os formatos de ficheiro suportados para estes tipos de ficheiro são os 97-2003 formatos de arquivo e formatos XML abertos do Office para os seguintes programas do Office: Word, Excel e PowerPoint. A menos que tenha a versão de pré-visualização do cliente do Azure Information Protection, o formato de documento de XML aberto Strict não é suportado.
 
@@ -196,7 +198,7 @@ Para ajudar a impedir que os utilizadores alterem os ficheiros que são crítico
 
 ### <a name="file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner"></a>Tipos de ficheiro que são excluídos da classificação e proteção, o scanner do Azure Information Protection
 
-Por predefinição, o scanner também exclui os mesmos tipos de ficheiro que o cliente do Azure Information Protection com uma exceção para a versão de pré-visualização do scanner:. rtf também foi excluída. 
+Por predefinição, o scanner também exclui os mesmos tipos de ficheiro que o cliente do Azure Information Protection com as seguintes exceções para a versão de pré-visualização do scanner: rar,. rtf, msg e. zip. 
 
 Pode alterar os tipos de ficheiros incluídos ou excluídos para inspeção do ficheiro pelo leitor ao utilizar os seguintes cmdlets do PowerShell:
 
@@ -227,7 +229,7 @@ Como solução para proteger estes ficheiros, poderia genericamente protegê-los
 
 Se proteger estes ficheiros é importante, pode copiá-los temporariamente para outro computador para genericamente protegê-los e, em seguida, copiá-los volta novamente. Em alternativa, utilize a versão de pré-visualização do cliente do Azure Information Protection.
 
-Quando utiliza a versão de pré-visualização do cliente do Azure Information Protection e estiver configurado para [proteger ficheiros PDF com a norma ISO para a encriptação de PDF](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), nativamente pode proteger e desproteger ficheiros PDF em ambos os seguintes circunstâncias:
+Quando utiliza a versão de pré-visualização atual do cliente do Azure Information Protection [por predefinição](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), nativamente pode proteger e desproteger ficheiros PDF em ambas das seguintes circunstâncias:
 
 - Um ficheiro PDF que é baseada em formulários.
 

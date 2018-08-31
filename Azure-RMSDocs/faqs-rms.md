@@ -4,19 +4,19 @@ description: Algumas perguntas mais frequentes sobre o serviço de proteção de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0964d6de3f06d8620de89d9c4c9cca65a64b71c1
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 67a3720f38faab750f04e91d7a4848cf88ae4eef
+ms.sourcegitcommit: b0c4fe8c522987a7863958ffdc6866a91ebabf86
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42805958"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43242219"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Perguntas mais frequentes sobre a proteção de dados no Azure Information Protection
 
@@ -73,7 +73,7 @@ Para obter mais informações sobre os modelos no portal do Azure, consulte [con
 
 ## <a name="ive-protected-a-document-and-now-want-to-change-the-usage-rights-or-add-usersdo-i-need-to-reprotect-the-document"></a>Eu protegeu um documento e agora Quero alterar os direitos de utilização ou adicionar utilizadores, é necessário voltar a proteger o documento?
 
-Se o documento tiver sido protegido com uma etiqueta ou um modelo, não é necessário para voltar a proteger o documento. Modificar o modelo ou etiqueta fazendo as alterações para os direitos de utilização ou adicionar novos grupos (ou utilizadores) e, em seguida, guardar e publicar estas alterações:
+Se o documento tiver sido protegido com uma etiqueta ou um modelo, não é necessário para voltar a proteger o documento. Modificar o modelo ou etiqueta fazendo as alterações para os direitos de utilização ou adicionar novos grupos (ou utilizadores) e, em seguida, guardar estas alterações:
 
 - Quando um utilizador não tenha acedido o documento antes de efetuadas as alterações, as alterações entrem em vigor assim que o usuário abre o documento.
 

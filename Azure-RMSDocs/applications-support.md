@@ -4,18 +4,18 @@ description: Compreender como as aplicações de utilizador final (como as aplic
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b2c21ba2c7030b0757aeb0fd901b900863a962d1
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: f468e82f71914e15aacc4a1a9c1d38e0fe5b4372
+ms.sourcegitcommit: b0c4fe8c522987a7863958ffdc6866a91ebabf86
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42807546"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43242127"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Como as aplicações suportam o serviço Azure Rights Management
 
@@ -40,11 +40,11 @@ Os serviços de pesquisa podem ser integrados no Rights Management de diferentes
 
 - SharePoint Online e SharePoint Server aplicam-se proteção do Rights Management aos ficheiros apenas durante a transferência. Essa implementação significa que os resultados de indexação e pesquisa no SharePoint não são afetados por esta solução de proteção de documentos. No entanto, se tiver um documento que pretende armazenar no SharePoint e este documento não deve ser devolvido nos resultados da pesquisa, proteger o documento antes de o carregar para o SharePoint.
 
-- Pesquisa de desktop do Windows utiliza um índice partilhado entre os diferentes utilizadores do dispositivo, por isso, a proteger os dados nos documentos protegidos, não indexa os ficheiros protegidos. Isso significa que embora os resultados da pesquisa não incluírem ficheiros que protegeu, pode ter a garantia de que os ficheiros que contêm confidenciais dados não são ser apresentados nos resultados de pesquisa para outros utilizadores que podem iniciar sessão no seu PC ou ligar ao seu PC. 
+- Pesquisa de desktop do Windows utiliza um índice partilhado entre os diferentes utilizadores do dispositivo, por isso, a proteger os dados nos documentos protegidos, não indexa os ficheiros protegidos. Isso significa que embora os resultados da pesquisa não incluírem ficheiros que protegeu, pode ter a garantia de que os ficheiros que contêm dados confidenciais não são apresentados nos resultados de pesquisa para outros utilizadores que podem iniciar sessão no seu PC ou ligar ao seu PC. 
 
 ## <a name="next-steps"></a>Passos Seguintes
 
-Saiba mais sobre como cada uma das seguintes aplicações e serviços suportam o serviço Azure Rights Management:
+Saiba mais sobre como cada um dos aplicativos e serviços seguintes suporta o serviço Azure Rights Management:
 
 -   [Aplicação de partilha RMS para Windows e plataformas móveis](sharing-app-support.md)
 

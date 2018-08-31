@@ -4,18 +4,18 @@ description: Informações para o ajudar a planear e gerir a sua chave de inquil
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 33fdab3f2ad45228760ecc91f59654c95ac9ab64
-ms.sourcegitcommit: d6c68ee8ec3771d8918869defa06d8584ba0036a
+ms.openlocfilehash: 9fa90627d3db00efcc577c838e78394d45fff81a
+ms.sourcegitcommit: 2b2cf599b8072cb8fe6a651743e27fbbe1a827c4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 08/29/2018
-ms.locfileid: "43151845"
+ms.locfileid: "43222324"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planear e implementar a sua chave de inquilino do Azure Information Protection
 
@@ -148,7 +148,7 @@ Certifique-se de que o comprimento da chave é 2048 bits (recomendados) ou de 10
 
 Para criar um protegida por HSM chave no local e transferi-la para o seu Cofre de chaves como uma chave protegida por HSM, siga os procedimentos [como gerar e transferir chaves protegidas por HSM para o Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/).
 
-Para o Azure Information Protection utilizar a chave, todas as operações do Cofre de chaves devem ser permitidas para a chave. Esta é a configuração padrão e as operações são encriptar, desencriptar, moldar, anular a moldagem, iniciar sessão e certifique-se. Pode verificar as operações permitidas de uma chave com [Get-AzureKeyVauktKey](/powershell/module/azurerm.keyvault/get-azurekeyvaultkey)e adicionar operações permitidas utilizando [Update-AzureKeyVaultKey](/powershell/module/azurerm.keyvault/update-azurekeyvaultkey).
+Para o Azure Information Protection utilizar a chave, todas as operações do Cofre de chaves devem ser permitidas para a chave. Esta é a configuração padrão e as operações são encriptar, desencriptar, moldar, anular a moldagem, iniciar sessão e certifique-se. Pode verificar as operações permitidas de uma chave com [Get-AzureKeyVauktKey](/powershell/module/azurerm.keyvault/get-azurekeyvaultkey) e a verificar o *key_ops* valores devolvidos no **chave** detalhes. Se necessário, adicione as operações permitidas usando [Update-AzureKeyVaultKey](/powershell/module/azurerm.keyvault/update-azurekeyvaultkey) e o *KeyOps* parâmetro.
 
 Uma chave armazenada no Cofre de chaves tem uma chave de ID. Esta chave de ID é um URL que contém o nome do Cofre de chaves, o contentor de chaves, o nome da chave e a versão da chave. Por exemplo: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Tem de configurar o Azure Information Protection para utilizar esta chave, especificando o URL do Key Vault.
 

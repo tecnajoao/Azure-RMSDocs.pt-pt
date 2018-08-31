@@ -4,18 +4,18 @@ description: Informações sobre as operações de ciclo de vida relevantes se g
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/07/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e910ad5226310f0c76de437c30e95fb7f6ba8f87
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 4dd322c95d9aadc6df73e426fb92d2bb77312ed4
+ms.sourcegitcommit: 0bc877840b168d05a16964b4ed0d28a9ed33f871
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42804058"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43298043"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Gerida pelo cliente: Operações de ciclo de vida de chave de inquilino
 
@@ -41,7 +41,7 @@ Exemplos de quando poderá ter de recodificação para o Azure Information Prote
 
 - Considerar que a cópia principal da sua chave de inquilino (a cópia em sua posse) é comprometida.
 
-Para recodificar a chave de outro por si, pode criar uma nova chave no Cofre de chaves do Azure ou utilizar uma chave diferente que já se encontra no Azure Key Vault. Em seguida, siga os mesmos procedimentos que utilizou para implementar o BYOK do Azure Information Protection.
+Para recodificar a chave de outro por si, pode criar uma nova chave no Cofre de chaves do Azure ou utilizar uma chave diferente que já se encontra no Azure Key Vault. Em seguida, siga os mesmos procedimentos que utilizou para implementar o BYOK do Azure Information Protection. 
 
 1. Apenas se a nova chave está num cofre de chaves diferente para aquele já estiver a utilizar para o Azure Information Protection: autorizar o Azure Information Protection para utilizar o Cofre de chaves, com o [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) cmdlet.
 
@@ -52,6 +52,8 @@ Para recodificar a chave de outro por si, pode criar uma nova chave no Cofre de 
 Para obter mais informações sobre cada um destes passos:
 
 - Para recodificar a chave de outro por si, veja [implementar o BYOK para a sua chave de inquilino do Azure Information Protection](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
+    
+    Se estiver a recodificação uma chave protegida por HSM que criar no local e a transferência para o Key Vault, pode utilizar o mesmo universo de segurança e cartões de acesso que tenha utilizado para a sua chave atual.
 
 - Para recodificar a, a alteração para uma chave que a Microsoft gere por si, consulte a [recodificar a sua chave de inquilino](operations-microsoft-managed-tenant-key.md#rekey-your-tenant-key) secção para operações de gerida pela Microsoft.
 

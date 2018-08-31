@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f27f04fc46ee608fdd1698134da1566f1ade7fab
-ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
+ms.openlocfilehash: 8a91b39b0f503ebb53b8b652de21423ef4cae9c8
+ms.sourcegitcommit: 0bc877840b168d05a16964b4ed0d28a9ed33f871
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118028"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43298019"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas para o cliente do Azure Information Protection
 
@@ -112,7 +112,9 @@ Crie o nome do valor DWORD seguinte (com quaisquer dados do valor):
 
 Por predefinição, o cliente do Azure Information Protection tenta automaticamente estabelecer ligação ao serviço Azure Information Protection para transferir a política do Azure Information Protection mais recente. Se tiver computadores que sabe que não será possível estabelecer ligação à Internet durante um período de tempo, pode impedir que o cliente tentar ligar ao serviço ao editar o registo. 
 
-Localize o nome do valor seguinte e defina os dados do valor como **0**:
+Tenha em atenção que sem uma ligação à Internet, o cliente não é possível aplicar proteção (ou remover proteção), utilizando a chave de com base na cloud da sua organização. Em vez disso, o cliente está limitado a utilizar as etiquetas que aplicam apenas a classificação ou proteção que utiliza [HYOK](../configure-adrms-restrictions.md).
+
+Para configurar esta definição, localize o nome do valor seguinte no Registro e defina os dados do valor como **0**:
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 

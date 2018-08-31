@@ -4,16 +4,16 @@ description: Quando configurar as condições para uma etiqueta, pode atribuir a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/16/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 7d9e128dd771f6d4d4882bedcd7f49aeefb41809
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 605173136442ed3af5b50e565cae79a94b16fb27
+ms.sourcegitcommit: 0bc877840b168d05a16964b4ed0d28a9ed33f871
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42804188"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43297995"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Como configurar as condições para classificação automática e recomendada para o Azure Information Protection
 
@@ -96,9 +96,6 @@ Pode alterar este comportamento para que o cliente do Azure Information Protecti
 Quando clica em **guardar**, as suas alterações estão automaticamente disponíveis para utilizadores e serviços. Já não existe uma opção de publicar separado.
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>Tipos de informações confidenciais que requerem uma versão mínima do cliente
-
-> [!NOTE]
-> Os seguintes tipos de informações de sensibilidade agora a implementar aos inquilinos, mas não poderão ser apresentados para o selecionar. No entanto, se configurar o scanner do Azure Information Protection para [identificar todas as condições personalizadas e tipos de informações confidenciais conhecidos](deploy-aip-scanner.md#using-the-scanner-with-alternative-configurations), a versão de pré-visualização do scanner pode detectar esses novos tipos de informações, mesmo se não for possível Selecione-os no portal do Azure.
 
 Os seguintes tipos de informações confidenciais atualmente requerem a versão de pré-visualização do cliente do Azure Information Protection:
 

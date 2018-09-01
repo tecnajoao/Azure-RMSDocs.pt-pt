@@ -4,18 +4,18 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 08/31/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8a91b39b0f503ebb53b8b652de21423ef4cae9c8
-ms.sourcegitcommit: 0bc877840b168d05a16964b4ed0d28a9ed33f871
+ms.openlocfilehash: 54e501b7f226f14c388912c874a17a0ff38dd78b
+ms.sourcegitcommit: ba7ef4fe439bbf00cdad888017cbb8f44c801f77
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43298019"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348720"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas para o cliente do Azure Information Protection
 
@@ -76,7 +76,7 @@ Além disso,
 
 ## <a name="enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses"></a>Impor o modo apenas de proteção quando a sua organização tiver uma mistura de licenças
 
-Se sua organização não tem quaisquer licenças do Azure Information Protection, mas tem licenças para o Office 365 que incluem o serviço Azure Rights Management para proteção de dados, o cliente do Azure Information Protection para Windows é executada automaticamente [modo apenas de proteção](client-protection-only-mode.md).
+Se sua organização não tem quaisquer licenças do Azure Information Protection, mas tem licenças para o Office 365 que incluem o serviço Azure Rights Management para proteger os dados, o cliente do Azure Information Protection para Windows é executada automaticamente [modo apenas de proteção](client-protection-only-mode.md).
 
 No entanto, se sua organização tiver uma subscrição do Azure Information Protection, por predefinição todos os computadores Windows podem transferir a política do Azure Information Protection. O cliente do Azure Information Protection não fazer para licenciar a verificação e de imposição. 
 
@@ -309,6 +309,8 @@ O valor de ID de etiqueta é apresentado no **etiqueta** painel, quando ver ou c
 
 Especifique a sua escolha de um nome de regra de migração. Utilize um nome descritivo, que ajuda a identificar como um ou mais etiquetas da sua solução de etiquetagem anterior deve ser mapeado para uma etiqueta do Azure Information Protection. O nome é apresentado nos relatórios de scanner e no Visualizador de eventos. 
 
+Tenha em atenção que esta definição não remove quaisquer marcas visuais que possa ter aplicados a etiqueta antiga. Para remover os cabeçalhos e rodapés, consulte a secção seguinte, [remover os cabeçalhos e rodapés de outras soluções de etiquetas](#remove-headers-and-footers-from-other-labeling-solutions).
+
 ### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>Exemplo 1: Mapeamento o mesmo nome de etiqueta
 
 Documentos que tenham uma etiqueta de Secure Islands de "Confidencial" devem ser relabeled como "Confidencial" pelo Azure Information Protection.
@@ -362,10 +364,107 @@ A definição de cliente avançado:
 |LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d, "a etiqueta de Secure Islands contém interno", classificação,. \*Interno.\*|
 
 
+## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>Remover os cabeçalhos e rodapés de outras soluções de etiquetas
+
+Esta opção de configuração está atualmente em pré-visualização e está sujeitas a alterações. Também requer a versão de pré-visualização do cliente do Azure Information Protection.
+
+Esta configuração utiliza várias [definições de cliente avançadas](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure.
+
+Estas definições permitem-lhe remover ou substituir os cabeçalhos ou rodapés de documentos quando essas marcas visuais foram aplicadas por outra solução de etiquetagem. Por exemplo, o rodapé antigo contém o nome de uma etiqueta antigo agora migrado para o Azure Information Protection com um novo nome de etiqueta e o seu próprio rodapé.
+
+Quando o cliente recebe esta configuração em sua diretiva, o antigos cabeçalhos e rodapés são removidas ou substituídas quando o documento é salvo. 
+
+Esta configuração não é suportada para o Outlook e lembre-se de que quando usá-lo com o Word, Excel e PowerPoint, ele pode afetar negativamente o desempenho desses aplicativos para os utilizadores. A configuração permite-lhe definir as definições por aplicação, por exemplo, pesquisa de texto nos cabeçalhos e rodapés de documentos do Word, mas não planilhas do Excel ou apresentações do PowerPoint.
+
+Uma vez que a correspondência de padrões afeta o desempenho para os utilizadores, recomendamos que limita os tipos de aplicações do Office (**W**ord, **i**xcel, **P**owerPoint) para apenas as que tem de ser pesquisada:
+
+- Chave: **RemoveExternalContentMarkingInApp**
+
+- Valor: \< **WXP de tipos de aplicação do Office**> 
+
+Exemplos:
+
+- Para pesquisar apenas a documentos do Word, especifique **W**.
+
+- Para procurar documentos do Word e apresentações do PowerPoint, especifique **WP**.
+
+Em seguida, tem de, pelo menos, uma definição de cliente mais avançado **ExternalContentMarkingToRemove**para especificar o conteúdo do cabeçalho ou rodapé de e como remover ou substituí-los.
+
+### <a name="how-to-configure-externalcontentmarkingtoremove"></a>Como configurar ExternalContentMarkingToRemove
+
+Quando especificar o valor de cadeia de caracteres para o **ExternalContentMarkingToRemove** chaves, tem três opções usam expressões regulares:
+
+- Correspondência parcial para remover tudo no cabeçalho ou rodapé de.
+    
+    Exemplo: Cabeçalhos ou rodapés de contêm a cadeia de caracteres **texto para remover**. Pretende remover completamente esses cabeçalhos ou rodapés. Especificar o valor: `*TEXT*`.
+
+- Correspondência completa para remover palavras específicas no cabeçalho ou rodapé de.
+    
+    Exemplo: Cabeçalhos ou rodapés de contêm a cadeia de caracteres **texto para remover**. Pretende remover a palavra **texto** apenas, que deixa a cadeia de cabeçalho ou rodapé como **para remover**. Especificar o valor: `TEXT `.
+
+- Correspondência completa para remover tudo no cabeçalho ou rodapé de.
+    
+    Exemplo: Cabeçalhos ou rodapés de tenham a cadeia de caracteres **texto para remover**. Pretende remover os cabeçalhos ou rodapés que têm exatamente essa cadeia de caracteres. Especificar o valor: `^TEXT TO REMOVE$`.
+    
+
+O padrão correspondente para a cadeia de caracteres que especificar diferencia maiúsculas de minúsculas. O comprimento máximo da cadeia é 255 carateres.
+
+Uma vez que alguns documentos podem incluir diferentes tipos de espaços ou tabulações ou carateres de invisíveis, a cadeia de caracteres que especificou para uma frase ou frase poderão não ser detetada. Sempre que possível, especifique uma única palavra distinguir para o valor e certifique-se de que os resultados de teste antes de implementar na produção.
+
+- Chave: **ExternalContentMarkingToRemove**
+
+- Valor: \< **para corresponder de cadeias de caracteres, definida como expressão regular**> 
+
+#### <a name="multiline-headers-or-footers"></a>Várias linhas cabeçalhos ou rodapés de
+
+Se uma mensagem de texto do cabeçalho ou rodapé é mais do que uma única linha, crie uma chave e valor para cada linha. Por exemplo, tem o rodapé seguinte com duas linhas:
+
+**O ficheiro é classificado como confidencial**
+
+**Etiqueta aplicada manualmente**
+
+Para remover este rodapé multline, crie as seguintes duas entradas:
+
+- Chave 1: **ExternalContentMarkingToRemove**
+
+- Valor da chave 1:  **\*confidenciais***
+
+- Chave 2: **ExternalContentMarkingToRemove**
+
+- Valor da chave 2:  **\*etiqueta aplicada*** 
+
+#### <a name="optimization-for-powerpoint"></a>Otimização para o PowerPoint
+
+Rodapés no PowerPoint são implementados como formas. Para evitar a remoção de formas que contêm o texto que especificou, mas não são cabeçalhos ou rodapés, utilize um cliente avançado adicional definição denominada **PowerPointShapeNameToRemove**. Também recomendamos que utilize esta definição para evitar a verificar o texto em todas as formas, que é um processo com muitos recursos.
+
+Se não especificar esta adicional definição de cliente avançada, e o PowerPoint está incluído nos **RemoveExternalContentMarkingInApp** valor, chave todas as formas serão verificadas para o texto que especificou no  **ExternalContentMarkingToRemove** valor. 
+
+Para localizar o nome da forma que está usando como um cabeçalho ou rodapé:
+
+1. No PowerPoint, apresentar os **seleção** painel: **formato** separador > **Arrange** grupo > **painel de seleção**.
+
+2. Selecione a forma no slide que contém o cabeçalho ou rodapé. O nome da forma selecionada agora é realçado na **seleção** painel.
+
+Utilize o nome da forma para especificar um valor de cadeia de caracteres para o **PowerPointShapeNameToRemove** chave. 
+
+Exemplo: É o nome da forma **fc**. Para remover a forma com este nome, tem de especificar o valor: `fc`.
+
+- Chave: **PowerPointShapeNameToRemove**
+
+- Valor: \< **nome de forma do PowerPoint**> 
+
+Quando tiver mais de uma forma de PowerPoint para remover, crie tantos **PowerPointShapeNameToRemove** chaves que tenha formas para remover. Para cada entrada, especifique o nome da forma remover.
+
+Por predefinição, apenas o mestre de slides são verificados para cabeçalhos e rodapés. Expandir esta pesquisa para todos os slides, que é um processo muito mais com muitos recursos, utilizar um cliente de avançadas adicional definição denominada **RemoveExternalContentMarkingInAllSlides**:
+
+- Chave: **RemoveExternalContentMarkingInAllSlides**
+
+- Valor: **Verdadeiro**
+
 ## <a name="label-an-office-document-by-using-an-existing-custom-property"></a>Etiqueta de um documento do Office usando uma propriedade personalizada existente
 
 > [!NOTE]
-> Se utilizar esta configuração e a configuração da secção anterior para migrar a partir de outra solução de etiquetagem, a definição de migração de etiquetagem tem precedência. 
+> Se utilizar esta configuração e a configuração para [migrar as etiquetas de Secure Islands e outras soluções de etiquetas](#migrate-labels-from-secure-islands-and-other-labeling-solutions), a migração de etiquetagem definição tem precedência. 
 
 Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
 
@@ -445,7 +544,7 @@ Também pode configurar as regras de fluxo de correio para proceder ao mapeament
 - Para cada etiqueta do Azure Information Protection: crie uma regra de fluxo de correio que seja aplicada quando o **msip_labels** cabeçalho inclui o nome da sua etiqueta (por exemplo, **geral**) e aplique uma mensagem classificação que mapeie esta etiqueta.
 
 
-## <a name="next-steps"></a>Passos Seguintes
+## <a name="next-steps"></a>Próximos passos
 Agora que personalizou o cliente do Azure Information Protection, veja os seguintes recursos para obter informações adicionais que poderá precisar para suportar este cliente:
 
 - [Ficheiros de cliente e registo de utilização](client-admin-guide-files-and-logging.md)

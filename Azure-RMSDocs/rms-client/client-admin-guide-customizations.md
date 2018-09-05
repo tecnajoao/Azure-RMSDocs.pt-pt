@@ -4,18 +4,18 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 09/04/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 54e501b7f226f14c388912c874a17a0ff38dd78b
-ms.sourcegitcommit: ba7ef4fe439bbf00cdad888017cbb8f44c801f77
+ms.openlocfilehash: 3e6d5f30e3db48eced850649976ac4da56271622
+ms.sourcegitcommit: a42bb93adbb5be2cd39606fed3de0785ac52dd65
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348720"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43703935"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas para o cliente do Azure Information Protection
 
@@ -372,7 +372,7 @@ Esta configuração utiliza várias [definições de cliente avançadas](#how-to
 
 Estas definições permitem-lhe remover ou substituir os cabeçalhos ou rodapés de documentos quando essas marcas visuais foram aplicadas por outra solução de etiquetagem. Por exemplo, o rodapé antigo contém o nome de uma etiqueta antigo agora migrado para o Azure Information Protection com um novo nome de etiqueta e o seu próprio rodapé.
 
-Quando o cliente recebe esta configuração em sua diretiva, o antigos cabeçalhos e rodapés são removidas ou substituídas quando o documento é salvo. 
+Quando o cliente recebe esta configuração em sua diretiva, o antigos cabeçalhos e rodapés são removidas ou substituídas quando o documento é aberto na aplicação do Office e qualquer etiqueta do Azure Information Protection é aplicada ao documento.
 
 Esta configuração não é suportada para o Outlook e lembre-se de que quando usá-lo com o Word, Excel e PowerPoint, ele pode afetar negativamente o desempenho desses aplicativos para os utilizadores. A configuração permite-lhe definir as definições por aplicação, por exemplo, pesquisa de texto nos cabeçalhos e rodapés de documentos do Word, mas não planilhas do Excel ou apresentações do PowerPoint.
 
@@ -544,7 +544,7 @@ Também pode configurar as regras de fluxo de correio para proceder ao mapeament
 - Para cada etiqueta do Azure Information Protection: crie uma regra de fluxo de correio que seja aplicada quando o **msip_labels** cabeçalho inclui o nome da sua etiqueta (por exemplo, **geral**) e aplique uma mensagem classificação que mapeie esta etiqueta.
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 Agora que personalizou o cliente do Azure Information Protection, veja os seguintes recursos para obter informações adicionais que poderá precisar para suportar este cliente:
 
 - [Ficheiros de cliente e registo de utilização](client-admin-guide-files-and-logging.md)

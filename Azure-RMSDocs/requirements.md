@@ -4,18 +4,18 @@ description: Identifique os pré-requisitos para implementar o Azure Information
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/22/2018
+ms.date: 08/31/2018
 ms.topic: get-started-article
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 03b97ca4324b9352db7abec37666e7de262e6f39
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 0cfaaa199178b7bede1d5b0d3fe54dd43dcfbf01
+ms.sourcegitcommit: beb4e480e0e821e32c9d35e86f2cf4321005c521
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808039"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43663404"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisitos para o Azure Information Protection
 
@@ -102,7 +102,7 @@ Outras edições do Office não podem proteger documentos e e-mails com um servi
 
 O cliente do Azure Information Protection não suporta várias versões do Office no mesmo computador. Este cliente também não suporta contas de utilizador mudar no Office.
 
-Para obter informações sobre as aplicações do Office que suportam o serviço de proteção de dados, consulte [Aplicações que suportam a proteção de dados do Azure Rights Management](requirements-applications.md).
+Para obter informações sobre o Office que as edições suportam o serviço de proteção, consulte [aplicações que suportam a proteção de dados do Azure Rights Management](requirements-applications.md).
 
 ## <a name="firewalls-and-network-infrastructure"></a>Firewalls e infraestrutura de rede
 
@@ -110,7 +110,7 @@ Se tiver uma firewall ou interveniente semelhante que estão configurados para p
 
 Além das informações no artigo do Office, específico para o Azure Information Protection:
 
-- Permitir tráfego HTTPS em TCP 443 para **api.informationprotection.azure.com**.
+- Permitir tráfego HTTPS em TCP 443 para **informationprotection.hosting.portal.azure.net**.
 
 - Se utilizar um proxy Web que requer autenticação, tem de o configurar para utilizar a autenticação integrada do Windows com as credenciais de início de sessão do utilizador do Active Directory.
 

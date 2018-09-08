@@ -5,17 +5,17 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/31/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5b19fcbe3bb86fb1cbd90e10b016343c0826311d
-ms.sourcegitcommit: 99b33cee47bc4588174d44e90ade16edba12ee44
+ms.openlocfilehash: a20718f50dc26d8d0310c40d6a89a48d0054bb66
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43380666"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44150783"
 ---
 # <a name="verifying-the-azure-rights-management-service"></a>Verificar o serviço Azure Rights Management
 
@@ -32,7 +32,7 @@ Se o seu teste não for bem-sucedido, reveja os passos de configuração no [Pla
 > [!TIP]
 > Se precisar de mais ajuda, consulte a secção [Opções de suporte e recursos da comunidade](information-support.md#support-options-and-community-resources) no artigo [Informações e suporte do Azure Information Protection](information-support.md).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 
 Pode monitorizar a forma como a sua organização está a utilizar o serviço Azure Rights Management através do registo de utilização. Para mais informações, consulte [Registar e analisar a utilização do serviço Azure Rights Management](log-analyze-usage.md).
 

@@ -4,18 +4,18 @@ description: Conheça os direitos específicos utilizados quando protege ficheir
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/06/2018
+ms.date: 09/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: db1a0581932cc71494f1727190a66b684e4310e4
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: cb18e5820b3646c5cb21fdab3590b1ab1c56984a
+ms.sourcegitcommit: cd3455390c36520389b7ce72cb481344e726bb8e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150556"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44383230"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuração de direitos de utilização para o Azure Rights Management
 
@@ -119,7 +119,7 @@ Um utilizador pretende enviar algumas informações por e-mail a pessoas especí
 
 Quando o Exchange Online usa os novos recursos para encriptação de mensagens do Office 365, uma nova opção de e-mail torna-se disponíveis: **só de criptografar**.
 
-Esta opção está a ser implementada para inquilinos que utilizam o Exchange Online, inicialmente apenas para o Outlook na web e como outra opção de proteção de direitos para uma regra de fluxo de correio. Para obter mais informações, consulte o seguinte anúncio de mensagem de blogue da equipa do Office: [criptografar apenas serem implementadas na encriptação de mensagens do Office 365](https://aka.ms/omefeb2018).
+Esta opção está disponível para inquilinos que utilizam o Exchange Online e podem ser selecionados no Outlook na web, como outra opção de proteção de direitos para uma regra de fluxo de correio e do Outlook quando tiver do Office 365 ProPlus com uma versão mínima do [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4). Para obter mais informações, consulte o seguinte anúncio de mensagem de blogue da equipa do Office: [criptografar apenas serem implementadas na encriptação de mensagens do Office 365](https://aka.ms/omefeb2018).
 
 Quando esta opção estiver selecionada, o e-mail é encriptada e os destinatários têm de ser autenticados. Em seguida, os destinatários têm todos os direitos de utilização, exceto **guardar como, exportar** e **controlo total**. Esta combinação de direitos de utilização significa que os destinatários têm sem restrições, exceto pelo fato de não é possível remover a proteção. Por exemplo, um destinatário pode copiar a partir do e-mail, imprimi-lo e reencaminhá-lo. 
 

@@ -4,18 +4,18 @@ description: Veja o que há de novo ou alterado numa versão do cliente do Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 09/20/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8bd70537bc3057ecb3087e790d529f499d07779d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 16abff7dc802838486b1fbc365e10a8e7d25e23d
+ms.sourcegitcommit: 09d28276f911e9854207c49b1659c6a273ab7b74
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149655"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490826"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: política de histórico e suporte de lançamento de versão
 
@@ -42,17 +42,27 @@ Utilize as seguintes informações para ver o que há de novo ou alterado para u
 >  
 > Para obter suporte técnico, consulte a [opções de suporte e recursos da Comunidade](../information-support.md#support-options-and-community-resources) informações. Também o incentivamos a interagir com a equipa do Azure Information Protection, no [site Yammer](https://www.yammer.com/askipteam/).
 
-## <a name="versions-later-than-12950"></a>Versões mais tarde do que 1.29.5.0
+## <a name="versions-later-than-137190"></a>Versões mais tarde do que 1.37.19.0
 
-Se tiver uma versão do cliente posterior 1.29.5.0, é uma versão de pré-visualização para fins de teste e avaliação.
+Se tiver uma versão do cliente posterior 1.37.19.0, é uma versão de pré-visualização para fins de teste e avaliação.
+
+**Lançado**: 20/09/2018
+
+Ativa o suporte para futuras funcionalidades.
+
+## <a name="version-137190"></a>Versão 1.37.19.0
+
+**Lançado**: 17/09/2018
 
 Esta versão inclui a versão 1.0.3592.627 do cliente RMS MSIPC.
 
 **Novas funcionalidades**: 
 
-- Suporte para o ISO padrão para a encriptação de PDF, de modo a que os documentos que protege reter a respetiva extensão de nome de ficheiro. pdf por predefinição e podem ser abertos por leitores PDF que suportam esta norma ISO. Atualmente, deve instruir os utilizadores para abrir estas PDFs protegidos manualmente ao utilizar o Visualizador do Azure Information Protection. Para ajudar os usuários a fazer isso, quando abrir um destes PDFs protegidos, verão uma página com ícones para selecionar para seu sistema operativo. Se não quiser este comportamento e em vez disso, necessitam de paridade com a versão de disponibilidade geral do cliente do Azure Information Protection, pode configurar uma [configuração de cliente avançado](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
+- Suporte para a norma ISO para a encriptação de PDF, ao configurar uma nova [configuração de cliente avançado](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). Quando esta opção estiver configurada, documentos PDF que protege reter a respetiva extensão de nome de ficheiro. pdf (em vez de alterar para. ppdf) e podem ser abertos por leitores PDF que suportam esta norma ISO. Atualmente, deve instruir os utilizadores para abrir estas PDFs protegidos manualmente ao utilizar o Visualizador do Azure Information Protection. Para ajudar os usuários a fazer isso, quando abrir um destes PDFs protegidos, verão uma página com ícones para selecionar para seu sistema operativo.
 
 - Suporte para novos tipos de informações confidenciais para o ajudar a classificar documentos que contenham informações pessoais. [Mais informações](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
+
+- As etiquetas que aplicam a proteção agora apresentadas nas aplicações do Office 2016 (versão mínima 1805, build 9330.2078) quando o utilizador tem atribuída uma licença do Azure Rights Management (também conhecido como Azure Information Protection para o Office 365).
 
 - Suporte de etiquetagem **Strict documento de XML aberto** formato em arquivos do Word, Excel e PowerPoint. Para obter mais informações sobre os formatos XML abertos, consulte a postagem no blog Office [novas opções de formato de ficheiro do novo Office](https://www.microsoft.com/en-us/microsoft-365/blog/2012/08/13/new-file-format-options-in-the-new-office/). 
 
@@ -64,7 +74,7 @@ Esta versão inclui a versão 1.0.3592.627 do cliente RMS MSIPC.
 
 - Para o scanner do Azure Information Protection:
 
-    - Novo cmdlet, [AIPScanner atualização](/powershell/module/azureinformationprotection/Update-AIPScanner): necessário para executar uma vez após a atualização da versão de DG (1.29.5.0) atual ou anterior.
+    - Novo cmdlet, [AIPScanner atualização](/powershell/module/azureinformationprotection/Update-AIPScanner): necessário para executar uma vez após a atualização da versão anterior de GA (1.29.5.0) ou anterior.
     
     - Novo cmdlet, [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus): obtém o estado atual do serviço para a deteção de impressão.  
     

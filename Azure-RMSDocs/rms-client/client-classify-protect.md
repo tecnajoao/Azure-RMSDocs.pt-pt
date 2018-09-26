@@ -4,18 +4,18 @@ description: Instruções sobre como classificar e proteger os seus documentos e
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 09/17/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 01637807680e4172af8938a3c63b092191ef41cd
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 355d71f844d64fb26898c482d2414ca388ac38be
+ms.sourcegitcommit: ea8207da513f61bc0691c952da1f8b61ceb10887
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148687"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45696522"
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Guia de utilizador: Classificar e proteger um ficheiro ou e-mail com o Azure Information Protection
 
@@ -76,6 +76,8 @@ Motivos possíveis:
 - Se o administrador tiver configurado recentemente uma nova etiqueta para si, experimente fechar todas as instâncias da sua aplicação do Office e voltar a abrir-la. Esta ação verifica se as suas etiquetas sofreram alguma alteração.
 
 - Se a etiqueta em falta aplicar proteção, poderá ter uma edição do Office que não suporta a aplicação da proteção Rights Management. Para verificar, clique em **Protect** > **ajuda e Feedback**. Na caixa de diálogo, verifique se tem uma mensagem na **estado do cliente** secção que diz **este cliente não está licenciado para o Office Professional Plus.** 
+    
+    Não é necessário Office Professional Plus se tiver aplicações do Office 2016 com uma versão mínima 1805, compilação 9330.2078, e sua conta é atribuída uma licença do Azure Rights Management (também conhecido como Azure Information Protection para o Office 365).
 
 - A etiqueta pode estar numa política de âmbito que não inclui a sua conta. Contacte o suporte técnico ou o administrador.
 

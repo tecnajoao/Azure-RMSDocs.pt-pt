@@ -4,18 +4,18 @@ description: Algumas perguntas mais frequentes sobre o Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2018
+ms.date: 09/17/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4d991a96dd82bdc27aed036fd05119ba3f7ca1f2
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: f948792073872895b2c3b9075bcd83b918a8a480
+ms.sourcegitcommit: ea8207da513f61bc0691c952da1f8b61ceb10887
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151678"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45696601"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Perguntas mais frequentes sobre o Azure Information Protection
 
@@ -117,7 +117,7 @@ As principais diferenças entre essas duas soluções:
 
 |Windows Server FCI|Scanner do Azure Information Protection|
 |--------------------------------|-------------------------------------|
-|Arquivos de dados suportados: <br /><br />-Pastas locais no Windows Server|Arquivos de dados suportados: <br /><br />-Pastas locais no Windows Server<br /><br />-Windows ficheiro partilhas e armazenamento ligado à rede<br /><br />-O SharePoint Server 2016 e o SharePoint Server 2013. SharePoint Server 2010 também é suportada para os clientes que tenham [suporte para esta versão do SharePoint estendido](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010) e que estão a utilizar a versão de pré-visualização do scanner.|
+|Arquivos de dados suportados: <br /><br />-Pastas locais no Windows Server|Arquivos de dados suportados: <br /><br />-Pastas locais no Windows Server<br /><br />-Windows ficheiro partilhas e armazenamento ligado à rede<br /><br />-O SharePoint Server 2016 e o SharePoint Server 2013. SharePoint Server 2010 também é suportada para os clientes que tenham [suporte para esta versão do SharePoint estendido](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).|
 |Modo operacional: <br /><br />-Em Tempo Real|Modo operacional: <br /><br />-Sistematicamente rastreia os arquivos de dados e esse ciclo pode executar uma vez ou repetidamente|
 |Suporte para tipos de ficheiro: <br /><br />-Todos os tipos de ficheiros estão protegidos por predefinição <br /><br />-Tipos de ficheiro específicos podem ser excluídos da proteção ao editar o registo|Suporte para tipos de ficheiro: <br /><br />-Tipos de ficheiro office estão protegidos por predefinição <br /><br />-Tipos de ficheiro específicos podem ser incluídos para proteção ao editar o registo|
 

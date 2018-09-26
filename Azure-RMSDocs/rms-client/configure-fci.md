@@ -4,18 +4,18 @@ description: Instruções para utilizar o cliente de Rights Management (RMS) com
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/12/2018
+ms.date: 09/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8c97e4591343c0c6f04c39b5fa162acb1feacdd1
-ms.sourcegitcommit: 62da5075a6b3d13e4688d2d7d82beff53cade440
+ms.openlocfilehash: 099b4985a0e595c22ec29fd2d682d092a5b445b5
+ms.sourcegitcommit: 395918e9e3513e1d791bbfc16c0fc90e4dd605eb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45540093"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750633"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Proteção RMS com Infraestrutura de Classificação de Ficheiros (FCI) do Windows Server
 
@@ -53,7 +53,7 @@ Pré-requisitos para estas instruções:
     
 - Sincronizou as suas contas de utilizador do Active Directory no local com o Azure Active Directory ou o Office 365, incluindo os endereços de e-mail. Isto é necessário para todos os utilizadores que possam necessitar de aceder a ficheiros protegidos pela FCI e pelo serviço Azure Rights Management. Se não efetuar este passo (por exemplo, num ambiente de teste), os utilizadores poderão ficar bloqueados de aceder a estes ficheiros. Se precisar de mais informações sobre este requisito, veja [Preparar utilizadores e grupos para o Azure Information Protection](../prepare.md).
     
-- Transferiu os modelos do Rights Management para o servidor de ficheiros e identificou o ID do modelo que irá proteger os ficheiros. Para o fazer, utilize o cmdlet [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate). Este cenário não suporta modelos departamentais, pelo que tem de utilizar um modelo que não esteja configurado para um âmbito ou a configuração do âmbito tem de incluir a opção de compatibilidade de aplicações para marcar a caixa de verificação **Mostrar este modelo a todos os utilizadores quando as aplicações não suportam a identidade de utilizador**.
+- Este cenário não suporta modelos departamentais, pelo que deve utilizar um modelo que não esteja configurado para um âmbito ou utilizar o [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet e os *EnableInLegacyApps* parâmetro.
 
 ## <a name="instructions-to-configure-file-server-resource-manager-fci-for-azure-rights-management-protection"></a>Instruções para configurar a FCI do Gestor de Recursos do Servidor de Ficheiros para a proteção do Azure Rights Management
 Siga estas instruções para proteger automaticamente todos os ficheiros numa pasta, através de um script do PowerShell como uma tarefa personalizada. Efetue estes procedimentos pela seguinte ordem:
@@ -72,7 +72,7 @@ Siga estas instruções para proteger automaticamente todos os ficheiros numa pa
 
 No final destas instruções, todos os ficheiros na sua pasta selecionada serão classificados com a propriedade personalizada do RMS e estes ficheiros estarão assim protegidos pela Gestão de Direitos. Para uma configuração mais complexa que protege seletivamente alguns ficheiros e não outros, pode criar ou utilizar uma propriedade e regra de classificação diferente, com uma tarefa de gestão de ficheiros que protege apenas esses ficheiros.
 
-Tenha em atenção que se fizer alterações ao modelo do Rights Management que utiliza para a FCI, terá de executar `Get-RMSTemplate -Force` no computador do servidor de ficheiros para obter o modelo atualizado. O modelo atualizado, em seguida, é utilizado para proteger os novos ficheiros. Se as alterações ao modelo forem suficientemente importantes para voltar a proteger os ficheiros no servidor de ficheiros, pode fazê-lo executando o cmdlet Protect-RMSFile interativamente com uma conta que tenha os direitos de utilização de exportação ou controlo total para os ficheiros. Terá também de executar `Get-RMSTemplate -Force` neste computador do servidor de ficheiros se publicar um novo modelo que pretenda utilizar para a FCI.
+Tenha em atenção que se fizer alterações ao modelo de Rights Management que utiliza para a FCI, a conta de computador que executa o script para proteger os ficheiros não recebem automaticamente o modelo atualizado. Para tal, no script, localize o comentado horizontalmente `Get-RMSTemplate -Force` de comandos e remover o `#` caractere de comentário. Quando é transferido o modelo atualizado (o script tem de executar, pelo menos, uma vez), pode comentar este comando adicional para que os modelos não são transferidos desnecessariamente cada vez. Se as alterações ao modelo forem suficientemente importantes para voltar a proteger os ficheiros no servidor de ficheiros, pode fazer isso interativamente ao executar o cmdlet Protect-RMSFile com uma conta que tenha os direitos de utilização de exportação ou controlo total para os ficheiros. Terá também de executar `Get-RMSTemplate -Force` se publicar um novo modelo que pretende utilizar para a FCI.
 
 ### <a name="save-the-windows-powershell-script"></a>Guardar o script do Windows PowerShell
 
@@ -266,7 +266,7 @@ Agora que concluiu a configuração de classificação, está pronto para config
     > [!TIP]
     > Algumas dicas para a resolução de problemas:
     > 
-    > -   Se vir **0** no relatório, em vez do número de ficheiros na sua pasta, este resultado indica que o script não foi executado. Em primeiro lugar, verifique o próprio script ao carregá-lo no ISE do Windows PowerShell para validar os conteúdos do script e tente executá-lo para ver se são apresentados erros. Sem especificar argumentos, o script tenta estabelecer ligação e autenticar para o serviço Azure Rights Management.
+    > -   Se vir **0** no relatório, em vez do número de ficheiros na sua pasta, este resultado indica que o script não foi executado. Em primeiro lugar, verifique o próprio script ao carregá-lo no ISE do Windows PowerShell para validar o conteúdo de script e tente executá-lo uma vez na mesma sessão do PowerShell, para ver se são apresentados erros. Sem especificar argumentos, o script tenta estabelecer ligação e autenticar para o serviço Azure Rights Management.
     > 
     >     -   Se o script anunciar que não foi possível ligar ao serviço Azure Rights Management (Azure RMS), verifique os valores que este apresenta para a conta do principal do serviço que especificou no script. Para obter mais informações sobre como criar esta conta do principal do serviço, veja [Pré-requisito 3: para proteger ou desproteger ficheiros sem interação](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction) no guia do administrador do cliente do Azure Information Protection.
     >     -   Se o script anunciar que pode ligar ao Azure RMS, em seguida verifique se pode encontrar o modelo especificado ao executar [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) diretamente a partir do Windows PowerShell no servidor. Deverá ver o modelo que especificou devolvido nos resultados.
@@ -281,6 +281,14 @@ Agora que concluiu a configuração de classificação, está pronto para config
     > -   Se vir o número correto de ficheiros no relatório, mas os ficheiros não estiverem protegidos, experimente proteger os ficheiros manualmente com o cmdlet [Protect-RMSFile](/powershell/azureinformationprotection/vlatest/protect-rmsfile), para ver se são apresentados erros.
 
 Após confirmar que estas tarefas foram executadas com êxito, pode fechar o Gestor de Recursos de Ficheiros. Novos ficheiros são classificados e protegidos quando as tarefas agendadas são executadas automaticamente. 
+
+## <a name="action-required-if-you-make-changes-to-the-rights-management-template"></a>Ação necessária se fizer alterações ao modelo de Rights Management
+
+Se fizer alterações ao modelo de Rights Management que as referências de script, a conta de computador que executa o script para proteger os ficheiros não recebem automaticamente o modelo atualizado. No script, localize o comentado horizontalmente `Get-RMSTemplate -Force` na função RMSConnection do conjunto de comandos e remover o caractere de comentário no início da linha. Da próxima vez que o script é executado, o modelo atualizado é baixado. Para otimizar o desempenho, de modo a que os modelos não transferir desnecessariamente, pode, em seguida, comente esta linha novamente. 
+
+Se as alterações ao modelo forem suficientemente importantes para voltar a proteger os ficheiros no servidor de ficheiros, pode fazer isso interativamente ao executar o cmdlet Protect-RMSFile com uma conta que tenha os direitos de utilização de exportação ou controlo total para os ficheiros. 
+
+Também execute esta linha no script se publicar um novo modelo que pretende utilizar para a FCI e alterar o ID de modelo na linha de argumento para a tarefa de gestão de ficheiros personalizados.
 
 ## <a name="modifying-the-instructions-to-selectively-protect-files"></a>Modificar as instruções para proteger ficheiros de forma seletiva
 Quando tiver implementado as instruções anteriores, em seguida, é fácil modificá-las para uma configuração mais complexa. Por exemplo, pode proteger ficheiros com o mesmo script, mas apenas para ficheiros que contenham informações pessoais, e talvez selecionar um modelo que possua direitos mais restritivos.

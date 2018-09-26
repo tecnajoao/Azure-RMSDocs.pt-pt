@@ -4,16 +4,16 @@ description: Um tutorial de introdução, com uma duração de aproximadamente 2
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/08/2018
+ms.date: 09/17/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: c98667de0b0c103b9dfbd278c0665db39f999491
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 2eb58e0177ca397548b5dda6df7b6b5a5fde0031
+ms.sourcegitcommit: ea8207da513f61bc0691c952da1f8b61ceb10887
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44146850"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45696488"
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Tutorial de início rápido do Azure Information Protection 
 
@@ -37,9 +37,18 @@ Para concluir este tutorial, precisa de ter o seguinte:
 
 - Uma conta de administrador global para iniciar sessão no portal do Azure para ativar a proteção e configurar a política do Azure Information Protection. Em alternativa, pode utilizar uma conta que tenha qualquer uma das seguintes funções administrativas: [administrador do Information Protection ou o administrador de segurança](/azure/active-directory/active-directory-assign-admin-roles-azure-portal). Esta conta também tem de ter um endereço de e-mail e um serviço de e-mail de trabalho, como o Exchange Online.
 
-- Um computador que execute o Windows (no mínimo o Windows 7 com Service Pack 1) e que tenha instalado o Office 365 ProPlus com aplicações da versão 2016 ou 2013, o Office Professional Plus 2016, o Office Professional Plus 2013 com Service Pack 1 ou o Office Professional Plus 2010 com Service Pack 2. 
+- Um computador com Windows (no mínimo do Windows 7 com Service Pack 1), e neste computador, tem sessão iniciada para aplicações do Office de uma das seguintes categorias:
     
-    Para utilizar estas aplicações com o Azure Information Protection, tem de ter uma [subscrição do Office 365 que inclui a utilizar o serviço Azure Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Por exemplo, do Office 365 E3 subscrição ou do Office 365 E5. Utilizar uma licença desta subscrição, precisa ser conectado às suas aplicações do Office.
+    - Office 365 com as aplicações do Office 2016 (versão mínima 1805, compilação 9330.2078). Para utilizar esta opção, a conta deve ser atribuída uma licença do Azure Rights Management. Esta licença é incluída na subscrição do Azure Information Protection.
+    
+    - O Office 365 ProPlus com aplicações de 2016 ou 2013 (instalação clique-e-Use ou baseada no Windows Installer).
+    
+    - Office Professional Plus 2016.
+    
+    - Office Professional Plus 2013 com Service Pack 1.
+    
+    - Office Professional Plus 2010 com Service Pack 2.
+
 
 Vamos começar.
 

@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 57c410432377d5a98c132239ac1805293d1a5133
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: a70610157b37df31576b4dfd3d7a00bbbd3fdcfe
+ms.sourcegitcommit: c1274d6d7ab486590dcd2a4e6aca3dcd3d284c1b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151491"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168714"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurar a política do Azure Information Protection
 
@@ -167,6 +167,8 @@ Utilize as seguintes informações para ajudar a configurar a política do Azure
 - [Como configurar e gerir modelos](configure-policy-templates.md)
 
 - [Como configurar etiquetas para diferentes idiomas](configure-policy-languages.md)
+
+- [Como migrar as etiquetas do Azure Information Protection para o Centro de conformidade e segurança do Office 365](configure-policy-migrate-labels.md)
 
 ## <a name="next-steps"></a>Passos Seguintes
 

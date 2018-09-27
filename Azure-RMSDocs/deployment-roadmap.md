@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 43f99a35104ecdc3bfb422ed9f6747043e895ac7
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 20fcfa3790dc9ad1612a508f4fe28f72997fc475
+ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149842"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47211280"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Plano de implementação do Azure Information Protection
 
@@ -118,9 +118,11 @@ Opcionalmente, considere configurar o seguinte:
 ### <a name="step-6-use-and-monitor-your-data-protection-solutions"></a>Passo 6: utilizar e monitorizar as soluções de proteção de dados
 Agora, está pronto para proteger os seus dados e iniciar sessão como sua empresa está a utilizar as etiquetas que configurou e a proteção de dados. Para obter informações adicionais de apoio nesta fase de implementação, veja o seguinte:
 
+- [Relatórios do Azure Information Protection](reports-aip.md)
+
 - [Ajudar os utilizadores a proteger ficheiros com o serviço Azure Rights Management](./help-users.md)
 
--  [Registar e analisar a utilização do serviço Azure Rights Management](./log-analyze-usage.md)
+- [Registar e analisar a utilização do serviço Azure Rights Management](./log-analyze-usage.md)
 
 - [Ficheiros de cliente e registo de utilização](./rms-client/client-admin-guide-files-and-logging.md)
 

@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: a70610157b37df31576b4dfd3d7a00bbbd3fdcfe
-ms.sourcegitcommit: c1274d6d7ab486590dcd2a4e6aca3dcd3d284c1b
+ms.openlocfilehash: e63b98118cda3a927577a90c7c0999d8781f8d93
+ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47168714"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47211297"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurar a política do Azure Information Protection
 
@@ -173,4 +173,6 @@ Utilize as seguintes informações para ajudar a configurar a política do Azure
 ## <a name="next-steps"></a>Passos Seguintes
 
 Para obter um exemplo de como personalizar a política predefinida e ver o comportamento resultante de uma aplicação do Office, experimente o [Tutorial de início rápido do Azure Information Protection](infoprotect-quick-start-tutorial.md).
+
+Para ver o desempenho da sua política, veja [de relatórios do Azure Information Protection](reports-aip.md).
 

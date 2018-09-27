@@ -4,18 +4,18 @@ description: Tem uma pergunta específica sobre classificação e etiquetagem at
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/26/2018
+ms.date: 09/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 6048867049046384a7a226d3caeed10fd09bb264
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: a6df966c75a1d556aeb3341804fa18d912389e24
+ms.sourcegitcommit: 4bc807177cf6c284f673cea667b6086121d69231
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147581"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233733"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Perguntas mais frequentes sobre a classificação e a etiquetagem no Azure Information Protection
 
@@ -29,13 +29,17 @@ Experimente o nosso tutorial de início rápido para ver isto em funcionamento e
 
 Procure anúncios no [Blogue Enterprise Mobility and Security](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection) e no nosso [site Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) estiverem disponíveis funcionalidades e capacidades adicionais. Seguem-se algumas limitações da versão atual, que incluem o seguinte:
 
-- Não existe nenhum registo centralizado para classificação e etiquetagem.
-
-- Sem capacidade de etiquetagem em aplicações do Office para dispositivos móveis (iOS e Android) e computadores Mac ou o Office web apps (Office Online).
+- Sem capacidade de etiquetagem nas aplicações web do Office (Office Online).
 
 - As funcionalidades de classificação e etiquetagem não foram integradas com o Exchange Online nem com o SharePoint Online.
 
-Pedir novas funcionalidades e votar nos pedidos, visite o [site User Voice](https://msip.uservoice.com/) do Azure Information Protection.
+> [!NOTE]
+> **Agora em pré-visualização**:
+> - Centralizada de relatórios para classificação e etiquetagem. Para obter mais informações, consulte [centralização de relatórios do Azure Information Protection](reports-aip.md).
+> - Etiquetagem capacidade nas aplicações do Office para dispositivos móveis (iOS e Android) e computadores Mac para os clientes que estão optou por participar para o [programa Office Insider](https://support.office.com/article/what-is-office-insider-f4208185-b63a-4b68-9c7a-9a32d2411c16). Para obter mais informações, consulte [aplicar etiquetas de sensibilidade aos seus documentos e e-mail do Office](https://aka.ms/officemipdocs).
+
+
+Pedir novas funcionalidades e votar nos pedidos, visite o [site do UserVoice](https://msip.uservoice.com/) do Azure Information Protection.
 
 ## <a name="do-i-need-to-be-a-global-admin-to-configure-classification-and-labels"></a>É necessário ser um administrador global para configurar a classificação e etiquetas?
 

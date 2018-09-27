@@ -4,18 +4,18 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/21/2018
+ms.date: 09/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 43f8fcbf090998df91cf635158eafd225c251668
-ms.sourcegitcommit: aa1207c0af8de19f973c345161845c77d9b5f579
+ms.openlocfilehash: 8c7327a5b159b06786eea6709640714bcfcfc553
+ms.sourcegitcommit: 4bc807177cf6c284f673cea667b6086121d69231
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46536426"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233801"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas para o cliente do Azure Information Protection
 
@@ -247,9 +247,11 @@ Para configurar esta definição avançada, introduza a seguinte cadeia:
 
 - Valor: **Verdadeiro**
 
-Como resultado desta opção de configuração, quando o cliente do Azure Information Protection protege um ficheiro PDF, esta ação cria um documento PDF protegido, que pode ser aberto com a versão mais recente do cliente do Azure Information Protection para Windows e outro PDF leitores que suportam a norma ISO para a encriptação de PDF. A aplicação Azure Information Protection para iOS e Android não suporta atualmente a norma ISO para a encriptação de PDF.
+Como resultado desta opção de configuração, quando o cliente do Azure Information Protection protege um ficheiro PDF, esta ação cria um documento PDF protegido, que pode ser aberto com a versão mais recente do cliente do Azure Information Protection para Windows e outro PDF leitores que suportam a norma ISO para a encriptação de PDF. A aplicação Azure Information Protection para iOS e Android não suporta atualmente a norma ISO para a encriptação de PDF. Para obter as informações mais recentes no Adobe Acrobat Reader, consulte [a partir Outubro, utilize o Adobe Acrobat Reader para PDFs protegidos pelo Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Starting-October-use-Adobe-Acrobat-Reader-for-PDFs-protected-by/ba-p/262738).
 
 Para o scanner do Azure Information Protection utilizar a nova definição, é necessário reiniciar o serviço de scanner.
+
+Para obter mais informações sobre esta encriptação de PDF, consulte a mensagem de blogue [novo suporte para encriptação de PDF com proteção de informações do Microsoft](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/2627570).
 
 ### <a name="to-convert-existing-ppdf-files-to-protected-pdf-files"></a>Para converter ficheiros. ppdf existentes para os ficheiros. pdf protegidos
 

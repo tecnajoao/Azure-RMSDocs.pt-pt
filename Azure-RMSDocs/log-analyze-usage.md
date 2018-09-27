@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f147ad04ec61e7a5796cbb1f02c7fa33afdeae7d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 1deea1b4353e2d48c85ae24625ab29eca96a3968
+ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149689"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47211331"
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Registar e analisar a utilização do serviço Azure Rights Management
 
@@ -48,6 +48,7 @@ Além deste registo de utilização, também tem as seguintes opções de regist
 |Registos de eventos de cliente|Atividade de utilização para o cliente do Azure Information Protection, iniciou sessão do Windows local **aplicativos e serviços** registo de eventos **do Azure Information Protection**. <br /><br />Para obter mais informações, consulte [registo de utilização para o cliente do Azure Information Protection](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
 |Ficheiros de registo de cliente|Registos de resolução de problemas para o cliente do Azure Information Protection, localizado em **%localappdata%\Microsoft\MSIP**. <br /><br />Estes ficheiros estão concebidos para Support da Microsoft.|
 
+Além disso, as informações dos registos de utilização do cliente do Azure Information Protection e o scanner do Azure Information Protection são recolhidas e agregadas para criar relatórios no portal do Azure. Para obter mais informações, consulte [de relatórios do Azure Information Protection](reports-aip.md).
 
 Utilize as secções seguintes para obter mais informações sobre o registo de utilização para o serviço Azure Rights Management. 
 
@@ -58,8 +59,6 @@ A partir de fevereiro de 2016, o registo de utilização do Azure Rights Managem
 > Não existem custos adicionais associados ao armazenamento dos registos nem à funcionalidade do registo.
 > 
 > Se utilizava o registo de utilização para o Azure Rights Management antes de fevereiro de 2016, precisava de uma subscrição do Azure e de espaço de armazenamento suficiente no Azure, o que já não é o caso.
-
-
 
 ## <a name="how-to-access-and-use-your-azure-rights-management-usage-logs"></a>Como aceder e utilizar os seus registos de utilização do Azure Rights Management
 O serviço Azure Rights Management escreve registos na sua conta de armazenamento do Azure como uma série de blobs. Cada blob contém um ou mais registos num formato de registo expandido W3C. Os nomes dos blobs são números, pela ordem em que foram criados. A secção [Como interpretar os seus registos de utilização do Azure Rights Management](#how-to-interpret-your-azure-rights-management-usage-logs), que se encontra mais adiante neste documento, contém mais informações sobre os conteúdos dos registos e a criação dos mesmos.

@@ -1,0 +1,302 @@
+---
+title: Início rápido – inicialização para clientes de proteção de informações da Microsoft (MIP) SDK C++
+description: Um guia de início rápido que mostra como escrever a lógica de inicialização para um cliente de proteção de informações da Microsoft (MIP) SDK de aplicações.
+services: information-protection
+author: BryanLa
+ms.service: information-protection
+ms.topic: quickstart
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: 9405f98ea2b1be79a4de8b487b407fbebc8fe923
+ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47214949"
+---
+# <a name="quickstart-client-application-initialization-c"></a>Início rápido: Inicialização de aplicações de cliente (C++)
+
+Este início rápido mostram-lhe como implementar o padrão de inicialização do cliente, utilizado pelo SDK C++ MIP em tempo de execução. 
+
+> [!NOTE]
+> Os passos descritos neste guia de introdução são necessários para qualquer aplicativo de cliente que utiliza o ficheiro de MIP, política ou as APIs de proteção. Embora este início rápido demonstra a utilização das APIs de arquivo, esse mesmo padrão é aplicável a clientes que utilizam a política e as APIs de proteção. Inícios rápidos de futuros devem ser feitos em série, como cada um deles baseia-se na anterior, por este sendo a primeira.
+
+## <a name="prerequisites"></a>Pré-requisitos
+
+Se ainda não o fez, certifique-se de que para:
+
+- Conclua os passos na [instalação do SDK de proteção de informações da Microsoft (MIP) e configuração](setup-configure-mip.md). Este guia de introdução baseia-se na configuração e instalação correta do SDK.
+- Opcionalmente:
+  - Revisão [objetos de perfil e de motor](concept-profile-engine-cpp.md). Os objetos de perfil e de motor são conceitos de universais, necessários para os clientes que utilizam as APIs de MIP/políticas/proteção de ficheiros. 
+  - Revisão [conceitos de autenticação](concept-authentication-cpp.md) para saber como a autenticação e autorização são implementadas pela aplicação cliente e do SDK.
+  - Revisão [conceitos de observador](concept-async-observers.md) para saber mais sobre observadores e como eles são implementados. O SDK de MIP faz uso do padrão observador implementar notificações de eventos assíncronos.
+
+## <a name="create-a-visual-studio-solution-and-project"></a>Criar uma solução do Visual Studio e o projeto
+
+Primeiro, criar e configurar a solução do Visual Studio e o projeto, sobre a qual irão criar os inícios rápidos inicial. 
+
+1. Abra o Visual Studio 2017, selecione o **arquivo** menu, **New**, **projeto**. Na **novo projeto** caixa de diálogo:
+     - No painel esquerdo, sob **instalada**, **outras linguagens**, selecione **Visual C++**.
+     - No painel central, selecione **aplicação de consola do Windows**
+     - No painel inferior, o projeto de atualização **Name**, **localização**e o que contém **nome da solução** em conformidade.
+     - Quando terminar, clique nas **OK** botão na parte inferior direita.
+
+     [![Criação de solução do Visual Studio](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
+
+
+2. Configure as definições do projeto:
+   - Na **Explorador de soluções**, clique com o botão direito do rato no nó do projeto (diretamente sob o nó superior/solução) e selecione **propriedades**. 
+   - À parte superior direita dos **Property Pages** caixa de diálogo, clique em **do Configuration Manager...** . No **Configuration Manager** caixa de diálogo, defina a "configuração da solução Active Directory" como **depurar**e de destino "plataforma de solução Active Directory" para **x64**. Clique em **fechar** quando terminar.
+   - Sob **propriedades de configuração**, selecione a **VC + + Directories** nó.
+   - Selecione o **incluir diretórios** linha, em seguida, clique na lista pendente à direita, em seguida, **< editar... >** e introduza os caminhos para o SDK incluem subdiretórios (. h) no campo superior. Especifique os caminhos completos para `file\include`, `protection\include`, `upe\include` subdiretórios (mas não mais aprofundada), no caminho onde instalou o SDK. Clique em **OK**. 
+
+        [![Criação de solução do Visual Studio](media/quick-app-initialization-cpp/set-include-lib-path-properties.png)](media/quick-app-initialization-cpp/set-include-lib-path-properties.png#lightbox)
+
+   - Repita o passo anterior para o **Library Directories** linha, introduzindo os caminhos para os subdiretórios de bibliotecas estáticas binário (lib) do SDK. Certifique-se de que utiliza os caminhos que correspondem à configuração de compilação atual para a sua solução. Neste início rápido, especifique os caminhos absolutos ou relativos para os `file\bins\debug\amd64`, `protection\bins\debug\amd64`, `upe\bins\debug\amd64` subdiretórios.
+
+   - Sob **propriedades de configuração**, abra o **vinculador** nó e selecione o **entrada** nó. 
+   - Selecione o **Additional Dependencies** linha, em seguida, clique na lista pendente à direita, em seguida, **< editar... >**. Aqui adicionar os nomes das bibliotecas estáticas do SDK. Adicionar `mip_protection_sdk.lib;mip_file_sdk.lib;mip_upe_sdk.lib;` à lista de bibliotecas, no campo superior. Clique em **OK**. 
+   - Clique em **OK** sobre o **páginas de propriedades** caixa de diálogo quando terminar.
+
+     [![Criação de solução do Visual Studio](media/quick-app-initialization-cpp/set-static-libs.png)](media/quick-app-initialization-cpp/set-static-libs.png#lightbox)
+
+## <a name="implement-an-observer-class"></a>Implementar uma classe de observador
+
+Agora, crie uma implementação básica para uma classe de observador, ao expandir o SDK `mip::FileProfile::Observer` classe. O observador é instanciado e mais tarde, utilizado pelo perfil de ficheiros e objetos do mecanismo de ficheiro.
+
+1. Adicione uma nova classe ao seu projeto, o que gera arquivos de cabeçalho /. h e de implementação /. cpp para:
+
+   - Na **Explorador de soluções**, clique com botão direito no nó do projeto novamente, selecione **Add**, em seguida, selecione **classe**.
+   - Sobre o **adicionar classe** caixa de diálogo:
+     - Na **nome da classe** , insira "profile_observer". Tenha em atenção que tanto o **arquivo. h** e **arquivo. cpp** campos são automaticamente preenchidos, com base no nome que introduzir.
+     - Quando terminar, clique nas **OK** botão.
+
+     [![Visual Studio adicionar classe](media/quick-app-initialization-cpp/add-class.png)](media/quick-app-initialization-cpp/add-class.png#lightbox)
+
+2. Depois de gerar os arquivos. h e. cpp para a classe, ambos os ficheiros são abertos no separadores de grupo do Editor. Agora, atualize cada ficheiro para implementar a sua nova classe de observador:
+
+   - Atualizar "profile_observer.h", ao selecionar/eliminar gerada `profile_observer` classe. **Não** remover as diretivas de pré-processamento geradas pelo passo anterior (#pragma, #include). Em seguida, copiar/colar seguinte origem para o ficheiro, após qualquer diretivas de pré-processamento existentes:
+
+     ```cpp
+     #include <memory>
+     #include "mip/file/file_profile.h"
+
+     class ProfileObserver final : public mip::FileProfile::Observer {
+     public:
+          ProfileObserver() { }
+          void OnLoadSuccess(const std::shared_ptr<mip::FileProfile>& profile, const std::shared_ptr<void>& context) override;
+          void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context) override;
+          void OnAddEngineSuccess(const std::shared_ptr<mip::FileEngine>& engine, const std::shared_ptr<void>& context) override;
+          void OnAddEngineFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context) override;
+     };
+     ```
+
+   - Atualizar "profile_observer.cpp", ao selecionar/eliminar gerada `profile_observer` implementação da classe. **Não** remover as diretivas de pré-processamento geradas pelo passo anterior (#pragma, #include). Em seguida, copiar/colar seguinte origem para o ficheiro, após qualquer diretivas de pré-processamento existentes:
+
+     ```cpp
+     #include <future>
+
+     using std::promise;
+     using std::shared_ptr;
+     using std::static_pointer_cast;
+     using mip::FileEngine;
+     using mip::FileProfile;
+
+     void ProfileObserver::OnLoadSuccess(const shared_ptr<FileProfile>& profile, const shared_ptr<void>& context) {
+          auto promise = static_pointer_cast<std::promise<shared_ptr<FileProfile>>>(context);
+          promise->set_value(profile);
+     }
+
+     void ProfileObserver::OnLoadFailure(const std::exception_ptr& error, const shared_ptr<void>& context) {
+          auto promise = static_pointer_cast<std::promise<shared_ptr<FileProfile>>>(context);
+          promise->set_exception(error);
+     }
+
+     void ProfileObserver::OnAddEngineSuccess(const shared_ptr<FileEngine>& engine, const shared_ptr<void>& context) {
+          auto promise = static_pointer_cast<std::promise<shared_ptr<FileEngine>>>(context);
+          promise->set_value(engine);
+     }
+
+     void ProfileObserver::OnAddEngineFailure(const std::exception_ptr& error, const shared_ptr<void>& context) {
+          auto promise = static_pointer_cast<std::promise<shared_ptr<FileEngine>>>(context);
+          promise->set_exception(error);
+     }
+     ```
+
+3. Opcionalmente, utilize F6 (**compilar solução**) para executar um teste de compilação/de ligação da sua solução, para garantir que ela baseia-se com êxito antes de continuar.
+
+## <a name="implement-an-authentication-delegate"></a>Implementar um delegado de autenticação
+
+O SDK de MIP implementa a autenticação utilizando extensibility de classe, que fornece um mecanismo de partilhar o trabalho de autenticação com a aplicação de cliente. O cliente tem de adquirir um acesso adequado de OAuth2 token e fornecido para o SDK de MIP em tempo de execução. 
+
+Agora, criar uma implementação para um delegado de autenticação, ao expandir o SDK `mip::AuthDelegate` classe e substituindo/implementando o `mip::AuthDelegate::AcquireOAuth2Token()` função virtual pura. O delegado de autenticação é instanciado e mais tarde, utilizado pelo perfil de ficheiros e objetos do mecanismo de ficheiro.
+
+1. Utilizar a funcionalidade de "Adicionar a classe" de Visual Studio mesmo que usamos passo #1 da secção anterior, adicione outra classe ao seu projeto. Desta vez, introduza "auth_delegate" a **nome da classe** campo. 
+
+2. Agora, atualize cada ficheiro para implementar a sua nova classe de delegado de autenticação:
+
+   - Atualizar "auth_delegate.h", ao substituir todos os gerado `auth_delegate` código com a seguinte origem de classe. **Não** remover as diretivas de pré-processamento geradas pelo passo anterior (#pragma, #include):
+
+     ```cpp
+     #include <string>
+     #include "mip/common_types.h"
+
+     class AuthDelegateImpl final : public mip::AuthDelegate {
+     public:
+          AuthDelegateImpl() = delete;        // Prevents default constructor
+          
+          AuthDelegateImpl(
+            const std::string& appId)         // AppID for registered AAD app
+            : mAppId(appId) {};
+
+          bool AcquireOAuth2Token(            // Called by MIP SDK to get a token
+            const mip::Identity& identity,    // Identity of the account to be authenticated, if known
+            const OAuth2Challenge& challenge, // Authority (AAD tenant issuing token), and resource (API being accessed; "aud" claim).
+            OAuth2Token& token) override;     // Token handed back to MIP SDK
+     private:
+          std::string mAppId;
+     };
+     ```
+
+   - Atualizar "auth_delegate.cpp", ao substituir todos os gerado `auth_delegate` implementação da classe com a seguinte origem. **Não** remover as diretivas de pré-processamento geradas pelo passo anterior (#pragma, #include). 
+
+     > [!IMPORTANT]
+     > O seguinte código de aquisição do token é intencionalmente incompleto. Iremos testar mais tarde com um token de acesso estático.  
+     > Na produção, isso deve ser substituído pelo código que pede ao utilizador para autenticação e recebe um token, dinamicamente usando:
+     > - o appId e redirecionamento de resposta/URI especificado no seu registo de aplicação do Azure AD (resposta/URI de redirecionamento **tem** corresponde ao seu registo de aplicações)
+     > - a autoridade e o URI do recurso transmitido pelo SDK no `challenge` argumento (o URI do recurso **tem** corresponde ao API/permissões seu registo de aplicações)
+     > - credenciais de utilizador/aplicação (os clientes de "nativos" OAuth2 devem solicitar credenciais de utilizador e utilizar o fluxo de "código de autorização". OAuth2 "clientes confidenciais" podem utilizar as suas próprias credenciais seguras com o fluxo de "credenciais de cliente" (como um serviço), ou solicitar credenciais de utilizador com o fluxo de "código de autorização" (por exemplo, uma aplicação web)).
+     >
+     > Aquisição de token OAuth2 é um protocolo complexo e normalmente feito usando uma biblioteca. É TokenAcquireOAuth2Token() **apenas** chamado pelo SDK MIP, conforme necessário.
+
+     ```cpp
+     using std::string;
+
+     bool AuthDelegateImpl::AcquireOAuth2Token(const mip::Identity& identity, const OAuth2Challenge& challenge, OAuth2Token& token) 
+     {
+            // TODO: replace with token acquisition code
+            const string authority = challenge.GetAuthority();
+            const string resourceURI = challenge.GetResource();
+            string accessToken = "<access-token>";
+
+            // Pass access token back to MIP SDK
+            token.SetAccessToken(accessToken);
+
+          // True = successful token acquisition; False = failure
+          return true;
+     }
+     ``` 
+3. Opcionalmente, utilize F6 (**compilar solução**) para executar um teste de compilação/de ligação da sua solução, para garantir que ela baseia-se com êxito antes de continuar.
+
+## <a name="implement-a-consent-delegate"></a>Implementar um delegado de consentimento
+
+Azure AD requer um aplicativo a ser dado consentimento, antes de pode aceder a recursos protegidos sob a identidade de uma conta. Consentimento é registado como uma confirmação permanente de permissão no inquilino da conta, por uma determinada conta (consentimento do utilizador) ou todas as contas (consentimento de administrador), para a aplicação aceder ao recurso pedido permissões/API. Consentimento ocorre em vários cenários, com base na API e nível de permissões que o aplicativo procura, e a conta que está a ser utilizada para início de sessão e aquisição de token: 
+
+- contas a partir da *mesmo inquilino* onde a aplicação fica registada, se o utilizador ou um administrador não previamente consentir explicitamente acesso por meio do recurso de "Conceder permissões".
+- contas a partir de um *inquilino diferente* se a aplicação fica registada como multi-inquilino e administrador de inquilinos não previamente dar o seu consentimento para todos os utilizadores com antecedência.
+
+Agora, criar uma implementação para um delegado de consentimento, ao expandir o SDK `mip::ConsentDelegate` classe e substituindo/implementando o `mip::AuthDelegate::GetUserConsent()` função virtual pura. O delegado de consentimento é instanciado e mais tarde, utilizado pelo perfil de ficheiros e objetos do mecanismo de ficheiro.
+
+1. Usando o mesmo recurso "Adicionar a classe" do Visual Studio utilizámos anteriormente, adicione outra classe ao seu projeto. Desta vez, introduza "consent_delegate" a **nome da classe** campo. 
+
+2. Agora, atualize cada ficheiro para implementar a sua nova classe de delegado de consentimento:
+
+   - Atualizar "consent_delegate.h", ao substituir todos os gerado `consent_delegate` código com a seguinte origem de classe. **Não** remover as diretivas de pré-processamento geradas pelo passo anterior (#pragma, #include):
+
+     ```cpp
+     #include "mip/common_types.h"
+     #include <string>
+
+     class ConsentDelegateImpl final : public mip::ConsentDelegate {
+     public:
+          ConsentDelegateImpl() = default;
+          virtual mip::Consent GetUserConsent(const std::string& url) override;
+     };
+     ```
+
+   - Atualizar "consent_delegate.cpp", ao substituir todos os gerado `consent_delegate` implementação da classe com a seguinte origem. **Não** remover as diretivas de pré-processamento geradas pelo passo anterior (#pragma, #include). 
+
+     ```cpp
+     #include <iostream>
+     using mip::Consent;
+     using std::string;
+
+     Consent ConsentDelegateImpl::GetUserConsent(const string& url) 
+     {
+          // Accept the consent to connect to the url
+          std::cout << "SDK will connect to: " << url << std::endl;
+          return Consent::AcceptAlways;
+     }
+     ``` 
+3. Opcionalmente, utilize F6 (**compilar solução**) para executar um teste de compilação/de ligação da sua solução, para garantir que ela baseia-se com êxito antes de continuar.
+
+## <a name="construct-a-file-profile-and-engine"></a>Construir um perfil de ficheiros e de motor
+
+Conforme mencionado, o objeto de perfil e de motor são necessários para SDK os clientes que utilizam APIs de MIP. Conclua a codificação parte deste início rápido, ao adicionar o código para instanciar os objetos de perfil e o mecanismo: 
+
+1. Partir **Explorador de soluções**, abra o ficheiro. cpp no projeto que contém a implementação do `main()` método. Por predefinição para o mesmo nome que o projeto que contém ele, que especificou durante a criação do projeto.
+
+2. Remover a implementação gerada de `main()`. **Não** remover diretivas de pré-processamento geradas pelo Visual Studio durante a criação do projeto (#pragma, #include). Acrescente o seguinte código após qualquer diretivas de pré-processamento:
+
+   ```cpp
+   #include "auth_delegate.h"
+   #include "consent_delegate.h"
+   #include "profile_observer.h"
+
+   using std::promise;
+   using std::future;
+   using std::make_shared;
+   using std::shared_ptr;
+   using std::string;
+   using std::cout;
+   using mip::ApplicationInfo; 
+   using mip::FileProfile;
+   using mip::FileEngine;
+
+   int main()
+   {
+     // Construct/initialize objects used by the application's profile object
+     ApplicationInfo appInfo{"0edbblll-8773-44de-b87c-b8c6276d41eb",    // ApplicationInfo object (App ID, friendly name)
+                 "AppInitialization Quickstart" };
+     auto profileObserver = make_shared<ProfileObserver>();         // Observer object                  
+     auto authDelegateImpl = make_shared<AuthDelegateImpl>(         // Authentication delegate object (App ID)
+                 "0edbblll-8773-44de-b87c-b8c6276d41eb");
+     auto consentDelegateImpl = make_shared<ConsentDelegateImpl>(); // Consent delegate object
+ 
+     // Construct/initialize profile object
+     FileProfile::Settings profileSettings("",      // Path for logging/telemetry/state; blank = C:
+       true,                                        // true = use in-memory state storage (vs disk)
+       authDelegateImpl,                            
+       consentDelegateImpl,                     
+       profileObserver,                         
+       appInfo);                                    
+
+     // Set up promise/future connection for async profile operations; load profile asynchronously
+     auto profilePromise = make_shared<promise<shared_ptr<FileProfile>>>();
+     auto profileFuture = profilePromise->get_future();
+     mip::FileProfile::LoadAsync(profileSettings, profilePromise);
+     auto profile = profileFuture.get();
+
+     // Construct/initialize engine object
+     FileEngine::Settings engineSettings("1",       // User-defined engine ID
+       "Client data",                               // User-defined engine state        
+       "en-US");                                    // Locale (default = en-US)
+
+     // Set up promise/future connect for async engine operations; add engine to profile asynchronously
+     auto enginePromise = make_shared<promise<shared_ptr<FileEngine>>>();
+     auto engineFuture = enginePromise->get_future();
+     profile->AddEngineAsync(engineSettings, enginePromise);
+
+     return 0;
+   }
+
+   ``` 
+
+3. Agora fazer uma compilação final do aplicativo e resolva quaisquer erros. Seu código deve criar com êxito, mas não irá ainda funciona corretamente enquanto não concluir o próximo início rápido.
+
+## <a name="next-steps"></a>Passos Seguintes
+
+Agora que seu código de inicialização estiver concluído, está pronto para o próximo início rápido, onde começará experimentar as APIs de arquivo MIP.
+
+> [!div class="nextstepaction"]
+> [Etiquetas de sensibilidade da lista](quick-file-list-labels-cpp.md)

@@ -4,17 +4,17 @@ description: Migre as etiquetas do Azure Information Protection para o Centro de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/26/2018
+ms.date: 09/27/2018
 ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: df86f13543484fb628435f1750090badf1bfe183
-ms.sourcegitcommit: c1274d6d7ab486590dcd2a4e6aca3dcd3d284c1b
+ms.openlocfilehash: ba2578d5a340f565bbb962053a0f4604128fde35
+ms.sourcegitcommit: 4bc807177cf6c284f673cea667b6086121d69231
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169146"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233750"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Como migrar as etiquetas do Azure Information Protection para o Centro de conformidade e segurança do Office 365
 
@@ -100,13 +100,9 @@ Para as etiquetas que migrar com êxito, eles podem agora ser utilizados pelo [c
 
 Os clientes que atualmente suportam a etiquetagem unificada incluem:
 
-- Do programa do Office Insiders:
+- Aplicações do programa Insiders do Office. Para obter mais informações, consulte o "Em que a funcionalidade está disponível hoje?" secção partir [aplicar etiquetas de sensibilidade aos seus documentos e e-mail do Office](https://aka.ms/officemipdocs).
     
-    - Computadores de MacOS que utilizam o Word, PowerPoint e Excel do Office para Mac 2016
-    
-    - dispositivos iOS e Android que utilizam o Word e PowerPoint do Office Mobile.
-
-- Os clientes de fornecedores de software e desenvolvedores que usam o [MIP SDK](https://docs.microsoft.com/azure/information-protection/develop/mip/mip-sdk-reference)
+- Os clientes de fornecedores de software e os desenvolvedores que utilizam o [MIP SDK](https://docs.microsoft.com/azure/information-protection/develop/mip/mip-sdk-reference).
 
 
 ## <a name="next-steps"></a>Passos Seguintes

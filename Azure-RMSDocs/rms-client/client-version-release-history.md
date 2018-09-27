@@ -4,18 +4,18 @@ description: Veja o que há de novo ou alterado numa versão do cliente do Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/24/2018
+ms.date: 09/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2d4c08242a0f408887a4bb3c21bfd82a767dbb00
-ms.sourcegitcommit: c1274d6d7ab486590dcd2a4e6aca3dcd3d284c1b
+ms.openlocfilehash: f74faf0b6ae218ceb5f553252bc15df96b1e83b2
+ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47168748"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47211263"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: política de histórico e suporte de lançamento de versão
 
@@ -48,7 +48,9 @@ Se tiver uma versão do cliente posterior 1.37.19.0, é uma versão de pré-visu
 
 **Lançado**: 20/09/2018
 
-Ativa o suporte para futuras funcionalidades.
+**Novas funcionalidades:**
+
+- Suporte para [central reporting](../reports-aip.md) para a funcionalidade de análise do Azure Information Protection anunciada na Microsoft Ignite.
 
 ## <a name="version-137190"></a>Versão 1.37.19.0
 

@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8c7327a5b159b06786eea6709640714bcfcfc553
-ms.sourcegitcommit: 4bc807177cf6c284f673cea667b6086121d69231
+ms.openlocfilehash: 40415c25befd3eea8d33a2b8572b0d48f7ee918c
+ms.sourcegitcommit: 7d477c418f3e5d8950c73af154c1575c84791ccc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47233801"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403102"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas para o cliente do Azure Information Protection
 
@@ -90,9 +90,9 @@ Além disso, verifique que estes computadores não têm um arquivo chamado **msi
 
 ## <a name="modify-the-email-address-for-the-report-an-issue-link"></a>Modificar o endereço de e-mail para o relatório de uma ligação de problema
 
-Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
+Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. Esta definição só é aplicável para pré-visualizar as versões do cliente do Azure Information Protection, porque as versões de disponibilidade geral do cliente não apresentam o **comunicar um problema** ligação.
 
-Quando os utilizadores selecionam a **comunicar um problema** uma ligação a **ajuda e Feedback** caixa de diálogo de cliente, por predefinição, um endereço é preenchido numa mensagem de e-mail da Microsoft. Utilize o seguinte avançada de definição de cliente para modificar esse endereço. Por exemplo, especificar `mailto:helpdesk@contoso.com` para o endereço de e-mail do suporte técnico. 
+Quando os utilizadores selecionam a **comunicar um problema** uma ligação a **ajuda e Feedback** cliente caixa de diálogo das versões de pré-visualização do cliente, por predefinição, um endereço é preenchido numa mensagem de e-mail da Microsoft. Utilize o seguinte avançada de definição de cliente para modificar esse endereço. Por exemplo, especificar `mailto:helpdesk@contoso.com` para o endereço de e-mail do suporte técnico. 
 
 Para configurar esta definição avançada, introduza as cadeias seguintes:
 

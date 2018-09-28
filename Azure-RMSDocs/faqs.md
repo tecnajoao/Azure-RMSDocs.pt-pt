@@ -4,18 +4,18 @@ description: Algumas perguntas mais frequentes sobre o Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/17/2018
+ms.date: 09/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f948792073872895b2c3b9075bcd83b918a8a480
-ms.sourcegitcommit: ea8207da513f61bc0691c952da1f8b61ceb10887
+ms.openlocfilehash: 0acb14314fd15d45ee013ef920b51f6427768c81
+ms.sourcegitcommit: 7d477c418f3e5d8950c73af154c1575c84791ccc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45696601"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403051"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Perguntas mais frequentes sobre o Azure Information Protection
 
@@ -103,9 +103,11 @@ Informações adicionais:
 
 ## <a name="whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365"></a>O que é a diferença entre as etiquetas no Azure Information Protection e as etiquetas no Office 365?
 
-As etiquetas no Azure Information Protection permitem aplicar uma política de classificação e proteção consistente para documentos e e-mails, quer estejam no local ou na cloud. Esta classificação e proteção é independente de onde o conteúdo está armazenado ou como é movido. [As etiquetas na segurança do Office 365 e conformidade](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) permitem-lhe classificar documentos e e-mails para auditoria e de retenção, quando esse conteúdo está em serviços do Office 365. 
+As etiquetas no Azure Information Protection permitem aplicar uma política de classificação e proteção consistente para documentos e e-mails, quer estejam no local ou na cloud. Esta classificação e proteção é independente de onde o conteúdo está armazenado ou como é movido. Até recentemente, o Office 365 tinha apenas [etiquetas de retenção](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) que permitem-lhe classificar documentos e e-mails para auditoria e de retenção, quando esse conteúdo está em serviços do Office 365. 
 
-Hoje em dia, aplicam-se e gerir estas etiquetas em separado, mas a Microsoft está trabalhando para uma estratégia de etiquetagem abrangente e unificada para vários serviços que incluem o Azure Information Protection, o Office 365, o Microsoft Cloud App Security e o Windows Proteção de informações. Deve ter ouvido falar dessa estratégia referida como "Microsoft Information Protection" (MIP). Esse mesmo esquema de etiquetagem e a loja também estará disponíveis para fornecedores de software. Para obter mais informações, consulte a postagem no blog [políticas consistentes de etiquetagem e proteção a chegar ao Office 365 e Azure Information Protection](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Consistent-labeling-and-protection-policies-coming-to-Office-365/ba-p/161553).
+A Microsoft tem trabalhado em direção uma estratégia de etiquetagem abrangente e unificada para vários serviços que incluem o Azure Information Protection, o Office 365, o Microsoft Cloud App Security e o Windows Information Protection.  Deve ter ouvido falar dessa estratégia referida como "Microsoft Information Protection". Esse mesmo esquema de etiquetagem e a loja é também a ser disponibilizada para fornecedores de software com o SDK de MIP.
+
+Anunciado na Microsoft Ignite 2018, começará agora ver uma opção para configurar **etiquetas de sensibilidade** além das etiquetas de retenção no Centro de conformidade e a segurança do Office 365. Para obter mais informações sobre o progresso no ter etiquetas que sejam unificadas em diferentes serviços, leia a publicação do blogue [anúncio da disponibilidade das funcionalidades de proteção de informações para ajudar a proteger os seus dados confidenciais](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
 ## <a name="whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner"></a>O que é a diferença entre a FCI do Windows Server e o scanner do Azure Information Protection?
 

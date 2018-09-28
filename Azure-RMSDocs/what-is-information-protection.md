@@ -8,12 +8,12 @@ ms.date: 09/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 2d2996d89e7f8574d1dba7544474c18ad28c0de9
-ms.sourcegitcommit: 4bc807177cf6c284f673cea667b6086121d69231
+ms.openlocfilehash: e2d67b103f727d6e5c5004844b83d13fe0296989
+ms.sourcegitcommit: 7d477c418f3e5d8950c73af154c1575c84791ccc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47233767"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403068"
 ---
 # <a name="what-is-azure-information-protection"></a>O que é o Azure Information Protection?
 
@@ -129,9 +129,9 @@ Recursos adicionais: [informações e suporte do Azure Information Protection](i
 
 Microsoft Ignite 2018 em Orlando tem muitas sessões que estejam identificadas [do Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection). Todas as sessões são registradas para que se não puder comparecer há, ainda pode ver as sessões posteriormente. Maiores cinco sessões que recomendamos que:
 
-- [BRK2006 - utilização Microsoft Information Protection (MIP) para ajudar a proteger os seus dados confidenciais em qualquer lugar, em todo o ciclo de vida](https://myignite.techcommunity.microsoft.com/sessions/64297)
+- [BRK2006 - utilização Microsoft Information Protection (MIP) para ajudar a proteger os seus dados confidenciais em qualquer lugar, em todo o ciclo](https://myignite.techcommunity.microsoft.com/sessions/64297) -veja o [vídeo do YouTube](https://youtu.be/gmHVF-1cLXA)
  
-- [BRK3002 - Noções básicas sobre como capacidades do Microsoft Information Protection funcionam em conjunto para proteger informações confidenciais em dispositivos, aplicações e serviços](https://myignite.techcommunity.microsoft.com/sessions/64299)
+- [BRK3002 - Noções básicas sobre como capacidades do Microsoft Information Protection funcionam em conjunto para proteger informações confidenciais em dispositivos, aplicações e serviços](https://myignite.techcommunity.microsoft.com/sessions/64299) -veja o [vídeo do YouTube](https://youtu.be/kL9Y7NGTyQQ)
 
 - [BRK3009 - acelerar a implementação e a adoção de soluções do Microsoft Information Protection](https://myignite.techcommunity.microsoft.com/sessions/64283)
 

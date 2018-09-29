@@ -1,33 +1,32 @@
 ---
 title: Conceitos - o objeto de perfil de API de ficheiros
 description: Este artigo ajuda-o a compreender os conceitos em todo o objeto de perfil do ficheiro, o que é criada durante a inicialização do aplicativo.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 52839df8f98613e02d01ab70a75d6d879ee70594
-ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
+ms.openlocfilehash: 33ec266068d15e827267b7d518344aebd0f8f072
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47214274"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47445908"
 ---
-# <a name="file-api-profile"></a>Perfil de API de ficheiros
+# <a name="microsoft-information-protection-sdk---file-api-profile-concepts"></a>SDK - conceitos de perfil de API de ficheiros do Microsoft Information Protection
 
 O perfil é a classe de raiz para todas as operações no SDK do MIP. Antes de utilizar qualquer uma das funcionalidades de API de ficheiros, um `FileProfile` tem de ser criada e todas as operações futuras serão executadas pelo perfil ou por outros objetos *adicionado* ao perfil.
 
 Existem alguns pré-requisitos de código devem ser cumpridos antes de tentar criar uma instância de um perfil:
 
-- [AuthDelegateImpl]() é implementado para expandir `mip::AuthDelegate`.
-- [ConsentDelegateImpl]() é implementado para expandir `mip::ConsentDelegate`.
-- O aplicativo tiver sido [registado no Azure Active Directory]() e o cliente ID é hard-coded para os ficheiros de configuração ou aplicação. 
+- `AuthDelegateImpl` é implementado para expandir `mip::AuthDelegate`.
+- `ConsentDelegateImpl` é implementado para expandir `mip::ConsentDelegate`.
+- O aplicativo tiver sido [registado no Azure Active Directory](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad.md) e o cliente ID é hard-coded para os ficheiros de configuração ou aplicação. 
 - Uma classe a herdar `mip::FileProfile::Observer` foi implementado corretamente.
 
 ## <a name="load-a-profile"></a>Um perfil de carga
 
-Com o [ProfileObserver](), [ConsentDelegateImpl](), e [AuthDelegateImpl]() definido, `mip::FileProfile` agora pode ser instanciado. Criar a `mip::FileProfile` objeto requer [ `mip::FileProfile::Settings` ](reference/class_mip_fileprofile_settings.md) para armazenar todas as informações de definições sobre o `FileProfile`.
+Com o `ProfileObserver`, `ConsentDelegateImpl`, e `AuthDelegateImpl` definidos, `mip::FileProfile` agora pode ser instanciado. Criar a `mip::FileProfile` objeto requer [ `mip::FileProfile::Settings` ](reference/class_mip_fileprofile_settings.md) para armazenar todas as informações de definições sobre o `FileProfile`.
 
 ### <a name="fileprofilesettings-parameters"></a>Parâmetros de FileProfile::Settings
 
@@ -35,9 +34,9 @@ O `FileProfile::Settings` construtor aceita parâmetros de cinco, listados abaix
 
 - `std::string path`: Caminho de ficheiro em que o registo, telemetria e outras estado persistente é armazenado.
 - `bool useInMemoryStorage`: Define se é ou não a todos os Estados devem ser armazenados na memória, em vez de no disco.
-- `std::shared_ptr<mip::AuthDelegate> authDelegate`: Um ponteiro compartilhado da classe `mip::AuthDelegate` (consulte [secção autenticação]())
+- `std::shared_ptr<mip::AuthDelegate> authDelegate`: Um ponteiro compartilhado da classe `mip::AuthDelegate` 
 - `std::shared_ptr<mip::ConsentDelegate>`: 
-- `std::shared_ptr<mip::FileProfile::Observer> observer`: Um ponteiro compartilhado para o [ `FileProfile::Observer` ]() implementação.
+- `std::shared_ptr<mip::FileProfile::Observer> observer`: Um ponteiro compartilhado para o `FileProfile::Observer` implementação.
 - `mip::ApplicationInfo applicationInfo`: objeto. Utilizado para definir as informações sobre a aplicação que está a consumir o SDK.
 
 Os exemplos seguintes mostram como criar o `profileSettings` utiliza o armazenamento local para o armazenamento de estado, assim como na memória apenas de objeto. Ambos partem do princípio de que o `authDelegateImpl` objeto já foi criado.

@@ -1,20 +1,19 @@
 ---
 title: Conceitos - observadores de API de proteção no SDK do MIP.
 description: O SDK de MIP foi concebido para ser quase que totalmente assíncrono. Este artigo ajuda-o a compreender como os observadores de API de proteção são implementados e utilizados para assincronicidade.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 143be0332b7e928d2242d32c7f0a0f07d9c4265f
-ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
+ms.openlocfilehash: 8403f1bd7b123c196c4063b7f38e2b0f73b9f5aa
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47214328"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446537"
 ---
-# <a name="protection-api-observers"></a>Observadores de API de proteção
+# <a name="microsoft-information-protection-sdk---protection-api-observers"></a>SDK - observadores de API de proteção do Microsoft Information Protection
 
 A API de proteção contém três classes de observador. Membros de observador são virtuais e podem ser substituídos para lidar com retornos de chamada para operações assíncronas.
 
@@ -90,7 +89,7 @@ Quando vamos criar uma instância de qualquer classe do SDK ou utilizar uma fun�
 
 ## <a name="protectionhandler-observer-implementation"></a>Implementação de ProtectionHandler observador
 
-O observador de proteção, semelhante `mip::ProtectionHandler` implementa uma `mip::ProtectionHandler::Observer` classe para lidar com notificações de eventos assíncronos durante operações de proteção. A implementação é semelhante ao que detalhados acima. `ProtectionHandlerObserverImpl` parcialmente definida abaixo. A implementação completa pode ser encontrada na nossa [repositório de exemplo do GitHub]().
+O observador de proteção, semelhante `mip::ProtectionHandler` implementa uma `mip::ProtectionHandler::Observer` classe para lidar com notificações de eventos assíncronos durante operações de proteção. A implementação é semelhante ao que detalhados acima. `ProtectionHandlerObserverImpl` parcialmente definida abaixo. A implementação completa pode ser encontrada na nossa [repositório de exemplo do GitHub](https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk).
 
 ### <a name="protectionhandlerobserverimpl-class-declaration"></a>Declaração de classe ProtectionHandlerObserverImpl
 
@@ -127,6 +126,3 @@ void ProtectionHandlerObserverImpl::OnCreateProtectionHandlerError(
 };
 ```
 
-## <a name="next-steps"></a>Passos Seguintes
-
-[TBD - ligação para criar uma `mip::ProtectionProfile`, carregar um `mip::ProtectionEngine`e executar operações de proteção com `mip::ProtectionHandler`]()

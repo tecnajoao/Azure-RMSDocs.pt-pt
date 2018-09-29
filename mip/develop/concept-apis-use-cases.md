@@ -1,20 +1,19 @@
 ---
 title: Conceitos - APIs no SDK do MIP.
 description: Este artigo ajuda-o a compreender os 3 tipos de APIs no SDK do MIP, como estão relacionadas e casos de utilização para uso de cada.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 02fc1ef3c53cd94c35943a4a093c42968c251cdf
-ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
+ms.openlocfilehash: a625df159a00a955d155850ff4e326d1e0d204e5
+ms.sourcegitcommit: 823a14784f4b34288f221e3b3cb41bbd1d5ef3a6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47214970"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47453337"
 ---
-# <a name="mip-sdk-apis"></a>APIs do SDK de MIP
+# <a name="microsoft-information-protection-sdk---api-concepts"></a>Microsoft Information Protection SDK - conceitos de API
 
 O SDK de MIP é composto por três APIs:
 
@@ -55,3 +54,7 @@ A API de ficheiros é uma abstração da proteção e a política de APIs. Ele f
 - Um mediador de segurança de acesso de nuvem (CASB) desenvolvidas pela sua organização. Peça aos seus clientes para a capacidade de aplicar etiquetas MIP a documentos do Microsoft Office e PDF. A API de ficheiros possibilitará que apresentar uma lista de etiquetas configuradas, em seguida, permitem que os clientes podem criar regras que seriam aplicada a etiqueta pretendida. Ficheiro de API, levando a ID de etiqueta, lidaria com os restantes para ficheiros que cumpram os critérios do cliente.
 
 - Sua organização fornece uma solução de prevenção de perda de dados baseada em serviços e/ou um CASB que monitoriza aplicações SaaS para a atividade de arquivos. Para reduzir o risco de perda de dados ou exposição em que os dados estão protegidos com MIP, seu serviço tem de ser capaz de analisar o conteúdo de ficheiros protegidos. Usando a API de ficheiros para os formatos suportados, quando o serviço é um utilizador com privilégios, pode remover a proteção, procure o conteúdo restrito ou conteúdo confidencial, descartar o resultado de texto sem formatação e aplicar uma regra de serviço para o relatório ou remediar o risco de se encontrar.
+
+## <a name="next-steps"></a>Passos Seguintes
+
+Agora que tem uma ideia geral de APIs de MIP disponíveis e como eles são usados, prosseguir [conceitos de objeto de perfil e de motor](concept-profile-engine-cpp.md). Esses conceitos são fundamentais e aplicam a todos os conjuntos de API de MIP.

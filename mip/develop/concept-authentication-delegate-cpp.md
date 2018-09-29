@@ -1,20 +1,19 @@
 ---
 title: Conceitos - implementação de delegado de autenticação (C++)
 description: Este artigo ajuda-o a compreender como implementar um delegado de autenticação em C++.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: a282d6a996cd1fd6a14b06fc9294f7aed793420c
-ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
+ms.openlocfilehash: 9a9256d4c67845f43eeb1598926ea5c02f07f822
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47215081"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47445738"
 ---
-# <a name="implementing-an-authentication-delegate-c"></a>Implementação de um delegado de autenticação (C++)
+# <a name="microsoft-information-protection-sdk---implementing-an-authentication-delegate-c"></a>SDK - implementando um delegado de autenticação (C++) do Microsoft Information Protection
 
 O SDK de MIP implementar um delegado de autenticação para lidar com os desafios de autenticação e a responder com um token. Não em si implementa aquisição do token. O processo de aquisição do token é cargo do desenvolvedor e é feito ao expandir a `mip::AuthDelegate` classe, especificamente o `AcquireOAuth2Token` função de membro.
 
@@ -111,6 +110,5 @@ bool AuthDelegateImpl::AcquireOAuth2Token(
 
 Para concluir a implementação de autenticação, é necessário criar o código por trás do `AcquireToken()` função. Os exemplos abaixo discutem algumas formas de adquirir o token.
 
-- [Exemplo de aquisição do token simples/PowerShell]()
-- [Exemplo de aquisição do token de Python]()
-- [Exemplo de autenticação do node. js]()
+- [Exemplo de aquisição do token simples/PowerShell](concept-authentication-acquire-token-ps.md)
+- [Exemplo de aquisição do token de Python](concept-authentication-acquire-token-py.md)

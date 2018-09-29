@@ -1,20 +1,19 @@
 ---
 title: Conceitos - conceitos básicos do SDK do MIP - perfil e de motor
 description: Este artigo ajuda-o a compreender os conceitos SDK core chamados o perfil e o mecanismo, que são criados durante a inicialização do aplicativo.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 9477e38a837736c39a9b7d772db3ef0f3d72f1d2
-ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
+ms.openlocfilehash: 6f11944e7cceed39423af2a8104ce044d1f6eec6
+ms.sourcegitcommit: 823a14784f4b34288f221e3b3cb41bbd1d5ef3a6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47214394"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47453423"
 ---
-# <a name="profile-and-engine-objects"></a>Objetos de perfil e de motor
+# <a name="microsoft-information-protection-sdk---profile-and-engine-object-concepts"></a>Conceitos de objeto do SDK - perfil e de motor do Microsoft Information Protection
 
 ## <a name="profiles"></a>Perfis
 
@@ -22,9 +21,9 @@ O perfil é a classe de raiz para todas as operações no SDK do MIP. Antes de u
 
 Existem três tipos de perfil no SDK do MIP:
 
-- [`Profile`](https://docs.microsoft.com/en-us/azure/information-protection/develop/mip/class_mip_profile): A classe de perfil para a API de política de MIP.
-- [`ProtectionProfile`](https://docs.microsoft.com/en-us/azure/information-protection/develop/mip/class_mip_protectionprofile): A classe de perfil para a API de proteção de MIP.
-- [`FileProfile`](https://docs.microsoft.com/en-us/azure/information-protection/develop/mip/class_mip_fileprofile): A classe de perfil para a API de ficheiros MIP.
+- [`PolicyProfile`](reference/class_mip_policyprofile.md): A classe de perfil para a API de política de MIP.
+- [`ProtectionProfile`](reference/class_mip_protectionprofile.md): A classe de perfil para a API de proteção de MIP.
+- [`FileProfile`](reference/class_mip_fileprofile.md): A classe de perfil para a API de ficheiros MIP.
 
 A API utilizada na aplicação de consumo irá determinar a classe que perfil deve ser utilizado.
 
@@ -39,9 +38,9 @@ O próprio perfil fornece as seguintes funcionalidades:
 
 - `Path`: Caminho de ficheiro em que o registo, telemetria e outras estado persistente é armazenado.
 - `useInMemoryStorage`: Um bool que define se o estado deve ser armazenado na memória, ou no disco.
-- `authDelegate`: Um ponteiro compartilhado da classe `mip::AuthDelegate`. ([TBD - conceitos de autenticação]())
-- `consentDelegate`: Um ponteiro compartilhado da classe `mip::ConsentDelegate`. ([TBD - conceitos de autenticação]())
-- `observer`: Um ponteiro compartilhado para o [ `Profile::Observer` ]() implementação.
+- `authDelegate`: Um ponteiro compartilhado da classe `mip::AuthDelegate`. 
+- `consentDelegate`: Um ponteiro compartilhado da classe `mip::ConsentDelegate`. 
+- `observer`: Um ponteiro compartilhado para o perfil `Observer` implementação (na `PolicyProfile`, `ProtectionProfile`, e `EngineProfile`).
 - `applicationInfo`: Um `mip::ApplicationInfo` objeto. Informações sobre a aplicação que está a consumir o SDK.
 
 ## <a name="engines"></a>Mecanismos de
@@ -51,12 +50,11 @@ O ficheiro, perfil e APIs de proteção, mecanismos de fornecem uma interface pa
 Existem três classes de motor no SDK, um para cada API. A lista seguinte mostra as classes de motor e algumas das funções associadas a cada:
 
 - [`mip::ProtectionEngine`]
-  - (TBD) - detalhes aqui.
-- [`mip::PolicyEngine`](https://docs.microsoft.com/en-us/azure/information-protection/develop/mip/class_mip_policyengine)
+- [`mip::PolicyEngine`](reference/class_mip_policyengine.md)
   - `ListSensitivityLabels()`: Obtém a lista de etiquetas para o mecanismo de carregá-lo.
   - `GetSensitivityLabel()`: Obtém o rótulo de conteúdo existente.
   - `ComputeActions()`: Fornecido com um ID de etiqueta e opcionais metadados, devolve a lista de ações que deve ocorrer para um item específico.
-- [`mip::FileEngine`](https://docs.microsoft.com/en-us/azure/information-protection/develop/mip/class_mip_fileengine)
+- [`mip::FileEngine`](reference/class_mip_fileengine.md)
   - `ListSensitivityLabels()`: Obtém a lista de etiquetas para o mecanismo de carregá-lo.
   - `CreateFileHandler()`: Cria um `mip::FileHandler` para um ficheiro específico ou fluxo.
 
@@ -105,4 +103,11 @@ Este método permite que o aplicativo ser criterioso sobre o uso de memória, pe
 
 ## <a name="next-steps"></a>Passos Seguintes
 
-Em seguida, leia sobre [observadores](concept-async-observers.md), e como eles são usados para fornecer notificações de eventos para eventos assíncronos.
+- Em seguida, saiba mais sobre [conceitos de autenticação](concept-authentication-cpp.md) e [observadores](concept-async-observers.md). MIP fornece um modelo de autenticação extensível, enquanto os observadores são utilizados para fornecer notificações de eventos para eventos assíncronos. Ambos são fundamentais e aplicam a todos os conjuntos de API de MIP.
+- Em seguida, trabalhar com os conceitos de perfil e um mecanismo para o ficheiro, a política e a APIs de proteção
+  - [Conceitos de perfil de API de ficheiros](concept-profile-engine-file-profile-cpp.md)
+  - [Conceitos de motor de API de ficheiros](concept-profile-engine-file-engine-cpp.md)
+  - [Conceitos de perfil de política de API](concept-profile-engine-file-profile-cpp.md)
+  - [Conceitos de motor de política de API](concept-profile-engine-file-engine-cpp.md)
+  - [Conceitos de perfil de API de proteção](concept-profile-engine-file-profile-cpp.md)
+  - [Conceitos de motor de API de proteção](concept-profile-engine-file-engine-cpp.md)  

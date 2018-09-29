@@ -1,3 +1,18 @@
+---
+title: classe ConsentDelegate
+description: Referência para a classe ConsentDelegate
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: 841049b1e6b369eb2f6a34d9701ed34eca028af6
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446367"
+---
 # <a name="class-consentdelegate"></a>classe ConsentDelegate 
 Delegado, consentimento operações relacionadas com.
 Este delegado é implementado por uma aplicação de cliente para saber quando uma notificação de pedido de consentimento deverá ser apresentada ao utilizador.

@@ -1,20 +1,19 @@
 ---
 title: Conceitos - o objeto de motor de política de API
 description: Este artigo ajuda-o a compreender os conceitos em todo o objeto de motor de política, o que é criada durante a inicialização do aplicativo.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 7d2fa73eed70cd1c1b87be47f622951d2d61dc4b
-ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
+ms.openlocfilehash: 07e0fc59e0ed5ec1fc66fe3179fce07dfcb687d1
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47215324"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47445279"
 ---
-# <a name="policy-api-engine"></a>Motor de política de API
+# <a name="microsoft-information-protection-sdk---policy-api-engine-concepts"></a>SDK - conceitos de motor de política de API do Microsoft Information Protection
 
 `mip::PolicyEngine` implementa todas as operações que podem realizar a API de política, com exceção de carregar o perfil. 
 
@@ -34,7 +33,7 @@ Como melhor prática, o primeiro parâmetro, **id**, deve ser algo que permite q
 
 ### <a name="implementation-add-the-policy-engine"></a>Implementação: Adicionar o motor de política
 
-Para adicionar o mecanismo, mas vamos voltar para o padrão de promessa/futuro usado para [o perfil de carga](). Em vez de criar a promessa de `mip::Profile`, vamos utilizar `mip::PolicyEngine`.
+Para adicionar o mecanismo, mas vamos voltar para o padrão de promessa/futuro usado para carregar o perfil. Em vez de criar a promessa de `mip::Profile`, vamos utilizar `mip::PolicyEngine`.
 
 ```cpp
 

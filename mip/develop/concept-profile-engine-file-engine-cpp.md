@@ -1,32 +1,31 @@
 ---
 title: Conceitos - o objeto de motor de API de ficheiros
 description: Este artigo ajuda-o a compreender os conceitos em todo o objeto de motor de arquivo, o que é criada durante a inicialização do aplicativo.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 5a2e8702b1ace1df2e45224b9b0d76f4c7cb8c77
-ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
+ms.openlocfilehash: 9ccea755c83b570aa17ff4d30d98783f4bef79e5
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47215171"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446605"
 ---
-# <a name="file-api-engine"></a>Motor de API de ficheiros
+# <a name="microsoft-information-protection-sdk---file-api-engine-concepts"></a>SDK - conceitos de motor de API de ficheiros do Microsoft Information Protection
 
 O `mip::FileEngine` na API de ficheiros do SDK do MIP fornece uma interface para todas as operações que são executadas em nome de uma identidade especificada. Será adicionado um mecanismo para cada utilizador que inicia sessão para o aplicativo e todas as operações que o motor de execute será executada no contexto de identidade.
 
 O `FileEngine` tem duas responsabilidades principais: listagem etiquetas para um usuário autenticado e a criação de manipuladores para realizar operações de ficheiros em nome do utilizador de ficheiros. 
 
 - [`mip::FileEngine`](reference/class_mip_fileengine.md)
-  - `ListSensitivityLabels()`: Obtém a lista de etiquetas para o mecanismo de carregá-lo.
-  - `CreateFileHandler()`: Cria um `mip::FileHandler` para um ficheiro específico ou fluxo.
+- `ListSensitivityLabels()`: Obtém a lista de etiquetas para o mecanismo de carregá-lo.
+- `CreateFileHandler()`: Cria um `mip::FileHandler` para um ficheiro específico ou fluxo.
 
 ## <a name="add-a-file-engine"></a>Adicionar um mecanismo de ficheiro
 
-Conforme explicado na [conceitos - motor]() página, um motor de pode ter dois Estados - `CREATED` ou `LOADED`. Se não for um desses dois Estados, não existe. Para criar e carregar um Estado, só é necessário fazer uma chamada única para `FileProfile::LoadAsync`. Se o motor de já existir no Estado em cache, será `LOADED`. Se não existir, será `CREATED` e `LOADED`. `CREATED` indica que o aplicativo tem todas as informações do serviço necessário para carregar o motor. `LOADED` indica que todas as estruturas de dados necessárias para aproveitar o mecanismo foram criadas na memória.
+Conforme descrito nos [objetos de perfil e de motor](concept-profile-engine-cpp.md), um motor de pode ter dois Estados - `CREATED` ou `LOADED`. Se não for um desses dois Estados, não existe. Para criar e carregar um Estado, só é necessário fazer uma chamada única para `FileProfile::LoadAsync`. Se o motor de já existir no Estado em cache, será `LOADED`. Se não existir, será `CREATED` e `LOADED`. `CREATED` indica que o aplicativo tem todas as informações do serviço necessário para carregar o motor. `LOADED` indica que todas as estruturas de dados necessárias para aproveitar o mecanismo foram criadas na memória.
 
 ### <a name="create-file-engine-settings"></a>Criar definições de motor de ficheiro
 
@@ -42,7 +41,7 @@ Como melhor prática, o primeiro parâmetro, `id`, deve ser algo que permite que
 
 ### <a name="add-the-file-engine"></a>Adicionar o mecanismo de ficheiro
 
-Para adicionar o mecanismo, mas vamos voltar para o padrão de promessa/futuro usado para [o perfil de carga](). Em vez de criar a promessa de `mip::FileProfile`, é criado usando `mip::FileEngine`.
+Para adicionar o mecanismo, mas vamos voltar para o padrão de promessa/futuro usado para carregar o perfil. Em vez de criar a promessa de `mip::FileProfile`, é criado usando `mip::FileEngine`.
 
 ```cpp
   //auto profile will be std::shared_ptr<mip::FileProfile>
@@ -107,7 +106,5 @@ A coleção de `mip::Label` devolvido pelo `GetSensitivityLabels()` pode ser uti
 
 ## <a name="next-steps"></a>Passos Seguintes
 
-Agora que o perfil é carregado, o mecanismo adicionado, e temos etiquetas, podemos adicionar um manipulador para começar a leitura, gravação ou remover etiquetas de ficheiros.
-
-- [Criar um manipulador de arquivo]()
+Agora que o perfil é carregado, o mecanismo adicionado, e temos etiquetas, podemos adicionar um manipulador para começar a leitura, gravação ou remover etiquetas de ficheiros. Ver [manipuladores de ficheiros no SDK do MIP](concept-handler-file-cpp.md).
 

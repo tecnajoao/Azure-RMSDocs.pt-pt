@@ -1,10 +1,25 @@
+---
+title: classe mip etiqueta
+description: Referência para a classe mip da etiqueta
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: 2a80748430df83a16a4d5ee716344d17ce7deee4
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446282"
+---
 # <a name="class-miplabel"></a>classe mip::Label 
 Abstração para um único rótulo do Microsoft Information Protection.
   
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
- público const Std:: String & GetId() const  |  Obter a etiqueta de ID.
+ público const Std:: String & GetId() const  |  Obter o ID da etiqueta.
  público const Std:: String & GetName() const  |  Obtenha o nome de etiqueta.
  público const Std:: String & GetDescription() const  |  Obter a descrição da etiqueta.
  público const Std:: String & const getcolor)  |  Obtenha a cor que da etiqueta deve ser exibida.
@@ -17,10 +32,10 @@ Std:: vector const público < std::shared_ptr<Label>> & GetChildren() const  |  
 ## <a name="members"></a>Membros
   
 ### <a name="getid"></a>GetId
-Obter a etiqueta de ID.
+Obter o ID da etiqueta.
 
   
-**Devolve**: O id de etiqueta.
+**Devolve**: O ID da etiqueta.
   
 ### <a name="getname"></a>GetName
 Obtenha o nome de etiqueta.

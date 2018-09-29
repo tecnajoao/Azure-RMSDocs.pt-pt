@@ -1,18 +1,17 @@
 ---
 title: Início rápido – inicialização para clientes de proteção de informações da Microsoft (MIP) SDK C++
 description: Um guia de início rápido que mostra como escrever a lógica de inicialização para um cliente de proteção de informações da Microsoft (MIP) SDK de aplicações.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 9405f98ea2b1be79a4de8b487b407fbebc8fe923
-ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
+ms.openlocfilehash: d687c1165ed61741fda8b89a9ed5bd55ad54a705
+ms.sourcegitcommit: 823a14784f4b34288f221e3b3cb41bbd1d5ef3a6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47214949"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47453440"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Início rápido: Inicialização de aplicações de cliente (C++)
 
@@ -47,22 +46,22 @@ Primeiro, criar e configurar a solução do Visual Studio e o projeto, sobre a q
 2. Configure as definições do projeto:
    - Na **Explorador de soluções**, clique com o botão direito do rato no nó do projeto (diretamente sob o nó superior/solução) e selecione **propriedades**. 
    - À parte superior direita dos **Property Pages** caixa de diálogo, clique em **do Configuration Manager...** . No **Configuration Manager** caixa de diálogo, defina a "configuração da solução Active Directory" como **depurar**e de destino "plataforma de solução Active Directory" para **x64**. Clique em **fechar** quando terminar.
-   - Sob **propriedades de configuração**, selecione a **VC + + Directories** nó.
-   - Selecione o **incluir diretórios** linha, em seguida, clique na lista pendente à direita, em seguida, **< editar... >** e introduza os caminhos para o SDK incluem subdiretórios (. h) no campo superior. Especifique os caminhos completos para `file\include`, `protection\include`, `upe\include` subdiretórios (mas não mais aprofundada), no caminho onde instalou o SDK. Clique em **OK**. 
+   - Sob **propriedades de configuração** no painel esquerdo, selecione a **VC + + Directories** nó.
+   - Selecione o **incluir diretórios** linha, em seguida, clique na lista pendente à direita, em seguida, **< editar... >** e introduza os caminhos para o SDK incluem subdiretórios (. h) no campo superior. Especifique os caminhos completos para `file\include`, `protection\include`, `upe\include` subdiretórios (mas não mais aprofundada), no caminho onde instalou o SDK. Pode criar uma nova linha para cada ou separá-los com um ponto e vírgula (`;`) numa única linha. Clique em **OK**. 
 
-        [![Criação de solução do Visual Studio](media/quick-app-initialization-cpp/set-include-lib-path-properties.png)](media/quick-app-initialization-cpp/set-include-lib-path-properties.png#lightbox)
+        [![Visual Studio definir propriedades de caminho](media/quick-app-initialization-cpp/set-include-lib-path-properties.png)](media/quick-app-initialization-cpp/set-include-lib-path-properties.png#lightbox)
 
    - Repita o passo anterior para o **Library Directories** linha, introduzindo os caminhos para os subdiretórios de bibliotecas estáticas binário (lib) do SDK. Certifique-se de que utiliza os caminhos que correspondem à configuração de compilação atual para a sua solução. Neste início rápido, especifique os caminhos absolutos ou relativos para os `file\bins\debug\amd64`, `protection\bins\debug\amd64`, `upe\bins\debug\amd64` subdiretórios.
 
-   - Sob **propriedades de configuração**, abra o **vinculador** nó e selecione o **entrada** nó. 
+   - Sob **propriedades de configuração** no painel esquerdo, abra o **vinculador** nó e selecione o **entrada** nó. 
    - Selecione o **Additional Dependencies** linha, em seguida, clique na lista pendente à direita, em seguida, **< editar... >**. Aqui adicionar os nomes das bibliotecas estáticas do SDK. Adicionar `mip_protection_sdk.lib;mip_file_sdk.lib;mip_upe_sdk.lib;` à lista de bibliotecas, no campo superior. Clique em **OK**. 
    - Clique em **OK** sobre o **páginas de propriedades** caixa de diálogo quando terminar.
 
-     [![Criação de solução do Visual Studio](media/quick-app-initialization-cpp/set-static-libs.png)](media/quick-app-initialization-cpp/set-static-libs.png#lightbox)
+     [![Visual Studio defina bibliotecas estáticas](media/quick-app-initialization-cpp/set-static-libs.png)](media/quick-app-initialization-cpp/set-static-libs.png#lightbox)
 
-## <a name="implement-an-observer-class"></a>Implementar uma classe de observador
+## <a name="implement-an-observer-class-to-monitor-the-file-profile-and-engine-objects"></a>Implementar uma classe de observador para controlar os objetos de perfil e o mecanismo de ficheiro
 
-Agora, crie uma implementação básica para uma classe de observador, ao expandir o SDK `mip::FileProfile::Observer` classe. O observador é instanciado e mais tarde, utilizado pelo perfil de ficheiros e objetos do mecanismo de ficheiro.
+Agora, crie uma implementação básica de uma classe de observador de perfil do ficheiro, ao expandir o SDK `mip::FileProfile::Observer` classe. O observador é instanciado e utilizado mais tarde, para monitorizar o carregamento do objeto de perfil do ficheiro e adicionar o objeto de motor para o perfil.
 
 1. Adicione uma nova classe ao seu projeto, o que gera arquivos de cabeçalho /. h e de implementação /. cpp para:
 
@@ -127,7 +126,7 @@ Agora, crie uma implementação básica para uma classe de observador, ao expand
 
 ## <a name="implement-an-authentication-delegate"></a>Implementar um delegado de autenticação
 
-O SDK de MIP implementa a autenticação utilizando extensibility de classe, que fornece um mecanismo de partilhar o trabalho de autenticação com a aplicação de cliente. O cliente tem de adquirir um acesso adequado de OAuth2 token e fornecido para o SDK de MIP em tempo de execução. 
+O SDK de MIP implementa a autenticação utilizando extensibility de classe, que fornece um mecanismo de partilhar o trabalho de autenticação com a aplicação de cliente. O cliente tem de adquirir um token de acesso de OAuth2 adequado e fornecer para o SDK de MIP em tempo de execução. 
 
 Agora, criar uma implementação para um delegado de autenticação, ao expandir o SDK `mip::AuthDelegate` classe e substituindo/implementando o `mip::AuthDelegate::AcquireOAuth2Token()` função virtual pura. O delegado de autenticação é instanciado e mais tarde, utilizado pelo perfil de ficheiros e objetos do mecanismo de ficheiro.
 
@@ -174,7 +173,7 @@ Agora, criar uma implementação para um delegado de autenticação, ao expandir
 
      bool AuthDelegateImpl::AcquireOAuth2Token(const mip::Identity& identity, const OAuth2Challenge& challenge, OAuth2Token& token) 
      {
-            // TODO: replace with token acquisition code
+            // TODO: replace with token acquisition code, using mAppId, identity, authority, and resourceURI
             const string authority = challenge.GetAuthority();
             const string resourceURI = challenge.GetResource();
             string accessToken = "<access-token>";
@@ -256,11 +255,11 @@ Conforme mencionado, o objeto de perfil e de motor são necessários para SDK os
    int main()
    {
      // Construct/initialize objects used by the application's profile object
-     ApplicationInfo appInfo{"0edbblll-8773-44de-b87c-b8c6276d41eb",    // ApplicationInfo object (App ID, friendly name)
-                 "AppInitialization Quickstart" };
+     ApplicationInfo appInfo{"<application-id>",    // ApplicationInfo object (App ID, friendly name)
+                 "<friendly-name>" };
      auto profileObserver = make_shared<ProfileObserver>();         // Observer object                  
      auto authDelegateImpl = make_shared<AuthDelegateImpl>(         // Authentication delegate object (App ID)
-                 "0edbblll-8773-44de-b87c-b8c6276d41eb");
+                 "<application-id>");
      auto consentDelegateImpl = make_shared<ConsentDelegateImpl>(); // Consent delegate object
  
      // Construct/initialize profile object
@@ -278,21 +277,51 @@ Conforme mencionado, o objeto de perfil e de motor são necessários para SDK os
      auto profile = profileFuture.get();
 
      // Construct/initialize engine object
-     FileEngine::Settings engineSettings("1",       // User-defined engine ID
-       "Client data",                               // User-defined engine state        
+     FileEngine::Settings engineSettings("<engine-id>",     // User-defined engine ID
+       "<engine-state>",                                // User-defined engine state        
        "en-US");                                    // Locale (default = en-US)
 
-     // Set up promise/future connect for async engine operations; add engine to profile asynchronously
+     // Set up promise/future connection for async engine operations; add engine to profile asynchronously
      auto enginePromise = make_shared<promise<shared_ptr<FileEngine>>>();
      auto engineFuture = enginePromise->get_future();
      profile->AddEngineAsync(engineSettings, enginePromise);
+     std::shared_ptr<FileEngine> engine; 
+     try
+     {
+       engine = engineFuture.get();             // triggers AcquireOAuth2Token() call
+     }
+     catch (const std::exception& e)
+     {
+       cout << "An exception occurred... is the access token incorrect/expired?\n\n"
+        << e.what() << "'\n";
+       system("pause");
+       return 1;
+     }
 
-     return 0;
-   }
+      return 0;
+     }
 
    ``` 
 
-3. Agora fazer uma compilação final do aplicativo e resolva quaisquer erros. Seu código deve criar com êxito, mas não irá ainda funciona corretamente enquanto não concluir o próximo início rápido.
+3. Substitua os valores de marcador de posição no código-fonte que acabou de colar, com os seguintes valores:
+
+   | Marcador de posição | Valor |
+   |:----------- |:----- |
+   | \<id da aplicação\> | O ID da aplicação do Azure AD atribuída à aplicação registado em "configuração de MIP SDK e configuração" (2 instâncias).  |
+   | \<nome amigável\> | Um nome amigável definido pelo utilizador para a sua aplicação. |
+   | \<id do motor\> | Um ID definida pelo utilizador atribuído para o motor. |
+   | \<Estado do motor\> | Estado definido pelo utilizador para ser associado com o motor. |
+
+
+4. Agora fazer uma compilação final do aplicativo e resolva quaisquer erros. Seu código deve criar com êxito, mas não irá ainda funciona corretamente enquanto não concluir o próximo início rápido. Se executar o aplicativo, verá uma exceção semelhante ao seguinte:
+
+   ```cmd
+   An exception occurred... is the access token incorrect/expired?
+
+   Failed acquiring policy, Request failed with http status code: 401, x-ms-diagnostics: [2000001;reason="OAuth token submitted with the request can not be parsed.";error_category="invalid_token"], correlationId:[5b731x67-6521-4cd8-b911-00009ab9cbez]'
+   
+   Press any key to continue . . .
+   ```
 
 ## <a name="next-steps"></a>Passos Seguintes
 

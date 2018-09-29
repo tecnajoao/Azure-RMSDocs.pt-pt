@@ -1,20 +1,20 @@
 ---
-title: classe mip InternalError
-description: Referência para a classe mip InternalError
+title: classe mip PolicySyncError
+description: Referência para a classe mip PolicySyncError
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: fc0babd7cff6dae6d322ba4f49fe5330a73255e5
+ms.openlocfilehash: 29b107f94303d39a233b798996d1ee9fd28b3b40
 ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445602"
+ms.locfileid: "47446966"
 ---
-# <a name="class-mipinternalerror"></a>classe mip::InternalError 
-Erro interno. Este erro é apresentado quando algo inesperado acontece durante a execução.
+# <a name="class-mippolicysyncerror"></a>classe mip::PolicySyncError 
+Falha ao tentar sincronizar dados de política.
   
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                

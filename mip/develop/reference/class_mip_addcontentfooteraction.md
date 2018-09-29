@@ -1,3 +1,18 @@
+---
+title: classe mip AddContentFooterAction
+description: Referência para a classe mip AddContentFooterAction
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: 73f641d965c3cf0236919557128af2ed07705672
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47445840"
+---
 # <a name="class-mipaddcontentfooteraction"></a>classe mip::AddContentFooterAction 
 Uma classe de ação que especifica a adicionar um rodapé de conteúdo ao documento.
   
@@ -43,7 +58,7 @@ Obter o tamanho de tipo de letra utilizado para apresentar o rodapé de conteúd
 Obtenha a cor do tipo de letra utilizada para apresentar o rodapé de conteúdo.
 
   
-**Devolve**: cor da fonte como uma cadeia de caracteres (e.g."#000000").
+**Devolve**: cor da fonte como uma cadeia de caracteres (por exemplo, "#000000").
   
 ### <a name="getalignment"></a>GetAlignment
 Obtenha o alinhamento de rodapé.
@@ -57,7 +72,7 @@ Obtenha o alinhamento de rodapé.
 Obtenha a margem de rodapé na parte inferior.
 
   
-**Devolve**: um número inteiro que representa as margens na parte inferior do documento (por exemplo, 10 mm).
+**Devolve**: as margens na parte inferior do documento (por exemplo, 10 mm).
   
 ### <a name="actiontype"></a>ActionType
 Obter o tipo de [ação](class_mip_action.md).

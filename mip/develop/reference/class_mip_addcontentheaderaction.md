@@ -1,3 +1,18 @@
+---
+title: classe mip AddContentHeaderAction
+description: Referência para a classe mip AddContentHeaderAction
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: bc60fe32005a0c6bc8088ab7687a3f711ae7a99a
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47445653"
+---
 # <a name="class-mipaddcontentheaderaction"></a>classe mip::AddContentHeaderAction 
 Uma classe de ação que especifica o cabeçalho de conteúdo a adicionar.
   
@@ -43,7 +58,7 @@ Obter o tamanho de tipo de letra utilizado para apresentar o cabeçalho de conte
 Obtenha a cor do tipo de letra utilizada para apresentar o cabeçalho de conteúdo.
 
   
-**Devolve**: cor da fonte como uma cadeia de caracteres (e.g."#000000").
+**Devolve**: cor da fonte como uma cadeia de caracteres (por exemplo, #000000 ").
   
 ### <a name="getalignment"></a>GetAlignment
 Obtenha o alinhamento do cabeçalho.
@@ -57,7 +72,7 @@ Obtenha o alinhamento do cabeçalho.
 Obter a margem do cabeçalho da parte inferior.
 
   
-**Devolve**: um número inteiro que representa as margens na parte inferior do documento (por exemplo, 10 mm).
+**Devolve**: as margens na parte inferior do documento (por exemplo, 10 mm).
   
 ### <a name="actiontype"></a>ActionType
 Obter o tipo de [ação](class_mip_action.md).

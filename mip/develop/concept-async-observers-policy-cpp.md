@@ -1,24 +1,23 @@
 ---
 title: Conceitos - observadores de política de API no SDK do MIP.
 description: O SDK de MIP foi concebido para ser quase que totalmente assíncrono. Este artigo ajuda-o a compreender como os observadores de API de política são implementados e utilizados para assincronicidade.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: fbdb1e7d1bf6a99228e810dca4d9532c79849d48
-ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
+ms.openlocfilehash: 50bc3bfd9bcba8e90a386a6e0444f65389bcfa76
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47214263"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47445806"
 ---
-# <a name="policy-api-observers"></a>Observadores de política de API
+# <a name="microsoft-information-protection-sdk---policy-api-observers"></a>SDK - observadores de política de API do Microsoft Information Protection
 
 O SDK da política de API contém uma classe de observador. Membros de observador são virtual e devem ser substituídos para lidar com retornos de chamada para operações assíncronas.
 
-- [`mip::Profile::Observer`](reference/class_mip_Profile_observer.md)
+- [`mip::PolicyProfile::Observer`](reference/class_mip_policyprofile_observer.md)
 
 Quando uma operação assíncrona for concluída, o `OnXxx()` denomina-se a função de membro correspondente para o resultado. Os exemplos são `OnLoadSuccess()`, `OnLoadFailure()`, e `OnAddEngineSuccess()` para `mip::Profile::Observer`.
 
@@ -77,6 +76,3 @@ void ProfileObserver::OnLoadFailure(const std::exception_ptr& error, const std::
 
 Ao realizar qualquer operação assíncrona, a implementação de observador é passada para o construtor de definições ou a função async em si. 
 
-## <a name="next-steps"></a>Passos Seguintes
-
-[TBD - ligação para criar uma `mip::Profile`, carregar um `mip::ProfileEngine`e realizar operações de ficheiros com `mip::FileHandler`]()

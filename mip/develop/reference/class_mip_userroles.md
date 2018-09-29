@@ -1,5 +1,20 @@
+---
+title: classe mip funções de utilizador
+description: Referência para a classe mip funções de utilizador
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: 1cc1da6f443fa22095f216bb2ec2f0e51e75bf78
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47445262"
+---
 # <a name="class-mipuserroles"></a>classe mip::UserRoles 
-Representa um grupo de utilizadores e as funções associadas a eles.
+Um grupo de utilizadores e as funções associadas a eles.
   
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                

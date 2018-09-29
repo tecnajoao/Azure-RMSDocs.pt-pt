@@ -1,20 +1,19 @@
 ---
 title: Conceitos - o objeto de motor de API de proteção
 description: Este artigo ajuda-o a compreender os conceitos em todo o objeto de motor de proteção, o que é criada durante a inicialização do aplicativo.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 4f8e8f2d1cd0328eb12c37b7318bbc15b700d303
-ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
+ms.openlocfilehash: da0c50de6a818fcd8beda0483696ba433ce22149
+ms.sourcegitcommit: 823a14784f4b34288f221e3b3cb41bbd1d5ef3a6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47215159"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47453321"
 ---
-# <a name="protection-api-engine"></a>Motor de API de proteção
+# <a name="microsoft-information-protection-sdk---protection-api-engine-concepts"></a>SDK - conceitos de motor de API de proteção do Microsoft Information Protection
 
 ## <a name="implementation-add-a-protection-engine"></a>Implementação: Adicionar um mecanismo de proteção
 
@@ -44,7 +43,7 @@ No entanto, geralmente, passa numa variável para identidade, em vez de embutir 
 
 ### <a name="implementation-add-the-protection-engine"></a>Implementação: Adicionar o mecanismo de proteção
 
-Para adicionar o mecanismo, mas vamos voltar para o padrão de promessa/futuro usado para [o perfil de carga](). Em vez de criar a promessa de `mip::ProtectionProfile`, vamos utilizar `mip::ProtectionEngine`.
+Para adicionar o mecanismo, mas vamos voltar para o padrão de promessa/futuro usado para carregar o perfil. Em vez de criar a promessa de `mip::ProtectionProfile`, vamos utilizar `mip::ProtectionEngine`.
 
 ```cpp
 
@@ -99,6 +98,4 @@ Mapeando modelos em etiquetas só pode ser feito através da política de API, e
 
 ## <a name="next-steps"></a>Passos Seguintes
 
-Agora que o perfil é carregado, o mecanismo adicionado, e temos modelos, podemos adicionar um manipulador para começar a leitura, gravação ou remover modelos de ficheiros.
-
-[Criar um manipulador de proteção]()
+Agora que o perfil é carregado, o mecanismo adicionado, e temos modelos, podemos adicionar um manipulador para começar a leitura, gravação ou remover modelos de ficheiros. Ver [conceitos de manipulador de proteção](concept-handler-protection-cpp.md).

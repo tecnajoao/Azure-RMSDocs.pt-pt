@@ -1,20 +1,19 @@
 ---
 title: Conceitos - autenticação no SDK do MIP.
 description: Este artigo ajuda-o a compreender como o SDK de MIP implementa a autenticação e os requisitos para aplicativos de cliente fornecer a lógica de aquisição do token de acesso de OAuth2.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 5f7a8409d79802fe96d26bf85ad073c53d8f76b3
-ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
+ms.openlocfilehash: 7e0fb9066af69793592e10b029d5af7d67f84993
+ms.sourcegitcommit: 823a14784f4b34288f221e3b3cb41bbd1d5ef3a6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47214952"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47453355"
 ---
-# <a name="authentication"></a>Autenticação 
+# <a name="microsoft-information-protection-sdk---authentication-concepts"></a>SDK - conceitos de autenticação do Microsoft Information Protection
 
 A autenticação no SDK do MIP é executada ao estender a classe `mip::AuthDelegate` para implementar o método de autenticação pretendido. `mip::AuthDelegate` contém:
 
@@ -34,7 +33,6 @@ A autenticação no SDK do MIP é executada ao estender a classe `mip::AuthDeleg
 
 O `mip::Consent` enum classe implementa uma abordagem de fácil de usar que permite que os desenvolvedores de aplicativos para proporcionar uma experiência de consentimento personalizadas com base no ponto final que está sendo acessado pelo SDK. A notificação pode informar a um utilizador dos dados que serão recolhidos, como obter os dados removidos ou qualquer outra informação que é exigida por lei ou a conformidade de políticas. Assim que o utilizador concede consentimento, a aplicação pode continuar. 
 
-(TBD) Informações do GDPR aqui? (TBD) Detalhes da exceção?
 
 ### <a name="implementation"></a>Implementação
 
@@ -43,11 +41,6 @@ Consentimento é implementado por expandir os `mip::Consent` classe e a implemen
 O objeto derivado de `mip::Consent` é passado para o `mip::FileProfile::Settings` ou `mip::ProtectionProfile::Settings` construtor.
 
 Quando um usuário executar uma operação que exigiria que fornece o consentimento, as chamadas SDK o `GetUserConsent` método, passando o URL de destino como o parâmetro. É nesse método onde um implementaria exibir as informações necessárias para o usuário, permitindo-lhes tomar uma decisão sobre se é ou não consentimento para utilizar o serviço. 
-
-As operações que irão acionar o fluxo de consentimento são:
-
-- Um
-- Dois
 
 ### <a name="consent-options"></a>Opções de consentimento
 

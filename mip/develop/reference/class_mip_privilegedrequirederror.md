@@ -1,10 +1,25 @@
+---
+title: classe mip PrivilegedRequiredError
+description: Referência para a classe mip PrivilegedRequiredError
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: e55228cb48ff779e271695d4f6461be115d05b2f
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47445755"
+---
 # <a name="class-mipprivilegedrequirederror"></a>classe mip::PrivilegedRequiredError 
 Etiqueta atual foi atribuída como uma operação com privilégios (o equivalente a uma operação de administrador), portanto não pode ser substituído.
   
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
- char pública const * what() const  |  Recebe uma mensagem de erro cstring.
+ char pública const * what() const  |  Obter a mensagem de erro.
 público std::shared_ptr<Error> const clone)  |  Clone o erro.
  público GetErrorType() virtual ErrorType const  |  Obter o tipo de erro.
  público virtual const Std:: String & GetErrorName() const  |  Obtenha o nome do erro.
@@ -14,10 +29,10 @@ público std::shared_ptr<Error> const clone)  |  Clone o erro.
 ## <a name="members"></a>Membros
   
 ### <a name="what"></a>o que
-Recebe uma mensagem de erro cstring.
+Obter a mensagem de erro.
 
   
-**Devolve**: um cstring err mensagem
+**Devolve**: A mensagem de erro
   
 ### <a name="error"></a>Error
 Clone o erro.

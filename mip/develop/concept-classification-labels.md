@@ -1,20 +1,19 @@
 ---
 title: Conceitos - etiquetas de classificação
 description: Este artigo ajuda-o a compreender como os rótulos são usados para classificação de dados.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 44a7ede22d115baa75eb6583c02cbd77c0ad131c
-ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
+ms.openlocfilehash: a32193194b9806dbab5066db27192265566ca44f
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47215195"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446656"
 ---
-# <a name="classification-labels"></a>Etiquetas de classificação
+# <a name="microsoft-information-protection-sdk---classification-label-concepts"></a>SDK - conceitos de etiqueta de classificação do Microsoft Information Protection
 
 Como parte de uma estratégia de proteção de dados abrangente, as organizações devem implementar um sistema de classificação de dados que descreve os níveis de sensibilidade dos dados dentro da organização e, em seguida, mapear os atributos de documento para essas classificações.
 
@@ -63,8 +62,6 @@ Em outras palavras, o `ContentLabel` é um `Label` que tenha sido aplicada a uma
 
 O SDK também suporte a adição de metadados adicionais para documentos sob a forma de pares chave/valor. Se sua organização tiver classificações secundárias ou etiquetas que descrevem as informações de forma mais específica, o SDK pode ser utilizado para aplicar esses metadados.
 
-[Saiba aqui]() para obter mais informações sobre a aplicação de metadados.
+## <a name="next-steps"></a>Passos Seguintes
 
-## <a name="links"></a>Links
-
-Referência à classificação: https://www.gpo.gov/fdsys/pkg/FR-2010-01-05/html/E9-31418.htm
+Para obter mais detalhes sobre o sistema de classificação do Governo dos Estados Unidos, consulte https://www.gpo.gov/fdsys/pkg/FR-2010-01-05/html/E9-31418.htm.

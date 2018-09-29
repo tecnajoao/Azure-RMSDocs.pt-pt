@@ -1,18 +1,17 @@
 ---
 title: Instalação do SDK de proteção de informações da Microsoft (MIP) e configuração
 description: Fornece os pré-requisitos de instalação e configuração, para poder utilizar aplicações criadas com o SDK do Microsoft Information Protection.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 299d965ac3a9b081d99b015b46dbd69f3d67dca9
-ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
+ms.openlocfilehash: 9257c72de223565e5259600d1680e78da0b7f544
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47215042"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446418"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Instalação do SDK de proteção de informações da Microsoft (MIP) e configuração 
 
@@ -21,8 +20,8 @@ O guia de introdução e tutoriais são centradas em torno da criação de aplic
 Certifique-se de que consulte os tópicos seguintes antes de começar:
 
 - [O que é o Centro de conformidade e de segurança do Office 365?](https://docs.microsoft.com/office365/securitycompliance/security-and-compliance)
-- [O que é o Azure Information Protection?](https://docs.microsoft.com/azure/information-protection/understand-explore/what-is-information-protection)
-- [Como funciona a proteção no Azure Information Protection?](https://docs.microsoft.com/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
+- [O que é o Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
+- [Como funciona a proteção no Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 
 O SDK de MIP é suportado nas seguintes plataformas:
 
@@ -45,7 +44,7 @@ Muitas das amostras do SDK exigem acesso a uma subscrição do Office 365. Se ai
 | Office 365 Enterprise E3 ou E5 | https://products.office.com/business/office-365-enterprise-e3-business-software |
 | Enterprise Mobility e Security E3 ou E5 | https://www.microsoft.com/cloud-platform/enterprise-mobility-security |
 | Azure Information Protection Premium P1 ou P2 | https://azure.microsoft.com/pricing/details/information-protection/ |
-| O Microsoft 365 E3, E5 ou em F1 | https://www.microsoft.com/en-us/microsoft-365/compare-all-microsoft-365-plans | 
+| O Microsoft 365 E3, E5 ou em F1 | https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans | 
 
 ## <a name="configure-your-client-workstation"></a>Configurar a sua estação de trabalho do cliente
 
@@ -171,16 +170,6 @@ Quando terminar, o registo de aplicação e permissões de API devem ser semelha
 
 
 Para obter mais detalhes sobre como adicionar APIs e as permissões para um registo, consulte [atualização de aplicativos, configurar uma aplicação de cliente para acessar a seção APIs web](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#updating-an-application). Aqui encontrará informações sobre como adicionar as APIs e as permissões necessárias por uma aplicação cliente.  
-
-## <a name="tbd-define-label-taxonomy-and-protection-settings"></a>TBD: Definir a taxonomia de etiqueta e as definições de proteção?
-
-Ver [conceitos de etiqueta de classificação](concept-classification-labels.md).
-
-* Fornecem ligações para configuração de SCC.
-* Fornecem detalhes sobre os direitos necessários para etiquetas de config.
-  - Administrador global, administrador de conformidade ou administrador do AIP
-* Fornecem detalhes sobre a etiquetagem taxonomia melhores práticas.
-  - Fornecem ligações para documentos do AIP, conversa do Tom Ignite 2017
 
 ## <a name="next-steps"></a>Passos Seguintes
 

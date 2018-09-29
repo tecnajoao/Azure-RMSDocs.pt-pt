@@ -1,3 +1,18 @@
+---
+title: classe mip ProtectionEngine definições
+description: Referência para a classe mip ProtectionEngine definições
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: f61e86a87ecfea21bc9d02f4e55f3fbe663e9b80
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446707"
+---
 # <a name="class-mipprotectionenginesettings"></a>classe mip::ProtectionEngine::Settings 
 [As definições](class_mip_protectionengine_settings.md) utilizada pelo [ProtectionEngine](class_mip_protectionengine.md) durante sua criação e ao longo de seu ciclo de vida.
   
@@ -6,8 +21,8 @@
 --------------------------------|---------------------------------------------
  Definições de públicas (const identidade e identidade, const Std:: String & clientData, const Std:: String e Localidade)  |  [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) construtor para a criação de um novo mecanismo.
  Definições de públicas (const Std:: String & engineId, const Std:: String & clientData, const Std:: String e Localidade)  |  [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) construtor para carregar um motor de existente.
- público const Std:: String & GetEngineId() const  |  Obtém o mecanismo de ID.
- SetEngineId void pública (const Std:: String & engineId)  |  Define o id de motor.
+ público const Std:: String & GetEngineId() const  |  Obtém o ID do motor.
+ SetEngineId void pública (const Std:: String & engineId)  |  Define o ID do motor.
  Identidade de const pública e GetIdentity() const  |  Obtém o usuário que identidade associada com o motor.
  SetIdentity void pública (const identidade e de identidade)  |  Define o usuário que identidade associada com o motor.
  público const Std:: String & GetClientData() const  |  Obtém dados personalizados especificados pelo cliente.
@@ -15,10 +30,10 @@
  público const Std:: String & GetLocale() const  |  Obtém a localidade no mecanismo de qual dados serão escritos.
 SetCustomSettings void pública (Std:: vector const < std::pair < Std:: String, Std:: String >> & valor)  |  Conjuntos de pares nome/valor utilizados para testar e experimentação.
 público const Std:: vector < std::pair < Std:: String, Std:: String >> & GetCustomSettings() const  |  Obtém pares nome/valor utilizados para testar e experimentação.
- SetSessionId void pública (const Std:: String & sessionId)  |  Define o id de sessão do mecanismo, utilizado para a correlação de registo ou de telemetria.
- público const Std:: String & GetSessionId() const  |  Obtém o id de sessão do motor.
- SetCloudEndpointBaseUrl void pública (const Std:: String & cloudEndpointBaseUrl)  |  Define o cloud base url de ponto final, utilizado para especificar a instância de cloud. Se não definir será valor predefinido.
- público const Std:: String & GetCloudEndpointBaseUrl() const  |  Url base associados com pontos finais de proteção.
+ SetSessionId void pública (const Std:: String & sessionId)  |  Define o ID de sessão do mecanismo, utilizado para a correlação de registo ou de telemetria.
+ público const Std:: String & GetSessionId() const  |  Obtém o ID de sessão de motor.
+ SetCloudEndpointBaseUrl void pública (const Std:: String & cloudEndpointBaseUrl)  |  Opcionalmente, define o URL base do ponto final de cloud.
+ público const Std:: String & GetCloudEndpointBaseUrl() const  |  Obtém o URL de base da cloud utilizado por todos os pedidos de serviço, se for especificado.
   
 ## <a name="members"></a>Membros
   
@@ -26,7 +41,7 @@ público const Std:: vector < std::pair < Std:: String, Std:: String >> & GetCus
 [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) construtor para a criação de um novo mecanismo.
 
 Parâmetros:  
-* **identidade**: identidade que será associada [ProtectionEngine](class_mip_protectionengine.md)
+* **identidade**: identidade, que será associada [ProtectionEngine](class_mip_protectionengine.md)
 
 
 * **clientData**: dados de cliente personalizável que podem ser armazenados com o mecanismo quando descarregadas e podem ser obtidos a partir de um mecanismo de carregá-lo. 
@@ -51,16 +66,16 @@ Parâmetros:
 
   
 ### <a name="getengineid"></a>GetEngineId
-Obtém o mecanismo de ID.
+Obtém o ID do motor.
 
   
-**Devolve**: id de motor
+**Devolve**: ID do motor
   
 ### <a name="setengineid"></a>SetEngineId
-Define o id de motor.
+Define o ID do motor.
 
 Parâmetros:  
-* **engineId**: id de motor.
+* **engineId**: o motor de ID.
 
 
   
@@ -113,29 +128,30 @@ Obtém pares nome/valor utilizados para testar e experimentação.
 **Devolve**: pares nome/valor utilizados para testar e experimentação
   
 ### <a name="setsessionid"></a>SetSessionId
-Define o id de sessão do mecanismo, utilizado para a correlação de registo ou de telemetria.
+Define o ID de sessão do mecanismo, utilizado para a correlação de registo ou de telemetria.
 
 Parâmetros:  
-* **sessionId**: id de sessão do mecanismo, utilizado para a correlação de registo/telemetria
+* **sessionId**: ID de sessão, para a correlação de registo ou de telemetria do motor
 
 
   
 ### <a name="getsessionid"></a>GetSessionId
-Obtém o id de sessão do motor.
+Obtém o ID de sessão de motor.
 
   
-**Devolve**: id de sessão do motor
+**Devolve**: o motor de identificação da sessão
   
 ### <a name="setcloudendpointbaseurl"></a>SetCloudEndpointBaseUrl
-Define o cloud base url de ponto final, utilizado para especificar a instância de cloud. Se não definir será valor predefinido.
+Opcionalmente, define o URL base do ponto final de cloud.
 
 Parâmetros:  
-* **cloudEndpointBaseUrl**: **representa** a instância de cloud para pedir, pois podem haver outras instâncias de cloud de serviço
+* **cloudEndpointBaseUrl**: o URL de base utilizado por todos os pedidos de serviço (por exemplo, "https://api.aadrm.com")
 
 
+Se o base URL não for especificado, será determinada por meio de pesquisa de DNS de domínio a identidade de motor.
   
 ### <a name="getcloudendpointbaseurl"></a>GetCloudEndpointBaseUrl
-Url base associados com pontos finais de proteção.
+Obtém o URL de base da cloud utilizado por todos os pedidos de serviço, se for especificado.
 
   
-**Devolve**: CloudEndpointBaseUrl
+**Devolve**: URL de Base

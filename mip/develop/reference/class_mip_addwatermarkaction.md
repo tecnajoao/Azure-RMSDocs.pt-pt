@@ -1,3 +1,18 @@
+---
+title: classe mip AddWatermarkAction
+description: Referência para a classe mip AddWatermarkAction
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: f49bd7aa16ae12aef240d05fff6acf507ddc341d
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446095"
+---
 # <a name="class-mipaddwatermarkaction"></a>classe mip::AddWatermarkAction 
 Uma classe de ação que especifica o limite de tamanho de adição.
   
@@ -48,7 +63,7 @@ Obter o tamanho da fonte usado para exibir a marca d'água.
 Obtenha a cor da fonte usada para exibir a marca d'água.
 
   
-**Devolve**: cor da fonte como uma cadeia de caracteres (e.g."#000000").
+**Devolve**: cor da fonte como uma cadeia de caracteres (por exemplo, "#000000").
   
 ### <a name="actiontype"></a>ActionType
 Obter o tipo de [ação](class_mip_action.md).

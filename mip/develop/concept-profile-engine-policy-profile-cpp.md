@@ -1,20 +1,19 @@
 ---
 title: Conceitos - o objeto de perfil de API de política
 description: Este artigo ajuda-o a compreender os conceitos em todo o objeto de perfil de política, o que é criada durante a inicialização do aplicativo.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 030b2edc81a20f15254aa30bd362f99a65de039c
-ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
+ms.openlocfilehash: b229148c3028f4478f83cbbc928e19666c2f44b5
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47215261"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47445432"
 ---
-# <a name="policy-api-profile"></a>Perfil de política de API
+# <a name="microsoft-information-protection-sdk---policy-api-profile-concepts"></a>SDK - conceitos de perfil de política de API do Microsoft Information Protection
 
 O `mip::Profile` têm de ser carregados antes de quaisquer operações de API de política podem ser executadas.
 
@@ -22,14 +21,14 @@ Os dois exemplos abaixo mostram como criar o objeto de profileSettings utiliza o
 
 ## <a name="load-a-profile"></a>Um perfil de carga
 
-Agora que o [ `ProfileObserver` ]() e [ `AuthDelegateImpl` ]() são definidas, vamos utilizar o-los para criar uma instância `mip::Profile`. Criar a `mip::Profile` objeto requer [ `mip::Profile::Settings` ](https://docs.microsoft.com/en-us/azure/information-protection/develop/mip/class_mip_Profile_settings).
+Agora que o `ProfileObserver` e `AuthDelegateImpl` são definidas, vamos utilizar o-los para criar uma instância `mip::PolicyProfile`. Criar a `mip::PolicyProfile` objeto requer [ `mip::PolicyProfile::Settings` ](reference/class_mip_PolicyProfile_settings.md).
 
 ### <a name="profilesettings-parameters"></a>Parâmetros de Profile::Settings
 
 - `std::string path`: Caminho de ficheiro em que o registo, telemetria e outras estado persistente é armazenado.
 - `bool useInMemoryStorage`: Define se é ou não a todos os Estados devem ser armazenados na memória, em vez de no disco.
-- `std::shared_ptr<mip::AuthDelegate> authDelegate`: Um ponteiro compartilhado da classe `mip::AuthDelegate` (consulte [secção autenticação]())
-- `std::shared_ptr<mip::Profile::Observer> observer`: Um ponteiro compartilhado para o [ `Profile::Observer` ]() implementação.
+- `std::shared_ptr<mip::AuthDelegate> authDelegate`: Um ponteiro compartilhado da classe `mip::AuthDelegate` 
+- `std::shared_ptr<mip::PolicyProfile::Observer> observer`: Um ponteiro compartilhado para o `PolicyProfile::Observer` implementação.
 - `mip::ApplicationInfo applicationInfo`: objeto. Utilizado para definir as informações sobre a aplicação que está a consumir o SDK.
 
 Os dois exemplos abaixo mostram como criar o objeto de profileSettings utiliza o armazenamento local para o armazenamento de estado, assim como na memória apenas. Ambos partem do princípio de que o `authDelegateImpl` objeto já foi criado.

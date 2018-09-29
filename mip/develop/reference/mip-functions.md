@@ -1,16 +1,32 @@
+---
+title: Funções
+description: Funções
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: 3bb9cd594022085c24c45bde428cb11f6734caab
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446520"
+---
 # <a name="functions"></a>Funções
 
- Funções (âmbito)                        | Descrições                                
---------------------------------|---------------------------------------------
+| Funções (âmbito)              | Descrições                                |
+|--------------------------------|---------------------------------------------|
+**Comuns** |
+público const Std:: String & GetCustomSettingPolicyDataName()       |  Nome da definição para especificar explicitamente os dados de política.
 público const Std:: String & GetCustomSettingExportPolicyFileName()       |  Nome da definição para especificar explicitamente o caminho do ficheiro para exportar dados de política de SCC.
 público const Std:: String & GetCustomSettingPolicyDataFile()       |  Nome da definição para especificar explicitamente o caminho do ficheiro de dados de política.
-público const Std:: String & GetCustomSettingPolicyDataName()       |  Nome da definição para especificar explicitamente os dados de política.
-**funções de Mip** |
+ **funções de Mip** |
 std::shared_ptr público < mip::Stream > CreateStreamFromBuffer (uint8_t * buffer, tamanho de int64_t const)       |  Cria um [Stream](class_mip_stream.md) de uma memória intermédia.
 std::shared_ptr público < mip::Stream > CreateStreamFromStdStream (const std::shared_ptr < std::iostream > & stdIOStream)       |  Cria um [Stream](class_mip_stream.md) de um std::iostream.
 std::shared_ptr público < mip::Stream > CreateStreamFromStdStream (const std::shared_ptr < std::istream > & stdIStream)       |  Cria um [Stream](class_mip_stream.md) de um std::istream.
 std::shared_ptr público < mip::Stream > CreateStreamFromStdStream (const std::shared_ptr < std::ostream > & stdOStream)       |  Cria um [Stream](class_mip_stream.md) de um std::ostream.
-ReleaseAllResources() de void MIP_API pública       |  Todos os recursos (threads, etc.) antes do Desligamento de versão.
+público ReleaseAllResources() void       |  Todos os recursos (threads, etc.) antes do Desligamento de versão.
 **funções de Mip::Rights**|
 público Std:: String AuditedExtract()       |  Obtém de cadeias de caracteres identificador para "auditado extrair" à direita.
 público Std:: String Comment()       |  Obtém de cadeias de caracteres identificador de "Comentários" à direita.
@@ -75,16 +91,6 @@ Parâmetros:
   
 **Devolve**: [Stream](class_mip_stream.md) um std::istream de encapsulamento de aplicações
   
-### <a name="mipcreatestreamfromstdstreamostream"></a>Mip::CreateStreamFromStdStream(ostream)
-
-Cria um [Stream](class_mip_stream.md) de um std::ostream.
-
-Parâmetros:  
-* **stdOStream**: std::ostream de segurança
-
-  
-**Devolve**: [Stream](class_mip_stream.md) um std::ostream de encapsulamento de aplicações
-  
 ### <a name="mipcreatestreamfromstdstreamiostream"></a>Mip::CreateStreamFromStdStream(iostream)
 
 Cria um [Stream](class_mip_stream.md) de um std::iostream.
@@ -94,14 +100,29 @@ Parâmetros:
   
 **Devolve**: [Stream](class_mip_stream.md) um std::iostream de encapsulamento de aplicações
   
+### <a name="mipcreatestreamfromstdstreamostream"></a>Mip::CreateStreamFromStdStream(ostream)
+
+Cria um [Stream](class_mip_stream.md) de um std::ostream.
+
+Parâmetros:  
+* **stdOStream**: std::ostream de segurança
+  
+**Devolve**: [Stream](class_mip_stream.md) um std::ostream de encapsulamento de aplicações
+  
 ### <a name="mipreleaseallresources"></a>Mip::ReleaseAllResources
 
-Todos os recursos (threads, etc.) antes do Desligamento de versão.
+Todos os recursos (threads, etc.) antes do encerramento da versão.  
 
-Se as bibliotecas de dinâmicas de MIP estão carregados com atraso por uma aplicação, esta função tem de ser chamada antes do aplicativo explicitamente descarregamento dessas bibliotecas MIP para evitar o deadlock. Por exemplo, no win32, esta função tem de ser chamada antes de todas as chamadas para o descarregamento de explicitamente MIP DLLs via FreeLibrary ou \__FUnloadDelayLoadedDLL2. Aplicativos deverá liberar referências a todos os objetos de MIP (por exemplo, perfis, motores, manipuladores) antes de chamar essa função.
+Se as bibliotecas de dinâmicas de MIP estão carregados com atraso por uma aplicação, esta função tem de ser chamada antes da aplicação dessas bibliotecas MIP o descarregamento explicitamente para evitar o deadlock. Por exemplo, no win32, esta função tem de ser chamada antes de todas as chamadas para explicitamente descarregar MIP DLLs via FreeLibrary ou \__FUnloadDelayLoadedDLL2. Aplicativos deverá liberar referências a todos os objetos de MIP (por exemplo, manipuladores de perfis, motores,) antes de chamar essa função.
 
 ## <a name="functions-miprights"></a>Funções (mip::rights)
 
+### <a name="owner"></a>Proprietário
+Obtém o identificador para o "proprietário" certo de cadeia.
+
+  
+**Devolve**: identificador de cadeia de caracteres para o "proprietário" certo
+  
 ### <a name="auditedextract"></a>AuditedExtract
 Obtém de cadeias de caracteres identificador para "auditado extrair" à direita.
 
@@ -150,18 +171,11 @@ Obtém de cadeias de caracteres identificador para '' direito extrair.
   
 **Devolve**: identificador de cadeia de caracteres para "extrair' direita
   
-
 ### <a name="forward"></a>Reencaminhar
 Obtém de cadeias de caracteres identificador para a direita 'Encaminhamento'.
 
   
 **Devolve**: cadeia de caracteres de identificador de direito de "reencaminhar"
-  
-### <a name="owner"></a>Proprietário
-Obtém o identificador para o "proprietário" certo de cadeia.
-
-  
-**Devolve**: identificador de cadeia de caracteres para o "proprietário" certo
   
 ### <a name="print"></a>Imprimir
 Obtém o identificador para a direita "impressão" de cadeia.
@@ -187,30 +201,34 @@ Obtém cadeia certo identificador para 'view'.
   
 **Devolve**: cadeia de identificador para 'view' à direita
   
+
 ## <a name="functions-miproles"></a>Funções (mip::roles)
 
 ### <a name="author"></a>Autor
 Obtém de cadeias de caracteres identificador para a função de "autor".
 
+Um autor pode ver, editar, copiar e imprimir o conteúdo.
   
-**Devolve**: identificador de cadeia de caracteres para a função de "autor" autor pode ver, editar, copiar e imprimir o conteúdo.
+**Devolve**: identificador de cadeia de caracteres para a função de "autor"
   
 ### <a name="coowner"></a>CoOwner
 Obtém o identificador para a função de 'coproprietário' de cadeia.
 
+Coproprietário tem todas as permissões
   
-**Devolve**: identificador de cadeia de caracteres para os coproprietário de função A 'coproprietário' tem todas as permissões
+**Devolve**: identificador de cadeia de caracteres para a função de 'coproprietário'
 
 ### <a name="reviewer"></a>Revisor
 Obtém o identificador para a função de "revisor" de cadeia.
 
+Um revisor pode ver e editar o conteúdo. Não é possível copiar ou imprimir.
   
-**Devolve**: identificador de cadeia de caracteres para a função de "revisor" um revisor pode visualizar e editar o conteúdo. Não é possível copiar ou imprimir.
-
+**Devolve**: identificador de cadeia de caracteres para a função de "revisor"
+  
 ### <a name="viewer"></a>Visualizador
 Obtém o identificador para a função de "Visualizador" de cadeia.
 
+Um visualizador só pode ver o conteúdo. Não é possível editar, copiar ou imprimir.
   
-**Devolve**: identificador de cadeia de caracteres para a função de "Visualizador" um visualizador só pode ver o conteúdo. Não é possível editar, copiar ou imprimir.
-  
+**Devolve**: identificador de cadeia de caracteres para a função de "Visualizador"
   

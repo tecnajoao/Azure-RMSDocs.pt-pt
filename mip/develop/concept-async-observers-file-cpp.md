@@ -1,20 +1,19 @@
 ---
 title: Conceitos - observadores de API de ficheiros no SDK do MIP.
 description: O SDK de MIP foi concebido para ser quase que totalmente assíncrono. Este artigo ajuda-o a compreender como os observadores de API de ficheiros são implementados e utilizados para assincronicidade.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 94389d552d4d42a2cedcacab76b1c98fcca9893c
-ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
+ms.openlocfilehash: d150e59c98300bfe20ced0b1a453a899558d1f27
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47214291"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446265"
 ---
-# <a name="file-api-observers"></a>Observadores de API de ficheiros
+# <a name="microsoft-information-protection-sdk---file-api-observers"></a>SDK - observadores de API de ficheiros do Microsoft Information Protection
 
 A API de ficheiros contém duas classes de observador. Membros de observador são virtuais e podem ser substituídos para lidar com retornos de chamada do evento.
 
@@ -81,7 +80,7 @@ Quando vamos criar uma instância de qualquer classe do SDK ou utilizar uma fun�
 
 ## <a name="filehandler-observer-implementation"></a>Implementação de FileHandler observador
 
-O observador de perfil, semelhante a `mip::FileHandler` implementa uma `mip::FileHandler::Observers` classe para lidar com notificações de eventos assíncronos durante operações de arquivo. A implementação é semelhante ao que detalhados acima. `FileHandlerObserver` parcialmente definida abaixo. A implementação completa pode ser encontrada na nossa [repositório de exemplo do GitHub](). LISTA DE TAREFAS: LIGAÇÃO
+O observador de perfil, semelhante a `mip::FileHandler` implementa uma `mip::FileHandler::Observers` classe para lidar com notificações de eventos assíncronos durante operações de arquivo. A implementação é semelhante ao que detalhados acima. `FileHandlerObserver` parcialmente definida abaixo. 
 
 ### <a name="filehandlerobserverh"></a>file_handler_observer.h
 
@@ -122,6 +121,3 @@ void FileHandlerObserver::OnCreateFileHandlerFailure(const std::exception_ptr& e
 //TODO: override remaining member functions inherited from mip::FileHandler::Observer
 ```
 
-## <a name="next-steps"></a>Passos Seguintes
-
-[TBD - ligação para criar uma `mip::FileProfile`, carregar um `mip::FileEngine`e executar operações de arquivo com `mip::FileHandler`.]()

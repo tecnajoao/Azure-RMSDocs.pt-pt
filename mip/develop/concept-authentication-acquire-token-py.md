@@ -1,18 +1,17 @@
 ---
 title: Conceitos - com o Python para adquirir um token de acesso.
 description: Este artigo ajuda-o a compreender como utilizar Python para adquirir um token de acesso de OAuth2. Isso é necessária para a implementação do delegado de autenticação.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: c574edb5f272b08f1fc13cc0e48fca6aa4d111a9
-ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
+ms.openlocfilehash: a7577bab58b701e945bea9829d7ed31b41909f88
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47215234"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47445789"
 ---
 # <a name="acquire-an-access-token-python"></a>Adquirir um token de acesso (Python)
 
@@ -24,13 +23,13 @@ Esse código não se destina a utilização de produção, mas pode ser utilizad
 
 Para executar o exemplo abaixo, o seguinte tem de ser concluído:
 
-- Instalar o Python 2.7
-- Implemente [utils.h/cpp]() no seu projeto TODO: ligação para a origem no repositório de exemplo
-- [auth.PY]() devem ser adicionados ao seu projeto e existe no mesmo diretório que os binários no build.
+- Instale o Python 2.7.
+- Implemente utils.h/cpp no seu projeto. 
+- auth.PY devem ser adicionados ao seu projeto e coexistem no mesmo diretório que os binários no build.
 
 ## <a name="sampleauthacquiretoken"></a>exemplo:: auth::AcquireToken()
 
-Na [exemplo de autenticação simples](), demonstramos uma simples `AcquireToken()` função que demorou sem parâmetros e devolveu um disco rígido codificado valor do token. Neste exemplo, podemos irá sobrecarregar AcquireToken() aceitam parâmetros de autenticação e chamar um script de Python externo para devolver o token.
+No exemplo a autenticação simples, demonstramos uma simples `AcquireToken()` função que demorou sem parâmetros e devolveu um disco rígido codificado valor do token. Neste exemplo, podemos irá sobrecarregar AcquireToken() aceitam parâmetros de autenticação e chamar um script de Python externo para devolver o token.
 
 ### <a name="authh"></a>auth.h
 
@@ -121,8 +120,6 @@ namespace sample {
 ## <a name="python-script"></a>Script de Python
 
 Este script adquire os tokens de autenticação diretamente através de um pedido de http simples. Isso é incluído apenas como um meio para adquirir os tokens de autenticação para utilização por aplicações de exemplo e não se destina a ser utilizado no código de produção. O script funciona apenas em inquilinos que suportam a autenticação http nome de utilizador/palavra-passe antigo sem formatação. MFA ou a autenticação baseada em certificado irá falhar.
-
-Lista de tarefas: Deve ter é simplesmente uma ligação para o repositório em vez de um documento? 
 
 ```python
 import getopt

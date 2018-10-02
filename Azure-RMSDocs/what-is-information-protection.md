@@ -4,16 +4,16 @@ description: Uma descrição geral sobre o serviço Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2018
+ms.date: 09/30/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: e2d67b103f727d6e5c5004844b83d13fe0296989
-ms.sourcegitcommit: 7d477c418f3e5d8950c73af154c1575c84791ccc
+ms.openlocfilehash: 0984cfc7b71c30d4a333b8cc6e24d8c3fbef216b
+ms.sourcegitcommit: 5cda0c64b486280ff0581e7f190d198b013a87d6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47403068"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47593766"
 ---
 # <a name="what-is-azure-information-protection"></a>O que é o Azure Information Protection?
 
@@ -127,17 +127,17 @@ Recursos adicionais: [informações e suporte do Azure Information Protection](i
 
 ### <a name="microsoft-ignite"></a>O Microsoft Ignite
 
-Microsoft Ignite 2018 em Orlando tem muitas sessões que estejam identificadas [do Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection). Todas as sessões são registradas para que se não puder comparecer há, ainda pode ver as sessões posteriormente. Maiores cinco sessões que recomendamos que:
+Microsoft Ignite 2018 em Orlando tinha muitas sessões que estejam identificadas [do Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection). Todas as sessões foram registradas, para se não conseguiu participar nos lá, ainda pode ver as sessões posteriormente. Maiores cinco sessões que recomendamos que:
 
 - [BRK2006 - utilização Microsoft Information Protection (MIP) para ajudar a proteger os seus dados confidenciais em qualquer lugar, em todo o ciclo](https://myignite.techcommunity.microsoft.com/sessions/64297) -veja o [vídeo do YouTube](https://youtu.be/gmHVF-1cLXA)
  
 - [BRK3002 - Noções básicas sobre como capacidades do Microsoft Information Protection funcionam em conjunto para proteger informações confidenciais em dispositivos, aplicações e serviços](https://myignite.techcommunity.microsoft.com/sessions/64299) -veja o [vídeo do YouTube](https://youtu.be/kL9Y7NGTyQQ)
 
-- [BRK3009 - acelerar a implementação e a adoção de soluções do Microsoft Information Protection](https://myignite.techcommunity.microsoft.com/sessions/64283)
+- [BRK3009 - acelerar a implementação e a adoção de soluções do Microsoft Information Protection](https://myignite.techcommunity.microsoft.com/sessions/64283) -veja o [vídeo do YouTube](https://www.youtube.com/watch?v=JsCyIVyQJmE)
 
-- [BRK3397 - proteger e controlar suas mensagens de e-mail confidenciais com encriptação de mensagens do Office 365](https://myignite.techcommunity.microsoft.com/sessions/64327)
+- [BRK3397 - proteger e controlar suas mensagens de e-mail confidenciais com encriptação de mensagens do Office 365](https://myignite.techcommunity.microsoft.com/sessions/64327) -veja o [vídeo do YouTube](https://www.youtube.com/watch?v=Ld4b4pFua0g)
 
-- [THR2003 - deteção de dados, relatórios de utilização e análise para todos os seus dados com o Microsoft Information Protection](https://myignite.techcommunity.microsoft.com/sessions/64301)
+- [THR2003 - deteção de dados, relatórios de utilização e análise para todos os seus dados com o Microsoft Information Protection](https://myignite.techcommunity.microsoft.com/sessions/64301) -veja o [vídeo do YouTube](https://www.youtube.com/watch?v=nzDIXd0XaeA)
 
 Para um rollup de anúncios que foram feitas neste Ignite, consulte a mensagem de blogue [anúncio da disponibilidade das funcionalidades de proteção de informações para ajudar a proteger os seus dados confidenciais](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 

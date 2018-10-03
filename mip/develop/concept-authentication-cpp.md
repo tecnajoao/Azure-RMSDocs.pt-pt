@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 7e0fb9066af69793592e10b029d5af7d67f84993
-ms.sourcegitcommit: 823a14784f4b34288f221e3b3cb41bbd1d5ef3a6
+ms.openlocfilehash: 288342c467574cf84c60e1211238b65a9e716b6c
+ms.sourcegitcommit: 860955fb2c292b3ca5910cd41095363f58caf553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453355"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48230527"
 ---
 # <a name="microsoft-information-protection-sdk---authentication-concepts"></a>SDK - conceitos de autenticação do Microsoft Information Protection
 
@@ -24,15 +24,19 @@ A autenticação no SDK do MIP é executada ao estender a classe `mip::AuthDeleg
 `mip::AuthDelegate::AcquireOAuth2Token` aceita os seguintes parâmetros e retorna um Booleano indicando se a aquisição do token foi concluída com êxito:
 
 - `mip::Identity`: A identidade do utilizador ou serviço de autenticação, se conhecidos.
-- `mip::AuthDelegate::OAuth2Challenge`: Aceita dois parâmetros, **autoridade** e **recurso**. **Autoridade** é o serviço será gerado contra o token. **Recurso** é o serviço que está a tentar aceder. O SDK processará a passar esses parâmetros para o delegado quando chamado.
-- `mip::AuthDelegate::OAuth2Token`: O resultado de token vamos escrever a este objeto. Serão consumida pelo SDK quando o motor é carregado. Fora da nossa implementação de autenticação, não deve ser necessário obter ou definir este valor em qualquer lugar.
+- `mip::AuthDelegate::OAuth2Challenge`: Aceita dois parâmetros, **autoridade** e **recurso**. **Autoridade** é o serviço será gerado contra o token. **Recurso** é o serviço que está a tentar aceder. O SDK processará passando estes parâmetros para o delegado quando chamado.
+- `mip::AuthDelegate::OAuth2Token`: O resultado de token é escrito para este objeto. Serão consumida pelo SDK quando o motor é carregado. Fora da nossa implementação de autenticação, não deve ser necessário obter ou definir este valor em qualquer lugar.
 
 **Importante:** os aplicativos não chamar `AcquireOAuth2Token` diretamente. O SDK irá chamar essa função, quando necessário.
 
 ## <a name="consent"></a>Consentimento
 
-O `mip::Consent` enum classe implementa uma abordagem de fácil de usar que permite que os desenvolvedores de aplicativos para proporcionar uma experiência de consentimento personalizadas com base no ponto final que está sendo acessado pelo SDK. A notificação pode informar a um utilizador dos dados que serão recolhidos, como obter os dados removidos ou qualquer outra informação que é exigida por lei ou a conformidade de políticas. Assim que o utilizador concede consentimento, a aplicação pode continuar. 
+Azure AD requer um aplicativo a ser dado consentimento, antes de ela for concedida permissão para aceder a recursos protegidas/APIs sob a identidade de uma conta. Consentimento é registado como uma confirmação permanente de permissão no inquilino da conta, para a conta específica (consentimento do utilizador) ou todas as contas (consentimento de administrador). Consentimento ocorre em vários cenários, com base na API que está sendo acessado e as permissões que o aplicativo procura, e a conta utilizada para início de sessão: 
 
+- contas a partir da *mesmo inquilino* onde a aplicação fica registada, se o utilizador ou um administrador não previamente consentir explicitamente acesso por meio do recurso de "Conceder permissões".
+- contas a partir de um *inquilino diferente* se a aplicação fica registada como multi-inquilino e administrador de inquilinos não previamente dar o seu consentimento para todos os utilizadores com antecedência.
+
+O `mip::Consent` enum classe implementa uma abordagem de fácil de usar que permite que os desenvolvedores de aplicativos para proporcionar uma experiência de consentimento personalizadas com base no ponto final que está sendo acessado pelo SDK. A notificação pode informar a um utilizador dos dados que serão recolhidos, como obter os dados removidos ou qualquer outra informação que é exigida por lei ou a conformidade de políticas. Assim que o utilizador concede consentimento, a aplicação pode continuar. 
 
 ### <a name="implementation"></a>Implementação
 

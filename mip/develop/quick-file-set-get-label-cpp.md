@@ -7,12 +7,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: d1e159e2276f5dc76a180711a81e3d0a182eb29e
-ms.sourcegitcommit: 823a14784f4b34288f221e3b3cb41bbd1d5ef3a6
+ms.openlocfilehash: a48ec2e1bbb18fb6398a6960ca8827b91726c7eb
+ms.sourcegitcommit: d5669b9bcc4aebabf64e8891eda4e20ea3acb2a1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453406"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48046942"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Guia de introdução: Definir e obter uma etiqueta de sensibilidade (C++)
 
@@ -22,11 +22,8 @@ Este guia de introdução mostra como usar mais de APIs de arquivo MIP. Utilizar
 
 Se ainda não o fez, certifique-se de que concluir os seguintes pré-requisitos antes de continuar:
 
-- Concluída [início rápido: listar etiquetas de sensibilidade (C++)](quick-file-list-labels-cpp.md) primeiro, que cria uma solução do Visual Studio, de arranque para listar as etiquetas de sensibilidade da organização. Este início rápido se baseia no anterior.
+- Concluída [início rápido: listar etiquetas de sensibilidade (C++)](quick-file-list-labels-cpp.md) primeiro, que cria uma solução do Visual Studio, de arranque para listar as etiquetas de sensibilidade da organização. Isso "Set e get uma etiqueta de sensibilidade" Guia de introdução baseia-se no anterior.
 - Opcionalmente,: Reveja [manipuladores de ficheiros no SDK do MIP](concept-handler-file-cpp.md) conceitos.
-
-> [!IMPORTANT]
-> Se passar muito tempo entre a conclusão do início rápido anterior "Etiquetas de sensibilidade da lista" e neste procedimento, irá expirar o token estático criado no primeiro. Se assim, precisará gerar um novo token e a atualização sua `AcquireOAuth2Token()` novamente a implementação. Ver [atualizar a lógica de aquisição do token com um token de acesso válido](quick-file-list-labels-cpp.md#update-the-token-acquisition-logic-with-a-valid-access-token) para obter mais detalhes.
 
 ## <a name="implement-an-observer-class-to-monitor-the-file-handler-object"></a>Implementar uma classe de observador para monitorizar o objeto do manipulador de arquivo
 
@@ -103,7 +100,7 @@ Adicione lógica para definir e obter uma etiqueta de sensibilidade num ficheiro
 
    using mip::FileHandler;
    ```
-3. Em direção ao final do corpo de `main()`, a seguir a `system("pause");`e acima a `return 0;` instruções (onde parou no início rápido anterior), insira o seguinte código:
+3. Próximo ao final dos `main()` body, veja a seguir `system("pause");` e acima `return 0;` (onde parou no início rápido anterior), insira o seguinte código:
 
    ```cpp
    // Set up async FileHandler for input file operations
@@ -147,7 +144,7 @@ Adicione lógica para definir e obter uma etiqueta de sensibilidade num ficheiro
         auto commitFuture = commitPromise->get_future();
         handler->CommitAsync(filePathOut, commitPromise);
         if (commitFuture.get()) {
-            cout << "Label committed to file: " << filePathOut << endl;
+            cout << "\nLabel committed to file: " << filePathOut << endl;
         }
         else {
             cout << "Failed to label: " + filePathOut << endl;
@@ -180,7 +177,7 @@ Adicione lógica para definir e obter uma etiqueta de sensibilidade num ficheiro
    // Get the label from output file
    try
    {
-        cout << "\nGetting label committed to file: " << filePathOut << endl;
+        cout << "\nGetting the label committed to file: " << filePathOut << endl;
         auto label = handler->GetLabel();
         cout << "Name: " + label->GetLabel()->GetName() << endl;
         cout << "Id: " + label->GetLabel()->GetId() << endl;
@@ -204,28 +201,55 @@ Adicione lógica para definir e obter uma etiqueta de sensibilidade num ficheiro
 
 ## <a name="build-and-test-the-application"></a>Criar e testar a aplicação
 
-Criar e testar a aplicação cliente. Se seu projeto baseia-se e é executada com êxito, deverá ver um resultado na janela da consola, semelhante ao seguinte exemplo: 
+Criar e testar a aplicação cliente. 
 
-```cmd
-Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
-Public : 83867195-f2b8-2ac2-b0b6-6bb73cb33afz
-General : f42a3342-8706-4288-bd31-ebb85995028z
-Confidential : 074e457c-5848-4542-9a6f-34a182080e7z
-Highly Confidential : f55c2dea-db0f-47cd-8520-a52e1590fb6z
-Press any key to continue . . .
+1. Utilizar F6 (**compilar solução**) para criar seu aplicativo de cliente. Não se tiver nenhum erro de compilação, use F5 (**iniciar a depuração**) para executar a sua aplicação.
 
-Applying Label ID f42a3342-8706-4288-bd31-ebb85995028z to c:\Test\Test.docx
-Committing changes
-Label committed to file: c:\Test\Test_labeled.docx
-Press any key to continue . . .
+2. Se seu projeto baseia-se e é executada com êxito, a aplicação irá solicitar um token de acesso, sempre que o SDK chama seu `AcquireOAuth2Token()` método. Como anteriormente a "Lista de etiquetas de sensibilidade" Guia de início rápido, executar o script do PowerShell para adquirir o token de cada vez, usando os valores fornecidos. `AcquireOAuth2Token()` tentará utilizar um token gerado anteriormente, se a autoridade de pedido e os recursos são os mesmos:
 
-Getting label committed to file: c:\Test\Test_labeled.docx
-Name: General
-Id: f42a3342-8706-4288-bd31-ebb85995028z
-Press any key to continue . . .
-```
+   ```cmd
+   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
+   Set $authority to: https://login.windows.net/common/oauth2/authorize
+   Set $resourceUrl to: https://syncservice.o365syncservice.com/
+   Sign in with user account: user1@tenant.onmicrosoft.com
+   Enter access token: <paste-access-token-here>
+   Press any key to continue . . .
 
-Pode verificar a aplicação da etiqueta, ao abrir o documento e inspecionar visualmente as definições de proteção de informações do documento.
+   Sensitivity labels for your organization:
+   Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
+   Public : 83867195-f2b8-2ac2-b0b6-6bb73cb33afz
+   General : f42a3342-8706-4288-bd31-ebb85995028z
+   Confidential : 074e457c-5848-4542-9a6f-34a182080e7z
+   Highly Confidential : f55c2dea-db0f-47cd-8520-a52e1590fb6z
+   Press any key to continue . . .
+
+   Applying Label ID 074e457c-5848-4542-9a6f-34a182080e7z to c:\Test\Test.docx
+   Committing changes
+
+   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
+   Set $authority to: https://login.windows.net/common/oauth2/authorize
+   Set $resourceUrl to: https://aadrm.com
+   Sign in with user account: user1@tenant.onmicrosoft.com
+   Enter access token: <paste-access-token-here>
+   Press any key to continue . . .
+
+   Label committed to file: c:\Test\Test_labeled.docx
+   Press any key to continue . . .
+
+   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
+   Set $authority to: https://login.windows.net/94f69844-8d34-4794-bde4-3ac89ad2b664/oauth2/authorize
+   Set $resourceUrl to: https://aadrm.com
+   Sign in with user account: user1@tenant.onmicrosoft.com
+   Enter access token: <paste-access-token-here>
+   Press any key to continue . . .
+
+   Getting the label committed to file: c:\Test\Test_labeled.docx
+   Name: Confidential
+   Id: 074e457c-5848-4542-9a6f-34a182080e7z
+   Press any key to continue . . .
+   ```
+
+Pode verificar a aplicação da etiqueta, ao abrir o ficheiro de saída e inspecionar visualmente as definições de proteção de informações do documento.
 
 > [!NOTE]
 > Se estiver a etiquetagem um documento do Office, mas não estiver conectado com uma conta de inquilino do Azure Active Directory (AD) em que foi obtido o token de acesso (e rótulos de sensibilidade estão configurados), poderá ser solicitado para início de sessão antes de abrir o documento s popiskem. 

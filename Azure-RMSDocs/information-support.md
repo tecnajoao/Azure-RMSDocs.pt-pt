@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8803d2ab9b5d8f5a2ef224376a50c6c84d968872
-ms.sourcegitcommit: 4e2493d7856dc35bb3f5869fff1276c98bf88192
+ms.openlocfilehash: 145889772dd3d2a8e29967264c1f0f7de7a7c222
+ms.sourcegitcommit: d5669b9bcc4aebabf64e8891eda4e20ea3acb2a1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864123"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48046993"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informações e suporte do Azure Information Protection
 
@@ -64,7 +64,9 @@ Experimente o [bot do Azure Information Protection ajuda](help-bot.md), atualmen
 
 Vídeos a pedido:
 
-- Sessões do Microsoft Ignite 2018 para [do Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection).
+- Sessões do Microsoft Ignite 2018 para [do Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection):
+    
+    - Consulte nossos [principais cinco](what-is-information-protection.md#microsoft-ignite) recomendado sessões.
 
 - Sessões do Microsoft Virtual Academy que incluem [do Azure Information Protection](https://mva.microsoft.com/search/SearchResults.aspx#!q=Azure%20Information%20protection).
 

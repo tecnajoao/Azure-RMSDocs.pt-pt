@@ -7,12 +7,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: a48ec2e1bbb18fb6398a6960ca8827b91726c7eb
-ms.sourcegitcommit: d5669b9bcc4aebabf64e8891eda4e20ea3acb2a1
+ms.openlocfilehash: 651fc73c00f18d06ad1a824337a096331bc7e897
+ms.sourcegitcommit: d677088db8588fb2cc4a5d7dd296e76d0d9a2e9c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046942"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48251748"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Guia de introdução: Definir e obter uma etiqueta de sensibilidade (C++)
 
@@ -207,7 +207,7 @@ Criar e testar a aplicação cliente.
 
 2. Se seu projeto baseia-se e é executada com êxito, a aplicação irá solicitar um token de acesso, sempre que o SDK chama seu `AcquireOAuth2Token()` método. Como anteriormente a "Lista de etiquetas de sensibilidade" Guia de início rápido, executar o script do PowerShell para adquirir o token de cada vez, usando os valores fornecidos. `AcquireOAuth2Token()` tentará utilizar um token gerado anteriormente, se a autoridade de pedido e os recursos são os mesmos:
 
-   ```cmd
+   ```console
    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
    Set $authority to: https://login.windows.net/common/oauth2/authorize
    Set $resourceUrl to: https://syncservice.o365syncservice.com/

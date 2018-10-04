@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 40248694a479632e2554c2d97f775bf99318de88
-ms.sourcegitcommit: d5669b9bcc4aebabf64e8891eda4e20ea3acb2a1
+ms.openlocfilehash: fc8d4b43bae9a7b74edef10947ef5aa22e5d1267
+ms.sourcegitcommit: d677088db8588fb2cc4a5d7dd296e76d0d9a2e9c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046959"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48251782"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Início rápido: Listar etiquetas de sensibilidade (C++)
 
@@ -84,7 +84,7 @@ Por fim, criar e testar a aplicação cliente.
 
 2. Se seu projeto baseia-se e é executada com êxito, a aplicação irá solicitar um token de acesso, sempre que o SDK chama seu `AcquireOAuth2Token()` método. Pode reutilizar um token gerado anteriormente, se lhe for pedido várias vezes e os valores pedidos são os mesmos:
 
-   ```cmd
+   ```console
    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
    Set $authority to: https://login.windows.net/common/oauth2/authorize
    Set $resourceUrl to: https://syncservice.o365syncservice.com/
@@ -107,7 +107,7 @@ Por fim, criar e testar a aplicação cliente.
 
 4. Depois de fornecer os tokens de acesso, a saída do console deve mostrar os rótulos de sensibilidade, semelhantes ao seguinte exemplo:
 
-   ```cmd
+   ```console
    Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
    Public : 83867195-f2b8-2ac2-b0b6-6bb73cb33afz
    General : f42a3342-8706-4288-bd31-ebb85995028z

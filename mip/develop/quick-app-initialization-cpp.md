@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: f3a6c81bb42152926bd2b6f275f6fa45b81acc18
-ms.sourcegitcommit: 860955fb2c292b3ca5910cd41095363f58caf553
+ms.openlocfilehash: f74d457ad50fa0998abc94fdef3d0084ad6c7b17
+ms.sourcegitcommit: d677088db8588fb2cc4a5d7dd296e76d0d9a2e9c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48230544"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48251765"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Início rápido: Inicialização de aplicações de cliente (C++)
 
@@ -327,7 +327,7 @@ Conforme mencionado, o objeto de perfil e de motor são necessários para SDK os
 
 4. Agora fazer uma compilação final do aplicativo e resolva quaisquer erros. Seu código deve criar com êxito, mas não irá ainda funciona corretamente enquanto não concluir o próximo início rápido. Se executar o aplicativo, verá um resultado semelhante ao seguinte. Não terá um token de acesso para fornecer, até concluir o próximo início rápido.
 
-   ```cmd
+   ```console
    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
    Set $authority to: https://login.windows.net/common/oauth2/authorize
    Set $resourceUrl to: https://syncservice.o365syncservice.com/

@@ -4,18 +4,18 @@ description: Algumas perguntas mais frequentes sobre o Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2018
+ms.date: 10/03/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0acb14314fd15d45ee013ef920b51f6427768c81
-ms.sourcegitcommit: 7d477c418f3e5d8950c73af154c1575c84791ccc
+ms.openlocfilehash: e49912fd777a97c51f9ef7b4e7cff5a2aeb2c3ad
+ms.sourcegitcommit: 1cedaa9cefea49775f574f2ede61539bc6f0b813
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47403051"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48794332"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Perguntas mais frequentes sobre o Azure Information Protection
 
@@ -98,6 +98,8 @@ Informações adicionais:
 - Pode querer ajustar a frequência de suas políticas de acesso condicional obterem avaliação. Pode fazê-lo ao configurar a duração do token. Para obter mais informações, consulte [durações de token configuráveis no Azure Active Directory](/azure/active-directory/active-directory-configurable-token-lifetimes).
 
 - Recomendamos que não adiciona as contas de administrador para as políticas de acesso condicional porque estas contas não será capazes de aceder ao painel do Azure Information Protection no portal do Azure.
+
+- Se utilizar a MFA no seu políticas de acesso condicional para colaborar com outras organizações (B2B), tem de utilizar [colaboração B2B do Azure AD](/active-directory/b2b/what-is-b2b) e crie contas de convidado para os utilizadores que pretende partilhar com a da outra organização.
 
 - Se usar muitas aplicações de cloud para o acesso condicional, não poderá ver **Microsoft Azure Information Protection** apresentados na lista para selecionar. Neste caso, utilize a caixa de pesquisa na parte superior da lista. Comece a escrever "Microsoft Azure Information Protection" para filtrar as aplicações disponíveis. Desde que tiver uma subscrição de suporte, em seguida, irá ver **Microsoft Azure Information Protection** para selecionar. 
 

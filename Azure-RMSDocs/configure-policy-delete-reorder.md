@@ -4,16 +4,16 @@ description: Pode eliminar ou reordenar etiquetas do Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: 9589985fa0ab5f80ce78483dedac8c7bc4b9879e
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 0b4631cd5664ba7951db04ce9ba221a19c0674ff
+ms.sourcegitcommit: 1cedaa9cefea49775f574f2ede61539bc6f0b813
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151712"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48794315"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Como eliminar ou reordenar uma etiqueta para o Azure Information Protection
 
@@ -25,7 +25,7 @@ Pode eliminar ou reordenar etiquetas do Azure Information Protection que os util
 
 Quando elimina uma etiqueta que foi aplicada a documentos e e-mails, os utilizadores veem **nenastaveno** para a etiqueta de estado quando estes documentos e e-mails são os próximos aberto pelo cliente do Azure Information Protection. No entanto, os permanecem de informações da etiqueta nos metadados e ele ainda podem ser lidos por serviços que procure estas informações de etiqueta.
 
-Além disso, se a etiqueta eliminada aplicada proteção, essa proteção não é removida. As definições de proteção de etiqueta permanecem e apresentar os **modelos de proteção** secção. Este modelo pode agora ser convertido para uma nova etiqueta ou ligado a uma etiqueta. Enquanto este modelo permanece, não é possível criar uma nova etiqueta com o mesmo nome que a etiqueta que eliminou. Se quiser fazer isso, tem as seguintes opções:
+Além disso, se a etiqueta eliminada aplicada proteção, essa proteção não é removida. As definições de proteção de etiqueta permanecem e apresentar os **modelos de proteção** secção. Este modelo pode agora ser convertido para uma nova etiqueta. Enquanto este modelo permanece, não é possível criar uma nova etiqueta com o mesmo nome que a etiqueta que eliminou. Se quiser fazer isso, tem as seguintes opções:
 
 - Converta o modelo numa etiqueta. 
     

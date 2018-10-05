@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 9257c72de223565e5259600d1680e78da0b7f544
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.openlocfilehash: b8c9d92e33632ef5e05d30ab82a0a823e2e8408e
+ms.sourcegitcommit: 1cedaa9cefea49775f574f2ede61539bc6f0b813
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446418"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48794298"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Instalação do SDK de proteção de informações da Microsoft (MIP) e configuração 
 
@@ -31,10 +31,9 @@ O SDK de MIP é suportado nas seguintes plataformas:
 | Red Hat Enterprise Linux | 7 com devtoolset 7 |
 | Debian  | 9 |
 | macOS   | High Sierra e posterior |
-| Windows | Todas as versões suportadas, 32 e 64 bits |
+| Windows | Todas suportadas versões, 32 bits e 64 bits |
 
 ## <a name="sign-up-for-an-office-365-subscription"></a>Inscreva-se uma subscrição do Office 365
-
 
 Muitas das amostras do SDK exigem acesso a uma subscrição do Office 365. Se ainda não o fez, certifique-se de que inscreva-se um dos seguintes tipos de subscrição:
 
@@ -45,6 +44,10 @@ Muitas das amostras do SDK exigem acesso a uma subscrição do Office 365. Se ai
 | Enterprise Mobility e Security E3 ou E5 | https://www.microsoft.com/cloud-platform/enterprise-mobility-security |
 | Azure Information Protection Premium P1 ou P2 | https://azure.microsoft.com/pricing/details/information-protection/ |
 | O Microsoft 365 E3, E5 ou em F1 | https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans | 
+
+## <a name="configure-sensitivity-labels"></a>Configurar etiquetas de sensibilidade
+
+Se utilizar atualmente o Azure Information Protection, são necessárias etapas para migrar as etiquetas para o Centro de conformidade e de segurança do Office 365. Para obter mais informações sobre o processo, consulte [como migrar as etiquetas do Azure Information Protection para o Centro de conformidade e segurança do Office 365](/azure/information-protection/configure-policy-migrate-labels). 
 
 ## <a name="configure-your-client-workstation"></a>Configurar a sua estação de trabalho do cliente
 
@@ -114,7 +117,7 @@ Em seguida, conclua os seguintes passos para garantir que seu computador cliente
     Install-Package Microsoft.InformationProtection.Policy
     Install-Package Microsoft.InformationProtection.Protection
     ```  
-6. Adicione os caminhos dos binários do SDK (bibliotecas de vínculo dinâmico (. dll)), a variável de ambiente PATH. Isso permite que o dependente. DLLs para ser encontrados em tempo de execução, por aplicações cliente:
+6. Adicione os caminhos dos binários do SDK (bibliotecas de vínculo dinâmico (. dll)), a variável de ambiente PATH. A variável de caminho permite que as DLLs dependentes ser encontrados em tempo de execução, por aplicações cliente:
    - Clique no ícone do Windows no canto inferior esquerdo.
    - Escreva "Caminho" e prima a tecla "Enter", quando vir o **editar as variáveis de ambiente de sistema** show de item.
    - Sobre o **propriedades do sistema** caixa de diálogo, clique em **variáveis de ambiente**.
@@ -148,7 +151,7 @@ Para registar uma conta de aplicação no Azure AD para utilização com os exem
     - **Tipo de aplicação** -selecione "Nativo", como as aplicações demonstradas pelo SDK aplicativos de console instalados nativamente. Aplicativos nativos são considerados "public" clientes por OAuth2, pois estão não é possível para armazenamento/utilizar credenciais de aplicação de forma segura. Ao contrário de um aplicativo "Confidencial" baseado em servidor, como um aplicativo web, que está registado com suas próprias credenciais. 
     - **URI de redirecionamento** - uma vez que o SDK utiliza aplicações de cliente de console simples, utilize um URI no formato `<app-name>://authorize`.
 
-2. Quando terminar, será encaminhado de volta para o **aplicação registada** page de seu novo registo de aplicação. Copie o GUID no **ID da aplicação** campo, pois irá precisar mais tarde. 
+2. Quando terminar, será encaminhado de volta para o **aplicação registada** page de seu novo registo de aplicação. Copie e guarde o GUID no **ID da aplicação** campo, pois irá precisar dele para os inícios rápidos. 
 
 3. Em seguida, clique em **definições** para adicionar as APIs e as permissões para o qual o cliente precisará de acesso. Sobre o **definições** página, clique em **permissões obrigatórias**.
 
@@ -164,14 +167,14 @@ Para registar uma conta de aplicação no Azure AD para utilização com os exem
 
 6. Quando estiver novamente o **permissões obrigatórias** página, clique em **conceder permissões**, em seguida, **Sim**. Este passo dá consentimento prévia para a aplicação com esse registro, para aceder às APIs do sob as permissões especificadas. Se tiver iniciado sessão como administrador global, o consentimento é registrado para todos os utilizadores no inquilino que executam o aplicativo; caso contrário, ele só se aplica a sua conta de utilizador. 
 
-Quando terminar, o registo de aplicação e permissões de API devem ser semelhantes ao seguinte:
+Quando terminar, registo de aplicação e permissões de API devem ter um aspeto semelhantes ao seguinte exemplo:
 
    [![Registo de aplicação do Azure AD](media/setup-mip-client/aad-app-registration.png)](media/setup-mip-client/aad-app-registration.png#lightbox)
 
 
-Para obter mais detalhes sobre como adicionar APIs e as permissões para um registo, consulte [atualização de aplicativos, configurar uma aplicação de cliente para acessar a seção APIs web](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#updating-an-application). Aqui encontrará informações sobre como adicionar as APIs e as permissões necessárias por uma aplicação cliente.  
+Para obter mais informações sobre como adicionar APIs e as permissões para um registo, consulte [atualização de aplicativos, configurar uma aplicação de cliente para acessar a seção APIs web](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#updating-an-application). Aqui encontrará informações sobre como adicionar as APIs e as permissões necessárias por uma aplicação cliente.  
 
 ## <a name="next-steps"></a>Passos Seguintes
 
 - Antes de iniciar a secção de guias de introdução, não deixe de ler sobre [observadores no SDK do MIP](concept-async-observers.md), como o SDK de MIP foi concebido para ser quase que totalmente assíncrono.
-- Se estiver pronto para obtém algumas práticas experiência com o SDK, começar com [início rápido: inicialização de aplicações de cliente (C++)](quick-app-initialization-cpp.md).
+- Se estiver pronto para obter experiência prática com o SDK, começar com [início rápido: inicialização de aplicações de cliente (C++)](quick-app-initialization-cpp.md).

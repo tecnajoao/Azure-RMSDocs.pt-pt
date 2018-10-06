@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: b8c9d92e33632ef5e05d30ab82a0a823e2e8408e
-ms.sourcegitcommit: 1cedaa9cefea49775f574f2ede61539bc6f0b813
+ms.openlocfilehash: bbd58c7f60e75d4b777a61fb60cfb74df8739a9c
+ms.sourcegitcommit: 82cbbeb833510b2de93980cd7dbebf41e34291e1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48794298"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48817886"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Instalação do SDK de proteção de informações da Microsoft (MIP) e configuração 
 
@@ -53,21 +53,27 @@ Se utilizar atualmente o Azure Information Protection, são necessárias etapas 
 
 Em seguida, conclua os seguintes passos para garantir que seu computador cliente foi definido e configurado corretamente.
 
-### <a name="windows-10"></a>Windows 10
+1. Se estiver a utilizar uma estação de trabalho do Windows 10:
 
-1. Utilizar o Windows Update, atualize o seu computador para o Windows 10 Fall Creators Update (versão 1709) ou posterior. Para verificar a sua versão atual:
-    - Clique no ícone do Windows no canto inferior esquerdo.
-    - Escreva "Sobre seu PC" e prima a tecla "Enter".
-    - Desloque para baixo até **especificações de Windows** e procure **versão**.
+   - Utilizar o Windows Update, atualize o seu computador para o Windows 10 Fall Creators Update (versão 1709) ou posterior. Para verificar a sua versão atual:
+     - Clique no ícone do Windows no canto inferior esquerdo.
+     - Escreva "Sobre seu PC" e prima a tecla "Enter".
+     - Desloque para baixo até **especificações de Windows** e procure **versão**.
+
+   - Certifique-se de que o "Modo de programador" está ativado na sua estação de trabalho:
+     - Clique no ícone do Windows no canto inferior esquerdo.
+     - Escreva "Utilizar funcionalidades de programador" e prima a tecla "Enter", quando vir o **utilizar funcionalidades de programador** show de item.
+     - Sobre o **definições** caixa de diálogo, **para desenvolvedores** separador, em "Utilizar funcionalidades de programador", selecione o **modo de programador** opção.
+     - Fechar o **definições** caixa de diálogo.
 
 2. Instale [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/), com as seguintes cargas de trabalho e os componentes opcionais:
-    - **Desenvolvimento de plataforma Windows universal** carga de trabalho do Windows, bem como os seguintes componentes opcionais:
-        - **Ferramentas da plataforma Windows Universal do C++**
-        - **SDK do Windows 10 SDK 10.0.16299.0** ou posteriormente, se não incluídas por predefinição
-    - **Desenvolvimento com C++** carga de trabalho do Windows, bem como os seguintes componentes opcionais:
-        - **SDK do Windows 10 SDK 10.0.16299.0** ou posteriormente, se não incluídas por predefinição 
+   - **Desenvolvimento de plataforma Windows universal** carga de trabalho do Windows, bem como os seguintes componentes opcionais:
+     - **Ferramentas da plataforma Windows Universal do C++**
+     - **SDK do Windows 10 SDK 10.0.16299.0** ou posteriormente, se não incluídas por predefinição
+   - **Desenvolvimento com C++** carga de trabalho do Windows, bem como os seguintes componentes opcionais:
+     - **SDK do Windows 10 SDK 10.0.16299.0** ou posteriormente, se não incluídas por predefinição 
 
-        [![Instalação do Visual Studio](media/setup-mip-client/visual-studio-install.png)](media/setup-mip-client/visual-studio-install.png#lightbox)
+     [![Instalação do Visual Studio](media/setup-mip-client/visual-studio-install.png)](media/setup-mip-client/visual-studio-install.png#lightbox)
 
 3. Instalar o [módulo do PowerShell ADAL.PS](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2). 
 
@@ -110,13 +116,14 @@ Em seguida, conclua os seguintes passos para garantir que seu computador cliente
    - **Incluem:** os arquivos de cabeçalho do SDK do Microsoft Information Protection
    - **Exemplos:** da origem de código para as aplicações de exemplo
 
-   No Windows, o SDK pode ser instalado através da consola de Gestor de pacote NuGet:
+   No Windows, o SDK pode ser instalado através da consola do Gestor de pacote NuGet no Visual Studio:
 
-    ```Powershell
+    ```console
     Install-Package Microsoft.InformationProtection.File
     Install-Package Microsoft.InformationProtection.Policy
     Install-Package Microsoft.InformationProtection.Protection
     ```  
+    
 6. Adicione os caminhos dos binários do SDK (bibliotecas de vínculo dinâmico (. dll)), a variável de ambiente PATH. A variável de caminho permite que as DLLs dependentes ser encontrados em tempo de execução, por aplicações cliente:
    - Clique no ícone do Windows no canto inferior esquerdo.
    - Escreva "Caminho" e prima a tecla "Enter", quando vir o **editar as variáveis de ambiente de sistema** show de item.
@@ -128,12 +135,6 @@ Em seguida, conclua os seguintes passos para garantir que seu computador cliente
      - \<plataforma\>  =  `amd64` (também conhecido como: x64), `x86`, etc.
    
    - Quando a atualização foi concluída a **caminho** variável, clique **OK**. Em seguida, clique em **OK** quando devolvido para o **variáveis de ambiente** caixa de diálogo.
-
-7. Certifique-se de que o "Modo de programador" está ativado na sua estação de trabalho:
-    - Clique no ícone do Windows no canto inferior esquerdo.
-    - Escreva "Utilizar funcionalidades de programador" e prima a tecla "Enter", quando vir o **utilizar funcionalidades de programador** show de item.
-    - Sobre o **definições** caixa de diálogo, **para desenvolvedores** separador, em "Utilizar funcionalidades de programador", selecione o **modo de programador** opção.
-    - Fechar o **definições** caixa de diálogo.
 
 ## <a name="register-a-client-application-with-azure-active-directory"></a>Registar uma aplicação de cliente com o Azure Active Directory
 

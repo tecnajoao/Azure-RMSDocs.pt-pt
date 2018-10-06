@@ -4,18 +4,18 @@ description: Informações para o ajudar a configurar os servidores no local que
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
+ms.date: 10/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 36ca84c29891efc3bdcaa42c633b4c87ad4ce1b6
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 952aca2aebac0996a46d23912f126dd7dc6141da
+ms.sourcegitcommit: 82cbbeb833510b2de93980cd7dbebf41e34291e1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151440"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48817903"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configurar servidores para o conector Azure Rights Management
 
@@ -167,7 +167,7 @@ Se os seus servidores do Exchange estiverem a executar uma versão anterior do s
 
     -   Faça edições de registo manuais com as informações disponíveis no artigo [Registry settings for the RMS connector (Definições de registo para o conector RMS – em inglês)](rms-connector-registry-settings.md) para adicionar as definições de registo manualmente nos servidores. 
 
-3.  Ative a funcionalidade IRM no Exchange. Para mais informações, consulte o artigo [Information Rights Management Procedures (Procedimentos da Gestão de Direitos de Informação – em inglês)](https://technet.microsoft.com/library/dd351212%28v=exchg.150%29.aspx) na biblioteca do Exchange.
+3. Ativar a funcionalidade IRM para o Exchange por [ativar a IRM para mensagens internas] (https://technet.microsoft.com/library/bb124077(v=exchg.150\).aspx#Anchor_1).
 
     > [!NOTE]
     > Por predefinição, depois de executar **Set-IRMConfiguration -InternalLicensingEnabled $true**, a IRM é ativada automaticamente para o Outlook Web App e para dispositivos móveis, para além de ativar a IRM para caixas de correio. No entanto, os administradores podem desativar a IRM em níveis diferentes, por exemplo, para um Servidor de Acesso de Cliente, para o diretório virtual do Outlook Web App ou a política de caixa de correio do Outlook Web App e para uma política de caixa de correio de dispositivos móveis. Se os utilizadores não conseguirem ver modelos do Azure RMS no Outlook Web App (depois de aguardarem um dia) ou nos dispositivos móveis, mas conseguirem vê-los no cliente do Outlook, verifique as definições relevantes para se certificar de que a IRM não está desativada. Para mais informações, consulte o artigo [Enable or Disable Information Rights Management on Client Access Servers (Ativar ou Desativar a Gestão de Direitos de Informação nos Servidores de Acesso de Cliente – em inglês)](https://technet.microsoft.com/library/dd876938(v=exchg.150).aspx) na documentação do Exchange. 

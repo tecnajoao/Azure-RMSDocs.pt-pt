@@ -4,18 +4,18 @@ description: Como os aplicativos do Office de utilizador final, como o Word e o 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/21/2018
+ms.date: 10/08/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b6b2a696ac6006754ece851a97701939df9e7870
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: b17e0f850fbd319011e0a50cccc2b661f773adc8
+ms.sourcegitcommit: 76e1b7c0255700813590be62d94b19338bf6c201
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148956"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48866174"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Como aplicativos do Office e serviços suportam o Azure Rights Management 
 
@@ -24,9 +24,9 @@ ms.locfileid: "44148956"
 Aplicações do Office de utilizador final e os serviços do Office podem utilizar o serviço Azure Rights Management do Azure Information Protection para ajudar a proteger dados da sua organização. Estas aplicações do Office são o Word, o Excel, o PowerPoint e o Outlook. Os serviços do Office são o Exchange e o SharePoint. As configurações do Office que suportam o serviço Azure Rights Management, muitas vezes, usam o termo **direitos de informação (IRM) de gestão**.
 
 ## <a name="office-applications-word-excel-powerpoint-outlook"></a>Aplicações do Office: Word, Excel, PowerPoint, Outlook
-Estas aplicações suportam o Azure Rights Management de forma nativa e permitir que os utilizadores protejam um documento guardado ou a uma mensagem de e-mail a enviar. Os utilizadores podem aplicar modelos para aplicar a proteção. Em alternativa, para Word, Excel e PowerPoint, os usuários podem escolher definições personalizadas para acesso, os direitos e restrições de utilização. 
+Estas aplicações suportam o Azure Rights Management de forma nativa e permitir que os utilizadores protejam um documento guardado ou a uma mensagem de e-mail a enviar. Os utilizadores podem aplicar [modelos](configure-policy-templates.md) para aplicar a proteção. Em alternativa, para Word, Excel e PowerPoint, os usuários podem escolher definições personalizadas para acesso, os direitos e restrições de utilização.
 
-Por exemplo, os utilizadores podem configurar um documento do Word para que possam ser acedido apenas por pessoas na sua organização. Em alternativa, controlar se uma planilha do Excel pode ser editada, restrito ao acesso de leitura ou impedi-lo de que está a ser impresso. Para ficheiros sensíveis ao tempo, um prazo de expiração pode ser configurado para quando já não é possível aceder ao ficheiro. Esta configuração pode ser feita diretamente pelos utilizadores ou ao aplicar um modelo. Para o Outlook, os utilizadores também podem escolher a opção **Não Reencaminhar** para ajudar a evitar a fuga de dados.
+Por exemplo, os utilizadores podem configurar um documento do Word para que possam ser acedido apenas por pessoas na sua organização. Em alternativa, controlar se uma planilha do Excel pode ser editada, restrito ao acesso de leitura ou impedi-lo de que está a ser impresso. Para ficheiros sensíveis ao tempo, um prazo de expiração pode ser configurado para quando já não é possível aceder ao ficheiro. Esta configuração pode ser feita diretamente pelos utilizadores ou ao aplicar um modelo de proteção. Para o Outlook, os utilizadores também podem escolher a opção **Não Reencaminhar** para ajudar a evitar a fuga de dados.
 
 Além de suporte nativo do Office para o Azure Rights Management, estas aplicações também suportam a barra do Azure Information Protection que é instalada com o [cliente Azure Information Protection](./rms-client/aip-client.md). Esta barra apresenta etiquetas que torna mais fácil para os utilizadores aplicarem automaticamente a proteção para documentos e e-mails que contêm dados confidenciais.
 
@@ -37,23 +37,27 @@ Se estiver pronto para configurar as aplicações do Office e o cliente do Azure
 - Para instalar e configurar o cliente do Azure Information Protection, veja [Cliente do Azure Information Protection: instalação e configuração para clientes](configure-client.md).
 
 ## <a name="exchange-online-and-exchange-server"></a>Exchange Online e Exchange Server
-Quando utiliza o Exchange Online ou o Exchange Server, pode configurar opções de gestão (IRM) de direitos de informação que suportam o Azure Rights Management. Esta configuração permite fornecer as seguintes soluções de proteção do Exchange:
+Quando utiliza o Exchange Online ou o Exchange Server, pode configurar opções para o Azure Information Protection. Esta configuração permite fornecer as seguintes soluções de proteção do Exchange:
 
 -   **IRM do Exchange ActiveSync** para que os dispositivos móveis possam proteger e consumir mensagens de e-mail protegidas.
 
--   O suporte para proteção de e-mail **Outlook na web**, que é implementado da mesma forma para o cliente do Outlook. Esta configuração permite que os utilizadores a proteger mensagens de e-mail com os modelos ou ao especificar opções individuais. Os utilizadores podem ler e utilizar mensagens de e-mail protegidas que lhes são enviadas.
+-   O suporte para proteção de e-mail **Outlook na web**, que é implementado da mesma forma para o cliente do Outlook. Esta configuração permite que os utilizadores a proteger mensagens de e-mail ao utilizar modelos de proteção ou de opções. Os utilizadores podem ler e utilizar mensagens de e-mail protegidas que lhes são enviadas.
 
--   **Regras de proteção** para clientes do Outlook que um administrador configura para aplicar automaticamente modelos de proteção para enviar um e-mail mensagens para destinatários especificados. Por exemplo, quando os e-mails internos são enviados para o seu departamento jurídico, estes só podem ser lidos por membros do departamento jurídico e não podem ser reencaminhados. Os utilizadores veem a proteção aplicada à mensagem de e-mail antes de a enviar e, por predefinição, podem removê-la se decidirem que não é necessária. Os e-mails são encriptados antes de serem enviados. Para obter mais informações, consulte [Regras de Proteção do Outlook](https://technet.microsoft.com/library/dd638178%28v=exchg.150%29.aspx) e [Criar uma Regra de Proteção do Outlook](https://technet.microsoft.com/library/dd638196%28v=exchg.150%29.aspx) na biblioteca do Exchange.
+-   **Regras de proteção** para clientes do Outlook que um administrador configura para aplicar automaticamente modelos de proteção e as opções para enviar um e-mail mensagens para destinatários especificados. Por exemplo, quando os e-mails internos são enviados para o seu departamento jurídico, estes só podem ser lidos por membros do departamento jurídico e não podem ser reencaminhados. Os utilizadores veem a proteção aplicada à mensagem de e-mail antes de a enviar e, por predefinição, podem removê-la se decidirem que não é necessária. Os e-mails são encriptados antes de serem enviados. Para obter mais informações, consulte [Regras de Proteção do Outlook](https://technet.microsoft.com/library/dd638178%28v=exchg.150%29.aspx) e [Criar uma Regra de Proteção do Outlook](https://technet.microsoft.com/library/dd638196%28v=exchg.150%29.aspx) na biblioteca do Exchange.
 
--   **As regras de fluxo de correio** que um administrador configura para aplicar automaticamente modelos de proteção para enviar um e-mail mensagens. Estas regras são baseadas em propriedades, tais como remetente, destinatário, assunto da mensagem e conteúdo. Estas regras são semelhantes em conceito às regras de proteção, mas não deixe que os utilizadores removam a proteção. As regras podem ser aplicadas ao Outlook na web e para e-mails que são enviados por dispositivos móveis. Além disso, essas regras não encriptam mensagens de e-mail antes de serem enviados do cliente. Para obter mais informações, consulte [Criar uma Regra de Proteção de Transporte](https://technet.microsoft.com/library/dd302432.aspx) na biblioteca do Exchange.
+-   **As regras de fluxo de correio** que um administrador configura para aplicar automaticamente modelos de proteção ou opções para mensagens de e-mail. Estas regras são baseadas em propriedades, tais como remetente, destinatário, assunto da mensagem e conteúdo. Estas regras são semelhantes em conceito às regras de proteção, mas não a permitir que os utilizadores remover a proteção porque a proteção é definida pelo serviço do Exchange em vez do cliente. Porque a proteção é definida pelo serviço, não importa qual sistema de operativo ou dispositivos que os utilizadores têm. Para obter mais informações, consulte [(regras de transporte) as regras de fluxo de correio no Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) e [criar uma regra de proteção de transporte](https://technet.microsoft.com/library/dd302432.aspx) para o Exchange no local.
 
--   **Políticas de prevenção (DLP) de perda de dados** que contêm conjuntos de condições para filtrar mensagens de e-mail e tomar medidas para ajudar a evitar perda de dados para conteúdos sensíveis ou confidenciais. Exemplos de conteúdos sensíveis ou confidenciais incluem informações pessoais de informações ou cartão de crédito. Sugestões de política podem ser utilizados quando são detetados dados confidenciais, para alertar os usuários que poderão ter de aplicar a proteção. Para obter mais informações, consulte [prevenção de perda de dados] (https://technet.microsoft.com/library/jj150527(v=exchg.160\).aspx) na biblioteca do Exchange.
+-   **Políticas de prevenção (DLP) de perda de dados** que contêm conjuntos de condições para filtrar mensagens de e-mail e tomar as medidas, para ajudar a evitar perda de dados para conteúdos sensíveis ou confidenciais. Uma das ações que pode especificar é aplicar encriptação Protection, ao especificar um dos modelos de proteção ou opções. Sugestões de política podem ser utilizados quando são detetados dados confidenciais, para alertar os usuários que poderão ter de aplicar a proteção. Para obter mais informações, consulte [prevenção de perda de dados](/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention) na documentação do Exchange Online.
 
--   **Encriptação de mensagens do Office 365** que suporta o envio de uma mensagem de e-mail protegida e de documentos do Office protegidos como anexos para qualquer endereço em qualquer dispositivo. Para contas de utilizador que não utilizem o Azure AD, uma experiência web suporta fornecedores de identidade social ou um código de acesso único. Para obter mais informações, consulte [configurar novas capacidades de encriptação de mensagens do Office 365 criadas com base no Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) do site do Office.
+-   **Encriptação de mensagens do Office 365** que suporta o envio de uma mensagem de e-mail protegidas e protegido os documentos do Office como anexos de qualquer endereço de e-mail em qualquer dispositivo. Para contas de utilizador que não utilizem o Azure AD, uma experiência web suporta fornecedores de identidade social ou um código de acesso único. Para obter mais informações, consulte [configurar novas capacidades de encriptação de mensagens do Office 365 criadas com base no Azure Information Protection](/office365/securitycompliance/set-up-new-message-encryption-capabilities) na documentação do Office 365. Para ajudar a encontrar informações adicionais que estejam relacionados com esta configuração, consulte [encriptação de mensagens do Office 365](https://docs.microsoft.com/office365/securitycompliance/ome).
 
 Se utilizar o Exchange no local, pode utilizar as funcionalidades IRM com o serviço Azure Rights Management ao implementar o conector Azure Rights Management. Este conector funciona como um reencaminhamento entre os servidores no local e o serviço Azure Rights Management.
 
-Se estiver pronto para configurar o Exchange para a IRM:
+Para obter mais informações sobre os modelos de proteção, consulte [configurando e gerenciando modelos do Azure Information Protection](configure-policy-templates.md).
+
+Para obter mais informações sobre o e-mail de opções que pode utilizar para proteger mensagens de correio eletrónico, consulte [opção não reencaminhar para e-mails](configure-usage-rights.md#do-not-forward-option-for-emails) e [opção de criptografar apenas para e-mails](configure-usage-rights.md#encrypt-only-option-for-emails).
+
+Se estiver pronto para configurar o Exchange para proteger mensagens de correio eletrónico:
 
 - Para o Exchange Online, veja [Exchange Online: configuração da IRM](configure-office365.md#exchange-online-irm-configuration).
 

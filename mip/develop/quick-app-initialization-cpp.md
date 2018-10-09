@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: f74d457ad50fa0998abc94fdef3d0084ad6c7b17
-ms.sourcegitcommit: d677088db8588fb2cc4a5d7dd296e76d0d9a2e9c
+ms.openlocfilehash: 578c5aa69faa986663ea6c164d94e5940580167d
+ms.sourcegitcommit: 76e1b7c0255700813590be62d94b19338bf6c201
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48251765"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48866141"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Início rápido: Inicialização de aplicações de cliente (C++)
 
@@ -32,33 +32,26 @@ Se ainda não o fez, certifique-se de que para:
 
 ## <a name="create-a-visual-studio-solution-and-project"></a>Criar uma solução do Visual Studio e o projeto
 
-Primeiro, criar e configurar a solução do Visual Studio e o projeto, sobre a qual irão criar os inícios rápidos inicial. 
+Primeiro, criar e configurar a solução do Visual Studio e o projeto, sobre a qual irão criar os inícios rápidos iniciais. 
 
 1. Abra o Visual Studio 2017, selecione o **arquivo** menu, **New**, **projeto**. Na **novo projeto** caixa de diálogo:
-     - No painel esquerdo, sob **instalada**, **outras linguagens**, selecione **Visual C++**.
-     - No painel central, selecione **aplicação de consola do Windows**
-     - No painel inferior, o projeto de atualização **Name**, **localização**e o que contém **nome da solução** em conformidade.
-     - Quando terminar, clique nas **OK** botão na parte inferior direita.
+   - No painel esquerdo, sob **instalada**, **outras linguagens**, selecione **Visual C++**.
+   - No painel central, selecione **aplicação de consola do Windows**
+   - No painel inferior, o projeto de atualização **Name**, **localização**e o que contém **nome da solução** em conformidade.
+   - Quando terminar, clique nas **OK** botão na parte inferior direita.
 
-       [![Criação de solução do Visual Studio](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
+     [![Criação de solução do Visual Studio](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
 
-
-2. Configure as definições do projeto:
-   - Na **Explorador de soluções**, clique com o botão direito do rato no nó do projeto (diretamente sob o nó superior/solução) e selecione **propriedades**. 
-   - À parte superior direita dos **Property Pages** caixa de diálogo, clique em **do Configuration Manager...** . No **Configuration Manager** caixa de diálogo, defina a "configuração da solução Active Directory" como **depurar**e de destino "plataforma de solução Active Directory" para **x64**. Clique em **fechar** quando terminar.
-   - Sob **propriedades de configuração** no painel esquerdo, selecione a **VC + + Directories** nó.
-   - Selecione o **incluir diretórios** linha, em seguida, clique na lista pendente à direita, em seguida, **< editar... >** e introduza os caminhos para o SDK incluem subdiretórios (. h) no campo superior. Especifique os caminhos completos para `file\include`, `protection\include`, `upe\include` subdiretórios (mas não mais aprofundada), no caminho onde instalou o SDK. Pode criar uma nova linha para cada ou separá-los com um ponto e vírgula (`;`) numa única linha. Clique em **OK**. 
-
-        [![Visual Studio definir propriedades de caminho](media/quick-app-initialization-cpp/set-include-lib-path-properties.png)](media/quick-app-initialization-cpp/set-include-lib-path-properties.png#lightbox)
-
-   - Repita o passo anterior para o **Library Directories** linha, introduzindo os caminhos para os subdiretórios de bibliotecas estáticas binário (lib) do SDK. Certifique-se de que utiliza os caminhos que correspondem à configuração de compilação atual para a sua solução. Neste início rápido, especifique os caminhos absolutos ou relativos para os `file\bins\debug\amd64`, `protection\bins\debug\amd64`, `upe\bins\debug\amd64` subdiretórios.
-
-   - Sob **propriedades de configuração** no painel esquerdo, abra o **vinculador** nó e selecione o **entrada** nó. 
-   - Selecione o **Additional Dependencies** linha, em seguida, clique na lista pendente à direita, em seguida, **< editar... >**. Aqui adicionar os nomes das bibliotecas estáticas do SDK. Adicionar `mip_protection_sdk.lib;mip_file_sdk.lib;mip_upe_sdk.lib;` à lista de bibliotecas, no campo superior. Clique em **OK**. 
-   - Clique em **OK** sobre o **páginas de propriedades** caixa de diálogo quando terminar.
-
-     [![Visual Studio defina bibliotecas estáticas](media/quick-app-initialization-cpp/set-static-libs.png)](media/quick-app-initialization-cpp/set-static-libs.png#lightbox)
-
+2. Adicione o pacote Nuget para a API de ficheiros do SDK MIP ao seu projeto:
+   - Na **Explorador de soluções**, clique com o botão direito do rato no nó do projeto (diretamente sob o nó superior/solução) e selecione **gerir pacotes NuGet...** :
+   - Quando o **Gestor de pacotes NuGet** é aberto um separador na área de separadores de grupo do Editor:
+     - Selecione **procurar**.
+     - Introduza "Microsoft.InformationProtection" na caixa de pesquisa.
+     - Selecione o pacote "Microsoft.InformationProtection.File".
+     - Clique em "Instalar", em seguida, clique em "OK" quando o **pré-visualizar alterações** apresenta a caixa de diálogo de confirmação.
+   
+     [![Visual Studio adicionar o pacote NuGet](media/quick-app-initialization-cpp/add-nuget-package.png)](media/quick-app-initialization-cpp/add-nuget-package.png#lightbox)
+ 
 ## <a name="implement-an-observer-class-to-monitor-the-file-profile-and-engine-objects"></a>Implementar uma classe de observador para controlar os objetos de perfil e o mecanismo de ficheiro
 
 Agora, crie uma implementação básica de uma classe de observador de perfil do ficheiro, ao expandir o SDK `mip::FileProfile::Observer` classe. O observador é instanciado e utilizado mais tarde, para monitorizar o carregamento do objeto de perfil do ficheiro e adicionar o objeto de motor para o perfil.

@@ -4,18 +4,18 @@ description: Instruções para ver e utilizar um documento protegido que requer 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 10/08/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 358463bbfd7cd89ccd11c815e73516f688086817
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 3b4dfc62950166ca7221002169005fa3693a5998
+ms.sourcegitcommit: e70bb1a02e96d701fd5ae2a25536fa485bbf2e87
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150760"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862096"
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Guia de utilizador: Ver e utilizar ficheiros que foram protegidos pelo Rights Management
 
@@ -63,11 +63,13 @@ Se a sua organização não tiver uma conta com base na cloud para que possa uti
     
     Para obter mais informações detalhadas sobre as permissões e os direitos de utilização de cada um, veja [Direitos incluídos nos níveis de permissões](../configure-usage-rights.md#rights-included-in-permissions-levels).
 
-4. Para editar o ficheiro, clique em **guardar como**, que lhe permite guardar o ficheiro sem a etiqueta e sem proteção para a extensão de nome de ficheiro original. Em seguida, pode editar o ficheiro com a aplicação associada a esse tipo de ficheiro. 
+4. Para editar o ficheiro, clique em **guardar como**, que lhe permite guardar o ficheiro protegido para a extensão de nome de ficheiro original. Em seguida, pode editar o ficheiro com a aplicação associada a esse tipo de ficheiro. Neste momento, o rótulo e a proteção do ficheiro é removido.
     
-    Quando terminar de editar o ficheiro no Explorador de ficheiros, faça duplo clique no ficheiro para voltar a aplicar a etiqueta, que por sua vez volta a aplicar proteção.
+    Observe que, dado que o Visualizador para ficheiros protegidos, o **guardar como** botão está habilitado apenas para ficheiros protegidos.
+    
+5. Quando terminar de editar o ficheiro no Explorador de ficheiros, faça duplo clique no ficheiro para voltar a aplicar a etiqueta. Esta ação volta a aplicar a proteção.
 
-5. Se tiver ficheiros protegidos adicionais para abrir, pode navegar diretamente até aos mesmos a partir do visualizador, através da opção **Abrir**. O ficheiro selecionado substitui o ficheiro original no visualizador. 
+6. Se tiver ficheiros protegidos adicionais para abrir, pode navegar diretamente até aos mesmos a partir do visualizador, através da opção **Abrir**. O ficheiro selecionado substitui o ficheiro original no visualizador. 
 
 > [!TIP]
 > Se o ficheiro protegido não abre, pelo que tenham o cliente do Azure Information Protection completo instalado, experimente o **repor definições** opção. Para aceder a esta opção, a partir de uma aplicação do Office, selecione o **Protect** botão > **ajuda e Feedback** > **repor definições**. 

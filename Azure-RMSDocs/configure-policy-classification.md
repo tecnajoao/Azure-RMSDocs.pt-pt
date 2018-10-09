@@ -4,16 +4,16 @@ description: Quando configurar as condições para uma etiqueta, pode atribuir a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/29/2018
+ms.date: 10/08/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 252b92a7a6ea6b64858acb0e7ace1cf9c56c1f63
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 3e911d8190e524efe56677d6afaec8f679c773b9
+ms.sourcegitcommit: e70bb1a02e96d701fd5ae2a25536fa485bbf2e87
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148166"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862112"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Como configurar as condições para classificação automática e recomendada para o Azure Information Protection
 
@@ -97,7 +97,7 @@ Quando clica em **guardar**, as suas alterações estão automaticamente dispon�
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>Tipos de informações confidenciais que requerem uma versão mínima do cliente
 
-Os seguintes tipos de informações confidenciais atualmente requerem a versão de pré-visualização do cliente do Azure Information Protection:
+Os seguintes tipos de informações confidenciais requerem a versão mínima do 1.37.19.0 para o cliente do Azure Information Protection:
 
 - **Número de telefone da UE**
 - **Número de telefone celular da UE**

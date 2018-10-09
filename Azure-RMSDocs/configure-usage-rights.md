@@ -4,18 +4,18 @@ description: Conheça os direitos específicos utilizados quando protege ficheir
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2018
+ms.date: 10/08/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 698d92cc38081a8b56f27ede4005cf8b514ed212
-ms.sourcegitcommit: a327dc124974c8b489340993d4b2b364ecf5fec5
+ms.openlocfilehash: ab94d732144613d810c959f7fad0f34a842da9c7
+ms.sourcegitcommit: 76e1b7c0255700813590be62d94b19338bf6c201
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46289282"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48866191"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuração de direitos de utilização para o Azure Rights Management
 
@@ -94,7 +94,7 @@ Estes modelos predefinidos são criados quando a sua subscrição foi comprada e
 
 ## <a name="do-not-forward-option-for-emails"></a>Opção Não Reencaminhar para e-mails
 
-Clientes do Exchange e serviços (por exemplo, o cliente do Outlook, a aplicação Outlook Web Access e as regras de fluxo de correio do Exchange) têm uma opção de proteção de direitos de informação adicional para e-mails: **não reencaminhar**. 
+Clientes do Exchange e de serviços (por exemplo, o cliente do Outlook, Outlook na web, as regras de fluxo de correio do Exchange e ações de DLP para o Exchange) têm uma opção de proteção de direitos de informação adicional para e-mails: **não reencaminhar**. 
 
 Embora esta opção seja apresentada aos utilizadores (e os administradores do Exchange) como se fosse um modelo de Gestão de Direitos predefinido que podem selecionar, **Não Reencaminhar** não é um modelo. Isto explica por que não é possível vê-lo no portal do Azure quando visualizar e gerir modelos de proteção. Em vez disso, o **não reencaminhar** opção é um conjunto de direitos de utilização que é aplicado dinamicamente por utilizadores aos seus destinatários de e-mail.
 
@@ -119,11 +119,11 @@ Um utilizador pretende enviar algumas informações por e-mail a pessoas especí
 
 Quando o Exchange Online usa os novos recursos para encriptação de mensagens do Office 365, uma nova opção de e-mail torna-se disponíveis: **só de criptografar**.
 
-Esta opção está disponível para inquilinos que utilizam o Exchange Online e podem ser selecionados no Outlook na web, como outra opção de proteção de direitos para uma regra de fluxo de correio e do Outlook quando tiver do Office 365 ProPlus com uma versão mínima do [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4). Para obter mais informações, consulte o seguinte anúncio de mensagem de blogue da equipa do Office: [criptografar apenas serem implementadas na encriptação de mensagens do Office 365](https://aka.ms/omefeb2018).
+Esta opção está disponível para inquilinos que utilizam o Exchange Online e podem ser selecionados no Outlook na web, como outra opção direitos de proteção para uma regra de fluxo de correio, como uma ação de DLP do Office 365 e do Outlook quando tiver do Office 365 ProPlus com uma versão mínima de [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4). Para obter mais informações, consulte o seguinte anúncio de mensagem de blogue da equipa do Office: [criptografar apenas serem implementadas na encriptação de mensagens do Office 365](https://aka.ms/omefeb2018).
 
 Quando esta opção estiver selecionada, o e-mail é encriptada e os destinatários têm de ser autenticados. Em seguida, os destinatários têm todos os direitos de utilização, exceto **guardar como, exportar** e **controlo total**. Esta combinação de direitos de utilização significa que os destinatários têm sem restrições, exceto pelo fato de não é possível remover a proteção. Por exemplo, um destinatário pode copiar a partir do e-mail, imprimi-lo e reencaminhá-lo. 
 
-Da mesma forma, por predefinição, desprotegidos [documentos do Office](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) que estão anexados à mensagem de e-mail herdam as mesmas permissões. Esses documentos são automaticamente protegidos e quando são transferidos, pode podem ser guardadas, editados, copiados e impressas a partir de aplicações do Office pelos destinatários. Quando o documento é salvo por um destinatário, podem ser guardado para um novo nome e até mesmo um formato diferente. No entanto, apenas os formatos de ficheiro que suportam a proteção estão disponíveis para que o documento não é possível guardar sem a proteção original. Se pretender que os direitos de utilização diferentes para um anexo ou o anexo não é um documento do Office que suporte esta proteção herdada, proteja o ficheiro antes de ligá-los para o e-mail. Em seguida, pode atribuir os direitos de utilização específico que necessita para o ficheiro.
+Da mesma forma, por predefinição, desprotegidos [documentos do Office](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) que estão anexados à mensagem de e-mail herdam as mesmas permissões. Esses documentos são automaticamente protegidos e quando são transferidos, podem ser guardadas, editados, copiados e impressas a partir de aplicações do Office pelos destinatários. Quando o documento é salvo por um destinatário, podem ser guardado para um novo nome e até mesmo um formato diferente. No entanto, apenas os formatos de ficheiro que suportam a proteção estão disponíveis para que o documento não é possível guardar sem a proteção original. Se pretender que os direitos de utilização diferentes para um anexo ou o anexo não é um documento do Office que suporte esta proteção herdada, proteja o ficheiro antes de ligá-los para o e-mail. Em seguida, pode atribuir os direitos de utilização específico que necessita para o ficheiro.
 
 Em alternativa, pode alterar essa herança de proteção de documentos, utilizando qualquer um dos seguintes parâmetros de configuração que definiu com o [PowerShell do Exchange Online](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps) comando, **Set-IRMConfiguration** . Quando não precisa manter a proteção original para o documento depois do utilizador é autenticado, utilize estas opções:
 

@@ -4,18 +4,18 @@ description: Detalhes técnicos sobre tipos de ficheiro suportados, extensões d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/24/2018
+ms.date: 10/09/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f9def0ae81a3887f9f6e1c99f7e1f02c54581fdb
-ms.sourcegitcommit: c1274d6d7ab486590dcd2a4e6aca3dcd3d284c1b
+ms.openlocfilehash: 8cc42253d5d5de6b2b1ca4dd06e59dd66193dc7d
+ms.sourcegitcommit: 4767afef8fb7b81065a6bf207cd0a5518bf0e97a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47168765"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48907183"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guia do administrador: Tipos de ficheiro suportados pelo cliente do Azure Information Protection
 
@@ -214,6 +214,22 @@ Pode alterar os tipos de ficheiros incluídos ou excluídos para inspeção do f
 > Se incluir arquivos. rtf, para análise, monitorize com cuidado o scanner. Alguns arquivos. RTF não podem ser inspecionados com êxito pelo scanner e para esses ficheiros, a inspeção não é concluído e o serviço tem de ser reiniciado. 
 
 Por predefinição, o scanner protege apenas os tipos de ficheiro do Office. Para alterar este comportamento para a deteção de impressão, editar o registo e especificar os tipos de ficheiro adicionais que pretende proteger. Para obter instruções, consulte [configuração da API de ficheiros](../develop/file-api-configuration.md) de orientação para programadores.
+
+#### <a name="to-scan-zip-files"></a>Para analisar ficheiros. zip
+
+O scanner pode inspecionar a arquivos. zip ao seguir estas instruções:
+
+1. Para o computador Windows Server com o scanner, instalar o [pacote de filtro do Office 2010 SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2).
+
+2. Configure a deteção de impressão para incluir os ficheiros. zip que serão verificadas, conforme descrito na secção anterior.
+
+3. Se os arquivos. zip devem ser classificados e protegidos em vez de apenas inspecionados relativamente a informações confidenciais, adicione uma entrada de registo para os ficheiros com esta extensão de nome de ficheiro para ter a proteção genérica (pfile), conforme descrito na secção anterior.
+
+Cenário de exemplo depois de seguir estes passos: 
+
+Um ficheiro denominado **accounts.zip** contém folhas de cálculo do Excel com números de cartão de crédito. A política do Azure Information Protection tem uma etiqueta denominada **confidencial \ Finanças**, que é configurado para detetar os números de cartão de crédito e aplicar automaticamente a etiqueta com a proteção restringe o acesso ao grupo finanças. 
+
+Depois inspecionar o ficheiro, o scanner classifica este ficheiro como **confidencial \ Finanças**, aplica-se proteção genérica para o ficheiro para que apenas os membros dos grupos de finanças podem descompactá-lo e muda o nome do ficheiro  **Accounts.zip.pfile**.
 
 ### <a name="files-that-cannot-be-protected-by-default"></a>Ficheiros que não podem ser protegidos por predefinição
 

@@ -4,18 +4,18 @@ description: Detalhes técnicos sobre tipos de ficheiro suportados, extensões d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/09/2018
+ms.date: 10/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8cc42253d5d5de6b2b1ca4dd06e59dd66193dc7d
-ms.sourcegitcommit: 4767afef8fb7b81065a6bf207cd0a5518bf0e97a
+ms.openlocfilehash: 23baab9ba6ab9a7b1d43dd1f5f12947f383d9d28
+ms.sourcegitcommit: d049c23ddd0bb7f4c4d40153c753f178b3a04d43
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 10/10/2018
-ms.locfileid: "48907183"
+ms.locfileid: "49072481"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guia do administrador: Tipos de ficheiro suportados pelo cliente do Azure Information Protection
 
@@ -97,7 +97,9 @@ Há tamanhos de ficheiro máximos que o cliente do Azure Information Protection 
     
     - Para proteger a outros tipos de arquivo e abrir estes tipos de ficheiro no Visualizador do Azure Information Protection: O tamanho máximo é limitado apenas pela memória e espaço em disco disponível.
     
-    - Para desproteger ficheiros ao utilizar o [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet: O tamanho de ficheiro máximo suportado para arquivos. pst é 5 GB. Outros tipos de ficheiros estão limitados apenas pela memória e espaço em disco disponível.
+    - Para desproteger ficheiros ao utilizar o [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet: O tamanho de ficheiro máximo suportado para arquivos. pst é 5 GB. Outros tipos de ficheiros estão limitados apenas pela memória e espaço em disco disponível
+    
+    Sugestão: Se precisar de pesquisar ou recuperar itens protegidos em arquivos. pst grandes, veja [orientações sobre o uso Unprotect-RMSFile para deteção de dados Eletrónicos](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery).
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>Tipos de ficheiros suportados para a classificação e proteção
 

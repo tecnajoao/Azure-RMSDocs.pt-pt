@@ -4,24 +4,24 @@ description: Conheça e implemente a funcionalidade de superutilizador do servi�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/31/2018
+ms.date: 10/09/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 762b46ac33b57bd81b5c1ab36d07f4d33305b4c0
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 59760f70c43f6c784c83b95b18c51998862484ae
+ms.sourcegitcommit: d049c23ddd0bb7f4c4d40153c753f178b3a04d43
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151002"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072464"
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados
 
 >*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-A funcionalidade de superutilizador do serviço Azure Rights Management do Azure Information Protection assegura que as pessoas e os serviços autorizados possam sempre ler e inspecionar os dados que o Azure Rights Management protege na sua organização. E, se for necessário, remove a proteção ou altera a proteção que estava anteriormente aplicada. 
+A funcionalidade de superutilizador do serviço Azure Rights Management do Azure Information Protection assegura que as pessoas e os serviços autorizados possam sempre ler e inspecionar os dados que o Azure Rights Management protege na sua organização. Se necessário, a proteção, em seguida, pode remover ou alterada.
 
 Um superutilizador tem sempre o [direito de utilização](configure-usage-rights.md) Controlo Total do Rights Management para documentos e e-mails que foram protegidos pelo inquilino do Azure Information Protection da sua organização. Esta capacidade é por vezes referida como "raciocínio através de dados" e é um elemento fundamental na manutenção do controlo dos dados da sua organização. Por exemplo, utilizaria esta funcionalidade para qualquer um dos seguintes cenários:
 
@@ -78,6 +78,21 @@ Se estiver a utilizar a classificação e a proteção, também poderá utilizar
 Para obter mais informações sobre estes cmdlets, veja [Utilizar o PowerShell com o cliente do Azure Information Protection](./rms-client/client-admin-guide-powershell.md) no guia do administrador do cliente do Azure Information Protection.
 
 > [!NOTE]
-> O módulo AzureInformationProtection substitui o módulo do PowerShell de Proteção RMS que foi instalado com a Ferramenta de Proteção RMS. Ambos os módulos são diferentes das e complementa a [módulo do PowerShell do Azure Rights Management](administer-powershell.md). O módulo AzureInformationProtection suporta o Azure Information Protection, o serviço Azure Rights Management (Azure RMS) para o Azure Information Protection e os Serviços de Gestão de Direitos do Active Directory (AD RMS).
+> O módulo AzureInformationProtection é diferente do e complementa a [módulo do PowerShell do AADRM](administer-powershell.md) que gerencia o serviço Azure Rights Management do Azure Information Protection.
 
+### <a name="guidance-for-using-unprotect-rmsfile-for-ediscovery"></a>Orientações sobre o uso Unprotect-RMSFile para deteção de dados Eletrónicos
+
+Apesar de poder utilizar o cmdlet Unprotect-RMSFile para desencriptar conteúdos protegidos no arquivos PST, utilize este cmdlet estrategicamente como parte do seu processo de deteção de dados eletrónicos. Executar Unprotect-RMSFile ficheiros grandes num computador é um com muitos recursos (memória e espaço em disco) e o tamanho de ficheiro máximo suportado para este cmdlet é 5 GB.
+
+O ideal é que usar [deteção de dados Eletrónicos do Office 365](/office365/securitycompliance/ediscovery) para procurar e extrair o anexo protegido nos e-mails e os e-mails protegidos. A capacidade de Superutilizador automaticamente está integrada com o Exchange Online, para que a deteção de dados Eletrónicos no Centro de conformidade de segurança do Office 365 e pode procurar itens encriptados antes da exportação ou e-mail de desencriptação encriptada na exportação.
+
+Se não conseguir utilizar a deteção de dados Eletrónicos do Office 365, poderá ter outra solução de deteção de dados Eletrónicos que se integra com o serviço Azure Rights Management da mesma forma compreender os dados. Em alternativa, se a sua solução de deteção de dados Eletrónicos automaticamente não é possível ler e desencriptar o conteúdo protegido, pode continuar a utilizar esta solução num processo de vários passo que permite-lhe executar Unprotect-RMSFile com mais eficiência:
+
+1. Exporte o e-mail em questão para um arquivo PST do Exchange Online ou o Exchange Server ou da estação de trabalho onde o utilizador armazenados respetivo e-mail.
+
+2. Importe o arquivo PST para sua ferramenta de deteção de dados eletrónicos. Uma vez que a ferramenta não é possível ler o conteúdo protegido, espera-se que esses itens gerará erros.
+
+3. De todos os itens que não foi possível abrir a ferramenta, gere um novo arquivo PST que desta vez, contém itens protegidos apenas. Este segundo arquivo PST provavelmente será muito menor do que o arquivo PST original.
+
+4. Execute Unprotect-RMSFile neste ficheiro PST segundo para desencriptar o conteúdo deste ficheiro muito menor. A partir da saída, importe o ficheiro de PST desencriptados de agora em sua ferramenta de deteção.
 

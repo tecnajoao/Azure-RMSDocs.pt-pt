@@ -164,7 +164,7 @@ Para efetuar a deteção do serviço, o cliente do RMS verifica o seguinte:
 
 3. **O serviço de deteção do Azure Rights Management**: O cliente de RMS liga-se ao **https://discover.aadrm.com**, que pede ao utilizador para autenticar.
 
-    Quando a autenticação tiver sido concluída com êxito, o nome de utilizador (e o domínio) da autenticação é utilizado para identificar o inquilino do Azure Information Protection a utilizar. O URL do Azure Information Protection a utilizar para essa conta de utilizador é devolvido ao cliente de RMS. O URL é o seguinte formato: **https://**\<YourTenantURL\>wmcs/licensing** 
+    Quando a autenticação tiver sido concluída com êxito, o nome de utilizador (e o domínio) da autenticação é utilizado para identificar o inquilino do Azure Information Protection a utilizar. O URL do Azure Information Protection a utilizar para essa conta de utilizador é devolvido ao cliente de RMS. O URL é o seguinte formato: **https://**\<YourTenantURL\>**wmcs/licensing** 
 
     Por exemplo: 5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
 

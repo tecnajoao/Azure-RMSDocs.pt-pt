@@ -4,18 +4,18 @@ description: Conheça e implemente a funcionalidade de superutilizador do servi�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/09/2018
+ms.date: 10/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 59760f70c43f6c784c83b95b18c51998862484ae
-ms.sourcegitcommit: d049c23ddd0bb7f4c4d40153c753f178b3a04d43
+ms.openlocfilehash: 07b780721bc0f22de6c36d88d98a2c8360af67b8
+ms.sourcegitcommit: f5395541fa3f74839402805dab68d0c2de395249
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072464"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49101839"
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados
 
@@ -95,4 +95,6 @@ Se não conseguir utilizar a deteção de dados Eletrónicos do Office 365, pode
 3. De todos os itens que não foi possível abrir a ferramenta, gere um novo arquivo PST que desta vez, contém itens protegidos apenas. Este segundo arquivo PST provavelmente será muito menor do que o arquivo PST original.
 
 4. Execute Unprotect-RMSFile neste ficheiro PST segundo para desencriptar o conteúdo deste ficheiro muito menor. A partir da saída, importe o ficheiro de PST desencriptados de agora em sua ferramenta de deteção.
+
+Para obter mais informações e orientações para a execução de deteção de dados Eletrónicos em caixas de correio e arquivos PST, consulte a seguinte mensagem de blogue: [processo de informações do Azure e os processos de deteção de dados Eletrónicos](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-and-eDiscovery-Processes/ba-p/270216).
 

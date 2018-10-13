@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 7f82c2fd022db0ef35a58198eb2737e3803e1645
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: fa32a5d00c161d2f6a78acd7cbe45ce00b34660c
+ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149757"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49170149"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Tarefas que costumava realizar com o portal clássico do Azure
 
@@ -40,9 +40,9 @@ Utilize as seguintes informações para ajudá-lo rapidamente a transição para
 |Criar um modelo com âmbito|Criar uma política de âmbito e criar uma etiqueta neste âmbito que se aplica a proteção. <br /><br />Para obter mais informações, consulte [como configurar a política do Azure Information Protection para utilizadores específicos com políticas de âmbito](configure-policy-scope.md).
 |Copiar um modelo|Não é possível copiar um modelo no portal do Azure. Se quiser duas etiquetas para que as mesmas definições de proteção, tem de definir as permissões em cada etiqueta. <br /><br />Para obter mais informações, consulte [para configurar uma etiqueta para as definições de proteção](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
 |Eliminar um modelo|A eliminar modelos pode resultar em dados inacessíveis, para que o portal do Azure não suporta esta ação. No entanto, pode eliminar a etiqueta e, em seguida, utilizar o PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) cmdlet para remover o modelo. <br /><br />Para obter mais informações, consulte [como eliminar ou reordenar uma etiqueta do Azure Information Protection](configure-policy-delete-reorder.md).
-|Suporte a vários idiomas|Do **MANAGE** seleção de menu, selecione **idiomas** para exportar os campos personalizáveis que incluem o nome do modelo e a descrição. Traduzir as cadeias de caracteres e, em seguida, importar essas cadeias de caracteres para o portal. <br /><br />Para obter mais informações, consulte [como configurar etiquetas e modelos para diferentes idiomas no Azure Information Protection](configure-policy-languages.md).
+|Suporte a vários idiomas|Do **Manage** seleção de menu, selecione **idiomas** para exportar os campos personalizáveis que incluem o nome do modelo e a descrição. Traduzir as cadeias de caracteres e, em seguida, importar essas cadeias de caracteres para o portal. <br /><br />Para obter mais informações, consulte [como configurar etiquetas e modelos para diferentes idiomas no Azure Information Protection](configure-policy-languages.md).
 |Relatórios de web de gestão de direitos|Utilizar o PowerShell [Get-AadrmUsageLog](/powershell/module/aadrm/Get-AadrmUsageLog) cmdlet para transferir os registos de utilização para o serviço Azure Rights Management. Em seguida, pode utilizar estes dados para criar relatórios personalizados. <br /><br />Para obter mais informações, consulte [Registar e analisar a utilização do serviço Azure Rights Management](log-analyze-usage.md).<br /><br />Sugestão: Procure anúncios no [blogue Enterprise Mobility and Security](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection) para uma solução de relatórios novos e centralizada para o Azure Information Protection.
-|Ativar e desativar o serviço de Rights Management|Do **MANAGE** opções de menu, selecionadas **ativação de proteção**.<br /><br />Para obter mais informações, consulte [como ativar o Azure Rights Management a partir do portal do Azure](activate-azure.md).
+|Ativar e desativar o serviço de Rights Management|Do **Manage** opções de menu, selecionadas **ativação de proteção**.<br /><br />Para obter mais informações, consulte [como ativar o Azure Rights Management a partir do portal do Azure](activate-azure.md).
 
 Antes de edita os modelos ou convertê-los em etiquetas no portal do Azure, veja [considerações para modelos no portal do Azure](configure-policy-templates.md#considerations-for-templates-in-the-azure-portal).
 

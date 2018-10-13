@@ -4,18 +4,18 @@ description: Veja o que há de novo ou alterado numa versão do cliente do Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/07/2018
+ms.date: 10/13/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b7aed6f8cdf6cf95b6b7af0bfa06554bde79dc02
-ms.sourcegitcommit: e70bb1a02e96d701fd5ae2a25536fa485bbf2e87
+ms.openlocfilehash: d140036e3326947df8504feb7b2946bf4390ed60
+ms.sourcegitcommit: a194b63f7513a7039fbc82d1b075063d9e26c7de
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862180"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307496"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: política de histórico e suporte de lançamento de versão
 
@@ -54,13 +54,19 @@ Se tiver uma versão 1 do cliente posterior 1.37.19.0, é uma versão de pré-vi
 
 **Adicionais:**
 
-Apenas para esta versão de pré-visualização, para utilizar o scanner, tem de seguir estes passos:
+Apenas para esta versão de pré-visualização, específica para a deteção de impressão:
 
-1. Instale a versão de DG (1.37.19.0) atual do cliente.
-2. Instalar e configurar a deteção de impressão.
-3. Inicie o scanner.
-4. Atualize o cliente do Azure Information Protection para esta versão de pré-visualização.
-5. Inicie o scanner.
+- Instale o scanner, seguindo estes passos:
+    
+    1. Instale a versão de DG (1.37.19.0) atual do cliente.
+    2. Instalar e configurar a deteção de impressão.
+    3. Inicie o scanner.
+    4. Atualize o cliente do Azure Information Protection para esta versão de pré-visualização.
+    5. Inicie o scanner.
+
+- Problema conhecido com a análise de grandes conjuntos de dados:
+    
+    Com esta versão de pré-visualização, aumente gradualmente o número de ficheiros analisados e monitorizar o progresso. Se o estado do leitor de relatórios que está a ser executado, mas não obter analisados novos ficheiros, reduza o número de ficheiros analisados e reiniciar o scanner. 
 
 Se precisar de instruções para instalar, configurar e iniciar o scanner, consulte [Implantando o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente](../deploy-aip-scanner.md).
 

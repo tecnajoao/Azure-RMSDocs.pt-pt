@@ -8,12 +8,12 @@ ms.date: 05/28/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: 82a3f71a4c1bb99fc4d0af74f49dd43a706cb132
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: af3958d7c3bafc37772944e2cb39a9b3244eccc2
+ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147700"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169979"
 ---
 # <a name="step-1-activate-protection"></a>Passo 1: Ativar proteção
  
@@ -41,7 +41,7 @@ Existem várias formas que pode ativar a proteção. Pode utilizar o PowerShell 
     
     Clique em **criar** novamente.
 
-4. Preste atenção às informações na página **Início rápido** que se abre automaticamente ao ligar ao serviço pela primeira vez. Pode regressar aqui mais tarde. Neste tutorial, selecione **MANAGE** > **ativação de proteção**. 
+4. Preste atenção às informações na página **Início rápido** que se abre automaticamente ao ligar ao serviço pela primeira vez. Pode regressar aqui mais tarde. Neste tutorial, selecione **Manage** > **ativação de proteção**. 
 
 5. Agora, ver se a proteção está ativada para o seu inquilino. 
     

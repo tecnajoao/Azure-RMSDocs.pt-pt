@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: cf951bba3cc74a82e31841986dde9e75ec34a630
-ms.sourcegitcommit: e70bb1a02e96d701fd5ae2a25536fa485bbf2e87
+ms.openlocfilehash: 5fb202d4b6e4aa5eafc4b4ed66bbacd1edd7c6d0
+ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862129"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49170098"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Central de relatórios do Azure Information Protection
 
@@ -90,7 +90,7 @@ Para ver os relatórios do Azure Information Protection e criar os seus próprio
     
     Por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
     
-2. Localize a **MANAGE** opções de menu e selecione **configurar análises (pré-visualização)**.
+2. Localize a **Manage** opções de menu e selecione **configurar análises (pré-visualização)**.
 
 3. Sobre o **o log analytics do Azure Information Protection** painel, verá uma lista de quaisquer áreas de trabalho do Log Analytics que pertencem ao seu inquilino. Efetue uma das seguintes ações:
     
@@ -104,11 +104,11 @@ Quando a área de trabalho é configurada, está pronto para ver os relatórios.
 
 ## <a name="how-to-view-the-reports"></a>Como ver os relatórios
 
-No painel do Azure Information Protection, localize a **DASHBOARDS (pré-visualização)** opções de menu e selecione uma das seguintes opções:
+No painel do Azure Information Protection, localize a **Dashboards** opções de menu e selecione uma das seguintes opções:
 
-- **Relatório de utilização**: Utilize este relatório para ver como as etiquetas estão sendo usadas. 
+- **Relatório de utilização (pré-visualização)**: Utilize este relatório para ver como as etiquetas estão sendo usadas. 
 
-- **Deteção de dados**: Utilize este relatório para ver informações sobre ficheiros que os scanners encontrados.
+- **Deteção de dados (pré-visualização)**: Utilize este relatório para ver informações sobre ficheiros que os scanners encontrados.
 
 ## <a name="how-to-modify-the-reports"></a>Como modificar os relatórios
 

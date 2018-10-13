@@ -8,12 +8,12 @@ ms.date: 04/30/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
-ms.openlocfilehash: 696d38c2dc7c0296a6afd87885ba90583c267050
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: c118abdf0f0b659b9ae330f44617901f8d11c300
+ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151304"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49170363"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Como configurar etiquetas e modelos para diferentes idiomas no Azure Information Protection
 
@@ -43,7 +43,7 @@ Selecione os idiomas que correspondem à definição de idioma do Office e do Wi
     
     Por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
 
-2. Do **GERIR** > **idiomas** opção de menu: no **do Azure Information Protection - idiomas** painel, selecione **adicionar um novo idioma para tradução**. Selecione os idiomas que pretende adicionar e, em seguida, selecione **OK**. Pode digitar o nome do idioma na caixa de pesquisa ou percorra a lista de idiomas de disponíveis
+2. Do **gerir** > **idiomas** opção de menu: no **do Azure Information Protection - idiomas** painel, selecione **adicionar um novo idioma para tradução**. Selecione os idiomas que pretende adicionar e, em seguida, selecione **OK**. Pode digitar o nome do idioma na caixa de pesquisa ou percorra a lista de idiomas de disponíveis
 
 3. Os idiomas selecionados agora apresentam no **do Azure Information Protection - idiomas** painel:
     

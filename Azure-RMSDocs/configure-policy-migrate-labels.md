@@ -4,17 +4,17 @@ description: Migre as etiquetas do Azure Information Protection para o Centro de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/11/2018
+ms.date: 10/13/2018
 ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 075330138910da90049cad3c1ccc74a1a360a218
-ms.sourcegitcommit: 39403f0e9fe5912d467b119ed45da94bccd1cc80
+ms.openlocfilehash: e689818ff4174e088faf1a6e3f396bf37abe0abc
+ms.sourcegitcommit: a194b63f7513a7039fbc82d1b075063d9e26c7de
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100648"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307462"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Como migrar as etiquetas do Azure Information Protection para o Centro de conformidade e segurança do Office 365
 
@@ -107,4 +107,6 @@ Os clientes que atualmente suportam a etiquetagem unificada incluem:
 
 ## <a name="next-steps"></a>Passos Seguintes
 
-Para obter mais informações sobre como configurar e publicar as suas etiquetas migradas no Centro de conformidade, de segurança do Office 365 e consulte a postagem no blog [a anunciar a disponibilidade de unificação de etiquetagem de gestão no Centro de conformidade e segurança do ](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492).
+Para obter mais informações sobre como configurar e publicar suas etiquetas migradas no Centro de conformidade e segurança do Office 365, consulte [descrição geral das etiquetas de sensibilidade](/Office365/SecurityCompliance/sensitivity-labels).
+
+Para ler a mensagem de blogue de anúncio: [anunciar a disponibilidade de unificação de etiquetagem de gestão no Centro de conformidade e segurança do](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492).

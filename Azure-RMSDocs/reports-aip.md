@@ -4,19 +4,19 @@ description: Como utilizar a centralização de relatórios para monitorizar a a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2018
+ms.date: 10/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 5fb202d4b6e4aa5eafc4b4ed66bbacd1edd7c6d0
-ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
+ms.openlocfilehash: 424be5910d6a4498bc9d2684888cd2bf9af010af
+ms.sourcegitcommit: 26e1ccdd0c4339a51ec7812082b399f13ef73b2b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49170098"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49324897"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Central de relatórios do Azure Information Protection
 
@@ -116,6 +116,8 @@ Selecione o ícone de consulta no dashboard para abrir um **pesquisa de registos
 
 ![Ícone de análise de registo para personalizar os relatórios do Azure Information Protection](./media/log-analytics-icon.png)
 
+
+Os dados com sessão iniciada para o Azure Information Protection são armazenados na tabela seguinte: **InformationProtectionLogs_CL**
 
 ## <a name="next-steps"></a>Passos Seguintes
 Depois de rever as informações nos relatórios, pode optar por efetuar alterações à sua política do Azure Information Protection. Para obter instruções, consulte [configurar a política do Azure Information Protection](configure-policy.md).

@@ -4,16 +4,16 @@ description: Quando atribui uma etiqueta a um documento ou a um e-mail pode sele
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2018
+ms.date: 10/15/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: b54707a367f58230c1d61192f6f0e8dbd00f0ec9
-ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
+ms.openlocfilehash: 087a06151b037760d2efc3d794b4eb55135c513c
+ms.sourcegitcommit: 26e1ccdd0c4339a51ec7812082b399f13ef73b2b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49170013"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49324896"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Como configurar uma etiqueta para marcas visuais para o Azure Information Protection
 
@@ -32,6 +32,12 @@ Obter informações adicionais sobre estas marcas visuais:
     - PowerPoint: as arcas d'água são aplicadas ao diapositivo principal, como uma imagem de fundo. Na **exibição** separador, **Slide mestre**, certifique-se de que o **ocultar gráficos de plano de fundo** não está selecionada a caixa de verificação.
     
     - São suportadas várias linhas de texto.
+
+- Comprimentos de cadeia de caracteres máximo:
+    
+    - O comprimento máximo da cadeia que pode introduzir para cabeçalhos e rodapés é de 1024 caracteres. No entanto, o Excel tem um limite de 253 carateres para cabeçalhos e rodapés. Se introduzir uma cadeia de caracteres mais de 253 carateres, no Excel, a cadeia de caracteres trunca após esse comprimento máximo da cadeia.
+    
+    - O comprimento máximo da cadeia para marcas de água que pode introduzir é 255 carateres.
 
 - Pode especificar apenas uma cadeia de texto ou utilizar [variáveis](#using-variables-in-the-text-string) para criar dinamicamente a cadeia de texto quando o cabeçalho, rodapé ou marca d'água for aplicada.
 

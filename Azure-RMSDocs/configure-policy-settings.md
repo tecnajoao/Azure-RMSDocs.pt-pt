@@ -4,16 +4,16 @@ description: Configurar as definições na política do Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/01/2018
+ms.date: 10/16/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 9e505b6aa2b1ae5e447055d0d12b333afe2f6363
-ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
+ms.openlocfilehash: 03736896f73fc83f699191677846e757eaf17be7
+ms.sourcegitcommit: d6c29e0d23c079045f9a9a2a270cf3cf22d628d5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49170115"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336464"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Como configurar as definições de política do Azure Information Protection
 
@@ -44,6 +44,8 @@ Configurar estas definições:
         Se uma etiqueta não estiver atribuída quando os utilizadores guardar um documento ou enviar um e-mail, é-lhes pedido para selecionar uma etiqueta. Por exemplo:
         
         ![Aviso do Azure Information Protection se a etiqueta for imposta](./media/info-protect-enforce-labelv2.png)
+        
+        Esta opção não se aplica quando remover uma etiqueta com o [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet do PowerShell com o *RemoveLabel* parâmetro.
         
     - **Os utilizadores têm de fornecer uma justificação para reduzir a segurança da etiqueta de classificação, remover uma etiqueta ou remover a proteção**: quando define esta opção como **Ativado** e um utilizador realiza uma destas ações (como alterar a etiqueta **Público** para **Pessoal**), é-lhe pedido que forneça uma explicação para esta ação. Por exemplo, o utilizador pode explicar que o documento já não contém informações confidenciais. A ação e a justificação são registadas no registo de eventos Windows local: **Applications and Services Logs** > **do Azure Information Protection**.  
         

@@ -4,17 +4,17 @@ description: Migre as etiquetas do Azure Information Protection para o Centro de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/13/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: e689818ff4174e088faf1a6e3f396bf37abe0abc
-ms.sourcegitcommit: a194b63f7513a7039fbc82d1b075063d9e26c7de
+ms.openlocfilehash: 49d8a76b8cd3129e4649fb669cf6c4cbc8b9e69e
+ms.sourcegitcommit: 6d4792755226a61d59e79fd8795a9b0f653770bb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307462"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49366976"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Como migrar as etiquetas do Azure Information Protection para o Centro de conformidade e segurança do Office 365
 
@@ -45,7 +45,7 @@ Antes de migrar as etiquetas, certifique-se de que está ciente das seguintes al
     
     - Modelos que utilizam uma chave com base na cloud e que fazem parte de uma configuração de etiqueta também são migrados com a etiqueta. Outros modelos de proteção não são migrados. 
     
-    - Depois de uma etiqueta com as definições de proteção com base na cloud foi migrada, o âmbito resultante do modelo de proteção é o âmbito definido no portal do Azure (ou ao utilizar o módulo do ADDRM PowerShell) e o âmbito definido na segurança & Centro de conformidade. 
+    - Depois de uma etiqueta com as definições de proteção com base na cloud foi migrada, o âmbito resultante do modelo de proteção é o âmbito definido no portal do Azure (ou ao utilizar o módulo do PowerShell do AADRM) e o âmbito definido na segurança & Centro de conformidade. 
 
 - Quando migra as etiquetas, verá a migração resulta apresentar se uma etiqueta foi **criado**, **atualizado**, ou **renomeado** devido à duplicação:
 
@@ -100,12 +100,14 @@ Para as etiquetas que migrado com êxito, eles podem agora ser utilizados pelo [
 
 Os clientes que atualmente suportam a etiquetagem unificada incluem:
 
+- O [do Azure Information Protection unified cliente etiquetagem para o Windows](./rms-client/unifiedlabelingclient-version-release-history.md) - na pré-visualização
+
 - Aplicações do programa Insiders do Office. Para obter mais informações, consulte a [em que a funcionalidade está disponível hoje?](https://support.office.com/article/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9?ad=US#bkmk_whereavailable) seção na documentação do Office.
     
 - Os clientes de fornecedores de software e os desenvolvedores que utilizam o [MIP SDK](https://docs.microsoft.com/azure/information-protection/develop/mip/mip-sdk-reference).
 
 
-## <a name="next-steps"></a>Passos Seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Para obter mais informações sobre como configurar e publicar suas etiquetas migradas no Centro de conformidade e segurança do Office 365, consulte [descrição geral das etiquetas de sensibilidade](/Office365/SecurityCompliance/sensitivity-labels).
 

@@ -4,18 +4,18 @@ description: Veja o que há de novo ou alterado numa versão do cliente do Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/13/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d140036e3326947df8504feb7b2946bf4390ed60
-ms.sourcegitcommit: a194b63f7513a7039fbc82d1b075063d9e26c7de
+ms.openlocfilehash: 3b67038450d904a1997ae46efc18110802269929
+ms.sourcegitcommit: 6a732226a3c97fc06fcf815fbbb24a2e2faae209
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307496"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358963"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: política de histórico e suporte de lançamento de versão
 
@@ -44,7 +44,10 @@ Utilize as seguintes informações para ver o que há de novo ou alterado para u
 
 ## <a name="versions-later-than-137190"></a>Versões mais tarde do que 1.37.19.0
 
-Se tiver uma versão 1 do cliente posterior 1.37.19.0, é uma versão de pré-visualização para fins de teste e avaliação.
+Se tiver uma versão 1 do cliente posterior 1.37.19.0, é uma versão de pré-visualização para fins de teste e avaliação. 
+
+> [!TIP]
+> Interessado na avaliação do Azure Information Protection unified cliente etiquetagem porque as etiquetas são publicadas a partir do Centro de conformidade e segurança do Office 365? Ver [do Azure Information Protection unified cliente etiquetagem: informações de lançamento de versão](unifiedlabelingclient-version-release-history.md).
 
 **Lançado**: 20/09/2018
 
@@ -307,7 +310,7 @@ Correções para uma melhor experiência de utilizador, que incluem:
 
 - A etiqueta principal não é apresentada quando todas as suas subetiquetas são configuradas para proteção e o cliente não tem uma edição do Office que suporte a proteção. 
 
-## <a name="next-steps"></a>Passos Seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Para obter mais informações sobre como instalar e utilizar o cliente: 
 

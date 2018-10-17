@@ -4,16 +4,16 @@ description: Quando atribui uma etiqueta a um documento ou a um e-mail pode sele
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/15/2018
+ms.date: 10/16/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 087a06151b037760d2efc3d794b4eb55135c513c
-ms.sourcegitcommit: 26e1ccdd0c4339a51ec7812082b399f13ef73b2b
+ms.openlocfilehash: dbc63a0ddca9e7583693219103268048b524121c
+ms.sourcegitcommit: 6a732226a3c97fc06fcf815fbbb24a2e2faae209
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324896"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358980"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Como configurar uma etiqueta para marcas visuais para o Azure Information Protection
 
@@ -35,7 +35,7 @@ Obter informações adicionais sobre estas marcas visuais:
 
 - Comprimentos de cadeia de caracteres máximo:
     
-    - O comprimento máximo da cadeia que pode introduzir para cabeçalhos e rodapés é de 1024 caracteres. No entanto, o Excel tem um limite de 253 carateres para cabeçalhos e rodapés. Se introduzir uma cadeia de caracteres mais de 253 carateres, no Excel, a cadeia de caracteres trunca após esse comprimento máximo da cadeia.
+    - O comprimento máximo da cadeia que pode introduzir para cabeçalhos e rodapés é de 1024 caracteres. No entanto, o Excel tem um limite total de 255 carateres para cabeçalhos e rodapés. Ao introduzir uma cadeia longa para cabeçalhos e rodapés, no Excel, este texto pode ser truncada de 255 carateres ou menos.
     
     - O comprimento máximo da cadeia para marcas de água que pode introduzir é 255 carateres.
 
@@ -138,7 +138,7 @@ Pode escolher a partir da lista de cores disponíveis ou especificar uma cor per
 
 Se precisar de uma referência para estes códigos [cores por nome](https://msdn.microsoft.com/library/aa358802\(v=vs.85\).aspx) da MSDN documentação é um ponto de partida útil. Também encontrar estes códigos em muitos aplicativos que permitem editar imagens. Por exemplo, o Microsoft Paint permite que escolha uma cor personalizada a partir de uma paleta e os valores RGB são apresentados automaticamente, que, em seguida, pode ser copiado.
 
-## <a name="next-steps"></a>Passos Seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).  
 

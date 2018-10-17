@@ -4,18 +4,18 @@ description: Instruções e informações para administradores implementar o cli
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/21/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d8818ff71acbd338ebb4959f9eb3ef617655b25d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 2b6e3a40f7faab35053c1bd3146bfc08767e0066
+ms.sourcegitcommit: 6d4792755226a61d59e79fd8795a9b0f653770bb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149281"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49367010"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guia do administrador: Instalar o cliente do Azure Information Protection para utilizadores
 
@@ -57,9 +57,9 @@ Em seguida, verifique os pré-requisitos adicionais que podem ser necessários p
     
     A instalação do cliente não verifica este pré-requisito, mas é necessário para o cliente do Azure Information Protection classificar e proteger ficheiros PDF.
 
-- Não desative o suplemento **Microsoft Azure Information Protection** para as aplicações do Office
+- Configuração da política de grupo para **lista de suplementos gerenciados**
     
-    Se configurou a definição de política de grupo **Lista de suplementos geridos**, adicione o suplemento Microsoft Azure Information Protection às aplicações do Office ao especificar os seguintes identificadores programáticos (ProgID) para o Azure Information Protection e definir a opção para **1: o suplemento está sempre ativado**.
+    Para Office 2013 e versões posteriores, configure a definição de política de grupo **lista de suplementos gerenciados** e adicione o **Microsoft Azure Information Protection** add-in para aplicativos do Office. Especifique os seguintes identificadores programáticos (ProgID) para o Azure Information Protection e definir a opção como **1: O suplemento está sempre ativado**.
     
     - Para o Outlook: `MSIP.OutlookAddin`
     
@@ -69,9 +69,9 @@ Em seguida, verifique os pré-requisitos adicionais que podem ser necessários p
     
     - Para o PowerPoint: `MSIP.PowerPointAddin`
     
-    Mesmo que ainda não tenha configurado esta definição de política de grupo **Lista de suplementos geridos**, poderá ter de a configurar se receber relatórios a informar que o suplemento Microsoft Azure Information Protection será desativado. Quando este suplemento é desativado, os utilizadores não veem a barra Azure Information Protection na aplicação do Office.
+    Se não configurar esta definição, o suplemento do Microsoft Azure Information Protection pode obter desativado e os utilizadores não poderão etiquetar os documentos e e-mails na sua aplicação do Office.
     
-    Para obter mais informações sobre esta definição de política de grupo, veja [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off) (Os suplementos não são carregados devido às definições de política de grupo dos programas do Office 2013 e do Office 2016).
+    Para obter mais informações sobre como configurar esta definição de política de grupo, consulte [controlo de administrador de sistema sobre suplementos](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) na documentação do Office.
 
 > [!IMPORTANT]
 > A instalação do cliente do Azure Information Protection requer permissões administrativas locais.
@@ -202,7 +202,7 @@ O módulo do PowerShell que está incluído com o cliente do Azure Information P
 
 Para instalar o cliente para a deteção de impressão, siga as mesmas instruções nas secções anteriores. Em seguida, está pronto para instalar o scanner. Para obter instruções, consulte [Implantando o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente](../deploy-aip-scanner.md).
 
-## <a name="next-steps"></a>Passos Seguintes
+## <a name="next-steps"></a>Próximos passos
 Agora que instalou o cliente do Azure Information Protection, veja o seguinte para obter informações adicionais que poderá precisar para suportar este cliente:
 
 - [Personalizações](client-admin-guide-customizations.md)

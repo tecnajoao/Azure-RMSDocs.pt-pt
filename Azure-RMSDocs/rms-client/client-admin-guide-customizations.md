@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 0c18c1ade57e189d355d5256418b8e9215fa634f
-ms.sourcegitcommit: d6c29e0d23c079045f9a9a2a270cf3cf22d628d5
+ms.openlocfilehash: 7657969916f69424a2823cb8b1dd79f9a50b6011
+ms.sourcegitcommit: 283782ee7e3ec566f479c8914eae7bf84d904392
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336498"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49382651"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas para o cliente do Azure Information Protection
 
@@ -251,7 +251,7 @@ Como resultado desta opção de configuração, quando o cliente do Azure Inform
 
 Para o scanner do Azure Information Protection utilizar a nova definição, é necessário reiniciar o serviço de scanner.
 
-Para obter mais informações sobre esta encriptação de PDF, consulte a mensagem de blogue [novo suporte para encriptação de PDF com proteção de informações do Microsoft](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/2627570).
+Para obter mais informações sobre esta encriptação de PDF, consulte a mensagem de blogue [novo suporte para encriptação de PDF com proteção de informações do Microsoft](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757).
 
 ### <a name="to-convert-existing-ppdf-files-to-protected-pdf-files"></a>Para converter ficheiros. ppdf existentes para os ficheiros. pdf protegidos
 

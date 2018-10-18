@@ -9,12 +9,12 @@ ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 49d8a76b8cd3129e4649fb669cf6c4cbc8b9e69e
-ms.sourcegitcommit: 6d4792755226a61d59e79fd8795a9b0f653770bb
+ms.openlocfilehash: 2d0ed8103ce4e0b42d67ea87b6b464dfb8f04f36
+ms.sourcegitcommit: 283782ee7e3ec566f479c8914eae7bf84d904392
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 10/17/2018
-ms.locfileid: "49366976"
+ms.locfileid: "49382617"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Como migrar as etiquetas do Azure Information Protection para o Centro de conformidade e segurança do Office 365
 
@@ -26,6 +26,15 @@ ms.locfileid: "49366976"
 Migrar as etiquetas, se pretender conseguir utilizá-los no Centro de conformidade, onde podem ser publicados e, em seguida, baixados por de segurança do Office 365 e [clientes que suportam a etiquetagem unificada](#clients-that-support-unified-labeling). O cliente do Azure Information Protection continua a transferir as etiquetas com a política do Azure Information Protection a partir do portal do Azure. 
 
 Depois de ter migrado as etiquetas, em seguida, pode efetuar alterações aos mesmos no portal do Azure ou a segurança do Office 365 e o Centro de conformidade e os respetivos clientes irão transferir a mesma alteração.
+
+### <a name="important-information-about-administrative-roles"></a>Informações importantes sobre as funções administrativas
+
+O [funções do Azure AD](/active-directory/users-groups-roles/directory-assign-admin-roles) dos **administrador de segurança** e **administrador do Information Protection** não são suportados pela plataforma de etiquetagem unificada. Se essas funções administrativas são utilizadas na sua organização, antes de migrar as etiquetas, adicione os utilizadores que têm estas funções para o **administrador de conformidade** ou o **gestão da organização** função grupos para o Centro de conformidade e segurança do Office 365. Como alternativa, pode criar um novo grupo de função para estes utilizadores e adicioná-los **gestão de retenção** ou **configuração de organização** funções a este grupo. Para obter instruções, consulte [conceder acesso de utilizadores para o Centro de conformidade e segurança do Office 365](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center).
+
+Se não conceder esses usuários acesso para o Centro de conformidade e segurança ao utilizar uma das seguintes configurações, eles perderão o acesso para as etiquetas e políticas no portal do Azure depois das etiquetas são migradas.
+
+Os administradores globais do seu inquilino pode continuar a gerir as etiquetas e políticas no tanto o portal do Azure e o Centro de segurança e conformidade depois das etiquetas são migradas.
+
 
 ## <a name="considerations-for-unified-labels"></a>Considerações para procurar etiquetas de unificada
 
@@ -89,6 +98,8 @@ Clientes do Azure Information Protection podem utilizar estas definições de et
 
 Quando tiver confirmado que o seu inquilino suporta etiquetas de sensibilidade no Centro de conformidade de segurança e, utilize as seguintes instruções para migrar o seu inquilino e etiquetas do Azure Information Protection.
 
+Tem de ser um administrador global para migrar as suas etiquetas.
+
 1. Abra uma nova janela do browser e inicie sessão no portal do Azure, utilizando a seguinte hiperligação: https://portal.azure.com/?ActivateMigration=true#blade/Microsoft_Azure_InformationProtection/DataClassGroupEditBlade/migrationActivationBlade 
 
 2. Sobre o **unificada do Azure Information Protection – etiquetagem** painel, selecione **ativar** e siga as instruções online.
@@ -107,8 +118,8 @@ Os clientes que atualmente suportam a etiquetagem unificada incluem:
 - Os clientes de fornecedores de software e os desenvolvedores que utilizam o [MIP SDK](https://docs.microsoft.com/azure/information-protection/develop/mip/mip-sdk-reference).
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 
-Para obter mais informações sobre como configurar e publicar suas etiquetas migradas no Centro de conformidade e segurança do Office 365, consulte [descrição geral das etiquetas de sensibilidade](/Office365/SecurityCompliance/sensitivity-labels).
+Para obter mais informações sobre as etiquetas migradas que agora pode ser configurado e publicado no Centro de conformidade e a segurança do Office 365, consulte [descrição geral das etiquetas de sensibilidade](/Office365/SecurityCompliance/sensitivity-labels).
 
 Para ler a mensagem de blogue de anúncio: [anunciar a disponibilidade de unificação de etiquetagem de gestão no Centro de conformidade e segurança do](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492).

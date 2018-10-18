@@ -4,18 +4,18 @@ description: Veja o que há de novo ou alterado numa versão do cliente do Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2018
+ms.date: 10/18/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3b67038450d904a1997ae46efc18110802269929
-ms.sourcegitcommit: 6a732226a3c97fc06fcf815fbbb24a2e2faae209
+ms.openlocfilehash: 4ccf6468ff1cfb2ee786e1f1bef95c9c07f39afe
+ms.sourcegitcommit: 00e508f97c9191035763384959a8b8fa9f742d4c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358963"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49399914"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: política de histórico e suporte de lançamento de versão
 
@@ -256,61 +256,7 @@ Correções para a estabilidade e para cenários específicos que incluem:
 
 - Para [registo de utilização do cliente](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client ): 102 de ID de evento e ID 103 são substituídos por evento 101 de ID.
 
-## <a name="version-110560"></a>Versão 1.10.56.0
-
-**Lançado**: 18/09/2017
-
-Esta versão inclui a versão 1.0.3219.0619 do cliente RMS MSIPC.
-
-**Novas funcionalidades**:
-
-- Suporte para as novas condições de DLP do Office 365 que pode configurar para uma etiqueta. Para obter mais informações, consulte [configurar condições para uma etiqueta do Azure Information Protection](../configure-policy-classification.md).
-
-- Suporte para etiquetas que estão configurados para ações definidas pelo utilizador. Para o Outlook, esta etiqueta aplica automaticamente a opção do Outlook não reencaminhar. Para o Word, Excel, PowerPoint e o Explorador de ficheiros, esta etiqueta pede ao utilizador para especificar permissões personalizadas. Para obter mais informações, consulte [configurar uma etiqueta do Azure Information Protection para proteção](../configure-policy-protection.md).
-
-- Etiquetas de suportam a vários idiomas. A partir do dia 30 de Agosto de 2017, o [política predefinida](../configure-policy-default.md) inclui suporte para vários idiomas que esta versão do cliente é apresentado aos utilizadores. Para os utilizadores verem as etiquetas em seu idioma preferencial de uma política predefinida antes desta data e para as etiquetas que configurou, veja [como configurar etiquetas para diferentes idiomas no Azure Information Protection] configurar-política-languages.md).
-
-- As etiquetas são apresentadas a partir da **Protect** botão da faixa de opções do Office, além de exibir na barra do Information Protection. 
-
-- Proteção nativa para os seguintes tipos de ficheiro do Visio:. vsdm,. vsdx,. vssm,. vssx, .vstm, .vstx
-
-- Suporte para configurações de cliente avançado que configurar no portal do Azure. Estas configurações incluem o seguinte:
-    
-    - [Ocultar ou mostrar o botão não reencaminhar no Outlook](client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook)
-    
-    - [Tornar as opções de permissões personalizadas disponíveis ou não está disponível para utilizadores](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users)
-    
-    - [Ocultar permanentemente a barra do Azure Information Protection](client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar)
-    
-    - [Ativar a classificação recomendada no Outlook](client-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
-
-- Para o PowerShell, suportam a etiquetar ficheiros de forma não interativa com os novos cmdlets do PowerShell, [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) e [Clear-AIPAuthentication](/powershell/module/azureinformationprotection/clear-aipauthentication). Para obter mais informações como utilizar estes cmdlets, consulte a [secção do PowerShell](client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) do Guia do administrador.
-
-- Para os cmdlets do PowerShell [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) e [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), existem novos parâmetros: **proprietário** e **PreserveFileDetails** . Estes parâmetros permitem-lhe especificar um endereço de e-mail para a propriedade personalizada de proprietário e a data inalterado para documentos que coloca uma etiqueta.
-
-**Correções**:
-
-Correções para a estabilidade e para cenários específicos que incluem:
-
-- Suporte para proteção genericamente ficheiros grandes, anteriormente podem causar danos se maior que 1 GB. Agora, o tamanho do ficheiro é limitado apenas pela memória disponível e de espaço em disco disponível. Para obter mais informações sobre as limitações de tamanho de ficheiro, consulte [tamanhos suportados para proteção de ficheiros](client-admin-guide-file-types.md#file-sizes-supported-for-protection) no Guia do administrador.
-
-- O Visualizador de cliente do Azure Information Protection abre ficheiros protegidos de PDF (. ppdf) como só de visualização.
-
-- Suporte para etiquetagem e proteção dos ficheiros armazenados no servidor do SharePoint.
-
-- As marcas d'água agora oferecem suporte a várias linhas. Além disso, marcas visuais agora são aplicadas a um documento no [first save only]configure-policy-markings.md#when-visual-markings-are-applied) em vez de sempre que um documento é salvo.
-
-- O **executar diagnósticos** opção a **ajuda e Feedback** caixa de diálogo é substituída pelo **repor definições**. O comportamento para esta ação foi alterado para incluir terminar a sessão do utilizador e a eliminar a política do Azure Information Protection. Para obter mais informações, consulte [mais informações sobre a opção de repor definições](..\rms-client\client-admin-guide.md#more-information-about-the-reset-settings-option) no Guia do administrador.
-
-- Suporte para a autenticação de proxy.
-
-Correções para uma melhor experiência de utilizador, que incluem:
-
-- Validação de e-mail quando os utilizadores podem especificar permissões personalizadas. Além disso, vários endereços de e-mail agora podem ser especificados ao premir Enter.
-
-- A etiqueta principal não é apresentada quando todas as suas subetiquetas são configuradas para proteção e o cliente não tem uma edição do Office que suporte a proteção. 
-
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 
 Para obter mais informações sobre como instalar e utilizar o cliente: 
 

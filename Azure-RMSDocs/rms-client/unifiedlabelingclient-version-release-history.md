@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 775c45bd34e9032239aefe8365b6c9987095442e
-ms.sourcegitcommit: 6d4792755226a61d59e79fd8795a9b0f653770bb
+ms.openlocfilehash: f05c1e96222eb70a7257123301d14ef7d885564d
+ms.sourcegitcommit: 283782ee7e3ec566f479c8914eae7bf84d904392
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 10/17/2018
-ms.locfileid: "49366942"
+ms.locfileid: "49382600"
 ---
 # <a name="azure-information-protection-unified-labeling-client-version-release-information"></a>O Azure Information Protection unified cliente etiquetagem: informações de lançamento de versão
 
@@ -47,7 +47,7 @@ Esta versão de pré-visualização do Azure Information Protection unified etiq
 
 - Etiquetas que aplicam não reencaminhar
 
-- Pedidos de justificação se os utilizadores diminuir o nível de sensibilidade, remover uma etiqueta ou removam a proteção
+- Pedidos de justificação se os utilizadores diminuir o nível de sensibilidade
 
 - Caixa de diálogo Ajuda e feedback, que inclui a repor as definições e exportar registos
 

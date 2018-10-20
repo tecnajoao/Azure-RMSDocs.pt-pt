@@ -6,32 +6,26 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: c889c736b6e67ef3c581ee1acaa3c04138773d20
-ms.sourcegitcommit: e70bb1a02e96d701fd5ae2a25536fa485bbf2e87
+ms.openlocfilehash: 430e130a5ba2026c0a3c69a59dddd6f9d6b4e8f0
+ms.sourcegitcommit: cc65c3851d4b8169a1a62c83afaf0f75402f7631
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862146"
+ms.lasthandoff: 10/20/2018
+ms.locfileid: "49476209"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Instalação do SDK de proteção de informações da Microsoft (MIP) e configuração 
 
 O guia de introdução e tutoriais são centradas em torno da criação de aplicativos que usam as APIs e bibliotecas MIP SDK. Este artigo mostra-lhe como configurar e configurar a sua subscrição do Office 365 e a estação de trabalho do cliente, em preparação para utilizar o SDK.
+
+O SDK de MIP é suportado nas seguintes plataformas:  
+
+[!INCLUDE [MIP SDK platform support](../include/mip-sdk-platform-support.md)]
 
 Certifique-se de que consulte os tópicos seguintes antes de começar:
 
 - [O que é o Centro de conformidade e de segurança do Office 365?](https://docs.microsoft.com/office365/securitycompliance/security-and-compliance)
 - [O que é o Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
 - [Como funciona a proteção no Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
-
-O SDK de MIP é suportado nas seguintes plataformas:
-
-| Sistema operativo | Versões |  
-|------------------|----------|
-| Ubuntu  |  16.04 |
-| Red Hat Enterprise Linux | 7 com devtoolset 7 |
-| Debian  | 9 |
-| macOS   | High Sierra e posterior |
-| Windows | Todas suportadas versões, 32 bits e 64 bits |
 
 ## <a name="sign-up-for-an-office-365-subscription"></a>Inscreva-se uma subscrição do Office 365
 

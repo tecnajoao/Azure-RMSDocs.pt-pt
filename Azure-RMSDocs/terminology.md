@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7db2b93b23efe2ad8f53cba35e1b93aab9ecb15e
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 01c2e8d4dd476e0910a75fd5949362225743f322
+ms.sourcegitcommit: 4cd90fcf94ac6e2543d8be10e6e29e8218d5fd9d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150879"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49651979"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologia do Azure Information Protection
 
@@ -27,7 +27,7 @@ Está confuso com uma palavra, expressão ou acrónimo relacionado com o Microso
 |--------|--------------|
 |AADRM|O nome do módulo do PowerShell para o serviço Azure Rights Management, derivado da abreviatura não oficial do Azure Rights Management quando, anteriormente denominado (Windows) Azure Active Directory Rights Management.|
 |ativar|Para ativar o serviço Azure Rights Management para que uma organização possa proteger os respetivos documentos e e-mails. Esta ação também permite que as funcionalidades da IRM no Exchange Online e SharePoint Online.|
-|Serviços de Gestão de Direitos do Active Directory|Frequentemente abreviado para *AD RMS*.<br /><br />Uma função do Windows Server que fornece proteção de gestão de direitos através de encriptação e políticas para o ajudar a proteger documentos, ficheiros e e-mails.|
+|Serviços de Gestão de Direitos do Active Directory|Frequentemente abreviado para *AD RMS*.<br /><br />Uma função do Windows Server que fornece proteção de gestão de direitos através da utilização de encriptação e políticas para ajudar a proteger documentos, ficheiros e e-mails.|
 |AD RMS|Consulte *Serviços de Gestão de Direitos do Active Directory*.|
 AzureInformationProtection|O nome do módulo do PowerShell para o cliente do Azure Information Protection.
 |Azure Information Protection|Um serviço baseado na nuvem que utiliza as etiquetas para classificar e proteger documentos e e-mails. O Azure Rights Management fornece a proteção utilizando as políticas de encriptação, de identidade e de autorização.|

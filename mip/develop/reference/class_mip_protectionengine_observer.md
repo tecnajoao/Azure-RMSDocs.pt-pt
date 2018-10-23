@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: reference
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 5c5b5e807a80c8db3cbdb69ea5d09da1e79aec6e
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.openlocfilehash: 9999b450d614b4465f151f0b2df80892a83bc143
+ms.sourcegitcommit: 4cd90fcf94ac6e2543d8be10e6e29e8218d5fd9d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446588"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49651350"
 ---
 # <a name="class-mipprotectionengineobserver"></a>classe mip::ProtectionEngine::Observer 
 Interface que recebe notificações relacionadas com a [ProtectionEngine](class_mip_protectionengine.md).
@@ -24,7 +24,7 @@ OnGetTemplatesSuccess de void virtual público (std::shared_ptr const < < Std:: 
 OnGetTemplatesFailure de void virtual público (const std::exception_ptr e erro, const std::shared_ptr<void>& contexto)  |  Chamado quando a obter modelos gerado um erro.
 OnGetRightsForLabelIdSuccess de void virtual público (std::shared_ptr const < < Std:: String >> Std:: vector & direitos, const std::shared_ptr<void>& contexto)  |  Chamado quando direitos foram obtidos com êxito.
 OnGetRightsForLabelIdFailure de void virtual público (const std::exception_ptr e erro, const std::shared_ptr<void>& contexto)  |  Chamado quando a obter direitos para obter um ID de etiqueta para o utilizador.
-OnGetGrantingLabelIdsSuccess de void virtual público (std::shared_ptr const < < Std:: String >> Std:: vector & lableIds, const std::shared_ptr<void>& contexto)  |  Chamado quando o IDs de etiqueta foram obtidos com êxito.
+OnGetGrantingLabelIdsSuccess de void virtual público (std::shared_ptr const < < Std:: String >> Std:: vector & labelIds, const std::shared_ptr<void>& contexto)  |  Chamado quando o IDs de etiqueta foram obtidos com êxito.
 OnGetGrantingLabelIdsFailure de void virtual público (const std::exception_ptr e erro, const std::shared_ptr<void>& contexto)  |  Chamado quando o IDs de etiqueta para o utilizador a obter.
   
 ## <a name="members"></a>Membros
@@ -81,7 +81,7 @@ Um aplicativo pode passar qualquer tipo de contexto (por exemplo, std::promise, 
 Chamado quando o IDs de etiqueta foram obtidos com êxito.
 
 Parâmetros:  
-* **lableIds**: obter uma referência à lista de IDs de etiqueta 
+* **labelIds**: obter uma referência à lista de IDs de etiqueta 
 
 
 * **contexto**: O mesmo contexto transmitido a [ProtectionEngine::GetGrantingLabelIdsAsync](class_mip_protectionengine.md#getgrantinglabelidsasync)

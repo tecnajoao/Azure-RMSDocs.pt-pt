@@ -4,18 +4,18 @@ description: Instruções para instalar, configurar e executar o scanner do Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/19/2018
+ms.date: 10/23/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: c67732bb473731cd8eb7f4135ff23bf365375cb3
-ms.sourcegitcommit: d745a2866a483c6f1bd15bb228e3b543315e7a94
+ms.openlocfilehash: cec02b659736cfb67fa6cfd0d2382a0bde392ffc
+ms.sourcegitcommit: b275c1f82bf9176fe3fb36016c6f8692b8418295
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49459099"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49951878"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Implementar o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente
 
@@ -192,7 +192,7 @@ Com a configuração predefinida do scanner, agora, está pronto para executar a
     
         Start-AIPScan
 
-2. Aguarde que o scanner concluir o seu ciclo. Quando a deteção de impressão tem rastreadas por meio de todos os arquivos nos arquivos de dados que especificou, o serviço será interrompido. Pode usar o Windows local **aplicativos e serviços** registo de eventos **do Azure Information Protection**, para confirmar quando o serviço está parado. Procure o ID de evento informativo **911**.
+2. Aguarde que o scanner concluir o seu ciclo. Quando a deteção de impressão tem rastreadas por meio de todos os arquivos nos arquivos de dados que especificou, o scanner para apesar do serviço de scanner permanece em execução. Pode utilizar o Windows local **aplicativos e serviços** registo de eventos **do Azure Information Protection**, para confirmar quando a deteção de impressão deixa. Procure o ID de evento informativo **911**.
 
 3. Rever os relatórios que são armazenados em %*localappdata*%\Microsoft\MSIP\Scanner\Reports e que tem um formato de ficheiro. csv. Com a configuração padrão do scanner, apenas os ficheiros que cumprem as condições para classificação automática estão incluídos nestes relatórios.
     

@@ -4,18 +4,18 @@ description: Instruções para instalar, configurar e executar o scanner do Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2018
+ms.date: 10/24/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: cec02b659736cfb67fa6cfd0d2382a0bde392ffc
-ms.sourcegitcommit: b275c1f82bf9176fe3fb36016c6f8692b8418295
+ms.openlocfilehash: 315c1e04d6d941643ee6625053b1cae8bd08b292
+ms.sourcegitcommit: 51c99ea4c98b867cde964f51c35450eaa22fac27
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49951878"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991382"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Implementar o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente
 
@@ -266,13 +266,15 @@ Quando o scanner aplique uma etiqueta com a proteção, por predefinição, apen
 
 ### <a name="editing-the-registry-for-the-scanner"></a>Editar o registo para a deteção de impressão
 
-Para alterar o comportamento de scanner de padrão para proteger os tipos de ficheiro diferentes arquivos do Office, tem manualmente de editar o registo e especificar os tipos de ficheiro adicionais que pretende proteger. Em alternativa, pode proteger todos os tipos de ficheiro, especificando o `*` com carateres universais. Para obter instruções, consulte [configuração da API de ficheiros](develop/file-api-configuration.md) de orientação para programadores. Nesta documentação para programadores, a proteção genérica é referida como "PFile". Além disso, específico para a deteção de impressão:
+Para alterar o comportamento de scanner de padrão para proteger os tipos de ficheiro diferentes arquivos do Office, tem manualmente de editar o registo e especificar os tipos de ficheiro adicionais que pretende proteger. Para obter instruções, consulte [configuração da API de ficheiros](develop/file-api-configuration.md) de orientação para programadores. Nesta documentação para programadores, a proteção genérica é referida como "PFile". Além disso, específico para a deteção de impressão:
 
 - O scanner tem seu próprio comportamento padrão: formatos de arquivo do Office só estão protegidos por predefinição. Se o registo não for modificado, outros tipos de ficheiro não serão protegidos pelo leitor.
 
+- Se pretender que o mesmo comportamento de proteção de predefinição do cliente do Azure Information Protection, onde todos os ficheiros são automaticamente protegidos com a proteção nativa ou genérica: Especifique a `*` universais como uma chave de registo e `Default` como os dados do valor .
+
 Ao editar o registro, criar manualmente a **MSIPC** chave e **FileProtection** chave se não existirem, bem como uma chave para cada extensão de nome de ficheiro.
 
-Por exemplo, para o scanner proteger ficheiros PDF, o registro depois que a editou será semelhante a imagem seguinte:
+Por exemplo, para o scanner proteger ficheiros PDF, além de ficheiros do Office, o registro depois que a editou será semelhante a imagem seguinte:
 
 ![Editar o registo para o scanner aplicar a proteção](./media/editregistry-scanner.png)
 

@@ -4,18 +4,18 @@ description: Veja o que há de novo ou alterado numa versão do cliente do Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/18/2018
+ms.date: 10/30/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4ccf6468ff1cfb2ee786e1f1bef95c9c07f39afe
-ms.sourcegitcommit: 00e508f97c9191035763384959a8b8fa9f742d4c
+ms.openlocfilehash: dd6a23c7bcb9f26c4b38a60e1733d84ddd954522
+ms.sourcegitcommit: 0e4e1bca400824c8a01c89e485cf56f6f14cd99e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49399914"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50227600"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: política de histórico e suporte de lançamento de versão
 
@@ -103,6 +103,8 @@ Esta versão inclui a versão 1.0.3592.627 do cliente RMS MSIPC.
     
     - SharePoint Server 2010 é suportada para os clientes que tenham [suporte para esta versão do SharePoint estendido](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
     
+- Suporte para a nova **do Azure Information Protection – nós (pré-visualização)** painel no portal do Azure, o que lhe permite gerir scanners de um local central. Informações da sua implementados scanners que ter conectividade para o Azure são atualizadas a cada cinco minutos. A partir deste painel, pode iniciar o scanner para uma única análise, reanalisar todos os ficheiros, verificar o estado de um scanner e ver a taxa de digitalização.
+
 **Correções**
 
 - Para o scanner do Azure Information Protection:

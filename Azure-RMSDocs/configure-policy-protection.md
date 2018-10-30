@@ -4,16 +4,16 @@ description: Pode proteger os seus documentos e e-mails mais confidenciais ao co
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2018
+ms.date: 10/30/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: dae8f654fbb6a5603d0324d474bd1f25e7c36118
-ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
+ms.openlocfilehash: c8cb4ebb2ccccb4c909e7385bb597310e751f9ae
+ms.sourcegitcommit: 0e4e1bca400824c8a01c89e485cf56f6f14cd99e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169775"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50227532"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Como configurar uma etiqueta para a proteção do Rights Management
 
@@ -100,17 +100,16 @@ Exchange tem de ser configurada para o Azure Information Protection antes dos ut
     
     Selecione **adicionar permissões**e, no **adicionar permissões** painel, selecione o primeiro conjunto de utilizadores e grupos que terão direitos a utilizar os conteúdos que serão protegidos pela etiqueta selecionada:
     
-    - Escolher **selecione na lista** onde pode, em seguida, adicionar todos os utilizadores da sua organização ao selecionar **Add \<nome da organização >-todos os membros**. Esta definição exclui as contas de convidado. Em alternativa, pode selecionar **adicionar utilizadores autenticados (pré-visualização)**, ou procure o diretório.
+    - Escolher **selecione na lista** onde pode, em seguida, adicionar todos os utilizadores da sua organização ao selecionar **Add \<nome da organização >-todos os membros**. Esta definição exclui as contas de convidado. Em alternativa, pode selecionar **adicionar utilizadores autenticados**, ou procure o diretório.
         
         Quando escolher todos os membros ou procurar o diretório, os utilizadores ou grupos têm de ter um endereço de e-mail. Num ambiente de produção, utilizadores e grupos quase sempre tem um endereço de e-mail, mas num ambiente de teste simple, poderá ter de adicionar endereços de e-mail a contas de utilizador ou grupos.
         
         ###### <a name="more-information-about-add-any-authenticated-users"></a>Obter mais informações sobre **adicionar utilizadores autenticados** 
         Esta definição não restringe quem pode aceder o conteúdo que a etiqueta protege, enquanto ainda encriptar o conteúdo e fornecer-lhe opções para restringir a como o conteúdo pode ser utilizadas (permissões) e acedidos (expiração e acesso offline). No entanto, o aplicativo abrindo o conteúdo protegido tem de ser capaz de suportar a autenticação a ser utilizada. Por esse motivo, federados fornecedores de redes sociais como o Google e autenticação de código de acesso onetime devem ser utilizados apenas para e-mails, e somente quando usar o Exchange Online e as novas capacidades de encriptação de mensagens do Office 365. Contas da Microsoft podem ser utilizadas com o Visualizador do Azure Information Protection e o Office 2016 Click-to-Run. 
           
-        Alguns cenários comuns para quaisquer autenticado a definição de usuários:  
-                -Não se a quem vê o conteúdo, mas pretender restringir a sua utilização. Por exemplo, não pretender que o conteúdo a ser editado, copiados ou impressos.  
-                -Não é necessário restringir quem acessa o conteúdo, mas quer poder controlar quem abre-se e potencialmente, revogue.  
-                -Tem um requisito que o conteúdo tem de estar encriptado em descanso e em trânsito, mas ele não requer controlos de acesso.  
+        Alguns cenários comuns para quaisquer autenticado a definição de usuários: – não se quem vê o conteúdo, mas pretender restringir a sua utilização. Por exemplo, não pretender que o conteúdo a ser editado, copiados ou impressos.  
+            -Não é necessário restringir quem acessa o conteúdo, mas quer poder controlar quem abre-se e potencialmente, revogue.  
+            -Tem um requisito que o conteúdo tem de estar encriptado em descanso e em trânsito, mas ele não requer controlos de acesso.
         
     - Escolher **introduza os detalhes** especificar manualmente o e-mail endereços para utilizadores individuais ou grupos (interno ou externo). Em alternativa, utilize esta opção para especificar todos os utilizadores na sua organização ao introduzir qualquer nome de domínio dessa organização. Também pode utilizar esta opção para fornecedores de redes sociais, introduzindo o respetivo nome de domínio, tal como **gmail.com**, **hotmail.com**, ou **outlook.com**.
         
@@ -279,7 +278,7 @@ Esta configuração tem a vantagem de que não tem de especificar os utilizadore
     
 2. Certifique-se **definir permissões** está selecionado e, em seguida, selecione **adicionar permissões**.
 
-3. Sobre o **adicionar permissões** painel, no **selecione na lista** separador, selecione **adicionar utilizadores autenticados (pré-visualização)**.
+3. Sobre o **adicionar permissões** painel, no **selecione na lista** separador, selecione **adicionar utilizadores autenticados**.
 
 4. Selecione as permissões que pretende e clique em **OK**.
 

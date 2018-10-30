@@ -4,18 +4,18 @@ description: Instruções para instalar, configurar e executar o scanner do Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/24/2018
+ms.date: 10/30/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 315c1e04d6d941643ee6625053b1cae8bd08b292
-ms.sourcegitcommit: 51c99ea4c98b867cde964f51c35450eaa22fac27
+ms.openlocfilehash: 4ee04cca2f6653d8beba50a74cc1b6d70d1042b8
+ms.sourcegitcommit: 0e4e1bca400824c8a01c89e485cf56f6f14cd99e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991382"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50227617"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Implementar o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente
 
@@ -191,13 +191,17 @@ Com a configuração predefinida do scanner, agora, está pronto para executar a
 1. Na sessão do PowerShell, reinicie o **do Azure Information Protection Scanner** service ao executar o seguinte comando:
     
         Start-AIPScan
+    
+    Em alternativa, pode iniciar o Verificador do **do Azure Information Protection** painel no portal do Azure, ao utilizar o **Scanner** > **nós (pré-visualização)**  >  \* *<* scanner nó * > * * > **analisar agora** opção.
 
 2. Aguarde que o scanner concluir o seu ciclo. Quando a deteção de impressão tem rastreadas por meio de todos os arquivos nos arquivos de dados que especificou, o scanner para apesar do serviço de scanner permanece em execução. Pode utilizar o Windows local **aplicativos e serviços** registo de eventos **do Azure Information Protection**, para confirmar quando a deteção de impressão deixa. Procure o ID de evento informativo **911**.
+    
+    Em alternativa, pode ver o estado a partir do **do Azure Information Protection** painel no portal do Azure, verificando o **Scanner** > **nós (pré-visualização)**  >  \* *<* scanner nó * > * * > **estado** coluna.
 
 3. Rever os relatórios que são armazenados em %*localappdata*%\Microsoft\MSIP\Scanner\Reports e que tem um formato de ficheiro. csv. Com a configuração padrão do scanner, apenas os ficheiros que cumprem as condições para classificação automática estão incluídos nestes relatórios.
     
     > [!TIP]
-    > Atualmente em pré-visualização, as informações destes relatórios agora são enviadas para o Azure Information Protection para que possa vê-las no portal do Azure. Para obter mais informações, consulte [de relatórios do Azure Information Protection](reports-aip.md). 
+    > Atualmente em pré-visualização, scanners de enviam estas informações para o Azure Information Protection a cada cinco minutos quando tiver a versão de pré-visualização do scanner, para que possa visualizar os resultados em tempo quase real do portal do Azure. Para obter mais informações, consulte [de relatórios do Azure Information Protection](reports-aip.md). 
         
     Se os resultados são não conforme o esperado, poderá ter de ajustar as condições que especificou na política do Azure Information Protection. Se for esse o caso, repita os passos 1 a 3 até estar pronto para alterar a configuração para aplicar a classificação e, opcionalmente, a proteção. 
 
@@ -216,8 +220,10 @@ Em sua configuração padrão, o scanner é executado um tempo e no modo só de 
 2. Reinicie o **do Azure Information Protection Scanner** service ao executar o seguinte comando:
     
         Start-AIPScan
+    
+    Em alternativa, pode iniciar o Verificador do **do Azure Information Protection** painel no portal do Azure, ao utilizar o **Scanner** > **nós (pré-visualização)**  >  \* *<* scanner nó * > * * > **analisar agora** opção.
 
-3. Como antes, monitorize o registo de eventos e os relatórios para ver quais arquivos foram etiquetados, classificação de que foi aplicada e, se a proteção foi aplicada.
+3. Como antes, monitorizar o registo de eventos e os relatórios ou utilizar o portal do Azure ver quais arquivos foram rotuladas, classificação de que foi aplicada e, se a proteção foi aplicada.
 
 Porque, configurámos o agendamento para ser executada continuamente, quando o scanner trilhou seu caminho através de todos os ficheiros, inicia um ciclo de novo para que os arquivos novos e alterados são detetados.
 
@@ -283,6 +289,8 @@ Por exemplo, para o scanner proteger ficheiros PDF, além de ficheiros do Office
 Para o primeiro ciclo de análise, o scanner inspeciona todos os ficheiros nos arquivos de dados configurada e, em seguida, para análises subsequentes, apenas novos ou modificados arquivos são inspecionados. 
 
 Pode forçar a deteção de impressão para inspecionar todos os ficheiros novamente, executando [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) com o `-Reset` parâmetro. A deteção de impressão tem de ser configurada para um agendamento manual, o que requer o `-Schedule` parâmetro ser definida como **Manual** com [conjunto AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).
+
+Em alternativa, pode forçar a deteção de impressão para inspecionar todos os ficheiros novamente a partir do **do Azure Information Protection** painel no portal do Azure, ao utilizar o **Scanner** > **(nós Pré-visualização)** > \**<* scanner nó * > * * > **reanalisar todos os ficheiros** opção.
 
 Inspecionar todos os ficheiros novamente é útil quando pretende que os relatórios para incluir todos os ficheiros e esta opção de configuração é normalmente utilizada quando o scanner é executado no modo de deteção. Quando uma análise completa estiver concluída, o tipo de análise muda automaticamente para incremental, de modo que para análises subsequentes, os ficheiros novos ou modificados só são analisados.
 

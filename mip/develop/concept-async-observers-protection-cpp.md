@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: d7077678ba336b031f7a8f812a3c4e90d8c5b05a
-ms.sourcegitcommit: d677088db8588fb2cc4a5d7dd296e76d0d9a2e9c
+ms.openlocfilehash: 35c0fb8eb358c5872ab378755d303425cc8e80a4
+ms.sourcegitcommit: 2c4e72120213407516a49286368f9b2860505f56
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48251714"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236820"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-observers"></a>SDK - observadores de API de proteção do Microsoft Information Protection
 
@@ -25,7 +25,7 @@ Quando uma operação assíncrona for concluída, o `OnXxx()` denomina-se a fun�
 
 Os exemplos abaixo demonstram o padrão de promessa/futuro, o que também é utilizado por amostras do SDK e pode ser estendido para implementar o comportamento de retorno de chamada pretendido. 
 
-## <a name="protection-protection-observer-implementation"></a>Implementação de observador de proteção de proteção
+## <a name="protectionprofile-observer-implementation"></a>Implementação de ProtectionProfile observador
 
 No exemplo a seguir, criamos uma classe, `ProtectionProfileObserverImpl` que é derivado de `mip::ProtectionProfile::Observer`. As funções de membro foram substituídas para usar o padrão de promessa/futuro usado em todo os exemplos.
 

@@ -4,16 +4,16 @@ description: Uma descrição geral sobre o serviço Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/30/2018
+ms.date: 10/30/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 0984cfc7b71c30d4a333b8cc6e24d8c3fbef216b
-ms.sourcegitcommit: 5cda0c64b486280ff0581e7f190d198b013a87d6
+ms.openlocfilehash: b789697a398a0e201cbf041b36d7cd41a82a9e0d
+ms.sourcegitcommit: 2c4e72120213407516a49286368f9b2860505f56
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47593766"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236837"
 ---
 # <a name="what-is-azure-information-protection"></a>O que é o Azure Information Protection?
 
@@ -104,7 +104,7 @@ Idealmente, documentos e e-mails são rotuladas quando forem criados pela primei
 
 Para os arquivos de dados no local, utilize o scanner do Azure Information Protection para detetar, classificar e proteger os documentos em pastas locais, compartilhamentos de rede e sites do SharePoint Server e bibliotecas. O scanner é executado como um serviço no Windows Server. Pode utilizar as mesmas regras na política para detetar informações confidenciais e aplique etiquetas de específicas aos documentos. Ou pode aplicar uma etiqueta predefinida para todos os documentos num repositório de dados sem inspecionar os conteúdos do ficheiro. Também pode utilizar o scanner em modo apenas de relatório para ajudar a detetar informações confidenciais que talvez não saiba que era necessário. 
 
-Para obter mais informações sobre como implementar e utilizar a deteção de impressão, consulte [Implantando o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente](deploy-rms-connector.md).
+Para obter mais informações sobre como implementar e utilizar a deteção de impressão, consulte [Implantando o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente](deploy-aip-scanner.md).
 
 Para os arquivos de dados na cloud, utilize o Microsoft Cloud App Security para aplicar as etiquetas a documentos na caixa, SharePoint Online e OneDrive para empresas. Para obter mais informações, consulte [aplicar automaticamente etiquetas de classificação do Azure Information Protection](/cloud-app-security/use-case-information-protection) e [integração do Azure Information Protection](/cloud-app-security/azip-integration).
 

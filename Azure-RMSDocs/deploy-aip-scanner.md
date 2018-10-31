@@ -4,18 +4,18 @@ description: Instruções para instalar, configurar e executar o scanner do Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/30/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 4ee04cca2f6653d8beba50a74cc1b6d70d1042b8
-ms.sourcegitcommit: 0e4e1bca400824c8a01c89e485cf56f6f14cd99e
+ms.openlocfilehash: 4e5c0c52c71527c5ffc2b6f2203086bf3efb9b82
+ms.sourcegitcommit: 7c120d7a3a973ec0f21b3db55020db73f53707c0
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50227617"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50254087"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Implementar o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente
 
@@ -433,6 +433,8 @@ Se o scanner foi configurado para ser executado uma vez, em vez de continuamente
 ----
 
 ## <a name="next-steps"></a>Passos Seguintes
+
+Interessado em como a equipe principal Services engenharia e operações no Microsoft implementado este scanner?  Leia o caso prático técnico: [automatizar a proteção de dados com o scanner do Azure Information Protection](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 
 Deve estar se perguntando: [qual é a diferença entre a FCI do Windows Server e o scanner do Azure Information Protection?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 

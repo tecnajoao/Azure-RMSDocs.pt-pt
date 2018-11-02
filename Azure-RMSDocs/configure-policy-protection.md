@@ -8,12 +8,12 @@ ms.date: 10/31/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: c1c757d2a952f4770f4392f7b8badb14c68c4547
-ms.sourcegitcommit: 3159b0f04f042a43193934d11376b4fadaaf1369
+ms.openlocfilehash: 0ee7333baebd0a34f518ff9500df95ed57ed2b01
+ms.sourcegitcommit: b70d49870960a7a3feaf9a97a6e04ad350c4d2c8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50679020"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50751173"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Como configurar uma etiqueta para a proteção do Rights Management
 
@@ -215,7 +215,7 @@ Esta etiqueta não é adequada para e-mails.
 7. Clique em **OK** sobre o **proteção** painel e clique em **guardar** no **etiqueta** painel.
 
 
-### <a name="example-3-add-external-users-to-an-existing-label"></a>Exemplo 3: Adicionar utilizadores externos para uma etiqueta existente
+### <a name="example-3-add-external-users-to-an-existing-label-that-protects-content"></a>Exemplo 3: Adicionar utilizadores externos para uma etiqueta existente que protege conteúdo
 
 Os novos utilizadores que adicionar serão capazes de documentos abertos e e-mails que já foram protegidos com esta etiqueta. As permissões que conceder a estes utilizadores podem ser diferentes das permissões que têm dos utilizadores existentes.
 

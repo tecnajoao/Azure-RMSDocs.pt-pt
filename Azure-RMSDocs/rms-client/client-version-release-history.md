@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: dd6a23c7bcb9f26c4b38a60e1733d84ddd954522
-ms.sourcegitcommit: 0e4e1bca400824c8a01c89e485cf56f6f14cd99e
+ms.openlocfilehash: b05b41b802b54d874d13dcf13f541374d4150564
+ms.sourcegitcommit: b70d49870960a7a3feaf9a97a6e04ad350c4d2c8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50227600"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50751258"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: política de histórico e suporte de lançamento de versão
 
@@ -113,7 +113,7 @@ Esta versão inclui a versão 1.0.3592.627 do cliente RMS MSIPC.
     
     - Os relatórios de scanner incluem "Última modificação por" para documentos do Office.
     
-    - Agora pode proteger todos os tipos de ficheiro ao utilizar o `*` universais ao editar o registro, conforme descrito no [configuração da API de ficheiros](../develop/file-api-configuration.md) instruções.
+    - Agora pode proteger todos os tipos de ficheiro ao utilizar o `*` universais ao editar o registro, conforme descrito no [editar o registo para o scanner](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner) secção.
 
 - Quando classifica e protege utilizando o PowerShell ou o scanner, os metadados de documento do Office não é removido ou criptografados.
 

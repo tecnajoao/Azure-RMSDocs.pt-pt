@@ -4,18 +4,18 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/15/2018
+ms.date: 11/02/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 7657969916f69424a2823cb8b1dd79f9a50b6011
-ms.sourcegitcommit: 283782ee7e3ec566f479c8914eae7bf84d904392
+ms.openlocfilehash: beac842cdb8cfde5b3a209f3e37084828d3df7ba
+ms.sourcegitcommit: d969a82dc801f3d653163de2b18a3a772607b74c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49382651"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50915585"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas para o cliente do Azure Information Protection
 
@@ -302,13 +302,11 @@ Como resultado desta edição de registo, são suportados os seguintes cenários
 
 - O Visualizador do Azure Information Protection pode abrir estes ficheiros protegidos.
 
-- Explorador de ficheiros e o PowerShell podem desproteger estes ficheiros ou volte a protegê-los com o Azure Information Protection.
-
-- Explorador de ficheiros, o PowerShell e o scanner do Azure Information Protection podem Etiquetar estes ficheiros.
-
 - O scanner do Azure Information Protection pode inspecionar esses arquivos de informações confidenciais.
 
-- Pode utilizar o [personalização do cliente de migração de etiquetagem](#migrate-labels-from-secure-islands-and-other-labeling-solutions) para converter a etiqueta de Secure Islands sobre esses protegidos ficheiros para uma etiqueta do Azure Information Protection.
+- Explorador de ficheiros, o PowerShell e o scanner do Azure Information Protection podem Etiquetar estes ficheiros. Como resultado, pode aplicar uma etiqueta do Azure Information Protection que aplica-se a nova proteção do Azure Information Protection ou que remove a proteção existente da Secure Islands.
+
+- Pode utilizar o [personalização do cliente de migração de etiquetagem](#migrate-labels-from-secure-islands-and-other-labeling-solutions) para converter automaticamente a etiqueta de Secure Islands sobre esses protegidos ficheiros para uma etiqueta do Azure Information Protection.
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Migrar as etiquetas de Secure Islands e outras soluções de etiquetas
 

@@ -4,18 +4,18 @@ description: Utilize estes passos para preparar, implementar e gerir o Azure Inf
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4d1a63ac3ea5fae9782588b1779d7c7950738e23
-ms.sourcegitcommit: 3b41a6e730fa40660a2bdf5b1a73d155c87aacc2
+ms.openlocfilehash: 4e2fa20d542a9509476c78ebe21143e49863b788
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48834611"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026830"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Plano de implementação do Azure Information Protection
 
@@ -23,7 +23,7 @@ ms.locfileid: "48834611"
 
 Utilize os seguintes passos, como recomendações para ajudar a preparar, implementar e gerir o Azure Information Protection para a sua organização.
 
-Contudo, se apenas quiser experimentar rapidamente o Azure Information Protection para si próprio, em vez de o implementar num ambiente de produção, consulte [Tutorial de início rápido do Azure Information Protection](./infoprotect-quick-start-tutorial.md).
+No entanto, se estiver procurando por baseados em cenários de instruções, consulte [guias para cenários comuns que utilizam o Azure Information Protection](how-to-guides.md).
 
 > [!NOTE]
 > Se estiver procurando por um mapa de versão do produto, consulte nosso [informações sobre novas versões e atualizações](information-support.md#information-about-new-releases-and-updates) secção.
@@ -32,7 +32,7 @@ Contudo, se apenas quiser experimentar rapidamente o Azure Information Protectio
 
 ### <a name="identify-your-deployment-roadmap"></a>Identificar o seu plano de implementação
 
-Antes de efetuar os seguintes passos para implementar o Azure Information Protection, certifique-se de que consultou [requisitos do Azure Information Protection](./requirements.md).
+Antes de implementar qualquer um dos seguintes passos para implementar o Azure Information Protection, certifique-se de que consultou [requisitos do Azure Information Protection](./requirements.md).
 
 Em seguida, escolha o plano de implementação que se aplica à sua organização e que corresponde a [funcionalidades da subscrição](https://azure.microsoft.com/pricing/details/information-protection/) que terá de:
 
@@ -59,7 +59,7 @@ Para obter mais informações, veja [Preparar utilizadores e grupos para o Azure
 ### <a name="step-3-configure-and-deploy-classification-and-labeling"></a>Passo 3: configurar e implementar a classificação e a etiquetagem
 
 > [!TIP]
-> **Opcional mas recomendado**: considere implementar o [scanner do Azure Information Protection](deploy-aip-scanner.md) para detetar as informações confidenciais tiver em seus arquivos de dados local. As informações que localiza o scanner pode ajudá-lo com a taxonomia de classificação, fornece valiosas informações sobre etiquetas de que precisa, e quais arquivos precisam de proteger.
+> **Opcional mas recomendado**: considere implementar o scanner do Azure Information Protection para detetar as informações confidenciais que tiver em seus arquivos de dados local. Temos uma [guia de introdução](quickstart-findsensitiveinfo.md) que aborda este cenário. As informações que localiza o scanner pode ajudá-lo com a taxonomia de classificação, fornece valiosas informações sobre etiquetas de que precisa, e quais arquivos precisam de proteger.
 > 
 > A deteção de impressão pode ser configurada para verificar tipos de informações confidenciais bem conhecidos em ficheiros locais no Windows Server, ficheiros nas partilhas de rede e ficheiros em versões no local do SharePoint. Porque esta configuração não exige que configurar etiquetas ou até mesmo ter sua taxonomia de classificação definida, que executa o scanner dessa maneira é adequado para este estágio inicial da sua implementação. Também pode utilizar esta configuração do scanner em paralelo com os seguintes passos de implementação, até que a configurar as condições para as etiquetas.
 
@@ -151,7 +151,7 @@ Nota: não atribua licenças de utilizador manualmente a partir da subscrição 
 ### <a name="step-2-prepare-your-tenant-to-use-azure-information-protection"></a>Passo 2: preparar o inquilino para utilizar o Azure Information Protection
 Antes de começar a utilizar o serviço de proteção do Azure Information Protection, efetue a preparação seguinte:
 
-1. Confirme que o seu inquilino do Office 365 contém os grupos e as contas de utilizador que serão utilizados pelo Azure Information Protection para autenticar e autorizar os utilizadores da sua organização. Se for necessário, crie estas contas e grupos ou sincronize-os partir do seu diretório local. Para obter mais informações, veja [Preparar utilizadores e grupos para o Azure Information Protection](prepare.md).
+1. Certifique-se de que o seu inquilino do Office 365 contém as contas de utilizador e grupos que vão ser utilizados pelo Azure Information Protection para autenticar e autorizar os utilizadores da sua organização. Se for necessário, crie estas contas e grupos ou sincronize-os partir do seu diretório local. Para obter mais informações, veja [Preparar utilizadores e grupos para o Azure Information Protection](prepare.md).
 
 2. Decida se pretende que a Microsoft efetue a gestão da sua chave de inquilino (predefinição) ou se pretende gerar e gerir a sua chave de inquilino sozinho (conhecido como traga a sua própria chave ou BYOK). Para obter mais informações, consulte [Planear e implementar a sua chave de inquilino do Azure Information Protection](plan-implement-tenant-key.md).
 

@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 47a8633852139bf0a84e6c55321c69b1af2c2892
-ms.sourcegitcommit: b70d49870960a7a3feaf9a97a6e04ad350c4d2c8
+ms.openlocfilehash: b97b000aaeb545592910a32b00e88ad6dd579ab1
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50751292"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026796"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Implementar o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente
 
@@ -326,7 +326,9 @@ Existem dois cenários alternativos que o scanner do Azure Information Protectio
     
     Para esta configuração, utilize o [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet e defina a *DiscoverInformationTypes* parâmetro **todos os**.
     
-    O scanner utiliza quaisquer condições personalizadas que tenha especificado para as etiquetas na política do Azure Information Protection e a lista de tipos de informações que estão disponíveis para especificar para etiquetas na política do Azure Information Protection. 
+    O scanner utiliza quaisquer condições personalizadas que tenha especificado para as etiquetas na política do Azure Information Protection e a lista de tipos de informações que estão disponíveis para especificar para etiquetas na política do Azure Information Protection.
+    
+    Início rápido seguinte utiliza esta configuração: [início rápido: encontrar as informações confidenciais que tiver](quickstart-findsensitiveinfo.md).
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>Otimizar o desempenho do scanner
 

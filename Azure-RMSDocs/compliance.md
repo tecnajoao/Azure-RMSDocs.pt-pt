@@ -1,6 +1,6 @@
 ---
 title: Conformidade e informações do Azure Information Protection
-description: As informações de suporte do Azure Information Protection incluem informações legais, de conformidade e SLAs.
+description: Informações de suporte para o Azure Information Protection incluem informações legais, conformidade e SLAs.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e7c6c078d992bc4d3be9480227715be2157178f2
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 0269888af84f4f1b17ce5523bb5bbc8648d0d1a7
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150794"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026711"
 ---
-# <a name="compliance-and-supporting-information-for-azure-information-protection"></a>Informações de suporte e conformidade do Azure Information Protection
+# <a name="compliance-and-supporting-information-for-azureinformation-protection"></a>Informações de suporte do Azure Information Protection e conformidade
 
-O Azure Information Protection suporta outros serviços e também depende de outros serviços. Se estiver à procura de informações sobre o Azure Information Protection, mas não sobre como utilizar o serviço Azure Information Protection, consulte os seguintes recursos:
+O Azure Information Protection suporta outros serviços e também depende de outros serviços. Se estiver procurando por informações relacionadas com o Azure Information Protection, mas não sobre como utilizar o serviço do Azure Information Protection, consulte os seguintes recursos:
 
 ## <a name="suitability-for-different-countries"></a>Adequação para diferentes países
 
@@ -39,15 +39,15 @@ No entanto, algumas informações relevantes que ajudem a seu consultor legal to
 
 ## <a name="legal-and-privacy"></a>Informações legais e privacidade
 
-- Para obter informações sobre o contrato do Microsoft Azure: [Contrato do Microsoft Azure](http://azure.microsoft.com/support/legal/subscription-agreement/)
+- Para obter informações de contrato do Microsoft Azure: [contrato do Microsoft Azure](http://azure.microsoft.com/support/legal/subscription-agreement/)
 
-- Para obter informações sobre a privacidade do Microsoft Azure: [Declaração de Privacidade do Microsoft Azure](http://azure.microsoft.com/support/legal/privacy-statement/)
+- Para obter informações de privacidade do Microsoft Azure: [declaração de privacidade do Microsoft Azure](http://azure.microsoft.com/support/legal/privacy-statement/)
 
 ## <a name="security-compliance-and-auditing"></a>Segurança, conformidade e auditoria
 
-Veja a secção [Requisitos de segurança, conformidade e regulamentação](./azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements) no artigo [Que problemas resolve o Azure RMS?](./azure-rms-problems-it-solves.md), para obter informações sobre certificados específicos para o serviço Azure Rights Management. Além disso:
+Veja a secção [Requisitos de segurança, conformidade e regulamentação](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements) no artigo [Que problemas resolve o Azure RMS?](./azure-rms-problems-it-solves.md), para obter informações sobre certificados específicos para o serviço Azure Rights Management. Além disso:
 
-- Para obter certificados externos para o Azure Information Protection: [Centro de Fidedignidade do Microsoft Azure](http://azure.microsoft.com/support/trust-center/)
+- Para obter certificados externos do Azure Information Protection: [Microsoft Azure Trust Center](http://azure.microsoft.com/support/trust-center/)
 
 - Para obter informações sobre a norma FIPS 140: [FIPS 140 Validation (Validação da Norma FIPS 140 – em inglês)](https://technet.microsoft.com/library/security/cc750357.aspx)
 
@@ -63,7 +63,7 @@ Para obter informações técnicas detalhadas sobre como funciona a tecnologia d
 
 ## <a name="documentation"></a>Documentação
 
-- Documentação do Azure Active Directory: [Azure Active Directory](/active-directory/)
+- Documentação do Azure Active Directory: [do Azure Active Directory](/active-directory/)
 
 - Biblioteca do Office 365: [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
 

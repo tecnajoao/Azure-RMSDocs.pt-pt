@@ -4,16 +4,16 @@ description: Configurar as definições na política do Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/16/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 03736896f73fc83f699191677846e757eaf17be7
-ms.sourcegitcommit: d6c29e0d23c079045f9a9a2a270cf3cf22d628d5
+ms.openlocfilehash: f8967b16f864939bfcb06f786e8ee1eff0603ac2
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336464"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026609"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Como configurar as definições de política do Azure Information Protection
 
@@ -83,5 +83,7 @@ Quando clica em **guardar**, as suas alterações estão automaticamente dispon�
 
 ## <a name="next-steps"></a>Passos Seguintes
 
-Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).  
+Para ver como algumas destas definições de política podem trabalhar em conjunto, experimente o [definições de política de configurar o Azure Information Protection que funcionam em conjunto](infoprotect-settings-tutorial.md) tutorial.
+
+Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).
 

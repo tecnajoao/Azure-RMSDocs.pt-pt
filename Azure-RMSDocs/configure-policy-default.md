@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
 ms.openlocfilehash: 0b985b3901924c3a22a167a26799a7cffb9c500a
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149162"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026847"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Política do Azure Information Protection predefinida
 

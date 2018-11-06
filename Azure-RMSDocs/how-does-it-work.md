@@ -4,18 +4,18 @@ description: Descrição detalhada de como o Azure RMS funciona, os controlos cr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 821038f555a73e89748541d5b512d5a631094fa8
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 19b45c3e24de5eba9f0bd243baf73797b66431f7
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149366"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026779"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Como funciona o Azure RMS? Os bastidores
 
@@ -29,7 +29,7 @@ Uma coisa importante para entender sobre como funciona o Azure RMS, é que este 
 
 Pode ver como este processo funciona de modo geral na imagem seguinte. O documento com a fórmula secreta é protegido e, em seguida, aberto com êxito por um utilizador ou serviço autorizado. O documento é protegido por uma chave de conteúdo (a chave verde nesta imagem). Esta é exclusiva para cada documento e é colocada no cabeçalho do ficheiro, onde é protegida pela sua chave de raiz de inquilino do Azure Information Protection (a chave vermelha nesta imagem). A sua chave de inquilino pode ser gerada e gerida pela Microsoft ou o utilizador pode gerar e fazer a gestão da sua própria chave de inquilino.
 
-Ao longo de todo o processo de proteção, quando o Azure RMS está a encriptar, desencriptar, autorizar e a impor restrições, a fórmula secreta nunca é enviada para o Azure.
+Ao longo do processo de proteção quando o Azure RMS é encriptar e desencriptar, autorizar e impor restrições, a fórmula secreta nunca é enviada para o Azure.
 
 ![Como o Azure RMS protege um ficheiro](./media/AzRMS_SecretColaFormula_final.png)
 
@@ -89,7 +89,7 @@ Antes de um utilizador poder proteger conteúdos ou consumir conteúdos protegid
 
 **O que acontece no passo 1**: primeiro, o cliente de RMS no computador liga-se ao serviço Azure Rights Management e autentica o utilizador com a respetiva conta do Azure Active Directory.
 
-Quando a conta do utilizador está federada com o Azure Active Directory, esta autenticação é automática e não serão pedidas ao utilizador as suas credenciais.
+Quando a conta de utilizador está federada com o Azure Active Directory, esta autenticação é automática e o utilizador não será pedido credenciais.
 
 ![Ativação do Cliente de RMS – passo 2, os certificados são transferidos para o cliente](./media/AzRMS_useractivation2.png)
 
@@ -150,7 +150,7 @@ Os passos anteriores abrangem os cenários padrão, mas existem algumas variaç�
 
 - **Dispositivos móveis**: quando os dispositivos móveis protegem ou consomem ficheiros com o serviço Azure Rights Management, os fluxos do processo são muito mais simples. Os dispositivos móveis não passam pelo processo de inicialização do utilizador efetuado em primeiro lugar, pois cada transação (para proteger ou consumir conteúdos) é independente. À semelhança dos computadores Windows, os dispositivos móveis ligam-se ao serviço Azure Rights Management e efetuam a autenticação. Para proteger os conteúdos, os dispositivos móveis submetem uma política e o serviço Azure Rights Management envia-lhes uma licença de publicação e uma chave simétrica para proteger o documento. Para consumir conteúdos, quando os dispositivos móveis se ligam ao serviço Azure Rights Management e efetuam a autenticação, os mesmos enviam a política do documento para o serviço Azure Rights Management e pedem uma licença de utilização para consumir o documento. Em resposta, o serviço Azure Rights Management envia as chaves e restrições necessárias para os dispositivos móveis. Ambos os processos utilizam o TLS para proteger a troca de chaves e outras comunicações.
 
-- **Conector RMS**: quando o serviço Azure Rights Management é utilizado com o conector RMS, os fluxos do processo mantêm-se os mesmos. A única diferença é que o conector funciona como um reencaminhamento entre os serviços no local (como o Exchange Server e o SharePoint Server) e o serviço Azure Rights Management. O conector propriamente dito não executa quaisquer operações, como a inicialização do ambiente de utilizador, a encriptação ou a desencriptação. Apenas reencaminha a comunicação que normalmente iria para um servidor AD RMS, através do processamento da tradução entre os protocolos que são utilizados em cada lado. Este cenário permite-lhe utilizar o serviço Azure Rights Management com serviços no local.
+- **Conector do RMS**: quando o serviço Azure Rights Management é utilizado com o conector RMS, os fluxos do processo mantêm a mesma. A única diferença é que o conector funciona como um reencaminhamento entre os serviços no local (como o Exchange Server e o SharePoint Server) e o serviço Azure Rights Management. O conector propriamente dito não executa quaisquer operações, como a inicialização do ambiente de utilizador, a encriptação ou a desencriptação. Apenas reencaminha a comunicação que normalmente iria para um servidor AD RMS, o processamento da tradução entre os protocolos que são utilizados em cada lado. Este cenário permite-lhe utilizar o serviço Azure Rights Management com serviços no local.
 
 - **Proteção genérica (.pfile)**: quando o serviço Azure Rights Management protege genericamente um ficheiro, o fluxo é basicamente o mesmo para a proteção de conteúdos com a exceção do facto de ser o cliente de RMS a criar uma política que concede todos os direitos. Quando o ficheiro é consumido, é desencriptado antes de ser transmitido para a aplicação de destino. Este cenário permite-lhe proteger todos os ficheiros, mesmo que não suportem o RMS originalmente.
 
@@ -160,9 +160,9 @@ Os passos anteriores abrangem os cenários padrão, mas existem algumas variaç�
 
 ## <a name="next-steps"></a>Passos Seguintes
 
-Para saber mais sobre o serviço Azure Rights Management, utilize os outros artigos na secção **Compreender e Explorar**, por exemplo [Como as aplicações suportam o serviço Azure Rights Management](applications-support.md) para saber como é que as suas aplicações existentes se podem integrar com o serviço Azure Rights Management para fornecer uma solução de proteção de informações. 
+Para saber mais sobre o serviço Azure Rights Management, utilize os outros artigos a **compreender e explorar** secção, tal como [como as aplicações suportam o serviço Azure Rights Management](applications-support.md) para saber mais como seus aplicativos existentes, podem integrar com o Azure Rights Management para fornecer uma solução de proteção de informações. 
 
-Consulte a [Terminologia do Azure Information Protection](./terminology.md) para se familiarizar com os termos que possam ser apresentados quando estiver a configurar e utilizar o serviço Azure Rights Management e certifique-se de que também consulta os [Requirements for Azure Information Protection (Requisitos para o Azure Information Protection – em inglês)](requirements.md) antes de iniciar a implementação. Se quiser começar já e experimentar, utilize o [Tutorial de início rápido do Azure Information Protection](infoprotect-quick-start-tutorial.md).
+Consulte a [Terminologia do Azure Information Protection](./terminology.md) para se familiarizar com os termos que possam ser apresentados quando estiver a configurar e utilizar o serviço Azure Rights Management e certifique-se de que também consulta os [Requirements for Azure Information Protection (Requisitos para o Azure Information Protection – em inglês)](requirements.md) antes de iniciar a implementação. Se quiser começar já e experimente mesmo, utilize o [editar a política e criar uma nova etiqueta](infoprotect-quick-start-tutorial.md) tutorial.
 
 Se estiver pronto para iniciar a implementação da proteção de dados na sua organização, utilize o [Plano de implementação do Azure Information Protection](deployment-roadmap.md) para obter os passos da sua implementação e ligações para instruções sobre como proceder.
 

@@ -1,43 +1,51 @@
 ---
-title: Tutorial de início rápido do Azure Information Protection
-description: Um tutorial de introdução, com uma duração de aproximadamente 20 minutos, para experimentar rapidamente o Microsoft Azure Information Protection na sua organização.
+title: Tutorial - editar a política do Azure Information Protection e criar uma nova etiqueta
+description: Um tutorial de introdução que edita a política do Azure Information Protection para a sua organização que deve demorar cerca de 15 minutos a concluir.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/17/2018
-ms.topic: conceptual
+ms.date: 11/05/2018
+ms.topic: tutorial
 ms.service: information-protection
-ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: 2eb58e0177ca397548b5dda6df7b6b5a5fde0031
-ms.sourcegitcommit: ea8207da513f61bc0691c952da1f8b61ceb10887
+ms.openlocfilehash: b3d799408d0e337bc17598d14c4c973102fed784
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45696488"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026813"
 ---
-# <a name="quick-start-tutorial-for-azure-information-protection"></a>Tutorial de início rápido do Azure Information Protection 
+# <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>Tutorial: Editar a política do Azure Information Protection e criar uma nova etiqueta
 
 >*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Utilize este tutorial, com uma duração de aproximadamente 20 minutos, para experimentar rapidamente o Azure Information Protection em apenas 5 passos. Este tutorial foi concebido para ser uma demonstração auto-configurada para mostrar rapidamente algumas das funcionalidades disponibilizadas pelo Azure Information Protection. Não inclui todas as funcionalidades disponíveis e não se destina a ser um guia de implementação para a sua organização. Se quiser implementar o Azure Information Protection na sua organização, consulte a [documentação com informações gerais sobre a implementação](deployment-roadmap.md). 
+Neste tutorial, ficará a saber como:
+> [!div class="checklist"]
+> * Alterar duas definições de política
+> * Criar uma nova etiqueta 
+> * Configurar a etiqueta para marcas visuais, recomendado classificação e proteção
+> * Veja as suas definições e etiquetas em ação
 
-Este tutorial destina-se a administradores de TI e consultores, para os ajudar a avaliar o Azure Information Protection como uma solução de proteção de informações empresariais para uma organização. Num ambiente de produção, os passos para configurar a política do Information Protection e instalar o cliente para os utilizadores teriam de ser feitos por um administrador. Os passos para etiquetar o documento, partilhá-lo em segurança por e-mail e controlá-lo seriam efetuados pelos utilizadores finais. Este tutorial inclui todos estes passos para demonstrar cenários comuns completos de classificação, etiquetagem e proteção dos dados da sua organização. 
+Como resultado nesta configuração, os utilizadores veem uma etiqueta predefinida aplicada quando criam um novo documento ou e-mail. No entanto, é-lhes pedido para aplicar a nova etiqueta quando as informações de cartão de crédito são detectadas. Quando a nova etiqueta é aplicada, o conteúdo é reclassified e protegido, com um rodapé correspondente e o limite de tamanho. 
 
-Se tiver alguma dificuldade em concluir este tutorial ou em utilizar o Azure Information Protection, ou se quiser ver o que tem sido dito sobre esta aplicação, aceda ao [site do Yammer do Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all).
+Pode concluir este tutorial em cerca de 15 minutos.
 
 ## <a name="prerequisites"></a>Pré-requisitos 
-Para concluir este tutorial, precisa de ter o seguinte:
 
-- Uma subscrição que inclui o Azure Information Protection para classificação, etiquetagem e proteção. Este tutorial inclui algumas das funcionalidades avançadas, tais como a classificação automática de dados com recomendações de utilizador e o site de controlo de documentos. Confirme se tem uma subscrição para suportar estas funcionalidades para este tutorial. Para obter mais informações, consulte a lista de recursos a partir da [preços do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection) página.
+Para concluir este tutorial, precisa de:
+
+1. Uma subscrição que inclui o Azure Information Protection plano 2.
     
-    Se não tiver uma subscrição para estas funcionalidades, pode inscrever-se numa versão de avaliação gratuita do [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7).
+    Se não tiver uma subscrição que inclui o Azure Information Protection plano 2, pode criar uma [gratuita](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) de conta para a sua organização.
+
+2. Adicionei o painel do Azure Information Protection para o portal do Azure e confirmar que o serviço de proteção está ativado.
+
+    Se precisar de ajuda com estas ações, consulte o artigo [início rápido: adicionar o Azure Information Protection para o portal do Azure e ver a política](quickstart-viewpolicy.md)
+
+3. O cliente do Azure Information Protection está instalado no seu computador. 
     
-  > [!TIP] 
-  > Se precisar de pedir uma subscrição, faça o seguinte procedimento com antecedência porque este processo, por vezes, pode demorar algum tempo a concluir.
+    Para instalar o cliente, vá para o [Centro de transferências da Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e transfira **AzInfoProtection.exe** da página do Azure Information Protection.
 
-- Uma conta de administrador global para iniciar sessão no portal do Azure para ativar a proteção e configurar a política do Azure Information Protection. Em alternativa, pode utilizar uma conta que tenha qualquer uma das seguintes funções administrativas: [administrador do Information Protection ou o administrador de segurança](/azure/active-directory/active-directory-assign-admin-roles-azure-portal). Esta conta também tem de ter um endereço de e-mail e um serviço de e-mail de trabalho, como o Exchange Online.
-
-- Um computador com Windows (no mínimo do Windows 7 com Service Pack 1), e neste computador, tem sessão iniciada para aplicações do Office de uma das seguintes categorias:
+4. Um computador com Windows (no mínimo do Windows 7 com Service Pack 1), e neste computador, tem sessão iniciada para aplicações do Office de uma das seguintes categorias:
     
     - Office 365 com as aplicações do Office 2016 (versão mínima 1805, compilação 9330.2078). Para utilizar esta opção, a conta deve ser atribuída uma licença do Azure Rights Management. Esta licença é incluída na subscrição do Azure Information Protection.
     
@@ -49,10 +57,213 @@ Para concluir este tutorial, precisa de ter o seguinte:
     
     - Office Professional Plus 2010 com Service Pack 2.
 
+Para obter uma lista completa de pré-requisitos para utilizar o Azure Information Protection, consulte [requisitos do Azure Information Protection](requirements.md).
 
 Vamos começar.
 
->[!div class="step-by-step"]
-[&#187; Passo 1](infoprotect-tutorial-step1.md)
+## <a name="edit-the-azure-information-protection-policy"></a>Editar a política do Azure Information Protection
 
+Utilizar o portal do Azure, vamos alterar primeiro algumas definições de política e, em seguida, criar uma nova etiqueta.
+
+### <a name="edit-the-policy-settings"></a>Editar as definições de política
+
+1. Abra uma nova janela do browser e [inicie sessão no portal do Azure](https://portal.azure.com). Em seguida, navegue até **do Azure Information Protection**. 
+    
+    Por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
+
+2. Selecione **classificações** > **políticas** > **Global** para abrir o **política: Global** painel. 
+
+3. Localizar as definições de política depois das etiquetas, no **configurar definições para apresentar e aplicar-se sobre os usuários finais do Information Protection** secção. Anote as definições atuais. Se ainda não mudou estas definições de seus padrões, verá não existe nenhum conjunto de etiqueta predefinida, documentos e e-mails não são necessários para ter uma etiqueta e os utilizadores não têm de fornecer uma justificação ao alterar as etiquetas:
+    
+    ![Tutorial do Azure Information Protection – política predefinida](./media/info-protect-policy-default-settings.png)
+    
+    Vamos alterar algumas dessas definições de política para que pode ver como elas funcionam.
+
+4. Para **selecione a etiqueta predefinida**, selecione **geral**. 
+
+    Se não tiver esta etiqueta porque tem uma versão mais antiga da política, selecione **Interno** como etiqueta equivalente.
+
+5. Para **os utilizadores têm de fornecer justificação para definir uma etiqueta de classificação inferior, remover uma etiqueta ou remover a proteção**, defina esta opção como **no**.
+
+6. Além disso, certifique-se de que **apresentar a barra de Information Protection nas aplicações do Office** está definida como **no**.
+
+7. Selecione **salvar** nisso **política: Global** painel e se lhe for pedido para confirmar a ação, selecione **OK**. Feche este painel.
+
+### <a name="create-a-new-label-for-protection-visual-markers-and-a-condition-to-prompt-for-classification"></a>Criar uma nova etiqueta para proteção, marcadores visuais e uma condição para pedidos de classificação
+
+Vamos agora criar uma nova subetiqueta para **confidencial**.
+
+1. Do **classificações** > **etiquetas** opção de menu: com o botão direito do **confidencial** Etiquetar e selecione **adicionar uma etiqueta secundária**.
+    
+    Se não tiver uma etiqueta denominada **confidencial**, pode selecionar outra etiqueta ou pode criar uma nova etiqueta em vez disso e ainda, siga o tutorial com pequenas diferenças.
+
+2. Sobre o **subetiqueta** painel, especifique o nome de etiqueta do **Finanças** e adicione a seguinte descrição: **dados confidenciais que contém informações financeiras, que é restritas aos funcionários apenas**.
+    
+    Este texto descreve como a etiqueta selecionada se destina a ser utilizado e é visível para os utilizadores como uma descrição para os ajudar a decidir qual a etiqueta a selecionar.
+
+3. Para **Defina permissões para documentos e e-mails que contenham esta etiqueta**, selecione **Proteger** e, em seguida, selecione **Proteção**:
+    
+    ![Proteção configurada para uma etiqueta do Azure Information Protection](./media/info-protect-protection-bar-configured.png) 
+    
+4. Sobre o **proteção** painel, certifique-se de que **Azure (chave da cloud)** está selecionada. Esta opção utiliza o serviço Azure Rights Management para proteger documentos e e-mails. Também certificar-se de que o **definir permissões** opção está selecionada. Em seguida, selecione **adicionar permissões**.
+
+5. Sobre o **adicionar permissões** painel, selecione **Add \<nome da organização >-todos os membros**. Por exemplo, se o nome da sua organização for VanArsdel Ltd, verá a seguinte opção para selecionar:
+    
+    ![Todos os membros a conceder permissões de proteção para uma etiqueta do Azure Information Protection](./media/info-protect-protection-all-members.png) 
+    
+    Esta opção seleciona automaticamente todos os utilizadores na sua organização que pode ser concedida permissões. No entanto, pode ver as outras opções que pudesse e procurar grupos ou utilizadores do seu inquilino. Ou, quando seleciona a **introduza os detalhes** opção, pode especificar endereços de e-mail individuais ou até todos os utilizadores de outra organização.
+
+6. Para obter as permissões, selecione **revisor** entre as opções predefinidas. Verá como esse nível de permissão concede automaticamente algumas permissões listados, mas não todas as permissões:
+    
+    ![Conceder permissões de proteção de Coautor para uma etiqueta do Azure Information Protection](./media/info-protect-protection-reviewer.png)
+    
+    Pode selecionar níveis de permissão diferentes ou especificar direitos de utilização individuais utilizando o **personalizado** opção. Mas este tutorial, mantenha a **revisor** opção. Pode experimentar com permissões diferentes, mais tarde e ler como restringir o que os utilizadores especificados podem fazer com o documento protegido ou o e-mail.
+
+7. Clique em **OK** fechar isto **adicionar permissões** painel e veja como o **proteção** painel é atualizado para refletir a configuração. Por exemplo:
+    
+     ![Painel de proteção que mostra a configuração de permissões para uma etiqueta do Azure Information Protection](./media/info-protect-protection-configured.png)
+    
+    Se selecionou **adicionar permissões**, esta ação abre o **adicionar permissões** painel novamente, para que pode adicionar mais utilizadores e conceder-lhes permissões diferentes. Por exemplo, apenas modo de exibição de conceder acesso a um grupo específico. Mas para este tutorial, vamos manter com um conjunto de permissões para todos os utilizadores.
+
+8. Reveja e mantenha as predefinições para a expiração de conteúdo e acesso offline e, em seguida, clique em **OK** para guardar e fechar isso **proteção** painel.
+
+8. Novamente o **subetiqueta** painel, localize a **definir marcas visuais** secção:
+    
+    Para o **documentos com esta etiqueta têm um rodapé** definir, clique em **no**e, em seguida, para o **texto** , escreva **classificado como confidencial** . 
+    
+    Para a definição **Documentos com esta etiqueta têm uma marca d'água**, clique em **Ativado** e, na caixa **Texto**, escreva o nome da organização. Por exemplo, **VanArsdel, Lda.** 
+    
+    Embora possa alterar a aparência para este marcadores visuais, vamos deixar estas definições nas predefinições por agora.
+    
+9. Localize a secção **Configurar condições para aplicar esta etiqueta automaticamente**:
+    
+    Clique em **adicionar uma nova condição** e, em seguida, no **condição** painel, selecione o seguinte:
+    
+    a. **Escolha o tipo de condição**: mantenha a predefinição **tipos de informações**.
+    
+    b. Na **seleciona os tipos de informações** caixa de pesquisa: tipo **número de cartão de crédito**. Em seguida, resultados da pesquisa, selecione **número de cartão de crédito**.
+    
+    c. **Número mínimo de ocorrências**: mantenha a predefinição de **1**.
+    
+    d. **Contagem de ocorrências com apenas valores exclusivos**: mantenha a predefinição **Desativado**.
+    
+    ![Tutorial do Azure Information Protection – configurar condição de cartão de crédito](./media/step2-configure-condition.png)
+    
+    Clique em **salvar** para voltar para o **subetiqueta** painel.
+
+10. Sobre o **subetiqueta** painel, verá que **número de cartão de crédito** é apresentado como o **nome da condição**, com **1**  **OCORRÊNCIAS**:
+    
+    ![Tutorial do Azure Information Protection – configurar condição de cartão de crédito](./media/step2-see-condition.png)
+
+11. Para **selecione a forma como esta etiqueta é aplicada**: mantenha a predefinição **recomendado**e não altere a sugestão de política predefinida. 
+
+12. Na caixa **introduzir notas para manutenção interna**, escreva **Apenas para fins de testes**.
+
+13. Clique em **salvar** nisso **subetiqueta** painel. Se lhe for pedido para confirmar, clique em **OK**. A nova etiqueta é criada e guardada, mas ainda não foram adicionada a uma política.
+
+14. Do **classificações** > **políticas** opção de menu: selecione **Global** novamente e, em seguida, selecione o **adicionar ou remover as etiquetas**link depois das etiquetas.
+
+15. Do **política: Adicionar ou remover as etiquetas** painel, selecione a etiqueta que acabou de criar, subetiqueta com o nome **Finanças**e clique em **OK**.
+
+16. Sobre o **política: Global** painel, verá agora sua nova subetiqueta na sua política global, que está configurada para marcas visuais e proteção. Por exemplo:
+
+    ![Tutorial do Azure Information Protection – subetiqueta novo](./media/info-protect-policy-configuredv2.png)
+    
+    Também pode ver que as definições são configuradas com as suas alterações para a etiqueta predefinida e a justificação:
+    
+    ![Tutorial do Azure Information Protection – definições configuradas](./media/info-protect-settings-configuredv2.png)
+    
+
+17. Clique em **salvar** nisso **política: Global** painel. Se lhe for pedido para confirmar esta ação, clique em **OK**.
+
+Pode fechar o portal do Azure ou deixá-lo aberto para experimentar opções de configuração adicionais depois de concluir este tutorial.
+
+Está pronto para experimentar os resultados das suas alterações.
+
+## <a name="see-classification-labeling-and-protection-in-action"></a>Ver classificação, etiquetagem e proteção em ação 
+
+As alterações de política que fez e a nova etiqueta que criou aplica-se ao Word, Excel, PowerPoint e Outlook. Mas para este tutorial, vamos utilizar o Word vê-los em ação. 
+
+Abra um novo documento do Word. Uma vez que o cliente do Azure Information Protection está instalado, verá o seguinte:
+
+![Tutorial do Azure Information Protection – cliente instalado](./media/word2016-calloutsv2.png)
+
+- Sobre o **home page** separador, uma **proteção** grupo, com um botão chamado **proteger**.
+    
+    Clique em **Proteger** > **Ajuda e Feedback** e, na caixa de diálogo **Microsoft Azure Information Protection**, confirme o estado do cliente. Deverá apresentar **Ligado como** e o seu nome de utilizador. Além disso, também deverá ver uma hora e data recentes para a última ligação e quando a política de Information Protection foi transferida. Verifique se o seu nome de utilizador apresentado está correto para o seu inquilino.
+
+- Uma nova barra abaixo do friso; a barra do Information Protection. Apresenta o título de **sensibilidade**e as etiquetas que vimos no portal do Azure.
+
+### <a name="to-manually-change-our-default-label"></a>Para alterar manualmente a nossa etiqueta predefinida
+
+Na barra do Information Protection, selecione a última etiqueta e verá a forma como as subetiquetas são apresentadas:
+
+![Tutorial do Azure Information Protection – Consulte subetiquetas](./media/info-protect-sub-labelsv2.png)
+
+Selecione uma destas subetiquetas e verá que as outras etiquetas já não apresentadas na barra de ter selecionado uma etiqueta para este documento. O **sensibilidade** nome muda de valor para mostrar a etiqueta e subetiqueta, com uma alteração correspondente da cor da etiqueta. Por exemplo:
+
+![Tutorial do Azure Information Protection – subetiqueta selecionada](./media/info-protect-sub-label-selectedv2.png)
+
+Na barra do Information Protection, clique no ícone **Editar Etiqueta** junto ao valor da etiqueta selecionada:
+
+![Tutorial do Azure Information Protection – ícone Editar etiqueta](./media/info-protect-edit-label-selectedv2.png)
+
+Esta ação apresenta as etiquetas disponíveis novamente.
+
+Selecione a primeira etiqueta, **Pessoal**. Uma vez que selecionar uma etiqueta com uma classificação de nível inferior da etiqueta anteriormente selecionada para este documento, lhe for pedido para indicar a razão pela qual está a reduzir o nível de classificação:
+
+![Tutorial de proteção de informações do Azure – linha de comandos confirmar a razão pela qual reduzir](./media/info-protect-lower-justification.png)
+
+Selecione **A etiqueta anterior já não se aplica** e clique em **Confirmar**. O valor **Sensibilidade** é alterado para **Pessoal** e as outras etiquetas voltam a ficar ocultas.
+
+### <a name="to-remove-the-classification-completely"></a>Para remover a classificação por completo
+
+Na barra Information Protection, clique novamente no ícone **Editar Etiqueta**. Em vez de selecionar uma das etiquetas, clique no ícone **Eliminar Etiqueta**:
+
+![Tutorial do Azure Information Protection – eliminar ícone](./media/delete-icon-from-personalv2.png)
+
+Desta vez, quando lhe for pedido, escreva "este documento não precisa classificar" e clique em **confirmar**.  
+
+Verá o **sensibilidade** valor a apresentar **nenastaveno**, que é que os utilizadores veem inicialmente para os novos documentos se não definir uma etiqueta predefinida como uma definição de política.
+
+### <a name="to-see-a-recommendation-prompt-for-labeling-and-automatic-protection"></a>Para ver um pedido de recomendação para etiquetagem e proteção automática
+
+1. No documento do Word, escreva um número de cartão de crédito válido, por exemplo: **4242-4242-4242-4242**. 
+
+2. Guarde localmente, o documento com um nome de ficheiro. 
+
+3. Verá um pedido para aplicar a etiqueta que configurou para proteção quando forem detetados números de cartão de crédito. Se não concordar com a recomendação, a definição da política permite rejeitá-la ao selecionar **Dispensar**. Fornecer uma recomendação mas deixar que o utilizador a ignore ajuda a reduzir os falsos positivos quando utiliza a classificação automática. Para este tutorial, clique em **Alterar agora**.
+
+    ![Tutorial do Azure Information Protection - Recomendamos linha de comandos](./media/change-nowv2.png)
+
+    Para além do documento a mostrar que a etiqueta configurada foi aplicada (por exemplo, **confidencial \ Finanças**), verá imediatamente a marca d'água do nome da organização em toda a página e rodapé de  **Classificado como confidencial** também é aplicado. 
+
+    O documento é também protegido com as permissões que especificou para esta etiqueta. Pode confirmar que o documento é protegido ao clicar o **arquivo** separador e ver as informações de **Proteger documento**. Verá que o documento é protegido pelo **confidencial \ Finanças** e a descrição da etiqueta. 
+    
+    Devido a configuração da proteção da etiqueta, apenas os funcionários podem abrir o documento e algumas ações são restritas para eles. Por exemplo, uma vez que não têm a impressão e a cópia e extrair conteúdas permissões, eles não é possível imprimir o documento ou a cópia do mesmo. Essas restrições quanto ajuda a evitar a perda de dados. Como o proprietário do documento, pode imprimi-lo e copiá-los. No entanto, se enviar por e-mail o documento para outro utilizador na sua organização, eles não podem fazer com que estas ações.
+
+4. Agora, pode fechar este documento.
+
+## <a name="clean-up-resources"></a>Limpar recursos
+
+Se não desejar manter as alterações efetuadas neste tutorial, faça o seguinte:
+
+1. Selecione **classificações** > **políticas** > **Global** para abrir o **política: Global** painel.
+
+2. Devolver as definições de política para os valores originais que apontou e, em seguida, selecione **guardar**. Os valores predefinidos:
+    
+    -  **Selecione a etiqueta predefinida**: **None**
+    -  **Os utilizadores têm de fornecer justificação para definir uma etiqueta de classificação inferior, remover uma etiqueta ou remover proteção**: **desativado**
+
+3. Do **classificações** > **etiqueta** opção de menu: no **do Azure Information Protection – etiqueta** painel, selecione o menu de contexto (**...**) para o **Finance** etiqueta que criou.
+
+4. Selecione **eliminar esta etiqueta** e, se lhe for pedido para confirmar, selecione **OK**.
+
+Reinicie o Word para transferir essas alterações.
+
+## <a name="next-steps"></a>Passos Seguintes
+
+Para obter mais informações sobre como editar a política do Azure Information Protection, consulte [política de configuração do Azure Information Protection](configure-policy.md).
+
+Para obter mais informações sobre onde a atividade de etiquetagem está conectada, consulte [registo de utilização para o cliente do Azure Information Protection](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).
 

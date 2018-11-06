@@ -4,16 +4,16 @@ description: Quando configurar as condições para uma etiqueta, pode atribuir a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/08/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: f47a6ea33c6abbfba6ca95772c7050ad11f76875
-ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
+ms.openlocfilehash: 49d3879dd4dd5d9a5459638b1b539f4fa233ee2f
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49170064"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026558"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Como configurar as condições para classificação automática e recomendada para o Azure Information Protection
 
@@ -70,7 +70,7 @@ Pode alterar este comportamento para que o cliente do Azure Information Protecti
 4. Na **condição** painel, selecione **tipos de informação** se pretender utilizar uma condição predefinida, ou **personalizado** se pretender especificar seus próprios:
     - Para **tipos de informações**: selecione na lista de condições disponíveis e, em seguida, selecione o número mínimo de ocorrências e se a ocorrência deve ter um valor único a ser incluído na contagem de ocorrências.
         
-        Os tipos de informações utilizam os tipos de informações de sensibilidade perda prevenção (DLP) do Office 365 dados e a deteção de padrão. Pode escolher entre vários tipos comuns de informações confidenciais, algumas das quais são específicas para diferentes regiões. Para obter mais informações, consulte [o que procurar os tipos de informações confidenciais](https://support.office.com/article/What-the-sensitive-information-types-look-for-fd505979-76be-4d9f-b459-abef3fc9e86b) na documentação do Office.
+        Os tipos de informações utilizam os tipos de informações de sensibilidade perda prevenção (DLP) do Office 365 dados e a deteção de padrão. Pode escolher entre vários tipos comuns de informações confidenciais, algumas das quais são específicas para diferentes regiões. Para obter mais informações, consulte [o que procurar os tipos de informações confidenciais](/office365/securitycompliance/what-the-sensitive-information-types-look-for) na documentação do Office 365.
         
         A lista de tipos de informações que pode selecionar a partir do portal do Azure é periodicamente atualizada para incluir quaisquer novas adições de DLP do Office. No entanto, a lista exclui quaisquer tipos de informações confidenciais personalizados que tenha definido e carregado como um pacote de regra para o Centro de conformidade e segurança do Office 365.
         

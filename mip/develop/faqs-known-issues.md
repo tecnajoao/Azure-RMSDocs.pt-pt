@@ -1,21 +1,23 @@
 ---
 title: FAQ e problemas conhecidos - SDK do Microsoft Information projeção.
-description: FAQs do SDK de proteção de informações da Microsoft (MIP) e orientações de resolução de problemas para problemas conhecidos.
+description: FAQs do SDK de proteção de informações da Microsoft (MIP) e orientações para a resolução de problemas e erros.
 author: BryanLa
 ms.service: information-protection
 ms.topic: troubleshooting
 ms.date: 10/19/2018
 ms.author: bryanla
-ms.openlocfilehash: cb3bdd6f2d9328a57156580f3d345d25983fccad
-ms.sourcegitcommit: cc65c3851d4b8169a1a62c83afaf0f75402f7631
+ms.openlocfilehash: f213b31d9b0e41ea9c1e076055a90e9f62b31b3a
+ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "49476445"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51223930"
 ---
-# <a name="microsoft-information-protection-mip-sdk-faqs-and-known-issues"></a>FAQ do SDK de proteção de informações da Microsoft (MIP) e problemas conhecidos
+# <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Problemas e perguntas frequentes do SDK de proteção de informações da Microsoft (MIP)
 
-## <a name="frequently-asked-questions-faqs"></a>Perguntas mais frequentes sobre (FAQ)
+Este artigo fornece respostas a perguntas mais frequentes (FAQs) e orientações de resolução de problemas para problemas conhecidos e erros comuns.
+
+## <a name="frequently-asked-questions"></a>Perguntas Mais Frequentes 
 
 ### <a name="question-which-platforms-are-supported-by-the-mip-sdk"></a>Pergunta: que plataformas são suportadas pelo MIP SDK?
 
@@ -33,7 +35,13 @@ O SDK se destina a ser utilizada para várias plataformas e usa [UTF-8 (Unicode 
 | .NET | Para clientes do SDK do .NET, todas as cadeias de caracteres, utilize a codificação predefinida UTF-16 e não é necessária nenhuma conversão especial. Conversão de/para UTF-16 é gerenciado internamente pelo MIP SDK. |
 | Outras plataformas | Todas as outras plataformas suportadas pelo MIP SDK tem suporte nativo para UTF-8. |
 
-## <a name="known-issues"></a>Problemas conhecidos
+## <a name="issues-and-errors-reference"></a>Referência de problemas e erros
+
+### <a name="error-file-format-not-supported"></a>Erro: "formato de ficheiro não suportado"  
+
+| Error | Solução |
+|-|-|
+|*Formato de ficheiro não suportado*| Esta exceção resulta de tentar proteger ou identifique um ficheiro PDF, que foi assinado digitalmente ou protegidos por senha. Ver [novo suporte para encriptação de PDF com proteção de informações do Microsoft](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) para obter mais informações sobre a proteção e etiquetagem ficheiros PDF.|
 
 ### <a name="error-failed-to-parse-the-acquired-compliance-policy"></a>Erro: "Falha ao analisar a política de conformidade adquirida"  
 
@@ -41,4 +49,4 @@ Transferiu o SDK de MIP e executou os aplicativos de exemplo. Utilize o exemplo 
 
 | Error | Solução |
 |-|-|
-|*Algo ruim aconteceu: Falha ao analisar a política de conformidade adquirida. Falhou com o: [classe mip::CompliancePolicyParserException] marca não encontrado: política, NodeType: 15, nome: não encontrar o nome, valor:, predecessores: <SyncFile> <Content>, correlationId: [34668a40-blll-4ef8-b2af-00005aa674z9]*| Isto indica que ainda não migrados suas etiquetas do Azure Information Protection, para a experiência unificada de etiquetagem! Siga [como migrar as etiquetas do Azure Information Protection para o Centro de conformidade e segurança do Office 365](/azure/information-protection/configure-policy-migrate-labels) para migrar as etiquetas, em seguida, criar uma política de etiqueta no Centro de conformidade e de segurança do Office 365. Quando terminar, o exemplo será executado com êxito.|
+|*Algo ruim aconteceu: Falha ao analisar a política de conformidade adquirida. Falhou com o: [classe mip::CompliancePolicyParserException] marca não encontrado: política, NodeType: 15, nome: não encontrar o nome, valor:, predecessores: <SyncFile> <Content>, correlationId: [34668a40-blll-4ef8-b2af-00005aa674z9]*| Isto indica que ainda não migrados suas etiquetas do Azure Information Protection, para a experiência unificada de etiquetagem. Siga [como migrar as etiquetas do Azure Information Protection para o Centro de conformidade e segurança do Office 365](/azure/information-protection/configure-policy-migrate-labels) para migrar as etiquetas, em seguida, criar uma política de etiqueta no Centro de conformidade e de segurança do Office 365. Quando terminar, o exemplo será executado com êxito.|

@@ -4,16 +4,15 @@ description: Conheça a forma como a política predefinida do Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/09/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.service: information-protection
-ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: 0b985b3901924c3a22a167a26799a7cffb9c500a
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: d74dfcd35dca2f3ab5e88a66eaaba37b13636e4d
+ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026847"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51223981"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Política do Azure Information Protection predefinida
 
@@ -21,19 +20,19 @@ ms.locfileid: "51026847"
 
 Utilize as seguintes informações para compreender a forma como a política predefinida para o Azure Information Protection está configurada.
 
-Quando um administrador se liga, pela primeira vez, ao serviço Azure Information Protection através do portal do Azure, é criada uma política predefinida para esse inquilino. Ocasionalmente, a Microsoft pode efetuar alterações à política predefinida. No entanto, se já estiver a utilizar o serviço antes de a política predefinida ser revista, a versão anterior da mesma não será atualizada porque poderá tê-la configurado e implementado na produção.
+Quando um administrador ligado pela primeira vez para o serviço Azure Information Protection com o portal do Azure, é criada a política predefinida do Azure Information Protection para esse inquilino. Ocasionalmente, a Microsoft pode efetuar alterações a esta política predefinida mas se já estiver a utilizar o serviço antes da política predefinida ser revista, a versão anterior da política do Azure Information Protection predefinida não é atualizada porque poderá ser necessário configurado e implementado na produção.
 
-Pode usar os seguintes valores como referência para voltar à política predefinida ou atualizar a política para os valores mais recentes.
+Pode referenciar os seguintes valores para voltar a política do Azure Information Protection predefinida ou atualizar a política do Azure Information Protection para os valores mais recentes.
 
 ## <a name="current-default-policy"></a>Política predefinida atual
 
-Esta versão da política predefinida é de 31 de Julho de 2017.
+Esta versão da política do Azure Information Protection predefinida é de 31 de Julho de 2017.
 
-Esta política predefinida é criada quando o serviço Azure Rights Management está ativado, que é o caso dos novos inquilinos a partir de Fevereiro de 2018. Para obter mais informações, consulte o anúncio do blogue [melhorias para a proteção da pilha no Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection).
+Esta política do Azure Information Protection predefinida é criada quando o serviço Azure Rights Management está ativado, que é o caso dos novos inquilinos a partir de Fevereiro de 2018. Para obter mais informações, consulte o anúncio do blogue [melhorias para a proteção da pilha no Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection).
 
-Esta política predefinida também é criada, se tiver manualmente [ativar o serviço](activate-service.md) antes da política foi criada. 
+Esta política do Azure Information Protection predefinida também é criada, se tiver manualmente [ativar o serviço](activate-service.md) antes do Azure Information Protection a política foi criada. 
 
-Se o serviço não foi ativado, a política predefinida não configurar a proteção para as subetiquetas seguintes:
+Se o serviço não foi ativado, a política do Azure Information Protection predefinida não configurar a proteção para as subetiquetas seguintes:
 
 - **Confidencial\Todos os Funcionários**
 
@@ -43,11 +42,11 @@ Se o serviço não foi ativado, a política predefinida não configurar a prote�
 
 - **Altamente confidencial \ apenas Recetores** 
 
-Quando estas subetiquetas não são automaticamente configuradas para proteção, a política predefinida permanece igual a [política de padrão anterior](#default-policy-before-july-31-2017).
+Quando estas subetiquetas não são automaticamente configuradas para proteção, a política do Azure Information Protection predefinida permanece igual a [política de padrão anterior](#default-policy-before-july-31-2017).
 
 Quando a proteção é aplicada para o **todos os funcionários** subetiquetas, a proteção é configurada utilizando os modelos predefinidos que são automaticamente convertidos em etiquetas no portal do Azure. Para obter mais informações sobre estes modelos, consulte [configurando e gerenciando modelos do Azure Information Protection](configure-policy-templates.md).
 
-A partir de 30 de Agosto de 2017, esta versão da política predefinida inclui as versões de vários idiomas dos nomes de etiqueta e descrições. 
+A partir de 30 de Agosto de 2017, esta versão da política predefinida do Azure Information Protection inclui as versões de vários idiomas dos nomes de etiqueta e descrições. 
 
 #### <a name="more-information-about-the-recipients-only-sublabel"></a>Obter mais informações sobre a subetiqueta apenas os destinatários
 

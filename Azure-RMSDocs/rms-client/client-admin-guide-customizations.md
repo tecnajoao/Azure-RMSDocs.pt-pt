@@ -4,18 +4,18 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/02/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: beac842cdb8cfde5b3a209f3e37084828d3df7ba
-ms.sourcegitcommit: d969a82dc801f3d653163de2b18a3a772607b74c
+ms.openlocfilehash: 62d53acd482b9efdd0425d5a944d2241f8a33b30
+ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50915585"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51223998"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas para o cliente do Azure Information Protection
 
@@ -40,6 +40,25 @@ Algumas destas definições requerem a edição do registo e algumas utilizam de
 5. Certifique-se de que os utilizadores desta política reiniciam as aplicações do Office que tinham abertas.
 
 6. Caso já não precise da definição e pretenda reverter para o comportamento predefinido: no painel **Definições avançadas**, selecione o menu de contexto (**...**) junto à definição que já não é precisa e, em seguida, selecione **Eliminar**. Em seguida, clique em **guarde e feche**.
+
+#### <a name="available-advanced-client-settings"></a>Definições de cliente avançadas disponíveis
+
+|Definição|Cenário e instruções|
+|----------------|---------------|
+|DisableDNF|[Ocultar ou mostrar o botão não reencaminhar no Outlook](#hide-or-show-the-do-not-forward-button-in-outlook)|
+|EnableBarHiding|[Ocultar permanentemente a barra do Azure Information Protection](#permanently-hide-the-azure-information-protection-bar)|
+|EnableCustomPermissions|[Tornar as opções de permissões personalizadas disponíveis ou não está disponível para utilizadores](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
+|EnablePDFv2Protection|[Proteger ficheiros PDF com a norma ISO para a encriptação de PDF](#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
+|LabelbyCustomProperty|[Migrar as etiquetas de Secure Islands e outras soluções de etiquetas](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
+|OutlookDefaultLabel|[Definir uma etiqueta predefinida diferente para o Outlook](#set-a-different-default-label-for-outlook)|
+|OutlookRecommendationEnabled|[Ativar a classificação recomendada no Outlook](#enable-recommended-classification-in-outlook)|
+|PostponeMandatoryBeforeSave|[Remova "Agora não" para os documentos quando utiliza a etiquetagem obrigatório](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
+|ProcessUsingLowIntegrity|[Desativar o nível de baixa integridade para a deteção de impressão](#disable-the-low-integrity-level-for-the-scanner)|
+|RemoveExternalContentMarkingInApp|[Remover os cabeçalhos e rodapés de outras soluções de etiquetas](#remove-headers-and-footers-from-other-labeling-solutions)|
+|ReportAnIssueLink|[Modificar o endereço de e-mail para o relatório de uma ligação de problema](#modify-the-email-address-for-the-report-an-issue-link)|
+|RunPolicyInBackground|[Ativar a classificação para executar continuamente em segundo plano](#turn-on-classification-to-run-continuously-in-the-background)|
+|SyncPropertyName|[Etiqueta de um documento do Office usando uma propriedade personalizada existente](#label-an-office-document-by-using-an-existing-custom-property)|
+|SyncPropertyState|[Etiqueta de um documento do Office usando uma propriedade personalizada existente](#label-an-office-document-by-using-an-existing-custom-property)|
 
 ## <a name="prevent-sign-in-prompts-for-ad-rms-only-computers"></a>Impedir pedidos de início de sessão para computadores só com AD RMS
 

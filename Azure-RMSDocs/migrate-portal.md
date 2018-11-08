@@ -4,18 +4,18 @@ description: Tarefas de administração em breve no portal do Azure que utilizou
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/14/2018
+ms.date: 11/07/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: fa32a5d00c161d2f6a78acd7cbe45ce00b34660c
-ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
+ms.openlocfilehash: 0f94a36f7653ef4aff590bb6815c75210768f7c5
+ms.sourcegitcommit: 227f54a8e90aa57d778ab60c646179c10e5edb44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49170149"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51272368"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Tarefas que costumava realizar com o portal clássico do Azure
 
@@ -33,7 +33,7 @@ Utilize as seguintes informações para ajudá-lo rapidamente a transição para
 
 |Portal clássico do Azure|Como efetuar esta tarefa no portal do Azure
 |-----------|--------------------|
-|As definições de configuração de acesso pela primeira vez|1. [Inicie sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal).<br /><br />2. No hub menu, clique em **criar um recurso**e, em seguida, a partir do **MARKETPLACE** lista, selecione **segurança + identidade**.<br /><br />3. Sobre o **segurança + identidade** painel, da **aplicações em destaque** lista, selecione **do Azure Information Protection**. Em seguida, no **do Azure Information Protection** painel, clique em **criar**.<br /><br />Esta ação cria a **do Azure Information Protection** painel, de modo que na próxima vez que iniciar sessão no portal, possa selecionar o serviço do hub **todos os serviços** lista.
+|As definições de configuração de acesso pela primeira vez|1. [Inicie sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal).<br /><br />2. Siga as instruções para [para aceder ao painel de proteção de informações do Azure pela primeira vez](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time).
 |Criar um novo modelo|Criar uma etiqueta que aplica a proteção e utilizar **definir permissões** para definir as permissões, a expiração e o acesso offline. <br /><br />Nos bastidores, esta configuração cria um novo modelo personalizado que pode ser acedido por serviços e aplicações que se integram nos modelos do Rights Management.<br /><br />Para obter mais informações, consulte [para criar um novo modelo](configure-policy-templates.md#to-create-a-new-template).
 |Edite propriedades do modelo: <br /><br />-Modelo nome e descrição<br /><br />-Direitos de utilização, expiração de conteúdo e definições de acesso offline|Se ainda não fez isso, [converter o modelo numa etiqueta](configure-policy-templates.md#to-convert-templates-to-labels), e, em seguida, faça o seguinte<br /><br />1. Alterar o nome de etiqueta e descrição<br /><br />2. Altere as definições de proteção no rótulo para atualizar as permissões, a expiração e as definições de acesso offline.<br /><br />Para obter mais informações, consulte [para configurar uma etiqueta para as definições de proteção](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
 |Arquivar um modelo|Definir o estado de etiqueta como **desativado**.
@@ -41,7 +41,7 @@ Utilize as seguintes informações para ajudá-lo rapidamente a transição para
 |Copiar um modelo|Não é possível copiar um modelo no portal do Azure. Se quiser duas etiquetas para que as mesmas definições de proteção, tem de definir as permissões em cada etiqueta. <br /><br />Para obter mais informações, consulte [para configurar uma etiqueta para as definições de proteção](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
 |Eliminar um modelo|A eliminar modelos pode resultar em dados inacessíveis, para que o portal do Azure não suporta esta ação. No entanto, pode eliminar a etiqueta e, em seguida, utilizar o PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) cmdlet para remover o modelo. <br /><br />Para obter mais informações, consulte [como eliminar ou reordenar uma etiqueta do Azure Information Protection](configure-policy-delete-reorder.md).
 |Suporte a vários idiomas|Do **Manage** seleção de menu, selecione **idiomas** para exportar os campos personalizáveis que incluem o nome do modelo e a descrição. Traduzir as cadeias de caracteres e, em seguida, importar essas cadeias de caracteres para o portal. <br /><br />Para obter mais informações, consulte [como configurar etiquetas e modelos para diferentes idiomas no Azure Information Protection](configure-policy-languages.md).
-|Relatórios de web de gestão de direitos|Utilizar o PowerShell [Get-AadrmUsageLog](/powershell/module/aadrm/Get-AadrmUsageLog) cmdlet para transferir os registos de utilização para o serviço Azure Rights Management. Em seguida, pode utilizar estes dados para criar relatórios personalizados. <br /><br />Para obter mais informações, consulte [Registar e analisar a utilização do serviço Azure Rights Management](log-analyze-usage.md).<br /><br />Sugestão: Procure anúncios no [blogue Enterprise Mobility and Security](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection) para uma solução de relatórios novos e centralizada para o Azure Information Protection.
+|Relatórios de web de gestão de direitos|[Centralizado de relatórios do Azure Information Protection](reports-aip.md) está agora em pré-visualização.<br /><br />Também pode utilizar o PowerShell [Get-AadrmUsageLog](/powershell/module/aadrm/Get-AadrmUsageLog) cmdlet para transferir os registos de utilização para o serviço Azure Rights Management. Em seguida, pode utilizar estes dados para criar relatórios personalizados. Para obter mais informações, consulte [Registar e analisar a utilização do serviço Azure Rights Management](log-analyze-usage.md).
 |Ativar e desativar o serviço de Rights Management|Do **Manage** opções de menu, selecionadas **ativação de proteção**.<br /><br />Para obter mais informações, consulte [como ativar o Azure Rights Management a partir do portal do Azure](activate-azure.md).
 
 Antes de edita os modelos ou convertê-los em etiquetas no portal do Azure, veja [considerações para modelos no portal do Azure](configure-policy-templates.md#considerations-for-templates-in-the-azure-portal).

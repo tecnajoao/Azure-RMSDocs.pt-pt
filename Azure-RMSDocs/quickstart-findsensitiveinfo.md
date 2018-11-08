@@ -7,12 +7,12 @@ manager: mbaldwin
 ms.date: 11/05/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: 68b070340767b0590711efeaae35edda884627c6
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: a69972ec4371c808b7a295bfc993a257e440d1e1
+ms.sourcegitcommit: 227f54a8e90aa57d778ab60c646179c10e5edb44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51027213"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51272402"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Início rápido: Encontrar as informações confidenciais que tiver no ficheiros armazenados no local
 
@@ -128,7 +128,7 @@ Em seguida, reinicie o computador.
 
 Este comando não remove os seguintes itens e tem de remover manualmente-los se não quiser que eles após este início rápido:
 
-- Base de dados do SQL Server que foi criada ao executar o cmdlet Install-AIPScanner quando o scanner do Azure Information Protection foi instalado. 
+- A base de dados do SQL Server com o nome **AzInfoProtection** que foi criada ao executar o cmdlet Install-AIPScanner quando o scanner do Azure Information Protection foi instalado. 
 
 - Os relatórios de scanner localizado em %*localappdata*% \Microsoft\MSIP\Scanner\Reports.
 

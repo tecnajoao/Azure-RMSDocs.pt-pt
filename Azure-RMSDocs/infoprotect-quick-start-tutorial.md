@@ -4,15 +4,15 @@ description: Um tutorial de introdução que edita a política do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 11/07/2018
 ms.topic: tutorial
 ms.service: information-protection
-ms.openlocfilehash: b3d799408d0e337bc17598d14c4c973102fed784
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: 9e5fb752e75a6b6616fa0ef347c6a6102cd859fa
+ms.sourcegitcommit: 8e43a41998045fe574710e9da0b7747eaeccdba1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026813"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51273604"
 ---
 # <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>Tutorial: Editar a política do Azure Information Protection e criar uma nova etiqueta
 
@@ -20,7 +20,7 @@ ms.locfileid: "51026813"
 
 Neste tutorial, ficará a saber como:
 > [!div class="checklist"]
-> * Alterar duas definições de política
+> * Configurar definições de política
 > * Criar uma nova etiqueta 
 > * Configurar a etiqueta para marcas visuais, recomendado classificação e proteção
 > * Veja as suas definições e etiquetas em ação
@@ -73,17 +73,19 @@ Utilizar o portal do Azure, vamos alterar primeiro algumas definições de polí
 
 2. Selecione **classificações** > **políticas** > **Global** para abrir o **política: Global** painel. 
 
-3. Localizar as definições de política depois das etiquetas, no **configurar definições para apresentar e aplicar-se sobre os usuários finais do Information Protection** secção. Anote as definições atuais. Se ainda não mudou estas definições de seus padrões, verá não existe nenhum conjunto de etiqueta predefinida, documentos e e-mails não são necessários para ter uma etiqueta e os utilizadores não têm de fornecer uma justificação ao alterar as etiquetas:
+3. Localizar as definições de política depois das etiquetas, no **configurar definições para apresentar e aplicar-se sobre os usuários finais do Information Protection** secção. 
     
-    ![Tutorial do Azure Information Protection – política predefinida](./media/info-protect-policy-default-settings.png)
+    Tome nota da forma como as definições estão atualmente configuradas. Especificamente, as definições **selecione a etiqueta predefinida** e **os utilizadores têm de fornecer justificação para definir uma etiqueta de classificação inferior, remover uma etiqueta ou remover a proteção**. Por exemplo:
     
-    Vamos alterar algumas dessas definições de política para que pode ver como elas funcionam.
+    ![Tutorial do Azure Information Protection - para alterar as definições de política](./media/info-protect-policy-default-settings.png)
+    
+    Vamos utilizar estas definições de política mais tarde no tutorial quando irá vê-los em ação.
 
 4. Para **selecione a etiqueta predefinida**, selecione **geral**. 
 
     Se não tiver esta etiqueta porque tem uma versão mais antiga da política, selecione **Interno** como etiqueta equivalente.
 
-5. Para **os utilizadores têm de fornecer justificação para definir uma etiqueta de classificação inferior, remover uma etiqueta ou remover a proteção**, defina esta opção como **no**.
+5. Para **os utilizadores têm de fornecer justificação para definir uma etiqueta de classificação inferior, remover uma etiqueta ou remover a proteção**, defina esta opção como **no** se ainda não estiver.
 
 6. Além disso, certifique-se de que **apresentar a barra de Information Protection nas aplicações do Office** está definida como **no**.
 
@@ -103,7 +105,7 @@ Vamos agora criar uma nova subetiqueta para **confidencial**.
 
 3. Para **Defina permissões para documentos e e-mails que contenham esta etiqueta**, selecione **Proteger** e, em seguida, selecione **Proteção**:
     
-    ![Proteção configurada para uma etiqueta do Azure Information Protection](./media/info-protect-protection-bar-configured.png) 
+    ![Configuração de uma etiqueta do Azure Information Protection para proteção](./media/info-protect-protection-bar-configured.png) 
     
 4. Sobre o **proteção** painel, certifique-se de que **Azure (chave da cloud)** está selecionada. Esta opção utiliza o serviço Azure Rights Management para proteger documentos e e-mails. Também certificar-se de que o **definir permissões** opção está selecionada. Em seguida, selecione **adicionar permissões**.
 
@@ -141,11 +143,13 @@ Vamos agora criar uma nova subetiqueta para **confidencial**.
     
     a. **Escolha o tipo de condição**: mantenha a predefinição **tipos de informações**.
     
-    b. Na **seleciona os tipos de informações** caixa de pesquisa: tipo **número de cartão de crédito**. Em seguida, resultados da pesquisa, selecione **número de cartão de crédito**.
+    b. Para **escolha um setor**: mantenha a predefinição **todos os**.
     
-    c. **Número mínimo de ocorrências**: mantenha a predefinição de **1**.
+    c. Na **seleciona os tipos de informações** caixa de pesquisa: tipo **número de cartão de crédito**. Em seguida, resultados da pesquisa, selecione **número de cartão de crédito**.
     
-    d. **Contagem de ocorrências com apenas valores exclusivos**: mantenha a predefinição **Desativado**.
+    d. **Número mínimo de ocorrências**: mantenha a predefinição de **1**.
+    
+    e. **Contagem de ocorrências com apenas valores exclusivos**: mantenha a predefinição **Desativado**.
     
     ![Tutorial do Azure Information Protection – configurar condição de cartão de crédito](./media/step2-configure-condition.png)
     
@@ -157,7 +161,7 @@ Vamos agora criar uma nova subetiqueta para **confidencial**.
 
 11. Para **selecione a forma como esta etiqueta é aplicada**: mantenha a predefinição **recomendado**e não altere a sugestão de política predefinida. 
 
-12. Na caixa **introduzir notas para manutenção interna**, escreva **Apenas para fins de testes**.
+12. Na **adicionar notas para utilização do administrador** , escreva **apenas para teste fins**.
 
 13. Clique em **salvar** nisso **subetiqueta** painel. Se lhe for pedido para confirmar, clique em **OK**. A nova etiqueta é criada e guardada, mas ainda não foram adicionada a uma política.
 
@@ -169,7 +173,7 @@ Vamos agora criar uma nova subetiqueta para **confidencial**.
 
     ![Tutorial do Azure Information Protection – subetiqueta novo](./media/info-protect-policy-configuredv2.png)
     
-    Também pode ver que as definições são configuradas com as suas alterações para a etiqueta predefinida e a justificação:
+    Também pode ver que as definições são configuradas para a etiqueta predefinida e a justificação:
     
     ![Tutorial do Azure Information Protection – definições configuradas](./media/info-protect-settings-configuredv2.png)
     
@@ -196,35 +200,35 @@ Abra um novo documento do Word. Uma vez que o cliente do Azure Information Prote
 
 ### <a name="to-manually-change-our-default-label"></a>Para alterar manualmente a nossa etiqueta predefinida
 
-Na barra do Information Protection, selecione a última etiqueta e verá a forma como as subetiquetas são apresentadas:
+1. Na barra do Information Protection, selecione a última etiqueta e verá a forma como as subetiquetas são apresentadas:
+    
+    ![Tutorial do Azure Information Protection – Consulte subetiquetas](./media/info-protect-sub-labelsv2.png)
 
-![Tutorial do Azure Information Protection – Consulte subetiquetas](./media/info-protect-sub-labelsv2.png)
+2. Selecione uma destas subetiquetas e verá que as outras etiquetas já não apresentadas na barra de ter selecionado uma etiqueta para este documento. O **sensibilidade** nome muda de valor para mostrar a etiqueta e subetiqueta, com uma alteração correspondente da cor da etiqueta. Por exemplo:
+    
+    ![Tutorial do Azure Information Protection – subetiqueta selecionada](./media/info-protect-sub-label-selectedv2.png)
 
-Selecione uma destas subetiquetas e verá que as outras etiquetas já não apresentadas na barra de ter selecionado uma etiqueta para este documento. O **sensibilidade** nome muda de valor para mostrar a etiqueta e subetiqueta, com uma alteração correspondente da cor da etiqueta. Por exemplo:
+3. Na barra do Information Protection, clique no ícone **Editar Etiqueta** junto ao valor da etiqueta selecionada:
+    
+    ![Tutorial do Azure Information Protection – ícone Editar etiqueta](./media/info-protect-edit-label-selectedv2.png)
+    
+    Esta ação apresenta as etiquetas disponíveis novamente.
 
-![Tutorial do Azure Information Protection – subetiqueta selecionada](./media/info-protect-sub-label-selectedv2.png)
-
-Na barra do Information Protection, clique no ícone **Editar Etiqueta** junto ao valor da etiqueta selecionada:
-
-![Tutorial do Azure Information Protection – ícone Editar etiqueta](./media/info-protect-edit-label-selectedv2.png)
-
-Esta ação apresenta as etiquetas disponíveis novamente.
-
-Selecione a primeira etiqueta, **Pessoal**. Uma vez que selecionar uma etiqueta com uma classificação de nível inferior da etiqueta anteriormente selecionada para este documento, lhe for pedido para indicar a razão pela qual está a reduzir o nível de classificação:
-
-![Tutorial de proteção de informações do Azure – linha de comandos confirmar a razão pela qual reduzir](./media/info-protect-lower-justification.png)
-
-Selecione **A etiqueta anterior já não se aplica** e clique em **Confirmar**. O valor **Sensibilidade** é alterado para **Pessoal** e as outras etiquetas voltam a ficar ocultas.
+4. Selecione a primeira etiqueta, **Pessoal**. Uma vez que selecionar uma etiqueta com uma classificação de nível inferior da etiqueta anteriormente selecionada para este documento, lhe for pedido para indicar a razão pela qual está a reduzir o nível de classificação:
+    
+    ![Tutorial de proteção de informações do Azure – linha de comandos confirmar a razão pela qual reduzir](./media/info-protect-lower-justification.png)
+    
+    Selecione **A etiqueta anterior já não se aplica** e clique em **Confirmar**. O valor **Sensibilidade** é alterado para **Pessoal** e as outras etiquetas voltam a ficar ocultas.
 
 ### <a name="to-remove-the-classification-completely"></a>Para remover a classificação por completo
 
-Na barra Information Protection, clique novamente no ícone **Editar Etiqueta**. Em vez de selecionar uma das etiquetas, clique no ícone **Eliminar Etiqueta**:
-
-![Tutorial do Azure Information Protection – eliminar ícone](./media/delete-icon-from-personalv2.png)
-
-Desta vez, quando lhe for pedido, escreva "este documento não precisa classificar" e clique em **confirmar**.  
-
-Verá o **sensibilidade** valor a apresentar **nenastaveno**, que é que os utilizadores veem inicialmente para os novos documentos se não definir uma etiqueta predefinida como uma definição de política.
+1. Na barra Information Protection, clique novamente no ícone **Editar Etiqueta**. Em vez de selecionar uma das etiquetas, clique no ícone **Eliminar Etiqueta**:
+    
+    ![Tutorial do Azure Information Protection – eliminar ícone](./media/delete-icon-from-personalv2.png)
+    
+2. Desta vez, quando lhe for pedido, escreva "este documento não precisa classificar" e clique em **confirmar**.  
+    
+    Verá o **sensibilidade** valor a apresentar **nenastaveno**, que é que os utilizadores veem inicialmente para os novos documentos se não definir uma etiqueta predefinida como uma definição de política.
 
 ### <a name="to-see-a-recommendation-prompt-for-labeling-and-automatic-protection"></a>Para ver um pedido de recomendação para etiquetagem e proteção automática
 
@@ -250,10 +254,7 @@ Se não desejar manter as alterações efetuadas neste tutorial, faça o seguint
 
 1. Selecione **classificações** > **políticas** > **Global** para abrir o **política: Global** painel.
 
-2. Devolver as definições de política para os valores originais que apontou e, em seguida, selecione **guardar**. Os valores predefinidos:
-    
-    -  **Selecione a etiqueta predefinida**: **None**
-    -  **Os utilizadores têm de fornecer justificação para definir uma etiqueta de classificação inferior, remover uma etiqueta ou remover proteção**: **desativado**
+2. Devolver as definições de política para os valores originais que apontou e, em seguida, selecione **guardar**. 
 
 3. Do **classificações** > **etiqueta** opção de menu: no **do Azure Information Protection – etiqueta** painel, selecione o menu de contexto (**...**) para o **Finance** etiqueta que criou.
 

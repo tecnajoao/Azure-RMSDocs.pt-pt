@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 430e130a5ba2026c0a3c69a59dddd6f9d6b4e8f0
-ms.sourcegitcommit: cc65c3851d4b8169a1a62c83afaf0f75402f7631
+ms.openlocfilehash: 6c0b9a878f98081312a0b81b965e75bcc0ade7e8
+ms.sourcegitcommit: 13b5b8e7457b09e1b828dad3cdfae086fd019819
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "49476209"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51508447"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Instalação do SDK de proteção de informações da Microsoft (MIP) e configuração 
 
@@ -169,7 +169,49 @@ Quando terminar, registo de aplicação e permissões de API devem ter um aspeto
 
 Para obter mais informações sobre como adicionar APIs e as permissões para um registo, consulte [atualização de aplicativos, configurar uma aplicação de cliente para acessar a seção APIs web](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#updating-an-application). Aqui encontrará informações sobre como adicionar as APIs e as permissões necessárias por uma aplicação cliente.  
 
+## <a name="request-an-information-protection-integration-agreement-ipia"></a>Pedir um Contrato de Integração do Information Protection (IPIA)
+
+Para poder disponibilizar uma aplicação desenvolvida com MIP, tem de aplicar para e celebrar um contrato formal com a Microsoft.
+
+1. Obtenha o seu IPIA ao enviar um e-mail para [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=Requesting%20IPIA%20for%20<company-name>) com as seguintes informações:
+
+   **Assunto:** pedido de IPIA para *Nome da Empresa*
+
+   No corpo do e-mail, inclua:
+   - Nome da aplicação e do produto
+   - Nome próprio e apelido do autor do pedido
+   - Endereço de e-mail do autor do pedido
+
+2. Após a receção do seu pedido de IPIA, ser-lhe-á enviado um formulário (como um documento do Word). Analise os termos e condições do IPIA e devolva o formulário para o e-mail [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=IPIA%20Response%20for%20<company-name>) com as seguintes informações:
+
+   - Denominação legal da Empresa
+   - Estado/Distrito (E.U.A./Canadá) ou País de Registo
+   - URL da empresa
+   - Endereço de e-mail do contacto
+   - Endereços adicionais da empresa (opcional)
+   - Nome da Aplicação da Empresa
+   - Breve Descrição da Aplicação
+   - *ID do Inquilino do Azure*
+   - *ID da Aplicação*
+   - Contactos, e-mail e telefone da empresa para Correspondência em Situações Críticas
+
+3. Quando recebermos o seu formulário, ser-lhe-á enviada a ligação final do IPIA para assinar digitalmente. Depois de assinar, o contrato será assinado pelo devido representante da Microsoft, dando-se por concluída a celebração do contrato.
+
+### <a name="already-have-a-signed-ipia"></a>Já tem um IPIA assinado?
+
+Se já tiver um IPIA assinado e quiser adicionar um novo *ID da Aplicação* a uma aplicação que irá disponibilizar, envie um e-mail para [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=Updating%20IPIA%20for%20<company-name>) e forneça-nos as seguintes informações:
+
+- Nome da Aplicação da Empresa
+- Breve Descrição da Aplicação
+- ID do Inquilino do Azure (mesmo que seja igual ao anterior)
+- ID da Aplicação
+- Contactos, e-mail e telefone da empresa para Correspondência em Situações Críticas
+
+Depois de nos enviar o e-mail, aguarde até 72 horas para receber um aviso de receção.
+
 ## <a name="next-steps"></a>Passos Seguintes
 
 - Antes de iniciar a secção de guias de introdução, não deixe de ler sobre [observadores no SDK do MIP](concept-async-observers.md), como o SDK de MIP foi concebido para ser quase que totalmente assíncrono.
 - Se estiver pronto para obter experiência prática com o SDK, começar com [início rápido: inicialização de aplicações de cliente (C++)](quick-app-initialization-cpp.md).
+
+

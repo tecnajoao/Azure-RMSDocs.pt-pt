@@ -1,27 +1,26 @@
 ---
 title: Guia para Programadores do RMS | Azure RMS
-description: "Estão agora disponíveis três gerações do SDK do Rights Management."
-keywords: 
-author: bruceperlerms
+description: Estão agora disponíveis três gerações do SDK do Rights Management.
+keywords: ''
+author: bryanla
 manager: mbaldwin
-ms.date: 02/23/2017
-ms.topic: article
-ms.prod: azure
+ms.date: 09/07/2018
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 0510ead4-2fe7-4269-885b-fe16bcc69888
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 899c05d233ec31db27cee058982c98d8dd809c3a
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 6f964c6a6cf36cbd6f78cf58096f8c912fb0ff68
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "51527933"
 ---
 # <a name="rms-developers-guide"></a>Guia para Programadores do RMS
 
-## <a name="overview"></a>Descrição Geral ##
+## <a name="overview"></a>Descrição geral ##
 Estão agora disponíveis três gerações do SDK do Rights Management: **SDK Microsoft Rights Management 4.2** para Android, iOS/OS X, dispositivos Windows e Linux, **SDK Microsoft Rights Management 2.1** para o Cliente do Ambiente de Trabalho do Windows e o **SDK AD RMS** substituído.
 
 ## <a name="software-development-kits"></a>Kits de Programação de Software ##
@@ -43,10 +42,8 @@ Esta coleção de ferramentas de suporte de programação e de exemplos de códi
 | [IpcDlp](https://github.com/Azure-Samples/active-directory-dotnet-rms)|Ambiente de Trabalho do Windows|[SDK RMS 2.1](microsoft-information-protection-and-control-client-portal.md) e versões posteriores do SDK 2.x|**IpcDlp** é uma aplicação de Proteção de Fuga de Dados preparada para RMS de exemplo que descreve os passos básicos que uma aplicação preparada para RMS DLP deve efetuar ao utilizar a API de Ficheiros para proteger e consumir conteúdo restrito.|
 | [IpcAzureApp](https://github.com/Azure-Samples/active-directory-dotnet-rms) | Ambiente de Trabalho do Windows|[SDK RMS 2.1](microsoft-information-protection-and-control-client-portal.md) e versões posteriores do SDK 2.x|**IpcAzureApp** é uma amostra que demonstra como utilizar o SDK RMS na aplicação Azure para proteger os dados no Armazenamento de Blobs do Azure.|
 | [RmsDocumentInspector](https://github.com/Azure-Samples/active-directory-dotnet-rms) | Ambiente de Trabalho do Windows|[SDK RMS 2.1](microsoft-information-protection-and-control-client-portal.md) e versões posteriores do SDK 2.x|**RmsDocumentInspector** é uma ferramenta que pode fornecer informações sobre qualquer ficheiro de RMS protegido, tal como ID de conteúdo ou direitos de utilizador.|
-| [RmsFileWatcher](https://github.com/Azure-Samples/active-directory-dotnet-rms) | Ambiente de Trabalho do Windows|[SDK RMS 2.1](microsoft-information-protection-and-control-client-portal.md) e versões posteriores do SDK 2.x|**RmsFileWatcher** é uma amostra que demonstra como criar uma aplicação do Windows que monitoriza os diretórios no sistema de ficheiros e aplica políticas de proteção RMS em todas as alterações, por exemplo, em ficheiros adicionados ou modificados.|
+| [RmsFileWatcher](https://github.com/Azure-Samples/active-directory-dotnet-rms) | Ambiente de Trabalho do Windows|[SDK RMS 2.1](microsoft-information-protection-and-control-client-portal.md) e versões posteriores do SDK 2.x|O **RmsFileWatcher** é uma amostra que demonstra como criar uma aplicação do Windows que monitoriza os diretórios no sistema de ficheiros e aplica políticas de proteção RMS em todas as alterações, por exemplo, em ficheiros adicionados ou modificados.|
 | [Cenários de utilização no iOS/OS X](https://msdn.microsoft.com/library/dn758307(v=vs.85).aspx) |iOS/OS X|[SDK RMS 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) e versões posteriores do SDK 4.x|Exemplos de código do **Objetivo C** que representam cenários de desenvolvimento importantes para o ajudar a habituar-se ao SDK RMS. Os exemplos incluem a utilização do formato de Ficheiro Protegido da Microsoft, formatos de ficheiros protegidos personalizados e controlos de IU personalizados.|
 | [Aplicação de Exemplo e Biblioteca da IU](https://github.com/AzureAD/rms-sdk-ui-for-ios) |iOS|[SDK RMS 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) e versões posteriores do SDK 4.x|**Bibliotecas da IU e aplicação de exemplo para iOS** no GitHub para que possa começar rapidamente e reutilizar a nossa IU padrão nas suas aplicações.|
 | [Aplicação de Exemplo e Biblioteca da IU](https://github.com/AzureAD/rms-sdk-ui-for-android) |Android|[SDK RMS 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) e versões posteriores do SDK 4.x|**Bibliotecas da IU e aplicação de exemplo para Android** no GitHub para que possa começar rapidamente e reutilizar a nossa IU padrão nas suas aplicações.|
 | [Cenários de utilização no Android](https://msdn.microsoft.com/en-us/library/dn758246(v=vs.85).aspx) |Android|[SDK RMS 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) e versões posteriores do SDK 4.x|**Exemplos de código Java** que representam cenários de desenvolvimento importantes para o ajudar a habituar-se ao SDK RMS. Os exemplos incluem a utilização do formato de Ficheiro Protegido da Microsoft, formatos de ficheiros protegidos personalizados e controlos de IU personalizados.|
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

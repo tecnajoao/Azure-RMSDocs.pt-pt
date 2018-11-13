@@ -1,20 +1,25 @@
 ---
 layout: LandingPage
 ms.topic: landing-page
-ms.openlocfilehash: 16adbfde4f2b0cf3673b0f9d51b63065b6817d95
-ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
+ms.service: information-protection
+author: cabailey
+manager: mbaldwin
+ms.author: cabailey
+ms.date: 09/26/2018
+ms.openlocfilehash: 4319abfc402b8cf16272bee856118864a0bb532b
+ms.sourcegitcommit: 860955fb2c292b3ca5910cd41095363f58caf553
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "29772980"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "51527981"
 ---
 # <a name="azure-information-protection-documentation"></a>Documentação do Azure Information Protection
 
-Controle e ajude a proteger e-mails, documentos e dados confidenciais que partilha fora da sua empresa. Desde uma classificação fácil a permissões e etiquetas incorporadas, melhore a proteção de dados em todos os momentos com o Azure Information Protection, independentemente do local onde estes se encontram armazenados ou com quem são partilhados.
+Controle e ajude a proteger e-mails, documentos e dados confidenciais que partilha fora da sua empresa. Melhore a proteção de dados em todos os momentos com a classificação facilitada e as permissões e etiquetas incorporadas, entre outras funcionalidades, do Microsoft Information Protection, independentemente do local onde os dados se encontram armazenados ou com quem são partilhados.
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="/information-protection/understand-explore/what-is-information-protection#resources-for-azure-information-protection">
+        <a href="/information-protection/understand-explore/what-is-information-protection#microsoft-ignite">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -24,7 +29,7 @@ Controle e ajude a proteger e-mails, documentos e dados confidenciais que partil
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Veja as Sessões do Microsoft Ignite 2016 para o Azure Information Protection</h3>
+                        <h3>Veja as sessões da Microsoft Ignite 2018 sobre o Azure Information Protection</h3>
                     </div>
                 </div>
             </div>

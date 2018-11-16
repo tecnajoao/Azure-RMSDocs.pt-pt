@@ -4,18 +4,18 @@ description: Veja o que há de novo ou alterado numa versão do cliente do Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/30/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b05b41b802b54d874d13dcf13f541374d4150564
-ms.sourcegitcommit: b70d49870960a7a3feaf9a97a6e04ad350c4d2c8
+ms.openlocfilehash: d4b9419ee12dfef0db29604dc7a396eedd7225fc
+ms.sourcegitcommit: a547dee247e4961e8f7c1f08e39b03dff710a74c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50751258"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51628076"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: política de histórico e suporte de lançamento de versão
 
@@ -114,8 +114,6 @@ Esta versão inclui a versão 1.0.3592.627 do cliente RMS MSIPC.
     - Os relatórios de scanner incluem "Última modificação por" para documentos do Office.
     
     - Agora pode proteger todos os tipos de ficheiro ao utilizar o `*` universais ao editar o registro, conforme descrito no [editar o registo para o scanner](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner) secção.
-
-- Quando classifica e protege utilizando o PowerShell ou o scanner, os metadados de documento do Office não é removido ou criptografados.
 
 - Ver mensagens de e-mail ao utilizar os ícones de seta próximo Item e o Item anterior na barra de ferramentas de acesso rápido mostra a etiqueta correta de cada e-mail.
 

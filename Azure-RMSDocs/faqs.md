@@ -4,24 +4,24 @@ description: Algumas perguntas mais frequentes sobre o Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 11/09/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 04cafed6317bd17f08e6b09a7f0b42b2cb2e20c7
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: 06434646727b93da5746f66f062fb49f986aaa95
+ms.sourcegitcommit: e70480e4d3dabbc1b5ae03a56cf54473400d25e2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026677"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51527795"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Perguntas mais frequentes sobre o Azure Information Protection
 
 >*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Tem alguma pergunta sobre o Azure Information Protection, ou sobre a proteção do Rights Management (Azure RMS)? Verifique se a resposta está aqui.
+Tem uma pergunta sobre o Azure Information Protection ou o serviço Azure Rights Management (Azure RMS)? Verifique se a resposta está aqui.
 
 Essas páginas de FAQ são atualizadas regularmente, com novas adições indicadas nos anúncios de atualização de documentação mensal no [blog técnico do Azure Information Protection](https://aka.ms/AIPblog).
 
@@ -47,10 +47,6 @@ Um utilizador deve ter um nome de utilizador válido e uma palavra-passe para ac
 Ver a lista de informações e recursos de subscrição no [preços do Azure Information Protection](https://azure.microsoft.com/en-us/pricing/details/information-protection) página. 
 
 Se tiver uma subscrição do Office 365 que inclui proteção de dados do Azure Rights Management, transfira o [folha de dados de licenciamento do Azure Information Protection](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf), que inclui também algumas perguntas mais frequentes sobre o licenciamento.
-
-## <a name="ive-just-got-my-azure-information-protection-subscriptionhow-do-i-get-going"></a>Apenas tenho a minha subscrição do Azure Information Protection – como, tudo fica pronto?
-
-Se estiver familiarizado com o Azure Information Protection e ansiosos para começar, ative nossa [inícios Rápidos](quickstart-viewpolicy.md) primeiro e, em seguida, reveja o [guias de procedimentos para cenários comuns](how-to-guides.md).
 
 ## <a name="is-the-azure-information-protection-client-only-for-subscriptions-that-include-classification-and-labeling"></a>O cliente do Azure Information Protection destina-se apenas a subscrições que incluem classificação e etiquetagem?
 
@@ -117,6 +113,16 @@ Informações adicionais:
 - Se utilizar a MFA no seu políticas de acesso condicional para colaborar com outras organizações (B2B), tem de utilizar [colaboração B2B do Azure AD](/active-directory/b2b/what-is-b2b) e crie contas de convidado para os utilizadores que pretende partilhar com a da outra organização.
 
 - Se usar muitas aplicações de cloud para o acesso condicional, não poderá ver **Microsoft Azure Information Protection** apresentados na lista para selecionar. Neste caso, utilize a caixa de pesquisa na parte superior da lista. Comece a escrever "Microsoft Azure Information Protection" para filtrar as aplicações disponíveis. Desde que tiver uma subscrição de suporte, em seguida, irá ver **Microsoft Azure Information Protection** para selecionar. 
+
+## <a name="i-see-azure-information-protection-is-listed-as-a-security-provider-for-microsoft-graph-securityhow-does-this-work-and-what-alerts-will-i-receive"></a>Posso ver o Azure Information Protection está listado como um fornecedor de segurança para o Microsoft Graph Security — como este funciona e que alertas recebo?
+
+Sim, como uma oferta de pré-visualização pública, podem agora receber um alerta para **acesso a dados anómalas do Azure Information Protection**. Este alerta é acionado quando existem invulgares tentativas de acesso a dados protegidos pelo Azure Information Protection. Por exemplo, aceder a um volume anormalmente elevado de dados, numa hora invulgar do dia ou aceder a partir de uma localização desconhecida.
+
+Esses alertas podem ajudar a detetar ataques relacionados com dados avançados e ameaças internas no seu ambiente. Estes alertas utilizam o machine learning para criar um perfil do comportamento dos utilizadores que acedem aos seus dados protegidos. 
+
+Os alertas do Azure Information Protection podem ser acedidos por [com a API de segurança do Microsoft Graph](https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/security-api-overview), ou pode [transmitir alertas](https://developer.microsoft.com/en-us/graph/docs/concepts/security_siemintegration) para soluções SIEM, como Splunk e o IBM Qradar, com o Azure Monitor.
+
+Para obter mais informações sobre a API de segurança do Microsoft Graph, consulte [descrição geral da API de segurança do Microsoft Graph](https://developer.microsoft.com/graph/docs/concepts/security-concept-overview).
 
 ## <a name="whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365"></a>O que é a diferença entre as etiquetas no Azure Information Protection e as etiquetas no Office 365?
 

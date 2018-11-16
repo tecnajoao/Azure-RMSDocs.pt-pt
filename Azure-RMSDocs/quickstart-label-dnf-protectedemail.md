@@ -4,15 +4,15 @@ description: Configure uma etiqueta que protege um e-mail para um utilizador ao 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 11/14/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: 6beb55b6dbcd82582cc24c7beb787bf4b232f518
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: 793c3ff3b68de66dce5876c25cb4ba5455d19c33
+ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51027198"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51644697"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Início rápido: Configurar uma etiqueta para os utilizadores a proteger facilmente os e-mails que contêm informações confidenciais
 
@@ -64,9 +64,11 @@ Para obter uma lista completa de pré-requisitos para utilizar o Azure Informati
 
 ## <a name="configure-an-existing-label-to-apply-the-do-not-forward-protection"></a>Configurar uma etiqueta existente para aplicar a proteção não reencaminhar
 
-1. Abra uma nova janela do browser e [inicie sessão no portal do Azure](https://portal.azure.com). Em seguida, navegue até **do Azure Information Protection**. 
+1. Abra uma nova janela do browser e inicie sessão para o [portal do Azure](https://portal.azure.com) como um administrador global. Em seguida, navegue até **do Azure Information Protection**. 
     
     Por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
+    
+    Se não for o administrador global, utilize a seguinte hiperligação para funções de alternativas: [o início de sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
 2. Do **classificações** > **etiquetas** opção de menu: no **do Azure Information Protection – etiquetas** painel, selecione a etiqueta que pretende configurar para aplica a proteção. 
 

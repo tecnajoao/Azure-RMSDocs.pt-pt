@@ -4,15 +4,15 @@ description: Um tutorial de introdução que edita a política do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/07/2018
+ms.date: 11/14/2018
 ms.topic: tutorial
 ms.service: information-protection
-ms.openlocfilehash: 9e5fb752e75a6b6616fa0ef347c6a6102cd859fa
-ms.sourcegitcommit: 8e43a41998045fe574710e9da0b7747eaeccdba1
+ms.openlocfilehash: 7f8fc76b0ad3d90d422cc18229d10b1f1a8d6e8d
+ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51273604"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51644748"
 ---
 # <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>Tutorial: Editar a política do Azure Information Protection e criar uma nova etiqueta
 
@@ -67,9 +67,11 @@ Utilizar o portal do Azure, vamos alterar primeiro algumas definições de polí
 
 ### <a name="edit-the-policy-settings"></a>Editar as definições de política
 
-1. Abra uma nova janela do browser e [inicie sessão no portal do Azure](https://portal.azure.com). Em seguida, navegue até **do Azure Information Protection**. 
+1. Abra uma nova janela do browser e inicie sessão para o [portal do Azure](https://portal.azure.com) como um administrador global. Em seguida, navegue até **do Azure Information Protection**. 
     
     Por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
+    
+    Se não for o administrador global, utilize a seguinte hiperligação para funções de alternativas: [o início de sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
 2. Selecione **classificações** > **políticas** > **Global** para abrir o **política: Global** painel. 
 

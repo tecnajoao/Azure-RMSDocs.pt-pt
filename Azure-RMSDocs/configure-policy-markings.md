@@ -4,16 +4,16 @@ description: Quando atribui uma etiqueta a um documento ou a um e-mail pode sele
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/16/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: dbc63a0ddca9e7583693219103268048b524121c
-ms.sourcegitcommit: 6a732226a3c97fc06fcf815fbbb24a2e2faae209
+ms.openlocfilehash: 0e40e0044c38e58690b3e4130a4980042296edf4
+ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358980"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51644731"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Como configurar uma etiqueta para marcas visuais para o Azure Information Protection
 
@@ -23,7 +23,7 @@ Quando atribui uma etiqueta a um documento ou a um e-mail pode selecionar vária
 
 Obter informações adicionais sobre estas marcas visuais:
 
-- Os cabeçalhos e rodapés aplicam-se ao Word, ao Excel, ao PowerPoint e ao Outlook.
+- Cabeçalhos e rodapés suportam linhas individuais de texto que se aplicam ao Word, Excel, PowerPoint e Outlook.
 
 - As marcas d'água aplicam-se ao Word, ao Excel e ao PowerPoint:
 
@@ -138,7 +138,7 @@ Pode escolher a partir da lista de cores disponíveis ou especificar uma cor per
 
 Se precisar de uma referência para estes códigos [cores por nome](https://msdn.microsoft.com/library/aa358802\(v=vs.85\).aspx) da MSDN documentação é um ponto de partida útil. Também encontrar estes códigos em muitos aplicativos que permitem editar imagens. Por exemplo, o Microsoft Paint permite que escolha uma cor personalizada a partir de uma paleta e os valores RGB são apresentados automaticamente, que, em seguida, pode ser copiado.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 
 Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).  
 

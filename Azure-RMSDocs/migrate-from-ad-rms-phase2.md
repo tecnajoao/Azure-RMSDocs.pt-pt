@@ -4,18 +4,18 @@ description: Fase 2 da migração do AD RMS para o Azure Information Protection,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 04ca9cdfe3f528d71ee45a88a81b59268a6357aa
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: ebc5a9867bad267b71f2f4ae6ebe0e22c9e7a607
+ms.sourcegitcommit: 4c4af9766342272eaa18df720ba3738d44ba99c8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150471"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51707764"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Fase 2 da migração – configuração do AD RMS do lado do servidor
 
@@ -125,9 +125,9 @@ As alterações de modelo que poderá ter de fazer para este passo:
 
 - Se criou modelos personalizados no Azure Information Protection antes da migração, tem de os exportar e importar manualmente.
 
-- Se os modelos no AD RMS utilizavam o **ANYONE** grupo, poderá ter de adicionar utilizadores ou grupos externos à sua organização. 
+- Se os modelos no AD RMS utilizavam o **ANYONE** grupo, poderá ter de adicionar manualmente utilizadores ou grupos. 
     
-    No AD RMS, o grupo qualquer pessoa que recebe direitos a todos os utilizadores autenticados. Este grupo é convertido automaticamente para todos os utilizadores no inquilino do Azure AD. Se não tem de conceder direitos para os usuários, é necessária nenhuma ação adicional. Mas se estivesse usando o grupo ANYONE para incluir utilizadores externos, tem de adicionar manualmente estes utilizadores e os direitos que pretende conceder-lhes.
+    No AD RMS, o grupo ANYONE concedidos direitos a todos os utilizadores autenticados por seu Active Directory no local, e este grupo não é suportado pelo Azure Information Protection. O equivalente do armário é um grupo que foi criado automaticamente para todos os utilizadores no inquilino do Azure AD. Se estivesse usando o grupo ANYONE para seus modelos de AD RMS, poderá ter de adicionar utilizadores e os direitos que pretende conceder-lhes.
 
 ### <a name="procedure-if-you-created-custom-templates-before-the-migration"></a>Procedimento se criou modelos personalizados antes da migração
 
@@ -143,7 +143,7 @@ Em seguida, pode publicar ou arquivar estes modelos como faria com qualquer mode
 
 ### <a name="procedure-if-your-templates-in-ad-rms-used-the-anyone-group"></a>Procedimento se os modelos no AD RMS utilizavam o grupo **ANYONE**
 
-Se os modelos no AD RMS utilizavam o **ANYONE** grupo, este grupo é convertido automaticamente para utilizar o grupo com o nome **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<nome_do_inquilino >. onmicrosoft.com** . Por exemplo, para a Contoso, este grupo poderá ser semelhante ao seguinte: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**. Este grupo contém todos os utilizadores no seu inquilino do Azure AD.
+Se os modelos no AD RMS utilizavam o **ANYONE** grupo, em que o grupo mais próximo de equivalente no Azure Information Protection é designado **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<nome_do_inquilino >. onmicrosoft.com**. Por exemplo, para a Contoso, este grupo poderá ser semelhante ao seguinte: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**. Este grupo contém todos os utilizadores no seu inquilino do Azure AD.
 
 Na gestão de modelos e as etiquetas no portal do Azure, este grupo mostra como o nome de domínio do seu inquilino no Azure AD. Por exemplo, este grupo poderá ser semelhante ao seguinte da Contoso: **contoso.onmicrosoft.com**. Para adicionar este grupo, a opção apresenta **Add \<nome da organização >-todos os membros**.
 

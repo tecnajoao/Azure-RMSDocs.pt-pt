@@ -4,15 +4,15 @@ description: Criar e configurar uma nova etiqueta que classifica os documentos e
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 11/14/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: 921b1343e533b4643d97098350c34f5a69bfcf3e
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: dca90c7635702226e7414947aad6f3d89cf91efd
+ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51027204"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51644658"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Início rápido: Criar uma nova etiqueta do Azure Information Protection para utilizadores específicos
 
@@ -48,9 +48,11 @@ Para obter uma lista completa de pré-requisitos para utilizar o Azure Informati
 
 Primeiro, crie a sua nova etiqueta.
 
-1. Se ainda não o tiver feito, abra uma nova janela do browser e [inicie sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal). Em seguida, navegue para o painel **Azure Information Protection**.
+1. Se ainda não o tiver feito, abra uma nova janela do browser e iniciar sessão para o [portal do Azure](configure-policy.md#signing-in-to-the-azure-portal). Em seguida, navegue para o painel **Azure Information Protection**.
     
     Por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
+    
+    Se não for o administrador global, utilize a seguinte hiperligação para funções de alternativas: [o início de sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
 2. Do **classificações** > **etiquetas** opção de menu: no **do Azure Information Protection – etiquetas** painel, clique em **adicionar uma nova etiqueta** .
 

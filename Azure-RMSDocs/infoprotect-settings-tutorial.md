@@ -4,15 +4,15 @@ description: Um tutorial de introdução orienta-o através da configuração da
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 11/14/2018
 ms.topic: tutorial
 ms.service: information-protection
-ms.openlocfilehash: ead65d9fef1b6c4f0087757e044caccee14805df
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: b9f60d0e8cc61a1d38b2992c0d430507bf494d18
+ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51027219"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51644659"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutorial: Configurar definições de política do Azure Information Protection que funcionam em conjunto
 
@@ -69,9 +69,11 @@ Em vez de contar que os utilizadores manualmente etiquetar os documentos e e-mai
 
 Utilizar o portal do Azure, podemos irá editar a política global para alterar as definições de política para todos os utilizadores.
 
-1. Abra uma nova janela do browser e [inicie sessão no portal do Azure](https://portal.azure.com). Em seguida, navegue até **do Azure Information Protection**. 
+1. Abra uma nova janela do browser e inicie sessão para o [portal do Azure](https://portal.azure.com) como um administrador global. Em seguida, navegue até **do Azure Information Protection**. 
     
     Por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
+    
+    Se não for o administrador global, utilize a seguinte hiperligação para funções de alternativas: [o início de sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
 2. Selecione **classificações** > **políticas** > **Global** para abrir o **política: Global** painel. 
 

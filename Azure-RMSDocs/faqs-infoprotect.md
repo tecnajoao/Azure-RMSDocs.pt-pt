@@ -4,18 +4,18 @@ description: Tem uma pergunta específica sobre classificação e etiquetagem at
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: f4a5cd07f072f1fa5ea6473cf0f1f75bcb2568f4
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: 2c0d391e2d00ec7d0bc09d98de3fe6f502f999a4
+ms.sourcegitcommit: 4c4af9766342272eaa18df720ba3738d44ba99c8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026643"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51707747"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Perguntas mais frequentes sobre a classificação e a etiquetagem no Azure Information Protection
 
@@ -27,7 +27,7 @@ Tem uma pergunta sobre o Azure Information Protection especificamente sobre clas
 
 Experimente o nosso [editar a política e criar uma nova etiqueta](infoprotect-quick-start-tutorial.md) tutorial para ver isto em funcionamento em apenas alguns minutos.
 
-Procure anúncios no [Blogue Enterprise Mobility and Security](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection) e no nosso [site Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) estiverem disponíveis funcionalidades e capacidades adicionais. Seguem-se algumas limitações da versão atual, que incluem o seguinte:
+Procure anúncios no [blogue Enterprise Mobility + Security](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection) e no nosso [site do Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) para quando as funcionalidades adicionais e capacidades ficam disponíveis. Seguem-se algumas limitações da versão atual, que incluem o seguinte:
 
 - Sem capacidade de etiquetagem nas aplicações web do Office (Office Online).
 

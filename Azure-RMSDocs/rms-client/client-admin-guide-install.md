@@ -4,18 +4,18 @@ description: Instruções e informações para administradores implementar o cli
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2018
+ms.date: 11/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2b6e3a40f7faab35053c1bd3146bfc08767e0066
-ms.sourcegitcommit: 6d4792755226a61d59e79fd8795a9b0f653770bb
+ms.openlocfilehash: f4067698a97ded8aa4c7fd6144fa7738822f1910
+ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49367010"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51644680"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guia do administrador: Instalar o cliente do Azure Information Protection para utilizadores
 
@@ -41,6 +41,11 @@ Em seguida, verifique os pré-requisitos adicionais que podem ser necessários p
     
     O módulo do PowerShell para o cliente requer o Windows PowerShell versão 4.0, que poderá ter de ser instalado em sistemas operativos mais antigos. Para obter mais informações, veja [Como Instalar o Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). O instalador não verifica nem instala este pré-requisito automaticamente. Para verificar que versão do Windows PowerShell está a executar, escreva `$PSVersionTable` numa sessão do PowerShell.
 
+- Resolução de ecrã superior a 800 x 600
+    
+    Resoluções de 800 x 600 e inferiores totalmente não é possível apresentar os **classificar e proteger – Azure Information Protection** caixa de diálogo quando faça duplo clique de um ficheiro ou pasta no Explorador de ficheiros.
+
+
 - Assistente de Início de Sessão do Microsoft Online Services 7.250.4303.0
     
     Os computadores com o Office 2010 necessitam do Assistente de Início de Sessão do Microsoft Online Services versão 7.250.4303.0. Esta versão está incluída na instalação do cliente. Se tiver uma versão posterior do Assistente de Início de Sessão, desinstale-a antes de instalar o cliente do Azure Information Protection. Por exemplo, verifique a versão e desinstale o Assistente de Início de Sessão através do **Painel de Controlo** > **Programa e Funcionalidades** > **Desinstalar ou alterar um programa**.
@@ -57,21 +62,21 @@ Em seguida, verifique os pré-requisitos adicionais que podem ser necessários p
     
     A instalação do cliente não verifica este pré-requisito, mas é necessário para o cliente do Azure Information Protection classificar e proteger ficheiros PDF.
 
-- Configuração da política de grupo para **lista de suplementos gerenciados**
+- Configurar a política de grupo para impedir que o suplemento para o Azure Information Protection que está a ser desativada
     
-    Para Office 2013 e versões posteriores, configure a definição de política de grupo **lista de suplementos gerenciados** e adicione o **Microsoft Azure Information Protection** add-in para aplicativos do Office. Especifique os seguintes identificadores programáticos (ProgID) para o Azure Information Protection e definir a opção como **1: O suplemento está sempre ativado**.
+    Para o Office 2013 e versões posteriores, configure a política de grupo para garantir que o **Microsoft Azure Information Protection** suplemento para aplicativos do Office está sempre ativada. Sem esta configuração, o suplemento do Microsoft Azure Information Protection pode obter desativado e os utilizadores não poderão etiquetar os documentos e e-mails na sua aplicação do Office.
     
-    - Para o Outlook: `MSIP.OutlookAddin`
+    - Para o Outlook: Utilizar a política de grupo definição documentados em [controlo de administrador de sistema sobre suplementos](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) na documentação do Office.
     
-    - Para o Word: `MSIP.WordAddin`
-    
-    - Para o Excel: `MSIP.ExcelAddin`
-    
-    - Para o PowerPoint: `MSIP.PowerPointAddin`
-    
-    Se não configurar esta definição, o suplemento do Microsoft Azure Information Protection pode obter desativado e os utilizadores não poderão etiquetar os documentos e e-mails na sua aplicação do Office.
-    
-    Para obter mais informações sobre como configurar esta definição de política de grupo, consulte [controlo de administrador de sistema sobre suplementos](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) na documentação do Office.
+    - Para Word, Excel e PowerPoint: utilizar a definição de política de grupo **lista de suplementos gerenciados** documentados no artigo de suporte [Add-ins carregados devido a configurações de diretiva de grupo do Office 2013 e Office 2016 programas](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off). 
+        
+        Especifique os seguintes identificadores programáticos (ProgID) para o Azure Information Protection e definir a opção como **1: O suplemento está sempre ativado**.
+        
+        Para o Word: `MSIP.WordAddin`
+        
+        Para o Excel: `MSIP.ExcelAddin`
+        
+        Para o PowerPoint: `MSIP.PowerPointAddin`
 
 > [!IMPORTANT]
 > A instalação do cliente do Azure Information Protection requer permissões administrativas locais.
@@ -202,7 +207,7 @@ O módulo do PowerShell que está incluído com o cliente do Azure Information P
 
 Para instalar o cliente para a deteção de impressão, siga as mesmas instruções nas secções anteriores. Em seguida, está pronto para instalar o scanner. Para obter instruções, consulte [Implantando o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente](../deploy-aip-scanner.md).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 Agora que instalou o cliente do Azure Information Protection, veja o seguinte para obter informações adicionais que poderá precisar para suportar este cliente:
 
 - [Personalizações](client-admin-guide-customizations.md)

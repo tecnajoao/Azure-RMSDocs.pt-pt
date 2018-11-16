@@ -4,19 +4,19 @@ description: Algumas perguntas mais frequentes sobre o serviço de proteção de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/29/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: df069aaf45b1108de1243419c22706cbca64273e
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 15cf2c9c893adfb6e81e6a0c94001a3a0e120076
+ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149451"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51644765"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Perguntas mais frequentes sobre a proteção de dados no Azure Information Protection
 
@@ -86,16 +86,16 @@ Se o ficheiro foi protegido ao utilizar permissões personalizadas, não é poss
 Sugestão: Para verificar se um documento foi protegido por um modelo ou ao utilizar a permissão personalizada, utilize o [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) cmdlet do PowerShell. Sempre a ver uma descrição do modelo de **acesso restrito** permissões personalizadas, com um ID de modelo exclusivo que não são apresentadas quando executa [Get-RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate).
 
 ## <a name="i-have-a-hybrid-deployment-of-exchange-with-some-users-on-exchange-online-and-others-on-exchange-serveris-this-supported-by-azure-rms"></a>Tenho uma implementação híbrida do Exchange com alguns utilizadores no Exchange Online e outros no Exchange Server. Isto é suportado pelo Azure RMS?
-Com certeza e o lado bom é, os utilizadores são capazes de forma totalmente integrada protegerem e consumirem e-mails e anexos protegidos nas duas implementações do Exchange. Para esta configuração, [ative o Azure RMS](activate-service.md) e [ative a IRM para o Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx) e, em seguida, [implemente e configure o conetor RMS](deploy-rms-connector.md) para o Exchange Server.
+Com certeza e o lado bom é, os utilizadores são capazes de forma totalmente integrada protegerem e consumirem e-mails e anexos protegidos nas duas implementações do Exchange. Para esta configuração, [ativar o Azure RMS](activate-service.md) e [ativar a IRM para o Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx), em seguida, [implementar e configurar o conector RMS](deploy-rms-connector.md) para o Exchange Server.
 
-## <a name="if-i-use-this-protection-for-my-production-environment-is-my-company-then-locked-into-the-solution-or-risk-losing-access-to-content-that-we-protected-with-azure-rms"></a>Se utilizar esta proteção para o meu ambiente de produção, a minha empresa fica presa a essa solução ou arrisca-se a perder o acesso aos conteúdos que protegemos com o Azure RMS?
-Não, permanece sempre no controlo dos seus dados e pode continuar a aceder aos mesmos, mesmo se optar por deixar de utilizar o serviço Azure Rights Management. Para obter mais informações, veja [Desativar o Azure Rights Management](decommission-deactivate.md).
+## <a name="if-i-use-this-protection-for-my-production-environment-is-my-company-then-locked-into-the-solution-or-risk-losing-access-to-content-that-we-protected-with-azurerms"></a>Se utilizar esta proteção meu ambiente de produção, é minha empresa fica presa a solução ou o risco de perder o acesso aos conteúdos que protegemos com o Azure RMS?
+Não, sempre permanece no controlo dos seus dados e pode continuar a aceder aos mesmos, mesmo se optar por deixar de utilizar o serviço Azure Rights Management. Para obter mais informações, veja [Desativar o Azure Rights Management](decommission-deactivate.md).
 
 ## <a name="can-i-control-which-of-my-users-can-use-azure-rms-to-protect-content"></a>Posso controlar que utilizadores podem aceder ao Azure RMS para proteger o conteúdo?
 Sim, o serviço Azure Rights Management tem controlos de integração do utilizador para este cenário. Para obter mais informações, veja a secção [Configurar os controlos de inclusão para uma implementação faseada](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) no artigo [Ativar o Azure Rights Management](activate-service.md).
 
 ## <a name="can-i-prevent-users-from-sharing-protected-documents-with-specific-organizations"></a>Posso impedir que os utilizadores partilhem documentos protegidos com organizações específicas?
-Uma das grandes vantagens da utilização do serviço Azure Rights Management na proteção de dados é que suporta a colaboração entre empresas sem ter de configurar confianças explícitas para cada organização parceira, porque o Azure AD processa a autenticação automaticamente.
+Um dos maiores benefícios de utilização do serviço Azure Rights Management para proteção de dados é que suporta a colaboração empresa-empresa sem ter de configurar confianças explícitas para cada organização parceira, porque trata do Azure AD a autenticação por si.
 
 Não existe uma opção de administração para impedir que os utilizadores partilhem documentos de forma segura com organizações específicas. Por exemplo, imagine que pretende bloquear uma organização na qual não confia ou que tem uma empresa concorrente. Não faria sentido impedir o serviço Azure Rights Management de enviar documentos protegidos aos utilizadores nessas organizações, porque os seus utilizadores iriam partilhar os seus documentos desprotegidos, que é provavelmente a última coisa que quer que aconteça neste cenário. Por exemplo, não poderia identificar quem está a partilhar documentos confidenciais da empresa com os utilizadores nessas organizações, o que pode fazer quando o documento (ou e-mail) é protegido pelo serviço Azure Rights Management.
 
@@ -103,7 +103,7 @@ Não existe uma opção de administração para impedir que os utilizadores part
 
 Por predefinição, o serviço Azure Rights Management utiliza uma conta do Azure Active Directory e um endereço de e-mail associado para a autenticação de utilizador, o que torna a colaboração empresa-empresa integrada para os administradores. Se a outra organização utilizar serviços do Azure, os utilizadores já terão contas no Azure Active Directory, mesmo que estas contas tenham sido criadas e geridas no local e, em seguida, sincronizadas com o Azure. Se a organização tiver o Office 365, nos bastidores, este serviço também utiliza o Azure Active Directory para as contas de utilizador. Se a organização do utilizador não tiver contas geridas no Azure, os utilizadores podem inscrever-se no [RMS para utilizadores individuais](./rms-for-individuals.md), que cria um diretório e um inquilino do Azure não gerido para a organização com uma conta para o utilizador, para que este utilizador (e utilizadores subsequentes) possa ser autenticado para o serviço Azure Rights Management.
 
-O método de autenticação para estas contas pode variar, dependendo da forma como o administrador na outra organização configurou as contas do Azure Active Directory. Por exemplo, podem utilizar palavras-passe que foram criadas para estas contas, autenticação multifator (MFA), federação ou palavras-passe que foram criadas nos Active Directory Domain Services e, em seguida, sincronizadas com o Azure Active Directory.
+O método de autenticação para estas contas pode variar, dependendo da forma como o administrador na outra organização configurou as contas do Azure Active Directory. Por exemplo, eles podem utilizar palavras-passe que foram criadas para estas contas, Federação ou palavras-passe que foram criadas nos serviços de domínio do Active Directory e, em seguida, sincronizadas com o Azure Active Directory.
 
 Outros métodos de autenticação:
 
@@ -172,7 +172,7 @@ Se estiver interessado numa funcionalidade específica que ainda não é suporta
 ## <a name="how-do-i-configure-one-drive-for-business-in-sharepoint-online-so-that-users-can-safely-share-their-files-with-people-inside-and-outside-the-company"></a>Como posso configurar o OneDrive para Empresas no SharePoint Online, para que os utilizadores possam partilhar os seus ficheiros de forma segura com pessoas dentro e fora da empresa?
 Por predefinição, enquanto administrador do Office 365, não lhe cabe a si configurar isto, mas sim aos utilizadores.
 
-Tal como um administrador do site do SharePoint ativa e configura a IRM para uma biblioteca do SharePoint que possui, o OneDrive para Empresas é concebido para os utilizadores ativarem e configurarem a IRM para as suas próprias bibliotecas do OneDrive para Empresas. No entanto, com o PowerShell, pode fazê-lo pelos utilizadores. Para obter instruções, veja a secção [SharePoint Online e OneDrive para Empresas: configuração de IRM](configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) no artigo [Office 365: configuração para clientes e serviços online](configure-office365.md).
+Tal como um administrador do site do SharePoint ativa e configura a IRM para uma biblioteca do SharePoint que possui, o OneDrive para Empresas é concebido para os utilizadores ativarem e configurarem a IRM para as suas próprias bibliotecas do OneDrive para Empresas. No entanto, com o PowerShell, pode fazê-lo pelos utilizadores. Para obter instruções, consulte a [SharePoint Online e OneDrive para empresas: configuração de IRM](configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) secção a [do Office 365: configuração para clientes e serviços online](configure-office365.md) artigo.
 
 ## <a name="do-you-have-any-tips-or-tricks-for-a-successful-deployment"></a>Tem sugestões ou truques para uma implementação com êxito?
 

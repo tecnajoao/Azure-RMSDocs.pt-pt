@@ -8,30 +8,30 @@ ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 0e40e0044c38e58690b3e4130a4980042296edf4
-ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
+ms.openlocfilehash: 1a2702d1cff5cdf62b8969829f0389c15b5c7fae
+ms.sourcegitcommit: 520c8758c46ab46427fe205234bb221688ec9ec4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51644731"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52292614"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Como configurar uma etiqueta para marcas visuais para o Azure Information Protection
 
 >*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Quando atribui uma etiqueta a um documento ou a um e-mail pode selecionar várias opções para tornar a classificação escolhida facilmente visível. Estas marcas visuais são um cabeçalho, um rodapé e uma marca d'água.
+Quando atribui uma etiqueta a um documento ou a um e-mail pode selecionar várias opções para tornar a classificação escolhida facilmente visível. Estas marcas visuais são um cabeçalho, um rodapé e uma marca d'água. 
 
 Obter informações adicionais sobre estas marcas visuais:
 
-- Cabeçalhos e rodapés suportam linhas individuais de texto que se aplicam ao Word, Excel, PowerPoint e Outlook.
+- Várias linhas de texto são suportadas para todas as marcas visuais.
+
+- Os cabeçalhos e rodapés aplicam-se ao Word, ao Excel, ao PowerPoint e ao Outlook.
 
 - As marcas d'água aplicam-se ao Word, ao Excel e ao PowerPoint:
 
     - Excel: as marcas d'água só estarão visíveis nos modos de Pré-visualização de impressão e Esquema de página e quando foram impressas.
     
     - PowerPoint: as arcas d'água são aplicadas ao diapositivo principal, como uma imagem de fundo. Na **exibição** separador, **Slide mestre**, certifique-se de que o **ocultar gráficos de plano de fundo** não está selecionada a caixa de verificação.
-    
-    - São suportadas várias linhas de texto.
 
 - Comprimentos de cadeia de caracteres máximo:
     

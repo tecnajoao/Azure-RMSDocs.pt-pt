@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f1623c14377feb545f945a447363e7f3d12e8dd3
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: a55a073a0b567e9e92b11fdcb1a5c8032c4e94c7
+ms.sourcegitcommit: 03a9fc3f1b96a4edc0e2a9d538ce04a0579023be
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026575"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52268058"
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Como configurar a política do Azure Information Protection para utilizadores específicos com políticas de âmbito
 
@@ -28,6 +28,8 @@ Para aplicações que suportam o cliente do Azure Information Protection, todos 
 Tenha em atenção que, além das aplicações de ambiente de trabalho de Office que suportam o cliente do Azure Information Protection, as etiquetas também são suportadas com o PowerShell e o scanner do Azure Information Protection. Isso significa que pode criar e configurar políticas de âmbito para contas com comandos do PowerShell ou a deteção de impressão. 
 
 As políticas de âmbito, tal como as etiquetas, são ordenadas no portal do Azure. Se um utilizador estiver configurado para vários âmbitos, será calculada uma política eficaz para esse utilizador antes de ser transferida. De acordo com a ordem das políticas, a última definição de política é aplicada. O utilizador vê as etiquetas da política global e, simultaneamente, etiquetas adicionais das políticas de âmbito às quais pertence.
+
+A exceção é quando um utilizador do seu inquilino abre um documento com nome ou e-mail e que o utilizador não se encontra no âmbito da etiqueta. Neste cenário, o usuário vê o nome do conjunto de etiqueta mas a etiqueta não é apresentada como disponíveis para seleção.  
 
 Como uma política de âmbito herda sempre as etiquetas e as definições da política global, as etiquetas da política global são apresentadas quando cria ou edita uma política de âmbito. No entanto, não pode editar as etiquetas da política global quando edita uma política de âmbito. No entanto, pode adicionar subetiquetas para estas etiquetas herdadas.
 
@@ -58,4 +60,3 @@ O cliente do Azure Information Protection verifica a existência de alterações
 ## <a name="next-steps"></a>Passos Seguintes
 
 Para obter um exemplo de como personalizar a política predefinida e ver o comportamento resultante de uma aplicação do Office, experimente o [editar a política e criar uma nova etiqueta](infoprotect-quick-start-tutorial.md) tutorial.
-

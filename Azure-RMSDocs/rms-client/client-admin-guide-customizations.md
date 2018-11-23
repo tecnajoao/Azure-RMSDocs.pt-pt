@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 62d53acd482b9efdd0425d5a944d2241f8a33b30
-ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
+ms.openlocfilehash: 4d3a44426de151ad9d1f1262cae967fdddf0da6f
+ms.sourcegitcommit: 520c8758c46ab46427fe205234bb221688ec9ec4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51223998"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52292597"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas para o cliente do Azure Information Protection
 
@@ -86,9 +86,11 @@ Para iniciar sessão como um utilizador diferente:
 
 Além disso,
 
-- esta solução é suportada para iniciar sessão como outro utilizador a partir do mesmo inquilino. Não é suportada para iniciar sessão como outro utilizador a partir de um inquilino diferente. Para testar o Azure Information Protection com vários inquilinos, utilize computadores diferentes.
+- Se o cliente do Azure Information Protection é ainda com sessão iniciado com a conta antiga depois de concluir estes passos, elimine todos os cookies do Internet Explorer e, em seguida, repita os passos 1 e 2.
 
-- Se estiver a utilizar o início de sessão único, tem de terminar sessão no Windows e iniciar sessão com a sua outra conta de utilizador após editar o registo. O cliente do Azure Information Protection faz, em seguida, a autenticação automaticamente através da conta de utilizador com sessão iniciada.
+- Se estiver a utilizar o início de sessão único, tem de terminar sessão no Windows e inicie sessão com a sua conta de utilizador diferente depois de eliminar o ficheiro de token. O cliente do Azure Information Protection faz, em seguida, a autenticação automaticamente através da conta de utilizador com sessão iniciada.
+
+- esta solução é suportada para iniciar sessão como outro utilizador a partir do mesmo inquilino. Não é suportada para iniciar sessão como outro utilizador a partir de um inquilino diferente. Para testar o Azure Information Protection com vários inquilinos, utilize computadores diferentes.
 
 - Pode utilizar o **repor definições** opção partir **ajuda e Feedback** para terminar sessão e eliminar a política do Azure Information Protection atualmente transferida.
 

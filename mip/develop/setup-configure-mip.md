@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 6c0b9a878f98081312a0b81b965e75bcc0ade7e8
-ms.sourcegitcommit: 13b5b8e7457b09e1b828dad3cdfae086fd019819
+ms.openlocfilehash: 2790c64095a6fca4a33f70aeada68fa0c6668020
+ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51508447"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52386734"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Instalação do SDK de proteção de informações da Microsoft (MIP) e configuração 
 
@@ -21,11 +21,18 @@ O SDK de MIP é suportado nas seguintes plataformas:
 
 [!INCLUDE [MIP SDK platform support](../include/mip-sdk-platform-support.md)]
 
+## <a name="prerequisites"></a>Pré-requisitos
+
 Certifique-se de que consulte os tópicos seguintes antes de começar:
 
 - [O que é o Centro de conformidade e de segurança do Office 365?](https://docs.microsoft.com/office365/securitycompliance/security-and-compliance)
 - [O que é o Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
 - [Como funciona a proteção no Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
+
+> [!IMPORTANT]
+> **Para respeitar a privacidade dos utilizadores, tem de pedir ao utilizador para dar consentimento antes de ativar o registo automático.** O exemplo seguinte é uma mensagem padrão, a Microsoft utiliza para notificações de registos:
+>
+> *Ao ativar os Registos de Desempenho e de Erros, está a concordar em enviar Dados de Desempenho e de Erros para a Microsoft. A Microsoft irá recolher dados de desempenho e de erros através da Internet ("Dados"). A Microsoft utiliza estes Dados para fornecer e melhorar a qualidade, segurança e integridade dos produtos e serviços da Microsoft. Por exemplo, analisamos o desempenho e a fiabilidade, como as funcionalidades que utiliza, o tempo de resposta das funcionalidades, o desempenho do dispositivo, as interações de interface de utilizador e os problemas que possa ter com o produto. Os Dados também incluirão informações acerca da configuração do seu software, como o software que está a utilizar atualmente e o endereço IP.*
 
 ## <a name="sign-up-for-an-office-365-subscription"></a>Inscreva-se uma subscrição do Office 365
 
@@ -41,7 +48,7 @@ Muitas das amostras do SDK exigem acesso a uma subscrição do Office 365. Se ai
 
 ## <a name="configure-sensitivity-labels"></a>Configurar etiquetas de sensibilidade
 
-Se utilizar atualmente o Azure Information Protection, são necessárias etapas para migrar as etiquetas para o Centro de conformidade e de segurança do Office 365. Para obter mais informações sobre o processo, consulte [como migrar as etiquetas do Azure Information Protection para o Centro de conformidade e segurança do Office 365](/azure/information-protection/configure-policy-migrate-labels). 
+Se utilizar atualmente o Azure Information Protection, tem de migrar as etiquetas para segurança do Office 365 e do Centro de conformidade. Para obter mais informações sobre o processo, consulte [como migrar as etiquetas do Azure Information Protection para o Centro de conformidade e segurança do Office 365](/azure/information-protection/configure-policy-migrate-labels). 
 
 ## <a name="configure-your-client-workstation"></a>Configurar a sua estação de trabalho do cliente
 

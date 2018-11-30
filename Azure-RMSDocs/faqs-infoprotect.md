@@ -4,18 +4,18 @@ description: Tem uma pergunta específica sobre classificação e etiquetagem at
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 2c0d391e2d00ec7d0bc09d98de3fe6f502f999a4
-ms.sourcegitcommit: 4c4af9766342272eaa18df720ba3738d44ba99c8
+ms.openlocfilehash: a4aa5b1a6375655b9b6ab20f092a7def47187225
+ms.sourcegitcommit: ff77e4da1f7c7cf2262c208f8e58b85cfdb54903
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51707747"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52421050"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Perguntas mais frequentes sobre a classificação e a etiquetagem no Azure Information Protection
 
@@ -68,6 +68,24 @@ Não. Quando coloca uma etiqueta numa mensagem de e-mail com anexos, esses anexo
 Porque o Azure Information Protection utiliza metadados persistentes para classificação, que incluem uma etiqueta de texto não encriptado, estas informações podem ser lidos por soluções DLP e outras aplicações. 
 
 Para obter mais informações e exemplos de como utilizar estes metadados com as regras de fluxo de correio Exchange Online, consulte [configurar o Exchange Online regras de fluxo de correio etiquetas do Azure Information Protection](configure-exo-rules.md).
+
+## <a name="can-i-create-a-document-template-that-automatically-includes-the-classification"></a>Pode criar um modelo de documento que inclui a classificação automaticamente?
+
+Sim. Pode configurar uma etiqueta para [aplicam-se de um cabeçalho ou rodapé que inclui o nome de etiqueta](configure-policy-markings.md). Mas se de que não cumprem os requisitos, pode criar um modelo de documento com a formatação que pretende e adicionar a classificação como um código de campo. 
+
+Por exemplo, poderá ter uma tabela no cabeçalho do documento que exibe a classificação. Em alternativa, utilizar palavras específicas utilizadas para obter uma introdução que faz referência a classificação do documento.
+
+Para adicionar este código de campo no seu documento:
+
+1. Etiquetar o documento e salvá-lo. Esta ação cria novos campos de metadados que agora pode utilizar para o seu código de campo.
+
+2. No documento, posicione o cursor em que pretende adicionar a classificação a etiqueta e, em seguida, a partir da **inserir** separador, selecione **texto** > **partes rápidas**  >  **Campo**.
+
+3. Na **campo** caixa de diálogo, da **categorias** menu pendente, selecione **informações do documento**. Em seguida, a partir da **nomes de campos** lista pendente, selecione **DocProperty**.
+
+4. Partir do **propriedade** menu pendente, selecione **sensibilidade**e selecione **OK**.
+
+Classificação da etiqueta atual é apresentada no documento e este valor será atualizado automaticamente sempre que abrir o documento ou utiliza o modelo. Portanto, se a etiqueta for alterado, a classificação que é apresentada para esse código de campo é atualizada automaticamente no documento.
 
 ## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>Qual a diferença entre a classificação do Azure Information Protection para e-mails e a classificação de mensagens do Exchange?
 

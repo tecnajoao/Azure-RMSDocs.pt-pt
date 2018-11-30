@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 06434646727b93da5746f66f062fb49f986aaa95
-ms.sourcegitcommit: e70480e4d3dabbc1b5ae03a56cf54473400d25e2
+ms.openlocfilehash: 5e78630e39c63f69037dd7288f764c435ff5c81e
+ms.sourcegitcommit: ef70dab87478084fca853f389dab2408b95d1df1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51527795"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52304064"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Perguntas mais frequentes sobre o Azure Information Protection
 
@@ -84,7 +84,7 @@ Factos a ter em conta:
 
 Sim. Embora o Azure Information Protection seja uma solução baseada na cloud, o mesmo consegue classificar, etiquetar e proteger documentos e e-mails armazenados tanto no local como na cloud.
 
-Se tiver o Exchange Server, SharePoint Server e servidores de ficheiros do Windows, pode implementar o [conector Rights Management](deploy-rms-connector.md) para que estes servidores no local possam utilizar o serviço Azure Rights Management para proteger suas mensagens de e-mail e documentos. Também pode sincronizar e federar os seus controladores de domínio do Active Directory com o Azure AD para uma experiência de autenticação mais integrada para os utilizadores, por exemplo, ao utilizar [do Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/).
+Se tiver o Exchange Server, SharePoint Server e servidores de ficheiros do Windows, pode implementar o [conector Rights Management](deploy-rms-connector.md) para que estes servidores no local possam utilizar o serviço Azure Rights Management para proteger suas mensagens de e-mail e documentos. Também pode sincronizar e federar os seus controladores de domínio do Active Directory com o Azure AD para uma experiência de autenticação mais integrada para os utilizadores, por exemplo, ao utilizar [do Azure AD Connect](/azure/active-directory/hybrid/whatis-hybrid-identity#what-is-azure-ad-connect).
 
 O serviço Azure Rights Management gera e gere o dos certificados XrML conforme necessário, pelo que não utiliza um PKI no local automaticamente. Para obter mais informações sobre como o Azure Rights Management utiliza certificados, consulte a [instruções sobre como funciona o Azure RMS: primeira utilização, proteção de conteúdos, consumo de conteúdos](./how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) secção a [como o Azure RMS funciona?](./how-does-it-work.md) artigo.
 

@@ -8,12 +8,12 @@ ms.date: 10/31/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 0ee7333baebd0a34f518ff9500df95ed57ed2b01
-ms.sourcegitcommit: b70d49870960a7a3feaf9a97a6e04ad350c4d2c8
+ms.openlocfilehash: e16c50422268a05596ebc28e09d464959fd1e0b2
+ms.sourcegitcommit: ef70dab87478084fca853f389dab2408b95d1df1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50751173"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52303928"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Como configurar uma etiqueta para a proteção do Rights Management
 
@@ -107,9 +107,10 @@ Exchange tem de ser configurada para o Azure Information Protection antes dos ut
         ###### <a name="more-information-about-add-any-authenticated-users"></a>Obter mais informações sobre **adicionar utilizadores autenticados** 
         Esta definição não restringe quem pode aceder o conteúdo que a etiqueta protege, enquanto ainda encriptar o conteúdo e fornecer-lhe opções para restringir a como o conteúdo pode ser utilizadas (permissões) e acedidos (expiração e acesso offline). No entanto, o aplicativo abrindo o conteúdo protegido tem de ser capaz de suportar a autenticação a ser utilizada. Por esse motivo, federados fornecedores de redes sociais como o Google e autenticação de código de acesso onetime devem ser utilizados apenas para e-mails, e somente quando usar o Exchange Online e as novas capacidades de encriptação de mensagens do Office 365. Contas da Microsoft podem ser utilizadas com o Visualizador do Azure Information Protection e o Office 2016 Click-to-Run. 
           
-        Alguns cenários comuns para quaisquer autenticado a definição de usuários: – não se quem vê o conteúdo, mas pretender restringir a sua utilização. Por exemplo, não pretender que o conteúdo a ser editado, copiados ou impressos.  
-            -Não é necessário restringir quem acessa o conteúdo, mas quer poder controlar quem abre-se e potencialmente, revogue.  
-            -Tem um requisito que o conteúdo tem de estar encriptado em descanso e em trânsito, mas ele não requer controlos de acesso.
+        Alguns cenários comuns para quaisquer autenticado a definição de usuários:
+        - Não se quem vê o conteúdo, mas pretender restringir a sua utilização. Por exemplo, não pretender que o conteúdo a ser editado, copiados ou impressos.
+        - Não é necessário restringir quem acessa o conteúdo, mas quer poder controlar quem abre-se e potencialmente, revogue.
+        - Tem um requisito que o conteúdo tem de estar encriptado em descanso e em trânsito, mas ele não requer controlos de acesso.
         
     - Escolher **introduza os detalhes** especificar manualmente o e-mail endereços para utilizadores individuais ou grupos (interno ou externo). Em alternativa, utilize esta opção para especificar todos os utilizadores na sua organização ao introduzir qualquer nome de domínio dessa organização. Também pode utilizar esta opção para fornecedores de redes sociais, introduzindo o respetivo nome de domínio, tal como **gmail.com**, **hotmail.com**, ou **outlook.com**.
         

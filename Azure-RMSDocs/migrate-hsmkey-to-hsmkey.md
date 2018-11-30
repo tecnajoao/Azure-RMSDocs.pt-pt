@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b12c3eaf66d70d87fd9eb8f239416f322c45cd89
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 7ddaf0a54aa116a317cee8699caf437faae9676f
+ms.sourcegitcommit: bcc9e0f9ae8512bf48d819533cf8ef3b667eb298
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148447"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52330337"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Passo 2: migração de chave protegida por HSM para chave protegida por HSM
 
@@ -37,14 +37,14 @@ Antes de começar, certifique-se de que a sua organização tem um cofre de chav
 
 
 > [!TIP]
-> Se for efetuar os passos de configuração do Azure Key Vault e não estiver familiarizado com este serviço do Azure, poderá considerar útil primeiro rever [Introdução ao Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/). 
+> Se for efetuar os passos de configuração do Azure Key Vault e não estiver familiarizado com este serviço do Azure, poderá considerar útil primeiro rever [Introdução ao Azure Key Vault](/azure/key-vault/key-vault-get-started). 
 
 
 ## <a name="part-1-transfer-your-hsm-key-to-azure-key-vault"></a>Parte 1: transferir a chave HSM para o Azure Key Vault
 
 Estes procedimentos são efetuados pelo administrador para o Azure Key Vault.
 
-1. Para cada chave SLC exportada que pretende armazenar no Azure Key Vault, siga as instruções apresentadas na secção [Implementing bring your own key (BYOK) for Azure Key Vault (Implementar o BYOK (Bring Your Own Key – Traga a sua Própria Chave))](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azurekey-vault) da documentação do Azure Key Vault, com a seguinte exceção:
+1. Para cada chave SLC exportada que pretende armazenar no Azure Key Vault, siga as instruções apresentadas na secção [Implementing bring your own key (BYOK) for Azure Key Vault (Implementar o BYOK (Bring Your Own Key – Traga a sua Própria Chave))](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault) da documentação do Azure Key Vault, com a seguinte exceção:
 
     - Não efetue os passos para **Gerar a chave de inquilino**, porque já tem o equivalente da sua implementação do AD RMS. Em vez disso, identifique a chave utilizada pelo servidor do AD RMS na instalação da Thales e utilize esta chave durante a migração. Ficheiros de chave encriptados são normalmente denominados de Thales **key <*keyAppName*><*keyIdentifier* >**  localmente no servidor.
 

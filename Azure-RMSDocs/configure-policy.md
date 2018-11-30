@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 9813f71535de9058c2cb3382ae590ba5f8102fd1
-ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
+ms.openlocfilehash: d6870982e86c1740b2492dac720578d6c771666c
+ms.sourcegitcommit: aae91cee32c59277a6dfffab35177cd4247169e4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51644799"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52450109"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurar a política do Azure Information Protection
 
@@ -64,7 +64,7 @@ Para iniciar sessão no portal do Azure, configurar e gerir o Azure Information 
     - **Administrador global / administrador de empresa**
     
     > [!NOTE] 
-    > Se sua teant tiver sido migrado para a loja de etiquetagem unificada, para gerir as etiquetas do portal do Azure, sua conta tem também de ter permissões para acessar o Centro de conformidade e segurança do Office 365. [Mais informações](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    > Se o seu inquilino tiver sido migrado para a loja de etiquetagem unificada, para gerir etiquetas a partir do portal do Azure, sua conta tem também de ter permissões para acessar o Centro de conformidade e segurança do Office 365. [Mais informações](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Para aceder ao painel de proteção de informações do Azure pela primeira vez
 

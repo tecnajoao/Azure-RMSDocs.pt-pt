@@ -4,18 +4,18 @@ description: Instruções para instalar, configurar e executar o scanner do Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/22/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 9c5c07d09096d5d0f75c53fd03f85f5e29af1640
-ms.sourcegitcommit: 74d13c7162a0a94cda4762556a975a1d12433a13
+ms.openlocfilehash: 3e331c859c3808ceba2305224a6dd524b1a5ea6c
+ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52281314"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52386802"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Implementar o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente
 
@@ -39,7 +39,7 @@ Quando tiver configurado a sua [política do Azure Information Protection](confi
 
 ![Proteção de informações scanner arquitetura descrição geral do Azure](./media/infoprotect-scanner.png)
 
-O scanner pode inspecionar a todos os ficheiros que o Windows podem indexar, utilizando os iFilters que estão instalados no computador. Em seguida, para determinar se os arquivos precisam de etiquetagem, o scanner usa a tipos de informações de sensibilidade perda prevenção (DLP) do Office 365 dados internos e deteção de padrão ou padrões de regex do Office 365. Uma vez que o scanner utiliza o cliente do Azure Information Protection, pode classificar e proteger os mesmos [tipos de ficheiro](./rms-client/client-admin-guide-file-types.md).
+O scanner pode inspecionar a todos os ficheiros que o Windows podem indexar, utilizando os IFilters que estão instalados no computador. Em seguida, para determinar se os arquivos precisam de etiquetagem, o scanner usa a tipos de informações de sensibilidade perda prevenção (DLP) do Office 365 dados internos e deteção de padrão ou padrões de regex do Office 365. Uma vez que o scanner utiliza o cliente do Azure Information Protection, pode classificar e proteger os mesmos [tipos de ficheiro](./rms-client/client-admin-guide-file-types.md).
 
 Pode executar a deteção de impressão no modo de deteção apenas, em que usar os relatórios para verificar o que aconteceria se os ficheiros foram etiquetados. Em alternativa, pode executar a deteção de impressão para aplicar automaticamente as etiquetas. Também pode executar a deteção de impressão para detetar ficheiros que contenham tipos de informações confidenciais, sem configurar etiquetas para condições que se aplicam a classificação automática.
 
@@ -192,7 +192,7 @@ Com a configuração predefinida do scanner, agora, está pronto para executar a
     
         Start-AIPScan
     
-    Em alternativa, pode iniciar o Verificador do **do Azure Information Protection** painel no portal do Azure, ao utilizar o **Scanner** > **nós (pré-visualização)**  >  \* *<* scanner nó * > * * > **analisar agora** opção.
+    Em alternativa, pode iniciar o Verificador do **do Azure Information Protection** painel no portal do Azure, ao utilizar o **Scanner** > **nós (pré-visualização)**  >  \* *<* nó scanner*>** > **analisar agora** opção.
 
 2. Aguarde que o scanner concluir o seu ciclo, executando o seguinte comando:
     
@@ -207,7 +207,7 @@ Com a configuração predefinida do scanner, agora, está pronto para executar a
 3. Rever os relatórios que são armazenados em %*localappdata*%\Microsoft\MSIP\Scanner\Reports e que tem um formato de ficheiro. csv. Com a configuração padrão do scanner, apenas os ficheiros que cumprem as condições para classificação automática estão incluídos nestes relatórios.
     
     > [!TIP]
-    > Atualmente em pré-visualização, scanners de enviam estas informações para o Azure Information Protection a cada cinco minutos quando tiver a versão de pré-visualização do scanner, para que possa visualizar os resultados em tempo quase real do portal do Azure. Para obter mais informações, consulte [de relatórios do Azure Information Protection](reports-aip.md). 
+    > Scanners de enviam estas informações para o Azure Information Protection a cada cinco minutos, para que possa visualizar os resultados em tempo quase real do portal do Azure. Para obter mais informações, consulte [de relatórios do Azure Information Protection](reports-aip.md). 
         
     Se os resultados são não conforme o esperado, poderá ter de ajustar as condições que especificou na política do Azure Information Protection. Se for esse o caso, repita os passos 1 a 3 até estar pronto para alterar a configuração para aplicar a classificação e, opcionalmente, a proteção. 
 
@@ -242,7 +242,7 @@ O scanner ignora automaticamente ficheiros que estão [excluídos da classifica�
 
 Pode alterar este comportamento ao definir uma lista dos tipos de ficheiro de analisar ou excluir da análise. Quando especifica esta lista e não especificar um repositório de dados, a lista se aplica a todos os repositórios de dados que não tem sua própria lista especificada. Para especificar esta lista, utilize [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes). Depois de especificar a lista de tipos de ficheiro, pode adicionar um novo tipo de ficheiro à lista utilizando [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes)e remover um tipo de ficheiro da lista com [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes).
 
-Em seguida, o scanner utiliza Windows iFilter para analisar os seguintes tipos de ficheiro. Para estes tipos de ficheiro, serão identificados o documento como utilizando as condições que especificou para as etiquetas.
+Em seguida, o scanner utiliza Windows IFilter para analisar os seguintes tipos de ficheiro. Para estes tipos de ficheiro, serão identificados o documento como utilizando as condições que especificou para as etiquetas.
 
 |Tipo de aplicação|Tipo de ficheiro|
 |--------------------------------|-------------------------------------|
@@ -252,13 +252,17 @@ Em seguida, o scanner utiliza Windows iFilter para analisar os seguintes tipos d
 |PDF |.pdf|
 |Texto|.txt; .xml; .csv|
 
-Por predefinição, apenas os tipos de ficheiro do Office protegidos pelo scanner, para que os ficheiros PDF e de texto não estão protegidos, a menos que [editar o registo](#editing-the-registry-for-the-scanner) para especificar os tipos de ficheiro:
+Além disso, o scanner também pode utilizar reconhecimento ótico de carateres (OCR) para inspecionar imagens TIFF com uma extensão de nome de ficheiro. TIFF, quando configura [definições do Windows TIFF IFilter](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) no computador que executa a deteção de impressão.
+
+Por predefinição, apenas os tipos de ficheiro do Office protegidos pelo scanner, por isso, documentos em PDF e arquivos de texto e imagens TIFF não estão protegidas, a menos que [editar o registo](#editing-the-registry-for-the-scanner) para especificar os tipos de ficheiro:
 
 - Se não adicionar o tipo de ficheiro de. pdf para o registo: serão identificados como ficheiros que tenham esta extensão de nome de ficheiro, mas se a etiqueta estiver configurada para proteção, a proteção não é aplicada.
 
 - Se não adicionar os tipos de ficheiro. txt,. XML ou. csv para o registo: ficheiros com estas extensões de nome de ficheiro serão não identificados como porque estes tipos de ficheiro não suportam apenas a classificação.
 
-Por fim, para os tipos de ficheiros restantes, o scanner aplica-se a etiqueta predefinida na política do Azure Information Protection ou a etiqueta predefinida que configurou para a deteção de impressão.
+- Se não adicionar o tipo de ficheiro de. tiff para o registo depois de configurar o IFilter TIFF do Windows: serão identificados como ficheiros que tenham esta extensão de nome de ficheiro, mas se a etiqueta estiver configurada para proteção, a proteção não é aplicada.
+
+Por fim, para os tipos de ficheiros restantes, o scanner não os inspeciona mas aplica-se a etiqueta predefinida na política do Azure Information Protection ou a etiqueta predefinida que configurou para a deteção de impressão.
 
 |Tipo de aplicação|Tipo de ficheiro|
 |--------------------------------|-------------------------------------|
@@ -380,7 +384,7 @@ Outros fatores que afetam o desempenho de scanner:
     
     - O scanner é executado mais rapidamente ao utilizar o [configuração alternativa](#using-the-scanner-with-alternative-configurations) para aplicar uma etiqueta predefinida para todos os ficheiros porque o scanner não inspeciona o conteúdo do ficheiro.
     
-    - O scanner é executado reduzindo mais quando utiliza a [configuração alternativa](#using-the-scanner-with-alternative-configurations) para identificar todas as condições personalizadas e tipos de informações confidenciais conhecidos.
+    - O scanner é executado mais lentamente quando utiliza a [configuração alternativa](#using-the-scanner-with-alternative-configurations) para identificar todas as condições personalizadas e tipos de informações confidenciais conhecidos.
     
 
 ## <a name="list-of-cmdlets-for-the-scanner"></a>Lista de cmdlets para a deteção de impressão 

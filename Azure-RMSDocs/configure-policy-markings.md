@@ -4,16 +4,16 @@ description: Quando atribui uma etiqueta a um documento ou a um e-mail pode sele
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 11/28/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 1a2702d1cff5cdf62b8969829f0389c15b5c7fae
-ms.sourcegitcommit: 520c8758c46ab46427fe205234bb221688ec9ec4
+ms.openlocfilehash: 23185d2d6b5b1bb14633647c345d0e58eeda3bdc
+ms.sourcegitcommit: e72c89e35cae6a19dca060f688838d78dc8f0448
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "52292614"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52585997"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Como configurar uma etiqueta para marcas visuais para o Azure Information Protection
 
@@ -23,8 +23,6 @@ Quando atribui uma etiqueta a um documento ou a um e-mail pode selecionar vária
 
 Obter informações adicionais sobre estas marcas visuais:
 
-- Várias linhas de texto são suportadas para todas as marcas visuais.
-
 - Os cabeçalhos e rodapés aplicam-se ao Word, ao Excel, ao PowerPoint e ao Outlook.
 
 - As marcas d'água aplicam-se ao Word, ao Excel e ao PowerPoint:
@@ -32,6 +30,8 @@ Obter informações adicionais sobre estas marcas visuais:
     - Excel: as marcas d'água só estarão visíveis nos modos de Pré-visualização de impressão e Esquema de página e quando foram impressas.
     
     - PowerPoint: as arcas d'água são aplicadas ao diapositivo principal, como uma imagem de fundo. Na **exibição** separador, **Slide mestre**, certifique-se de que o **ocultar gráficos de plano de fundo** não está selecionada a caixa de verificação.
+
+- Várias linhas são suportadas para as marcas d'água e para cabeçalhos e rodapés do Word, Excel e PowerPoint. Se especificar várias linhas para o cabeçalho ou rodapé é aplicada uma etiqueta no Outlook, as linhas são concatenadas. Neste cenário, considere utilizar a configuração para [definir diferentes marcas visuais para Word, Excel, PowerPoint e Outlook](##setting-different-visual-markings-for-word-excel-powerpoint-and-outlook).
 
 - Comprimentos de cadeia de caracteres máximo:
     
@@ -41,7 +41,7 @@ Obter informações adicionais sobre estas marcas visuais:
 
 - Pode especificar apenas uma cadeia de texto ou utilizar [variáveis](#using-variables-in-the-text-string) para criar dinamicamente a cadeia de texto quando o cabeçalho, rodapé ou marca d'água for aplicada.
 
-- Word, PowerPoint e Outlook suportam marcas visuais com cores diferentes. Marcas visuais configuradas para as cores são sempre apresentam como black no Excel.
+- Word, PowerPoint, Outlook e agora Excel suportam marcas visuais com cores diferentes.
 
 - Marcas visuais suportam apenas um idioma.
 
@@ -82,7 +82,7 @@ Quando clica em **guardar**, as suas alterações estão automaticamente dispon�
 
 Pode utilizar as seguintes variáveis na cadeia de texto para o seu cabeçalho, rodapé ou marca d'água:
 
-- `${Item.Label}` para a etiqueta selecionada. Por exemplo: Interno
+- `${Item.Label}` para a etiqueta selecionada. Por exemplo: geral
 
 - `${Item.Name}` para o nome de ficheiro ou assunto de e-mail. Por exemplo: VendasJulho.docx
 
@@ -95,6 +95,9 @@ Pode utilizar as seguintes variáveis na cadeia de texto para o seu cabeçalho, 
 - `${Event.DateTime}` para a data e hora quando a etiqueta selecionada foi definida. Por exemplo: 16/8/2016 13:30
 
 Exemplo: se especificar a cadeia `Document: ${item.name}  Classification: ${item.label}` para o rodapé de etiqueta **Geral**, o texto do rodapé aplicado a um documento chamado projeto.docx será **Documento: projeto.docx Classificação: Geral**.
+
+>[!TIP]
+> Também é usar um [campo de código para inserir o nome de rótulo](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) num documento ou modelo.
 
 ## <a name="setting-different-visual-markings-for-word-excel-powerpoint-and-outlook"></a>Definir diferentes marcas visuais para Word, Excel, PowerPoint e Outlook
 

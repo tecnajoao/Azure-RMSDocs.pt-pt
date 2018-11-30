@@ -4,18 +4,18 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/06/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 4d3a44426de151ad9d1f1262cae967fdddf0da6f
-ms.sourcegitcommit: 520c8758c46ab46427fe205234bb221688ec9ec4
+ms.openlocfilehash: 41e092b379cfb52db286a61ad715703514e500d0
+ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "52292597"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52386785"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas para o cliente do Azure Information Protection
 
@@ -50,10 +50,12 @@ Algumas destas definições requerem a edição do registo e algumas utilizam de
 |EnableCustomPermissions|[Tornar as opções de permissões personalizadas disponíveis ou não está disponível para utilizadores](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
 |EnablePDFv2Protection|[Proteger ficheiros PDF com a norma ISO para a encriptação de PDF](#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
 |LabelbyCustomProperty|[Migrar as etiquetas de Secure Islands e outras soluções de etiquetas](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
+|LabelToSMIME|[Configurar uma etiqueta para aplicar a proteção de S/MIME no Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |OutlookDefaultLabel|[Definir uma etiqueta predefinida diferente para o Outlook](#set-a-different-default-label-for-outlook)|
 |OutlookRecommendationEnabled|[Ativar a classificação recomendada no Outlook](#enable-recommended-classification-in-outlook)|
 |PostponeMandatoryBeforeSave|[Remova "Agora não" para os documentos quando utiliza a etiquetagem obrigatório](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |ProcessUsingLowIntegrity|[Desativar o nível de baixa integridade para a deteção de impressão](#disable-the-low-integrity-level-for-the-scanner)|
+|PullPolicy|[Suporte para computadores desligados](#support-for-disconnected-computers)
 |RemoveExternalContentMarkingInApp|[Remover os cabeçalhos e rodapés de outras soluções de etiquetas](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Modificar o endereço de e-mail para o relatório de uma ligação de problema](#modify-the-email-address-for-the-report-an-issue-link)|
 |RunPolicyInBackground|[Ativar a classificação para executar continuamente em segundo plano](#turn-on-classification-to-run-continuously-in-the-background)|
@@ -62,13 +64,13 @@ Algumas destas definições requerem a edição do registo e algumas utilizam de
 
 ## <a name="prevent-sign-in-prompts-for-ad-rms-only-computers"></a>Impedir pedidos de início de sessão para computadores só com AD RMS
 
-Por predefinição, o cliente do Azure Information Protection tenta automaticamente estabelecer ligação ao serviço Azure Information Protection. Para computadores que só comunicam com AD RMS, esta configuração pode resultar num pedido desnecessário de início de sessão aos utilizadores. Pode impedir este pedido de início de sessão ao editar o registo:
+Por predefinição, o cliente do Azure Information Protection tenta automaticamente estabelecer ligação ao serviço Azure Information Protection. Para computadores que só comunicam com AD RMS, esta configuração pode resultar num pedido desnecessário de início de sessão aos utilizadores. Pode impedir que este pedido de início de sessão ao editar o registo.
 
-Localize o nome do valor seguinte e, em seguida, defina os dados do valor como **0**:
+ - Localize o nome do valor seguinte e, em seguida, defina os dados do valor como **0**:
+    
+    **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
-**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
-
-Independentemente desta definição, o cliente do Azure Information Protection segue o [processo de deteção do serviço RMS](client-deployment-notes.md#rms-service-discovery) padrão, para localizar o respetivo cluster AD RMS.
+Independentemente desta definição, o cliente do Azure Information Protection ainda segue o padrão [processo de deteção do serviço de RMS](client-deployment-notes.md#rms-service-discovery) para localizar o respetivo cluster AD RMS.
 
 ## <a name="sign-in-as-a-different-user"></a>Iniciar sessão como um utilizador diferente
 
@@ -133,11 +135,28 @@ Por predefinição, o cliente do Azure Information Protection tenta automaticame
 
 Tenha em atenção que sem uma ligação à Internet, o cliente não é possível aplicar proteção (ou remover proteção), utilizando a chave de com base na cloud da sua organização. Em vez disso, o cliente está limitado a utilizar as etiquetas que aplicam apenas a classificação ou proteção que utiliza [HYOK](../configure-adrms-restrictions.md).
 
-Para configurar esta definição, localize o nome do valor seguinte no Registro e defina os dados do valor como **0**:
+Pode impedir que um pedido de início de sessão para o serviço Azure Information Protection ao utilizar um [definição de cliente avançado](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure e, em seguida, transferir a política para os computadores. Em alternativa, pode impedir este pedido de início de sessão ao editar o registo.
 
-**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
+- Para configurar a definição de cliente avançado:
+    
+    1. Introduza as seguintes cadeias:
+    
+        - Chave: **PullPolicy**
+        
+        - Valor: **Falso**
+    
+    2. Transferir a política com esta definição e instalá-lo em computadores utilizando as instruções que se seguem.
 
-Certifique-se de que o cliente tem um ficheiro de política válido denominado **msip**, na **%LocalAppData%\Microsoft\MSIP** pasta. Se necessário, pode exportar a política global ou de uma política de âmbito do portal do Azure e copie o ficheiro exportado para o computador cliente. Também pode utilizar este método para substituir um ficheiro de política desatualizada pela política publicada mais recente. No entanto, exportar a política não suporta o cenário em que um utilizador pertencer a mais do que uma política de âmbito. Também tenha em atenção que se os utilizadores selecionarem a **repor definições** opção partir [ajuda e feedback](client-admin-guide.md#help-and-feedback-section), esta ação elimina o ficheiro de política e apresenta-o cliente inoperável até que substitua manualmente o ficheiro de política ou o cliente liga-se ao serviço transferir a política.
+- Em alternativa, editar o registo:
+    
+    - Localize o nome do valor seguinte e, em seguida, defina os dados do valor como **0**:
+    
+        **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
+
+
+O cliente tem de ter um ficheiro de política válido denominado **msip**, na **%LocalAppData%\Microsoft\MSIP** pasta.
+
+Pode exportar a política global ou de uma política de âmbito do portal do Azure e copie o ficheiro exportado para o computador cliente. Também pode utilizar este método para substituir o ficheiro de política de um-fora-de-data com a política mais recente. No entanto, exportar a política não suporta o cenário em que um utilizador pertencer a mais do que uma política de âmbito. Também tenha em atenção que se os utilizadores selecionarem a **repor definições** opção partir [ajuda e feedback](client-admin-guide.md#help-and-feedback-section), esta ação elimina o ficheiro de política e apresenta-o cliente inoperável até que substitua manualmente o ficheiro de política ou o cliente liga-se ao serviço transferir a política.
 
 Ao exportar a política do portal do Azure, será transferido um arquivo zipado contém várias versões da política. Estas versões de política correspondem a diferentes versões do cliente do Azure Information Protection:
 
@@ -222,6 +241,46 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 - Valor: \< **ID de etiqueta**> ou **None**
 
+## <a name="configure-a-label-to-apply-smime-protection-in-outlook"></a>Configurar uma etiqueta para aplicar a proteção de S/MIME no Outlook
+
+Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. Esta definição está em pré-visualização e podem ser alteradas.
+
+Utilize esta definição apenas quando tem um funcionamento [implementação de S/MIME](https://docs.microsoft.com/office365/SecurityCompliance/s-mime-for-message-signing-and-encryption) e quiser uma etiqueta para aplicar automaticamente este método de proteção para mensagens de e-mail em vez de proteção do Rights Management do Azure Information Protection. A proteção resultante é o mesmo que quando um utilizador seleciona manualmente as opções de S/MIME do Outlook.
+
+Esta configuração requer que especifique um definição com o nome de cliente avançado **LabelToSMIME** para cada etiqueta do Azure Information Protection que pretende aplicar a proteção de S/MIME. Em seguida, para cada entrada, defina o valor utilizando a seguinte sintaxe:
+
+`[Azure Information Protection label ID];[S/MIME action]`
+
+O valor de ID de etiqueta é apresentado no **etiqueta** painel, quando ver ou configurar a política do Azure Information Protection no portal do Azure. Para utilizar S/MIME com uma subetiqueta, sempre Especifica o ID de apenas a subetiqueta e não a etiqueta principal. Quando especificar uma subetiqueta, a etiqueta principal tem de ser no mesmo escopo, ou na política global.
+
+A ação de S/MIME pode ser:
+
+- `Sign;Encrypt`: Para aplicar uma assinatura digital e a encriptação S/MIME
+
+- `Encrypt`: Para aplicar apenas a encriptação S/MIME
+
+- `Sign`: Para aplicar uma assinatura digital apenas
+
+Valores de exemplo para obter um ID de etiqueta de **dcf781ba-727f-4860-b3c1-73479e31912b**:
+
+- Para aplicar uma assinatura digital e a encriptação S/MIME:
+    
+    **dcf781ba-727f-4860-b3c1-73479e31912b; Início de sessão; Encriptar**
+
+- Para aplicar apenas a encriptação S/MIME:
+    
+    **dcf781ba-727f-4860-b3c1-73479e31912b; Encriptar**
+    
+- Para aplicar uma assinatura digital apenas:
+    
+    **dcf781ba-727f-4860-b3c1-73479e31912b; Início de sessão**
+
+Como resultado nesta configuração, quando a etiqueta é aplicada para uma mensagem de e-mail, a proteção de S/MIME é aplicada à mensagem de e-mail, além de classificação da etiqueta.
+
+Se a etiqueta que especificou está configurada para proteção do Rights Management no portal do Azure, proteção de S/MIME substitui a proteção do Rights Management apenas no Outlook. Para todos os outros cenários que suportam a etiquetagem, será aplicada proteção do Rights Management.
+
+Se pretender que a etiqueta a só ser visível no Outlook, configurar a etiqueta para aplicar a ação única definida pelo utilizador de **não reencaminhar**, conforme descrito no [início rápido: configurar uma etiqueta para os utilizadores a proteger facilmente e-mails que contêm informações confidenciais](../quickstart-label-dnf-protectedemail.md).
+
 ## <a name="remove-not-now-for-documents-when-you-use-mandatory-labeling"></a>Remova "Agora não" para os documentos quando utiliza a etiquetagem obrigatório
 
 Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
@@ -296,7 +355,8 @@ Utilizar comandos do PowerShell para converter os arquivos existentes. ppdf para
     
     - O valor para **RMSTemplateId**. Se este valor é **acesso restrito**, um utilizador protegeu o ficheiro com permissões personalizadas, em vez das definições de proteção que estão configuradas para a etiqueta. Se continuar, essas permissões personalizadas serão substituídas por definições de proteção da etiqueta. Decida se pretende continuar ou pedir ao utilizador (valor apresentado para o **RMSIssuer**) para remover a etiqueta e volte a aplicar, juntamente com as respetivas permissões personalizadas originais.
 
-3. Remover a etiqueta através de [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) com o *RemoveLabel* parâmetro. Se estiver a utilizar o [definição de política](../configure-policy-settings.md) dos **os utilizadores têm de fornecer justificação para definir uma etiqueta de classificação inferior, remover uma etiqueta ou remover a proteção**, também tem de especificar o  *Justificação* parâmetro com o motivo. Por exemplo: 
+3. Remover a etiqueta através de [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) com o *RemoveLabel* parâmetro. Se estiver a utilizar a [definição de política] (... / configurar-
+4. Settings.MD) de **os utilizadores têm de fornecer justificação para definir uma etiqueta de classificação inferior, remover uma etiqueta ou remover a proteção**, também tem de especificar o *justificação* parâmetro com o motivo. Por exemplo: 
     
         Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
 
@@ -417,7 +477,7 @@ A definição de cliente avançado:
 
 Esta configuração utiliza várias [definições de cliente avançadas](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. Estas definições estão em pré-visualização e podem ser alteradas.
 
-As definições permitem-lhe remover ou substituir os cabeçalhos ou rodapés de documentos quando essas marcas visuais foram aplicadas por outra solução de etiquetagem. Por exemplo, o rodapé antigo contém o nome de uma etiqueta antigo agora migrado para o Azure Information Protection com um novo nome de etiqueta e o seu próprio rodapé.
+As definições permitem-lhe remover ou substituir o texto com base em cabeçalhos ou rodapés de documentos quando essas marcas visuais foram aplicadas por outra solução de etiquetagem. Por exemplo, o rodapé antigo contém o nome de uma etiqueta antigo agora migrado para o Azure Information Protection com um novo nome de etiqueta e o seu próprio rodapé.
 
 Quando o cliente recebe esta configuração em sua diretiva, o antigos cabeçalhos e rodapés são removidas ou substituídas quando o documento é aberto na aplicação do Office e qualquer etiqueta do Azure Information Protection é aplicada ao documento.
 

@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 952aca2aebac0996a46d23912f126dd7dc6141da
-ms.sourcegitcommit: 82cbbeb833510b2de93980cd7dbebf41e34291e1
+ms.openlocfilehash: e66b4941cdfa86fbb1dcfe8593b39b59eb45ed9e
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48817903"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024132"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configurar servidores para o conector Azure Rights Management
 
@@ -84,7 +84,7 @@ Depois de fazer as alterações de configuração nestes servidores, terá de os
 
 ### <a name="how-to-use-the-server-configuration-tool-for-microsoft-rms-connector"></a>Como utilizar a ferramenta de configuração do servidor para o conector Microsoft RMS
 
-1.  Se ainda não tiver transferido o script da ferramenta de configuração do servidor para o conector Microsoft RMS (GenConnectorConfig.ps1), transfira-o a partir do [ Centro de Transferências da Microsoft](http://go.microsoft.com/fwlink/?LinkId=314106).
+1.  Se ainda não tiver transferido o script da ferramenta de configuração do servidor para o conector Microsoft RMS (GenConnectorConfig.ps1), transfira-o a partir do [ Centro de Transferências da Microsoft](https://go.microsoft.com/fwlink/?LinkId=314106).
 
 2.  Guarde o ficheiro GenConnectorConfig.ps1 no computador onde irá executar a ferramenta. Se quiser executar a ferramenta localmente, este tem de ser o servidor que pretende configurar para comunicar com o conector RMS. Caso contrário, pode guardá-lo em qualquer computador.
 
@@ -193,7 +193,7 @@ Um servidor com o SharePoint 2016 ou SharePoint 2013 também tem de ter em execu
 >
 > Pode verificar a versão do cliente ao consultar o número de versão do ficheiro MSIPC.dll, que se encontra em **\Programas\Active Directory Rights Management Services Client 2.1**. A caixa de diálogo das propriedades mostra o número de versão do cliente MSIPC 2.1.
 
-Os servidores com o SharePoint 2010 têm de ter instalada uma versão do cliente MSDRM que inclua suporte para o Modo Criptográfico 2 do RMS. A versão mínima suportada no Windows Server 2008 está incluída na correção que pode transferir a partir da página [RSA key length is increased to 2048 bits for AD RMS in Windows Server 2008 R2 and in Windows Server 2008 (O comprimento de chave RSA é aumentado para 2048 bits para o AD RMS no Windows Server 2008 R2 e no Windows Server 2008 – em inglês)](http://support.microsoft.com/kb/2627272) e a versão mínima do Windows Server 2008 R2 pode ser transferida a partir da página [RSA key length is increased to 2048 bits for AD RMS in Windows 7 or in Windows Server 2008 R2 (O comprimento de chave RSA é aumentado para 2048 bits para o AD RMS no Windows 7 ou no Windows Server 2008 R2 – em inglês)](http://support.microsoft.com/kb/2627273). O Windows Server 2012 e o Windows Server 2012 R2 suportam nativamente o Modo Criptográfico 2.
+Os servidores com o SharePoint 2010 têm de ter instalada uma versão do cliente MSDRM que inclua suporte para o Modo Criptográfico 2 do RMS. A versão mínima suportada no Windows Server 2008 está incluída na correção que pode transferir a partir da página [RSA key length is increased to 2048 bits for AD RMS in Windows Server 2008 R2 and in Windows Server 2008 (O comprimento de chave RSA é aumentado para 2048 bits para o AD RMS no Windows Server 2008 R2 e no Windows Server 2008 – em inglês)](https://support.microsoft.com/kb/2627272) e a versão mínima do Windows Server 2008 R2 pode ser transferida a partir da página [RSA key length is increased to 2048 bits for AD RMS in Windows 7 or in Windows Server 2008 R2 (O comprimento de chave RSA é aumentado para 2048 bits para o AD RMS no Windows 7 ou no Windows Server 2008 R2 – em inglês)](https://support.microsoft.com/kb/2627273). O Windows Server 2012 e o Windows Server 2012 R2 suportam nativamente o Modo Criptográfico 2.
 
 ### <a name="to-configure-sharepoint-servers-to-use-the-connector"></a>Para configurar servidores SharePoint para utilizarem o conector
 
@@ -245,7 +245,7 @@ Para utilizar o conector RMS e a Infraestrutura de Classificação de Ficheiros 
 
     - Faça edições de registo manuais com as informações disponíveis no artigo [Registry settings for the RMS connector (Definições de registo para o conector RMS – em inglês)](rms-connector-registry-settings.md) para adicionar as definições de registo manualmente nos servidores. 
 
-3. Crie regras de classificação e tarefas de gestão de ficheiros para proteger os documentos com Encriptação RMS e, em seguida, especifique um modelo de RMS para aplicar automaticamente as políticas de RMS. Para mais informações, consulte o artigo [Descrição Geral do Gestor de Recursos do Servidor de Ficheiros](http://technet.microsoft.com/library/hh831701.aspx) na biblioteca de documentação do Windows Server.
+3. Crie regras de classificação e tarefas de gestão de ficheiros para proteger os documentos com Encriptação RMS e, em seguida, especifique um modelo de RMS para aplicar automaticamente as políticas de RMS. Para mais informações, consulte o artigo [Descrição Geral do Gestor de Recursos do Servidor de Ficheiros](https://technet.microsoft.com/library/hh831701.aspx) na biblioteca de documentação do Windows Server.
 
 ## <a name="next-steps"></a>Passos Seguintes
 Agora que o conector RMS está instalado e configurado, estando os servidores configurados para o utilizar, os administradores de TI e os utilizadores podem proteger e tirar partido das mensagens de e-mail e documentos com o serviço Azure Rights Management. Para facilitar o trabalho aos utilizadores, implemente o cliente do Azure Information Protection, que instala um suplemento para o Office e adiciona novas opções de contexto ao Explorador de Ficheiros. Para obter mais informações, veja o [Guia do administrador do Azure Information Protection](./rms-client/client-admin-guide.md).

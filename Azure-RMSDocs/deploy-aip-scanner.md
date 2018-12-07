@@ -4,18 +4,18 @@ description: Instruções para instalar, configurar e executar o scanner do Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/30/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: d29203359bcfdda09d7792f1f65a7c85723ee18f
-ms.sourcegitcommit: c1c34529f10dd7c1545ca37be9629b52be87e33e
+ms.openlocfilehash: 153009e9c9760649bd42d85bece421e3b8ee5afd
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52731154"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024251"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Implementar o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente
 
@@ -62,7 +62,7 @@ Antes de instalar o scanner do Azure Information Protection, certifique-se de qu
 
 Se não é possível cumprir todos os requisitos na tabela porque eles são proibidos pelas suas diretivas da organização, consulte a secção seguinte para alternativas.
 
-Se todos os requisitos são cumpridos, avance diretamente para o [oddíl instalace](#install-the-azure-information-protection-scanner).
+Se todos os requisitos são cumpridos, avance diretamente para o [oddíl instalace](#install-the-scanner).
 
 ### <a name="deploying-the-scanner-with-alternative-configurations"></a>Implementar o scanner com configurações alternativos
 
@@ -221,7 +221,7 @@ Em sua configuração padrão, o scanner é executado um tempo e no modo só de 
     
         Set-AIPScannerConfiguration -Enforce On -Schedule Always
     
-    Existem outras definições de configuração que talvez queira alterar. Por exemplo, se os atributos de ficheiro são alterados e o que é registado nos relatórios. Além disso, se a política do Azure Information Protection inclui a definição que necessita de uma mensagem de justificação para reduzir o nível de classificação ou remover a proteção, especifique que a mensagem utilizando este cmdlet. Utilize o [ajuda online](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#parameters) para obter mais informações sobre cada definição de configuração. 
+    Existem outras definições de configuração que talvez queira alterar. Por exemplo, se os atributos de ficheiro são alterados e o que é registado nos relatórios. Além disso, se a política do Azure Information Protection inclui a definição que necessita de uma mensagem de justificação para reduzir o nível de classificação ou remover a proteção, especifique que a mensagem utilizando este cmdlet. Utilize o [ajuda online](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#optional-parameters) para obter mais informações sobre cada definição de configuração. 
 
 2. Tome nota do tempo atual e iniciar o scanner novamente executando o seguinte comando:
     
@@ -364,7 +364,7 @@ Outros fatores que afetam o desempenho de scanner:
 
 - Alterar as condições no Azure Information Protection
     
-    O primeiro ciclo de análise quando o scanner deve inspecionar todos os ficheiros, obviamente, irá demorar mais de ciclos de análise subsequentes que, por predefinição, inspecionar os ficheiros apenas novos e alterados. No entanto, se alterar as condições na política do Azure Information Protection, todos os ficheiros são analisados mais uma vez, conforme descrito no [secção anterior](#when-files-are-rescanned-by-the-azure-information-protection-scanner).
+    O primeiro ciclo de análise quando o scanner deve inspecionar todos os ficheiros, obviamente, irá demorar mais de ciclos de análise subsequentes que, por predefinição, inspecionar os ficheiros apenas novos e alterados. No entanto, se alterar as condições na política do Azure Information Protection, todos os ficheiros são analisados mais uma vez, conforme descrito no [secção anterior](#when-files-are-rescanned).
 
 - O nível de registo escolhido
     

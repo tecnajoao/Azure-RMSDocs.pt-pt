@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 27de9df7062f6072e7e15b66759f540d5ce81dba
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 926a6d34b34b486577f6a8481010d058e465b3e8
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148057"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023996"
 ---
 # <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Ver e utilizar ficheiros que foram protegidos pelo Rights Management
 
@@ -28,7 +28,7 @@ Quando a [Aplicação de partilha Rights Management (RMS) está instalada no com
 >
 > Se a sua organização não utiliza o Azure Information Protection nem o AD RMS, pode candidatar-se a uma conta gratuita que aceitará as suas credenciais para que possa abrir ficheiros protegidos pelo RMS:
 >
-> -   Para se candidatar a esta conta, clique na ligação para aderir ao [RMS para indivíduos](http://go.microsoft.com/fwlink/?LinkId=309469).
+> -   Para se candidatar a esta conta, clique na ligação para aderir ao [RMS para indivíduos](https://go.microsoft.com/fwlink/?LinkId=309469).
 >
 >     Quando se inscrever, utilize o seu endereço de e-mail da empresa em vez de um endereço de e-mail pessoal. Caso se esteja a inscrever porque recebeu um anexo protegido, utilize o mesmo endereço de e-mail que foi utilizado para lhe enviar a mensagem de e-mail.
 > -   Para mais informações, consulte [RMS para indivíduos e Azure Rights Management](../rms-for-individuals.md).
@@ -86,7 +86,7 @@ Se pretender efetuar outras ações além da leitura (por exemplo, editar, copia
 
 - **Outras extensões de nome de ficheiro**
 
-    O dispositivo tem de ter uma aplicação que suporte a proteção Rights Management para utilizar estes ficheiros. Estas aplicações chamam-se aplicações otimizadas para o RMS. As aplicações do Office 2016, Office 2013 e Office 2010 (como o Word, Excel, PowerPoint e Outlook) são exemplos de aplicações que são otimizadas para o Rights Management. No entanto, as aplicações que não são da Microsoft, tais como as aplicações de outras empresas de software e as suas próprias aplicações de linha de negócio, também podem ser otimizadas para o Rights Management.
+    O dispositivo tem de ter uma aplicação que suporte a proteção Rights Management para utilizar estes ficheiros. Estas aplicações chamam-se aplicações otimizadas para o RMS. As aplicações do Office 2016, Office 2013 e Office 2010 (como Word, Excel, PowerPoint e Outlook) são exemplos de aplicativos que são suportados por Rights Management. No entanto, as aplicações que não são da Microsoft, tais como as aplicações de outras empresas de software e as suas próprias aplicações de linha de negócio, também podem ser otimizadas para o Rights Management.
 
     As aplicações otimizadas para o Rights Management sabem como abrir ficheiros que foram protegidos por outras aplicações otimizadas para o Rights Management. Além disso, também mantêm a proteção que lhes é aplicada, mesmo que edite o ficheiro ou o guarde com outro nome de ficheiro ou noutra localização. Estas aplicações permitem-lhe utilizar o ficheiro de acordo com as permissões aplicadas atualmente ao mesmo, para que o possa utilizar se tiver permissões para o fazer. Por exemplo, poderá conseguir editar o ficheiro, mas não imprimi-lo.
 

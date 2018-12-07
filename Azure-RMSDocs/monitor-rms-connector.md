@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e799c6928b437c157a04eac66cbacb941fe3fa9b
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: f78135b7398ed509d1b77dfc724fc6380adbb4d5
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148465"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53026953"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Monitorizar o conector Azure Rights Management
 
@@ -174,7 +174,7 @@ O registo de utilização ajuda-o a identificar quando os e-mails e os documento
 
 Para obter mais informações sobre o registo de utilização, consulte [Registar e analisar a utilização do serviço Azure Rights Management](log-analyze-usage.md).
 
-Caso precise de um registo mais detalhado para fins de diagnóstico, pode utilizar o [Debugview](http://go.microsoft.com/fwlink/?LinkID=309277) do Windows Sysinternals. Ative o rastreio para o conector RMS modificando o ficheiro web.config para o Site predefinido no IIS:
+Caso precise de um registo mais detalhado para fins de diagnóstico, pode utilizar o [Debugview](https://go.microsoft.com/fwlink/?LinkID=309277) do Windows Sysinternals. Ative o rastreio para o conector RMS modificando o ficheiro web.config para o Site predefinido no IIS:
 
 1. Localize o ficheiro web.config em **%programfiles%\Microsoft Rights Management connector\Web Service**.
 

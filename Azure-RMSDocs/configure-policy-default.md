@@ -1,5 +1,5 @@
 ---
-title: A política predefinida do Azure Information Protection
+title: A política predefinida para o Azure Information Protection – AIP
 description: Conheça a forma como a política predefinida do Azure Information Protection está configurada. Se modificar a política predefinida, pode referenciar estes valores para voltar à política predefinida.
 author: cabailey
 ms.author: cabailey
@@ -7,12 +7,12 @@ manager: mbaldwin
 ms.date: 11/06/2018
 ms.topic: conceptual
 ms.service: information-protection
-ms.openlocfilehash: d74dfcd35dca2f3ab5e88a66eaaba37b13636e4d
-ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
+ms.openlocfilehash: f4e5301ec9c1f2bd1a98da6acedd58f3f42f5ffa
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51223981"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024387"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Política do Azure Information Protection predefinida
 

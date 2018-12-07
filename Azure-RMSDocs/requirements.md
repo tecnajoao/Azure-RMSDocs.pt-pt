@@ -1,5 +1,5 @@
 ---
-title: Requisitos para o Azure Information Protection
+title: Requisitos para o Azure Information Protection – AIP
 description: Identifique os pré-requisitos para implementar o Azure Information Protection para a sua organização.
 author: cabailey
 ms.author: cabailey
@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 62a291667cf0ae60debbd62047d3a6b09962ac1d
-ms.sourcegitcommit: 4f22874c3c2fb9632d57932148664c40b3907a78
+ms.openlocfilehash: 43ff5d8fabf8197ba8ea235b01258dff12a5acd4
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52831243"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024152"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisitos para o Azure Information Protection
 
@@ -140,7 +140,7 @@ O cenário de implementação seguinte não é suportado, exceto se estiver a ut
 
 - Executar o AD RMS e Azure RMS lado a lado na mesma organização, exceto durante a migração, conforme descrito em [migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-Existe um caminho de migração suportados [do AD RMS para o Azure Information Protection](http://technet.microsoft.com/library/Dn858447.aspx)e a partir [do Azure Information Protection para o AD RMS](/powershell/module/aadrm/Set-AadrmMigrationUrl). Se implementar o Azure Information Protection e, em seguida, decidir que já não quer utilizar este serviço na cloud, consulte [Encerrar e desativar o Azure Information Protection](decommission-deactivate.md).
+Existe um caminho de migração suportados [do AD RMS para o Azure Information Protection](https://technet.microsoft.com/library/Dn858447.aspx)e a partir [do Azure Information Protection para o AD RMS](/powershell/module/aadrm/Set-AadrmMigrationUrl). Se implementar o Azure Information Protection e, em seguida, decidir que já não quer utilizar este serviço na cloud, consulte [Encerrar e desativar o Azure Information Protection](decommission-deactivate.md).
 
 
 

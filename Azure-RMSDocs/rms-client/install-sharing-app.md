@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 944d47d77efa06999e21ebe42b03a5b35733cc05
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 139198780f5a83b1336715dccf8540c2962cda00
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150097"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023327"
 ---
 # <a name="download-and-install-the-rights-management-sharing-application"></a>Transferir e instalar a aplicação de partilha Rights Management
 
@@ -28,7 +28,7 @@ Não é necessário ser um administrador local para instalar a aplicação de pa
 
 ## <a name="to-download-and-install-the-rights-management-sharing-application"></a>Para transferir e instalar a aplicação de partilha Rights Management
 
-1.  Aceda à página do [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) no site da Microsoft.
+1.  Aceda à página do [Microsoft Rights Management](https://go.microsoft.com/fwlink/?LinkId=303970) no site da Microsoft.
 
 2.  Na secção **Computadores**, clique no ícone da **aplicação RMS para Windows** e guarde o ficheiro **Setup.exe** para instalar a aplicação de partilha Microsoft Rights Management.
 

@@ -1,5 +1,5 @@
 ---
-title: Adicionar ou remover uma etiqueta de ou para uma política do Azure Information Protection
+title: Adicionar ou remover uma etiqueta de ou para uma política do Azure Information Protection – AIP
 description: Adicionar ou remover uma etiqueta do Azure Information Protection para ou da política global para todos os utilizadores, ou para ou a partir de uma política de âmbito para um subconjunto de utilizadores.
 author: cabailey
 ms.author: cabailey
@@ -8,12 +8,12 @@ ms.date: 04/30/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
-ms.openlocfilehash: a5e5e50f5271476c3690280cbe026be9ada7ceb2
-ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
+ms.openlocfilehash: f097ec2f0e3db75d679e6c0a6251fb128f583d4b
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49170346"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023313"
 ---
 # <a name="add-or-remove-a-label-to-or-from-an-azure-information-protection-policy"></a>Adicionar ou remover uma etiqueta de ou para uma política do Azure Information Protection
 

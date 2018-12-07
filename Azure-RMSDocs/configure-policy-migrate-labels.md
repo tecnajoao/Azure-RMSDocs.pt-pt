@@ -1,5 +1,5 @@
 ---
-title: Migrar o Azure Information Protection etiquetas para o Centro de conformidade e segurança do Office 365
+title: Migrar o Azure Information Protection etiquetas para a segurança do Office 365 e o Centro de conformidade – AIP
 description: Migre as etiquetas do Azure Information Protection para o Centro de conformidade e segurança do Office 365 para o cliente suporta a etiquetagem unificada.
 author: cabailey
 ms.author: cabailey
@@ -9,12 +9,12 @@ ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 771cbb26a842cbf19184ace94ae47ba9d549a33f
-ms.sourcegitcommit: b4118cd75db6478f86b9994e8d84d0ada15c7f95
+ms.openlocfilehash: be48797931dc0e8c76f29094715df37d6488f800
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52953334"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024013"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Como migrar as etiquetas do Azure Information Protection para o Centro de conformidade e segurança do Office 365
 
@@ -29,7 +29,7 @@ Depois de ter migrado as etiquetas, em seguida, pode efetuar alterações aos me
 
 ### <a name="important-information-about-administrative-roles"></a>Informações importantes sobre as funções administrativas
 
-O [funções do Azure AD](/active-directory/users-groups-roles/directory-assign-admin-roles) dos **administrador de segurança** e **administrador do Information Protection** não são suportados pela plataforma de etiquetagem unificada. Se essas funções administrativas são utilizadas na sua organização, antes de migrar as etiquetas, adicione os utilizadores que têm estas funções para o **administrador de conformidade** ou o **gestão da organização** função grupos para o Centro de conformidade e segurança do Office 365. Como alternativa, pode criar um novo grupo de função para estes utilizadores e adicioná-los **gestão de retenção** ou **configuração de organização** funções a este grupo. Para obter instruções, consulte [conceder acesso de utilizadores para o Centro de conformidade e segurança do Office 365](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center).
+O [funções do Azure AD](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) dos **administrador de segurança** e **administrador do Information Protection** não são suportados pela plataforma de etiquetagem unificada. Se essas funções administrativas são utilizadas na sua organização, antes de migrar as etiquetas, adicione os utilizadores que têm estas funções para o **administrador de conformidade** ou o **gestão da organização** função grupos para o Centro de conformidade e segurança do Office 365. Como alternativa, pode criar um novo grupo de função para estes utilizadores e adicioná-los **gestão de retenção** ou **configuração de organização** funções a este grupo. Para obter instruções, consulte [conceder acesso de utilizadores para o Centro de conformidade e segurança do Office 365](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center).
 
 Se não conceder esses usuários acesso para o Centro de conformidade e segurança ao utilizar uma das seguintes configurações, eles perderão o acesso para as etiquetas e políticas no portal do Azure depois das etiquetas são migradas.
 

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 283e3dc21997f455301fcd7a6edb3caf84f82572
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 9ca34cc149f86fa99174ea9792d05d7dfecc35dc
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150828"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023587"
 ---
 # <a name="change-permissions-on-files-that-have-been-protected-by-rights-management"></a>Alterar permissões em ficheiros que tenham sido protegidos pela Rights Management
 
@@ -65,7 +65,7 @@ Se quiser remover por completo todas as permissões de modo a que o ficheiro já
 >
 > Se a sua organização não utilizar o Azure Information Protection ou o AD RMS, pode candidatar-se a uma conta gratuita que aceitará as suas credenciais para que possa utilizar ficheiros protegidos por RMS:
 >
-> -   Para se candidatar a esta conta, clique na ligação para aderir ao [RMS para indivíduos](http://go.microsoft.com/fwlink/?LinkId=309469).
+> -   Para se candidatar a esta conta, clique na ligação para aderir ao [RMS para indivíduos](https://go.microsoft.com/fwlink/?LinkId=309469).
 >
 >     Quando se inscrever, utilize o seu endereço de e-mail da empresa em vez de um endereço de e-mail pessoal. Caso se esteja a inscrever porque recebeu um anexo protegido, utilize o mesmo endereço de e-mail que foi utilizado para lhe enviar a mensagem de e-mail.
 > -   Para mais informações, consulte [RMS para indivíduos e Azure Rights Management](../rms-for-individuals.md).

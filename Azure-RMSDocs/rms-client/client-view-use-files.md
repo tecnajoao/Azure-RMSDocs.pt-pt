@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3b4dfc62950166ca7221002169005fa3693a5998
-ms.sourcegitcommit: e70bb1a02e96d701fd5ae2a25536fa485bbf2e87
+ms.openlocfilehash: 0bb7a5333124c7581144ec00ac0b758691ff349f
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862096"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023805"
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Guia de utilizador: Ver e utilizar ficheiros que foram protegidos pelo Rights Management
 
@@ -47,7 +47,7 @@ Se a sua organização não tiver uma conta com base na cloud para que possa uti
 
 - Se foram enviados um e-mail protegido, siga as instruções para iniciar sessão com o seu fornecedor de identidade social (por exemplo, o Google para uma conta do Gmail) ou Inscreva-se um código de acesso único.
 
-- Pode aplicar-se numa conta gratuita que aceitará as suas credenciais, para que possa abrir documentos que estão protegidos pelo Rights Management. Para se candidatar a esta conta, clique na ligação para se candidatar [RMS para indivíduos](http://go.microsoft.com/fwlink/?LinkId=309469) e usar seu endereço de e-mail da empresa, em vez de um endereço de e-mail pessoal. 
+- Pode aplicar-se numa conta gratuita que aceitará as suas credenciais, para que possa abrir documentos que estão protegidos pelo Rights Management. Para se candidatar a esta conta, clique na ligação para se candidatar [RMS para indivíduos](https://go.microsoft.com/fwlink/?LinkId=309469) e usar seu endereço de e-mail da empresa, em vez de um endereço de e-mail pessoal. 
 
 ## <a name="to-view-and-use-a-protected-document"></a>Para ver e utilizar um documento protegido
 

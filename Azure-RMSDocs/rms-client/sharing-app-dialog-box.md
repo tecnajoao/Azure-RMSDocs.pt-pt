@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 435432c1c759c040482096393c3a36cdee02691b
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: f6e84919653d68fb4f09671b233ccdc31bf1a82f
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148499"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024285"
 ---
 # <a name="dialog-box-options-for-the-rights-management-sharing-application"></a>Opções da caixa de diálogo para a aplicação de partilha Rights Management
 
@@ -24,7 +24,7 @@ ms.locfileid: "44148499"
 Utilize estas informações para ajudar a especificar as opções na caixa de diálogo **adicionar proteção** da aplicação de partilha RMS ou na caixa de diálogo **partilhar protegido**. Irá ver esta caixa de diálogo quando [proteger um ficheiro para partilhar](sharing-app-protect-by-email.md) ou [proteger um ficheiro no local](sharing-app-protect-in-place.md) e escolher permissões personalizadas.
 
 > [!IMPORTANT]
-> Se as opções apresentadas forem diferentes das documentadas aqui, provavelmente não tem a versão mais recente da aplicação de partilha instalada. Pode transferir a versão mais recente a partir da página do [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970).
+> Se as opções apresentadas forem diferentes das documentadas aqui, provavelmente não tem a versão mais recente da aplicação de partilha instalada. Pode transferir a versão mais recente a partir da página do [Microsoft Rights Management](https://go.microsoft.com/fwlink/?LinkId=303970).
 > 
 > Como pode saber se tem a versão mais recente? Procure a **aplicação de partilha Microsoft Rights Management** na lista de Programas e Funcionalidades e verifique o número da versão correspondente. Para ver e utilizar as opções da tabela, a versão deve ser, pelo menos, **1.0.1770.0**. Pode verificar o número da versão mais recente na página de transferência.
 

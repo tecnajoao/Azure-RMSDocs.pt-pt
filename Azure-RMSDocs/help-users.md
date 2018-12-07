@@ -4,18 +4,18 @@ description: Informações para fornecer orientações a utilizadores, administr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0359329513bdd2825f7121a95d4e940a76c401a5
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 43bc10ce43a4ba7a26958e562c4acc6e245ad76a
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148805"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024081"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Ajudar os utilizadores a proteger ficheiros com o serviço Azure Rights Management
 
@@ -30,7 +30,7 @@ Após ter implementado e configurado o Azure Information Protection para a sua o
     > [!TIP]
     > Vídeos de exemplo para os utilizadores finais:
     > -   [Microsoft Azure Information Protection](https://youtu.be/ToShAUdlrPo?list=PL8nfc9haGeb6qSm1kLU8n3Zqg398764h5)
-    > -   [Revogação e Controlo de Documentos do Azure RMS](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
+    > -   [Revogação e Controlo de Documentos do Azure RMS](https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
 
 -   **Informações de administrador**
     
@@ -66,20 +66,20 @@ Utilize as secções seguintes para informações específicas de aplicações p
 
 ## <a name="using-information-protection-with-the-azure-information-protection-client"></a>Utilizar a proteção de informações com o cliente do Azure Information Protection
 
-Caso os utilizadores tenham o Office 2010, o cliente do Azure Information Protection (ou a aplicação mais antiga, a aplicação de partilha RMS) é preciso para proteger e consumir documentos e e-mails protegidos. No entanto, o cliente do Azure Information Protection também é recomendado para todos os computadores e dispositivos móveis que suportam este serviço.
+Se os utilizadores tiverem o Office 2010, o cliente do Azure Information Protection (ou a aplicação mais antiga, a aplicação de partilha RMS) é necessária para proteger e consumir documentos e e-mails protegidos. No entanto, o cliente do Azure Information Protection também é recomendado para todos os computadores e dispositivos móveis que suportam este serviço.
 
 Para além de tornar mais fácil para os utilizadores protegerem documentos e e-mails, o cliente do Azure Information Protection permite-lhes controlarem os documentos que protegeram. Os documentos rastreados podem também ser revogados se os utilizadores anteriormente autorizados já não puderem ter acesso aos mesmos.
 
 Para obter instruções sobre como utilizar este cliente para computadores Windows, veja o [Guia de utilizador do cliente do Azure Information Protection](./rms-client/client-user-guide.md).
 
 
-## <a name="using-information-protection-with-office-365-office-2016-or-office-2013"></a>Utilizar a proteção de informações com o Office 365, Office 2016 ou Office 2013
+## <a name="using-information-protection-with-office365-office-2016-or-office2013"></a>Utilizar a proteção de informações com o Office 365, Office 2016 ou Office 2013
 Se estiver a utilizar o serviço Azure Rights Management e não tiver instalado o cliente do Azure Information Protection, os utilizadores não veem a barra do Azure Information Protection nas suas aplicações de ambiente de trabalho do Office. Também não vêem a **Protect** botão da faixa de opções, ou **classificar e proteger** no Explorador de ficheiros. Estas adições tornam mais fácil para os utilizadores protegerem documentos e e-mails. Estes utilizadores têm de seguir instruções semelhantes aos passos que se seguem.
 
 > [!TIP]
 > Para encontrar a ajuda específica da aplicação e instruções para utilizar a proteção de informações com estas aplicações, pesquise a **IRM** e o nome e a versão da aplicação.
 
-#### <a name="to-protect-a-document-in-word-2013"></a>Para proteger um documento no Word 2013
+#### <a name="to-protect-a-document-in-word2013"></a>Para proteger um documento no Word 2013
 
 1.  No Microsoft Word, crie um documento.
 
@@ -98,7 +98,7 @@ Por exemplo, um direito de utilização Ver Apenas não permite que o utilizador
 
 Os direitos de utilização são apresentados na parte superior do documento, através de uma faixa de restrição. A faixa pode apresentar as permissões que são aplicadas ao documento ou pode disponibilizar uma ligação para as mostrar.
 
-#### <a name="to-protect-an-email-message-using-outlook-2013-and-exchange-online"></a>Para proteger uma mensagem de e-mail através do Outlook 2013 e do Exchange Online
+#### <a name="to-protect-an-email-message-using-outlook2013-and-exchange-online"></a>Para proteger uma mensagem de e-mail através do Outlook 2013 e Exchange Online
 
 1.  No Outlook, crie uma mensagem de e-mail é endereçada a um destinatário da sua organização.
 

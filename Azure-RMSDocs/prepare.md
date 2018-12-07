@@ -4,18 +4,18 @@ description: Verifique se tem as contas de utilizador e de grupo de que precisa 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0277b638f9d069d2cfb1084136068d7ef58b1e2b
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: abbb7e5af52952dc3ed69f2825a8e32d25ab9982
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151627"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024107"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Preparar utilizadores e grupos para o Azure Information Protection
 
@@ -73,9 +73,9 @@ Para atribuir direitos de utilização e controlos de acesso, assim como configu
     
     O Azure Information Protection poderá utilizar qualquer valor neste atributo proxyAddresses do Azure AD, desde que o domínio tenha sido adicionado ao inquilino (um "domínio verificado"). Para obter mais informações sobre a verificação de domínios:
     
-    - No Azure AD: [Adicionar um nome de domínio personalizado ao Azure Active Directory](/active-directory/active-directory-add-domain)
+    - No Azure AD: [Adicionar um nome de domínio personalizado ao Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain)
 
-    - No Office 365: [Adicionar um domínio e utilizadores ao Office 365](https://go.microsoft.com/fwlinkid/?linkid=847121)
+    - Para o office 365: [adicionar um domínio ao Office 365](/office365/admin/setup/add-domain?view=o365-worldwide)
 
 - O atributo **userPrincipalName do Azure AD** é utilizado apenas quando uma conta do seu inquilino não tem valores no atributo proxyAddresses do Azure AD. Por exemplo, quando cria um utilizador no portal do Azure ou cria um utilizador do Office 365 que não tem uma caixa de correio.
 

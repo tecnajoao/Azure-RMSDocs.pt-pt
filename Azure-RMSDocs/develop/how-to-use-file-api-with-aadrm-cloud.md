@@ -12,23 +12,22 @@ ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 8c047aaf0d78c9389720345551b9c19038b82ad1
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 7f9965628cce150c8bb53e02b206c4291677f8bc
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149672"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023480"
 ---
 # <a name="how-to-enable-your-service-application-to-work-with-cloud-based-rms"></a>Procedimentos: permitir que a aplicação de serviço funcione com o RMS baseado na nuvem
 
 Este tópico descreve os passos para configurar a aplicação do serviço para utilizar o Azure Rights Management. Para obter mais informações, consulte [Introdução ao Azure Rights Management](https://technet.microsoft.com/library/jj585016.aspx).
 
-**Importante**  
-Para utilizar a aplicação de serviço SDK Rights Management Services 2.1 com o Azure RMS, terá de criar os seus inquilinos. Para obter mais informações, consulte [Requisitos do Azure RMS: Subscrições na nuvem que suportam o Azure RMS](../requirements.md)
+**Importante**    para utilizar a aplicação de serviço de Rights Management Services SDK 2.1 com o Azure RMS, terá de criar os seus inquilinos. Para obter mais informações, consulte [Requisitos do Azure RMS: Subscrições na nuvem que suportam o Azure RMS](../requirements.md)
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
--   O SDK RMS 2.1 tem de estar instalado e configurado. Para obter mais informações, consulte [Introdução ao SDK RMS 2.1](getting-started-with-ad-rms-2-0.md).
+-   SDK RMS 2.1 tem de ser instalado e configurado. Para obter mais informações, consulte [introdução ao SDK RMS 2.1](getting-started-with-ad-rms-2-0.md).
 -   Tem de [criar uma identidade do serviço através do ACS](https://msdn.microsoft.com/library/gg185924.aspx) ao utilizar a opção de chave simétrica ou através de outros meios e registar as informações da chave a partir desse processo.
 
 ## <a name="connecting-to-the-azure-rights-management-service"></a>Ligar ao Serviço Azure Rights Management
@@ -41,9 +40,9 @@ Para utilizar a aplicação de serviço SDK Rights Management Services 2.1 com o
         IpcSetGlobalProperty(IPC_EI_API_MODE, &(mode));
 
 
-  **Nota:** para obter mais informações, consulte [Definir o modo de segurança de API](setting-the-api-security-mode-api-mode.md)
+  **Tenha em atenção**  para obter mais informações, consulte [definir o modo de segurança de API](setting-the-api-security-mode-api-mode.md)
 
-     
+     
 -   Os seguintes passos são a configuração para a criação de uma instância de uma estrutura [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx) com o membro *pcCredential* ([IPC\_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx)) preenchido com as informações de ligação do serviço Azure Rights Management.
 -   Utilize as informações da criação da identidade do serviço de chave simétrica (consulte os pré-requisitos listados anteriormente neste tópico) para definir os parâmetros *wszServicePrincipal*, *wszBposTenantId* e *cbKey* quando cria uma instância de uma estrutura [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx).
 
@@ -53,10 +52,10 @@ Para utilizar a aplicação de serviço SDK Rights Management Services 2.1 com o
 
 ### <a name="instructions-to-generate-a-symmetric-key"></a>Instruções para gerar uma chave simétrica
 
--   Instalar o [Assistente de Início de Sessão Online da Microsoft](http://go.microsoft.com/fwlink/p/?LinkID=286152)
+-   Instalar o [Assistente de Início de Sessão Online da Microsoft](https://go.microsoft.com/fwlink/p/?LinkID=286152)
 -   Instalar o [Módulo do Powershell do Azure AD](https://bposast.vo.msecnd.net/MSOPMW/8073.4/amd64/AdministrationConfig-en.msi).
 
-**Nota:** tem de ser um administrador inquilino para utilizar cmdlets do Powershell.
+**Tenha em atenção** -tem de ser um administrador de inquilino para utilizar os cmdlets do Powershell.
 
 - Inicie o Powershell e execute os seguintes comandos para gerar uma chave
 
@@ -104,7 +103,7 @@ Para mais informações, consulte [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn
 
 -   Crie uma instância de uma estrutura [IPC\_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx) que contém a instância [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx).
 
-**Nota:** os membros *connectionInfo* são definidos com URLs a partir da chamada anterior para `Get-AadrmConfiguration` e são indicados aqui com esses nomes de campo.
+**Tenha em atenção** - a *connectionInfo* membros são definidos com URLs da chamada anterior para `Get-AadrmConfiguration` e são indicados aqui com esses nomes de campo.
 
     // Create a credential structure.
     IPC_CREDENTIAL cred = {0};
@@ -164,7 +163,7 @@ Concluiu os passos necessários para permitir que a sua aplicação utilize o Az
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Introdução ao Azure Rights Management](https://technet.microsoft.com/library/jj585016.aspx)
-* [Introdução ao SDK RMS 2.1](getting-started-with-ad-rms-2-0.md)
+* [Introdução ao SDK RMS 2.1](getting-started-with-ad-rms-2-0.md)
 * [Criar uma identidade do serviço através do ACS](https://msdn.microsoft.com/library/gg185924.aspx)
 * [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx)
 * [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx)

@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ff3e9f93de5a46ec12ae001d798ec0292da8526a
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 79dbf817086aa3f4b7919d87136008222a0bb1a6
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149009"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024268"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrar do AD RMS para o Azure Information Protection
 
@@ -55,7 +55,7 @@ Antes de iniciar a migração para o Azure Information Protection, certifique-se
         
         - Windows Server 2012 (x64)
         
-        - Windows Server 2012 R2 (x64)
+        - Windows Server 2012 R2 (x64)
         
         - Windows Server 2016 (x64)
         
@@ -75,7 +75,7 @@ Antes de iniciar a migração para o Azure Information Protection, certifique-se
 
     Tenha em atenção que se tiver computadores a executar o Office 2010, tem de instalar o cliente do Azure Information Protection, porque este cliente permite autenticar os utilizadores para serviços cloud. Nas versões mais recentes do Office, o cliente do Azure Information Protection é necessário para a classificação e etiquetagem e é opcional mas recomendado se quiser apenas proteger os dados. Para obter mais informações, veja o [Guia do administrador do cliente do Azure Information Protection](./rms-client/client-admin-guide.md).
 
-    Embora precise de ter uma subscrição do Azure Information Protection para poder migrar a partir do AD RMS, recomendamos que o serviço Rights Management do seu inquilino não seja ativado antes de iniciar a migração. O processo de migração inclui este passo de ativação depois de ter exportado as chaves e modelos do AD RMS e de os ter importado para o seu inquilino do Azure Information Protection. No entanto, se o serviço Rights Management já estiver ativado, ainda pode migrar a partir do AD RMS com alguns passos adicionais.
+    Embora precise de ter uma subscrição do Azure Information Protection para poder migrar do AD RMS, recomendamos que o serviço de Rights Management para o seu inquilino não está ativado antes de iniciar a migração. O processo de migração inclui este passo de ativação após a exportação de chaves e modelos do AD RMS e respetiva importação para o seu inquilino do Azure Information Protection. No entanto, se o serviço Rights Management já estiver ativado, ainda pode migrar do AD RMS com alguns passos adicionais.
 
 
 - **Preparação para o Azure Information Protection:**
@@ -86,7 +86,7 @@ Antes de iniciar a migração para o Azure Information Protection, certifique-se
 
     Veja [Preparar utilizadores e grupos para o Azure Information Protection](prepare.md).
 
-- **Se tiver utilizado a funcionalidade de Gestão de Direitos de Informação (IRM) do Exchange Server** (por exemplo, regras de transporte e Outlook Web Access) ou do SharePoint Server com o AD RMS:
+- **Se tiver utilizado a funcionalidade de gestão de direitos de informação (IRM) do Exchange Server** (por exemplo, regras de transporte e Outlook Web Access) ou o SharePoint Server com o AD RMS:
 
     - A IRM não estará disponível nestes servidores durante um curto período de tempo
  
@@ -111,7 +111,7 @@ Para confirmar o Modo Criptográfico do AD RMS:
 
 ### <a name="migration-limitations"></a>Limitações da migração
 
-- Se tiver software e clientes que não são suportados pelo serviço Rights Management utilizado pelo Azure Information Protection, estes não poderão proteger ou consumir conteúdos protegidos pelo Azure Rights Management. Certifique-se de que verifica as secções de aplicações e clientes suportados no artigo [Requisitos para o Azure Rights Management](./requirements.md).
+- Se tiver software e clientes que não são suportados pelo serviço Rights Management utilizado pelo Azure Information Protection, não poderão proteger ou consumir conteúdos protegidos pelo Azure Rights Management. Certifique-se de que verifica as secções de aplicações e clientes suportados no artigo [Requisitos para o Azure Rights Management](./requirements.md).
 
 - Se a sua implementação do AD RMS estiver configurada para colaborar com parceiros externos (por exemplo, ao utilizar federações ou domínios de utilizadores fidedignos), estes também devem migrar para o Azure Information Protection em simultâneo com a sua migração ou logo que seja possível posteriormente. Para continuarem a aceder a conteúdos que a sua organização protegeu anteriormente com o Azure Information Protection, têm de fazer alterações na configuração de clientes semelhantes às que foram feitas por si e que estão incluídas neste documento.
     
@@ -131,7 +131,7 @@ Inclua os seus parceiros de AD RMS na fase de planeamento da migração porque e
 
 - Fornecem-lhe os URLs para o respetivo cluster do AD RMS e o URL do serviço Azure Rights Management, para que possa configurar os seus clientes migrados para redirecionar pedidos para os conteúdos protegidos do AD RMS deles para o serviço Azure Rights Management do inquilino. As instruções para configurar o redirecionamento de clientes encontram-se no passo 7.
 
-- Importam as chaves de raiz do cluster do AD RMS (SLC) para o inquilino antes de começar a migrar os seus utilizadores. De igual modo, tem de importar as suas chaves de raiz do cluster do AD RMS antes de começarem a migrar os respetivos utilizadores. As instruções para importar a chave estão abrangidas neste processo de migração, no [Passo 4. Exportar os dados de configuração do AD RMS e importá-los para o Azure Information Protection](migrate-from-ad-rms-phase2.md#step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection). 
+- Importam as chaves de raiz do cluster do AD RMS (SLC) para o inquilino antes de começar a migrar os seus utilizadores. De igual modo, tem de importar as suas chaves de raiz do cluster do AD RMS antes de começarem a migrar os respetivos utilizadores. As instruções para importar a chave estão abrangidas neste processo de migração, no [Passo 4. Exportar dados de configuração do AD RMS e importá-lo para o Azure Information Protection](migrate-from-ad-rms-phase2.md#step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection). 
 
 ## <a name="overview-of-the-steps-for-migrating-ad-rms-to-azure-information-protection"></a>Descrição geral dos passos para migrar o AD RMS para o Azure Information Protection
 
@@ -153,13 +153,13 @@ Os passos de migração podem ser divididos em cinco fases que podem ser efetuad
 
 [**FASE 2: CONFIGURAÇÃO DO AD RMS DO LADO DO SERVIDOR**](migrate-from-ad-rms-phase2.md)
 
-- **Passo 4: exportar os dados de configuração do AD RMS e importá-los para o Azure Information Protection**
+- **Passo 4: Exportar dados de configuração do AD RMS e importá-lo para o Azure Information Protection**
 
     Exporte os dados de configuração (chaves, modelos, URLs) do AD RMS para um ficheiro XML e, em seguida, carregue esse ficheiro para o serviço Azure Rights Management do Azure Information Protection através do cmdlet Import-AadrmTpd do PowerShell. Em seguida, identifique a chave do Certificado de Licenciante para Servidor (SLC) importada para utilizar como a chave de inquilino no serviço do Azure Rights Management. Podem ser necessários passos adicionais, dependendo da configuração da sua chave do AD RMS:
 
     - **Migração de chave protegida por software para chave protegida por software**:
 
-        Chaves geridas centralmente com base em palavras-passe no AD RMS para a chave de inquilino do Azure Information Protection gerida pela Microsoft. Este é o caminho de migração mais simples e não são necessários passos adicionais.
+        Chaves geridas centralmente com base em palavra-passe no AD RMS para chave de inquilino do Azure Information Protection gerida pela Microsoft. Este é o caminho de migração mais simples e não são necessários passos adicionais.
 
     - **Migração de chave protegida por HSM para chave protegida por HSM**:
 
@@ -182,7 +182,7 @@ Os passos de migração podem ser divididos em cinco fases que podem ser efetuad
 
 - **Passo 7: Reconfigurar os computadores Windows para utilizar o Azure Information Protection**
 
-    Os computadores Windows existentes têm de ser reconfigurados para utilizar o serviço Azure Rights Management em vez do AD RMS. Este passo aplica-se aos computadores na sua organização e aos computadores nas organizações parceiras, caso tenha colaborado com as mesmas enquanto executou o AD RMS.
+    Os computadores Windows existentes têm de ser reconfigurados para utilizar o serviço Azure Rights Management em vez do AD RMS. Este passo aplica-se a computadores na sua organização e a computadores em organizações de parceiros caso tenha colaborado com as mesmas enquanto executou o AD RMS.
 
 [**FASE 4: CONFIGURAÇÃO DE SERVIÇOS DE SUPORTE**](migrate-from-ad-rms-phase4.md)
 
@@ -203,7 +203,7 @@ Os passos de migração podem ser divididos em cinco fases que podem ser efetuad
 
 - **Passo 11: Executar tarefas de migração de cliente**
 
-    Se tiver implementado o [extensão do dispositivo móvel](http://technet.microsoft.com/library/dn673574.aspx) para suportar dispositivos móveis, como telemóveis com iOS e iPads, telemóveis Android e tablets, Windows phone e computadores Mac, tem de remover os registos SRV no DNS que redirecionou estes clientes Para utilizar o AD RMS. 
+    Se tiver implementado o [extensão do dispositivo móvel](https://technet.microsoft.com/library/dn673574.aspx) para suportar dispositivos móveis, como telemóveis com iOS e iPads, telemóveis Android e tablets, Windows phone e computadores Mac, tem de remover os registos SRV no DNS que redirecionou estes clientes Para utilizar o AD RMS. 
     
     Os controlos de inclusão que configurou durante a fase de preparação já não são necessários. No entanto, se não utilizou os controlos de inclusão porque optou por migrar tudo ao mesmo tempo, em vez de fazer uma migração faseada, pode ignorar as instruções para remover os controlos de inclusão.
     

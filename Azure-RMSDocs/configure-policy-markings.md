@@ -1,5 +1,5 @@
 ---
-title: Configurar marcas visuais para uma etiqueta do Azure Information Protection
+title: Configurar marcas visuais para uma etiqueta do Azure Information Protection – AIP
 description: Quando atribui uma etiqueta a um documento ou a um e-mail pode selecionar várias opções para tornar a classificação escolhida facilmente visível. Estas marcas visuais são um cabeçalho, um rodapé e uma marca d'água.
 author: cabailey
 ms.author: cabailey
@@ -8,12 +8,12 @@ ms.date: 11/28/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 23185d2d6b5b1bb14633647c345d0e58eeda3bdc
-ms.sourcegitcommit: e72c89e35cae6a19dca060f688838d78dc8f0448
+ms.openlocfilehash: 3f94e9b1993573e8fe392dc75bcf999452bab626
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52585997"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023979"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Como configurar uma etiqueta para marcas visuais para o Azure Information Protection
 

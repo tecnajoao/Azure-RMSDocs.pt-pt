@@ -1,5 +1,5 @@
 ---
-title: Início rápido - configurar uma etiqueta para os utilizadores a proteger facilmente os e-mails que contêm informações confidenciais
+title: Início rápido - configurar uma etiqueta para os utilizadores a proteger facilmente os e-mails que contêm informações confidenciais – AIP
 description: Configure uma etiqueta que protege um e-mail para um utilizador ao aplicar automaticamente a proteção não reencaminhar.
 author: cabailey
 ms.author: cabailey
@@ -7,12 +7,12 @@ manager: mbaldwin
 ms.date: 11/14/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: 793c3ff3b68de66dce5876c25cb4ba5455d19c33
-ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
+ms.openlocfilehash: 217fbdc45967b5677f554410bca2ac1da58552d2
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51644697"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023503"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Início rápido: Configurar uma etiqueta para os utilizadores a proteger facilmente os e-mails que contêm informações confidenciais
 

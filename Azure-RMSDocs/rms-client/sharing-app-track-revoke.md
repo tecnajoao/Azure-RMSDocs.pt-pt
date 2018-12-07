@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c20ead2b01b2a37d63bbf3b2b0295f37c9421fdd
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: d0efb37ee0d424593b9cdb4c2690088e11afc29d
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151695"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024064"
 ---
 # <a name="track-and-revoke-your-documents-when-you-use-the-rms-sharing-application"></a>Controlar e revogar os documentos quando utiliza a aplicação de partilha RMS
 
@@ -37,7 +37,7 @@ Ações que pode realizar no site de controlo de documentos:
     
     Nota: Se não vir este ícone, apesar de ser um administrador global, é porque ainda não partilhou documentos. Neste caso, utilize o seguinte URL para aceder ao site de controlo de documentos: https://portal.azurerms.com/#/admin
 
-- Se tiver dúvidas ou quiser fornecer feedback sobre o site de controlo de documentos: clique no ícone de Ajuda para aceder às [FAQ acerca do Controlo de Documentos](http://go.microsoft.com/fwlink/?LinkId=523977).
+- Se tiver dúvidas ou quiser fornecer feedback sobre o site de controlo de documentos: clique no ícone de Ajuda para aceder às [FAQ acerca do Controlo de Documentos](https://go.microsoft.com/fwlink/?LinkId=523977).
 
 ## <a name="using-office-to-access-the-document-tracking-site"></a>Utilizar o Office para aceder ao site de controlo de documentos
 
@@ -67,19 +67,19 @@ Além de controlar os seus documentos em computadores com o Windows através da 
 
 #### <a name="using-a-web-browser-to-access-the-doc-tracking-site"></a>Utilizar um browser para aceder ao site de controlo de documentos
 
-- Num browser suportado, aceda ao [site de controlo de documentos](http://go.microsoft.com/fwlink/?LinkId=529562).
+- Num browser suportado, aceda ao [site de controlo de documentos](https://go.microsoft.com/fwlink/?LinkId=529562).
 
-    Browsers suportados: recomendamos que utilize, pelo menos, a versão 10 do Internet Explorer, mas pode utilizar qualquer um dos seguintes browsers para aceder ao site de controlo de documentos:
+    Browsers suportados: Recomendamos que utilize o Internet Explorer que, pelo menos, versão 10, mas pode utilizar qualquer um dos seguintes browsers para aceder ao site de controlo de documentos:
 
-    -   Internet Explorer: pelo menos, versão 10
+    -   Internet Explorer:, pelo menos, versão 10
 
     -   Internet Explorer 9 com, pelo menos, MS12-037: Atualização de Segurança Cumulativa para o Internet Explorer: 12 de junho de 2012
 
-    -   Mozilla Firefox: pelo menos, versão 12
+    -   Mozilla Firefox: Pelo menos, versão 12
 
-    -   Apple Safari 5: pelo menos, versão 5
+    -   Apple Safari 5:, pelo menos, versão 5
 
-    -   Google Chrome: pelo menos, versão 18
+    -   Google Chrome: Pelo menos, versão 18
 
 #### <a name="using-file-explorer-to-access-the-doc-tracking-site"></a>Utilizar o Explorador de Ficheiros para aceder ao site de controlo de documentos
 

@@ -4,18 +4,18 @@ description: Informações para administradores sobre como implementar o cliente
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 58b569fef27050388e94440af371e605cd3c1f91
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: e60ef4d683abe920072fdc9cf6a0b8e9537cf5ff
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149587"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023418"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Cliente do Azure Information Protection: instalação e configuração para clientes
 
@@ -32,7 +32,7 @@ Para uma instalação e configuração empresariais do cliente para o Windows, v
 > Se pretender instalar rapidamente e testar o cliente do Azure Information Protection para um único computador, veja [Transferir e instalar o cliente do Azure Information Protection](./rms-client/install-client-app.md)no [Guia do utilizador do cliente do Azure Information Protection](./rms-client/client-user-guide.md).
 
 ## <a name="the-azure-information-protection-client-for-ios-and-android-installation-and-management"></a>Cliente do Azure Information Protection para iOS e Android: instalação e configuração
-Para instalar o cliente do Azure Information Protection para estas plataformas móveis populares, pode transferir a aplicação relevante através das ligações na [página do Microsoft Azure Information Protection](http://go.microsoft.com/fwlink/?LinkId=303970). Não é necessária qualquer configuração.
+Para instalar o cliente do Azure Information Protection para estas plataformas móveis populares, pode transferir a aplicação relevante através das ligações na [página do Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970). Não é necessária qualquer configuração.
 
 > [!NOTE]
 > Para computadores Mac e dispositivos Windows Phone, as ligações a partir desta página transferem as aplicações de partilha RMS para dispositivos móveis. Estes dispositivos não suportam atualmente o cliente do Azure Information Protection.

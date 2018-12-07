@@ -12,17 +12,17 @@ ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 2a239c802ae818a3b51eb0fb05f98f509f469e3c
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 5a3fabd4d76dc86b52d0d8891b7032d1e017cf28
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44146324"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023309"
 ---
 # <a name="how-to-install-configure-and-test-with-an-rms-server"></a>Procedimentos: instalar, configurar e testar com um servidor RMS
 
 Este tópico inclui os passos para ligação a um servidor RMS ou ao Azure RMS para fins de testar da sua aplicação com capacidade para direitos.
- 
+ 
 ## <a name="instructions"></a>Instruções
 
 ### <a name="step-1-setup-your-rms-server"></a>Passo 1: configurar o servidor RMS
@@ -38,9 +38,9 @@ Os seguintes passos descrevem a configuração do servidor RMS e incluem:
 
     A partir do Windows Server 2008, os componentes de cliente e servidor estão incluídos no sistema operativo. Pode transferir os componentes de servidor para sistemas operativos anteriores a partir da seguinte localização.
 
-    -   [Servidor RMS v1.0 SP2](http://go.microsoft.com/fwlink/p/?linkid=73722)
+    -   [Servidor RMS v1.0 SP2](https://go.microsoft.com/fwlink/p/?linkid=73722)
 
-    Para configurar o componente de servidor no Windows Server 2008, tem de instalar a função de AD RMS. Se estiver a desenvolver aplicações num sistema operativo do servidor anterior, configure o registo após a instalação do RMS Server v1.0 SP2, mas antes do aprovisionamento do serviço RMS.
+    Para configurar o componente de servidor no Windows Server 2008, tem de instalar a função de AD RMS. Se estiver a desenvolver aplicações num sistema operativo do servidor anterior, configure o registo após a instalação do RMS Server v1.0 SP2, mas antes do aprovisionamento do serviço RMS.
 
 2.  **Inscrever o servidor**
 
@@ -48,7 +48,7 @@ Os seguintes passos descrevem a configuração do servidor RMS e incluem:
 
     -   **Autoinscrição**
 
-        A partir do Windows Server 2008, é possível inscrever um servidor RMS na hierarquia adequada sem enviar informações à Microsoft. Ao instalar a função de RMS, um certificado de autoinscrição e a chave privada também são instalados. Estes são utilizados para criar automaticamente o certificado de licenciante para servidor. Nenhuma informação é trocada com a Microsoft.
+        A partir do Windows Server 2008, pode inscrever um servidor RMS na hierarquia adequada sem enviar informações à Microsoft. Ao instalar a função de RMS, um certificado de autoinscrição e a chave privada também são instalados. Estes são utilizados para criar automaticamente o certificado de licenciante para servidor. Nenhuma informação é trocada com a Microsoft.
 
     -   **Inscrição online**
 

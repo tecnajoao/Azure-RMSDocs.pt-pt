@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 16d3aa308395a65f7d3af6e74f817d88d6033747
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: e535295c4393d2d7267174f587fcbbf34fa986b0
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150590"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023877"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Fase 5 da migração – tarefas de pós-migração
 
@@ -38,7 +38,7 @@ Para remover o SCP, garanta que tem sessão iniciada como administrador da empre
 
 4. Selecione **Remover SCP atual** e, em seguida, clique em **OK**.
 
-Agora monitorize servidores do AD RMS para a atividade. Por exemplo, confira o [pedidos no relatório do Estado de funcionamento do sistema](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx), o [tabela ServiceRequest](http://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx) ou [auditar o acesso de utilizador a conteúdo protegido](http://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx). 
+Agora monitorize servidores do AD RMS para a atividade. Por exemplo, confira o [pedidos no relatório do Estado de funcionamento do sistema](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx), o [tabela ServiceRequest](https://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx) ou [auditar o acesso de utilizador a conteúdo protegido](http://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx). 
 
 Quando tiver confirmado que os clientes RMS já não estão a comunicar com estes servidores e que os clientes estão a utilizar o Azure Information Protection com êxito, pode remover a função de servidor do AD RMS destes servidores. Se estiver a utilizar servidores dedicados, poderá preferir o passo cautelar de começar por encerrar os servidores durante um período de tempo. Este lhe dará tempo para se certificar de que não existem não existem problemas comunicados que exijam reiniciar estes servidores para continuidade do serviço enquanto estiver a investigar por que os clientes não estiver a utilizar do Azure Information Protection.
 
@@ -49,7 +49,7 @@ Depois de ter desaprovisionado os servidores do AD RMS, pode querer aproveitar a
 
 ## <a name="step-11-complete-client-migration-tasks"></a>Passo 11: Tarefas de migração de cliente concluída
 
-Para clientes de dispositivos móveis e computadores Mac: remover os registos SRV de DNS que criou quando implementou o [extensão de dispositivo móvel do AD RMS](http://technet.microsoft.com/library/dn673574.aspx).
+Para clientes de dispositivos móveis e computadores Mac: remover os registos SRV de DNS que criou quando implementou o [extensão de dispositivo móvel do AD RMS](https://technet.microsoft.com/library/dn673574.aspx).
 
 Quando estas alterações DNS tem propogated, estes clientes irão detetar automaticamente e começar a utilizar o serviço Azure Rights Management. No entanto, computadores Mac que executem Office Mac colocar em cache as informações do AD RMS. Para estes computadores, este processo pode demorar até 30 dias. 
 

@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 02e2cbe91e3e1e699249b18f514cbbe0a411790d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 2e3babe4a402b8f77700e9b9890dc5f826a5850a
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149791"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53026966"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Instalar e configurar o conector Azure Rights Management
 
@@ -28,12 +28,13 @@ Antes de começar, certifique-se de que consultou e verificou os [pré-requisito
 
 ## <a name="installing-the-rms-connector"></a>Instalar o conector RMS
 
-1.  Identifique os computadores (no mínimo dois) que irão executar o conector RMS. Os computadores têm de cumprir as especificações mínimas descritas nos pré-requisitos.
+1.  Identificar os computadores (mínimo de dois) dessa migrarmos
+2.  l executa o conector do RMS. Os computadores têm de cumprir as especificações mínimas descritas nos pré-requisitos.
 
     > [!NOTE]
     > Instale um único conector RMS (composto por múltiplos servidores para elevada disponibilidade) por inquilino (inquilino do Office 365 ou do Azure AD). Ao contrário do Active Directory RMS, não precisa de instalar um conector RMS em cada floresta.
 
-2.  Transfira os ficheiros de origem do conector RMS a partir do [Centro de Transferências da Microsoft](http://go.microsoft.com/fwlink/?LinkId=314106).
+2.  Transfira os ficheiros de origem do conector RMS a partir do [Centro de Transferências da Microsoft](https://go.microsoft.com/fwlink/?LinkId=314106).
 
     Para instalar o conector RMS, transfira o ficheiro RMSConnectorSetup.exe.
 
@@ -173,7 +174,7 @@ O nome de servidor do URL do conector pode ser qualquer nome dentro do espaço d
 > [!IMPORTANT]
 > Recomendamos que não altere este nome após ter configurado os servidores Exchange e do SharePoint para utilizar o conector, uma vez que teria de limpar as configurações de IRM destes servidores e, depois, reconfigurá-las.
 
-Depois de criar o nome no DNS e de o configurar para um endereço IP, configure o balanceamento de carga desse endereço, que redireciona o tráfego para os servidores do conector. Pode utilizar qualquer balanceador de carga baseado em IP para este fim, que inclua a funcionalidade Balanceamento de Carga na Rede (NLB) no Windows Server. Para obter mais informações, consulte o [Load Balancing Deployment Guide ](http://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx) (Guia de Implementação do Balanceamento de Carga – em inglês).
+Depois de criar o nome no DNS e de o configurar para um endereço IP, configure o balanceamento de carga desse endereço, que redireciona o tráfego para os servidores do conector. Pode utilizar qualquer balanceador de carga baseado em IP para este fim, que inclua a funcionalidade Balanceamento de Carga na Rede (NLB) no Windows Server. Para obter mais informações, consulte o [Load Balancing Deployment Guide ](https://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx) (Guia de Implementação do Balanceamento de Carga – em inglês).
 
 Utilize as seguintes definições para configurar o cluster com balanceamento de carga em rede (NLB):
 
@@ -200,9 +201,9 @@ Se utilizar a opção HTTPS, certifique-se de que todos os servidores que execut
 > [!TIP]
 > Pode utilizar os seguintes recursos e informações para o ajudar a pedir e instalar um certificado de autenticação de servidor e para vincular este certificado ao Web Site Predefinido no IIS:
 >
-> -   Se utilizar os Serviços de Certificados do Active Directory (AD CS) e uma autoridade de certificação empresarial (AC) para implementar estes certificados de autenticação de servidor, pode duplicar e utilizar o modelo de certificado do Web Server. Este modelo de certificado utiliza a opção **Fornecido no pedido** para o nome do requerente do certificado, o que significa que pode fornecer o FQDN do nome do conector RMS para o nome do requerente do certificado ou um nome de requerente alternativo quando pedir o certificado.
-> -   Se utilizar uma AC autónoma ou adquirir este certificado a partir de outra empresa, consulte [Configuring Internet Server Certificates (IIS 7) (Configurar Certificados do Servidor de Internet (IIS 7) – em inglês)](http://technet.microsoft.com/library/cc731977%28v=ws.10%29.aspx) na biblioteca de documentos referente ao [Web Server (IIS)](http://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) no TechNet.
-> -   Para configurar o IIS para utilizar o certificado, veja [Add a Binding to a Site (IIS 7) (Adicionar um Enlace a um Site (IIS 7))](http://technet.microsoft.com/library/cc731692.aspx) na biblioteca de documentos referente ao [Web Server (IIS)](http://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) no TechNet.
+> - Se utilizar os Serviços de Certificados do Active Directory (AD CS) e uma autoridade de certificação empresarial (AC) para implementar estes certificados de autenticação de servidor, pode duplicar e utilizar o modelo de certificado do Web Server. Este modelo de certificado utiliza a opção **Fornecido no pedido** para o nome do requerente do certificado, o que significa que pode fornecer o FQDN do nome do conector RMS para o nome do requerente do certificado ou um nome de requerente alternativo quando pedir o certificado.
+> -   Se utilizar uma AC autónoma ou adquirir este certificado a partir de outra empresa, consulte [Configuring Internet Server Certificates (IIS 7) (Configurar Certificados do Servidor de Internet (IIS 7) – em inglês)](https://technet.microsoft.com/library/cc731977%28v=ws.10%29.aspx) na biblioteca de documentos referente ao [Web Server (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) no TechNet.
+> - Para configurar o IIS para utilizar o certificado, veja [Add a Binding to a Site (IIS 7) (Adicionar um Enlace a um Site (IIS 7))](https://technet.microsoft.com/library/cc731692.aspx) na biblioteca de documentos referente ao [Web Server (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) no TechNet.
 
 ## <a name="configuring-the-rms-connector-for-a-web-proxy-server"></a>Configurar o conector RMS para um servidor proxy Web
 Se os servidores do seu conector estiverem instalados numa rede que não tem conectividade Internet direta e que necessita de configuração manual de um servidor proxy Web para o acesso à Internet de saída, tem de configurar o registo nestes servidores para o conector RMS.
@@ -238,7 +239,7 @@ Para instalar a ferramenta de administração do conector RMS, execute os seguin
 
 -   Para um computador de 64 bits: RMSConnectorSetup.exe
 
-Se ainda não tiver transferido estes ficheiros, pode fazê-lo no [Centro de Transferências da Microsoft](http://go.microsoft.com/fwlink/?LinkId=314106).
+Se ainda não tiver transferido estes ficheiros, pode fazê-lo no [Centro de Transferências da Microsoft](https://go.microsoft.com/fwlink/?LinkId=314106).
 
 
 ## <a name="next-steps"></a>Passos Seguintes

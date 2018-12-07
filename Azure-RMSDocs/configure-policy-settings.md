@@ -4,16 +4,16 @@ description: Configurar as definições na política do Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 12/04/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: f8967b16f864939bfcb06f786e8ee1eff0603ac2
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: 3533a8a83d5fa24eb98ae36092eaf08d4ff75ccc
+ms.sourcegitcommit: 4f22874c3c2fb9632d57932148664c40b3907a78
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026609"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52831226"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Como configurar as definições de política do Azure Information Protection
 
@@ -53,7 +53,9 @@ Configurar estas definições:
         
         Esta opção não é aplicável para reduzir a classificação de subetiquetas sob o mesmo rótulo de principal.
         
-    - **Para mensagens de e-mail com anexos, aplique uma etiqueta que corresponda à classificação mais elevada desses anexos**: quando define esta opção como **Recomendado**, é pedido aos utilizadores que apliquem uma etiqueta à respetiva mensagem de e-mail. A etiqueta é selecionada de forma dinâmica com base nas etiquetas de classificação aplicadas aos anexos e é selecionada a etiqueta de classificação mais elevada. O anexo tem de ser um ficheiro físico e não pode ser uma ligação a um ficheiro (por exemplo, uma ligação a um ficheiro no SharePoint ou no OneDrive para Empresas). Os utilizadores podem aceitar a recomendação ou ignorá-la. Quando define esta opção como **automática**, a etiqueta é aplicada automaticamente, mas os utilizadores podem remover a etiqueta ou selecione uma etiqueta diferente antes de enviar o e-mail.  
+    - **Para mensagens de e-mail com anexos, aplique uma etiqueta que corresponda à classificação mais elevada desses anexos**: quando define esta opção como **Recomendado**, é pedido aos utilizadores que apliquem uma etiqueta à respetiva mensagem de e-mail. A etiqueta é selecionada de forma dinâmica com base nas etiquetas de classificação aplicadas aos anexos e é selecionada a etiqueta de classificação mais elevada. O anexo tem de ser um ficheiro físico e não pode ser uma ligação a um ficheiro (por exemplo, uma ligação a um ficheiro no SharePoint ou no OneDrive para Empresas). Os utilizadores podem aceitar a recomendação ou ignorá-la. Quando define esta opção como **automática**, a etiqueta é aplicada automaticamente, mas os utilizadores podem remover a etiqueta ou selecione uma etiqueta diferente antes de enviar o e-mail.
+    
+    Quando o anexo com a etiqueta de classificação mais alta é configurado para proteção com a definição de pré-visualização de permissões definidas pelo utilizador, a mensagem de e-mail tem o nome com a mesma classificação, mas não a proteção é aplicada.
     
     - **Apresentar a barra de Information Protection nas aplicações do Office**: quando esta definição estiver desativada, os utilizadores não é possível selecionar etiquetas de uma barra no Word, Excel, PowerPoint e Outlook. Em vez disso, os utilizadores devem selecionar etiquetas a partir da **Protect** botão na faixa de opções. Quando esta definição está ativado, os utilizadores podem selecionar etiquetas a partir da barra ou no botão.
         

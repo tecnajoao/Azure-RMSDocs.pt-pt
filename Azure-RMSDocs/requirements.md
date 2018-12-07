@@ -4,18 +4,18 @@ description: Identifique os pré-requisitos para implementar o Azure Information
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 12/04/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 92b7ca3feceb70bc9b8b085b58c26231d2ae70ce
-ms.sourcegitcommit: 8a4bab8dc6ee4c322a54d79091af04ec9449e5c2
+ms.openlocfilehash: 62a291667cf0ae60debbd62047d3a6b09962ac1d
+ms.sourcegitcommit: 4f22874c3c2fb9632d57932148664c40b3907a78
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51020059"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52831243"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisitos para o Azure Information Protection
 
@@ -64,7 +64,7 @@ Os seguintes dispositivos suportam o cliente do Azure Information Protection, o 
 
 - Windows 10 (x86, x64)
     
-    - Não há suporte para manuscrito na compilação do Windows 10 RS4 Insiders. 
+    - Não há suporte para manuscrito na compilação do Windows 10 RS4 e posterior. 
 
 - Windows 8.1 (x86, x64)
 

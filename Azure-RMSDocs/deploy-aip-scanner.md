@@ -4,18 +4,18 @@ description: Instruções para instalar, configurar e executar o scanner do Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/27/2018
+ms.date: 11/30/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 3e331c859c3808ceba2305224a6dd524b1a5ea6c
-ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
+ms.openlocfilehash: d29203359bcfdda09d7792f1f65a7c85723ee18f
+ms.sourcegitcommit: c1c34529f10dd7c1545ca37be9629b52be87e33e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52386802"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52731154"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Implementar o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente
 
@@ -252,7 +252,7 @@ Em seguida, o scanner utiliza Windows IFilter para analisar os seguintes tipos d
 |PDF |.pdf|
 |Texto|.txt; .xml; .csv|
 
-Além disso, o scanner também pode utilizar reconhecimento ótico de carateres (OCR) para inspecionar imagens TIFF com uma extensão de nome de ficheiro. TIFF, quando configura [definições do Windows TIFF IFilter](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) no computador que executa a deteção de impressão.
+Além disso, o scanner também pode utilizar reconhecimento ótico de carateres (OCR) para inspecionar as imagens TIFF com uma extensão de nome de ficheiro. tiff quando instalar a funcionalidade do Windows TIFF IFilter e, em seguida, configure [definições do Windows TIFF IFilter](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) no computador que executa a deteção de impressão.
 
 Por predefinição, apenas os tipos de ficheiro do Office protegidos pelo scanner, por isso, documentos em PDF e arquivos de texto e imagens TIFF não estão protegidas, a menos que [editar o registo](#editing-the-registry-for-the-scanner) para especificar os tipos de ficheiro:
 

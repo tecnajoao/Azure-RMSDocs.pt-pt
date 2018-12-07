@@ -4,18 +4,18 @@ description: Detalhes técnicos sobre tipos de ficheiro suportados, extensões d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/27/2018
+ms.date: 12/04/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9bc0bbcf6eb74d889e7cd31e6d7ff3f0b6320050
-ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
+ms.openlocfilehash: e228c1c49481a9772e2f86164926db6075fe2924
+ms.sourcegitcommit: 8e7b135bf48ced7e53d91f45d62b7bbd0f37634e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52386751"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52861239"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guia do administrador: Tipos de ficheiro suportados pelo cliente do Azure Information Protection
 
@@ -127,7 +127,7 @@ Estes tipos de ficheiro são identificados separadamente, uma vez que, quando s�
 |.jt|.pjt|
 
 ###### <a name="footnote-1"></a>Nota de rodapé 1
-Se configurar o cliente do Azure Information Protection [proteger ficheiros PDF com a norma ISO para a encriptação de PDF](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), a extensão de nome de ficheiro do documento PDF protegido permanece como. pdf.
+Com a versão mais recente do cliente do Azure Information Protection [por predefinição](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), a extensão de nome de ficheiro do documento PDF protegido permanece como. pdf.
 
 A seguinte tabela apresenta os tipos de ficheiros restantes que suportam a proteção nativa pelo cliente do Azure Information Protection e que também podem ser classificados. Irá reconhecê-los como tipos de ficheiro para aplicações do Microsoft Office. Os formatos de ficheiro suportados para estes tipos de ficheiro são os 97-2003 formatos de arquivo e formatos XML abertos do Office para os seguintes programas do Office: Word, Excel e PowerPoint.
 
@@ -238,19 +238,13 @@ Depois inspecionar o ficheiro, o scanner classifica este ficheiro como **confide
 
 Qualquer ficheiro protegido por palavra-passe não pode ser protegido nativamente pelo cliente do Azure Information Protection, a menos que o ficheiro está atualmente aberto no aplicativo que se aplica a proteção. É normalmente visualizado ficheiros PDF que são protegidos por palavra-passe, mas outros aplicativos, como aplicações do Office, também oferecem essa funcionalidade.
 
-Além disso, a menos que o cliente do Azure Information Protection está configurado para [proteger ficheiros PDF com a norma ISO para a encriptação de PDF](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), este cliente pode ver os seguintes arquivos, mas não é possível nativamente proteger ou desproteger PDF ficheiros de qualquer uma das seguintes circunstâncias:
+Se alterar o [predefinição de comportamento](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption) do cliente do Azure Information Protection para que ele protege arquivos PDF com uma extensão de nome de ficheiro. ppdf, o cliente não é possível nativamente proteger ou desproteger ficheiros PDF em qualquer um dos seguintes circunstâncias:
 
 - Um ficheiro PDF que é baseada em formulários.
 
 - Um ficheiro PDF protegido que tem uma extensão de nome de ficheiro. pdf.
-
-Como solução para proteger estes ficheiros, poderia genericamente protegê-los ao seguir as instruções no [alterar o nível de proteção predefinido dos ficheiros](#changing-the-default-protection-level-of-files) secção. No entanto, esse método altera o nível de proteção para todos os ficheiros que tenham uma extensão de nome de ficheiro. pdf, no nível do computador. Não é possível definir a proteção genérica para apenas os ficheiros que cumpram os critérios listados.
-
-Se proteger estes ficheiros é importante, pode copiá-los temporariamente para outro computador para genericamente protegê-los e, em seguida, copiá-los volta novamente. Ou, configurar o cliente para [proteger ficheiros PDF com a norma ISO para a encriptação de PDF](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption) para que possam nativamente proteger e desproteger ficheiros PDF em ambas das seguintes circunstâncias:
-
-- Um ficheiro PDF que é baseada em formulários.
-
-- Um ficheiro PDF protegido que tem uma extensão de nome de ficheiro. pdf.
+    
+    O cliente do Azure Information Protection pode proteger um ficheiro PDF não protegido e pode desproteger e voltar a proteger um ficheiro PDF protegido quando tem uma extensão de nome de ficheiro. ppdf.
 
 ### <a name="limitations-for-container-files-such-as-zip-files"></a>Limitações para ficheiros de contentor, como arquivos. zip
 

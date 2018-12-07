@@ -4,18 +4,18 @@ description: Instruções e informações para administradores numa rede empresa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/12/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b5eccdd62d828bc5104815746458d4c7036594fd
-ms.sourcegitcommit: 39403f0e9fe5912d467b119ed45da94bccd1cc80
+ms.openlocfilehash: be6477edae471bddbcf3a5d4e6c7bb0cfcec1e4e
+ms.sourcegitcommit: 4f22874c3c2fb9632d57932148664c40b3907a78
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100642"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52831260"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guia do administrador do cliente do Azure Information Protection
 
@@ -198,15 +198,9 @@ Utilize o [política de histórico e suporte de lançamento de versão](client-v
 
 ### <a name="upgrading-the-azure-information-protection-scanner"></a>Atualizar o scanner do Azure Information Protection
 
-Para atualizar o scanner do Azure Information Protection, instale a versão mais recente do cliente do Azure Information Protection. Em seguida, efetue uma das seguintes ações de uso individual. Depois de fazer isso, não é necessário para reanalisar já ficheiros.
+Para atualizar o scanner do Azure Information Protection, instale a versão mais recente do cliente do Azure Information Protection. Em seguida, efetue a seguinte ação única. Depois de fazer isso, não é necessário para reanalisar já ficheiros.
 
-Para a versão de DG atual: 
-
-- Volte a executar o comando de instalação com o scanner [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner). As definições de configuração para o scanner e repositórios serão mantidas. Reinstalar o scanner concede o scanner permissões de eliminação de conta de serviço da base de dados do scanner, que será necessária para relatórios.
-
-Para a versão de pré-visualização: 
-
-- Execute [AIPScanner atualização](/powershell/module/azureinformationprotection/Update-AIPScanner) depois de ter atualizado o cliente do Azure Information Protection a partir da versão de disponibilidade geral 1.29.5.0, ou anterior. As definições de configuração para o scanner e repositórios serão mantidas. Executar este cmdlet é necessário para atualizar o esquema de base de dados para a deteção de impressão e se necessário, a conta de serviço do scanner também recebe eliminar as permissões para a base de dados do scanner. 
+- Execute [AIPScanner atualização](/powershell/module/azureinformationprotection/Update-AIPScanner) depois de ter atualizado o cliente do Azure Information Protection. As definições de configuração para o scanner e repositórios serão mantidas. Executar este cmdlet é necessário para atualizar o esquema de base de dados para a deteção de impressão e se necessário, a conta de serviço do scanner também recebe eliminar as permissões para a base de dados do scanner. 
     
     Até que executar este cmdlet de atualização, o scanner não é executado e verá o ID de evento normalmente **1000** no registo de eventos do Windows, com a seguinte mensagem de erro: **nome de objeto inválido 'ScannerStatus'**.
 

@@ -5,19 +5,19 @@ keywords: ''
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/13/2018
+ms.date: 12/04/2018
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
 ms.assetid: aab59e02-930b-4a17-8442-2d5d081fe1a6
 ms.reviewer: kartikka
 ms.suite: ems
-ms.openlocfilehash: ab3d141394a9a042a8a3e15e35d1daffab20ad98
-ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
+ms.openlocfilehash: d4421caa4ec6846456c12aa831644e957c5b4fd9
+ms.sourcegitcommit: 8e7b135bf48ced7e53d91f45d62b7bbd0f37634e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49170351"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52861205"
 ---
 # <a name="supported-pdf-readers-for-microsoft-information-protection"></a>Leitores de PDF suportados para o Microsoft Information Protection
 
@@ -33,7 +33,7 @@ Esta integração nativa tem as seguintes vantagens:
 
 - Suporte para a norma ISO para a encriptação de PDF.
     
-    Este formato de ficheiro PDF protegido tem de ser [ativada por um administrador](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). Quando esta configuração é feita, a extensão de nome de ficheiro permanece como. pdf e não é alterado para. ppdf.
+    A menos que esta capacidade tem sido [desativada por um administrador](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), este formato de ficheiro PDF protegido agora está ativado por predefinição, a versão mais recente do cliente do Azure Information Protection.
 
 Para obter mais informações, consulte a seguinte mensagem de blogue: [Outubro inicial, utilize o Adobe Acrobat Reader para PDFs protegidos pelo Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Starting-October-use-Adobe-Acrobat-Reader-for-PDFs-protected-by/ba-p/262738)
 
@@ -49,13 +49,13 @@ Os leitores PDF seguintes podem abrir ficheiros PDF protegidos que sigam o padr�
 
 ### <a name="support-for-previous-formats"></a>Suporte para formatos anteriores
 
-Os leitores PDF no suporte de tabela seguinte de documentos PDF que tenham um. ppdf nome extensionand mais antigos formatos de arquivo que tenham uma extensão de nome de ficheiro. pdf protegidos.
+Os leitores PDF no suporte de tabela seguinte protegidas documentos PDF que tenham uma extensão de nome de ficheiro. ppdf e formatos mais antigos que tenham uma extensão de nome de ficheiro. pdf.
 
 Atualmente, SharePoint Online e SharePoint no local utilizam um formato mais antigo para documentos PDF em bibliotecas protegidas por IRM.
 
 
 |Sistema operativo|Leitores suportados|
 |----------------|-----------------------------------|
-|Windows 10 e versões anteriores<br />por meio do Windows 7 Service Pack 1|Visualizador do Azure Information Protection<br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />Aplicação de partilha RMS|
+|Windows 10 e versões anteriores<br />por meio do Windows 7 Service Pack 1|Visualizador do Azure Information Protection<br /><br />Gaaiho Doc<br /><br />Cliente PDF do ambiente de trabalho GigaTrust para Adobe<br /><br />Foxit Reader<br /><br />Leitor de PDF do nitro<br /><br />Aplicação de partilha RMS|
 |Android|Azure Information Protection app<br /><br />Foxit MobilePDF com o RMS<br /><br />GigaTrust App for Android|
 |iOS|Azure Information Protection app<br /><br />Foxit MobilePDF com o RMS<br /><br />TITUS Docs|

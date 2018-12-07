@@ -4,18 +4,18 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/27/2018
+ms.date: 12/04/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 41e092b379cfb52db286a61ad715703514e500d0
-ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
+ms.openlocfilehash: d4e2af4a9123b7276f2afad6f0d41232f3555d62
+ms.sourcegitcommit: 8e7b135bf48ced7e53d91f45d62b7bbd0f37634e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52386785"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52861188"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas para o cliente do Azure Information Protection
 
@@ -48,7 +48,7 @@ Algumas destas definições requerem a edição do registo e algumas utilizam de
 |DisableDNF|[Ocultar ou mostrar o botão não reencaminhar no Outlook](#hide-or-show-the-do-not-forward-button-in-outlook)|
 |EnableBarHiding|[Ocultar permanentemente a barra do Azure Information Protection](#permanently-hide-the-azure-information-protection-bar)|
 |EnableCustomPermissions|[Tornar as opções de permissões personalizadas disponíveis ou não está disponível para utilizadores](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
-|EnablePDFv2Protection|[Proteger ficheiros PDF com a norma ISO para a encriptação de PDF](#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
+|EnablePDFv2Protection|[Não proteger ficheiros PDF com a norma ISO para a encriptação de PDF](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
 |LabelbyCustomProperty|[Migrar as etiquetas de Secure Islands e outras soluções de etiquetas](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[Configurar uma etiqueta para aplicar a proteção de S/MIME no Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |OutlookDefaultLabel|[Definir uma etiqueta predefinida diferente para o Outlook](#set-a-different-default-label-for-outlook)|
@@ -315,23 +315,21 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 - Valor: **Verdadeiro**
 
-## <a name="protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>Proteger ficheiros PDF com a norma ISO para a encriptação de PDF
+## <a name="dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>Não proteger ficheiros PDF com a norma ISO para a encriptação de PDF
 
 Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
 
-Por predefinição, quando o cliente do Azure Information Protection protege um ficheiro PDF, o arquivo resultante tem uma extensão de nome de ficheiro. ppdf. Pode alterar este comportamento para que a extensão de nome de ficheiro permanece como. pdf e em conformidade com a norma ISO para a encriptação de PDF. Para obter mais informações sobre este padrão, consulte a secção **encriptação 7.6** partir a [documento que é derivado da ISO 32000-1](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) e publicado por Incorporated de sistemas do Adobe.
+Quando a versão mais recente do cliente do Azure Information Protection protege um ficheiro PDF, a extensão de nome de ficheiro resultante permanece como. pdf e respeita o ISO padrão para a encriptação de PDF. Para obter mais informações sobre este padrão, consulte a secção **encriptação 7.6** partir a [documento que é derivado da ISO 32000-1](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) e publicado por Incorporated de sistemas do Adobe.
 
-Para configurar esta definição avançada, introduza a seguinte cadeia:
+Se precisar do cliente para reverter para o comportamento em versões mais antigas do cliente que os ficheiros PDF protegidos através da utilização de uma extensão de nome de ficheiro. ppdf, utilize a seguinte definição avançada ao introduzir a seguinte cadeia:
 
 - Chave: **EnablePDFv2Protection**
 
-- Valor: **Verdadeiro**
-
-Como resultado desta opção de configuração, quando o cliente do Azure Information Protection protege um ficheiro PDF, esta ação cria um documento PDF protegido, que pode ser aberto com a versão mais recente do cliente do Azure Information Protection para Windows e outro PDF leitores que suportam a norma ISO para a encriptação de PDF. A aplicação Azure Information Protection para iOS e Android não suporta atualmente a norma ISO para a encriptação de PDF. Para obter as informações mais recentes no Adobe Acrobat Reader, consulte [a partir Outubro, utilize o Adobe Acrobat Reader para PDFs protegidos pelo Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Starting-October-use-Adobe-Acrobat-Reader-for-PDFs-protected-by/ba-p/262738).
+- Valor: **Falso**
 
 Para o scanner do Azure Information Protection utilizar a nova definição, é necessário reiniciar o serviço de scanner.
 
-Para obter mais informações sobre esta encriptação de PDF, consulte a mensagem de blogue [novo suporte para encriptação de PDF com proteção de informações do Microsoft](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757).
+Para obter mais informações sobre a nova criptografia de PDF, consulte a mensagem de blogue [novo suporte para encriptação de PDF com proteção de informações do Microsoft](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757).
 
 ### <a name="to-convert-existing-ppdf-files-to-protected-pdf-files"></a>Para converter ficheiros. ppdf existentes para os ficheiros. pdf protegidos
 

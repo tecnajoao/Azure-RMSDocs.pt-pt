@@ -4,17 +4,17 @@ description: Migre as etiquetas do Azure Information Protection para o Centro de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 2d0ed8103ce4e0b42d67ea87b6b464dfb8f04f36
-ms.sourcegitcommit: 283782ee7e3ec566f479c8914eae7bf84d904392
+ms.openlocfilehash: 771cbb26a842cbf19184ace94ae47ba9d549a33f
+ms.sourcegitcommit: b4118cd75db6478f86b9994e8d84d0ada15c7f95
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49382617"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52953334"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Como migrar as etiquetas do Azure Information Protection para o Centro de conformidade e segurança do Office 365
 
@@ -48,7 +48,7 @@ Antes de migrar as etiquetas, certifique-se de que está ciente das seguintes al
     
     Para uma experiência de usuário mais consistente, recomendamos que publique as etiquetas mesmo no mesmos âmbitos no Centro de conformidade e segurança do.
 
-- Nem todas as definições de uma etiqueta migrada são compatíveis com o Centro de conformidade e segurança. Utilize a tabela no [Etiquetar definições que não são suportadas no Centro de conformidade e segurança do](#label-settings-that-are-not-supported-in-the-security--compliance-center) secção para ajudar a identificar estas definições e se deve excluir as etiquetas migradas de publicação na segurança & Centro de conformidade.
+- Nem todas as definições de uma etiqueta migrada são compatíveis com o Centro de conformidade e segurança. Utilize a tabela no [Etiquetar definições que não são suportadas no Centro de conformidade e segurança do](#label-settings-that-are-not-supported-in-the-security--compliance-center) secção para ajudar a identificar as definições que não são suportadas pelo centro de conformidade e segurança do.
 
 - Modelos de proteção:
     
@@ -66,17 +66,15 @@ Antes de migrar as etiquetas, certifique-se de que está ciente das seguintes al
 
 - Quaisquer cadeias de caracteres localizadas para as etiquetas não são migradas. Tem de definir novas cadeias de caracteres localizadas para as etiquetas migradas no Centro de conformidade e segurança do.
 
-- Após a migração, ao editar uma etiqueta migrada no portal do Azure, a mesma alteração é refletida automaticamente no Centro de conformidade e segurança do. No entanto, ao editar uma etiqueta migrada no Centro de conformidade e a segurança, tem de atualizar, em seguida, a etiqueta no portal do Azure para a etiqueta de retirada a alteração. Por exemplo, editar a **adicionar notas para utilização do administrador** caixa de **etiqueta** painel. 
-
-- Etiquetagem unificado é ainda a implementar aos inquilinos. Se ainda não é suportada para o seu inquilino, a migração não será concluída com êxito e corretamente anular as alterações. Até que é suportado para todos os inquilinos, tem de utilizar uma ligação para aceder a opção para migrar o seu inquilino e etiquetas. Esta ligação é fornecida nas instruções que se seguem.
+- Após a migração, ao editar uma etiqueta migrada no portal do Azure, a mesma alteração é refletida automaticamente no Centro de conformidade e segurança do. No entanto, ao editar uma etiqueta migrada no Centro de conformidade e a segurança, terá de voltar para o portal do Azure, **unificada do Azure Information Protection – etiquetagem** painel e selecione **Publish**. Esta ação adicional é necessário para clientes do Azure Information Protection recolher as alterações de etiqueta.
 
 ### <a name="label-settings-that-are-not-supported-in-the-security--compliance-center"></a>Definições de etiquetas que não são suportadas no Centro de conformidade e segurança do
 
-Utilize a tabela seguinte para identificar quais as definições de configuração de uma etiqueta migrada não são suportadas para clientes que utilizam estas etiquetas, e se deve editar e publicar a etiqueta migrada no Centro de conformidade e segurança do. Se publicar as etiquetas que são identificadas a serem excluídos da publicação, não existem etiquetas exibir para os clientes que suportam a etiquetagem unificada.
+Utilize a tabela seguinte para identificar quais as definições de configuração de uma etiqueta migrada não são suportados pelos clientes unificados de etiquetas ou são suportadas com limitações. Para evitar confusões, recomendamos que não a configurar as definições que não têm efeito nos clientes de etiquetas unificados.
 
 Clientes do Azure Information Protection podem utilizar estas definições de etiqueta sem problemas, porque eles continuam a transferir as etiquetas do portal do Azure.
 
-|Configuração de etiqueta|Suportado no Centro de conformidade e segurança do|Excluir da edição e no Centro de conformidade de segurança e de publicação|
+|Configuração de etiqueta|Suportados pelos clientes de etiquetas unificados|Excluir da edição no Centro de conformidade e segurança do|
 |-------------------|---------------------------------------------|-------------------------|
 |Estado ativado ou desativado<br /><br />Notas: Não sincronizados para o Centro de conformidade e segurança |Não aplicável|Não aplicável|
 |Cor da etiqueta: selecione na lista ou especifique usando código RGB<br /><br />Notas: Cores de etiqueta não são suportadas pelo centro de conformidade e segurança do |Não aplicável|Não aplicável|
@@ -91,12 +89,7 @@ Clientes do Azure Information Protection podem utilizar estas definições de et
 
 ## <a name="to-migrate-azure-information-protection-labels"></a>Para migrar as etiquetas do Azure Information Protection
 
-> [!IMPORTANT]
-> Não migre as etiquetas até que tiver confirmado que pode editar e publicar as etiquetas de sensibilidade no Centro de conformidade e a segurança do Office 365. Etiquetas de sensibilidade estão a começar a implementar para inquilinos do Office 365, mas ainda não estão disponíveis para todos os inquilinos.
-> 
-> Para verificar: Centro de conformidade e da segurança do Office 365, aceda a **classificações** > **etiquetas**e ver se tem um **sensibilidade** separador. Se não vir neste separador, o seu inquilino ainda não está pronto para procurar etiquetas de sensibilidade e não deve migrar suas etiquetas do Azure Information Protection neste momento.
-
-Quando tiver confirmado que o seu inquilino suporta etiquetas de sensibilidade no Centro de conformidade de segurança e, utilize as seguintes instruções para migrar o seu inquilino e etiquetas do Azure Information Protection.
+Utilize as seguintes instruções para migrar o seu inquilino e etiquetas do Azure Information Protection para utilizar a etiquetagem unificada novo armazenam.
 
 Tem de ser um administrador global para migrar as suas etiquetas.
 
@@ -106,6 +99,8 @@ Tem de ser um administrador global para migrar as suas etiquetas.
 
 Para as etiquetas que migrado com êxito, eles podem agora ser utilizados pelo [clientes que suportam a etiquetagem unificada](#clients-that-support-unified-labeling). No entanto, é necessário publicar primeiro estas etiquetas no Centro de conformidade e segurança.
 
+> [!IMPORTANT]
+> Se editar as etiquetas fora do portal do Azure, para clientes do Azure Information Protection, regresse a este **unificada do Azure Information Protection – etiquetagem** painel e selecione **Publish**.
 
 ### <a name="clients-that-support-unified-labeling"></a>Clientes que suportam a etiquetagem unificada
 

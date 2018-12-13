@@ -28,6 +28,7 @@
 ##### [Tarefas que costumava realizar com a aplicação de partilha RMS](upgrade-client-app.md)
 ### [Cliente de etiquetagem unificado do Azure Information Protection (PRÉ-VISUALIZAÇÃO)](unifiedlabelingclient-version-release-history.md)
 ### [Transferir e instalar o cliente de etiquetagem unificado do Azure Information Protection (PRÉ-VISUALIZAÇÃO)](install-unifiedlabelingclient-app.md)
+### [Leitores de PDF protegidos](protected-pdf-readers.md)
 ### [Notas de implementação do cliente RMS](client-deployment-notes.md)
 ### [Proteção RMS com o Windows Server FCI](configure-fci.md)
 #### [Script do PowerShell](fci-script.md)

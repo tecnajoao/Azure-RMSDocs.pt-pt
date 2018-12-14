@@ -4,22 +4,22 @@ description: O serviço Azure Rights Management tem de ser ativado antes de a su
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/06/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0642dcf6b2d8db1921cd2c5d4d662a36e8f78ead
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 4eb4b477091990bfff036288cf2d33795bafeb3d
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149400"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305442"
 ---
 # <a name="activating-azure-rights-management"></a>Ativar o Azure Rights Management
 
->*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!NOTE]
 > Estas informações de configuração são destinadas aos administradores responsáveis por um serviço que se aplica a todos os utilizadores de uma organização. Se estiver à procura de ajuda de utilizador e de informações sobre como utilizar a funcionalidade Rights Management para uma aplicação específica ou como abrir um ficheiro ou enviar um e-mail protegido por direitos, utilize a ajuda e as orientações incluídas na sua aplicação.
@@ -35,9 +35,9 @@ Quando o serviço Azure Rights Management do Azure Information Protection é ati
 
 Quando tiver um plano de serviço que inclui o Azure Rights Management, não poderá ter de ativar o serviço:
 
-- **Se a sua subscrição que inclui o Azure Rights Management ou do Azure Information Protection foi obtida até o final de Fevereiro de 2018 ou posterior:** o serviço é ativado automaticamente para. Não é necessário que ativar o serviço, a menos que ou outro administrador global para a sua organização desativado o Azure Rights Management.
+- **Se a sua subscrição que inclui o Azure Rights Management ou do Azure Information Protection foi obtida até o final de Fevereiro de 2018 ou posterior:** O serviço é ativado automaticamente para. Não é necessário que ativar o serviço, a menos que ou outro administrador global para a sua organização desativado o Azure Rights Management.
 
-- **Se a sua subscrição que inclui o Azure Rights Management ou do Azure Information Protection foi obtida antes ou durante a Fevereiro de 2018:** Microsoft está a ser iniciado ativar o serviço Azure Rights Management para estas subscrições se seu inquilino é com o Exchange Online. Para estas subscrições, a ativação automática é começar a implementar 1 de Agosto de 2018 quando o serviço será ativado para, a menos que vê **AutomaticServiceUpdateEnabled** está definida como **falso** quando Execute [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps). 
+- **Se a sua subscrição que inclui o Azure Rights Management ou do Azure Information Protection foi obtida antes ou durante a Fevereiro de 2018:** Microsoft está a iniciar ativar o serviço Azure Rights Management para estas subscrições se seu inquilino está a utilizar o Exchange Online. Para estas subscrições, a ativação automática é começar a implementar 1 de Agosto de 2018 quando o serviço será ativado para, a menos que vê **AutomaticServiceUpdateEnabled** está definida como **falso** quando Execute [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps). 
 
 Se nenhum dos cenários subsequentes se aplicar ao utilizador, tem de ativar manualmente o serviço de proteção. 
 
@@ -52,7 +52,7 @@ Para utilizar esta solução de proteção de dados, sua organização tem de te
 
 - Um [plano do Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) 
 
-- Uma [plano do Office 365 que inclua o Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+- Uma [plano do Office 365 que inclua o Rights Management](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 Quando o serviço Azure Rights Management está ativado, todos os utilizadores na sua organização podem aplicar a proteção de informações aos respetivos documentos e e-mails e todos os utilizadores podem abrir (consumir) documentos e e-mails que foram protegidos pelo Azure Rights Management serviço. No entanto, se preferir, pode restringir quem pode aplicar a proteção de informações, ao utilizar controlos de inclusão para uma implementação faseada. Para obter mais informações, consulte a secção [Configurar os controlos de inclusão para uma implementação faseada](#configuring-onboarding-controls-for-a-phased-deployment) neste artigo.
 
@@ -78,9 +78,9 @@ Em alternativa, pode utilizar os seguintes comandos do PowerShell:
 Se não quiser que todos os utilizadores possam proteger documentos e e-mails imediatamente com o Azure Rights Management, pode configurar os controlos de inclusão de utilizador utilizando o [Set-AadrmOnboardingControlPolicy](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy) comando do PowerShell. Pode executar este comando antes ou depois de ativar o serviço Azure Rights Management.
 
 > [!IMPORTANT]
-> Para executar este comando, tem de ter no mínimo a versão **2.1.0.0** do [módulo do PowerShell para o Azure Rights Management](https://go.microsoft.com/fwlink/?LinkId=257721).
+> Para executar este comando, tem de ter no mínimo a versão **2.1.0.0** do [módulo do PowerShell para o Azure Rights Management](https://www.powershellgallery.com/packages/AADRM).
 >
-> Para verificar a versão que instalou, execute: **(Get-Module aadrm –ListAvailable).Version**
+> Para verificar a versão que instalou, execute: **(Get-Module aadrm – ListAvailable). Versão**
 
 Por exemplo, se pretender inicialmente que apenas os administradores no grupo "Departamento de TI" (que tem uma ID de objeto de fbb99ded-32a0-45f1-b038-38b519009503) possam proteger conteúdo para fins de teste, utilize o seguinte comando:
 

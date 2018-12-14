@@ -4,22 +4,22 @@ description: Informações sobre as operações de ciclo de vida relevantes se g
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/29/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 098f7834e4765dcb020817014f9357139e42207a
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 92b5b2dad15c2ec33169e72e69f87bddec5e56df
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147105"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305323"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Gerida pelo cliente: Operações de ciclo de vida de chave de inquilino
 
->*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Se gerir a sua chave de inquilino do Azure Information Protection (a traga a sua própria chave ou BYOK, cenário), utilize as secções seguintes para obter mais informações sobre as operações de ciclo de vida que são relevantes para esta topologia.
 
@@ -43,7 +43,7 @@ Exemplos de quando poderá ter de recodificação para o Azure Information Prote
 
 Para recodificar a chave de outro por si, pode criar uma nova chave no Cofre de chaves do Azure ou utilizar uma chave diferente que já se encontra no Azure Key Vault. Em seguida, siga os mesmos procedimentos que utilizou para implementar o BYOK do Azure Information Protection. 
 
-1. Apenas se a nova chave está num cofre de chaves diferente para aquele já estiver a utilizar para o Azure Information Protection: autorizar o Azure Information Protection para utilizar o Cofre de chaves, com o [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) cmdlet.
+1. Apenas se a nova chave num cofre de chaves diferente para aquele que já estiver a utilizar para o Azure Information Protection: Autorizar o Azure Information Protection para utilizar o Cofre de chaves, com o [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) cmdlet.
 
 2. Se o Azure Information Protection já não sabe sobre a chave de que pretende utilizar, execute [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey) cmdlet.
 
@@ -60,7 +60,7 @@ Para obter mais informações sobre cada um destes passos:
 ## <a name="backup-and-recover-your-tenant-key"></a>Efetuar cópia de segurança e recuperar a chave de inquilino
 Uma vez que estiver a gerir a chave de inquilino, é responsável por fazer backup da chave que utiliza o Azure Information Protection. 
 
-Se gerou a chave de inquilino no local, num HSM da Thales: para fazer uma cópia de segurança da chave, criar cópias de segurança o ficheiro de chave tokenized, o ficheiro de universo e os cartões de administrador. Quando transferir a chave para o Azure Key Vault, o serviço guarda o ficheiro de chave tokenized, para proteger contra falhas de quaisquer nós de serviço. Este ficheiro está vinculado ao mundo da segurança da instância ou região do Azure específica. No entanto, não considere este ficheiro de chave tokenized para ser uma cópia de segurança completa. Por exemplo, se alguma vez precisar de uma cópia de texto simples da sua chave para utilizar fora de um HSM da Thales, Azure Key Vault não é possível recuperá-lo para, porque tem apenas uma cópia não recuperável.
+Se a chave de inquilino no local, é gerado num HSM da Thales: Para fazer uma cópia de segurança da chave, criar cópias de segurança o ficheiro de chave tokenized, o ficheiro de universo e os cartões de administrador. Quando transferir a chave para o Azure Key Vault, o serviço guarda o ficheiro de chave tokenized, para proteger contra falhas de quaisquer nós de serviço. Este ficheiro está vinculado ao mundo da segurança da instância ou região do Azure específica. No entanto, não considere este ficheiro de chave tokenized para ser uma cópia de segurança completa. Por exemplo, se alguma vez precisar de uma cópia de texto simples da sua chave para utilizar fora de um HSM da Thales, Azure Key Vault não é possível recuperá-lo para, porque tem apenas uma cópia não recuperável.
 
 O Azure Key Vault tem um [cmdlet de cópia de segurança](/powershell/module/azurerm.keyvault/Backup-AzureKeyVaultKey) que pode usar para fazer cópias de segurança de uma chave baixá-lo e armazenando-o num ficheiro. Uma vez que o conteúdo baixado é criptografado, não pode ser utilizado fora do Azure Key Vault. 
 

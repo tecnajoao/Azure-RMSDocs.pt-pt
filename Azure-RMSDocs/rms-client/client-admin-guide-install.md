@@ -10,18 +10,18 @@ ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f4067698a97ded8aa4c7fd6144fa7738822f1910
-ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
+ms.openlocfilehash: 8df9ded90829c620751529f011a0113e6f51b30e
+ms.sourcegitcommit: 2a1c0882d2b0400f4da6370dbc1830df09867e3d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51644680"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53218532"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guia do administrador: Instalar o cliente do Azure Information Protection para utilizadores
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Aplica-se a: Serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
-Antes de instalar o cliente do Azure Information Protection na sua rede empresarial, verifique que os computadores têm as versões de sistema operativo necessária e as aplicações do Azure Information Protection: [requisitos para obter informações do Azure Proteção](../requirements.md). 
+Antes de instalar o cliente do Azure Information Protection na sua rede empresarial, verifique que os computadores têm as versões de sistema operativo necessária e as aplicações do Azure Information Protection: [Requisitos do Azure Information Protection](../requirements.md). 
 
 Em seguida, verifique os pré-requisitos adicionais que podem ser necessários para o cliente do Azure Information Protection, conforme documentado na próxima seção. Nem todos os pré-requisitos são verificados pelo programa de instalação.
 
@@ -39,7 +39,7 @@ Em seguida, verifique os pré-requisitos adicionais que podem ser necessários p
 
 - Versão do Windows PowerShell 4.0
     
-    O módulo do PowerShell para o cliente requer o Windows PowerShell versão 4.0, que poderá ter de ser instalado em sistemas operativos mais antigos. Para obter mais informações, veja [Como Instalar o Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). O instalador não verifica nem instala este pré-requisito automaticamente. Para verificar que versão do Windows PowerShell está a executar, escreva `$PSVersionTable` numa sessão do PowerShell.
+    O módulo do PowerShell para o cliente requer o Windows PowerShell versão 4.0, que poderá ter de ser instalado em sistemas operativos mais antigos. Para obter mais informações, veja [Como Instalar o Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). O instalador não verifica nem instala este pré-requisito automaticamente. Para verificar que versão do Windows PowerShell está a executar, escreva `$PSVersionTable` numa sessão do PowerShell.
 
 - Resolução de ecrã superior a 800 x 600
     
@@ -52,13 +52,13 @@ Em seguida, verifique os pré-requisitos adicionais que podem ser necessários p
 
 - KB 2533623
     
-    Os computadores que executem o Windows 7 Service Pack 1 requerem a KB 2533623. Para obter mais informações sobre esta atualização, veja [Aviso de Segurança da Microsoft: o carregamento de bibliotecas não seguro pode permitir a execução remota de códigos](https://support.microsoft.com/en-us/kb/2533623). Poderá instalar diretamente esta atualização ou ser substituída por outra atualização que a instala por si.
+    Os computadores que executem o Windows 7 Service Pack 1 requerem a KB 2533623. Para obter mais informações sobre esta atualização, consulte [aviso de segurança da Microsoft: Carregamento de bibliotecas não seguro pode permitir a execução de código remoto](https://support.microsoft.com/en-us/kb/2533623). Poderá instalar diretamente esta atualização ou ser substituída por outra atualização que a instala por si.
     
     Se esta atualização for obrigatória e não estiver instalada, a instalação do cliente avisa-o de que tem de ser instalada. Esta atualização pode ser instalada após a instalação do cliente, mas algumas ações serão bloqueadas e a mensagem é apresentada novamente.  
 
 - Visual C++ Redistributable para Visual Studio 2015 (versão de 32 bits)
     
-    Para computadores que executam o Windows 7 Service Pack 1, instale **vc_redist.x86.exe** entre as seguintes opções de página de transferência: [Visual C++ Redistributable para Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
+    Para computadores que executam o Windows 7 Service Pack 1, instale **vc_redist.x86.exe** página de transferência entre as seguintes opções: [Visual C++ Redistributable para Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
     
     A instalação do cliente não verifica este pré-requisito, mas é necessário para o cliente do Azure Information Protection classificar e proteger ficheiros PDF.
 
@@ -66,11 +66,11 @@ Em seguida, verifique os pré-requisitos adicionais que podem ser necessários p
     
     Para o Office 2013 e versões posteriores, configure a política de grupo para garantir que o **Microsoft Azure Information Protection** suplemento para aplicativos do Office está sempre ativada. Sem esta configuração, o suplemento do Microsoft Azure Information Protection pode obter desativado e os utilizadores não poderão etiquetar os documentos e e-mails na sua aplicação do Office.
     
-    - Para o Outlook: Utilizar a política de grupo definição documentados em [controlo de administrador de sistema sobre suplementos](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) na documentação do Office.
+    - Para o Outlook: Usar a diretiva de grupo documentados em [controlo de administrador de sistema sobre suplementos](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) na documentação do Office.
     
-    - Para Word, Excel e PowerPoint: utilizar a definição de política de grupo **lista de suplementos gerenciados** documentados no artigo de suporte [Add-ins carregados devido a configurações de diretiva de grupo do Office 2013 e Office 2016 programas](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off). 
+    - Para Word, Excel e PowerPoint: Utilizar a definição de política de grupo **lista de suplementos gerenciados** documentados no artigo de suporte [Add-ins carregados devido a definições de política de grupo para programas do Office 2013 e Office 2016](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off). 
         
-        Especifique os seguintes identificadores programáticos (ProgID) para o Azure Information Protection e definir a opção como **1: O suplemento está sempre ativado**.
+        Especifique os seguintes identificadores programáticos (ProgID) para o Azure Information Protection e definir a opção **1: O suplemento está sempre ativado**.
         
         Para o Word: `MSIP.WordAddin`
         
@@ -86,9 +86,9 @@ Em seguida, verifique os pré-requisitos adicionais que podem ser necessários p
 
 Existem duas opções para instalar o cliente para utilizadores:
 
-**Execute a versão do executável (.exe) do cliente**: o método de instalação recomendado que pode executar interativamente ou silenciosamente. Este método tem mais flexibilidade e é recomendado porque o instalador verifica muitos dos pré-requisitos e pode instalar automaticamente pré-requisitos ausentes. [Instruções](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)
+**Executar a versão do executável (.exe) do cliente**: O método de instalação recomendado que pode executar interativamente ou silenciosamente. Este método tem mais flexibilidade e é recomendado porque o instalador verifica muitos dos pré-requisitos e pode instalar automaticamente pré-requisitos ausentes. [Instruções](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)
 
-**Implementar a versão do instalador do Windows (.msi) do cliente**: suportado apenas para instalações silenciosas que utilizam um mecanismo de implementação central, como uma política de grupo, o Configuration Manager e o Microsoft Intune. Este método é necessário para computadores com Windows 10 geridos pelo Intune e pela gestão de dispositivos móveis (MDM) porque para estes computadores, os ficheiros executáveis não têm suporte para instalação. No entanto, quando utilizar este método de instalação, deve verificar e instalar manualmente ou desinstalar o software dependente que o instalador do executável deve executar para cada computador. [Instruções](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)
+**Implementar a versão do Windows installer (MSI) do cliente**: Suporte para instalações silenciosas apenas que utilizam um mecanismo de implementação central, como diretiva de grupo, o Configuration Manager e o Microsoft Intune. Este método é necessário para computadores com Windows 10 geridos pelo Intune e pela gestão de dispositivos móveis (MDM) porque para estes computadores, os ficheiros executáveis não têm suporte para instalação. No entanto, quando utilizar este método de instalação, deve verificar e instalar manualmente ou desinstalar o software dependente que o instalador do executável deve executar para cada computador. [Instruções](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)
 
 Depois do Azure Information Protection é instalado, pode atualizar este cliente, repetindo o seu método de instalação escolhido, ou utilizar o Windows Update para manter o cliente atualizado automaticamente. Para obter mais informações sobre a atualização, consulte a [Upgrading e manter o cliente do Azure Information Protection](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client) secção.
 
@@ -108,11 +108,11 @@ Utilize as instruções a seguir para instalar o cliente quando não estiver a u
     
     Parâmetros adicionais que não estão listados no ecrã de ajuda:
     
-    - **ServiceLocation**: utilize este parâmetro se estiver a instalar o cliente em computadores com o Office 2010 e se os utilizadores não forem administradores locais nos computadores deles ou se não quiser que lhes seja pedido. [Mais informações](#more-information-about-the-servicelocation-installation-parameter) 
+    - **ServiceLocation**: Utilize este parâmetro se estiver a instalar o cliente em computadores que executam o Office 2010 e os utilizadores não sejam administradores locais em seus computadores ou não pretender que lhes seja pedido. [Mais informações](#more-information-about-the-servicelocation-installation-parameter) 
     
-    - **DowngradeDotNetRequirement**: utilize este parâmetro para ignorar o requisito para o Microsoft Framework .NET versão 4.6.2. [Mais informações](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
+    - **DowngradeDotNetRequirement**: Utilize este parâmetro para contornar o requisito do Microsoft Framework .NET versão 4.6.2. [Mais informações](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
     
-    - **AllowTelemetry=0**: utilize este parâmetro para desativar a opção de instalação **Ajude a melhorar o Azure Information Protection ao enviar estatísticas de utilização para a Microsoft**. 
+    - **AllowTelemetry = 0**: Utilize este parâmetro para desativar a opção de instalação **ajude a melhorar o Azure Information Protection ao enviar estatísticas de utilização à Microsoft**. 
     
 3. Se estiver a instalar interativamente, selecione a opção para instalar uma **política de demonstração** se não puder ligar-se ao Office 365 ou ao Azure Active Directory e quiser ver e experimentar o lado do cliente do Azure Information Protection com uma política local para efeitos de demonstração. Quando o cliente se liga a um serviço Azure Information Protection, esta política de demonstração é substituída pela política do Azure Information Protection da organização.
     
@@ -128,9 +128,9 @@ Utilize as instruções a seguir para instalar o cliente quando não estiver a u
  
     Este ficheiro tem o seguinte formato de nomes: `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`
     
-    Por exemplo: **Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
+    Por exemplo: **Microsoft_Azure_Information_Protection_20161201093652_000_MSIP. Setup.Main.msi.log**
     
-    Procure a seguinte cadeia neste ficheiro de registo: **Product: Microsoft Azure Information Protection -- Installation completed successfully.** Se a instalação falhou, este ficheiro de registo contém detalhes que o ajudam a identificar e resolver qualquer tipo de problemas.
+    Neste ficheiro de registo, procure a seguinte cadeia: **Produto: Microsoft Azure Information Protection-- Instalação concluída com êxito.** Se a instalação falhou, este ficheiro de registo contém detalhes que o ajudam a identificar e resolver qualquer tipo de problemas.
 
 #### <a name="more-information-about-the-servicelocation-installation-parameter"></a>Mais informações sobre o parâmetro de instalação ServiceLocation
 

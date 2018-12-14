@@ -4,27 +4,27 @@ description: Instruções como classificar os documentos e e-mails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: d65c7690-fab7-4823-845c-8c73903e9c79
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e49cd5da0c34c8dd6fa537bca3d90ba56c32e690
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 823f252756e18d5a2ab2239afb85b58fc3aa048e
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150233"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305306"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-azure-information-protection"></a>Guia de utilizador: Classificar um ficheiro ou e-mail utilizando o Azure Information Protection
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
+>*Aplica-se a: Serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
 
 > [!NOTE]
 > Utilize estas instruções para ajudá-lo a classificar (mas não proteger) seus documentos e e-mails. Se precisar de também proteger os seus documentos e e-mails, veja a [classificar e proteger instruções](client-classify-protect.md). Se não tiver a certeza de qual conjunto de instruções para utilizar, contacte o administrador ou suporte técnico.
 
-A forma mais fácil de classificar os documentos e e-mails é durante a criação ou edição dos mesmos nas suas aplicações de ambiente de trabalho do Office: **Word**, **Excel**, **PowerPoint**,  **Outlook**. 
+A maneira mais fácil de classificar os documentos e e-mails é durante a criação ou edição dos mesmos nas suas aplicações de ambiente de trabalho do Office: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
 No entanto, também pode classificar ficheiros utilizando **Explorador de ficheiros**. Este método suporta tipos de ficheiro adicionais e é uma maneira conveniente de classificar vários ficheiros ao mesmo tempo. 
 
@@ -70,7 +70,7 @@ Quando seleciona uma pasta, todos os ficheiros nessa pasta e eventuais subpastas
 
 Quando utilizar o Explorador de ficheiros para classificar os seus ficheiros, se um ou mais etiquetas aparecerem escurecidas, os ficheiros que selecionou não suportará a classificação sem também protegê-los.
 
-Guia do administrador contém uma lista completa dos tipos de ficheiro que suportam a classificação sem proteção: [tipos de ficheiro suportados apenas para classificação](client-admin-guide-file-types.md#file-types-supported-for-classification-only).
+Guia do administrador contém uma lista completa dos tipos de ficheiro que suportam a classificação sem proteção: [Tipos de ficheiro suportados apenas para classificação](client-admin-guide-file-types.md#file-types-supported-for-classification-only).
 
 ### <a name="to-classify-a-file-by-using-file-explorer"></a>Para classificar um ficheiro ao utilizar o Explorador de ficheiros
 

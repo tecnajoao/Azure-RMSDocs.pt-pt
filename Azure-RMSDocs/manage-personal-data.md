@@ -4,18 +4,18 @@ description: Informações sobre os dados pessoais que são utilizados pelo Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: 6904c8c1e879a4d076486fae17a1dbdbd71cb4b4
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 4e44796d3bd2fdf1fd2f0c39cc759f16d87267a1
+ms.sourcegitcommit: db60fe8f74ffaa4f6ffbf5defb22efc476c28312
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150437"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53319419"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gerir dados pessoais para o Azure Information Protection
 
@@ -251,7 +251,7 @@ Para eliminar os dados pessoais nos ficheiros de registo de cliente e registos d
 
 Utilize os seguintes três passos para pedir que a Microsoft elimina os dados pessoais em registos, de logs de administração ou registos de utilização para o serviço Azure Rights Management de controlo de documentos. 
 
-**Passo 1: Iniciar Eliminar pedido**
+**Passo 1: Pedido de início de eliminação**
 [contacte o suporte da Microsoft](information-support.md#to-contact-microsoft-support) para abrir um incidente de suporte do Azure Information Protection com um pedido para a eliminação de dados do seu inquilino. Tem de provar que é um administrador inquilino do Azure Information Protection e compreender que este processo demorará vários dias para confirmar. Ao submeter o pedido, terá de fornecer informações adicionais, consoante os dados que precisam de eliminar.
 
 - Para eliminar o registo de administração, forneça o **data de fim**. Todos os registos de administrador, até que a data de fim serão eliminados.

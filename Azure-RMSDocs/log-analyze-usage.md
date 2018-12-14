@@ -4,24 +4,24 @@ description: Informações e instruções sobre como utilizar os registos de uti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1deea1b4353e2d48c85ae24625ab29eca96a3968
-ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
+ms.openlocfilehash: 3d287df4fbea3f4b040444182aed89da7c470ea1
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47211331"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305646"
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Registar e analisar a utilização do serviço Azure Rights Management
 
->*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Utilize estas informações para o ajudar a compreender como pode utilizar o registo de utilização do serviço Azure Rights Management do Azure Information Protection. Este serviço fornece a proteção de dados de documentos da sua organização e mensagens de correio eletrónico e pode registar cada solicitação a ele. Estes pedidos incluem quando os utilizadores protegerem documentos e e-mail e a consumam este conteúdo, ações efetuadas pelos seus administradores para este serviço e ações realizadas por operadores da Microsoft para suportar a implementação do Azure Information Protection. 
+Utilize estas informações para ajudar a compreender como pode utilizar o registo de utilização do serviço do Azure Rights Management do Azure Information Protection. Este serviço fornece a proteção de dados de documentos da sua organização e mensagens de correio eletrónico e pode registar cada solicitação a ele. Estes pedidos incluem quando os utilizadores protegerem documentos e e-mail e a consumam este conteúdo, ações efetuadas pelos seus administradores para este serviço e ações realizadas por operadores da Microsoft para suportar a implementação do Azure Information Protection. 
 
 Em seguida, pode utilizar estes registos do serviço Azure Rights Management para suportar os seguintes cenários empresariais:
 
@@ -31,13 +31,13 @@ Em seguida, pode utilizar estes registos do serviço Azure Rights Management par
 
 -   **Monitorizar abusos**
 
-    As informações de registo do Azure Rights Management são-lhe disponibilizadas quase em tempo real, para que possa monitorizar continuamente a utilização do serviço Rights Management da sua empresa. 99,9% dos registos estão disponíveis dentro de 15 minutos após uma ação iniciada para o serviço.
+    Informações de registo de Rights Management do Azure são-lhe disponibilizadas quase em tempo real, para que possa monitorizar continuamente a utilização da sua empresa do serviço Rights Management. 99,9% dos registos estão disponíveis dentro de 15 minutos após uma ação iniciada para o serviço.
 
     Por exemplo, poderá querer ser alertado caso ocorra um aumento súbito de pessoas que estão a ler dados protegidos fora do horário de trabalho normal, o que pode significar que um utilizador mal-intencionado está a recolher informações para vender à concorrência. Em alternativa, poderá querer ser alertado se o mesmo utilizador parecer aceder a dados a partir de dois endereços IP diferentes num curto período de tempo, o que pode significar que uma conta de utilizador foi comprometida.
 
 -   **Efetuar análises forenses**
 
-    Se ocorrer uma fuga de informações, é provável que lhe seja pedido para indicar quem acedeu recentemente a documentos específicos e a que tipo de informações uma pessoa suspeita acedeu recentemente. Pode responder a esses tipos de perguntas quando utiliza este registo porque as pessoas que utilizam conteúdos protegidos têm sempre de obter uma licença de Rights Management para abrir documentos e imagens protegidos pelo serviço Azure Rights Management, mesmo que esses arquivos são movidos por e-mail ou copiados para unidades USB ou outros dispositivos de armazenamento. Isto significa que, se proteger os seus dados com o serviço Azure Rights Management, pode utilizar os registos do mesmo como fonte definitiva de informações para análises forenses.
+    Se ocorrer uma fuga de informações, é provável que lhe seja pedido para indicar quem acedeu recentemente a documentos específicos e a que tipo de informações uma pessoa suspeita acedeu recentemente. Pode responder a esses tipos de perguntas quando utiliza este registo porque as pessoas que utilizam conteúdos protegidos têm sempre de obter uma licença de Rights Management para abrir documentos e imagens protegidos pelo serviço Azure Rights Management, mesmo que esses arquivos são movidos por e-mail ou copiados para unidades USB ou outros dispositivos de armazenamento. Isso significa que pode utilizar estes registos como fonte definitiva de informações para análise forense quando proteger os seus dados com o serviço Azure Rights Management.
 
 Além deste registo de utilização, também tem as seguintes opções de registo:
 
@@ -52,8 +52,8 @@ Além disso, as informações dos registos de utilização do cliente do Azure I
 
 Utilize as secções seguintes para obter mais informações sobre o registo de utilização para o serviço Azure Rights Management. 
 
-## <a name="how-to-enable-azure-rights-management-usage-logging"></a>Como ativar o registo de utilização do Azure Rights Management
-A partir de fevereiro de 2016, o registo de utilização do Azure Rights Management passou a ser ativado por predefinição para todos os clientes. Isto aplica-se aos clientes que ativaram o serviço Azure Rights Management antes e após fevereiro de 2016. 
+## <a name="how-to-enable-azure-rightsmanagement-usage-logging"></a>Como ativar o registo de utilização do Azure Rights Management
+A partir de Fevereiro de 2016, registo de utilização do Azure Rights Management está ativado por predefinição para todos os clientes. Isto aplica-se aos clientes que ativaram o serviço Azure Rights Management antes e após fevereiro de 2016. 
 
 > [!NOTE]
 > Não existem custos adicionais associados ao armazenamento dos registos nem à funcionalidade do registo.
@@ -133,7 +133,7 @@ A primeira linha indica que estes são registos do Azure Rights Management. A se
 
 A terceira linha apresenta uma lista composta por nomes de campos que são separados por tabulações:
 
-**#Fields: date            time            row-id        request-type           user-id       result          correlation-id          content-id                owner-email           issuer                     template-id             file-name                  date-published      c-info         c-ip            admin-action            acting-as-user**
+**#Fields: tempo id de linha tipo de pedido id de utilizador resultado id de correlação e-mail de proprietário de id de conteúdo emissor id do modelo-nome do ficheiro data de publicação de datas      admin-action de informações de c c-ip acting-as-user**
 
 Cada uma das linhas subsequentes é um registo. Os valores dos campos estão na mesma ordem da linha anterior e são separados por tabulações. Utilize a seguinte tabela para interpretar os campos.
 
@@ -151,7 +151,7 @@ Cada uma das linhas subsequentes é um registo. Os valores dos campos estão na 
 |issuer|Cadeia|Endereço de e-mail do emissor do documento. <br /><br /> Este campo fica em branco se o tipo de pedido for RevokeAccess.|alice@contoso.com (ou) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
 |template-id|Cadeia|ID do modelo utilizado para proteger o documento. <br /><br /> Este campo fica em branco se o tipo de pedido for RevokeAccess.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
 |file-name|Cadeia|O nome de ficheiro de um documento protegido que é controlado com o cliente do Azure Information Protection para Windows ou a aplicação de partilha Rights Management para Windows. <br /><br />Atualmente, alguns ficheiros (como documentos do Office) são apresentados como GUIDs em vez do nome de ficheiro real.<br /><br /> Este campo fica em branco se o tipo de pedido for RevokeAccess.|DocumentoConfidencial.docx|
-|date-published|Data|Data em que o ficheiro foi protegido.<br /><br /> Este campo fica em branco se o tipo de pedido for RevokeAccess.|2015-10-15T21:37:00|
+|date-published|Date|Data em que o ficheiro foi protegido.<br /><br /> Este campo fica em branco se o tipo de pedido for RevokeAccess.|2015-10-15T21:37:00|
 |c-info|Cadeia|Informações sobre a plataforma de cliente que está a efetuar o pedido.<br /><br />A cadeia específica varia em função da aplicação (por exemplo, do sistema operativo ou do browser).|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|Endereço|Endereço IP do cliente que efetua o pedido.|64.51.202.144|
 |admin-action|Booleano|Indica se um administrador acedeu ao site de controlo de documentos no modo de Administrador.|Verdadeiro|
@@ -163,7 +163,7 @@ Apesar de o campo user-id indicar geralmente o utilizador que efetuou o pedido, 
 
 -   O valor **"microsoftrmsonline@&lt;IDDoSeuInquilino&gt;.rms.&lt;região&gt;.aadrm.com"**.
 
-    Isto indica que o pedido está a ser efetuado por um serviço do Office 365, tal como o Exchange Online ou o SharePoint Online. Na cadeia, *&lt;IDDoSeuInquilino&gt;* é o GUID para o seu inquilino e *&lt;região&gt;* é a região em que o seu inquilino está registado. Por exemplo, **na** significa North America (América do Norte), **eu** significa Europa e **ap** significa Ásia.
+    Isto indica que um serviço do Office 365, como o Exchange Online ou SharePoint Online, é que efetua o pedido. Na cadeia, *&lt;IDDoSeuInquilino&gt;* é o GUID para o seu inquilino e *&lt;região&gt;* é a região em que o seu inquilino está registado. Por exemplo, **na** significa North America (América do Norte), **eu** significa Europa e **ap** significa Ásia.
 
 -   Se estiver a utilizar o conector RMS.
 
@@ -190,7 +190,7 @@ Há muitos tipos de pedido para o serviço Azure Rights Management, mas a seguin
 |FECreatePublishingLicenseV1|É igual à combinação dos pedidos Certify e GetClientLicensorCert, feito a partir de clientes móveis.|
 |FEGetAllTemplates|É efetuada uma chamada a partir de um dispositivo móvel (front-end) para obter os modelos.|
 |FindServiceLocationsForUser|É efetuada uma chamada de consulta de URL, que é utilizada para chamar o pedido Certify ou AcquireLicense.|
-|GetAllDocs|É feita uma chamada a partir do site de controlo de documentos para carregar a página **todos os documentos** para um utilizador ou procurar todos os documentos para o inquilino. Utilize este valor com os campos admin-action e acting-as-admin:<br /><br />- admin-action está vazio: um utilizador vê a página **todos os documentos** para os seus próprios documentos.<br /><br />- admin-action é verdadeiro e acting-as-user está vazio: um administrador vê todos os documentos para o respetivo inquilino.<br /><br />- admin-action é verdadeiro e acting-as-user não está vazio: um administrador vê **todos os documentos** para um utilizador.|
+|GetAllDocs|É feita uma chamada a partir do site de controlo de documentos para carregar a página **todos os documentos** para um utilizador ou procurar todos os documentos para o inquilino. Utilize este valor com os campos admin-action e acting-as-admin:<br /><br />-admin-action está vazio: Um utilizador vê a **todos os documentos** página para seus próprios documentos.<br /><br />-admin-action é verdadeiro e acting-as-user está vazia: Um administrador vê todos os documentos para o respetivo inquilino.<br /><br />-admin-action é verdadeiro e acting-as-user não está vazia: Um administrador vê a **todos os documentos** para um utilizador.|
 |GetAllTemplates|É efetuada uma chamada a partir do portal do Azure, para obter todos os modelos.|
 |GetClientLicensorCert|O cliente está a pedir um certificado de publicação (que é posteriormente utilizado para proteger conteúdos) a partir de um computador baseado no Windows.|
 |GetConfiguration|É chamado um cmdlet do PowerShell do Azure para obter a configuração do inquilino do Azure RMS.|

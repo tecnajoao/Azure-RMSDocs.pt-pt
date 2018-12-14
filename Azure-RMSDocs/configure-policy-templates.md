@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 1571939554e64459acd7ec0b7c32e9d40f7bd7eb
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 412b84b705d12efd7259066c0fece68e2ab8c099
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024319"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173949"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurar e gerir modelos do Azure Information Protection
 
->*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Modelos de proteção, também conhecido como modelos do Rights Management, são um agrupamento de definições de proteção definidos pelo administrador do Azure Information Protection. Estas definições incluem a escolhida [direitos de utilização](configure-usage-rights.md) para os utilizadores autorizados e controlos de acesso para a expiração e acesso offline. Estes modelos são integrados com a política do Azure Information Protection: 
 
@@ -79,7 +79,7 @@ Antes de editar estes modelos ou convertê-los em etiquetas, certifique-se de qu
     
     - **Permitir Macros** (nome comum) é adicionado automaticamente. Este direito de utilização é preciso para a barra do Azure Information Protection nas aplicações do Office.
 
-- As definições **Publicado** e **Arquivado** são apresentadas como **Ativado**: **Ligado** e **Ativado**: **Desligado** respetivamente no painel **Etiqueta**. Em modelos que pretende manter, mas não ser visível para utilizadores ou serviços, esses modelos, defina como **Enabled**: **desativar**.
+- **Publicado** e **arquivado** definições são apresentadas como **ativado**: **No** e **ativado**: **Desativar** respetivamente no **etiqueta** painel. Em modelos que pretende manter, mas não ser visível para utilizadores ou serviços, esses modelos, defina como **ativado**: **Desativar**.
 
 - Não é possível copiar ou eliminar um modelo no portal do Azure. Quando o modelo é convertido para uma etiqueta, pode configurar a etiqueta de deixar de utilizar o modelo selecionando **não configurado** para o **definir permissões para documentos e e-mails que contenham esta etiqueta** opção. Em alternativa, pode eliminar a etiqueta. Em ambos os cenários, no entanto, o modelo não é eliminado e permanece num Estado de funcionamento arquivado.
     
@@ -99,7 +99,7 @@ Antes de editar estes modelos ou convertê-los em etiquetas, certifique-se de qu
     
     Por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
 
-2. Do **classificações** > **etiquetas** opção de menu: no **do Azure Information Protection – etiquetas** painel, expanda **proteção modelos**e, em seguida, localize o modelo que pretende configurar.
+2. Do **classificações** > **etiquetas** opção de menu: Sobre o **do Azure Information Protection - etiquetas** painel, expanda **modelos de proteção**e, em seguida, localize o modelo que pretende configurar.
     
 3. Selecione o modelo e, no **rótulo** painel, pode alterar o nome do modelo e a descrição, se necessário, ao editar o **nome a apresentar etiqueta** e **Descrição**. Em seguida, selecione **proteção** que tem um valor de **(chave da cloud) do Azure**, para abrir o **proteção** painel.
 
@@ -126,19 +126,19 @@ Ao converter um modelo numa etiqueta:
 
 - O nome do modelo é convertido num novo nome de etiqueta e a descrição do modelo é convertida na descrição da etiqueta. 
 
-- Se o estado do modelo for publicado, esta definição é mapeada para **Ativado**: **Ligado** na etiqueta, que é agora apresentada como esta etiqueta para os utilizadores quando voltar a publicar a política do Azure Information Protection. Se o estado do modelo foi arquivado, esta definição é mapeada para **Enabled**: **desativar** para a etiqueta e não é apresentada como uma etiqueta disponível aos utilizadores.
+- Se o estado do modelo foi publicado, esta definição é mapeada para **ativado**: **No** para a etiqueta, que é agora apresentada como esta etiqueta para os utilizadores quando voltar a publicar a política do Azure Information Protection. Se o estado do modelo foi arquivado, esta definição é mapeada para **ativado**: **Desativar** para a etiqueta e não é apresentada como uma etiqueta disponível aos utilizadores.
 
 - As definições de proteção são mantidas e pode editá-las se for necessário, além de adicionar outras definições de etiqueta como marcadores visuais e condições.
 
 - O modelo original deixa de ser apresentado em **modelos de proteção** e não pode ser selecionada como um modelo predefinido ao configurar a proteção para uma etiqueta. Para editar este modelo no portal do Azure, agora tem de editar a etiqueta que foi criada quando converter o modelo. O modelo permanece disponível para o serviço Azure Rights Management e ainda pode ser gerido com os [comandos do PowerShell](administer-powershell.md).  
 
-## <a name="to-create-a-new-template"></a>Criar um novo modelo
+## <a name="to-create-a-new-template"></a>Para criar um novo modelo
 
 Quando cria uma nova etiqueta com a definição de proteção do **Azure (chave da cloud)**, nos bastidores, esta ação cria um novo modelo personalizado que pode ser acedido por serviços e aplicações que se integram com o Rights Management modelos.
 
-1. Do **classificações** > **etiquetas** opção de menu: no **do Azure Information Protection – etiquetas** painel, selecione **adicionar uma nova etiqueta** .
+1. Do **classificações** > **etiquetas** opção de menu: Sobre o **do Azure Information Protection - etiquetas** painel, selecione **adicionar uma nova etiqueta**.
 
-2. Na **etiqueta** painel, mantenha a predefinição **ativado**: **no**, em seguida, introduza um nome de etiqueta e descrição para o nome do modelo e a descrição.
+2. Sobre o **rótulo** painel, mantenha a predefinição **ativado**: **No**, em seguida, introduza um nome de etiqueta e descrição para o nome do modelo e a descrição.
 
 3. Para **Defina permissões para documentos e e-mails que contenham esta etiqueta**, selecione **Proteger** e, em seguida, selecione **Proteção**:
     
@@ -152,7 +152,7 @@ Quando cria uma nova etiqueta com a definição de proteção do **Azure (chave 
     
     Embora a etiqueta é ativada, por predefinição, o modelo for arquivado. Para que as aplicações e serviços podem utilizar o modelo para proteger documentos e e-mails, conclua a etapa final para publicar o modelo.
 
-5. Do **classificações** > **políticas** menu opção, selecione a política que contém as novas definições de proteção. Em seguida, selecione **adicionar ou remover etiquetas**. Partir do **política: Adicionar ou remover as etiquetas** painel, selecione a etiqueta criada recentemente que contém as definições de proteção, selecione **OK**e, em seguida, selecione **guardar**.
+5. Do **classificações** > **políticas** menu opção, selecione a política que contém as novas definições de proteção. Em seguida, selecione **adicionar ou remover etiquetas**. Do **política: Adicionar ou remover as etiquetas** painel, selecione a etiqueta criada recentemente que contém as definições de proteção, selecione **OK**e, em seguida, selecione **guardar**.
 
 ## <a name="next-steps"></a>Passos Seguintes
 

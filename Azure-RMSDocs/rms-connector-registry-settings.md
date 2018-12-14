@@ -4,22 +4,22 @@ description: Informações sobre as definições de registo em servidores que ut
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 587138c3d421ffee99462a86b9b19ffbdd42d39e
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 6af7fe3a7b23f655a79d67421f67292416792792
+ms.sourcegitcommit: 0632c89a316ff31f588e9752dd474445983b1690
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149043"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53120590"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Definição de registo para o conetor Rights Management
 
->*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 
 Utilize as tabelas nas secções seguintes apenas se pretender adicionar manualmente ou verificar as definições de registo nos servidores que executam o Exchange, o SharePoint ou o Windows Server. Estas definições de registo configuram os servidores a utilizar o [conector de RMS](deploy-rms-connector.md). O método recomendado para configurar estes servidores é utilizar a ferramenta de configuração do servidor do conetor Microsoft RMS.
@@ -28,7 +28,7 @@ Instruções ao utilizar estas definições:
 
 -   *\<Urldeinquilino >* é o URL do serviço Azure Rights Management para o seu inquilino do Azure Information Protection. Para localizar este valor:
 
-    1.  Executar o [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet para o serviço Azure Rights Management. Se ainda não instalou o módulo do Windows PowerShell para o Azure RMS, consulte [instalar o módulo do PowerShell do AADRM](install-powershell.md).
+    1.  Executar o [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) cmdlet para o serviço Azure Rights Management. Se ainda não instalou o módulo do Windows PowerShell para o Azure RMS, consulte [instalar o módulo do PowerShell do AADRM](install-powershell.md).
 
     2.  A partir da saída, identifique o valor **LicensingIntranetDistributionPointUrl**.
 
@@ -53,7 +53,7 @@ Instruções ao utilizar estas definições:
 
 **Tipo:** Reg_SZ
 
-**Valor:** predefinido
+**Valor:** Predefinição
 
 **Dados:** https://*\<YourTenantURL>*/_wmcs/certification
 
@@ -63,7 +63,7 @@ Instruções ao utilizar estas definições:
 
 **Tipo:** Reg_SZ
 
-**Valor:** predefinido
+**Valor:** Predefinição
 
 **Dados:** https://*\<YourTenantURL>*/_wmcs/Licensing
 
@@ -76,7 +76,7 @@ Instruções ao utilizar estas definições:
 **Valor:** https:// *\<YourTenantURL>*
 
 
-**Dados:** um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange server para o conetor RMS:
+**Dados:** Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange Server para o conetor RMS:
 
 - http://*<\ConnectorFQDN>*
 
@@ -91,7 +91,7 @@ Instruções ao utilizar estas definições:
 **Valor:** https://*<\YourTenantURL>*
 
 
-**Dados:** um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange server para o conetor RMS:
+**Dados:** Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange Server para o conetor RMS:
 
 - http://*<\ConnectorFQDN>*
 
@@ -104,7 +104,7 @@ Instruções ao utilizar estas definições:
 
 **Tipo:** Reg_SZ
 
-**Valor:** predefinido
+**Valor:** Predefinição
 
 **Dados:** https://*<\YourTenantURL>*/_wmcs/certification
 
@@ -114,7 +114,7 @@ Instruções ao utilizar estas definições:
 
 **Tipo:** Reg_SZ
 
-**Valor:** predefinido
+**Valor:** Predefinição
 
 **Dados:** https://*<\YourTenantURL>*/_wmcs/Licensing
 
@@ -126,7 +126,7 @@ Instruções ao utilizar estas definições:
 
 **Valor:** https://*<\YourTenantURL>*
 
-**Dados:** um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange server para o conetor RMS:
+**Dados:** Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange Server para o conetor RMS:
 
 - http://*<\ConnectorFQDN>*
 
@@ -140,7 +140,7 @@ Instruções ao utilizar estas definições:
 
 **Valor:** https://*<\YourTenantURL>*
 
-**Dados:** um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange server para o conetor RMS:
+**Dados:** Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no Exchange Server para o conetor RMS:
 
 - http://*<\ConnectorFQDN>*
 
@@ -156,7 +156,7 @@ Instruções ao utilizar estas definições:
 **Dados:** https://*<\YourTenantURL>*/_wmcs/Licensing
 
 
-**Dados:** um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no SharePoint server para o conetor RMS:
+**Dados:** Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no SharePoint server para o conetor RMS:
 
 - http://*<\ConnectorFQDN>*/_wmcs/licensing
 
@@ -168,9 +168,9 @@ Instruções ao utilizar estas definições:
 
 **Tipo:** Reg_SZ
 
-**Valor:** predefinido
+**Valor:** Predefinição
 
-**Dados:** um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no SharePoint server para o conetor RMS:
+**Dados:** Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no SharePoint server para o conetor RMS:
 
 - http://*<\ConnectorFQDN>*/_wmcs/certification
 
@@ -182,10 +182,10 @@ Instruções ao utilizar estas definições:
 
 **Tipo:** Reg_SZ
 
-**Valor:** predefinido
+**Valor:** Predefinição
 
 
-**Dados:** um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no SharePoint server para o conetor RMS:
+**Dados:** Um dos seguintes, dependendo se está a utilizar HTTP ou HTTPS no SharePoint server para o conetor RMS:
 
 - http://*<\ConnectorFQDN>*/_wmcs/licensing
 
@@ -200,7 +200,7 @@ Instruções ao utilizar estas definições:
 
 **Tipo:** Reg_SZ
 
-**Valor:** predefinido
+**Valor:** Predefinição
 
 **Dados:** http://*ConnectorFQDN*/_wmcs/licensing
 
@@ -210,7 +210,7 @@ Instruções ao utilizar estas definições:
 
 **Tipo:** Reg_SZ
 
-**Valor:** predefinido
+**Valor:** Predefinição
 
 **Dados:** http://*ConnectorFQDN*/_wmcs/certification
 

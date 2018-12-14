@@ -1,6 +1,6 @@
 ---
 title: Configuração do Android | Azure RMS
-description: As aplicações Android podem utilizar o SDK Microsoft Rights Management 4.2 para ativar a proteção de informações integrada nas respetivas aplicações.
+description: Aplicações Android podem utilizar o Microsoft Rights Management SDK 4.2 para ativar a proteção de informações integrada nas respetivas aplicações.
 keywords: ''
 author: lleonard-msft
 ms.author: alleonar
@@ -12,46 +12,46 @@ ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: d6a851cc5568b14b1f18ad71169b2c0e6efc136b
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 242700c089e34bc69eef10a45ea761f9668f4a42
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147530"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266652"
 ---
 # <a name="android-setup"></a>Configuração do Android
 
-As aplicações Android podem utilizar o SDK Microsoft Rights Management 4.2 para ativar a proteção de informações integrada nas respetivas aplicações utilizando o Azure Active Directory Rights Management (AAD RM).
+Aplicações Android podem utilizar o Microsoft Rights Management SDK 4.2 para ativar a proteção de informações integrada nas respetivas aplicações ao utilizar o Azure Active Directory Rights Management (AAD RM).
 
 Este tópico descreve como configurar o ambiente para criar as suas novas aplicações.
 
 -   [Pré-requisitos](#prerequisites)
 -   [Opcional](#optional)
 -   [Configurar o ambiente de desenvolvimento](#configuring-your-development-environment)
--   [Consulte Também](#see-also)
+-   [Consulte também](#see-also)
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 Recomendamos o seguinte software no sistema de desenvolvimento:
 
--   Sistema operativo Windows ou OS X para executar o ambiente de desenvolvimento [Eclipse](http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html).
+-   Sistema operativo Windows ou OS X para executar o ambiente de desenvolvimento [Eclipse](https://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html).
 -   Este guia pressupõe que está a utilizar o SDK Eclipse com o Eclipse Juno 4.2 ou superior e que está a utilizar uma instalação predefinida.
 -   Java 1.6 ou superior.
--   [Plug-in Ferramentas do Programador do Android (ADT)](http://developer.android.com/sdk/installing/index.html). NOTA – poderá ser-lhe pedido para reiniciar o Eclipse para concluir a instalação.
+-   [Plug-in Ferramentas do Programador do Android (ADT)](https://developer.android.com/studio/install). NOTA – poderá ser-lhe pedido para reiniciar o Eclipse para concluir a instalação.
 
-     
+     
 
--   O pacote do SDK MS RMS 4.2 para Android. Para obter mais informações, consulte [Introdução](get-started.md).
+-   O pacote do SDK MS RMS 4.2 para Android. Para obter mais informações, consulte [Introdução](get-started.md).
 
     Este SDK pode ser utilizado para desenvolver para o Android 4.0.3 (nível de API 15) e posterior.
 
--   Biblioteca de autenticação: recomendamos que utilize a [Biblioteca de Autenticação do Azure AD (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx). No entanto, outras bibliotecas de autenticação que suportem o OAuth 2.0 também podem ser utilizadas.
+-   Biblioteca de autenticação: Recomendamos que utilize o [do Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx). No entanto, outras bibliotecas de autenticação que suportem o OAuth 2.0 também podem ser utilizadas.
 
     Para obter mais informações, consulte [ADAL para Android](https://github.com/MSOpenTech/azure-activedirectory-library-for-android)
 
-    **Nota** Se a aplicação não for utilizar a biblioteca ADAL como a biblioteca de autenticação OAuth 2.0, deve rever esta orientação do Android, [Algumas Ideias SecureRandom](http://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html).
+    **Tenha em atenção**  se o seu aplicativo não esteja a utilizar a biblioteca ADAL como a biblioteca de autenticação OAuth 2.0, deve rever esta orientação do Android, [algumas ideias Securerandom](https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html).
 
-     
+     
 
 Consulte o tópico [Novidades](release-notes.md) para obter informações sobre atualizações de API, notas de versão e perguntas mais frequentes (FAQ).
 
@@ -61,9 +61,9 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
 
 ## <a name="configuring-your-development-environment"></a>Configurar o ambiente de desenvolvimento
 
-**Nota** Versão de  Pré-visualização do SDK MS RMS 4.2: nesta versão de pré-visualização, as capturas de ecrã não foram atualizadas para mostrar a alteração no nome dos caminhos de com/microsoft/protection para com/microsoft/rightsmanagment. No entanto, o texto foi atualizado.
+**Tenha em atenção**  versão de pré-visualização do SDK do MS RMS 4.2: Nesta versão de pré-visualização, as capturas de ecrã não foram atualizadas para mostrar a alteração no nome dos caminhos de com/microsoft/protection para com/microsoft/rightsmanagment. No entanto, o texto foi atualizado.
 
- 
+ 
 -   Abra o ambiente de desenvolvimento Eclipse.
 -   Para criar um novo projeto de Aplicação Android, no menu **Ficheiro**, clique em **Novo**, clique em **Projeto** e selecione **Projeto de Aplicação Android**.
 
@@ -117,7 +117,7 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
 
 -   Clique em **OK**.
 
-    Uma vez que o SDK MS RMS 4.2 liga ao AAD RM, é necessário conceder **INTERNET** e **ACCESS\_NETWORK\_STATE** à aplicação. Para tal, abra o ficheiro *AndroidManifest.xml* na raiz do projeto.
+    Uma vez que o SDK MS RMS 4.2 liga-se com o AAD RM, a aplicação tem de ser concedida a **INTERNET** e **acesso\_rede\_estado**. Para tal, abra o ficheiro *AndroidManifest.xml* na raiz do projeto.
 
     Para adicionar as permissões, clique em **Adicionar** e selecione **Utiliza Permissões**.
 
@@ -134,7 +134,7 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
     <uses-permission/>
    ```
 
-**Nota** O SDK utiliza o *android.support.v4*
+**Tenha em atenção**  o SDK utiliza o *android.support.v4*
 
 -   Agora, está pronto para criar as suas novas aplicações Android.
 

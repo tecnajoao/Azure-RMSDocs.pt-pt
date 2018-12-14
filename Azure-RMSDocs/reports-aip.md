@@ -4,19 +4,19 @@ description: Como utilizar a centralização de relatórios para monitorizar a a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 12/08/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 8dc53c6bad6c8f68ac5786afb0600cafb6398765
-ms.sourcegitcommit: b4118cd75db6478f86b9994e8d84d0ada15c7f95
+ms.openlocfilehash: 58ea955deef9341ec80b516b89feec609389b9ad
+ms.sourcegitcommit: 4caf3aa13506554928c5fda38994301ddcbdfb41
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52953317"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068814"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Central de relatórios do Azure Information Protection
 
@@ -67,9 +67,13 @@ Por exemplo, será capaz de ver o seguinte:
     
     - Os ficheiros que contêm informações confidenciais relativas a categorias conhecidas, como dados financeiros e informações pessoais e a localização dos ficheiros por estas categorias
     
-Utilizam os relatórios [do Azure Log Analytics](/azure/log-analytics/log-analytics-overview) para armazenar os dados numa área de trabalho que sua organização é proprietária. Se estiver familiarizado com a linguagem de consulta, pode modificar as consultas e criar novos relatórios e dashboards do Power BI. Poderá considerar o seguinte tutorial útil compreender a linguagem de consulta: [introdução ao Portal do Analytics](https://docs.loganalytics.io/docs/Learn/Getting-Started/Getting-started-with-the-Analytics-portal). 
+Utilizam os relatórios [do Azure Log Analytics](/azure/log-analytics/log-analytics-overview) para armazenar os dados numa área de trabalho que sua organização é proprietária. Se estiver familiarizado com a linguagem de consulta, pode modificar as consultas e criar novos relatórios e dashboards do Power BI. Poderá considerar o seguinte tutorial útil compreender a linguagem de consulta: [Introdução ao Portal do Analytics](https://docs.loganalytics.io/docs/Learn/Getting-Started/Getting-started-with-the-Analytics-portal). 
 
-Para obter mais informações, leia a mensagem de blogue: [deteção de dados, relatórios e análises para todos os seus dados com o Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).
+Para obter mais informações, leia as seguintes mensagens de blogue: 
+
+- [Deteção de dados, relatórios e análises para todos os seus dados com o Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854)
+
+- [Detetar e proteger os dados confidenciais através do Azure Information Protection e o Windows Defender ATP](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Discover-and-protect-sensitive-data-through-Azure-Information/ba-p/297292)
 
 ### <a name="information-collected-and-sent-to-microsoft"></a>Informações recolhidas e enviadas à Microsoft
 
@@ -85,9 +89,9 @@ Para gerar esses relatórios, os pontos finais de enviar os seguintes tipos de i
 
 - O nome do dispositivo do utilizador.
 
-- Para documentos: caminho de ficheiro e nome de ficheiro de documentos que estão identificadas.
+- Para documentos: O caminho do ficheiro e o nome de ficheiro de documentos que estão identificadas.
 
-- Para e-mails: O assunto do e-mail, do remetente de e-mail e destinatários de e-mail para os e-mails que estão identificadas. 
+- Para mensagens de e-mail: O assunto do e-mail, o remetente de e-mail e destinatários de e-mail para os e-mails que estão identificadas. 
 
 - Os tipos de informações confidenciais ([predefinidos](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) e personalizada) que foram detetadas no conteúdo.
 
@@ -116,9 +120,9 @@ Para ver os relatórios do Azure Information Protection e criar os seus próprio
 
 3. Sobre o **o log analytics do Azure Information Protection** painel, verá uma lista de quaisquer áreas de trabalho do Log Analytics que pertencem ao seu inquilino. Efetue uma das seguintes ações:
     
-    - Para criar uma nova área de trabalho do Log Analytics: selecione **criar nova área de trabalho**e, no **área de trabalho do Log analytics** painel, forneça as informações pedidas.
+    - Para criar uma nova área de trabalho do Log Analytics: Selecione **criar nova área de trabalho**e, no **área de trabalho do Log analytics** painel, forneça as informações pedidas.
     
-    - Para utilizar uma área de trabalho do Log Analytics existente: selecione a área de trabalho da lista.
+    - Para utilizar uma área de trabalho do Log Analytics existente: Selecione a área de trabalho da lista.
 
 Se precisar de obter ajuda na criação da área de trabalho do Log Analytics, consulte [criar uma área de trabalho do Log Analytics no portal do Azure](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace).
 
@@ -130,7 +134,7 @@ No painel do Azure Information Protection, localize a **Dashboards** opções de
 
 - **Relatório de utilização (pré-visualização)**: Utilize este relatório para ver como as etiquetas estão sendo usadas. 
 
-- **Registos de Atividades (pré-visualização)**: Utilize este relatório para ver a etiquetagem de ações de usuários e em dispositivos e caminhos de ficheiro.
+- **Registos de Atividades (pré-visualização)**: Utilize este relatório para ver a etiquetagem de ações de usuários e em dispositivos e caminhos de ficheiros.
     
     Este relatório está atualmente a implementar aos inquilinos, portanto, se não o vir, tente novamente dentro de alguns dias.
     
@@ -145,7 +149,7 @@ Selecione o ícone de consulta no dashboard para abrir um **pesquisa de registos
 ![Ícone de análise de registo para personalizar os relatórios do Azure Information Protection](./media/log-analytics-icon.png)
 
 
-Os dados com sessão iniciada para o Azure Information Protection são armazenados na tabela seguinte: **InformationProtectionLogs_CL**
+Os dados com sessão iniciada para o Azure Information Protection são armazenados na tabela a seguir: **InformationProtectionLogs_CL**
 
 ## <a name="next-steps"></a>Passos Seguintes
 Depois de rever as informações nos relatórios, pode optar por efetuar alterações à sua política do Azure Information Protection. Para obter instruções, consulte [configurar a política do Azure Information Protection](configure-policy.md).

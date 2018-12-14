@@ -10,19 +10,19 @@ ms.service: information-protection
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7be58d201ddd24497ff79935554c2a68efd04a3f
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 84f013014f0256a01c30d9518089f2604ed9a668
+ms.sourcegitcommit: b2414cc00d50ccefe10f8c3719eb3f6c1e78fc65
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024438"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246195"
 ---
 # <a name="rights-management-sharing-application-administrator-guide"></a>Guia do administrador da aplicação de partilha Rights Management
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
+>*Aplica-se a: Serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 com SP1, Windows 8, Windows 8.1*
 
 > [!IMPORTANT]
-> **Notificação de fim do suporte**: a aplicação de partilha Rights Management para Windows está a ser substituída pelo [cliente do Azure Information Protection](aip-client.md). O suporte para esta aplicação mais antiga será interrompido 31 de Janeiro de 2019. 
+> **Fim do suporte notificação**: O Rights Management para Windows está a ser substituído pela aplicação de partilha do [cliente Azure Information Protection](aip-client.md). O suporte para esta aplicação mais antiga será interrompido 31 de Janeiro de 2019. 
 
 Utilize as seguintes informações se for o responsável pela aplicação de partilha Microsoft Rights Management numa rede empresarial ou se quiser obter mais informações técnicas além das que se encontram no [Guia do utilizador da aplicação de partilha Rights Management](sharing-app-user-guide.md) ou nas [FAQ sobre a Aplicação de Partilha Microsoft Rights Management do Windows](https://go.microsoft.com/fwlink/?LinkId=303971).
 
@@ -33,11 +33,11 @@ Para obter uma descrição geral técnica da aplicação Rights Management, info
 ## <a name="automatic-deployment-for-the-microsoft-rights-management-sharing-application"></a>Implementação automática da aplicação de partilha Microsoft Rights Management
 A versão para Windows da aplicação de partilha RMS suporta uma instalação com script, o que a torna adequada para implementações empresariais.
 
-Os únicos pré-requisitos para instalações são os computadores executarem a versão mínima do Windows 7 Service Pack 1 e que o Microsoft Framework, versão mínima 4.0 está instalado. Se precisar de instalar o Microsoft .NET Framework 4.0, pode [baixá-lo para a instalação do Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=17718).
+Os únicos pré-requisitos para instalações são os computadores executarem a versão mínima do Windows 7 Service Pack 1 e que o Microsoft Framework, versão mínima 4.0 está instalado. Se precisar de instalar o Microsoft .NET Framework 4.0, pode [baixá-lo para a instalação do Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=17718).
 
 ### <a name="to-download-the-rms-sharing-application-for-automatic-deployment"></a>Para transferir a aplicação de partilha RMS para implementações automáticas
 
-1.  Aceda à página da [aplicação de partilha Microsoft Rights Management para Windows](http://www.microsoft.com/download/details.aspx?id=40857) no Centro de Transferências da Microsoft e clique em **Transferir**.
+1.  Aceda à página da [aplicação de partilha Microsoft Rights Management para Windows](https://www.microsoft.com/download/details.aspx?id=40857) no Centro de Transferências da Microsoft e clique em **Transferir**.
 
 2.  Selecione e transfira os ficheiros de que precisa. Existem dois pacotes de instalação de clientes: um para o Windows de 64 bits (Microsoft Rights Management sharing application x64.zip) e outro para o Windows de 32 bits (Microsoft Rights Management sharing application x86.zip).
 
@@ -92,7 +92,7 @@ Para confirmar o êxito da operação, consulte a secção [Confirmar o êxito d
 
     1.  Inicie sessão num computador com uma conta de administrador local.
 
-    2.  Nesse computador, [transfira e instale o Assistente de Início de Sessão Online da Microsoft](http://www.microsoft.com/download/details.aspx?id=28177).
+    2.  Nesse computador, [transfira e instale o Assistente de Início de Sessão Online da Microsoft](https://www.microsoft.com/download/details.aspx?id=28177).
 
     3.  Execute o seguinte comando para apresentar no ecrã o URL do serviço de certificação, que poderá copiar e guardar para o próximo passo:
 
@@ -217,7 +217,7 @@ Pode utilizar os ficheiros de registo da instalação para verificar se a instal
 
     Uma instalação com êxito apresenta um código de saída com o valor 0 e todos os outros números indicam uma falha na instalação.
 
-    Exemplo de nome de ficheiro de registo: **C:\temp\RMS_Installer_9352fc91-1982-43bf-958a-2ef1fe9c2ed0\RMInstaller.log**
+    Nome do ficheiro de registo de exemplo: **C:\temp\RMS_Installer_9352fc91-1982-43bf-958a-2ef1fe9c2ed0\RMInstaller.log**
 
 ### <a name="to-verify-installation-success-for-the-rms-sharing-application-for-office2010-and-azure-information-protection"></a>Para confirmar o êxito da instalação da aplicação para o Office 2010 e Azure Information Protection de partilha RMS
 
@@ -225,7 +225,7 @@ Pode utilizar os ficheiros de registo da instalação para verificar se a instal
 
     Uma instalação com êxito apresenta um código de saída com o valor 0 e todos os outros números indicam uma falha na instalação.
 
-    Exemplo de nome de ficheiro de registo: **C:\temp\RMS_Installer_9352fc91-1982-43bf-958a-2ef1fe9c2ed0**
+    Nome do ficheiro de registo de exemplo: **C:\temp\RMS_Installer_9352fc91-1982-43bf-958a-2ef1fe9c2ed0**
 
 2.  Para confirmar o êxito do comando RMSSetup.exe, o utilizador deve ter os seguintes ficheiros criados na pasta *%localappdata%\microsoft\drm*:
 
@@ -247,7 +247,7 @@ Pode utilizar os ficheiros de registo da instalação para verificar se a instal
 
     Uma instalação com êxito apresenta um código de saída com o valor 0 e todos os outros números indicam uma falha na instalação.
 
-    Exemplo de nome de ficheiro de registo: **C:\temp\RMS_Installer_9352fc91-1982-43bf-958a-2ef1fe9c2ed0**
+    Nome do ficheiro de registo de exemplo: **C:\temp\RMS_Installer_9352fc91-1982-43bf-958a-2ef1fe9c2ed0**
 
 2.  Para confirmar o êxito do comando aadrmprep.exe, em cada computador, procure o seguinte texto no ficheiro de registo de instalação: **aadrmprep.exe saiu com o estado ÊXITO**
 
@@ -274,21 +274,21 @@ Pode utilizar os ficheiros de registo da instalação para verificar se a instal
 
 ### <a name="to-verify-installation-success-for-the-rms-sharing-application-and-office-add-in-only"></a>Para confirmar o êxito da instalação apenas para a aplicação de partilha RMS e o suplemento do Office
 
-1.  Para confirmar o êxito do comando Setup_ipviewer.exe, procure o seguinte texto no ficheiro de registo de instalação: **Installation success or error status: 0**
+1.  Para verificar o êxito do comando Setup_ipviewer.exe, procure o seguinte texto no ficheiro de registo de instalação: **Estado de sucesso ou erro de instalação: 0**
 
     Exemplos de linhas de uma instalação concluída com êxito:
 
-    **MSI (s) (F0:B8) [14:19:57:854]: Product: Active Directory Rights Management Services Client 2.1 – Installation completed successfully.**
+    **MSI (s) (F0:B8) [14:19:57:854]: Produto: Active Directory Rights Management Services Client 2.1-- instalação concluída com êxito.**
 
-    **MSI (s) (F0:B8) [14:19:57:854]: Windows Installer installed the product. Product Name: Active Directory Rights Management Services Client 2.1. Product Version: 1.0.1179.1. Product Language: 1033. Manufacturer: Microsoft Corporation. Installation success or error status: 0.**
+    **MSI (s) (F0:B8) [14:19:57:854]: Windows Installer instalou o produto. Nome do produto: Do Active Directory Rights Management Services Client 2.1. Versão do produto: 1.0.1179.1. Idioma do produto: 1033. Fabricante: Microsoft Corporation. Estado de sucesso ou erro de instalação: 0.**
 
-2.  Para confirmar o êxito da instalação do suplemento do Office, procure em cada computador o seguinte texto no ficheiro de registo de instalação: **Installation success or error status: 0**
+2.  Para confirmar o êxito do suplemento para Office, em cada computador, procure o seguinte texto no ficheiro de registo de instalação: **Estado de sucesso ou erro de instalação: 0**
 
     Exemplos de linhas de uma instalação concluída com êxito:
 
-    **MSI (s) (9C:88) [18:49:04:007]: Product: Microsoft RMS Office Addins – Installation completed successfully.**
+    **MSI (s) (9C:88) [18:49:04:007]: Produto: Microsoft RMS Office Addins – A instalação foi concluída com êxito.**
 
-    **MSI (s) (9C:88) [18:49:04:007]: Windows Installer installed the product. Product Name: Microsoft RMS Office Addins. Product Version: 1.0.7. Product Language: 1033. Manufacturer: Microsoft. Installation success or error status: 0.**
+    **MSI (s) (9C:88) [18:49:04:007]: Windows Installer instalou o produto. Nome do produto: Suplementos do Office do Microsoft RMS. Versão do produto: 1.0.7. Idioma do produto: 1033. Fabricante: Microsoft. Estado de sucesso ou erro de instalação: 0.**
 
 ## <a name="uninstall-commands"></a>Comandos de desinstalação
 Nem todos os comandos de instalação necessários para efetuar estas implementações suportam um comando de desinstalação. Pode desinstalar o cliente e a aplicação de partilha AD RMS, bem como o suplemento do Office. Utilize os seguintes comandos para desinstalar estes elementos.
@@ -340,7 +340,7 @@ Dado que a aplicação de partilha RMS não é suportada pelo WSUS, pode utiliza
 
 3.  Após a conclusão dos testes e a resolução de eventuais problemas, implemente a versão mais recente para todos os utilizadores através das instruções de implementação automática existentes neste guia.
 
-## <a name="azure-information-protection-only-configuring-document-tracking"></a>Apenas Azure Information Protection: configurar o controlo de documentos
+## <a name="azure-information-protection-only-configuring-document-tracking"></a>Apenas para o Azure Information Protection: Configurar o controlo de documentos
 Se tiver uma [subscrição que suporta o controlo de documentos](https://www.microsoft.com/cloud-platform/azure-information-protection-features), o site de controlo de documentos é ativado por predefinição para todos os utilizadores da sua organização. O controlo de documentos apresenta informações como os endereços de e-mail das pessoas que tentaram aceder a documentos protegidos partilhados por utilizadores, quando essas pessoas tentaram aceder aos mesmos e a sua localização. Se a apresentação deste tipo de informações for proibida dentro da sua organização devido a requisitos de privacidade, pode desativar o acesso ao site de controlo de documentos através do cmdlet [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature). Pode reativar o acesso ao site em qualquer altura através de [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) e ainda verificar se o acesso ao site está ativado ou desativado com [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature).
 
 Para executar estes cmdlets, tem de ter no mínimo a versão **2.3.0.0** do módulo do Azure Rights Management para o Windows PowerShell. Para obter instruções de instalação, consulte [instalar o módulo do PowerShell do AADRM](../install-powershell.md).
@@ -377,7 +377,7 @@ Para obter instruções sobre como utilizar o site de controlo de documentos, ve
 
 ### <a name="usage-logging-for-the-document-tracking-site"></a>Registo de utilização para o site de controlo de documentos
 
-São aplicáveis dois campos nos ficheiros de registo de utilização ao controlo de documentos: **AdminAction** e **ActingAsUser**.
+Dois campos nos ficheiros de registo de utilização são aplicáveis ao controlo de documentos: **AdminAction** e **ActingAsUser**.
 
 **AdminAction** - Este campo tem um valor de true quando um administrador utiliza o site de controlo de documentos no modo de Administrador, por exemplo, para revogar um documento em nome de um utilizador ou para ver quando foi partilhado. Este campo está vazio quando um utilizador inicia sessão no site de controlo de documentos.
 
@@ -388,14 +388,14 @@ Também existem tipos de pedido que registam a forma como os utilizadores e os a
 
 Para obter mais informações sobre o registo de utilização, consulte [Registar e analisar a utilização do serviço Azure Rights Management](../log-analyze-usage.md)
 
-## <a name="ad-rms-only-support-for-multiple-email-domains-within-your-organization"></a>Apenas AD RMS: suporte para múltiplos domínios de e-mail dentro da sua organização
+## <a name="ad-rms-only-support-for-multiple-email-domains-within-your-organization"></a>Apenas AD RMS: Suporte para múltiplos domínios de e-mail dentro da sua organização
 Se utilizar o AD RMS e os utilizadores na sua organização tiverem múltiplos domínios de e-mail, talvez como resultado de uma fusão ou aquisição, tem de efetuar o seguinte edição de registo:
 
 1.  Navegue para **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC** e, se esta ainda não existir, crie uma nova chave com o nome **RmsSharingApp**.
 
 2.  Selecione **RmsSharingApp**, crie um novo Valor de Múltiplas Cadeias com o nome **FederatedDomains** e, em seguida, adicione todos os domínios e subdomínios utilizados pela sua organização. Os carateres universais não são suportados.
 
-    Por exemplo: a empresa Coho Vineyard &amp; Winery tem o domínio de e-mail padrão **cohovineyardandwinery.com** mas, devido a fusões, também utilizam os domínios de e-mail **cohowinery.com**, **eastcoast.cohowinery.com** e **cohovineyard**. Para os dados do valor **FederatedDomains**, o administrador deve introduzir: **cohowinery.com;eastcoast.cohowinery.com;cohovineyard**
+    Por exemplo: A empresa Coho Vineyard &amp; Winery tem um domínio de e-mail **cohovineyardandwinery.com**, mas devido a fusões, também utilizam os domínios de e-mail **cohowinery.com**, **eastcoast.cohowinery.com**, e **cohovineyard**. Para os dados do valor **FederatedDomains**, o administrador deve introduzir: **cohowinery.com;eastcoast.cohowinery.com;cohovineyard**
 
 Se não fizer esta alteração de registo, é possível que os utilizadores não consigam consumir conteúdos que foram protegidos por outros utilizadores da organização. Esta edição de registo não é necessária se utilizar o Azure Information Protection.
 

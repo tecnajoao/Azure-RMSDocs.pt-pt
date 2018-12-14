@@ -4,22 +4,22 @@ description: O Azure Information Protection sofreu muitas alterações de nome, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 0af1b2ff-46a7-4a38-803c-5a730e4ff56d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 496912a8dea0c73957d979d3f2cd42d785d532aa
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 036b80b1c2aa7026b1f7993d42ce726d518209c0
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149961"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305136"
 ---
 # <a name="azure-information-protection---also-known-as-"></a>Azure Information Protection – também conhecido como...
 
->*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 A evolução do Azure Information Protection (por vezes abreviado como AIP) deve-se a um longo histórico de tecnologias já estabelecidas da Microsoft que implementam a proteção da gestão de direitos. Graças a esta evolução, é possível que já conheça esta solução por um dos seus nomes anteriores. Também é possível que veja referências a esses nomes em documentação, na IU e em ficheiros de registo. 
 

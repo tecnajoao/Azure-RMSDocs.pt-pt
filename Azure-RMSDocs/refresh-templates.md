@@ -4,22 +4,22 @@ description: Quando utiliza o serviço Azure Rights Management, os modelos são 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/25/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 90c046f0cf2f954e70a17d127bc99b0479115928
-ms.sourcegitcommit: a5fd0afd84b62f84c3b9f0d076fab1b674267bf3
+ms.openlocfilehash: 10e381e68c75f2f401439ee330bf952b01b22c30
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083885"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305289"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Atualizar modelos para os utilizadores e os serviços
 
->*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Quando utiliza o serviço Azure Rights Management do Azure Information Protection, os modelos são automaticamente transferidos para computadores cliente para os utilizadores poderem selecioná-los a partir das suas aplicações. No entanto, poderá ter de efetuar passos adicionais se fizer alterações aos modelos:
 
@@ -28,7 +28,7 @@ Quando utiliza o serviço Azure Rights Management do Azure Information Protectio
 |Exchange Online<br /><br />Aplicável a regras de transporte e ao Outlook Web App |Atualizados automaticamente dentro de uma hora - não existem passos adicionais necessários.<br /><br />Esse é o caso, se estiver a utilizar [encriptação de mensagens do Office 365 com os novos recursos](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Se anteriormente tiver configurado o Exchange Online para utilizar o serviço Azure Rights Management através da importação de seu domínio de publicação fidedigno (TPD), utilize o mesmo conjunto de instruções para ativar os novos recursos no Exchange Online.|
 |Cliente do Azure Information Protection|Atualizado automaticamente sempre que a política do Azure Information Protection é atualizada no cliente:<br /><br /> - Quando abre uma aplicação do Office que suporta a barra do Azure Information Protection. <br /><br /> - Quando clica com o botão direito do rato para classificar e proteger um ficheiro ou uma pasta. <br /><br /> - Quando executa os cmdlets do PowerShell para etiquetagem e proteção (Get-AIPFileStatus e Set-AIPFileLabel).<br /><br /> -Quando é iniciado o serviço de Scanner de proteção de informações do Azure e a política local é mais antigo do que uma hora. Além disso, o serviço de scanner verifica a existência de alterações a cada hora e utiliza essas alterações para o próximo ciclo de análise.<br /><br /> - A cada 24 horas.<br /><br /> Além disso, porque este cliente está totalmente integrado com o Office, qualquer os modelos atualizados do Office 2016 ou Office 2013 também serão atualizados para o cliente do Azure Information Protection.|
 |O Azure Information Protection unified cliente etiquetagem (pré-visualização)|Atualizados automaticamente a cada 4 horas, por aplicação do Office.<br /><br /> Além disso, porque este cliente está totalmente integrado com o Office, qualquer os modelos atualizados do Office 2016 ou Office 2013 também serão atualizados para o cliente de etiquetagem unificado do Azure Information Protection.|
-|Office 2016 e Office 2013<br /><br />Aplicação de partilha RMS para Windows|Atualizados automaticamente – com base numa agenda:<br /><br />- Para estas versões posteriores do Office: o intervalo de atualização predefinido é de sete dias.<br /><br />- Para a aplicação de partilha RMS para Windows: a partir da versão 1.0.1784.0, o intervalo de atualização predefinido é de um dia. As versões anteriores têm um intervalo de atualização predefinido de 7 dias.<br /><br />Para forçar uma atualização mais cedo do que a agendada, veja a secção [Office 2016, Office 2013 e aplicação de partilha RMS para Windows: como forçar uma atualização de um modelo personalizado modificado](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
+|Office 2016 e Office 2013<br /><br />Aplicação de partilha RMS para Windows|Atualizados automaticamente – com base numa agenda:<br /><br />-Para estas versões mais recentes do Office: O intervalo de atualização predefinido é de 7 dias.<br /><br />-Para a aplicação de partilha RMS para Windows: A partir da versão 1.0.1784.0, o intervalo de atualização predefinido é 1 dia. As versões anteriores têm um intervalo de atualização predefinido de 7 dias.<br /><br />Para forçar uma atualização mais cedo do que a agenda, consulte a secção seguinte, [Office 2016, Office 2013 e aplicação para Windows de partilha RMS: Como forçar uma atualização de um modelo personalizado modificado](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
 |Office 2010|Atualizado automaticamente quando os utilizadores terminam sessão no Windows, iniciam sessão novamente e esperam até uma hora.|
 |Exchange no local com o conector Rights Management<br /><br />Aplicável a regras de transporte e ao Outlook Web App|Atualizados automaticamente – não existem passos adicionais necessários. No entanto, o Outlook Web App coloca a IU em cache durante um dia.|
 |Office 2016 para Mac|Atualizados automaticamente – não existem passos adicionais necessários.|
@@ -37,7 +37,7 @@ Quando utiliza o serviço Azure Rights Management do Azure Information Protectio
 
 Quando as aplicações de cliente precisam de transferir modelos (inicialmente ou atualizados para alterações), esteja preparado para aguardar até 15 minutos antes de a transferência estar concluída e os modelos novos ou atualizados estarem totalmente operacionais. O tempo em questão pode variar devido a fatores como o tamanho e a complexidade da configuração do modelo e a conectividade de rede. 
 
-## <a name="office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2016, Office 2013 e aplicação de partilha RMS para Windows: como forçar uma atualização de um modelo personalizado modificado
+## <a name="office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2016, Office 2013 e aplicação para Windows de partilha RMS: Como forçar uma atualização de um modelo personalizado modificado
 Ao editar o registo nos computadores ao executar o Office 2016, Office 2013 ou a aplicação de partilha Rights Management (RMS) para Windows, pode alterar o agendamento automático para os modelos modificados serem atualizados nos computadores com mais frequência do que o respetivo valor predefinido. Também pode forçar uma atualização imediata ao eliminar os dados existentes num valor de registo.
 
 > [!WARNING]
@@ -47,7 +47,7 @@ Ao editar o registo nos computadores ao executar o Office 2016, Office 2013 ou a
 
 1.  Através de um editor de registo, crie e defina um dos seguintes valores do registo:
 
-    - Para definir uma frequência de atualização em dias (mínimo de 1 dia): crie um novo valor de registo com o nome **TemplateUpdateFrequency** e defina um valor inteiro para os dados, que especifica a frequência em dias para transferir quaisquer alterações a um modelo transferido. Utilize as seguintes informações para localizar o caminho do registo para criar este novo valor de registo.
+    - Para definir uma frequência de atualização em dias (mínimo de 1 dia):  Crie um novo valor de registo com o nome **TemplateUpdateFrequency** e defina um valor de número inteiro para os dados, que especifica a frequência em dias para transferir alterações para um modelo transferido. Utilize as seguintes informações para localizar o caminho do registo para criar este novo valor de registo.
 
         **Caminho do registo:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
@@ -55,7 +55,7 @@ Ao editar o registo nos computadores ao executar o Office 2016, Office 2013 ou a
 
         **Valor:** TemplateUpdateFrequency
 
-    - Para definir uma frequência de atualização em segundos (mínimo de 1 segundo): crie um novo valor de registo com o nome **TemplateUpdateFrequencyInSeconds** e defina um valor inteiro para os dados, que especifica a frequência em segundos para transferir alterações para um modelo transferido. Utilize as seguintes informações para localizar o caminho do registo para criar este novo valor de registo.
+    - Para definir uma frequência de atualização em segundos (mínimo de 1 segundo):  Crie um novo valor de registo com o nome **TemplateUpdateFrequencyInSeconds** e defina um valor de número inteiro para os dados, que especifica a frequência em segundos para transferir alterações para um modelo transferido. Utilize as seguintes informações para localizar o caminho do registo para criar este novo valor de registo.
 
         **Caminho do registo:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
@@ -63,7 +63,7 @@ Ao editar o registo nos computadores ao executar o Office 2016, Office 2013 ou a
 
         **Valor:** TemplateUpdateFrequencyInSeconds
 
-    Certifique-se de que cria e configura um destes valores do registo, não ambos. Se ambos estiverem presentes, o **TemplateUpdateFrequency** será ignorado.
+    Certifique-se de que cria e configura um destes valores de registo, não ambos. Se ambos estiverem presentes, o **TemplateUpdateFrequency** será ignorado.
 
 2.  Se quiser forçar uma atualização imediata dos modelos, avance para o procedimento seguinte. Caso contrário, reinicie as suas aplicações do Office e instâncias do Explorador de Ficheiros agora.
 
@@ -71,7 +71,7 @@ Ao editar o registo nos computadores ao executar o Office 2016, Office 2013 ou a
 
 1.  Através de um editor de registo, elimine os dados do valor **LastUpdatedTime**. Por exemplo, os dados poderão apresentar **2015-04-20T15:52**. Elimine 2015-04-20T15:52 para não serem apresentados dados. Utilize as seguintes informações para localizar o caminho do registo para eliminar os dados deste valor de registo.
 
-    **Caminho do registo:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\<*MicrosoftRMS_FQDN*> \Template\\ < *user_alias*>
+    **Caminho do registo:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\<*MicrosoftRMS_FQDN*> \Template\\<*user_alias*>
 
     **Tipo:** REG_SZ
 
@@ -80,7 +80,7 @@ Ao editar o registo nos computadores ao executar o Office 2016, Office 2013 ou a
     > [!TIP]
     > No caminho do registo, *MicrosoftRMS_FQDN*> refere-se ao seu FQDN do serviço Microsoft RMS. Se quiser verificar este valor:
 
-    > Execute o cmdlet [Get-AadrmConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) para o Azure RMS. Se ainda não instalou o módulo do Windows PowerShell para o Azure RMS, consulte [instalar o módulo do PowerShell do AADRM](install-powershell.md).
+    > Execute o cmdlet [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) para o Azure RMS. Se ainda não instalou o módulo do Windows PowerShell para o Azure RMS, consulte [instalar o módulo do PowerShell do AADRM](install-powershell.md).
     >
     > A partir da saída, identifique o valor **LicensingIntranetDistributionPointUrl**.
     >

@@ -11,16 +11,16 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 15cf2c9c893adfb6e81e6a0c94001a3a0e120076
-ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
+ms.openlocfilehash: f6c4bd30c09ff54eab6da4bb63130a16373faebc
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51644765"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53174017"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Perguntas mais frequentes sobre a proteção de dados no Azure Information Protection
 
->*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Tem uma pergunta sobre o serviço de proteção de dados, o Azure Rights Management, do Azure Information Protection? Verifique se a resposta está aqui.
 
@@ -51,7 +51,7 @@ Para obter mais informações sobre o HYOK, certificar-se de que compreende as s
 
 Sim, pode agora utilizar o BYOK com o Exchange Online quando seguir as instruções em [configurar novas capacidades de encriptação de mensagens do Office 365 criadas com base no Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Estas instruções ativar os novos recursos no Exchange Online, que suportam a utilização de BYOK para o Azure Information Protection, bem como a nova encriptação de mensagens do Office 365.
 
-Para obter mais informações sobre esta alteração, consulte o anúncio do blogue: [encriptação de mensagens do Office 365 com os novos recursos](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)
+Para obter mais informações sobre esta alteração, consulte o anúncio do blogue: [Encriptação de mensagens do Office 365 com os novos recursos](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)
 
 ## <a name="where-can-i-find-information-about-third-party-solutions-that-integrate-with-azure-rms"></a>Onde posso encontrar informações sobre soluções de terceiros que se integram com o Azure RMS?
 
@@ -63,7 +63,7 @@ Embora o conector do Rights Management registe mensagens de erro, aviso e inform
 
 ## <a name="do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators"></a>Tenho de ser um administrador global para configurar o Azure RMS ou posso delegar noutros administradores?
 
-Com a função de administrador do Information Protection recém-lançado, este perguntas (e respostas) agora foi movido para a página de FAQ principal: [precisa de ser um administrador global para configurar o Azure Information Protection, ou posso delegar noutros administradores?](faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-information-protection-or-can-i-delegate-to-other-administrators)
+Com a função de administrador do Information Protection introduzidas recentemente, este perguntas (e respostas) agora foi movido para a página de FAQ principal: [Precisa de ser um administrador global para configurar o Azure Information Protection, ou posso delegar noutros administradores?](faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-information-protection-or-can-i-delegate-to-other-administrators)
 
 ## <a name="how-do-i-create-a-new-custom-template-in-the-azure-portal"></a>Como posso criar um novo modelo personalizado no portal do Azure?
 
@@ -123,7 +123,7 @@ Em alternativa, pode adicionar utilizadores externos para modelos personalizados
 
 2. Fornecer esta variável ao parâmetro RightsDefinition com o [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet.
 
-    Adicionar utilizadores a um modelo existente, tem de definir os objetos de definição de direitos para os utilizadores existentes nos modelos, além dos novos utilizadores. Para este cenário, pode achar útil **exemplo 3: adicionar novos utilizadores e os direitos para um modelo personalizado** partir a [exemplos](/powershell/module/aadrm/set-aadrmtemplateproperty#examples) secção para o cmdlet.
+    Adicionar utilizadores a um modelo existente, tem de definir os objetos de definição de direitos para os utilizadores existentes nos modelos, além dos novos utilizadores. Para este cenário, pode achar útil **exemplo 3: Adicionar novos utilizadores e os direitos para um modelo personalizado** partir de [exemplos](/powershell/module/aadrm/set-aadrmtemplateproperty#examples) secção para o cmdlet.
 
 ## <a name="what-type-of-groups-can-i-use-with-azure-rms"></a>Que tipo de grupos pode utilizar com o Azure RMS?
 Na maioria dos cenários, pode usar qualquer tipo de grupo no Azure AD que tenha um endereço de e-mail. Esta regra geral aplica-se sempre ao atribuir direitos de utilização, mas existem algumas exceções para administrar o serviço Azure Rights Management. Para obter mais informações, consulte [requisitos do Azure Information Protection para contas de grupo](prepare.md#azure-information-protection-requirements-for-group-accounts).
@@ -134,9 +134,9 @@ Quando utiliza o Exchange Online e o serviço Azure Rights Management, apenas en
 
 O destinatário verá uma opção para iniciar sessão na sua conta Gmail, Yahoo ou Microsoft e, em seguida, podem ler a mensagem de e-mail protegida. Em alternativa, podem escolher a opção para um código de acesso único ler o e-mail num browser.
 
-Para suportar este cenário, Exchange Online tem de estar ativada para o serviço Azure Rights Management e os novos recursos na encriptação de mensagens do Office 365. Para obter mais informações sobre esta configuração, consulte [Exchange Online: configuração de IRM](configure-office365.md#exchange-online-irm-configuration).
+Para suportar este cenário, Exchange Online tem de estar ativada para o serviço Azure Rights Management e os novos recursos na encriptação de mensagens do Office 365. Para obter mais informações sobre esta configuração, consulte [Exchange Online: Configuração de IRM](configure-office365.md#exchange-online-irm-configuration).
 
-Para obter mais informações sobre os novos recursos que incluem o suporte a todas as contas de e-mail em todos os dispositivos, consulte a seguinte mensagem de blogue: [anunciando novos recursos disponíveis na encriptação de mensagens do Office 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
+Para obter mais informações sobre os novos recursos que incluem o suporte a todas as contas de e-mail em todos os dispositivos, consulte a seguinte mensagem de blogue: [Apresentamos novas funcionalidades disponíveis na encriptação de mensagens do Office 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
 ## <a name="what-devices-and-which-file-types-are-supported-by-azure-rms"></a>Que dispositivos e que tipos de ficheiro são suportados pelo Azure RMS?
 Para obter uma lista dos dispositivos que suportam o serviço Azure Rights Management, veja [Dispositivos cliente que suportam a proteção de dados do Azure Rights Management](./requirements-client-devices.md). Uma vez que nem todos os dispositivos suportados conseguem atualmente suportar todas as funcionalidades de Rights Management, verifique também a tabela [Aplicações otimizadas pelo RMS](./requirements-applications.md#rms-enlightened-applications).
@@ -157,9 +157,9 @@ Abra o Outlook e crie um perfil com a conta escolar ou profissional do Office 36
 
     Esta ação irá transferir os modelos do Azure Rights Management e **Verificar Credenciais** foi agora substituído por opções que incluem **Sem Restrições**, **Não Encaminhar** e quaisquer modelos do Azure Rights Management que estejam publicados para o seu inquilino. Já pode cancelar esta nova mensagem.
 
-Para proteger uma mensagem de e-mail ou um documento: no separador **Opções**, clique em **Permissões** e escolha uma opção ou um modelo que protege o seu e-mail ou documento.
+Para proteger uma mensagem de e-mail ou um documento: Sobre o **opções** separador, clique em **permissões** e escolha uma opção ou um modelo que protege o seu e-mail ou documento.
 
-Para controlar um documento depois de o proteger: a partir de um computador Windows que tenha o cliente do Azure Information Protection instalado, registe o documento no site de controlo de documentos ao utilizar uma aplicação do Office ou o Explorador de Ficheiros. Para obter instruções, veja [Controlar e revogar os documentos](./rms-client/client-track-revoke.md). No seu computador Mac, agora pode utilizar o browser para ir para o site de controlo de documentos (https://track.azurerms.com) para controlar e revogar este documento.
+Para controlar um documento depois de o proteger: Num computador Windows que tenha o cliente do Azure Information Protection instalado, registe o documento com o site de controlo utilizando um aplicativo do Office ou o Explorador de ficheiros de documentos. Para obter instruções, veja [Controlar e revogar os documentos](./rms-client/client-track-revoke.md). No seu computador Mac, agora pode utilizar o browser para ir para o site de controlo de documentos (https://track.azurerms.com) para controlar e revogar este documento.
 
 ## <a name="when-i-open-an-rms-protected-office-document-does-the-associated-temporary-file-become-rms-protected-as-well"></a>Quando abro um documento do Office protegido por RMS, o ficheiro temporário associado também fica protegido por RMS?
 Não. Neste cenário, o ficheiro temporário associado não contém dados do documento original, mas apenas o que o utilizador introduz enquanto o ficheiro está aberto. Ao contrário do ficheiro original, o ficheiro temporário não foi concebido para partilha e permaneceria no dispositivo, protegido por controlos de segurança locais, como o BitLocker e o EFS.
@@ -172,11 +172,11 @@ Se estiver interessado numa funcionalidade específica que ainda não é suporta
 ## <a name="how-do-i-configure-one-drive-for-business-in-sharepoint-online-so-that-users-can-safely-share-their-files-with-people-inside-and-outside-the-company"></a>Como posso configurar o OneDrive para Empresas no SharePoint Online, para que os utilizadores possam partilhar os seus ficheiros de forma segura com pessoas dentro e fora da empresa?
 Por predefinição, enquanto administrador do Office 365, não lhe cabe a si configurar isto, mas sim aos utilizadores.
 
-Tal como um administrador do site do SharePoint ativa e configura a IRM para uma biblioteca do SharePoint que possui, o OneDrive para Empresas é concebido para os utilizadores ativarem e configurarem a IRM para as suas próprias bibliotecas do OneDrive para Empresas. No entanto, com o PowerShell, pode fazê-lo pelos utilizadores. Para obter instruções, consulte a [SharePoint Online e OneDrive para empresas: configuração de IRM](configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) secção a [do Office 365: configuração para clientes e serviços online](configure-office365.md) artigo.
+Tal como um administrador do site do SharePoint ativa e configura a IRM para uma biblioteca do SharePoint que possui, o OneDrive para Empresas é concebido para os utilizadores ativarem e configurarem a IRM para as suas próprias bibliotecas do OneDrive para Empresas. No entanto, com o PowerShell, pode fazê-lo pelos utilizadores. Para obter instruções, consulte o [SharePoint Online e OneDrive para empresas: Configuração de IRM](configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) secção o [do Office 365: Configuração para clientes e serviços online](configure-office365.md) artigo.
 
 ## <a name="do-you-have-any-tips-or-tricks-for-a-successful-deployment"></a>Tem sugestões ou truques para uma implementação com êxito?
 
-Após supervisionar várias implementações e ouvir os nossos clientes, parceiros, consultores e engenheiros de suporte – uma das maiores sugestões que podemos transmitir da nossa experiência: **Crie e implemente políticas simples**.
+Após supervisionar várias implementações e ouvir os nossos clientes, parceiros, consultores e engenheiros de suporte – uma das maiores sugestões que podemos transmitir da experiência: **Crie e implemente políticas simples**.
 
 Como o Azure Information Protection suporta a partilha segura com todas as pessoas, pode ser ambicioso com o alcance da proteção de dados. Mas, seja conservador quando configurar restrições de utilização de direitos. Para muitas organizações, o maior impacto comercial provém de impedir a fuga de dados ao restringir o acesso a pessoas na sua organização. Claro que, se for necessário, pode ser muito mais granular e impedir que as pessoas imprimam, editem, etc. Mas manter as restrições mais granulares, como a exceção para documentos que precisam de segurança de alto nível e não implementam estes direitos de utilização mais restritivos no primeiro dia, mas planeie uma abordagem mais faseada.
 

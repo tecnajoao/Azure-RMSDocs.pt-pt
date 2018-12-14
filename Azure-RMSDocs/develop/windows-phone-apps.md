@@ -1,45 +1,45 @@
 ---
 title: Configuração do Windows Phone | Azure RMS
-description: As aplicações do Windows Phone podem utilizar o SDK Microsoft Rights Management 4.2 para ativar a proteção de informações integrada na respetiva aplicação.
+description: Aplicativos do Windows Phone podem utilizar o Microsoft Rights Management SDK 4.2 para ativar a proteção de informações integrada na respetiva aplicação.
 keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 12/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e25a446e-b977-4736-9c65-7711171fb0e1
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 50480fef2983f715a54b68ae1b21dbcf28e9b554
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 2c85449615fd0db5f88c452031cbc5b837cb0f82
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151508"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266397"
 ---
 # <a name="windows-phone-setup"></a>Configuração do Windows Phone
 
 
-As aplicações do Windows Phone podem utilizar o SDK Microsoft Rights Management 4.2 para ativar a proteção de informações integrada na respetiva aplicação utilizando o Azure Active Directory Rights Management (AAD RM).
+Aplicativos do Windows Phone podem utilizar o Microsoft Rights Management SDK 4.2 para ativar a proteção de informações integrada na respetiva aplicação utilizando o Azure Active Directory Rights Management (AAD RM).
 
 Este tópico descreve como configurar o ambiente para criar as suas novas aplicações.
 
 -   [Pré-requisitos](#prerequisites)
 -   [Configurar o ambiente de desenvolvimento](#configuring-your-development-environment)
--   [Consulte Também](#see-also)
+-   [Consulte também](#see-also)
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 
 Tem de possuir o seguinte software no sistema de desenvolvimento:
 
--   O sistema operativo [Windows 8.1](http://windows.microsoft.com/en-US/windows-8/meet).
--   [Ferramentas de Desenvolvimento do Windows Phone 8.1 (SDK)](http://dev.windowsphone.com/en-us/downloadsdk)
--   Microsoft [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview) ou superior, ou Visual Studio Express 2012, que está incluído no Windows Phone SDK 8.0/8.1
--   O pacote do SDK MS RMS 4.2 para Windows Phone. Para obter mais informações, consulte [Introdução](get-started.md).
--   Biblioteca de autenticação: recomendamos que utilize a [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx), mas é possível utilizar outras bibliotecas de autenticação.
+-   O sistema operativo [Windows 8.1](https://windows.microsoft.com/windows-8/meet).
+-   [Ferramentas de Desenvolvimento do Windows Phone 8.1 (SDK)](https://developer.microsoft.com/windows/downloads/sdk-archive)
+-   Microsoft [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/) ou superior, ou Visual Studio Express 2012, que está incluído no Windows Phone SDK 8.0/8.1
+-   O pacote do SDK MS RMS 4.2 para Windows Phone. Para obter mais informações, consulte [Introdução](get-started.md).
+-   Biblioteca de autenticação: Recomendamos que utilize o [do Azure AD Authentication Library](https://msdn.microsoft.com/library/jj573266.aspx) e outras bibliotecas de autenticação podem ser utilizadas.
 
 Consulte o tópico [Novidades](release-notes.md) para obter informações acerca de atualizações de API, informações de dispositivos e de ambiente, notas de versão e perguntas mais frequentes (FAQ).
 
@@ -79,6 +79,6 @@ Agora, está pronto para criar as suas novas aplicações do Windows Phone.
 
 [Referência da API do Windows](https://msdn.microsoft.com/library/dn891914.aspx)
 
-[Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
+[Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/)
 
-[Windows Phone SDK](http://dev.windowsphone.com/en-us/downloadsdk)
+[Windows Phone SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)

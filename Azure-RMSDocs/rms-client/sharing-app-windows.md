@@ -10,19 +10,19 @@ ms.service: information-protection
 ms.assetid: 7d8a8abe-6de1-4088-90ee-e0c4bd6deec8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3884674c70df310fba9995c22598832b61367c66
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 60c07cd317fbdcacba7aa22d0ebf089a519ba87c
+ms.sourcegitcommit: b2414cc00d50ccefe10f8c3719eb3f6c1e78fc65
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148329"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246161"
 ---
 # <a name="rights-management-sharing-application-for-windows"></a>Aplicação de Partilha Rights Management para Windows
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*Aplica-se a: Serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 > [!IMPORTANT]
-> **Notificação de fim do suporte**: a aplicação de partilha Rights Management para Windows está a ser substituída pelo [cliente do Azure Information Protection](aip-client.md). O suporte para esta aplicação mais antiga será interrompido 31 de Janeiro de 2019. 
+> **Fim do suporte notificação**: O Rights Management para Windows está a ser substituído pela aplicação de partilha do [cliente Azure Information Protection](aip-client.md). O suporte para esta aplicação mais antiga será interrompido 31 de Janeiro de 2019. 
 
 
 A gestão de direitos de aplicação de partilha para Windows (também conhecida apenas como "aplicação de partilha RMS") é uma aplicação gratuita e transferível para organizações que utilizam [serviços de gestão de direitos do Active Directory](https://technet.microsoft.com/library/cc772403.aspx) (AD RMS) ou [Azure Information Protection](../what-is-information-protection.md). Esse aplicativo também é para as organizações que não tem sua própria infraestrutura de proteção de informações, porém pretendem consumir conteúdo que foi protegido por outras organizações que utilizam o serviço Azure Rights Management do Azure Information Protection.
@@ -36,8 +36,8 @@ A gestão de direitos de aplicação de partilha para Windows (também conhecida
 > [!TIP]
 > Também existe uma aplicação Azure Information Protection para iOS e Android. Para obter mais informações, consulte [FAQ da aplicação Azure Information Protection para iOS e Android](mobile-app-faq.md )
 > 
-> Para computadores Mac e Windows Phones: [FAQ da Aplicação de Partilha Rights Management para Plataformas Móveis e Mac](http://technet.microsoft.com/dn451248).
+> Para computadores Mac e Windows Phones: [FAQ da aplicação para plataformas móveis e Mac de partilha Rights Management](https://technet.microsoft.com/dn451248).
 
 ## <a name="see-also"></a>Consulte Também
-[FAQ sobre a Aplicação de Partilha Rights Management para Windows](http://technet.microsoft.com/dn467883)
+[FAQ sobre a Aplicação de Partilha Rights Management para Windows](https://technet.microsoft.com/dn467883)
 

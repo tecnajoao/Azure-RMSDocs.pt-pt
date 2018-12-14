@@ -4,19 +4,19 @@ description: Descreve as alterações importantes e de recursos desta e de vers�
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
-ms.date: 09/25/2017
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: e3b4812f06c7ee86c48c0984e440d34f858bb4e7
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 6433352f05401fcaafc84704a0441941ff87bdf3
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148788"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266703"
 ---
 # <a name="whats-new-and-release-notes"></a>Novidades e Notas de versão
 
@@ -26,13 +26,13 @@ Este tópico descreve as funcionalidades nesta versão nova do v4.x RMS SDK e al
 
 -   [Novo em Julho de 2017](#new-for-july-2017)
 -   [Atualização de Outubro de 2016](#October-2016-update)
--   [Atualização de Junho de 2016](#new-for-June-2016)
+-   [Atualização de Junho de 2016](#june-2016-update)
 -   [Atualização de Dezembro de 2015](#december-2015-update)
--   [Atualização de Julho de 2015 – adiciona suporte para Linux / desenvolvimento em C++](#july-2015-update-adds-support-for-linux-c-developm)
--   [Talvez a atualização de 2015 – adiciona o controlo de registo](#may-2015-update-adds-logging-control)
--   [Atualização de Fevereiro de 2015 - suporte técnico da aplicação adiciona o Windows Store](#february-2015-update-adds-windows-store-application-support)
--   [Atualização de Janeiro de 2015 – adiciona o suporte da plataforma WinPhone](#january-2015-update-adds-winphone-platform-support)
--   [Atualização de Outubro de 2014 – atualizar para o SDK do Microsoft RMS 4.1](#october-2014-update-upgrade-to-microsoft-rms-sdk-4-1)
+-   [Atualização de Julho de 2015 – adiciona suporte para Linux / desenvolvimento em C++](#july-2015-update---adds-support-for-linux--c-development)
+-   [Talvez a atualização de 2015 – adiciona o controlo de registo](#may-2015-update---adds-logging-control)
+-   [Atualização de Fevereiro de 2015 - suporte técnico da aplicação adiciona o Windows Store](#february-2015-update---adds-windows-store-application-support)
+-   [Atualização de Janeiro de 2015 – adiciona o suporte da plataforma WinPhone](#january-2015-update---adds-winphone-platform-support)
+-   [Atualização de Outubro de 2014 – atualizar para o SDK do Microsoft RMS 4.1](#october-2014-update---upgrade-to-microsoft-rms-sdk-4-1)
 -   [Notas de versão](#release-notes)
 -   [Perguntas mais frequentes](#frequently-asked-questions)
 
@@ -40,7 +40,7 @@ Este tópico descreve as funcionalidades nesta versão nova do v4.x RMS SDK e al
 
 A atualização para a nossa versão de Julho incluído deixa de aumentar a revisão do SDK, 4.2.5 agora.
 
-- Android SDK: A sua aplicação agora pode **definir o registo ao nível no momento** com o SDK do Android. Para obter mais informações, consulte [Como: ativar registo de erros e de desempenho](https://docs.microsoft.com/information-protection/develop/enabling-logging)
+- Android SDK: Agora a sua aplicação pode **definir o registo ao nível no momento** com o SDK do Android. Para obter mais informações, consulte [como: Ativar o registo de desempenho e de erro](https://docs.microsoft.com/information-protection/develop/enabling-logging)
 - O SDK do iOS não suporta o nível de registo. 
 - O SDK agora retorna um erro para um token de acesso NULL.
 
@@ -54,7 +54,7 @@ A atualização para a nossa versão de Julho incluído deixa de aumentar a revi
 - **Suporte para autenticação moderna** -traz baseada no Active Directory Authentication Library ADAL início de sessão para o RMS, as aplicações. Ele permite o início de sessão funcionalidades, como o multi-factor Authentication (MFA), fornecedores de identidade de terceiros baseadas em SAML com aplicações de cliente do RMS, cartão inteligente e a autenticação baseada em certificado e remove a necessidade de RMS as aplicações para utilizar o básico protocolo de autenticação.
 - **Suporte ao Controlo de Documentos** - os programadores agora podem ativar o controlo de documentos ao proteger um documento nas suas aplicações
 - Melhoramentos de desempenho
-- Correções
+- Correções de erros
 
 ### <a name="december-2015-update"></a>Atualização de dezembro de 2015
 
@@ -64,7 +64,7 @@ Com esta versão, o SDK RMS para dispositivos está agora na versão 4.2 e adici
 
     Para obter detalhes e instruções de utilização no iOS/OS X, consulte a [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx) classe, que fornece informações de controlo e o método de registo de controlo no adicional de documentos [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx). Existem adições semelhantes para o Android em [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx) e [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx).
 
-    Para obter uma descrição detalhada da funcionalidade de controlo de documentos, consulte [Como: utilizar o controlo de documentos](how-to-use-document-tracking.md).
+    Para obter uma descrição detalhada da funcionalidade de controlo de documentos, consulte [como: Utilizar o controlo de documentos](how-to-use-document-tracking.md).
 
 -   Um conjunto de métodos síncronos paralelos às versões assíncronas para a API do Android:
 
@@ -108,7 +108,7 @@ Esta versão adiciona suporte para as seguintes atualizações:
 
     Definições de controlo do nível de registo ativadas.
 
-    Para obter mais informações, consulte [Como: ativar registo de erros e de desempenho](enabling-logging.md)
+    Para obter mais informações, consulte [como: Ativar o registo de desempenho e de erro](enabling-logging.md)
 
     Suporte de limpeza da cache adicionado.
 
@@ -193,50 +193,50 @@ Esta secção apresenta as informações sobre as versões atuais e anteriores d
 
 
 
-**Nota:** as aplicações MDI não são suportadas pela nossa API do iOS.
+**Tenha em atenção**  as aplicações MDI não são suportadas pela nossa API do iOS.
 
 ## <a name="frequently-asked-questions"></a>Perguntas mais frequentes
 
 **Todas as plataformas**
 
-**P**: não consigo ver uma IU de seleção de **Permissões Personalizadas** no fluxo de trabalho da proteção. Por que motivo?
+**AS PERGUNTAS E**: Não vejo uma **permissões personalizadas** seleção da interface do Usuário do fluxo de trabalho de proteção. Por que motivo?
 
-**R** – isto é um problema conhecido e será resolvido mais tarde.
+**A**: Este é um problema conhecido e será resolvido mais tarde.
 
-**P**: de que forma obtenho novos inquilinos organizacionais para experimentar o SDK e as aplicações de exemplo?
+**AS PERGUNTAS E**: Como obtenho novos inquilinos organizacionais para experimentar o SDK e aplicações de exemplo?
 
-**R**: para pedir credenciais para organizações de teste do Azure AD RMS, envie um e-mail para <rmcstbeta@microsoft.com>.
+**A**: Para pedir credenciais para organizações de teste do Azure AD RMS, envie um e-mail para <rmcstbeta@microsoft.com>.
 
-**P**: não vejo qualquer debate sobre a hierarquia de testes aqui na documentação. Por que motivo?
+**AS PERGUNTAS E**: Não vejo qualquer discussão aqui da hierarquia de teste na documentação. Por que motivo?
 
-**R**: não existe qualquer conceito de hierarquia de testes com os novos SDKs AD RMS. Irá sempre trabalhar com a hierarquia de produção.
+**A**: Não há nenhum conceito de hierarquia de teste com os novos SDKs AD RMS. Irá sempre trabalhar com a hierarquia de produção.
 
-**As perguntas e**: na versão 2.1 do SDK RMS, um manifesto gerado era necessária para cada aplicação que implementasse a proteção de informações. Isso é ainda verdade para as versões 4.0 e posteriores do SDK?
+**AS PERGUNTAS E**: Na versão do RMS SDK 2.1, um manifesto gerado foi necessário para cada aplicação que implementasse a proteção de informações. Isso é ainda verdade para as versões 4.0 e posteriores do SDK?
 
-**R**: não, os manifestos já não são necessários para as versões 3.0 e posteriores do SDK Rights Management.
+**A**: Não, os manifestos já não são necessários para as versões 3.0 e versões posteriores do SDK do Rights Management.
 
 **Android**
 
-**P**: com que ambientes de desenvolvimento foi o SDK testado?
+**AS PERGUNTAS E**: Que ambientes de desenvolvimento tem o SDK testado?
 
-**R**: Eclipse Juno através da API do Google 15 e superior.
+**A**: Eclipse Juno através da API do Google 15 e superior.
 
-**P**: posso chamar um método de cancelamento cancel() a partir do thread da IU?
-**R**: deve chamar cancel() a partir de um thread não IU, pois pode abortar uma ligação de rede.
+**AS PERGUNTAS E**: Posso chamar Cancel () um método de cancelamento do thread da interface do Usuário?
+**A**: Deve chamar Cancel () a partir de um thread não IU, pois pode abortar uma ligação de rede.
 
 **iOS**
 
-**P**: que plataformas foram verificadas para o desenvolvimento de SDK?
+**AS PERGUNTAS E**: Que plataformas foram verificadas para o desenvolvimento de SDK?
 
-**R**: Xcode 5.0 com iOS 7 e posterior.
+**A**: Xcode 5.0 com iOS 7 e posterior.
 
-**P**: chamei um método cancel() numa operação; no entanto, ainda obtive uma notificação sobre a conclusão da operação. Por que motivo?
+**AS PERGUNTAS E**: Chamei um método Cancel () numa operação, no entanto, eu ainda Obtive uma notificação concluir a operação. Por que motivo?
 
-**Um**: nem todas as operações podem ser canceladas, pelo que uma operação de cancelamento é executada da melhor forma possível.
+**A**: Nem todas as operações podem ser canceladas, pelo que uma operação de cancelamento é executada da melhor forma possível.
 
 **OS X**
 
-**As perguntas e**: estrutura de aplicação de exemplo é adaptada para o Xcode 5, posso trabalhar com o Xcode 4.6?
+**AS PERGUNTAS E**: Estrutura de aplicação de exemplo é adaptada para o Xcode 5, posso trabalhar com o Xcode 4.6?
 
 **R**: o SDK OS X apenas funciona com o Xcode 4.6 e versões posteriores, bem como o OS X 10.8 e versões posteriores.
 

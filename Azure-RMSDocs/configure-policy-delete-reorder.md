@@ -4,16 +4,16 @@ description: Pode eliminar ou reordenar etiquetas do Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: ccb5f4ff84e590640ed4e5204d2170384611775f
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 1f957874649fe9e5697c3dd0164b0b0b255d1e6e
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023401"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53304881"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Como eliminar ou reordenar uma etiqueta para o Azure Information Protection
 
@@ -55,13 +55,13 @@ Utilize as seguintes instruções para efetuar as alterações.
     
     Por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
 
-2. Do **classificações** > **etiquetas** opção de menu: no **do Azure Information Protection – etiquetas** painel, efetue um ou mais das seguintes ações: 
+2. Do **classificações** > **etiquetas** opção de menu: Sobre o **do Azure Information Protection – etiquetas** painel, efetue um ou mais das seguintes ações: 
 
-    - Para eliminar uma etiqueta: faça duplo clique ou selecione o menu de contexto (**...** ) para a etiqueta que pretende eliminar, clique em **eliminar esta etiqueta**e clique em **OK** para confirmar. 
+    - Para eliminar uma etiqueta: Faça duplo clique ou selecione o menu de contexto (**...** ) para a etiqueta que pretende eliminar, clique em **eliminar esta etiqueta**e clique em **OK** para confirmar. 
 
-    - Para desativar uma etiqueta: selecione a etiqueta que pretende desativar. Sobre o **etiqueta** painel, para **ativado**, selecione **desativar**e, em seguida, clique em **guardar**.
+    - Para desativar uma etiqueta: Selecione a etiqueta que pretende desativar. Sobre o **etiqueta** painel, para **ativado**, selecione **desativar**e, em seguida, clique em **guardar**.
 
-    - Para reordenar uma etiqueta: faça duplo clique ou selecione o menu de contexto (**...** ) para a etiqueta que pretende reordenar, clique em **mover para cima** ou **mover para baixo** até que a etiqueta esteja na ordem em que desejar.  
+    - Para reordenar uma etiqueta: Faça duplo clique ou selecione o menu de contexto (**...** ) para a etiqueta que pretende reordenar, clique em **mover para cima** ou **mover para baixo** até que a etiqueta esteja na ordem em que desejar.  
 
 ## <a name="next-steps"></a>Passos Seguintes
 

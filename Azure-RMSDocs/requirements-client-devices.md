@@ -4,22 +4,22 @@ description: Identifique quais os dispositivos que suportam o serviço Azure Rig
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/14/2017
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 93f8021d-43c5-47fe-ad63-8a1bacff9971
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2004ca8962f1ef40c101ad75b7ea06b1ac30dccd
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 673e57a9a63dfb88ab9ef5f92a0f692ed31d7cdb
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44146442"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53304949"
 ---
 # <a name="client-devices-that-support-azure-rights-management-data-protection"></a>Dispositivos cliente que suportam a proteção de dados do Azure Rights Management
 
->*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilize as secções seguintes para identificar quais os dispositivos que suportam o serviço Azure Rights Management. Este serviço proporciona proteção de dados para o Azure Information Protection.
 
@@ -28,24 +28,24 @@ Os seguintes sistemas operativos de computador suportam o serviço Azure Rights 
 
 -   **Windows 7** (x86, x64)
 
--   **Windows 8** (x86, x64)
+-   **O Windows 8** (x86, x64)
 
--   **Windows 8.1** (x86, x64)
+-   **Windows 8.1** (x86, x64)
 
--   **Windows 10** (x86, x64)
+-   **Windows 10** (x86, x64)
 
--   **macOS**: versão mínima do macOS 10.8 (Mountain Lion)
+-   **macOS**: Versão mínima do macOS 10.8 (Mountain Lion)
 
 ## <a name="mobile-devices"></a>Dispositivos móveis
-Os seguintes sistemas operativos de dispositivo móvel suportam o serviço Azure Rights Management:
+Os seguintes sistemas operativos de dispositivos móveis suportam o serviço Azure Rights Management:
 
--   **Windows Phone**: Windows Phone 8.1
+-   **Windows Phone**: Windows Phone 8.1
 
--   **Telemóveis e tablets Android**: versão mínima do Android 4.4
+-   **Telemóveis e tablets Android**: Versão mínima do Android 4.4
 
--   **iPhone e iPad**: versão mínima do iOS 8.0
+-   **iPhone e iPad**: Versão mínima do iOS 8.0
 
--   **Tablets Windows**: Windows 10 Mobile e Windows 8.1 RT
+-   **Windows tablets**: Windows 10 Mobile e Windows 8.1 RT
 
 
 ## <a name="next-steps"></a>Passos Seguintes

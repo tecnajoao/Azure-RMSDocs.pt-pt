@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: 11ffa730-c5dc-4b6b-9c1e-c58eff8aafc2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d93e761db545ac9934ca04f7cad148203cdb8c12
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 1a09edc0ed8a9bad27aa599282c9aaaf42ffc07a
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151780"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173677"
 ---
 # <a name="preparing-the-environment-for-azure-rights-management-when-you-also-have-active-directory-rights-management-services-ad-rms"></a>Preparar o ambiente para o Azure Rights Management quando também tem os Serviços de Gestão de Direitos do Active Directory (AD RMS)
 
->*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
 > Documentação de orientação se estiver a utilizar o Active Directory Rights Management Services (AD RMS)
@@ -85,9 +85,9 @@ Já deverá estar visível **O Rights Management não está ativado** e a opçã
 
 A barra de informações apresenta **desativação foi concluída com êxito** e **desativar** foi substituída por **ativar**. 
 
-### <a name="step-2-start-planning-for-migration"></a>Passo 2: começar a planear a migração
+### <a name="step-2-start-planning-for-migration"></a>Passo 2: Começar a planejar a migração
 
-Veja as orientações de migração: [migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
+Veja as orientações de migração: [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
 
 
 ## <a name="your-subscription-was-purchased-before-or-during-february-2018-and-you-have-exchange-online"></a>Sua assinatura tiver sido adquirida antes ou durante a Fevereiro de 2018 e tiver o Exchange Online
@@ -96,15 +96,15 @@ Microsoft está a começar a ativar o serviço Azure Rights Management para assi
 
 Se o serviço é ativado automaticamente para e também estiver a utilizar o AD RMS, esta combinação não é compatível pelo que é importante que o inquilino é excluído da atualização automática do serviço. 
 
-### <a name="step-1-opt-out-from-the-automatic-service-update"></a>Passo 1: Optar por sair da atualização do serviço automática
+### <a name="step-1-opt-out-from-the-automatic-service-update"></a>Passo 1: Optar ativamente por participar da atualização do serviço automática
 
 Utilize o seguinte procedimento [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration) comando do PowerShell do Exchange Online:`Set-IRMConfiguration -AutomaticServiceUpdateEnabled $false`
 
 [Mais informações](https://support.office.com/article/protection-features-in-azure-information-protection-rolling-out-to-existing-office-365-tenants-7ad6f58e-65d7-4c82-8e65-0b773666634d) 
 
-### <a name="step-2-start-planning-for-migration"></a>Passo 2: começar a planear a migração
+### <a name="step-2-start-planning-for-migration"></a>Passo 2: Começar a planejar a migração
 
-Veja as orientações de migração: [migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
+Veja as orientações de migração: [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
 
 
 ## <a name="you-see-an-option-to-activate-protection-when-you-configure-azure-information-protection"></a>Verá uma opção para ativar a proteção quando configurar o Azure Information Protection
@@ -113,13 +113,13 @@ O **do Azure Information Protection – ativação de proteção** painel tem um
 
 Se também estiver a utilizar o AD RMS, não selecione a **Activate** opção. Quando o serviço Azure Rights Management não está ativado, continua a poder utilizar o Azure Information Protection apenas para etiquetas que aplicam classificação. É criada uma política predefinida especial que não inclui a proteção de dados. Essas opções de configuração permanecem indisponíveis até ativar o serviço Azure Rights Management.
 
-### <a name="step-1-configure-your-azure-information-protection-policy-for-classification-and-labeling---without-protection"></a>Passo 1: configurar a política do Azure Information Protection para classificação e etiquetagem (sem proteção)
+### <a name="step-1-configure-your-azure-information-protection-policy-for-classification-and-labeling---without-protection"></a>Passo 1: Configurar a política do Azure Information Protection para classificação e etiquetagem (sem proteção)
 
 Do **do Azure Information Protection – etiquetas** painel, ver e configurar as etiquetas que não incluem as opções de proteção de dados. Para obter mais informações sobre como configurar as etiquetas e as definições de política, consulte [política de configuração do Azure Information Protection](configure-policy.md).
 
-### <a name="step-2-start-planning-for-migration"></a>Passo 2: começar a planear a migração
+### <a name="step-2-start-planning-for-migration"></a>Passo 2: Começar a planejar a migração
 
-Veja as orientações de migração: [migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
+Veja as orientações de migração: [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
 
 ### <a name="step-3-configure-labels-for-protection"></a>Passo 3: Configurar etiquetas para proteção
 

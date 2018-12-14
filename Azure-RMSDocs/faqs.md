@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fd3c4701abba55bc80117345444781a02cd8f6a2
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: a513f495b2dd6ef75a3c2f219a207a98f1f6e143
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024404"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53174102"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Perguntas mais frequentes sobre o Azure Information Protection
 
->*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Tem uma pergunta sobre o Azure Information Protection ou o serviço Azure Rights Management (Azure RMS)? Verifique se a resposta está aqui.
 
@@ -46,7 +46,7 @@ Um utilizador deve ter um nome de utilizador válido e uma palavra-passe para ac
 ## <a name="what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included"></a>De que subscrição preciso para o Azure Information Protection e que funcionalidades estão incluídas?
 Ver a lista de informações e recursos de subscrição no [preços do Azure Information Protection](https://azure.microsoft.com/en-us/pricing/details/information-protection) página. 
 
-Se tiver uma subscrição do Office 365 que inclui proteção de dados do Azure Rights Management, transfira o [folha de dados de licenciamento do Azure Information Protection](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf), que inclui também algumas perguntas mais frequentes sobre o licenciamento.
+Se tiver uma subscrição do Office 365 que inclui proteção de dados do Azure Rights Management, transfira o [folha de dados de licenciamento do Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf), que inclui também algumas perguntas mais frequentes sobre o licenciamento.
 
 ## <a name="is-the-azure-information-protection-client-only-for-subscriptions-that-include-classification-and-labeling"></a>O cliente do Azure Information Protection destina-se apenas a subscrições que incluem classificação e etiquetagem?
 
@@ -60,15 +60,15 @@ Se utilizar atualmente o aplicativo para Windows de partilha Rights Management, 
 
 Os administradores globais de um inquilino do Office 365 ou inquilino do Azure AD podem obviamente executar todas as tarefas administrativas do Azure Information Protection. No entanto, se pretender atribuir permissões administrativas a outros utilizadores, tem as seguintes opções:
 
-- **Administrador do Information Protection**: função de administrador neste Azure Active Directory permite que um administrador configurar todos os aspetos do Azure Information Protection, mas não a outros serviços. Um administrador com esta função pode ativar e desativar o serviço de proteção do Azure Rights Management, configurar as definições de proteção e as etiquetas e configurar a política do Azure Information Protection. Além disso, um administrador com esta função pode executar todos os cmdlets do PowerShell para o [cliente Azure Information Protection](./rms-client/client-admin-guide-powershell.md) e para o [módulo AADRM](administer-powershell.md). 
+- **Administrador do Information Protection**: Esta função de administrador do Azure Active Directory permite que um administrador configurar todos os aspetos do Azure Information Protection, mas não a outros serviços. Um administrador com esta função pode ativar e desativar o serviço de proteção do Azure Rights Management, configurar as definições de proteção e as etiquetas e configurar a política do Azure Information Protection. Além disso, um administrador com esta função pode executar todos os cmdlets do PowerShell para o [cliente Azure Information Protection](./rms-client/client-admin-guide-powershell.md) e para o [módulo AADRM](administer-powershell.md). 
     
     Para atribuir um utilizador a esta função administrativa, veja [atribuir um utilizador a funções de administrador no Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 
-- **Administrador de segurança**: função de administrador neste Azure Active Directory permite que um administrador configurar todos os aspetos do Azure Information Protection no portal do Azure, além de configurar alguns aspetos dos outros serviços do Azure. Um administrador com esta função não é possível executar qualquer um da [cmdlets do PowerShell do módulo do AADRM](administer-powershell.md).
+- **Administrador de segurança**: Esta função de administrador do Azure Active Directory permite que um administrador configurar todos os aspetos do Azure Information Protection no portal do Azure, além de configurar alguns aspetos dos outros serviços do Azure. Um administrador com esta função não é possível executar qualquer um da [cmdlets do PowerShell do módulo do AADRM](administer-powershell.md).
     
     Para atribuir um utilizador a esta função administrativa, veja [atribuir um utilizador a funções de administrador no Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). Para ver quais outras permissões que um utilizador com esta função tem, consulte a [funções disponíveis](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) secção da documentação do Azure Active Directory.
 
-- O Azure Rights Management **Administrador Global** e **administrador do conector**: para estas funções de administrador do Azure Rights Management, a primeira concede aos usuários permissões para executar todos [ Cmdlets do PowerShell do módulo do AADRM](administer-powershell.md) sem o tornar um administrador global para outros serviços em nuvem e a segunda função concede permissões para executar apenas o conector do Rights Management (RMS). Nenhuma destas funções administrativas concedem permissões para consolas de gestão ou para utilizar o modo de administrador no site de controlo de documentos.
+- Azure Rights Management **Administrador Global** e **administrador do conector**: Para estas funções de administrador do Azure Rights Management, a primeira concede aos usuários permissões para executar todos [cmdlets do PowerShell do módulo do AADRM](administer-powershell.md) sem o tornar um administrador global para outros serviços em nuvem e a segunda função concede permissões para executar apenas o conector do Rights Management (RMS). Nenhuma destas funções administrativas concedem permissões para consolas de gestão ou para utilizar o modo de administrador no site de controlo de documentos.
 
     Para atribuir qualquer uma destas funções administrativas, utilize o cmdlet do PowerShell do AADRM [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator).
 
@@ -78,15 +78,15 @@ Factos a ter em conta:
 
 - Os utilizadores que são atribuídos uma função administrativa automaticamente não é possível remover a proteção de documentos ou e-mails que foram protegidos pelo Azure Information Protection. Os utilizadores que estão atribuídos superutilizadores podem fazê-lo, e somente quando a funcionalidade de Superutilizador é ativada. No entanto, qualquer utilizador que atribuir permissões administrativas para o Azure Information Protection pode atribuir utilizadores como superutilizadores, incluindo a sua própria conta. Também pode ativar a funcionalidade de superutilizador. Estas ações são registadas no registo de um administrador. Para obter mais informações, veja a secção de melhores práticas em [Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados](configure-super-users.md). 
 
-- Se estiver a migrar suas etiquetas do Azure Information Protection para Office 365, certifique-se de que leia a seguinte seção na documentação de migração do rótulo: [informações importantes sobre as funções administrativas](configure-policy-migrate-labels.md#important-information-about-administrative-roles).
+- Se estiver a migrar suas etiquetas do Azure Information Protection para o Office 365, certifique-se de que leem a seção a seguir a documentação de migração de etiqueta: [Informações importantes sobre as funções administrativas](configure-policy-migrate-labels.md#important-information-about-administrative-roles).
 
 ## <a name="does-azure-information-protection-support-on-premises-and-hybrid-scenarios"></a>O Azure Information Protection suporta cenários no local e híbridos?
 
 Sim. Embora o Azure Information Protection seja uma solução baseada na cloud, o mesmo consegue classificar, etiquetar e proteger documentos e e-mails armazenados tanto no local como na cloud.
 
-Se tiver o Exchange Server, SharePoint Server e servidores de ficheiros do Windows, pode implementar o [conector Rights Management](deploy-rms-connector.md) para que estes servidores no local possam utilizar o serviço Azure Rights Management para proteger suas mensagens de e-mail e documentos. Também pode sincronizar e federar os seus controladores de domínio do Active Directory com o Azure AD para uma experiência de autenticação mais integrada para os utilizadores, por exemplo, ao utilizar [do Azure AD Connect](/azure/active-directory/hybrid/whatis-hybrid-identity#what-is-azure-ad-connect).
+Se tiver o Exchange Server, SharePoint Server e servidores de ficheiros do Windows, pode implementar o [conector Rights Management](deploy-rms-connector.md) para que estes servidores no local possam utilizar o serviço Azure Rights Management para proteger suas mensagens de e-mail e documentos. Também pode sincronizar e federar os seus controladores de domínio do Active Directory com o Azure AD para uma experiência de autenticação mais integrada para os utilizadores, por exemplo, ao utilizar [do Azure AD Connect](/azure/active-directory/hybrid/whatis-azure-ad-connect).
 
-O serviço Azure Rights Management gera e gere o dos certificados XrML conforme necessário, pelo que não utiliza um PKI no local automaticamente. Para obter mais informações sobre como o Azure Rights Management utiliza certificados, consulte a [instruções sobre como funciona o Azure RMS: primeira utilização, proteção de conteúdos, consumo de conteúdos](./how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) secção a [como o Azure RMS funciona?](./how-does-it-work.md) artigo.
+O serviço Azure Rights Management gera e gere o dos certificados XrML conforme necessário, pelo que não utiliza um PKI no local automaticamente. Para obter mais informações sobre como o Azure Rights Management utiliza certificados, consulte o [instruções sobre como funciona o Azure RMS: Primeira utilização, proteção de conteúdos, consumo de conteúdos](./how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) secção do [como o Azure RMS funciona?](./how-does-it-work.md) artigo.
 
 ## <a name="what-types-of-data-can-azure-information-protection-classify-and-protect"></a>Que tipos de dados pode do Azure Information Protection classificar e proteger?
 
@@ -100,11 +100,11 @@ Sim, como pré-visualização pública da oferta, pode agora configurar o acesso
 
 Quando um utilizador abre um documento protegido pelo Azure Information Protection, os administradores agora podem bloquear ou conceder acesso aos utilizadores no seu inquilino, com base nos controlos padrão de acesso condicional. Exigir autenticação multifator (MFA) é uma das condições mais pedidas. Outro uma é que dispositivos têm de ser [em conformidade com as políticas do Intune](/intune/conditional-access-intune-common-ways-use) para que, por exemplo, dispositivos móveis cumprem os requisitos de palavra-passe e uma versão mínima do sistema operativo e computadores têm de ser associado a um domínio.
 
-Para obter mais informações e alguns exemplos passo a passo, consulte a seguinte mensagem de blogue: [políticas de acesso condicional do Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2017/10/17/conditional-access-policies-for-azure-information-protection/).
+Para obter mais informações e alguns exemplos passo a passo, consulte a seguinte mensagem de blogue: [Políticas de acesso condicional do Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2017/10/17/conditional-access-policies-for-azure-information-protection/).
 
 Informações adicionais:
 
-- Para computadores Windows: para a versão de pré-visualização atual, as políticas de acesso condicional do Azure Information Protection são avaliadas quando o [ambiente do utilizador é inicializado](./how-does-it-work.md#initializing-the-user-environment) (este processo também é conhecido como arranque do sistema), e em seguida, cada 30 dias.
+- Para computadores Windows: Para a versão de pré-visualização atual, as políticas de acesso condicional do Azure Information Protection são avaliadas quando o [ambiente do utilizador é inicializado](./how-does-it-work.md#initializing-the-user-environment) (este processo também é conhecido como arranque do sistema) e, em seguida, a cada 30 dias.
 
 - Pode querer ajustar a frequência de suas políticas de acesso condicional obterem avaliação. Pode fazê-lo ao configurar a duração do token. Para obter mais informações, consulte [durações de token configuráveis no Azure Active Directory](/azure/active-directory/active-directory-configurable-token-lifetimes).
 
@@ -152,7 +152,7 @@ Atualmente, existe uma diferença na definição do [proprietário do Rights Man
 
 - Para o Windows Server FCI: Pode definir o proprietário do Rights Management para ser uma única conta para todos os ficheiros ou definir dinamicamente o proprietário do Rights Management para cada ficheiro. Para definir dinamicamente o proprietário do Rights Management, utilize o **- OwnerMail [Source File Owner Email]** parâmetro e valor. Esta configuração obtém o endereço de e-mail do utilizador do Active Directory utilizando o nome da conta de utilizador na propriedade proprietário do ficheiro.
 
-- Para o scanner do Azure Information Protection: pode definir o proprietário do Rights Management para ser uma única conta para todos os ficheiros num arquivo de dados especificada, mas não é possível definir dinamicamente o proprietário do Rights Management para cada ficheiro. Para definir a conta, especifique a **- DefaultOwner** parâmetro para o [perfil de repositório de dados](/powershell/module/azureinformationprotection/Set-AIPScannerRepository?view=azureipps#optional-parameters).
+- Para o scanner do Azure Information Protection: Pode definir o proprietário do Rights Management para ser uma única conta para todos os ficheiros num arquivo de dados especificada, mas não é possível definir dinamicamente o proprietário do Rights Management para cada ficheiro. Para definir a conta, especifique a **- DefaultOwner** parâmetro para o [perfil de repositório de dados](/powershell/module/azureinformationprotection/Set-AIPScannerRepository?view=azureipps#optional-parameters).
 
 Quando a deteção de impressão pode proteger ficheiros em sites do SharePoint e bibliotecas, o proprietário do Rights Management é definido dinamicamente para cada ficheiro ao utilizar o valor de autor do SharePoint.
 
@@ -166,7 +166,7 @@ Países diferentes têm requisitos diferentes e regulamentos. Para ajudar a resp
 
 ## <a name="how-can-azure-information-protection-help-with-gdpr"></a>Como o Azure Information Protection pode ajudar com o GDPR?
 
-Para ver como o Azure Information Protection o pode ajudar-o a cumprir o Regulamento de proteção de dados (GDPR) em geral, consulte o seguinte anúncio de mensagem do blogue, com vídeo: [do Microsoft 365 fornece uma estratégia de proteção de informações para ajudar com o GDPR](https://blogs.office.com/2018/02/22/microsoft-365-provides-an-information-protection-strategy-to-help-with-the-gdpr).
+Para ver como o Azure Information Protection o pode ajudar-o a cumprir o Regulamento de proteção de dados (GDPR) em geral, consulte o seguinte anúncio de mensagem do blogue, com vídeo: [Microsoft 365 fornece uma estratégia de proteção de informações para ajudar com o GDPR](https://blogs.office.com/2018/02/22/microsoft-365-provides-an-information-protection-strategy-to-help-with-the-gdpr).
 
 ## <a name="where-can-i-find-supporting-information-for-azureinformation-protectionsuch-as-legal-compliance-and-slas"></a>Onde posso encontrar informações de suporte do Azure Information Protection – como legais, conformidade e SLAs?
 Veja [Informações de suporte e conformidade do Azure Information Protection](./compliance.md).
@@ -175,7 +175,7 @@ Veja [Informações de suporte e conformidade do Azure Information Protection](.
 
 Em alternativa, utilize os canais de suporte padrão ou [contacte o Suporte da Microsoft](information-support.md#to-contact-microsoft-support).
 
-Para enviar feedback, como sugestões de melhorias ou novas funcionalidades: na aplicação do Office, no separador **Base** no grupo **Proteção**, clique em **Proteger** e, em seguida, clique em **Ajuda e Feedback**. Na caixa de diálogo **Microsoft Azure Information Protection**, clique em **Envie-nos Os Seus Comentários**. Esta opção abre-se uma mensagem de e-mail para ser enviado à equipa do Information Protection.
+Para comentários como sugestões de melhorias ou novas funcionalidades: Na aplicação do Office, sobre o **home page** separador a **proteção** , clique em **proteger**e, em seguida, clique em **ajuda e Feedback**. Na caixa de diálogo **Microsoft Azure Information Protection**, clique em **Envie-nos Os Seus Comentários**. Esta opção abre-se uma mensagem de e-mail para ser enviado à equipa do Information Protection.
 
 É também convidado a interagir com a nossa equipa de engenharia, no [site Yammer do Azure Information Protection](https://www.yammer.com/askipteam/). 
 

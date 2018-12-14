@@ -4,22 +4,22 @@ description: Informações para o ajudar a instalar e configurar o conector Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2e3babe4a402b8f77700e9b9890dc5f826a5850a
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: c0fc5812eedd7cce5c0e17231d9ee19dbf4edd1b
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53026966"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305680"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Instalar e configurar o conector Azure Rights Management
 
->*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Utilize as seguintes informações para o ajudar a instalar e configurar o conector Azure Rights Management (RMS). Estes procedimentos abrangem os passos de 1 a 4 para [Implementar o conector do Azure Rights Management](deploy-rms-connector.md).
 
@@ -57,17 +57,17 @@ Antes de configurar o conector RMS, tem de introduzir as credenciais da conta qu
 
 Esta conta não deve exigir a autenticação multifator (MFA) porque a ferramenta de administração do Microsoft Rights Management não suporta a MFA para esta conta. 
 
-O conector também tem algumas restrições de carateres para esta palavra-passe. Não pode utilizar uma palavra-passe que tenha os seguintes carateres: "E" comercial ( **&** ); parêntese reto esquerdo ( **[** ); parêntese reto direito ( **]** ); aspas direitas ( **"** ) e apóstrofo ( **'** ). Se a sua palavra-passe tiver algum destes carateres, a autenticação do conector RMS irá falhar e receberá a mensagem de erro **Essa combinação de nome de utilizador e palavra-passe não está correta**, mesmo que já tenha conseguido iniciar sessão com esta conta e palavra-passe noutros cenários. Se este cenário aplica-se a sua palavra-passe, utilize uma conta com uma palavra-passe que não tenha nenhum destes carateres especiais ou reponha a palavra-passe para que ele não tem nenhum destes carateres especiais.
+O conector também tem algumas restrições de carateres para esta palavra-passe. Não é possível utilizar uma palavra-passe que tenha os seguintes carateres: "E" comercial ( **&** ); esquerdo Reto ( **[** ); certo Reto ( **]** ); diretamente entre aspas ( **"** ); e apóstrofo ( **'** ). Se a sua palavra-passe tiver algum destes carateres, a autenticação do conector RMS irá falhar e receberá a mensagem de erro **Essa combinação de nome de utilizador e palavra-passe não está correta**, mesmo que já tenha conseguido iniciar sessão com esta conta e palavra-passe noutros cenários. Se este cenário aplica-se a sua palavra-passe, utilize uma conta com uma palavra-passe que não tenha nenhum destes carateres especiais ou reponha a palavra-passe para que ele não tem nenhum destes carateres especiais.
 
-Além disso, se tiver implementado [controlos de integração](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), certifique-se de que a conta especificada tem a capacidade de proteger conteúdos. Por exemplo, se tiver restringido a capacidade de proteger conteúdos ao grupo "Departamento de TI", a conta que especificar tem de ser membro desse grupo. Se não vir a mensagem de erro: **Falha ao tentar descobrir a localização do serviço de administração e organização. Certifique-se de que o serviço Microsoft Rights Management está ativado para a sua organização.**
+Além disso, se tiver implementado [controlos de integração](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), certifique-se de que a conta especificada tem a capacidade de proteger conteúdos. Por exemplo, se tiver restringido a capacidade de proteger conteúdos ao grupo "Departamento de TI", a conta que especificar tem de ser membro desse grupo. Caso contrário, verá a mensagem de erro: **Falha ao tentar descobrir a localização do serviço de administração e organização. Certifique-se de que o serviço Microsoft Rights Management está ativado para a sua organização.**
 
 Pode utilizar uma conta que tenha um dos seguintes privilégios:
 
--   **Administrador global do seu inquilino**: uma conta que é um administrador global do inquilino do Office 365 ou do inquilino do Azure AD.
+-   **Administrador global do seu inquilino**: Uma conta que seja um administrador global para o seu inquilino do Office 365 ou inquilino do Azure AD.
 
--   **Administrador global do Azure Rights Management**: uma conta no Azure Active Directory à qual foi atribuída a função de administrador global do Azure RMS.
+-   **Administrador global do Azure Rights Management**: Uma conta no Azure Active Directory que tenha sido atribuída a função de administrador global do Azure RMS.
 
--   **Administrador do conector do Azure Rights Management**: uma conta no Azure Active Directory com direitos para instalar e administrar o conector do RMS na sua organização.
+-   **Administrador do conector Rights Management do Azure**: Uma conta no Azure Active Directory com direitos para instalar e administrar o conector RMS para a sua organização.
 
     > [!NOTE]
     > A função de administrador global do Azure Rights Management e a função de administrador do conector do Azure Rights Management são atribuídas às contas através do cmdlet [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator) do Azure RMS.
@@ -94,7 +94,7 @@ Pode utilizar uma conta que tenha um dos seguintes privilégios:
     >     ```
     >     Add-AadrmRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
     >     ```
-    >     Por exemplo, escreva: **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
+    >     Por exemplo, escreva: **Adicionar-AadrmRoleBasedAdministrator - EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
     >
     >     Embora estes comandos atribuam a função de administrador do conector, também pode utilizar a função GlobalAdministrator aqui.
 
@@ -145,7 +145,7 @@ Na página **Permitir que um servidor utilize o conector**, introduza o nome do 
 
 Mais informações sobre as diferentes funções de servidor:
 
--   Para os servidores que executam o Exchange: tem de especificar um grupo de segurança e pode utilizar o grupo predefinido (**Servidores Exchange**) que o Exchange cria e guarda automaticamente com todos os servidores Exchange na floresta.
+-   Para servidores que executam o Exchange: Tem de especificar um grupo de segurança e pode utilizar o grupo predefinido (**servidores Exchange**) que Exchange automaticamente cria e mantém todos os servidores do Exchange na floresta.
 
 -   Para os servidores que executam o SharePoint:
 
@@ -182,9 +182,9 @@ Utilize as seguintes definições para configurar o cluster com balanceamento de
 
     Para obter mais informações sobre quando utilizar HTTP ou HTTPS, consulte a secção seguinte.
 
--   Afinidade: nenhuma
+-   Afinidade: Nenhuma
 
--   Método de distribuição: igual
+-   Método de distribuição: Igual a
 
 O nome que define para o sistema com balanceamento de carga (para os servidores a executar o serviço do conector RMS) é o nome do conector RMS da sua organização que irá utilizar mais tarde, quando configurar os servidores no local para utilizar o Azure RMS.
 

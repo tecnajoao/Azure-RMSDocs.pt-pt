@@ -4,22 +4,22 @@ description: Fase 1 da migração do AD RMS para o Azure Information Protection,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3a695268605a16564573d64c1f48447ea9b8cf45
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 5eec7b06f3e0b649f436f61dc141e53173503774
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151117"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305184"
 ---
 # <a name="migration-phase-1---preparation"></a>Fase 1 da migração – preparação
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: Serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilize as seguintes informações para a Fase 1 da migração do AD RMS para o Azure Information Protection. Estes procedimentos abrangem os passos 1 a 3 de [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) e preparam o seu ambiente para a migração sem qualquer impacto para os seus utilizadores.
 
@@ -77,7 +77,7 @@ Na maioria das migrações, não é prático migrar todos os clientes de uma só
     
 4. Extraia os ficheiros e siga as instruções em **preparar Client.cmd** para que ele contém o nome do servidor para o AD RMS cluster extranet URL de licenciamento. 
     
-    Para localizar este nome: na consola dos Serviços de Gestão de Direitos do Active Directory, clique no nome do cluster. Nas informações em **Detalhes do Cluster**, copie o nome de servidor do valor **Licensing** da secção de URLs do cluster da extranet. Por exemplo: **rmscluster.contoso.com**.
+    Para localizar este nome: Na consola Serviços de gestão de direitos do Active Directory, clique no nome do cluster. Nas informações em **Detalhes do Cluster**, copie o nome de servidor do valor **Licensing** da secção de URLs do cluster da extranet. Por exemplo: **rmscluster.contoso.com**.
 
     > [!IMPORTANT]
     > As instruções incluem a substituição de endereços de exemplo de **adrms.contoso.com** pelos endereços de servidor do AD RMS. Ao fazê-lo, certifique-se de que não existem espaços adicionais antes ou depois dos endereços, uma vez que estes interrompem o script de migração e são muito difíceis de identificar como a causa de raiz do problema. Algumas ferramentas de edição adicionam automaticamente um espaço depois do texto colado.
@@ -93,7 +93,7 @@ Se estiver a utilizar o Exchange no local ou o Exchange Online, poderá ter inte
 
 Certifique-se de que tem o [URL do serviço Azure Rights Management do seu inquilino](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url) para que possa substituir este valor por *&lt;YourTenantURL&gt;* nos comandos seguintes. 
 
-**Se tiver integrado o Exchange Online com o AD RMS**: abra uma sessão do PowerShell do Exchange Online e execute os seguintes comandos do PowerShell individualmente ou num script:
+**Se tiver integrado o Exchange Online com o AD RMS**: Abra uma sessão do PowerShell do Exchange Online e execute os seguintes comandos do PowerShell individualmente ou num script:
 
     $irmConfig = Get-IRMConfiguration
     $list = $irmConfig.LicensingLocation
@@ -102,7 +102,7 @@ Certifique-se de que tem o [URL do serviço Azure Rights Management do seu inqui
     Set-IRMConfiguration -internallicensingenabled $false
     Set-IRMConfiguration -internallicensingenabled $true 
 
-**Se tiver integrado o Exchange no local com o AD RMS**: para cada organização do Exchange, adicione primeiro os valores de registo em cada servidor do Exchange e, em seguida, execute os comandos do PowerShell: 
+**Se tiver integrado o Exchange no local com o AD RMS**: Para cada organização do Exchange, adicione primeiro os valores de registo em cada Exchange server e, em seguida, execute comandos do PowerShell: 
 
 Valores de registo para o Exchange 2013 e o Exchange 2016:
 

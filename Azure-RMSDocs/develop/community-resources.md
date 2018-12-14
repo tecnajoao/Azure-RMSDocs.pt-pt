@@ -12,19 +12,20 @@ ms.assetid: e3bdaa6d-e8ca-421a-a429-553bfc54b78b
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 08ea1a1dfda69221657e738459f2b758a5014b05
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: c6a1c0fa6d3783ce7eb618f56316fdbe1141bd77
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150250"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266465"
 ---
 # <a name="community-resources"></a>Recursos comunitários
 
 Os Serviços de Gestão de Direitos do Active Directory são bem suportados por uma crescente comunidade de programadores em várias plataformas.
 
 ## <a name="developers-blog"></a>Blogue para Programadores
-A [Área para Programadores do RMS (blogue)](http://blogs.msdn.com/b/rms/) é o concentrador ativo para o programador de proteção de informações.
+[Fórum do TechNet de Cloud do Microsoft RMS](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
+[Stack Overflow do Azure RMS](https://stackoverflow.com/search?q=Azure+RMS)
 
 ## <a name="microsoft-connect"></a>Microsoft Connect
 A secção Serviços de Gestão de Direitos no site do Connect é onde pode encontrar os materiais a entregar atuais e tem a possibilidade de escrever comentários.
@@ -33,7 +34,7 @@ A secção Serviços de Gestão de Direitos no site do Connect é onde pode enco
 >
 >Se ainda não se registou no Microsoft Connect, efetue o seguinte:
 >
->-   Navegue para [do Microsoft Connect](http://connect.microsoft.com) (http://connect.microsoft.com)
+>-   Navegue para [do Microsoft Connect](https://connect.microsoft.com) (https://connect.microsoft.com)
 >-   Inicie sessão com a sua conta Microsoft
 >-   Clique em **Diretório** na barra de comandos
 >-   Procure "Serviços de Gestão de Direitos"

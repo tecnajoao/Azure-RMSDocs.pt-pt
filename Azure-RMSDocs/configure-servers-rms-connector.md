@@ -4,22 +4,22 @@ description: Informações para o ajudar a configurar os servidores no local que
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e66b4941cdfa86fbb1dcfe8593b39b59eb45ed9e
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 606ca10f04ad9fa21d90fdf4bfcbc368db6febb1
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024132"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305629"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configurar servidores para o conector Azure Rights Management
 
->*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 
 Utilize as seguintes informações para ajudar a configurar os servidores no local que irão utilizar o conector Azure Rights Management (RMS). Estes procedimentos inclui o passo 5 do artigo [Implementar o conector Azure Rights Management](deploy-rms-connector.md).
@@ -30,15 +30,15 @@ Antes de começar, certifique-se de que instalou e configurou o conetor RMS e de
 ## <a name="configuring-servers-to-use-the-rms-connector"></a>Configurar servidores para utilizar o conector RMS
 Após instalar e configurar o conector RMS, estará pronto para configurar os servidores no local que irão ligar ao serviço Azure Rights Management e utilizar esta tecnologia de proteção através do conector. Isto implica configurar os seguintes servidores:
 
--   **Para o Exchange 2016 e Exchange 2013**: servidores de acesso de cliente e servidores de caixa de correio
+-   **Para o Exchange 2016 e Exchange 2013**: Servidores de acesso de cliente e servidores de caixa de correio
 
--   **Para o Exchange 2010**: servidores de acesso de cliente e servidores de transporte de concentrador
+-   **Para o Exchange 2010**: Servidores de acesso de cliente e servidores de transporte de hub
 
--   **Para o SharePoint**: servidores Web front-end do SharePoint, incluindo os que alojam o servidor de Administração Central
+-   **Para o SharePoint**: Servidores Web front-end do SharePoint, incluindo os que alojam o servidor de Administração Central
 
--   **Para a Infraestrutura de Classificação de Ficheiros**: computadores com o Windows Server e com o Gestor de Recursos de Ficheiros instalado
+-   **Para a infraestrutura de classificação de ficheiros**: Computadores Windows Server que têm instalado o Gestor de recursos de ficheiros
 
-Esta configuração requer definições de registo. Para tal, tem duas opções: automaticamente, com a ferramenta de configuração do servidor para o conector Microsoft RMS, ou manualmente, ao editar o registo.
+Esta configuração requer definições de registo. Para fazer isso, tem duas opções: Automaticamente, com a ferramenta de configuração do servidor do conetor Microsoft RMS, ou manualmente, ao editar o registo.
 
 ---
 
@@ -90,11 +90,11 @@ Depois de fazer as alterações de configuração nestes servidores, terá de os
 
 3.  Decida como quer executar a ferramenta:
 
-    -   **Localmente**: pode executar a ferramenta de forma interativa, a partir do servidor a configurar para comunicar com o conector RMS. Trata-se de uma opção útil para uma configuração pontual, tal como um ambiente de teste.
+    -   **Localmente**: Pode executar a ferramenta de forma interativa, do servidor para ser configurado para comunicar com o conector RMS. Trata-se de uma opção útil para uma configuração pontual, tal como um ambiente de teste.
 
-    -   **Implementação de software**: pode executar a ferramenta para produzir ficheiros de registo que, em seguida, irá implementar num ou mais servidores relevantes, através de uma aplicação de gestão de sistemas que suporte a implementação de software, tal como o System Center Configuration Manager.
+    -   **Implementação de software**: Pode executar a ferramenta para produzir ficheiros de registo que, em seguida, implementar num ou mais servidores relevantes usando um aplicativo de gerenciamento de sistemas que oferece suporte à implantação de software, como o System Center Configuration Manager.
 
-    -   **Política de Grupo**: pode executar a ferramenta para produzir um script que irá fornecer a um administrador apto a criar objetos de Política de Grupo para os servidores a configurar. Este script cria um objeto de Política de Grupo para cada tipo de servidor a configurar, objeto este que o administrador poderá depois atribuir aos servidores relevantes.
+    -   **Política de grupo**: Pode executar a ferramenta para produzir um script que irá fornecer a um administrador que pode criar objetos de política de grupo para os servidores a ser configurado. Este script cria um objeto de Política de Grupo para cada tipo de servidor a configurar, objeto este que o administrador poderá depois atribuir aos servidores relevantes.
 
     > [!NOTE]
     > Esta ferramenta configura os servidores que irão comunicar com o conector RMS e que estão listados no início desta secção. Não execute esta ferramenta nos servidores que executam o conector RMS.
@@ -128,9 +128,9 @@ Utilize as secções que se seguem para obter informações específicas para ca
 ## <a name="configuring-an-exchange-server-to-use-the-connector"></a>Configurar um servidor Exchange para utilizar o conector
 As seguintes funções do Exchange comunicam com o conector RMS:
 
--   Para o Exchange 2016 e Exchange 2013: servidor de acesso de cliente e servidor de caixa de correio
+-   Para o Exchange 2016 e Exchange 2013: Servidor de acesso de cliente e servidor de caixa de correio
 
--   Para o Exchange 2010: servidor de acesso de cliente e servidor de transporte de concentrador
+-   Para o Exchange 2010: Servidor acesso para cliente e servidor de transporte de hub
 
 Para utilizarem o conector RMS, estes servidores com o Exchange têm de ter uma das seguintes versões de software em execução:
 
@@ -225,7 +225,7 @@ Para utilizar o conector RMS e a Infraestrutura de Classificação de Ficheiros 
 
 - Windows Server 2016
 
-- Windows Server 2012 R2
+- Windows Server 2012 R2
 
 - Windows Server 2012
 

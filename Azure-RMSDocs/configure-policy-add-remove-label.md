@@ -4,16 +4,16 @@ description: Adicionar ou remover uma etiqueta do Azure Information Protection p
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
-ms.openlocfilehash: f097ec2f0e3db75d679e6c0a6251fb128f583d4b
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 367426324af487cbdf0ddaac53eb86aa89c168b7
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023313"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53304864"
 ---
 # <a name="add-or-remove-a-label-to-or-from-an-azure-information-protection-policy"></a>Adicionar ou remover uma etiqueta de ou para uma política do Azure Information Protection
 
@@ -33,7 +33,7 @@ Se precisar de criar uma política de âmbito para que a etiqueta aplica-se a um
     
     Por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
 
-2. Do **classificações** > **políticas** opção de menu: no **do Azure Information Protection** - **políticas** painel, selecione **Global** se a etiqueta para adicionar ou remover aplica-se a todos os utilizadores.
+2. Do **classificações** > **políticas** opção de menu: Sobre o **do Azure Information Protection** - **políticas** painel, selecione **Global** se a etiqueta para adicionar ou remover aplica-se a todos os utilizadores.
 
     Se a etiqueta para adicionar ou remover aplica-se a um subconjunto de utilizadores, selecione a política de âmbito.
 

@@ -4,22 +4,22 @@ description: Recursos de informação para o cliente do Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 12/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8d537ec34756b131805dcd83edd1d4b833bc5749
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 6f2348de61c395bc1792dc0a205bf18848ca7c18
+ms.sourcegitcommit: 2a1c0882d2b0400f4da6370dbc1830df09867e3d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148822"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53218413"
 ---
 # <a name="azure-information-protection-client-for-windows"></a>Cliente do Azure Information Protection para Windows
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2**
+>*Aplica-se a: Serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2**
 
 O cliente do Azure Information Protection para Windows é um cliente gratuito e transferível para as organizações que utilizam o [Azure Information Protection](../what-is-information-protection.md) classificarem e protegerem documentos e e-mails ou utilizarem um serviço Rights Management para proteger os seus dados. Este cliente também tem um visualizador para organizações que não tem a sua própria infraestrutura de proteção de informações, mas pretendem consumir conteúdo que foi protegido por outras organizações que utilizam um serviço Rights Management da Microsoft.
 
@@ -32,7 +32,7 @@ O cliente do Azure Information Protection para Windows é um cliente gratuito e 
 > [!TIP]
 > Também existe uma aplicação Azure Information Protection para iOS e Android. Para obter mais informações, consulte [FAQ da aplicação Azure Information Protection para iOS e Android](mobile-app-faq.md )
 > 
-> Para computadores Mac e dispositivos Windows Phone: utilize a aplicação de partilha RMS para dispositivos móveis e leia as [FAQ sobre a Aplicação de Partilha Rights Management para Plataformas Móveis e Mac](http://technet.microsoft.com/dn451248).
+> Para computadores Mac e Windows Phones: Utilizar a aplicação para dispositivos móveis de partilha RMS e ler os [FAQ para as aplicação de partilha do Rights Management para plataformas móveis e Mac](https://technet.microsoft.com/dn451248).
 
 ## <a name="install-instructions"></a>Instruções de instalação
 

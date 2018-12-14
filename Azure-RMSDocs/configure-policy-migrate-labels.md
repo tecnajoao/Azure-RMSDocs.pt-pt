@@ -9,16 +9,16 @@ ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: be48797931dc0e8c76f29094715df37d6488f800
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 84f3aa3cc5dc7955056c98a957fa5d307340da1d
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024013"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53174136"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Como migrar as etiquetas do Azure Information Protection para o Centro de conformidade e segurança do Office 365
 
->*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
 > Esta funcionalidade está em pré-visualização e migra o seu inquilino para uma nova plataforma que também está em pré-visualização. Não é possível inverter a migração. A nova plataforma suporta a etiquetagem unificada, para que as etiquetas que criar e gerir podem ser utilizadas por vários clientes e serviços.
@@ -77,12 +77,12 @@ Clientes do Azure Information Protection podem utilizar estas definições de et
 |Configuração de etiqueta|Suportados pelos clientes de etiquetas unificados|Excluir da edição no Centro de conformidade e segurança do|
 |-------------------|---------------------------------------------|-------------------------|
 |Estado ativado ou desativado<br /><br />Notas: Não sincronizados para o Centro de conformidade e segurança |Não aplicável|Não aplicável|
-|Cor da etiqueta: selecione na lista ou especifique usando código RGB<br /><br />Notas: Cores de etiqueta não são suportadas pelo centro de conformidade e segurança do |Não aplicável|Não aplicável|
+|Cor da etiqueta: Selecione na lista ou especifique usando código RGB<br /><br />Notas: Cores de etiqueta não são suportadas pelo centro de conformidade e segurança do |Não aplicável|Não aplicável|
 |Proteção baseada na cloud ou um modelo predefinido a utilizar a proteção baseada em HYOK |Não|Sim|
 |Proteção baseada na cloud com as permissões definidas pelo usuário no Word, Excel e PowerPoint |Não|Sim|
 |Proteção baseada em HYOK usando permissões definidas pelo usuário no Outlook para a opção não reencaminhar |Não|Sim|
 |Remover proteção |Não|Sim|
-|Marcas visuais (cabeçalho, rodapé, marca d'água): tipo personalizada e o tipo de letra personalizado cor por código RGB|Não|Recomendado se utilizar variáveis<br /><br />-Nos clientes, as variáveis são apresentadas como texto em vez de exibir os valores dinâmicos|
+|Marcas visuais (cabeçalho, rodapé, marca d'água): Personalizado fontes e cores de tipo de letra personalizados pelo código RGB|Não|Recomendado se utilizar variáveis<br /><br />-Nos clientes, as variáveis são apresentadas como texto em vez de exibir os valores dinâmicos|
 |Marcas visuais por aplicação|Não|Recomendado se utilizar variáveis<br /><br />-Nos clientes, as variáveis são apresentadas como texto em vez de exibir os valores dinâmicos|
 |Condições e configurações associadas <br /><br />Notas: Inclui a etiquetagem automática e recomendada e suas descrições|Não aplicável|Não|
 
@@ -117,4 +117,4 @@ Os clientes que atualmente suportam a etiquetagem unificada incluem:
 
 Para obter mais informações sobre as etiquetas migradas que agora pode ser configurado e publicado no Centro de conformidade e a segurança do Office 365, consulte [descrição geral das etiquetas de sensibilidade](/Office365/SecurityCompliance/sensitivity-labels).
 
-Para ler a mensagem de blogue de anúncio: [anunciar a disponibilidade de unificação de etiquetagem de gestão no Centro de conformidade e segurança do](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492).
+Para ler a mensagem de blogue de anúncio: [Anunciando a disponibilidade do unified a etiquetagem de gestão no Centro de conformidade e segurança do](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492).

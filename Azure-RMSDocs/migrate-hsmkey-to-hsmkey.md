@@ -4,22 +4,22 @@ description: Instruções que fazem parte do caminho de migração do AD RMS par
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/13/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7ddaf0a54aa116a317cee8699caf437faae9676f
-ms.sourcegitcommit: bcc9e0f9ae8512bf48d819533cf8ef3b667eb298
+ms.openlocfilehash: 77037f5ab82e7b36899c4b1bdb2399d27b662a5d
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52330337"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305048"
 ---
-# <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Passo 2: migração de chave protegida por HSM para chave protegida por HSM
+# <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Passo 2: Migração de chave protegida por HSM para chave protegida por HSM
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*Aplica-se a: Serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 
 Estas instruções fazem parte do [caminho de migração do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) e só são aplicáveis se a sua chave do AD RMS estiver protegida por HSM e quiser migrar para o Azure Information Protection com uma chave de inquilino protegida por HSM no Azure Key Vault. 
@@ -40,7 +40,7 @@ Antes de começar, certifique-se de que a sua organização tem um cofre de chav
 > Se for efetuar os passos de configuração do Azure Key Vault e não estiver familiarizado com este serviço do Azure, poderá considerar útil primeiro rever [Introdução ao Azure Key Vault](/azure/key-vault/key-vault-get-started). 
 
 
-## <a name="part-1-transfer-your-hsm-key-to-azure-key-vault"></a>Parte 1: transferir a chave HSM para o Azure Key Vault
+## <a name="part-1-transfer-your-hsm-key-to-azure-key-vault"></a>Parte 1: Transferir a chave HSM para o Azure Key Vault
 
 Estes procedimentos são efetuados pelo administrador para o Azure Key Vault.
 
@@ -59,7 +59,7 @@ Estes procedimentos são efetuados pelo administrador para o Azure Key Vault.
 
 Agora que já preparou a sua chave HSM no Azure Key Vault para o serviço Azure Rights Management do Azure Information Protection, está pronto para importar os dados de configuração do AD RMS.
 
-## <a name="part-2-import-the-configuration-data-to-azure-information-protection"></a>Parte 2: importar os dados de configuração para o Azure Information Protection
+## <a name="part-2-import-the-configuration-data-to-azure-information-protection"></a>Parte 2: Importar os dados de configuração para o Azure Information Protection
 
 Estes procedimentos são efetuados pelo administrador para o Azure Information Protection.
 

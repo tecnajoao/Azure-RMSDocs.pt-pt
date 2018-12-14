@@ -4,22 +4,22 @@ description: Instruções que fazem parte do caminho de migração do AD RMS par
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7a95da3590a666e1d90452e514e93ab6100b8ad7
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 3e8f0b9e2ca404f1f5a4c37c60d44f4fa95ace1e
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024030"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305432"
 ---
-# <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>Passo 2: migração de chave protegida por software para chave protegida por HSM
+# <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>Passo 2: Migração de chave protegida por software para chave protegida por HSM
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*Aplica-se a: Serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 
 Estas instruções fazem parte do [caminho de migração do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) e são aplicáveis apenas se a sua chave do AD RMS estiver protegida por software e quiser migrar para o Azure Information Protection com uma chave de inquilino protegida por HSM no Azure Key Vault. 
@@ -39,13 +39,13 @@ Antes de começar, certifique-se de que a sua organização tem um cofre de chav
 > Se for efetuar os passos de configuração do Azure Key Vault e não estiver familiarizado com este serviço do Azure, poderá considerar útil primeiro rever [Introdução ao Azure Key Vault](/azure/key-vault/key-vault-get-started). 
 
 
-## <a name="part-1-extract-your-slc-key-from-the-configuration-data-and-import-the-key-to-your-on-premises-hsm"></a>Parte 1: extrair a chave SLC dos dados de configuração e importar a chave para o seu HSM no local
+## <a name="part-1-extract-your-slc-key-from-the-configuration-data-and-import-the-key-to-your-on-premises-hsm"></a>Parte 1: Extrair a chave SLC dos dados de configuração e importar a chave para o seu HSM no local
 
-1.  Administrador do Azure Key Vault: para cada chave SLC exportada que pretende armazenar no Azure Key Vault, siga os seguintes passos na secção [Implementing bring your own key (BYOK) for Azure Key Vault (Implementar o BYOK (Bring Your Own Key – Traga a sua Própria Chave))](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azurekey-vault) da documentação do Azure Key Vault:
+1.  Administrador do Cofre de chaves do Azure: Cada chave SLC exportada que pretende armazenar no Azure Key Vault, siga os passos seguintes no [implementar traga a sua própria chave (BYOK) para o Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault) seção da documentação do Azure Key Vault:
 
-    -   **Gerar e transferir a sua chave para o HSM do Azure Key Vault**: [Passo 1: preparar a estação de trabalho ligada à Internet](/azure/key-vault/key-vault-hsm-protected-keys#step-1-prepare-your-internet-connected-workstation)
+    -   **Gerar e transferir a chave para o HSM do Azure Key Vault**: [Passo 1: Preparar a estação de trabalho ligada à Internet](/azure/key-vault/key-vault-hsm-protected-keys#step-1-prepare-your-internet-connected-workstation)
 
-    -   **Gerar e transferir a chave de inquilino – através da Internet**: [Passo 2: preparar a estação de trabalho desligada](/azure/key-vault/key-vault-hsm-protected-keys#step-2-prepare-your-disconnected-workstation)
+    -   **Gerar e transferir a chave de inquilino – através da Internet**: [Passo 2: Preparar a estação de trabalho desligada](/azure/key-vault/key-vault-hsm-protected-keys#step-2-prepare-your-disconnected-workstation)
 
     Não siga os passos para gerar a chave de inquilino, porque já tem o equivalente no ficheiro dos dados de configuração exportados (.xml). Em vez disso, deverá executar uma ferramenta para extrair esta chave do ficheiro e importá-la para o seu HSM no local. A ferramenta cria dois ficheiros ao ser executada:
 
@@ -53,7 +53,7 @@ Antes de começar, certifique-se de que a sua organização tem um cofre de chav
 
     - Um ficheiro PEM (contentor de chaves) com a chave, que está pronto para ser importado para o seu HSM no local.
 
-2. Administrador do Azure Information Protection ou do Azure Key Vault: na estação de trabalho desligada, execute a ferramenta TpdUtil a partir do [Toolkit de migração do Azure RMS](https://go.microsoft.com/fwlink/?LinkId=524619). Por exemplo, se a ferramenta for instalada na unidade E para a qual copia o ficheiro de dados de configuração com o nome ContosoTPD.xml:
+2. Administrador do Azure Information Protection ou o administrador do Azure Key Vault: Na estação de trabalho desligada, execute a ferramenta TpdUtil a partir da [toolkit de migração do Azure RMS](https://go.microsoft.com/fwlink/?LinkId=524619). Por exemplo, se a ferramenta for instalada na unidade E para a qual copia o ficheiro de dados de configuração com o nome ContosoTPD.xml:
 
     ```
         E:\TpdUtil.exe /tpd:ContosoTPD.xml /otpd:ContosoTPD.xml /opem:ContosoTPD.pem
@@ -107,19 +107,19 @@ Esta saída confirma que a chave privada foi agora migrada para o seu dispositiv
 Agora que a chave SLC foi extraída e importada para o seu HSM no local, está pronto para empacotar a chave protegida por HSM e transferi-la para o Azure Key Vault.
 
 > [!IMPORTANT]
-> Quando tiver concluído este passo, apague em segurança estes ficheiros PEM da estação de trabalho desligada para assegurar que não podem ser acedidos por pessoas não autorizadas. Por exemplo, execute "cipher /w:E" para eliminar em segurança todos os ficheiros da unidade E:.
+> Quando tiver concluído este passo, apague em segurança estes ficheiros PEM da estação de trabalho desligada para assegurar que não podem ser acedidos por pessoas não autorizadas. Por exemplo, execute "cipher /w: E"para eliminar em segurança todos os ficheiros da unidade.
 
-## <a name="part-2-package-and-transfer-your-hsm-key-to-azure-key-vault"></a>Parte 2: compactar e transferir a chave HSM para o Azure Key Vault
+## <a name="part-2-package-and-transfer-your-hsm-key-to-azure-key-vault"></a>Parte 2: Compactar e transferir a chave HSM para o Azure Key Vault
 
-Administrador do Azure Key Vault: para cada chave SLC exportada que pretende armazenar no Azure Key Vault, siga os seguintes passos na secção [Implementing bring your own key (BYOK) for Azure Key Vault (Implementar o BYOK (Bring Your Own Key – Traga a sua Própria Chave))](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault) da documentação do Azure Key Vault:
+Administrador do Cofre de chaves do Azure: Para cada chave SLC exportada que pretende armazenar no Azure Key vault, utilize os passos seguintes a [implementar traga a sua própria chave (BYOK) para o Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault) seção da documentação do Azure Key Vault:
 
-- [Passo 4: preparar a transferência da chave](/azure/key-vault/key-vault-hsm-protected-keys#step-4-prepare-your-key-for-transfer)
+- [Passo 4: Preparar a transferência da chave](/azure/key-vault/key-vault-hsm-protected-keys#step-4-prepare-your-key-for-transfer)
 
-- [Passo 5: transferir a chave para o Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys#step-5-transfer-your-key-to-azure-key-vault)
+- [Passo 5: Transferir a chave para o Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys#step-5-transfer-your-key-to-azure-key-vault)
 
 Não siga os passos para gerar o par de chaves, uma vez que já tem a chave. Em vez disso, executará um comando para transferir esta chave (no nosso exemplo, o parâmetro KeyIdentifier utiliza "contosobyok") a partir do seu HSM no local.
 
-Antes de transferir a chave para o Azure Key Vault, certifique-se de que o utilitário KeyTransferRemote.exe devolve **Result: SUCCESS** (Resultado: ÊXITO) quando cria uma cópia da sua chave com permissões reduzidas (passo 4.1) e ao encriptar a chave (passo 4.3).
+Antes de transferir a chave para o Azure Key Vault, certifique-se de que o utilitário de KeyTransferRemote.exe retorna **resultado: ÊXITO** quando cria uma cópia da sua chave com permissões reduzidas (passo 4.1) e ao encriptar a chave (passo 4.3).
 
 Quando a chave é carregada para o Azure Key Vault, pode ver as propriedades da chave apresentadas, incluindo o ID da chave. Ele será semelhante **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Anote este URL, uma vez que o administrador do Azure Information Protection irá precisar do mesmo para indicar ao serviço Azure Rights Management do Azure Information Protection para utilizar esta chave na respetiva chave de inquilino.
 
@@ -131,9 +131,9 @@ Por exemplo, se o cofre de chaves que criou para o Azure Information Protection 
 
 Agora que já transferiu a chave HSM para o Azure Key Vault, está pronto para importar os dados de configuração do AD RMS.
 
-## <a name="part-3-import-the-configuration-data-to-azure-information-protection"></a>Parte 3: importar os dados de configuração para o Azure Information Protection
+## <a name="part-3-import-the-configuration-data-to-azure-information-protection"></a>Parte 3: Importar os dados de configuração para o Azure Information Protection
 
-1. Administrador do Azure Information Protection: na estação de trabalho ligada à Internet e na sessão do PowerShell, copie o seu novo ficheiro de configuração de dados (.xml) com a chave SLC removida depois de executar a ferramenta TpdUtil.
+1. Administrador do Azure Information Protection: Na estação de trabalho ligada à Internet e na sessão do PowerShell, copie os novos dados ficheiros de configuração (. xml) que tenham a chave SLC removida depois de executar a ferramenta TpdUtil.
 
 2. Carregue cada ficheiro .xml, ao utilizar o cmdlet [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd). Por exemplo, deverá ter pelo menos um ficheiro adicional para importar se tiver atualizado o seu cluster AD RMS para o Modo Criptográfico 2.
 

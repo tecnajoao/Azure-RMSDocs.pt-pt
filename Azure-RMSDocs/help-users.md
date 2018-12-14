@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 43bc10ce43a4ba7a26958e562c4acc6e245ad76a
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 25471f9e047b4b3c1dac94cdf0856d7413de268a
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024081"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173898"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Ajudar os utilizadores a proteger ficheiros com o serviço Azure Rights Management
 
->*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Após ter implementado e configurado o Azure Information Protection para a sua organização, forneça ajuda e orientação para utilizadores, administradores e o suporte técnico:
 
@@ -40,7 +40,7 @@ Após ter implementado e configurado o Azure Information Protection para a sua o
     
 -   **Informações do suporte técnico**
     
-    Se os utilizadores têm o cliente do Azure Information Protection, operadores de suporte técnico poderão pedir-lhes para utilizar o **ajuda e Feedback** opção para obter informações, como se a edição do Office não consegue suportar a proteção e atualmente iniciada na conta de utilizador. Também pode utilizar esta opção para recolher ficheiros de registo e reposição do cliente. Para obter mais informações, consulte o Guia do administrador: [verificações e resolução de problemas de instalar](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting).
+    Se os utilizadores têm o cliente do Azure Information Protection, operadores de suporte técnico poderão pedir-lhes para utilizar o **ajuda e Feedback** opção para obter informações, como se a edição do Office não consegue suportar a proteção e atualmente iniciada na conta de utilizador. Também pode utilizar esta opção para recolher ficheiros de registo e reposição do cliente. Para obter mais informações, consulte o Guia do administrador: [Instalar verificações e resolução de problemas](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting).
     
     Se existirem pedidos legítimos para ter acesso de direitos totais a documentos protegidos, garanta que o suporte técnico tem processos para fazer este pedido de acesso através da [funcionalidade de superutilizador](configure-super-users.md) do Azure Rights Management. Por exemplo, estes pedidos poderão ser do Departamento jurídico ou um gestor depois de um funcionário ter saído da organização.
     
@@ -102,7 +102,7 @@ Os direitos de utilização são apresentados na parte superior do documento, at
 
 1.  No Outlook, crie uma mensagem de e-mail é endereçada a um destinatário da sua organização.
 
-2.  No separador **OPÇÕES**, clique em **Permissão** e selecione uma opção. Por exemplo: **não reencaminhar**, ou  **\<nome da empresa > – confidencial**, ou  **\<nome da empresa >-apenas visualização confidencial**.
+2.  No separador **OPÇÕES**, clique em **Permissão** e selecione uma opção. Por exemplo: **Não reencaminhar**, ou  **\<nome da empresa > – confidencial**, ou  **\<nome da empresa > – confidencial visualizar apenas**.
 
 3.  Envie a mensagem.
 
@@ -114,7 +114,7 @@ Por exemplo, se a mensagem de e-mail estiver protegida através da opção **Nã
 
 1.  Através do Outlook na Web, crie uma mensagem de e-mail endereçada a um destinatário da sua organização.
 
-2.  Clique em **…**, clique em **definir permissão** e selecione uma opção. Por exemplo: **não reencaminhar** ou **não responder a todos**. Ou,  **\<nome da empresa > – confidencial** ou  **\<nome da empresa > – confidencial visualizar apenas**.
+2.  Clique em **…**, clique em **definir permissão** e selecione uma opção. Por exemplo: **Não reencaminhar** ou **não responder a todos**. Ou,  **\<nome da empresa > – confidencial** ou  **\<nome da empresa > – confidencial visualizar apenas**.
 
 3.  Envie a mensagem.
 

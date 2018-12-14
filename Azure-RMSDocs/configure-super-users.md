@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c4b4df01be10ce033dd7369e71420e949750e667
-ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
+ms.openlocfilehash: 3a4cf3eaaf177a9424a438d0cdbee54b6a0a252e
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169912"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173830"
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados
 
->*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 A funcionalidade de superutilizador do serviço Azure Rights Management do Azure Information Protection assegura que as pessoas e os serviços autorizados possam sempre ler e inspecionar os dados que o Azure Rights Management protege na sua organização. Se necessário, a proteção, em seguida, pode remover ou alterada.
 
@@ -96,5 +96,5 @@ Se não conseguir utilizar a deteção de dados Eletrónicos do Office 365, pode
 
 4. Execute Unprotect-RMSFile neste ficheiro PST segundo para desencriptar o conteúdo deste ficheiro muito menor. A partir da saída, importe o ficheiro de PST desencriptados de agora em sua ferramenta de deteção.
 
-Para obter mais informações e orientações para a execução de deteção de dados Eletrónicos em caixas de correio e arquivos PST, consulte a seguinte mensagem de blogue: [do Azure Information Protection e os processos de deteção de dados Eletrónicos](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-and-eDiscovery-Processes/ba-p/270216).
+Para informações e orientações para a execução de deteção de dados Eletrónicos em caixas de correio e arquivos PST mais detalhadas, consulte a seguinte mensagem de blogue: [O Azure Information Protection e os processos de deteção de dados Eletrónicos](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-and-eDiscovery-Processes/ba-p/270216).
 

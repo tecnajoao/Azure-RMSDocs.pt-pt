@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0289431239e2f7f3e6ae4725ce79a8f337ea6944
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 13729d124ce0e49eddeda6c4c19aeae2c62eb8c6
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151383"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53174255"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Fase 3 da migração – configuração do lado do cliente
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: Serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilize as seguintes informações para a Fase 3 da migração do AD RMS para o Azure Information Protection. Estes procedimentos incluem o passo 7 de [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
@@ -64,7 +64,7 @@ Este método só é adequado para clientes de Windows que executam aplicações 
     |**Protocolo**|_http|  
     |**prioridade**|0|  
     |**peso**|0|  
-    |**Número de porta**|80|  
+    |**Número da porta**|80|  
     |**Anfitrião que oferece este serviço**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
 
 2. Defina uma permissão de negação para os utilizadores do Office 2016 no ponto de final de publicação de AD RMS:
@@ -83,7 +83,7 @@ Este método só é adequado para clientes de Windows que executam aplicações 
 
     f. Para confirmar que esta configuração está a funcionar conforme esperado, tente ligar-se para o ficheiro de licensing.asmx diretamente a partir de um browser. Deverá ver a seguinte mensagem de erro, que dispara o cliente a executar o Office 2016 para procurar o registo SRV:
     
-    **Chybová zpráva 401.3: não tem permissões para visualizar este diretório ou página com as credenciais que forneceu (acesso negado devido a listas de controlo de acesso).**
+    **Chybová zpráva 401.3: Não tem permissões para visualizar este diretório ou página com as credenciais que forneceu (acesso negado devido a listas de controlo de acesso).**
 
 
 ## <a name="client-reconfiguration-by-using-registry-edits"></a>Reconfiguração de clientes com edições de registo

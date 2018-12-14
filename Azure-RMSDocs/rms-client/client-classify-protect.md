@@ -4,31 +4,31 @@ description: Instruções sobre como classificar e proteger os seus documentos e
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/17/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 355d71f844d64fb26898c482d2414ca388ac38be
-ms.sourcegitcommit: ea8207da513f61bc0691c952da1f8b61ceb10887
+ms.openlocfilehash: 29c79d3da5e82b0d5702a1d85a22608f9177d271
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45696522"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305709"
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Guia de utilizador: Classificar e proteger um ficheiro ou e-mail com o Azure Information Protection
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
+>*Aplica-se a: Serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
 
 > [!NOTE]
 > Utilize estas instruções para o ajudar a classificar e proteger os seus documentos e e-mails. Se precisar apenas para classificar e proteger os seus documentos e e-mails não, consulte a [instruções de só de classificar](client-classify.md). Se não tiver a certeza de qual conjunto de instruções para utilizar, contacte o administrador ou suporte técnico.
 
-A forma mais fácil de classificar e proteger os seus documentos e e-mails é durante a criação ou edição nas aplicações de ambiente de trabalho do Office: **Word**, **Excel**, **PowerPoint** e **Outlook**. 
+A forma mais fácil de classificar e proteger os seus documentos e e-mails é durante a criação ou edição dos mesmos nas suas aplicações de ambiente de trabalho do Office: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
 No entanto, também pode classificar e proteger ficheiros ao utilizar **Explorador de ficheiros**. Este método suporta tipos de ficheiro adicionais e é uma maneira conveniente de classificar e proteger vários ficheiros ao mesmo tempo. Este método suporta proteger documentos do Office, ficheiros PDF, ficheiros de texto e imagem e uma vasta gama de outros ficheiros. 
 
-Se a etiqueta aplicar proteção a um documento, o documento protegido não é adequado para serem salvos no SharePoint ou o OneDrive. Estas localizações não suportam o seguinte procedimento para ficheiros protegidos: coautoria, Office Online, pesquisa, pré-visualização do documento, miniatura e deteção de dados eletrónicos. 
+Se a etiqueta aplicar proteção a um documento, o documento protegido não é adequado para serem salvos no SharePoint ou o OneDrive. Estas localizações não suportam o seguinte procedimento para ficheiros protegidos: Coautoria, Office Online, pesquisa, pré-visualização do documento, miniatura e deteção de dados eletrónicos. 
 
 ### <a name="safely-share-a-file-with-people-outside-your-organization"></a>Partilhar um ficheiro de forma segura com pessoas fora da sua organização
 
@@ -95,15 +95,15 @@ Se permitido pelo seu administrador, pode especificar as suas próprias definiç
 
 2. Na caixa de diálogo **Microsoft Azure Information Protection**, especifique o seguinte:
 
-    - **Proteger com permissões personalizadas**: confirme que esta opção está selecionada para que possa especificar e aplicar as suas permissões personalizadas. Desmarque esta opção para remover quaisquer permissões personalizadas.
+    - **Proteger com permissões personalizadas**: Certifique-se de que esta opção está selecionada para que possa especificar e aplicar as suas permissões personalizadas. Desmarque esta opção para remover quaisquer permissões personalizadas.
     
-    - **Selecionar permissões**: se quiser proteger o ficheiro de modo a ser o único utilizador a poder aceder ao mesmo, selecione **Apenas para mim**. Caso contrário, selecione o nível de acesso que pretende que as pessoas tenham.
+    - **Selecionar permissões**: Se pretender proteger o ficheiro para que só pode acessá-lo, selecione **apenas para mim**. Caso contrário, selecione o nível de acesso que pretende que as pessoas tenham.
     
-    - **Selecionar utilizadores, grupos ou organizações**: especifique as pessoas que devem ter as permissões que selecionou para o seu ficheiro ou ficheiros. Escreva o endereço de e-mail completo dessas pessoas, um endereço de e-mail de grupo ou um nome de domínio da organização para todos os utilizadores nessa organização. 
+    - **Selecionar utilizadores, grupos ou organizações**: Especifique as pessoas que devem ter as permissões que selecionou para o ficheiro ou ficheiros. Escreva o endereço de e-mail completo dessas pessoas, um endereço de e-mail de grupo ou um nome de domínio da organização para todos os utilizadores nessa organização. 
         
         Também pode utilizar o ícone de livro de endereços para selecionar utilizadores ou grupos do livro de endereços do Outlook.
     
-    - **Expirar acesso**: selecione esta opção apenas para ficheiros sensíveis ao tempo para que as pessoas que especificou não poderão abrir o ficheiro ou ficheiros selecionados após uma data que definir. Ainda poderá abrir o ficheiro original, mas após a meia-noite (seu fuso horário atual), no dia em que definir, as pessoas que especificou não poderão abrir o ficheiro.
+    - **Expirar acesso**: Selecione esta opção apenas para ficheiros sensíveis ao tempo para que as pessoas que especificou não poderão abrir o ficheiro ou ficheiros selecionados após uma data que definir. Ainda poderá abrir o ficheiro original, mas após a meia-noite (seu fuso horário atual), no dia em que definir, as pessoas que especificou não poderão abrir o ficheiro.
 
 5. Clique em **Aplicar** e espere pela mensagem **Permissões personalizadas aplicadas**. Em seguida, clique em **Fechar**.
 
@@ -127,7 +127,7 @@ Quando utiliza o Explorador de Ficheiros para classificar e proteger os ficheiro
 
 Alguns ficheiros são automaticamente excluídos da classificação e da proteção, uma vez que alterá-los poderá interromper a execução do PC. Embora possa selecionar estes ficheiros, eles são ignorados como uma pasta ou ficheiro excluídos. Alguns exemplos incluem ficheiros executáveis e a pasta do Windows.
 
-O guia do administrador contém uma lista completa dos tipos de ficheiro suportados e os ficheiros e pastas que estão automaticamente excluídos: [Tipos de ficheiro suportados pelo cliente do Azure Information Protection](client-admin-guide-file-types.md).
+Guia do administrador contém uma lista completa dos tipos de ficheiro suportados e os ficheiros e pastas que são automaticamente excluídas: [Tipos de ficheiro suportados pelo cliente do Azure Information Protection](client-admin-guide-file-types.md).
 
 
 ### <a name="to-classify-and-protect-a-file-by-using-file-explorer"></a>Para classificar e proteger ficheiros com o Explorador de Ficheiros
@@ -138,11 +138,11 @@ O guia do administrador contém uma lista completa dos tipos de ficheiro suporta
 
 2. Na caixa de diálogo **Classificar e proteger – Azure Information Protection**, utilize as etiquetas como faria numa aplicação do Office, o que define a classificação e a proteção, conforme definido pelo seu administrador. 
 
-    - Se nenhuma das etiquetas puder ser selecionada (aparecem escurecidas): o ficheiro selecionado não suportará a classificação, mas poderá protegê-lo com permissões personalizadas (passo 3). Por exemplo:
+    - Se nenhuma das etiquetas pode ser selecionada (aparecem escurecidas): O ficheiro selecionado não suportará a classificação, mas poderá protegê-lo com permissões personalizadas (etapa 3). Por exemplo:
 
     ![Não há etiquetas disponíveis na caixa de diálogo Classificar e proteger – Azure Information Protection**](../media/info-protect-dialog-labels-dimmed.png)
     
-    - Se não vir etiquetas, mas vir uma opção para a **Proteção predefinida da empresa** nesta caixa de diálogo: o cliente está em execução no [modo apenas de proteção](client-protection-only-mode.md). Selecione um modelo para aplicar a proteção que o administrador tiver configurado para si ou selecione **Permissões personalizadas** para especificar as suas próprias definições de proteção e avance para o passo 4.
+    - Se não vir etiquetas, mas uma opção para **proteção predefinida da empresa** nessa caixa de diálogo: O cliente está em execução [modo apenas de proteção](client-protection-only-mode.md). Selecione um modelo para aplicar a proteção que o administrador tiver configurado para si ou selecione **Permissões personalizadas** para especificar as suas próprias definições de proteção e avance para o passo 4.
     
     ![Não há etiquetas na caixa de diálogo Classificar e proteger – Azure Information Protection**](../media/info-protect-dialog-labels-protection-only.png)
     
@@ -154,13 +154,13 @@ O guia do administrador contém uma lista completa dos tipos de ficheiro suporta
 
 4. Se selecionar a opção de permissões personalizadas, especifique o seguinte:
 
-    - **Selecionar permissões**: selecione o nível de acesso que pretende que as pessoas tenham quando protege o ficheiro ou ficheiros selecionados.
+    - **Selecionar permissões**: Selecione o nível de acesso que pretende que as pessoas tenham quando protege o ficheiro ou ficheiros selecionados.
     
-    - **Selecionar utilizadores, grupos ou organizações**: especifique as pessoas que devem ter as permissões que selecionou para o seu ficheiro ou ficheiros. Escreva o endereço de e-mail completo dessas pessoas, um endereço de e-mail de grupo ou um nome de domínio da organização para todos os utilizadores nessa organização. 
+    - **Selecionar utilizadores, grupos ou organizações**: Especifique as pessoas que devem ter as permissões que selecionou para o ficheiro ou ficheiros. Escreva o endereço de e-mail completo dessas pessoas, um endereço de e-mail de grupo ou um nome de domínio da organização para todos os utilizadores nessa organização. 
     
     Em alternativa, pode utilizar o ícone de livro de endereços para selecionar utilizadores ou grupos do livro de endereços do Outlook.
         
-    - **Expirar acesso**: selecione esta opção somente para ficheiros sensíveis ao tempo, para que as pessoas especificadas não possam abrir o ficheiro ou ficheiros selecionados, após uma data definida por si. No entanto, continuará a poder abrir o ficheiro original, mas após a meia-noite (no seu fuso horário atual), no dia definido por si, as pessoas que especificou não poderão abrir o ficheiro.
+    - **Expirar acesso**: Selecione esta opção apenas para ficheiros sensíveis ao tempo para que as pessoas que especificou não poderão abrir o ficheiro ou ficheiros selecionados após uma data que definir, ainda poderá abrir o ficheiro original, mas após a meia-noite (seu fuso horário atual) , no dia em que definir, as pessoas que especificou não será possível abrir o ficheiro.
     
     Observe que se essa definição foi configurada anteriormente através de permissões personalizadas de uma aplicação do Office 2010, a data de expiração especificada não é apresentada nesta caixa de diálogo, mas continuará definida. Este é um problema de apresentação de quando a data de expiração foi configurada no Office 2010.
 
@@ -183,5 +183,5 @@ Pode obter mais instruções sobre os procedimentos no guia do utilizador do Azu
 ## <a name="additional-information-for-administrators"></a>Informações adicionais para administradores    
 Para obter instruções de configuração ativar a definição de política **disponibilizar a opção de permissões personalizadas para os usuários**, consulte [configurar as definições de política do Azure Information Protection](../configure-policy-settings.md).
 
-Outras instruções de configuração: [configurar a política do Azure Information Protection](../configure-policy.md).
+Outras instruções de configuração: [Configurar a política do Azure Information Protection](../configure-policy.md).
 

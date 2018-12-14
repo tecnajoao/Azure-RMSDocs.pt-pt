@@ -4,22 +4,22 @@ description: Informações sobre o registo de utilização e ficheiros do client
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/08/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d935d5eafd3d893b67bbdccb1893bf67d418ae79
-ms.sourcegitcommit: 76e1b7c0255700813590be62d94b19338bf6c201
+ms.openlocfilehash: 2aa0e470d9a2801b695c6b2c9d922836c010690c
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866123"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53304915"
 ---
-# <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guia do administrador: Ficheiros de cliente do Azure Information Protection e o registo de utilização do cliente
+# <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guia do administrador: Registo de utilização do cliente e de ficheiros do cliente do Azure Information Protection
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Aplica-se a: Serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Depois de instalar o cliente do Azure Information Protection, poderá precisar de saber onde estão localizados os ficheiros e monitorizar a forma como o cliente está a ser utilizado.
 
@@ -47,21 +47,21 @@ O cliente regista a atividade do utilizador para o registo de eventos do Windows
 
 - Ação:
 
-    - Definir Etiqueta: ID de Informações 101
+    - Definir etiqueta:  ID de informações 101
     
-    - Definir etiqueta (inferior): 101 de ID de informações
+    - Definir etiqueta (inferior):  ID de informações 101
     
-    - Definir etiqueta (superior): 101 de ID de informações
+    - Definir etiqueta (superior): ID de informações 101
     
-    - Remover etiqueta: ID de Informações 104
+    - Remova etiqueta: ID de informações 104
    
     - Sugestão recomendada: Informações 105
     
-    - Aplicar proteção personalizada: ID de Informações 201
+    - Aplica proteção personalizada: ID de informações 201
     
-    - Remover proteção personalizada: ID de Informações 202
+    - Remova proteção personalizada: ID de informações 202
     
-    - Início de Sessão (operacional): ID de informações 902
+    - Início de sessão (operacional): ID de informações 902
     
     - Transferir política (operacional): ID de informações 901
     
@@ -75,7 +75,7 @@ O cliente regista a atividade do utilizador para o registo de eventos do Windows
     
     - Sistema (para iniciar sessão e transferir a política)
     
-    - Predefinido
+    - Predefinição
     
 - Etiqueta antes e depois da ação 
     

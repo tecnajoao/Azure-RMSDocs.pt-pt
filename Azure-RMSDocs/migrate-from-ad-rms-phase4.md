@@ -4,22 +4,22 @@ description: Fase 4 da migração do AD RMS para o Azure Information Protection,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/01/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6ea5a80ad9d08873f817f21a9f6ac4d059618af7
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: d694876a91e0d39d0d429e5dd5503bb153fd5521
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024047"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305459"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Fase 4 da migração – configuração de serviços de suporte
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: Serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 Utilize as seguintes informações para a Fase 4 da migração do AD RMS para o Azure Information Protection. Estes procedimentos incluem os passos 8 a 9 do tópico [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
@@ -37,7 +37,7 @@ Independentemente do inquilino do Azure Information Protection, topologia de cha
     
     Quando este registo DNS está implementado, os utilizadores através do Outlook na web e clientes de e-mail do dispositivo móvel vão conseguir ver o AD RMS protegidos essas aplicações de mensagens de e-mail e Exchange poderá utilizar a chave que tiver sido importado de AD RMS para desencriptar, índice , diário e proteger conteúdo que foi protegido pelo AD RMS.  
 
-2. Executar o Exchange Online [Get-IRMConfiguration] (https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx) comando. Se precisar de executar este comando de ajuda, veja as instruções passo a passo em [Exchange Online: configuração de IRM](configure-office365.md#exchange-online-irm-configuration).
+2. Executar o Exchange Online [Get-IRMConfiguration] (https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx) comando. Se precisar de executar este comando de ajuda, veja as instruções passo a passo em [Exchange Online: Configuração de IRM](configure-office365.md#exchange-online-irm-configuration).
     
     A partir da saída, verifique se **AzureRMSLicensingEnabled** está definida como **verdadeiro**:
     
@@ -105,7 +105,7 @@ Utilize as instruções no artigo [Implementar o conector Azure Rights Managemen
 
 ### <a name="configure-exchange-and-sharepoint-to-use-the-connector"></a>Configurar o Exchange e o SharePoint para utilizar o conector
 
-1. Volte às instruções para implementar o conector RMS: [Passo 5: configurar servidores para utilizar o conector RMS](./configure-servers-rms-connector.md)
+1. Volte às instruções para implementar o conector RMS: [Passo 5: Configurar servidores para utilizar o conector RMS](./configure-servers-rms-connector.md)
 
     Se apenas tiver o SharePoint Server, aceda diretamente aos [Passos seguintes](#next-steps) para continuar a migração. 
 

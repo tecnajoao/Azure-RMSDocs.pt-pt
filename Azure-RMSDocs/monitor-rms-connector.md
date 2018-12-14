@@ -4,22 +4,22 @@ description: Informações para ajudá-lo a monitorizar o conector e a utilizaç
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f78135b7398ed509d1b77dfc724fc6380adbb4d5
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 46f8c817911408d62f12a1fce0a7ae0ce14069e2
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53026953"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305493"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Monitorizar o conector Azure Rights Management
 
->*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Após instalar e configurar o conector RMS, pode utilizar os seguintes métodos e as informações para ajudar a monitorizar o conector e a utilização da organização do serviço Azure Rights Management do Azure Information Protection.
 
@@ -164,7 +164,7 @@ Ao instalar o conector RMS, este cria automaticamente contadores de desempenho d
 
 Por exemplo, ocorrem regularmente atrasos quando os documentos ou os e-mails estão protegidos. Ou ocorrem atrasos quando os documentos ou os e-mails protegidos são abertos. Nestes casos, os contadores de desempenho podem ajudá-lo a determinar se os atrasos são devidos ao tempo de processamento do conector, ao tempo de processamento do serviço Azure Rights Management ou a atrasos da rede. 
 
-Para ajudar a identificar onde está a ocorrer o atraso, procure contadores que incluam contagens de média para o **Tempo de Processamento do Conector**, para o **Tempo de Resposta do Serviço**, e para o **Tempo de Resposta do Conector**. Por exemplo: **licenciamento com êxito do pedido em batch com tempo de resposta médio do conector**.
+Para ajudar a identificar onde está a ocorrer o atraso, procure contadores que incluam contagens de média para o **Tempo de Processamento do Conector**, para o **Tempo de Resposta do Serviço**, e para o **Tempo de Resposta do Conector**. Por exemplo: **Licenciamento com êxito em lotes de tempo de resposta do conector de média de pedido**.
 
 Se tiver adicionado recentemente novas contas de servidor para utilizar o conector, um com contador para verificar é o **Tempo desde a última atualização da política de autorização**, para confirmar que o conector transferiu a lista desde que a atualizou, ou se terá de aguardar um pouco mais (até 15 minutos).
 

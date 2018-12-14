@@ -1,6 +1,6 @@
 ---
 title: Introdução | Azure RMS
-description: A plataforma SDK RMS 2.1 permite aos programadores criarem aplicações que tiram partido da proteção de informações do RMS.
+description: A plataforma do SDK RMS 2.1 permite aos programadores criarem aplicações que tiram partido da proteção de informações do RMS.
 keywords: ''
 author: lleonard-msft
 ms.author: alleonar
@@ -12,18 +12,18 @@ ms.assetid: 728113C9-FCF9-4280-BE1D-6AF5C15E449E
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 2113d408356fc80efa90838bf667712d47ce7e0f
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 43e63165fcf8c19760a9f82619a02923ba55e97e
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147343"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266346"
 ---
 # <a name="getting-started"></a>Introdução
 
 A plataforma do SDK Rights Management Services 2.1 permite aos programadores criar aplicações que tiram partido da proteção de informações do RMS através de um RMS Server ou do Azure RMS. A plataforma processa práticas de segurança complexas tais como a gestão de chaves, o processamento de encriptação e desencriptação e oferece uma API simplificada para a programação de aplicações fácil.
 
-## <a name="get-started-with-rms-sdk-21"></a>Introdução ao SDK RMS 2.1
+## <a name="get-started-with-rmssdk21"></a>Introdução ao SDK RMS 2.1
 
 Este tópico descreve o processo de configuração e execução da aplicação com permissão para direitos num ambiente de teste. Os tópicos seguintes analisam como configurar o ambiente de desenvolvimento, sendo listados pela ordem de execução das tarefas.
 
@@ -39,7 +39,7 @@ Este tópico descreve o processo de configuração e execução da aplicação c
 | [Implementar em produção](deploying-your-application.md) |Este tópico descreve as opções de implementação da sua aplicação com permissão para direitos.|
 
 
-Tente utilizar o SDK RMS 2.1 ao seguir as orientações nos seguintes tópicos:
+Tente utilizar o SDK RMS 2.1 ao seguir as orientações nos seguintes tópicos:
 
 - [Instalar o SDK](install-the-rms-sdk.md)
 - [Configurar o Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)
@@ -47,9 +47,9 @@ Tente utilizar o SDK RMS 2.1 ao seguir as orientações nos seguintes tópicos:
 - [Testar a sua aplicação](how-to-set-up-your-test-environment.md)
 - [Implementar em produção](deploying-your-application.md)
 
-### <a name="why-use-rms-sdk-21-for-protecting-your-content"></a>Por que motivo deve utilizar o SDK RMS 2.1 para proteger o seu conteúdo
+### <a name="why-use-rmssdk21-for-protecting-your-content"></a>Porquê utilizar o SDK RMS 2.1 para proteger o seu conteúdo
 
-Para programadores que pretendem adicionar o suporte do RMS às suas aplicações novas e existentes, o SDK RMS 2.1 facilita:
+Para os desenvolvedores que deseja adicionar suporte do RMS às suas aplicações de novas e existentes, o SDK RMS 2.1 ajuda a tornar mais fácil:
 
 -   Criar aplicações geríveis, compatíveis, robustas e com suporte para RMS.
 -   Encriptar dados do utilizador de forma persistente. Os dados permanecem encriptados independentemente do ambiente, do dispositivo ou do sistema operativo.
@@ -57,7 +57,7 @@ Para programadores que pretendem adicionar o suporte do RMS às suas aplicaçõe
 -   Apoiar políticas de proteção geridas por empresas.
 -   Suportar novos mecanismos de autenticação e algoritmos de encriptação à medida que ficam disponíveis.
 
-O SDK RMS 2.1 suporta uma gama de plataformas de clientes e servidores importantes. Para obter mais informações, consulte [Plataformas suportadas](supported-platforms.md).
+O SDK RMS 2.1 suporta uma gama de plataformas de cliente e servidor são importantes. Para obter mais informações, consulte [Plataformas suportadas](supported-platforms.md).
 
 ## <a name="core-principles"></a>Princípios fundamentais
 
@@ -68,4 +68,3 @@ O SDK RMS 2.1 suporta uma gama de plataformas de clientes e servidores importa
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Guia para Programadores do RMS](developers-guide.md)
-* [Área para Programadores do AD RMS](http://blogs.msdn.com/b/rms/)

@@ -12,12 +12,12 @@ ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 1adb21ac41a922ebb3636fcce9e13c9fd785930d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 42a1944dcb643c1647ee7299456307815f1023b4
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151661"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266635"
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Como registar-se e ativar o RMS na aplicação com o Azure AD
 
@@ -33,12 +33,12 @@ Comece por seguir este guia para configurar o registo da aplicação através do
 Para poder implementar a aplicação, tem de preencher um IPIA com a equipa do Microsoft Information Protection. Para obter informações detalhadas completas, veja a primeira secção do tópico, [Implementar na produção](deploying-your-application.md).
 
 ## <a name="implement-user-authentication-for-your-app"></a>Implementar a autenticação de utilizador para a aplicação
-Cada uma das APIs do RMS tem uma chamada de retorno que tem de ser implementada para ativar a autenticação do utilizador. O SDK RMS 4.2 utilizará, em seguida, a implementação de uma chamada de retorno quando o utilizador não fornecer um token de acesso, quando o seu token de acesso necessitar de ser atualizado ou quando o token de acesso tiver expirado.
+Cada uma das APIs do RMS tem uma chamada de retorno que tem de ser implementada para ativar a autenticação do utilizador. O SDK RMS 4.2 utilizará, em seguida, a sua implementação do retorno de chamada quando o utilizador não fornecer um token de acesso, quando o token de acesso tem de ser atualizado ou quando o token de acesso tiver expirado.
 
 - Android - [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) e [AuthenticationCompletionCallback](https://msdn.microsoft.com/library/dn758250.aspx).
 - iOS/OS X - [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx).
 -  Windows Phone/Windows RT -  interface [IAuthenticationCallback](https://msdn.microsoft.com/library/microsoft.rightsmanagement.iauthenticationcallback.aspx).
-- Linux - interface [IAuthenticationCallback](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html).
+- Linux - interface [IAuthenticationCallback](https://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html).
 
 ### <a name="what-library-to-use-for-authentication"></a>Qual biblioteca utilizar para a autenticação
 Para poder implementar a sua chamada de retorno de autenticação, terá de transferir uma biblioteca adequada e configurar o ambiente de desenvolvimento para utilizá-la. Poderá encontrar no GitHub, as bibliotecas ADAL para estas plataformas.
@@ -51,8 +51,7 @@ Cada um dos seguintes recursos contém orientações sobre a configuração do a
 -   [Windows Azure Active Directory Authentication Library (ADAL) para dotnet](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet)
 -   Para o SDK Linux, a biblioteca ADAL é compactada com a origem do SDK, disponível através do [Github](https://github.com/AzureAD/rms-sdk-for-cpp).
 
->[!NOTE]  
-> Recomendamos que utilize uma das ADAL, embora possa utilizar outras bibliotecas de autenticação.
+>[!NOTE]   Recomendamos que utilize uma das ADAL embora possa utilizar outras bibliotecas de autenticação.
 
 ### <a name="authentication-parameters"></a>Parâmetros de autenticação
 
@@ -72,8 +71,7 @@ e provém do passo de registo anterior através do portal do Azure.
 
     iOS: `<app-scheme>://<bundle-id>`
 
->[!NOTE] 
-> Se a aplicação não seguir estas diretrizes, é provável que os fluxos de trabalho do Azure RMS e do Azure AD falhem e não sejam suportados pela Microsoft.com. Além disso, o Contrato de Licença de Rights Management (RMLA) pode ser violado se uma ID de Cliente inválida for utilizada numa aplicação de produção.
+>[!NOTE]  Se a aplicação não seguir estas diretrizes, serão provável que os fluxos de trabalho do Azure RMS e o Azure AD falhem e não sejam suportados pela Microsoft.com. Além disso, o Contrato de Licença de Rights Management (RMLA) pode ser violado se uma ID de Cliente inválida for utilizada numa aplicação de produção.
 
 ### <a name="what-should-an-authentication-callback-implementation-look-like"></a>Qual deverá ser o aspeto de uma implementação de chamada de retorno de autenticação
 **Exemplos de Código de Autenticação** – Este SDK tem o código de exemplo que mostra a utilização de chamadas de retorno de autenticação. Para comodidade do utilizador, estes exemplos de código são representados aqui, bem como em cada um dos seguintes tópicos relacionados.

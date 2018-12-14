@@ -4,22 +4,22 @@ description: Instruções e informações para administradores numa rede empresa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/02/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: be6477edae471bddbcf3a5d4e6c7bb0cfcec1e4e
-ms.sourcegitcommit: 4f22874c3c2fb9632d57932148664c40b3907a78
+ms.openlocfilehash: a9f54931d8409fd88bddb6be85f1a0d7c2b416a1
+ms.sourcegitcommit: 40ea9568688b9da95d72b48f02b4152e54da17c6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52831260"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53029409"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guia do administrador do cliente do Azure Information Protection
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Aplica-se a: Serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Utilize as informações deste guia se for responsável pelo cliente do Azure Information Protection numa rede empresarial ou se pretender mais informações técnicas além das que estão no [Guia do utilizador do cliente do Azure Information Protection](client-user-guide.md). 
 
@@ -98,15 +98,15 @@ Utilize as secções seguintes para informações sobre como instalar o cliente 
 
 Quando o cliente é instalado, utilize o **ajuda e Feedback** opção para abrir o **Microsoft Azure Information Protection** caixa de diálogo:
 
-- A partir de uma aplicação do Office: no separador **Base**, no grupo **Proteção**, clique em **Proteger** e, em seguida, selecione **Ajuda e Feedback**.
+- A partir de uma aplicação do Office: Sobre o **home page** separador a **proteção** grupo, selecione **proteger**e, em seguida, selecione **ajuda e Feedback**.
 
-- No Explorador de Ficheiros: selecione com o botão direito do rato um ficheiro, ficheiros ou pasta, selecione **Classificar e proteger** e, em seguida, selecione **Ajuda e Feedback**. 
+- No Explorador de ficheiros: Direito-selecione um ficheiro, ficheiros ou pasta, selecione **classificar e proteger**e, em seguida, selecione **ajuda e Feedback**. 
 
 #### <a name="help-and-feedback-section"></a>Secção **Ajuda e Feedback**
 
 A **ligação Mais informações** direciona-o, por predefinição, para o site do [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection), mas pode configurá-la para um URL personalizado, de acordo com uma das [definições da política](../configure-policy-settings.md) da política do Azure Information Protection.
 
-O **comunicar um problema** ligação apresenta em versões de pré-visualização do cliente e não em versões de disponibilidade geral. Por predefinição, esta opção envia um e-mail à Microsoft, mas pode configurar a cadeia de caracteres HTTP para os seus utilizadores, especificando uma [definição de cliente avançado](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link). Por exemplo, especifique o endereço de e-mail do suporte técnico.
+O **comunicar um problema** ligação mostra apenas se especificou um [definição de cliente avançado](client-admin-guide-customizations.md#add-report-an-issue-for-users). Quando configurar esta definição, especifique uma ligação HTTP, como o endereço de e-mail do suporte técnico.
 
 **Exportar Registos** recolhe e anexa automaticamente ficheiros de registo para o cliente de Azure Information Protection se lhe tiver sido pedido para os enviar ao Suporte da Microsoft. Esta opção também serve para os utilizadores finais enviarem estes ficheiros de registo ao suporte técnico.
 
@@ -150,7 +150,7 @@ Se precisar de iniciar sessão como um utilizador diferente do apresentado, veja
 
 A **Última ligação** mostra quando o cliente esteve ligado pela última vez ao serviço Azure Information Protection da organização. Pode utilizar esta informação com a data e hora apresentada em **A política do Information Protection foi instalada a** para confirmar quando foi a última vez em que a política do Azure Information Protection foi instalada ou atualizada. Quando o cliente se liga ao serviço, será transferida automaticamente a política mais recente se forem detetadas alterações em relação à política atual e, também, a cada 24 horas. Se tiver efetuado alterações de política após a hora apresentada, feche e reabra a aplicação do Office.
 
-Se vir **O cliente não está licenciado para o Office Professional Plus**: significa que o cliente do Azure Information Protection detetou que a edição instalada do Office não suporta a aplicação da proteção Rights Management. Quando esta deteção é feita, as etiquetas que aplicam a proteção não são apresentadas na barra do Azure Information Protection.
+Se vir **o cliente não está licenciado para o Office Professional Plus**: O cliente do Azure Information Protection detetou que a edição instalada do Office não suporta a aplicação da proteção Rights Management. Quando esta deteção é feita, as etiquetas que aplicam a proteção não são apresentadas na barra do Azure Information Protection.
 
 Utilize as informações da **Versão** para confirmar que versão do cliente está instalada. Pode verificar se esta é a versão mais recente, bem como as correções correspondentes e as novas funcionalidades, ao clicar na ligação **Novidades**, para ler o [Histórico do Lançamento de Versões](client-version-release-history.md) do cliente.
 
@@ -166,9 +166,9 @@ No entanto, os nomes de etiqueta e descrições que especificou não são traduz
 
 Depois de instalar o cliente do Azure Information Protection, certifique-se de que dê instruções sobre os utilizadores como etiquetar os documentos e e-mails e orientação para as etiquetas escolher para cenários específicos. Por exemplo:
 
-- Instruções de utilizador online: [guia de utilizador do Azure Information Protection](client-user-guide.md)
+- Instruções de utilizador online: [Guia do utilizador do Azure Information Protection](client-user-guide.md)
 
-- Baixe um guia do usuário personalizável: [o guia de adoção do Azure Information Protection utilizador final](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
+- Baixe um guia do usuário personalizável: [Guia de adoção de utilizador final do Azure Information Protection](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
 
 ### <a name="update-macros-in-excel-spreadsheets"></a>Atualizar as macros do planilhas do Excel
 
@@ -202,13 +202,13 @@ Para atualizar o scanner do Azure Information Protection, instale a versão mais
 
 - Execute [AIPScanner atualização](/powershell/module/azureinformationprotection/Update-AIPScanner) depois de ter atualizado o cliente do Azure Information Protection. As definições de configuração para o scanner e repositórios serão mantidas. Executar este cmdlet é necessário para atualizar o esquema de base de dados para a deteção de impressão e se necessário, a conta de serviço do scanner também recebe eliminar as permissões para a base de dados do scanner. 
     
-    Até que executar este cmdlet de atualização, o scanner não é executado e verá o ID de evento normalmente **1000** no registo de eventos do Windows, com a seguinte mensagem de erro: **nome de objeto inválido 'ScannerStatus'**.
+    Até que executar este cmdlet de atualização, o scanner não é executado e verá o ID de evento normalmente **1000** no registo de eventos do Windows, com a seguinte mensagem de erro: **Nome de objeto inválido 'ScannerStatus'**.
 
 ## <a name="uninstalling-the-azure-information-protection-client"></a>Desinstalar o cliente do Azure Information Protection
 
 Pode usar qualquer uma das seguintes opções para desinstalar o cliente:
 
-- Utilize o Painel de Controlo para desinstalar um programa: clique em **Microsoft Azure Information Protection** > **Desinstalar**
+- Utilize o painel de controlo para desinstalar um programa: Clique em **do Microsoft Azure Information Protection** > **desinstalar**
 
 - Volte a executar o ficheiro executável (por exemplo, **AzInfoProtection.exe**) e, na página **Modificar Configuração**, clique em **Desinstalar**. 
 

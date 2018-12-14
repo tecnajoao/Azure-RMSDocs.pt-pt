@@ -4,16 +4,16 @@ description: Pode adicionar suporte para idiomas diferentes para as etiquetas qu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
-ms.openlocfilehash: 489850c6311fae95d92fa4cbf88441f1a57da150
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 4c9bc0f8e09b71637b5b731d8e7236bbd8e1fc27
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023384"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305410"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Como configurar etiquetas e modelos para diferentes idiomas no Azure Information Protection
 
@@ -43,7 +43,7 @@ Selecione os idiomas que correspondem à definição de idioma do Office e do Wi
     
     Por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
 
-2. Do **gerir** > **idiomas** opção de menu: no **do Azure Information Protection - idiomas** painel, selecione **adicionar um novo idioma para tradução**. Selecione os idiomas que pretende adicionar e, em seguida, selecione **OK**. Pode digitar o nome do idioma na caixa de pesquisa ou percorra a lista de idiomas de disponíveis
+2. Do **Manage** > **idiomas** opção de menu: Sobre o **do Azure Information Protection - idiomas** painel, selecione **adicionar um novo idioma para tradução**. Selecione os idiomas que pretende adicionar e, em seguida, selecione **OK**. Pode digitar o nome do idioma na caixa de pesquisa ou percorra a lista de idiomas de disponíveis
 
 3. Os idiomas selecionados agora apresentam no **do Azure Information Protection - idiomas** painel:
     
@@ -60,7 +60,7 @@ Selecione os idiomas que correspondem à definição de idioma do Office e do Wi
 
 5. Extraia os ficheiros da **localização exportada.zip**, para que tenha os ficheiros .xml para cada idioma que selecionou para transferência. 
 
-6. Edite cada ficheiro .xml: para cada cadeia dentro de etiquetas `<LocalizedText>`, apresente as traduções que deseja para cada idioma escolhido. 
+6. Edite cada ficheiro. XML: Para cada cadeia dentro de `<LocalizedText>` etiquetas, apresente as traduções que deseja para cada idioma escolhido. 
 
 7. Quando tiver editado cada ficheiro .xml, crie uma nova pasta comprimida (zipada) que contém estes ficheiros. A pasta comprimida pode ter qualquer nome, mas deve ter uma extensão .zip.
 

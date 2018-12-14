@@ -4,22 +4,22 @@ description: Depois de ter protegido os seus documentos, pode controlar a forma 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/28/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 485b999ce8b5adcbe284d0ea8286cdf1183ac8da
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 251de2d7e959dc46bcf95c003fd8924cc4c34d13
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151039"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305234"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Guia de utilizador: Controlar e revogar os documentos quando utiliza o Azure Information Protection
 
->*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
 
 Após proteger os seus documentos com o Azure Information Protection, pode controlar como as pessoas utilizam esses documentos. Se necessário, também poderá revogar o acesso a estes se não pretender que as pessoas continuem a poder lê-los. Para tal, utilize o **site de controlo de documentos**. Pode aceder a este site a partir de computadores com o Windows, computadores Mac e até mesmo tablets e telemóveis.
 
@@ -95,17 +95,17 @@ Depois de ter registado o documento protegido através das aplicações do Offic
 
 - No PC Windows, computador Mac ou dispositivo móvel, visite o [site de controlo de documentos](https://go.microsoft.com/fwlink/?LinkId=529562).
 
-    **Browsers suportados**: recomendamos que utilize, pelo menos, a versão 10 do Internet Explorer, mas pode utilizar qualquer um dos seguintes browsers para aceder ao site de controlo de documentos:
+    **Browsers suportados**: Recomendamos que utilize o Internet Explorer que, pelo menos, versão 10, mas pode utilizar qualquer um dos seguintes browsers para aceder ao site de controlo de documentos:
 
-    - Internet Explorer: pelo menos, versão 10
+    - Internet Explorer: Pelo menos, versão 10
 
-    - Internet Explorer 9 com, pelo menos, MS12-037: Atualização de Segurança Cumulativa para o Internet Explorer: 12 de junho de 2012
+    - Internet Explorer 9 com, pelo menos, MS12-037: Atualização de segurança cumulativa para o Internet Explorer: 12 de Junho de 2012
 
-    - Mozilla Firefox: pelo menos, versão 12
+    - Mozilla Firefox: Pelo menos, versão 12
 
-    - Apple Safari 5: pelo menos, versão 5
+    - Apple Safari 5: Pelo menos, versão 5
 
-    - Google Chrome: pelo menos, versão 18
+    - Google Chrome: Pelo menos, versão 18
 
 
 ## <a name="other-instructions"></a>Outras instruções

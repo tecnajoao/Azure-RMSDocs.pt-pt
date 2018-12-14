@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 861d262a04f80a6e1326f15b06942afd27f41990
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 35b2211b9ca6eb3f8c0f160a80850c3cb899562c
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024302"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53174187"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Fase 2 da migração – configuração do AD RMS do lado do servidor
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: Serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilize as seguintes informações para a Fase 2 da migração do AD RMS para o Azure Information Protection. Estes procedimentos incluem os passos 4 a 6 de [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
@@ -74,7 +74,7 @@ A sua implementação atual do AD RMS utiliza uma das seguintes configurações 
 > [!NOTE]
 > Para obter mais informações sobre a utilização de módulos de hardware de segurança com o AD RMS, veja [Utilizar o AD RMS com Módulos de Hardware de Segurança](https://technet.microsoft.com/library/jj651024.aspx).
 
-As duas opções de topologia de chaves de inquilino do Azure Information Protection estão relacionadas com o facto de a sua chave de inquilino poder ser gerida pela Microsoft (**gerida pela Microsoft**) ou por si (**gerida pelo cliente**) no Azure Key Vault. Quando gere a sua própria chave de inquilino do Azure Information Protection, essa é, às vezes, referida como "bring your own key" (BYOK). Para obter mais informações, veja [Planear e implementar a sua chave de inquilino do Azure Information Protection](plan-implement-tenant-key.md).
+As duas opções de topologia de chave de inquilino do Azure Information Protection são: Microsoft gere a sua chave de inquilino (**gerida pela Microsoft**) ou gerir a sua chave de inquilino (**gerida pelo cliente**) no Azure Key Vault. Quando gere a sua própria chave de inquilino do Azure Information Protection, essa é, às vezes, referida como "bring your own key" (BYOK). Para obter mais informações, veja [Planear e implementar a sua chave de inquilino do Azure Information Protection](plan-implement-tenant-key.md).
 
 Utilize a seguinte tabela para identificar o procedimento a utilizar para a sua migração. 
 
@@ -156,7 +156,7 @@ Para obter mais informações sobre esta configuração, consulte [como configur
 #### <a name="sample-windows-powershell-script-to-identify-ad-rms-templates-that-include-the-anyone-group"></a>Script de exemplo do Windows PowerShell para identificar modelos do AD RMS que incluem o grupo ANYONE
 Esta secção contém o script de exemplo para ajudar a identificar quaisquer modelos do AD RMS com o grupo ANYONE definido, conforme descrito na secção anterior.
 
-**Exclusão de responsabilidade:** este script de exemplo não é suportado por nenhum serviço ou programa de suporte padrão da Microsoft. Este script de exemplo é fornecido TAL COMO ESTÁ, sem qualquer tipo de garantia.
+**Exclusão de responsabilidade:** Este script de exemplo não é suportado por nenhum serviço ou programa de suporte padrão da Microsoft. Este script de exemplo é fornecido TAL COMO ESTÁ, sem qualquer tipo de garantia.
 
 ```
 import-module adrmsadmin 

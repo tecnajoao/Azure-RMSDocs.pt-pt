@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 40cc70864d68b4bdcc1081f908539663ba8366a8
-ms.sourcegitcommit: d969a82dc801f3d653163de2b18a3a772607b74c
+ms.openlocfilehash: 72735ea07a00f37377bbbab781c03c4516f032de
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50915568"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173796"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS para indivíduos e Azure Information Protection
 
@@ -43,7 +43,7 @@ Quando a conta é criada, a última página apresenta ligações para transferir
 
 3. Clique em **Inscrever-se**.
 
-    A Microsoft utiliza o seu endereço de e-mail para verificar se a sua organização já tem um [subscrição Premium do Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) ou um [subscrição do Office 365 que inclui proteção de dados ao utilizar o Azure Proteção de informações](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Se for encontrada qualquer uma destas subscrições, não precisa do RMS para indivíduos. Tem sessão iniciada imediatamente e a inscrição self-service para o RMS para indivíduos é cancelada. Se não for encontrada uma destas subscrições, continue para o passo seguinte.
+    A Microsoft utiliza o seu endereço de e-mail para verificar se a sua organização já tem um [subscrição Premium do Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) ou um [subscrição do Office 365 que inclui proteção de dados ao utilizar o Azure Proteção de informações](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Se for encontrada qualquer uma destas subscrições, não precisa do RMS para indivíduos. Tem sessão iniciada imediatamente e a inscrição self-service para o RMS para indivíduos é cancelada. Se não for encontrada uma destas subscrições, continue para o passo seguinte.
 
 4. Aguarde que uma mensagem de e-mail de confirmação seja enviada para o endereço que especificou. Esta será enviada pela Equipa do Office 365 (support@email.microsoftonline.com) com o assunto **Concluir a sua inscrição no Microsoft Azure Information Protection**.
 

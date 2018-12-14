@@ -4,22 +4,22 @@ description: Fluxo de trabalho ponto-a-ponto para colaborar nos documentos que e
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/21/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1b11f50bcf2090129211f3dd09cff867cfbdcb7b
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: eb2e2538246ea5c8ca42f6270e535c73dda71774
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026660"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305510"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configuração da colaboração de documentos segura, utilizando o Azure Information Protection
 
->*Aplica-se a: [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Quando utiliza o Azure Information Protection, pode proteger os seus documentos sem sacrificar a colaboração para os utilizadores autorizados. A maioria dos documentos que um usuário cria e, em seguida, partilhar com outras pessoas para ver e editar irá ser documentos do Office do Word, Excel e PowerPoint. Estes documentos suportam a proteção nativa, o que significa que as funcionalidades de proteção de autorização e criptografia, além de também suportarem permissão restrita para um controlo mais detalhado. 
 
@@ -27,13 +27,13 @@ Estas permissões são chamadas de direitos de utilização e incluir permissõe
 
 Quando configurar estas permissões, pode especificar quais os utilizadores que são para:
 
-- **Para os utilizadores na sua própria organização ou de outra organização que utiliza o Azure Active Directory**: pode especificar contas de utilizador do Azure AD, grupos do Azure AD ou todos os utilizadores nessa organização. 
+- **Para os utilizadores na sua própria organização ou de outra organização que utiliza o Azure Active Directory**: Pode especificar contas de utilizador do Azure AD, grupos do Azure AD ou todos os utilizadores nessa organização. 
 
 - **Para os utilizadores que não tem uma conta do Azure Active Directory**: Especifique um endereço de e-mail que será utilizado com uma conta Microsoft. Esta conta pode já existir, ou os utilizadores podem criá-la no momento que abrem o documento protegido. 
     
     Para abrir documentos com uma conta Microsoft, os utilizadores podem utilizar o Office 2016 Click-to-Run. Outras versões e edições do Office fazem ainda não suporte abrir o Office proteger documentos com uma conta Microsoft.
 
-- **Para qualquer utilizador autenticado**: esta opção é adequada para quando não precisa de controlar quem acede ao documento protegido, fornecendo ao usuário que possa ser autenticado. A autenticação pode ser pelo Azure AD, utilizando uma conta Microsoft, ou até mesmo um provedor social federado ou código de acesso único quando o conteúdo é protegido pelas novas capacidades de encriptação de mensagens do Office 365. 
+- **Para qualquer utilizador autenticado**: Esta opção é adequada para quando não precisa de controlar quem acede ao documento protegido, fornecendo ao usuário que possa ser autenticado. A autenticação pode ser pelo Azure AD, utilizando uma conta Microsoft, ou até mesmo um provedor social federado ou código de acesso único quando o conteúdo é protegido pelas novas capacidades de encriptação de mensagens do Office 365. 
 
 Como administrador, pode configurar uma etiqueta do Azure Information Protection para aplicar as permissões e os utilizadores autorizados. Esta configuração torna muito fácil para os utilizadores e a outros administradores aplicar as definições de proteção correto, porque eles simplesmente aplicam a etiqueta sem ter de especificar todos os detalhes. As secções seguintes fornecem uma exemplo passo a passo para proteger um documento que oferece suporte à colaboração segura com usuários internos e externos.
 
@@ -42,7 +42,7 @@ Como administrador, pode configurar uma etiqueta do Azure Information Protection
 
 Este exemplo descreve como configurar uma etiqueta existente para aplicar a proteção para que os utilizadores da sua organização podem colaborar com documentos com todos os utilizadores de outra organização que tenha o Office 365 ou do Azure AD, um grupo a partir de uma organização diferente que tenha Office 365 ou do Azure AD e um utilizador que não tem uma conta no Azure AD e em vez disso, irá utilizar o endereço de e-mail do Gmail.
 
-Uma vez que o cenário restringe o acesso a pessoas específicas, ele não inclui a definição para utilizadores autenticados. Para obter um exemplo de como pode configurar uma etiqueta com esta definição, consulte [exemplo 5: etiqueta, que criptografa o conteúdo, mas não restringe quem pode acessá-lo](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
+Uma vez que o cenário restringe o acesso a pessoas específicas, ele não inclui a definição para utilizadores autenticados. Para obter um exemplo de como pode configurar uma etiqueta com esta definição, consulte [exemplo 5: Etiqueta, que criptografa o conteúdo, mas não restringe quem pode acessá-lo](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
 
 1. Selecione a etiqueta que já se encontra na política global ou de uma política de âmbito. Sobre o **proteção** painel, certifique-se **Azure (chave da cloud)** está selecionada.
     
@@ -50,15 +50,15 @@ Uma vez que o cenário restringe o acesso a pessoas específicas, ele não inclu
 
 3. Sobre o **adicionar permissões** painel: 
     
-    - Para o seu grupo interno: selecione **procurar diretório** para selecionar o grupo, o que deve ter o e-mail ativado.
+    - Para o seu grupo interno: Selecione **procurar diretório** para selecionar o grupo, o que deve ter o e-mail ativado.
     
-    - Para todos os utilizadores na organização primeiro externa: selecione **introduza os detalhes** e escreva o nome de um domínio no inquilino da organização. Por exemplo, fabrikam.com.
+    - Para todos os utilizadores na organização externa primeiro: Selecione **introduza os detalhes** e escreva o nome de um domínio no inquilino da organização. Por exemplo, fabrikam.com.
     
-    - Para o grupo no segundo organização externa: ainda na **introduza os detalhes** separador, escreva o endereço de e-mail do grupo no inquilino da organização. Por exemplo, sales@contoso.com.
+    - Para o grupo da organização externa segundo: Ainda na **introduza os detalhes** separador, escreva o endereço de e-mail do grupo no inquilino da organização. Por exemplo, sales@contoso.com.
     
-    - Para o utilizador que não tem uma conta do Azure AD: ainda na **introduza os detalhes** separador, escreva o endereço de e-mail do utilizador. Por exemplo, bengi.turan@gmail.com. 
+    - Para o utilizador que não tem uma conta do Azure AD: Ainda na **introduza os detalhes** separador, escreva o endereço de e-mail do utilizador. Por exemplo, bengi.turan@gmail.com. 
 
-4. Para conceder as mesmas permissões para todos esses usuários: para **escolha as permissões da configuração predefinida**, selecione **Coproprietário**, **Coautor**, **revisor**, ou **personalizada** para selecionar as permissões que pretende conceder.
+4. Para conceder as mesmas permissões para todos esses usuários: Para **escolha as permissões da configuração predefinida**, selecione **Coproprietário**, **Coautor**, **revisor**, ou **personalizado**para selecionar as permissões que pretende conceder.
     
     Por exemplo, as suas permissões configuradas podem ter um aspeto semelhantes ao seguinte:
         

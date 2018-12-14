@@ -4,25 +4,25 @@ description: Veja o que há de novo ou alterado numa versão do cliente do Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/05/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bfca9c6aab0625a9d35d7648a53f7cce6b74bce6
-ms.sourcegitcommit: 8e7b135bf48ced7e53d91f45d62b7bbd0f37634e
+ms.openlocfilehash: c6312d3f10a70ffcb3cc48447fcbc751b7072a0d
+ms.sourcegitcommit: db24caa96033fd0c7a0fad4e36518a816a570c94
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52861222"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53335528"
 ---
-# <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: política de histórico e suporte de lançamento de versão
+# <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: Política de histórico e suporte de lançamento de versão
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Aplica-se a: Serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 A equipa do Azure Information Protection atualiza regularmente o cliente do Azure Information Protection com correções e novas funcionalidades. 
 
-Pode baixar a mais recente versão de lançamento de disponibilidade geral e a versão de pré-visualização atual (se disponível) partir do [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Após um curto atraso, normalmente, duas semanas, a versão de disponibilidade geral também está incluída no catálogo Microsoft Update (categoria: **do Azure Information Protection**). Essa inclusão no catálogo significa que pode atualizar o cliente com o WSUS ou do Configuration Manager ou de outros mecanismos de implantação de software que utilizam o Microsoft Update.
+Pode baixar a mais recente versão de lançamento de disponibilidade geral e a versão de pré-visualização atual (se disponível) partir do [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Após um curto atraso, normalmente, duas semanas, a versão de disponibilidade geral também está incluída no catálogo Microsoft Update (categoria: **Azure Information Protection**). Essa inclusão no catálogo significa que pode atualizar o cliente com o WSUS ou do Configuration Manager ou de outros mecanismos de implantação de software que utilizam o Microsoft Update.
 
 Para obter mais informações, consulte [Upgrading e manter o cliente do Azure Information Protection](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 
@@ -44,7 +44,7 @@ Utilize as seguintes informações para ver o que há de novo ou alterado para u
 ## <a name="version-141510"></a>Versão 1.41.51.0
 
 > [!TIP]
-> Interessado na avaliação do Azure Information Protection unified cliente etiquetagem porque as etiquetas são publicadas a partir do Centro de conformidade e segurança do Office 365? Ver [do Azure Information Protection unified cliente etiquetagem: informações de lançamento de versão](unifiedlabelingclient-version-release-history.md).
+> Interessado na avaliação do Azure Information Protection unified cliente etiquetagem porque as etiquetas são publicadas a partir do Centro de conformidade e segurança do Office 365? Consulte [do Azure Information Protection unified cliente etiquetagem: Informações de lançamento de versão](unifiedlabelingclient-version-release-history.md).
 
 **Lançado**: 11/27/2018
 
@@ -74,7 +74,7 @@ Esta versão inclui a versão 1.0.3592.627 do cliente RMS MSIPC.
     
     - Marcas visuais são aplicadas agora se guardar a folha de cálculo durante a edição de uma célula.
     
-    - Excel 2010: Quando uma folha de cálculo é protegida com o Coautor [nível de permissão](../configure-usage-rights.md#rights-included-in-permissions-levels), o **eliminar etiqueta** botão agora está disponível quando o ficheiro com o botão direito e escolher **classificar e Proteger**.
+    - Excel 2010: Quando uma folha de cálculo é protegida com o Coautor [nível de permissão](../configure-usage-rights.md#rights-included-in-permissions-levels), o **eliminar etiqueta** botão agora está disponível quando o ficheiro com o botão direito e escolher **classificar e proteger**.
 
 - As definições de cliente avançado poderão [remover os cabeçalhos e rodapés de outras soluções de etiquetas](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions) agora oferece suporte a esquemas personalizados.
 
@@ -106,11 +106,13 @@ Esta versão inclui a versão 1.0.3592.627 do cliente RMS MSIPC.
 
 - Para o scanner do Azure Information Protection:
 
-    - Novo cmdlet, [AIPScanner atualização](/powershell/module/azureinformationprotection/Update-AIPScanner): necessário para executar uma vez após a atualização da versão anterior de GA (1.29.5.0) ou anterior.
+    - Novo cmdlet, [AIPScanner atualização](/powershell/module/azureinformationprotection/Update-AIPScanner): Necessário para executar uma vez após a atualização da versão anterior de GA (1.29.5.0) ou anterior.
     
-    - Novo cmdlet, [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus): obtém o estado atual do serviço para a deteção de impressão.  
+    - Novo cmdlet, [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus): Obtém o estado atual do serviço para a deteção de impressão.  
     
-    - Novo cmdlet, [início AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan): instrui o scanner para iniciar um ciclo de análise de quando a agenda está definida para manual de tempo.
+    - Novo cmdlet, [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan): Instrui o scanner para iniciar um ciclo de análise de quando a agenda está definida para manual de tempo.
+    
+    - Documentos PDF estão agora protegidos por predefinição, quando utiliza a norma ISO para a encriptação de PDF.
     
     - SharePoint Server 2010 é suportada para os clientes que tenham [suporte para esta versão do SharePoint estendido](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
     
@@ -150,7 +152,7 @@ Esta versão inclui a versão 1.0.3592.627 do cliente RMS MSIPC.
 
 - A versão de política é alterada para 1.4. Identificar o número de versão é necessária para [configurar computadores desligados](client-admin-guide-customizations.md#support-for-disconnected-computers).
 
-- O **enviar comentários** ligação na **ajuda e Feedback** caixa de diálogo é removida. Temporariamente foi substituída pela **comunicar um problema**, mas esta ligação apresenta agora apenas versões de pré-visualização. Por predefinição, esta opção envia um e-mail à Microsoft, mas pode alterar este endereço de e-mail para uma cadeia de caracteres HTTP que especificar. Por exemplo, uma página da web personalizada para os utilizadores comuniquem problemas, ou um endereço de e-mail que vai para o suporte técnico. Para modificar este endereço, utilize um [definição de cliente avançado](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link).
+- O **enviar comentários** ligação na **ajuda e Feedback** caixa de diálogo é removida. Temporariamente foi substituída pela **comunicar um problema** que, por predefinição, enviado um e-mail à Microsoft. A partir de Dezembro de 2018 ou superior, o **comunicar um problema** opção não é apresentada por predefinição, mas podem ser adicionada com um [definição de cliente avançado](client-admin-guide-customizations.md#add-report-an-issue-for-users) onde pode especificar uma cadeia de caracteres HTTP para a ligação. Por exemplo, uma página da web personalizada para os utilizadores comuniquem problemas, ou um endereço de e-mail que vai para o suporte técnico. 
 
 ## <a name="version-12950"></a>Versão 1.29.5.0 
 
@@ -208,5 +210,5 @@ Para obter mais informações sobre como instalar e utilizar o cliente:
 
 - Para os utilizadores: [Transferir e instalar o cliente](install-client-app.md)
 
-- Para os administradores: [Guia do administrador do cliente do Azure Information Protection](client-admin-guide.md)
+- Para administradores: [Guia do administrador de clientes do Azure Information Protection](client-admin-guide.md)
 

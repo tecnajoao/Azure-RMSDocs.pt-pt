@@ -2,8 +2,8 @@
 title: Configuração do Linux
 description: Várias versões dos sistemas operativos Linux podem agora utilizar o Rights Management SDK 4.x.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: A348541C-17E0-4024-BF97-84B0099B0E69
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: c403baa17cb4de9ec7932ca5088bbc5e6033d9f6
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 69fdf8e9405415c196cf439e06abe2983afcbf37
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150386"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54070371"
 ---
 # <a name="linux-setup"></a>Configuração do Linux
 
@@ -34,13 +34,13 @@ Várias versões dos sistemas operativos Linux podem agora fazer o uso do SDK do
 - CentOS 7
 
 Bibliotecas e amostras tem foram compiladas com êxito no Windows e no OSX, bem, mas estas não são totalmente suportadas neste momento.
- 
+ 
 ## <a name="how-to-build-and-use"></a>Como criar e utilizar
 
 - [Como criar bibliotecas e aplicações de exemplo](https://github.com/AzureAD/rms-sdk-for-cpp/wiki/How-to-Build)
 - [Como instalar e utilizar a aplicação em sistemas de utilizador](https://github.com/AzureAD/rms-sdk-for-cpp/wiki/How-to-Use)
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [Introdução](get-started.md)
 - [Novidades](release-notes.md)

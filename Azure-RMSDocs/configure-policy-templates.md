@@ -4,18 +4,18 @@ description: Configurar e gerir modelos de gestão de direitos do portal do Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2018
+ms.date: 12/28/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 412b84b705d12efd7259066c0fece68e2ab8c099
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 6147a065f6aff31dd40c339699f0dc35f1ebaa82
+ms.sourcegitcommit: b10df82d9f00b3f826bce38beb7b666ce3f56e84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173949"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "53814242"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurar e gerir modelos do Azure Information Protection
 
@@ -83,7 +83,7 @@ Antes de editar estes modelos ou convertê-los em etiquetas, certifique-se de qu
 
 - Não é possível copiar ou eliminar um modelo no portal do Azure. Quando o modelo é convertido para uma etiqueta, pode configurar a etiqueta de deixar de utilizar o modelo selecionando **não configurado** para o **definir permissões para documentos e e-mails que contenham esta etiqueta** opção. Em alternativa, pode eliminar a etiqueta. Em ambos os cenários, no entanto, o modelo não é eliminado e permanece num Estado de funcionamento arquivado.
     
-    Agora pode eliminar o modelo através do PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) cmdlet. Também pode utilizar este cmdlet do PowerShell para modelos que não são convertidos em etiquetas. No entanto, se eliminar um modelo que foi utilizado para proteger conteúdo, esse conteúdo já não pode ser aberto. Elimine modelos apenas se tiver a certeza de que não foram utilizados para proteger documentos ou e-mails na produção. Como precaução, talvez queira considerar primeiro exportar o modelo de cópia de segurança, ao utilizar o [Export-AadrmTemplate](/powershell/module/aadrm/export-aadrmtemplate) cmdlet. 
+    Agora pode eliminar o modelo através do PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) cmdlet. Também pode utilizar este cmdlet do PowerShell para modelos que não são convertidos em etiquetas. No entanto, para garantir que os conteúdos anteriormente protegidos podem ser aberto e utilizado como pretendido, normalmente, aconselhamos contra a eliminação de modelos. Como melhor prática, elimine os modelos apenas se tiver a certeza de que não foram utilizados para proteger documentos ou e-mails na produção. Como precaução, talvez queira considerar primeiro exportar o modelo de cópia de segurança, ao utilizar o [Export-AadrmTemplate](/powershell/module/aadrm/export-aadrmtemplate) cmdlet. 
 
 - Atualmente, se editar e guardar um modelo departamental, este remove a configuração do âmbito. O equivalente de um modelo com âmbito na política do Azure Information Protection é uma [política com âmbito](configure-policy-scope.md). Se converter o modelo numa etiqueta, pode selecionar um âmbito existente.
     

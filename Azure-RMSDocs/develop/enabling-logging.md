@@ -1,9 +1,9 @@
 ---
 title: Como&#58; ativar registo de erros e de desempenho | Azure RMS
-description: O SDK Microsoft Rights Management 4.2 gere o carregamento de registos de diagnóstico e de desempenho através de uma propriedade de único dispositivo.
+description: O Microsoft Rights Management SDK 4.2 gere o diagnóstico e de desempenho o carregamento de registos através de uma propriedade de único dispositivo.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,15 +12,15 @@ ms.assetid: F5AD3826-2292-4A25-AF5C-D17D083F5742
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 4dece185bdbfd83d8ee98d815ead5545ca007754
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 5b454ea2917fc5807326493fdf303e508bda7f0f
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147360"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071816"
 ---
-# <a name="how-to-enable-error-and-performance-logging"></a>Como: ativar registo de erros e de desempenho
-O SDK Microsoft Rights Management 4.2 gere o carregamento de registos de diagnóstico e de desempenho através de uma propriedade de único dispositivo.
+# <a name="how-to-enable-error-and-performance-logging"></a>Como: Ativar o registo de desempenho e de erro
+O Microsoft Rights Management SDK 4.2 gere o diagnóstico e de desempenho o carregamento de registos através de uma propriedade de único dispositivo.
 
 ## <a name="overview"></a>Descrição geral ##
 Pode melhorar a experiência e resolução de problemas dos utilizadores ao permitir o carregamento de diagnósticos automáticos, registos de telemetria e desempenho para a Microsoft. 
@@ -79,7 +79,7 @@ Definir o controlo do nível de registo
 Obter a definição de controlo do nível de registo
 
     [[NSUserDefaults standardUserDefaults] boolForKey:@&quot;IpcLogLevel&quot;];
- 
+ 
 
 ## <a name="windows"></a>Windows ##
 Ativar o registo automático

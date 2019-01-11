@@ -2,8 +2,8 @@
 title: Configuração da API de Ficheiros | Azure RMS
 description: O comportamento da API de Ficheiros pode ser configurado através de definições no registo.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 10/11/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 1323984258b64e9d28142a0209a89d3791ab03dd
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 0b05498730d064dfa2b7fb2183b1a8694c1fbf63
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148652"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54070626"
 ---
 # <a name="file-api-configuration"></a>Configuração da API de Ficheiros
 
@@ -37,15 +37,15 @@ As secções seguintes descrevem as chaves e os valores de chave que controlam a
 
 ### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection`
 
-**Tipo**: Chave
+**Tipo de**: Chave
 
-**Descrição**: contém a configuração geral da API de Ficheiros.
+**Descrição**: Contém configuração geral para a API de ficheiros.
 
 ### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\<EXT>`
 
-**Tipo**: Chave
+**Tipo de**: Chave
 
-**Descrição**: especifica as informações de configuração de uma extensão de ficheiro específica. Por exemplo, TXT, JPG, entre outras.
+**Descrição**: Especifica as informações de configuração de uma extensão de ficheiro específicos; Por exemplo, TXT, JPG e assim por diante.
 
 - O caráter universal, ' *', é permitido. No entanto, uma definição para uma extensão específica tem prioridade sobre a definição de caráter universal. O caráter universal não afeta as definições de ficheiros do Microsoft Office. Estas devem ser explicitamente desativadas por tipo de ficheiro.
 - Para especificar os ficheiros que não tenham uma extensão, utilize '.'
@@ -56,18 +56,18 @@ Para especificar o comportamento de proteção, defina o **Encryption** valor na
 
 ### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\<EXT>\Encryption*`
 
-**Tipo**: REG_SZ
+**Tipo de**: REG_SZ
 
-**Descrição**: contém um de três valores:
+**Descrição**: Contém um de três valores:
 
-- **Desativar**: a encriptação está desativada.
+- **Desativar**: Encriptação está desativada.
 
 > [!Note]
 > Esta definição não tem efeito na desencriptação. Qualquer ficheiro encriptado, seja ele encriptado com a proteção nativa ou Pfile, pode ser desencriptado, desde que o utilizador tenha o direito **EXTRAIR**.
 
-- **Nativa**: a encriptação nativa é utilizada. Para ficheiros do Office, o ficheiro encriptado terá a mesma extensão que o ficheiro original. Por exemplo, um ficheiro com a extensão de ficheiro .docx será encriptado para um ficheiro com uma extensão .docx. Para outros ficheiros que podem ter a proteção nativa aplicada, o ficheiro será encriptado para um ficheiro com uma extensão no formato p*zzz*, em que *zzz* é a extensão do ficheiro original. Por exemplo, os arquivos. txt serão encriptados para um ficheiro com extensão. ptxt. Segue uma lista de extensões de ficheiro que podem ter a proteção nativa aplicada.
+- **Nativo**:  Encriptação nativa é utilizada. Para ficheiros do Office, o ficheiro encriptado terá a mesma extensão que o ficheiro original. Por exemplo, um ficheiro com a extensão de ficheiro .docx será encriptado para um ficheiro com uma extensão .docx. Para outros ficheiros que podem ter a proteção nativa aplicada, o ficheiro será encriptado para um ficheiro com uma extensão no formato p*zzz*, em que *zzz* é a extensão do ficheiro original. Por exemplo, os arquivos. txt serão encriptados para um ficheiro com extensão. ptxt. Segue uma lista de extensões de ficheiro que podem ter a proteção nativa aplicada.
 
-- **Pfile**: a encriptação PFile é utilizada. O ficheiro encriptado terá .pfile anexado à extensão original. Por exemplo, depois da encriptação, um ficheiro .txt terá uma extensão .txt.pfile.
+- **Pfile**: Encriptação PFile é utilizada. O ficheiro encriptado terá .pfile anexado à extensão original. Por exemplo, depois da encriptação, um ficheiro .txt terá uma extensão .txt.pfile.
 
 
 > [!Note]
@@ -91,19 +91,19 @@ Se a encriptação for tentada num tipo de ficheiro que está bloqueado, ocorre 
 
 -   Extensões de ficheiros: doc, dot, xla, xls, xlt, pps, ppt, docm, docx, dotm, dotx, xlam, xlsb, xlsm, xlsx, xltm, xltx, xps, potm, potx, ppsx, ppsm, pptm, pptx, thmx, vsdx, vsdm, vssx, vssm, vstx e vstm. 
 -   Tipo de proteção = Nativa (predefinição): exemplo.docx está encriptado para exemplo.docx
--   Tipo de proteção = Pfile: para ficheiros do Office, tem o mesmo efeito que nativa.
--   Desativar: desativa a encriptação.
+-   Tipo de proteção = Pfile: Para ficheiros do Office, tem o mesmo efeito que nativa.
+-   Desativado: Desativa a encriptação.
 
 **Ficheiros PDF**
 
 -   Tipo de proteção = Nativa: exemplo.pdf é encriptado e é-lhe atribuído o nome exemplo.ppdf
 -   Tipo de proteção = Pfile: exemplo.pdf é encriptado e é-lhe atribuído o nome exemplo.pdf.pfile.
--   Desativar: desativa a encriptação.
+-   Desativado: Desativa a encriptação.
 
 **Todos os outros formatos de ficheiros**
 
 -   Tipo de proteção = Pfile: exemplo.*zzz* é encriptado e é-lhe atribuído o nome exemplo.*zzz*.pfile; em que *zzz* é a extensão de ficheiro original.
--   Desativar: desativa a encriptação.
+-   Desativado: Desativa a encriptação.
 
 ### <a name="examples"></a>Exemplos
 
@@ -111,38 +111,38 @@ As definições seguintes ativam a encriptação PFile para ficheiros txt. Os fi
 
 ```
 HKEY_LOCAL_MACHINE
-   Software
-      Microsoft
-         MSIPC
-            FileProtection
-               txt
-                  Encryption = Pfile
+   Software
+      Microsoft
+         MSIPC
+            FileProtection
+               txt
+                  Encryption = Pfile
 ```
 
 As definições seguintes ativam a encriptação PFile para todos os ficheiros não Office, exceto os txt. Os ficheiros do Office terão a proteção nativa aplicada (por predefinição), os ficheiros txt terão a proteção bloqueada e todos os outros ficheiros terão a proteção PFile aplicada.
 
 ```
 HKEY_LOCAL_MACHINE
-   Software
-      Microsoft
-         MSIPC
-            FileProtection
-               *
-                  Encryption = Pfile
-               txt
-                  Encryption = Off
+   Software
+      Microsoft
+         MSIPC
+            FileProtection
+               *
+                  Encryption = Pfile
+               txt
+                  Encryption = Off
 ```
 
 As definições seguintes desativam a encriptação nativa para ficheiros docx. Os ficheiros do Office, exceto os ficheiros docx, terão a proteção nativa aplicada (por predefinição) e todos os outros ficheiros terão a proteção bloqueada (por predefinição).
 
 ```
 HKEY_LOCAL_MACHINE
-   Software
-      Microsoft
-         MSIPC
-            FileProtection
-               docx
-                  Encryption = Off
+   Software
+      Microsoft
+         MSIPC
+            FileProtection
+               docx
+                  Encryption = Off
 ```
 
 ## <a name="related-articles"></a>Artigos relacionados

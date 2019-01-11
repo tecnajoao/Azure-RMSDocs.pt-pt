@@ -4,18 +4,18 @@ description: Instruções para instalar, configurar e executar o scanner do Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/13/2018
+ms.date: 01/08/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: fba2a1a804c085c44efc79d0f0ac69988f681aaa
-ms.sourcegitcommit: c9a0d81c18ea79a2520baa4b3777b06a72f87f60
+ms.openlocfilehash: 87e82a34e38bb66df2ecb10b91ec371f35bd5652
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53382525"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071323"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Implementar o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente
 
@@ -53,12 +53,13 @@ Antes de instalar o scanner do Azure Information Protection, certifique-se de qu
 
 |Requisito|Mais informações|
 |---------------|--------------------|
-|Computador Windows Server para executar o serviço de scanner:<br /><br />-4 processadores de núcleo<br /><br />-4 GB de RAM<br /><br />-10 GB de espaço livre (média) para ficheiros temporários|Windows Server 2016 ou Windows Server 2012 R2. <br /><br />Nota: Para fins de teste ou avaliação num ambiente de não produção, pode usar um sistema de operativo de cliente Windows que está [suportados pelo cliente do Azure Information Protection](requirements.md#client-devices).<br /><br />Este computador pode ser um computador físico ou virtual que tenha uma ligação de rede rápida e fiável para os arquivos de dados deve ser verificado.<br /><br /> O scanner requer espaço em disco suficiente para criar ficheiros temporários para cada ficheiro que verifica a, quatro arquivos por núcleo. Permite que o espaço em disco recomendado de 10 GB para 4 processadores de núcleo de análise de 16 ficheiros que tenham, cada um tamanho de ficheiro de 625 MB. <br /><br />Certifique-se de que este computador tem o [conectividade à Internet](requirements.md#firewalls-and-network-infrastructure) que necessita para o Azure Information Protection. Se a conectividade com a Internet não é possível devido às políticas de sua organização, consulte a [Implantando o scanner com configurações alternativos](#deploying-the-scanner-with-alternative-configurations) secção.|
+|Computador Windows Server para executar o serviço de scanner:<br /><br />-4 processadores de núcleo<br /><br />-8 GB de RAM<br /><br />-10 GB de espaço livre (média) para ficheiros temporários|Windows Server 2016 ou Windows Server 2012 R2. <br /><br />Nota: Para fins de teste ou avaliação num ambiente de não produção, pode usar um sistema de operativo de cliente Windows que está [suportados pelo cliente do Azure Information Protection](requirements.md#client-devices).<br /><br />Este computador pode ser um computador físico ou virtual que tenha uma ligação de rede rápida e fiável para os arquivos de dados deve ser verificado.<br /><br /> O scanner requer espaço em disco suficiente para criar ficheiros temporários para cada ficheiro que verifica a, quatro arquivos por núcleo. Permite que o espaço em disco recomendado de 10 GB para 4 processadores de núcleo de análise de 16 ficheiros que tenham, cada um tamanho de ficheiro de 625 MB. <br /><br />Certifique-se de que este computador tem o [conectividade à Internet](requirements.md#firewalls-and-network-infrastructure) que necessita para o Azure Information Protection. Se a conectividade com a Internet não é possível devido às políticas de sua organização, consulte a [Implantando o scanner com configurações alternativos](#deploying-the-scanner-with-alternative-configurations) secção.|
 |SQL Server para armazenar a configuração de scanner:<br /><br />-Instância local ou remota<br /><br />-Função de administrador do sistema para instalar o scanner|SQL Server 2012 é a versão mínima para as seguintes edições:<br /><br />– SQL Server Enterprise<br /><br />-SQL Server Standard<br /><br />-SQL Server Express<br /><br />Se instalar mais de uma instância do scanner, cada instância do scanner requer sua própria instância do SQL Server.<br /><br />Quando instala o scanner e a sua conta com a função de administrador do sistema, o processo de instalação cria a base de dados AzInfoProtectionScanner automaticamente e atribui a função db_owner necessária para a conta de serviço que executa a deteção de impressão. Se não é possível conceder a função de administrador do sistema ou as políticas de sua organização necessitam bases de dados a ser criado e configurado manualmente, consulte a [Implantando o scanner com configurações alternativos](#deploying-the-scanner-with-alternative-configurations) secção.<br /><br />O tamanho da base de dados de configuração irá variar para cada implementação, mas recomendamos que alocar o 500 MB para cada 1 000 000 ficheiros que pretende analisar. |
 |Conta de serviço para executar o serviço de scanner|Além de executar o serviço de scanner, esta conta autentica para o Azure AD e transfere a política do Azure Information Protection. Esta conta tem de ser uma conta do Active Directory e sincronizado com o Azure AD. Se não é possível sincronizar esta conta devido às políticas de sua organização, consulte a [Implantando o scanner com configurações alternativos](#deploying-the-scanner-with-alternative-configurations) secção.<br /><br />Esta conta de serviço tem os seguintes requisitos:<br /><br />- **Iniciar sessão localmente** certo. Este direito é necessário para a instalação e configuração do scanner, mas não para a operação. Tem de conceder este direito para a conta de serviço, mas é possível remover este direito após a confirmação de que a deteção de impressão pode detetar, classificar e proteger ficheiros. Se conceder este direito até mesmo para um curto período de tempo não é possível devido às políticas de sua organização, consulte a [Implantando o scanner com configurações alternativos](#deploying-the-scanner-with-alternative-configurations) secção.<br /><br />- **Iniciar sessão como um serviço** certo. Este direito é concedido automaticamente para a conta de serviço durante a instalação de scanner e este direito é necessário para a instalação, configuração e operação do scanner. <br /><br />-Permissões para os repositórios de dados: Tem de conceder **leitura** e **escrever** permissões para verificar os ficheiros e, em seguida, a aplicar a classificação e proteção para os ficheiros que cumprem as condições na política do Azure Information Protection. Para executar a deteção de impressão no modo de deteção apenas **leitura** permissão é suficiente.<br /><br />-Para etiquetas que voltar a proteger ou remover a proteção: Para garantir que a deteção de impressão tem sempre acesso aos ficheiros protegidos, tornar esta conta uma [Superutilizador](configure-super-users.md) para o Azure Rights Management service e certifique-se de que a funcionalidade de Superutilizador é ativada. Para obter mais informações sobre os requisitos de conta para a aplicação de proteção, consulte [preparar utilizadores e grupos do Azure Information Protection](prepare.md). Além disso, se tiver implementado [controlos de inclusão](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) para uma implementação faseada, certifique-se de que esta conta está incluída na sua controlos de inclusão que configurou.|
 |O cliente do Azure Information Protection está instalado no computador do servidor do Windows|Tem de instalar o cliente completo para a deteção de impressão. Não instale o cliente com apenas o módulo do PowerShell.<br /><br />Para obter instruções de instalação do cliente, consulte a [Guia do administrador](./rms-client/client-admin-guide.md). Se tiver instalado anteriormente o scanner e agora tem de atualizá-lo para uma versão posterior, veja [atualizar o scanner do Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).|
 |Configurado etiquetas que aplicam a classificação automática e, opcionalmente, proteção|Para obter mais informações sobre como configurar as condições na política do Azure Information Protection, consulte [como configurar condições para classificação automática e recomendada para o Azure Information Protection](configure-policy-classification.md).<br /><br />Para obter mais informações sobre como configurar etiquetas para aplicar proteção a ficheiros, consulte [como configurar uma etiqueta para proteção do Rights Management](configure-policy-protection.md).<br /><br />Estas etiquetas podem ser na política global, ou um ou mais [políticas de âmbito](configure-policy-scope.md).<br /><br />Nota: Embora seja possível executar a deteção de impressão, mesmo que ainda não tiver configurado as etiquetas que aplicam classificação automática, este cenário não é abrangido com estas instruções. [Mais informações](#using-the-scanner-with-alternative-configurations)|
-|Para documentos do Office ser analisado:<br /><br />-formatos de arquivo 97-2003 e formatos XML abertos do Office para Word, Excel e PowerPoint|Para obter mais informações sobre os tipos de ficheiro que o suporta o scanner para estes ficheiros de formatos, consulte [tipos de ficheiro suportados pelo cliente do Azure Information Protection](./rms-client/client-admin-guide-file-types.md). 
+|Para documentos do Office ser analisado:<br /><br />-formatos de arquivo 97-2003 e formatos XML abertos do Office para Word, Excel e PowerPoint|Para obter mais informações sobre os tipos de ficheiro que o suporta o scanner para estes formatos de ficheiros Consulte [tipos de ficheiro suportados pelo cliente do Azure Information Protection](./rms-client/client-admin-guide-file-types.md)|
+|Para os caminhos longos:<br /><br />-Máximo de 260 carateres, a menos que o scanner é instalado no Windows 2016 e o computador está configurado para suportar os caminhos longos|Comprimentos de caminhos superiores a 260 carateres com o seguinte de suporte do Windows 10 e Windows Server 2016 [definição de política de grupo](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/): **Política de computador local** > **configuração do computador** > **modelos administrativos** > **todas as definições**  >  **NTFS** > **caminhos longos do Win32 ativar**<br /><br /> Para obter mais informações sobre o suporte de caminhos de ficheiro longos, consulte a [limitação de comprimento máximo do caminho](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) secção da documentação do desenvolvedor do Windows 10.
 
 Se não é possível cumprir todos os requisitos na tabela porque eles são proibidos pelas suas diretivas da organização, consulte a secção seguinte para alternativas.
 
@@ -192,7 +193,7 @@ Com a configuração predefinida do scanner, agora, está pronto para executar a
     
         Start-AIPScan
     
-    Em alternativa, pode iniciar o Verificador do **do Azure Information Protection** painel no portal do Azure, ao utilizar o **Scanner** > **nós (pré-visualização)**  >  \* *<* nó scanner*>** > **analisar agora** opção.
+    Em alternativa, pode iniciar o Verificador do **do Azure Information Protection** painel no portal do Azure, ao utilizar o **Scanner** > **nós (pré-visualização)**  >   **\< *nó scanner*>**> **analisar agora** opção.
 
 2. Aguarde que o scanner concluir o seu ciclo, executando o seguinte comando:
     
@@ -227,7 +228,7 @@ Em sua configuração padrão, o scanner é executado um tempo e no modo só de 
     
         Start-AIPScan
     
-    Em alternativa, pode iniciar o Verificador do **do Azure Information Protection** painel no portal do Azure, ao utilizar o **Scanner** > **nós (pré-visualização)**  >  \* *<* scanner nó * > * * > **analisar agora** opção.
+    Em alternativa, pode iniciar o Verificador do **do Azure Information Protection** painel no portal do Azure, ao utilizar o **Scanner** \> **nós (pré-visualização)** \> **\< *nó scanner* \>** \> **analisar agora** opção.
 
 3. Monitorizar o registo de eventos para o tipo de informativo **911** novamente, com um tempo de carimbo posterior quando iniciou a análise no passo anterior. 
     
@@ -238,61 +239,72 @@ Porque, configurámos o agendamento para ser executada continuamente, quando o s
 
 ## <a name="how-files-are-scanned"></a>Como os ficheiros são analisados
 
-O scanner ignora automaticamente ficheiros que estão [excluídos da classificação e proteção](./rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection), tais como executáveis e de sistema de ficheiros.
+O scanner percorre os seguintes processos quando ele analisa os ficheiros.
 
-Pode alterar este comportamento ao definir uma lista dos tipos de ficheiro de analisar ou excluir da análise. Quando especifica esta lista e não especificar um repositório de dados, a lista se aplica a todos os repositórios de dados que não tem sua própria lista especificada. Para especificar esta lista, utilize [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes). Depois de especificar a lista de tipos de ficheiro, pode adicionar um novo tipo de ficheiro à lista utilizando [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes)e remover um tipo de ficheiro da lista com [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes).
+### <a name="1-determine-whether-files-are-included-or-excluded-for-scanning"></a>1. Determinar se os ficheiros são incluídos ou excluídos para verificação 
+O scanner ignora automaticamente ficheiros que estão [excluídos da classificação e proteção](./rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection), como arquivos executáveis e arquivos do sistema.
 
-Em seguida, o scanner utiliza Windows IFilter para analisar os seguintes tipos de ficheiro. Para estes tipos de ficheiro, serão identificados o documento como utilizando as condições que especificou para as etiquetas.
+Pode alterar este comportamento ao definir uma lista dos tipos de ficheiro de analisar ou excluir da análise. Quando especifica esta lista e não especificar um repositório de dados, a lista se aplica a todos os repositórios de dados que não tem sua própria lista especificada. Para especificar esta lista, utilize [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes). 
 
-|Tipo de aplicação|Tipo de ficheiro|
-|--------------------------------|-------------------------------------|
-|Word|.docx; .docm; .dotm; .dotx|
-|Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
-|PowerPoint|. ppt; .pps; .pot;. pptx; .ppsx;. pptm; .ppsm; .potx; .potm|
-|PDF |.pdf|
-|Texto|.txt; .xml; .csv|
+Depois de especificar a lista de tipos de ficheiro, pode adicionar um novo tipo de ficheiro à lista utilizando [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes)e remover um tipo de ficheiro da lista com [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes).
 
-Além disso, o scanner também pode utilizar reconhecimento ótico de carateres (OCR) para inspecionar as imagens TIFF com uma extensão de nome de ficheiro. tiff quando instalar a funcionalidade do Windows TIFF IFilter e, em seguida, configure [definições do Windows TIFF IFilter](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) no computador que executa a deteção de impressão.
+### <a name="2-inspect-and-label-files"></a>2. Inspecione e etiquetar ficheiros
 
-Por predefinição, apenas os tipos de ficheiro do Office e ficheiros PDF protegidos pelo scanner, para que os ficheiros de texto e imagem não estão protegidos, a menos que [editar o registo](#editing-the-registry-for-the-scanner) para especificar os tipos de ficheiro:
+O scanner, em seguida, utiliza filtros para analisar os tipos de ficheiro suportados. Estes filtros mesmo são utilizados pelo sistema operativo para o Windows Search e a indexação. Sem qualquer configuração adicional, o Windows IFilter é utilizado para analisar os tipos de ficheiro que são utilizados pelo Word, Excel, PowerPoint e para documentos PDF e arquivos de texto.
 
-- Se não adicionar os tipos de ficheiro. txt,. XML ou. csv para o registo: Ficheiros com estas extensões de nome de ficheiro serão não identificados como porque estes tipos de ficheiro não suportam apenas a classificação.
+Para obter uma lista completa dos tipos de ficheiros que são suportadas por padrão e informações adicionais como para configurar os filtros existentes que incluem ficheiros. zip e ficheiros. TIFF, consulte [tipos de ficheiro suportados para inspeção](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-inspection).
 
-- Se não adicionar o tipo de ficheiro de. tiff para o registo depois de configurar o IFilter TIFF do Windows: Serão identificados como ficheiros que tenham esta extensão de nome de ficheiro, mas se a etiqueta estiver configurada para proteção, a proteção não é aplicada.
+Após a inspeção, estes tipos de ficheiro podem ser rotulados utilizando as condições que especificou para as etiquetas. Em alternativa, se estiver a utilizar o modo de deteção, estes ficheiros podem ser comunicados para conter as condições que especificou para as etiquetas ou todos os tipos conhecidos de informações confidenciais. 
 
-Por fim, para os tipos de ficheiros restantes, o scanner não os inspeciona mas aplica-se a etiqueta predefinida na política do Azure Information Protection ou a etiqueta predefinida que configurou para a deteção de impressão.
+No entanto, o scanner não é possível etiquetar os ficheiros nas seguintes circunstâncias:
 
-|Tipo de aplicação|Tipo de ficheiro|
-|--------------------------------|-------------------------------------|
-|Projeto|.mpp; .mpt|
-|Fabricante|.pub|
-|Visio|.vsd; .vdw; .vst; .vss; .vsdx; .vsdm; .vssx; .vssm; .vstx; .vstm|
-|XPS|.xps; .oxps; .dwfx|
-|Como o Solidworks|.sldprt; .slddrw; .sldasm|
-|JPEG |.jpg; .jpeg; .jpe; .jif; .jfif; .jfi|
-|PNG |.png|
-|GIF|.gif|
-|Mapa de bits|.bmp; .giff|
-|TIFF|. TIF;. tiff|
-|PhotoShop|.psdv|
-|DigitalNegative|.dng|
-|Pfile|.pfile|
+- Se aplica-se a etiqueta de classificação e proteção não e o tipo de ficheiro não existir [suportará a classificação apenas](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-classification-only).
 
-Quando o scanner aplique uma etiqueta com a proteção, por predefinição, apenas os tipos de ficheiro do Office e ficheiros PDF são protegidos. Pode alterar este comportamento para que outros tipos de ficheiro são protegidos. No entanto, quando uma etiqueta aplicar proteção genérica a documentos, a extensão de nome de ficheiro é alterado para. pfile. Outros tipos de ficheiro, podem alterar a extensão de nome também. Além disso, esses ficheiros passam a ser só de leitura até que sejam abertos por um utilizador autorizado e guardados no seu formato nativo.
+- Se aplica-se a etiqueta de classificação e proteção, mas o scanner não protege o tipo de ficheiro.
+    
+    Por predefinição, o scanner protege apenas os tipos de ficheiro do Office e os ficheiros PDF que estejam protegidos utilizando a norma ISO para a encriptação de PDF. Outros tipos de ficheiro podem ser protegido quando [editar o registo](#editing-the-registry-for-the-scanner) conforme descrito na seção a seguir.
+
+Por exemplo, depois de inspecionar ficheiros que tenham uma extensão de nome de ficheiro de. txt, o scanner não é possível aplicar uma etiqueta que está configurada para classificação, mas não a proteção, porque o tipo de ficheiro. txt não suporta apenas a classificação. Se a etiqueta é configurada para classificação e proteção, e o Registro é editado para o tipo de ficheiro. txt, o scanner pode Etiquetar o ficheiro. 
+
+> [!TIP]
+> Durante este processo, se o scanner interrompe e não concluir a verificação de um grande número de ficheiros num repositório, poderá ter de aumentar o número de portas dinâmicas para o sistema operativo que aloja os ficheiros. Sistema de proteção do servidor para o SharePoint pode ser um dos motivos por que o scanner excede o número de ligações de rede permitidos e, portanto, deixa.
+> 
+> Para verificar se esta é a causa do scanner a parar, dê uma olhada para ver se a seguinte mensagem de erro é registada para a deteção de impressão em %*localappdata*%\Microsoft\MSIP\Logs\MSIPScanner.iplog (comprimido se existirem vários registos): **Não é possível ligar ao servidor remoto---> System.Net.Sockets.SocketException: Utilização de apenas um de cada endereço de soquete (endereço de rede/protocolo/porta) normalmente é permitida IP: porta**
+>
+> Para obter mais informações sobre como visualizar o intervalo de portas atual e aumentar o leque de mensagens em fila, consulte [definições que podem ser modificadas para melhorar o desempenho de rede](https://docs.microsoft.com/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance) 
+
+
+
+### <a name="3-label-files-that-cant-be-inspected"></a>3. Ficheiros de etiqueta que não não possível inspecioná-lo
+Para os tipos de ficheiro que não não possível inspecioná-lo, o scanner aplica-se a etiqueta predefinida na política do Azure Information Protection ou a etiqueta predefinida que configurou para a deteção de impressão.
+
+Como no passo anterior, o scanner não é possível etiquetar os ficheiros nas seguintes circunstâncias:
+
+- Se aplica-se a etiqueta de classificação e proteção não e o tipo de ficheiro não existir [suportará a classificação apenas](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-classification-only).
+
+- Se aplica-se a etiqueta de classificação e proteção, mas o scanner não protege o tipo de ficheiro.
+    
+    Por predefinição, o scanner protege apenas os tipos de ficheiro do Office e os ficheiros PDF que estejam protegidos utilizando a norma ISO para a encriptação de PDF. Outros tipos de ficheiro podem ser protegido quando [editar o registo](#editing-the-registry-for-the-scanner) conforme descrito a seguir.
+
 
 ### <a name="editing-the-registry-for-the-scanner"></a>Editar o registo para a deteção de impressão
 
-Para alterar o comportamento de scanner de padrão para proteger os tipos de ficheiro diferentes arquivos do Office e de PDFs, tem manualmente de editar o registo e especificar os tipos de ficheiro adicionais que pretende proteger. Para obter instruções, consulte [configuração da API de ficheiros](develop/file-api-configuration.md) de orientação para programadores. Nesta documentação para programadores, a proteção genérica é referida como "PFile". Além disso, específico para a deteção de impressão:
+Para alterar o comportamento de scanner de padrão para proteger os tipos de ficheiro diferentes arquivos do Office e de PDFs, tem de editar o registo e especificar os tipos de ficheiro adicionais que pretende proteger e o tipo de proteção (nativo ou genérico) manualmente. Para obter instruções, consulte [configuração da API de ficheiros](develop/file-api-configuration.md) de orientação para programadores. Nesta documentação para programadores, a proteção genérica é referida como "PFile". Além disso, específico para a deteção de impressão:
 
-- O scanner tem seu próprio comportamento padrão: Apenas os formatos de arquivo do Office e os documentos PDF protegidos por padrão. Se o registo não for modificado, outros tipos de ficheiro não serão protegidos pelo leitor.
+- O scanner tem seu próprio comportamento padrão: Apenas os formatos de arquivo do Office e os documentos PDF protegidos por padrão. Se o registo não for modificado, outros tipos de ficheiro não serão etiquetados ou protegidos pelo leitor.
 
 - Se pretender que o mesmo comportamento de proteção de predefinição do cliente do Azure Information Protection, onde todos os ficheiros são automaticamente protegidos com a proteção nativa ou genérica: Especifique a `*` universais como uma chave de registo e `Default` como os dados do valor.
 
 Ao editar o registro, criar manualmente a **MSIPC** chave e **FileProtection** chave se não existirem, bem como uma chave para cada extensão de nome de ficheiro.
 
-Por exemplo, para a deteção de impressão proteger as imagens TIFF, além de ficheiros do Office e de PDFs, o registo após editou, será semelhante a imagem seguinte:
+Por exemplo, para a deteção de impressão proteger as imagens TIFF, além de ficheiros do Office e de PDFs, o registo após editou, será semelhante a imagem seguinte. Como um ficheiro de imagem, ficheiros TIFF suportam a proteção nativa e a extensão de nome de ficheiro resultante,. ptiff.
 
 ![Editar o registo para o scanner aplicar a proteção](./media/editregistry-scanner.png)
+
+Para obter uma lista de texto e imagens de tipos de ficheiro que da mesma forma suportam a proteção nativa, mas tem de ser especificado no registo, consulte [tipos de ficheiros suportados para classificação e proteção](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection) no Guia do administrador.
+
+Para ficheiros que não suportam a proteção nativa, especifique a extensão de nome de ficheiro, como uma nova chave, e **PFile** para proteção genérica. A extensão de nome de ficheiro resultante para o ficheiro protegido é. pfile.
+
 
 ## <a name="when-files-are-rescanned"></a>Quando ficheiros estão a ser reanalisados
 
@@ -300,7 +312,7 @@ Para o primeiro ciclo de análise, o scanner inspeciona todos os ficheiros nos a
 
 Pode forçar a deteção de impressão para inspecionar todos os ficheiros novamente, executando [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) com o `-Reset` parâmetro. A deteção de impressão tem de ser configurada para um agendamento manual, o que requer o `-Schedule` parâmetro ser definida como **Manual** com [conjunto AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).
 
-Em alternativa, pode forçar a deteção de impressão para inspecionar todos os ficheiros novamente a partir do **do Azure Information Protection** painel no portal do Azure, ao utilizar o **Scanner** > **(nós Pré-visualização)** > \**<* scanner nó * > * * > **reanalisar todos os ficheiros** opção.
+Em alternativa, pode forçar a deteção de impressão para inspecionar todos os ficheiros novamente a partir do **do Azure Information Protection** painel no portal do Azure, ao utilizar o **Scanner** \> **(nós Pré-visualização)** \> **\< *nó scanner* \>** \> **reanalisar todos os ficheiros** opção.
 
 Inspecionar todos os ficheiros novamente é útil quando pretende que os relatórios para incluir todos os ficheiros e esta opção de configuração é normalmente utilizada quando o scanner é executado no modo de deteção. Quando uma análise completa estiver concluída, o tipo de análise muda automaticamente para incremental, de modo que para análises subsequentes, os ficheiros novos ou modificados só são analisados.
 
@@ -438,9 +450,9 @@ Informações **911**
 
 **Ciclo de scanner foi concluída.**
 
-Este evento é registado quando o scanner terminar sua única análise, uma vez que o servidor iniciado ou o scanner concluir um ciclo numa base contínua.
+Este evento é registado quando o scanner foi concluída uma análise manual ou o scanner concluir um ciclo numa base contínua.
 
-Se o scanner foi configurado para ser executado uma vez, em vez de continuamente, para analisar os ficheiros novamente, tem de definir a agenda **OneTime** ou **contínua**e, em seguida, reinicie manualmente o serviço. Para alterar a agenda, utilize o [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet e o **agenda** parâmetro.
+Se o scanner foi configurado para executar manualmente em vez de forma contínua, para executar uma nova análise, utilize o [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) cmdlet. Para alterar a agenda, utilize o [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet e o **agenda** parâmetro.
 
 ----
 

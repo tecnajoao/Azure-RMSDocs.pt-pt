@@ -2,8 +2,8 @@
 title: Ficheiros do ambiente de desenvolvimento | Azure RMS
 description: Este tópico mostra os ficheiros do ambiente de desenvolvimento e as respetivas localizações de instalação no computador.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,18 +12,18 @@ ms.assetid: B57AC6F3-733C-42A8-AF83-0E15FBF27C99
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 3dffcdddae1ba7522671694cb909c21b4e096c89
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 80993b63a50e4d180429f841698638219f7725a0
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147768"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071442"
 ---
 # <a name="development-environment-files"></a>Ficheiros do ambiente de desenvolvimento
 
 Este tópico mostra os ficheiros do ambiente de desenvolvimento e as respetivas localizações de instalação no computador.
 
-O SDK Rights Management Services 2.1 inclui os seguintes ficheiros, instalados no computador na localização predefinida ou na localização que especificou: %MsipcSDKDir%.
+O Rights Management Services SDK 2.1 inclui os seguintes arquivos, instalados no seu computador na localização predefinida ou aquele que especificou: % MsipcSDKDir %.
 
 |Ficheiro|Caminho|Descrição|
 |----|----|-----------|
@@ -32,8 +32,8 @@ O SDK Rights Management Services 2.1 inclui os seguintes ficheiros, instalados 
 |Isvtier5appsigningpubkey.dat|\bin|Contém a chave pública utilizada para gerar um manifesto para utilização durante o desenvolvimento de uma aplicação com capacidade para RMS.|
 |Isvtier5appsignsdk_client.xml|\bin|Usado para gerar um manifesto para utilização durante o desenvolvimento de uma aplicação com capacidade para RMS.|
 |NomeDaAplicação.isv.mcf|\bin|Um ficheiro de configuração de manifesto automático que pode utilizar para gerar um manifesto durante o desenvolvimento de uma aplicação com capacidade para RMS.|
-|Ipcsecproc_isv.dll|\bin\x86|DLL utilizado internamente, para aplicações x86, pelo Cliente dos Serviços de Gestão de Direitos do Active Directory 2.1 quando funciona na hierarquia de ISV.|
-|Ipcsecproc_ssp_isv.dll|\bin\x86|DLL utilizado internamente, para aplicações x86, pelo AD RMS 2.1 quando funciona na hierarquia de ISV.|
+|Ipcsecproc_isv.dll|\bin\x86|DLL utilizado internamente, para x86 aplicativos, pelo Active Directory Rights Management Services Client 2.1 quando funciona na hierarquia de ISV.|
+|Ipcsecproc_ssp_isv.dll|\bin\x86|DLL utilizado internamente, para x86 aplicativos, pelo AD RMS 2.1 quando funciona na hierarquia de ISV.|
 |Ipcsecproc_isv.dll|\bin\x64|DLL utilizado internamente, para aplicações x64, pelo Cliente de AD RMS 2.1 quando funciona na hierarquia de ISV.|
 |Ipcsecproc_ssp_isv.dll|\bin\x64|DLL utilizado internamente, para aplicações x64, pelo Cliente de AD RMS 2.1 quando funciona na hierarquia de ISV.|
 |Msipc.h|\inc|Ficheiro de inclusão principal do SDK RMS 2.1.|

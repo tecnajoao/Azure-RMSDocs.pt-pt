@@ -2,8 +2,8 @@
 title: Descrição geral - RMS SDK 2.1 | Azure RMS
 description: O Rights Management Services (RMS) é uma tecnologia de proteção de informações que ajuda a salvaguardar as informações digitais contra a utilização não autorizada.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: B546B6C1-ADC1-4EBD-95E2-B4A74E4E980B
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 50dc99a83cbd45b977c2ddb22a2a3034f648c396
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: edd4cb0d28c68491348e61ac5a90d03087059144
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147428"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54070286"
 ---
 # <a name="overview"></a>Descrição geral
 
@@ -27,9 +27,9 @@ O AD RMS consiste em componentes de [servidor](ad-rms-server.md) e de [cliente](
 
 O componente de [cliente](ad-rms-client.md) pode ser executado num sistema operativo de cliente ou de servidor e contém funções que permitem que uma aplicação encripte e desencripte conteúdo, obtenha modelos e listas de revogação, adquira licenças e certificados a partir de um servidor e outras tarefas de gestão de direitos relacionadas.
 
-Para obter mais informações, consulte [Tipos de aplicações](application-types.md).
+Para obter mais informações, veja [Tipos de aplicações](application-types.md).
 
-Seguem-se alguns dos cenários em que podem ser aplicadas aplicações incorporadas no SDK Rights Management Services 2.1.
+Seguem-se apenas alguns dos cenários para os quais podem ser aplicadas aplicações criadas no Rights Management Services SDK 2.1.
 
 -   Uma firma de advogados pretende impedir que as mensagens de e-mail confidenciais sejam impressas ou reencaminhadas.
 -   Os programadores do projeto assistido por computador e software de fabrico pretendem limitar o acesso de desenho a um pequeno grupo de utilizadores dentro da divisão de pesquisa sem a necessidade da utilização de palavras-passe.
@@ -46,7 +46,7 @@ Os tópicos restantes desta secção a Arquitetura RMS e as suas implementaçõe
 | Tópico | Descrição |
 |-------|-------------|
 |[Cliente](ad-rms-client.md) |Este tópico descreve a finalidade e a função do Rights Management Service Client 2.1 |
-|[Servidor](ad-rms-server.md) | Este tópico descreve a finalidade e as funções do RMS Server para o Azure e Windows Server.|
+|[servidor](ad-rms-server.md) | Este tópico descreve a finalidade e as funções do RMS Server para o Azure e Windows Server.|
 
 
 ## <a name="related-topics"></a>Tópicos relacionados

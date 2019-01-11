@@ -2,8 +2,8 @@
 title: Configurar o ambiente de programação | Azure RMS
 description: Saiba como configurar o ambiente de desenvolvimento para trabalhar com as APIs do SDK AD RMS para o seu sistema operativo específico.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,22 +12,22 @@ ms.assetid: 296FC4C0-99C6-4997-AD97-5CEE01221B1A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 51d6c542c1118f05795e98934ce90bc70d744ccf
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: f05c24d6d9bec5771b94f6cad1b07b4aca019a4e
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148601"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071680"
 ---
 # <a name="setup-developer-environment"></a>Configurar o ambiente de programação
 
 Os tópicos seguintes mostram como configurar o ambiente de desenvolvimento para trabalhar com as APIs do SDK AD RMS para o seu sistema operativo específico.
 
-|Platform | Descrição|
+|Plataforma | Descrição|
 |------|------------|
-|[Android](android-sdk.md)| As aplicações Android podem utilizar o SDK Microsoft Rights Management 4.2 para ativar a proteção de informações integrada nas respetivas aplicações utilizando o Azure Active Directory Rights Management (AAD RM).|
-|[Linux](linux-setup.md)|Agora, várias versões dos sistemas operativos Linux podem utilizar o SDK MS RMS 4.2 para ativar a proteção de informações integrada na respetiva aplicação utilizando o Azure Active Directory Rights Management (AAD RM).|
-|[iOS e OSX](ios-sdk.md)|As aplicações iOS e OS X podem utilizar o SDK MS RMS 4.2 para ativar a proteção de informações integrada na respetiva aplicação utilizando o Azure Active Directory Rights Management (AAD RM).|
-|[Windows Phone](windows-phone-apps.md)|As aplicações para Windows Phone podem utilizar o SDK MS RMS 4.2 para ativar a proteção de informações integrada na respetiva aplicação utilizando o Azure Active Directory Rights Management (AAD RM).|
-|[Loja Windows](winrt-sdk.md)|As aplicações da Loja Windows podem utilizar o SDK MS RMS 4.2 para ativar a proteção de informações integrada na respetiva aplicação utilizando o Azure Active Directory Rights Management (AAD RM).|
+|[Android](android-sdk.md)| Aplicações Android podem utilizar o Microsoft Rights Management SDK 4.2 para ativar a proteção de informações integrada nas respetivas aplicações ao utilizar o Azure Active Directory Rights Management (AAD RM).|
+|[Linux](linux-setup.md)|Agora podem fazer várias versões dos sistemas operativos Linux utilizar o SDK MS RMS 4.2 para ativar a proteção de informações integrada na respetiva aplicação utilizando o Azure Active Directory Rights Management (AAD RM).|
+|[iOS e OSX](ios-sdk.md)|aplicações iOS e OS X podem utilizar o SDK MS RMS 4.2 para ativar a proteção de informações integrada na respetiva aplicação utilizando o Azure Active Directory Rights Management (AAD RM).|
+|[Windows Phone](windows-phone-apps.md)|Aplicativos do Windows Phone podem utilizar o SDK MS RMS 4.2 para ativar a proteção de informações integrada na respetiva aplicação utilizando o Azure Active Directory Rights Management (AAD RM).|
+|[Loja Windows](winrt-sdk.md)|Aplicativos da Windows Store podem utilizar o SDK MS RMS 4.2 para ativar a proteção de informações integrada na respetiva aplicação utilizando o Azure Active Directory Rights Management (AAD RM).|
 

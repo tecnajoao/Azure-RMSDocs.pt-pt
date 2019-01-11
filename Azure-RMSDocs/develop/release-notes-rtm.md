@@ -2,8 +2,8 @@
 title: Notas de versão
 description: Atualizações do SDK, revisão e outras informações do desenvolvedor.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 10/18/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 05ac80a9032467fafe09e39941117c6b4c52d439
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 8132fd2afba45402f8f9c835f2d6db69dd8e81f2
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151355"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071205"
 ---
 # <a name="release-notes"></a>Notas de versão
 
@@ -63,7 +63,7 @@ Este artigo contém informações importantes sobre isto e versões anteriores d
 -   O **controlo de documentos** é agora possível através de um conjunto de APIs novas. Para obter mais informações, veja [Controlar Conteúdo](tracking-content.md).
 -   **Tipo de encriptação** – agora suportamos o controlo de nível da API para a seleção do pacote de encriptação. Para obter mais informações, veja [Trabalhar com a encriptação](working-with-encryption.md).
 
-    **Nota:** já não expomos o sinalizador **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** na nossa API. Isto significa que as aplicações futuras vão deixar de compilar se fizerem referência a este sinalizador, mas as aplicações já criadas vão continuar a funcionar, uma vez que respeitamos o sinalizador em privado no código da API. Para aproveitar ainda as vantagens do sinalizador de algoritmos de encriptação preterido antigo, basta alterar um sinalizador. Para obter mais informações, veja [Trabalhar com a encriptação](working-with-encryption.md).
+    **Tenha em atenção**  já não irá expor o **IPC\_LI\_PRETERIDO\_encriptação\_algoritmos** sinalizador na nossa API. Isto significa que as aplicações futuras vão deixar de compilar se fizerem referência a este sinalizador, mas as aplicações já criadas vão continuar a funcionar, uma vez que respeitamos o sinalizador em privado no código da API. Para aproveitar ainda as vantagens do sinalizador de algoritmos de encriptação preterido antigo, basta alterar um sinalizador. Para obter mais informações, veja [Trabalhar com a encriptação](working-with-encryption.md).
 
 -   As **Aplicações de Modo de Servidor** que utilizarem um [Valor de modo de API](https://msdn.microsoft.com/library/hh535236.aspx) de **IPC\_API\_MODE\_SERVER** já não necessitam de um manifesto da aplicação. Pode testar a aplicação relativamente a um servidor RMS de produção e não é necessário obter uma licença de produção quando mudar para um ambiente de produção. Para obter mais informações sobre as aplicações do modo de servidor, veja [Tipos de aplicação](application-types.md).
 -   O **registo** é agora implementado através dos métodos Rastreio de Eventos e ficheiros do Windows.
@@ -93,7 +93,7 @@ O componente da API de ficheiros do SDK foram expandido e oferece as seguintes f
 
     Funções adicionadas a esta versão:
 
-    **Nota:** foram adicionadas estruturas e tipos de dados de suporte, não listados aqui, às extensões da API de Ficheiros. Todos os artigos que foram atualizados nesta versão estão marcados como **preliminares e estão sujeitas a alterações**.
+    **Tenha em atenção** - dados de suporte tipos e estruturas, não listadas aqui, foram adicionadas para as extensões de API de ficheiros. Todos os artigos que foram atualizados nesta versão estão marcados como **preliminares e estão sujeitas a alterações**.
 
     -   [IpcfOpenFileOnHandle](https://msdn.microsoft.com/library/dn771751.aspx)
     -   [IpcfOpenFileOnILockBytes](https://msdn.microsoft.com/library/dn771752.aspx)
@@ -116,19 +116,19 @@ O componente da API de ficheiros do SDK foram expandido e oferece as seguintes f
 
 -   **Suporte nativo para todos os tipos de ficheiro**
 
-    É possível adicionar suporte nativo para qualquer tipo de ficheiro (extensão) com esta versão do SDK Rights Management Services 2.1. Por exemplo, para qualquer extensão &lt;ext&gt; (não Office e pdf), \*.p&lt;ext&gt; será utilizado se a configuração de administração para essa extensão for “NATIVO”.
+    É possível adicionar suporte nativo para qualquer tipo de ficheiro (extensão) com esta versão do SDK do Rights Management Services 2.1. Por exemplo, para qualquer extensão &lt;ext&gt; (não Office e pdf), \*.p&lt;ext&gt; será utilizado se a configuração de administração para essa extensão for “NATIVO”.
 
     Para obter mais informações sobre tipos de ficheiro suportados, veja [Configuração da API de Ficheiros](file-api-configuration.md).
 
--   Os **computadores Windows 7 SP1 e Windows Server 2008 R2 SP1** sem a atualização [KB2533623](https://support.microsoft.com/kb/2533623) poderão apresentar o seguinte erro ao proteger um ficheiro do Office: “O parâmetro está incorreto. Código de erro 0x80070057”. Se vir isto, instale a atualização e tente novamente. Se os problemas persistirem, contacte o alias de comentários do RMS SDK Beta <rmcstbeta@microsoft.com>.
+-   **Máquinas do Windows 7 SP1 e Windows Server 2008 R2 SP1** sem a atualização [KB2533623](https://support.microsoft.com/kb/2533623), pode ter o seguinte erro de proteger um ficheiro do office "o parâmetro está incorreto. Código de erro 0x80070057”. Se vir isto, instale a atualização e tente novamente. Se os problemas persistirem, contacte o alias de comentários do RMS SDK Beta <rmcstbeta@microsoft.com>.
 
-    **Nota:** na versão de abril de 2015, foi adicionada uma verificação ao processo de instalação deste KB.
+    **Tenha em atenção**  no momento do lançamento de Abril de 2015, uma verificação foi adicionada para o processo de instalação para este KB.
 
-     
+     
 
 -   **Integração da API de Ficheiros**
 
-    A API de Ficheiros dos Serviços de Gestão de Direitos do Active Directory, com a adição da API de Ficheiros, fornece as seguintes vantagens e capacidades.
+    O Active Directory Rights Management API dos serviços do arquivo, com a adição da API de ficheiros, fornece as seguintes vantagens e capacidades.
 
       - Pode proteger dados confidenciais de uma forma automática sem necessitar de saber os detalhes sobre a implementação da Gestão de Direitos de Informação (IRM) utilizada por vários formatos de ficheiro.
 
@@ -136,27 +136,27 @@ O componente da API de ficheiros do SDK foram expandido e oferece as seguintes f
 
       - Todos os ficheiros, exceto ficheiros do sistema e ficheiros do Office, podem ser protegidos através do formato de Ficheiro Protegido (PFile) do RMS.
 
-    A API de ficheiros é implementada através de seguintes quatro novas funções: [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx), [IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx), [IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx)e [IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx).
+    A API de ficheiros é implementada por meio das seguintes quatro novas funções: [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx), [IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx), [IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx), e [IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx).
 
     A API de Ficheiro necessita que o Rights Management Service Client 2.1 seja instalado no computador cliente e que o computador tenha conectividade com um servidor RMS. Para obter mais informações sobre o servidor RMS, o cliente RMS e a respetiva funcionalidade, veja o conteúdo do TechNet relativo à [Documentação do RMS para Profissionais de TI](https://technet.microsoft.com/library/cc771234(v=ws.10).aspx).
 
--   **Problema**: ao criar uma licença do zero, os direitos de propriedade têm de ser concedidos explicitamente.
+-   **Problema**: Quando criar uma licença do zero, direitos de propriedade tem de ser concedidos explicitamente.
 
-    **Solução**: a sua aplicação tem de adicionar explicitamente direitos de **Proprietário** ao proprietário da licença ao criar uma licença do zero através de [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx). Para obter mais informações, veja [Adicionar direitos de proprietário explícitos](add-explicit-owner-rights.md).
+    **Solução**: A aplicação deve adicionar explicitamente **proprietário** direitos para o proprietário da licença ao criar uma licença do zero através de [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx). Para obter mais informações, veja [Adicionar direitos de proprietário explícitos](add-explicit-owner-rights.md).
 
--   **Problema**: se uma aplicação chamar [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) ou [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) duas vezes para a mesma janela com o respetivo identificador, o SDK RMS 2.1 devolve uma falha no **HRESULT**.
+-   **Problema**: Se uma aplicação chamar [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) ou [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) duas vezes para a mesma janela utilizando o respetivo identificador, SDK RMS 2.1 devolve uma falha no **HRESULT**.
 
-    **Solução**: para obter instruções específicas sobre isto, veja a secção Observações em [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) e [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx).
+    **Solução**: Para obter instruções específicas sobre isto, consulte a secção observações em [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) e [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx).
 
--   **Problema**: ao criar para várias arquiteturas, tem de utilizar esta orientação.
+-   **Problema**: Ao criar para várias arquiteturas, tem de utilizar esta orientação.
 
-    **Solução**: se pretender utilizar o Ipcsecproc\*isv.dll para uma arquitetura diferente (por exemplo, tem instalado o SDK de 64 bits num computador de 64 bits, mas agora pretende implementar num computador de 32 bits que requer o Ipcsecproc\*isv.dll), tem de instalar o SDK de 32 bits num computador diferente e copiar os ficheiros Ipcsecproc\*isv.dll para lá da pasta “%PROGRAMFILES%\\Microsoft Information Protection And Control” (a localização predefinida ou onde quer que opte por instalar o SDK).
+    **Solução**: Se pretender utilizar o Ipcsecproc\*ISV. dll para uma arquitetura diferente (por exemplo, tiver instalado o SDK de 64 bits num computador de 64 bits, mas agora pretende implementar num computador de 32 bits que requer o Ipcsecproc\*ISV. dll), tem de instalar o SDK de 32 bits num computador diferente e copiar o Ipcsecproc\*ficheiros de ISV. dll para lá do "% PROGRAMFILES %\\Microsoft Information Protection e o controle" pasta (a localização predefinida ou onde quer que tenha optado por instalar o SDK).
 
 ## <a name="frequently-asked-questions"></a>Perguntas mais frequentes
 
-**P**: como é que o comportamento de idioma predefinido funciona com funções que assumem um parâmetro LCID?
+**AS PERGUNTAS E**: Como funciona o comportamento de idioma predefinido com as funções que assumem um parâmetro LCID?
 
-**R**: utilize 0 para a região predefinida. Neste caso, o Cliente de AD RMS 2.1 procura nomes e descrições na seguinte sequência e obtém o primeiro disponível:
+**A**: Utilize 0 para a região predefinida. Neste caso, o cliente de AD RMS 2.1 procura nomes e descrições na seguinte sequência e obtém o primeiro um disponível:
 
     1 - User preferred LCID.
     2 - System locale LCID.

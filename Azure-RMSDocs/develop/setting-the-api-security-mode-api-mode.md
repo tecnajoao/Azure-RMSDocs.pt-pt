@@ -2,8 +2,8 @@
 title: Procedimentos para definir o modo de segurança da API | Azure RMS
 description: Escolha o modo de segurança em que é executada a sua aplicação de API de Ficheiros.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 3B088F14-81C5-4C78-8DED-F5F153353EE0
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: d88656d966bc551fb5513a9e67d02b6a5c2d9fb2
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: c1f6b30fa15ac050b77314e1baf8d355f6887f24
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151321"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071408"
 ---
 # <a name="how-to-set-the-api-security-mode"></a>Procedimentos: definir o modo de segurança da API
 
@@ -27,7 +27,7 @@ Para inicializar a aplicação de modo a ser executada no *modo de servidor*, ch
 
 Para obter mais informações sobre o *modo de servidor*, consulte [Tipos de aplicações](application-types.md).
 
-**Importante** O modo de segurança deve ser definido antes de ser chamada qualquer outra função do SDK Rights Management Services 2.1. Depois de definir o modo de segurança, não o pode alterar para o processo atual.
+**Importante**  o modo de segurança deve ser definido antes de qualquer outra função do Rights Management Services SDK 2.1 é chamada. Depois de definir o modo de segurança, não o pode alterar para o processo atual.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

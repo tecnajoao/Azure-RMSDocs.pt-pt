@@ -2,8 +2,8 @@
 title: Desenvolver a aplicação – AIP
 description: Documentação de orientação sobre uma aplicação de consola básica a implementar proteção de documentos com o AIP
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 03/13/2017
 ms.topic: conceptual
@@ -12,20 +12,20 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: ef75dcff64d5ad2adaf2ffc9938490a65ac9bee9
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 6f0fdcaf6d21047f28c470dc896a1cd64fee752d
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148738"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071306"
 ---
 # <a name="developing-your-application"></a>Desenvolver a sua aplicação
 
 Neste exemplo, vai criar uma aplicação de consola simples que interage com o serviço do Azure Information Protection (AIP).  Este irá considerar o caminho de um documento a proteger como uma entrada e, em seguida, vai protegê-lo com uma política ad hoc ou um modelo do Azure. A aplicação irá aplicar as políticas corretas, de acordo com as entradas, e criar um documento de informações protegido. O código de exemplo que irá utilizar é a [aplicação de teste de IP do Azure](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AzureIP_Test) e encontra-se no Github.
 
 ## <a name="sample-app-prerequisites"></a>Pré-requisitos da aplicação de exemplo
-- **Sistema Operativo**: Windows 10, Windows 8, Windows 7, Windows Server 2008, Windows Server 2008 R2 ou Windows Server 2012
-- **Linguagem de Programação**: C# (.NET Framework 3.0 e superior)
+- **Sistema operativo**: Windows 10, Windows 8, Windows 7, Windows Server 2008, Windows Server 2008 R2 ou Windows Server 2012
+- **Linguagem de programação**: C#(.NET framework 3.0 e superior)
 - **Ambiente de desenvolvimento**: Visual Studio 2015 (e posterior)
 
 ## <a name="setting-up-your-azure-configuration"></a>Definir a Configuração do Azure

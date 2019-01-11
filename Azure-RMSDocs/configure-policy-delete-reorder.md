@@ -4,16 +4,16 @@ description: Pode eliminar ou reordenar etiquetas do Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 12/28/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: 1f957874649fe9e5697c3dd0164b0b0b255d1e6e
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 6e5348eb55451747ff9f10b3bd4f7a2f868b03c5
+ms.sourcegitcommit: 95f16f89a46d9dffa8a114f7683816024d65ff02
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53304881"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53996070"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Como eliminar ou reordenar uma etiqueta para o Azure Information Protection
 
@@ -33,7 +33,7 @@ Além disso, se a etiqueta eliminada aplicada proteção, essa proteção não �
 
 - Utilize o PowerShell para mudar o nome do modelo ou eliminá-lo.
     
-    Antes de efetuar estas ações, considere se outros administradores ou serviços estão a utilizar o modelo e identificação-lo pelo respetivo nome atual. Elimine um modelo apenas se não precisa abrir documentos ou e-mails que foram protegidos pelo modelo.
+    Antes de efetuar estas ações, considere se outros administradores ou serviços estão a utilizar o modelo ou usaram no passado. É possível identificar o modelo pelo respetivo ID de modelo que não é alterada, ou seu nome (que pode ser alterado). Como melhor prática, elimine um modelo apenas se tiver a certeza de que os utilizadores não terão que abrir documentos ou e-mails que foram protegidos pelo modelo.
 
 Para obter mais informações sobre a gestão de modelos de proteção, consulte [configurando e gerenciando modelos do Azure Information Protection](configure-policy-templates.md).
 

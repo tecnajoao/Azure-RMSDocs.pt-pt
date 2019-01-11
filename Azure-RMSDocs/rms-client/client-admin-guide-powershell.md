@@ -4,18 +4,18 @@ description: As instruções e as informações para os administradores gerirem 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 12/25/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d707f32062df54975237d9ae6f7218d33cfe337a
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 8c46dfb6aafa9162be6725202516f8d1fa871cc8
+ms.sourcegitcommit: 60223377a914269c93d73b3522d87b8161ecf854
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305663"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53786322"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guia do administrador: Utilizar o PowerShell com o cliente do Azure Information Protection
 
@@ -33,9 +33,11 @@ Os cmdlets são instalados com o módulo do PowerShell **AzureInformationProtect
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Etiqueta ficheiros de forma não interativa, por exemplo, utilizando um script que é executada com base numa agenda.|
 
 > [!TIP]
-> Para utilizar os cmdlets com comprimentos de caminhos superiores a 260 carateres, utilize o seguinte procedimento [definição de política de grupo](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) que está disponível com a atualização de aniversário do Windows 10:<br /> **Política de computador local** > **configuração do computador** > **modelos administrativos** > **todas as definições**  >  **NTFS** > **caminhos longos do Win32 ativar** 
+> Para utilizar os cmdlets com comprimentos de caminhos superiores a 260 carateres, utilize o seguinte procedimento [definição de política de grupo](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) ou seja disponíveis inicial do Windows 10, versão 1607:<br /> **Política de computador local** > **configuração do computador** > **modelos administrativos** > **todas as definições**  >  **NTFS** > **caminhos longos do Win32 ativar** 
 > 
 > Para o Windows Server 2016, pode utilizar a mesma definição de política de grupo ao instalar os modelos administrativos mais recentes (ADMX) para o Windows 10.
+>
+> Para obter mais informações, consulte a [limitação de comprimento máximo do caminho](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) secção da documentação do desenvolvedor do Windows 10.
 
 O [scanner do Azure Information Protection](../deploy-aip-scanner.md) utiliza cmdlets do módulo AzureInformationProtection para instalar e configurar um serviço no Windows Server. Este scanner, em seguida, permite-lhe detetar, classificar e proteger ficheiros em arquivos de dados.
 

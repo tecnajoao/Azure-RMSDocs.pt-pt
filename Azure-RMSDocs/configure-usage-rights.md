@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ab2ea0f153d33e192958bf84800fc713d1b5b336
-ms.sourcegitcommit: c9a0d81c18ea79a2520baa4b3777b06a72f87f60
-ms.translationtype: HT
+ms.openlocfilehash: a7bf1e202fdff99375054647e04d44d44eecdb85
+ms.sourcegitcommit: 5b48131ace3bbaf82f22fcb7eedf735c2f73d962
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53382508"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53429904"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuração de direitos de utilização para o Azure Rights Management
 
@@ -129,7 +129,7 @@ Em alternativa, pode alterar essa herança de proteção de documentos, especifi
 
 Se precisar de um documento anexado para manter a proteção original, consulte [proteger colaboração de documentos utilizando o Azure Information Protection](secure-collaboration-documents.md).
 
-Nota: Se vir as referências para **DecryptAttachmentFromPortal**, este parâmetro é preterido agora para [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps) e já não está disponível.
+Nota: Se vir as referências para **DecryptAttachmentFromPortal**, este parâmetro é preterido agora para [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps). A menos que tenha configurado anteriormente este parâmetro, não está disponível. 
 
 ## <a name="rights-management-issuer-and-rights-management-owner"></a>Emissor e proprietário do Rights Management
 
@@ -179,7 +179,7 @@ A predefinição utilizar validade de licença período para um inquilino é 30 
     
     Para obter mais informações e orientações para configurar esta definição com o PowerShell, consulte a ajuda de cada cmdlet.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 [Configurar e gerir modelos do Azure Information Protection](configure-policy-templates.md)
 
 [Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados](configure-super-users.md)

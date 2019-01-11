@@ -4,15 +4,15 @@ description: Se a sua organização é totalmente nova para o Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 12/15/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: f5cf70b0827e36ffae6644634ef198385ef6d11a
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: c890d6acf2557093441a175bc8ed8657e8d1d9da
+ms.sourcegitcommit: bc082cffaa698b89b28aef7034290553c26f667b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023520"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411818"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Início rápido: Introdução ao Azure Information Protection no portal do Azure
 
@@ -36,7 +36,7 @@ O Azure Information Protection não está automaticamente disponível no portal 
 
 1. Inicie sessão para o [portal do Azure](https://portal.azure.com) utilizando a conta de administrador global do seu inquilino. 
     
-    Se não for o administrador global, utilize a seguinte hiperligação para funções de alternativas: [o início de sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal)
+    Se não for o administrador global, utilize a seguinte hiperligação para funções de alternativas: [O início de sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
 2. No hub menu, selecione **criar um recurso**e, em seguida, a partir da caixa de pesquisa para o Marketplace, escreva **do Azure Information Protection**. 
     
@@ -75,7 +75,7 @@ Na primeira vez que ligar para o serviço Azure Information Protection com o por
     
 2. Passe alguns minutos, ao se familiarizar com as etiquetas que são apresentadas:
     
-    - Etiquetas para classificação: **Pessoal**, **Público**, **Geral**, **Confidencial** e **Altamente Confidencial**. As últimas duas etiquetas se expandem para mostrar subetiquetas, que fornecem exemplos de como uma classificação pode ter subcategorias:
+    - Etiquetas para classificação: **Pessoais**, **pública**, **geral**, **confidenciais**, e **altamente confidencial**. As últimas duas etiquetas se expandem para mostrar subetiquetas, que fornecem exemplos de como uma classificação pode ter subcategorias:
     
     - Com a configuração predefinida, algumas etiquetas não têm marcas visuais configuradas. As marcas visuais são um rodapé, cabeçalho e marca d'água. Dependendo da sua diretiva padrão, alguns rótulos, talvez também tenha proteção definida. Por exemplo: 
     
@@ -83,12 +83,12 @@ Na primeira vez que ligar para o serviço Azure Information Protection com o por
     
 3. Depois das etiquetas, no **configurar definições para apresentar e aplicar-se sobre os usuários finais do Information Protection** seção, também deve ver-se algumas definições de política. Por exemplo, não existe nenhum conjunto de etiqueta predefinida, documentos e e-mails não têm de ter uma etiqueta e os utilizadores não têm de fornecer uma justificação ao alterar as etiquetas:
     
-    ![Passo 3 do tutorial de início rápido do Azure Information Protection – política predefinida](./media/info-protect-policy-default-settings.png) 
+    ![Passo 3 do tutorial de início rápido do Azure Information Protection – política predefinida](./media/info-protect-policy-default-settings-quickstart.png) 
 
 4. Uma vez que só está a ver as definições e etiquetas, pode fechar todos os painéis que abriu.
 
 ## <a name="next-steps"></a>Passos Seguintes
 
-Agora que já viu as etiquetas e as definições de política no portal do Azure, poderá considerar o tutorial seguinte úteis como o próximo passo: [editar a política e criar uma nova etiqueta do Azure Information Protection](infoprotect-quick-start-tutorial.md).
+Agora que já viu as etiquetas e as definições de política no portal do Azure, poderá considerar o tutorial seguinte úteis como o próximo passo: [Editar a política e criar uma nova etiqueta do Azure Information Protection](infoprotect-quick-start-tutorial.md).
 
 Em alternativa, para obter instruções detalhadas para configurar todos os aspetos da política do Azure Information Protection, consulte [configurar a política do Azure Information Protection](configure-policy.md).

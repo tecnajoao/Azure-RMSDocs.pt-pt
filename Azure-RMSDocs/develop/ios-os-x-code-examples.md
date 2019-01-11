@@ -2,8 +2,8 @@
 title: Exemplos de código de iOS/OS X | Azure RMS
 description: Este tópico apresenta-lhe elementos de código importantes para a versão iOS/OS X do SDK RMS.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: fc918b10dc8924002efd5eb71725b8c157461d7e
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: c71fe41da2eb29645c3c25d0044f969ebdca1c9a
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150913"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54070243"
 ---
 # <a name="iosos-x-code-examples"></a>Exemplos de código de iOS/OS X
 
@@ -32,12 +32,12 @@ Este tópico apresenta-lhe elementos de código importantes para a versão iOS/O
 
 Seguem-se exemplos de código do **Objetivo C** de uma aplicação de exemplo maior que representam cenários de desenvolvimento importantes para se orientar neste SDK. Estes demonstram a utilização do formato de Ficheiro Protegido da Microsoft referido como ficheiro protegido, a utilização de formatos de ficheiros protegidos personalizados e a utilização de controlos de IU personalizados.
 
-### <a name="scenario-consume-an-rms-protected-file"></a>Cenário: consumir um ficheiro de RMS protegido
+### <a name="scenario-consume-an-rms-protected-file"></a>Cenário: Consumir um ficheiro de RMS protegido
 
 
-- **Passo 1**: criar um objeto [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx)
+- **Passo 1**: Criar uma [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) objeto
 
- **Descrição**: instanciar um objeto [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) através do respetivo método de criação que implementa o serviço de autenticação com o [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) para obter um token ao transferir uma instância de **MSAuthenticationCallback**, como o parâmetro *authenticationCallback*, para a API de MSIPC. Consulte a chamada para [MSProtectedData protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx) na secção de código de exemplo seguinte.
+ **Descrição**: Criar uma instância de um [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) , através de objeto seu método de criação que implementa o serviço de autenticação através do [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) para obter um token transferindo uma instância de **MSAuthenticationCallback**, como o parâmetro *authenticationCallback*, para a API de MSIPC. Consulte a chamada para [MSProtectedData protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx) na secção de código de exemplo seguinte.
 
         + (void)consumePtxtFile:(NSString *)path authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -53,9 +53,9 @@ Seguem-se exemplos de código do **Objetivo C** de uma aplicação de exemplo ma
             }];
         }
 
-- **Passo 2**: configurar a autenticação com a Active Directory Authentication Library (ADAL).
+- **Passo 2**: Configurar a autenticação com o Active Directory Authentication Library (ADAL).
 
-  **Descrição**: neste passo, verá a ADAL utilizada para implementar um [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) com parâmetros de autenticação de exemplo. Para obter mais informações sobre a utilização da ADAL, consulte a Azure AD Authentication Library (ADAL).
+  **Descrição**: Neste passo, verá a ADAL utilizada para implementar um [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) com parâmetros de autenticação de exemplo. Para obter mais informações sobre a utilização da ADAL, consulte a Azure AD Authentication Library (ADAL).
 
       // AuthenticationCallback holds the necessary information to retrieve an access token.
       @interface MsipcAuthenticationCallback : NSObject<MSAuthenticationCallback>
@@ -94,7 +94,7 @@ Seguem-se exemplos de código do **Objetivo C** de uma aplicação de exemplo ma
                           }];
        }
 
--   **Passo 3**: verificar se o direito de Edição existe para este utilizador com estes conteúdos através do método [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790789.aspx) de um objeto [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx).
+-   **Passo 3**: Verifique se o direito de edição existe para o utilizador com estes conteúdos através da [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790789.aspx) método de um [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) objeto.
 
         - (void)accessCheckWithProtectedData:(MSProtectedData *)protectedData
         {
@@ -108,11 +108,11 @@ Seguem-se exemplos de código do **Objetivo C** de uma aplicação de exemplo ma
             }
         }
 
-### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Cenário: criar um novo ficheiro protegido através de um modelo
+### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Cenário: Criar um novo ficheiro protegido com um modelo
 
 Este cenário começa com a obtenção de uma lista de modelos, [MSTemplateDescriptor](https://msdn.microsoft.com/library/dn790785.aspx), ao selecionar o primeiro para criar uma política e, em seguida, ao criar e escrever no novo ficheiro protegido.
 
--   **Passo 1**: obter lista de modelos
+-   **Passo 1**: Obter lista de modelos
 
         + (void)templateListUsageWithAuthenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -124,7 +124,7 @@ Este cenário começa com a obtenção de uma lista de modelos, [MSTemplateDescr
                                    }];
         }
 
--   **Passo 2**: criar um [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) com o primeiro modelo na lista.
+-   **Passo 2**: Criar uma [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) utilizando o primeiro modelo na lista.
 
         + (void)userPolicyCreationFromTemplateWithAuthenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -139,7 +139,7 @@ Este cenário começa com a obtenção de uma lista de modelos, [MSTemplateDescr
             }];
         }
 
--   **Passo 3**: criar um [MSMutableProtectedData](https://msdn.microsoft.com/library/dn758325.aspx) e escrever os conteúdos no mesmo.
+-   **Passo 3**: Criar uma [MSMutableProtectedData](https://msdn.microsoft.com/library/dn758325.aspx) e escrever conteúdo no mesmo.
 
         + (void)createPtxtWithUserPolicy:(MSUserPolicy *)userPolicy contentToProtect:(NSData *)contentToProtect
         {
@@ -153,10 +153,10 @@ Este cenário começa com a obtenção de uma lista de modelos, [MSTemplateDescr
             }];
         }
 
-### <a name="scenario-open-a-custom-protected-file"></a>Cenário: abrir um ficheiro protegido personalizado
+### <a name="scenario-open-a-custom-protected-file"></a>Cenário: Abra um ficheiro protegido personalizado
 
 
--   **Passo 1**: criar um [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) a partir de um *serializedContentPolicy*.
+-   **Passo 1**: Criar uma [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) de um *serializedContentPolicy*.
 
         + (void)userPolicyWith:(NSData *)protectedData
         authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
@@ -184,7 +184,7 @@ Este cenário começa com a obtenção de uma lista de modelos, [MSTemplateDescr
             }];
          }
 
--   **Passo 2**: criar um [MSCustomProtectedData](https://msdn.microsoft.com/library/dn758321.aspx) com o [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) do **Passo 1** e ler a partir do mesmo.
+-   **Passo 2**: Criar uma [MSCustomProtectedData](https://msdn.microsoft.com/library/dn758321.aspx) utilizando o [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) partir **passo 1** e lê-lo.
 
         + (void)customProtectedDataWith:(NSData *)protectedData
         {
@@ -211,12 +211,12 @@ Este cenário começa com a obtenção de uma lista de modelos, [MSTemplateDescr
             }];
          }
 
-### <a name="scenario-create-a-custom-protected-file-using-a-custom-ad-hoc-policy"></a>Cenário: criar um ficheiro protegido personalizado utilizando uma política personalizada (ad hoc)
+### <a name="scenario-create-a-custom-protected-file-using-a-custom-ad-hoc-policy"></a>Cenário: Criar um ficheiro protegido personalizado utilizando uma política personalizada (ad-hoc)
 
 
--   **Passo 1**: com um endereço de e-mail fornecido pelo utilizador, criar um descritor de política.
+-   **Passo 1**: Com um endereço de e-mail fornecido pelo usuário, crie um descritor de política.
 
-    **Descrição**: na prática, seria possível criar os seguintes objetos com entradas do utilizador a partir da interface do dispositivo; [MSUserRights](https://msdn.microsoft.com/library/dn790811.aspx) e [MSPolicyDescriptor](https://msdn.microsoft.com/library/dn758339.aspx).
+    **Descrição**: Na prática seriam ser criar os seguintes objetos utilizando entradas do utilizador a partir da interface do dispositivo; [MSUserRights](https://msdn.microsoft.com/library/dn790811.aspx) e [MSPolicyDescriptor](https://msdn.microsoft.com/library/dn758339.aspx).
 
         + (void)policyDescriptor
         {
@@ -227,7 +227,7 @@ Este cenário começa com a obtenção de uma lista de modelos, [MSTemplateDescr
             policyDescriptor.offlineCacheLifetimeInDays = 10;
         }
 
--   **Passo 2**: criar um [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) personalizado do descritor de política, *selectedDescriptor*.
+-   **Passo 2**: Criar um personalizado [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) descritor de política *selectedDescriptor*.
 
         + (void)userPolicyWithPolicyDescriptor:(MSPolicyDescriptor *)policyDescriptor
         {
@@ -241,7 +241,7 @@ Este cenário começa com a obtenção de uma lista de modelos, [MSTemplateDescr
             }];
         }
 
--   **Passo 3**: criar e escrever os conteúdos no [MSMutableCustomProtectedData](https://msdn.microsoft.com/library/dn758321.aspx) e fechar.
+-   **Passo 3**: Criar e escrever conteúdo para o [MSMutableCustomProtectedData](https://msdn.microsoft.com/library/dn758321.aspx) e, em seguida, feche.
 
         + (void)mutableCustomProtectedData:(NSMutableData *)backingData policy:(MSUserPolicy *)policy contentToProtect:(NSString *)contentToProtect
         {

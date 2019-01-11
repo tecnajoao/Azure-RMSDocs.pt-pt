@@ -2,8 +2,8 @@
 title: Como utilizar o controlo de documentos | Azure RMS
 description: A funcionalidade de controlo de documentos requer alguns conhecimentos simples sobre a gestão dos metadados associados e o registo do serviço.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,14 +12,14 @@ ms.assetid: 70E10936-7953-49B0-B0DC-A5E7C4772E60
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 1f9d929cc10f78bbdb98ac47083d8ff9d9d8136c
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 7415e1408c5e3c3c782506a9ce25b4b8d90403f2
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151420"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071850"
 ---
-# <a name="how-to-use-document-tracking"></a>Como: utilizar o controlo de documentos
+# <a name="how-to-use-document-tracking"></a>Como: Utilizar o controlo de documentos
 
 A utilização da funcionalidade de controlo de documentos requer alguns conhecimentos simples sobre a gestão dos metadados associados e o registo do serviço.
 
@@ -44,9 +44,9 @@ Selecione o tipo de política (modelo ou ad-hoc):
   - Android – [PolicyDescriptor.setLicenseMetadata](https://msdn.microsoft.com/library/mt573698.aspx)
   - iOS – [MSPolicyDescriptor.licenseMetadata](https://msdn.microsoft.com/library/mt573693.aspx).
 
-    **Nota:** o objeto de metadados de licença só é acessível diretamente durante o processo de configuração do controlo de documentos da política de utilizador especificada. Quando o objeto de política de utilizador tiver sido criado, os metadados de licença associados não estão acessíveis, ou seja, alterar os valores dos metadados de licença não tem qualquer efeito.
+    **Tenha em atenção**  o objeto de metadados de licença só é acessível diretamente durante o processo de configuração de controlo de documentos para a política de utilizador especificado. Quando o objeto de política de utilizador tiver sido criado, os metadados de licença associados não estão acessíveis, ou seja, alterar os valores dos metadados de licença não tem qualquer efeito.
 
-     
+     
 
 -   Por fim, chame o método de registo de plataforma para o controlo de documentos
   - Android – [UserPolicy.registerForDocTracking assíncrono](https://msdn.microsoft.com/library/mt573699.aspx) ou [UserPolicy.registerForDocTracking síncrono](https://msdn.microsoft.com/library/mt631387.aspx)

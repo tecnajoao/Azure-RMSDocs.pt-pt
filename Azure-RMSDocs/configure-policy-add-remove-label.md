@@ -4,22 +4,24 @@ description: Adicionar ou remover uma etiqueta do Azure Information Protection p
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 12/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
-ms.openlocfilehash: 367426324af487cbdf0ddaac53eb86aa89c168b7
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 154b8d5b61169208cdc01a2445be918ea6e2f77b
+ms.sourcegitcommit: b10df82d9f00b3f826bce38beb7b666ce3f56e84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53304864"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "53814208"
 ---
 # <a name="add-or-remove-a-label-to-or-from-an-azure-information-protection-policy"></a>Adicionar ou remover uma etiqueta de ou para uma política do Azure Information Protection
 
 >*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Depois de criar uma etiqueta do Azure Information Protection, pode, em seguida, adicioná-lo a uma política para que fique disponível para os utilizadores. Se a etiqueta é para todos os utilizadores, adicione a etiqueta para a política global. Se a etiqueta for para um subconjunto de utilizadores, adicione a etiqueta para uma política de âmbito. Atualmente, uma etiqueta pode ser adicionada a apenas uma política. Para adicionar uma subetiqueta, a etiqueta principal tem de ser na mesma política ou na política global.
+Depois de criar uma etiqueta do Azure Information Protection, pode, em seguida, adicioná-lo a uma política para que fique disponível para os utilizadores. Se a etiqueta é para todos os utilizadores, adicione a etiqueta para a política global. Se a etiqueta for para um subconjunto de utilizadores, adicione a etiqueta para uma política de âmbito. Pode ser adicionada uma etiqueta para apenas uma política. 
+
+Para adicionar uma subetiqueta, a etiqueta principal tem de ser na mesma política ou na política global. Quando adicionar uma subetiqueta, as definições da etiqueta principal não são herdadas. Para os utilizadores que estão atribuídos a subetiqueta na sua política, a etiqueta principal é suportada apenas como um contêiner de apresentação para o nome e a cor. Neste cenário, as outras definições de configuração na etiqueta principal não são suportadas para marcas visuais, proteção e condições. Embora ainda pode configurá-las, essas definições na etiqueta principal são suportadas apenas para utilizadores que têm a etiqueta principal na sua política sem a subetiqueta.
 
 Para etiquetas que já estão numa política, pode removê-lo da política. Esta ação não elimina a etiqueta. Continua a ser disponível para serem utilizados na outra política.
 
@@ -56,5 +58,4 @@ Se precisar de criar uma política de âmbito para que a etiqueta aplica-se a um
 
 ## <a name="next-steps"></a>Passos Seguintes
 
-Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).  
-
+Para mais informações sobre como configurar a política do Azure Information Protection, utilize as ligações na secção [Configurar política da organização](configure-policy.md#configuring-your-organizations-policy).

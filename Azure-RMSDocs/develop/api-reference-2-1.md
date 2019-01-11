@@ -1,9 +1,9 @@
 ---
 title: Referência do SDK 2.1 da API | Documentos da Microsoft
-description: O SDK 2.1 do Azure Information Protection suporta a ativação RMS de clientes do Windows.
+description: O Azure Information Protection SDK 2.1 suporta a ativação do RMS de clientes do Windows.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,16 +12,16 @@ ms.assetid: 6dcfa840-026b-4728-b53c-2c9c730fcf84
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 6ea8508531981a784d0f0c23291dbaf42533e6bc
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 80cab10e904134d5f01c49b094bc3ef946041773
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44145827"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071629"
 ---
 # <a name="api-reference"></a>Referência da API
 
-O Microsoft Rights Management SDK 2.1 suporta a ativação RMS de clientes do Windows. Para obter mais informações acerca de informações específicas, consulte [Notas de versão](release-notes-rtm.md).
+O Microsoft Rights Management SDK 2.1 suporta a ativação do RMS de clientes do Windows. Para obter mais informações acerca de informações específicas, consulte [Notas de versão](release-notes-rtm.md).
 - [Constantes](https://msdn.microsoft.com/library/hh535291.aspx)
 - [Tipos de dados](https://msdn.microsoft.com/library/hh535288.aspx)
 - [Funções](https://msdn.microsoft.com/library/hh535289.aspx)

@@ -4,14 +4,14 @@ description: Um guia de início rápido que mostra como escrever a lógica de in
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 09/27/2018
+ms.date: 01/08/2019
 ms.author: bryanla
-ms.openlocfilehash: 578c5aa69faa986663ea6c164d94e5940580167d
-ms.sourcegitcommit: 76e1b7c0255700813590be62d94b19338bf6c201
+ms.openlocfilehash: 686321c4f376679103b92419b5b86abaa74dc394
+ms.sourcegitcommit: adc4621ec4738c0abb6c1fa81a6598a6dfc5ace6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866141"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136242"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Início rápido: Inicialização de aplicações de cliente (C++)
 
@@ -259,8 +259,8 @@ Conforme mencionado, o objeto de perfil e de motor são necessários para SDK os
    int main()
    {
      // Construct/initialize objects required by the application's profile object
-     ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, friendly name)
-                 "<friendly-name>" };
+     ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, app name)
+                 "<application-name>" };
      auto profileObserver = make_shared<ProfileObserver>();         // Observer object                  
      auto authDelegateImpl = make_shared<AuthDelegateImpl>(         // Authentication delegate object (App ID)
                  "<application-id>");
@@ -312,8 +312,8 @@ Conforme mencionado, o objeto de perfil e de motor são necessários para SDK os
 
    | Marcador de posição | Valor | Exemplo |
    |:----------- |:----- |:--------|
-   | \<id da aplicação\> | O ID da aplicação do Azure AD atribuída à aplicação registado em "configuração de MIP SDK e configuração" (2 instâncias).  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
-   | \<nome amigável\> | Um nome amigável definido pelo utilizador para a sua aplicação. | AppInitialization |
+   | \<id da aplicação\> | O Azure AD Application ID (GUID) atribuído para a aplicação registada no [passo 2 de # de "definição de MIP SDK e configuração"](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory) artigo. Substitua 2 instâncias.  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
+   | \<nome da aplicação\> | Um nome amigável definido pelo utilizador para a sua aplicação. Tem de conter carateres de ASCII válidos (excluindo ';') e o ideal é que corresponde ao nome da aplicação que utilizou no seu registo do Azure AD. | AppInitialization |
    | \<motor de conta\> | A conta utilizada para de identidade o mecanismo. Quando se autentica com uma conta de utilizador durante a aquisição do token, este valor tem de corresponder. | user1@tenant.onmicrosoft.com |
    | \<Estado do motor\> | Estado definido pelo utilizador para ser associado com o motor. | MyAppState |
 
@@ -328,7 +328,7 @@ Conforme mencionado, o objeto de perfil e de motor são necessários para SDK os
    Enter access token:
    ```
 
-## <a name="next-steps"></a>Passos Seguintes
+## <a name="next-steps"></a>Próximos Passos
 
 Agora que seu código de inicialização estiver concluído, está pronto para o próximo início rápido, onde começará experimentar as APIs de arquivo MIP.
 

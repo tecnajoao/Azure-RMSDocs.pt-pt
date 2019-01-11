@@ -4,14 +4,14 @@ description: Fornece os pré-requisitos de instalação e configuração, para p
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 09/27/2018
+ms.date: 01/08/2019
 ms.author: bryanla
-ms.openlocfilehash: 2790c64095a6fca4a33f70aeada68fa0c6668020
-ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
+ms.openlocfilehash: 2f84cfd8a0ae15a66cd624fe591f2891ff549768
+ms.sourcegitcommit: adc4621ec4738c0abb6c1fa81a6598a6dfc5ace6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52386734"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136241"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Instalação do SDK de proteção de informações da Microsoft (MIP) e configuração 
 
@@ -113,9 +113,9 @@ Em seguida, conclua os seguintes passos para garantir que seu computador cliente
 
    Cada. zip ou tarball contém outros três diretórios:
 
-   - **Contentores:** os binários compilados para cada arquitetura de plataforma, quando aplicável.
-   - **Incluem:** os arquivos de cabeçalho do SDK do Microsoft Information Protection
-   - **Exemplos:** da origem de código para aplicativos de exemplo
+   - **Contentores:** Os binários compilados para cada arquitetura de plataforma, quando aplicável.
+   - **Incluem:** Os arquivos de cabeçalho do SDK do Microsoft Information Protection
+   - **Exemplos:** Código-fonte para aplicativos de exemplo
 
    Se estiver fazendo o desenvolvimento do Visual Studio, o SDK pode ser instalado também através da consola do Gestor de pacotes NuGet:
 
@@ -139,7 +139,7 @@ Em seguida, conclua os seguintes passos para garantir que seu computador cliente
 
 ## <a name="register-a-client-application-with-azure-active-directory"></a>Registar uma aplicação de cliente com o Azure Active Directory
 
-Como parte da subscrição do Office 365, processo, um Azure associado de aprovisionamento é criado o inquilino do AD. O inquilino do Azure AD fornece gestão de identidades e acessos para o Office 365 *contas de utilizador* e *contas de aplicação*. Aplicativos que exigem acesso a APIs seguros (como APIs de MIP), requerem uma conta de aplicativos.
+Como parte da subscrição do Office 365, processo de aprovisionamento, é criado um inquilino do Azure Active Directory (Azure AD) associado. O inquilino do Azure AD fornece gestão de identidades e acessos para o Office 365 *contas de utilizador* e *contas de aplicação*. Aplicativos que exigem acesso a APIs seguros (como APIs de MIP), requerem uma conta de aplicativos.
 
 Para autenticação e autorização em tempo de execução, as contas são representadas por um *entidade de segurança*, que é derivado de informações de identidade da conta. Entidades de segurança que representam uma conta de aplicativos são conhecidas como um [ *principal de serviço*](/azure/active-directory/develop/developer-glossary#service-principal-object). 
 
@@ -149,7 +149,7 @@ Para registar uma conta de aplicação no Azure AD para utilização com os exem
   > Para aceder à gestão de inquilino do Azure AD para a criação de conta, terá de iniciar sessão no portal do Azure com uma conta de utilizador que seja um membro a [função de "Proprietário" na subscrição](/azure/billing/billing-add-change-azure-subscription-administrator). Dependendo da configuração do seu inquilino, também poderá ter de ser um membro da função de diretório "Palavra Global" para [registar uma aplicação](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
   > Recomendamos que teste com uma conta restrita. Certifique-se de que a conta tem apenas direitos de acesso os pontos de extremidade de SCC necessários. Palavras-passe de texto simples transmitidas por meio da linha de comandos podem ser recolhidas por sistemas de Registro em log.
 
-1. Siga os passos em [integrar aplicações com o Azure Active Directory, adicione uma seção do aplicativo](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#adding-an-application). Para fins de teste, utilize os seguintes valores para as propriedades de determinada à medida que revê os passos do guia: 
+1. Siga os passos em [registar uma aplicação com o Azure AD, registar uma nova aplicação](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal) secção. Para fins de teste, utilize os seguintes valores para as propriedades de determinada à medida que revê os passos do guia: 
     - **Tipo de aplicação** -selecione "Nativo", como as aplicações demonstradas pelo SDK aplicativos de console instalados nativamente. Aplicativos nativos são considerados "public" clientes por OAuth2, pois estão não é possível para armazenamento/utilizar credenciais de aplicação de forma segura. Ao contrário de um aplicativo "Confidencial" baseado em servidor, como um aplicativo web, que está registado com suas próprias credenciais. 
     - **URI de redirecionamento** - uma vez que o SDK utiliza aplicações de cliente de console simples, utilize um URI no formato `<app-name>://authorize`.
 
@@ -174,7 +174,7 @@ Quando terminar, registo de aplicação e permissões de API devem ter um aspeto
    [![Registo de aplicação do Azure AD](media/setup-mip-client/aad-app-registration.png)](media/setup-mip-client/aad-app-registration.png#lightbox)
 
 
-Para obter mais informações sobre como adicionar APIs e as permissões para um registo, consulte [atualização de aplicativos, configurar uma aplicação de cliente para acessar a seção APIs web](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#updating-an-application). Aqui encontrará informações sobre como adicionar as APIs e as permissões necessárias por uma aplicação cliente.  
+Para obter mais informações sobre como adicionar APIs e as permissões para um registo, consulte [a atualizar uma aplicação no Azure AD, configurar uma aplicação de cliente para aceder a web APIs](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). Aqui encontrará informações sobre como adicionar as APIs e as permissões necessárias por uma aplicação cliente.  
 
 ## <a name="request-an-information-protection-integration-agreement-ipia"></a>Pedir um Contrato de Integração do Information Protection (IPIA)
 
@@ -182,7 +182,7 @@ Para poder disponibilizar uma aplicação desenvolvida com MIP, tem de aplicar p
 
 1. Obtenha o seu IPIA ao enviar um e-mail para [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=Requesting%20IPIA%20for%20<company-name>) com as seguintes informações:
 
-   **Assunto:** pedido de IPIA para *Nome da Empresa*
+   **Assunto:** Pedido de IPIA para *nome da empresa*
 
    No corpo do e-mail, inclua:
    - Nome da aplicação e do produto
@@ -216,9 +216,9 @@ Se já tiver um IPIA assinado e quiser adicionar um novo *ID da Aplicação* a u
 
 Depois de nos enviar o e-mail, aguarde até 72 horas para receber um aviso de receção.
 
-## <a name="next-steps"></a>Passos Seguintes
+## <a name="next-steps"></a>Próximos Passos
 
 - Antes de iniciar a secção de guias de introdução, não deixe de ler sobre [observadores no SDK do MIP](concept-async-observers.md), como o SDK de MIP foi concebido para ser quase que totalmente assíncrono.
-- Se estiver pronto para obter experiência prática com o SDK, começar com [início rápido: inicialização de aplicações de cliente (C++)](quick-app-initialization-cpp.md).
+- Se estiver pronto para obter experiência prática com o SDK, comece com [início rápido: Inicialização de aplicações de cliente (C++)](quick-app-initialization-cpp.md).
 
 

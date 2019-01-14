@@ -4,18 +4,18 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/13/2018
+ms.date: 01/04/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2ecb0376ac7d4d4ddd476e76a60053ff408e2bbd
-ms.sourcegitcommit: db24caa96033fd0c7a0fad4e36518a816a570c94
+ms.openlocfilehash: b16dee0a922ce6f3195d192021edbf4966223e30
+ms.sourcegitcommit: 17d2528e801ebf37f3d6f54db920588ef212d34d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53335545"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53996949"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas do cliente do Azure Information Protection
 
@@ -76,7 +76,7 @@ Independentemente desta definição, o cliente do Azure Information Protection a
 
 Num ambiente de produção, normalmente, os utilizadores não precisam de iniciar sessão como um utilizador diferente quando estão a utilizar o cliente do Azure Information Protection. No entanto, como administrador, poderá ter de iniciar sessão como um utilizador diferente durante uma fase de teste. 
 
-Pode verificar com que conta tem atualmente sessão iniciada como ao utilizar o **Microsoft Azure Information Protection** caixa de diálogo: Abra uma aplicação do Office, no separador Base, no grupo **Proteção**, clique em **Proteger** e, em seguida, clique em **Ajuda e feedback**. O nome da sua conta é apresentado na secção **Estado do cliente**.
+Pode verificar com que conta tem atualmente sessão iniciada como ao utilizar o **Microsoft Azure Information Protection** caixa de diálogo: Abra uma aplicação do Office, no separador **Base**, no grupo **Proteção**, clique em **Proteger** e, em seguida, clique em **Ajuda e feedback**. O nome da sua conta é apresentado na secção **Estado do cliente**.
 
 Confirme que também verifica o nome de domínio da conta com sessão iniciada que é apresentada. Pode não perceber que tem sessão iniciada com o nome da conta certo, mas com o domínio errado. Um sinal de utilização da conta errada inclui a impossibilidade de transferir a política do Azure Information Protection ou não ver as etiquetas ou o comportamento esperado.
 
@@ -122,6 +122,10 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 - Chave: **ReportAnIssueLink**
 
 - Valor: **\<Cadeia de caracteres HTTP >**
+
+Valor de exemplo para um Web site: `https://support.contoso.com`
+
+Valor de exemplo para um endereço de e-mail: `mailto:helpdesk@contoso.com`
 
 ## <a name="hide-the-classify-and-protect-menu-option-in-windows-file-explorer"></a>Ocultar a opção de menu Classificar e Proteger no Explorador de Ficheiros do Windows
 
@@ -351,10 +355,9 @@ Utilizar comandos do PowerShell para converter os arquivos existentes. ppdf para
     
     Nota: Se não houver nenhum valor para **MainLabelId** pode ser, o ficheiro não é identificado. Neste caso, pode utilizar o [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) comando e [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) comando em vez dos comandos no passo 3 e 4.
     
-    - O valor para **RMSTemplateId**. Se este valor é **acesso restrito**, um utilizador protegeu o ficheiro com permissões personalizadas, em vez das definições de proteção que estão configuradas para a etiqueta. Se continuar, essas permissões personalizadas serão substituídas por definições de proteção da etiqueta. Decida se pretende continuar ou pedir ao utilizador (valor apresentado para o **RMSIssuer**) para remover a etiqueta e volte a aplicar, juntamente com as respetivas permissões personalizadas originais.
+    - O valor para **RMSTemplateId**. Se este valor é **acesso restrito**, um utilizador protegeu o ficheiro com permissões personalizadas, em vez das definições de proteção que estão configuradas para a etiqueta. Se continuar, essas permissões personalizadas serão substituídas por definições de proteção da etiqueta. Decida se pretende continuar ou pedir ao utilizador (valor apresentado para o **RMSIssuer**) remover a etiqueta e voltar a aplicar, juntamente com as respetivas permissões personalizadas originais.
 
-3. Remover a etiqueta através de [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) com o *RemoveLabel* parâmetro. Se estiver a utilizar a [definição de política] (... / configurar-
-4. Settings.MD) de **os utilizadores têm de fornecer justificação para definir uma etiqueta de classificação inferior, remover uma etiqueta ou remover a proteção**, também tem de especificar o *justificação* parâmetro com o motivo. Por exemplo: 
+3. Remover a etiqueta através de [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) com o *RemoveLabel* parâmetro. Se estiver a utilizar o [definição de política](../configure-policy-settings.md) dos **os utilizadores têm de fornecer justificação para definir uma etiqueta de classificação inferior, remover uma etiqueta ou remover a proteção**, também tem de especificar o  *Justificação* parâmetro com o motivo. Por exemplo: 
     
         Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
 
@@ -528,7 +531,7 @@ Se uma mensagem de texto do cabeçalho ou rodapé é mais do que uma única linh
 
 **Etiqueta aplicada manualmente**
 
-Para remover este rodapé multline, crie as seguintes duas entradas:
+Para remover este rodapé com várias linhas, crie as seguintes duas entradas:
 
 - Chave 1: **ExternalContentMarkingToRemove**
 

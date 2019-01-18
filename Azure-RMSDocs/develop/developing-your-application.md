@@ -12,12 +12,12 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 6f0fdcaf6d21047f28c470dc896a1cd64fee752d
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 580dc90bae499a5cc64238a6157612bea5eb3282
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071306"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394182"
 ---
 # <a name="developing-your-application"></a>Desenvolver a sua aplicação
 
@@ -62,7 +62,7 @@ Siga estes passos para criar um Principal de Serviço:
 - Ligue-se ao serviço online com as credenciais de utilizador atribuídas: `Connect-MsolService`
 - Crie um novo principal de serviço ao executar:`New-MsolServicePrincipal`
 - Forneça um nome para o seu principal de serviço
-> Registe a chave simétrica e o ID principal da aplicação para utilização futura.
+  > Registe a chave simétrica e o ID principal da aplicação para utilização futura.
 
 *Saída de exemplo*
 ![resultado do cmdlet](../media/develop/output-of-NewMsolServicePrincipal.png)
@@ -80,8 +80,8 @@ O diagrama seguinte descreve uma arquitetura e o fluxo de processo da aplicaçã
 ![resumo da estrutura](../media/develop/design-summary.png)
 
 1. As entradas do utilizador:
-  - O caminho do ficheiro a ser protegido
-  - Seleciona um modelo ou cria uma política ad hoc
+   - O caminho do ficheiro a ser protegido
+   - Seleciona um modelo ou cria uma política ad hoc
 2. A aplicação solicita a autenticação com AIP.
 3. O AIP confirma a autenticação
 4. A aplicação solicita modelos do AIP.
@@ -216,16 +216,16 @@ Depois de ter tudo compilado e em execução, os resultados da aplicação devem
 ![resultado da aplicação – passo 1](../media/develop/app-output-1.png)
 
 2. É-lhe solicitado para indicar o caminho do ficheiro a ser protegido.
-![resultado da aplicação – passo 2](../media/develop/app-output-2.png)
+   ![resultado da aplicação – passo 2](../media/develop/app-output-2.png)
 
 3. É-lhe pedido para introduzir o e-mail de um proprietário de licença (este proprietário tem de ter privilégios de Administrador Global no Inquilino do Azure AD).
-![resultado da aplicação – passo 3](../media/develop/app-output-3.png)
+   ![resultado da aplicação – passo 3](../media/develop/app-output-3.png)
 
 4. Introduza os endereços de e-mail dos utilizadores que terão direitos de acesso ao ficheiro (os e-mails devem ser separados por espaços).
-![resultado da aplicação – passo 4](../media/develop/app-output-4.png)
+   ![resultado da aplicação – passo 4](../media/develop/app-output-4.png)
 
 5. Seleciona a partir de uma lista de direitos a atribuir aos utilizadores autorizados.
-![resultado da aplicação – passo 5](../media/develop/app-output-5.png)
+   ![resultado da aplicação – passo 5](../media/develop/app-output-5.png)
 
 6. Por último, introduza alguns metadados da política: nome da política, descrição e nome a apresentar do emissor (Inquilino do Azure AD) ![resultado da aplicação – passo 6](../media/develop/app-output-6.png)
 

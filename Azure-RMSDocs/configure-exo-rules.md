@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: c6f220e995aa785c44d4227884da2c7379918a8d
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 39abf4586f00cb40cb096841261993225b8c8387
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305476"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393349"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configurar regras de fluxo de correio Exchange Online etiquetas do Azure Information Protection
 
@@ -29,7 +29,7 @@ Utilize as seguintes informações para ajudar a configurar as regras de fluxo d
 
 As regras de fluxo de correio que aplicam a proteção como uma ação são ignoradas, se o e-mail já está protegido. Por exemplo, uma mensagem de e-mail que foi protegida por não reencaminhar não pode ser alterada por uma regra de fluxo de correio do Exchange para utilizar a opção de criptografar apenas.  
 
-Pode expandir estes exemplos, bem como modificá-los. Por exemplo, adicione mais condições. Para obter mais informações sobre como configurar as regras de fluxo de correio, consulte [correio as regras de fluxo (regras de transporte) no Exchange Online] (https://technet.microsoft.com/library/jj919238(v=exchg.150\).aspx) na documentação do Exchange Online.
+Pode expandir estes exemplos, bem como modificá-los. Por exemplo, adicione mais condições. Para obter mais informações sobre como configurar as regras de fluxo de correio, consulte [(regras de transporte) as regras de fluxo de correio no Exchange Online](https://technet.microsoft.com/library/jj919238(v=exchg.150).aspx) na documentação do Exchange Online.
 
 Para obter mais informações sobre como configurar as regras de fluxo de correio para encriptar mensagens de e-mail, consulte [definem as regras de fluxo de correio para encriptar mensagens de e-mail do Office 365](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8) na documentação do Office. 
 
@@ -37,9 +37,9 @@ Para obter mais informações sobre como configurar as regras de fluxo de correi
 
 Como uma etiqueta do Azure Information Protection é armazenada nos metadados, fluxo de emails de regras no Exchange Online pode ler estas informações para mensagens e anexos de documento:
 
-- E-mails, estas informações são armazenadas no cabeçalho de x: **msip_labels: Msip_label _\<GUID > enabled = True;** 
+- E-mails, estas informações são armazenadas no cabeçalho de x: **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** 
 
-- Para documentos do Word (. doc e. docx), folhas de cálculo do Excel (. xls e. xlsx), apresentações do PowerPoint (. ppt e. pptx) e documentos PDF (. pdf), estes metadados são armazenados na propriedade personalizada seguintes: **Msip_label _\<GUID > enabled = True**  
+- Para documentos do Word (. doc e. docx), folhas de cálculo do Excel (. xls e. xlsx), apresentações do PowerPoint (. ppt e. pptx) e documentos PDF (. pdf), estes metadados são armazenados na propriedade personalizada seguintes: **MSIP_Label_\<GUID>_Enabled=True**  
 
 Para identificar o GUID de uma etiqueta, localize o valor de ID de etiqueta no **etiqueta** painel, quando ver ou configurar a política do Azure Information Protection no portal do Azure. Para os ficheiros que tenham as etiquetas aplicadas, também pode executar o [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) cmdlet do PowerShell para identificar o GUID (MainLabelId ou SubLabelId). Quando uma etiqueta tem subetiquetas, sempre Especifica o GUID de apenas uma subetiqueta e não a etiqueta principal.
 
@@ -60,7 +60,7 @@ Para os exemplos seguintes, crie uma nova regra de fluxo de correio, utilize os 
 > [!TIP]
 > Se tiver problemas com a interface de utilizador quando configurar as regras, tente um browser diferente, como o Internet Explorer.
 
-Os exemplos de ter uma condição única que aplica a proteção quando uma mensagem de e-mail é enviada fora da organização. Para obter mais informações sobre outras condições que pode selecionar, consulte [condições de regra de fluxo de correio e as exceções (predicados) no Exchange Online] (https://technet.microsoft.com/library/jj919235(v=exchg.150\).aspx).
+Os exemplos de ter uma condição única que aplica a proteção quando uma mensagem de e-mail é enviada fora da organização. Para obter mais informações sobre outras condições que pode selecionar, consulte [condições de regra de fluxo e exceções (predicados) de correio no Exchange Online](https://technet.microsoft.com/library/jj919235(v=exchg.150).aspx).
 
 
 ### <a name="example-1-rule-that-applies-the-do-not-forward-option-to-emails-that-are-labeled-general-when-they-are-sent-outside-the-organization"></a>Exemplo 1: Regra aplica-se a opção não reencaminhar para e-mails que estão identificadas **gerais** quando são enviados fora da organização

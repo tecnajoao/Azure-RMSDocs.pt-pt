@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3efae21dfabdb347826b177d5c58a3498d3276c5
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 17de145dc063b7a79f07562b111a932aa5959065
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173966"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394380"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planear e implementar a sua chave de inquilino do Azure Information Protection
 
@@ -79,7 +79,7 @@ Quando esta opção é selecionada, ocorre o seguinte:
 3. A cópia da chave está protegida pelo Azure Key Vault.
 
 > [!NOTE]
-
+> 
 > Como medida de proteção adicional, o Azure Key Vault utiliza domínios de segurança separados de seus centros de dados em regiões como a América do Norte, EMEA (Europa, Médio Oriente e África) e Ásia. O Azure Key Vault também utiliza diferentes instâncias do Azure, como o Microsoft Azure Alemanha e o Azure Government. 
 
 Embora seja opcional, provavelmente também irá querer utilizar os registos de utilização quase em tempo real do Azure Information Protection, para saber exatamente como e quando a sua chave de inquilino está a ser utilizada.
@@ -181,10 +181,10 @@ Em seguida, execute o [cmdlet Use-AadrmKeyVaultKey](/powershell/module/aadrm/use
 
 > [!IMPORTANT]
 > Neste exemplo, "aaaabbbbcccc111122223333" é a versão da chave a utilizar. Se não especificar a versão, a versão atual da chave é utilizada sem aviso e o comando parece funcionar. No entanto, se a chave no Cofre de Chaves for atualizada mais tarde (renovada), o serviço Azure Rights Management deixará de funcionar para o seu inquilino, mesmo que execute novamente o comando Use-AadrmKeyVaultKey.
->
->Quando executar este comando, certifique-se de que especifica a versão da chave, bem como o nome da chave. Pode utilizar o comando do Azure Key Vault ([Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault\get-azurekeyvaultkey)) para obter o número da versão da chave atual. Por exemplo: `Get-AzureKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
+> 
+> Quando executar este comando, certifique-se de que especifica a versão da chave, bem como o nome da chave. Pode utilizar o comando do Azure Key Vault ([Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault/get-azurekeyvaultkey)) para obter o número da versão da chave atual. Por exemplo: `Get-AzureKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
 
-Se tiver de confirmar que a chave de URL está definida corretamente para o Azure Information Protection: No Azure Key Vault, execute [Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault\get-azurekeyvaultkey) para ver a chave de URL.
+Se tiver de confirmar que a chave de URL está definida corretamente para o Azure Information Protection: No Azure Key Vault, execute [Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault/get-azurekeyvaultkey) para ver a chave de URL.
 
 Por fim, se o serviço Azure Rights Management já estiver ativado, execute [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) para dizer ao Azure Information Protection para utilizar esta chave como chave de inquilino ativa para o serviço Azure Rights Management. Se não efetuar este passo, Azure Information Protection irá continuar a utilizar a chave de gerida pela Microsoft para predefinida que foi criada automaticamente para o seu inquilino.
 

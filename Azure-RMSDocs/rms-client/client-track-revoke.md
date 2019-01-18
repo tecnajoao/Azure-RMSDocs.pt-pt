@@ -4,18 +4,18 @@ description: Depois de ter protegido os seus documentos, pode controlar a forma 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 251de2d7e959dc46bcf95c003fd8924cc4c34d13
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: ba53a7f4d3aa96e4e813c602d1d79f014550ea17
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305234"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314769"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Guia de utilizador: Controlar e revogar os documentos quando utiliza o Azure Information Protection
 
@@ -59,6 +59,8 @@ A menos que seja um administrador, pode controlar e revogar apenas os documentos
 > Se o administrador tiver configurado os controlos de privacidade para o site de controlo de documentos, talvez não veja quando os utilizadores da sua organização acederam a um documento que controla. Um administrador pode isentar todos os utilizadores ou apenas alguns. No entanto, pode sempre revogar o acesso aos documentos que controla.
 
 Para controlar um documento que protegeu, deve utilizar o seu computador Windows para o registar no site de controlo de documentos. Para tal, utilize o Explorador de Ficheiros ou as aplicações do Office.
+
+Se tiver a versão de pré-visualização atual do cliente do Azure Information Protection, também pode registar o documento protegido com o PowerShell quando utiliza a *EnableTracking* parâmetro com o [Set-AIPFileLabel ](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) cmdlet.
 
 ## <a name="using-office-to-track-or-revoke-the-document"></a>Utilizar o Office para controlar ou revogar o documento
 

@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 13729d124ce0e49eddeda6c4c19aeae2c62eb8c6
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 5aa86c3806dd23787d2661b4a4ac2e6850d1e907
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53174255"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393895"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Fase 3 da migração – configuração do lado do cliente
 
->*Aplica-se a: Serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilize as seguintes informações para a Fase 3 da migração do AD RMS para o Azure Information Protection. Estes procedimentos incluem o passo 7 de [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
@@ -92,7 +92,7 @@ Esse método é adequado para todos os clientes do Windows e deve ser utilizado 
 
 - Migrate-Client.cmd
 
-- User.cmd migrar
+- Migrate-User.cmd
 
 O script de configuração de cliente (Migrate-Client.cmd) configura definições ao nível do computador no Registro, o que significa que deve ser executado num contexto de segurança que pode efetuar essas alterações. Isso normalmente significa que um dos seguintes métodos:
 
@@ -126,14 +126,14 @@ Quando não é possível migrar todos os seus clientes de Windows de uma só vez
 
 1. Voltar para os scripts de migração **Client.cmd para migrar** e **User.cmd para migrar**, que extraiu anteriormente quando transferiu esses scripts no [fase de preparação](migrate-from-ad-rms-phase1.md#step-2-prepare-for-client-migration).
 
-2.  Siga as instruções em **migrar Client.cmd** para modificar o script para que ele contém o URL de serviço do Azure Rights Management do seu inquilino, e também os nomes de servidores para o AD RMS cluster URL de licenciamento na extranet e da intranet URL de licenciamento. Em seguida, incremente a versão do script, o que foi explicada anteriormente. Uma boa prática para controlo de versões de script é usar a data de hoje no seguinte formato: AAAAMMDD
+2. Siga as instruções em **migrar Client.cmd** para modificar o script para que ele contém o URL de serviço do Azure Rights Management do seu inquilino, e também os nomes de servidores para o AD RMS cluster URL de licenciamento na extranet e da intranet URL de licenciamento. Em seguida, incremente a versão do script, o que foi explicada anteriormente. Uma boa prática para controlo de versões de script é usar a data de hoje no seguinte formato: AAAAMMDD
     
-    > [!IMPORTANT]
-    > Tal como anteriormente, tenha cuidado para não introduzir espaços adicionais antes ou depois dos seus endereços.
-    > 
-    > Além disso, se os seus servidores do AD RMS utilizarem certificados de servidor SSL/TLS, verifique se os valores de URL de licenciamento incluem o número de porta **443** na cadeia. Por exemplo: https://rms.treyresearch.net:443/_wmcs/licensing. Pode encontrar estas informações na consola de serviços de gestão de direitos do Active Directory quando clica no nome do cluster e veja a **detalhes do Cluster** informações. Se vir o número de porta 443 incluído no URL, inclua este valor quando modificar o script. Por exemplo, https://rms.treyresearch.net:**443**. 
+   > [!IMPORTANT]
+   > Tal como anteriormente, tenha cuidado para não introduzir espaços adicionais antes ou depois dos seus endereços.
+   > 
+   > Além disso, se os seus servidores do AD RMS utilizarem certificados de servidor SSL/TLS, verifique se os valores de URL de licenciamento incluem o número de porta **443** na cadeia. Por exemplo: https://rms.treyresearch.net:443/_wmcs/licensing. Pode encontrar estas informações na consola de serviços de gestão de direitos do Active Directory quando clica no nome do cluster e veja a **detalhes do Cluster** informações. Se vir o número de porta 443 incluído no URL, inclua este valor quando modificar o script. Por exemplo, https://rms.treyresearch.net:<strong>443</strong>. 
     
-    Se precisar de obter o URL do serviço Azure Rights Management para *&lt;YourTenantURL&gt;*, veja novamente [Para identificar o URL do serviço Azure Rights Management](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
+   Se precisar de obter o URL do serviço Azure Rights Management para *&lt;YourTenantURL&gt;*, veja novamente [Para identificar o URL do serviço Azure Rights Management](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
 
 3. Usando as instruções no início deste passo, a configurar seus métodos de implementação de script para executar **Client.cmd para migrar** e **migrar User.cmd** nos computadores cliente Windows que são utilizados pela membros do grupo AIPMigrated. 
 

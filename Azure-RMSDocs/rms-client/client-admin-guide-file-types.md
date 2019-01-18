@@ -4,18 +4,18 @@ description: Detalhes técnicos sobre tipos de ficheiro suportados, extensões d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/04/2019
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 444181d82c028feb50df12d55d279ecbeda97560
-ms.sourcegitcommit: 630f03a91f84d79219e04b4085bdfb5bc6478e88
+ms.openlocfilehash: cd0279bb45c04bc6f62c9eb20ffc006c7838b286
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012012"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393853"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guia do administrador: Tipos de ficheiro suportados pelo cliente do Azure Information Protection
 
@@ -56,12 +56,12 @@ Os seguintes tipos de ficheiro podem ser classificados, mesmo quando não estão
 - **Digital Negative**: .dng
 
 - **Microsoft Office**: Tipos de ficheiro na seguinte tabela.
-    
+
     Os formatos de ficheiro suportados para estes tipos de ficheiro são os 97-2003 formatos de arquivo e formatos XML abertos do Office para os seguintes programas do Office: Word, Excel e PowerPoint.
-    
+
     |Tipo de ficheiro do Office|Tipo de ficheiro do Office|
     |----------------------------------|----------------------------------|
-    |.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vdw<br /><br />.vsd|.vsdm<br /><br /> .vsdx<br /><br />ser<br /><br />. vssm<br /><br />. vst<br /><br />.vstm<br /><br />.vssx<br /><br />.vstx<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx|
+    |.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vdw<br /><br />.vsd|.vsdm<br /><br /> .vsdx<br /><br />.vss<br /><br />.vssm<br /><br />.vst<br /><br />.vstm<br /><br />.vssx<br /><br />.vstx<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx|
 
 Tipos de ficheiro adicionais suportam a classificação quando também estão protegidos. Para estes tipos de ficheiros, consulte a [tipos de ficheiros suportados para classificação e proteção](#supported-file-types-for-classification-and-protection) secção.
 
@@ -88,19 +88,21 @@ Esta proteção de dados pode ser aplicada automaticamente quando um utilizador 
 Há tamanhos de ficheiro máximos que o cliente do Azure Information Protection suporta para proteção.
 
 - **Para ficheiros do Office:**
-    
-    |Aplicação do Office|Tamanho máximo do ficheiro suportado|
-    |--------------------------------|-------------------------------------|
-    |Word 2007 (suportado apenas pelo AD RMS)<br /><br />Word 2010<br /><br />Word 2013<br /><br />Word 2016|32 bits: 512 MB<br /><br />64 bits: 512 MB
-    |Excel 2007 (suportado apenas pelo AD RMS)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016|32 bits: 2 GB<br /><br />64 bits: Limitado apenas pela memória e espaço em disco disponível|
-    |PowerPoint 2007 (suportado apenas pelo AD RMS)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016|32 bits: Limitado apenas pela memória e espaço em disco disponível<br /><br />64 bits: Limitado apenas pela memória e espaço em disco disponível
+
+
+  |                                                     Aplicação do Office                                                      |                                                Tamanho máximo do ficheiro suportado                                                 |
+  |-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+  |             Word 2007 (suportado apenas pelo AD RMS)<br /><br />Word 2010<br /><br />Word 2013<br /><br />Word 2016             |                                          32 bits: 512 MB<br /><br />64 bits: 512 MB                                          |
+  |           Excel 2007 (suportado apenas pelo AD RMS)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016           |                      32 bits: 2 GB<br /><br />64 bits: Limitado apenas pela memória e espaço em disco disponível                       |
+  | PowerPoint 2007 (suportado apenas pelo AD RMS)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016 | 32 bits: Limitado apenas pela memória e espaço em disco disponível<br /><br />64 bits: Limitado apenas pela memória e espaço em disco disponível |
+
 
 - **Para todos os outros ficheiros**: 
-    
-    - Para proteger a outros tipos de ficheiro e para abrir estes tipos de ficheiro no Visualizador do Azure Information Protection: O tamanho máximo é limitado apenas pela memória e espaço em disco disponível.
-    
-    - Para desproteger ficheiros ao utilizar o [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet: O tamanho de ficheiro máximo suportado para arquivos. pst é 5 GB. Outros tipos de ficheiros estão limitados apenas pela memória e espaço em disco disponível
-    
+
+  - Para proteger a outros tipos de ficheiro e para abrir estes tipos de ficheiro no Visualizador do Azure Information Protection: O tamanho máximo é limitado apenas pela memória e espaço em disco disponível.
+
+  - Para desproteger ficheiros ao utilizar o [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet: O tamanho de ficheiro máximo suportado para arquivos. pst é 5 GB. Outros tipos de ficheiros estão limitados apenas pela memória e espaço em disco disponível
+
     Sugestão: Se precisar de procurar ou recuperar itens protegidos em arquivos. pst grandes, veja [orientações sobre o uso Unprotect-RMSFile para deteção de dados Eletrónicos](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery).
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>Tipos de ficheiros suportados para a classificação e proteção
@@ -118,7 +120,7 @@ Estes tipos de ficheiro são identificados separadamente, uma vez que, quando s�
 |.xml|.pxml|
 |.jpg|.pjpg|
 |.jpeg|.pjpeg|
-|.pdf|. ppdf [[1]](#footnote-1)|
+|.pdf|.ppdf [[1]](#footnote-1)|
 |.png|.ppng|
 |.tif|.ptif|
 |.tiff|.ptiff|
@@ -131,13 +133,13 @@ Estes tipos de ficheiro são identificados separadamente, uma vez que, quando s�
 ###### <a name="footnote-1"></a>Nota de rodapé 1
 Com a versão mais recente do cliente do Azure Information Protection [por predefinição](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), a extensão de nome de ficheiro do documento PDF protegido permanece como. pdf.
 
-A seguinte tabela apresenta os tipos de ficheiros restantes que suportam a proteção nativa pelo cliente do Azure Information Protection e que também podem ser classificados. Irá reconhecê-los como tipos de ficheiro para aplicações do Microsoft Office. Os formatos de ficheiro suportados para estes tipos de ficheiro são os 97-2003 formatos de arquivo e formatos XML abertos do Office para os seguintes programas do Office: Word, Excel e PowerPoint.
+A seguinte tabela apresenta os tipos de ficheiros restantes que suportam a proteção nativa pelo cliente do Azure Information Protection e que também podem ser classificados. Irá reconhecê-los como tipos de ficheiro das aplicações do Microsoft Office. Os formatos de ficheiro suportados para estes tipos de ficheiro são os 97-2003 formatos de arquivo e formatos XML abertos do Office para os seguintes programas do Office: Word, Excel e PowerPoint.
 
 Nestes ficheiros, a extensão de nome de ficheiro permanece igual depois de o ficheiro ser protegido pelo serviço Rights Management.
 
 |Tipos de ficheiro suportados pelo Office|Tipos de ficheiro suportados pelo Office|
 |----------------------------------|----------------------------------|
-|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vsdm|.vsdx<br /><br />. vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
+|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vsdm|.vsdx<br /><br />.vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
 
 ### <a name="changing-the-default-protection-level-of-files"></a>Alterar o nível de proteção predefinido dos ficheiros
 Pode alterar a forma como o cliente do Azure Information Protection protege os ficheiros ao editar o registo. Por exemplo, pode forçar os ficheiros que suportam a proteção nativa a serem protegidos genericamente pelo cliente do Azure Information Protection.
@@ -155,9 +157,9 @@ Pode também forçar o cliente do Azure Information Protection a bloquear a prot
 Para configurar o cliente do Azure Information Protection para aplicar uma proteção genérica a todos os ficheiros que, por predefinição, teriam uma proteção nativa aplicada, realize as seguintes edições de registo. Tenha em atenção que, se a chave FileProtection não existir, terá de a criar manualmente.
 
 1. Crie uma nova chave com o nome * para o seguinte caminho de registo, que indica ficheiros com qualquer extensão de nome de ficheiro:
-    
+
     - Para a versão de 32 bits do Windows: **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
-    
+
     - Para a versão de 64 bits do Windows: **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection**
 
 2. Na chave recentemente adicionada (por exemplo, HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\\\*), crie um novo valor de cadeia (REG_SZ) com o nome **Encryption** com o valor de dados **Pfile**.
@@ -184,7 +186,7 @@ Pode efetuar edições de registo semelhantes para outros cenários ao alterar o
 
 - **Nativo**: proteção nativa
 
-- **Desativar**: Bloquear proteção
+- **Off**: Bloquear proteção
 
 Para obter mais informações, consulte [configuração da API de ficheiros](../develop/file-api-configuration.md) de orientação para programadores. Nesta documentação para programadores, a proteção genérica é referida como "PFile". 
 
@@ -193,7 +195,7 @@ Para obter mais informações, consulte [configuração da API de ficheiros](../
 Para ajudar a impedir que os utilizadores alterem os ficheiros que são críticos para operações informáticas, alguns tipos de ficheiro e pastas são automaticamente excluídos da proteção e da classificação. Se os utilizadores tentarem classificar ou proteger estes ficheiros ao utilizar o cliente do Azure Information Protection, verão uma mensagem que foram excluídos.
 
 - **Tipos de ficheiro excluídos**:. lnk, .exe, .com,. cmd,. bat,. dll,. ini,. pst, SCA, DRM,. sys,. cpl,. inf,. drv,. dat,. tmp, msg,. msp,. msi,. pdb,. JAR
-    
+
 
 - **Pastas excluídas**: 
     - Windows
@@ -205,15 +207,27 @@ Para ajudar a impedir que os utilizadores alterem os ficheiros que são crítico
 
 Por predefinição, o scanner também exclui os mesmos tipos de ficheiro que o cliente do Azure Information Protection com as seguintes exceções:
 
+Para a versão de disponibilidade geral:
+
 - também são excluídos. zip, rar e. rtf
 
-Pode alterar os tipos de ficheiros incluídos ou excluídos para inspeção do ficheiro pelo leitor ao utilizar os seguintes cmdlets do PowerShell:
+Para a versão de pré-visualização atual: 
 
-- [Conjunto AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes)
+    - . rtf e rar, também são excluídos
 
-- [AIPScannerScannedFileTypes adicionar](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes)
+Pode alterar os tipos de ficheiros incluídos ou excluídos para inspeção do ficheiro pelo scanner:
+
+Para a versão de disponibilidade geral, utilize os seguintes cmdlets do PowerShell:
+
+- [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes)
+
+- [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes)
 
 - [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes)
+
+Para a versão de pré-visualização atual:
+
+- Configurar **tipos de ficheiros a analisar** no perfil de scanner, por [com o portal do Azure](../deploy-aip-scanner-preview.md#configure-the-scanner-in-the-azure-portal).
 
 > [!NOTE]
 > Se incluir arquivos. rtf, para análise, monitorize com cuidado o scanner. Alguns arquivos. RTF não podem ser inspecionados com êxito pelo scanner e para esses ficheiros, a inspeção não é concluído e o serviço tem de ser reiniciado. 
@@ -229,16 +243,18 @@ Se alterar o [predefinição de comportamento](client-admin-guide-customizations
 - Um ficheiro PDF que é baseada em formulários.
 
 - Um ficheiro PDF protegido que tem uma extensão de nome de ficheiro. pdf.
-    
+
     O cliente do Azure Information Protection pode proteger um ficheiro PDF não protegido e pode desproteger e voltar a proteger um ficheiro PDF protegido quando tem uma extensão de nome de ficheiro. ppdf.
 
 ### <a name="limitations-for-container-files-such-as-zip-files"></a>Limitações para ficheiros de contentor, como arquivos. zip
 
-Ficheiros de contentor são ficheiros que incluem outros arquivos, com um exemplo típico que está a ser arquivos. zip que contêm arquivos compactados. Outros exemplos incluem rar, .7z, e. msg.
+Ficheiros de contentor são ficheiros que incluem outros arquivos, com um exemplo típico que está a ser arquivos. zip que contêm arquivos compactados. Outros exemplos incluem rar, .7z, os arquivos. msg e documentos PDF que incluem anexos.
 
 Pode classificar e proteger estes ficheiros de contentor, mas a classificação e proteção não se aplica a cada arquivo dentro do contentor.
 
 Se tiver um arquivo de contêiner que inclui ficheiros classificados e protegidos, tem primeiro de extrair os ficheiros para alterar suas configurações de classificação ou de proteção. No entanto, pode remover a proteção para todos os ficheiros nos ficheiros de contentor suportadas utilizando o [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet.
+
+O Visualizador do Azure Information Protection não é possível abrir anexos num documento PDF protegido.
 
 ## <a name="file-types-supported-for-inspection"></a>Tipos de ficheiro suportados para inspeção
 
@@ -248,7 +264,7 @@ Sem qualquer configuração adicional, o cliente do Azure Information Protection
 |--------------------------------|-------------------------------------|
 |Word|.docx; .docm; .dotm; .dotx|
 |Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
-|PowerPoint|. ppt; .pps; .pot;. pptx; .ppsx;. pptm; .ppsm; .potx; .potm|
+|PowerPoint|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
 |PDF |.pdf|
 |Texto|.txt; .xml; .csv|
 
@@ -264,7 +280,7 @@ O scanner do Azure Information Protection e o [Set-AIPFileClassiciation](/powers
 
 1. Para o computador a executar a deteção de impressão ou a sessão do PowerShell, instalar o [pacote de filtro do Office 2010 SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2).
 
-2. Para a deteção de impressão: Incluir ficheiros. zip que serão verificadas, conforme descrito no [scanner do Azure Information Protection](#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner) secção.
+2. Para a deteção de impressão: A menos que estiver executando a versão de pré-visualização atual do scanner, incluir arquivos. zip que serão verificadas, conforme descrito no [scanner do Azure Information Protection](#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner) secção.
 
 3. Para a deteção de impressão: Depois de encontrar informações confidenciais, se o ficheiro. zip deve ser classificado e protegido com uma etiqueta, adicione uma entrada de registo para esta extensão de nome de ficheiro para a proteção genérica (pfile), conforme descrito em [editar o registo para o scanner](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner) das instruções de implementação do scanner.
 

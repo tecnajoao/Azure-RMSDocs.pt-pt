@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: eb2e2538246ea5c8ca42f6270e535c73dda71774
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: a5a1c0069a35073d9362e28ef18ad4c09d95df3d
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305510"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393951"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configuração da colaboração de documentos segura, utilizando o Azure Information Protection
 
@@ -50,13 +50,13 @@ Uma vez que o cenário restringe o acesso a pessoas específicas, ele não inclu
 
 3. Sobre o **adicionar permissões** painel: 
     
-    - Para o seu grupo interno: Selecione **procurar diretório** para selecionar o grupo, o que deve ter o e-mail ativado.
+   - Para o seu grupo interno: Selecione **procurar diretório** para selecionar o grupo, o que deve ter o e-mail ativado.
     
-    - Para todos os utilizadores na organização externa primeiro: Selecione **introduza os detalhes** e escreva o nome de um domínio no inquilino da organização. Por exemplo, fabrikam.com.
+   - Para todos os utilizadores na organização externa primeiro: Selecione **introduza os detalhes** e escreva o nome de um domínio no inquilino da organização. Por exemplo, fabrikam.com.
     
-    - Para o grupo da organização externa segundo: Ainda na **introduza os detalhes** separador, escreva o endereço de e-mail do grupo no inquilino da organização. Por exemplo, sales@contoso.com.
+   - Para o grupo da organização externa segundo: Ainda na **introduza os detalhes** separador, escreva o endereço de e-mail do grupo no inquilino da organização. Por exemplo, sales@contoso.com.
     
-    - Para o utilizador que não tem uma conta do Azure AD: Ainda na **introduza os detalhes** separador, escreva o endereço de e-mail do utilizador. Por exemplo, bengi.turan@gmail.com. 
+   - Para o utilizador que não tem uma conta do Azure AD: Ainda na **introduza os detalhes** separador, escreva o endereço de e-mail do utilizador. Por exemplo, bengi.turan@gmail.com. 
 
 4. Para conceder as mesmas permissões para todos esses usuários: Para **escolha as permissões da configuração predefinida**, selecione **Coproprietário**, **Coautor**, **revisor**, ou **personalizado**para selecionar as permissões que pretende conceder.
     

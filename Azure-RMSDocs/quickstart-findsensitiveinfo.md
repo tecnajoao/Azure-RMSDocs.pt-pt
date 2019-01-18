@@ -4,19 +4,21 @@ description: Utilize o scanner do Azure Information Protection para encontrar as
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 01/16/2019
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: 050c56887b83f0badf692bf2ee3b4616ad5b8bf4
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 12bde16a9b1659d00137720ad7c804db32cb1556
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024234"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314837"
 ---
-# <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Início rápido: Encontrar as informações confidenciais que tiver no ficheiros armazenados no local
+# <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Início rápido: Localizar as informações confidenciais que tiver no ficheiros armazenados no local
 
-Neste início rápido, irá instalar e configurar o scanner do Azure Information Protection para encontrar as informações confidenciais que tiver em ficheiros que estão armazenados num arquivo de dados no local. Por exemplo, uma pasta local, compartilhamento de rede ou servidor do SharePoint. 
+Neste início rápido, irá instalar e configurar o scanner do Azure Information Protection para encontrar as informações confidenciais que tiver em ficheiros que estão armazenados num arquivo de dados no local. Por exemplo, uma pasta local, compartilhamento de rede ou servidor do SharePoint.
+
+Nota: Este início rápido utiliza a versão atual da disponibilidade geral do scanner e não a versão de pré-visualização, que utiliza o portal do Azure para a configuração.
 
 Pode concluir esta configuração em menos de 10 minutos.
 

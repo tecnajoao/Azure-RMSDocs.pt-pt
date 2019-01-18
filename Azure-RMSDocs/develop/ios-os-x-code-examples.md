@@ -12,12 +12,12 @@ ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: c71fe41da2eb29645c3c25d0044f969ebdca1c9a
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: aee986c462dd5bba1966017eada2f97f4fbbb1a8
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54070243"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394157"
 ---
 # <a name="iosos-x-code-examples"></a>Exemplos de código de iOS/OS X
 
@@ -37,7 +37,7 @@ Seguem-se exemplos de código do **Objetivo C** de uma aplicação de exemplo ma
 
 - **Passo 1**: Criar uma [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) objeto
 
- **Descrição**: Criar uma instância de um [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) , através de objeto seu método de criação que implementa o serviço de autenticação através do [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) para obter um token transferindo uma instância de **MSAuthenticationCallback**, como o parâmetro *authenticationCallback*, para a API de MSIPC. Consulte a chamada para [MSProtectedData protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx) na secção de código de exemplo seguinte.
+  **Descrição**: Criar uma instância de um [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) , através de objeto seu método de criação que implementa o serviço de autenticação através do [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) para obter um token transferindo uma instância de **MSAuthenticationCallback**, como o parâmetro *authenticationCallback*, para a API de MSIPC. Consulte a chamada para [MSProtectedData protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx) na secção de código de exemplo seguinte.
 
         + (void)consumePtxtFile:(NSString *)path authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -94,19 +94,19 @@ Seguem-se exemplos de código do **Objetivo C** de uma aplicação de exemplo ma
                           }];
        }
 
--   **Passo 3**: Verifique se o direito de edição existe para o utilizador com estes conteúdos através da [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790789.aspx) método de um [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) objeto.
+- **Passo 3**: Verifique se o direito de edição existe para o utilizador com estes conteúdos através da [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790789.aspx) método de um [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) objeto.
 
-        - (void)accessCheckWithProtectedData:(MSProtectedData *)protectedData
-        {
-            //check if user has edit rights and apply enforcements
-            if (!protectedData.userPolicy.accessCheck(EditableDocumentRights.Edit))
-            {
-                // enforce on the UI
-                textEditor.focusableInTouchMode = NO;
-                textEditor.focusable = NO;
-                textEditor.enabled = NO;
-            }
-        }
+      - (void)accessCheckWithProtectedData:(MSProtectedData *)protectedData
+      {
+          //check if user has edit rights and apply enforcements
+          if (!protectedData.userPolicy.accessCheck(EditableDocumentRights.Edit))
+          {
+              // enforce on the UI
+              textEditor.focusableInTouchMode = NO;
+              textEditor.focusable = NO;
+              textEditor.enabled = NO;
+          }
+      }
 
 ### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Cenário: Criar um novo ficheiro protegido com um modelo
 

@@ -12,12 +12,12 @@ ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 8132fd2afba45402f8f9c835f2d6db69dd8e81f2
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 695251277b62d44166e7a4569881b804db34279e
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071205"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394258"
 ---
 # <a name="release-notes"></a>Notas de versão
 
@@ -37,9 +37,9 @@ Este artigo contém informações importantes sobre isto e versões anteriores d
 
 - **Atualizar para a ADAL** – ao atualizar a sua aplicação para utilizar a autenticação ADAL em vez do Assistente de Início de Sessão Online da Microsoft, o utilizador e os seus clientes poderão:
 
- - Utilizar a autenticação multifator
- - Instalar o cliente RMS 2.1 sem necessidade de privilégios administrativos no computador
- - Certificar a aplicação para o Windows 10
+  - Utilizar a autenticação multifator
+  - Instalar o cliente RMS 2.1 sem necessidade de privilégios administrativos no computador
+  - Certificar a aplicação para o Windows 10
 
 - **O suporte para o Assistente de Início de Sessão Online da Microsoft (SIA) com o SDK RMS está a ser removido.** Vamos continuar a suportar a utilização do SIA durante seis meses após o qual irá parar de suporte.
 
@@ -124,7 +124,7 @@ O componente da API de ficheiros do SDK foram expandido e oferece as seguintes f
 
     **Tenha em atenção**  no momento do lançamento de Abril de 2015, uma verificação foi adicionada para o processo de instalação para este KB.
 
-     
+     
 
 -   **Integração da API de Ficheiros**
 
@@ -136,7 +136,7 @@ O componente da API de ficheiros do SDK foram expandido e oferece as seguintes f
 
       - Todos os ficheiros, exceto ficheiros do sistema e ficheiros do Office, podem ser protegidos através do formato de Ficheiro Protegido (PFile) do RMS.
 
-    A API de ficheiros é implementada por meio das seguintes quatro novas funções: [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx), [IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx), [IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx), e [IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx).
+    A API de ficheiros é implementada por meio das seguintes quatro novas funções: [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx), [IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx), [IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx), and [IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx).
 
     A API de Ficheiro necessita que o Rights Management Service Client 2.1 seja instalado no computador cliente e que o computador tenha conectividade com um servidor RMS. Para obter mais informações sobre o servidor RMS, o cliente RMS e a respetiva funcionalidade, veja o conteúdo do TechNet relativo à [Documentação do RMS para Profissionais de TI](https://technet.microsoft.com/library/cc771234(v=ws.10).aspx).
 
@@ -154,7 +154,7 @@ O componente da API de ficheiros do SDK foram expandido e oferece as seguintes f
 
 ## <a name="frequently-asked-questions"></a>Perguntas mais frequentes
 
-**AS PERGUNTAS E**: Como funciona o comportamento de idioma predefinido com as funções que assumem um parâmetro LCID?
+**Q**: Como funciona o comportamento de idioma predefinido com as funções que assumem um parâmetro LCID?
 
 **A**: Utilize 0 para a região predefinida. Neste caso, o cliente de AD RMS 2.1 procura nomes e descrições na seguinte sequência e obtém o primeiro um disponível:
 

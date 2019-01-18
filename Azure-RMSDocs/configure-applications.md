@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b53bb0a914871ba2a53ad7ff4c3bd6fca0d32dde
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 99c0871d879d7326a4142b99753acfe00cd27cf5
+ms.sourcegitcommit: 73b5884ee9fe8aabb1a9fc9baace64d5fd433f4e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173269"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54324085"
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Configurar aplicações para o Azure Rights Management
 
@@ -31,9 +31,9 @@ Depois de ter implementado o Azure Information Protection na sua organização, 
 > [!IMPORTANT]
 > Para obter informações sobre as versões suportadas e outros requisitos, consulte [Requisitos do Azure Rights Management](requirements.md).
 
--   [Office 365: Configuração para clientes e serviços online](configure-office365.md)
+-   [Office 365: Configuração para clientes e serviços online](configure-office365.md)
 
-    -   [Exchange Online: Configuração de IRM](configure-office365.md#exchange-online-irm-configuration)
+    -   [Exchange Online: Configuração de IRM](configure-office365.md#exchange-online-irm-configuration)
 
     -   [SharePoint Online e OneDrive para empresas: Configuração de IRM](configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration)
 
@@ -41,9 +41,9 @@ Depois de ter implementado o Azure Information Protection na sua organização, 
 
     -   [Office 2016 ou Office 2013](configure-office-apps.md#office-2016-and-office-2013)
 
-    -   [Office 2010](configure-office-apps.md#office-2010)
+    -   [Office 2010](configure-office-apps.md#office-2010)
 
--   [Cliente do Azure Information Protection: Instalação e configuração para clientes](configure-sharing-app.md)
+-   [Cliente do Azure Information Protection: Instalação e configuração para clientes](configure-client.md)
 
 -   [Aplicação de partilha Rights Management: Instalação e configuração para clientes](configure-sharing-app.md)
 

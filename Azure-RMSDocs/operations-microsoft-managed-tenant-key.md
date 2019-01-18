@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3cddb4660ddae7bb19ff2ef1994fb4fa3c0bf9a6
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 8f98750c24fe535a580952fa7ebe76a6833f7dd2
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305391"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394062"
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gerida pela Microsoft: Operações de ciclo de vida de chave de inquilino
 
@@ -81,9 +81,9 @@ Pode exportar a configuração do Azure Information Protection e a chave de inqu
     ```
     O resultado deste comando deve ser dois arquivos: Um contém a palavra-passe de texto sem formatação para o TPD protegido por palavra-passe e o outro é o TPD protegido por palavra-passe por si só. Os ficheiros têm um novo GUID, por exemplo:
      
-    - Palavra-passe-5E4C2018-8C8C-4548-8705-E3218AA1544E.txt
+  - Palavra-passe-5E4C2018-8C8C-4548-8705-E3218AA1544E.txt
 
-    - TPDExportado-5E4C2018-8C8C-4548-8705-E3218AA1544E.xml
+  - TPDExportado-5E4C2018-8C8C-4548-8705-E3218AA1544E.xml
 
     Efetue uma cópia de segurança destes ficheiros e armazene-os de forma segura para se certificar de que pode continuar a desencriptar o conteúdo que está protegido com esta chave de inquilino. Além disso, se está a migrar para o AD RMS, pode importar este ficheiro TPD (o ficheiro que começa com **ExportedTDP**) para o seu servidor AD RMS.
 

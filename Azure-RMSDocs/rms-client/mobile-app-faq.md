@@ -11,22 +11,24 @@ ms.custom: askipteam
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cd07ed5d1c4bf2f4192f400c699e6e6dc3447713
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 29c7d333131c0b85b9cdb83e9a2212420f60077f
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023758"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393657"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>FAQs sobre a aplicação Microsoft Azure Information Protection para iOS e Android
 
-*Aplica-se a: serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+*Aplica-se a: Serviços de gestão de direitos do Active Directory [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Esta página fornece respostas às perguntas mais frequentes sobre a aplicação Azure Information Protection para iOS e Android.
 
 ## <a name="what-can-i-do-with-the-azure-information-protection-app"></a>O que posso fazer com a aplicação Azure Information Protection?
 
-Esta aplicação permite-lhe ver mensagens de e-mail com proteção de direitos (ficheiros .rpmsg) se a sua aplicação de e-mail não suportar nativamente a proteção de dados de gestão de direitos. Esta aplicação também lhe permite ver ficheiros PDF, imagens e ficheiros de texto com proteção de direitos. Atualmente, não pode utilizar esta aplicação para criar ou responder a mensagens de e-mail protegidas, nem para criar ou editar ficheiros protegidos.
+Esta aplicação permite-lhe ver mensagens de e-mail com proteção de direitos (ficheiros .rpmsg) se a sua aplicação de e-mail não suportar nativamente a proteção de dados de gestão de direitos. Esta aplicação também lhe permite visualizar documentos em PDF protegido por direitos, imagens e arquivos de texto que estão protegido por direitos. 
+
+Uma vez que esta aplicação é um visualizador, não é possível usá-lo para criar mensagens de e-mail protegidas, responder a elas, ou criar ou editar ficheiros protegidos. Além disso, a aplicação não é possível abrir anexos para os ficheiros que vir. Por exemplo, anexos em documentos em PDF protegidos ou em mensagens de e-mail protegido por direitos.
 
 ## <a name="can-i-open-pdf-files-that-are-in-sharepoint-protected-libraries-and-onedrive-for-business"></a>Posso abrir ficheiros PDF em bibliotecas protegidas do SharePoint e no OneDrive para Empresas?
 
@@ -48,7 +50,7 @@ Se tiver estas versões ou versões superiores, pode instalar a aplicação para
 
 Depois de instalar a aplicação, não tem de fazer mais nada. Aguarde até receber um e-mail ou ficheiro protegido que queira ver e, em seguida, selecione o **AIP Viewer** para abri-lo. Ser-lhe-á pedido que inicie sessão com a sua conta escolar ou profissional, ou que selecione um certificado. Quando essas credenciais forem autenticadas, poderá ler os conteúdos.
 
-No entanto, se não quiser esperar, pode utilizar as seguintes instruções para enviar um e-mail ou ficheiro protegido para si próprio para o abrir: [Introdução à aplicação Microsoft Azure Information Protection para iOS e Android](mobile-app-get-started.md) 
+No entanto, se não quiser esperar, pode utilizar as seguintes instruções para enviar a mesmo um e-mail ou ficheiro protegido para ver: [Comece com a aplicação do Microsoft Azure Information Protection para iOS e Android](mobile-app-get-started.md) 
 
 ## <a name="what-credentials-should-i-use-to-sign-in-to-this-app"></a>Que credenciais devo utilizar para iniciar sessão nesta aplicação?
 

@@ -4,18 +4,18 @@ description: Instruções e informações para administradores numa rede empresa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 01/18/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e66ad53b23a76a263d4ec74e184597db12fdaa9d
-ms.sourcegitcommit: 8deca8163a6adea73f28aaf300a958154f842e4a
+ms.openlocfilehash: 1ece9ab39045d1bb6f1388a33784a733618dd0d4
+ms.sourcegitcommit: 24c464bcb80db2d193cfd17ea8c264a327dcf54a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54210503"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54366219"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guia do administrador do cliente do Azure Information Protection
 
@@ -198,11 +198,69 @@ Utilize o [política de histórico e suporte de lançamento de versão](client-v
 
 ### <a name="upgrading-the-azure-information-protection-scanner"></a>Atualizar o scanner do Azure Information Protection
 
+Como atualizar o scanner depende se estiver a atualizar para a versão de DG atual ou para a versão de pré-visualização atual.
+
+#### <a name="to-upgrade-the-scanner-to-the-current-ga-version"></a>Para atualizar o scanner para a versão atual do GA
+
 Para atualizar o scanner do Azure Information Protection, instale a versão mais recente do cliente do Azure Information Protection. Em seguida, efetue a seguinte ação única. Depois de fazer isso, não é necessário para reanalisar já ficheiros.
 
 - Execute [AIPScanner atualização](/powershell/module/azureinformationprotection/Update-AIPScanner) depois de ter atualizado o cliente do Azure Information Protection. As definições de configuração para o scanner e repositórios serão mantidas. Executar este cmdlet é necessário para atualizar o esquema de base de dados para a deteção de impressão e se necessário, a conta de serviço do scanner também recebe eliminar as permissões para a base de dados do scanner. 
     
     Até que executar este cmdlet de atualização, o scanner não é executado e verá o ID de evento normalmente **1000** no registo de eventos do Windows, com a seguinte mensagem de erro: **Nome de objeto inválido 'ScannerStatus'**.
+
+#### <a name="to-upgrade-the-scanner-to-the-current-preview-version"></a>Para atualizar o scanner para a versão de pré-visualização atual
+
+> [!IMPORTANT]
+> Para um caminho de atualização suave, não instale a versão de pré-visualização do cliente do Azure Information Protection no computador com o scanner como o primeiro passo para atualizar o scanner. Em vez disso, utilize as seguintes instruções de atualização.
+
+Para a versão de pré-visualização atual do scanner, o processo de atualização é diferente de versões anteriores. Atualizar o scanner automaticamente altera o scanner para obtém as definições de configuração do portal do Azure. Além disso, o esquema é atualizado para o banco de dados de configuração do scanner, e esta base de dados também é mudado da AzInfoProtection:
+
+- Se não especificar o nome do seu perfil, a base de dados de configuração foi mudado **AIPScanner_\<nome_do_computador >**. 
+
+- Se especificar o nome do seu perfil, a base de dados de configuração foi mudado **AIPScanner_\<Nome_do_perfil >**.
+
+Embora seja possível atualizar o scanner numa ordem diferente, recomendamos os seguintes passos:
+
+1. Utilize o portal do Azure para criar um novo perfil de scanner, que inclui definições para a deteção de impressão e seus repositórios de dados com as definições que precisam. Para obter ajuda com este passo, consulte a [configurar a deteção de impressão no portal do Azure](../deploy-aip-scanner-preview.md#configure-the-scanner-in-the-azure-portal) secção das instruções de implementação do Verificador de pré-visualização.
+    
+    Se o computador que executa a deteção de impressão estiver desligado da Internet, ainda tem de efetuar este passo. Em seguida, a partir do portal do Azure, utilize o **exportar** opção para exportar o seu perfil de scanner para um ficheiro.
+
+2. No computador de scanner, pare o serviço de scanner, **do Azure Information Protection Scanner**.
+
+3. Atualizar o cliente do Azure Information Protection ao instalar a versão de pré-visualização atual a partir da [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+
+4. Numa sessão do PowerShell, execute o comando de atualização AIPScanner com o mesmo nome de perfil que especificou no passo 1. Por exemplo: `Update-AIPScanner –Profile USWest`
+
+5. Apenas se o scanner está em execução num computador desligado: Agora, execute [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) e especifique o ficheiro que contém as definições exportadas.
+
+6. Reinicie o serviço de Azure Information Protection Scanner **do Azure Information Protection Scanner**.
+
+##### <a name="upgrading-in-a-different-order-to-the-recommended-steps"></a>Atualização numa ordem diferente para os passos recomendados
+
+Se não configurar a deteção de impressão no portal do Azure antes de executar o comando de atualização AIPScanner, não terá um nome de perfil para especificar que identifica as definições de configuração de scanner para o processo de atualização. 
+
+Neste cenário, quando configurar a deteção de impressão no portal do Azure, tem de especificar exatamente o mesmo nome do perfil que foi utilizado quando executou o comando de atualização AIPScanner. Se o nome não corresponder, o scanner não será configurado para as suas definições. 
+
+> [!TIP]
+> Para identificar scanners que têm esta configuração incorreta, utilize o **do Azure Information Protection – nós** painel no portal do Azure.
+>  
+> Para scanners que tem ligação à Internet, eles exibem o respetivo nome de computador com o número de versão de pré-visualização do cliente do Azure Information Protection, mas nenhum nome de perfil. Apenas os scanners que têm um número de versão 1.41.51.0 não deverá apresentar a nenhum nome de perfil neste painel. 
+
+Se não tiver especificado um nome de perfil quando executou o comando de atualização AIPScanner, o nome do computador é utilizado para criar automaticamente o nome de perfil para a deteção de impressão.
+
+#### <a name="moving-the-scanner-configuration-database-to-a-different-sql-server-instance"></a>Mover a base de dados de configuração do scanner para uma instância diferente do SQL Server
+
+Na versão de pré-visualização atual, existe um problema conhecido se tentar mover a base de dados de configuração do scanner para uma nova instância do SQL Server depois de executar o comando de atualização.
+
+Se souber que pretende mover a base de dados de configuração de scanner para a versão de pré-visualização, faça o seguinte:
+
+1. Desinstale o scanner utilizando [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner).
+
+2. Se ainda não tiver atualizado para a versão de pré-visualização do cliente do Azure Information Protection, agora a atualizar o cliente.
+
+3. Instalar o scanner, utilizando [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner), especificando a nova instância do SQL Server e nome de perfil.
+
+4. Opcional: Se não pretender que o scanner para reanalisar todos os ficheiros, a tabela de ScannerFiles de exportar e importá-lo para a nova base de dados.
 
 ## <a name="uninstalling-the-azure-information-protection-client"></a>Desinstalar o cliente do Azure Information Protection
 

@@ -8,12 +8,12 @@ ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: de278dbb9fd9f051c3a4e47ef719988df4706434
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: d1613d30dbb59395254ca5bd56222c15fcb75058
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305561"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393577"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Manter a proteção da sua própria chave (HYOK) para o Azure Information Protection
 
@@ -65,25 +65,25 @@ A tabela seguinte lista os cenários suportados para proteger conteúdo através
 
 |Plataforma|Aplicação|Suportadas|
 |----------------------|----------|-----------|
-|Windows|Cliente de proteção de informações do Azure com o Office 2016 e Office 2013 <br /><br />-Word, Excel, PowerPoint|Proteção: Sim<br /><br />Consumo: Sim|
+|Windows|Cliente de proteção de informações do Azure com o Office 2016 e Office 2013 <br /><br />- Word, Excel, PowerPoint|Proteção: Sim<br /><br />Consumo: Sim|
 |Windows|Cliente de proteção de informações do Azure com o Office 2016 e Office 2013 <br /><br />-Outlook|Proteção: Sim<br /><br />Consumo: Sim|
 |Windows|Cliente de proteção de informações do Azure com o Explorador de ficheiros|Proteção: Sim <br /><br />Consumo: Sim|
 |Windows|Visualizador do Azure Information Protection|Proteção: Não aplicável<br /><br />Consumo: Sim|
 |Windows|Cliente de proteção de informações do Azure com o PowerShell cmdlets de etiquetagem|Proteção: Sim<br /><br />Consumo: Sim|
 |Windows|Scanner do Azure Information Protection|Proteção: Sim<br /><br />Consumo: Sim|
 |Windows|Aplicação de partilha Rights Management|Proteção: Não<br /><br />Consumo: Sim|
-|MacOS|Office para Mac <br /><br /> -Word, Excel, PowerPoint|Proteção: Não<br /><br />Consumo: Sim|
+|MacOS|Office para Mac <br /><br /> - Word, Excel, PowerPoint|Proteção: Não<br /><br />Consumo: Sim|
 |MacOS|Office para Mac<br /><br />-Outlook|Proteção: Não<br /><br />Consumo: Sim|
 |MacOS|Aplicação de partilha Rights Management|Proteção: Não<br /><br />Consumo: Sim|
-|iOS|Office Mobile <br /><br />-Word, Excel, PowerPoint|Proteção: Não<br /><br />Consumo: Sim|
+|iOS|Office Mobile <br /><br />- Word, Excel, PowerPoint|Proteção: Não<br /><br />Consumo: Sim|
 |iOS|Office Mobile <br /><br />-Outlook|Proteção: Não<br /><br />Consumo: Não|
 |iOS|Visualizador do Azure Information Protection|Proteção: Não aplicável<br /><br />Consumo: Sim|
-|Android|Office Mobile <br /><br />-Word, Excel, PowerPoint|Proteção: Não<br /><br />Consumo: Sim|
+|Android|Office Mobile <br /><br />- Word, Excel, PowerPoint|Proteção: Não<br /><br />Consumo: Sim|
 |Android|Office Mobile <br /><br />-Outlook|Proteção: Não<br /><br />Consumo: Não|
 |Android|Visualizador do Azure Information Protection|Proteção: Não aplicável<br /><br />Consumo: Sim|
 |Web|Outlook na web|Proteção: Não<br /><br />Consumo: Não|
-|Web|Office Online<br /><br />-Word, Excel, PowerPoint|Proteção: Não<br /><br />Consumo: Não|
-|Universal|Aplicações universais do Office<br /><br />-Word, Excel, PowerPoint|Proteção: Não<br /><br />Consumo: Não|
+|Web|Office Online<br /><br />- Word, Excel, PowerPoint|Proteção: Não<br /><br />Consumo: Não|
+|Universal|Aplicações universais do Office<br /><br />- Word, Excel, PowerPoint|Proteção: Não<br /><br />Consumo: Não|
 
 
 ## <a name="additional-limitations-when-using-hyok"></a>Limitações adicionais ao utilizar HYOK
@@ -114,35 +114,35 @@ Uma implementação do AD RMS têm de cumprir os seguintes requisitos para forne
 
 - Configuração do AD RMS:
     
-    - Versão mínima do Windows Server 2012 R2: Necessário para ambientes de produção, mas para fins de teste ou avaliação, pode utilizar uma versão mínima do Windows Server 2008 R2 com Service Pack 1.
+  - Versão mínima do Windows Server 2012 R2: Necessário para ambientes de produção, mas para fins de teste ou avaliação, pode utilizar uma versão mínima do Windows Server 2008 R2 com Service Pack 1.
     
-    - Uma das seguintes topologias:
+  - Uma das seguintes topologias:
         
-        - Floresta única com um único cluster de raiz do AD RMS. 
+    - Floresta única com um único cluster de raiz do AD RMS. 
         
-        - Várias florestas com clusters independentes de raiz de AD RMS e os utilizadores não têm acesso ao conteúdo protegido pelos utilizadores nas outras florestas.
+    - Várias florestas com clusters independentes de raiz de AD RMS e os utilizadores não têm acesso ao conteúdo protegido pelos utilizadores nas outras florestas.
         
-        - Clusters de várias florestas com o AD RMS em cada um deles. Cada cluster do AD RMS compartilha um URL de licenciamento que aponta para o mesmo cluster de AD RMS. Neste cluster de AD RMS, tem de importar todos os certificados de domínio (TUD) de utilizadores fidedignos de todos os outros clusters de AD RMS. Para obter mais informações sobre essa topologia, consulte [domínio de utilizador fidedigno] (https://technet.microsoft.com/library/dd983944(v=ws.10\).aspx).
+    - Clusters de várias florestas com o AD RMS em cada um deles. Cada cluster do AD RMS compartilha um URL de licenciamento que aponta para o mesmo cluster de AD RMS. Neste cluster de AD RMS, tem de importar todos os certificados de domínio (TUD) de utilizadores fidedignos de todos os outros clusters de AD RMS. Para obter mais informações sobre essa topologia, consulte [domínio de utilizador fidedigno](https://technet.microsoft.com/library/dd983944(v=ws.10).aspx).
         
     Quando tiver vários clusters do AD RMS em florestas independentes, elimine quaisquer etiquetas na política global que aplicarem a proteção do HYOK (AD RMS) e configurar uma [política de âmbito](configure-policy-scope.md) para cada cluster. Em seguida, atribua utilizadores para cada cluster a respetiva política de âmbito, certificar-se de que não utilize grupos que resultariam num utilizador que está a ser atribuído a mais do que uma política de âmbito. O resultado deve ser a que cada utilizador tem etiquetas para um cluster AD RMS. 
     
-    - [Modo criptográfico 2](https://technet.microsoft.com/library/hh867439.aspx): Pode confirmar o modo ao verificar as propriedades de cluster de AD RMS **gerais** separador.
+  - [Modo criptográfico 2](https://technet.microsoft.com/library/hh867439.aspx): Pode confirmar o modo ao verificar as propriedades de cluster de AD RMS **gerais** separador.
     
-    - Cada servidor do AD RMS está configurado para o URL de certificação. [Instruções](#configuring-ad-rms-servers-to-locate-the-certification-url) 
+  - Cada servidor do AD RMS está configurado para o URL de certificação. [Instruções](#configuring-ad-rms-servers-to-locate-the-certification-url) 
     
-    - Um ponto de ligação de serviço (SCP) não está registado no Active Directory: Não é utilizado um SCP quando utiliza a proteção do AD RMS com o Azure Information Protection. 
+  - Um ponto de ligação de serviço (SCP) não está registado no Active Directory: Não é utilizado um SCP quando utiliza a proteção do AD RMS com o Azure Information Protection. 
     
-        - Se tiver registado um SCP na implementação do AD RMS, tem de removê-lo para que a [deteção do serviço](./rms-client/client-deployment-notes.md#rms-service-discovery) seja bem-sucedida para a proteção do Azure Rights Management. 
+      - Se tiver registado um SCP na implementação do AD RMS, tem de removê-lo para que a [deteção do serviço](./rms-client/client-deployment-notes.md#rms-service-discovery) seja bem-sucedida para a proteção do Azure Rights Management. 
         
-        - Se estiver a instalar um novo cluster de AD RMS para HYOK, ignore o passo para registar o SCP durante a configuração do nó primeiro. Para cada nó adicional, certifique-se de que o servidor está configurado para o URL de certificação antes de adicionar a função de AD RMS e Junte-se do cluster existente.
+      - Se estiver a instalar um novo cluster de AD RMS para HYOK, ignore o passo para registar o SCP durante a configuração do nó primeiro. Para cada nó adicional, certifique-se de que o servidor está configurado para o URL de certificação antes de adicionar a função de AD RMS e Junte-se do cluster existente.
     
-    - Os servidores do AD RMS estão configurados para utilizar SSL/TLS com um certificado x.509 válido que seja considerada fidedigna pelos clientes ligados: Necessários para ambientes de produção, mas não para fins de teste ou avaliação.
+  - Os servidores do AD RMS estão configurados para utilizar SSL/TLS com um certificado x.509 válido que seja considerada fidedigna pelos clientes ligados: Necessários para ambientes de produção, mas não para fins de teste ou avaliação.
     
-    - Modelos de direitos configurados.
+  - Modelos de direitos configurados.
     
-    - Não configurado para IRM do Exchange.
+  - Não configurado para IRM do Exchange.
     
-    - Para dispositivos móveis e computadores Mac: O [extensão de dispositivo de móveis de serviços do Rights Management Active Directory](https://technet.microsoft.com/library/dn673574.aspx) está instalado e configurado.
+  - Para dispositivos móveis e computadores Mac: O [extensão de dispositivo de móveis de serviços do Rights Management Active Directory](https://technet.microsoft.com/library/dn673574.aspx) está instalado e configurado.
 
 - Sincronização de diretórios está configurada entre o Active Directory no local e o Azure Active Directory e utilizadores que irão utilizar a proteção do HYOK estão configurados para início de sessão único.
 

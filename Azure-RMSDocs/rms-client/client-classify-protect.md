@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 29c79d3da5e82b0d5702a1d85a22608f9177d271
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: b1d46cb3c98c520ab6900f910f691af920337334
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305709"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393462"
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Guia de utilizador: Classificar e proteger um ficheiro ou e-mail com o Azure Information Protection
 
@@ -138,13 +138,13 @@ Guia do administrador contém uma lista completa dos tipos de ficheiro suportado
 
 2. Na caixa de diálogo **Classificar e proteger – Azure Information Protection**, utilize as etiquetas como faria numa aplicação do Office, o que define a classificação e a proteção, conforme definido pelo seu administrador. 
 
-    - Se nenhuma das etiquetas pode ser selecionada (aparecem escurecidas): O ficheiro selecionado não suportará a classificação, mas poderá protegê-lo com permissões personalizadas (etapa 3). Por exemplo:
+   - Se nenhuma das etiquetas pode ser selecionada (aparecem escurecidas): O ficheiro selecionado não suportará a classificação, mas poderá protegê-lo com permissões personalizadas (etapa 3). Por exemplo:
 
-    ![Não há etiquetas disponíveis na caixa de diálogo Classificar e proteger – Azure Information Protection**](../media/info-protect-dialog-labels-dimmed.png)
+     ![Não há etiquetas disponíveis na caixa de diálogo Classificar e proteger – Azure Information Protection**](../media/info-protect-dialog-labels-dimmed.png)
     
-    - Se não vir etiquetas, mas uma opção para **proteção predefinida da empresa** nessa caixa de diálogo: O cliente está em execução [modo apenas de proteção](client-protection-only-mode.md). Selecione um modelo para aplicar a proteção que o administrador tiver configurado para si ou selecione **Permissões personalizadas** para especificar as suas próprias definições de proteção e avance para o passo 4.
+   - Se não vir etiquetas, mas uma opção para **proteção predefinida da empresa** nessa caixa de diálogo: O cliente está em execução [modo apenas de proteção](client-protection-only-mode.md). Selecione um modelo para aplicar a proteção que o administrador tiver configurado para si ou selecione **Permissões personalizadas** para especificar as suas próprias definições de proteção e avance para o passo 4.
     
-    ![Não há etiquetas na caixa de diálogo Classificar e proteger – Azure Information Protection**](../media/info-protect-dialog-labels-protection-only.png)
+     ![Não há etiquetas na caixa de diálogo Classificar e proteger – Azure Information Protection**](../media/info-protect-dialog-labels-protection-only.png)
     
 3. Se permitido pelo seu administrador, pode especificar as suas próprias definições de proteção em vez de utilizar as definições de proteção que o administrador possa ter incluído com a etiqueta escolhida. Para tal, selecione **proteger com permissões personalizadas**.
     
@@ -154,15 +154,15 @@ Guia do administrador contém uma lista completa dos tipos de ficheiro suportado
 
 4. Se selecionar a opção de permissões personalizadas, especifique o seguinte:
 
-    - **Selecionar permissões**: Selecione o nível de acesso que pretende que as pessoas tenham quando protege o ficheiro ou ficheiros selecionados.
+   - **Selecionar permissões**: Selecione o nível de acesso que pretende que as pessoas tenham quando protege o ficheiro ou ficheiros selecionados.
     
-    - **Selecionar utilizadores, grupos ou organizações**: Especifique as pessoas que devem ter as permissões que selecionou para o ficheiro ou ficheiros. Escreva o endereço de e-mail completo dessas pessoas, um endereço de e-mail de grupo ou um nome de domínio da organização para todos os utilizadores nessa organização. 
+   - **Selecionar utilizadores, grupos ou organizações**: Especifique as pessoas que devem ter as permissões que selecionou para o ficheiro ou ficheiros. Escreva o endereço de e-mail completo dessas pessoas, um endereço de e-mail de grupo ou um nome de domínio da organização para todos os utilizadores nessa organização. 
     
-    Em alternativa, pode utilizar o ícone de livro de endereços para selecionar utilizadores ou grupos do livro de endereços do Outlook.
+     Em alternativa, pode utilizar o ícone de livro de endereços para selecionar utilizadores ou grupos do livro de endereços do Outlook.
         
-    - **Expirar acesso**: Selecione esta opção apenas para ficheiros sensíveis ao tempo para que as pessoas que especificou não poderão abrir o ficheiro ou ficheiros selecionados após uma data que definir, ainda poderá abrir o ficheiro original, mas após a meia-noite (seu fuso horário atual) , no dia em que definir, as pessoas que especificou não será possível abrir o ficheiro.
+   - **Expirar acesso**: Selecione esta opção apenas para ficheiros sensíveis ao tempo para que as pessoas que especificou não poderão abrir o ficheiro ou ficheiros selecionados após uma data que definir, ainda poderá abrir o ficheiro original, mas após a meia-noite (seu fuso horário atual) , no dia em que definir, as pessoas que especificou não será possível abrir o ficheiro.
     
-    Observe que se essa definição foi configurada anteriormente através de permissões personalizadas de uma aplicação do Office 2010, a data de expiração especificada não é apresentada nesta caixa de diálogo, mas continuará definida. Este é um problema de apresentação de quando a data de expiração foi configurada no Office 2010.
+     Observe que se essa definição foi configurada anteriormente através de permissões personalizadas de uma aplicação do Office 2010, a data de expiração especificada não é apresentada nesta caixa de diálogo, mas continuará definida. Este é um problema de apresentação de quando a data de expiração foi configurada no Office 2010.
 
 5. Clique em **Aplicar** e aguarde pela mensagem **Trabalho concluído** para ver os resultados. Em seguida, clique em **Fechar**.
 

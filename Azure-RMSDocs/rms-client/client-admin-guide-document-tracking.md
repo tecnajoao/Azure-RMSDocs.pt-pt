@@ -4,18 +4,18 @@ description: Instruções e informações para os administradores configurarem e
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/16/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5add56fb5c033243acccb5308b7b9569b0c72624
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 108a77f6c78b49bfcd852ff94ef529d3a667a193
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305204"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314740"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guia do administrador: Configurar e utilizar o controlo de documentos do Azure Information Protection
 
@@ -95,6 +95,16 @@ Para sair do modo de Administrador, clique no **X** junto a **Sair do modo de ad
 
 Para obter instruções sobre como utilizar o site de controlo de documentos, veja [Controlar e revogar documentos](client-track-revoke.md) no guia de utilizador.
 
+### <a name="using-powershell-to-register-labeled-documents-with-the-document-tracking-site"></a>Com o PowerShell para registar documentos etiquetados com o site de controlo de documentos
+
+Esta opção só está disponível para a versão de pré-visualização atual do cliente do Azure Information Protection.
+
+Para poder controlar e revogar um documento, tem primeiro de ser registado com o site de controlo de documentos. Esta ação ocorre quando os utilizadores selecionam a **controlar e revogar** opção a partir do Explorador de ficheiros ou as suas aplicações do Office quando estiverem a utilizar o cliente do Azure Information Protection. Para a gestão de direitos de aplicação de partilha, esta ação ocorre automaticamente quando os utilizadores selecionam a **partilhar protegido** opção.
+
+Se Etiquetar e proteger ficheiros para os utilizadores com o [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) cmdlet, pode utilizar os *EnableTracking* parâmetro para registrar o arquivo com o site de controlo de documentos. Por exemplo:
+
+    Set-AIPFileLabel -Path C:\Projects\ -LabelId ade72bf1-4714-4714-4714-a325f824c55a -EnableTracking
+
 ## <a name="usage-logging-for-the-document-tracking-site"></a>Registo de utilização para o site de controlo de documentos
 
 Dois campos nos ficheiros de registo de utilização são aplicáveis ao controlo de documentos: **AdminAction** e **ActingAsUser**.
@@ -105,9 +115,7 @@ Dois campos nos ficheiros de registo de utilização são aplicáveis ao control
 
 Também existem tipos de pedido que registam a forma como os utilizadores e os administradores estão a utilizar o site de controlo de documentos. Por exemplo, **RevokeAccess** é o tipo de pedido quando um utilizador ou um administrador em nome de um utilizador revogou um documento no site de controlo de documentos. Utilize este tipo de pedido juntamente com o campo AdminAction para determinar se o utilizador revogou o seu próprio documento (o campo AdminAction está vazio) ou um administrador revogou um documento em nome de um utilizador (AdminAction é true).
 
-
 Para obter mais informações sobre o registo de utilização, consulte [Registar e analisar a utilização do serviço Azure Rights Management](../log-analyze-usage.md)
-
 
 
 ## <a name="next-steps"></a>Passos Seguintes

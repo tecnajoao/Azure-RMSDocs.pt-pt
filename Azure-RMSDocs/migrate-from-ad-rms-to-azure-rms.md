@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d9b79faa2444560ec209faa199072f2a745152cd
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 3f7c06a6415160b5c2245dc60e94bf7d9633ef7f
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305578"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393758"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrar do AD RMS para o Azure Information Protection
 
->*Aplica-se a: Serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilize o seguinte conjunto de instruções para migrar a implementação dos Serviços de Gestão de Direitos do Active Directory (AD RMS) para o Azure Information Protection. 
 
@@ -49,23 +49,23 @@ Antes de iniciar a migração para o Azure Information Protection, certifique-se
 
 - **Uma implementação RMS suportada:**
     
-    - As seguintes versões do AD RMS suportam uma migração para o Azure Information Protection:
+  - As seguintes versões do AD RMS suportam uma migração para o Azure Information Protection:
     
-        - Windows Server 2008 R2 (x64)
+      - Windows Server 2008 R2 (x64)
         
-        - Windows Server 2012 (x64)
+      - Windows Server 2012 (x64)
         
-        - Windows Server 2012 R2 (x64)
+      - Windows Server 2012 R2 (x64)
         
-        - Windows Server 2016 (x64)
+      - Windows Server 2016 (x64)
         
-    - Todas as topologias válidas do AD RMS são suportadas:
+  - Todas as topologias válidas do AD RMS são suportadas:
     
-        - Floresta única, cluster RMS único
+      - Floresta única, cluster RMS único
         
-        - Floresta única, vários clusters RMS só de licenciamento
+      - Floresta única, vários clusters RMS só de licenciamento
         
-        - Várias florestas, vários clusters RMS
+      - Várias florestas, vários clusters RMS
         
     Nota: Por predefinição, os vários clusters do AD RMS migram para um único inquilino do Azure Information Protection. Se quiser inquilinos separados para o Azure Information Protection, tem de tratá-los como migrações diferentes. Uma chave de um cluster do RMS não pode ser importada para mais do que um inquilino.
 
@@ -80,15 +80,15 @@ Antes de iniciar a migração para o Azure Information Protection, certifique-se
 
 - **Preparação para o Azure Information Protection:**
 
-    - Sincronização de diretórios entre o diretório no local e o Azure Active Directory
+  - Sincronização de diretórios entre o diretório no local e o Azure Active Directory
 
-    - Grupos com capacidade de correio no Azure Active Directory
+  - Grupos com capacidade de correio no Azure Active Directory
 
     Veja [Preparar utilizadores e grupos para o Azure Information Protection](prepare.md).
 
 - **Se tiver utilizado a funcionalidade de gestão de direitos de informação (IRM) do Exchange Server** (por exemplo, regras de transporte e Outlook Web Access) ou o SharePoint Server com o AD RMS:
 
-    - A IRM não estará disponível nestes servidores durante um curto período de tempo
+  - A IRM não estará disponível nestes servidores durante um curto período de tempo
  
     Pode continuar a utilizar a IRM nestes servidores após a migração. No entanto, um dos passos da migração é a desativação temporária do serviço de IRM, a instalação e configuração de um conector, a reconfiguração dos servidores e reativação da IRM.
 

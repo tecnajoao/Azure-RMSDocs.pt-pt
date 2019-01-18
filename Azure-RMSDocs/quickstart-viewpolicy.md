@@ -7,12 +7,12 @@ manager: mbaldwin
 ms.date: 12/15/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: c890d6acf2557093441a175bc8ed8657e8d1d9da
-ms.sourcegitcommit: bc082cffaa698b89b28aef7034290553c26f667b
+ms.openlocfilehash: 91a9a124c53d7c8f1aab31213595a8fc2f3627dd
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411818"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393972"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Início rápido: Introdução ao Azure Information Protection no portal do Azure
 
@@ -75,11 +75,11 @@ Na primeira vez que ligar para o serviço Azure Information Protection com o por
     
 2. Passe alguns minutos, ao se familiarizar com as etiquetas que são apresentadas:
     
-    - Etiquetas para classificação: **Pessoais**, **pública**, **geral**, **confidenciais**, e **altamente confidencial**. As últimas duas etiquetas se expandem para mostrar subetiquetas, que fornecem exemplos de como uma classificação pode ter subcategorias:
+   - Etiquetas para classificação: **Pessoais**, **pública**, **geral**, **confidenciais**, e **altamente confidencial**. As últimas duas etiquetas se expandem para mostrar subetiquetas, que fornecem exemplos de como uma classificação pode ter subcategorias:
     
-    - Com a configuração predefinida, algumas etiquetas não têm marcas visuais configuradas. As marcas visuais são um rodapé, cabeçalho e marca d'água. Dependendo da sua diretiva padrão, alguns rótulos, talvez também tenha proteção definida. Por exemplo: 
+   - Com a configuração predefinida, algumas etiquetas não têm marcas visuais configuradas. As marcas visuais são um rodapé, cabeçalho e marca d'água. Dependendo da sua diretiva padrão, alguns rótulos, talvez também tenha proteção definida. Por exemplo: 
     
-    ![Passo 3 do tutorial de início rápido do Azure Information Protection – política predefinida](./media/info-protect-policy-default-labelsv2.png)
+     ![Passo 3 do tutorial de início rápido do Azure Information Protection – política predefinida](./media/info-protect-policy-default-labelsv2.png)
     
 3. Depois das etiquetas, no **configurar definições para apresentar e aplicar-se sobre os usuários finais do Information Protection** seção, também deve ver-se algumas definições de política. Por exemplo, não existe nenhum conjunto de etiqueta predefinida, documentos e e-mails não têm de ter uma etiqueta e os utilizadores não têm de fornecer uma justificação ao alterar as etiquetas:
     

@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8c46dfb6aafa9162be6725202516f8d1fa871cc8
-ms.sourcegitcommit: 60223377a914269c93d73b3522d87b8161ecf854
+ms.openlocfilehash: 53a08a06351e4095e8e5662a4e1bf85f15f77f1d
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53786322"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394326"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guia do administrador: Utilizar o PowerShell com o cliente do Azure Information Protection
 
@@ -77,15 +77,15 @@ Além dos pré-requisitos para instalar o módulo AzureInformationProtection, ex
 1. O Serviço Azure Rights Management tem de ser ativado.
 
 2. Para remover a proteção dos ficheiros para os outros utilizadores que utilizam a conta: 
-    
+
     - A funcionalidade de superutilizador tem de estar ativada para a sua organização e a conta tem de estar configurada para ser um superutilizador do Azure Rights Management.
 
 3. Para proteger ou desproteger ficheiros diretamente sem a interação do utilizador: 
-    
+
     - Crie uma conta do principal de serviço, execute Set-RMSServerAuthentication e considere tornar este principal de serviço um superutilizador do Azure Rights Management.
 
 4. Para regiões fora da América do Norte: 
-    
+
     - Edite o registo de deteção do serviço.
 
 #### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>Pré-requisito 1: O serviço Azure Rights Management tem de ser ativado
@@ -131,7 +131,6 @@ New-MsolServicePrincipal -DisplayName $ServicePrincipalName
 $symmetricKey="<value from the display of the New-MsolServicePrincipal command>"
 $appPrincipalID=(Get-MsolServicePrincipal | Where { $_.DisplayName -eq $ServicePrincipalName }).AppPrincipalId
 Set-RMSServerAuthentication -Key $symmetricKey -AppPrincipalId $appPrincipalID -BposTenantId $bposTenantID
-
 ````
 
 As secções seguintes explicam como obter e especificar estes valores, com mais informações sobre cada um deles manualmente.
@@ -145,29 +144,29 @@ Execute o cmdlet Get-AadrmConfiguration a partir do módulo do Windows PowerShel
 2. Inicie o Windows PowerShell com a opção **Executar como Administrador**.
 
 3. Utilize o cmdlet `Connect-AadrmService` para ligar ao serviço Azure Rights Management:
-    
+
         Connect-AadrmService
-    
+
     Quando lhe for pedido, introduza as suas credenciais de administrador de inquilino do Azure Information Protection. Normalmente, utiliza uma conta que seja um administrador global do Azure Active Directory ou Office 365.
-    
+
 4. Execute `Get-AadrmConfiguration` e faça uma cópia do valor BPOSId.
-    
+
     Um exemplo de saída de Get-AadrmConfiguration:
-    
+
             BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
-        
+
             RightsManagement ServiceId               : 1a302373-f233-440600909-4cdf305e2e76
-        
+
             LicensingIntranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
-        
+
             LicensingExtranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
-        
+
             CertificationIntranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
-        
+
             CertificationExtranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
 
 5. Encerre o serviço:
-    
+
         Disconnect-AadrmService
 
 ##### <a name="to-get-the-appprincipalid-and-symmetric-key"></a>Para obter o AppPrincipalId e a Chave Simétrica
@@ -182,25 +181,25 @@ Crie um novo principal de serviço ao executar o cmdlet `New-MsolServicePrincipa
 2. Inicie o Windows PowerShell com a opção **Executar como Administrador**.
 
 3. Utilize o cmdlet **Connect-MsolService** para ligar ao Azure AD:
-    
+
         Connect-MsolService
-    
+
     Quando lhe for pedido, introduza as suas credenciais de administrador de inquilino do Azure AD (normalmente, utiliza uma conta que seja um administrador global do Azure Active Directory ou Office 365).
 
 4. Execute o cmdlet New-MsolServicePrincipal para criar um novo principal de serviço:
-    
+
         New-MsolServicePrincipal
-    
+
     Quando lhe for pedido, introduza um nome a apresentar à sua escolha para este principal de serviço que o ajuda a identificar o objetivo mais tarde como uma conta para estabelecer ligação ao serviço Azure Rights Management para que possa proteger e desproteger ficheiros.
-    
+
     Um exemplo de saída do New-MsolServicePrincipal:
-    
+
         Supply values for the following parameters:
-        
+
         DisplayName: AzureRMSProtectionServicePrincipal
         The following symmetric key was created as one was not supplied
         zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=
-        
+
         Display Name: AzureRMSProtectionServicePrincipal
         ServicePrincipalNames: (b5e3f7g1-b5c2-4c96-a594-a0807f65bba4)
         ObjectId: 23720996-593c-4122-bfc7-1abb5a0b5109
@@ -248,20 +247,20 @@ Quando utiliza uma conta do principal de serviço para proteger ficheiros e tran
 2. Em cada computador onde irá executar os cmdlets AzureInformationProtection, abra o editor de registo.
 
 3. Navegue para o seguinte caminho: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation`. 
-    
+
     Se não vir a **MSIPC** chave ou **ServiceLocation** da chave, criá-los.
 
 4. Para a chave **ServiceLocation**, crie duas chaves, caso não existam, com o nome **EnterpriseCertification** e **EnterprisePublishing**. 
-    
+
     Para o valor de cadeia de caracteres que é criado automaticamente para essas chaves, não altere o nome de "(predefinição)", mas editar a cadeia de caracteres para definir os dados do valor:
 
-    - Para **EnterpriseCertification**, cole o valor de CertificationExtranetDistributionPointUrl.
-    
-    - Para **EnterpriseCertification**, cole o valor de LicensingExtranetDistributionPointUrl.
-    
-    Por exemplo, sua entrada de registo para EnterpriseCertification deve ter um aspeto semelhante ao seguinte:
-    
-    ![Editar o registo de módulo do PowerShell de proteção de informações do Azure para regiões fora da América do Norte](../media/registry-example-rmsprotection.png)
+   - Para **EnterpriseCertification**, cole o valor de CertificationExtranetDistributionPointUrl.
+
+   - Para **EnterpriseCertification**, cole o valor de LicensingExtranetDistributionPointUrl.
+
+     Por exemplo, sua entrada de registo para EnterpriseCertification deve ter um aspeto semelhante ao seguinte:
+
+     ![Editar o registo de módulo do PowerShell de proteção de informações do Azure para regiões fora da América do Norte](../media/registry-example-rmsprotection.png)
 
 5. Feche o editor de registo. Não é preciso reiniciar o computador. No entanto, se estiver a utilizar uma conta do principal de serviço em vez da sua própria conta de utilizador, terá de executar o comando Set-RMSServerAuthentication depois desta edição do registo.
 
@@ -280,7 +279,7 @@ Quando lhe for pedido, introduza os três identificadores, conforme descrito em 
 Para poder proteger ficheiros, terá de transferir os modelos do Rights Management para o computador e identificar qual utilizar e o número de ID correspondente. A partir da saída, pode copiar o ID do modelo:
 
     Get-RMSTemplate
-    
+
 A saída pode ser semelhante ao seguinte:
 
     TemplateId        : {82bf3474-6efe-4fa1-8827-d1bd93339119}
@@ -289,7 +288,7 @@ A saída pode ser semelhante ao seguinte:
     Name              : Contoso, Ltd - Confidential View Only
     IssuerDisplayName : Contoso, Ltd
     FromTemplate      : True
-    
+
     TemplateId        : {e6ee2481-26b9-45e5-b34a-f744eacd53b0}
     CultureInfo       : en-US
     Description       : This content is proprietary information intended for internal users only. This content can be modified but cannot be copied and printed.
@@ -369,7 +368,7 @@ Além dos pré-requisitos para instalar o módulo AzureInformationProtection, a 
 7. Na caixa de diálogo **Permissões para ServerCertification.asmx**, clique em **Adicionar**. 
 
 8. Adicione o nome da sua conta. Se outros administradores do AD RMS ou contas de serviço também irão utilizar estes cmdlets para proteger e desproteger ficheiros, adicione essas contas também. 
-    
+
     Para proteger ou desproteger ficheiros de forma não interativa, adicione a conta de computador relevantes ou contas. Por exemplo, adicione a conta de computador do computador Windows Server que está configurado para a infraestrutura de classificação de ficheiros e usará um script do PowerShell para proteger ficheiros.
 
 9. Na coluna **Permitir**, confirme que as caixas de verificação **Leitura e Execução**e **Leitura** estão selecionadas.
@@ -406,8 +405,8 @@ A saída pode ser semelhante ao seguinte:
     Name              : Contoso, Ltd - Confidential View Only
     IssuerDisplayName : Contoso, Ltd
     FromTemplate      : True
-    
-    
+
+
     TemplateId        : {e6ee2481-26b9-45e5-b34a-f744eacd53b0}
     CultureInfo       : en-US
     Description       : This content is proprietary information intended for internal users only. This content can be modified but cannot be copied and printed.
@@ -487,37 +486,37 @@ Após ter executado este cmdlet, pode executar os cmdlets de etiquetagem no cont
 2. Para o inquilino do Azure AD que utiliza com o Azure Information Protection, navegue para **Azure Active Directory** > **Registos das aplicações**. 
 
 3. Selecione **Novo registo de aplicação** para criar a aplicação Web/aplicação API. Na etiqueta **Criar**, especifique os seguintes valores e, em seguida, clique em **Criar**:
-    
-    - Nome: **AIPOnBehalfOf**
-    
-    Se preferir, especifique um nome diferente. Tem de ser exclusivo por inquilino.
-    
-    - Tipo de aplicação: **Aplicação Web/API**
-    
-    - URL de início de sessão: **http://localhost**
+
+   - Nome: **AIPOnBehalfOf**
+
+     Se preferir, especifique um nome diferente. Tem de ser exclusivo por inquilino.
+
+   - Tipo de aplicação: **Aplicação Web/API**
+
+   - URL de início de sessão: **http://localhost**
 
 4. Selecione a aplicação que acabou de criar, por exemplo, **AIPOnBehalfOf**. Em seguida, no painel **Definições**, selecione **Propriedades**. No painel **Propriedades**, copie o valor para o **ID da Aplicação** e, em seguida, feche este painel. 
-    
+
     Este valor é utilizado para o parâmetro `WebAppId` quando executa o cmdlet Set-AIPAuthentication. Cole e guarde-o para futura referência.
 
 5. Volta a **definições** painel, selecione **permissões obrigatórias**. Sobre o **permissões obrigatórias** painel, selecione **conceder permissões**, clique em **Sim** para confirmar e, em seguida, feche este painel.
 
 6. Novamente o **configurações** painel mais uma vez, selecione **chaves**. Adicione uma nova chave especificando uma descrição e a sua escolha de duração (1 ano, 2 anos ou nunca expira). Em seguida, selecione **Guardar**e copie a cadeia para o **Valor** que é apresentado. É importante que guarde esta cadeia, uma vez que não é novamente apresentada e não pode obtê-la. Tal como com qualquer chave que utiliza, armazene o valor guardado de forma segura e restrinja o acesso ao mesmo.
-    
+
     Este valor é utilizado para o parâmetro `WebAppKey` quando executa o cmdlet Set-AIPAuthentication.
 
 7. De novo no painel **Registos das aplicações**, selecione **Novo registo de aplicação** para criar a aplicação nativa. Na etiqueta **Criar**, especifique os seguintes valores e, em seguida, clique em **Criar**:
-    
-    - Nome: **AIPClient**
-    
-    Se preferir, especifique um nome diferente. Tem de ser exclusivo por inquilino.
-    
-    - Tipo de aplicação: **Nativo**
-    
-    - URL de início de sessão: **http://localhost**
+
+   - Nome: **AIPClient**
+
+     Se preferir, especifique um nome diferente. Tem de ser exclusivo por inquilino.
+
+   - Tipo de aplicação: **Native**
+
+   - URL de início de sessão: **http://localhost**
 
 8. Selecione a aplicação que acabou de criar, por exemplo, **AIPClient**. Em seguida, no painel **Definições**, selecione **Propriedades**. No painel **Propriedades**, copie o valor para o **ID da Aplicação** e, em seguida, feche este painel.
-    
+
     Este valor é utilizado para o parâmetro `NativeAppId` quando executa o cmdlet Set-AIPAuthentication. Cole e guarde-o para futura referência.
 
 9. No painel **Definições**, selecione **Permissões obrigatórias**. 
@@ -527,7 +526,7 @@ Após ter executado este cmdlet, pode executar os cmdlets de etiquetagem no cont
 11. No painel **Ativar Acesso**, selecione **AIPOnBehalfOf**, clique em **Selecionar**e, de seguida, em **Concluído**.
 
 12. Volta a **permissões obrigatórias** painel, selecione **conceder permissões**, clique em **Sim** para confirmar e, em seguida, feche este painel.
-    
+
 
 Concluiu agora a configuração das duas aplicações e tem os valores que precisa executar [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) com os parâmetros *WebAppId*, *WebAppKey* e *NativeAppId*. Por exemplo:
 
@@ -558,21 +557,21 @@ Passos de alto nível:
 1. No seu computador, crie um novo script de PowerShell chamado Aipauthentication.ps1.
 
 2. Copie e cole o seguinte comando para este script:
-    
+
          Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application> -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application > -Token <token value>
 
 3. Com as instruções na secção anterior, modifique este comando, especificando os seus próprios valores para o **WebAppId**, **WebAppkey**, e **NativeAppId** parâmetros. Neste momento, não tem o valor para o **Token** parâmetro, que pode especificar mais tarde. 
-    
+
     Por exemplo: `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>`
-    
+
 #### <a name="step-2-run-set-aipauthentication-to-get-an-access-token-and-copy-it-to-the-clipboard"></a>Passo 2: Execute Set-AIPAuthentication para obter um acesso de token e copie-o para a área de transferência
 
 1. Abra uma sessão do Windows PowerShell.
 
 2. Utilizar os mesmos valores especificados no script, execute o seguinte comando:
-    
+
         (Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application >).token | clip
-    
+
     Por exemplo: `(Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
 
 #### <a name="step-3-modify-the-powershell-script-to-supply-the-token"></a>Passo 3: Modificar o script do PowerShell para fornecer o token
@@ -580,7 +579,7 @@ Passos de alto nível:
 1. No seu script de PowerShell, especifique o valor do token ao colar a cadeia de caracteres da área de transferência e guarde o ficheiro.
 
 2. Assine o script. Se não assinar o script (mais seguro), tem de configurar o Windows PowerShell no computador que irá executar os comandos de etiquetas. Por exemplo, executar uma sessão do Windows PowerShell com o **executar como administrador** opção e tipo: `Set-ExecutionPolicy RemoteSigned`. No entanto, esta configuração permite que scripts tudo não assinados executados quando eles são armazenados neste computador (menos seguro).
-    
+
     Para obter mais informações sobre como assinar os scripts do Windows PowerShell, veja [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) na biblioteca de documentação do PowerShell.
 
 3. Copie este script do PowerShell para o computador que irá Etiquetar e proteger ficheiros e eliminar o original no seu computador. Por exemplo, copie o script do PowerShell para C:\Scripts\Aipauthentication.ps1 num computador Windows Server.
@@ -590,12 +589,12 @@ Passos de alto nível:
 1. Certifique-se de que a conta de serviço que será Etiquetar e proteger ficheiros tem o **iniciar sessão como uma tarefa do batch** certo.
 
 2. No computador que irá identificar e proteger ficheiros, abra o agendador de tarefas e criar uma nova tarefa. Configure esta tarefa para ser executado como conta de serviço que será Etiquetar e proteger ficheiros e, em seguida, configure os seguintes valores para o **ações**:
-    
-    - **Ação**: `Start a program`
-    - **Programa/script**: `Powershell.exe`
-    - **Adicione argumentos (opcional)**: `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
-    
-    Para a linha de argumento, especifique o seu próprio nome de ficheiro e caminho, se estes são diferentes do exemplo.
+
+   - **Ação**: `Start a program`
+   - **Programa/script**: `Powershell.exe`
+   - **Adicione argumentos (opcional)**: `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
+
+     Para a linha de argumento, especifique o seu próprio nome de ficheiro e caminho, se estes são diferentes do exemplo.
 
 3. Executar manualmente esta tarefa.
 
@@ -604,7 +603,7 @@ Passos de alto nível:
 1. Confirme que o token agora é armazenado na pasta %localappdata%\Microsoft\MSIP para o perfil de conta de serviço. Este valor está protegido pela conta de serviço.
 
 2. Elimine o script do PowerShell que contém o valor do token (por exemplo, Aipauthentication.ps1).
-    
+
     Opcionalmente, elimine a tarefa. Se o token expirar, terá de repetir este processo, nesse caso, poderá ser mais conveniente deixar a tarefa configurada para que fique pronto para voltar a executar quando copia sobre o novo PowerShell script com o novo valor de token.
 
 ## <a name="next-steps"></a>Passos Seguintes

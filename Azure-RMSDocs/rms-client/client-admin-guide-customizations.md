@@ -4,18 +4,18 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/04/2019
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b16dee0a922ce6f3195d192021edbf4966223e30
-ms.sourcegitcommit: 17d2528e801ebf37f3d6f54db920588ef212d34d
+ms.openlocfilehash: 9386889c41706e0603c5e758be09b0d2baafc7e8
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53996949"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394372"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas do cliente do Azure Information Protection
 
@@ -175,6 +175,7 @@ Ao exportar a política do portal do Azure, será transferido um arquivo zipado 
     
 2. Mudar o nome do ficheiro identificado para **msip**e, em seguida, copie-o para o **%LocalAppData%\Microsoft\MSIP** pasta em computadores que tenham o cliente do Azure Information Protection instalado. 
 
+Se o computador desconectado estiver a executar a versão de pré-visualização do scanner do Azure Information Protection, existem passos de configuração adicionais que deve efetuar. Para obter mais informações, consulte [restrição: O servidor de scanner não pode ter conectividade à Internet](../deploy-aip-scanner-preview.md#restriction-the-scanner-server-cannot-have-internet-connectivity) das instruções de implementação do scanner.
 
 ## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Ocultar ou mostrar o botão não reencaminhar no Outlook
 
@@ -269,15 +270,15 @@ Valores de exemplo para obter um ID de etiqueta de **dcf781ba-727f-4860-b3c1-734
 
 - Para aplicar uma assinatura digital e a encriptação S/MIME:
     
-    **dcf781ba-727f-4860-b3c1-73479e31912b; Início de sessão; Encriptar**
+    **dcf781ba-727f-4860-b3c1-73479e31912b;Sign;Encrypt**
 
 - Para aplicar apenas a encriptação S/MIME:
     
-    **dcf781ba-727f-4860-b3c1-73479e31912b; Encriptar**
+    **dcf781ba-727f-4860-b3c1-73479e31912b;Encrypt**
     
 - Para aplicar uma assinatura digital apenas:
     
-    **dcf781ba-727f-4860-b3c1-73479e31912b; Início de sessão**
+    **dcf781ba-727f-4860-b3c1-73479e31912b;Sign**
 
 Como resultado nesta configuração, quando a etiqueta é aplicada para uma mensagem de e-mail, a proteção de S/MIME é aplicada à mensagem de e-mail, além de classificação da etiqueta.
 
@@ -351,11 +352,11 @@ Utilizar comandos do PowerShell para converter os arquivos existentes. ppdf para
 
 2. A partir da saída, tome nota dos seguintes valores de parâmetro:
     
-    - O valor (GUID) para **SubLabelId**, se existir um. Se este valor está em branco, uma subetiqueta não foi usada, por isso, tenha em atenção o valor para **MainLabelId** em vez disso.
+   - O valor (GUID) para **SubLabelId**, se existir um. Se este valor está em branco, uma subetiqueta não foi usada, por isso, tenha em atenção o valor para **MainLabelId** em vez disso.
     
-    Nota: Se não houver nenhum valor para **MainLabelId** pode ser, o ficheiro não é identificado. Neste caso, pode utilizar o [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) comando e [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) comando em vez dos comandos no passo 3 e 4.
+     Nota: Se não houver nenhum valor para **MainLabelId** pode ser, o ficheiro não é identificado. Neste caso, pode utilizar o [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) comando e [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) comando em vez dos comandos no passo 3 e 4.
     
-    - O valor para **RMSTemplateId**. Se este valor é **acesso restrito**, um utilizador protegeu o ficheiro com permissões personalizadas, em vez das definições de proteção que estão configuradas para a etiqueta. Se continuar, essas permissões personalizadas serão substituídas por definições de proteção da etiqueta. Decida se pretende continuar ou pedir ao utilizador (valor apresentado para o **RMSIssuer**) remover a etiqueta e voltar a aplicar, juntamente com as respetivas permissões personalizadas originais.
+   - O valor para **RMSTemplateId**. Se este valor é **acesso restrito**, um utilizador protegeu o ficheiro com permissões personalizadas, em vez das definições de proteção que estão configuradas para a etiqueta. Se continuar, essas permissões personalizadas serão substituídas por definições de proteção da etiqueta. Decida se pretende continuar ou pedir ao utilizador (valor apresentado para o **RMSIssuer**) remover a etiqueta e voltar a aplicar, juntamente com as respetivas permissões personalizadas originais.
 
 3. Remover a etiqueta através de [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) com o *RemoveLabel* parâmetro. Se estiver a utilizar o [definição de política](../configure-policy-settings.md) dos **os utilizadores têm de fornecer justificação para definir uma etiqueta de classificação inferior, remover uma etiqueta ou remover a proteção**, também tem de especificar o  *Justificação* parâmetro com o motivo. Por exemplo: 
     
@@ -629,7 +630,7 @@ Para obter esta solução:
 
      Para o cabeçalho da mensagem, encontra as informações a especificar ao inspecionar os cabeçalhos de Internet do e-mail que enviou e classificou com a etiqueta do Azure Information Protection. Procure o cabeçalho **msip_labels** e a cadeia que imediatamente a seguir, até ao ponto e vírgula, inclusive. Por exemplo:
     
-    **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled = True;**
+    **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
     
     Em seguida, para o cabeçalho da mensagem na regra, especifique **msip_labels** para o cabeçalho e a parte restante da cadeia para o valor do cabeçalho. Por exemplo:
     

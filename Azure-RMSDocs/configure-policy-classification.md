@@ -4,16 +4,16 @@ description: Condições de uma etiqueta permitem-lhe atribuir automaticamente u
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: adf877a3f5f08d0adefd1cbe8864a0c0c2bb17b1
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: da76767b7538706f596653b77f3f29f8717e1442
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023860"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314803"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Como configurar as condições para classificação automática e recomendada para o Azure Information Protection
 
@@ -50,7 +50,7 @@ Pode alterar este comportamento para que o cliente do Azure Information Protecti
 
 ### <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>Como várias condições são avaliadas quando estas são aplicadas a mais do que uma etiqueta
 
-1. As etiquetas são ordenadas para avaliação de acordo com a respetiva posição que especificou na política: a etiqueta posicionada em primeiro tem a posição mais baixa (menos confidencial) e a etiqueta posicionada em último tem a posição mais elevada (mais confidencial).
+1. As etiquetas são ordenadas para avaliação, de acordo com a respetiva posição que especificou na política: A etiqueta posicionada em primeiro lugar tem a posição mais baixa (menos confidencial) e a etiqueta posicionada em último tem a posição mais elevada (mais confidencial).
 
 2. A etiqueta mais confidencial é aplicada.
  
@@ -63,12 +63,12 @@ Pode alterar este comportamento para que o cliente do Azure Information Protecti
     
     Por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
 
-2. Do **classificações** > **etiquetas** opção de menu: no **do Azure Information Protection – etiquetas** painel, selecione a etiqueta a configurar.
+2. Do **classificações** > **etiquetas** opção de menu: Sobre o **do Azure Information Protection – etiquetas** painel, selecione a etiqueta para configurar.
 
 3. No painel **Etiqueta**, na secção **Configurar condições para aplicar esta etiqueta automaticamente**, clique em **Adicionar uma nova condição**.
 
 4. Na **condição** painel, selecione **tipos de informação** se pretender utilizar uma condição predefinida, ou **personalizado** se pretender especificar seus próprios:
-    - Para **tipos de informações**: selecione na lista de condições disponíveis e, em seguida, selecione o número mínimo de ocorrências e se a ocorrência deve ter um valor único a ser incluído na contagem de ocorrências.
+    - Para **tipos de informações**: Selecione na lista de condições disponíveis e, em seguida, selecione o número mínimo de ocorrências e se a ocorrência deve ter um valor único a ser incluído na contagem de ocorrências.
         
         Os tipos de informações utilizam os tipos de informações de sensibilidade perda prevenção (DLP) do Office 365 dados e a deteção de padrão. Pode escolher entre vários tipos comuns de informações confidenciais, algumas das quais são específicas para diferentes regiões. Para obter mais informações, consulte [o que procurar os tipos de informações confidenciais](/office365/securitycompliance/what-the-sensitive-information-types-look-for) na documentação do Office 365.
         
@@ -79,19 +79,19 @@ Pode alterar este comportamento para que o cliente do Azure Information Protecti
         
         Quando o Azure Information Protection avalia os tipos de informações que selecionar, ele não utiliza a definição de nível de confiança de DLP do Office, mas coincide de acordo com a confiança de mais baixa.
     
-    - Para **Personalizada**: especifique um nome e uma expressão correspondente, que tem de excluir aspas e carateres especiais. Em seguida, especifique se para fazer corresponder como uma expressão regular, utilize maiúsculas e minúsculas e o número mínimo de ocorrências e se a ocorrência deve ter um valor único a ser incluído na ocorrência contagem.
+    - Para **personalizado**: Especifique um nome e uma expressão correspondente, que tem de excluir aspas e carateres especiais. Em seguida, especifique se para fazer corresponder como uma expressão regular, utilize maiúsculas e minúsculas e o número mínimo de ocorrências e se a ocorrência deve ter um valor único a ser incluído na ocorrência contagem.
         
         As expressões regulares, use os padrões de regex do Office 365. Para ajudar a especificar expressões regulares para suas condições personalizadas, consulte a seguinte versão específica do [sintaxe de expressão Regular do Perl](https://www.boost.org/doc/libs/1_37_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) de aumento.
         
 5. Decida se é preciso alterar a **número mínimo de ocorrências** e o **contagem de ocorrências com apenas o valor exclusivo**e, em seguida, selecione **guardar**. 
     
-    Exemplo das opções de ocorrências: selecionar o tipo de informações para o número da Previdência social, o número mínimo de ocorrências como 2 e um documento do conjunto tem o mesmo número de segurança social listado duas vezes: Se definir o **contagem de ocorrências com apenas o valor exclusivo** para **no**, a condição não for cumprida. Se definir esta opção como **desativar**, a condição é cumprida.
+    Exemplo das opções de ocorrências: Selecionar o tipo de informações para o número da Previdência social, o número mínimo de ocorrências como 2 e um documento do conjunto tem o mesmo número de segurança social listado duas vezes: Se definir o **Contar ocorrências com apenas o valor exclusivo** ao **no**, a condição não for cumprida. Se definir esta opção como **desativar**, a condição é cumprida.
 
 6. Novamente o **rótulo** painel, configure o seguinte e, em seguida, clique em **guardar**:
     
-    - Escolha a classificação automática ou recomendada: para **Selecionar a forma como esta etiqueta é aplicada: automaticamente ou recomendada para o utilizador**, selecione **Automática** ou **Recomendada**.
+    - Escolha a classificação automática ou recomendada: Para **selecione a forma como esta etiqueta é aplicada: automaticamente ou recomendada para o usuário**, selecione **automática** ou **recomendado**.
     
-    - Especifique o texto do aviso ao utilizador ou da sugestão de política: mantenha o texto predefinido ou especifique uma cadeia própria.
+    - Especifique o texto para a sugestão de linha de comandos ou a política de utilizador: Mantenha o texto predefinido ou especifique sua própria cadeia de caracteres.
 
 Quando clica em **guardar**, as suas alterações estão automaticamente disponíveis para utilizadores e serviços. Já não existe uma opção de publicar separado.
 
@@ -99,11 +99,9 @@ Quando clica em **guardar**, as suas alterações estão automaticamente dispon�
 
 Os seguintes tipos de informações confidenciais requerem a versão mínima do 1.37.19.0 para o cliente do Azure Information Protection:
 
-- **Número de telefone da UE**
 - **Número de telefone celular da UE**
 - **Número de Passport da UE**
 - **Número de licença do controlador da UE**
-- **Coordenadas do GPS da UE**
 - **Número de identificação do National da UE**
 - **Número da Previdência Social (SSN) da UE, ou equivalente ID**
 - **Número de identificação de imposto da UE (TIN)**
@@ -111,6 +109,24 @@ Os seguintes tipos de informações confidenciais requerem a versão mínima do 
 - **Número de identificação nacional turco**
 - **Número de cartão de residência japonês**
 
+
+Os seguintes tipos de informações confidenciais requerem a versão de pré-visualização atual do cliente do Azure Information Protection:
+
+- **Cadeia de ligação do Azure Service Bus**
+- **Cadeia de ligação do IoT do Azure**
+- **Conta de armazenamento do Azure**
+- **Cadeia de ligação de base de dados IAAS do Azure e a cadeia de ligação de SQL do Azure**
+- **Cadeia de ligação de Cache de Redis do Azure**
+- **Azure SAS**
+- **Cadeia de ligação do SQL Server**
+- **Chave de autenticação do Azure DocumentDB**
+- **A definição de palavra-passe de publicação do Azure**
+- **Chave de conta de armazenamento do Azure (genérico)**
+
+Além disso, os seguintes tipos de informações confidenciais não são suportados para a versão de pré-visualização atual do cliente Azure Information Protection e já não apresentar no portal do Azure:
+
+- **Número de telefone da UE**
+- **Coordenadas do GPS da UE**
 
 ## <a name="next-steps"></a>Passos Seguintes
 

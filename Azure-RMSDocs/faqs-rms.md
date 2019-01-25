@@ -11,12 +11,12 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f6c4bd30c09ff54eab6da4bb63130a16373faebc
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: ac079a7046b6166b89c828054ed5f94e756fa99f
+ms.sourcegitcommit: 8bda26b8b84cb8b66ae8f927906710d60c4b6a80
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53174017"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397985"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Perguntas mais frequentes sobre a proteção de dados no Azure Information Protection
 
@@ -134,7 +134,7 @@ Quando utiliza o Exchange Online e o serviço Azure Rights Management, apenas en
 
 O destinatário verá uma opção para iniciar sessão na sua conta Gmail, Yahoo ou Microsoft e, em seguida, podem ler a mensagem de e-mail protegida. Em alternativa, podem escolher a opção para um código de acesso único ler o e-mail num browser.
 
-Para suportar este cenário, Exchange Online tem de estar ativada para o serviço Azure Rights Management e os novos recursos na encriptação de mensagens do Office 365. Para obter mais informações sobre esta configuração, consulte [Exchange Online: Configuração de IRM](configure-office365.md#exchange-online-irm-configuration).
+Para suportar este cenário, Exchange Online tem de estar ativada para o serviço Azure Rights Management e os novos recursos na encriptação de mensagens do Office 365. Para obter mais informações sobre esta configuração, consulte [Exchange Online: Configuração de IRM](configure-office365.md#exchangeonline-irm-configuration).
 
 Para obter mais informações sobre os novos recursos que incluem o suporte a todas as contas de e-mail em todos os dispositivos, consulte a seguinte mensagem de blogue: [Apresentamos novas funcionalidades disponíveis na encriptação de mensagens do Office 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
@@ -172,7 +172,7 @@ Se estiver interessado numa funcionalidade específica que ainda não é suporta
 ## <a name="how-do-i-configure-one-drive-for-business-in-sharepoint-online-so-that-users-can-safely-share-their-files-with-people-inside-and-outside-the-company"></a>Como posso configurar o OneDrive para Empresas no SharePoint Online, para que os utilizadores possam partilhar os seus ficheiros de forma segura com pessoas dentro e fora da empresa?
 Por predefinição, enquanto administrador do Office 365, não lhe cabe a si configurar isto, mas sim aos utilizadores.
 
-Tal como um administrador do site do SharePoint ativa e configura a IRM para uma biblioteca do SharePoint que possui, o OneDrive para Empresas é concebido para os utilizadores ativarem e configurarem a IRM para as suas próprias bibliotecas do OneDrive para Empresas. No entanto, com o PowerShell, pode fazê-lo pelos utilizadores. Para obter instruções, consulte o [SharePoint Online e OneDrive para empresas: Configuração de IRM](configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) secção o [do Office 365: Configuração para clientes e serviços online](configure-office365.md) artigo.
+Tal como um administrador do site do SharePoint ativa e configura a IRM para uma biblioteca do SharePoint que possui, o OneDrive para Empresas é concebido para os utilizadores ativarem e configurarem a IRM para as suas próprias bibliotecas do OneDrive para Empresas. No entanto, com o PowerShell, pode fazê-lo pelos utilizadores. Para obter instruções, consulte o [SharePoint Online e OneDrive para empresas: Configuração de IRM](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration) secção o [do Office 365: Configuração para clientes e serviços online](configure-office365.md) artigo.
 
 ## <a name="do-you-have-any-tips-or-tricks-for-a-successful-deployment"></a>Tem sugestões ou truques para uma implementação com êxito?
 

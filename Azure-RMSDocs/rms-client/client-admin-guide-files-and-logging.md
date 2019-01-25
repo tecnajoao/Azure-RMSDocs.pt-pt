@@ -4,18 +4,18 @@ description: Informações sobre o registo de utilização e ficheiros do client
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/23/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2aa0e470d9a2801b695c6b2c9d922836c010690c
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 94806aa46721c1f6b117f910d111dd7ca3fc0366
+ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53304915"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898754"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guia do administrador: Registo de utilização do cliente e de ficheiros do cliente do Azure Information Protection
 
@@ -84,7 +84,7 @@ O cliente regista a atividade do utilizador para o registo de eventos do Windows
 - Justificação do utilizador (quando aplicável)
 
 - Permissões personalizadas (quando aplicável) que inclui a [direitos de utilização pelo respetivo nome de codificação](../configure-usage-rights.md#usage-rights-and-descriptions) para os utilizadores especificados, grupos ou organizações
-    
+
 Para obter informações sobre o registo de utilização para o serviço de proteção, consulte [registar e analisar a utilização do serviço Azure Rights Management](../log-analyze-usage.md)
 
 ## <a name="next-steps"></a>Passos Seguintes

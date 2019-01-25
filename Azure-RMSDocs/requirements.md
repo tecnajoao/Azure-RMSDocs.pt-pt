@@ -4,18 +4,18 @@ description: Identifique os pré-requisitos para implementar o Azure Information
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/04/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4ef35134a8f5d6a3a8a615be6c956ec5e445557d
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 66ebb49b3b161a63c80968104e681fad74bbef42
+ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173745"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898771"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisitos para o Azure Information Protection
 
@@ -36,9 +36,9 @@ Para certificar-se de que a subscrição da sua organização inclui as funciona
 >
 > [Descrição de serviço Online do Exchange](https://technet.microsoft.com/library/exchange-online-service-description.aspx)
 >
-> [Office 365 educação](https://technet.microsoft.com/library/mt844095.aspx)
+> [Office 365 Education](https://technet.microsoft.com/library/mt844095.aspx)
 >
-> [Office 365 administração pública dos EUA](https://technet.microsoft.com/library/mt774581.aspx)
+> [Office 365 US Government](https://technet.microsoft.com/library/mt774581.aspx)
 
 Se tiver dúvidas sobre subscrições ou licenciamento, não as publique nesta página. em alternativa, entre em contacto com o seu Gestor de Conta Microsoft ou com o [Suporte da Microsoft](information-support.md#to-contact-microsoft-support).
 
@@ -90,9 +90,9 @@ Tem do cliente do Azure Information Protection [pré-requisitos adicionais](./rm
 
 O cliente do Azure Information Protection pode etiquetar e proteger documentos e e-mails ao utilizar as aplicações **Word**, **Excel**, **PowerPoint** e **Outlook** a partir de qualquer uma das seguintes edições do Office:
 
-- Office 365 com aplicações do Office 2016 (versão mínima 1805, build 9330.2078) quando o utilizador tem atribuída uma licença do Azure Rights Management (também conhecido como Azure Information Protection para o Office 365)
+- Office 365 com aplicações do Office do Office 365 empresas ou do Microsoft 365 empresas quando o utilizador tem atribuída uma licença do Azure Rights Management (também conhecido como Azure Information Protection para o Office 365)
 
-- Office 365 ProPlus com aplicações da versão de 2016 ou 2013 (instalação com tecnologia Clique-e-Use ou baseada no Windows Installer)
+- Office 365 ProPlus
 
 - Office Professional Plus 2016
 

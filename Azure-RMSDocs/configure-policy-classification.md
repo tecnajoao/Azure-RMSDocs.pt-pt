@@ -8,12 +8,12 @@ ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: da76767b7538706f596653b77f3f29f8717e1442
-ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
+ms.openlocfilehash: b9cc4267ec4dd3ebaa24b23d996fde61f9b09799
+ms.sourcegitcommit: 719e3c758e414c5c95dea03cd78d7427af4ee8e7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314803"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54443846"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Como configurar as condições para classificação automática e recomendada para o Azure Information Protection
 
@@ -29,7 +29,9 @@ Um exemplo de aviso para quando configura uma condição para aplicar uma etique
 
 ![Deteção e recomendação do Azure Information Protection](./media/info-protect-recommend-calloutsv2.png)
 
-Neste exemplo, o utilizador pode clicar **alterar agora** para aplicar a etiqueta recomendada ou ignorar a recomendação selecionando **dispensar**. Se o utilizador optar por ignorar a recomendação e a condição ainda se aplica quando o documento é aberto em seguida, a recomendação de etiqueta é apresentada novamente. 
+Neste exemplo, o utilizador pode clicar **alterar agora** para aplicar a etiqueta recomendada ou ignorar a recomendação selecionando **dispensar**. Se o utilizador optar por ignorar a recomendação e a condição ainda se aplica quando o documento é aberto em seguida, a recomendação de etiqueta é apresentada novamente.
+
+Se configurar a classificação automática em vez de recomendado, a etiqueta é aplicada automaticamente e o utilizador ainda verá uma notificação em seus aplicativos do Office. No entanto, o **alterar agora** e **dispensar** botões são substitua **OK**.
 
 > [!IMPORTANT]
 >Não configure uma etiqueta para a classificação automática e uma permissão definida pelo utilizador. A opção de permissões definidas pelo utilizador é um [definição de proteção](configure-policy-protection.md) que permita aos utilizadores especificar que deve ser concedido permissões.

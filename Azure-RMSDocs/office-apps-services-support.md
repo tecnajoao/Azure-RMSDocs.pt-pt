@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e1a44fb7cf6e4ad340a89f236920e5ff6d96b7d0
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: e05ade72a2dcd81eadd21fc4185b0845660a26eb
+ms.sourcegitcommit: 8bda26b8b84cb8b66ae8f927906710d60c4b6a80
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53174000"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397900"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Como aplicativos do Office e serviços suportam o Azure Rights Management 
 
@@ -59,7 +59,7 @@ Para obter mais informações sobre o e-mail de opções que pode utilizar para 
 
 Se estiver pronto para configurar o Exchange para proteger mensagens de correio eletrónico:
 
-- Para o Exchange Online, consulte [Exchange Online: Configuração de IRM](configure-office365.md#exchange-online-irm-configuration).
+- Para o Exchange Online, consulte [Exchange Online: Configuração de IRM](configure-office365.md#exchangeonline-irm-configuration).
 
 - Para o Exchange no local, veja [Implementar o conector Azure Rights Management](deploy-rms-connector.md).
 
@@ -95,7 +95,7 @@ Apesar de já não é novo, a seguinte publicação do blogue do Office 365 tem 
 
 Se estiver pronto para configurar o SharePoint para a IRM:
 
-- Para o SharePoint Online, consulte [SharePoint Online e OneDrive para empresas: Configuração de IRM](configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration).
+- Para o SharePoint Online, consulte [SharePoint Online e OneDrive para empresas: Configuração de IRM](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration).
 
 - Para o SharePoint Server, veja [Implementar o conector Azure Rights Management](deploy-rms-connector.md).
 

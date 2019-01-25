@@ -4,18 +4,18 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2019
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 9386889c41706e0603c5e758be09b0d2baafc7e8
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 71ef2607355cbe84003aaf9fc77dfa5d9a72beff
+ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54394372"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898856"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas do cliente do Azure Information Protection
 
@@ -51,6 +51,7 @@ Algumas destas definições requerem a edição do registo e algumas utilizam de
 |EnablePDFv2Protection|[Não proteger ficheiros PDF com a norma ISO para a encriptação de PDF](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
 |LabelbyCustomProperty|[Migrar as etiquetas de Secure Islands e outras soluções de etiquetas](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[Configurar uma etiqueta para aplicar a proteção de S/MIME no Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
+|LogLevel|[Alterar o nível de registo de local](#change-the-local-logging-level)
 |OutlookDefaultLabel|[Definir uma etiqueta predefinida diferente para o Outlook](#set-a-different-default-label-for-outlook)|
 |OutlookRecommendationEnabled|[Ativar a classificação recomendada no Outlook](#enable-recommended-classification-in-outlook)|
 |PostponeMandatoryBeforeSave|[Remova "Agora não" para os documentos quando utiliza a etiquetagem obrigatório](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
@@ -603,7 +604,7 @@ Agora, quando um utilizador abre e salva um desses documentos do Office, ele tem
 
 ## <a name="disable-the-low-integrity-level-for-the-scanner"></a>Desativar o nível de baixa integridade para a deteção de impressão
 
-Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. 
+Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure.
 
 Por predefinição, o scanner do Azure Information Protection é executado com um nível de baixa integridade. Esta definição proporciona maior isolamento de segurança, mas ao custo de desempenho. Um nível de baixa integridade é adequado se executar a deteção de impressão com uma conta que tem direitos (por exemplo, uma conta de administrador local) privilegiado porque esta definição ajuda a proteger o computador que executa a deteção de impressão.
 
@@ -617,6 +618,32 @@ Para configurar as definições avançadas para que o scanner é executado com u
 
 - Valor: **FALSO**
 
+
+## <a name="change-the-local-logging-level"></a>Alterar o nível de registo de local
+
+Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure.
+
+Por predefinição, o cliente do Azure Information Protection escreve cliente ficheiros de registo do **%localappdata%\Microsoft\MSIP** pasta. Estes ficheiros destinam-se para a resolução de problemas Support da Microsoft.
+ 
+Para alterar o nível de registo para esses ficheiros, configure o seguinte avançada de definição de cliente:
+
+- Chave: **LogLevel**
+
+- Valor:  **\<nível de registo >**
+
+Defina o nível de registo para um dos seguintes valores:
+
+- **Off**: Nenhum registo local.
+
+- **Erro**: Apenas erros.
+
+- **Informações de**: Registo mínimo, que inclui não existem IDs de eventos.
+
+- **Depurar**: Obter informações completas (a predefinição).
+
+- **Rastreio**: Registo muito detalhado, que tem um impacto no desempenho e deve ser ativado apenas se for solicitado pelo Support da Microsoft. Se é instruído para definir esse nível de registo, não se esqueça de definir um valor diferente de quando os registos relevantes tiverem sido recolhidos.
+
+Esta definição de cliente avançada não altera as informações que são enviadas para o Azure Information Protection para [central reporting](../reports-aip.md), ou alterar as informações que são gravadas para local [registo de eventos](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).
 
 ## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Integração com a classificação de mensagem do Exchange para uma solução de etiquetagem do dispositivo móvel
 

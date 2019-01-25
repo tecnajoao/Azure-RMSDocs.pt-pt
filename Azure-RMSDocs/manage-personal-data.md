@@ -4,18 +4,18 @@ description: Informações sobre os dados pessoais que são utilizados pelo Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/23/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: 4e44796d3bd2fdf1fd2f0c39cc759f16d87267a1
-ms.sourcegitcommit: db60fe8f74ffaa4f6ffbf5defb22efc476c28312
+ms.openlocfilehash: 08ae5875437a1e443247a5a57b1bb621b6627ce3
+ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53319419"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898788"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gerir dados pessoais para o Azure Information Protection
 
@@ -196,6 +196,12 @@ Quando as etiquetas e proteção são aplicadas a documentos e e-mails, endereç
 Além disso, o cliente do Azure Information Protection regista a estes dados pessoais para o registo de eventos do Windows local **Applications and Services Logs** > **do Azure Information Protection**.
 
 Quando o cliente do Azure Information Protection é executado o scanner, os dados pessoais é salvo em %localappdata%\Microsoft\MSIP\Scanner\Reports no computador Windows Server que executa a deteção de impressão.
+
+Pode desativar o registo de informações para o cliente do Azure Information Protection e o scanner, utilizando as seguintes configurações:
+
+- Para o cliente do Azure Information Protection: Criar uma [definição de cliente avançado](./rms-client/client-admin-guide-customizations.md#change-the-local-logging-level) que configura o **LogLevel** para **desativar**.
+
+- Para o scanner do Azure Information Protection: Utilize o [AIPScannerConfiguration conjunto](/azureinformationprotection/set-aipscannerconfiguration) cmdlet para definir o *ReportLevel* parâmetro **desativar**.
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-hybrid-note.md)]
 

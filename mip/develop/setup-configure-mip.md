@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/08/2019
 ms.author: bryanla
-ms.openlocfilehash: 2f84cfd8a0ae15a66cd624fe591f2891ff549768
-ms.sourcegitcommit: adc4621ec4738c0abb6c1fa81a6598a6dfc5ace6
+ms.openlocfilehash: 21fdf98495fbf64cfae413c70205beaeffa7fe3b
+ms.sourcegitcommit: 0fad4196f397fa32c60e6d24791fcad43689c4ba
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136241"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55088127"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Instalação do SDK de proteção de informações da Microsoft (MIP) e configuração 
 
@@ -19,7 +19,7 @@ O guia de introdução e tutoriais são centradas em torno da criação de aplic
 
 O SDK de MIP é suportado nas seguintes plataformas:  
 
-[!INCLUDE [MIP SDK platform support](../include/mip-sdk-platform-support.md)]
+[!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -132,8 +132,8 @@ Em seguida, conclua os seguintes passos para garantir que seu computador cliente
    - No **variáveis de ambiente** caixa de diálogo, clique no **caminho** variável linha sob **variáveis de utilizador para \<utilizador\>**, em seguida, clique em **Editar...** .
    - Sobre o **variável de ambiente de edição** caixa de diálogo, clique em **New**, que cria uma nova linha editável. Usando o caminho completo para cada um a `file\bins\debug\amd64`, `protection\bins\debug\amd64`, e `upe\bins\debug\amd64` subdiretórios, adicionar uma nova linha para cada um. Os diretórios SDK são armazenados num `<API>\bins\<target>\<platform>` formato, em que:
      - \<API\> = `file`, `protection`, `upe`
-     - \<destino\> = `debug`, `release`
-     - \<plataforma\>  =  `amd64` (também conhecido como: x64), `x86`, etc.
+     - \<target\> = `debug`, `release`
+     - \<platform\> = `amd64` (aka: x64), `x86`, etc.
    
    - Quando a atualização foi concluída a **caminho** variável, clique **OK**. Em seguida, clique em **OK** quando devolvido para o **variáveis de ambiente** caixa de diálogo.
 

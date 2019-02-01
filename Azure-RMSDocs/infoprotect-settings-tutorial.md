@@ -4,15 +4,15 @@ description: Um tutorial de introdução orienta-o através da configuração da
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 01/24/2019
 ms.topic: tutorial
 ms.service: information-protection
-ms.openlocfilehash: 0341ba1b232551f89e1ee43f77a3425b8c6e8ffb
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 324f13a61d287fd883e9336c6e17250e9ab9ff9f
+ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024370"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55231026"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutorial: Configurar definições de política do Azure Information Protection que funcionam em conjunto
 
@@ -41,7 +41,7 @@ Para concluir este tutorial, precisa de:
 
 2. Adicionei o painel do Azure Information Protection para o portal do Azure e confirmar que o serviço de proteção está ativado.
 
-    Se precisar de ajuda com estas ações, consulte o artigo [início rápido: adicionar o Azure Information Protection para o portal do Azure e ver a política](quickstart-viewpolicy.md)
+    Se precisar de ajuda com estas ações, consulte o artigo [início rápido: Adicionar o Azure Information Protection para o portal do Azure e ver a política](quickstart-viewpolicy.md)
 
 3. O cliente do Azure Information Protection está instalado no seu computador. 
     
@@ -49,9 +49,11 @@ Para concluir este tutorial, precisa de:
 
 4. Um computador com Windows (no mínimo do Windows 7 com Service Pack 1), e neste computador, tem sessão iniciada para aplicações do Office de uma das seguintes categorias:
     
-    - Office 365 com as aplicações do Office 2016 (versão mínima 1805, compilação 9330.2078). Para utilizar esta opção, a conta deve ser atribuída uma licença do Azure Rights Management. Esta licença é incluída na subscrição do Azure Information Protection.
+    - Versão mínima da aplicações do Office 1805, crie 9330.2078 do Office 365 empresas ou do Microsoft 365 empresas quando for atribuída uma licença do Azure Rights Management (também conhecido como Azure Information Protection para o Office 365).
     
-    - O Office 365 ProPlus com aplicações de 2016 ou 2013 (instalação clique-e-Use ou baseada no Windows Installer).
+    - Office 365 ProPlus.
+    
+    - Office Professional Plus 2019.
     
     - Office Professional Plus 2016.
     
@@ -73,7 +75,7 @@ Utilizar o portal do Azure, podemos irá editar a política global para alterar 
     
     Por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
     
-    Se não for o administrador global, utilize a seguinte hiperligação para funções de alternativas: [o início de sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal)
+    Se não for o administrador global, utilize a seguinte hiperligação para funções de alternativas: [O início de sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
 2. Selecione **classificações** > **políticas** > **Global** para abrir o **política: Global** painel. 
 
@@ -86,9 +88,9 @@ Utilizar o portal do Azure, podemos irá editar a política global para alterar 
     |Definição|Valor|Informações|
     |-------|-----|-----|
     |**Selecione a etiqueta predefinida**|**Geral**|Se não tiver uma etiqueta denominada **gerais**, selecione outra etiqueta na lista pendente. Sem etiqueta de documentos e e-mails terão esta etiqueta aplicada automaticamente como uma classificação de base. No entanto, os utilizadores podem alterar a etiqueta escolhida para outra.|
-    |**Todos os documentos e e-mails devem ter uma etiqueta**|**no**|Esta definição é frequentemente referida como a etiquetagem obrigatório porque ele evita que os utilizadores de gravação de documentos ou e-mails que são sem etiqueta de envio. Em conjunto com a etiqueta predefinida, documentos e e-mails terá o rótulo padrão que definir, ou uma etiqueta que escolherem.
+    |**Todos os documentos e e-mails devem ter uma etiqueta**|**On**|Esta definição é frequentemente referida como a etiquetagem obrigatório porque ele evita que os utilizadores de gravação de documentos ou e-mails que são sem etiqueta de envio. Em conjunto com a etiqueta predefinida, documentos e e-mails terá o rótulo padrão que definir, ou uma etiqueta que escolherem.
     |**Para mensagens de e-mail com anexos, aplique uma etiqueta que corresponda à classificação mais elevada desses anexos**|**Recomendado**|Esta definição solicita aos usuários para selecionarem uma etiqueta de classificação superior para seus e-mails mesmo quando eles anexar documentos que tenham uma classificação superior à sua etiqueta predefinidas selecionadas.
-    |**Apresentar a barra de Information Protection nas aplicações do Office**|**no**|Apresentar a barra do Information Protection torna mais fácil para os utilizadores vejam e alterar a etiqueta predefinida.
+    |**Apresentar a barra de Information Protection nas aplicações do Office**|**On**|Apresentar a barra do Information Protection torna mais fácil para os utilizadores vejam e alterar a etiqueta predefinida.
     
     As definições devem agora ter um aspeto semelhante a esta:
     

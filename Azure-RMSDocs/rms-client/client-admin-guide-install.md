@@ -4,18 +4,18 @@ description: Instruções e informações para administradores implementar o cli
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/12/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8df9ded90829c620751529f011a0113e6f51b30e
-ms.sourcegitcommit: 2a1c0882d2b0400f4da6370dbc1830df09867e3d
+ms.openlocfilehash: 156cb0311e93f506ce4dfcd822dcfd867a1417a8
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53218532"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067810"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guia do administrador: Instalar o cliente do Azure Information Protection para utilizadores
 
@@ -112,7 +112,7 @@ Utilize as instruções a seguir para instalar o cliente quando não estiver a u
     
     - **DowngradeDotNetRequirement**: Utilize este parâmetro para contornar o requisito do Microsoft Framework .NET versão 4.6.2. [Mais informações](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
     
-    - **AllowTelemetry = 0**: Utilize este parâmetro para desativar a opção de instalação **ajude a melhorar o Azure Information Protection ao enviar estatísticas de utilização à Microsoft**. 
+    - **AllowTelemetry=0**: Utilize este parâmetro para desativar a opção de instalação **ajude a melhorar o Azure Information Protection ao enviar estatísticas de utilização à Microsoft**. 
     
 3. Se estiver a instalar interativamente, selecione a opção para instalar uma **política de demonstração** se não puder ligar-se ao Office 365 ou ao Azure Active Directory e quiser ver e experimentar o lado do cliente do Azure Information Protection com uma política local para efeitos de demonstração. Quando o cliente se liga a um serviço Azure Information Protection, esta política de demonstração é substituída pela política do Azure Information Protection da organização.
     
@@ -128,7 +128,7 @@ Utilize as instruções a seguir para instalar o cliente quando não estiver a u
  
     Este ficheiro tem o seguinte formato de nomes: `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`
     
-    Por exemplo: **Microsoft_Azure_Information_Protection_20161201093652_000_MSIP. Setup.Main.msi.log**
+    Por exemplo: **Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
     
     Neste ficheiro de registo, procure a seguinte cadeia: **Produto: Microsoft Azure Information Protection-- Instalação concluída com êxito.** Se a instalação falhou, este ficheiro de registo contém detalhes que o ajudam a identificar e resolver qualquer tipo de problemas.
 

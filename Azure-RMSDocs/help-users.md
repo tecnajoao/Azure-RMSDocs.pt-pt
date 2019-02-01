@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0f62134663cd7c784a694d25369698b4b7c9538c
-ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
+ms.openlocfilehash: b023eaa514fc22dcb3d595495c724d7d19e58c08
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898805"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067674"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Ajudar os utilizadores a proteger ficheiros com o serviço Azure Rights Management
 
@@ -73,7 +73,7 @@ Para além de tornar mais fácil para os utilizadores protegerem documentos e e-
 Para obter instruções sobre como utilizar este cliente para computadores Windows, veja o [Guia de utilizador do cliente do Azure Information Protection](./rms-client/client-user-guide.md).
 
 
-## <a name="using-information-protection-with-office365-office-2016-or-office2013"></a>Utilizar a proteção de informações com o Office 365, Office 2016 ou Office 2013
+## <a name="using-information-protection-with-office365-office-2019-office-2016-or-office2013"></a>Utilizar a proteção de informações com o Office 365, Office 2019, Office 2016 ou Office 2013
 Se estiver a utilizar o serviço Azure Rights Management e não tiver instalado o cliente do Azure Information Protection, os utilizadores não veem a barra do Azure Information Protection nas suas aplicações de ambiente de trabalho do Office. Também não vêem a **Protect** botão da faixa de opções, ou **classificar e proteger** no Explorador de ficheiros. Estas adições tornam mais fácil para os utilizadores protegerem documentos e e-mails. Estes utilizadores têm de seguir instruções semelhantes aos passos que se seguem.
 
 > [!TIP]
@@ -112,11 +112,11 @@ Por exemplo, se a mensagem de e-mail estiver protegida através da opção **Nã
 
 #### <a name="to-protect-an-email-message-using-outlook-on-the-web"></a>Para proteger uma mensagem de e-mail através do Outlook na Web
 
-1.  Através do Outlook na Web, crie uma mensagem de e-mail endereçada a um destinatário da sua organização.
+1. Através do Outlook na Web, crie uma mensagem de e-mail endereçada a um destinatário da sua organização.
 
-2.  Selecione **proteger**. A menos que a predefinição foi alterada por um administrador, o **não reencaminhar** opção será selecionada automaticamente. Se quiser alterar o padrão, selecione **alterar permissões** e, em seguida, selecione uma opção no menu pendente. Por exemplo: **Encriptar** ou  **\<nome da empresa > – confidencial**.
+2. Selecione **proteger**. A menos que a predefinição foi alterada por um administrador, o **não reencaminhar** opção será selecionada automaticamente. Se quiser alterar o padrão, selecione **alterar permissões** e, em seguida, selecione uma opção no menu pendente. Por exemplo: **Encriptar** ou  **\<nome da empresa > – confidencial**.
 
-3.  Envie a mensagem.
+3. Envie a mensagem.
 
 Tal como na visualização de um documento protegido, quando os destinatários abrem a mensagem de e-mail, primeiro são autenticados. Se estiverem autorizados a ver a mensagem de e-mail, esta abre-se com os [direitos de utilização](configure-usage-rights.md) restrita que foram especificados para esse utilizador. 
 

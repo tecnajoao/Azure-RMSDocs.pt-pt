@@ -4,18 +4,18 @@ description: Identifique os pré-requisitos para implementar o Azure Information
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/24/2019
+ms.date: 01/29/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 66ebb49b3b161a63c80968104e681fad74bbef42
-ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
+ms.openlocfilehash: 68b1cb057af1cc5de271c6e896e5cff4bb922cd2
+ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898771"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146711"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisitos para o Azure Information Protection
 
@@ -90,9 +90,11 @@ Tem do cliente do Azure Information Protection [pré-requisitos adicionais](./rm
 
 O cliente do Azure Information Protection pode etiquetar e proteger documentos e e-mails ao utilizar as aplicações **Word**, **Excel**, **PowerPoint** e **Outlook** a partir de qualquer uma das seguintes edições do Office:
 
-- Office 365 com aplicações do Office do Office 365 empresas ou do Microsoft 365 empresas quando o utilizador tem atribuída uma licença do Azure Rights Management (também conhecido como Azure Information Protection para o Office 365)
+- Versão mínima da aplicações do Office 1805, criar 9330.2078 do Office 365 empresas ou do Microsoft 365 empresas quando o utilizador tem atribuída uma licença do Azure Rights Management (também conhecido como Azure Information Protection para o Office 365)
 
 - Office 365 ProPlus
+
+- Office Professional Plus 2019
 
 - Office Professional Plus 2016
 

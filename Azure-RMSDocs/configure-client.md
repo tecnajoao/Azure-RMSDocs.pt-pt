@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3edcaf6b7751996a6d162eeec7cfc8ba3e352940
-ms.sourcegitcommit: 2daa75cda8475028a3dac83d70505fcfccef42a1
+ms.openlocfilehash: 10fc4c158cd4669b67c28e4968b0a3c4e7b889ad
+ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361788"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146847"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Cliente do Azure Information Protection: Instalação e configuração para clientes
 
@@ -35,7 +35,7 @@ Para uma instalação e configuração empresariais do cliente para o Windows, v
 Para instalar o cliente do Azure Information Protection para estas plataformas móveis populares, pode transferir a aplicação relevante através das ligações na [página do Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970). Não é necessária qualquer configuração.
 
 > [!NOTE]
-> Para computadores Mac e dispositivos Windows Phone, as ligações a partir desta página transferem as aplicações de partilha RMS para dispositivos móveis. Estes dispositivos não suportam atualmente o cliente do Azure Information Protection.
+> Para computadores Mac, ligações a partir desta página transferem as aplicações para dispositivos móveis de partilha RMS. Estes computadores não suportam o cliente do Azure Information Protection.
 
 **Se tiver o Microsoft Intune**: Uma vez que a aplicação Azure Information Protection foi criada usando o Microsoft Intune App Software Development Kit, quando os dispositivos iOS e Android forem inscritos pelo Intune, pode implementar e gerir a aplicação Azure Information Protection para estes dispositivos:
 

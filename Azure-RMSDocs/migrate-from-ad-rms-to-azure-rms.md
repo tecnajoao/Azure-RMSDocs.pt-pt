@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3f7c06a6415160b5c2245dc60e94bf7d9633ef7f
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 714d5ca28df5ab47fa66ca59a21929bcd7b69d9c
+ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393758"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146779"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrar do AD RMS para o Azure Information Protection
 
@@ -203,7 +203,7 @@ Os passos de migração podem ser divididos em cinco fases que podem ser efetuad
 
 - **Passo 11: Tarefas de migração de cliente concluída**
 
-    Se tiver implementado o [extensão do dispositivo móvel](https://technet.microsoft.com/library/dn673574.aspx) para suportar dispositivos móveis, como telemóveis com iOS e iPads, telemóveis Android e tablets, Windows phone e computadores Mac, tem de remover os registos SRV no DNS que redirecionou estes clientes Para utilizar o AD RMS. 
+    Se tiver implementado o [extensão do dispositivo móvel](https://technet.microsoft.com/library/dn673574.aspx) para suportar dispositivos móveis, como telemóveis com iOS e iPads, telemóveis Android e tablets, telemóveis Windows e tablets e computadores Mac, tem de remover os registos SRV no DNS que redirecionou Estes clientes para utilizarem o AD RMS. 
     
     Os controlos de inclusão que configurou durante a fase de preparação já não são necessários. No entanto, se não utilizou os controlos de inclusão porque optou por migrar tudo ao mesmo tempo, em vez de fazer uma migração faseada, pode ignorar as instruções para remover os controlos de inclusão.
     

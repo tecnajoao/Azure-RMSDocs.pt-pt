@@ -4,19 +4,19 @@ description: Algumas perguntas mais frequentes sobre o serviço de proteção de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 01/10/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ac079a7046b6166b89c828054ed5f94e756fa99f
-ms.sourcegitcommit: 8bda26b8b84cb8b66ae8f927906710d60c4b6a80
+ms.openlocfilehash: 8f0e202b9404b114dd7ae48522a61bc8e524e618
+ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397985"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146830"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Perguntas mais frequentes sobre a proteção de dados no Azure Information Protection
 
@@ -147,7 +147,7 @@ Para obter uma lista de extensões de nome de ficheiro que são suportadas nativ
 
 ## <a name="how-do-i-configure-a-mac-computer-to-protect-and-track-documents"></a>Como configurar um computador Mac para proteger e controlar documentos?
 
-Primeiro, certifique-se de que tem instalado Office para Mac, utilizando a ligação de instalação de software de https://portal.office.com. Para obter instruções completas, veja [Transferir e instalar ou reinstalar o Office 365 ou o Office 2016 num PC ou Mac](https://support.office.com/en-us/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
+Primeiro, certifique-se de que tem instalado Office para Mac, utilizando a ligação de instalação de software de https://portal.office.com. Para obter instruções completas, consulte [transferir e instalar ou reinstalar o Office 365 ou Office 2019 num PC ou Mac](https://support.office.com/en-us/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
 
 Abra o Outlook e crie um perfil com a conta escolar ou profissional do Office 365. Em seguida, crie uma nova mensagem e faça o seguinte procedimento para configurar o Office, para que possa proteger documentos e e-mails com o serviço Azure Rights Management:
 
@@ -194,7 +194,7 @@ O utilizador que protegeu o documento, o [emissor do Rights Management](configur
 O valor predefinido para o período de validade de licença de utilização de um inquilino é de 30 dias e esta definição pode ser substituída por uma definição mais restritiva numa etiqueta ou modelo. Para obter mais informações sobre a licença de utilização e como configurá-lo, consulte a [utilizar a gestão de direitos de licença](configure-usage-rights.md#rights-management-use-license) documentação.
 
 ## <a name="can-rights-management-prevent-screen-captures"></a>O Rights Management pode impedir capturas de ecrã?
-Ao não conceder direitos de **utilização** [de Cópia](configure-usage-rights.md), o Rights Management pode impedir capturas de ecrãs de muitas das ferramentas de captura de ecrã utilizadas normalmente em plataformas com Windows (Windows 7, Windows 8.1, Windows 10, Windows Phone) e Android. No entanto, os dispositivos iOS e Mac não permitem que as aplicações impeçam capturas de ecrã e os browsers (por exemplo, quando são utilizados com o Outlook Web App e o Office Online) também não podem impedir capturas de ecrã.
+Ao não conceder a **cópia** [direito de utilização](configure-usage-rights.md), Rights Management pode impedir capturas de ecrãs de muitas das ferramentas de captura de ecrã utilizadas normalmente em plataformas do Windows (Windows 7, Windows 8.1, Windows 10, Windows 10 Mobile) e Android. No entanto, os dispositivos iOS e Mac não permitem que as aplicações impeçam capturas de ecrã e os browsers (por exemplo, quando são utilizados com o Outlook Web App e o Office Online) também não podem impedir capturas de ecrã.
 
 Impedir capturas de ecrã pode ajudar a evitar a divulgação por acidente ou por negligência de informações confidenciais. No entanto, existem várias formas de um utilizador partilhar os dados apresentados num ecrã e tirar uma captura de ecrã é apenas um dos métodos possíveis. Por exemplo, um utilizador que esteja determinado em partilhar as informações apresentadas pode tirar uma fotografia com a câmara do telemóvel, reescrever os dados ou simplesmente dizê-las a alguém.
 

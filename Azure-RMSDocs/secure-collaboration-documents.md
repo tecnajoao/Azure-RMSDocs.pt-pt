@@ -4,18 +4,18 @@ description: Fluxo de trabalho ponto-a-ponto para colaborar nos documentos que e
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a5a1c0069a35073d9362e28ef18ad4c09d95df3d
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: cc62934195916f5db26e7a328957c7fb09f10a57
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393951"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067599"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configuração da colaboração de documentos segura, utilizando o Azure Information Protection
 
@@ -31,7 +31,7 @@ Quando configurar estas permissões, pode especificar quais os utilizadores que 
 
 - **Para os utilizadores que não tem uma conta do Azure Active Directory**: Especifique um endereço de e-mail que será utilizado com uma conta Microsoft. Esta conta pode já existir, ou os utilizadores podem criá-la no momento que abrem o documento protegido. 
     
-    Para abrir documentos com uma conta Microsoft, os utilizadores podem utilizar o Office 2016 Click-to-Run. Outras versões e edições do Office fazem ainda não suporte abrir o Office proteger documentos com uma conta Microsoft.
+    Para abrir documentos com uma conta Microsoft, os utilizadores podem utilizar aplicações do Office 365 (clique-e-use). Outras versões e edições do Office fazem ainda não suporte abrir o Office proteger documentos com uma conta Microsoft.
 
 - **Para qualquer utilizador autenticado**: Esta opção é adequada para quando não precisa de controlar quem acede ao documento protegido, fornecendo ao usuário que possa ser autenticado. A autenticação pode ser pelo Azure AD, utilizando uma conta Microsoft, ou até mesmo um provedor social federado ou código de acesso único quando o conteúdo é protegido pelas novas capacidades de encriptação de mensagens do Office 365. 
 
@@ -140,7 +140,7 @@ Além disso, os seguintes cenários de suportam de documentos em visualização:
 Suporta contas de utilizador, grupos com capacidade de correio eletrónico, todos os membros. Contas de utilizador e grupos com capacidade de correio eletrónico podem incluir as contas de convidado. Todos os membros excluem contas de convidado.
 
 ###### <a name="footnote-2"></a>Nota de rodapé 2
-Atualmente suportados pelo Office 2016 clique-e-Use apenas.
+Suporta atualmente aplicações do Office 365 (clique-e-use) apenas.
 
 
 

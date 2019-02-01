@@ -4,18 +4,18 @@ description: Instruções sobre como classificar e proteger os seus documentos e
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b1d46cb3c98c520ab6900f910f691af920337334
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: e0404f21ae3fbd5a4e9be86c9372645a4a425b38
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393462"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067793"
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Guia de utilizador: Classificar e proteger um ficheiro ou e-mail com o Azure Information Protection
 
@@ -77,7 +77,7 @@ Motivos possíveis:
 
 - Se a etiqueta em falta aplicar proteção, poderá ter uma edição do Office que não suporta a aplicação da proteção Rights Management. Para verificar, clique em **Protect** > **ajuda e Feedback**. Na caixa de diálogo, verifique se tem uma mensagem na **estado do cliente** secção que diz **este cliente não está licenciado para o Office Professional Plus.** 
     
-    Não é necessário Office Professional Plus se tiver aplicações do Office 2016 com uma versão mínima 1805, compilação 9330.2078, e sua conta é atribuída uma licença do Azure Rights Management (também conhecido como Azure Information Protection para o Office 365).
+    Não é necessário Office Professional Plus se tiver aplicações do Office do Microsoft 365 empresas ou do Office 365 empresas quando o utilizador tem atribuída uma licença do Azure Rights Management (também conhecido como Azure Information Protection para o Office 365).
 
 - A etiqueta pode estar numa política de âmbito que não inclui a sua conta. Contacte o suporte técnico ou o administrador.
 

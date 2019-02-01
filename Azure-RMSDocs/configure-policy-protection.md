@@ -4,16 +4,16 @@ description: Pode proteger os seus documentos e e-mails mais confidenciais ao co
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/31/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 075441ef848f3ebe5e106f5989a99981037711bd
-ms.sourcegitcommit: 8bda26b8b84cb8b66ae8f927906710d60c4b6a80
+ms.openlocfilehash: eafcbf02ea6585b8a1434e210c274648982c0894
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397849"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067300"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Como configurar uma etiqueta para a proteção do Rights Management
 
@@ -105,7 +105,7 @@ Exchange tem de ser configurada para o Azure Information Protection antes dos ut
        Quando escolher todos os membros ou procurar o diretório, os utilizadores ou grupos têm de ter um endereço de e-mail. Num ambiente de produção, utilizadores e grupos quase sempre tem um endereço de e-mail, mas num ambiente de teste simple, poderá ter de adicionar endereços de e-mail a contas de utilizador ou grupos.
         
        ###### <a name="more-information-about-add-any-authenticated-users"></a>Obter mais informações sobre **adicionar utilizadores autenticados** 
-       Esta definição não restringe quem pode aceder o conteúdo que a etiqueta protege, enquanto ainda encriptar o conteúdo e fornecer-lhe opções para restringir a como o conteúdo pode ser utilizadas (permissões) e acedidos (expiração e acesso offline). No entanto, o aplicativo abrindo o conteúdo protegido tem de ser capaz de suportar a autenticação a ser utilizada. Por esse motivo, federados fornecedores de redes sociais como o Google e autenticação de código de acesso onetime devem ser utilizados apenas para e-mails, e somente quando usar o Exchange Online e as novas capacidades de encriptação de mensagens do Office 365. Contas da Microsoft podem ser utilizadas com o Visualizador do Azure Information Protection e o Office 2016 Click-to-Run. 
+       Esta definição não restringe quem pode aceder o conteúdo que a etiqueta protege, enquanto ainda encriptar o conteúdo e fornecer-lhe opções para restringir a como o conteúdo pode ser utilizadas (permissões) e acedidos (expiração e acesso offline). No entanto, o aplicativo abrindo o conteúdo protegido tem de ser capaz de suportar a autenticação a ser utilizada. Por esse motivo, federados fornecedores de redes sociais como o Google e autenticação de código de acesso onetime devem ser utilizados apenas para e-mails, e somente quando usar o Exchange Online e as novas capacidades de encriptação de mensagens do Office 365. Contas da Microsoft podem ser utilizadas com o Visualizador do Azure Information Protection e as aplicações do Office 365 (clique-e-use). 
           
        Alguns cenários comuns para quaisquer autenticado a definição de usuários:
        - Não se quem vê o conteúdo, mas pretender restringir a sua utilização. Por exemplo, não pretender que o conteúdo a ser editado, copiados ou impressos.
@@ -242,7 +242,7 @@ Se especificar utilizadores externos que não tem uma conta no Azure AD:
 
 - A etiqueta é adequada para e-mail ao Exchange Online está a utilizar o [novas capacidades de encriptação de mensagens do Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
  
-- Para os anexos do Office são automaticamente protegidos, esses documentos estão disponíveis para ver num browser. Para editar estes documentos, transferir e edite-los com o Office 2016 Click-to-Run e uma conta Microsoft que utiliza o mesmo endereço de e-mail. [Mais informações](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+- Para os anexos do Office são automaticamente protegidos, esses documentos estão disponíveis para ver num browser. Para editar estes documentos, transferir e edite-los com aplicações do Office 365 (clique-e-use) e uma conta Microsoft que utiliza o mesmo endereço de e-mail. [Mais informações](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 
 > [!NOTE]

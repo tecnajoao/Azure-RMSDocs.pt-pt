@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ef9836a6e3b651986642d2c93128ea0f6b1e6112
-ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
+ms.openlocfilehash: 18c5028bf69f756b79328a26ce967f5e73492d2e
+ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314854"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146796"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Perguntas mais frequentes sobre o Azure Information Protection
 
@@ -44,7 +44,7 @@ O Azure Information Protection fornece classificação, etiquetagem e proteção
 Um utilizador deve ter um nome de utilizador válido e uma palavra-passe para aceder a conteúdo protegido pelo Azure Information Protection. Para ler mais sobre como o Azure Information Protection o ajuda a proteger os seus dados, veja [A função do Azure Information Protection na proteção de dados](/enterprise-mobility-security/solutions/azure-information-protection-securing-data). 
 
 ## <a name="what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included"></a>De que subscrição preciso para o Azure Information Protection e que funcionalidades estão incluídas?
-Ver a lista de informações e recursos de subscrição no [preços do Azure Information Protection](https://azure.microsoft.com/en-us/pricing/details/information-protection) página. 
+Ver a lista de informações e recursos de subscrição no [preços do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection) página. 
 
 Se tiver uma subscrição do Office 365 que inclui proteção de dados do Azure Rights Management, transfira o [folha de dados de licenciamento do Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf), que inclui também algumas perguntas mais frequentes sobre o licenciamento.
 
@@ -122,7 +122,7 @@ Sim, como uma oferta de pré-visualização pública, podem agora receber um ale
 
 Esses alertas podem ajudar a detetar ataques relacionados com dados avançados e ameaças internas no seu ambiente. Estes alertas utilizam o machine learning para criar um perfil do comportamento dos utilizadores que acedem aos seus dados protegidos. 
 
-Os alertas do Azure Information Protection podem ser acedidos por [com a API de segurança do Microsoft Graph](https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/security-api-overview), ou pode [transmitir alertas](https://developer.microsoft.com/en-us/graph/docs/concepts/security_siemintegration) para soluções SIEM, como Splunk e o IBM Qradar, com o Azure Monitor.
+Os alertas do Azure Information Protection podem ser acedidos por [com a API de segurança do Microsoft Graph](https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/security-api-overview), ou pode [transmitir alertas](https://developer.microsoft.com/graph/docs/concepts/security_siemintegration) para soluções SIEM, como Splunk e o IBM Qradar, com o Azure Monitor.
 
 Para obter mais informações sobre a API de segurança do Microsoft Graph, consulte [descrição geral da API de segurança do Microsoft Graph](https://developer.microsoft.com/graph/docs/concepts/security-concept-overview).
 
@@ -195,7 +195,7 @@ Além disso, existem FAQ criadas para os utilizadores finais:
 
 - [FAQ sobre a aplicação Azure Information Protection para iOS e Android](./rms-client/mobile-app-faq.md)
 
-- [FAQ sobre a aplicação de partilha RMS para computadores Mac e Windows Phone](https://technet.microsoft.com/dn451248)
+- [FAQ da aplicação para computadores Mac de partilha RMS](https://technet.microsoft.com/dn451248)
 
 - [FAQ sobre a Aplicação de Partilha Rights Management para Windows](https://technet.microsoft.com/dn467883)
 

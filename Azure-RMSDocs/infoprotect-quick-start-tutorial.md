@@ -4,15 +4,15 @@ description: Um tutorial de introdução que edita a política do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 01/29/2019
 ms.topic: tutorial
 ms.service: information-protection
-ms.openlocfilehash: a619a05607f5061f51bae93d97cfd44086cefd55
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 2e08b21deb8d1b7ef99d77f56e1bf149a82df081
+ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024183"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55231060"
 ---
 # <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>Tutorial: Editar a política do Azure Information Protection e criar uma nova etiqueta
 
@@ -39,7 +39,7 @@ Para concluir este tutorial, precisa de:
 
 2. Adicionei o painel do Azure Information Protection para o portal do Azure e confirmar que o serviço de proteção está ativado.
 
-    Se precisar de ajuda com estas ações, consulte o artigo [início rápido: adicionar o Azure Information Protection para o portal do Azure e ver a política](quickstart-viewpolicy.md)
+    Se precisar de ajuda com estas ações, consulte o artigo [início rápido: Adicionar o Azure Information Protection para o portal do Azure e ver a política](quickstart-viewpolicy.md)
 
 3. O cliente do Azure Information Protection está instalado no seu computador. 
     
@@ -47,9 +47,11 @@ Para concluir este tutorial, precisa de:
 
 4. Um computador com Windows (no mínimo do Windows 7 com Service Pack 1), e neste computador, tem sessão iniciada para aplicações do Office de uma das seguintes categorias:
     
-    - Office 365 com as aplicações do Office 2016 (versão mínima 1805, compilação 9330.2078). Para utilizar esta opção, a conta deve ser atribuída uma licença do Azure Rights Management. Esta licença é incluída na subscrição do Azure Information Protection.
+    - Versão mínima da aplicações do Office 1805, crie 9330.2078 do Office 365 empresas ou do Microsoft 365 empresas quando for atribuída uma licença do Azure Rights Management (também conhecido como Azure Information Protection para o Office 365).
     
-    - O Office 365 ProPlus com aplicações de 2016 ou 2013 (instalação clique-e-Use ou baseada no Windows Installer).
+    - Office 365 ProPlus.
+    
+    - Office Professional Plus 2019.
     
     - Office Professional Plus 2016.
     
@@ -71,7 +73,7 @@ Utilizar o portal do Azure, vamos alterar primeiro algumas definições de polí
     
     Por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
     
-    Se não for o administrador global, utilize a seguinte hiperligação para funções de alternativas: [o início de sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal)
+    Se não for o administrador global, utilize a seguinte hiperligação para funções de alternativas: [O início de sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
 2. Selecione **classificações** > **políticas** > **Global** para abrir o **política: Global** painel. 
 
@@ -97,11 +99,11 @@ Utilizar o portal do Azure, vamos alterar primeiro algumas definições de polí
 
 Vamos agora criar uma nova subetiqueta para **confidencial**.
 
-1. Do **classificações** > **etiquetas** opção de menu: com o botão direito do **confidencial** Etiquetar e selecione **adicionar uma etiqueta secundária**.
+1. Do **classificações** > **etiquetas** opção de menu: Com o botão direito a **confidencial** Etiquetar e selecione **adicionar uma etiqueta secundária**.
     
     Se não tiver uma etiqueta denominada **confidencial**, pode selecionar outra etiqueta ou pode criar uma nova etiqueta em vez disso e ainda, siga o tutorial com pequenas diferenças.
 
-2. Sobre o **subetiqueta** painel, especifique o nome de etiqueta do **Finanças** e adicione a seguinte descrição: **dados confidenciais que contém informações financeiras, que é restritas aos funcionários apenas**.
+2. Sobre o **subetiqueta** painel, especifique o nome de etiqueta do **Finanças** e adicione a seguinte descrição: **Dados confidenciais que contém informações financeiras, que é restritas aos funcionários**.
     
     Este texto descreve como a etiqueta selecionada se destina a ser utilizado e é visível para os utilizadores como uma descrição para os ajudar a decidir qual a etiqueta a selecionar.
 
@@ -143,15 +145,15 @@ Vamos agora criar uma nova subetiqueta para **confidencial**.
     
     Clique em **adicionar uma nova condição** e, em seguida, no **condição** painel, selecione o seguinte:
     
-    a. **Escolha o tipo de condição**: mantenha a predefinição **tipos de informações**.
+    a. **Escolha o tipo de condição**: Mantenha a predefinição **tipos de informações**.
     
-    b. Para **escolha um setor**: mantenha a predefinição **todos os**.
+    b. Para **escolha um setor**: Mantenha a predefinição **todos os**.
     
-    c. Na **seleciona os tipos de informações** caixa de pesquisa: tipo **número de cartão de crédito**. Em seguida, resultados da pesquisa, selecione **número de cartão de crédito**.
+    c. Na **seleciona os tipos de informações** caixa de pesquisa: Tipo **número de cartão de crédito**. Em seguida, resultados da pesquisa, selecione **número de cartão de crédito**.
     
-    d. **Número mínimo de ocorrências**: mantenha a predefinição de **1**.
+    d. **Número mínimo de ocorrências**: Mantenha a predefinição **1**.
     
-    e. **Contagem de ocorrências com apenas valores exclusivos**: mantenha a predefinição **Desativado**.
+    e. **Contagem de ocorrências com apenas valores exclusivos**: Mantenha a predefinição **desativar**.
     
     ![Tutorial do Azure Information Protection – configurar condição de cartão de crédito](./media/step2-configure-condition.png)
     
@@ -161,15 +163,15 @@ Vamos agora criar uma nova subetiqueta para **confidencial**.
     
     ![Tutorial do Azure Information Protection – configurar condição de cartão de crédito](./media/step2-see-condition.png)
 
-11. Para **selecione a forma como esta etiqueta é aplicada**: mantenha a predefinição **recomendado**e não altere a sugestão de política predefinida. 
+11. Para **selecione a forma como esta etiqueta é aplicada**: Mantenha a predefinição **recomendado**e não altere a sugestão de política predefinida. 
 
 12. Na **adicionar notas para utilização do administrador** , escreva **apenas para teste fins**.
 
 13. Clique em **salvar** nisso **subetiqueta** painel. Se lhe for pedido para confirmar, clique em **OK**. A nova etiqueta é criada e guardada, mas ainda não foram adicionada a uma política.
 
-14. Do **classificações** > **políticas** opção de menu: selecione **Global** novamente e, em seguida, selecione o **adicionar ou remover as etiquetas**link depois das etiquetas.
+14. Do **classificações** > **políticas** opção de menu: Selecione **Global** novamente e, em seguida, selecione a **etiquetas de adicionar ou remover** ligação depois das etiquetas.
 
-15. Do **política: Adicionar ou remover as etiquetas** painel, selecione a etiqueta que acabou de criar, subetiqueta com o nome **Finanças**e clique em **OK**.
+15. Do **política: Adicionar ou remover as etiquetas** painel, selecione a etiqueta que acabou de criar, subetiqueta com o nome **Finance**e clique em **OK**.
 
 16. Sobre o **política: Global** painel, verá agora sua nova subetiqueta na sua política global, que está configurada para marcas visuais e proteção. Por exemplo:
 
@@ -258,7 +260,7 @@ Se não desejar manter as alterações efetuadas neste tutorial, faça o seguint
 
 2. Devolver as definições de política para os valores originais que apontou e, em seguida, selecione **guardar**. 
 
-3. Do **classificações** > **etiqueta** opção de menu: no **do Azure Information Protection – etiqueta** painel, selecione o menu de contexto (**...**) para o **Finance** etiqueta que criou.
+3. Partir do **classificações** > **etiqueta** opção de menu: Sobre o **do Azure Information Protection – a etiqueta** painel, selecione o menu de contexto (**...** ) para o **Finance** etiqueta que criou.
 
 4. Selecione **eliminar esta etiqueta** e, se lhe for pedido para confirmar, selecione **OK**.
 

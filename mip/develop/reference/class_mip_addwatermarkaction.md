@@ -1,17 +1,17 @@
 ---
-title: classe mip AddWatermarkAction
-description: Referência para a classe mip AddWatermarkAction
+title: classe mip::AddWatermarkAction
+description: Documenta a classe mip::addwatermarkaction da Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: f49bd7aa16ae12aef240d05fff6acf507ddc341d
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.date: 01/28/2019
+ms.openlocfilehash: d9a2049238e2b45f1c19265ed2f940b3fea079e6
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446095"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650838"
 ---
 # <a name="class-mipaddwatermarkaction"></a>classe mip::AddWatermarkAction 
 Uma classe de ação que especifica o limite de tamanho de adição.
@@ -19,53 +19,53 @@ Uma classe de ação que especifica o limite de tamanho de adição.
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
- público const Std:: String & GetUIElementName()  |  Uma API utilizada para marcar o elemento de marca d'água.
- público GetLayout() de WatermarkLayout const  |  Uma API utilizada para obter o esquema de marca de água.
- público const Std:: String & GetText() const  |  Obtenha o texto que serve para ir para a marca d'água.
- público const Std:: String & GetFontName() const  |  Obtenha o nome de tipo de letra utilizado para apresentar a marca d'água.
- público int GetFontSize() const  |  Obter o tamanho da fonte usado para exibir a marca d'água.
- público const Std:: String & GetFontColor() const  |  Obtenha a cor da fonte usada para exibir a marca d'água.
- público GetType() de ActionType const  |  Obter o tipo de [ação](class_mip_action.md).
+public const std::string& GetUIElementName()  |  Uma API utilizada para marcar o elemento de marca d'água.
+public WatermarkLayout GetLayout() const  |  Uma API utilizada para obter o esquema de marca de água.
+public const std::string& GetText() const  |  Obtenha o texto que serve para ir para a marca d'água.
+public const std::string& GetFontName() const  |  Obtenha o nome de tipo de letra utilizado para apresentar a marca d'água.
+public int GetFontSize() const  |  Obter o tamanho da fonte usado para exibir a marca d'água.
+public const std::string& GetFontColor() const  |  Obtenha a cor da fonte usada para exibir a marca d'água.
+público GetType() de ActionType const  |  Obter o tipo de [ação](class_mip_action.md).
   
 ## <a name="members"></a>Membros
   
-### <a name="getuielementname"></a>GetUIElementName
+### <a name="getuielementname-function"></a>Função de GetUIElementName
 Uma API utilizada para marcar o elemento de marca d'água.
 
   
 **Devolve**: O nome que deve ser utilizado para o elemento de interface do Usuário que contém a marca d'água. No caso do limite de tamanho tem de ser removido em RemoveWatermarkingAction retornará o mesmo nome.
   
-### <a name="getlayout"></a>GetLayout
+### <a name="getlayout-function"></a>Função de GetLayout
 Uma API utilizada para obter o esquema de marca de água.
 
   
-**Devolve**: WatermarkLayout o layout de marca d'água na forma de th de uma enum HORIZONTAL | DIAGONAL. ,
+**Devolve**: WatermarkLayout o layout de marca d'água na forma de th de uma enum HORIZONTAL | DIAGONAL. , 
   
-### <a name="gettext"></a>GetText
+### <a name="gettext-function"></a>Função de GetText
 Obtenha o texto que serve para ir para a marca d'água.
 
   
-**Devolve**: texto do cabeçalho de conteúdo.
+**Devolve**: Texto do cabeçalho de conteúdo.
   
-### <a name="getfontname"></a>GetFontName
+### <a name="getfontname-function"></a>Função de GetFontName
 Obtenha o nome de tipo de letra utilizado para apresentar a marca d'água.
 
   
-**Devolve**: nome da fonte. Valor predefinido é Calibri se nada estiver definido pela política.
+**Devolve**: Nome do tipo de letra. Valor predefinido é Calibri se nada estiver definido pela política.
   
-### <a name="getfontsize"></a>GetFontSize
+### <a name="getfontsize-function"></a>Função de GetFontSize
 Obter o tamanho da fonte usado para exibir a marca d'água.
 
   
-**Devolve**: tamanho da fonte como um número inteiro.
+**Devolve**: Tamanho da fonte como um número inteiro.
   
-### <a name="getfontcolor"></a>GetFontColor
+### <a name="getfontcolor-function"></a>Função de GetFontColor
 Obtenha a cor da fonte usada para exibir a marca d'água.
 
   
-**Devolve**: cor da fonte como uma cadeia de caracteres (por exemplo, "#000000").
+**Devolve**: Cor da fonte como uma cadeia de caracteres (por exemplo, "#000000").
   
-### <a name="actiontype"></a>ActionType
+### <a name="gettype-function"></a>Função de GetType
 Obter o tipo de [ação](class_mip_action.md).
 
   

@@ -4,20 +4,23 @@ description: Proteção de informações da Microsoft (MIP) é unificação dos 
 author: BryanLa
 ms.service: information-protection
 ms.topic: overview
-ms.date: 09/27/2018
+ms.date: 01/18/2019
 ms.author: bryanla
-ms.openlocfilehash: 775ae3d524947c8300de0e011b92c2cad106905a
-ms.sourcegitcommit: d677088db8588fb2cc4a5d7dd296e76d0d9a2e9c
+ms.openlocfilehash: 77d8fb8d32c0f75be49b29e95316f8da873d14c6
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48251731"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651144"
 ---
 # <a name="overview"></a>Descrição geral
 
 ## <a name="microsoft-information-protection"></a>Microsoft Information Protection
 
-Proteção de informações da Microsoft (MIP) é unificação dos serviços de classificação, etiquetagem e proteção da Microsoft, num único administração experiência e o software development kit (SDK). Administração unificada é fornecida no Office 365, Azure Information Protection, Windows Information Protection e outros serviços Microsoft. Terceiros pode utilizar o SDK para integrar com aplicações, utilizando uma etiquetagem o serviço de esquema e a proteção de dados padrão e consistentes.
+Proteção de informações da Microsoft (MIP) é unificação de classificação da Microsoft, etiquetagem e proteção de serviços:
+
+- Administração unificada é fornecida no Office 365, Azure Information Protection, Windows Information Protection e outros serviços Microsoft. 
+- Terceiros pode utilizar o SDK de MIP para integração com aplicativos, usando uma etiquetagem o serviço de esquema e a proteção de dados padrão e consistentes.
 
 * [O que é o Centro de conformidade e de segurança do Office 365?](https://docs.microsoft.com/office365/securitycompliance/)
 * [O que é o Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
@@ -25,7 +28,7 @@ Proteção de informações da Microsoft (MIP) é unificação dos serviços de 
 
 ## <a name="microsoft-information-protection-sdk"></a>SDK do Microsoft Information Protection
 
-O SDK de MIP expõe os serviços de etiquetagem e proteção de segurança do Office 365 e do Centro de conformidade aos serviços e aplicações de terceiros. Os programadores podem utilizar o SDK para criar o suporte nativo para aplicar etiquetas e proteção a ficheiros. Os desenvolvedores podem razão pós-falha quais ações deverão ser executadas quando são detetadas etiquetas específicas e ter em conta encriptada MIP informações. 
+O SDK de MIP expõe os serviços de etiquetagem e proteção de segurança do Office 365 e do Centro de conformidade, aos serviços e aplicações de terceiros. Os programadores podem utilizar o SDK para criar o suporte nativo para aplicar etiquetas e proteção a ficheiros. Os desenvolvedores podem razão pós-falha quais ações deverão ser executadas quando são detetadas etiquetas específicas e ter em conta encriptada MIP informações. 
 
 As etiquetas e a proteção aplicada a informações do conjunto de serviços da Microsoft são **consistente**. Consistência permite que aplicações e serviços MIP esse suporte ler e escrever as etiquetas de uma maneira comum e previsível.
 
@@ -37,7 +40,7 @@ Casos de utilização do SDK de MIP alto nível incluem:
 
 Para obter uma lista mais completa, consulte [conceitos de API](concept-apis-use-cases.md).
 
-## <a name="next-steps"></a>Passos Seguintes
+## <a name="next-steps"></a>Próximos Passos
 
-Agora está pronto para começar a utilizar com o SDK. A primeira coisa que precisará fazer, é [conclua os passos de instalação e configuração do SDK de MIP](setup-configure-mip.md), para se certificar de que a subscrição do Office 365 e a máquina de cliente estão configuradas corretamente.
+Agora está pronto para começar a utilizar com o SDK. A primeira coisa que precisará fazer é [conclua os passos de instalação e configuração do SDK de MIP](setup-configure-mip.md). Estes passos irão garantir que a sua subscrição do Office 365 e o computador cliente estão configuradas corretamente.
 

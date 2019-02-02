@@ -1,17 +1,17 @@
 ---
-title: classe mip ApplyLabelAction
-description: Referência para a classe mip ApplyLabelAction
+title: classe mip::ApplyLabelAction
+description: Documenta a classe mip::applylabelaction da Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 06a17ef1e60503cfb7d690bea9bb72316544f16d
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.date: 01/28/2019
+ms.openlocfilehash: ce813a544504ce18b382cdb86bd31d89b6626fad
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445772"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650498"
 ---
 # <a name="class-mipapplylabelaction"></a>classe mip::ApplyLabelAction 
 Aplicar ações de etiqueta requer que o aplicativo de chamada para aplicar uma etiqueta específica.
@@ -19,18 +19,25 @@ Aplicar ações de etiqueta requer que o aplicativo de chamada para aplicar uma 
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
- público const Std:: String & GetLabelId() const  |  Obtenha o ID de etiqueta necessário.
- público GetType() de ActionType const  |  Obter o tipo de [ação](class_mip_action.md).
+public const std::string& GetLabelId() const  |  Obtenha o ID de etiqueta necessário.
+public const std::vector\<std::string\>& GetClassificationIds() const  |  Obter os IDs de classificação que correspondentes e causou esta etiqueta apareça.
+público GetType() de ActionType const  |  Obter o tipo de [ação](class_mip_action.md).
   
 ## <a name="members"></a>Membros
   
-### <a name="getlabelid"></a>GetLabelId
+### <a name="getlabelid-function"></a>Função de GetLabelId
 Obtenha o ID de etiqueta necessário.
 
   
 **Devolve**: O ID da etiqueta.
   
-### <a name="actiontype"></a>ActionType
+### <a name="getclassificationids-function"></a>Função de GetClassificationIds
+Obter os IDs de classificação que correspondentes e causou esta etiqueta apareça.
+
+  
+**Devolve**: & Obter uma lista de IDs que causou esta etiqueta apareça de classificação de Const Std:: vector < Std:: String >.
+  
+### <a name="gettype-function"></a>Função de GetType
 Obter o tipo de [ação](class_mip_action.md).
 
   

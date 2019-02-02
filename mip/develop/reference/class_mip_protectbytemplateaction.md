@@ -1,17 +1,17 @@
 ---
-title: classe mip ProtectByTemplateAction
-description: Referência para a classe mip ProtectByTemplateAction
+title: classe mip::ProtectByTemplateAction
+description: Documenta a classe mip::protectbytemplateaction da Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: cb5f42b25e6f499bc09f3f460ec4a253627b45a5
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.date: 01/28/2019
+ms.openlocfilehash: 1c05a04df39e6454eb934b5db48e96339afdac0c
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445466"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650821"
 ---
 # <a name="class-mipprotectbytemplateaction"></a>classe mip::ProtectByTemplateAction 
 Uma classe de ação que especifica a adição de proteção pelo modelo para o documento.
@@ -19,18 +19,18 @@ Uma classe de ação que especifica a adição de proteção pelo modelo para o 
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
- público const Std:: String & GetTemplateId() const  |  Obtenha o ID de modelo de proteção associado com a ação.
- público GetType() de ActionType const  |  Obter o tipo de [ação](class_mip_action.md).
+public const std::string& GetTemplateId() const  |  Obtenha o ID de modelo de proteção associado com a ação.
+público GetType() de ActionType const  |  Obter o tipo de [ação](class_mip_action.md).
   
 ## <a name="members"></a>Membros
   
-### <a name="gettemplateid"></a>GetTemplateId
+### <a name="gettemplateid-function"></a>Função de GetTemplateId
 Obtenha o ID de modelo de proteção associado com a ação.
 
   
 **Devolve**: O ID de modelo de proteção.
   
-### <a name="actiontype"></a>ActionType
+### <a name="gettype-function"></a>Função de GetType
 Obter o tipo de [ação](class_mip_action.md).
 
   

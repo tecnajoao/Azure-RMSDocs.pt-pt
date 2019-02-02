@@ -1,50 +1,57 @@
 ---
-title: Resumo
-description: Resumo
+title: SDK de MIP para estruturas de referência do C++ e enumerações
+description: Documentação de referência para as estruturas de MIP C++ SDK e enums.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 5af209d5a627263399c8c60f474495dcadab24a0
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.date: 01/28/2019
+ms.openlocfilehash: d3ca101d3141f2a1e36fcfec11e805907c125b8e
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446503"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651773"
 ---
 # <a name="summary"></a>Resumo
+
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
-**Comuns** |
+**Namespace `mip` :** |
+Enum ActionSource       |  Define o que acionou o evento de SetLabel
+Enum ActionType       |  Tipos de ação diferentes.
+Enum AssignmentMethod       |  O método de atribuição da etiqueta do documento. Se a atribuição da etiqueta foi feita automaticamente, padrão ou como uma operação com privilégios (o equivalente a uma operação de administrador).
 Enum consentimento       |  Resposta de um utilizador quando consentimento é solicitado para ligar a um ponto de extremidade de serviço.
-struct ApplicationInfo  |  Uma estrutura que inclui informações específicas do aplicativo.
-**Mip** |
+Enum ContentFormat       |  Formato de conteúdo.
+enum ContentMarkAlignment       |  Marca de alinhamento para o conteúdo (conteúdo cabeçalho ou rodapé de conteúdo).
+Enum ContentState       |  Define o estado dos dados está a aplicação a funcionar após.
 Enum ErrorType       | _Ainda não documentado._
 Enum HttpRequestType       |  Tipo de pedido HTTP.
-Enum LogLevel       |  Níveis de registo diferentes utilizados em todo o SDK de MIP.
+enum LogLevel       |  Níveis de registo diferentes utilizados em todo o SDK de MIP.
 Enum ProtectionHandlerCreationOptions       |  Sinalizadores de bits que ditam o comportamento de criação de política adicionais.
 Enum ProtectionType       |  Descreve se proteção baseia-se desativar um modelo ou ad-hoc (personalizado)
-Enum ActionType       |  Tipos de ação diferentes.
-struct mip::PublishingLicenseContext | Contém os detalhes de uma licença de publicação utilizado para criar um manipulador de proteção.
+Enum WatermarkLayout       |  Esquema das marcas d'água.
+struct ApplicationInfo  |  Uma estrutura que inclui informações específicas do aplicativo.
+struct PublishingLicenseContext | Contém os detalhes de uma licença de publicação utilizado para criar um manipulador de proteção.
+  
+## <a name="enumerations-mip"></a>As enumerações (`mip`)
 
-  
-## <a name="enumerations-common"></a>Enumerações (comum)
-  
-### <a name="consent"></a>Consentimento
-Representa a decisão de um utilizador para dar consentimento para ligar a um ponto de extremidade de serviço.
+### <a name="actionsource-enum"></a>ActionSource enum
+
+Define o que acionou o evento de SetLabel
 
  Valores                         | Descrições                                
 --------------------------------|---------------------------------------------
-AcceptAlways            | Dar consentimento e lembre-se esta decisão
-Aceitar            | Dar consentimento, apenas uma vez
-Rejeitar            | Não consentimento
-  
-## <a name="enumerations-mip"></a>Enumerações (mip)
+MANUAL            | Selecionada manualmente pelo utilizador
+AUTOMÁTICA            | Definir condições de política
+RECOMENDADO            | Definido pelo utilizador após a etiqueta foi recomendada por condições de política
+PADRÃO            | Definido por predefinição na política
+OBRIGATÓRIO            | Definido pelo utilizador após a política imposta para definir uma etiqueta
 
-### <a name="actiontype"></a>ActionType
 
-Tipos de ação diferentes.
+### <a name="actiontype-enum"></a>ActionType enum
+
+Tipos de ação diferentes. PERSONALIZADO é o tipo de ação genérica. Todos os outros tipos de ação é uma ação específica com um significado específico.
 
  Valores                         | Descrições                                
 --------------------------------|---------------------------------------------
@@ -53,8 +60,8 @@ ADD_CONTENT_HEADER            | Adicione um cabeçalho de conteúdo para o tipo 
 ADD_WATERMARK            | Adicione uma marca de água para o tipo de ação de todo o documento.
 PERSONALIZADO            | Um tipo de ação personalizada de definidos.
 JUSTIFICAR            | Um tipo de ação justify.
-METADADOS            | Tipo de ação de alteração de dados de uma Meta.
-PROTECT_ADHOC            | Um proteger por tipo de ação de política ad-hoc.
+METADATA            | Tipo de ação de alteração de dados de uma Meta.
+PROTECT_ADHOC            | Um proteger por tipo de ação de política ad hoc.
 PROTECT_BY_TEMPLATE            | Um proteger por tipo de ação de modelo.
 PROTECT_DO_NOT_FORWARD            | Um proteger por não reencaminhar o tipo de ação.
 REMOVE_CONTENT_FOOTER            | Remova o tipo de ação de rodapé de conteúdo.
@@ -64,37 +71,89 @@ REMOVE_WATERMARK            | Remova tipo de ação de marca d'água.
 APPLY_LABEL            | Aplicam-se o tipo de ação da etiqueta.
 RECOMMEND_LABEL            | Recomendamos o tipo de ação da etiqueta.
 
-PERSONALIZADO é o tipo de ação genérica. Todos os outros tipos de ação é uma ação específica com um significado específico.
+### <a name="assignmentmethod-enum"></a>AssignmentMethod enum
 
-É possível combinar valores ActionType utilizando os seguintes operadores:
+O método de atribuição da etiqueta do documento. Se a atribuição da etiqueta foi feita automaticamente, padrão ou como uma operação com privilégios (o equivalente a uma operação de administrador).
 
-- E (&) operador para [ação](class_mip_action.md) (`operator &(ActionType a, ActionType b)`)
-- Lógica ou (Xor) (^) operador para [ação](class_mip_action.md). (`operator ^(ActionType a, ActionType b)`)
+ Valores                         | Descrições                                
+--------------------------------|---------------------------------------------
+STANDARD            | [Etiqueta](class_mip_label.md) é o método de atribuição standard
+COM PRIVILÉGIOS            | [Etiqueta](class_mip_label.md) privilegiado do método de atribuição
+AUTO            | [Etiqueta](class_mip_label.md) método de atribuição é automático
 
 
-### <a name="errortype"></a>ErrorType
+### <a name="consent-enum"></a>Enumeração de consentimento
+
+Resposta de um utilizador quando consentimento é solicitado para ligar a um ponto de extremidade de serviço.
+
+ Valores                         | Descrições                                
+--------------------------------|---------------------------------------------
+AcceptAlways            | Dar consentimento e lembre-se esta decisão
+Aceitar            | Dar consentimento, apenas uma vez
+Rejeitar            | Não consentimento
+
+
+### <a name="contentformat-enum"></a>ContentFormat enum
+
+Formato de conteúdo.
+
+ Valores                         | Descrições                                
+--------------------------------|---------------------------------------------
+PADRÃO            | Formato de conteúdo é o formato de arquivo padrão
+CORREIO ELETRÓNICO            | Formato do conteúdo é o formato de correio eletrónico
+
+### <a name="contentmarkalignment-enum"></a>ContentMarkAlignment enum
+
+Marca de alinhamento para o conteúdo (conteúdo cabeçalho ou rodapé de conteúdo).
+
+ Valores                         | Descrições                                
+--------------------------------|---------------------------------------------
+À ESQUERDA            | Marcação de conteúdo é alinhada à esquerda
+DIREITA            | Marcação de conteúdo é alinhada à direita
+CENTRO            | Marcação de conteúdo centra-se
+
+### <a name="contentstate-enum"></a>ContentState enum
+
+Define o estado dos dados está a aplicação a funcionar após.
+
+ Valores                         | Descrições                                
+--------------------------------|---------------------------------------------
+REST            | Armazenados fisicamente em bases de dados/ficheiro/armazéns de dados Inativos
+EQUIPE DO MOTION            | Dados atravessar uma rede ou temporariamente que reside na memória do computador para ser de leitura ou atualizado
+USE            | Dados ativos em constante mudança armazenado fisicamente em bases de dados/ficheiro/armazéns etc
+
+### <a name="errortype-enum"></a>ErrorType enum
+
  Valores                         | Descrições                                
 --------------------------------|---------------------------------------------
 BAD_INPUT_ERROR            | Autor da chamada transmitida uma entrada incorreta.
 FILE_IO_ERROR            | Erro de e/s de arquivo de geral.
 NETWORK_ERROR            | Problemas gerais de rede; Por exemplo, serviço inacessível.
 TRANSIENT_NETWORK_ERROR            | Problemas de rede transitórios; Por exemplo, gateway inválido.
-INTERNAL_ERROR            | Erros inesperados internos. Por exemplo, no protocolo de cliente-servidor (resposta inesperada recebida).
+INTERNAL_ERROR            | Erros inesperados internos.
 JUSTIFICATION_REQUIRED            | Deve fornecer a justificação para concluir a ação no ficheiro.
 NOT_SUPPORTED_OPERATION            | A operação pedida ainda não é suportada.
 PRIVILEGED_REQUIRED            | Não é possível substituir a etiqueta com privilégios quando o novo método de etiqueta é padrão.
-ACCESS_DENIED            | O utilizador não foi possível obter acesso ao conteúdo. Por exemplo, não existem permissões, conteúdos revogaram etc.
+ACCESS_DENIED            | O utilizador não foi possível obter acesso aos serviços.
 CONSENT_DENIED            | Uma operação que é necessário o consentimento do utilizador não foi concedida ao consentimento.
+POLICY_SYNC_ERROR            | Falha ao tentar sincronizar dados de política.
+NO_PERMISSIONS            | O utilizador não foi possível obter acesso ao conteúdo. Por exemplo, não existem permissões, conteúdos revogado
+NO_AUTH_TOKEN            | O utilizador não foi possível obter acesso ao conteúdo devido a um token de autenticação vazia.
+DISABLED_SERVICE            | O utilizador não foi possível obter acesso ao conteúdo devido a ser desativada
+PROXY_AUTH_ERROR            | Falha na autenticação de proxy.
+NO_POLICY_ERROR            | Nenhuma política está configurada para o utilizador/inquilino
   
-### <a name="httprequesttype"></a>HttpRequestType
+### <a name="httprequesttype-enum"></a>HttpRequestType enum
+
 Tipo de pedido HTTP.
 
  Valores                         | Descrições                                
 --------------------------------|---------------------------------------------
 Obter            | GET
 Post            | POST
+
   
-### <a name="loglevel"></a>LogLevel
+### <a name="loglevel-enum"></a>LogLevel enum
 
 Níveis de registo diferentes utilizados em todo o SDK de MIP.
 
@@ -103,61 +162,58 @@ Níveis de registo diferentes utilizados em todo o SDK de MIP.
 Rastreio            | 
 Informações            | 
 Aviso            | 
-Error            | 
-Níveis de registo diferentes utilizados em todo o sdk de mip.
+Erro            | 
+
   
-### <a name="protectionhandlercreationoptions"></a>ProtectionHandlerCreationOptions
+### <a name="protectionhandlercreationoptions-enum"></a>ProtectionHandlerCreationOptions enum
 
 Sinalizadores de bits que ditam o comportamento de criação de política adicionais.
 
  Valores                         | Descrições                                
 --------------------------------|---------------------------------------------
-Nenhum            | Nenhum
+Nenhuma            | Nenhuma
 OfflineOnly            | Não permita operações de rede e da interface do Usuário.
 AllowAuditedExtraction            | Conteúdo pode ser aberto num aplicativo sem proteção-SDK-suporte para
 PreferDeprecatedAlgorithms            | Utilização despromovida algoritmos criptográficos (ECB) para efeitos compatibilidade
+  
+### <a name="protectiontype-enum"></a>ProtectionType enum
 
-
-### <a name="protectiontype"></a>ProtectionType
-Descreve se proteção baseia-se desativar um modelo ou ad-hoc (personalizado)
+Descreve se proteção baseia-se desativar um modelo ou ad-hoc (personalizado).
 
  Valores                         | Descrições                                
 --------------------------------|---------------------------------------------
 TemplateBased            | Identificador foi criado a partir de um modelo
 Personalizar            | Identificador foi criado ad hoc
-
   
-### <a name="protectionhandlercreationoptions"></a>ProtectionHandlerCreationOptions
-Operador de OR bit a bit ProtectionHandlerCreationOptions.
+### <a name="watermarklayout-enum"></a>WatermarkLayout enum
 
-Parâmetros:  
-* **um**: deixado valor 
+Esquema das marcas d'água.
 
-* **b**: com o botão direito valor
-
-### <a name="releaseallresources"></a>ReleaseAllResources
-Todos os recursos (threads, etc.) antes do Desligamento de versão.
-Se as bibliotecas de dinâmicas de MIP estão carregados com atraso por uma aplicação, esta função tem de ser chamada antes do aplicativo explicitamente descarregamento dessas bibliotecas MIP para evitar o deadlock. Por exemplo, no win32, esta função tem de ser chamada antes de todas as chamadas para o descarregamento de explicitamente MIP DLLs via FreeLibrary ou \__FUnloadDelayLoadedDLL2. Aplicativos deverá liberar referências a todos os objetos de MIP (por exemplo, perfis, motores, manipuladores) antes de chamar essa função.
-  
-**Devolve**: totalmente ou de parâmetros
-  
-## <a name="structures"></a>Estruturas
-
-### <a name="applicationinfo"></a>ApplicationInfo 
-Uma estrutura que inclui informações específicas do aplicativo.
-
- Campos                        | Descrições                                
+ Valores                         | Descrições                                
 --------------------------------|---------------------------------------------
- applicationId Std:: String pública  |  Identificador da aplicação conforme definido no portal do Azure AD.
- applicationName Std:: String pública  |  Nome da aplicação
- applicationVersion Std:: String pública  |  A versão do aplicativo a ser utilizado
+HORIZONTAL            | Esquema de marca d'água é horizontal
+DIAGONAL LARGA            | Esquema de marca d'água é diagonal
+
+
+## <a name="structures"></a>Estruturas 
+
+### `mip::ApplicationInfo` 
+
+Uma estrutura que inclui informações específicas do aplicativo.
   
-### <a name="mippublishinglicensecontext"></a>Mip::PublishingLicenseContext 
+ Membros                        | Descrições                                
+--------------------------------|---------------------------------------------
+ applicationId Std:: String pública  |  Identificador da aplicação como definido no portal do AAD, (deve ser um GUID sem parênteses Retos).
+ applicationName Std:: String pública  |  Nome da aplicação, (deve conter apenas carateres ASCII válido excluindo ';')
+ public std::string applicationVersion  |  A versão do aplicativo a ser utilizado, (deve conter apenas carateres ASCII válido excluindo ';')
+  
+### `mip::PublishingLicenseContext` 
+
 Contém os detalhes de uma licença de publicação utilizado para criar um manipulador de proteção.
   
- Campos                        | Descrições                                
+ Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
-público licenseInfo const de Std:: vector < uint8_t >  | _Ainda não documentado._
-público serializedPublishingLicense const de Std:: vector < uint8_t >  | _Ainda não documentado._
-PublishingLicenseContext pública (const Std:: vector < uint8_t > licenseInfo, const Std:: vector < uint8_t > & serializedPublishingLicense)  | _Ainda não documentado._
+público const Std:: vector\<uint8_t\> licenseInfo  | _Ainda não documentado._
+público const Std:: vector\<uint8_t\> serializedPublishingLicense  | _Ainda não documentado._
+PublishingLicenseContext pública (Std:: vector const\<uint8_t\>& licenseInfo, Std:: vector const\<uint8_t\>& serializedPublishingLicense)  | _Ainda não documentado._
   

@@ -1,17 +1,17 @@
 ---
-title: classe mip ProtectionHandler
-description: Referência para a classe mip ProtectionHandler
+title: classe mip::ProtectionHandler
+description: Documenta a classe mip::protectionhandler da Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 6fbae05030f56d3c9e680e6de9c8177a11b2f1e2
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.date: 01/28/2019
+ms.openlocfilehash: 37358a2160c190978a21c491249dab42598d49b6
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446758"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651331"
 ---
 # <a name="class-mipprotectionhandler"></a>classe mip::ProtectionHandler 
 Gere as ações relacionadas com a proteção para uma configuração de proteção específico.
@@ -19,174 +19,181 @@ Gere as ações relacionadas com a proteção para uma configuração de proteç
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
-público std::shared_ptr<Stream> CreateProtectedStream (const std::shared_ptr<Stream>& backingStream, contentSize de int64_t int64_t contentStartPosition,)  |  Crie um fluxo protegido que irá permitir a encriptação/desencriptação de conteúdo.
- público int64_t EncryptBuffer (int64_t offsetFromStart, const uint8_t * inputBuffer, int64_t inputBufferSize, uint8_t * outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Encripte uma memória intermédia.
- público int64_t DecryptBuffer (int64_t offsetFromStart, const uint8_t * inputBuffer, int64_t inputBufferSize, uint8_t * outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Descriptografar uma memória intermédia.
- público int64_t GetProtectedContentLength (int64_t unprotectedLength, bool includesFinalBlock)  |  Calcula o tamanho (em bytes) de conteúdo se fosse sendo criptografados com isso [ProtectionHandler](class_mip_protectionhandler.md).
- público int64_t GetBlockSize()  |  Obtém o tamanho do bloco (em bytes) para o modo de cifra utilizado por este [ProtectionHandler](class_mip_protectionhandler.md).
-público Std:: vector Std:: < String > GetRights() const  |  Obtém os direitos concedidos a/identidade do utilizador associada a este [ProtectionHandler](class_mip_protectionhandler.md).
- bool pública AccessCheck (const Std:: String & direita) const  |  Verifica se o manipulador de proteção concede acesso de utilizador especificado certo.
- público const Std:: String GetIssuedTo()  |  Obtém o utilizador associado ao manipulador de proteção.
- público const Std:: String GetOwner()  |  Obtém endereço de e-mail do proprietário do conteúdo.
- bool pública IsIssuedToOwner()  |  Obtém o se o utilizador atual é o proprietário do conteúdo ou não.
-público std::shared_ptr<ProtectionDescriptor> GetProtectionDescriptor()  |  Obtém os detalhes de proteção.
- público const Std:: String GetContentId()  |  Obtém o identificador exclusivo para o/conteúdo do documento.
- bool pública DoesUseDeprecatedAlgorithms()  |  Obtém se utiliza do manipulador de proteção preterido algoritmos criptográficos (ECB) para compatibilidade com versões anteriores, ou não.
- bool pública IsAuditedExtractAllowed()  |  Obtém se o manipulador de proteção concede o utilizador 'auditado extrair"à direita ou não.
-público const Std:: vector < uint8_t > GetSerializedPublishingLicense()  |  Serializar [ProtectionHandler](class_mip_protectionhandler.md) numa licença de publicação (PL)
+public std::shared_ptr\<Stream\> CreateProtectedStream(const std::shared_ptr\<Stream\>& backingStream, int64_t contentStartPosition, int64_t contentSize)  |  Crie um fluxo protegido que irá permitir a encriptação/desencriptação de conteúdo.
+public int64_t EncryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Encripte uma memória intermédia.
+public int64_t DecryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Descriptografar uma memória intermédia.
+public int64_t GetProtectedContentLength(int64_t unprotectedLength, bool includesFinalBlock)  |  Calcula o tamanho (em bytes) de conteúdo se fosse sendo criptografados com isso [ProtectionHandler](class_mip_protectionhandler.md).
+public int64_t GetBlockSize()  |  Obtém o tamanho do bloco (em bytes) para o modo de cifra utilizado por este [ProtectionHandler](class_mip_protectionhandler.md).
+público Std:: vector\<Std:: String\> GetRights() const  |  Obtém os direitos concedidos a/identidade do utilizador associada a este [ProtectionHandler](class_mip_protectionhandler.md).
+bool pública AccessCheck (const Std:: String & direita) const  |  Verifica se o manipulador de proteção concede acesso de utilizador especificado certo.
+public const std::string GetIssuedTo()  |  Obtém o utilizador associado ao manipulador de proteção.
+public const std::string GetOwner()  |  Obtém endereço de e-mail do proprietário do conteúdo.
+bool pública IsIssuedToOwner()  |  Obtém o se o utilizador atual é o proprietário do conteúdo ou não.
+public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor()  |  Obtém os detalhes de proteção.
+public const std::string GetContentId()  |  Obtém o identificador exclusivo para o/conteúdo do documento.
+bool pública DoesUseDeprecatedAlgorithms()  |  Obtém se utiliza do manipulador de proteção preterido algoritmos criptográficos (ECB) para compatibilidade com versões anteriores, ou não.
+bool pública IsAuditedExtractAllowed()  |  Obtém se o manipulador de proteção concede o utilizador 'auditado extrair"à direita ou não.
+público const Std:: vector\<uint8_t\> GetSerializedPublishingLicense()  |  Serializar [ProtectionHandler](class_mip_protectionhandler.md) numa licença de publicação (PL)
+public const std::vector\<uint8_t\> GetSerializedProtectionInfo()  |  Obtém as informações de proteção.
   
 ## <a name="members"></a>Membros
   
-### <a name="stream"></a>Stream
+### <a name="createprotectedstream-function"></a>Função de CreateProtectedStream
 Crie um fluxo protegido que irá permitir a encriptação/desencriptação de conteúdo.
 
 Parâmetros:  
-* **backingStream**: fluxo de segurança do que de leitura/escrita 
+* **backingStream**: Fluxo de segurança do que de leitura/escrita 
 
 
-* **contentStartPosition**: a iniciar a posição (em bytes) dentro do fluxo de segurança onde começa a conteúdo protegido 
+* **contentStartPosition**: A iniciar a posição (em bytes) dentro do fluxo de segurança onde começa a conteúdo protegido 
 
 
-* **contentSize**: tamanho (em bytes) de conteúdos protegidos dentro do fluxo de segurança
+* **contentSize**: Tamanho (em bytes) de conteúdos protegidos dentro do fluxo de segurança
 
 
 
   
-**Devolve**: stream protegido
+**Devolve**: Stream protegido
   
-### <a name="encryptbuffer"></a>EncryptBuffer
+### <a name="encryptbuffer-function"></a>Função de EncryptBuffer
 Encripte uma memória intermédia.
 
 Parâmetros:  
-* **offsetFromStart**: posição relativa de inputBuffer desde o início do conteúdo de texto simples 
+* **offsetFromStart**: Posição relativa de inputBuffer desde o início do conteúdo de texto simples 
 
 
-* **inputBuffer**: memória intermédia de conteúdo de texto simples que será encriptado 
+* **inputBuffer**: Memória intermédia de conteúdo de texto simples que será encriptado 
 
 
-* **inputBufferSize**: tamanho (em bytes) da memória intermédia de entrada 
+* **inputBufferSize**: Tamanho (em bytes) da memória intermédia de entrada 
 
 
 * **outputBuffer**: Buffer no qual será copiado conteúdo encriptado 
 
 
-* **outputBufferSize**: tamanho (em bytes) da memória intermédia de saída 
+* **outputBufferSize**: Tamanho (em bytes) da memória intermédia de saída 
 
 
-* **isFinal**: se a memória intermédia de entrada contém os bytes de texto simples final ou não
+* **isFinal**: Se a memória intermédia de entrada contém os bytes de texto simples final ou não
 
 
 
   
-**Devolve**: tamanho real (em bytes) de conteúdo encriptado
+**Devolve**: Tamanho real (em bytes) de conteúdo encriptado
   
-### <a name="decryptbuffer"></a>DecryptBuffer
+### <a name="decryptbuffer-function"></a>Função de DecryptBuffer
 Descriptografar uma memória intermédia.
 
 Parâmetros:  
-* **offsetFromStart**: posição relativa de inputBuffer desde o início do conteúdo encriptado 
+* **offsetFromStart**: Posição relativa de inputBuffer desde o início do conteúdo encriptado 
 
 
-* **inputBuffer**: memória intermédia de conteúdo encriptado que irá ser desencriptado 
+* **inputBuffer**: Memória intermédia de conteúdo encriptado que irá ser desencriptado 
 
 
-* **inputBufferSize**: tamanho (em bytes) da memória intermédia de entrada 
+* **inputBufferSize**: Tamanho (em bytes) da memória intermédia de entrada 
 
 
 * **outputBuffer**: Buffer no qual será copiado desencriptado conteúdo 
 
 
-* **outputBufferSize**: tamanho (em bytes) da memória intermédia de saída 
+* **outputBufferSize**: Tamanho (em bytes) da memória intermédia de saída 
 
 
-* **isFinal**: se a memória intermédia de entrada contém os bytes encriptados finais ou não
+* **isFinal**: Se a memória intermédia de entrada contém os bytes encriptados finais ou não
 
 
 
   
-**Devolve**: tamanho real (em bytes) de conteúdo desencriptado
+**Devolve**: Tamanho real (em bytes) de conteúdo desencriptado
   
-### <a name="getprotectedcontentlength"></a>GetProtectedContentLength
+### <a name="getprotectedcontentlength-function"></a>Função de GetProtectedContentLength
 Calcula o tamanho (em bytes) de conteúdo se fosse sendo criptografados com isso [ProtectionHandler](class_mip_protectionhandler.md).
 
 Parâmetros:  
-* **unprotectedLength**: tamanho (em bytes) de conteúdo não protegido 
+* **unprotectedLength**: Tamanho (em bytes) de conteúdo não protegido 
 
 
-* **includesFinalBlock**: descreve se o conteúdo não protegido em questão inclui o bloco final, ou não. Por exemplo, no modo de encriptação CBC4k, blocos de protegido não final são o mesmo tamanho que blocos não protegidos, mas blocos protegidos finais são maiores do que suas contrapartes não protegidos.
+* **includesFinalBlock**: Descreve se o conteúdo não protegido em questão inclui o bloco final, ou não. Por exemplo, no modo de encriptação CBC4k, blocos de protegido não final são o mesmo tamanho que blocos não protegidos, mas blocos protegidos finais são maiores do que suas contrapartes não protegidos.
 
 
 
   
-**Devolve**: tamanho (em bytes) de conteúdo protegido
+**Devolve**: Tamanho (em bytes) de conteúdo protegido
   
-### <a name="getblocksize"></a>GetBlockSize
+### <a name="getblocksize-function"></a>Função de GetBlockSize
 Obtém o tamanho do bloco (em bytes) para o modo de cifra utilizado por este [ProtectionHandler](class_mip_protectionhandler.md).
 
   
-**Devolve**: Bloquear tamanho (em bytes)
+**Devolve**: Tamanho do bloco (em bytes)
   
-### <a name="getrights"></a>GetRights
+### <a name="getrights-function"></a>Função de GetRights
 Obtém os direitos concedidos a/identidade do utilizador associada a este [ProtectionHandler](class_mip_protectionhandler.md).
 
   
-**Devolve**: direitos concedidos ao utilizador
+**Devolve**: Direitos concedidos ao utilizador
   
-### <a name="accesscheck"></a>AccessCheck
+### <a name="accesscheck-function"></a>Função de AccessCheck
 Verifica se o manipulador de proteção concede acesso de utilizador especificado certo.
 
 Parâmetros:  
-* **certo**: direito para verificar
+* **right**: Direito para verificar
 
 
 
   
-**Devolve**: se o manipulador de proteção concede acesso de utilizador especificado, à direita ou não
+**Devolve**: Se o manipulador de proteção concede acesso de utilizador especificado, à direita ou não
   
-### <a name="getissuedto"></a>GetIssuedTo
+### <a name="getissuedto-function"></a>Função de GetIssuedTo
 Obtém o utilizador associado ao manipulador de proteção.
 
   
-**Devolve**: utilizador associado o manipulador de proteção
+**Devolve**: Utilizador associado o manipulador de proteção
   
-### <a name="getowner"></a>GetOwner
+### <a name="getowner-function"></a>Função de GetOwner
 Obtém endereço de e-mail do proprietário do conteúdo.
 
   
-**Devolve**: endereço de E-Mail do proprietário do conteúdo
+**Devolve**: Endereço de e-mail do proprietário do conteúdo
   
-### <a name="isissuedtoowner"></a>IsIssuedToOwner
+### <a name="isissuedtoowner-function"></a>Função de IsIssuedToOwner
 Obtém o se o utilizador atual é o proprietário do conteúdo ou não.
 
   
-**Devolve**: se o utilizador atual é o proprietário do conteúdo ou não
+**Devolve**: Se o utilizador atual é o proprietário do conteúdo ou não
   
-### <a name="protectiondescriptor"></a>ProtectionDescriptor
+### <a name="getprotectiondescriptor-function"></a>Função de GetProtectionDescriptor
 Obtém os detalhes de proteção.
 
   
-**Devolve**: detalhes de proteção
+**Devolve**: Detalhes de proteção
   
-### <a name="getcontentid"></a>GetContentId
+### <a name="getcontentid-function"></a>GetContentId function
 Obtém o identificador exclusivo para o/conteúdo do documento.
 
   
 **Devolve**: Identificador exclusivo de conteúdo
   
-### <a name="doesusedeprecatedalgorithms"></a>DoesUseDeprecatedAlgorithms
+### <a name="doesusedeprecatedalgorithms-function"></a>Função de DoesUseDeprecatedAlgorithms
 Obtém se utiliza do manipulador de proteção preterido algoritmos criptográficos (ECB) para compatibilidade com versões anteriores, ou não.
 
   
-**Devolve**: se utiliza de manipulador de proteção preterido algoritmos criptográficos ou não
+**Devolve**: Se o manipulador de proteção usa criptografia algoritmos preteridos ou não
   
-### <a name="isauditedextractallowed"></a>IsAuditedExtractAllowed
+### <a name="isauditedextractallowed-function"></a>Função de IsAuditedExtractAllowed
 Obtém se o manipulador de proteção concede o utilizador 'auditado extrair"à direita ou não.
 
   
-**Devolve**: se o manipulador de proteção concede o utilizador 'auditado extrair"à direita ou não
+**Devolve**: Se o manipulador de proteção concede o utilizador 'auditado extrair"à direita ou não
   
-### <a name="getserializedpublishinglicense"></a>GetSerializedPublishingLicense
+### <a name="getserializedpublishinglicense-function"></a>Função de GetSerializedPublishingLicense
 Serializar [ProtectionHandler](class_mip_protectionhandler.md) numa licença de publicação (PL)
 
   
-**Devolve**: licença serializada de publicação
+**Devolve**: Licença serializada de publicação
+  
+### <a name="getserializedprotectioninfo-function"></a>Função de GetSerializedProtectionInfo
+Obtém as informações de proteção.
+
+  
+**Devolve**: Informações de proteção serializados

@@ -4,231 +4,326 @@ description: Funções
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
+ms.date: 01/28/2019
 ms.author: bryanla
-ms.openlocfilehash: 3bb9cd594022085c24c45bde428cb11f6734caab
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.openlocfilehash: ab176e53547ebb773b7cf8b3933fddfc1566d62b
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446520"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651195"
 ---
 # <a name="functions"></a>Funções
 
-| Funções (âmbito)              | Descrições                                |
+## <a name="summary"></a>Resumo
+
+| Funções pelo âmbito do espaço de nomes   | Descrições                                |
 |--------------------------------|---------------------------------------------|
-**Comuns** |
-público const Std:: String & GetCustomSettingPolicyDataName()       |  Nome da definição para especificar explicitamente os dados de política.
-público const Std:: String & GetCustomSettingExportPolicyFileName()       |  Nome da definição para especificar explicitamente o caminho do ficheiro para exportar dados de política de SCC.
-público const Std:: String & GetCustomSettingPolicyDataFile()       |  Nome da definição para especificar explicitamente o caminho do ficheiro de dados de política.
- **funções de Mip** |
-std::shared_ptr público < mip::Stream > CreateStreamFromBuffer (uint8_t * buffer, tamanho de int64_t const)       |  Cria um [Stream](class_mip_stream.md) de uma memória intermédia.
-std::shared_ptr público < mip::Stream > CreateStreamFromStdStream (const std::shared_ptr < std::iostream > & stdIOStream)       |  Cria um [Stream](class_mip_stream.md) de um std::iostream.
-std::shared_ptr público < mip::Stream > CreateStreamFromStdStream (const std::shared_ptr < std::istream > & stdIStream)       |  Cria um [Stream](class_mip_stream.md) de um std::istream.
-std::shared_ptr público < mip::Stream > CreateStreamFromStdStream (const std::shared_ptr < std::ostream > & stdOStream)       |  Cria um [Stream](class_mip_stream.md) de um std::ostream.
-público ReleaseAllResources() void       |  Todos os recursos (threads, etc.) antes do Desligamento de versão.
-**funções de Mip::Rights**|
+**Namespace `mip` :** |
+público Std:: String GetAssignmentMethodString (método AssignmentMethod)       |  Converte AssignmentMethod enum para uma descrição de cadeia de caracteres.
+público estático Std:: String GetActionSourceString (ActionSource actionSource)       |  Obtenha o nome da origem de ação.
+public static std::string GetContentStateString(mip::ContentState state)       |  Obtenha o nome do Estado de conteúdo.
+public const std::string& GetCustomSettingPolicyDataName()       |  Nome da definição para especificar explicitamente os dados de política.
+public const std::string& GetCustomSettingExportPolicyFileName()       |  Nome da definição para especificar explicitamente o caminho do ficheiro para exportar dados de política de SCC.
+public const std::string& GetCustomSettingSensitivityTypesDataName()       |  Nome da definição para especificar explicitamente os dados de sensibilidade.
+public const std::string& GetCustomSettingPolicyDataFile()       |  Nome da definição para especificar explicitamente o caminho do ficheiro de dados de política.
+public const std::string& GetCustomSettingSensitivityTypesDataFile()       |  Nome da definição para especificar explicitamente o caminho do ficheiro de dados de tipos de sensibilidade.
+público __CDECL de void MIP_API ReleaseAllResources()       |  Todos os recursos (threads, etc.) antes do encerramento da versão.
+público MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream (const std::shared_ptr\<std::istream\>& stdIStream)       |  Cria um [Stream](class_mip_stream.md) de um std::istream.
+público MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream (const std::shared_ptr\<std::ostream\>& stdOStream)       |  Cria um [Stream](class_mip_stream.md) de um std::ostream.
+público MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream (const std::shared_ptr\<std::iostream\>& stdIOStream)       |  Cria um [Stream](class_mip_stream.md) de um std::iostream.
+público MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromBuffer (uint8_t * buffer, tamanho de int64_t const)       |  Cria um [Stream](class_mip_stream.md) de uma memória intermédia.
+ | 
+**Namespace `mip::auditmetadatakeys` :** |
+público Std:: String Sender()       |  Chaves de metadados na representação de cadeia de caracteres de auditoria.
+público Std:: String Recipients()       | _Ainda não documentado._
+público Std:: String LastModifiedBy()       | _Ainda não documentado._
+público Std:: String LastModifiedDate()       | _Ainda não documentado._
+ | 
+**Namespace `mip::rights` :** |
+público Std:: String Owner()       |  Obtém o identificador para o "proprietário" certo de cadeia.
+público Std:: String View()       |  Obtém cadeia certo identificador para 'view'.
 público Std:: String AuditedExtract()       |  Obtém de cadeias de caracteres identificador para "auditado extrair" à direita.
-público Std:: String Comment()       |  Obtém de cadeias de caracteres identificador de "Comentários" à direita.
-público Std:: vector Std:: < String > CommonRights()       |  Obtém uma lista de direitos que se aplicam a todos os cenários.
-público Std:: String Edit()       |  Obtém o identificador para "Editar" certo de cadeia.
-público Std:: vector Std:: < String > EditableDocumentRights()       |  Obtém uma lista de direitos que se aplicam aos documentos.
-público Std:: vector Std:: < String > EmailRights()       |  Obtém uma lista de direitos que se aplicam a mensagens de correio eletrónico.
+public std::string Edit()       |  Obtém o identificador para "Editar" certo de cadeia.
 público Std:: String Export()       |  Obtém de cadeias de caracteres identificador para "Exportar" à direita.
 público Std:: String Extract()       |  Obtém de cadeias de caracteres identificador para '' direito extrair.
-público Std:: String Forward()       |  Obtém de cadeias de caracteres identificador para a direita 'Encaminhamento'.
-público Std:: String Owner()       |  Obtém o identificador para o "proprietário" certo de cadeia.
 público Std:: String Print()       |  Obtém o identificador para a direita "impressão" de cadeia.
-público Std:: String Reply()       |  Obtém cadeia de identificador de "resposta" à direita.
-público Std:: String ReplyAll()       |  Obtém de cadeias de caracteres identificador para o direito de "responder a todos".
-público Std:: String View()       |  Obtém cadeia certo identificador para 'view'.
-**funções de Mip::roles**|
+público Std:: String Comment()       |  Obtém de cadeias de caracteres identificador de "Comentários" à direita.
+public std::string Reply()       |  Obtém cadeia de identificador de "resposta" à direita.
+public std::string ReplyAll()       |  Obtém de cadeias de caracteres identificador para o direito de "responder a todos".
+público Std:: String Forward()       |  Obtém de cadeias de caracteres identificador para a direita 'Encaminhamento'.
+public std::vector\<std::string\> EmailRights()       |  Obtém uma lista de direitos que se aplicam a mensagens de correio eletrónico.
+public std::vector\<std::string\> EditableDocumentRights()       |  Obtém uma lista de direitos que se aplicam aos documentos.
+public std::vector\<std::string\> CommonRights()       |  Obtém uma lista de direitos que se aplicam a todos os cenários.
+ | 
+**Namespace `mip::roles` :** |
+público Std:: String Viewer()       |  Obtém o identificador para a função de "Visualizador" de cadeia.
+public std::string Reviewer()       |  Obtém o identificador para a função de "revisor" de cadeia.
 público Std:: String Author()       |  Obtém de cadeias de caracteres identificador para a função de "autor".
 público Std:: String CoOwner()       |  Obtém o identificador para a função de 'coproprietário' de cadeia.
-público Std:: String Reviewer()       |  Obtém o identificador para a função de "revisor" de cadeia.
-público Std:: String Viewer()       |  Obtém o identificador para a função de "Visualizador" de cadeia.
+
+
+
+## <a name="namespace-mip"></a>Namespace `mip`
+
+### <a name="getassignmentmethodstring-function"></a>Função de GetAssignmentMethodString
+Converte AssignmentMethod enum para uma descrição de cadeia de caracteres.
+
+Parâmetros:  
+* **método**: um método de atribuição. 
+
+
 
   
-## <a name="functions-common"></a>Funções (comum)
+**Devolve**: Uma descrição de cadeia de caracteres do método de atribuição.
+  
+### <a name="getactionsourcestring-function"></a>Função de GetActionSourceString
+Obtenha o nome da origem de ação.
 
-### <a name="getcustomsettingpolicydataname"></a>GetCustomSettingPolicyDataName
+Parâmetros:  
+* **actionSource**: A origem de ação. 
+
+
+
+  
+**Devolve**: Uma representação de cadeia de caracteres de origem de ação.
+  
+### <a name="getcontentstatestring-function"></a>Função de GetContentStateString
+Obtenha o nome do Estado de conteúdo.
+
+Parâmetros:  
+* **actionSource**: O estado do conteúdo a ser executado após. 
+
+
+
+  
+**Devolve**: Uma representação de cadeia de caracteres do Estado do conteúdo.
+  
+### <a name="getcustomsettingpolicydataname-function"></a>Função de GetCustomSettingPolicyDataName
 Nome da definição para especificar explicitamente os dados de política.
 
   
 **Devolve**: A chave de definições personalizadas.
   
-### <a name="getcustomsettingexportpolicyfilename"></a>GetCustomSettingExportPolicyFileName
+### <a name="getcustomsettingexportpolicyfilename-function"></a>Função de GetCustomSettingExportPolicyFileName
 Nome da definição para especificar explicitamente o caminho do ficheiro para exportar dados de política de SCC.
 
   
 **Devolve**: A chave de definições personalizadas.
   
-### <a name="getcustomsettingpolicydatafile"></a>GetCustomSettingPolicyDataFile
+### <a name="getcustomsettingsensitivitytypesdataname-function"></a>Função de GetCustomSettingSensitivityTypesDataName
+Nome da definição para especificar explicitamente os dados de sensibilidade.
+
+  
+**Devolve**: A chave de definições personalizadas.
+  
+### <a name="getcustomsettingpolicydatafile-function"></a>Função de GetCustomSettingPolicyDataFile
 Nome da definição para especificar explicitamente o caminho do ficheiro de dados de política.
 
   
 **Devolve**: A chave de definições personalizadas.
+  
+### <a name="getcustomsettingsensitivitytypesdatafile-function"></a>Função de GetCustomSettingSensitivityTypesDataFile
+Nome da definição para especificar explicitamente o caminho do ficheiro de dados de tipos de sensibilidade.
 
-## <a name="functions-mip"></a>Funções (mip)
-
-### <a name="mipcreatestreamfrombufferbuffer"></a>Mip::CreateStreamFromBuffer(buffer)
-
-Cria um [Stream](class_mip_stream.md) de uma memória intermédia.
+  
+**Devolve**: A chave de definições personalizadas.
+  
+### <a name="releaseallresources-function"></a>Função de ReleaseAllResources
+Todos os recursos (threads, etc.) antes do encerramento da versão.
+Se as bibliotecas de dinâmicas de MIP estão carregados com atraso por uma aplicação, esta função tem de ser chamada antes da aplicação dessas bibliotecas MIP o descarregamento explicitamente para evitar o deadlock. Por exemplo, no win32, essa função deve ser chamada antes de todas as chamadas para explicitamente descarregar MIP DLLs via FreeLibrary ou __FUnloadDelayLoadedDLL2. Aplicativos deverá liberar referências a todos os objetos de MIP (por exemplo, manipuladores de perfis, motores,) antes de chamar essa função.
+  
+### <a name="operator-function"></a>operador | função
+Operador de OR bit a bit ProtectionHandlerCreationOptions.
 
 Parâmetros:  
-* **memória intermédia**: aponta para um buffer
+* **a**: Valor da esquerda 
 
-**Devolve**: **tamanho** da memória intermédia
+
+* **b**: Valor da direita
+
+
+
   
-
-### <a name="mipcreatestreamfromstdstreamistream"></a>Mip::CreateStreamFromStdStream(IStream)
-
+**Devolve**: OR bit a bit de ProtectionHandlerCreationOptions
+  
+### <a name="createstreamfromstdstream-function"></a>Função de CreateStreamFromStdStream
 Cria um [Stream](class_mip_stream.md) de um std::istream.
 
 Parâmetros:  
+* **stdIStream**: Std::istream de segurança
 
-* **stdIStream**: std::istream de segurança
+
+
   
 **Devolve**: [Stream](class_mip_stream.md) um std::istream de encapsulamento de aplicações
   
-### <a name="mipcreatestreamfromstdstreamiostream"></a>Mip::CreateStreamFromStdStream(iostream)
-
-Cria um [Stream](class_mip_stream.md) de um std::iostream.
-
-Parâmetros:  
-* **stdIOStream**: std::iostream de segurança
-  
-**Devolve**: [Stream](class_mip_stream.md) um std::iostream de encapsulamento de aplicações
-  
-### <a name="mipcreatestreamfromstdstreamostream"></a>Mip::CreateStreamFromStdStream(ostream)
-
+### <a name="createstreamfromstdstream-function"></a>Função de CreateStreamFromStdStream
 Cria um [Stream](class_mip_stream.md) de um std::ostream.
 
 Parâmetros:  
-* **stdOStream**: std::ostream de segurança
+* **stdOStream**: Std::ostream de segurança
+
+
+
   
 **Devolve**: [Stream](class_mip_stream.md) um std::ostream de encapsulamento de aplicações
   
-### <a name="mipreleaseallresources"></a>Mip::ReleaseAllResources
+### <a name="createstreamfromstdstream-function"></a>Função de CreateStreamFromStdStream
+Cria um [Stream](class_mip_stream.md) de um std::iostream.
 
-Todos os recursos (threads, etc.) antes do encerramento da versão.  
+Parâmetros:  
+* **stdIOStream**: Std::iostream de segurança
 
-Se as bibliotecas de dinâmicas de MIP estão carregados com atraso por uma aplicação, esta função tem de ser chamada antes da aplicação dessas bibliotecas MIP o descarregamento explicitamente para evitar o deadlock. Por exemplo, no win32, esta função tem de ser chamada antes de todas as chamadas para explicitamente descarregar MIP DLLs via FreeLibrary ou \__FUnloadDelayLoadedDLL2. Aplicativos deverá liberar referências a todos os objetos de MIP (por exemplo, manipuladores de perfis, motores,) antes de chamar essa função.
 
-## <a name="functions-miprights"></a>Funções (mip::rights)
 
-### <a name="owner"></a>Proprietário
+  
+**Devolve**: [Stream](class_mip_stream.md) um std::iostream de encapsulamento de aplicações
+  
+### <a name="createstreamfrombuffer-function"></a>Função de CreateStreamFromBuffer
+Cria um [Stream](class_mip_stream.md) de uma memória intermédia.
+
+Parâmetros:  
+* **memória intermédia**: Aponta para um buffer
+
+
+
+  
+**Devolve**: Tamanho de tamanho do buffer
+  
+
+
+
+## <a name="namespace-mipauditmetadatakeys"></a>Namespace `mip::auditmetadatakeys`
+
+### <a name="sender-function"></a>Função de remetente
+Chaves de metadados na representação de cadeia de caracteres de auditoria.
+  
+### <a name="recipients-function"></a>Função de destinatários
+_Não documentados ainda._
+
+  
+### <a name="lastmodifiedby-function"></a>Função de LastModifiedBy
+_Não documentados ainda._
+  
+### <a name="lastmodifieddate-function"></a>Função de LastModifiedDate
+_Não documentados ainda._
+
+
+
+
+
+## <a name="namespace-miprights"></a>Namespace `mip::rights`
+
+### <a name="owner-function"></a>Função de proprietário
 Obtém o identificador para o "proprietário" certo de cadeia.
 
   
-**Devolve**: identificador de cadeia de caracteres para o "proprietário" certo
+**Devolve**: Identificador para o "proprietário" certo de cadeias de caracteres
   
-### <a name="auditedextract"></a>AuditedExtract
-Obtém de cadeias de caracteres identificador para "auditado extrair" à direita.
-
-  
-**Devolve**: cadeia de identificador para "auditado extract" à direita
-  
-### <a name="comment"></a>Comentário
-Obtém de cadeias de caracteres identificador de "Comentários" à direita.
-
-  
-**Devolve**: cadeia de identificador de "Comentários" à direita
-  
-### <a name="commonrights"></a>CommonRights
-Obtém uma lista de direitos que se aplicam a todos os cenários.
-
-  
-**Devolve**: uma lista de direitos que se aplicam a todos os cenários
-
-### <a name="edit"></a>Editar
-Obtém o identificador para "Editar" certo de cadeia.
-
-  
-**Devolve**: identificador de cadeia de caracteres de "Editar" à direita
-  
-### <a name="editabledocumentrights"></a>EditableDocumentRights
-Obtém uma lista de direitos que se aplicam aos documentos.
-
-  
-**Devolve**: uma lista de direitos que se aplicam a documentos
-  
-### <a name="emailrights"></a>EmailRights
-Obtém uma lista de direitos que se aplicam a mensagens de correio eletrónico.
-
-  
-**Devolve**: uma lista de direitos que se aplicam a mensagens de correio eletrónico
-  
-### <a name="export"></a>Exportar
-Obtém de cadeias de caracteres identificador para "Exportar" à direita.
-
-  
-**Devolve**: cadeia de identificador para "Exportar" à direita
-  
-### <a name="extract"></a>Extração
-Obtém de cadeias de caracteres identificador para '' direito extrair.
-
-  
-**Devolve**: identificador de cadeia de caracteres para "extrair' direita
-  
-### <a name="forward"></a>Reencaminhar
-Obtém de cadeias de caracteres identificador para a direita 'Encaminhamento'.
-
-  
-**Devolve**: cadeia de caracteres de identificador de direito de "reencaminhar"
-  
-### <a name="print"></a>Imprimir
-Obtém o identificador para a direita "impressão" de cadeia.
-
-  
-**Devolve**: cadeia de caracteres de identificador para a direita "impressão"
-  
-### <a name="reply"></a>Responder
-Obtém cadeia de identificador de "resposta" à direita.
-
-  
-**Devolve**: cadeia de identificador de "resposta" à direita
-  
-### <a name="replyall"></a>ReplyAll
-Obtém de cadeias de caracteres identificador para o direito de "responder a todos".
-
-  
-**Devolve**: cadeia de caracteres de identificador para o direito de "responder a todos"
-  
-### <a name="view"></a>Veja os
+### <a name="view-function"></a>Função de vista
 Obtém cadeia certo identificador para 'view'.
 
   
-**Devolve**: cadeia de identificador para 'view' à direita
+**Devolve**: Cadeia de identificador para 'view' à direita
   
+### <a name="auditedextract-function"></a>Função de AuditedExtract
+Obtém de cadeias de caracteres identificador para "auditado extrair" à direita.
 
-## <a name="functions-miproles"></a>Funções (mip::roles)
-
-### <a name="author"></a>Autor
-Obtém de cadeias de caracteres identificador para a função de "autor".
-
-Um autor pode ver, editar, copiar e imprimir o conteúdo.
   
-**Devolve**: identificador de cadeia de caracteres para a função de "autor"
+**Devolve**: Cadeia de identificador para "auditado extract" à direita
   
-### <a name="coowner"></a>CoOwner
-Obtém o identificador para a função de 'coproprietário' de cadeia.
+### <a name="edit-function"></a>Editar função
+Obtém o identificador para "Editar" certo de cadeia.
 
-Coproprietário tem todas as permissões
   
-**Devolve**: identificador de cadeia de caracteres para a função de 'coproprietário'
+**Devolve**: Identificador de cadeia de caracteres para o direito de "Editar"
+  
+### <a name="export-function"></a>Função de exportação
+Obtém de cadeias de caracteres identificador para "Exportar" à direita.
 
-### <a name="reviewer"></a>Revisor
-Obtém o identificador para a função de "revisor" de cadeia.
+  
+**Devolve**: Cadeia de identificador para "Exportar" à direita
+  
+### <a name="extract-function"></a>Extrair a função
+Obtém de cadeias de caracteres identificador para '' direito extrair.
 
-Um revisor pode ver e editar o conteúdo. Não é possível copiar ou imprimir.
   
-**Devolve**: identificador de cadeia de caracteres para a função de "revisor"
+**Devolve**: Identificador de cadeia de caracteres para a direita 'extrair'
   
-### <a name="viewer"></a>Visualizador
+### <a name="print-function"></a>Função de impressa
+Obtém o identificador para a direita "impressão" de cadeia.
+
+  
+**Devolve**: Cadeia de caracteres de identificador para a direita "impressão"
+  
+### <a name="comment-function"></a>Função de comentário
+Obtém de cadeias de caracteres identificador de "Comentários" à direita.
+
+  
+**Devolve**: Cadeia de identificador de "Comentários" à direita
+  
+### <a name="reply-function"></a>Função de resposta
+Obtém cadeia de identificador de "resposta" à direita.
+
+  
+**Devolve**: Cadeia de identificador de "resposta" à direita
+  
+### <a name="replyall-function"></a>Função de ReplyAll
+Obtém de cadeias de caracteres identificador para o direito de "responder a todos".
+
+  
+**Devolve**: Cadeia de caracteres de identificador para o direito de "responder a todos"
+  
+### <a name="forward-function"></a>Função de encaminhamento
+Obtém de cadeias de caracteres identificador para a direita 'Encaminhamento'.
+
+  
+**Devolve**: Cadeia de caracteres de identificador de direito de "reencaminhar"
+  
+### <a name="emailrights-function"></a>Função de EmailRights
+Obtém uma lista de direitos que se aplicam a mensagens de correio eletrónico.
+
+  
+**Devolve**: Uma lista de direitos que se aplicam a mensagens de correio eletrónico
+  
+### <a name="editabledocumentrights-function"></a>Função de EditableDocumentRights
+Obtém uma lista de direitos que se aplicam aos documentos.
+
+  
+**Devolve**: Uma lista de direitos que se aplicam a documentos
+  
+### <a name="commonrights-function"></a>Função de CommonRights
+Obtém uma lista de direitos que se aplicam a todos os cenários.
+
+  
+**Devolve**: Uma lista de direitos que se aplicam a todos os cenários
+
+
+
+
+## <a name="namespace-miproles"></a>Namespace `mip::roles`
+
+### <a name="viewer-function"></a>Função de Visualizador
 Obtém o identificador para a função de "Visualizador" de cadeia.
 
-Um visualizador só pode ver o conteúdo. Não é possível editar, copiar ou imprimir.
   
-**Devolve**: identificador de cadeia de caracteres para a função de "Visualizador"
+**Devolve**: Identificador de cadeia de caracteres para a função de "Visualizador" um visualizador só pode ver o conteúdo. Não é possível editar, copiar ou imprimir.
   
+### <a name="reviewer-function"></a>Função do revisor
+Obtém o identificador para a função de "revisor" de cadeia.
+
+  
+**Devolve**: Identificador de cadeia de caracteres para a função de "revisor" um revisor pode ver e editar o conteúdo. Não é possível copiar ou imprimir.
+  
+### <a name="author-function"></a>Função de autor
+Obtém de cadeias de caracteres identificador para a função de "autor".
+
+  
+**Devolve**: Identificador para a função de "autor" autor pode ver, editar, copiar e imprimir o conteúdo de cadeia.
+  
+### <a name="coowner-function"></a>Função de coOwner
+Obtém o identificador para a função de 'coproprietário' de cadeia.
+
+  
+**Devolve**: Identificador de cadeia de caracteres para a função de 'coproprietário' coproprietário tem todas as permissões

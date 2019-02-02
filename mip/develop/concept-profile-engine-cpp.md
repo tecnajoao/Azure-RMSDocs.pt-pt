@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 05a66dc7a00b976dfb9883f44b3c93a25b4b6975
-ms.sourcegitcommit: 0d3b43c9cedbaeae65299ac372fbfb9ad66ce27f
+ms.openlocfilehash: e29c128569549bbab2125bcce97d87eb74734750
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54183631"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651399"
 ---
 # <a name="microsoft-information-protection-sdk---profile-and-engine-object-concepts"></a>Conceitos de objeto do SDK - perfil e de motor do Microsoft Information Protection
 
@@ -39,7 +39,7 @@ O próprio perfil fornece as seguintes funcionalidades:
 - `Path`: Caminho de ficheiro em que o registo, telemetria e outras estado persistente é armazenado.
 - `useInMemoryStorage`: Um booleano que define se o estado deve ser armazenado na memória, ou no disco.
 - `authDelegate`: Um ponteiro compartilhado da classe `mip::AuthDelegate`. 
-- `consentDelegate`: Um ponteiro compartilhado da classe [ `mip::ConsentDelegate` ](reference/class_consentdelegate.md). 
+- `consentDelegate`: Um ponteiro compartilhado da classe [ `mip::ConsentDelegate` ](reference/class_mip_consentdelegate.md). 
 - `observer`: Um ponteiro compartilhado para o perfil `Observer` implementação (na [ `PolicyProfile` ](reference/class_mip_policyprofile_observer.md), [ `ProtectionProfile` ](reference/class_mip_protectionprofile_observer.md), e [ `FileProfile` ](reference/class_mip_fileprofile_observer.md)).
 - `applicationInfo`: R [ `mip::ApplicationInfo` ](reference/mip-enums-and-structs.md#structures) objeto. Informações sobre a aplicação que está a consumir o SDK, que corresponde ao seu ID de registo de aplicação do Azure Active Directory e o nome.
 

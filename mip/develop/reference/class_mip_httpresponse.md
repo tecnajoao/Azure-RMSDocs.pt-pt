@@ -1,17 +1,17 @@
 ---
-title: classe mip HttpResponse
-description: Referência para a classe mip HttpResponse
+title: classe mip::HttpResponse
+description: Documenta a classe mip::httpresponse da Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: a19ea78b048cafe94501d452bb9c7409237f6ffd
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.date: 01/28/2019
+ms.openlocfilehash: 9cbd899548be15833456a7c1e1fe34c3b5629717
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445364"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650297"
 ---
 # <a name="class-miphttpresponse"></a>classe mip::HttpResponse 
 Interface que descreve uma única resposta HTTP, implementada pela aplicação de cliente, ao substituir [HttpDelegate](class_mip_httpdelegate.md).
@@ -19,26 +19,26 @@ Interface que descreve uma única resposta HTTP, implementada pela aplicação d
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
- público int32_t GetStatusCode() const  |  Obter o código de estado de resposta.
- público const Std:: String & GetBody() const  |  Obtenha o corpo do pedido.
-público std::map const < Std:: String, Std:: String, CaseInsensitiveComparator > & GetHeaders() const  |  Obtenha os cabeçalhos de pedido.
+public int32_t GetStatusCode() const  |  Obter o código de estado de resposta.
+public const std::string& GetBody() const  |  Obtenha o corpo do pedido.
+public const std::map\<std::string, std::string, CaseInsensitiveComparator\>& GetHeaders() const  |  Obtenha os cabeçalhos de pedido.
   
 ## <a name="members"></a>Membros
   
-### <a name="getstatuscode"></a>GetStatusCode
+### <a name="getstatuscode-function"></a>Função de GetStatusCode
 Obter o código de estado de resposta.
 
   
-**Devolve**: código de estado
+**Devolve**: Código de estado
   
-### <a name="getbody"></a>GetBody
+### <a name="getbody-function"></a>Função de GetBody
 Obtenha o corpo do pedido.
 
   
-**Devolve**: corpo do pedido
+**Devolve**: Corpo do pedido
   
-### <a name="getheaders"></a>GetHeaders
+### <a name="getheaders-function"></a>Função de GetHeaders
 Obtenha os cabeçalhos de pedido.
 
   
-**Devolve**: cabeçalhos de pedido
+**Devolve**: Cabeçalhos do pedido

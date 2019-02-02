@@ -1,17 +1,17 @@
 ---
-title: classe mip MetadataAction
-description: Referência para a classe mip MetadataAction
+title: classe mip::MetadataAction
+description: Documenta a classe mip::metadataaction da Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 8f7480775a0226c7161c9ad770184e54427a5084
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.date: 01/28/2019
+ms.openlocfilehash: 110a2b8fbaa10e87bcdf8617e9f7d22f749139b8
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47444624"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650889"
 ---
 # <a name="class-mipmetadataaction"></a>classe mip::MetadataAction 
 Uma [ação](class_mip_action.md) que adiciona informações de metadados para o conteúdo.
@@ -19,25 +19,25 @@ Uma [ação](class_mip_action.md) que adiciona informações de metadados para o
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
-público const Std:: vector < Std:: String > & GetMetadataToRemove() const  |  Obter a lista de nomes dos metadados que devem ser removidos do conteúdo.
-público const Std:: vector < std::pair < Std:: String, Std:: String >> & GetMetadataToAdd() const  |  Obter os metadados de pares nome/valor que devem ser adicionados ao conteúdo.
- público GetType() de ActionType const  |  Obter o tipo de [ação](class_mip_action.md).
+public const std::vector\<std::string\>& GetMetadataToRemove() const  |  Obter a lista de nomes dos metadados que devem ser removidos do conteúdo.
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetMetadataToAdd() const  |  Obter os metadados de pares nome/valor que devem ser adicionados ao conteúdo.
+público GetType() de ActionType const  |  Obter o tipo de [ação](class_mip_action.md).
   
 ## <a name="members"></a>Membros
   
-### <a name="getmetadatatoremove"></a>GetMetadataToRemove
+### <a name="getmetadatatoremove-function"></a>Função de GetMetadataToRemove
 Obter a lista de nomes dos metadados que devem ser removidos do conteúdo.
 
   
-**Devolve**: um vetor de cadeias de caracteres para remover. remover metadados deve ser feito antes de adicionar metadados.
+**Devolve**: Um vetor de cadeias de caracteres para remover. remover metadados deve ser feito antes de adicionar metadados.
   
-### <a name="getmetadatatoadd"></a>GetMetadataToAdd
+### <a name="getmetadatatoadd-function"></a>Função de GetMetadataToAdd
 Obter os metadados de pares nome/valor que devem ser adicionados ao conteúdo.
 
   
 **Devolve**: Const Std:: vector < std::pair < Std:: String, Std:: String >> & remover metadados devem ser feitas antes de adicionar metadados.
   
-### <a name="actiontype"></a>ActionType
+### <a name="gettype-function"></a>Função de GetType
 Obter o tipo de [ação](class_mip_action.md).
 
   

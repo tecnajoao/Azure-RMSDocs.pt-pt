@@ -4,21 +4,21 @@ description: Um guia de início rápido que mostra como escrever a lógica de in
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 01/08/2019
+ms.date: 01/18/2019
 ms.author: bryanla
-ms.openlocfilehash: 686321c4f376679103b92419b5b86abaa74dc394
-ms.sourcegitcommit: adc4621ec4738c0abb6c1fa81a6598a6dfc5ace6
+ms.openlocfilehash: 2fb19aa5071fa13f9801de9e9ed1106717f5adf9
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136242"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651433"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Início rápido: Inicialização de aplicações de cliente (C++)
 
-Este início rápido mostram-lhe como implementar o padrão de inicialização do cliente, utilizado pelo SDK C++ MIP em tempo de execução. 
+Este guia de introdução mostra-lhe como implementar o padrão de inicialização do cliente, utilizado pelo SDK C++ MIP em tempo de execução. 
 
 > [!NOTE]
-> Os passos descritos neste guia de introdução são necessários para qualquer aplicativo de cliente que utiliza o ficheiro de MIP, política ou as APIs de proteção. Embora este início rápido demonstra a utilização das APIs de arquivo, esse mesmo padrão é aplicável a clientes que utilizam a política e as APIs de proteção. Inícios rápidos de futuros devem ser feitos em série, como cada um deles baseia-se na anterior, por este sendo a primeira.
+> Os passos descritos neste guia de introdução são necessários para qualquer aplicativo de cliente que utiliza o ficheiro de MIP, política ou as APIs de proteção. Embora este início rápido demonstra a utilização das APIs de arquivo, esse mesmo padrão é aplicável a clientes que utilizam a política e as APIs de proteção. Conclua os inícios rápidos restantes em série, como cada um deles baseia-se na anterior, por este sendo a primeira.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -27,12 +27,12 @@ Se ainda não o fez, certifique-se de que para:
 - Conclua os passos na [instalação do SDK de proteção de informações da Microsoft (MIP) e configuração](setup-configure-mip.md). Este "cliente inicialização de aplicações" Guia de introdução baseia-se na configuração e instalação correta do SDK.
 - Opcionalmente:
   - Revisão [objetos de perfil e de motor](concept-profile-engine-cpp.md). Os objetos de perfil e de motor são conceitos de universais, necessários para os clientes que utilizam as APIs de MIP/políticas/proteção de ficheiros. 
-  - Revisão [conceitos de autenticação](concept-authentication-cpp.md) para saber como a autenticação e autorização são implementadas pela aplicação cliente e do SDK.
-  - Revisão [conceitos de observador](concept-async-observers.md) para saber mais sobre observadores e como eles são implementados. O SDK de MIP faz uso do padrão observador implementar notificações de eventos assíncronos.
+  - Revisão [conceitos de autenticação](concept-authentication-cpp.md) para saber como a autenticação e autorização são implementados com o SDK e o aplicativo cliente.
+  - Revisão [conceitos de observador](concept-async-observers.md) para saber mais sobre observadores e como eles são implementados. O SDK de MIP utiliza o padrão observer implementar notificações de eventos assíncronos.
 
 ## <a name="create-a-visual-studio-solution-and-project"></a>Criar uma solução do Visual Studio e o projeto
 
-Primeiro, criar e configurar a solução do Visual Studio e o projeto, sobre a qual irão criar os inícios rápidos iniciais. 
+Primeiro, criar e configurar a solução do Visual Studio e o projeto, sobre a qual criar outros guias de introdução iniciais. 
 
 1. Abra o Visual Studio 2017, selecione o **arquivo** menu, **New**, **projeto**. Na **novo projeto** caixa de diálogo:
    - No painel esquerdo, sob **instalada**, **outras linguagens**, selecione **Visual C++**.
@@ -43,7 +43,7 @@ Primeiro, criar e configurar a solução do Visual Studio e o projeto, sobre a q
      [![Criação de solução do Visual Studio](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
 
 2. Adicione o pacote Nuget para a API de ficheiros do SDK MIP ao seu projeto:
-   - Na **Explorador de soluções**, clique com o botão direito do rato no nó do projeto (diretamente sob o nó superior/solução) e selecione **gerir pacotes NuGet...** :
+   - Na **Explorador de soluções**, clique com o botão direito no nó do projeto (diretamente sob o nó superior/solução) e selecione **gerir pacotes NuGet...** :
    - Quando o **Gestor de pacotes NuGet** é aberto um separador na área de separadores de grupo do Editor:
      - Selecione **procurar**.
      - Introduza "Microsoft.InformationProtection" na caixa de pesquisa.
@@ -235,7 +235,7 @@ Agora, criar uma implementação para um delegado de consentimento, ao expandir 
 
 ## <a name="construct-a-file-profile-and-engine"></a>Construir um perfil de ficheiros e de motor
 
-Conforme mencionado, o objeto de perfil e de motor são necessários para SDK os clientes que utilizam APIs de MIP. Conclua a codificação parte deste início rápido, ao adicionar o código para instanciar os objetos de perfil e o mecanismo: 
+Conforme mencionado, perfil e um mecanismo de objetos são necessários para clientes SDK usando APIs de MIP. Conclua a codificação parte deste início rápido, ao adicionar o código para instanciar os objetos de perfil e o mecanismo: 
 
 1. Partir **Explorador de soluções**, abra o ficheiro. cpp no projeto que contém a implementação do `main()` método. Por predefinição para o mesmo nome que o projeto que contém ele, que especificou durante a criação do projeto.
 
@@ -259,8 +259,9 @@ Conforme mencionado, o objeto de perfil e de motor são necessários para SDK os
    int main()
    {
      // Construct/initialize objects required by the application's profile object
-     ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, app name)
-                 "<application-name>" };
+     ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, name, version)
+                 "<application-name>",
+                 "<application-version>"};
      auto profileObserver = make_shared<ProfileObserver>();         // Observer object                  
      auto authDelegateImpl = make_shared<AuthDelegateImpl>(         // Authentication delegate object (App ID)
                  "<application-id>");
@@ -277,8 +278,19 @@ Conforme mencionado, o objeto de perfil e de motor são necessários para SDK os
      // Set up promise/future connection for async profile operations; load profile asynchronously
      auto profilePromise = make_shared<promise<shared_ptr<FileProfile>>>();
      auto profileFuture = profilePromise->get_future();
-     mip::FileProfile::LoadAsync(profileSettings, profilePromise);
-     auto profile = profileFuture.get();
+    try
+    { 
+        mip::FileProfile::LoadAsync(profileSettings, profilePromise);
+    }
+    catch (const std::exception& e)
+    {
+        cout << "An exception occurred... are the Settings and ApplicationInfo objects populated correctly?\n\n"
+            << e.what() << "'\n";
+        system("pause");
+        return 1;
+
+    }
+    auto profile = profileFuture.get();
 
      // Construct/initialize engine object
      FileEngine::Settings engineSettings(
@@ -303,28 +315,28 @@ Conforme mencionado, o objeto de perfil e de motor são necessários para SDK os
        return 1;
      }
 
-      return 0;
-     }
-
+   return 0;
+   }
    ``` 
 
-3. Substitua os valores de marcador de posição no código-fonte que acabou de colar, com os seguintes valores:
+3. Substitua todos os valores de marcador de posição no código-fonte que acabou de colar, utilizar as constantes de cadeia de caracteres:
 
    | Marcador de posição | Valor | Exemplo |
    |:----------- |:----- |:--------|
-   | \<id da aplicação\> | O Azure AD Application ID (GUID) atribuído para a aplicação registada no [passo 2 de # de "definição de MIP SDK e configuração"](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory) artigo. Substitua 2 instâncias.  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
-   | \<nome da aplicação\> | Um nome amigável definido pelo utilizador para a sua aplicação. Tem de conter carateres de ASCII válidos (excluindo ';') e o ideal é que corresponde ao nome da aplicação que utilizou no seu registo do Azure AD. | AppInitialization |
-   | \<motor de conta\> | A conta utilizada para de identidade o mecanismo. Quando se autentica com uma conta de utilizador durante a aquisição do token, este valor tem de corresponder. | user1@tenant.onmicrosoft.com |
-   | \<Estado do motor\> | Estado definido pelo utilizador para ser associado com o motor. | MyAppState |
+   | \<application-id\> | O Azure AD Application ID (GUID) atribuído para a aplicação registada no [passo 2 de # de "definição de MIP SDK e configuração"](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory) artigo. Substitua 2 instâncias. | `"0edbblll-8773-44de-b87c-b8c6276d41eb"` |
+   | \<application-name\> | Um nome amigável definido pelo utilizador para a sua aplicação. Tem de conter carateres de ASCII válidos (excluindo ';') e o ideal é que corresponde ao nome da aplicação que utilizou no seu registo do Azure AD. | `"AppInitialization"` |
+   | \<application-version\> | Informações de versão definido pelo utilizador para a sua aplicação. Tem de conter carateres de ASCII válidos (excluindo ';'). | `"1.1.0.0"` |
+   | \<engine-account\> | A conta utilizada para de identidade o mecanismo. Quando se autentica com uma conta de utilizador durante a aquisição do token, este valor tem de corresponder. | `"user1@tenant.onmicrosoft.com"` |
+   | \<engine-state\> | Estado definido pelo utilizador para ser associado com o motor. | `"My App State"` |
 
 
-4. Agora fazer uma compilação final do aplicativo e resolva quaisquer erros. Seu código deve criar com êxito, mas não irá ainda funciona corretamente enquanto não concluir o próximo início rápido. Se executar o aplicativo, verá um resultado semelhante ao seguinte. Não terá um token de acesso para fornecer, até concluir o próximo início rápido.
+4. Agora fazer uma compilação final do aplicativo e resolva quaisquer erros. Seu código deve criar com êxito, mas não irá ainda funciona corretamente enquanto não concluir o próximo início rápido. Se executar o aplicativo, ver um resultado semelhante ao seguinte. Não terá um token de acesso para fornecer, até concluir o próximo início rápido.
 
    ```console
    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
    Set $authority to: https://login.windows.net/common/oauth2/authorize
    Set $resourceUrl to: https://syncservice.o365syncservice.com/
-   Be sure to sign in with user account:
+   Sign in with user account:
    Enter access token:
    ```
 

@@ -1,17 +1,17 @@
 ---
-title: classe mip AddContentFooterAction
-description: Referência para a classe mip AddContentFooterAction
+title: classe mip::AddContentFooterAction
+description: Documenta a classe mip::addcontentfooteraction da Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 73f641d965c3cf0236919557128af2ed07705672
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.date: 01/28/2019
+ms.openlocfilehash: 064581d2b3a3c0ab9b926f0defe161dba46dfe49
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445840"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650855"
 ---
 # <a name="class-mipaddcontentfooteraction"></a>classe mip::AddContentFooterAction 
 Uma classe de ação que especifica a adicionar um rodapé de conteúdo ao documento.
@@ -19,62 +19,62 @@ Uma classe de ação que especifica a adicionar um rodapé de conteúdo ao docum
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
- público const Std:: String & GetUIElementName()  |  Uma API utilizada para marcar o elemento de rodapé de conteúdo.
- público const Std:: String & GetText() const  |  Obtenha o texto que serve para ir para o rodapé de conteúdo.
- público const Std:: String & GetFontName() const  |  Obtenha o nome de tipo de letra utilizado para apresentar o rodapé de conteúdo.
- público int GetFontSize() const  |  Obter o tamanho de tipo de letra utilizado para apresentar o rodapé de conteúdo.
- público const Std:: String & GetFontColor() const  |  Obtenha a cor do tipo de letra utilizada para apresentar o rodapé de conteúdo.
- público GetAlignment() de ContentMarkAlignment const  |  Obtenha o alinhamento de rodapé.
- público int GetMargin() const  |  Obtenha a margem de rodapé na parte inferior.
- público GetType() de ActionType const  |  Obter o tipo de [ação](class_mip_action.md).
+public const std::string& GetUIElementName()  |  Uma API utilizada para marcar o elemento de rodapé de conteúdo.
+public const std::string& GetText() const  |  Obtenha o texto que serve para ir para o rodapé de conteúdo.
+public const std::string& GetFontName() const  |  Obtenha o nome de tipo de letra utilizado para apresentar o rodapé de conteúdo.
+public int GetFontSize() const  |  Obter o tamanho de tipo de letra utilizado para apresentar o rodapé de conteúdo.
+public const std::string& GetFontColor() const  |  Obtenha a cor do tipo de letra utilizada para apresentar o rodapé de conteúdo.
+public ContentMarkAlignment GetAlignment() const  |  Obtenha o alinhamento de rodapé.
+public int GetMargin() const  |  Obtenha a margem de rodapé na parte inferior.
+público GetType() de ActionType const  |  Obter o tipo de [ação](class_mip_action.md).
   
 ## <a name="members"></a>Membros
   
-### <a name="getuielementname"></a>GetUIElementName
+### <a name="getuielementname-function"></a>Função de GetUIElementName
 Uma API utilizada para marcar o elemento de rodapé de conteúdo.
 
   
 **Devolve**: O nome que deve ser utilizado para o elemento de interface do Usuário que contém o rodapé de conteúdo. O mesmo nome vai ser devolvido num [RemoveContentFooterAction](class_mip_removecontentfooteraction.md) no caso do rodapé de conteúdo tem de ser removido.
   
-### <a name="gettext"></a>GetText
+### <a name="gettext-function"></a>Função de GetText
 Obtenha o texto que serve para ir para o rodapé de conteúdo.
 
   
-**Devolve**: texto do rodapé de conteúdo.
+**Devolve**: Texto do rodapé de conteúdo.
   
-### <a name="getfontname"></a>GetFontName
+### <a name="getfontname-function"></a>Função de GetFontName
 Obtenha o nome de tipo de letra utilizado para apresentar o rodapé de conteúdo.
 
   
-**Devolve**: nome da fonte. Valor predefinido é Calibri se nada estiver definido pela política.
+**Devolve**: Nome do tipo de letra. Valor predefinido é Calibri se nada estiver definido pela política.
   
-### <a name="getfontsize"></a>GetFontSize
+### <a name="getfontsize-function"></a>Função de GetFontSize
 Obter o tamanho de tipo de letra utilizado para apresentar o rodapé de conteúdo.
 
   
-**Devolve**: tamanho da fonte como um número inteiro.
+**Devolve**: Tamanho da fonte como um número inteiro.
   
-### <a name="getfontcolor"></a>GetFontColor
+### <a name="getfontcolor-function"></a>Função de GetFontColor
 Obtenha a cor do tipo de letra utilizada para apresentar o rodapé de conteúdo.
 
   
-**Devolve**: cor da fonte como uma cadeia de caracteres (por exemplo, "#000000").
+**Devolve**: Cor da fonte como uma cadeia de caracteres (por exemplo, "#000000").
   
-### <a name="getalignment"></a>GetAlignment
+### <a name="getalignment-function"></a>Função de GetAlignment
 Obtenha o alinhamento de rodapé.
 
   
-**Devolve**: ContentMarkAlignment o enumerador: esquerda | DIREITA | CENTRO. 
+**Devolve**: O enumerador ContentMarkAlignment: ESQUERDA | DIREITA | CENTRO. 
   
-**Consulte também**: ContentMarkAlignment
+**Consulte também**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
   
-### <a name="getmargin"></a>GetMargin
+### <a name="getmargin-function"></a>Função de GetMargin
 Obtenha a margem de rodapé na parte inferior.
 
   
-**Devolve**: as margens na parte inferior do documento (por exemplo, 10 mm).
+**Devolve**: As margens na parte inferior do documento (por exemplo, 10 mm).
   
-### <a name="actiontype"></a>ActionType
+### <a name="gettype-function"></a>Função de GetType
 Obter o tipo de [ação](class_mip_action.md).
 
   

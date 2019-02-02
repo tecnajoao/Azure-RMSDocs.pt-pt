@@ -1,36 +1,36 @@
 ---
-title: classe mip RemoveContentFooterAction
-description: Referência para a classe mip RemoveContentFooterAction
+title: class mip::RemoveContentFooterAction
+description: Documenta a classe mip::removecontentfooteraction da Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: d275e2256c8a65bf63fd16d5761f42563d7a7f07
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.date: 01/28/2019
+ms.openlocfilehash: 1d8d68ff3fb3e041a271469b9ba4d0a18c158544
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445636"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651314"
 ---
-# <a name="class-mipremovecontentfooteraction"></a>classe mip::RemoveContentFooterAction 
+# <a name="class-mipremovecontentfooteraction"></a>class mip::RemoveContentFooterAction 
 Uma classe de ação que especifica a remover o rodapé de conteúdo do documento.
   
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
-público const Std:: vector < Std:: String > & GetUIElementNames()  |  Obtém uma lista de nomes que deve ser utilizado para localizar os elementos de interface do Usuário que devem ser removidos.
- público GetType() de ActionType const  |  Obter o tipo de [ação](class_mip_action.md).
+public const std::vector\<std::string\>& GetUIElementNames()  |  Obtém uma lista de nomes que deve ser utilizado para localizar os elementos de interface do Usuário que devem ser removidos.
+público GetType() de ActionType const  |  Obter o tipo de [ação](class_mip_action.md).
   
 ## <a name="members"></a>Membros
   
-### <a name="getuielementnames"></a>GetUIElementNames
+### <a name="getuielementnames-function"></a>Função de GetUIElementNames
 Obtém uma lista de nomes que deve ser utilizado para localizar os elementos de interface do Usuário que devem ser removidos.
 
   
-**Devolve**: uma lista de nomes do elemento de interface do usuário.
+**Devolve**: Uma lista de nomes de elemento de interface do usuário.
   
-### <a name="actiontype"></a>ActionType
+### <a name="gettype-function"></a>Função de GetType
 Obter o tipo de [ação](class_mip_action.md).
 
   

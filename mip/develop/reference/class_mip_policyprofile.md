@@ -1,17 +1,17 @@
 ---
-title: classe mip PolicyProfile
-description: Referência para a classe mip PolicyProfile
+title: classe mip::PolicyProfile
+description: Documenta a classe mip::policyprofile da Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 387e28780cb0ef02d56050f534d4783fdebc286e
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.date: 01/28/2019
+ms.openlocfilehash: c97f6335159f99c97ff68e233ed7d357242bedb3
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446961"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651161"
 ---
 # <a name="class-mippolicyprofile"></a>classe mip::PolicyProfile 
 [PolicyProfile](class_mip_policyprofile.md) classe é a classe de raiz para as operações do Microsoft Information Protection a utilizar. Um aplicativo típico irá apenas precisa de um [PolicyProfile](class_mip_policyprofile.md) , mas ele pode criar vários perfis, se for necessário.
@@ -19,21 +19,21 @@ ms.locfileid: "47446961"
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
- Definições de const públicas & GetSettings() const  |  Obtenha as configurações definidas no perfil.
-ListEnginesAsync void pública (const std::shared_ptr<void>& contexto)  |  Começa a lista a operação de mecanismos.
-UnloadEngineAsync void pública (Std:: String const & id, const std::shared_ptr<void>& contexto)  |  É iniciado, descarregando o motor de política com o ID especificado.
-AddEngineAsync void pública (const PolicyEngine::Settings e definições, const std::shared_ptr<void>& contexto)  |  Inicia a adicionar um novo mecanismo de política para o perfil.
-DeleteEngineAsync void pública (Std:: String const & id, const std::shared_ptr<void>& contexto)  |  Começa a eliminar o motor de política com o ID especificado. Todos os dados para o perfil de determinado serão eliminados.
+Definições de const públicas & GetSettings() const  |  Obtenha as configurações definidas no perfil.
+public void ListEnginesAsync(const std::shared_ptr\<void\>& context)  |  Começa a lista a operação de mecanismos.
+public void UnloadEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  É iniciado, descarregando o motor de política com o ID especificado.
+public void AddEngineAsync(const PolicyEngine::Settings& settings, const std::shared_ptr\<void\>& context)  |  Inicia a adicionar um novo mecanismo de política para o perfil.
+public void DeleteEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  Começa a eliminar o motor de política com o ID especificado. Todos os dados para o perfil de determinado serão eliminados.
   
 ## <a name="members"></a>Membros
   
-### <a name="settings"></a>Definições
+### <a name="getsettings-function"></a>Função de GetSettings
 Obtenha as configurações definidas no perfil.
 
   
-**Devolve**: configurar as definições no perfil.
+**Devolve**: Configurar as definições no perfil.
   
-### <a name="listenginesasync"></a>ListEnginesAsync
+### <a name="listenginesasync-function"></a>Função de ListEnginesAsync
 Começa a lista a operação de mecanismos.
 
 Parâmetros:  
@@ -42,7 +42,7 @@ Parâmetros:
 
 [PolicyProfile::Observer](class_mip_policyprofile_observer.md) será chamado após o êxito ou falha.
   
-### <a name="unloadengineasync"></a>UnloadEngineAsync
+### <a name="unloadengineasync-function"></a>Função de UnloadEngineAsync
 É iniciado, descarregando o motor de política com o ID especificado.
 
 Parâmetros:  
@@ -54,7 +54,7 @@ Parâmetros:
 
 [PolicyProfile::Observer](class_mip_policyprofile_observer.md) será chamado após o êxito ou falha.
   
-### <a name="addengineasync"></a>AddEngineAsync
+### <a name="addengineasync-function"></a>Função de AddEngineAsync
 Inicia a adicionar um novo mecanismo de política para o perfil.
 
 Parâmetros:  
@@ -66,7 +66,7 @@ Parâmetros:
 
 [PolicyProfile::Observer](class_mip_policyprofile_observer.md) será chamado após o êxito ou falha.
   
-### <a name="deleteengineasync"></a>DeleteEngineAsync
+### <a name="deleteengineasync-function"></a>Função de DeleteEngineAsync
 Começa a eliminar o motor de política com o ID especificado. Todos os dados para o perfil de determinado serão eliminados.
 
 Parâmetros:  

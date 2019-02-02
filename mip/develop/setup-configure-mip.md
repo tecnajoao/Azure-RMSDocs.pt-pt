@@ -4,22 +4,18 @@ description: Fornece os pré-requisitos de instalação e configuração, para p
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 01/08/2019
+ms.date: 01/30/2019
 ms.author: bryanla
-ms.openlocfilehash: 21fdf98495fbf64cfae413c70205beaeffa7fe3b
-ms.sourcegitcommit: 0fad4196f397fa32c60e6d24791fcad43689c4ba
+ms.openlocfilehash: b8c152db0ae52a20cc5323709c245911564e5f18
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55088127"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651450"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Instalação do SDK de proteção de informações da Microsoft (MIP) e configuração 
 
 O guia de introdução e tutoriais são centradas em torno da criação de aplicativos que usam as APIs e bibliotecas MIP SDK. Este artigo mostra-lhe como configurar e configurar a sua subscrição do Office 365 e a estação de trabalho do cliente, em preparação para utilizar o SDK.
-
-O SDK de MIP é suportado nas seguintes plataformas:  
-
-[!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -76,7 +72,7 @@ Em seguida, conclua os seguintes passos para garantir que seu computador cliente
 
      [![Instalação do Visual Studio](media/setup-mip-client/visual-studio-install.png)](media/setup-mip-client/visual-studio-install.png#lightbox)
 
-3. Instalar o [módulo do PowerShell ADAL.PS](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2). 
+3. Instalar o [módulo do PowerShell ADAL.PS](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2): 
 
    - Porque os direitos de administrador são necessários para instalar os módulos, primeiro precisa:
 
@@ -97,25 +93,21 @@ Em seguida, conclua os seguintes passos para garantir que seu computador cliente
      PS C:\WINDOWS\system32>
      ```
 
-4. Baixe amostras SDK a partir do GitHub 
+4. Transferir ficheiros do SDK:
 
-   - Se ainda não tiver uma, crie primeiro um [perfil do GitHub](https://github.com/join).
-   - Em seguida, instale a versão mais recente do [ferramentas de cliente do Git da Software Freedom Conservancy (Git Bash)](https://git-scm.com/download/)
-   - Com o Git Bash, transfira o sample(s) de interesse:
-     - Utilize a seguinte consulta para ver os repositórios: https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk. 
-     - Com o Git Bash, utilize `git clone https://github.com/azure-samples/<repo-name>` para transferir cada repositório de exemplo.
+   O SDK de MIP é suportado nas seguintes plataformas, com downloads separados para cada plataforma/idioma suportado:  
 
-5. Transferir os ficheiros binários e de cabeçalho do SDK
+   [!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 
-   Um ficheiro. zip que contém os binários do SDK e cabeçalhos para todas as plataformas podem ser encontradas em https://aka.ms/mipsdkbinaries. O zip contém vários arquivos. zip adicionais, um para cada plataforma e API. Os ficheiros são nomeados da seguinte forma, onde \<API\> = `file`, `protection`, ou `upe`, e \<SO\> = a plataforma: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`.
+   **Tar.GZ/. Downloads de ZIP**
 
-   Por exemplo, seria o. zip para binários de API de proteção e os cabeçalhos no Debian: `mip_sdk_protection_debian9_1.0.0.0.tar.gz`.
+   Tar.GZ e. Downloads de ZIP contêm arquivos compactados adicionais, um para cada API. Os arquivos compactados são nomeados da seguinte forma, onde \<API\> = `file`, `protection`, ou `upe`, e \<SO\> = a plataforma: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`. Por exemplo, seria o ficheiro para binários de API de proteção e os cabeçalhos no Debian: `mip_sdk_protection_debian9_1.0.0.0.tar.gz`. Cada.tar.gz/.zip contido é dividido em três diretórios:
 
-   Cada. zip ou tarball contém outros três diretórios:
-
-   - **Contentores:** Os binários compilados para cada arquitetura de plataforma, quando aplicável.
-   - **Incluem:** Os arquivos de cabeçalho do SDK do Microsoft Information Protection
-   - **Exemplos:** Código-fonte para aplicativos de exemplo
+   - **Contentores:** Binários compilados para cada arquitetura de plataforma, quando aplicável.
+   - **Incluem:** Arquivos de cabeçalho (C++).
+   - **Exemplos:** Código-fonte para aplicativos de exemplo.
+    
+   **Pacotes NuGet**
 
    Se estiver fazendo o desenvolvimento do Visual Studio, o SDK pode ser instalado também através da consola do Gestor de pacotes NuGet:
 
@@ -124,8 +116,11 @@ Em seguida, conclua os seguintes passos para garantir que seu computador cliente
     Install-Package Microsoft.InformationProtection.Policy
     Install-Package Microsoft.InformationProtection.Protection
     ```  
-    
-6. Adicione os caminhos dos binários do SDK (bibliotecas de vínculo dinâmico (. dll)), a variável de ambiente PATH. A variável de caminho permite que as DLLs dependentes ser encontrados em tempo de execução, por aplicações cliente:
+
+5. Se não estiver a utilizar o pacote NuGet, adicione os caminhos dos binários do SDK para a variável de ambiente PATH. A variável de caminho permite que os binários dependentes (DLLs) para ser encontrados em tempo de execução, por aplicações de cliente (opcional):
+
+   Se estiver a utilizar uma estação de trabalho do Windows 10:
+
    - Clique no ícone do Windows no canto inferior esquerdo.
    - Escreva "Caminho" e prima a tecla "Enter", quando vir o **editar as variáveis de ambiente de sistema** show de item.
    - Sobre o **propriedades do sistema** caixa de diálogo, clique em **variáveis de ambiente**.
@@ -133,9 +128,17 @@ Em seguida, conclua os seguintes passos para garantir que seu computador cliente
    - Sobre o **variável de ambiente de edição** caixa de diálogo, clique em **New**, que cria uma nova linha editável. Usando o caminho completo para cada um a `file\bins\debug\amd64`, `protection\bins\debug\amd64`, e `upe\bins\debug\amd64` subdiretórios, adicionar uma nova linha para cada um. Os diretórios SDK são armazenados num `<API>\bins\<target>\<platform>` formato, em que:
      - \<API\> = `file`, `protection`, `upe`
      - \<target\> = `debug`, `release`
-     - \<platform\> = `amd64` (aka: x64), `x86`, etc.
+     - \<platform\> = `amd64` (x64), `x86`, etc.
    
    - Quando a atualização foi concluída a **caminho** variável, clique **OK**. Em seguida, clique em **OK** quando devolvido para o **variáveis de ambiente** caixa de diálogo.
+
+6. Baixe amostras SDK a partir do GitHub (opcional):
+
+   - Se ainda não tiver uma, crie primeiro um [perfil do GitHub](https://github.com/join).
+   - Em seguida, instale a versão mais recente do [ferramentas de cliente do Git da Software Freedom Conservancy (Git Bash)](https://git-scm.com/download/)
+   - Com o Git Bash, transfira o sample(s) de interesse:
+     - Utilize a seguinte consulta para ver os repositórios: https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk. 
+     - Com o Git Bash, utilize `git clone https://github.com/azure-samples/<repo-name>` para transferir cada repositório de exemplo.
 
 ## <a name="register-a-client-application-with-azure-active-directory"></a>Registar uma aplicação de cliente com o Azure Active Directory
 
@@ -161,7 +164,7 @@ Para registar uma conta de aplicação no Azure AD para utilização com os exem
    - Sobre o **permissões obrigatórias** página, clique em **Add**. 
    - Sobre o **adicionar acesso à API** página, clique em **selecionar uma API**.
    - Sobre o **selecionar uma API** página, clique no "**Microsoft Rights Management Services**" API e clique em **selecionar**.
-   - Na **ativar o acesso ao** para permissões de disponíveis da API, clique em "**criar e aceder a conteúdo protegido para utilizadores**" e clique em **selecione**, em seguida,  **Feito**.
+   - No **ativar o acesso ao** para permissões de disponíveis da API, clique em "**criar e aceder a conteúdo protegido para utilizadores**", em seguida, **selecione**, em seguida, **feito** .
 
 5. Repita o passo 4 de #, mas desta vez, quando vai para o **selecionar uma API** página, será necessário para a API de pesquisa.
    - Sobre o **selecionar uma API** página, no tipo de caixa de pesquisa "**serviço de sincronização do Microsoft Information Protection**", em seguida, clique a API e clique em **selecionar**.
@@ -174,7 +177,7 @@ Quando terminar, registo de aplicação e permissões de API devem ter um aspeto
    [![Registo de aplicação do Azure AD](media/setup-mip-client/aad-app-registration.png)](media/setup-mip-client/aad-app-registration.png#lightbox)
 
 
-Para obter mais informações sobre como adicionar APIs e as permissões para um registo, consulte [a atualizar uma aplicação no Azure AD, configurar uma aplicação de cliente para aceder a web APIs](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). Aqui encontrará informações sobre como adicionar as APIs e as permissões necessárias por uma aplicação cliente.  
+Para obter mais informações sobre como adicionar APIs e as permissões para um registo, consulte [configurar uma aplicação de cliente para aceder a web APIs](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). Aqui encontrará informações sobre como adicionar as APIs e as permissões necessárias por uma aplicação cliente.  
 
 ## <a name="request-an-information-protection-integration-agreement-ipia"></a>Pedir um Contrato de Integração do Information Protection (IPIA)
 
@@ -210,15 +213,17 @@ Se já tiver um IPIA assinado e quiser adicionar um novo *ID da Aplicação* a u
 
 - Nome da Aplicação da Empresa
 - Breve Descrição da Aplicação
-- ID do Inquilino do Azure (mesmo que seja igual ao anterior)
+- ID de inquilino do Azure (mesmo que o igual ao anterior)
 - ID da Aplicação
 - Contactos, e-mail e telefone da empresa para Correspondência em Situações Críticas
 
-Depois de nos enviar o e-mail, aguarde até 72 horas para receber um aviso de receção.
+Após o envio da mensagem de e-mail, permitir que até 72 horas para receber um aviso de receção.
 
 ## <a name="next-steps"></a>Próximos Passos
 
-- Antes de iniciar a secção de guias de introdução, não deixe de ler sobre [observadores no SDK do MIP](concept-async-observers.md), como o SDK de MIP foi concebido para ser quase que totalmente assíncrono.
-- Se estiver pronto para obter experiência prática com o SDK, comece com [início rápido: Inicialização de aplicações de cliente (C++)](quick-app-initialization-cpp.md).
+- Se for um desenvolvedor de C++
+  - Certifique-se de que leia [conceitos de observadores](concept-async-observers.md) antes de começar a seção de início rápido, para saber mais sobre a natureza assíncrona das APIs do C++.
+  - Quando estiver pronto para obter alguma experiência com o SDK, começa com [início rápido: Inicialização de aplicações de cliente (C++)](quick-app-initialization-cpp.md).
+- Se for um C# programador, quando estiver pronto para obter alguma experiência com o SDK, comece com [início rápido: Inicialização de aplicações de cliente (C#)](quick-app-initialization-csharp.md).
 
 

@@ -1,17 +1,17 @@
 ---
-title: classe mip FileHandler observador
-description: Referência para a classe mip FileHandler observador
+title: classe mip::FileHandler::Observer
+description: Documenta a classe mip::filehandler da Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: a587107afc2b8963d64c31ad47af81761bf2b9f8
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.date: 01/28/2019
+ms.openlocfilehash: 33f8a9c0d90d7f64295d469004c36a4c4cc80338
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446190"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650634"
 ---
 # <a name="class-mipfilehandlerobserver"></a>classe mip::FileHandler::Observer 
 [Observador](class_mip_filehandler_observer.md) interface para que os clientes obter notificações de eventos relacionados com o manipulador de arquivo.
@@ -20,37 +20,37 @@ Todos os erros herdam [mip::Error](class_mip_error.md). Cliente não deve chamar
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
-OnCreateFileHandlerSuccess de void virtual público (const std::shared_ptr<FileHandler>& fileHandler, const std::shared_ptr<void>& contexto)  |  Chamado quando o manipulador é criado com êxito.
-OnCreateFileHandlerFailure de void virtual público (const std::exception_ptr e erro, const std::shared_ptr<void>& contexto)  |  Chamado quando a falha ao criar o manipulador.
-OnGetLabelSuccess de void virtual público (const std::shared_ptr<ContentLabel>& etiqueta, const std::shared_ptr<void>& contexto)  |  Chamado quando a etiqueta é recuperada com êxito.
-OnGetLabelFailure de void virtual público (const std::exception_ptr e erro, const std::shared_ptr<void>& contexto)  |  Chamado quando a falha ao obter a etiqueta.
-OnGetProtectionSuccess de void virtual público (const std::shared_ptr<ProtectionHandler>& protectionHandler, const std::shared_ptr<void>& contexto)  |  Chamado quando a política de proteção é obtida com êxito.
-OnGetProtectionFailure de void virtual público (const std::exception_ptr e erro, const std::shared_ptr<void>& contexto)  |  Chamado quando a falha ao obter a política de proteção.
-OnCommitSuccess de void virtual público (bool confirmada, const std::shared_ptr<void>& contexto)  |  Chamado quando a consolidar as alterações no ficheiro foram bem-sucedidas.
-OnCommitFailure de void virtual público (const std::exception_ptr e erro, const std::shared_ptr<void>& contexto)  |  Chamado quando a falha ao consolidar as alterações ao ficheiro.
+public virtual void OnCreateFileHandlerSuccess(const std::shared_ptr\<FileHandler\>& fileHandler, const std::shared_ptr\<void\>& context)  |  Chamado quando o manipulador é criado com êxito.
+OnCreateFileHandlerFailure de void virtual público (const std::exception_ptr e erro, const std::shared_ptr\<void\>& contexto)  |  Chamado quando a falha ao criar o manipulador.
+OnClassifySuccess de void virtual público (Std:: vector const\<std::shared_ptr\<ação\>\>& ações, const std::shared_ptr\<void\>& contexto)  |  Chamado quando classificar êxito.
+OnClassifyFailure de void virtual público (const std::exception_ptr e erro, const std::shared_ptr\<void\>& contexto)  |  Chamado quando classificar falhou.
+public virtual void OnGetDecryptedTemporaryFileSuccess(const std::string& decryptedFilePath, const std::shared_ptr\<void\>& context)  |  Chamado quando a obter o êxito do ficheiro temporário desencriptada.
+public virtual void OnGetDecryptedTemporaryFileFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Chamado quando o ficheiro temporário desencriptado falhou a obter.
+OnCommitSuccess de void virtual público (bool confirmada, const std::shared_ptr\<void\>& contexto)  |  Chamado quando a consolidar as alterações no ficheiro foram bem-sucedidas.
+OnCommitFailure de void virtual público (const std::exception_ptr e erro, const std::shared_ptr\<void\>& contexto)  |  Chamado quando a falha ao consolidar as alterações ao ficheiro.
   
 ## <a name="members"></a>Membros
   
-### <a name="oncreatefilehandlersuccess"></a>OnCreateFileHandlerSuccess
+### <a name="oncreatefilehandlersuccess-function"></a>Função de OnCreateFileHandlerSuccess
 Chamado quando o manipulador é criado com êxito.
   
-### <a name="oncreatefilehandlerfailure"></a>OnCreateFileHandlerFailure
+### <a name="oncreatefilehandlerfailure-function"></a>Função de OnCreateFileHandlerFailure
 Chamado quando a falha ao criar o manipulador.
   
-### <a name="ongetlabelsuccess"></a>OnGetLabelSuccess
-Chamado quando a etiqueta é recuperada com êxito.
+### <a name="onclassifysuccess-function"></a>Função de OnClassifySuccess
+Chamado quando classificar êxito.
   
-### <a name="ongetlabelfailure"></a>OnGetLabelFailure
-Chamado quando a falha ao obter a etiqueta.
+### <a name="onclassifyfailure-function"></a>Função de OnClassifyFailure
+Chamado quando classificar falhou.
   
-### <a name="ongetprotectionsuccess"></a>OnGetProtectionSuccess
-Chamado quando a política de proteção é obtida com êxito.
+### <a name="ongetdecryptedtemporaryfilesuccess-function"></a>OnGetDecryptedTemporaryFileSuccess function
+Chamado quando a obter o êxito do ficheiro temporário desencriptada.
   
-### <a name="ongetprotectionfailure"></a>OnGetProtectionFailure
-Chamado quando a falha ao obter a política de proteção.
+### <a name="ongetdecryptedtemporaryfilefailure-function"></a>Função de OnGetDecryptedTemporaryFileFailure
+Chamado quando o ficheiro temporário desencriptado falhou a obter.
   
-### <a name="oncommitsuccess"></a>OnCommitSuccess
+### <a name="oncommitsuccess-function"></a>Função de OnCommitSuccess
 Chamado quando a consolidar as alterações no ficheiro foram bem-sucedidas.
   
-### <a name="oncommitfailure"></a>OnCommitFailure
+### <a name="oncommitfailure-function"></a>Função de OnCommitFailure
 Chamado quando a falha ao consolidar as alterações ao ficheiro.

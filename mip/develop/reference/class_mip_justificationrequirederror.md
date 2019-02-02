@@ -1,63 +1,63 @@
 ---
-title: classe mip JustificationRequiredError
-description: Referência para a classe mip JustificationRequiredError
+title: classe mip::JustificationRequiredError
+description: Documenta a classe mip::justificationrequirederror da Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 059d139fc5222fd5f1865c66834519347e23a5a9
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.date: 01/28/2019
+ms.openlocfilehash: 721037296ecc7d92fae6747a408ce84bfda4b34a
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445993"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650923"
 ---
 # <a name="class-mipjustificationrequirederror"></a>classe mip::JustificationRequiredError 
   
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
-público std::shared_ptr virtual<Error> const clone)  |  Clone o erro.
- char pública const * what() const  |  Obter a mensagem de erro.
- público GetErrorType() virtual ErrorType const  |  Obter o tipo de erro.
- público virtual const Std:: String & GetErrorName() const  |  Obtenha o nome do erro.
- público virtual const Std:: String & const GetMessage)  |  Obter a mensagem de erro.
- SetMessage de void virtual público (const Std:: String & msg)  |  Defina a mensagem de erro.
+std::shared_ptr virtual pública\<erro\> const clone)  |  Clone o erro.
+public char const* what() const  |  Obter a mensagem de erro.
+público GetErrorType() virtual ErrorType const  |  Obter o tipo de erro.
+público virtual const Std:: String & GetErrorName() const  |  Obtenha o nome do erro.
+public virtual const std::string& GetMessage() const  |  Obter a mensagem de erro.
+public virtual void SetMessage(const std::string& msg)  |  Defina a mensagem de erro.
   
 ## <a name="members"></a>Membros
   
-### <a name="error"></a>Error
+### <a name="clone-function"></a>Função de clone
 Clone o erro.
 
   
-**Devolve**: um clone do erro.
+**Devolve**: Um clone do erro.
   
-### <a name="what"></a>o que
+### <a name="what-function"></a>o que funcionar
 Obter a mensagem de erro.
 
   
 **Devolve**: A mensagem de erro
   
-### <a name="errortype"></a>ErrorType
+### <a name="geterrortype-function"></a>Função de GetErrorType
 Obter o tipo de erro.
 
   
 **Devolve**: O tipo de erro.
   
-### <a name="geterrorname"></a>GetErrorName
+### <a name="geterrorname-function"></a>Função de GetErrorName
 Obtenha o nome do erro.
 
   
 **Devolve**: O nome do erro.
   
-### <a name="getmessage"></a>GetMessage
+### <a name="getmessage-function"></a>Função GetMessage
 Obter a mensagem de erro.
 
   
 **Devolve**: A mensagem de erro.
   
-### <a name="setmessage"></a>SetMessage
+### <a name="setmessage-function"></a>Função de SetMessage
 Defina a mensagem de erro.
 
 Parâmetros:  

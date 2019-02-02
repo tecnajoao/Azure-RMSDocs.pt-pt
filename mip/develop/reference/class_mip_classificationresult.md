@@ -1,17 +1,17 @@
 ---
-title: classe mip ClassificationResult
-description: Referência para a classe mip ClassificationResult
+title: classe mip::ClassificationResult
+description: Documenta a classe mip::classificationresult da Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: ea312330c656b6daefbc1bcba690f53ebfbf419f
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.date: 01/28/2019
+ms.openlocfilehash: 28b174fe65de5980fb1922cfb4c3e5cee7cab1d8
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446299"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650753"
 ---
 # <a name="class-mipclassificationresult"></a>classe mip::ClassificationResult 
 Classe que contém o resultado de uma chamada de classificação no estado de execução.
@@ -19,23 +19,23 @@ Classe que contém o resultado de uma chamada de classificação no estado de ex
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
- público Std:: String GetId() const  |  Obtenha o ID da política de classificação.
- público int GetCount() const  |  Obter a contagem de instâncias.
- público int GetConfidenceLevel() const  |  Obtenha a confiança no resultado.
+public std::string GetId() const  |  Obtenha o ID da política de classificação.
+público int GetCount() const  |  Obter a contagem de instâncias.
+público int GetConfidenceLevel() const  |  Obtenha a confiança no resultado.
   
 ## <a name="members"></a>Membros
   
-### <a name="getid"></a>GetId
+### <a name="getid-function"></a>Função de GetId
 Obtenha o ID da política de classificação.
 
   
 **Devolve**: ID da política de classificação.
   
-### <a name="getcount"></a>GetCount
+### <a name="getcount-function"></a>Função de GetCount
 Obter a contagem de instâncias.
 
   
 **Devolve**: A contagem de instâncias.
   
-### <a name="getconfidencelevel"></a>GetConfidenceLevel
+### <a name="getconfidencelevel-function"></a>Função de GetConfidenceLevel
 Obtenha a confiança no resultado.

@@ -1,17 +1,17 @@
 ---
-title: classe mip FileProfile observador
-description: Referência para a classe mip FileProfile observador
+title: classe mip::FileProfile::Observer
+description: Documenta a classe mip::fileprofile da Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 105380ef63f6533839190e4c9e3f3ee5379781f1
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.date: 01/28/2019
+ms.openlocfilehash: 08ddea8287678bb0c5f423be39eb112a03bf2503
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446401"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650593"
 ---
 # <a name="class-mipfileprofileobserver"></a>classe mip::FileProfile::Observer 
 [Observador](class_mip_fileprofile_observer.md) interface para os clientes a obter notificações do perfil eventos relacionados.
@@ -20,58 +20,68 @@ Todos os erros herdam [mip::Error](class_mip_error.md). Cliente não deve chamar
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
- público ~Observer() virtual  | _Ainda não documentado._
-OnLoadSuccess de void virtual público (std::shared_ptr const < mip::FileProfile > & perfil, const std::shared_ptr<void>& contexto)  |  Chamado quando o perfil foi carregado com êxito.
-OnLoadFailure de void virtual público (const std::exception_ptr e erro, const std::shared_ptr<void>& contexto)  |  Chamado quando o carregamento de um perfil provocou um erro.
-OnListEnginesSuccess de void virtual público (Std:: vector const < Std:: String > & engineIds, const std::shared_ptr<void>& contexto)  |  Chamado quando a lista de motores de foi gerada com êxito.
-OnListEnginesFailure de void virtual público (const std::exception_ptr e erro, const std::shared_ptr<void>& contexto)  |  Chamado quando a listagem mecanismos provocou um erro.
-OnUnloadEngineSuccess de void virtual público (const std::shared_ptr<void>& contexto)  |  Chamado quando um motor de foi descarregado com êxito.
-OnUnloadEngineFailure de void virtual público (const std::exception_ptr e erro, const std::shared_ptr<void>& contexto)  |  Chamado quando o descarregamento de um motor de provocou um erro.
-OnAddEngineSuccess de void virtual público (std::shared_ptr const < mip::FileEngine > & mecanismo, const std::shared_ptr<void>& contexto)  |  Chamado quando um novo mecanismo de foi adicionado com êxito.
-OnAddEngineFailure de void virtual público (const std::exception_ptr e erro, const std::shared_ptr<void>& contexto)  |  Chamado quando adicionar um novo mecanismo de provocou um erro.
-OnDeleteEngineSuccess de void virtual público (const std::shared_ptr<void>& contexto)  |  Chamado quando um motor de foi eliminado com êxito.
-OnDeleteEngineFailure de void virtual público (const std::exception_ptr e erro, const std::shared_ptr<void>& contexto)  |  Chamado quando a eliminação de um motor de provocou um erro.
- OnPolicyChanged de void virtual público (const Std:: String & engineId)  |  Chamado quando a política foi alterado para o motor com o ID especificado.
- Observer() protegido  | _Ainda não documentado._
+public virtual ~Observer()  | _Ainda não documentado._
+OnLoadSuccess de void virtual público (const std::shared_ptr\<mip::FileProfile\>& perfil, const std::shared_ptr\<void\>& contexto)  |  Chamado quando o perfil foi carregado com êxito.
+OnLoadFailure de void virtual público (const std::exception_ptr e erro, const std::shared_ptr\<void\>& contexto)  |  Chamado quando o carregamento de um perfil provocou um erro.
+OnListEnginesSuccess de void virtual público (Std:: vector const\<Std:: String\>& engineIds, const std::shared_ptr\<void\>& contexto)  |  Chamado quando a lista de motores de foi gerada com êxito.
+OnListEnginesFailure de void virtual público (const std::exception_ptr e erro, const std::shared_ptr\<void\>& contexto)  |  Chamado quando a listagem mecanismos provocou um erro.
+OnUnloadEngineSuccess de void virtual público (const std::shared_ptr\<void\>& contexto)  |  Chamado quando um motor de foi descarregado com êxito.
+OnUnloadEngineFailure de void virtual público (const std::exception_ptr e erro, const std::shared_ptr\<void\>& contexto)  |  Chamado quando o descarregamento de um motor de provocou um erro.
+OnAddEngineSuccess de void virtual público (const std::shared_ptr\<mip::FileEngine\>& mecanismo, const std::shared_ptr\<void\>& contexto)  |  Chamado quando um novo mecanismo de foi adicionado com êxito.
+OnAddEngineFailure de void virtual público (const std::exception_ptr e erro, const std::shared_ptr\<void\>& contexto)  |  Chamado quando adicionar um novo mecanismo de provocou um erro.
+OnDeleteEngineSuccess de void virtual público (const std::shared_ptr\<void\>& contexto)  |  Chamado quando um motor de foi eliminado com êxito.
+OnDeleteEngineFailure de void virtual público (const std::exception_ptr e erro, const std::shared_ptr\<void\>& contexto)  |  Chamado quando a eliminação de um motor de provocou um erro.
+OnPolicyChanged de void virtual público (const Std:: String & engineId)  |  Chamado quando a política foi alterado para o motor com o ID especificado.
+OnAddPolicyEngineStarting void virtual público (bool requiresPolicyFetch)  |  Chamado antes da criação do motor para descrever ou não os dados de política do motor de política devem ser obtidos do servidor ou se ele pode ser criado a partir de dados armazenados em cache localmente.
+Observer() protegido  | _Ainda não documentado._
   
 ## <a name="members"></a>Membros
   
-### <a name="observer"></a>~ Observador
+### <a name="observer-function"></a>~ Função de observador
 _Não documentados ainda._
 
   
-### <a name="onloadsuccess"></a>OnLoadSuccess
+### <a name="onloadsuccess-function"></a>Função de OnLoadSuccess
 Chamado quando o perfil foi carregado com êxito.
   
-### <a name="onloadfailure"></a>OnLoadFailure
+### <a name="onloadfailure-function"></a>Função de OnLoadFailure
 Chamado quando o carregamento de um perfil provocou um erro.
   
-### <a name="onlistenginessuccess"></a>OnListEnginesSuccess
+### <a name="onlistenginessuccess-function"></a>Função de OnListEnginesSuccess
 Chamado quando a lista de motores de foi gerada com êxito.
   
-### <a name="onlistenginesfailure"></a>OnListEnginesFailure
+### <a name="onlistenginesfailure-function"></a>Função de OnListEnginesFailure
 Chamado quando a listagem mecanismos provocou um erro.
   
-### <a name="onunloadenginesuccess"></a>OnUnloadEngineSuccess
+### <a name="onunloadenginesuccess-function"></a>Função de OnUnloadEngineSuccess
 Chamado quando um motor de foi descarregado com êxito.
   
-### <a name="onunloadenginefailure"></a>OnUnloadEngineFailure
+### <a name="onunloadenginefailure-function"></a>Função de OnUnloadEngineFailure
 Chamado quando o descarregamento de um motor de provocou um erro.
   
-### <a name="onaddenginesuccess"></a>OnAddEngineSuccess
+### <a name="onaddenginesuccess-function"></a>Função de OnAddEngineSuccess
 Chamado quando um novo mecanismo de foi adicionado com êxito.
   
-### <a name="onaddenginefailure"></a>OnAddEngineFailure
+### <a name="onaddenginefailure-function"></a>Função de OnAddEngineFailure
 Chamado quando adicionar um novo mecanismo de provocou um erro.
   
-### <a name="ondeleteenginesuccess"></a>OnDeleteEngineSuccess
+### <a name="ondeleteenginesuccess-function"></a>Função de OnDeleteEngineSuccess
 Chamado quando um motor de foi eliminado com êxito.
   
-### <a name="ondeleteenginefailure"></a>OnDeleteEngineFailure
+### <a name="ondeleteenginefailure-function"></a>Função de OnDeleteEngineFailure
 Chamado quando a eliminação de um motor de provocou um erro.
   
-### <a name="onpolicychanged"></a>OnPolicyChanged
+### <a name="onpolicychanged-function"></a>Função de OnPolicyChanged
 Chamado quando a política foi alterado para o motor com o ID especificado.
   
-### <a name="observer"></a>Observador
+### <a name="onaddpolicyenginestarting-function"></a>Função de OnAddPolicyEngineStarting
+Chamado antes da criação do motor para descrever ou não os dados de política do motor de política devem ser obtidos do servidor ou se ele pode ser criado a partir de dados armazenados em cache localmente.
+
+Parâmetros:  
+* **requiresPolicyFetch**: Descreve se os dados do motor devem ser obtidos por meio de HTTP ou se ele será carregado a partir da cache
+
+
+Esse retorno de chamada opcional pode ser utilizado por uma aplicação para ser informado se é ou não uma operação de AddEngineAsync exigirá uma operação HTTP (com seu atraso associado) para concluir.
+  
+### <a name="observer-function"></a>Função de observador
 _Não documentados ainda._

@@ -1,17 +1,17 @@
 ---
-title: classe mip Stream
-description: Referência para a classe mip Stream
+title: classe mip::Stream
+description: Documenta a classe mip::stream da Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: e6296c5e15590741e008979dcf12373ff5fcdf00
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.date: 01/28/2019
+ms.openlocfilehash: 4289b39ba454b19c6836a7eaccb6333cbb9000b4
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445228"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651705"
 ---
 # <a name="class-mipstream"></a>classe mip::Stream 
 Uma classe que define a interface entre o SDK de MIP e baseada em fluxo conteúdo de mensagens em fila.
@@ -19,19 +19,19 @@ Uma classe que define a interface entre o SDK de MIP e baseada em fluxo conteúd
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
- público int64_t leitura (uint8_t * buffer, int64_t bufferLength)  |  Ler num buffer do fluxo.
- público int64_t escrever (const uint8_t * buffer, int64_t bufferLength)  |  Escreva para o fluxo de uma memória intermédia.
- bool pública Flush)  |  esvaziar o fluxo.
- Seek void pública (posição int64_t)  |  Posição específica dentro do fluxo de procura.
- bool pública CanRead() const  |  Uma verificação se o fluxo pode ser lidos na.
- bool pública CanWrite() const  |  Verifique se o fluxo pode ser escrito para.
- público int64_t Position()  |  Obter a posição atual dentro do fluxo.
- público int64_t Size()  |  Obter o tamanho do conteúdo dentro do fluxo.
- Tamanho da void pública (int64_t valor)  |  Defina o tamanho do fluxo.
+public int64_t Read(uint8_t* buffer, int64_t bufferLength)  |  Ler num buffer do fluxo.
+public int64_t Write(const uint8_t* buffer, int64_t bufferLength)  |  Escreva para o fluxo de uma memória intermédia.
+bool pública Flush)  |  esvaziar o fluxo.
+Seek void pública (posição int64_t)  |  Posição específica dentro do fluxo de procura.
+bool pública CanRead() const  |  Uma verificação se o fluxo pode ser lidos na.
+bool pública CanWrite() const  |  Verifique se o fluxo pode ser escrito para.
+público int64_t Position()  |  Obter a posição atual dentro do fluxo.
+público int64_t Size()  |  Obter o tamanho do conteúdo dentro do fluxo.
+Tamanho da void pública (int64_t valor)  |  Defina o tamanho do fluxo.
   
 ## <a name="members"></a>Membros
   
-### <a name="read"></a>Ler
+### <a name="read-function"></a>Função de leitura
 Ler num buffer do fluxo.
 
 Parâmetros:  
@@ -43,9 +43,9 @@ Parâmetros:
 
 
   
-**Devolve**: número de bytes lidos.
+**Devolve**: Número de bytes lidos.
   
-### <a name="write"></a>Escrever
+### <a name="write-function"></a>Criar função
 Escreva para o fluxo de uma memória intermédia.
 
 Parâmetros:  
@@ -57,15 +57,15 @@ Parâmetros:
 
 
   
-**Devolve**: número de bytes escritos.
+**Devolve**: Número de bytes escritos.
   
-### <a name="flush"></a>Remoção da cache
+### <a name="flush-function"></a>Remover função
 esvaziar o fluxo.
 
   
-**Devolve**: false outra VERDADEIRO se for bem sucedida.
+**Devolve**: VERDADEIRO se for bem-sucedido false outra.
   
-### <a name="seek"></a>Procurar
+### <a name="seek-function"></a>Função de procura
 Posição específica dentro do fluxo de procura.
 
 Parâmetros:  
@@ -73,31 +73,31 @@ Parâmetros:
 
 
   
-### <a name="canread"></a>CanRead
+### <a name="canread-function"></a>Função de CanRead
 Uma verificação se o fluxo pode ser lidos na.
 
   
-**Devolve**: false outra True se legível.
+**Devolve**: VERDADEIRO se legível false outra.
   
-### <a name="canwrite"></a>CanWrite
+### <a name="canwrite-function"></a>Função de CanWrite
 Verifique se o fluxo pode ser escrito para.
 
   
-**Devolve**: false outra True se gravável.
+**Devolve**: VERDADEIRO se gravável false outra.
   
-### <a name="position"></a>Posição
+### <a name="position-function"></a>Função de posição
 Obter a posição atual dentro do fluxo.
 
   
-**Devolve**: posição dentro do fluxo.
+**Devolve**: Posição dentro do fluxo.
   
-### <a name="size"></a>Size
+### <a name="size-function"></a>Função de tamanho
 Obter o tamanho do conteúdo dentro do fluxo.
 
   
 **Devolve**: O tamanho de fluxos.
   
-### <a name="size"></a>Size
+### <a name="size-function"></a>Função de tamanho
 Defina o tamanho do fluxo.
 
 Parâmetros:  

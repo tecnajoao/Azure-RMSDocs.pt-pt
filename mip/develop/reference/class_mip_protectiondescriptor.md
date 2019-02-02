@@ -1,17 +1,17 @@
 ---
-title: classe mip ProtectionDescriptor
-description: Referência para a classe mip ProtectionDescriptor
+title: classe mip::ProtectionDescriptor
+description: Documenta a classe mip::protectiondescriptor da Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: e723041af1eec7be7a839bf36f6d3db67b32447f
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.date: 01/28/2019
+ms.openlocfilehash: f3bf856982f3e5b4c060a83fe1e822866fb1808b
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446554"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651722"
 ---
 # <a name="class-mipprotectiondescriptor"></a>classe mip::ProtectionDescriptor 
 Descrição de proteção associada a uma parte do conteúdo.
@@ -19,96 +19,103 @@ Descrição de proteção associada a uma parte do conteúdo.
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
- público GetProtectionType() de ProtectionType const  |  Obtém o tipo de proteção, se foi gerado a partir de modelo do SDK de proteção ou não.
- público Std:: String GetOwner() const  |  Obtém o proprietário para a proteção.
- público Std:: String GetName() const  |  Obtém o nome de proteção.
- público Std:: String GetDescription() const  |  Obtém a descrição de proteção.
- público Std:: String GetTemplateId() const  |  Obtém o ID do modelo de proteção, se aplicável.
- público Std:: String GetLabelId() const  |  Obtém o ID de etiqueta, caso existam.
-público Std:: vector<UserRights> GetUserRights() const  |  Obtém a coleção de mapeamentos de direitos de usuários.
-público Std:: vector<UserRoles> GetUserRoles() const  |  Obtém a coleção de mapeamentos de funções de utilizadores.
-std::chrono::time_point público < std::chrono::system_clock > GetContentValidUntil() const  |  Obtém a hora de expiração de proteção.
- bool pública DoesAllowOfflineAccess() const  |  Obtém se permite offline a proteção de acesso ao conteúdo ou não.
- público Std:: String GetReferrer() const  |  Obtém o endereço do referenciador de proteção.
-std::map público < Std:: String, Std:: String > GetEncryptedAppData() const  |  Obtém dados específicos da aplicação que foi encriptados.
-std::map público < Std:: String, Std:: String > GetSignedAppData() const  |  Obtém os dados específicos da aplicação que foi assinados.
+público GetProtectionType() de ProtectionType const  |  Obtém o tipo de proteção, se foi gerado a partir de modelo do SDK de proteção ou não.
+public std::string GetOwner() const  |  Obtém o proprietário para a proteção.
+public std::string GetName() const  |  Obtém o nome de proteção.
+público Std:: String GetDescription() const  |  Obtém a descrição de proteção.
+public std::string GetTemplateId() const  |  Obtém o ID do modelo de proteção, se aplicável.
+public std::string GetLabelId() const  |  Obtém o ID de etiqueta, caso existam.
+público Std:: vector\<UserRights\> GetUserRights() const  |  Obtém a coleção de mapeamentos de direitos de usuários.
+público Std:: vector\<funções de utilizador\> GetUserRoles() const  |  Obtém a coleção de mapeamentos de funções de utilizadores.
+bool pública DoesContentExpire() const  |  Verifica se o conteúdo tem um prazo de expiração ou não.
+público std::chrono::time_point\<std::chrono::system_clock\> GetContentValidUntil() const  |  Obtém a hora de expiração de proteção.
+bool pública DoesAllowOfflineAccess() const  |  Obtém se permite offline a proteção de acesso ao conteúdo ou não.
+public std::string GetReferrer() const  |  Obtém o endereço do referenciador de proteção.
+public std::map\<std::string, std::string\> GetEncryptedAppData() const  |  Obtém dados específicos da aplicação que foi encriptados.
+public std::map\<std::string, std::string\> GetSignedAppData() const  |  Obtém os dados específicos da aplicação que foi assinados.
   
 ## <a name="members"></a>Membros
   
-### <a name="protectiontype"></a>ProtectionType
+### <a name="getprotectiontype-function"></a>Função de GetProtectionType
 Obtém o tipo de proteção, se foi gerado a partir de modelo do SDK de proteção ou não.
 
   
-**Devolve**: tipo de proteção
+**Devolve**: Tipo de proteção
   
-### <a name="getowner"></a>GetOwner
+### <a name="getowner-function"></a>Função de GetOwner
 Obtém o proprietário para a proteção.
 
   
-**Devolve**: proprietário de proteção
+**Devolve**: Proprietário de proteção
   
-### <a name="getname"></a>GetName
+### <a name="getname-function"></a>Função de GetName
 Obtém o nome de proteção.
 
   
-**Devolve**: nome de proteção
+**Devolve**: Nome de proteção
   
-### <a name="getdescription"></a>GetDescription
+### <a name="getdescription-function"></a>Função de GetDescription
 Obtém a descrição de proteção.
 
   
-**Devolve**: descrição de proteção
+**Devolve**: Descrição de proteção
   
-### <a name="gettemplateid"></a>GetTemplateId
+### <a name="gettemplateid-function"></a>Função de GetTemplateId
 Obtém o ID do modelo de proteção, se aplicável.
 
   
 **Devolve**: ID do modelo
   
-### <a name="getlabelid"></a>GetLabelId
+### <a name="getlabelid-function"></a>Função de GetLabelId
 Obtém o ID de etiqueta, caso existam.
 
   
-**Devolve**: [etiqueta](class_mip_label.md) esta propriedade só irá ser preenchida no ProtectionDescriptors para preexistente de ID de conteúdo protegido. É um campo preenchido pelo servidor neste momento é consumido conteúdo protegido.
+**Devolve**: [Etiqueta](class_mip_label.md) esta propriedade só irá ser preenchida no ProtectionDescriptors para preexistente de ID de conteúdo protegido. É um campo preenchido pelo servidor neste momento é consumido conteúdo protegido.
   
-### <a name="userrights"></a>UserRights
+### <a name="getuserrights-function"></a>Função de GetUserRights
 Obtém a coleção de mapeamentos de direitos de usuários.
 
   
-**Devolve**: a coleção de mapeamentos de direitos de usuários o valor da [UserRights](class_mip_userrights.md) propriedade estará vazia se o utilizador atual não tem acesso a essas informações (ou seja, se o utilizador não é o proprietário e não tem o Direito VIEWRIGHTSDATA).
+**Devolve**: Coleção de mapeamentos de direitos de usuários o valor do [UserRights](class_mip_userrights.md) propriedade estará vazia se o utilizador atual não tem acesso a essas informações (ou seja, se o utilizador não é o proprietário e não tem direito a VIEWRIGHTSDATA).
   
-### <a name="userroles"></a>Funções de utilizador
+### <a name="getuserroles-function"></a>Função de GetUserRoles
 Obtém a coleção de mapeamentos de funções de utilizadores.
 
   
-**Devolve**: coleção de mapeamentos de funções de utilizadores
+**Devolve**: Coleção de mapeamentos de funções de utilizadores
   
-### <a name="getcontentvaliduntil"></a>GetContentValidUntil
+### <a name="doescontentexpire-function"></a>Função de DoesContentExpire
+Verifica se o conteúdo tem um prazo de expiração ou não.
+
+  
+**Devolve**: VERDADEIRO se o conteúdo podem expirar, outra false
+  
+### <a name="getcontentvaliduntil-function"></a>Função de GetContentValidUntil
 Obtém a hora de expiração de proteção.
 
   
-**Devolve**: hora de expiração de proteção
+**Devolve**: Hora de expiração de proteção
   
-### <a name="doesallowofflineaccess"></a>DoesAllowOfflineAccess
+### <a name="doesallowofflineaccess-function"></a>Função de DoesAllowOfflineAccess
 Obtém se permite offline a proteção de acesso ao conteúdo ou não.
 
   
-**Devolve**: se a proteção permite o acesso ao conteúdo offline ou não (predefinição = true)
+**Devolve**: Se a proteção permite o acesso ao conteúdo offline ou não (predefinição = true)
   
-### <a name="getreferrer"></a>GetReferrer
+### <a name="getreferrer-function"></a>Função de GetReferrer
 Obtém o endereço do referenciador de proteção.
 
   
-**Devolve**: endereço do referenciador de proteção do referenciador é um URI que é visualizáveis ao usuário se eles não podem desproteger o conteúdo. Contém informações sobre como esse utilizador pode obter a permissão para aceder ao conteúdo.
+**Devolve**: Endereço do referenciador de proteção o Referenciador for um URI que é visualizáveis ao usuário se eles não podem desproteger o conteúdo. Contém informações sobre como esse utilizador pode obter a permissão para aceder ao conteúdo.
   
-### <a name="getencryptedappdata"></a>GetEncryptedAppData
+### <a name="getencryptedappdata-function"></a>Função de GetEncryptedAppData
 Obtém dados específicos da aplicação que foi encriptados.
 
   
-**Devolve**: A de dados de aplicação específicos [ProtectionHandler](class_mip_protectionhandler.md) pode manter um dicionário de dados específicos da aplicação que foi encriptados pelo serviço de proteção. Estes dados encriptados são independentes dos dados assinados podem ser acedidos através de [ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getsignedappdata)
+**Devolve**: Dados de aplicação específicos A [ProtectionHandler](class_mip_protectionhandler.md) pode manter um dicionário de dados específicos da aplicação que foi encriptados pelo serviço de proteção. Estes dados encriptados são independentes dos dados assinados podem ser acedidos através de [ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getappsigneddata-function)
   
-### <a name="getsignedappdata"></a>GetSignedAppData
+### <a name="getsignedappdata-function"></a>Função de GetSignedAppData
 Obtém os dados específicos da aplicação que foi assinados.
 
   
-**Devolve**: A de dados de aplicação específicos [ProtectionHandler](class_mip_protectionhandler.md) pode manter um dicionário de dados específicos da aplicação que foi assinados pelo serviço de proteção. Estes dados assinados são independentes dos dados encriptados podem ser acedidos através de [ProtectionDescriptor::GetEncryptedAppData](class_mip_protectiondescriptor.md#getencryptedappdata)
+**Devolve**: Dados de aplicação específicos A [ProtectionHandler](class_mip_protectionhandler.md) pode manter um dicionário de dados específicos da aplicação que foi assinados pelo serviço de proteção. Estes dados assinados são independentes dos dados encriptados podem ser acedidos através de [ProtectionDescriptor::GetEncryptedAppData](class_mip_protectiondescriptor.md#getencryptedappdata-function)

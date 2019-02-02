@@ -1,17 +1,17 @@
 ---
-title: classe mip funções de utilizador
-description: Referência para a classe mip funções de utilizador
+title: classe mip::UserRoles
+description: Documenta a classe mip::userroles da Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 1cc1da6f443fa22095f216bb2ec2f0e51e75bf78
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.date: 01/28/2019
+ms.openlocfilehash: 1a060652ea61ed452867bb67d281c9531f4e1b98
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445262"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651518"
 ---
 # <a name="class-mipuserroles"></a>classe mip::UserRoles 
 Um grupo de utilizadores e as funções associadas a eles.
@@ -19,31 +19,31 @@ Um grupo de utilizadores e as funções associadas a eles.
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
-funções de utilizador públicas (const Std:: vector < Std:: String > e os utilizadores, const Std:: vector < Std:: String > e funções)  |  [Funções de utilizador](class_mip_userroles.md) construtor.
-público const Std:: vector < Std:: String > & Users() const  |  Obtém os utilizadores associados a um conjunto de funções.
-público const Std:: vector < Std:: String > & Roles() const  |  Obtém as funções associadas um grupo de utilizadores.
+public UserRoles(const std::vector\<std::string\>& users, const std::vector\<std::string\>& roles)  |  [Funções de utilizador](class_mip_userroles.md) construtor.
+public const std::vector\<std::string\>& Users() const  |  Obtém os utilizadores associados a um conjunto de funções.
+público const Std:: vector\<Std:: String\>& Roles() const  |  Obtém as funções associadas um grupo de utilizadores.
   
 ## <a name="members"></a>Membros
   
-### <a name="userroles"></a>Funções de utilizador
+### <a name="userroles-function"></a>Função de funções de utilizador
 [Funções de utilizador](class_mip_userroles.md) construtor.
 
 Parâmetros:  
-* **os utilizadores**: grupo de usuários que compartilham as mesmas funções 
+* **Os utilizadores**: Grupo de usuários que compartilham as mesmas funções 
 
 
-* **funções**: funções partilharam por grupo de utilizadores
+* **funções**: Funções compartilhadas por grupo de utilizadores
 
 
   
-### <a name="users"></a>Users
+### <a name="users-function"></a>Função de utilizadores
 Obtém os utilizadores associados a um conjunto de funções.
 
   
-**Devolve**: os utilizadores associados a um conjunto de funções
+**Devolve**: Utilizadores associados a um conjunto de funções
   
-### <a name="roles"></a>Funções
+### <a name="roles-function"></a>Função de funções
 Obtém as funções associadas um grupo de utilizadores.
 
   
-**Devolve**: funções associadas um grupo de utilizadores
+**Devolve**: Funções associadas um grupo de utilizadores

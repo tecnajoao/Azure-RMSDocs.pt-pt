@@ -5,16 +5,16 @@ services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 09/27/2018
+ms.date: 01/18/2019
 ms.author: bryanla
-ms.openlocfilehash: 651fc73c00f18d06ad1a824337a096331bc7e897
-ms.sourcegitcommit: d677088db8588fb2cc4a5d7dd296e76d0d9a2e9c
+ms.openlocfilehash: 4898aefc996c26df5f4831c95be63c9fa1a45dc4
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48251748"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651212"
 ---
-# <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Guia de introdução: Definir e obter uma etiqueta de sensibilidade (C++)
+# <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Início rápido: Definir e obter uma etiqueta de sensibilidade (C++)
 
 Este guia de introdução mostra como usar mais de APIs de arquivo MIP. Utilizar uma das etiquetas de sensibilidade listados no início rápido anterior, utilize um manipulador de arquivo para definir/obter o rótulo num arquivo. O arquivo de classe de manipulador expõe várias operações para definição/obter etiquetas ou proteção, para tipos de ficheiro suportados.
 
@@ -22,16 +22,16 @@ Este guia de introdução mostra como usar mais de APIs de arquivo MIP. Utilizar
 
 Se ainda não o fez, certifique-se de que concluir os seguintes pré-requisitos antes de continuar:
 
-- Concluída [início rápido: listar etiquetas de sensibilidade (C++)](quick-file-list-labels-cpp.md) primeiro, que cria uma solução do Visual Studio, de arranque para listar as etiquetas de sensibilidade da organização. Isso "Set e get uma etiqueta de sensibilidade" Guia de introdução baseia-se no anterior.
-- Opcionalmente,: Reveja [manipuladores de ficheiros no SDK do MIP](concept-handler-file-cpp.md) conceitos.
+- Completa [início rápido: Listar etiquetas de sensibilidade (C++)](quick-file-list-labels-cpp.md) primeiro, que cria uma solução do Visual Studio, de arranque para listar as etiquetas de sensibilidade da organização. Isso "Set e get uma etiqueta de sensibilidade" Guia de introdução baseia-se no anterior.
+- Opcionalmente: Revisão [manipuladores de ficheiros no SDK do MIP](concept-handler-file-cpp.md) conceitos.
 
 ## <a name="implement-an-observer-class-to-monitor-the-file-handler-object"></a>Implementar uma classe de observador para monitorizar o objeto do manipulador de arquivo
 
 Semelhante para o observador é implementada (para o perfil de ficheiros e o mecanismo) na inicialização do aplicativo início rápido, agora implementa uma classe de observador para um objeto de manipulador de arquivo.
 
-Criar uma implementação básica para uma classe de observador, ao expandir o SDK `mip::FileHandler::Observer` classe. O observador é instanciado e utilizado mais tarde, para monitorizar as operações de manipulador de arquivo.
+Criar uma implementação básica de um observador do manipulador de arquivo, ao expandir o SDK `mip::FileHandler::Observer` classe. O observador é instanciado e utilizado mais tarde, para monitorizar as operações de manipulador de arquivo.
 
-1. Abra a solução do Visual Studio qual trabalhou num anterior "Guia de início rápido: listar etiquetas de sensibilidade (C++)" artigo.
+1. Abra a solução do Visual Studio qual trabalhou num anterior "Guia de início rápido: Listar etiquetas de sensibilidade (C++) "artigo.
 
 2. Adicione uma nova classe ao seu projeto, o que gera arquivos de cabeçalho /. h e de implementação /. cpp para:
 
@@ -105,12 +105,19 @@ Adicione lógica para definir e obter uma etiqueta de sensibilidade num ficheiro
    ```cpp
    // Set up async FileHandler for input file operations
    string filePathIn = "<input-file-path>";
+   string contentIdentifier = "<content-identifier>";
    std::shared_ptr<FileHandler> handler;
    try
    {
         auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
         auto handlerFuture = handlerPromise->get_future();
-        engine->CreateFileHandlerAsync(filePathIn, mip::ContentState::REST, std::make_shared<FileHandlerObserver>(), handlerPromise);
+        engine->CreateFileHandlerAsync(
+             filePathIn, 
+             contentIdentifier,
+             mip::ContentState::REST, 
+             true, 
+             std::make_shared<FileHandlerObserver>(), 
+             handlerPromise);
         handler = handlerFuture.get();
    }
    catch (const std::exception& e)
@@ -160,11 +167,19 @@ Adicione lógica para definir e obter uma etiqueta de sensibilidade num ficheiro
    system("pause");
 
    // Set up async FileHandler for output file operations
+   contentIdentifier = "<content-identifier>";
    try
    {
         auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
         auto handlerFuture = handlerPromise->get_future();
-        engine->CreateFileHandlerAsync(filePathOut, mip::ContentState::REST, std::make_shared<FileHandlerObserver>(), handlerPromise);
+        engine->CreateFileHandlerAsync(
+             filePathOut, 
+             contentIdentifier,
+             mip::ContentState::REST,
+             true,
+             std::make_shared<FileHandlerObserver>(),
+             handlerPromise);
+
         handler = handlerFuture.get();
    }
    catch (const std::exception& e)
@@ -191,13 +206,14 @@ Adicione lógica para definir e obter uma etiqueta de sensibilidade num ficheiro
    system("pause");
    ```
 
-4. Substitua os valores de marcador de posição no código-fonte que acabou de colar, com os seguintes valores:
+4. Substitua os valores de marcador de posição no código-fonte que que acabou de colar na como a seguir, utilizar as constantes de cadeia de caracteres:
 
    | Marcador de posição | Valor |
    |:----------- |:----- |
-   | \<caminho de ficheiro de entrada\> | O caminho completo para um teste de entrada ficheiro, por exemplo: `c:\\Test\\Test.docx`. |
-   | \<id da etiqueta\> | Um ID de etiqueta de sensibilidade, copiados a partir da consola de saída no início rápido anterior, por exemplo: `f42a3342-8706-4288-bd31-ebb85995028z`. |
-   | \<caminho de ficheiro de saída\> | O caminho completo para o ficheiro de saída, que será uma cópia com nome do ficheiro de entrada, por exemplo: `c:\\Test\\Test_labeled.docx`. |
+   | \<input-file-path\> | O caminho completo para um teste de entrada ficheiro, por exemplo: `"c:\\Test\\Test.docx"`. |
+   | \<content-identifier\> | Um identificador legível por humanos para o conteúdo. Por exemplo: <ul><li>para um ficheiro, considere path\filename: `"c:\Test\Test.docx"`</li><li>para uma mensagem de e-mail, considere o assunto: remetente: `"RE: Audit design:user1@contoso.com"`</li></ul> |
+   | \<label-id\> | Um ID de etiqueta de sensibilidade, copiados a partir da consola de saída no início rápido anterior, por exemplo: `"f42a3342-8706-4288-bd31-ebb85995028z"`. |
+   | \<output-file-path\> | O caminho completo para o ficheiro de saída, que será uma cópia com nome do ficheiro de entrada, por exemplo: `"c:\\Test\\Test_labeled.docx"`. |
 
 ## <a name="build-and-test-the-application"></a>Criar e testar a aplicação
 
@@ -205,7 +221,7 @@ Criar e testar a aplicação cliente.
 
 1. Utilizar F6 (**compilar solução**) para criar seu aplicativo de cliente. Não se tiver nenhum erro de compilação, use F5 (**iniciar a depuração**) para executar a sua aplicação.
 
-2. Se seu projeto baseia-se e é executada com êxito, a aplicação irá solicitar um token de acesso, sempre que o SDK chama seu `AcquireOAuth2Token()` método. Como anteriormente a "Lista de etiquetas de sensibilidade" Guia de início rápido, executar o script do PowerShell para adquirir o token de cada vez, usando os valores fornecidos. `AcquireOAuth2Token()` tentará utilizar um token gerado anteriormente, se a autoridade de pedido e os recursos são os mesmos:
+2. Se seu projeto é compilado e é executada com êxito, o aplicativo solicita um token de acesso, cada vez que as chamadas SDK sua `AcquireOAuth2Token()` método. Como fez anteriormente a "Lista de etiquetas de sensibilidade" início rápido, execute o script do PowerShell para adquirir o token de cada vez, utilizando os valores fornecidos para $authority e $resourceUrl. 
 
    ```console
    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:

@@ -1,17 +1,17 @@
 ---
-title: classe mip PolicyHandler
-description: Referência para a classe mip PolicyHandler
+title: classe mip::PolicyHandler
+description: Documenta a classe mip::policyhandler da Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 23de5616558a298189cb885727d69a20373a3609
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.date: 01/28/2019
+ms.openlocfilehash: ca644716d730a43d4455919b7555852e770e0cda
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445942"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651501"
 ---
 # <a name="class-mippolicyhandler"></a>classe mip::PolicyHandler 
 Essa classe fornece uma interface para todas as funções do manipulador de política num arquivo.
@@ -19,24 +19,24 @@ Essa classe fornece uma interface para todas as funções do manipulador de pol�
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
-público std::shared_ptr<ContentLabel> GetSensitivityLabel (const ExecutionState & Estado)  |  Obter etiqueta de confidencialidade do conteúdo existente.
-Std:: vector público < std::shared_ptr<Action>> ComputeActions (const ExecutionState & Estado)  |  Executa as regras no manipulador com base no estado fornecido e retorna a lista de ações a ser executado.
- NotifyCommittedActions void pública (const ExecutionState & Estado)  |  Chamado assim que as ações calculadas foram aplicadas e os dados dedicada para o disco.
+público std::shared_ptr\<ContentLabel\> GetSensitivityLabel (const ExecutionState & Estado)  |  Obter etiqueta de confidencialidade do conteúdo existente.
+público Std:: vector\<std::shared_ptr\<ação\> \> ComputeActions (const ExecutionState & Estado)  |  Executa as regras no manipulador com base no estado fornecido e retorna a lista de ações a ser executado.
+NotifyCommittedActions void pública (const ExecutionState & Estado)  |  Chamado assim que as ações calculadas foram aplicadas e os dados dedicada para o disco.
   
 ## <a name="members"></a>Membros
   
-### <a name="contentlabel"></a>ContentLabel
+### <a name="getsensitivitylabel-function"></a>Função de GetSensitivityLabel
 Obter etiqueta de confidencialidade do conteúdo existente.
 
 Parâmetros:  
-* **estado**: estado atual do conteúdo 
+* **state**: Estado atual do conteúdo 
 
 
 
   
 **Devolve**: A etiqueta aplicada atualmente ao conteúdo. Se não o nome, devolve vazio.
   
-### <a name="action"></a>Ação
+### <a name="computeactions-function"></a>Função de ComputeActions
 Executa as regras no manipulador com base no estado fornecido e retorna a lista de ações a ser executado.
 
 Parâmetros:  
@@ -45,9 +45,9 @@ Parâmetros:
 
 
   
-**Devolve**: lista de ações que devem ser aplicadas no conteúdo.
+**Devolve**: Lista de ações que devem ser aplicadas no conteúdo.
   
-### <a name="notifycommittedactions"></a>NotifyCommittedActions
+### <a name="notifycommittedactions-function"></a>Função de NotifyCommittedActions
 Chamado assim que as ações calculadas foram aplicadas e os dados dedicada para o disco.
 
 Parâmetros:  

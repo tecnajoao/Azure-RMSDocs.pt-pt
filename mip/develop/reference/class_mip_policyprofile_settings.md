@@ -1,17 +1,17 @@
 ---
-title: classe mip PolicyProfile definições
-description: Referência para a classe mip PolicyProfile definições
+title: classe mip::PolicyProfile::Settings
+description: Documenta a classe mip::policyprofile da Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 07cbcbc022c02a43f751e1cf55b5b0efdfb816d1
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.date: 01/28/2019
+ms.openlocfilehash: d6a0c773226fff789889bd82a6075a65cff184bd
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446978"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651127"
 ---
 # <a name="class-mippolicyprofilesettings"></a>classe mip::PolicyProfile::Settings 
 [As definições](class_mip_policyprofile_settings.md) utilizada pelo [PolicyProfile](class_mip_policyprofile.md) durante sua criação e ao longo de seu ciclo de vida.
@@ -19,28 +19,28 @@ ms.locfileid: "47446978"
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
-Definições de públicas (const std::shared_ptr Std:: String & caminho, bool useInMemoryStorage, const<AuthDelegate>& authDelegate, std::shared_ptr const < PolicyProfile::Observer > & observador, const ApplicationInfo & applicationInfo)  |  Interface para definir o perfil.
- público const Std:: String & GetPath() const  |  Obter o caminho para o estado armazenado.
- bool pública GetUseInMemoryStorage() const  |  Obtenha o sinalizador de armazenamento em utilização na memória.
-público std::shared_ptr const<AuthDelegate>& GetAuthDelegate() const  |  Obtenha o delegado de autenticação.
-std::shared_ptr const público < PolicyProfile::Observer > & GetObserver() const  |  Obtenha o observador de eventos.
- público GetApplicationInfo() const ApplicationInfo const  |  Obter as informações de aplicação.
-público std::shared_ptr<LoggerDelegate> GetLoggerDelegate() const  |  Obtenha o delegado de agente de log (se houver) fornecido pela aplicação.
-SetLoggerDelegate void pública (const std::shared_ptr<LoggerDelegate>& loggerDelegate)  |  Substitua o agente de log padrão.
-público std::shared_ptr<HttpDelegate> GetHttpDelegate() const  |  Obtenha o delegado HTTP (se houver) fornecido pela aplicação.
-SetHttpDelegate void pública (const std::shared_ptr<HttpDelegate>& httpDelegate)  |  Substitua a pilha HTTP padrão do cliente.
- público OptOutTelemetry() void  |  Opta ativamente por toda a telemetria de recolha.
- bool pública IsTelemetryOptedOut() const  |  Obtém se telemetria recolha deve ser desabilitada ou não.
- SetMinimumLogLevel void pública (LogLevel logLevel)  |  Defina o nível de registo mínimo que irão acionar um evento de log.
- público GetMinimumLogLevel() de LogLevel const  |  Obtenha o objeto de nível de registo mínimo.
+Definições de públicas (const std::shared_ptr Std:: String & caminho, bool useInMemoryStorage, const\<AuthDelegate\>& authDelegate, const std::shared_ptr\<PolicyProfile::Observer\>& observador, const ApplicationInfo & applicationInfo)  |  Interface para definir o perfil.
+public const std::string& GetPath() const  |  Obter o caminho para o estado armazenado.
+bool pública GetUseInMemoryStorage() const  |  Obtenha o sinalizador de armazenamento em utilização na memória.
+público std::shared_ptr const\<AuthDelegate\>& GetAuthDelegate() const  |  Obtenha o delegado de autenticação.
+public const std::shared_ptr\<PolicyProfile::Observer\>& GetObserver() const  |  Obtenha o observador de eventos.
+público GetApplicationInfo() const ApplicationInfo const  |  Obter as informações de aplicação.
+public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  Obtenha o delegado de agente de log (se houver) fornecido pela aplicação.
+public void SetLoggerDelegate(const std::shared_ptr\<LoggerDelegate\>& loggerDelegate)  |  Substitua o agente de log padrão.
+público std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Obtenha o delegado HTTP (se houver) fornecido pela aplicação.
+SetHttpDelegate void pública (const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Substitua a pilha HTTP padrão do cliente.
+public void OptOutTelemetry()  |  Opta ativamente por toda a telemetria de recolha.
+public bool IsTelemetryOptedOut() const  |  Obtém se telemetria recolha deve ser desabilitada ou não.
+SetMinimumLogLevel void pública (LogLevel logLevel)  |  Defina o nível de registo mínimo que irão acionar um evento de log.
+público GetMinimumLogLevel() de LogLevel const  |  Obtenha o objeto de nível de registo mínimo.
   
 ## <a name="members"></a>Membros
   
-### <a name="settings"></a>Definições
+### <a name="settings-function"></a>Função de definições
 Interface para definir o perfil.
 
 Parâmetros:  
-* **caminho**: O caminho para um diretório em que o SDK irá armazenar o estado do perfil. 
+* **path**: O caminho para um diretório em que o SDK irá armazenar o estado do perfil. 
 
 
 * **useInMemoryStorage**: Store qualquer Estado em cache na memória, em vez de no disco. 
@@ -49,82 +49,82 @@ Parâmetros:
 * **authDelegate**: O delegado de autenticação utilizado pelo SDK para adquirir os tokens de autenticação. 
 
 
-* **observador**: implementar uma classe a [PolicyProfile::Observer](class_mip_policyprofile_observer.md) interface. Pode ser nullptr. 
+* **observer**: Implementar uma classe a [PolicyProfile::Observer](class_mip_policyprofile_observer.md) interface. Pode ser nullptr. 
 
 
-* **applicationInfo**: os identificadores de aplicativo utilizados para acesso de serviço.
+* **applicationInfo**: Os identificadores de aplicativo utilizados para acesso de serviço.
 
 
   
-### <a name="getpath"></a>GetPath
+### <a name="getpath-function"></a>Função de GetPath
 Obter o caminho para o estado armazenado.
 
   
-**Devolve**: caminho para o estado armazenado.
+**Devolve**: Caminho para o estado armazenado.
   
-### <a name="getuseinmemorystorage"></a>GetUseInMemoryStorage
+### <a name="getuseinmemorystorage-function"></a>Função de GetUseInMemoryStorage
 Obtenha o sinalizador de armazenamento em utilização na memória.
 
   
-**Devolve**: True se o uso na memória está definido como outra FALSO.
+**Devolve**: VERDADEIRO se a utilização na memória está definida como outra falsa.
   
-### <a name="getauthdelegate"></a>GetAuthDelegate
+### <a name="getauthdelegate-function"></a>Função de GetAuthDelegate
 Obtenha o delegado de autenticação.
 
   
 **Devolve**: O delegado de autenticação.
   
-### <a name="policyprofileobserver"></a>PolicyProfile::Observer
+### <a name="getobserver-function"></a>Função de GetObserver
 Obtenha o observador de eventos.
 
   
 **Devolve**: O observador de eventos.
   
-### <a name="applicationinfo"></a>ApplicationInfo
+### <a name="getapplicationinfo-function"></a>Função de GetApplicationInfo
 Obter as informações de aplicação.
 
   
-**Devolve**: as informações da aplicação.
+**Devolve**: As informações da aplicação.
   
-### <a name="loggerdelegate"></a>LoggerDelegate
+### <a name="getloggerdelegate-function"></a>Função de GetLoggerDelegate
 Obtenha o delegado de agente de log (se houver) fornecido pela aplicação.
 
   
-**Devolve**: Logger
+**Devolve**: agente de log
   
-### <a name="setloggerdelegate"></a>SetLoggerDelegate
+### <a name="setloggerdelegate-function"></a>Função de SetLoggerDelegate
 Substitua o agente de log padrão.
 
 Parâmetros:  
-* **loggerDelegate**: interface de retorno de chamada de registo implementada por aplicações cliente
+* **loggerDelegate**: Interface de retorno de chamada de registo implementada por aplicações cliente
 
 
 Este método deve ser chamado por aplicações cliente que utilizam a sua própria implementação de agente de log
   
-### <a name="httpdelegate"></a>HttpDelegate
+### <a name="gethttpdelegate-function"></a>Função de GetHttpDelegate
 Obtenha o delegado HTTP (se houver) fornecido pela aplicação.
 
   
-**Devolve**: delegado de Http a ser utilizado para operações de HTTP
+**Devolve**: Delegado de HTTP a ser utilizado para operações de HTTP
   
-### <a name="sethttpdelegate"></a>SetHttpDelegate
+### <a name="sethttpdelegate-function"></a>Função de SetHttpDelegate
 Substitua a pilha HTTP padrão do cliente.
 
 Parâmetros:  
-* **httpDelegate**: interface de retorno de chamada de Http implementada pela aplicação cliente
+* **httpDelegate**: Interface de retorno de chamada de HTTP implementada pela aplicação cliente
 
 
   
-### <a name="optouttelemetry"></a>OptOutTelemetry
+### <a name="optouttelemetry-function"></a>Função de OptOutTelemetry
 Opta ativamente por toda a telemetria de recolha.
   
-### <a name="istelemetryoptedout"></a>IsTelemetryOptedOut
+### <a name="istelemetryoptedout-function"></a>Função de IsTelemetryOptedOut
 Obtém se telemetria recolha deve ser desabilitada ou não.
 
   
-**Devolve**: recolha Iftelemetry deve ser desabilitada ou não
+**Devolve**: VERDADEIRO se a recolha de telemetria que deve ser desabilitada outra false
   
-### <a name="setminimumloglevel"></a>SetMinimumLogLevel
+### <a name="setminimumloglevel-function"></a>Função de SetMinimumLogLevel
 Defina o nível de registo mínimo que irão acionar um evento de log.
 
 Parâmetros:  
@@ -133,10 +133,10 @@ Parâmetros:
 
 
   
-**Devolve**: VERDADEIRO
+**Devolve**: Verdadeiro
   
-### <a name="loglevel"></a>LogLevel
+### <a name="getminimumloglevel-function"></a>Função de GetMinimumLogLevel
 Obtenha o objeto de nível de registo mínimo.
 
   
-**Devolve**: nível de registo mínimo que irão acionar um evento de log.
+**Devolve**: Nível de registo mínimo que irão acionar um evento de log.

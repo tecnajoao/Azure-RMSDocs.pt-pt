@@ -1,17 +1,17 @@
 ---
-title: classe mip ação
-description: Referência para a classe mip ação
+title: classe mip::Action
+description: Documenta a classe mip::action da Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 97b082a0a3da1e8b6726d181f42e741f002a7e29
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.date: 01/28/2019
+ms.openlocfilehash: 2a3ef2340aacefc9679ddad011be17991929face
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445976"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650532"
 ---
 # <a name="class-mipaction"></a>classe mip::Action 
 Interface para uma ação. Cada ação se traduz numa etapa que é necessário realizar pela aplicação para aplicar a etiqueta (conforme definido na política)
@@ -19,11 +19,11 @@ Interface para uma ação. Cada ação se traduz numa etapa que é necessário r
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
- público GetType() de ActionType const  |  Obter o tipo de [ação](class_mip_action.md).
+público GetType() de ActionType const  |  Obter o tipo de [ação](class_mip_action.md).
   
 ## <a name="members"></a>Membros
   
-### <a name="actiontype"></a>ActionType
+### <a name="gettype-function"></a>Função de GetType
 Obter o tipo de [ação](class_mip_action.md).
 
   

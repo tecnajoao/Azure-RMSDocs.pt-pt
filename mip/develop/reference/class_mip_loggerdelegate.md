@@ -1,17 +1,17 @@
 ---
-title: classe mip LoggerDelegate
-description: Referência para a classe mip LoggerDelegate
+title: classe mip::LoggerDelegate
+description: Documenta a classe mip::loggerdelegate da Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: b25cdb177735feccfa5c4d344613e4747d18b77f
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.date: 01/28/2019
+ms.openlocfilehash: d93bfb863bf97629a8b2361425a0d78187c88cdc
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445857"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650006"
 ---
 # <a name="class-miploggerdelegate"></a>classe mip::LoggerDelegate 
 Uma classe que define a interface para o agente de log MIP SDK.
@@ -19,14 +19,14 @@ Uma classe que define a interface para o agente de log MIP SDK.
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
- Init void pública (Std:: String const & storagePath, LogLevel logLevel)  |  Inicialize o agente de log.
- público GetLogLevel() de LogLevel const  |  Obtenha a mais baixa evel logl que irá acionar um evento de log.
- Flush () de void pública  |  Esvaziar o agente de log.
- WriteToLog void pública (nível de LogLevel const, Std:: String const & mensagem, Std:: String const & função, Std:: String const & ficheiro, const int32_t linha)  |  Escreva uma instrução de registo para o ficheiro de registo.
+public void Init(const std::string& storagePath, LogLevel logLevel)  |  Inicialize o agente de log.
+público GetLogLevel() de LogLevel const  |  Obtenha a mais baixa evel logl que irá acionar um evento de log.
+public void Flush()  |  Esvaziar o agente de log.
+public void WriteToLog(const LogLevel level, const std::string& message, const std::string& function, const std::string& file, const int32_t line)  |  Escreva uma instrução de registo para o ficheiro de registo.
   
 ## <a name="members"></a>Membros
   
-### <a name="init"></a>Init
+### <a name="init-function"></a>Função init
 Inicialize o agente de log.
 
 Parâmetros:  
@@ -37,16 +37,16 @@ Parâmetros:
 
 
   
-### <a name="loglevel"></a>LogLevel
+### <a name="getloglevel-function"></a>Função de GetLogLevel
 Obtenha a mais baixa evel logl que irá acionar um evento de log.
 
   
 **Devolve**: O nível de registo mais baixo que irá acionar um evento de log.
   
-### <a name="flush"></a>Remoção da cache
+### <a name="flush-function"></a>Remover função
 Esvaziar o agente de log.
   
-### <a name="writetolog"></a>WriteToLog
+### <a name="writetolog-function"></a>Função de WriteToLog
 Escreva uma instrução de registo para o ficheiro de registo.
 
 Parâmetros:  

@@ -3,18 +3,19 @@ author: BryanLa
 ms.author: bryanla
 ms.service: information-protection
 ms.topic: include
-ms.date: 11/08/2018
-ms.openlocfilehash: c59fc7f11b2ea94804722b87647ec1d4c3aa598d
-ms.sourcegitcommit: 0fad4196f397fa32c60e6d24791fcad43689c4ba
+ms.date: 02/01/2019
+ms.openlocfilehash: 70d4dc41f632356079631956487057f7a723a1a3
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55088161"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55668470"
 ---
-| Sistema operativo | Versões |  
-|------------------|----------|
-| Ubuntu  |  16.04 |
-| RedHat Enterprise Linux | 7 com devtoolset 7 |
-| Debian  | 9 |
-| macOS   | High Sierra e posterior |
-| Windows | Todas suportadas versões, 32 bits e 64 bits |
+| Sistema operativo | Versões | Transferências |
+|------------------|----------|----------|
+| Ubuntu  |  16.04 | [C++ tar.gz](https://aka.ms/mipsdkbinaries) |
+| RedHat Enterprise Linux | 7 com devtoolset 7 | [C++ tar.gz](https://aka.ms/mipsdkbinaries) |
+| Debian  | 9 | [C++ tar.gz](https://aka.ms/mipsdkbinaries) |
+| macOS   | High Sierra e posterior | [C++ .zip](https://aka.ms/mipsdkbinaries) |
+| Windows | Todas as versões suportadas, 32/64 bits | [C++/.NET .zip](https://aka.ms/mipsdkbinaries)<br>[C++/.NET NuGet](https://www.nuget.org/packages?q=Microsoft.InformationProtection) |
+

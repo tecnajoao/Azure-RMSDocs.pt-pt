@@ -4,32 +4,33 @@ description: Este artigo ajuda-o a compreender como utilizar Python para adquiri
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 09/27/2018
+ms.date: 02/04/2019
 ms.author: bryanla
-ms.openlocfilehash: 4d6db3d2bd2e2b980770027e07104f7528264e66
-ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
+ms.openlocfilehash: 423ae80df11dcf8031f845fdabf881606daf89c7
+ms.sourcegitcommit: fa7551060aaecc62d0c1f9179dd07f035d86651f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51223892"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742172"
 ---
 # <a name="acquire-an-access-token-python"></a>Adquirir um token de acesso (Python)
 
-Este exemplo demonstra como chamar um script de Python externo para obter um token OAuth2. Isso é necessária para a implementação do delegado de autenticação.
-
-Esse código não se destina a utilização de produção, mas pode ser utilizado para desenvolvimento e noções básicas sobre conceitos de autenticação. O exemplo é para várias plataformas.
+Este exemplo demonstra como chamar um script de Python externo para obter um token OAuth2. Um token de acesso de OAuth2 válido é necessária para a implementação do delegado de autenticação.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Para executar o exemplo abaixo, o seguinte tem de ser concluído:
+Para executar o exemplo abaixo:
 
 - Instale o Python 2.7.
 - Implemente utils.h/cpp no seu projeto. 
 - auth.PY devem ser adicionados ao seu projeto e coexistem no mesmo diretório que os binários no build.
+- Concluída [instalação do SDK (MIP) e configuração](setup-configure-mip.md). Entre outras tarefas, terá de registar a sua aplicação de cliente no seu inquilino do Azure Active Directory (Azure AD). O Azure AD irá fornecer um ID de aplicação, também conhecido como ID de cliente, que é utilizada na sua lógica de aquisição do token.
 
-## <a name="sampleauthacquiretoken"></a>exemplo:: auth::AcquireToken()
+Esse código não foi concebido para utilização em produção. Só podem ser utilizada para desenvolvimento e conceitos de autenticação de compreensão. O exemplo é para várias plataformas.
 
-No exemplo a autenticação simples, demonstramos uma simples `AcquireToken()` função que demorou sem parâmetros e devolveu um disco rígido codificado valor do token. Neste exemplo, podemos irá sobrecarregar AcquireToken() aceitam parâmetros de autenticação e chamar um script de Python externo para devolver o token.
+## <a name="sampleauthacquiretoken"></a>sample::auth::AcquireToken()
+
+No exemplo a autenticação simples, demonstramos uma simples `AcquireToken()` função que demorou sem parâmetros e devolveu um valor de token hard-coded. Neste exemplo, podemos irá sobrecarregar AcquireToken() aceitam parâmetros de autenticação e chamar um script de Python externo para devolver o token.
 
 ### <a name="authh"></a>auth.h
 
@@ -46,7 +47,7 @@ namespace sample {
     std::string AcquireToken(
         const std::string& userName, //A string value containing the user's UPN.
         const std::string& password, //The user's password in plaintext
-        const std::string& clientId, //The AAD client ID of your application.
+        const std::string& clientId, //The Azure AD client ID (also known as Application ID) of your application.
         const std::string& resource, //The resource URL for which an OAuth2 token is required. Provided by challenge object.
         const std::string& authority); //The authentication authority endpoint. Provided by challenge object.
     }
@@ -104,7 +105,8 @@ namespace sample {
     cmd += " -r ";
     cmd += resource;
     cmd += " -c ";
-    cmd += (!clientId.empty() ? clientId : "0edbblll-8773-44de-b87c-b8c6276d41eb");
+    // Replace <application-id> with the Application ID provided during your Azure AD application registration.
+    cmd += (!clientId.empty() ? clientId : "<application-id>");
 
     string result = sample::Execute(cmd.c_str());
     if (result.empty())
@@ -117,7 +119,7 @@ namespace sample {
 
 ```
 
-## <a name="python-script"></a>Script de Python
+## <a name="python-script"></a>Python Script
 
 Este script adquire os tokens de autenticação diretamente através de um pedido de http simples. Isso é incluído apenas como um meio para adquirir os tokens de autenticação para utilização por aplicações de exemplo e não se destina a ser utilizado no código de produção. O script funciona apenas em inquilinos que suportam a autenticação http nome de utilizador/palavra-passe antigo sem formatação. MFA ou a autenticação baseada em certificado irá falhar.
 

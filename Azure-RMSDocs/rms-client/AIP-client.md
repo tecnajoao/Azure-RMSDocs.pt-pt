@@ -4,18 +4,18 @@ description: Recursos de informação para o cliente do Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/10/2018
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6f2348de61c395bc1792dc0a205bf18848ca7c18
-ms.sourcegitcommit: 2a1c0882d2b0400f4da6370dbc1830df09867e3d
+ms.openlocfilehash: 365330c19ea55ffa93bc834db50fc6233e6c71f7
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53218413"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559891"
 ---
 # <a name="azure-information-protection-client-for-windows"></a>Cliente do Azure Information Protection para Windows
 
@@ -32,13 +32,10 @@ O cliente do Azure Information Protection para Windows é um cliente gratuito e 
 > [!TIP]
 > Também existe uma aplicação Azure Information Protection para iOS e Android. Para obter mais informações, consulte [FAQ da aplicação Azure Information Protection para iOS e Android](mobile-app-faq.md )
 > 
-> Para computadores Mac e Windows Phones: Utilizar a aplicação para dispositivos móveis de partilha RMS e ler os [FAQ para as aplicação de partilha do Rights Management para plataformas móveis e Mac](https://technet.microsoft.com/dn451248).
+> Para computadores Mac: Utilizar a aplicação de partilha RMS e ler os [FAQ para as aplicação de partilha do Rights Management para plataformas móveis e Mac](https://technet.microsoft.com/dn451248).
 
 ## <a name="install-instructions"></a>Instruções de instalação
 
 - [Administradores](client-admin-guide-install.md)
 
 - [Utilizadores finais](install-client-app.md)
-
-
-

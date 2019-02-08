@@ -4,17 +4,17 @@ description: Migre as etiquetas do Azure Information Protection para o Centro de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/26/2019
+ms.date: 02/05/2019
 ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 58a563e3d1f43dd312c0d4c9d1ffdf612b1c8d12
-ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
+ms.openlocfilehash: 8525d20d452004b6ba46dd438dd042f98f603d6d
+ms.sourcegitcommit: e8b4a09db9aad7f6540b4c2fd92b1e8008c999b1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55231043"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737278"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Como migrar as etiquetas do Azure Information Protection para o Centro de conformidade e segurança do Office 365
 
@@ -26,6 +26,14 @@ ms.locfileid: "55231043"
 Migrar as etiquetas, se pretender conseguir utilizá-los no Centro de conformidade, onde podem ser publicados e, em seguida, baixados por de segurança do Office 365 e [clientes que suportam a etiquetagem unificada](#clients-that-support-unified-labeling). O cliente do Azure Information Protection continua a transferir as etiquetas com a política do Azure Information Protection a partir do portal do Azure. 
 
 Depois de ter migrado as etiquetas, em seguida, pode efetuar alterações aos mesmos no portal do Azure ou a segurança do Office 365 e o Centro de conformidade e os respetivos clientes irão transferir a mesma alteração.
+
+Antes de ler instruções detalhadas sobre como migrar as suas etiquetas, poderá considerar as seguintes perguntas mais frequentes sobre úteis:
+
+- [O que é a diferença entre as etiquetas no Azure Information Protection e as etiquetas no Office 365?](faqs.md#whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365)
+
+- [Quando é o momento certo para migrar os meus rótulos para Office 365?](faqs.md#when-is-the-right-time-to-migrate-my-labels-to-office-365)
+
+- [Depois que tiver migrado meus rótulos, do portal de gestão que utilizo?](faqs.md?#after-ive-migrated-my-labels-which-management-portal-do-i-use )
 
 ### <a name="important-information-about-administrative-roles"></a>Informações importantes sobre as funções administrativas
 

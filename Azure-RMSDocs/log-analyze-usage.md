@@ -4,18 +4,18 @@ description: Informações e instruções sobre como utilizar os registos de uti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/15/2019
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bf42c0309af481847e80b12cb161422b7cd18378
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 234980a639ec4456cf85399dffdabe49963eec31
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54394343"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559976"
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Registar e analisar a utilização do serviço Azure Rights Management
 
@@ -44,7 +44,7 @@ Além deste registo de utilização, também tem as seguintes opções de regist
 |Opção de registo|Descrição|
 |----------------|---------------|
 |Registo de administrador|Regista tarefas administrativas para o serviço Azure Rights Management. Por exemplo, se o serviço estiver desativado, quando a funcionalidade de Superutilizador é ativada e quando os utilizadores estiverem permissões de administrador delegado para o serviço. <br /><br />Para obter mais informações, consulte o cmdlet do PowerShell [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog).|
-|Controlo de documentos|Permite aos utilizadores controlar e revogar os documentos que eles têm controlado com o cliente do Azure Information Protection ou a aplicação de partilha RMS. Os administradores globais também podem controlar esses documentos em nome dos utilizadores. <br /><br />Para obter mais informações, consulte [configurando e usando o controlo de documentos do Azure Information Protection](./rms-client/client-admin-guide-document-tracking.md).|
+|Controlo de documentos|Permite aos utilizadores controlar e revogar os documentos que eles têm controlado com o cliente do Azure Information Protection. Os administradores globais também podem controlar esses documentos em nome dos utilizadores. <br /><br />Para obter mais informações, consulte [configurando e usando o controlo de documentos do Azure Information Protection](./rms-client/client-admin-guide-document-tracking.md).|
 |Registos de eventos de cliente|Atividade de utilização para o cliente do Azure Information Protection, iniciou sessão do Windows local **aplicativos e serviços** registo de eventos **do Azure Information Protection**. <br /><br />Para obter mais informações, consulte [registo de utilização para o cliente do Azure Information Protection](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
 |Ficheiros de registo de cliente|Registos de resolução de problemas para o cliente do Azure Information Protection, localizado em **%localappdata%\Microsoft\MSIP**. <br /><br />Estes ficheiros estão concebidos para Support da Microsoft.|
 
@@ -151,7 +151,7 @@ Cada uma das linhas subsequentes é um registo. Os valores dos campos estão na 
 |  owner-email   |    Cadeia     |                                                                                                                       Endereço de e-mail do proprietário do documento.<br /><br /> Este campo fica em branco se o tipo de pedido for RevokeAccess.                                                                                                                        |                                                          alice@contoso.com                                                          |
 |     issuer     |    Cadeia     |                                                                                                                          Endereço de e-mail do emissor do documento. <br /><br /> Este campo fica em branco se o tipo de pedido for RevokeAccess.                                                                                                                          |                       alice@contoso.com (ou) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'                       |
 |  template-id   |    Cadeia     |                                                                                                                    ID do modelo utilizado para proteger o documento. <br /><br /> Este campo fica em branco se o tipo de pedido for RevokeAccess.                                                                                                                     |                                               {6d9371a6-4e2d-4e97-9a38-202233fed26e}                                                |
-|   file-name    |    Cadeia     | O nome de ficheiro de um documento protegido que é controlado com o cliente do Azure Information Protection para Windows ou a aplicação de partilha Rights Management para Windows. <br /><br />Atualmente, alguns ficheiros (como documentos do Office) são apresentados como GUIDs em vez do nome de ficheiro real.<br /><br /> Este campo fica em branco se o tipo de pedido for RevokeAccess. |                                                       DocumentoConfidencial.docx                                                        |
+|   file-name    |    Cadeia     | Nome de ficheiro de um documento protegido que é controlado com o cliente do Azure Information Protection para Windows. <br /><br />Atualmente, alguns ficheiros (como documentos do Office) são apresentados como GUIDs em vez do nome de ficheiro real.<br /><br /> Este campo fica em branco se o tipo de pedido for RevokeAccess. |                                                       DocumentoConfidencial.docx                                                        |
 | date-published |     Date      |                                                                                                                          Data em que o ficheiro foi protegido.<br /><br /> Este campo fica em branco se o tipo de pedido for RevokeAccess.                                                                                                                           |                                                         2015-10-15T21:37:00                                                         |
 |     c-info     |    Cadeia     |                                                                                   Informações sobre a plataforma de cliente que está a efetuar o pedido.<br /><br />A cadeia específica varia em função da aplicação (por exemplo, do sistema operativo ou do browser).                                                                                   | 'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64' |
 |      c-ip      |    Endereço    |                                                                                                                                                       Endereço IP do cliente que efetua o pedido.                                                                                                                                                        |                                                            64.51.202.144                                                            |

@@ -4,18 +4,18 @@ description: Informações para fornecer orientações a utilizadores, administr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/24/2019
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b023eaa514fc22dcb3d595495c724d7d19e58c08
-ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
+ms.openlocfilehash: f71a539185f60695950c4b2989eb68650f58755b
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55067674"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559942"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Ajudar os utilizadores a proteger ficheiros com o serviço Azure Rights Management
 
@@ -66,7 +66,7 @@ Utilize as secções seguintes para informações específicas de aplicações p
 
 ## <a name="using-information-protection-with-the-azure-information-protection-client"></a>Utilizar a proteção de informações com o cliente do Azure Information Protection
 
-Se os utilizadores tiverem o Office 2010, o cliente do Azure Information Protection (ou a aplicação mais antiga, a aplicação de partilha RMS) é necessária para proteger e consumir documentos e e-mails protegidos. No entanto, o cliente do Azure Information Protection também é recomendado para todos os computadores e dispositivos móveis que suportam este serviço.
+Se os utilizadores tiverem o Office 2010, o cliente do Azure Information Protection é necessário para proteger e consumir documentos e e-mails protegidos. No entanto, o cliente do Azure Information Protection também é recomendado para todos os computadores e dispositivos móveis que suportam este serviço.
 
 Para além de tornar mais fácil para os utilizadores protegerem documentos e e-mails, o cliente do Azure Information Protection permite-lhes controlarem os documentos que protegeram. Os documentos rastreados podem também ser revogados se os utilizadores anteriormente autorizados já não puderem ter acesso aos mesmos.
 

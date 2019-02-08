@@ -4,18 +4,18 @@ description: Instruções e informações para os administradores configurarem e
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2018
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 108a77f6c78b49bfcd852ff94ef529d3a667a193
-ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
+ms.openlocfilehash: 32e61bafe3157c33b3ed9db6d540085df07a9f15
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314740"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55560010"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guia do administrador: Configurar e utilizar o controlo de documentos do Azure Information Protection
 
@@ -74,20 +74,20 @@ Estes URLs são standard para o serviço Azure Rights Management, com a exceçã
 
 ## <a name="tracking-and-revoking-documents-for-users"></a>Controlar e revogar documentos para utilizadores
 
-Quando os utilizadores iniciam sessão no site de controlo de documentos, podem controlar e revogar documentos que protegeram através do cliente do Azure Information Protection ou que partilharam através da aplicação de partilha Rights Management. Quando iniciar sessão como administrador global do Azure AD para o seu inquilino, pode clicar no ícone de administração, que muda para o modo de administrador. Outras funções de administrador não suporta este modo para o site de controlo de documentos. 
+Quando os utilizadores iniciam sessão para o site de controlo de documentos, podem controlar e revogar documentos que protegeram através do cliente do Azure Information Protection. Quando iniciar sessão como administrador global do Azure AD para o seu inquilino, pode clicar no ícone de administração, que muda para o modo de administrador. Outras funções de administrador não suporta este modo para o site de controlo de documentos. 
 
 ![Ícone Administrador no site de controlo de documentos](../media/tracking-site-admin-icon.png)
 
-O modo de administrador permite-lhe ver os documentos que os utilizadores na sua organização selecionaram para controlar com o cliente do Azure Information Protection ou partilharam com a aplicação de partilha Rights Management.
+O modo de administrador permite-lhe ver os documentos que os utilizadores na sua organização tem selecionado para controlar com o cliente do Azure Information Protection.
 
 > [!NOTE] 
 > Se não vir este ícone, apesar de ser um administrador global, é porque não ainda partilhou todos os documentos por conta própria. Neste caso, utilize o seguinte URL para aceder ao site de controlo de documentos: https://portal.azurerms.com/#/admin
 
 As ações que executar no modo de Administrador são auditadas e registadas nos ficheiros de registo de utilização e tem de confirmar para continuar. Para obter mais informações sobre este registo, veja a secção seguinte.
 
-Quando estiver no modo de Administrador, pode procurar por utilizador ou documento. Se procurar por utilizador, verá todos os documentos que o utilizador especificado selecionou para controlar com o cliente do Azure Information Protection ou partilhou com a aplicação de partilha Rights Management. 
+Quando estiver no modo de Administrador, pode procurar por utilizador ou documento. Se procurar por utilizador, verá todos os documentos que o utilizador especificado selecionou para controlar com o cliente do Azure Information Protection. 
 
-Se procurar por documento verá todos os utilizadores na sua organização que controlaram esse documento com o cliente do Azure Information Protection ou o partilharam com a aplicação de partilha Rights Management. Em seguida, pode explorar os resultados da pesquisa para controlar os documentos que os utilizadores protegeram e revogar esses documentos, se necessário. 
+Se procurar por documento verá todos os utilizadores na sua organização que controlaram esse documento de utilizar o cliente do Azure Information Protection. Em seguida, pode explorar os resultados da pesquisa para controlar os documentos que os utilizadores protegeram e revogar esses documentos, se necessário. 
 
 Para sair do modo de Administrador, clique no **X** junto a **Sair do modo de administrador**:
 
@@ -99,7 +99,7 @@ Para obter instruções sobre como utilizar o site de controlo de documentos, ve
 
 Esta opção só está disponível para a versão de pré-visualização atual do cliente do Azure Information Protection.
 
-Para poder controlar e revogar um documento, tem primeiro de ser registado com o site de controlo de documentos. Esta ação ocorre quando os utilizadores selecionam a **controlar e revogar** opção a partir do Explorador de ficheiros ou as suas aplicações do Office quando estiverem a utilizar o cliente do Azure Information Protection. Para a gestão de direitos de aplicação de partilha, esta ação ocorre automaticamente quando os utilizadores selecionam a **partilhar protegido** opção.
+Para poder controlar e revogar um documento, tem primeiro de ser registado com o site de controlo de documentos. Esta ação ocorre quando os utilizadores selecionam a **controlar e revogar** opção a partir do Explorador de ficheiros ou as suas aplicações do Office quando estiverem a utilizar o cliente do Azure Information Protection.
 
 Se Etiquetar e proteger ficheiros para os utilizadores com o [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) cmdlet, pode utilizar os *EnableTracking* parâmetro para registrar o arquivo com o site de controlo de documentos. Por exemplo:
 

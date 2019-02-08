@@ -4,18 +4,18 @@ description: Instruções para os administradores configurarem aplicações e se
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1b88360b593317f2be93bf1afa3b514a61783896
-ms.sourcegitcommit: 8bda26b8b84cb8b66ae8f927906710d60c4b6a80
+ms.openlocfilehash: 63444cf83ef6b4135d72fccea27baa4f4e0afa8c
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397951"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559551"
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Configurar aplicações para o Azure Rights Management
 
@@ -44,9 +44,6 @@ Depois de ter implementado o Azure Information Protection na sua organização, 
     -   [Office 2010](configure-office-apps.md#office2010)
 
 -   [Cliente do Azure Information Protection: Instalação e configuração para clientes](configure-client.md)
-
--   [Aplicação de partilha Rights Management: Instalação e configuração para clientes](configure-sharing-app.md)
-
 
 Para configurar os servidores no local, como o Exchange Server e o SharePoint Server, consulte [Implementar o conector Azure Rights Management](deploy-rms-connector.md).
 

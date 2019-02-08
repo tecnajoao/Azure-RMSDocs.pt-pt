@@ -4,18 +4,18 @@ description: Quando utiliza o serviço Azure Rights Management, os modelos são 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/24/2019
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: caed7a13a290739065792320525dfa648981aa20
-ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
+ms.openlocfilehash: 02858ff5f908cbdee91e8a97d3cbe087e262f54d
+ms.sourcegitcommit: d9c8b560fa3d2797ef634d8919af3ed695b16908
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55067604"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55701920"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Atualizar modelos para os utilizadores e os serviços
 
@@ -28,7 +28,7 @@ Quando utiliza o serviço Azure Rights Management do Azure Information Protectio
 |Exchange Online<br /><br />Aplicável a regras de transporte e ao Outlook Web App |Atualizados automaticamente dentro de uma hora - não existem passos adicionais necessários.<br /><br />Esse é o caso, se estiver a utilizar [encriptação de mensagens do Office 365 com os novos recursos](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Se anteriormente tiver configurado o Exchange Online para utilizar o serviço Azure Rights Management através da importação de seu domínio de publicação fidedigno (TPD), utilize o mesmo conjunto de instruções para ativar os novos recursos no Exchange Online.|
 |Cliente do Azure Information Protection|Atualizado automaticamente sempre que a política do Azure Information Protection é atualizada no cliente:<br /><br /> - Quando abre uma aplicação do Office que suporta a barra do Azure Information Protection. <br /><br /> - Quando clica com o botão direito do rato para classificar e proteger um ficheiro ou uma pasta. <br /><br /> - Quando executa os cmdlets do PowerShell para etiquetagem e proteção (Get-AIPFileStatus e Set-AIPFileLabel).<br /><br /> -Quando é iniciado o serviço de Scanner de proteção de informações do Azure e a política local é mais antigo do que uma hora. Além disso, o serviço de scanner verifica a existência de alterações a cada hora e utiliza essas alterações para o próximo ciclo de análise.<br /><br /> - A cada 24 horas.<br /><br /> Além disso, porque este cliente está totalmente integrado com o Office, todos os modelos para aplicações do Office 365, Office 2019, Office 2016, atualizados ou Office 2013 também serão atualizados para o cliente do Azure Information Protection.|
 |O Azure Information Protection unified cliente etiquetagem (pré-visualização)|Atualizados automaticamente a cada 4 horas, por aplicação do Office.<br /><br /> Além disso, porque este cliente está totalmente integrado com o Office, todos os modelos para aplicações do Office 365, Office 2019, Office 2016, atualizados ou Office 2013 também serão atualizados para o cliente de etiquetagem unificado do Azure Information Protection.|
-|Aplicações do Office 365, Office 2019, Office 2016 e Office 2013<br /><br />Aplicação de partilha RMS para Windows|Atualizados automaticamente – com base numa agenda:<br /><br />-Para estas versões mais recentes do Office: O intervalo de atualização predefinido é de 7 dias.<br /><br />-Para a aplicação de partilha RMS para Windows: A partir da versão 1.0.1784.0, o intervalo de atualização predefinido é 1 dia. As versões anteriores têm um intervalo de atualização predefinido de 7 dias.<br /><br />Para forçar uma atualização mais cedo do que a agenda, consulte a secção seguinte, [aplicações de Office 365, Office 2019, Office 2016, Office 2013 e aplicação para Windows de partilha RMS: Como forçar uma atualização de um modelo personalizado modificado](#office-365-apps--office-2019--office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
+|Aplicações do Office 365, Office 2019, Office 2016 e Office 2013|Atualizados automaticamente – com base numa agenda:<br /><br />-Para estas versões mais recentes do Office: O intervalo de atualização predefinido é de 7 dias.<br /><br />Para forçar uma atualização mais cedo do que a agenda, consulte a secção seguinte, [aplicações do Office 365, Office 2019, Office 2016 e Office 2013: Como forçar uma atualização de um modelo personalizado modificado](#office-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-a-changed-custom-template).|
 |Office 2010|Atualizado automaticamente quando os utilizadores terminam sessão no Windows, iniciam sessão novamente e esperam até uma hora.|
 |Exchange no local com o conector Rights Management<br /><br />Aplicável a regras de transporte e ao Outlook Web App|Atualizados automaticamente – não existem passos adicionais necessários. No entanto, o Outlook Web App coloca a IU em cache durante um dia.|
 |2019 do Office para Mac e o Office 2016 para Mac|Atualizados automaticamente – não existem passos adicionais necessários.|
@@ -37,8 +37,8 @@ Quando utiliza o serviço Azure Rights Management do Azure Information Protectio
 
 Quando as aplicações de cliente precisam de transferir modelos (inicialmente ou atualizados para alterações), esteja preparado para aguardar até 15 minutos antes de a transferência estar concluída e os modelos novos ou atualizados estarem totalmente operacionais. O tempo em questão pode variar devido a fatores como o tamanho e a complexidade da configuração do modelo e a conectividade de rede. 
 
-## <a name="office-365-apps-office-2019-office-2016-office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template"></a>Aplicações do Office 365, Office 2019, Office 2016, Office 2013 e aplicação para Windows de partilha RMS: Como forçar uma atualização de um modelo personalizado modificado
-Ao editar o registo nos computadores que executam aplicações de Office 365, Office 2019, Office 2016, Office 2013 ou de partilha Rights Management (RMS) aplicativos para Windows, pode alterar o agendamento automático para que os modelos modificados serem atualizados nos computadores mais com freqüência que o respetivo valor predefinido. Também pode forçar uma atualização imediata ao eliminar os dados existentes num valor de registo.
+## <a name="office-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-a-changed-custom-template"></a>Aplicações do Office 365, Office 2019, Office 2016 e Office 2013: Como forçar uma atualização de um modelo personalizado modificado
+Ao editar o registo nos computadores que executam aplicações do Office 365, Office 2019, Office 2016 ou Office 2013, pode alterar o agendamento automático para que os modelos alterados sejam atualizados em computadores com mais frequência do que o respetivo valor predefinido. Também pode forçar uma atualização imediata ao eliminar os dados existentes num valor de registo.
 
 > [!WARNING]
 > A utilização incorreta do Editor de Registo poderá causar problemas graves que exijam a reinstalação do sistema operativo. A Microsoft não garante que consiga resolver os problemas resultantes da utilização incorreta do Editor de Registo. A utilização do Editor de Registo é da exclusiva responsabilidade do utilizador.

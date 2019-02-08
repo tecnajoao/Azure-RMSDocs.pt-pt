@@ -4,18 +4,18 @@ description: Descrição detalhada de como o Azure RMS funciona, os controlos cr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7c1d488ff738b0eea9042f1580ea74b7099f3ac5
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: d4530e6a09fbf8ab3779d1938c37b6e736976ed7
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53174119"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559670"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Como funciona o Azure RMS? Nos bastidores
 
@@ -49,7 +49,7 @@ Mesmo que não precise se conheça detalhadamente como funciona essa tecnologia,
 
 ###### <a name="footnote-1"></a>Nota de rodapé 1 
 
-O controlo de 256 bits é utilizado pelo cliente do Azure Information Protection e pela aplicação de partilha Rights Management para proteção genérica e nativa quando o ficheiro tem uma extensão de nome de ficheiro .ppdf ou quando se trata de um ficheiro de imagem ou de texto protegido (tal como .ptxt ou .pjpg).
+256 bits é utilizado pelo cliente do Azure Information Protection para proteção genérica e nativa quando o ficheiro tem uma extensão de nome de ficheiro. ppdf ou é um arquivo de imagem (por exemplo,. ptxt ou. pjpg) ou de texto protegido.
 
 ###### <a name="footnote-2"></a>Nota de rodapé 2
 
@@ -153,8 +153,6 @@ Os passos anteriores abrangem os cenários padrão, mas existem algumas variaç�
 - **Conector do RMS**: Quando o serviço Azure Rights Management é utilizado com o conector RMS, os fluxos do processo permanecem iguais. A única diferença é que o conector funciona como um reencaminhamento entre os serviços no local (como o Exchange Server e o SharePoint Server) e o serviço Azure Rights Management. O conector propriamente dito não executa quaisquer operações, como a inicialização do ambiente de utilizador, a encriptação ou a desencriptação. Apenas reencaminha a comunicação que normalmente iria para um servidor AD RMS, o processamento da tradução entre os protocolos que são utilizados em cada lado. Este cenário permite-lhe utilizar o serviço Azure Rights Management com serviços no local.
 
 - **Proteção genérica (. pfile)**: Quando o serviço Azure Rights Management protege genericamente um ficheiro, o fluxo é basicamente o mesmo para a proteção de conteúdo, exceto que o cliente de RMS cria uma política que concede todos os direitos. Quando o ficheiro é consumido, é desencriptado antes de ser transmitido para a aplicação de destino. Este cenário permite-lhe proteger todos os ficheiros, mesmo que não suportem o RMS originalmente.
-
-- **PDF protegido (. ppdf)**: Quando o serviço Azure Rights Management protege originalmente um ficheiro do Office, também cria uma cópia desse ficheiro e protege-o da mesma forma. A única diferença é que a cópia do ficheiro está no formato de ficheiro PPDF, que o visualizador do cliente do Azure Information Protection e a aplicação de partilha RMS sabem como abrir no modo só de visualização. Este cenário permite-lhe enviar anexos protegidos por e-mail, sabendo que o destinatário num dispositivo móvel pode sempre lê-los, mesmo que o dispositivo móvel não tem uma aplicação que suporta nativamente protegidos de arquivos do Office.
 
 - **As contas Microsoft**: O Azure Information Protection pode autorizar os endereços de e-mail para consumo, quando os utilizadores são autenticados com uma conta Microsoft. No entanto, nem todos os aplicativos podem abrir conteúdo protegido, quando uma conta Microsoft é utilizada para autenticação. [Obter mais informações](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).
 

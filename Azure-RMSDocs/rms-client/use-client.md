@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9026560849d04939799a013d28d6d6d4d38ae442
-ms.sourcegitcommit: 8d854ee417d9af1a85e7d4ecb3807a69a43b0313
+ms.openlocfilehash: 59f79f7ac24a575665a2d8350f39b87aaedec7e1
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177199"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559483"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>O lado do cliente do Azure Information Protection
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Aplica-se a: Serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 O Azure Information Protection fornece uma solução de servidor cliente que ajuda a proteger os documentos e os e-mails de uma organização:
 
@@ -38,10 +38,6 @@ Utilize a seguinte documentação quando precisar de mais informações sobre co
 - [Notas de implementação do cliente RMS](client-deployment-notes.md)
 
 - [Proteção RMS com Infraestrutura de Classificação de Ficheiros (FCI) do Windows Server](configure-fci.md)
-
-- [Aplicação de partilha Rights Management para Windows](sharing-app-windows.md)
-
-Note que a aplicação de partilha Rights Management para Windows e a Ferramenta de Proteção RMS estão a ser substituídas pelo cliente do Azure Information Protection. 
 
 
 ## <a name="see-also"></a>Consulte também

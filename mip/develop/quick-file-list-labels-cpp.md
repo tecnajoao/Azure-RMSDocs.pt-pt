@@ -4,14 +4,15 @@ description: Um guia de introdução mostra-lhe como utilizar o SDK de C++ do Mi
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: bryanla
-ms.openlocfilehash: 935e33a3e7f2c4cce8ac3e2137029377660acaea
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 53ff9177bd17a87b64db3ec507e87236c9b12507
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651484"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257812"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Início rápido: List sensitivity labels (C++) (Listar etiquetas de confidencialidade [C++])
 

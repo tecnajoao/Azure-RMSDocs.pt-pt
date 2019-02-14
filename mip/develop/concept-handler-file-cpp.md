@@ -4,14 +4,15 @@ description: Este artigo ajuda-o a compreender como os manipuladores de API de f
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 6b2916a3937892353f4389a59b5e48356deda603
-ms.sourcegitcommit: 823a14784f4b34288f221e3b3cb41bbd1d5ef3a6
+ms.openlocfilehash: b021f5a05ad484b32af3a189c10522564da6d86d
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453372"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254854"
 ---
 # <a name="microsoft-information-protection-sdk---file-handler-concepts"></a>SDK - conceitos de manipulador de arquivo do Microsoft Information Protection
 
@@ -52,7 +53,7 @@ Criar a `FileHandler` é tão fácil quanto chamar o `FileEngine`do `CreateFileH
 
 `CreateFileHandlerAsync` aceita três parâmetros: O caminho para o ficheiro que deve ser lidos ou modificado, o `mip::FileHandler::Observer` para notificações de eventos assíncronos e a promessa para o `FileHandler`.
 
-**Nota:** a `mip::FileHandler::Observer` classe tem de ser implementada numa classe derivada como `CreateFileHandler` requer o `Observer` objeto. 
+**Nota:** O `mip::FileHandler::Observer` classe tem de ser implementada numa classe derivada como `CreateFileHandler` requer o `Observer` objeto. 
 
 ```cpp
 auto createFileHandlerPromise = std::make_shared<std::promise<std::shared_ptr<mip::FileHandler>>>();
@@ -141,7 +142,7 @@ handler->CommitAsync(outputFile, commitPromise);
 auto wasCommitted = commitFuture.get();
 ```
 
-**Importante:** o `FileHandler` não irá atualizar ou substituir ficheiros existentes. Cabe ao desenvolvedor implementar **substituindo** o ficheiro que está a ser etiquetado. 
+**Importante:** O `FileHandler` não irá atualizar ou substituir ficheiros existentes. Cabe ao desenvolvedor implementar **substituindo** o ficheiro que está a ser etiquetado. 
 
 Se uma etiqueta para a escrever **FileA.docx**, uma cópia do ficheiro **FileB.docx**, será criado com a etiqueta aplicada. Código deve ser escrito para a mudança de nome/remover **FileA.docx** e mude o nome **FileB.docx**.
 

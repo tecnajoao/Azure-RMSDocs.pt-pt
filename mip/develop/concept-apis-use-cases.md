@@ -4,14 +4,15 @@ description: Este artigo ajuda-o a compreender os 3 tipos de APIs no SDK do MIP,
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 10/16/2018
 ms.author: bryanla
-ms.openlocfilehash: 5c3f7ee97bfe003f2f215ba95ba196894ab8e197
-ms.sourcegitcommit: cc65c3851d4b8169a1a62c83afaf0f75402f7631
+ms.openlocfilehash: 1dddb9834a0cc7b365a2294bbad3611e4d01870a
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "49476192"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252485"
 ---
 # <a name="microsoft-information-protection-sdk---api-concepts"></a>Microsoft Information Protection SDK - conceitos de API
 
@@ -21,7 +22,7 @@ O SDK de proteção de informações da Microsoft (MIP) é composto por três AP
 
 Consoante as necessidades da sua aplicação, poderá querer de interface na camada de API de ficheiros ou poderá ter de trabalhar diretamente com as camadas de política ou a API de proteção.
 
-## <a name="file-api"></a>API de ficheiros
+## <a name="file-api"></a>API de Ficheiros
 
 A API de ficheiros é uma abstração da proteção e a política de APIs. Ele fornece fácil de usar interfaces para ler as etiquetas do serviço, aplicar etiquetas a tipos de ficheiro definido e ler as etiquetas desses tipos de ficheiros. A API de ficheiros será usada por qualquer serviço ou de aplicativo onde:
 

@@ -5,14 +5,15 @@ services: information-protection
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 11/07/2018
 ms.author: tommos
-ms.openlocfilehash: bc85a6e737c883afdc39e8730483fc2c0da720a9
-ms.sourcegitcommit: ef70dab87478084fca853f389dab2408b95d1df1
+ms.openlocfilehash: 729570c902ad3175b65ddd8167005c0cb4e4078c
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52304202"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258764"
 ---
 # <a name="auditing-in-the-mip-sdk"></a>Auditoria no SDK do MIP
 
@@ -28,10 +29,10 @@ Eventos de heartbeat são gerados automaticamente para qualquer aplicativo que i
 
 * TenantId
 * Hora de geração
-* Nome Principal de Utilizador
+* Nome Principal de utilizador
 * Nome da máquina em que a auditoria foi gerada
 * Nome do processo
-* Platform
+* Plataforma
 * ID da aplicação - corresponde com o Azure AD ID da aplicação.
 
 Esses eventos são úteis na deteção de aplicações em toda a empresa que estão a utilizar o SDK do Microsoft Information Protection.
@@ -73,7 +74,7 @@ handler->NotifyCommittedActions(*state);
 
 Eventos enviados para o pipeline de auditoria do Azure Information Protection irão descobrir nos relatórios em https://portal.azure.com. Análise de proteção de informações do Azure está em pré-visualização pública e funcionalidades podem ser alterados.
 
-## <a name="next-steps"></a>Passos Seguintes
+## <a name="next-steps"></a>Próximos Passos
 
 - Para obter detalhes sobre a experiência de auditoria no Azure Information Protection, consulte a [pré-visualizar o blogue de anúncio na Comunidade tecnológica](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).
 - Transferir o [política amostras de API do GitHub e experimente a API de política](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)

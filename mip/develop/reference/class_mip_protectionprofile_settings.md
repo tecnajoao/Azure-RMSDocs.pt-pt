@@ -4,14 +4,15 @@ description: Documenta a classe mip::protectionprofile da Microsoft Information 
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 30fffb8de542375fef26154d48a92919137a22fb
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 1998d693de33d2bc37043f750d85296f7282add4
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651535"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254820"
 ---
 # <a name="class-mipprotectionprofilesettings"></a>classe mip::ProtectionProfile::Settings 
 [As definições](class_mip_protectionprofile_settings.md) utilizada pelo [ProtectionProfile](class_mip_protectionprofile.md) durante sua criação e ao longo de seu ciclo de vida.

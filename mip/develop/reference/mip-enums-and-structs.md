@@ -4,14 +4,15 @@ description: Documentação de referência para as estruturas de MIP C++ SDK e e
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: d3ca101d3141f2a1e36fcfec11e805907c125b8e
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 04abc581d94c0b05cf19d01362f7b416155a372c
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651773"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56256112"
 ---
 # <a name="summary"></a>Resumo
 
@@ -171,7 +172,7 @@ Sinalizadores de bits que ditam o comportamento de criação de política adicio
 
  Valores                         | Descrições                                
 --------------------------------|---------------------------------------------
-Nenhuma            | Nenhuma
+Nenhum            | Nenhum
 OfflineOnly            | Não permita operações de rede e da interface do Usuário.
 AllowAuditedExtraction            | Conteúdo pode ser aberto num aplicativo sem proteção-SDK-suporte para
 PreferDeprecatedAlgorithms            | Utilização despromovida algoritmos criptográficos (ECB) para efeitos compatibilidade

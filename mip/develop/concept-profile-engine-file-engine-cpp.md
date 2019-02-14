@@ -4,20 +4,21 @@ description: Este artigo ajuda-o a compreender os conceitos em todo o objeto de 
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 9ccea755c83b570aa17ff4d30d98783f4bef79e5
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.openlocfilehash: 09b4db10523539f093a54c54d1fc6b7de8f7ddb0
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446605"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259291"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-engine-concepts"></a>SDK - conceitos de motor de API de ficheiros do Microsoft Information Protection
 
 O `mip::FileEngine` na API de ficheiros do SDK do MIP fornece uma interface para todas as operações que são executadas em nome de uma identidade especificada. Será adicionado um mecanismo para cada utilizador que inicia sessão para o aplicativo e todas as operações que o motor de execute será executada no contexto de identidade.
 
-O `FileEngine` tem duas responsabilidades principais: listagem etiquetas para um usuário autenticado e a criação de manipuladores para realizar operações de ficheiros em nome do utilizador de ficheiros. 
+O `FileEngine` tem duas responsabilidades principais: Listagem etiquetas para um usuário autenticado e a criação de manipuladores de arquivo para realizar operações de ficheiros em nome do utilizador. 
 
 - [`mip::FileEngine`](reference/class_mip_fileengine.md)
 - `ListSensitivityLabels()`: Obtém a lista de etiquetas para o mecanismo de carregá-lo.
@@ -104,7 +105,7 @@ for (const auto& label : labels) {
 
 A coleção de `mip::Label` devolvido pelo `GetSensitivityLabels()` pode ser utilizado para apresentar todas as etiquetas disponíveis ao utilizador e, em seguida, quando selecionado, utilize o ID para aplicar etiquetas a um ficheiro.
 
-## <a name="next-steps"></a>Passos Seguintes
+## <a name="next-steps"></a>Próximos Passos
 
 Agora que o perfil é carregado, o mecanismo adicionado, e temos etiquetas, podemos adicionar um manipulador para começar a leitura, gravação ou remover etiquetas de ficheiros. Ver [manipuladores de ficheiros no SDK do MIP](concept-handler-file-cpp.md).
 

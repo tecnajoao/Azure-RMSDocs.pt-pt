@@ -4,20 +4,21 @@ description: Este artigo ajuda-o a compreender como implementar um delegado de a
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: f80eb1f7ade5e024bd6d7d68775624b51f3f1809
-ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
+ms.openlocfilehash: adf82006219a24b39d44a75e22d5ef1dd282aa79
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51223913"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56251284"
 ---
 # <a name="microsoft-information-protection-sdk---implementing-an-authentication-delegate-c"></a>SDK - implementando um delegado de autenticação (C++) do Microsoft Information Protection
 
 O SDK de MIP implementar um delegado de autenticação para lidar com os desafios de autenticação e a responder com um token. Não em si implementa aquisição do token. O processo de aquisição do token é cargo do desenvolvedor e é feito ao expandir a `mip::AuthDelegate` classe, especificamente o `AcquireOAuth2Token` função de membro.
 
-## <a name="building-authdelegateimpl"></a>Criando AuthDelegateImpl
+## <a name="building-authdelegateimpl"></a>Building AuthDelegateImpl
 
 Para estender a classe base `mip::AuthDelegate`, criamos uma nova classe chamada `sample::auth::AuthDelegateImpl`. Essa classe implementa o `AcquireOAuth2Token` funcionalidade e configura o construtor para tirar nos nossos parâmetros de autenticação.
 
@@ -106,7 +107,7 @@ bool AuthDelegateImpl::AcquireOAuth2Token(
 }
 ```
 
-## <a name="next-steps"></a>Passos Seguintes
+## <a name="next-steps"></a>Próximos Passos
 
 Para concluir a implementação de autenticação, é necessário criar o código por trás do `AcquireToken()` função. Os exemplos abaixo discutem algumas formas de adquirir o token.
 

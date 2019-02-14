@@ -4,14 +4,15 @@ description: Documenta a classe mip::protectbytemplateaction da Microsoft Inform
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 1c05a04df39e6454eb934b5db48e96339afdac0c
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 9c7114bcceceef537675ca04499cdb1710456b82
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55650821"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252372"
 ---
 # <a name="class-mipprotectbytemplateaction"></a>classe mip::ProtectByTemplateAction 
 Uma classe de ação que especifica a adição de proteção pelo modelo para o documento.

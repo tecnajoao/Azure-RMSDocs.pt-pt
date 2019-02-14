@@ -4,14 +4,15 @@ description: Este artigo ajuda-o a compreender os conceitos em todo o objeto de 
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: ae6699212d45a6c8a2fa95f648e7f5a2be3de93e
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.openlocfilehash: 3fa8a7b9f787cef980722efa5036de5c3f583b35
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445313"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56251709"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-profile-concepts"></a>SDK - conceitos de perfil de API de proteção do Microsoft Information Protection
 
@@ -98,7 +99,7 @@ int main()
 
 Resultar de final é que podemos carreguei o perfil com êxito e armazenadas no objeto chamado `profile`.
 
-## <a name="next-steps"></a>Passos Seguintes
+## <a name="next-steps"></a>Próximos Passos
 
 Agora que o perfil foi adicionado, a próxima etapa é adicionar um mecanismo para o perfil.
 

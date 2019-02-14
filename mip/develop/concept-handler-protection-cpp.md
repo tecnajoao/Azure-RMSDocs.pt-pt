@@ -4,14 +4,15 @@ description: Este artigo ajuda-o a compreender como os manipuladores de API de p
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: a087f1bdef5a010718c67fbdca938ecbb62e5faa
-ms.sourcegitcommit: 823a14784f4b34288f221e3b3cb41bbd1d5ef3a6
+ms.openlocfilehash: e345a98e69c0173ccda7b80c21a5c2c7aa9af5a3
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453512"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253034"
 ---
 # <a name="microsoft-information-protection-sdk---protection-handler-concepts"></a>SDK - conceitos de manipulador de proteção do Microsoft Information Protection
 

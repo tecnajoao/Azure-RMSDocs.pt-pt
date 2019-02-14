@@ -4,14 +4,15 @@ description: Este artigo ajuda-o a compreender como o SDK de MIP implementa a au
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 288342c467574cf84c60e1211238b65a9e716b6c
-ms.sourcegitcommit: 860955fb2c292b3ca5910cd41095363f58caf553
+ms.openlocfilehash: dd2e8c5c3344da351715069910741c5651f4e617
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48230527"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257977"
 ---
 # <a name="microsoft-information-protection-sdk---authentication-concepts"></a>SDK - conceitos de autenticação do Microsoft Information Protection
 
@@ -27,7 +28,7 @@ A autenticação no SDK do MIP é executada ao estender a classe `mip::AuthDeleg
 - `mip::AuthDelegate::OAuth2Challenge`: Aceita dois parâmetros, **autoridade** e **recurso**. **Autoridade** é o serviço será gerado contra o token. **Recurso** é o serviço que está a tentar aceder. O SDK processará passando estes parâmetros para o delegado quando chamado.
 - `mip::AuthDelegate::OAuth2Token`: O resultado de token é escrito para este objeto. Serão consumida pelo SDK quando o motor é carregado. Fora da nossa implementação de autenticação, não deve ser necessário obter ou definir este valor em qualquer lugar.
 
-**Importante:** os aplicativos não chamar `AcquireOAuth2Token` diretamente. O SDK irá chamar essa função, quando necessário.
+**Importante:** Os aplicativos não chamar `AcquireOAuth2Token` diretamente. O SDK irá chamar essa função, quando necessário.
 
 ## <a name="consent"></a>Consentimento
 
@@ -48,9 +49,9 @@ Quando um usuário executar uma operação que exigiria que fornece o consentime
 
 ### <a name="consent-options"></a>Opções de consentimento
 
-- **AcceptAlways**: consentimento e lembre-se a decisão.
-- **Aceitar**: uma vez o consentimento.
-- **Rejeitar**: não dar consentimento.
+- **AcceptAlways**: O consentimento e lembre-se a decisão.
+- **Aceitar**: Uma vez consentimento.
+- **Rejeitar**: Não consentimento.
 
 Quando o SDK pede consentimento do utilizador com este método, o aplicativo cliente deve apresentar o URL para o usuário. Aplicações de cliente devem fornecer alguns meios de obtenção de consentimento do utilizador e voltar a enumeração de consentimento apropriada que corresponde à decisão do usuário.
 

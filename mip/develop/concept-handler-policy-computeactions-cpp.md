@@ -5,14 +5,15 @@ services: information-protection
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 11/16/2018
 ms.author: tommos
-ms.openlocfilehash: 1cecbcc88434995c9807e1060dcf6296e33d2689
-ms.sourcegitcommit: ef70dab87478084fca853f389dab2408b95d1df1
+ms.openlocfilehash: 944e86c3d950912ce48013e502c1864fda3498b1
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52304185"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56260107"
 ---
 # <a name="compute-an-action"></a>Uma ação de computação
 
@@ -24,7 +25,7 @@ A última etapa do processo é fornecer um identificador de etiqueta e, opcional
 
 Código de exemplo para este artigo pode ser encontrado no GitHub.
 
-* [mipsdk-policyapi-cpp-exemplo-básico](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-basic)
+* [mipsdk-policyapi-cpp-sample-basic](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-basic)
 
 ## <a name="compute-an-action-for-a-new-label"></a>Uma ação de computação para uma nova etiqueta
 
@@ -114,7 +115,7 @@ Remove: MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_ContentBits
 Remove: MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_ActionId
 ```
 
-## <a name="next-steps"></a>Passos Seguintes
+## <a name="next-steps"></a>Próximos Passos
 
 - Saiba como [transmitir eventos de auditoria para análise de proteção de informações do Azure](concept-handler-policy-auditing-cpp.md)
 - Transferir o [política amostras de API do GitHub e experimente a API de política](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)

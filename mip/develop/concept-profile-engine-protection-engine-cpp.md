@@ -4,14 +4,15 @@ description: Este artigo ajuda-o a compreender os conceitos em todo o objeto de 
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: da0c50de6a818fcd8beda0483696ba433ce22149
-ms.sourcegitcommit: 823a14784f4b34288f221e3b3cb41bbd1d5ef3a6
+ms.openlocfilehash: 9595d3a3b12af802720363e141e40608c6f5ba93
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453321"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258415"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-engine-concepts"></a>SDK - conceitos de motor de API de proteção do Microsoft Information Protection
 
@@ -21,7 +22,7 @@ Na API do ficheiro, o `mip::ProtectionProfile` classe é a classe de raiz para t
 
 O exemplo a seguir demonstra como utilizar um mecanismo único para um único utilizador autenticado.
 
-### <a name="implementation-create-protection-engine-settings"></a>Implementação: Definições de motor de proteção de criação
+### <a name="implementation-create-protection-engine-settings"></a>Implementação: Criar definições de motor de proteção
 
 Semelhante a um perfil, o mecanismo também requer um objeto de definições, `mip::ProtectionEngine::Settings`. Este objeto armazena o identificador exclusivo do motor, os dados de cliente personalizável que podem ser utilizados para depuração ou telemetria e, opcionalmente, a localidade.
 
@@ -31,7 +32,7 @@ Aqui vamos criar um `ProtectionEngine::Settings` objeto chamado *engineSettings*
 ProtectionEngine::Settings engineSettings("UniqueID", "");
 ```
 
-**Tenha em atenção**: Se utilizar este método para criar o objeto de definições de proteção, tem de definir manualmente o CloudEndpointBaseUrl como https://api.aadrm.com
+**Nota**: Se utilizar este método para criar o objeto de definições de proteção, tem de definir manualmente o CloudEndpointBaseUrl como https://api.aadrm.com
 
 Como melhor prática, o primeiro parâmetro, **id**, deve ser algo que permite que o mecanismo ligar facilmente para o utilizador associado, **ou** um `mip::Identity` objeto. Para inicializar as configurações com `mip::Identity`:
 
@@ -68,7 +69,7 @@ Para adicionar o mecanismo, mas vamos voltar para o padrão de promessa/futuro u
 
 O resultado final do código acima é que adicionamos com êxito um mecanismo para o usuário autenticado para o perfil.
 
-## <a name="implementation-list-templates"></a>Implementação: Modelos de lista
+## <a name="implementation-list-templates"></a>Implementação: Lista de modelos
 
 Usando o mecanismo de foi adicionado, agora é possível listar todos os modelos de sensibilidade disponíveis para o utilizador autenticado ao chamar `engine->GetTemplatesAsync()`. 
 
@@ -83,7 +84,7 @@ mEngine->GetTemplatesAsync(engineObserver, loadPromise);
 auto templates = loadFuture.get();
 ```
 
-### <a name="implementation-print-the-template-ids"></a>Implementação: Os Ids de modelo de impressão
+### <a name="implementation-print-the-template-ids"></a>Implementação: Imprimir os Ids de modelo
 
 ```cpp
 //Iterate through all template IDs in the vector
@@ -96,6 +97,6 @@ Imprimir os nomes é uma forma fácil de mostrar o que nós, com êxito, obtido 
 
 Mapeando modelos em etiquetas só pode ser feito através da política de API, examinando o resultado da `ComputeActions()`.
 
-## <a name="next-steps"></a>Passos Seguintes
+## <a name="next-steps"></a>Próximos Passos
 
 Agora que o perfil é carregado, o mecanismo adicionado, e temos modelos, podemos adicionar um manipulador para começar a leitura, gravação ou remover modelos de ficheiros. Ver [conceitos de manipulador de proteção](concept-handler-protection-cpp.md).

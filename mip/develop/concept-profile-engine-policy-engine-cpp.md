@@ -4,14 +4,15 @@ description: Este artigo ajuda-o a compreender os conceitos em todo o objeto de 
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 07e0fc59e0ed5ec1fc66fe3179fce07dfcb687d1
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.openlocfilehash: 9aac5fb0e010c8c73776c3e62ba9e98bdeff77d2
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445279"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252780"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-engine-concepts"></a>SDK - conceitos de motor de política de API do Microsoft Information Protection
 
@@ -19,7 +20,7 @@ ms.locfileid: "47445279"
 
 ## <a name="implementation-add-a-policy-engine"></a>Implementação: Adicionar um motor de política
 
-### <a name="implementation-create-policy-engine-settings"></a>Implementação: Definições de motor de política de criação
+### <a name="implementation-create-policy-engine-settings"></a>Implementação: Criar definições de motor de política
 
 Semelhante a um perfil, o mecanismo também requer um objeto de definições, `mip::PolicyEngine::Settings`. Este objeto armazena o identificador exclusivo do motor, os dados de cliente personalizável que podem ser utilizados para depuração ou telemetria e, opcionalmente, a localidade.
 
@@ -58,7 +59,7 @@ Para adicionar o mecanismo, mas vamos voltar para o padrão de promessa/futuro u
 
 O resultado final do código acima é que adicionamos com êxito um mecanismo para o usuário autenticado para o perfil.
 
-## <a name="implementation-list-sensitivity-labels"></a>Implementação: Etiquetas de sensibilidade de lista
+## <a name="implementation-list-sensitivity-labels"></a>Implementação: Etiquetas de sensibilidade da lista
 
 Usando o mecanismo de adicionados, é agora possível para listar todos da sensibilidade etiquetas disponível para o utilizador autenticado ao chamar `engine->ListSensitivityLabels()`.
 

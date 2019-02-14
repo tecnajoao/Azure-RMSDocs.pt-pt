@@ -5,14 +5,15 @@ services: information-protection
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 11/01/2018
 ms.author: tommos
-ms.openlocfilehash: 71cc6f08e130fe4a97604924643d13fd341a5625
-ms.sourcegitcommit: ef70dab87478084fca853f389dab2408b95d1df1
+ms.openlocfilehash: 54e5249f7624cbc020451752d39ccb9f0b507f3a
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52304168"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257693"
 ---
 # <a name="implement-executionstate"></a>Implementar ExecutionState
 
@@ -63,7 +64,7 @@ struct ExecutionStateOptions {
 
 Cada propriedade é definida pelo aplicativo, em seguida, `ExecutionStateOptions` é passado para o construtor da classe derivada de `mip::ExecutionState`. Estas informações são utilizadas para determinar as ações de. Dados fornecidos no `mip::ExecutionState` também irão descobrir na análise de proteção de informações do Azure.
 
-### <a name="next-steps"></a>Passos Seguintes
+### <a name="next-steps"></a>Próximos Passos
 
 - Saiba como determinar [computação ações para uma etiqueta de nova ou existente](concept-handler-policy-computeactions-cpp.md), com base no estado atual e pretendido.
 - Transferir o [política amostras de API do GitHub e experimente a API de política](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)

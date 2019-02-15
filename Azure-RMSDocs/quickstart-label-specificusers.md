@@ -3,18 +3,21 @@ title: Início rápido - criar uma nova etiqueta do Azure Information Protection
 description: Criar e configurar uma nova etiqueta que classifica os documentos e e-mails para utilizadores específicos através da utilização de uma política de âmbito.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 11/14/2018
+manager: barbkess
+ms.date: 02/15/2019
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 1a8af09681411e49936c067c6161376c9d4f9f16
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: a4057396bbe2d642d5f1d155a9e3975d40f02b1e
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023580"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265983"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Início rápido: Criar uma nova etiqueta do Azure Information Protection para utilizadores específicos
+
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Neste início rápido, irá criar uma nova etiqueta que apenas utilizadores específicos, podem ver e aplicam-se para classificar e proteger os documentos e e-mails.
 
@@ -32,13 +35,13 @@ Para concluir este início rápido, precisa de:
 
 2. Adicionei o painel do Azure Information Protection para o portal do Azure e confirmar que o serviço de proteção está ativado.
 
-    Se precisar de ajuda com estas ações, veja [início rápido: começar a utilizar no portal do Azure](quickstart-viewpolicy.md).
+    Se precisar de ajuda com estas ações, consulte o artigo [início rápido: Começar a utilizar no portal do Azure](quickstart-viewpolicy.md).
 
 3. Um grupo com capacidade de receber notificações por e-mail no Azure AD que contém os utilizadores que irão ver e aplicar a nova etiqueta.
     
     Se não tiver um grupo adequado, crie uma com o nome **equipa de vendas** e adicione pelo menos um utilizador.
 
-4. Para testar a nova etiqueta: cliente do Azure Information Protection tem de estar instalado nos computadores para os utilizadores. 
+4. Para testar a nova etiqueta: O cliente do Azure Information Protection tem de estar instalado nos computadores para os utilizadores. 
     
     Para experimentar a etiqueta para si próprio, pode instalar o cliente ao aceder a [Centro de transferências da Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e transfira **AzInfoProtection.exe** da página do Azure Information Protection.
 
@@ -52,15 +55,15 @@ Primeiro, crie a sua nova etiqueta.
     
     Por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
     
-    Se não for o administrador global, utilize a seguinte hiperligação para funções de alternativas: [o início de sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal)
+    Se não for o administrador global, utilize a seguinte hiperligação para funções de alternativas: [O início de sessão no portal do Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
-2. Do **classificações** > **etiquetas** opção de menu: no **do Azure Information Protection – etiquetas** painel, clique em **adicionar uma nova etiqueta** .
+2. Do **classificações** > **etiquetas** opção de menu: Sobre o **do Azure Information Protection - etiquetas** painel, clique em **adicionar uma nova etiqueta**.
 
 3. Sobre o **etiqueta** painel, especifique, pelo menos, o seguinte:
     
-    - **Nome a apresentar etiqueta**: um nome para a nova etiqueta que será apresentada aos utilizadores e que identifica a classificação para o conteúdo. Por exemplo: `Sales - Restricted`.
+    - **Nome a apresentar etiqueta**: Um nome para a nova etiqueta que será apresentada aos utilizadores e que identifica a classificação para o conteúdo. Por exemplo: `Sales - Restricted`.
     
-    - **Descrição**: uma dica de ferramenta para ajudar os utilizadores a identificar quando selecionar esta nova etiqueta. Por exemplo: `Business data that is restricted to the Sales Team.`
+    - **Descrição**: Uma dica de ferramenta para ajudar os utilizadores a identificar quando selecionar esta nova etiqueta. Por exemplo: `Business data that is restricted to the Sales Team.`
 
 4. Certifique-se de que **Enabled** está definida como **no** (predefinição) e selecione **guardar**.
 
@@ -68,7 +71,7 @@ Primeiro, crie a sua nova etiqueta.
 
 Agora, adicione a etiqueta criada recentemente para uma nova política de âmbito.
 
-1. Do **classificações** > **políticas** opção de menu: no **do Azure Information Protection - políticas** painel, selecione **adicionar um novo política**. 
+1. Do **classificações** > **políticas** opção de menu: Sobre o **do Azure Information Protection - políticas** painel, selecione **adicionar uma nova política**. 
 
 2. Sobre o **política** painel, para o **nome da política** , introduza um nome que identifica o grupo de utilizadores que irão ver a nova etiqueta criada. Por exemplo, `Sales`.
 
@@ -96,11 +99,11 @@ Para testar esta etiqueta, é necessário um mínimo de dois computadores porque
 
 Se não pretender manter esta etiqueta e a política de âmbito, efetue o seguinte procedimento:
 
-1. Do **classificações** > **políticas** opção de menu: no **do Azure Information Protection - políticas** painel, selecione o menu de contexto (**...** ) para a política de âmbito que acabou de criar. Por exemplo, **vendas**.
+1. Do **classificações** > **políticas** opção de menu: Sobre o **do Azure Information Protection - políticas** painel, selecione o menu de contexto (**...** ) para a política de âmbito que acabou de criar. Por exemplo, **vendas**.
 
 2. Selecione **Eliminar política** e, se lhe for pedido para confirmar, selecione **OK**.
 
-3. Do **classificações** > **etiqueta** opção de menu: no **do Azure Information Protection – etiqueta** painel, selecione o menu de contexto (**...**) para a etiqueta que acabou de criar.  Por exemplo, **vendas - restringidas**.
+3. Partir do **classificações** > **etiqueta** opção de menu: Sobre o **do Azure Information Protection – a etiqueta** painel, selecione o menu de contexto (**...** ) para a etiqueta que acabou de criar.  Por exemplo, **vendas - restringidas**.
 
 4.  Selecione **eliminar esta etiqueta** e, se lhe for pedido para confirmar, selecione **OK**.
 

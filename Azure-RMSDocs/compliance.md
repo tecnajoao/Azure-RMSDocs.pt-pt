@@ -3,19 +3,20 @@ title: Conformidade e informações do Azure Information Protection
 description: Informações de suporte para o Azure Information Protection incluem informações legais, conformidade e SLAs.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/06/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e6586c60934bf0db48295c3d9a7a40ece84f4ad2
-ms.sourcegitcommit: 4caf3aa13506554928c5fda38994301ddcbdfb41
+ms.openlocfilehash: 4f611f97309851364324618e436ca13d4bd9fee7
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53068865"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254718"
 ---
 # <a name="compliance-and-supporting-information-for-azureinformation-protection"></a>Informações de suporte do Azure Information Protection e conformidade
 
@@ -39,7 +40,7 @@ No entanto, algumas informações relevantes que ajudem a seu consultor legal to
 
 ## <a name="legal-and-privacy"></a>Informações legais e privacidade
 
-- Para obter informações de contrato do Microsoft Azure: [Contrato do Microsoft Azure](https://azure.microsoft.com/support/legal/subscription-agreement/)
+- Para obter informações de contrato do Microsoft Azure: [Microsoft Azure Agreement](https://azure.microsoft.com/support/legal/subscription-agreement/)
 
 - Para obter informações de privacidade do Microsoft Azure: [Declaração de privacidade do Microsoft Azure](https://azure.microsoft.com/support/legal/privacy-statement/)
 

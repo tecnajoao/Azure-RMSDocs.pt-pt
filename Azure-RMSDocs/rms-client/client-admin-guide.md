@@ -3,19 +3,20 @@ title: Guia do administrador do cliente do Azure Information Protection
 description: Instruções e informações para administradores numa rede empresarial responsáveis por implementar o cliente do Azure Information Protection para o Windows.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/18/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 1ece9ab39045d1bb6f1388a33784a733618dd0d4
-ms.sourcegitcommit: 24c464bcb80db2d193cfd17ea8c264a327dcf54a
+ms.openlocfilehash: a0addbf7d4e613ab49ea29e750fd67a3b8ef1793
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54366219"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254582"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guia do administrador do cliente do Azure Information Protection
 
@@ -68,7 +69,7 @@ Implemente o cliente do Azure Information Protection no caso de se aplicar algum
 
 - Quer classificar (e, opcionalmente, proteger) documentos e e-mails ao selecionar etiquetas a partir das suas aplicações do Office (Word, Excel, PowerPoint, Outlook).
 
-- Quer classificar (e, opcionalmente, proteger) documentos e e-mails através do Explorador de Ficheiros, que suporta outros tipos de ficheiro, a seleção múltipla e as pastas.
+- Pretende classificar (e, opcionalmente, proteger) ficheiros ao utilizar o Explorador de ficheiros, oferecendo suporte a tipos de ficheiro adicionais que são suportados pelo Office, a seleção múltipla e pastas.
 
 - Quer executar scripts que classificam (e, opcionalmente, protegem) documentos ao utilizar comandos do PowerShell.
 

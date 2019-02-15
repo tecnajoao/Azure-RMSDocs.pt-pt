@@ -3,17 +3,18 @@ title: Configurar marcas visuais para uma etiqueta do Azure Information Protecti
 description: Quando atribui uma etiqueta a um documento ou a um e-mail pode selecionar várias opções para tornar a classificação escolhida facilmente visível. Estas marcas visuais são um cabeçalho, um rodapé e uma marca d'água.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 01/24/2019
+manager: barbkess
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 549bf29cc6c4c70dd91d6e36ad3fbe26baa69535
-ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
+ms.openlocfilehash: b0ff274917a78fa031dfe3e6f0665cef104111a9
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55067742"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258968"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Como configurar uma etiqueta para marcas visuais para o Azure Information Protection
 
@@ -35,7 +36,7 @@ Obter informações adicionais sobre estas marcas visuais:
 
 - Comprimentos de cadeia de caracteres máximo:
     
-    - O comprimento máximo da cadeia que pode introduzir para cabeçalhos e rodapés é de 1024 caracteres. No entanto, o Excel tem um limite total de 255 carateres para cabeçalhos e rodapés. Ao introduzir uma cadeia longa para cabeçalhos e rodapés, no Excel, este texto pode ser truncada de 255 carateres ou menos.
+    - O comprimento máximo da cadeia que pode introduzir para cabeçalhos e rodapés é de 1024 caracteres. No entanto, o Excel tem um limite total de 255 carateres para cabeçalhos e rodapés. Este limite inclui caracteres que não são visíveis no Excel, como códigos de formatação. Ao introduzir uma cadeia longa para cabeçalhos e rodapés, no Excel, este texto pode ser truncada de 255 carateres ou menos.
     
     - O comprimento máximo da cadeia para marcas de água que pode introduzir é 255 carateres.
 
@@ -101,7 +102,7 @@ Exemplo: Se especificar a cadeia de caracteres `Document: ${item.name}  Classifi
 
 ## <a name="setting-different-visual-markings-for-word-excel-powerpoint-and-outlook"></a>Definir diferentes marcas visuais para Word, Excel, PowerPoint e Outlook
 
-Por predefinição, as marcas visuais que especificar são aplicadas em Word, Excel, PowerPoint e Outlook. No entanto, pode especificar as marcas visuais por tipo de aplicação do Office quando utilizar uma instrução de variável "If.App" na cadeia de texto e identifique o tipo de aplicação com os valores **Word**, **Excel**, **PowerPoint**, ou **Outlook**. Também pode abreviar estes valores e abbreiwhich é necessário se pretender especificar mais do que uma na mesma instrução If.App.
+Por predefinição, as marcas visuais que especificar são aplicadas em Word, Excel, PowerPoint e Outlook. No entanto, pode especificar as marcas visuais por tipo de aplicação do Office quando utilizar uma instrução de variável "If.App" na cadeia de texto e identifique o tipo de aplicação com os valores **Word**, **Excel**, **PowerPoint**, ou **Outlook**. Também pode abreviar estes valores, que é necessário se pretender especificar mais do que um na mesma instrução If.App.
 
 Utilize a seguinte sintaxe:
 

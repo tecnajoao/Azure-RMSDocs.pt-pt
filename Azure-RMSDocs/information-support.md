@@ -3,19 +3,20 @@ title: Informações e suporte do Azure Information Protection
 description: Recursos para administradores que incluem informações sobre novas versões, opções de suporte e como contactar a Microsoft para reportar um problema.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/07/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 013532db350b41e8cfaeac5559065e46f76379a7
-ms.sourcegitcommit: 308e6da8de1a3456a0ba807c5388b8891b861d5b
+ms.openlocfilehash: 5d73037a8aba25e7c15ca531241b90dcc92f6dcc
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55854226"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258101"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informações e suporte do Azure Information Protection
 

@@ -3,20 +3,21 @@ title: Novidades e notas de versão
 description: Descreve as alterações importantes e de recursos desta e de versões anteriores.
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/11/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 260e6103c90db3da70f4feddfe65b9a8008fc95c
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: e5f6ea66a3cb8b6a0447cc116552d94cd0f4f669
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071765"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257087"
 ---
 # <a name="whats-new-and-release-notes"></a>Novidades e Notas de versão
 
@@ -199,44 +200,44 @@ Esta secção apresenta as informações sobre as versões atuais e anteriores d
 
 **Todas as plataformas**
 
-**AS PERGUNTAS E**: Não vejo uma **permissões personalizadas** seleção da interface do Usuário do fluxo de trabalho de proteção. Por que motivo?
+**Q**: Não vejo uma **permissões personalizadas** seleção da interface do Usuário do fluxo de trabalho de proteção. Por que motivo?
 
 **A**: Este é um problema conhecido e será resolvido mais tarde.
 
-**AS PERGUNTAS E**: Como obtenho novos inquilinos organizacionais para experimentar o SDK e aplicações de exemplo?
+**Q**: Como obtenho novos inquilinos organizacionais para experimentar o SDK e aplicações de exemplo?
 
 **A**: Para pedir credenciais para organizações de teste do Azure AD RMS, envie um e-mail para <rmcstbeta@microsoft.com>.
 
-**AS PERGUNTAS E**: Não vejo qualquer discussão aqui da hierarquia de teste na documentação. Por que motivo?
+**Q**: Não vejo qualquer discussão aqui da hierarquia de teste na documentação. Por que motivo?
 
 **A**: Não há nenhum conceito de hierarquia de teste com os novos SDKs AD RMS. Irá sempre trabalhar com a hierarquia de produção.
 
-**AS PERGUNTAS E**: Na versão do RMS SDK 2.1, um manifesto gerado foi necessário para cada aplicação que implementasse a proteção de informações. Isso é ainda verdade para as versões 4.0 e posteriores do SDK?
+**Q**: Na versão do RMS SDK 2.1, um manifesto gerado foi necessário para cada aplicação que implementasse a proteção de informações. Isso é ainda verdade para as versões 4.0 e posteriores do SDK?
 
 **A**: Não, os manifestos já não são necessários para as versões 3.0 e versões posteriores do SDK do Rights Management.
 
 **Android**
 
-**AS PERGUNTAS E**: Que ambientes de desenvolvimento tem o SDK testado?
+**Q**: Que ambientes de desenvolvimento tem o SDK testado?
 
 **A**: Eclipse Juno através da API do Google 15 e superior.
 
-**AS PERGUNTAS E**: Posso chamar Cancel () um método de cancelamento do thread da interface do Usuário?
+**Q**: Posso chamar Cancel () um método de cancelamento do thread da interface do Usuário?
 **A**: Deve chamar Cancel () a partir de um thread não IU, pois pode abortar uma ligação de rede.
 
 **iOS**
 
-**AS PERGUNTAS E**: Que plataformas foram verificadas para o desenvolvimento de SDK?
+**Q**: Que plataformas foram verificadas para o desenvolvimento de SDK?
 
 **A**: Xcode 5.0 com iOS 7 e posterior.
 
-**AS PERGUNTAS E**: Chamei um método Cancel () numa operação, no entanto, eu ainda Obtive uma notificação concluir a operação. Por que motivo?
+**Q**: Chamei um método Cancel () numa operação, no entanto, eu ainda Obtive uma notificação concluir a operação. Por que motivo?
 
 **A**: Nem todas as operações podem ser canceladas, pelo que uma operação de cancelamento é executada da melhor forma possível.
 
 **OS X**
 
-**AS PERGUNTAS E**: Estrutura de aplicação de exemplo é adaptada para o Xcode 5, posso trabalhar com o Xcode 4.6?
+**Q**: Estrutura de aplicação de exemplo é adaptada para o Xcode 5, posso trabalhar com o Xcode 4.6?
 
 **R**: o SDK OS X apenas funciona com o Xcode 4.6 e versões posteriores, bem como o OS X 10.8 e versões posteriores.
 

@@ -3,19 +3,20 @@ title: Configuração para clientes do Office 365 e serviços online utilizar o 
 description: Informações e instruções para administradores para configurarem o Office 365 para trabalhar com o serviço Azure Rights Management do Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/02/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7dd3216492b1fa967c52c3b390077995175f5db1
-ms.sourcegitcommit: d9c8b560fa3d2797ef634d8919af3ed695b16908
+ms.openlocfilehash: ed441ab24517b5d12a1e38ed61a46d4498237636
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55701937"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259189"
 ---
 # <a name="office365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Configuração para clientes e serviços online utilizar o serviço Azure Rights Management
 

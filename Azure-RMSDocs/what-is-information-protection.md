@@ -3,17 +3,18 @@ title: O que é o Azure Information Protection? – AIP
 description: Uma descrição geral sobre o serviço Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 11/05/2018
+manager: barbkess
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 9c7fd9070e6cc07a7b16043dd480addd2d0a4313
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 147982a700f2b2033b77d0b02568990a164cf555
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024348"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257863"
 ---
 # <a name="what-is-azure-information-protection"></a>O que é o Azure Information Protection?
 
@@ -31,7 +32,7 @@ Após os seus conteúdos serem classificados (e, opcionalmente, protegidos), pod
 
 Pode utilizar etiquetas do Azure Information Protection para aplicar a classificação a documentos e e-mails. Ao fazê-lo, a classificação será sempre identificável, independentemente de onde os dados são armazenados ou com quem são partilhados. As etiquetas podem incluem marcas visuais como um cabeçalho, rodapé ou marca d'água. Os metadados são adicionados aos ficheiros e cabeçalhos de e-mail em texto não encriptado. O texto não encriptado garante que outros serviços (tais como soluções de prevenção de perda de dados) conseguem identificar a classificação e tomar as medidas adequadas. 
 
-Por exemplo, a seguinte mensagem de e-mail foi classificada como "Geral". A etiqueta tiver adicionado um rodapé de "Sensibilidade:"geral"à mensagem de e-mail. Este rodapé é um indicador visual para todos os destinatários a informar que o e-mail contém dados empresariais gerais que não deverão ser enviados para fora da organização. A etiqueta é incorporada nos cabeçalhos de e-mail para que os serviços de e-mail possam inspecionar este valor e poderia criar uma entrada de auditoria ou impedi-lo de que está a ser enviados fora da organização.
+Por exemplo, a seguinte mensagem de e-mail foi classificada como "Geral". A etiqueta tiver adicionado um rodapé de "sensibilidade: "Geral" à mensagem de e-mail. Este rodapé é um indicador visual para todos os destinatários a informar que o e-mail contém dados empresariais gerais que não deverão ser enviados para fora da organização. A etiqueta é incorporada nos cabeçalhos de e-mail para que os serviços de e-mail possam inspecionar este valor e poderia criar uma entrada de auditoria ou impedi-lo de que está a ser enviados fora da organização.
 
 ![Exemplo de rodapé de e-mail e cabeçalhos que mostram a classificação do Azure Information Protection](./media/example-email-footerv2.png)
 
@@ -111,21 +112,23 @@ Para os arquivos de dados na cloud, utilize o Microsoft Cloud App Security para 
 
 ## <a name="resources-for-azure-information-protection"></a>Recursos para o Azure Information Protection
 
-- Versão de avaliação gratuita: [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
+- Versão de avaliação: [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
 
-- As opções de assinatura e preços: [preços do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)
+- As opções de assinatura e preços: [Azure Information Protection preços](https://azure.microsoft.com/pricing/details/information-protection)
 
-- Transferir o cliente: [cliente do Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
+- Transferir o cliente: [Cliente do Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
 
-- Baixe um guia do usuário personalizável: [o guia de adoção do Azure Information Protection utilizador final](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
+- Baixe um guia de implementação para tomadores de decisões comerciais: [Guia de aceleração de implementação do Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Deployment-Acceleration-Guide/ba-p/334423)
 
-- FAQ: [Perguntas mais frequentes sobre o Azure Information Protection](faqs.md)
+- Baixe um guia do usuário personalizável: [Guia de adoção de utilizador final do Azure Information Protection](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
+
+- Perguntas mais frequentes: [Perguntas mais frequentes sobre o Azure Information Protection](faqs.md)
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
-Recursos adicionais: [informações e suporte do Azure Information Protection](information-support.md)
+Recursos adicionais: [Informações e suporte do Azure Information Protection](information-support.md)
 
-### <a name="microsoft-ignite"></a>O Microsoft Ignite
+### <a name="microsoft-ignite"></a>Microsoft Ignite
 
 Microsoft Ignite 2018 em Orlando tinha muitas sessões que estejam identificadas [do Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection). Todas as sessões foram registradas, para se não conseguiu participar nos lá, ainda pode ver as sessões posteriormente. Maiores cinco sessões que recomendamos que:
 

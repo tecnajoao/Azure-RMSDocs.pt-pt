@@ -3,19 +3,20 @@ title: Bot de ajuda para o Azure Information Protection
 description: Ajudar a bot do Azure Information Protection para ajudar a responder às suas perguntas, pesquise os documentos ou abrir um pedido de suporte se precisar de suporte técnico.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/21/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 98105d30-ff81-4b9c-9f41-9e9ffd6e7aa6
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: af20fcc800952b83e9c711cfc7cafc3b28651ba3
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 7d16ec8ade8a96d31fdc621d2223414aa1ac6e9b
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151412"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56256282"
 ---
 # <a name="help-bot-for-azure-information-protection"></a>Bot de ajuda para o Azure Information Protection
 

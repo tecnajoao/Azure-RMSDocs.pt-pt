@@ -3,19 +3,20 @@ title: Configurar e gerir modelos do Azure Information Protection – AIP
 description: Configurar e gerir modelos de gestão de direitos do portal do Azure.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/28/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6147a065f6aff31dd40c339699f0dc35f1ebaa82
-ms.sourcegitcommit: b10df82d9f00b3f826bce38beb7b666ce3f56e84
+ms.openlocfilehash: ff3b809d5e459961321fb04655336f134ff99cc8
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/28/2018
-ms.locfileid: "53814242"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253562"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurar e gerir modelos do Azure Information Protection
 
@@ -79,7 +80,7 @@ Antes de editar estes modelos ou convertê-los em etiquetas, certifique-se de qu
     
     - **Permitir Macros** (nome comum) é adicionado automaticamente. Este direito de utilização é preciso para a barra do Azure Information Protection nas aplicações do Office.
 
-- **Publicado** e **arquivado** definições são apresentadas como **ativado**: **No** e **ativado**: **Desativar** respetivamente no **etiqueta** painel. Em modelos que pretende manter, mas não ser visível para utilizadores ou serviços, esses modelos, defina como **ativado**: **Desativar**.
+- **Publicado** e **arquivado** definições são apresentadas como **ativado**: **No** e **ativado**: **Desativar** respetivamente no **etiqueta** painel. Em modelos que pretende manter, mas não ser visível para utilizadores ou serviços, esses modelos, defina como **ativado**: **Off**.
 
 - Não é possível copiar ou eliminar um modelo no portal do Azure. Quando o modelo é convertido para uma etiqueta, pode configurar a etiqueta de deixar de utilizar o modelo selecionando **não configurado** para o **definir permissões para documentos e e-mails que contenham esta etiqueta** opção. Em alternativa, pode eliminar a etiqueta. Em ambos os cenários, no entanto, o modelo não é eliminado e permanece num Estado de funcionamento arquivado.
     

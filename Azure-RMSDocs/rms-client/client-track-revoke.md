@@ -3,19 +3,20 @@ title: Controlar e revogar documentos – AIP
 description: Depois de ter protegido os seus documentos, pode controlar a forma como as pessoas os utilizam. Se necessário, também poderá revogar o acesso a esses documentos se não pretender que as pessoas continuem a poder lê-los.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/16/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ba53a7f4d3aa96e4e813c602d1d79f014550ea17
-ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
+ms.openlocfilehash: 66c0f915c2a3575d5f9d45e59f5684d9bdfbf7e7
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314769"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252508"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Guia de utilizador: Controlar e revogar os documentos quando utiliza o Azure Information Protection
 

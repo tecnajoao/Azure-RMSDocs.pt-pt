@@ -3,19 +3,20 @@ title: Suporte do servidor para a proteção de dados do Azure RMS – AIP
 description: Identifique os produtos de servidor no local que podem utilizar o serviço Azure Rights Management a partir do Azure Information Protection ao utilizar o conector do Rights Management.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e7d91f2d-d6a7-4c7e-821f-c94e4be9967d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1afe0dcde0ce73fb727da1b1efd9d262d954ae66
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: e298fc08c610e5587aa6b8e4007f64aae2b0da42
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305272"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56251388"
 ---
 # <a name="on-premises-servers-that-support-azure-rights-management-data-protection"></a>Servidores no local que suportam a proteção de dados do Azure Rights Management
 

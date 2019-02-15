@@ -3,22 +3,23 @@ title: O Azure Information Protection unified cliente etiquetagem - informaçõe
 description: Ver as informações de versão para o Azure Information Protection unified etiquetagem cliente para Windows.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 10/23/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: a1544e0fa3c6d09328d1801a75ffbccd496e3482
-ms.sourcegitcommit: b275c1f82bf9176fe3fb36016c6f8692b8418295
+ms.openlocfilehash: 939ae3e367b14f722c38be023c70d9dcce21004f
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49951844"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254837"
 ---
-# <a name="azure-information-protection-unified-labeling-client-version-release-information"></a>O Azure Information Protection unified cliente etiquetagem: informações de lançamento de versão
+# <a name="azure-information-protection-unified-labeling-client-version-release-information"></a>O Azure Information Protection unified cliente etiquetagem: Informações de lançamento de versão
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Aplica-se a: Serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 > [!NOTE]
 > Este cliente está em pré-visualização e está sujeitas a alterações. Ele utiliza o armazenamento de etiquetagem unificado e transfere a política com as etiquetas do Centro de conformidade e segurança do Office 365. [Mais informações](/Office365/SecurityCompliance/sensitivity-labels)
@@ -71,7 +72,7 @@ As seguintes funcionalidades não funcionar nesta versão de pré-visualização
 
 ## <a name="instructions"></a>Instruções
 
-1. Instalar o cliente utilizando as seguintes instruções: [Guia do utilizador: transferir e instalar o cliente do Azure Information Protection (pré-visualização)](install-unifiedlabelingclient-app.md) 
+1. Instale o cliente utilizando as instruções seguintes: [Guia de utilizador: Transferir e instalar o cliente do Azure Information Protection (pré-visualização)](install-unifiedlabelingclient-app.md) 
 
 2. Utilizar o cliente nas aplicações do Office como faria com o cliente do Azure Information Protection, exceto pelo fato do botão da faixa de opções do Office é designado **sensibilidade** vez **proteger**:
     

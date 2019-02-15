@@ -4,20 +4,21 @@ description: Todas as aplicações com suporte RMS têm de impor restrições de
 keywords: ''
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: E388B16C-ECDA-4696-A040-D457D3C96766
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 1f46f11092270117686681662088c16f311963f7
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 5e62518965f2cea04b3b26df6a96646945567b9c
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071527"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257897"
 ---
 # <a name="understanding-usage-restrictions"></a>Compreender as restrições de utilização
 
@@ -53,7 +54,7 @@ Cada direito de utilizador, listado na coluna da direita do AD RMS, tem uma desc
 
 | Direito/descrição do AD RMS | Como impor |
 |--------------------------|----------------|
-|**IPC_GENERIC_ALL** <br><br> Concede todos os direitos ao utilizador. <br><br> **Pontos de Imposição Comuns**: Nenhuma |Este direito é utilizado pelo sistema e geralmente não deve ser verificado diretamente. <br><br> [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx) utiliza este direito para determinar se deve conceder ao utilizador outros direitos tal como neste exemplo.<br><br> `/* fAccessGranted is set to TRUE if either the IPC_GENERIC_WRITE or the IPC_GENERIC_ALL right is granted */` <br><br> `IpcAccessCheck(hKey, IPC_GENERIC_WRITE, &fAccessGranted);`|
+|**IPC_GENERIC_ALL** <br><br> Concede todos os direitos ao utilizador. <br><br> **Pontos de Imposição Comuns**: Nenhum |Este direito é utilizado pelo sistema e geralmente não deve ser verificado diretamente. <br><br> [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx) utiliza este direito para determinar se deve conceder ao utilizador outros direitos tal como neste exemplo.<br><br> `/* fAccessGranted is set to TRUE if either the IPC_GENERIC_WRITE or the IPC_GENERIC_ALL right is granted */` <br><br> `IpcAccessCheck(hKey, IPC_GENERIC_WRITE, &fAccessGranted);`|
 |**IPC_GENERIC_READ** <br><br> O direito de ler o conteúdo de documentos. <br><br> **Pontos de Imposição Comuns**: Carregamento de documentos|Não carregar ou apresentar o conteúdo de documentos|
 |**IPC_GENERIC_WRITE** <br><br> O direito de editar o conteúdo de documentos <br><br> **Pontos de Imposição Comuns**: Modificação de documentos|Torne os controlos de IU que possam ser utilizados para modificar o conteúdo de documentos não editáveis. <br><br> Desative quaisquer itens de menu que acionam alterações em documentos. **Editar** > **Cortar**, **Editar** > **Colar** e **Inserir** são exemplos típicos. <br><br>Desative quaisquer itens de menu de atalho que acionam alterações em documentos.|
 |Nenhum direito do AD RMS <br><br> Sem descrição <br><br> **Pontos de Imposição Comuns**: Guardar | Desative o menu **Ficheiro** > **Guardar**. <br><br> **Nota:** este direito não controla o menu **Ficheiro** > **Guardar Como**, porque o direito não representa uma alteração ao documento original.<br><br> Desative qualquer atalho de teclado que possa ser utilizado para acionar uma gravação (por exemplo, Ctrl + G).<br><br> **Sugestão** Um procedimento recomendado é atualizar o seu código nuclear **Ficheiro** > **Guardar** para falhar caso o utilizador não tenha este direito. Isto funciona como uma rede de segurança se perder algum mecanismo UX que possa ser utilizado para acionar uma gravação. |

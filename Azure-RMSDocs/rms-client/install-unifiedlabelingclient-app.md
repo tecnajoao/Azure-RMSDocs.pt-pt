@@ -3,23 +3,24 @@ title: Transferir e instalar o cliente etiquetagem unificado (pré-visualizaçã
 description: Instruções para os utilizadores instalarem a versão de pré-visualização do Azure Information Protection unified cliente etiquetagem para o Windows, para que possa classificar e proteger os seus documentos e e-mails.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 10/17/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5d2f5c07ebc7f4844b0d35879ae00c7b9066cb6d
-ms.sourcegitcommit: 6a732226a3c97fc06fcf815fbbb24a2e2faae209
+ms.openlocfilehash: 6ee27b9aedd35ae135fc7150a3211be43ca2f092
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49359044"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56250899"
 ---
 # <a name="download-and-install-the-azure-information-protection-unified-labeling-client-preview"></a>Transferir e instalar o cliente etiquetagem unificado (pré-visualização) do Azure Information Protection
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
+>*Aplica-se a: Serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
 
 > [!NOTE]
 > Este cliente está em pré-visualização e está sujeitas a alterações. Ele utiliza o armazenamento de etiquetagem unificado e transfere a política com as etiquetas de sensibilidade do Centro de conformidade e segurança do Office 365. Para utilizar estas etiquetas, eles devem primeiro ser publicados a partir do Centro de conformidade e segurança do. [Mais informações](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492)
@@ -67,7 +68,7 @@ Depois de instalar o Azure Information Protection unified etiquetagem cliente ao
 
 A instalação está agora concluída e pode utilizar o cliente de etiquetagem unificado do Azure Information Protection para identificar e proteger os seus documentos e e-mails.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 
-Para saber mais sobre a etiquetagem unificada armazenam que a segurança do Office 365 e a conformidade center utiliza agora, leia a seguinte mensagem de blogue: [anunciar a disponibilidade do unified a etiquetagem de gestão no Centro de conformidadeeasegurança](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492).
+Para obter mais informações sobre a loja de etiquetagem unificada que a segurança do Office 365 e a conformidade center agora utiliza, leia a seguinte mensagem de blogue: [Anunciando a disponibilidade do unified a etiquetagem de gestão no Centro de conformidade e segurança do](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492).
 

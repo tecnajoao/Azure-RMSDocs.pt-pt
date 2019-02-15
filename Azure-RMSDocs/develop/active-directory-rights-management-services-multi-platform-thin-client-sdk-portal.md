@@ -4,20 +4,21 @@ description: O SDK RMS 4.2 é uma API simplificada de última geração que poss
 keywords: ''
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4ee4fa26-b4f7-478f-b360-be6f421c5718
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 7780f7d540de4a36a53aa430da6625258234f673
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 70ab7aa0260cef02b453ad72850168dbf4081652
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071255"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258577"
 ---
 # <a name="rights-management-sdk42"></a>Rights SDK Management 4.2
 

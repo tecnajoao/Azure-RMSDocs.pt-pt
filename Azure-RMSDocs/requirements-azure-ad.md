@@ -3,18 +3,19 @@ title: Requisitos de Azure AD para o Azure Information Protection – AIP
 description: Conheça os requisitos do Azure AD para utilizar o Azure Information Protection, para que os utilizadores possam ser autenticados com êxito.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/05/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.suite: ems
-ms.openlocfilehash: b2ca14d6dcff00009b6e032d5ca17f5e466d69ea
-ms.sourcegitcommit: 1cd3a3bc19cd973f81a62419c946bfaf2796dfb2
+ms.openlocfilehash: 7be53f80e3de227ee2439121bc6733661274f3e1
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760774"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258475"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Requisitos do Azure Active Directory para o Azure Information Protection
 

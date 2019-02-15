@@ -3,19 +3,20 @@ title: Definições de registo para o conetor Rights Management – AIP
 description: Informações sobre as definições de registo em servidores que utilizam o conector RMS. O método recomendado para configurar estas definições é utilizar a ferramenta de configuração do servidor do conetor Microsoft RMS.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/06/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6af7fe3a7b23f655a79d67421f67292416792792
-ms.sourcegitcommit: 0632c89a316ff31f588e9752dd474445983b1690
+ms.openlocfilehash: 14b10c074d80ed5479953ab44b4bec1249749020
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53120590"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56256044"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Definição de registo para o conetor Rights Management
 

@@ -3,19 +3,20 @@ title: Modo de apenas de proteção para o Azure Information Protection
 description: Informações para utilizadores que executam o cliente do Azure Information Protection no modo de apenas de proteção.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/24/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 16042717-0d7a-41f5-87e3-12826fda35df
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: dedacab4509b88f300739bd92012debedfaacf7d
-ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
+ms.openlocfilehash: 57bcea5841823cf5ae15681d247966346b14c1d2
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55067973"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253766"
 ---
 # <a name="user-guide-protection-only-mode-for-the-azure-information-protection-client"></a>Guia de utilizador: Modo de apenas de proteção para o cliente do Azure Information Protection
 

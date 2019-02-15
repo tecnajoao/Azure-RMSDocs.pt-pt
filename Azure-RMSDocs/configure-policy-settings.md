@@ -3,17 +3,18 @@ title: Configurar definições de política do Azure Information Protection – 
 description: Configurar as definições na política do Azure Information Protection aplicáveis a todos os utilizadores e a todos os dispositivos.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 01/16/2018
+manager: barbkess
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: c3d95b0dc8328665c921ab4ff6b37e53ec726f03
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 91ab0e30c0fac8f3285983f6c3b06886c0782e7d
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393487"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56266068"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Como configurar as definições de política do Azure Information Protection
 
@@ -37,7 +38,9 @@ Configurar estas definições:
 
 3. Sobre o **política** painel, configure as definições:
     
-   - **Selecione a etiqueta predefinida**: Quando definir esta opção, selecione a etiqueta a atribuir a documentos e e-mails que não tenham uma etiqueta. Não é possível definir uma etiqueta como predefinição se tiver subetiquetas. 
+   - **Selecione a etiqueta predefinida**: Quando definir esta opção, selecione a etiqueta a atribuir a documentos e e-mails que não tenham uma etiqueta. Não é possível definir uma etiqueta como predefinição se tiver subetiquetas.
+        
+        Esta definição aplica-se para aplicações do Office e o scanner. Não é aplicável ao Explorador de ficheiros, ou o PowerShell.
     
    - **Todos os documentos e e-mails devem ter uma etiqueta**: Quando define esta opção como **no**, todos os documentos guardado e e-mails enviados devem ter uma etiqueta aplicada. As etiquetas podem ser atribuídas manualmente por um utilizador, automaticamente como resultado de uma [Condição](configure-policy-classification.md) ou pode ser atribuída por predefinição (definindo opção **Selecionar etiqueta predefinida**).
         
@@ -51,11 +54,13 @@ Configurar estas definições:
         
        ![Aviso do Azure Information Protection se a nova classificação for inferior](./media/info-protect-lower-justification.png)
         
-       Esta opção não é aplicável para reduzir a classificação de subetiquetas sob o mesmo rótulo de principal ou para a versão de pré-visualização do scanner.
+       Esta opção não é aplicável para reduzir a classificação de subetiquetas sob o mesmo rótulo de principal.
         
    - **Para mensagens de e-mail com anexos, aplique uma etiqueta que corresponda à classificação mais elevada desses anexos**: Quando define esta opção como **recomendado**, é pedido aos utilizadores para aplicar uma etiqueta à respetiva mensagem de e-mail. A etiqueta é selecionada de forma dinâmica com base nas etiquetas de classificação aplicadas aos anexos e é selecionada a etiqueta de classificação mais elevada. O anexo tem de ser um ficheiro físico e não pode ser uma ligação a um ficheiro (por exemplo, uma ligação a um ficheiro no SharePoint ou no OneDrive para Empresas). Os utilizadores podem aceitar a recomendação ou ignorá-la. Quando define esta opção como **automática**, a etiqueta é aplicada automaticamente, mas os utilizadores podem remover a etiqueta ou selecione uma etiqueta diferente antes de enviar o e-mail.
-    
-     Quando o anexo com a etiqueta de classificação mais alta é configurado para proteção com a definição de pré-visualização de permissões definidas pelo utilizador, a mensagem de e-mail tem o nome com a mesma classificação, mas não a proteção é aplicada.
+        
+        Para tirar a ordem das subetiquetas em consideração quando utilizar esta definição de política, deve [configurar um definição de cliente avançado](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments).
+        
+        Quando o anexo com a etiqueta de classificação mais alta é configurado para proteção com a definição de pré-visualização de permissões definidas pelo utilizador, a mensagem de e-mail tem o nome com a mesma classificação, mas não a proteção é aplicada.
     
    - **Apresentar a barra de Information Protection nas aplicações do Office**: Quando esta definição estiver desativada, os utilizadores não é possível selecionar etiquetas a partir de uma barra no Word, Excel, PowerPoint e Outlook. Em vez disso, os utilizadores devem selecionar etiquetas a partir da **Protect** botão na faixa de opções. Quando esta definição está ativado, os utilizadores podem selecionar etiquetas a partir da barra ou no botão.
         

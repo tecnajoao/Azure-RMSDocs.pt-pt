@@ -3,19 +3,20 @@ title: O cliente do Azure Information Protection
 description: O Microsoft Azure Information Protection fornece uma solução de servidor cliente que ajuda a proteger os dados de uma organização. O cliente (o cliente do Azure Information Protection ou o cliente Rights Management) está integrado nas aplicações executadas em computadores e dispositivos móveis.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 11/19/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 59f79f7ac24a575665a2d8350f39b87aaedec7e1
-ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
+ms.openlocfilehash: 878d00d941a85f62982d9e23db36da8c5ad70078
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55559483"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56251845"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>O lado do cliente do Azure Information Protection
 

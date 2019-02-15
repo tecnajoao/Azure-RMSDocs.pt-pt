@@ -1,8 +1,8 @@
 ---
- Título: incluir a descrição do ficheiro: incluem serviços de arquivo: autor de política do azure: eross msft
+ title: include file description: include file services: azure-policy author: eross-msft
  
-MS. Service: MS. topic de política do azure: incluem MS. Date: 05/01/2018 MS. Author: lizross MS. Custom: ficheiro de inclusão
+ms.service: azure-policy ms.topic: include ms.collection: Conformidade de segurança M365 MS: 05/01/2018 MS. Author: lizross MS. Custom: ficheiro de inclusão
 ---
 
 >[!Note]
->Se estiver interessado em ver ou eliminar os dados pessoais, orientações da Microsoft, verifique a [Gestor de conformidade do Microsoft](https://servicetrust.microsoft.com/ComplianceManager) e, no [seção GDPR a compatibilidade do Microsoft 365 Enterprise](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr) site. Se estiver procurando por informações gerais sobre o GDPR, consulte a [secção GDPR para o portal de confiança do serviço](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+>Se quiser ver ou eliminar dados pessoais, veja as orientações da Microsoft no [Gestor de Conformidade da Microsoft](https://servicetrust.microsoft.com/ComplianceManager) e na [secção RGPD do site de Conformidade do Microsoft 365 Enterprise](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Se quiser obter informações gerais sobre o RGPD, veja a [secção RGPD do Portal de Confiança do Serviço](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).

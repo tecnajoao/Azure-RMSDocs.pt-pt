@@ -3,23 +3,24 @@ title: Migrar do AD RMS para o Azure Information Protection – fase 1
 description: Fase 1 da migração do AD RMS para o Azure Information Protection, que abrange os passos 1 a 3 de Migrar do AD RMS para o Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/11/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5eec7b06f3e0b649f436f61dc141e53173503774
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: b5a27e874af808136274a50d25310d722f399032
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305184"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252746"
 ---
 # <a name="migration-phase-1---preparation"></a>Fase 1 da migração – preparação
 
->*Aplica-se a: Serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Aplica-se a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilize as seguintes informações para a Fase 1 da migração do AD RMS para o Azure Information Protection. Estes procedimentos abrangem os passos 1 a 3 de [Migrar do AD RMS para o Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) e preparam o seu ambiente para a migração sem qualquer impacto para os seus utilizadores.
 

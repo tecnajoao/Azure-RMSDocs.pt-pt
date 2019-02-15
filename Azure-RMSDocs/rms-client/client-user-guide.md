@@ -3,27 +3,28 @@ title: Guia do utilizador do Azure Information Protection
 description: O cliente do Azure Information Protection para Windows ajuda-o a manter os documentos e e-mails importantes protegidos das pessoas que não os devem ver, mesmo que o seu e-mail seja reencaminhado ou que o seu documento seja guardado noutra localização.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 08/31/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2cf46bf9-7d23-4f49-b5c1-7ed7b71c858f
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 63360ae3c0dc8a051187df24b7b760f442ebedee
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: b531103a03991c87bb3f0cb99b4288ca607142ec
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44146341"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56256350"
 ---
 # <a name="azure-information-protection-user-guide"></a>Guia do utilizador do Azure Information Protection
 
->*Aplica-se a: serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
+>*Aplica-se a: Serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1*
 
 O cliente do Azure Information Protection para Windows ajuda-o a manter os documentos e e-mails importantes protegidos das pessoas que não os devem ver, mesmo que o seu e-mail seja reencaminhado ou que o seu documento seja guardado noutra localização. Também pode utilizar este cliente para abrir documentos que tenham sido protegidos por outras pessoas com a tecnologia de proteção do Rights Management a partir do Azure Information Protection.
 
-Tudo o que precisa é de um computador que execute, pelo menos, o Windows 7 com Service Pack 1. Em seguida, transfira e instale este cliente gratuito da Microsoft.
+Tudo o que precisa é um computador que execute, pelo menos, Windows 7 com Service Pack 1. Em seguida, transfira e instale este cliente gratuito da Microsoft.
 
 
 ## <a name="what-do-you-want-to-do"></a>O que pretende fazer?

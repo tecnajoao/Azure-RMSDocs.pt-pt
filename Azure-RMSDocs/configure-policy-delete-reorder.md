@@ -3,17 +3,18 @@ title: Eliminar ou reordenar uma etiqueta do Azure Information Protection – AI
 description: Pode eliminar ou reordenar etiquetas do Azure Information Protection que os utilizadores veem.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/28/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: 6e5348eb55451747ff9f10b3bd4f7a2f868b03c5
-ms.sourcegitcommit: 95f16f89a46d9dffa8a114f7683816024d65ff02
+ms.openlocfilehash: 8a672c1d5f4b6c18a25687ebb183285cd3d6881f
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53996070"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56260090"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Como eliminar ou reordenar uma etiqueta para o Azure Information Protection
 

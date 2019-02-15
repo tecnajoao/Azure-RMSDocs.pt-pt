@@ -3,19 +3,20 @@ title: Registar e analisar a utilização do serviço Azure RMS – AIP
 description: Informações e instruções sobre como utilizar os registos de utilização com o Azure Rights Management (Azure RMS).
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/01/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 234980a639ec4456cf85399dffdabe49963eec31
-ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
+ms.openlocfilehash: 9e17e13eeb86b161444e222cde658905177dd285
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55559976"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259920"
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Registar e analisar a utilização do serviço Azure Rights Management
 
@@ -143,7 +144,7 @@ Cada uma das linhas subsequentes é um registo. Os valores dos campos estão na 
 |      date      |     Data      |                                                                                                                     Data UTC em que o pedido foi servido.<br /><br />A origem é o relógio local no servidor que serviu o pedido.                                                                                                                     |                                                             2013-06-25                                                              |
 |      time      |     Hora      |                                                                                                            Hora UTC, em formato de 24 horas, em que o pedido foi servido.<br /><br />A origem é o relógio local no servidor que serviu o pedido.                                                                                                            |                                                              21:59:28                                                               |
 |     row-id     |     Texto      |                                                                           GUID exclusivo deste registo. Se não existir um valor, utilize o valor correlation-id para identificar a entrada.<br /><br />Este valor é útil quando agrega registos ou copia registos para outro formato.                                                                           |                                                1c3fe7a9-d9e0-4654-97b7-14fafa72ea63                                                 |
-|  request-type  |     Nome      |                                                                                                                                                            Nome da API de RMS que foi pedida.                                                                                                                                                            |                                                           AcquireLicense                                                            |
+|  request-type  |     Name      |                                                                                                                                                            Nome da API de RMS que foi pedida.                                                                                                                                                            |                                                           AcquireLicense                                                            |
 |    user-id     |    Cadeia     |                                                               O utilizador que efetuou o pedido.<br /><br />O valor está entre plicas. As chamadas a partir de uma chave de inquilino gerida por si (BYOK) têm um valor de **"**, o qual também é aplicável aplica quando os tipos de pedido são anónimos.                                                                |                                                          ‘joe@contoso.com’                                                          |
 |     result     |    Cadeia     |                                                                                                                  'Êxito' se o pedido tiver sido servido com êxito.<br /><br />O tipo de erro entre plicas se o pedido tiver falhado.                                                                                                                   |                                                              'Êxito'                                                              |
 | correlation-id |     Texto      |                                                                                                 GUID que é comum entre o registo de cliente do RMS e o registo do servidor para um determinado pedido.<br /><br />Este valor pode ser útil para ajudar na resolução de problemas do cliente.                                                                                                 |                                                cab52088-8925-4371-be34-4b71a3112356                                                 |

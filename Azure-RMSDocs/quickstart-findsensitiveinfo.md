@@ -3,18 +3,21 @@ title: Início rápido – localize as informações confidenciais nos ficheiros
 description: Utilize o scanner do Azure Information Protection para encontrar as informações confidenciais que tiver em ficheiros armazenados no local.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 01/16/2019
+manager: barbkess
+ms.date: 02/15/2019
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 12bde16a9b1659d00137720ad7c804db32cb1556
-ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
+ms.openlocfilehash: 07baee062d994b6efd97084bf0b293adb2d5fb84
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314837"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56266017"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Início rápido: Localizar as informações confidenciais que tiver no ficheiros armazenados no local
+
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Neste início rápido, irá instalar e configurar o scanner do Azure Information Protection para encontrar as informações confidenciais que tiver em ficheiros que estão armazenados num arquivo de dados no local. Por exemplo, uma pasta local, compartilhamento de rede ou servidor do SharePoint.
 

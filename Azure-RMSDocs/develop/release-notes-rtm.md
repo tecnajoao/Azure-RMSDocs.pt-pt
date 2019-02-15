@@ -4,20 +4,21 @@ description: Atualizações do SDK, revisão e outras informações do desenvolv
 keywords: ''
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 10/18/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 695251277b62d44166e7a4569881b804db34279e
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: e9a019698b0295c5e0d6e93fad1073cb75a00394
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54394258"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253528"
 ---
 # <a name="release-notes"></a>Notas de versão
 
@@ -56,7 +57,7 @@ Este artigo contém informações importantes sobre isto e versões anteriores d
 
 ## <a name="may-2015-update"></a>Atualização de maio de 2015
 
--   **Serviço de aplicações e baseado na nuvem RMS** - [IPC\_CREDENTIAL\_SYMMETRIC\_chave](https://msdn.microsoft.com/library/dn133062.aspx) precisa de três partes de informações; a chave simétrica,  **AppPrincipalId**, e **TenantBposId**. O artigo para que isso foi atualizado para fornecer orientações sobre o processamento destas informações. Para esta atualização, veja a versão revista de [Permitir que a aplicação do serviço funcione com o RMS baseado na cloud](how-to-use-file-api-with-aadrm-cloud.md).
+-   **Serviço de aplicações e baseado na nuvem RMS** - [IPC\_CREDENTIAL\_SYMMETRIC\_chave](https://msdn.microsoft.com/library/dn133062.aspx) precisa de três partes de informações; a chave simétrica, ** AppPrincipalId**, e **TenantBposId**. O artigo para que isso foi atualizado para fornecer orientações sobre o processamento destas informações. Para esta atualização, veja a versão revista de [Permitir que a aplicação do serviço funcione com o RMS baseado na cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## <a name="april-2015-update"></a>Atualização de abril de 2015
 

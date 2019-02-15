@@ -3,19 +3,20 @@ title: Configurar a política do Azure Information Protection – AIP
 description: Para configurar a classificação, a etiquetagem e a proteção, tem de configurar a política do Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 11/13/2018
+ms.date: 02/15/2019
+manager: barbkess
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3085799d9cb8da168c68a1a2eea04528daeb7737
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 03b0aa0ef3b5f2a8cb232059fe748b243e067f76
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54394054"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258713"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurar a política do Azure Information Protection
 
@@ -65,6 +66,8 @@ Para iniciar sessão no portal do Azure, configurar e gerir o Azure Information 
     
     > [!NOTE] 
     > Se o seu inquilino tiver sido migrado para a loja de etiquetagem unificada, para gerir etiquetas a partir do portal do Azure, sua conta tem também de ter permissões para acessar o Centro de conformidade e segurança do Office 365. [Mais informações](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    
+    - Uso **leitor de segurança** para [analytics do Azure Information Protection](reports-aip.md) apenas.
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Para aceder ao painel de proteção de informações do Azure pela primeira vez
 

@@ -3,19 +3,20 @@ title: PowerShell para modelos de proteção - Azure Information Protection
 description: Tudo o que pode fazer no portal do Azure para criar e gerir modelos de proteção, pode fazer da linha de comando, com o PowerShell. Além disso, pode exportar e importar modelos para poder copiar modelos entre inquilinos ou fazer edições em volume de propriedades complexas nos modelos, como nomes e descrições multilingues.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ee40d0c742695d449fd807f364e87d9c30f6079f
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 3e1915c327daaee35d9f0e8053f944fd1fcdbd7a
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53304966"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254616"
 ---
 # <a name="powershell-reference-for-protection-templates"></a>Referência do PowerShell para modelos de proteção
 

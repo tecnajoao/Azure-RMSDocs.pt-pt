@@ -3,16 +3,17 @@ title: Tutorial - configurar definições de política do Azure Information Prot
 description: Um tutorial de introdução orienta-o através da configuração das definições de política do Azure Information Protection para ajudar a classificar documentos e e-mails da sua organização.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 01/24/2019
+manager: barbkess
+ms.date: 02/15/2019
 ms.topic: tutorial
+ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 324f13a61d287fd883e9336c6e17250e9ab9ff9f
-ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
+ms.openlocfilehash: f906a5b9fc9f678d1f452e347fb3739b4ff96586
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55231026"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56266085"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutorial: Configurar definições de política do Azure Information Protection que funcionam em conjunto
 
@@ -157,7 +158,7 @@ A barra do Information Protection, em seguida, apresenta mais uma vez, para os u
 
 Uma vez que a etiqueta é selecionada antes de enviar o e-mail, não é necessário para efetivamente enviar o e-mail para ver como funciona esta definição de política. Pode fechar a mensagem de e-mail sem enviar ou salvá-lo.
 
-No entanto, talvez queira tentar repetir neste exercício, mas também anexar outro documento que tem uma classificação mais elevada (uma subetiqueta do **altamente confidencial** etiqueta). Em seguida, irá ver como a linha de comandos muda para aplicar a etiqueta de classificação mais elevada.
+No entanto, talvez queira tentar repetir neste exercício, mas também anexar outro documento que tem uma classificação mais elevada (uma subetiqueta do **altamente confidencial** etiqueta). Em seguida, irá ver como a linha de comandos muda para aplicar a etiqueta de classificação mais elevada. Se testar múltiplos anexos com subetiquetas que têm o mesmo rótulo de principal, tem de configurar [um definição de cliente avançado](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) para suportar as suas encomendas no portal do Azure.
 
 ## <a name="clean-up-resources"></a>Limpar recursos
 
@@ -171,6 +172,6 @@ Reinicie as suas aplicações Word e Outlook para transferir essas alterações.
 
 ## <a name="next-steps"></a>Passos Seguintes
 
-Para obter mais informações sobre como editar o veja de definições de política do Azure Information Protection [como configurar as definições de política do Azure Information Protection](configure-policy-settings.md).
+Para obter mais informações sobre como editar as definições de política do Azure Information Protection, consulte [como configurar as definições de política do Azure Information Protection](configure-policy-settings.md).
 
 As definições de política que alteramos ajudaram a garantir um nível de base de classificação, bem como encorajar os utilizadores selecionarem uma etiqueta adequada. A próxima etapa é melhorar esta estratégia ao inspecionar o conteúdo de documentos e e-mails e, em seguida, recomendando ou aplicar uma etiqueta apropriada automaticamente. Pode fazê-lo ao configurar etiquetas para condições. Para obter mais informações, consulte [como configurar condições para classificação automática e recomendada para o Azure Information Protection](configure-policy-classification.md).

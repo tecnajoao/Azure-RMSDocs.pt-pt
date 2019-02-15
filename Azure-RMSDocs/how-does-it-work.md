@@ -3,19 +3,20 @@ title: Como funciona o Azure RMS – AIP
 description: Descrição detalhada de como o Azure RMS funciona, os controlos criptográficos que utiliza e diagramas passo a passo sobre o funcionamento deste processo.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/01/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d4530e6a09fbf8ab3779d1938c37b6e736976ed7
-ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
+ms.openlocfilehash: 82b76924e74796a06ecc9bf57acb1461cc0e8ce9
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55559670"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56256673"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Como funciona o Azure RMS? Nos bastidores
 

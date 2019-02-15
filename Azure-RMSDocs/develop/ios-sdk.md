@@ -4,20 +4,21 @@ description: aplicações iOS e OS X podem utilizar o SDK RMS 4.2 para ativar a 
 keywords: ''
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 620412b55ca583d8a84cf8d167ba890cea742b7f
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 6b3fe0994c27e26c505974cd4f5d96df252f2aa0
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54070241"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259325"
 ---
 # <a name="ios-and-os-x-setup"></a>Configuração do iOS e OS X
 
@@ -99,7 +100,7 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
 
 -   Agora, está pronto para criar as suas novas aplicações iOS/OS X.
 
-### <a name="see-also"></a>Veja Também
+### <a name="see-also"></a>Consulte Também
 
 * [Introdução](get-started.md)
 

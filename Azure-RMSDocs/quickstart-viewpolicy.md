@@ -3,18 +3,21 @@ title: Início rápido - introdução ao Azure Information Protection no portal 
 description: Se a sua organização é totalmente nova para o Azure Information Protection, comece por aqui para adicionar o serviço para o portal do Azure, confirme o serviço de proteção é ativado e ver a política.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 12/15/2018
+manager: barbkess
+ms.date: 02/15/2019
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 91a9a124c53d7c8f1aab31213595a8fc2f3627dd
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 3e4e81f7300f319f9fd5887cd859f43e58d60c10
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393972"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56266051"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Início rápido: Introdução ao Azure Information Protection no portal do Azure
+
+>*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Neste início rápido, vai adicionar o Azure Information Protection para o portal do Azure, confirme o serviço de proteção é ativado e ver a política de predefinida da sua organização. 
 

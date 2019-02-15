@@ -3,19 +3,20 @@ title: Configurar regras de fluxo de correio Exchange Online para as etiquetas d
 description: Instruções e exemplos para configurar regras de fluxo de correio Exchange Online para as etiquetas do Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 12/12/2018
+manager: barbkess
+ms.date: 02/15/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: 39abf4586f00cb40cb096841261993225b8c8387
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: f35ab27167514b9b94a4cb4be2e6196dccd5280d
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393349"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56266000"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configurar regras de fluxo de correio Exchange Online etiquetas do Azure Information Protection
 
@@ -39,7 +40,7 @@ Como uma etiqueta do Azure Information Protection é armazenada nos metadados, f
 
 - E-mails, estas informações são armazenadas no cabeçalho de x: **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** 
 
-- Para documentos do Word (. doc e. docx), folhas de cálculo do Excel (. xls e. xlsx), apresentações do PowerPoint (. ppt e. pptx) e documentos PDF (. pdf), estes metadados são armazenados na propriedade personalizada seguintes: **MSIP_Label_\<GUID>_Enabled=True**  
+- Para documentos do Word (. doc e. docx), folhas de cálculo do Excel (. xls e. xlsx) e apresentações do PowerPoint (. ppt e. pptx), estes metadados são armazenados na propriedade personalizada seguinte: **MSIP_Label_\<GUID>_Enabled=True**  
 
 Para identificar o GUID de uma etiqueta, localize o valor de ID de etiqueta no **etiqueta** painel, quando ver ou configurar a política do Azure Information Protection no portal do Azure. Para os ficheiros que tenham as etiquetas aplicadas, também pode executar o [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) cmdlet do PowerShell para identificar o GUID (MainLabelId ou SubLabelId). Quando uma etiqueta tem subetiquetas, sempre Especifica o GUID de apenas uma subetiqueta e não a etiqueta principal.
 

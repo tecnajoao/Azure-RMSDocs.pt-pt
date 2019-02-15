@@ -3,19 +3,20 @@ title: Configurar políticas de âmbito do Azure Information Protection – AIP
 description: Para configurar definições e etiquetas diferentes para utilizadores específicos, deve configurar uma política de âmbito para o Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 11/05/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8d10ddf21842d944773c7d088c4c452bc618c29c
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 505e02c48a0090551cfb57ffb57605af5b27470c
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024349"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56255153"
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Como configurar a política do Azure Information Protection para utilizadores específicos com políticas de âmbito
 
@@ -41,7 +42,7 @@ Para configurar uma política de âmbito para o Azure Information Protection:
 
     Por exemplo, no hub menu, clique em **todos os serviços** e comece a escrever **informações** na caixa Filtro. Selecione **Azure Information Protection**.
 
-2. Do **classificações** > **políticas** opção de menu: no **do Azure Information Protection - políticas** painel, selecione **adicionar um novo política**. Em seguida, consulte a **política** painel que apresenta a política global existente, onde pode agora configurar seu novo, a política de âmbito.
+2. Do **classificações** > **políticas** opção de menu: Sobre o **do Azure Information Protection - políticas** painel, selecione **adicionar uma nova política**. Em seguida, consulte a **política** painel que apresenta a política global existente, onde pode agora configurar seu novo, a política de âmbito.
 
 3. Especifique um nome e uma descrição da política que apenas os administradores veem no portal do Azure. O nome do inquilino deve ser exclusivo. Em seguida, selecione **especificar quais os utilizadores/grupos recebem esta política**, e nos painéis subsequentes, pode procurar e selecione os utilizadores e grupos para esta política. As etiquetas e as definições que configurou nesta política de âmbito serão aplicadas apenas a esses utilizadores.
     

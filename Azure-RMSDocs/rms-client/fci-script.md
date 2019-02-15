@@ -3,19 +3,20 @@ title: Script do PowerShell para o Azure RMS e FCI – AIP
 description: Script de amostra para copiar e editar, conforme descrito nas instruções de proteção RMS com Infraestrutura de Classificação de Ficheiros do Windows Server.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ae6d8d0f-4ebc-43fe-a1f6-26b690fd83d0
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9a59be70117f4ed2dd0a0c3bb14bc9fa6f0c530d
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 6b040359ecd1f1277711366cd8d612cd9664dba1
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305119"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259138"
 ---
 # <a name="windows-powershell-script-for-azure-rms-protection-by-using-file-server-resource-manager-fci"></a>Script do Windows PowerShell para a proteção do Azure RMS através do Gestor de Recursos do Servidor de Ficheiros (FCI)
 
@@ -25,7 +26,7 @@ Esta página contém o script de amostra para copiar e editar, conforme descrito
 
 Este script utiliza uma versão mínima de **1.3.155.2** para o módulo AzureInformationProtection. Execute o comando seguinte para verificar a versão: `(Get-Module AzureInformationProtection -ListAvailable).Version` 
 
-*&#42;&#42;Exclusão de responsabilidade&#42;&#42;: Este script de exemplo não é suportado por nenhum serviço ou programa de suporte padrão da Microsoft. Este script de exemplo é fornecido tal como está sem garantias de qualquer tipo.*
+*&#42;&#42;Disclaimer&#42;&#42;: Este script de exemplo não é suportado por nenhum serviço ou programa de suporte padrão da Microsoft. Este script de exemplo é fornecido tal como está sem garantias de qualquer tipo.*
 
 ```
 <#

@@ -4,20 +4,21 @@ description: O Microsoft Rights Management SDK 4.2 gere o diagnóstico e de dese
 keywords: ''
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: F5AD3826-2292-4A25-AF5C-D17D083F5742
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 5b454ea2917fc5807326493fdf303e508bda7f0f
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 23f4eda077a4f3749097e0f34013d5a831e6cb2f
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071816"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56255381"
 ---
 # <a name="how-to-enable-error-and-performance-logging"></a>Como: Ativar o registo de desempenho e de erro
 O Microsoft Rights Management SDK 4.2 gere o diagnóstico e de desempenho o carregamento de registos através de uma propriedade de único dispositivo.

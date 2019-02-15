@@ -3,19 +3,20 @@ title: FAQs sobre o Azure Information Protection
 description: Algumas perguntas mais frequentes sobre o Azure Information Protection e o respetivo serviço de proteção de dados, o Azure Rights Management (Azure RMS).
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 02/07/2019
+manager: barbkess
+ms.date: 02/15/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 51ff1b6185661c4ab0c4204e035ffe981a5a9710
-ms.sourcegitcommit: 308e6da8de1a3456a0ba807c5388b8891b861d5b
+ms.openlocfilehash: fb200717efee9c34e8c3d6fc41ccab82478f5755
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55854192"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258067"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Perguntas mais frequentes sobre o Azure Information Protection
 
@@ -102,6 +103,8 @@ Os administradores globais de um inquilino do Office 365 ou inquilino do Azure A
 - **Administrador do Information Protection**: Esta função de administrador do Azure Active Directory permite que um administrador configurar todos os aspetos do Azure Information Protection, mas não a outros serviços. Um administrador com esta função pode ativar e desativar o serviço de proteção do Azure Rights Management, configurar as definições de proteção e as etiquetas e configurar a política do Azure Information Protection. Além disso, um administrador com esta função pode executar todos os cmdlets do PowerShell para o [cliente Azure Information Protection](./rms-client/client-admin-guide-powershell.md) e para o [módulo AADRM](administer-powershell.md). 
     
     Para atribuir um utilizador a esta função administrativa, veja [atribuir um utilizador a funções de administrador no Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
+
+- **Leitor de segurança**: Para [analytics do Azure Information Protection](reports-aip.md) apenas. Este Azure Active Directory função de administrador permite que um administrador ver como as etiquetas estão sendo usadas, monitorizar o acesso dos utilizadores a etiquetados de documentos e e-mails e quaisquer alterações à respetiva classificação e pode identificar documentos que contenham informações confidenciais que devem ser protegidas. Uma vez que esse recurso usa o Log Analytics do Azure, também tem de ter um tipo de suporte [função RBAC](reports-aip.md#permissions-required-for-azure-information-protection-analytics).
 
 - **Administrador de segurança**: Esta função de administrador do Azure Active Directory permite que um administrador configurar todos os aspetos do Azure Information Protection no portal do Azure, além de configurar alguns aspetos dos outros serviços do Azure. Um administrador com esta função não é possível executar qualquer um da [cmdlets do PowerShell do módulo do AADRM](administer-powershell.md).
     

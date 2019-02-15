@@ -4,20 +4,21 @@ description: O comportamento da API de Ficheiros pode ser configurado através d
 keywords: ''
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 10/11/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 0b05498730d064dfa2b7fb2183b1a8694c1fbf63
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: a46a270780fe6245adf14b950833d6f6277f1b35
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54070626"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253029"
 ---
 # <a name="file-api-configuration"></a>Configuração da API de Ficheiros
 
@@ -60,7 +61,7 @@ Para especificar o comportamento de proteção, defina o **Encryption** valor na
 
 **Descrição**: Contém um de três valores:
 
-- **Desativar**: Encriptação está desativada.
+- **Off**: Encriptação está desativada.
 
 > [!Note]
 > Esta definição não tem efeito na desencriptação. Qualquer ficheiro encriptado, seja ele encriptado com a proteção nativa ou Pfile, pode ser desencriptado, desde que o utilizador tenha o direito **EXTRAIR**.

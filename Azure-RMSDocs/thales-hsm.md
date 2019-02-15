@@ -3,19 +3,20 @@ title: 'Informações sobre os HSMs da Thales e adições da Microsoft: CONTEÚD
 description: As informações neste artigo foram removidas porque já não são relevantes agora que o Azure Rights Management utiliza o Cofre de Chaves do Azure para chaves de inquilino geridas pelo cliente (também conhecido como traga a sua própria chave ou BYOK).
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 11/19/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8c9d61e5-75da-4785-9942-1c6313879fd5
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 679f8d2a59ff088ddec230d3d13113f7725cf769
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: aa5136bf2b4cfb1fb322b846dbffe913dda076dd
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173626"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254803"
 ---
 # <a name="more-information-about-thales-hsms-and-microsoft-additions-retired-content"></a>Mais informações sobre os HSMs da Thales e adições da Microsoft: CONTEÚDO EXTINTO
 

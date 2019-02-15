@@ -4,20 +4,21 @@ description: Aplicações Android podem utilizar o Microsoft Rights Management S
 keywords: ''
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: c0edbda67c7c6faadd0c5d6bddb2695d88dc8420
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 2c7ef53f48f1207afa5cb22b0623230fbd191729
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393425"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259454"
 ---
 # <a name="android-setup"></a>Configuração do Android
 
@@ -138,7 +139,7 @@ A nossa biblioteca da interface de utilizador fornece uma IU reutilizável para 
 
 -   Agora, está pronto para criar as suas novas aplicações Android.
 
-### <a name="see-also"></a>Consulte Também
+### <a name="see-also"></a>Veja Também
 
 [Introdução](get-started.md)
 

@@ -3,19 +3,20 @@ title: Controlo de documentos do Azure Information Protection
 description: Instruções e informações para os administradores configurarem e utilizarem o controlo de documentos do Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/01/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 32e61bafe3157c33b3ed9db6d540085df07a9f15
-ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
+ms.openlocfilehash: 137d7d613fb5ed510a23d4c81f010ae1cf04386f
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55560010"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56256384"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guia do administrador: Configurar e utilizar o controlo de documentos do Azure Information Protection
 

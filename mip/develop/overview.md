@@ -7,12 +7,12 @@ ms.topic: overview
 ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: bryanla
-ms.openlocfilehash: 656f4af77ce3e26515c5e54103e8d3b341439271
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: b78214fc2260fd984b6b853866f72b92dd5cc11e
+ms.sourcegitcommit: 4ed27f50545aae1a58cc922202959d427bcba7ac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56250747"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56323568"
 ---
 # <a name="overview"></a>Descrição geral
 
@@ -40,6 +40,10 @@ Casos de utilização do SDK de MIP alto nível incluem:
 * Uma cloud acesso mediador ou dados perda prevenção solução motivos de segurança sobre os dados encriptados com o Azure Information Protection.
 
 Para obter uma lista mais completa, consulte [conceitos de API](concept-apis-use-cases.md).
+
+O SDK de MIP é suportado nas seguintes plataformas:
+
+[!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 
 ## <a name="next-steps"></a>Próximos Passos
 

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 03b0aa0ef3b5f2a8cb232059fe748b243e067f76
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: b12c3451517f3e2832ed36b00d60c401973a0ebb
+ms.sourcegitcommit: 1fe9720526a2ff814cd5d353249b16497cfcaadc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258713"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425951"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurar a política do Azure Information Protection
 
@@ -58,16 +58,17 @@ Para iniciar sessão no portal do Azure, configurar e gerir o Azure Information 
 
 - Utilizar uma conta que tenha um dos seguintes [funções de administrador](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
-  - **Administrador do Information Protection**
-
+    - **Administrador do Information Protection**
+    
+    - **Leitor de segurança** para [analytics do Azure Information Protection](reports-aip.md) apenas
+    
   - **Administrador de segurança**
-
+    
   - **Administrador global / administrador de empresa**
     
     > [!NOTE] 
-    > Se o seu inquilino tiver sido migrado para a loja de etiquetagem unificada, para gerir etiquetas a partir do portal do Azure, sua conta tem também de ter permissões para acessar o Centro de conformidade e segurança do Office 365. [Mais informações](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
-    
-    - Uso **leitor de segurança** para [analytics do Azure Information Protection](reports-aip.md) apenas.
+    > Se o seu inquilino tiver sido migrado para a loja de etiquetagem unificada, para gerir o Azure Information Protection a partir do portal do Azure, a conta tem de ser um administrador global ou um do listadas funções e permissões para aceder a segurança do Office 365 e a conformidade Centro. [Mais informações](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Para aceder ao painel de proteção de informações do Azure pela primeira vez
 
@@ -146,6 +147,16 @@ Utilize as seguintes informações para ajudar a configurar a política do Azure
 - [Como configurar etiquetas para diferentes idiomas](configure-policy-languages.md)
 
 - [Como migrar as etiquetas do Azure Information Protection para o Centro de conformidade e segurança do Office 365](configure-policy-migrate-labels.md)
+
+## <a name="label-information-stored-in-emails-and-documents"></a>Informações de etiqueta armazenadas em e-mails e documentos
+
+Quando uma etiqueta é aplicada a um documento ou e-mail, nos bastidores, a etiqueta é armazenada nos metadados, para que as aplicações e serviços podem ler a etiqueta:
+
+- E-mails, estas informações são armazenadas no cabeçalho de x: **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** 
+
+- Para documentos do Word (. doc e. docx), folhas de cálculo do Excel (. xls e. xlsx), apresentações do PowerPoint (. ppt e. pptx) e documentos PDF, estes metadados são armazenados na propriedade personalizada seguinte: **MSIP_Label_\<GUID>_Enabled=True**  
+
+Para identificar o GUID de uma etiqueta, localize o valor de ID de etiqueta no **etiqueta** painel no portal do Azure, quando ver ou configurar a política do Azure Information Protection. Para os ficheiros que tenham as etiquetas aplicadas, também pode executar o [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) cmdlet do PowerShell para identificar o GUID (MainLabelId ou SubLabelId). Quando uma etiqueta tem subetiquetas, sempre Especifica o GUID de apenas uma subetiqueta e não a etiqueta principal.
 
 ## <a name="next-steps"></a>Passos Seguintes
 

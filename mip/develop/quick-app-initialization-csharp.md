@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: tommos
-ms.openlocfilehash: 17c7bb1bd887b4009f450cb5bbf75900587de4f1
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: b7f2b25027502fbdd9dd7bd877b8893c1940628a
+ms.sourcegitcommit: ca2df73f8bba6bf0f58eea5bee15e356705276d6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252101"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56589990"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Início rápido: Inicialização de aplicações de cliente (C#)
 
@@ -83,7 +83,7 @@ Agora, criar uma implementação para um delegado de autenticação, ao expandir
 
 O `ApplicationInfo` objeto contém duas propriedades. O `_appInfo.ApplicationId` vão ser utilizados no `AuthDelegateImplementation` classe para fornecer o ID de cliente para a biblioteca de autenticação.
 
-5. Adicionar o `public string AcquireToken()` classe. Essa classe deve aceitar `Microsoft.InformationProtection.Identity`e duas cadeias de caracteres: autoridade e de recursos. Estas variáveis de cadeia de caracteres serão passados para a biblioteca de autenticação pela API e não devem ser manipulados. Edição pode resultar numa falha ao autenticar.
+5. Adicionar o `public string AcquireToken()` método. Esse método deve aceitar `Microsoft.InformationProtection.Identity` e duas cadeias de caracteres: autoridade e de recursos. Estas variáveis de cadeia de caracteres serão passados para a biblioteca de autenticação pela API e não devem ser manipulados. Edição pode resultar numa falha ao autenticar.
 
      ```csharp
      public string AcquireToken(Identity identity, string authority, string resource)

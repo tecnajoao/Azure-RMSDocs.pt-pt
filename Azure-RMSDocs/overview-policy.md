@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5ecccb6a8d26d3ae074270e46250952d4cc9b4f3
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 29f573ae997431d621a616eccb9591c830ae8e9c
+ms.sourcegitcommit: 1fe9720526a2ff814cd5d353249b16497cfcaadc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253940"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425934"
 ---
 # <a name="overview-of-the-azure-information-protection-policy"></a>Descrição geral da política do Azure Information Protection
 
@@ -50,7 +50,6 @@ Quando uma etiqueta está configurada para subetiquetas, os utilizadores não é
 As etiquetas do Azure Information Protection podem ser utilizadas com o intervalo completo de dados que uma organização normalmente cria e armazena, desde a classificação mais baixa de dados pessoais, à classificação mais elevada de dados altamente confidenciais. 
 
 Pode utilizar as etiquetas predefinidas sem alterações ou pode personalizá-las, eliminá-las ou criar novas etiquetas. Para obter instruções completas, consulte [configurar a política do Azure Information Protection](configure-policy.md).
-
 
 ## <a name="next-steps"></a>Passos Seguintes
 

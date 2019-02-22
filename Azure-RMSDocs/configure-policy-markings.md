@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: b0ff274917a78fa031dfe3e6f0665cef104111a9
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: a7894ba71ea136d5b7cf1fbe067ff434d942c1d0
+ms.sourcegitcommit: 176a1b0d5ffa1a44484325d25815b4cfaa371af5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258968"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56654704"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Como configurar uma etiqueta para marcas visuais para o Azure Information Protection
 
@@ -128,7 +128,7 @@ Exemplos:
     
     `${If.App.WP}This content is ${If.End}Confidential`
     
-    No Word e PointPoint, a etiqueta aplicar o texto da marca d'água "este conteúdo é confidencial". No Excel, a etiqueta, aplica-se o texto da marca d'água "Confidencial". No Outlook, a etiqueta não qualquer texto da marca d'água, uma vez que as marcas d'água, como marcas visuais não são suportadas para o Outlook.
+    No Word e PowerPoint, a etiqueta aplicar o texto da marca d'água "este conteúdo é confidencial". No Excel, a etiqueta, aplica-se o texto da marca d'água "Confidencial". No Outlook, a etiqueta não se aplica qualquer texto da marca d'água porque as marcas d'água, como marcas visuais não são suportadas para o Outlook.
 
 ### <a name="setting-the-font-name"></a>Definição do nome de tipo de letra
 

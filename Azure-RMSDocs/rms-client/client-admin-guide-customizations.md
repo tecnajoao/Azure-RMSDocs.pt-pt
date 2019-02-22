@@ -4,19 +4,19 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/14/2019
+ms.date: 02/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f41dde8fda216084ef9399c0a0e4d7b09c1e79fb
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: e336a025d680f6c3a016f1b9b2c36976f765824f
+ms.sourcegitcommit: ca2df73f8bba6bf0f58eea5bee15e356705276d6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56266136"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590007"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas do cliente do Azure Information Protection
 
@@ -413,7 +413,7 @@ Como resultado desta edição de registo, são suportados os seguintes cenários
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Migrar as etiquetas de Secure Islands e outras soluções de etiquetas
 
-Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. Esta definição está em pré-visualização e podem ser alteradas.
+Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure.
 
 Esta configuração não é atualmente compatível com o novo comportamento padrão que protege ficheiros PDF com a norma ISO para a encriptação de PDF. Neste cenário, os ficheiros. ppdf não não possível abrir Explorador de ficheiros, PowerShell ou a deteção de impressão. Para resolver este problema, utilize o definição de cliente avançado [não utilize a norma ISO para encriptação de PDF](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
 
@@ -470,7 +470,7 @@ Neste exemplo:
 A definição de cliente avançado:
 
     
-|Nome|Valor|
+|Name|Valor|
 |---------------------|---------|
 |LabelbyCustomProperty|3e9df74d-3168-48af-8b11-037e3021813f, "etiqueta Secure Islands é sensível a", classificação, com diferenciação de|
 
@@ -488,7 +488,7 @@ Neste exemplo:
 A definição de cliente avançado:
 
     
-|Nome|Valor|
+|Name|Valor|
 |---------------------|---------|
 |LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d, "a etiqueta de Secure Islands contém interno", classificação,. \*Interno.\*|
 
@@ -654,11 +654,11 @@ Defina o nível de registo para um dos seguintes valores:
 
 - **Erro**: Apenas erros.
 
-- **Informações de**: Registo mínimo, que inclui não existem IDs de eventos.
+- **Informações de**: Registo mínimo, que não inclui a nenhum evento IDs (a predefinição para a deteção de impressão).
 
-- **Depurar**: Obter informações completas (a predefinição).
+- **Depurar**: Obter informações completas.
 
-- **Rastreio**: Registo muito detalhado, que tem um impacto no desempenho e deve ser ativado apenas se for solicitado pelo Support da Microsoft. Se é instruído para definir esse nível de registo, não se esqueça de definir um valor diferente de quando os registos relevantes tiverem sido recolhidos.
+- **Rastreio**: Registo detalhado (a predefinição para os clientes). Para o scanner, esta definição tem um impacto significativo no desempenho e deve estar ativada para o scanner apenas se for solicitado pelo Support da Microsoft. Se é instruído para definir esse nível de registo para a deteção de impressão, não se esqueça de definir um valor diferente de quando os registos relevantes tiverem sido recolhidos.
 
 Esta definição de cliente avançada não altera as informações que são enviadas para o Azure Information Protection para [central reporting](../reports-aip.md), ou alterar as informações que são gravadas para local [registo de eventos](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).
 
@@ -682,7 +682,7 @@ Para obter esta solução:
     
     Nota: Quando a etiqueta é uma subetiqueta, também tem de especificar a etiqueta principal antes da subetiqueta no valor de cabeçalho, usando o mesmo formato. Por exemplo, se seu subetiqueta tem um GUID de 27efdf94-80a0 - 4d 02-b88c-b615c12d69a9, o valor pode ser semelhante ao seguinte: `MSIP_Label_ab70158b-bdcc-42a3-8493-2a80736e9cbd_Enabled=True;MSIP_Label_27efdf94-80a0-4d02-b88c-b615c12d69a9_Enabled=True;`
 
-Antes de testar esta configuração, lembre-se de que é, muitas vezes, um atraso ao criar ou editar as regras de fluxo de correio (por exemplo, aguarde uma hora). Quando a regra entrar em vigor, agora que os seguintes eventos acontecem quando os utilizadores utilizarem o Outlook na web ou um cliente de dispositivo móvel que suporte IRM do Exchange ActiveSync: 
+Antes de testar esta configuração, lembre-se de que é, muitas vezes, um atraso ao criar ou editar as regras de fluxo de correio (por exemplo, aguarde uma hora). Quando a regra entrar em vigor, agora que os seguintes eventos acontecem quando os utilizadores utilizarem o Outlook na web: 
 
 - Os utilizadores selecionam a classificação de mensagens do Exchange e enviam o e-mail.
 
@@ -690,7 +690,7 @@ Antes de testar esta configuração, lembre-se de que é, muitas vezes, um atras
 
 - Quando os destinatários internos veem o e-mail no Outlook e têm o cliente do Azure Information Protection instalado, verão a etiqueta do Azure Information Protection atribuída. 
 
-Se as etiquetas do Azure Information Protection aplicarem a proteção, adicione esta proteção à configuração da regra: Selecionar a opção para modificar a segurança de mensagem, aplicar a proteção de direitos e, em seguida, selecione a opção não reencaminhar ou modelo de RMS.
+Se as etiquetas do Azure Information Protection aplicarem a proteção, adicione esta proteção à configuração da regra: Selecionar a opção para modificar a segurança de mensagem, aplicar a proteção de direitos e, em seguida, selecione a opção não reencaminhar ou modelo de proteção.
 
 Também pode configurar as regras de fluxo de correio para proceder ao mapeamento inverso. Quando uma etiqueta do Azure Information Protection é detetada, é definida uma classificação de mensagens do Exchange correspondente:
 

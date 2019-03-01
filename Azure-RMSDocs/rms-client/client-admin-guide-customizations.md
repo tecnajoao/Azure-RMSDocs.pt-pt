@@ -4,19 +4,19 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/22/2019
+ms.date: 02/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e336a025d680f6c3a016f1b9b2c36976f765824f
-ms.sourcegitcommit: ca2df73f8bba6bf0f58eea5bee15e356705276d6
+ms.openlocfilehash: 59395fe48eff2a3b1df0ae25dded1a66af9f453f
+ms.sourcegitcommit: f19ee03fd3f6f39df1a28ab389b43fbd8f9e9072
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590007"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56891099"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas do cliente do Azure Information Protection
 
@@ -62,6 +62,7 @@ Algumas destas definições requerem a edição do registo e algumas utilizam de
 |RemoveExternalContentMarkingInApp|[Remover os cabeçalhos e rodapés de outras soluções de etiquetas](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Adicionar "Relatar um problema" para os utilizadores](#add-report-an-issue-for-users)|
 |RunPolicyInBackground|[Ativar a classificação para executar continuamente em segundo plano](#turn-on-classification-to-run-continuously-in-the-background)|
+|ScannerConcurrencyLevel|[Limitar o número de segmentos utilizados pelo leitor](#limit-the-number-of-threads-used-by-the-scanner)|
 |SyncPropertyName|[Etiqueta de um documento do Office usando uma propriedade personalizada existente](#label-an-office-document-by-using-an-existing-custom-property)|
 |SyncPropertyState|[Etiqueta de um documento do Office usando uma propriedade personalizada existente](#label-an-office-document-by-using-an-existing-custom-property)|
 
@@ -488,7 +489,7 @@ Neste exemplo:
 A definição de cliente avançado:
 
     
-|Name|Valor|
+|Nome|Valor|
 |---------------------|---------|
 |LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d, "a etiqueta de Secure Islands contém interno", classificação,. \*Interno.\*|
 
@@ -618,6 +619,20 @@ Por exemplo, tem uma coluna de SharePoint com o nome **classificação** que tem
 Para um documento do Office com um dos seguintes valores de classificação de etiqueta, defina **SyncPropertyName** ao **classificação**, e **SyncPropertyState** para  **OneWay**. 
 
 Agora, quando um utilizador abre e salva um desses documentos do Office, ele tem o nome **pública**, **gerais**, ou **altamente confidencial \ todos os funcionários** se tiver etiquetas com estes nomes na sua política do Azure Information Protection. Se não tiver etiquetas com esses nomes, o documento permanece sem etiqueta.
+
+## <a name="limit-the-number-of-threads-used-by-the-scanner"></a>Limitar o número de segmentos utilizados pelo leitor
+
+Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure.
+
+Por predefinição, o scanner utiliza todos os recursos de processador disponíveis no computador que executa o serviço de scanner. Se tiver de limitar o consumo da CPU, enquanto este serviço está a analisar, crie a seguinte definição avançada. 
+
+Para o valor, especifique o número de threads em simultâneo que a deteção de impressão pode ser executadas em paralelo. O scanner usa um thread separado para cada ficheiro que verifica a, pelo que esta configuração de limitação também define o número de ficheiros que podem ser analisados em paralelo. 
+
+Quando configura pela primeira vez o valor para fins de teste, recomendamos que especifique 2 por núcleo e, em seguida, monitorize os resultados. Por exemplo, se executar a deteção de impressão num computador que tenha de 4 núcleos, primeiro defina o valor como 8. Se necessário, aumentar ou diminuir esse número, de acordo com o desempenho resultante que necessita para o computador de scanner e as taxas de verificação. 
+
+- Chave: **ScannerConcurrencyLevel**
+
+- Valor:  **\<número de threads em simultâneo >**
 
 ## <a name="disable-the-low-integrity-level-for-the-scanner"></a>Desativar o nível de baixa integridade para a deteção de impressão
 

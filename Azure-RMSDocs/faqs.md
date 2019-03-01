@@ -4,19 +4,19 @@ description: Algumas perguntas mais frequentes sobre o Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fb200717efee9c34e8c3d6fc41ccab82478f5755
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 4e7ffa1fa4121d7a0aecc4474d50497c7c300b1b
+ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258067"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56756152"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Perguntas mais frequentes sobre o Azure Information Protection
 
@@ -50,7 +50,7 @@ Para obter mais informações sobre como migrar as suas etiquetas existentes, co
 
 Etiquetas de sensibilidade no Centro de conformidade de segurança do Office 365 e estão disponíveis em geral, mas a opção para migrar as suas etiquetas do Azure Information Protection ainda está em pré-visualização. Quando as etiquetas são migradas para a loja de etiquetagem unificada, podem ser publicados e, em seguida, baixados por [clientes que suportam a etiquetagem unificada](configure-policy-migrate-labels.md#clients-that-support-unified-labeling). Hoje em dia, nem todos os clientes suportam etiquetas unificadas ou estão disponíveis em geral.
 
-Recomendamos que teste primeiro a funcionalidade de pré-visualização com um inquilino de teste e, em seguida, migrar o seu inquilino de produção. Além disso:
+Recomendamos que teste primeiro a funcionalidade de pré-visualização com um inquilino de teste e, em seguida, migre o seu inquilino de produção. Além disso:
 
 - **Se estiver familiarizado com o Azure Information Protection:** 
     
@@ -61,6 +61,8 @@ Recomendamos que teste primeiro a funcionalidade de pré-visualização com um i
     Recomendamos que conclua a configuração de etiqueta no portal do Azure e, em seguida, migre as etiquetas. Esta estratégia evita a duplicação de etiquetas durante o processo de migração, que, em seguida, vai ter de ser editado no Centro de conformidade e segurança do.
 
 Antes de migrar as etiquetas, certifique-se de que compreende os [considerações e configurações de rótulo que não são suportadas pelo centro de conformidade e segurança do](configure-policy-migrate-labels.md#considerations-for-unified-labels).
+
+Consulte também [o cliente de pré-visualização instalo nova funcionalidade de teste?](faqs-infoprotect.md#which-preview-client-do-i-install-for-testing-new-functionality)
 
 ## <a name="after-ive-migrated-my-labels-which-management-portal-do-i-use"></a>Depois que tiver migrado meus rótulos, do portal de gestão que utilizo?
 

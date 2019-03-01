@@ -4,19 +4,19 @@ description: Tem uma pergunta específica sobre classificação e etiquetagem at
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/25/2019
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 37aea835e34c0db50d277922edbfd044e43afd71
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 5945b115d4b20f7ef8c42d51e76066cca5c994bd
+ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256819"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56756203"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Perguntas mais frequentes sobre a classificação e a etiquetagem no Azure Information Protection
 
@@ -42,6 +42,18 @@ Procure anúncios no [blogue Enterprise Mobility + Security](https://techcommuni
 > - Capacidade de etiquetagem incorporadas para aplicações do Office para dispositivos móveis (iOS e Android) e computadores Mac. Para obter mais informações, consulte [aplicar etiquetas de sensibilidade aos seus documentos e e-mail do Office](https://aka.ms/officemipdocs).
 
 Pedir novas funcionalidades e votar nos pedidos, visite o [site do UserVoice](https://msip.uservoice.com/) do Azure Information Protection.
+
+## <a name="which-preview-client-do-i-install-for-testing-new-functionality"></a>O cliente de pré-visualização instalar nova funcionalidade de teste?
+
+Atualmente, existem dois clientes de pré-visualização para Windows: 
+
+- O **cliente Azure Information Protection** que transfere etiquetas e as definições de política a partir do portal do Azure. Este cliente tem por base a versão de disponibilidade geral do cliente.
+
+- O **do Azure Information Protection unified cliente etiquetagem** que transfere etiquetas e as definições de política a partir do Centro de conformidade e a segurança do Office 365. Este cliente está em pré-visualização segundo.
+
+Recomendamos que teste com o cliente de etiquetagem unificado do Azure Information Protection se a sua atual conjunto de recursos e funcionalidade de cumprem os requisitos comerciais. Se não, ou se tiver configurado as etiquetas no portal do Azure que ainda não ainda [migrados para a loja de etiquetagem unificada](configure-policy-migrate-labels.md), utilizar o cliente do Azure Information Protection.
+
+Para obter mais informações, incluindo uma tabela de comparação de funções e funcionalidades, consulte [escolher qual cliente Azure Information Protection para utilizar](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
 
 ## <a name="do-i-need-to-be-a-global-admin-to-configure-classification-and-labels"></a>É necessário ser um administrador global para configurar a classificação e etiquetas?
 

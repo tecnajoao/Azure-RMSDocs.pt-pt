@@ -4,17 +4,17 @@ description: Quando atribui uma etiqueta a um documento ou a um e-mail pode sele
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/13/2019
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: a7894ba71ea136d5b7cf1fbe067ff434d942c1d0
-ms.sourcegitcommit: 176a1b0d5ffa1a44484325d25815b4cfaa371af5
+ms.openlocfilehash: 2ddefdc557d83ff0eae6bbc2b5d7d0e69dfbbca5
+ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56654704"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56756186"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Como configurar uma etiqueta para marcas visuais para o Azure Information Protection
 
@@ -48,7 +48,7 @@ Obter informações adicionais sobre estas marcas visuais:
 
 ## <a name="when-visual-markings-are-applied"></a>Quando as marcas visuais são aplicadas
 
-Para as mensagens de e-mail, as marcas visuais são aplicadas quando o e-mail é enviado do Outlook.
+Para mensagens de e-mail, as marcas visuais são aplicadas quando é enviada uma mensagem de e-mail do Outlook. Se essa mensagem de e-mail é reencaminhada ou respondeu com uma alteração de etiqueta, as marcas visuais originais são sempre retidas.
 
 Para documentos, as marcas visuais são aplicadas da seguinte forma:
 

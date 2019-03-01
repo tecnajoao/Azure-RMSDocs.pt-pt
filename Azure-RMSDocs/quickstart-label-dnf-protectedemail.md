@@ -4,16 +4,16 @@ description: Configure uma etiqueta que protege um e-mail para um utilizador ao 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 02/29/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 67fe46f94b83b219794251c9d7e1500f756669a3
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: c41f190cf2e91378b03922caf3211c19ec01e871
+ms.sourcegitcommit: d1aac7dc96f5986511f73ec035400954be24e723
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56266034"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017205"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Início rápido: Configurar uma etiqueta para os utilizadores a proteger facilmente os e-mails que contêm informações confidenciais
 
@@ -77,7 +77,9 @@ Para obter uma lista completa de pré-requisitos para utilizar o Azure Informati
 
 2. Do **classificações** > **etiquetas** opção de menu: Sobre o **do Azure Information Protection – etiquetas** painel, selecione a etiqueta que pretende configurar para aplicar a proteção. 
 
-3. No painel **Etiqueta**, localize **Definir permissões para documentos e e-mails que contêm esta etiqueta**. Selecione **proteger**e, em seguida **proteção**:
+3. No painel **Etiqueta**, localize **Definir permissões para documentos e e-mails que contêm esta etiqueta**. Selecione **Protect** e o **proteção** painel abre automaticamente se uma das outras opções selecionada anteriormente. 
+    
+    Se o **proteção** painel não abre automaticamente, selecione **proteção**:
     
     ![Configurar a proteção para uma etiqueta do Azure Information Protection](./media/info-protect-protection-bar-configured.png).
 

@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a715dbe743ef9b4018865df22ccdea347f888192
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: bdc92908e04cd0568a7417a269168b34058790e3
+ms.sourcegitcommit: abb08a85dfd7a0f100b381934a3a211da6727178
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56266102"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828673"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: Política de histórico e suporte de lançamento de versão
 
@@ -83,7 +83,7 @@ Esta versão inclui a versão 1.0.3592.627 do cliente RMS MSIPC.
 
 - O cliente do Azure Information Protection remove corretamente proteção a partir de um documento PDF que foi protegido pela aplicação de partilha Rights Management.
 
-- Nomes de ficheiros e caminhos não apresentar pontos de interrogação (**?**) em vez de não-ASCII na análise do Azure Information Protection quando a Localidade do sistema de operativo envio está em inglês.
+- Nomes de ficheiros e caminhos não apresentar pontos de interrogação (**?**) em vez de não-ASCII no analytics do Azure Information Protection quando a Localidade do sistema de operativo envio está em inglês.
 
 - Subetiquetas sejam aplicadas corretamente ao PowerShell e o scanner quando a etiqueta principal está configurada para permissões definidas pelo utilizador.
 

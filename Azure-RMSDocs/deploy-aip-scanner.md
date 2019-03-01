@@ -4,19 +4,19 @@ description: Instruções para instalar, configurar e executar o scanner do Azur
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 02/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: d81e8f851f2b624ca81912bc3af8487522bf2873
-ms.sourcegitcommit: 4ed27f50545aae1a58cc922202959d427bcba7ac
+ms.openlocfilehash: 9b7cd88df290c3df46f0a336c649e282df10d4df
+ms.sourcegitcommit: bfb8e4fff4b6ebc38337f48f2b31ca43048dcca6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56323687"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007057"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Implementar o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente
 
@@ -59,7 +59,7 @@ Antes de instalar o scanner do Azure Information Protection, certifique-se de qu
 
 |Requisito|Mais informações|
 |---------------|--------------------|
-|Computador Windows Server para executar o serviço de scanner:<br /><br />-4 processadores de núcleo<br /><br />-8 GB de RAM<br /><br />-10 GB de espaço livre (média) para ficheiros temporários|Windows Server 2016 ou Windows Server 2012 R2. <br /><br />Nota: Para fins de teste ou avaliação num ambiente de não produção, pode usar um sistema de operativo de cliente Windows que está [suportados pelo cliente do Azure Information Protection](requirements.md#client-devices).<br /><br />Este computador pode ser um computador físico ou virtual que tenha uma ligação de rede rápida e fiável para os arquivos de dados deve ser verificado.<br /><br /> O scanner requer espaço em disco suficiente para criar ficheiros temporários para cada ficheiro que verifica a, quatro arquivos por núcleo. Permite que o espaço em disco recomendado de 10 GB para 4 processadores de núcleo de análise de 16 ficheiros que tenham, cada um tamanho de ficheiro de 625 MB. <br /><br />Se a conectividade com a Internet não é possível devido às políticas de sua organização, consulte a [Implantando o scanner com configurações alternativos](#deploying-the-scanner-with-alternative-configurations) secção. Caso contrário, certifique-se de que este computador tem conectividade de Internet que permite que os seguintes URLs:<br /> \*.aadrm.com <br /> \*.azurerms.com<br /> \*.informationprotection.azure.com <br /> informationprotection.hosting.portal.azure.net <br /> \*.aria.microsoft.com|
+|Computador Windows Server para executar o serviço de scanner:<br /><br />-4 processadores de núcleo<br /><br />-8 GB de RAM<br /><br />-10 GB de espaço livre (média) para ficheiros temporários|Windows Server 2016 ou Windows Server 2012 R2. <br /><br />Nota: Para fins de teste ou avaliação num ambiente de não produção, pode usar um sistema de operativo de cliente Windows que está [suportados pelo cliente do Azure Information Protection](requirements.md#client-devices).<br /><br />Este computador pode ser um computador físico ou virtual que tenha uma ligação de rede rápida e fiável para os arquivos de dados deve ser verificado.<br /><br /> O scanner requer espaço em disco suficiente para criar ficheiros temporários para cada ficheiro que verifica a, quatro arquivos por núcleo. Permite que o espaço em disco recomendado de 10 GB para 4 processadores de núcleo de análise de 16 ficheiros que tenham, cada um tamanho de ficheiro de 625 MB. <br /><br />Se a conectividade com a Internet não é possível devido às políticas de sua organização, consulte a [Implantando o scanner com configurações alternativos](#deploying-the-scanner-with-alternative-configurations) secção. Caso contrário, certifique-se de que este computador tem conectividade de Internet que permite que os seguintes URLs através de HTTPS (porta 443):<br /> \*.aadrm.com <br /> \*.azurerms.com<br /> \*.informationprotection.azure.com <br /> informationprotection.hosting.portal.azure.net <br /> \*.aria.microsoft.com|
 |Conta de serviço para executar o serviço de scanner |Além de executar o serviço do scanner no computador do servidor do Windows, esta conta do Windows efetua a autenticação para o Azure AD e transfere a política do Azure Information Protection. Esta conta tem de ser uma conta do Active Directory e sincronizado com o Azure AD. Se não é possível sincronizar esta conta devido às políticas de sua organização, consulte a [Implantando o scanner com configurações alternativos](#deploying-the-scanner-with-alternative-configurations) secção.<br /><br />Esta conta de serviço tem os seguintes requisitos:<br /><br />- **Iniciar sessão localmente** atribuição de direito de utilizador. Este direito é necessário para a instalação e configuração do scanner, mas não para a operação. Tem de conceder este direito para a conta de serviço, mas é possível remover este direito após a confirmação de que a deteção de impressão pode detetar, classificar e proteger ficheiros. Se conceder este direito até mesmo para um curto período de tempo não é possível devido às políticas de sua organização, consulte a [Implantando o scanner com configurações alternativos](#deploying-the-scanner-with-alternative-configurations) secção.<br /><br />- **Iniciar sessão como um serviço** atribuição de direito de utilizador. Este direito é concedido automaticamente para a conta de serviço durante a instalação de scanner e este direito é necessário para a instalação, configuração e operação do scanner. <br /><br />-Permissões para os repositórios de dados: Tem de conceder **leitura** e **escrever** permissões para verificar os ficheiros e, em seguida, a aplicar a classificação e proteção para os ficheiros que cumprem as condições na política do Azure Information Protection. Para executar a deteção de impressão no modo de deteção apenas **leitura** permissão é suficiente.<br /><br />-Para etiquetas que voltar a proteger ou remover a proteção: Para garantir que a deteção de impressão tem sempre acesso aos ficheiros protegidos, tornar esta conta uma [Superutilizador](configure-super-users.md) para o Azure Rights Management service e certifique-se de que a funcionalidade de Superutilizador é ativada. Para obter mais informações sobre os requisitos de conta para a aplicação de proteção, consulte [preparar utilizadores e grupos do Azure Information Protection](prepare.md). Além disso, se tiver implementado [controlos de inclusão](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) para uma implementação faseada, certifique-se de que esta conta está incluída na sua controlos de inclusão que configurou.|
 |SQL Server para armazenar a configuração de scanner:<br /><br />-Instância local ou remota<br /><br />-Função de administrador do sistema para instalar o scanner|SQL Server 2012 é a versão mínima para as seguintes edições:<br /><br />- SQL Server Enterprise<br /><br />-SQL Server Standard<br /><br />- SQL Server Express<br /><br />Se instalar mais de uma instância do scanner, cada instância do scanner requer sua própria instância do SQL Server.<br /><br />Quando instala o scanner e a sua conta com a função de administrador do sistema, o processo de instalação cria a base de dados AzInfoProtectionScanner automaticamente e atribui a função db_owner necessária para a conta de serviço que executa a deteção de impressão. Se não é possível conceder a função de administrador do sistema ou as políticas de sua organização necessitam bases de dados a ser criado e configurado manualmente, consulte a [Implantando o scanner com configurações alternativos](#deploying-the-scanner-with-alternative-configurations) secção.<br /><br />O tamanho da base de dados de configuração irá variar para cada implementação, mas recomendamos que alocar o 500 MB para cada 1 000 000 ficheiros que pretende analisar. |
 |O cliente do Azure Information Protection está instalado no computador do servidor do Windows|Tem de instalar o cliente completo para a deteção de impressão. Não instale o cliente com apenas o módulo do PowerShell.<br /><br />Para obter instruções de instalação do cliente, consulte a [Guia do administrador](./rms-client/client-admin-guide.md). Se tiver instalado anteriormente o scanner e agora tem de atualizá-lo para uma versão posterior, veja [atualizar o scanner do Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).|
@@ -230,6 +230,8 @@ Com a configuração predefinida do scanner, agora, está pronto para executar a
         
     Se os resultados são não conforme o esperado, poderá ter de ajustar as condições que especificou na política do Azure Information Protection. Se for esse o caso, repita os passos 1 a 3 até estar pronto para alterar a configuração para aplicar a classificação e, opcionalmente, a proteção. 
 
+O portal do Azure mostra informações sobre a última análise. Se precisar de ver os resultados das verificações anteriores, regresse aos relatórios que estão armazenados no computador de scanner, em %*localappdata*%\Microsoft\MSIP\Scanner\Reports pasta.
+
 Quando estiver pronto para etiquetar automaticamente os ficheiros que Deteta o scanner, avance para o procedimento seguinte. 
 
 ## <a name="configure-the-scanner-to-apply-classification-and-protection"></a>Configurar a deteção de impressão para aplicar a classificação e proteção
@@ -368,6 +370,8 @@ Existem dois cenários alternativos que o scanner do Azure Information Protectio
     Início rápido seguinte utiliza esta configuração: [Início rápido: Encontrar as informações confidenciais que tiver](quickstart-findsensitiveinfo.md).
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>Otimizar o desempenho do scanner
+
+Utilize as seguintes orientações para o ajudar a otimizar o desempenho do scanner. No entanto, se a sua prioridade é a capacidade de resposta do computador de scanner, em vez do desempenho de scanner, pode utilizar um definição de cliente avançado [limitar o número de segmentos utilizados pelo leitor](#limit-the-number-of-threads-used-by-the-scanner).
 
 Para maximizar o desempenho de scanner:
 

@@ -4,16 +4,16 @@ description: Um tutorial de introdução que edita a política do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/29/2019
+ms.date: 02/29/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: e081da93ecc486de22746e4b19e2bb5334b44c66
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 75ba59498918ecb2d987e2fe794c624f8f340498
+ms.sourcegitcommit: d1aac7dc96f5986511f73ec035400954be24e723
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254361"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017239"
 ---
 # <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>Tutorial: Editar a política do Azure Information Protection e criar uma nova etiqueta
 
@@ -108,7 +108,7 @@ Vamos agora criar uma nova subetiqueta para **confidencial**.
     
     Este texto descreve como a etiqueta selecionada se destina a ser utilizado e é visível para os utilizadores como uma descrição para os ajudar a decidir qual a etiqueta a selecionar.
 
-3. Para **Defina permissões para documentos e e-mails que contenham esta etiqueta**, selecione **Proteger** e, em seguida, selecione **Proteção**:
+3. Para **definir permissões para documentos e e-mails que contenham esta etiqueta**, selecione **proteger**, que abre automaticamente o **proteção** painel selecionando o **Protection** opção para si:
     
     ![Configuração de uma etiqueta do Azure Information Protection para proteção](./media/info-protect-protection-bar-configured.png) 
     

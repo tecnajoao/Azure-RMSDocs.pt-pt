@@ -4,18 +4,18 @@ description: Ver as informações de versão para o Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/23/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 939ae3e367b14f722c38be023c70d9dcce21004f
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 699e2807c700b90b98bbc855dd8792aa607696f3
+ms.sourcegitcommit: 8ba63c0f4cd7d2ad7614af4ea9cfe8aec7fac4c0
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254837"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956258"
 ---
 # <a name="azure-information-protection-unified-labeling-client-version-release-information"></a>O Azure Information Protection unified cliente etiquetagem: Informações de lançamento de versão
 
@@ -28,53 +28,71 @@ Pode baixar a versão de pré-visualização mais recente do Azure Information P
 
 ### <a name="release-information"></a>Informações de versão
 
-Utilize as seguintes informações para ver o que é suportado para a versão de pré-visualização mais recente do cliente etiquetagem unificada do Azure Information Protection. 
+Utilize as seguintes informações para ver o que é suportado para a versão de pré-visualização mais recente do cliente etiquetagem unificada do Azure Information Protection.
 
-Este cliente é instalado como um suplemento do Office para computadores Windows e tem o mesmo [pré-requisitos](../requirements.md) que o cliente do Azure Information Protection que transfere a política do Azure.
+Este cliente instala um suplemento do Office para computadores Windows, uma extensão para o Explorador de ficheiros e um módulo do PowerShell. Este cliente tem o mesmo [pré-requisitos](../requirements.md) que o cliente do Azure Information Protection que transfere a política do Azure.
+
+Para comparar recursos e funcionalidades com o cliente do Azure Information Protection, consulte [comparações de recursos para os clientes](use-client.md#feature-comparisons-for-the-clients).
 
 ## <a name="current-preview-version"></a>Versão de pré-visualização atual
 
-**Lançado**: 10/16/2018
+**Lançado**: 02/25/2019
 
 Esta versão de pré-visualização do Azure Information Protection unified etiquetagem cliente para o Windows suporta as seguintes funcionalidades: 
 
-- Atualizar a partir do cliente do Azure Information Protection
+- Atualizar a partir do cliente do Azure Information Protection.
 
-- Manual de etiquetagem que aplica-se a classificação e proteção para o Word, Excel, PowerPoint e Outlook.
+- Manual, automática e recomendada de etiquetagem: Uso **etiquetagem automática** partir do Centro de conformidade e segurança do Office 365, para configurar a etiquetagem automática e recomendada. Para obter mais informações, consulte [aplique uma etiqueta de sensibilidade para o conteúdo automaticamente](/Office365/SecurityCompliance/apply_sensitivity_label_automatically).
 
-- Marcação Visual (cabeçalhos, rodapés e marcas d'água)
+- Explorador de ficheiros, faça duplo clique ações para classificar e proteger ficheiros, remover a proteção e aplicar permissões personalizadas.
 
-- Padrão de etiquetagem 
+- Um Visualizador de texto protegido e arquivos de imagem protegido ficheiros PDF e os ficheiros que são protegidos genericamente.
 
-- Etiquetas que aplicam não reencaminhar
+- Comandos do PowerShell para fazer o seguinte:
+    - [Definir ou remover uma etiqueta num documento](/powershell/module/azureinformationprotection/set-aipfilelabel)
+    - [Etiqueta de um documento depois inspecionar o seu conteúdo](/powershell/module/azureinformationprotection/set-aipfileclassification)
+    - [Ler as informações de etiqueta aplicadas a um documento](/powershell/module/azureinformationprotection/get-aipfilestatus)
+    - [Autenticar para oferecer suporte a sessões do PowerShell autónomas](/powershell/module/azureinformationprotection/set-aipauthentication)
 
-- Pedidos de justificação se os utilizadores diminuir o nível de sensibilidade
+- Suporte para a utilização de relatórios central [analytics do Azure Information Protection](../reports-aip.md).
 
-- Caixa de diálogo Ajuda e feedback, que inclui a repor as definições e exportar registos
+- As seguintes definições de política e a etiqueta:
+    - Marcação Visual (cabeçalhos, rodapés e marcas d'água)
+    - Padrão de etiquetagem
+    - Etiquetas que aplicam-se não reencaminhar e apresentam apenas no Outlook
+    - Pedidos de justificação se os utilizadores diminuir o nível de classificação ou remover uma etiqueta
+    - Cores para as etiquetas
 
-- Atualização da política do Centro de conformidade de segurança e a cada 4 horas, por aplicação do Office.
+- Atualização de política a partir do Centro de conformidade e segurança do:
+    - Sempre que inicia uma aplicação do Office e todas as 4 horas
+    - Quando rato para classificar e proteger um ficheiro ou pasta
+    - Quando executa os cmdlets do PowerShell para etiquetagem e proteção
 
-As seguintes funcionalidades não funcionar nesta versão de pré-visualização:
+- Uma caixa de diálogo Ajuda e feedback, que inclui repor definições e exportar registos.
 
-- Classificação automática e recomendada
+### <a name="features-that-do-not-work-in-this-preview-version-or-are-not-available"></a>Funcionalidades não irão funcionar nesta versão de pré-visualização ou não estão disponíveis
 
-- Permissões personalizadas
+Inclui:
 
-- Protegida de um Visualizador de texto protegido e arquivos de imagem, ficheiros PDF e os ficheiros que são protegidos genericamente
+- O scanner para o descobrir, Etiquetar e proteger ficheiros em arquivos de dados no local não está disponível.
 
-- Explorador de ficheiros, faça duplo clique ações para classificar e proteger ficheiros
+- As etiquetas que são migradas do portal do Azure e configuradas para exibição de proteção do HYOK no cliente quando estes forem publicados, mas estas etiquetas não aplique proteção.
 
-- Comandos do PowerShell para classificar e proteger ficheiros a partir da linha de comandos
+- O conjunto completo de cmdlets do módulo AzureInformationProtection não estão disponíveis, que inclui cmdlets que se ligam diretamente a um serviço de proteção. Por exemplo, Unprotect-RMSFile para desproteger ficheiros em massa.
 
-- O scanner a detetar, identificar e proteger ficheiros em arquivos de dados no local
-
-- Suporte para idiomas diferentes do inglês
+Para mais informações, consulte a [tabelas comparativas](use-client.md#feature-comparisons-for-the-clients).
 
 ## <a name="instructions"></a>Instruções
 
 1. Instale o cliente utilizando as instruções seguintes: [Guia de utilizador: Transferir e instalar o cliente do Azure Information Protection (pré-visualização)](install-unifiedlabelingclient-app.md) 
 
-2. Utilizar o cliente nas aplicações do Office como faria com o cliente do Azure Information Protection, exceto pelo fato do botão da faixa de opções do Office é designado **sensibilidade** vez **proteger**:
+2. Utilize o cliente, tal como faria com o cliente do Azure Information Protection, com as seguintes exceções de aplicações do Office:
+    - O botão da faixa de opções do Office é designado **sensibilidade** vez **proteger**.
+    - Os administradores não é possível apresentar a barra do Information Protection por predefinição, mas os utilizadores podem exibi-lo selecionando **Mostrar barra** partir a **sensibilidade** botão. 
+    - Permissões personalizadas não estão disponíveis
+    - Controlar e revogar não está disponível
+    
+    Para obter instruções de utilizador:
     
     - [Classificar um ficheiro ou e-mail](client-classify.md) 
     
@@ -83,6 +101,3 @@ As seguintes funcionalidades não funcionar nesta versão de pré-visualização
 3. Partilhe a sua experiência: 
     
     - Para fornecer comentários ou fazer perguntas sobre este cliente de pré-visualização, utilize o [site do Yammer do Azure Information Protection](https://www.yammer.com/AskIPTeam).
-    
-    - Para reportar problemas com este cliente de pré-visualização, utilize o **ajuda e feedback** opção da **sensibilidade** botão na faixa de opções. Na caixa de diálogo, exportar os registos e, em seguida, anexe estes ficheiros de registo para o e-mail que é criado com o **comunicar um problema** opção. 
-

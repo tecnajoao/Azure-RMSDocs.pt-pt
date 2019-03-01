@@ -4,17 +4,17 @@ description: Pode proteger os seus documentos e e-mails mais confidenciais ao co
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/24/2019
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 74ec040b0999bfc9c2f3693cc8ceb3e0d438d67c
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 11063a208e21ef121ba0a3a5007c76635f63af17
+ms.sourcegitcommit: d1aac7dc96f5986511f73ec035400954be24e723
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255211"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017154"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Como configurar uma etiqueta para a proteção do Rights Management
 
@@ -73,7 +73,7 @@ Exchange tem de ser configurada para o Azure Information Protection antes dos ut
         
         Se utilizadores não têm permissões para remover a proteção do Rights Management e selecionarem uma etiqueta que está configurada com esta **remover proteção** opção, verão a mensagem seguinte: **O Azure Information Protection não pode aplicar esta etiqueta. Se este problema persistir, contacte o seu administrador.**
 
-4. Se selecionou **Proteger**, agora selecione **Proteção** para abrir o painel **Proteção**:
+4. Se tiver selecionado **Protect**, o **proteção** painel abre automaticamente se uma das outras opções foram selecionada. Se este painel novo não abrir automaticamente, selecione **proteção**:
     
     ![Configurar a proteção para uma etiqueta do Azure Information Protection](./media/info-protect-protection-bar-configured.png)
 
@@ -95,11 +95,13 @@ Exchange tem de ser configurada para o Azure Information Protection antes dos ut
     
      Para selecionar um modelo predefinido, o modelo tem de ser publicado (não arquivado) e não deve ser vinculado já a outra etiqueta. Quando seleciona esta opção, pode utilizar um **Editar modelo** botão [converter o modelo numa etiqueta](configure-policy-templates.md#to-convert-templates-to-labels).
     
-     Sugestão: Se forem utilizados para a criação e edição de modelos personalizados, poderá considerar útil para referência [tarefas que costumava realizar com o portal clássico do Azure](migrate-portal.md).
+     Se forem utilizados para a criação e edição de modelos personalizados, poderá considerar útil para referência [tarefas que costumava realizar com o portal clássico do Azure](migrate-portal.md).
 
-7. Se tiver selecionado **definir permissões** para **Azure (chave da cloud)**, esta opção permite-lhe configurar as definições que pode configurar num modelo. 
+7. Se tiver selecionado **definir permissões** para **Azure (chave da cloud)**, esta opção permite-lhe selecionar os utilizadores e direitos de utilização. 
     
-    Selecione **adicionar permissões**e, no **adicionar permissões** painel, selecione o primeiro conjunto de utilizadores e grupos que terão direitos a utilizar os conteúdos que serão protegidos pela etiqueta selecionada:
+    Se não selecionar quaisquer utilizadores e selecione **OK** neste painel, seguido **guardar** sobre o **etiqueta** painel: A etiqueta é configurada para aplicar a proteção, de modo a que apenas a pessoa que aplica-se a etiqueta pode abrir o documento ou e-mail sem restrições. Esta configuração é por vezes referida como "Apenas para mim" e pode ser o resultado necessário, para que um usuário pode salvar um arquivo para qualquer localização e ter a garantia de que apenas estes poderão abri-lo. Se não selecionar esta correspondências de resultado seus requisitos e outros não são necessários para colaborar em conteúdos protegidos, **adicionar permissões**. Depois de guardar a etiqueta, da próxima vez que abrir isto **proteção** painel, verá **IPC_USER_ID_OWNER** apresentadas para **utilizadores**, e **Coproprietário**apresentado **permissões** para refletir esta configuração.
+    
+    Para especificar os utilizadores que pretende poder abrir documentos e e-mails protegidos, selecione **adicionar permissões**. Em seguida, sobre o **adicionar permissões** painel, selecione o primeiro conjunto de utilizadores e grupos que terão direitos a utilizar os conteúdos que serão protegidos pela etiqueta selecionada:
     
    - Escolher **selecione na lista** onde pode, em seguida, adicionar todos os utilizadores da sua organização ao selecionar **Add \<nome da organização >-todos os membros**. Esta definição exclui as contas de convidado. Em alternativa, pode selecionar **adicionar utilizadores autenticados**, ou procure o diretório.
         
@@ -177,7 +179,9 @@ Quando clicado **guardar**, as suas alterações estão automaticamente disponí
 
 O **todos os funcionários** e **destinatários apenas** sublabels do **confidencial** e **elevada confidenciais** etiquetas a partir do [política predefinida](configure-policy-default.md) fornecer exemplos de como pode configurar as etiquetas que aplicam a proteção. Também pode utilizar os exemplos seguintes para o ajudar a configurar a proteção para diferentes cenários. 
 
-Para cada exemplo que se segue, no seu \< *nome da etiqueta*> painel, selecione **proteger** e, em seguida, selecione **proteção** para abrir o  **Proteção** painel.
+Para cada exemplo que se segue, no seu \< *nome da etiqueta*> painel, selecione **proteger**. Se o **proteção** painel não abre automaticamente, selecione **proteção** para abrir este painel que permite que selecione as opções de configuração de proteção:
+
+![Configuração de uma etiqueta do Azure Information Protection para proteção](./media/info-protect-protection-bar-configured.png)
 
 ### <a name="example-1-label-that-applies-do-not-forward-to-send-a-protected-email-to-a-gmail-account"></a>Exemplo 1: Etiqueta que aplica-se não reencaminhar para enviar um e-mail protegido para uma conta do Gmail
 

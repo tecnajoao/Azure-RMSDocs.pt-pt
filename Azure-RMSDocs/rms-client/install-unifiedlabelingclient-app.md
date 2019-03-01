@@ -4,19 +4,19 @@ description: Instruções para os utilizadores instalarem a versão de pré-visu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/17/2018
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6ee27b9aedd35ae135fc7150a3211be43ca2f092
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: cbe97fc619de9b7bda73ebb419bfc254f237f372
+ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56250899"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56756135"
 ---
 # <a name="download-and-install-the-azure-information-protection-unified-labeling-client-preview"></a>Transferir e instalar o cliente etiquetagem unificado (pré-visualização) do Azure Information Protection
 
@@ -43,18 +43,15 @@ Se tiver etiquetas que são publicadas atualmente a partir do portal do Azure pa
 
 2. Execute o ficheiro executável que foi transferido **AzInfoProtection_For_Unified_Labeling.exe**. Se lhe for pedido para continuar, clique em **Sim**.    
 
-3. Na página **Instalar o cliente do Azure Information Protection**:     
-    - Selecione a opção para instalar uma política de demonstração se não puder ligar-se à cloud, mas pretender ver e experimentar o lado do cliente do Azure Information Protection com uma política local para efeitos de demonstração. Quando o cliente liga-se para o Centro de conformidade e segurança do Office 365, esta política de demonstração é substituída com a política de etiqueta da sua organização.
+3. Sobre o **instalar o cliente do Azure Information Protection** página, clique em **concordo** quando tiver lido os termos de licenciamento e condições.
 
-    - Clique em **Concordo** quando tiver lido os termos e as condições de licenciamento.    
+4. Se lhe for pedido para continuar, clique em **Sim**e aguarde a conclusão da instalação.
 
-4. Se lhe for pedido para continuar, clique em **Sim**e aguarde a conclusão da instalação.    
-
-6. Clique em **Fechar**. Antes de começar a utilizar o Azure Information Protection unified cliente etiquetagem:    
+6. Clique em **Fechar**. Antes de começar a utilizar o Azure Information Protection unified cliente etiquetagem:
 
     - Se o computador estiver a executar o Office 2010, reinicie o computador e, em seguida, avance para a próxima secção para o seu passo final.    
         
-    - Para outras versões do Office, reinicie todas as aplicações do Office e todas as instâncias do Explorador de Ficheiros. A instalação está agora concluída e pode utilizar o cliente para identificar e proteger os seus documentos e e-mails.    
+    - Para outras versões do Office, reinicie todas as aplicações do Office e todas as instâncias do Explorador de Ficheiros. A instalação está agora concluída e pode utilizar o cliente para identificar e proteger os seus documentos e e-mails.
 
 ### <a name="installing-the-azure-information-protection-unified-labeling-client-with-office-2010"></a>Instalar o Azure Information Protection unified etiquetagem cliente com o Office 2010
 
@@ -71,4 +68,3 @@ A instalação está agora concluída e pode utilizar o cliente de etiquetagem u
 ## <a name="next-steps"></a>Passos Seguintes
 
 Para obter mais informações sobre a loja de etiquetagem unificada que a segurança do Office 365 e a conformidade center agora utiliza, leia a seguinte mensagem de blogue: [Anunciando a disponibilidade do unified a etiquetagem de gestão no Centro de conformidade e segurança do](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492).
-

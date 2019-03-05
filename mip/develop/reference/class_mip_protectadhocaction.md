@@ -1,18 +1,18 @@
 ---
 title: classe mip::ProtectAdhocAction
 description: Documenta a classe mip::protectadhocaction da Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 1eff8d629f712b1b7faf3fdadba4c292ae040979
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 0e7092f700e614005a11e939523b9712c3c71bd0
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256928"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333514"
 ---
 # <a name="class-mipprotectadhocaction"></a>classe mip::ProtectAdhocAction 
 Uma classe de ação que especifica a adição de ad hoc proteção para o documento.

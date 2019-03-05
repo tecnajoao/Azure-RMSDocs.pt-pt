@@ -1,18 +1,18 @@
 ---
 title: Instalação do SDK de proteção de informações da Microsoft (MIP) e configuração
 description: Fornece os pré-requisitos de instalação e configuração, para poder utilizar aplicações criadas com o SDK do Microsoft Information Protection.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/30/2019
-ms.author: bryanla
-ms.openlocfilehash: 13d9d82a402d283c393c90dc52c265a1bf8502d7
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: c61b2c08cf0cb0fc59942bad3b5bb3fdbc47832c
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254276"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57331976"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Instalação do SDK de proteção de informações da Microsoft (MIP) e configuração 
 
@@ -35,7 +35,7 @@ Certifique-se de que consulte os tópicos seguintes antes de começar:
 
 Muitas das amostras do SDK exigem acesso a uma subscrição do Office 365. Se ainda não o fez, certifique-se de que inscreva-se um dos seguintes tipos de subscrição:
 
-| Name | Inscreva-se |
+| Nome | Inscreva-se |
 |------|---------|
 | Office 365 Enterprise E3 avaliação (avaliação gratuita de 30 dias) | https://go.microsoft.com/fwlink/p/?LinkID=403802 |
 | Office 365 Enterprise E3 ou E5 | https://products.office.com/business/office-365-enterprise-e3-business-software |

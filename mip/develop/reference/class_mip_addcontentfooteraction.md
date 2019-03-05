@@ -1,18 +1,18 @@
 ---
 title: classe mip::AddContentFooterAction
 description: Documenta a classe mip::addcontentfooteraction da Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 28f9deb9460c88174f10c9a26c60f51407457b90
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: dd803c734c099e11b46db1b7d446b03b2eaa8a1e
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254038"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332281"
 ---
 # <a name="class-mipaddcontentfooteraction"></a>classe mip::AddContentFooterAction 
 Uma classe de ação que especifica a adicionar um rodapé de conteúdo ao documento.

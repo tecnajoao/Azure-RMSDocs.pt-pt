@@ -1,18 +1,18 @@
 ---
 title: Conceitos - conceitos básicos do SDK do MIP - perfil e de motor
 description: Este artigo ajuda-o a compreender os conceitos SDK core chamados o perfil e o mecanismo, que são criados durante a inicialização do aplicativo.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
-ms.openlocfilehash: 66c8f462aa45c964e471a8ca056c102fec3ffbcc
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: e815820fa9f3a6de95d5e37e350ed18df8513b21
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252933"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333543"
 ---
 # <a name="microsoft-information-protection-sdk---profile-and-engine-object-concepts"></a>Conceitos de objeto do SDK - perfil e de motor do Microsoft Information Protection
 

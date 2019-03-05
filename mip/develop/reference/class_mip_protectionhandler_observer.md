@@ -1,18 +1,18 @@
 ---
 title: classe mip::ProtectionHandler::Observer
 description: Documenta a classe mip::protectionhandler da Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 4dac87e4fba8cf5bbcf6eef98ff1edda28a9947f
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 00d74069374850a562547cd161ad4c5f15927b0a
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255855"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333726"
 ---
 # <a name="class-mipprotectionhandlerobserver"></a>classe mip::ProtectionHandler::Observer 
 Interface que recebe notificações relacionadas com a [ProtectionHandler](class_mip_protectionhandler.md).

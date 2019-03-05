@@ -2,18 +2,18 @@
 title: Início rápido - Set e get uma etiqueta de sensibilidade um ficheiro com o C# SDK de MIP
 description: Um guia de introdução mostra-lhe como utilizar o Wrapper de .NET SDK de proteção de informações de Microsoft para definir e obter uma etiqueta de sensibilidade num ficheiro.
 services: information-protection
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/09/2019
-ms.author: bryanla
-ms.openlocfilehash: 3af8cd7e21124d6e6ac70407d8e366eb6d88da45
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: 3ee178c493b99cfecd3f6cd04a680f47acf45412
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253613"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333253"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Início rápido: Definir e obter uma etiqueta de sensibilidade (C#)
 

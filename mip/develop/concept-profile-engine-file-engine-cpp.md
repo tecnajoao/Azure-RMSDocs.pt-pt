@@ -1,18 +1,18 @@
 ---
 title: Conceitos - o objeto de motor de API de ficheiros
 description: Este artigo ajuda-o a compreender os conceitos em todo o objeto de motor de arquivo, o que é criada durante a inicialização do aplicativo.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
-ms.openlocfilehash: 09b4db10523539f093a54c54d1fc6b7de8f7ddb0
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: fcdcb5c11646fd7d32284b6df31cda33abbfde4a
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259291"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330547"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-engine-concepts"></a>SDK - conceitos de motor de API de ficheiros do Microsoft Information Protection
 

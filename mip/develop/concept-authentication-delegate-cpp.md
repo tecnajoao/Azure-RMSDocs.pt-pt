@@ -1,18 +1,18 @@
 ---
 title: Conceitos - implementação de delegado de autenticação (C++)
 description: Este artigo ajuda-o a compreender como implementar um delegado de autenticação em C++.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
-ms.openlocfilehash: adf82006219a24b39d44a75e22d5ef1dd282aa79
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: 20e82e52a293b7723513fbd0990a3d5e66ea568a
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56251284"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333420"
 ---
 # <a name="microsoft-information-protection-sdk---implementing-an-authentication-delegate-c"></a>SDK - implementando um delegado de autenticação (C++) do Microsoft Information Protection
 

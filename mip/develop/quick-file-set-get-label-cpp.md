@@ -2,18 +2,18 @@
 title: Início rápido - Set e get uma etiqueta de sensibilidade num arquivo usando o C++ MIP SDK
 description: Um guia de introdução mostra-lhe como utilizar o SDK de C++ do Microsoft Information Protection para definir e obter uma etiqueta de sensibilidade num ficheiro.
 services: information-protection
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/18/2019
-ms.author: bryanla
-ms.openlocfilehash: 45263bc2a8f77f73f318b2c8df94f21e785e0f40
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: 50fe4bce04b28440609c558297d8a3e39087e557
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256690"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332842"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Início rápido: Definir e obter uma etiqueta de sensibilidade (C++)
 

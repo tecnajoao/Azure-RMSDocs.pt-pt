@@ -1,18 +1,18 @@
 ---
 title: Início rápido - etiquetas de sensibilidade da lista de um inquilino de proteção de informações da Microsoft (MIP) usando C++ MIP SDK
 description: Um guia de introdução mostra-lhe como utilizar o SDK de C++ do Microsoft Information Protection para listar as etiquetas de sensibilidade no seu inquilino.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/18/2019
-ms.author: bryanla
-ms.openlocfilehash: 53ff9177bd17a87b64db3ec507e87236c9b12507
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: 27b6c9039277feca033298520cc0fc18d239f037
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257812"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330989"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Início rápido: List sensitivity labels (C++) (Listar etiquetas de confidencialidade [C++])
 

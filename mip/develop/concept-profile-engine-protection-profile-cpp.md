@@ -1,18 +1,18 @@
 ---
 title: Conceitos - o objeto de perfil de API de proteção
 description: Este artigo ajuda-o a compreender os conceitos em todo o objeto de perfil de proteção, o que é criada durante a inicialização do aplicativo.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
-ms.openlocfilehash: 3fa8a7b9f787cef980722efa5036de5c3f583b35
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: c8e2785f68ea76c34384dccb079260b6c3ed45cb
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56251709"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57329901"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-profile-concepts"></a>SDK - conceitos de perfil de API de proteção do Microsoft Information Protection
 

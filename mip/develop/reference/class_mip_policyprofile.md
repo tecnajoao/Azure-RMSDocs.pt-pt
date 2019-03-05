@@ -1,18 +1,18 @@
 ---
 title: classe mip::PolicyProfile
 description: Documenta a classe mip::policyprofile da Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: be28afc75bb88d63f0dbccd10187e317bd847d1f
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: c604cbb097c8604dffec6fc4dbe84a94e6b6203e
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252542"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333285"
 ---
 # <a name="class-mippolicyprofile"></a>classe mip::PolicyProfile 
 [PolicyProfile](class_mip_policyprofile.md) classe é a classe de raiz para as operações do Microsoft Information Protection a utilizar. Um aplicativo típico irá apenas precisa de um [PolicyProfile](class_mip_policyprofile.md) , mas ele pode criar vários perfis, se for necessário.

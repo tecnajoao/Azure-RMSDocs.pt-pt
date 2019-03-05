@@ -1,18 +1,18 @@
 ---
 title: Conceitos - observadores de política de API no SDK do MIP.
 description: O SDK de MIP foi concebido para ser quase que totalmente assíncrono. Este artigo ajuda-o a compreender como os observadores de API de política são implementados e utilizados para assincronicidade.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
-ms.openlocfilehash: d822a8ea57def13d2f04ac1c18b22ff629e413ad
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: e8f2e2c775270f81489778ced852a7bb26b5ad1c
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56251181"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330292"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-observers"></a>SDK - observadores de política de API do Microsoft Information Protection
 

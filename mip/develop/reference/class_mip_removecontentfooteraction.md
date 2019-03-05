@@ -1,18 +1,18 @@
 ---
 title: class mip::RemoveContentFooterAction
 description: Documenta a classe mip::removecontentfooteraction da Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: cff3c01b01f5e02f7df3376fc2cb10fc0a6858fa
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 006c8ad45da57b0223b35084456e8917411802f3
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259556"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330241"
 ---
 # <a name="class-mipremovecontentfooteraction"></a>class mip::RemoveContentFooterAction 
 Uma classe de ação que especifica a remover o rodapé de conteúdo do documento.

@@ -1,18 +1,18 @@
 ---
 title: Conceitos - manipuladores de arquivo no SDK do MIP.
 description: Este artigo ajuda-o a compreender como os manipuladores de API de ficheiros são criadas e utilizadas para chamar operações.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
-ms.openlocfilehash: b021f5a05ad484b32af3a189c10522564da6d86d
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: 7e436d27ae48ee6d3589faaf55943b8ffd314450
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254854"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333744"
 ---
 # <a name="microsoft-information-protection-sdk---file-handler-concepts"></a>SDK - conceitos de manipulador de arquivo do Microsoft Information Protection
 

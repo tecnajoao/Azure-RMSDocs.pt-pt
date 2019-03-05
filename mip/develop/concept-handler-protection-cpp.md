@@ -1,18 +1,18 @@
 ---
 title: Conceitos - manipuladores de proteção no SDK do MIP.
 description: Este artigo ajuda-o a compreender como os manipuladores de API de proteção são criados e usados para chamar operações.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
-ms.openlocfilehash: e345a98e69c0173ccda7b80c21a5c2c7aa9af5a3
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: dd38b8e6c9deb45b4ce7df9ec3363ac8036a7ef4
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253034"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330190"
 ---
 # <a name="microsoft-information-protection-sdk---protection-handler-concepts"></a>SDK - conceitos de manipulador de proteção do Microsoft Information Protection
 

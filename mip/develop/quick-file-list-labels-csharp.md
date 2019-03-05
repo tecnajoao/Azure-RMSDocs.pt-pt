@@ -1,18 +1,18 @@
 ---
 title: Início rápido - etiquetas de sensibilidade da lista de um inquilino de proteção de informações da Microsoft (MIP) com o SDK de MIP C# Wrapper
 description: Um guia de introdução mostra-lhe como utilizar o SDK do Microsoft Information Protection C# wrapper para listar as etiquetas de sensibilidade no seu inquilino.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/04/2019
-ms.author: bryanla
-ms.openlocfilehash: f7071952693e947977278b39d28a8ee985d5834e
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: b692e78cbebe9b8657b0479a1d343453f5f07348
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253851"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333335"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Início rápido: List sensitivity labels (C#) (Listar etiquetas de confidencialidade [C#])
 

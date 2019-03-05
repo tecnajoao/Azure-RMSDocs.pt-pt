@@ -1,18 +1,18 @@
 ---
 title: classe mip::FileProfile
 description: Documenta a classe mip::fileprofile da Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: f6578d4bb3a8926b38b02b06ca2ca525dc524582
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 4bdd96e7f9f414062d969de1ffaf7195ad71d214
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256333"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57329408"
 ---
 # <a name="class-mipfileprofile"></a>classe mip::FileProfile 
 [FileProfile](class_mip_fileprofile.md) classe é a classe de raiz para as operações do Microsoft Information Protection a utilizar.

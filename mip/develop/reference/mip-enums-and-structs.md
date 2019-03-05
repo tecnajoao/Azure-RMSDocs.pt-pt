@@ -1,18 +1,18 @@
 ---
 title: SDK de MIP para estruturas de referência do C++ e enumerações
 description: Documentação de referência para as estruturas de MIP C++ SDK e enums.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 04abc581d94c0b05cf19d01362f7b416155a372c
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 2c0c600cc6a77b656d5e5dd1e86401fb4a9a66e4
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256112"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333199"
 ---
 # <a name="summary"></a>Resumo
 

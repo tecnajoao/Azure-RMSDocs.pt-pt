@@ -5,14 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/30/2019
+ms.date: 03/01/2019
 ms.author: mbaldwin
-ms.openlocfilehash: c61b2c08cf0cb0fc59942bad3b5bb3fdbc47832c
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: db815d17303abb0fb98b6e5936fbcd1f975d74f0
+ms.sourcegitcommit: 50e6b94bdb387cfa35d0e565b1e89f9e69563a63
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331976"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57581747"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Instalação do SDK de proteção de informações da Microsoft (MIP) e configuração 
 
@@ -219,6 +219,17 @@ Se já tiver um IPIA assinado e quiser adicionar um novo *ID da Aplicação* a u
 - Contactos, e-mail e telefone da empresa para Correspondência em Situações Críticas
 
 Após o envio da mensagem de e-mail, permitir que até 72 horas para receber um aviso de receção.
+
+## <a name="ensure-your-app-has-the-required-runtime"></a>Certifique-se de que a aplicação tem o tempo de execução necessário
+
+> [!NOTE]
+> Este passo é necessário apenas se implementar a aplicação a uma máquina sem o Visual Studio, ou se a instalação do Visual Studio não possui os componentes de tempo de execução Visual C++.
+
+As aplicações criadas com o SDK de MIP requerem o tempo de execução do Visual C++ 2015 ou 2017 do Visual C++ para ser instalado, se ainda não estiver presente.
+- [Atualização redistribuível do Microsoft Visual C++ 2015 3](https://www.microsoft.com/download/details.aspx?id=53587)
+- [Microsoft Visual C++ Redistributable para Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#microsoft-visual-c-redistributable-for-visual-studio-2017)
+
+Elas funcionarão apenas se a aplicação foi criada como versão. Se o aplicativo for criado como Debug, em seguida, a depuração de tempo de execução do Visual C++ DLLs devem ser incluídas com a aplicação ou instalado na máquina. 
 
 ## <a name="next-steps"></a>Próximos Passos
 

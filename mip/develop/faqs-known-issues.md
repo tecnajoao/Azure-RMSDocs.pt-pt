@@ -5,14 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: troubleshooting
 ms.collection: M365-security-compliance
-ms.date: 10/19/2018
+ms.date: 03/05/2019
 ms.author: mbaldwin
-ms.openlocfilehash: e548b2b6e9b32899ceff693312cf510b9fff74aa
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 97b9fdb53c103eac94e62ddb6438c57e4c9f45cc
+ms.sourcegitcommit: 50e6b94bdb387cfa35d0e565b1e89f9e69563a63
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333556"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57581730"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Problemas e perguntas frequentes do SDK de proteção de informações da Microsoft (MIP)
 
@@ -20,7 +20,9 @@ Este artigo fornece respostas a perguntas mais frequentes (FAQs) e orientações
 
 ## <a name="frequently-asked-questions"></a>Perguntas Mais Frequentes 
 
-### <a name="question-how-does-the-sdk-handle-strings-and-what-string-type-should-i-be-using-in-my-code"></a>Pergunta: como é que as cadeias de caracteres de identificador do SDK e o tipo de cadeia de caracteres deve ser usando em meu código?
+### <a name="sdk-string-handling"></a>Manipulação de cadeia de caracteres SDK
+
+**Pergunta**: Como o SDK manipular cadeias de caracteres, e que tipo de cadeia de caracteres deve eu estar usando em meu código?
 
 O SDK se destina a ser utilizada para várias plataformas e usa [UTF-8 (Unicode Transformation Format - 8 bits)](https://wikipedia.org/wiki/UTF-8) para a manipulação de cadeia de caracteres. Documentação de orientação específica depende da plataforma que está a utilizar:
 
@@ -34,14 +36,24 @@ O SDK se destina a ser utilizada para várias plataformas e usa [UTF-8 (Unicode 
 
 ### <a name="error-file-format-not-supported"></a>Erro: "Formato de ficheiro não suportado"  
 
-| Erro | Solução |
-|-|-|
-|*Formato de ficheiro não suportado*| Esta exceção resulta de tentar proteger ou identifique um ficheiro PDF, que foi assinado digitalmente ou protegidos por senha. Ver [novo suporte para encriptação de PDF com proteção de informações do Microsoft](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) para obter mais informações sobre a proteção e etiquetagem ficheiros PDF.|
+**Pergunta**: Por que motivo recebo o seguinte erro ao tentar proteger ou identifique um ficheiro PDF?
+
+> Formato de ficheiro não suportado
+
+Esta exceção resulta de tentar proteger ou identifique um ficheiro PDF que foram assinado digitalmente ou protegidos por senha. Ver [novo suporte para encriptação de PDF com proteção de informações do Microsoft](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) para obter mais informações sobre a proteção e etiquetagem ficheiros PDF.
 
 ### <a name="error-failed-to-parse-the-acquired-compliance-policy"></a>Erro: "Falha ao analisar a política de conformidade adquirida"  
 
-Transferiu o SDK de MIP e executou os aplicativos de exemplo. Utilize o exemplo de ficheiro para experimentar listar todas as etiquetas, mas o erro seguinte:
+**Pergunta**: Por que obtenho o erro seguinte depois de baixar o SDK de MIP e tentar utilizar o exemplo de ficheiro para listar todas as etiquetas?
 
-| Erro | Solução |
-|-|-|
-|*Algo ruim aconteceu: Falha ao analisar a política de conformidade adquirida. Falhou com o: [classe mip::CompliancePolicyParserException] marca não encontrado: política, NodeType: 15, nome: Não encontrar o nome, valor:, predecessores: <SyncFile> <Content>, correlationId: [34668a40-blll-4ef8-b2af-00005aa674z9]*| Isto indica que ainda não migrados suas etiquetas do Azure Information Protection, para a experiência unificada de etiquetagem. Siga [como migrar as etiquetas do Azure Information Protection para o Centro de conformidade e segurança do Office 365](/azure/information-protection/configure-policy-migrate-labels) para migrar as etiquetas, em seguida, criar uma política de etiqueta no Centro de conformidade e de segurança do Office 365. Quando terminar, o exemplo será executado com êxito.|
+> Algo ruim aconteceu: Falha ao analisar a política de conformidade adquirida. Falhou com o: [classe mip::CompliancePolicyParserException] marca não encontrado: política, NodeType: 15, nome: Não encontrar o nome, valor:, predecessores: <SyncFile> <Content>, correlationId: [34668a40-blll-4ef8-b2af-00005aa674z9]
+
+Isto indica que ainda não tiver migrado as etiquetas do Azure Information Protection para a experiência unificada de etiquetagem. Siga [como migrar as etiquetas do Azure Information Protection para o Centro de conformidade e segurança do Office 365](/azure/information-protection/configure-policy-migrate-labels) para migrar as etiquetas, em seguida, criar uma política de etiqueta no Centro de conformidade e de segurança do Office 365. 
+
+### <a name="error-systemcomponentmodelwin32exception-loadlibrary-failed"></a>Erro: "System.ComponentModel.Win32Exception: LoadLibrary falhou"
+
+**Pergunta**: Por que obtenho o erro seguinte ao utilizar o Wrapper do .NET SDK MIP?
+
+> System.ComponentModel.Win32Exception: LoadLibrary falhou para: [sdk_wrapper_dotnet.dll] ao chamar MIP. Initialize ().
+
+Seu aplicativo não tem o tempo de execução necessário, ou não foi criado como versão. Ver [Certifique-se de que a aplicação tem o tempo de execução necessário](setup-configure-mip.md#ensure-your-app-has-the-required-runtime) para obter mais informações. 

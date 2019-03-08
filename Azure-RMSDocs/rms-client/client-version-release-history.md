@@ -4,18 +4,18 @@ description: Veja o que há de novo ou alterado numa versão do cliente do Azure
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/13/2019
+ms.date: 03/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bdc92908e04cd0568a7417a269168b34058790e3
-ms.sourcegitcommit: abb08a85dfd7a0f100b381934a3a211da6727178
+ms.openlocfilehash: 9240e0a8fc8f70fb38d9984ae74ee039d0f52e39
+ms.sourcegitcommit: 872fe78c482e8c2c57c3653919edeba745411cba
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828673"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57510059"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: Política de histórico e suporte de lançamento de versão
 
@@ -49,7 +49,7 @@ Se tiver uma versão 1 do cliente posterior 1.41.51.0, é uma versão de pré-vi
 > [!TIP]
 > Interessado na avaliação do Azure Information Protection unified cliente etiquetagem porque as etiquetas são publicadas a partir do Centro de conformidade e segurança do Office 365? Consulte [do Azure Information Protection unified cliente etiquetagem: Informações de lançamento de versão](unifiedlabelingclient-version-release-history.md).
 
-**Lançado**: 01/15/2019
+**Lançado**: 03/05/2019
 
 Esta versão inclui a versão 1.0.3592.627 do cliente RMS MSIPC.
 
@@ -77,6 +77,11 @@ Esta versão inclui a versão 1.0.3592.627 do cliente RMS MSIPC.
     - A definição de palavra-passe de publicação do Azure
     - Chave de conta de armazenamento do Azure (genérico)
 
+- Novas definições de cliente avançado que implementam as mensagens pop-up no Outlook que pode avisar, justificar ou bloco de e-mails enviados. [Mais informações](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+
+- Nova definição de cliente avançado que é aplicável apenas ao configurar a política de configuração para não exibir permissões personalizadas: Quando existe um ficheiro que está protegido com permissões personalizadas, exiba a opção de permissões personalizadas no Explorador de ficheiros para os utilizadores podem ver e alterá-los (se tiverem permissões para alterar as definições de proteção). [Mais informações](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
+
+
 **Correções**:
 
 - Marcas visuais novos consistentemente são aplicadas quando um utilizador adiciona duas novas secções para um documento do Word e, em seguida, relabels o documento.
@@ -90,6 +95,12 @@ Esta versão inclui a versão 1.0.3592.627 do cliente RMS MSIPC.
 - O cliente do Azure Information Protection exiba corretamente as etiquetas que foram aplicadas pelo [clientes que suportam a etiquetagem unificada](../configure-policy-migrate-labels.md#clients-that-support-unified-labeling).
 
 - Documentos aberto corretamente no Office sem uma mensagem de recuperação após a proteção foi removida pelo Explorador de ficheiros e com o botão direito, PowerShell e a deteção de impressão.
+
+- Quando utiliza a definição para definir de cliente avançado uma [etiqueta predefinida para o Outlook](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook), pode aplicar uma etiqueta de principal com subetiquetas quando todos os esses subetiquetas estão desativadas para o utilizador.
+
+- Quando utiliza a [definição de política](../configure-policy-settings.md) **para mensagens de e-mail com anexos, aplique uma etiqueta que corresponda à classificação mais elevada desses anexos** e a etiqueta com a classificação mais alta é configurado para permissões definidas pelo utilizador, o resultado anteriormente era que a etiqueta foi aplicada à mensagem de e-mail, mas não era a proteção. Agora:
+    - Quando a etiqueta definida pelo utilizador permissões incluem Outlook (não reencaminhar): Aplica essa etiqueta e a proteção não reencaminhar para o e-mail.
+    - Quando a etiqueta definida pelo utilizador permissões são apenas para o Word, Excel, PowerPoint e o Explorador de ficheiros: Não se aplicam a etiqueta e não são aplicáveis a toda a proteção para o e-mail.
 
 **Alterações adicionais:**
 

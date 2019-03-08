@@ -4,19 +4,19 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/27/2019
+ms.date: 03/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 59395fe48eff2a3b1df0ae25dded1a66af9f453f
-ms.sourcegitcommit: f19ee03fd3f6f39df1a28ab389b43fbd8f9e9072
+ms.openlocfilehash: 48280e4654d9ab5ce999dcc934791ff408ca5691
+ms.sourcegitcommit: 503b8330efbecfc4dce204ffe036a7911a35691d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56891099"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379955"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas do cliente do Azure Information Protection
 
@@ -50,12 +50,17 @@ Algumas destas definições requerem a edição do registo e algumas utilizam de
 |CompareSubLabelsInAttachmentAction|[Ativar o suporte de ordem para subetiquetas](#enable-order-support-for-sublabels-on-attachments) 
 |EnableBarHiding|[Ocultar permanentemente a barra do Azure Information Protection](#permanently-hide-the-azure-information-protection-bar)|
 |EnableCustomPermissions|[Tornar as opções de permissões personalizadas disponíveis ou não está disponível para utilizadores](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
+|EnableCustomPermissionsForCustomProtectedFiles|[Para ficheiros protegidos com permissões personalizadas, apresentar sempre permissões personalizadas aos utilizadores no Explorador de ficheiros](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnablePDFv2Protection|[Não proteger ficheiros PDF com a norma ISO para a encriptação de PDF](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
 |LabelbyCustomProperty|[Migrar as etiquetas de Secure Islands e outras soluções de etiquetas](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[Configurar uma etiqueta para aplicar a proteção de S/MIME no Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |LogLevel|[Alterar o nível de registo de local](#change-the-local-logging-level)
+|OutlookBlockUntrustedCollaborationLabel|[Implementar as mensagens pop-up no Outlook que avisar, justificar ou bloquear mensagens de e-mail a ser enviadas](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|OutlookCollaborationTrustedDomains|[Implementar as mensagens pop-up no Outlook que avisar, justificar ou bloquear mensagens de e-mail a ser enviadas](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookDefaultLabel|[Definir uma etiqueta predefinida diferente para o Outlook](#set-a-different-default-label-for-outlook)|
+|OutlookJustifyUntrustedCollaborationLabel|[Implementar as mensagens pop-up no Outlook que avisar, justificar ou bloquear mensagens de e-mail a ser enviadas](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookRecommendationEnabled|[Ativar a classificação recomendada no Outlook](#enable-recommended-classification-in-outlook)|
+|OutlookWarnUntrustedCollaborationLabel|[Implementar as mensagens pop-up no Outlook que avisar, justificar ou bloquear mensagens de e-mail a ser enviadas](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |PostponeMandatoryBeforeSave|[Remova "Agora não" para os documentos quando utiliza a etiquetagem obrigatório](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |ProcessUsingLowIntegrity|[Desativar o nível de baixa integridade para a deteção de impressão](#disable-the-low-integrity-level-for-the-scanner)|
 |PullPolicy|[Suporte para computadores desligados](#support-for-disconnected-computers)
@@ -205,6 +210,19 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 - Valor: **TRUE** para tornar a opção de permissões personalizadas visível, ou **False** para ocultar esta opção
 
+## <a name="for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer"></a>Para ficheiros protegidos com permissões personalizadas, apresentar sempre permissões personalizadas aos utilizadores no Explorador de ficheiros
+
+Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. A definição está em pré-visualização e requer a versão de pré-visualização do cliente.
+
+Quando configura a [definição de política](../configure-policy-settings.md) **disponibilizar a opção de permissões personalizadas para utilizadores** ou o equivalente definição de cliente avançado na secção anterior, os utilizadores não são capazes de ver ou alterar o permissões personalizadas que já estiverem definidas num documento protegido. 
+
+Quando criar e configurar este cliente avançado definição, os utilizadores podem ver e alterar as permissões personalizadas para um documento protegido, quando utilizar o Explorador de ficheiros e o ficheiro com o botão direito. O **permissões personalizadas** opção a partir do **proteger** botão da faixa de opções do Office permanece oculto.
+
+Para configurar esta definição avançada, introduza as cadeias seguintes:
+
+- Chave: **EnableCustomPermissionsForCustomProtectedFiles**
+
+- Valor: **Verdadeiro**
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Ocultar permanentemente a barra do Azure Information Protection
 
@@ -250,6 +268,98 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 - Valor: **Verdadeiro**
 
+## <a name="implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent"></a>Implementar as mensagens pop-up no Outlook que avisar, justificar ou bloquear mensagens de e-mail a ser enviadas
+
+Esta configuração utiliza várias [definições de cliente avançadas](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. Esta configuração está em pré-visualização e podem ser alteradas.
+
+Quando cria e configurar as seguintes definições de cliente avançado, os utilizadores verão mensagens pop-up no Outlook, que podem avisá-los antes de enviar uma mensagem de e-mail, peça-lhe para fornecer uma justificação por que eles estão a enviar uma mensagem de e-mail ou impedi-los de enviar um e-mail para qualquer um dos os seguintes cenários:
+
+- **O e-mail ou anexo do e-mail tem uma etiqueta específica**:
+    - O anexo pode ser qualquer tipo de ficheiro
+
+- **O e-mail ou o anexo do e-mail não tem uma etiqueta**:
+    - O anexo pode ser um documento do Office ou o documento PDF
+
+Quando estas condições são cumpridas e endereço de e-mail do destinatário não está incluído numa lista de nomes de domínio permitido que tenha especificado, o utilizador verá uma mensagem de pop-up com uma das seguintes ações:
+
+- **Warn**: O utilizador pode confirmar e enviar ou Cancelar.
+
+- **Justificar**: É pedido ao utilizador uma justificação (opções predefinidas ou de forma livre).  O utilizador pode, em seguida, enviar ou cancelar a mensagem de e-mail. O texto de justificação é escrito para o x-cabeçalho de e-mail, para que possa ser lido por outros sistemas. Por exemplo, serviços de (DLP) de prevenção de perda de dados.
+
+- **Bloco**: O utilizador é impedido de enviar o e-mail, enquanto a condição permanece. A mensagem inclui a razão para bloquear o e-mail, para que o utilizador pode resolver o problema. Por exemplo, remova a destinatários específicos ou identifique o e-mail. 
+
+
+### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>Para implementar o aviso, justificar ou bloquear as mensagens pop-up para etiquetas específicas:
+
+Para implementar as mensagens pop-up para procurar etiquetas de específicas, deve conhecer o ID de etiqueta para essas etiquetas. O valor de ID de etiqueta é apresentado no **etiqueta** painel, quando ver ou configurar a política do Azure Information Protection no portal do Azure. Para os ficheiros que tenham as etiquetas aplicadas, também pode executar o [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) cmdlet do PowerShell para identificar o ID de etiqueta (MainLabelId ou SubLabelId). Quando uma etiqueta tem subetiquetas, sempre Especifica o ID de apenas uma subetiqueta e não a etiqueta principal.
+
+Crie um ou mais das seguintes definições de cliente avançado com as seguintes chaves. Para os valores, especifique um ou mais etiquetas por suas IDs, cada um separado por vírgulas.
+
+Valor de exemplo para vários IDs de etiqueta como uma cadeia separada por vírgulas: `dcf781ba-727f-4860-b3c1-73479e31912b,1ace2cc3-14bc-4142-9125-bf946a70542c,3e9df74d-3168-48af-8b11-037e3021813f`
+
+
+- Avise mensagens:
+    
+    - Chave: **OutlookWarnUntrustedCollaborationLabel**
+    
+    - Valor: \< **IDs, separados por vírgulas de etiqueta**>
+
+- Mensagens de justificação:
+    
+    - Chave: **OutlookJustifyUntrustedCollaborationLabel**
+    
+    - Valor: \< **IDs, separados por vírgulas de etiqueta**>
+
+- Bloquear mensagens:
+    
+    - Chave: **OutlookBlockUntrustedCollaborationLabel**
+    
+    - Valor: \< **IDs, separados por vírgulas de etiqueta**>
+
+
+### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label"></a>Para implementar o aviso, justificar ou bloquear as mensagens pop-up para e-mails e anexos que não tenham uma etiqueta:
+
+Crie o seguinte avançada de definição de cliente com um dos seguintes valores:
+
+- Avise mensagens:
+    
+    - Chave: **OutlookUnlabeledCollaborationAction**
+    
+    - Valor: **Warn**
+
+- Mensagens de justificação:
+    
+    - Chave: **OutlookUnlabeledCollaborationAction**
+    
+    - Valor: **Justificar**
+
+- Bloquear mensagens:
+    
+    - Chave: **OutlookUnlabeledCollaborationAction**
+    
+    - Valor: **Bloquear**
+
+- Desative estas mensagens:
+    
+    - Chave: **OutlookUnlabeledCollaborationAction**
+    
+    - Valor: **Off**
+
+### <a name="to-specify-the-allowed-domain-names-for-recipients-exempt-from-the-pop-up-messages"></a>Para especificar os nomes de domínio permitido para isentar as mensagens pop-up de destinatários
+
+Quando especificar um nome de domínio num definição de cliente avançado, os utilizadores não veem as mensagens pop-up para destinatários que têm de ter esse nome de domínio incluído no respetivo endereço de e-mail. Neste caso, os e-mails são enviados sem interrupção. Para especificar vários domínios, tem de adicioná-los como uma cadeia única, separada por vírgulas.
+
+É uma configuração típica apresentar as mensagens pop-up apenas para os destinatários que são externas à sua organização ou que não estão autorizados parceiros para a sua organização. Neste caso, especificar todos os domínios de e-mail que são utilizados pela sua organização e pelos seus parceiros.
+
+Crie a seguinte chave de definição de cliente avançado. Para o valor, especifique um ou mais domínios, cada um separado por vírgulas.
+
+Valor de exemplo para múltiplos domínios como uma cadeia separada por vírgulas: `contoso.com,fabrikam.com,litware.com`
+
+- Chave: **OutlookCollaborationTrustedDomains**
+
+- Valor: **\<** nomes de domínio, separados por vírgulas**>**
+
+Por exemplo, se especificar o nome de domínio contoso.com, os utilizadores não veem as mensagens pop-up no Outlook quando enviam um e-mail para john@sales.contoso.com.
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Definir uma etiqueta predefinida diferente para o Outlook
 
@@ -357,6 +467,8 @@ Para o scanner do Azure Information Protection utilizar a nova definição, é n
 
 Para obter mais informações sobre a nova criptografia de PDF, consulte a mensagem de blogue [novo suporte para encriptação de PDF com proteção de informações do Microsoft](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757).
 
+Para obter uma lista de leitores PDF que suportam a norma ISO para a encriptação de PDF e os leitores que suportam formatos mais antigos, consulte [leitores de PDF suportadas para o Microsoft Information Protection](protected-pdf-readers.md).
+
 ### <a name="to-convert-existing-ppdf-files-to-protected-pdf-files"></a>Para converter ficheiros. ppdf existentes para os ficheiros. pdf protegidos
 
 Quando o cliente do Azure Information Protection tiver baixado a política de cliente com a nova definição, pode utilizar comandos do PowerShell para converter os arquivos existentes. ppdf para ficheiros. pdf protegidos que utilizam a norma ISO para a encriptação de PDF. 
@@ -454,7 +566,7 @@ Neste exemplo:
 A definição de cliente avançado:
 
     
-|Nome|Valor|
+|Name|Valor|
 |---------------------|---------|
 |LabelbyCustomProperty|1ace2cc3-14bc-4142-9125-bf946a70542c, "etiqueta Secure Islands é confidencial", classificação, confidencial|
 
@@ -489,7 +601,7 @@ Neste exemplo:
 A definição de cliente avançado:
 
     
-|Nome|Valor|
+|Name|Valor|
 |---------------------|---------|
 |LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d, "a etiqueta de Secure Islands contém interno", classificação,. \*Interno.\*|
 

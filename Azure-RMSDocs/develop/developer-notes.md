@@ -2,8 +2,8 @@
 title: Orientação para programadores sobre o SDK 2.1 do Azure Information Protection | Documentos da Microsoft
 description: Uma coleção de tópicos com instruções sobre como programar o SDK 2.1 do AIP
 keywords: ''
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.assetid: 5A9F04FD-0FCD-482F-8671-36FE93B783B0
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: c6f20fe10580e5dc6dd56912e53b878940598f3a
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: c362c866233024897329cfa72930c8529924480f
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255891"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333148"
 ---
 # <a name="developer-guidance"></a>Orientação para programadores
 

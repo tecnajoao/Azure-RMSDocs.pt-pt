@@ -2,8 +2,8 @@
 title: Introdução | Azure RMS
 description: O guia de introdução para uma primeira aplicação é efetuado através de guias de configuração do ambiente de desenvolvimento para cada um dos sistemas operativos/plataformas.
 keywords: ''
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.assetid: 9f4cbd16-58e5-421f-a472-8d279e952760
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 0b849a849e1d217fe53b9bbd55cc9ad5270702fc
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: d23664686da33cbc10d02d45aeeb9fe0e99ed10b
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252984"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333178"
 ---
 # <a name="get-started"></a>Introdução
 

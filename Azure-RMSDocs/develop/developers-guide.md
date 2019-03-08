@@ -1,8 +1,8 @@
 ---
 title: Guia para Programadores do Azure Information Protection
 description: Os programadores podem utilizar o Azure Information Protection para proteger e gerir ficheiros de todos os tipos
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 10/11/2017
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 628e93338f276d3b297a36ee3d795227782ff17f
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: d9f1a3578a5da4abec6d61aa849388573dec3fe1
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257978"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57331992"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guia para Programadores do Azure Information Protection
 

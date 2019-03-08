@@ -4,17 +4,17 @@ description: Pode proteger os seus documentos e e-mails mais confidenciais ao co
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 03/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 11063a208e21ef121ba0a3a5007c76635f63af17
-ms.sourcegitcommit: d1aac7dc96f5986511f73ec035400954be24e723
+ms.openlocfilehash: 110cf52834ef7c2075539f15238c738aa61a16f7
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017154"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332315"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Como configurar uma etiqueta para a proteção do Rights Management
 
@@ -73,7 +73,7 @@ Exchange tem de ser configurada para o Azure Information Protection antes dos ut
         
         Se utilizadores não têm permissões para remover a proteção do Rights Management e selecionarem uma etiqueta que está configurada com esta **remover proteção** opção, verão a mensagem seguinte: **O Azure Information Protection não pode aplicar esta etiqueta. Se este problema persistir, contacte o seu administrador.**
 
-4. Se tiver selecionado **Protect**, o **proteção** painel abre automaticamente se uma das outras opções foram selecionada. Se este painel novo não abrir automaticamente, selecione **proteção**:
+4. Se tiver selecionado **Protect**, o **proteção** painel abre automaticamente se uma das outras opções selecionada anteriormente. Se este painel novo não abrir automaticamente, selecione **proteção**:
     
     ![Configurar a proteção para uma etiqueta do Azure Information Protection](./media/info-protect-protection-bar-configured.png)
 
@@ -135,7 +135,7 @@ Exchange tem de ser configurada para o Azure Information Protection antes dos ut
     
      |Definição|Mais informações|Definição recomendada
      |-----------|--------------------|--------------------|
-     |**expiração de conteúdos**|Defina uma data ou número de dias para quando documentos ou e-mails protegidos por estas definições não devem ser aberto para os utilizadores selecionados. Pode especificar uma data ou um número de dias, começando pelo momento em que a proteção foi aplicada ao conteúdo.<br /><br />Quando especificar uma data, a mesma é efetiva a partir da meia-noite no seu fuso horário atual.|**O conteúdo nunca expira** exceto se o conteúdo tiver um requisito controlado por um tempo específico.|
+     |**expiração de conteúdos**|Defina uma data ou número de dias para quando os documentos que estão protegidos por estas definições não devem ser aberto para os utilizadores selecionados. Para os e-mails, expiração sempre não é imposta devido à colocação em cache mecanismos usados por alguns clientes de e-mail.<br /><br />Pode especificar uma data ou um número de dias, começando pelo momento em que a proteção foi aplicada ao conteúdo.<br /><br />Quando especificar uma data, a mesma é efetiva a partir da meia-noite no seu fuso horário atual.|**O conteúdo nunca expira** exceto se o conteúdo tiver um requisito controlado por um tempo específico.|
      |**Permitir acesso offline**|Utilize esta definição para equilibrar quaisquer requisitos de segurança que tem (inclui acesso após revogação) com a capacidade de os utilizadores selecionados abrirem o conteúdo protegido quando não têm uma ligação à Internet.<br /><br />Se especificar que o conteúdo não está disponível sem uma ligação à Internet ou que os conteúdos só estão disponíveis para um número especificado de dias, quando esse limiar for atingido, estes utilizadores têm possível reautenticar e respetivo acesso é registado. Quando isto acontecer, se as respetivas credenciais não estiverem colocadas em cache, é pedido aos utilizadores que iniciem sessão antes de poderem abrir o documento ou e-mail.<br /><br />Para além da reautenticação, a política e a associação de grupo do utilizador é reavaliada. Isto significa que os utilizadores podem experienciar resultados de acesso diferentes para o mesmo documento ou e-mail, se existirem alterações na associação de política ou grupo resultantes da última vez a que acederam ao conteúdo. Tal pode retirar o acesso se o documento tiver sido [revogado](./rms-client/client-track-revoke.md).|Dependendo do nível de confidencialidade do conteúdo:<br /><br />- **Número de dias em que o conteúdo está disponível sem ligação à Internet** = **7** para dados empresariais confidenciais que podem causar danos ao negócio se forem partilhados com pessoas não autorizadas. Esta recomendação proporciona um bom equilíbrio entre flexibilidade e segurança. Os exemplos incluem contratos, relatórios de segurança, resumos de previsões e dados de conta de vendas.<br /><br />- **Nunca** para dados empresariais altamente confidenciais que iriam causar danos à empresa se fossem partilhados com pessoas não autorizadas. Esta recomendação prioriza a segurança sobre a flexibilidade e garante que se o documento tiver sido revogado, todos os utilizadores autorizados imediatamente não podem abrir o documento. Exemplos: informações dos funcionários e clientes, palavras-passe, código de origem e relatórios financeiros previamente anunciados.|
     
      Quando terminar de configurar as permissões e definições, clique em **OK**. 
@@ -292,6 +292,20 @@ Esta configuração tem a vantagem de que não tem de especificar os utilizadore
 
 6. Sobre o **rótulo** painel, selecione **guardar**.
 
+
+### <a name="example-6-label-that-applies-just-for-me-protection"></a>Exemplo 6: Etiqueta que aplica a proteção de "Apenas para mim"
+
+Esta configuração oferece o oposto de colaboração segura para documentos: Com exceção de uma [Superutilizador](configure-super-users.md), apenas a pessoa que aplica-se a etiqueta pode abrir o conteúdo protegido, sem quaisquer restrições. Esta configuração é frequentemente referida como proteção de "Apenas para mim" e é adequada quando um usuário quer salvar um arquivo para qualquer localização e ter a garantia de que apenas estes poderão abri-lo.
+
+A configuração de etiqueta é extremamente simples:
+
+1. Sobre o **proteção** painel, certifique-se **Azure (chave da cloud)** está selecionada.
+    
+2. Selecione **OK** sem selecionar todos os utilizadores ou a configuração de quaisquer definições neste painel.
+    
+    Embora seja possível configurar as definições para **expiração de conteúdos** e **permitir o acesso offline**, quando não especificar utilizadores e suas permissões, estas definições de acesso não são aplicáveis. Isso acontece porque é a pessoa que se aplica a proteção do [emissor do Rights Management](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) para o conteúdo e esta função é excluído dessas restrições de acesso.
+
+3. Sobre o **rótulo** painel, selecione **guardar**.
 
 ## <a name="next-steps"></a>Passos Seguintes
 

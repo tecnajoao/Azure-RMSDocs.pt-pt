@@ -4,17 +4,17 @@ description: Configurar as definições na política do Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/13/2019
+ms.date: 03/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 91ab0e30c0fac8f3285983f6c3b06886c0782e7d
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: 5a797fc02894c64d3801492080decf113383cb33
+ms.sourcegitcommit: 503b8330efbecfc4dce204ffe036a7911a35691d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56266068"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379887"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Como configurar as definições de política do Azure Information Protection
 
@@ -60,7 +60,8 @@ Configurar estas definições:
         
         Para tirar a ordem das subetiquetas em consideração quando utilizar esta definição de política, deve [configurar um definição de cliente avançado](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments).
         
-        Quando o anexo com a etiqueta de classificação mais alta é configurado para proteção com a definição de pré-visualização de permissões definidas pelo utilizador, a mensagem de e-mail tem o nome com a mesma classificação, mas não a proteção é aplicada.
+        Quando o anexo com a etiqueta de classificação mais alta está configurado para proteção com a definição de pré-visualização de permissões definidas pelo utilizador: – para a versão de disponibilidade geral do cliente: A mensagem de e-mail tem o nome com a mesma classificação, mas não a proteção é aplicada.
+            -Para a versão de pré-visualização do cliente: Quando a etiqueta definida pelo utilizador permissões incluem Outlook (não reencaminhar), que a etiqueta é aplicada e não reencaminhar proteção é aplicada à mensagem de e-mail. Quando as permissões definidas pelo usuário da etiqueta apenas para o Word, Excel, PowerPoint e o Explorador de ficheiros, essa etiqueta não é aplicada à mensagem de e-mail e nenhuma delas é a proteção.
     
    - **Apresentar a barra de Information Protection nas aplicações do Office**: Quando esta definição estiver desativada, os utilizadores não é possível selecionar etiquetas a partir de uma barra no Word, Excel, PowerPoint e Outlook. Em vez disso, os utilizadores devem selecionar etiquetas a partir da **Protect** botão na faixa de opções. Quando esta definição está ativado, os utilizadores podem selecionar etiquetas a partir da barra ou no botão.
         

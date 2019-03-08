@@ -1,8 +1,8 @@
 ---
 title: Novidades e notas de versão
 description: Descreve as alterações importantes e de recursos desta e de versões anteriores.
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 12/11/2018
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: e5f6ea66a3cb8b6a0447cc116552d94cd0f4f669
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 22dbe505020d7ed65318fcdc173a7e659791b606
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257087"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332077"
 ---
 # <a name="whats-new-and-release-notes"></a>Novidades e Notas de versão
 

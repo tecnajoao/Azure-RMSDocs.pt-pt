@@ -4,19 +4,19 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/06/2019
+ms.date: 03/10/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 48280e4654d9ab5ce999dcc934791ff408ca5691
-ms.sourcegitcommit: 503b8330efbecfc4dce204ffe036a7911a35691d
+ms.openlocfilehash: 20c0fbd26a8884524e747a0ebc912d7a6dfb2f48
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379955"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57898104"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas do cliente do Azure Information Protection
 
@@ -212,7 +212,7 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 ## <a name="for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer"></a>Para ficheiros protegidos com permissões personalizadas, apresentar sempre permissões personalizadas aos utilizadores no Explorador de ficheiros
 
-Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. A definição está em pré-visualização e requer a versão de pré-visualização do cliente.
+Esta configuração utiliza uma [definição avançada de cliente](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. Esta definição está em pré-visualização e requer a versão de pré-visualização do cliente.
 
 Quando configura a [definição de política](../configure-policy-settings.md) **disponibilizar a opção de permissões personalizadas para utilizadores** ou o equivalente definição de cliente avançado na secção anterior, os utilizadores não são capazes de ver ou alterar o permissões personalizadas que já estiverem definidas num documento protegido. 
 
@@ -270,14 +270,14 @@ Para configurar esta definição avançada, introduza as cadeias seguintes:
 
 ## <a name="implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent"></a>Implementar as mensagens pop-up no Outlook que avisar, justificar ou bloquear mensagens de e-mail a ser enviadas
 
-Esta configuração utiliza várias [definições de cliente avançadas](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. Esta configuração está em pré-visualização e podem ser alteradas.
+Esta configuração utiliza várias [definições de cliente avançadas](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure. Esta definição está em pré-visualização e requer a versão de pré-visualização do cliente.
 
 Quando cria e configurar as seguintes definições de cliente avançado, os utilizadores verão mensagens pop-up no Outlook, que podem avisá-los antes de enviar uma mensagem de e-mail, peça-lhe para fornecer uma justificação por que eles estão a enviar uma mensagem de e-mail ou impedi-los de enviar um e-mail para qualquer um dos os seguintes cenários:
 
 - **O e-mail ou anexo do e-mail tem uma etiqueta específica**:
     - O anexo pode ser qualquer tipo de ficheiro
 
-- **O e-mail ou o anexo do e-mail não tem uma etiqueta**:
+- **O e-mail ou anexo do e-mail não tem uma etiqueta**:
     - O anexo pode ser um documento do Office ou o documento PDF
 
 Quando estas condições são cumpridas e endereço de e-mail do destinatário não está incluído numa lista de nomes de domínio permitido que tenha especificado, o utilizador verá uma mensagem de pop-up com uma das seguintes ações:
@@ -287,6 +287,28 @@ Quando estas condições são cumpridas e endereço de e-mail do destinatário n
 - **Justificar**: É pedido ao utilizador uma justificação (opções predefinidas ou de forma livre).  O utilizador pode, em seguida, enviar ou cancelar a mensagem de e-mail. O texto de justificação é escrito para o x-cabeçalho de e-mail, para que possa ser lido por outros sistemas. Por exemplo, serviços de (DLP) de prevenção de perda de dados.
 
 - **Bloco**: O utilizador é impedido de enviar o e-mail, enquanto a condição permanece. A mensagem inclui a razão para bloquear o e-mail, para que o utilizador pode resolver o problema. Por exemplo, remova a destinatários específicos ou identifique o e-mail. 
+
+A ação resultante é registada no registo de eventos do Windows local **Applications and Services Logs** > **do Azure Information Protection**:
+
+- Avise mensagens: ID de informações 301
+
+- Justificar mensagens: ID de informações 302
+
+- Bloquear mensagens: ID de informações 303
+
+Entrada de evento de exemplo de uma mensagem de justify:
+
+```
+Client Version: 1.48.1.0
+Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
+Item Full Path: Price list.msg
+Item Name: Price list
+Process Name: OUTLOOK
+Action: Justify
+User Justification: My manager approved sharing of this content
+Action Source: 
+User Response: Confirmed
+```
 
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>Para implementar o aviso, justificar ou bloquear as mensagens pop-up para etiquetas específicas:
@@ -503,7 +525,7 @@ O ficheiro mantém a extensão de nome de ficheiro. pdf, mas é classificado com
 
 ## <a name="support-for-files-protected-by-secure-islands"></a>Suporte para ficheiros protegidos por Secure Islands
 
-Esta opção de configuração está atualmente em pré-visualização e está sujeitas a alterações.
+Esta opção de configuração está em pré-visualização e está sujeitas a alterações.
 
 Se utilizou a Secure Islands para proteger documentos, poderá proteger texto e arquivos de imagem e ficheiros protegidos genericamente, como resultado desta proteção. Por exemplo, ficheiros que tenham uma extensão de nome de ficheiro. ptxt,. pjpeg ou. pfile. Ao editar o registo da seguinte forma, o Azure Information Protection pode descriptografar esses arquivos:
 

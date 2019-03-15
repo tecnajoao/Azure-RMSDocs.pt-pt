@@ -12,12 +12,12 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3782d2cea93b2128530e66d82e366924e92abbbc
-ms.sourcegitcommit: 95b7df32ecccdab4b80bc3a9f6433dc1c33dbbc5
+ms.openlocfilehash: daa545f2fa0ed8241c5b8c729d7e018e170933f7
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407764"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828499"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Perguntas mais frequentes sobre a proteção de dados no Azure Information Protection
 
@@ -148,7 +148,7 @@ Para obter uma lista de extensões de nome de ficheiro que são suportadas nativ
 
 ## <a name="how-do-i-configure-a-mac-computer-to-protect-and-track-documents"></a>Como configurar um computador Mac para proteger e controlar documentos?
 
-Primeiro, certifique-se de que tem instalado Office para Mac, utilizando a ligação de instalação de software de https://portal.office.com. Para obter instruções completas, consulte [transferir e instalar ou reinstalar o Office 365 ou Office 2019 num PC ou Mac](https://support.office.com/en-us/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
+Primeiro, certifique-se de que tem instalado Office para Mac, utilizando a ligação de instalação de software de https://admin.microsoft.com. Para obter instruções completas, consulte [transferir e instalar ou reinstalar o Office 365 ou Office 2019 num PC ou Mac](https://support.office.com/en-us/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
 
 Abra o Outlook e crie um perfil com a conta escolar ou profissional do Office 365. Em seguida, crie uma nova mensagem e faça o seguinte procedimento para configurar o Office, para que possa proteger documentos e e-mails com o serviço Azure Rights Management:
 

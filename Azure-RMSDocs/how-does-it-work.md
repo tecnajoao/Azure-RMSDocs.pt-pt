@@ -4,19 +4,19 @@ description: Descrição detalhada de como o Azure RMS funciona, os controlos cr
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/01/2019
+ms.date: 03/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 87cd350077f42718a6bcd86a98e9f8f1f79eb53e
-ms.sourcegitcommit: 78cc0a94b38bf8c03808109b495e0952f2cdfbd4
+ms.openlocfilehash: a60fbf43056673674f07f7dd8517213072f78aec
+ms.sourcegitcommit: 171a96af12a7e0364052d830dc14714b1bb1c95c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557651"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57734137"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Como funciona o Azure RMS? Nos bastidores
 
@@ -50,7 +50,13 @@ Mesmo que não precise se conheça detalhadamente como funciona essa tecnologia,
 
 ###### <a name="footnote-1"></a>Nota de rodapé 1 
 
-256 bits é utilizado pelo cliente do Azure Information Protection para proteção genérica e nativa quando o ficheiro tem uma extensão de nome de ficheiro. ppdf ou é um arquivo de imagem (por exemplo,. ptxt ou. pjpg) ou de texto protegido.
+256 bits é utilizado pelo cliente do Azure Information Protection nos seguintes cenários:
+
+- Proteção genérica (. pfile).
+
+- Proteção nativa para documentos PDF quando o documento foi protegido com a norma ISO para a encriptação de PDF ou o documento protegido resultante tem uma extensão de nome de ficheiro. ppdf.
+
+- Proteção nativa para ficheiros de texto ou de imagem (por exemplo,. ptxt ou. pjpg).
 
 ###### <a name="footnote-2"></a>Nota de rodapé 2
 

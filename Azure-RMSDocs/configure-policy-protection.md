@@ -4,17 +4,17 @@ description: Pode proteger os seus documentos e e-mails mais confidenciais ao co
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/05/2019
+ms.date: 03/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 110cf52834ef7c2075539f15238c738aa61a16f7
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 0057677890de2a771e93cc2f843623bbd780c31a
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332315"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57978156"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Como configurar uma etiqueta para a proteção do Rights Management
 
@@ -62,16 +62,24 @@ Exchange tem de ser configurada para o Azure Information Protection antes dos ut
     - **Não configurado**: Selecione esta opção se a etiqueta estiver configurada para aplicar a proteção e que já não quer que a etiqueta selecionada para aplicar a proteção. Em seguida, avance para o passo 11.
         
         De volta para a proteção configurada anteriormente, as definições são mantidas como um modelo de proteção arquivados e vão a ser apresentadas se alterar a opção **Protect**. Não vê este modelo no portal do Azure, mas se for necessário, pode continuar a gerir o modelo usando [PowerShell](configure-templates-with-powershell.md). Isso significa de comportamento que o conteúdo permanece acessível se tiver esta etiqueta com as definições de proteção aplicada anteriormente.
+        
+        Quando uma etiqueta com isso **não configurado** definição de proteção é aplicada:
+        
+         - Se o conteúdo foi protegido anteriormente sem utilizar uma etiqueta, essa proteção é preservada. 
+         
+         - Se o conteúdo foi protegido anteriormente com uma etiqueta, essa proteção é removida se o utilizador a que se aplicar a etiqueta tiver permissões para remover a proteção do Rights Management. Este requisito, significa que o utilizador tem de ter o **exportar** ou **controlo total** [direito de utilização](configure-usage-rights.md). Ou, de ser o proprietário do Rights Management (que concede automaticamente o direito de utilização controlo total), ou uma [Superutilizador do Azure Rights Management](configure-super-users.md).
+             
+             Se o utilizador não tem permissões para remover a proteção, não é possível aplicar a etiqueta e é apresentada a mensagem seguinte: **O Azure Information Protection não pode aplicar esta etiqueta. Se o problema persistir, contacte o administrador**. 
     
     - **Proteger**: Selecione esta opção para aplicar a proteção e, em seguida, avance para o passo 4.
     
     - **Remover a proteção**: Selecione esta opção para remover a proteção se um documento ou e-mail é protegido. Em seguida, avance para o passo 11.
         
-        De volta para a proteção configurada anteriormente, as definições são mantidas como um modelo de proteção arquivados e vão a ser apresentadas se alterar a opção **Protect**. Não vê este modelo no portal do Azure, mas se for necessário, pode continuar a gerir o modelo usando [PowerShell](configure-templates-with-powershell.md). Isso significa de comportamento que o conteúdo permanece acessível se tiver esta etiqueta com as definições de proteção aplicada anteriormente.
+        Se a proteção foi aplicada com um modelo de etiqueta ou a proteção, a proteção, as definições são mantidas como um modelo de proteção arquivados e vão a ser apresentadas se alterar a opção de volta ao **Protect**. Não vê este modelo no portal do Azure, mas se for necessário, pode continuar a gerir o modelo usando [PowerShell](configure-templates-with-powershell.md). Isso significa de comportamento que o conteúdo permanece acessível se tiver esta etiqueta com as definições de proteção aplicada anteriormente.
         
-        Tenha em atenção que para os utilizadores aplicarem uma etiqueta com esta opção, eles têm de ter permissões para remover a proteção do Rights Management. Este requisito, significa que os utilizadores têm de ter o **exportar** ou **controlo total** [direito de utilização](configure-usage-rights.md). Em alternativa, eles têm de ser o proprietário do Rights Management (que concede automaticamente o direito de utilização controlo total) ou ser um [Superutilizador do Azure Rights Management](configure-super-users.md). Os modelos do Azure Rights Management predefinidos não incluem os direitos de utilização que permitem que os utilizadores removam a proteção. 
+        Tenha em atenção que um utilizador pode aplicar com êxito uma etiqueta com esta opção, esse utilizador tem de ter permissões para remover a proteção do Rights Management. Este requisito, significa que o utilizador tem de ter o **exportar** ou **controlo total** [direito de utilização](configure-usage-rights.md). Ou, de ser o proprietário do Rights Management (que concede automaticamente o direito de utilização controlo total), ou uma [Superutilizador do Azure Rights Management](configure-super-users.md). 
         
-        Se utilizadores não têm permissões para remover a proteção do Rights Management e selecionarem uma etiqueta que está configurada com esta **remover proteção** opção, verão a mensagem seguinte: **O Azure Information Protection não pode aplicar esta etiqueta. Se este problema persistir, contacte o seu administrador.**
+        Se o utilizador, aplicar a etiqueta com esta definição não tem permissões para remover a proteção do Rights Management, não é possível aplicar a etiqueta e é apresentada a mensagem seguinte: **O Azure Information Protection não pode aplicar esta etiqueta. Se este problema persistir, contacte o seu administrador.**
 
 4. Se tiver selecionado **Protect**, o **proteção** painel abre automaticamente se uma das outras opções selecionada anteriormente. Se este painel novo não abrir automaticamente, selecione **proteção**:
     

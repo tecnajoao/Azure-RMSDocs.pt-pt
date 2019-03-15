@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: db258b5b9babaf050399bf07baa37a78b36ae21b
-ms.sourcegitcommit: 95b7df32ecccdab4b80bc3a9f6433dc1c33dbbc5
+ms.openlocfilehash: a67f95bb3d7683de901a557c22971eee6d7b0c25
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407747"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828401"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Preparar utilizadores e grupos para o Azure Information Protection
 
@@ -26,7 +26,7 @@ Antes de implementar o Azure Information Protection na sua organização, confir
 
 Existem várias formas de criar estas contas de utilizadores e grupos. Veja a seguir:
 
-- Crie os utilizadores no centro de administração do Office 365 e os grupos no centro de administração do Exchange Online.
+- Crie os utilizadores no Centro de administração do Microsoft 365 e os grupos no Centro de administração do Exchange Online.
 
 - Crie os utilizadores e os grupos no portal do Azure.
 

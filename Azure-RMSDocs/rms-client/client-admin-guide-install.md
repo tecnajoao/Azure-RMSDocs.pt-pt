@@ -4,19 +4,19 @@ description: Instruções e informações para administradores implementar o cli
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/24/2019
+ms.date: 03/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f1f111b0f5e6c534f005dae5725211f9035377ec
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 36900711d53e7bea33c1f0e8c1b03048694b212d
+ms.sourcegitcommit: e22c369e93f5069f9e197cab42cd751d3d97b136
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257081"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57682353"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guia do administrador: Instalar o cliente do Azure Information Protection para utilizadores
 
@@ -46,10 +46,13 @@ Em seguida, verifique os pré-requisitos adicionais que podem ser necessários p
     
     Resoluções de 800 x 600 e inferiores totalmente não é possível apresentar os **classificar e proteger – Azure Information Protection** caixa de diálogo quando faça duplo clique de um ficheiro ou pasta no Explorador de ficheiros.
 
-
 - Assistente de Início de Sessão do Microsoft Online Services 7.250.4303.0
     
     Os computadores com o Office 2010 necessitam do Assistente de Início de Sessão do Microsoft Online Services versão 7.250.4303.0. Esta versão está incluída na instalação do cliente. Se tiver uma versão posterior do Assistente de Início de Sessão, desinstale-a antes de instalar o cliente do Azure Information Protection. Por exemplo, verifique a versão e desinstale o Assistente de Início de Sessão através do **Painel de Controlo** > **Programa e Funcionalidades** > **Desinstalar ou alterar um programa**.
+
+- KB 4482887
+    
+    Para o Windows 10 versão 1809 apenas, sistema de operação baseia-se com mais de 17763.348, instale [dia 1 de Março de 2019 — KB4482887 (17763.348 de compilação de SO)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) para garantir a proteção de informações apresentado corretamente barra em aplicativos do Office. Esta atualização não é necessária se tiver o Office 365 1902 ou posterior.
 
 - KB 2533623
     
@@ -190,6 +193,9 @@ Se utilizar o Intune enquanto método de implementação de software, utilize es
     
     |Versão do Office|Sistema operativo|Software|Ação|
     |--------------------|--------------|----------------|---------------------|
+    |Todas as versões, exceto o Office 365 1902 ou posterior|Windows 10 versão 1809 apenas, sistema de operação baseia-se com mais de 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Instalar|
+    |Office 2013|Todas as versões suportadas|64 bits: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32 bits: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Versão: 1.0|Instalar|
+    |Office 2010|Todas as versões suportadas|[Assistente de Início de Sessão do Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Versão: 2.1|Instalar|
     |Office 2016|Todas as versões suportadas|64 bits: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32 bits: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> Versão: 1.0|Instalar|
     |Office 2013|Todas as versões suportadas|64 bits: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32 bits: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Versão: 1.0|Instalar|
     |Office 2010|Todas as versões suportadas|[Assistente de Início de Sessão do Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Versão: 2.1|Instalar|

@@ -4,17 +4,17 @@ description: Condições de uma etiqueta permitem-lhe atribuir automaticamente u
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/16/2019
+ms.date: 03/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: b7d0bf743d23083e2f9c6ca18044e26cb8c2ae6f
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: f8545491a527b8e502150cd83802b2868dd3a1da
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256571"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57829047"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Como configurar as condições para classificação automática e recomendada para o Azure Information Protection
 
@@ -32,7 +32,7 @@ Um exemplo de aviso para quando configura uma condição para aplicar uma etique
 
 Neste exemplo, o utilizador pode clicar **alterar agora** para aplicar a etiqueta recomendada ou ignorar a recomendação selecionando **dispensar**. Se o utilizador optar por ignorar a recomendação e a condição ainda se aplica quando o documento é aberto em seguida, a recomendação de etiqueta é apresentada novamente.
 
-Se configurar a classificação automática em vez de recomendado, a etiqueta é aplicada automaticamente e o utilizador ainda verá uma notificação em seus aplicativos do Office. No entanto, o **alterar agora** e **dispensar** botões são substitua **OK**.
+Se configurar a classificação automática em vez de recomendado, a etiqueta é aplicada automaticamente e o utilizador ainda verá uma notificação no Word, Excel e PowerPoint. No entanto, o **alterar agora** e **dispensar** botões são substitua **OK**. No Outlook, não há nenhuma notificação para classificação automática e a etiqueta é aplicada no momento que é enviado o e-mail.
 
 > [!IMPORTANT]
 >Não configure uma etiqueta para a classificação automática e uma permissão definida pelo utilizador. A opção de permissões definidas pelo utilizador é um [definição de proteção](configure-policy-protection.md) que permita aos utilizadores especificar que deve ser concedido permissões.

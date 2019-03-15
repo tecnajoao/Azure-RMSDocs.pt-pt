@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 5945b115d4b20f7ef8c42d51e76066cca5c994bd
-ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
+ms.openlocfilehash: 3bfa333e88df07702aa6e7990c31609985a2b00f
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56756203"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828860"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Perguntas mais frequentes sobre a classificação e a etiquetagem no Azure Information Protection
 
@@ -81,7 +81,9 @@ Não. Quando coloca uma etiqueta numa mensagem de e-mail com anexos, esses anexo
 
 Porque o Azure Information Protection utiliza metadados persistentes para classificação, que incluem uma etiqueta de texto não encriptado, estas informações podem ser lidos por soluções DLP e outras aplicações. 
 
-Para obter mais informações e exemplos de como utilizar estes metadados com as regras de fluxo de correio Exchange Online, consulte [configurar o Exchange Online regras de fluxo de correio etiquetas do Azure Information Protection](configure-exo-rules.md).
+Para obter mais informações sobre estes metadados, consulte [Etiquetar informações armazenadas em e-mails e documentos](configure-policy.md#label-information-stored-in-emails-and-documents).
+
+Para obter exemplos de como utilizar estes metadados com as regras de fluxo de correio Exchange Online, consulte [configurar o Exchange Online regras de fluxo de correio etiquetas do Azure Information Protection](configure-exo-rules.md).
 
 ## <a name="can-i-create-a-document-template-that-automatically-includes-the-classification"></a>Pode criar um modelo de documento que inclui a classificação automaticamente?
 

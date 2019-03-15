@@ -12,12 +12,12 @@ ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 22dbe505020d7ed65318fcdc173a7e659791b606
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 2db27a558acd60fc1d3f6a05c1dda90d00baa3bb
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332077"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57829081"
 ---
 # <a name="whats-new-and-release-notes"></a>Novidades e Notas de versão
 
@@ -33,7 +33,7 @@ Este tópico descreve as funcionalidades nesta versão nova do v4.x RMS SDK e al
 -   [Talvez a atualização de 2015 – adiciona o controlo de registo](#may-2015-update---adds-logging-control)
 -   [Atualização de Fevereiro de 2015 - suporte técnico da aplicação adiciona o Windows Store](#february-2015-update---adds-windows-store-application-support)
 -   [Atualização de Janeiro de 2015 – adiciona o suporte da plataforma WinPhone](#january-2015-update---adds-winphone-platform-support)
--   [Atualização de Outubro de 2014 – atualizar para o SDK do Microsoft RMS 4.1](#october-2014-update---upgrade-to-microsoft-rms-sdk-4-1)
+-   [Atualização de Outubro de 2014 – atualizar para o SDK do Microsoft RMS 4.1](#october-2014-update---upgrade-to-microsoft-rms-sdk-41)
 -   [Notas de versão](#release-notes)
 -   [Perguntas mais frequentes](#frequently-asked-questions)
 
@@ -240,4 +240,3 @@ Esta secção apresenta as informações sobre as versões atuais e anteriores d
 **Q**: Estrutura de aplicação de exemplo é adaptada para o Xcode 5, posso trabalhar com o Xcode 4.6?
 
 **R**: o SDK OS X apenas funciona com o Xcode 4.6 e versões posteriores, bem como o OS X 10.8 e versões posteriores.
-

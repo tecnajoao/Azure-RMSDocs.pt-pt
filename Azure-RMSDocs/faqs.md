@@ -4,19 +4,19 @@ description: Algumas perguntas mais frequentes sobre o Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 03/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4e7ffa1fa4121d7a0aecc4474d50497c7c300b1b
-ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
+ms.openlocfilehash: 6a68d7f550a773016b552b380bb42f596720f250
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56756152"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828498"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Perguntas mais frequentes sobre o Azure Information Protection
 
@@ -48,7 +48,7 @@ Para obter mais informações sobre como migrar as suas etiquetas existentes, co
 
 ## <a name="when-is-the-right-time-to-migrate-my-labels-to-office-365"></a>Quando é o momento certo para migrar os meus rótulos para Office 365?
 
-Etiquetas de sensibilidade no Centro de conformidade de segurança do Office 365 e estão disponíveis em geral, mas a opção para migrar as suas etiquetas do Azure Information Protection ainda está em pré-visualização. Quando as etiquetas são migradas para a loja de etiquetagem unificada, podem ser publicados e, em seguida, baixados por [clientes que suportam a etiquetagem unificada](configure-policy-migrate-labels.md#clients-that-support-unified-labeling). Hoje em dia, nem todos os clientes suportam etiquetas unificadas ou estão disponíveis em geral.
+Etiquetas de sensibilidade no Centro de conformidade de segurança do Office 365 e estão disponíveis em geral, mas a opção para migrar as suas etiquetas do Azure Information Protection ainda está em pré-visualização. Quando as etiquetas são migradas para a loja de etiquetagem unificada, podem ser publicados e, em seguida, utilizados pelo [os clientes e serviços que suportam a etiquetagem unificada](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling). Hoje em dia, nem todos os clientes suportam etiquetas unificadas ou estão disponíveis em geral.
 
 Recomendamos que teste primeiro a funcionalidade de pré-visualização com um inquilino de teste e, em seguida, migre o seu inquilino de produção. Além disso:
 
@@ -68,11 +68,11 @@ Consulte também [o cliente de pré-visualização instalo nova funcionalidade d
 
 Depois de ter migrado as etiquetas no portal do Azure:
 
-- Se tiver [unified clientes etiquetas](configure-policy-migrate-labels.md#clients-that-support-unified-labeling), vá a segurança do Office 365 e o Centro de conformidade para publicar estas etiquetas e para configurar as definições de política para unificado clientes etiquetas. Para alterações de etiqueta abaixem reencaminhar, utilize o Centro de conformidade e segurança. Os clientes de etiquetas unificados transferem as etiquetas e as definições de política do Centro de conformidade e segurança do.
+- Se tiver [unified etiquetagem clientes e serviços](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), vá a segurança do Office 365 e o Centro de conformidade para publicar estas etiquetas e para configurar as definições de política. Para alterações de etiqueta abaixem reencaminhar, utilize o Centro de conformidade e segurança. Os clientes de etiquetas unificados transferem as etiquetas e as definições de política do Centro de conformidade e segurança do.
 
 - Se tiver [os clientes do Azure Information Protection](./rms-client/aip-client.md), continuar a utilizar o portal do Azure para editar os rótulos e as definições de política. Clientes do Azure Information Protection continuam a transferir as etiquetas e as definições de política do Azure.
 
-- Se tiver ambos [unified clientes etiquetas](configure-policy-migrate-labels.md#clients-that-support-unified-labeling) e [clientes do Azure Information Protection](./rms-client/aip-client.md), pode utilizar qualquer um dos portais para fazer alterações de etiqueta. No entanto, para que os clientes do Azure Information Protection recolher as alterações de etiqueta que fizer no Centro de conformidade e a segurança, tem de devolver ao portal do Azure: Utilize o **Publish** opção da **unificada do Azure Information Protection – etiquetagem** painel no portal do Azure. 
+- Se tiver ambos [unified clientes etiquetas](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) e [clientes do Azure Information Protection](./rms-client/aip-client.md), pode utilizar qualquer um dos portais para fazer alterações de etiqueta. No entanto, para que os clientes do Azure Information Protection recolher as alterações de etiqueta que fizer no Centro de conformidade e a segurança, tem de devolver ao portal do Azure: Utilize o **Publish** opção da **unificada do Azure Information Protection – etiquetagem** painel no portal do Azure. 
 
 Continuar a utilizar o portal do Azure para [central reporting](reports-aip.md) e o [scanner](deploy-aip-scanner-preview.md).
 
@@ -194,7 +194,9 @@ Quando a deteção de impressão pode proteger ficheiros em sites do SharePoint 
 
 ## <a name="ive-heard-a-new-release-is-going-to-be-available-soon-for-azure-information-protectionwhen-will-it-be-released"></a>Já ouvi falar que uma nova versão irá estar disponível em breve para o Azure Information Protection. Quando será lançada?
 
-A documentação técnica não contém informações sobre os lançamentos futuros. Para este tipo de informações e anúncios de lançamento, verifique os [blogue Enterprise Mobility and Security](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity?product=azure-information-protection,azure-rights-management-services) e obter as atualizações mais recentes do [Microsoft Mobility@MSFTMobility ](https://twitter.com/MSFTMobility) no Twitter. Se uma versão do Office que está interessado em, certifique-se de que também consulta os [blogue do Office 365](https://techcommunity.microsoft.com/t5/Office-365-Blog/bg-p/Office365Blog) e [blogue de aplicações do Office](https://techcommunity.microsoft.com/t5/Office-Apps-Blog/bg-p/OfficeAppsBlog).
+A documentação técnica não contém informações sobre os lançamentos futuros. Para este tipo de informações e anúncios de lançamento, verifique os [blogue Enterprise Mobility + Security](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity?product=azure-information-protection,azure-rights-management-services).
+
+Se uma versão do Office que está interessado em, certifique-se de que também consulta os [blogue do Office 365](https://techcommunity.microsoft.com/t5/Office-365-Blog/bg-p/Office365Blog) e [blogue de aplicações do Office](https://techcommunity.microsoft.com/t5/Office-Apps-Blog/bg-p/OfficeAppsBlog).
 
 ## <a name="is-azure-information-protection-suitable-for-my-country"></a>Azure Information Protection é adequado para o meu país?
 
@@ -210,8 +212,6 @@ Veja [Informações de suporte e conformidade do Azure Information Protection](.
 ## <a name="how-can-i-report-a-problem-or-send-feedback-for-azure-information-protection"></a>Como posso comunicar um problema ou enviar feedback do Azure Information Protection?
 
 Em alternativa, utilize os canais de suporte padrão ou [contacte o Suporte da Microsoft](information-support.md#to-contact-microsoft-support).
-
-Para comentários como sugestões de melhorias ou novas funcionalidades: Na aplicação do Office, sobre o **home page** separador a **proteção** , clique em **proteger**e, em seguida, clique em **ajuda e Feedback**. Na caixa de diálogo **Microsoft Azure Information Protection**, clique em **Envie-nos Os Seus Comentários**. Esta opção abre-se uma mensagem de e-mail para ser enviado à equipa do Information Protection.
 
 É também convidado a interagir com a nossa equipa de engenharia, no [site Yammer do Azure Information Protection](https://www.yammer.com/askipteam/). 
 

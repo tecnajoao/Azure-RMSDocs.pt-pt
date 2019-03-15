@@ -8,12 +8,12 @@ ms.date: 02/29/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 75ba59498918ecb2d987e2fe794c624f8f340498
-ms.sourcegitcommit: d1aac7dc96f5986511f73ec035400954be24e723
+ms.openlocfilehash: 5a9c1ebae0678125c19fd35ce4c5275aa056ce45
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017239"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57829030"
 ---
 # <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>Tutorial: Editar a política do Azure Information Protection e criar uma nova etiqueta
 
@@ -36,7 +36,7 @@ Para concluir este tutorial, precisa de:
 
 1. Uma subscrição que inclui o Azure Information Protection plano 2.
     
-    Se não tiver uma subscrição que inclui o Azure Information Protection plano 2, pode criar uma [gratuita](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) de conta para a sua organização.
+    Se não tiver uma subscrição que inclui o Azure Information Protection plano 2, pode criar uma [gratuita](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) de conta para a sua organização.
 
 2. Adicionei o painel do Azure Information Protection para o portal do Azure e confirmar que o serviço de proteção está ativado.
 

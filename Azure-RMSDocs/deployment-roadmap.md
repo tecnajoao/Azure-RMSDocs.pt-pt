@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ac9e76d7c9ef49e687a18d84491e939247958117
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 69fdfe85bb1376cee25b60bcf1d65b7a8462af3c
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259971"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828554"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Plano de implementação do Azure Information Protection
 
@@ -50,7 +50,7 @@ Em seguida, escolha o plano de implementação que se aplica à sua organizaçã
 ### <a name="step-1-confirm-your-subscription-and-assign-user-licenses"></a>Passo 1: Confirmar a sua subscrição e atribuir licenças de utilizador
 Reveja a lista de informações e recursos de subscrição do [preços do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection) página para confirmar se a sua organização tem uma subscrição que inclui as funcionalidades que pretende. Em seguida, atribua licenças desta subscrição a todos os utilizadores na sua organização que irão classificar, Etiquetar e proteger documentos e e-mails.
 
-Nota: Não atribuir manualmente licenças de utilizador a partir do RMS para a subscrição de indivíduos gratuita e não utilize esta licença para administrar o serviço Azure Rights Management para a sua organização. Estas licenças são apresentadas como **Adhoc do Rights Management** no Centro de administração do Office 365 e **RIGHTSMANAGEMENT_ADHOC** quando executa o cmdlet do Azure AD PowerShell, [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx). Para obter mais informações sobre como a subscrição do RMS para utilizadores individuais é automaticamente concedida e atribuída aos utilizadores, consulte [RMS para utilizadores individuais e Azure Information Protection](./rms-for-individuals.md).
+Nota: Não atribuir manualmente licenças de utilizador a partir do RMS para a subscrição de indivíduos gratuita e não utilize esta licença para administrar o serviço Azure Rights Management para a sua organização. Estas licenças são apresentadas como **Adhoc do Rights Management** no Centro de administração do Microsoft 365, e **RIGHTSMANAGEMENT_ADHOC** quando executar o cmdlet do PowerShell do Azure AD, [Get-MsolAccountSku ](https://msdn.microsoft.com/library/azure/dn194118.aspx). Para obter mais informações sobre como a subscrição do RMS para utilizadores individuais é automaticamente concedida e atribuída aos utilizadores, consulte [RMS para utilizadores individuais e Azure Information Protection](./rms-for-individuals.md).
 
 ### <a name="step-2-prepare-your-tenant-to-use-azure-information-protection"></a>Passo 2: Preparar o seu inquilino para utilizar o Azure Information Protection
 Antes de começar a utilizar o Azure Information Protection, certifique-se de que tem contas de utilizador e grupos no Office 365 ou Azure Active Directory. Estas contas de utilizador e grupos serão utilizados pelo Azure Information Protection para autenticar e autorizar os utilizadores da sua organização. Se for necessário, crie estas contas e grupos ou sincronize-os partir do seu diretório local. 
@@ -146,7 +146,7 @@ Para obter mais informações, consulte [Administrar o serviço Azure Rights Man
 ### <a name="step-1-confirm-that-you-have-a-subscription-that-includes-the-protection-service-from-azure-information-protection"></a>Passo 1: Confirme se tem uma subscrição que inclui o serviço de proteção do Azure Information Protection
 Reveja a lista de informações e recursos de subscrição do [preços do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection) página para confirmar se a sua organização tem uma subscrição que inclui as funcionalidades que pretende. Em seguida, atribua uma licença desta subscrição a todos os utilizadores na sua organização que irão proteger documentos e e-mails.
 
-Nota: Não atribuir manualmente licenças de utilizador a partir do RMS para a subscrição de indivíduos gratuita e não utilize esta licença para administrar o serviço Azure Rights Management para a sua organização. Estas licenças são apresentadas como **Adhoc do Rights Management** no Centro de administração do Office 365 e **RIGHTSMANAGEMENT_ADHOC** quando executa o cmdlet do Azure AD PowerShell, [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx). Para obter mais informações sobre como a subscrição do RMS para utilizadores individuais é automaticamente concedida e atribuída aos utilizadores, consulte [RMS para utilizadores individuais e Azure Information Protection](./rms-for-individuals.md).
+Nota: Não atribuir manualmente licenças de utilizador a partir do RMS para a subscrição de indivíduos gratuita e não utilize esta licença para administrar o serviço Azure Rights Management para a sua organização. Estas licenças são apresentadas como **Adhoc do Rights Management** no Centro de administração do Microsoft 365, e **RIGHTSMANAGEMENT_ADHOC** quando executar o cmdlet do PowerShell do Azure AD, [Get-MsolAccountSku ](https://msdn.microsoft.com/library/azure/dn194118.aspx). Para obter mais informações sobre como a subscrição do RMS para utilizadores individuais é automaticamente concedida e atribuída aos utilizadores, consulte [RMS para utilizadores individuais e Azure Information Protection](./rms-for-individuals.md).
 
 
 ### <a name="step-2-prepare-your-tenant-to-use-azure-information-protection"></a>Passo 2: Preparar o seu inquilino para utilizar o Azure Information Protection

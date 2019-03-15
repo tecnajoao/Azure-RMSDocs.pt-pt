@@ -4,17 +4,17 @@ description: Quando atribui uma etiqueta a um documento ou a um e-mail pode sele
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 03/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 2ddefdc557d83ff0eae6bbc2b5d7d0e69dfbbca5
-ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
+ms.openlocfilehash: cc921ae66d8a36a3bad9f184b7b900c7508eb2d1
+ms.sourcegitcommit: 171a96af12a7e0364052d830dc14714b1bb1c95c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56756186"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57734100"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Como configurar uma etiqueta para marcas visuais para o Azure Information Protection
 
@@ -36,7 +36,7 @@ Obter informações adicionais sobre estas marcas visuais:
 
 - Comprimentos de cadeia de caracteres máximo:
     
-    - O comprimento máximo da cadeia que pode introduzir para cabeçalhos e rodapés é de 1024 caracteres. No entanto, o Excel tem um limite total de 255 carateres para cabeçalhos e rodapés. Este limite inclui caracteres que não são visíveis no Excel, como códigos de formatação. Ao introduzir uma cadeia longa para cabeçalhos e rodapés, no Excel, este texto pode ser truncada de 255 carateres ou menos.
+    - O comprimento máximo da cadeia que pode introduzir para cabeçalhos e rodapés é de 1024 caracteres. No entanto, o Excel tem um limite total de 255 carateres para cabeçalhos e rodapés. Este limite inclui caracteres que não são visíveis no Excel, como códigos de formatação. Se esse limite for atingido, a cadeia de caracteres que é inserir não é apresentada no Excel.
     
     - O comprimento máximo da cadeia para marcas de água que pode introduzir é 255 carateres.
 

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 9b7cd88df290c3df46f0a336c649e282df10d4df
-ms.sourcegitcommit: bfb8e4fff4b6ebc38337f48f2b31ca43048dcca6
+ms.openlocfilehash: b8cf9cb6bd0fadadc12a6ef9c7b65d708ce51648
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57007057"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828537"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Implementar o scanner do Azure Information Protection para classificar e proteger ficheiros automaticamente
 
@@ -371,7 +371,7 @@ Existem dois cenários alternativos que o scanner do Azure Information Protectio
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>Otimizar o desempenho do scanner
 
-Utilize as seguintes orientações para o ajudar a otimizar o desempenho do scanner. No entanto, se a sua prioridade é a capacidade de resposta do computador de scanner, em vez do desempenho de scanner, pode utilizar um definição de cliente avançado [limitar o número de segmentos utilizados pelo leitor](#limit-the-number-of-threads-used-by-the-scanner).
+Utilize as seguintes orientações para o ajudar a otimizar o desempenho do scanner. No entanto, se a sua prioridade é a capacidade de resposta do computador de scanner, em vez do desempenho de scanner, pode utilizar um definição para limitar o número de segmentos utilizados pelo leitor de cliente avançado.
 
 Para maximizar o desempenho de scanner:
 
@@ -490,5 +490,3 @@ Interessado em como a equipe principal Services engenharia e operações no Micr
 Deve estar pensando: [O que é a diferença entre a FCI do Windows Server e o scanner do Azure Information Protection?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 Também pode utilizar o PowerShell para classificar e proteger ficheiros a partir de seu computador desktop de interativamente. Para obter mais informações sobre este e outros cenários que utilizam o PowerShell, consulte [utilizar o PowerShell com o cliente do Azure Information Protection](./rms-client/client-admin-guide-powershell.md).
-
-

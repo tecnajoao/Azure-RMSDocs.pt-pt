@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2f05b95477405a2262b7dc0e129f17f9f5ff46db
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: ff99a39c138cc3ddc0b49cf7ff65ab95d5e36ece
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256401"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828911"
 ---
 # <a name="activating-azure-rights-management"></a>Ativar o Azure Rights Management
 
@@ -59,9 +59,9 @@ Quando o serviço Azure Rights Management está ativado, todos os utilizadores n
 
 ## <a name="choosing-your-activation-method"></a>Escolher o método de ativação
 
-Para obter instruções sobre como para ativar os direitos de gestão de serviço do seu portal de gestão, selecione se pretende utilizar o Centro de administração do Office 365 ou o portal do Azure:
+Para obter instruções sobre como para ativar os direitos de gestão de serviço do seu portal de gestão, selecione se pretende utilizar o Centro de administração do Microsoft 365 ou o portal do Azure:
 
-- [Centro de administração do Office 365](activate-office365.md) -requer a conta de Administrador Global
+- [Centro de administração do Microsoft 365](activate-office365.md) -requer a conta de Administrador Global
 
 - [Portal do Azure](activate-azure.md) -não necessita de conta de Administrador Global
 

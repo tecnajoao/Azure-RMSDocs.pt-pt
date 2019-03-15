@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ed441ab24517b5d12a1e38ed61a46d4498237636
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 8a1057aeab9bf86bba8047f3425b11e7eeae1082
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259189"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828435"
 ---
 # <a name="office365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Configuração para clientes e serviços online utilizar o serviço Azure Rights Management
 
@@ -104,7 +104,7 @@ Depois de ter ativado o serviço de IRM para o SharePoint Online, OneDrive para 
 #### <a name="configuration-for-users"></a>Configuração para os utilizadores
 Dê aos utilizadores as seguintes instruções para que eles possam configurar o OneDrive para empresas proteger os respetivos ficheiros empresariais.
 
-1. Inicie sessão no Office 365 com a sua conta escolar ou profissional e vá para o [Web site do OneDrive](https://portal.office.com/onedrive).
+1. Inicie sessão no Office 365 com a sua conta escolar ou profissional e vá para o [Web site do OneDrive](https://admin.microsoft.com/onedrive).
 
 2. No painel de navegação, na parte inferior, selecione **regressar ao OneDrive clássico**.
 
@@ -502,7 +502,7 @@ Embora não possa configurar a IRM para o OneDrive para Empresas dos utilizadore
 
    2. Procure o `$tenantAdmin` e substitua o valor de exemplo pela sua própria conta de administrador global completamente qualificado do Office 365.
 
-      Este valor é o mesmo que utiliza para iniciar sessão no portal de administração do Office 365 como administrador global e tem o seguinte formato: nome_de_utilizador@*&lt;nome de domínio do inquilino&gt;*.com
+      Este valor é o mesmo que utiliza para iniciar sessão no Centro de administração do Microsoft 365 como administrador global e tem o seguinte formato: nome_de_utilizador @*&lt;o nome de domínio de inquilino&gt;*.com
 
       Por exemplo, se o nome de utilizador de administrador global do Office 365 for "admin" para o domínio de inquilino "contoso.com", tem de especificar: <strong>admin@contoso.com</strong>
 

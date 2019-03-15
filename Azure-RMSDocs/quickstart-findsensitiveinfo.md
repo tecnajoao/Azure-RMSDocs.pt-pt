@@ -8,12 +8,12 @@ ms.date: 02/15/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 07baee062d994b6efd97084bf0b293adb2d5fb84
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: 5a051967ad9f3b572eecd5214cf411dd4a4a01d6
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56266017"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57829013"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Início rápido: Localizar as informações confidenciais que tiver no ficheiros armazenados no local
 
@@ -31,7 +31,7 @@ Para concluir este início rápido, precisa de:
 
 1. Uma subscrição que inclui o Azure Information Protection plano 1 ou plano 2.
     
-    Se não tiver uma destas subscrições, pode criar uma [gratuita](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) de conta para a sua organização.
+    Se não tiver uma destas subscrições, pode criar uma [gratuita](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) de conta para a sua organização.
 
 2. O cliente do Azure Information Protection está instalado no seu computador. 
     

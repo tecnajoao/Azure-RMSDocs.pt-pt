@@ -19,7 +19,7 @@ items:
       href: requirements-applications.md
     - name: Suporte de servidores no local para proteção de dados
       href: requirements-servers.md
-- name: Guias de Introdução
+- name: Quickstarts (Inícios Rápidos)
   href: /azure/information-protection/quickstart-viewpolicy
   items:
   - name: Começar a utilizar o portal do Azure
@@ -61,7 +61,7 @@ items:
     href: rms-for-individuals.md
   - name: Também conhecido como...
     href: aka.md
-- name: How-to guides (Guias de procedimentos)
+- name: How-to guides (Manuais de instruções)
   href: how-to-guides.md
   items:
   - name: Procedimentos para cenários comuns
@@ -104,7 +104,7 @@ items:
     - name: Ativar o serviço
       href: activate-service.md
       items:
-      - name: Centro de administração do Office 365
+      - name: Microsoft 365 admin center (Centro de administração do Microsoft 365)
         href: activate-office365.md
       - name: Portal do Azure
         href: activate-azure.md
@@ -396,7 +396,7 @@ items:
           href: https://msdn.microsoft.com/library/hh535288.aspx
         - name: Funções
           href: https://msdn.microsoft.com/library/hh535289.aspx
-        - name: Estruturas
+        - name: estruturas
           href: https://msdn.microsoft.com/library/hh535294.aspx
         - name: Códigos de erro
           href: https://msdn.microsoft.com/library/hh535248.aspx
@@ -419,9 +419,9 @@ items:
     href: https://docs.microsoft.com/powershell/azure/aip/overview?view=azureipps
   - name: Terminologia
     href: terminology.md
-ms.openlocfilehash: 7d50cf5d9796499808d14dfb7edcb6072be93d16
-ms.sourcegitcommit: 171a96af12a7e0364052d830dc14714b1bb1c95c
+ms.openlocfilehash: 5fa0ffe3bb86a058bd5d41b54b9cdfc25aa90620
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57734126"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57978241"

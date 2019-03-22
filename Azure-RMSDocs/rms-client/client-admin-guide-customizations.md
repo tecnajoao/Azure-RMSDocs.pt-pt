@@ -4,19 +4,19 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/10/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 20c0fbd26a8884524e747a0ebc912d7a6dfb2f48
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: de1febc25d5fa5518f7ffca5d51895bebd2cd56b
+ms.sourcegitcommit: 3a3f1051c5a58c2bd2f230f1c8ece919df3dc23e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57898104"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221087"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas do cliente do Azure Information Protection
 
@@ -484,6 +484,8 @@ Se precisar do cliente para reverter para o comportamento em versões mais antig
 - Chave: **EnablePDFv2Protection**
 
 - Valor: **FALSO**
+
+Por exemplo, poderá ter esta definição para todos os utilizadores se usar um leitor de PDF que não suporta a norma ISO para a encriptação de PDF. Em alternativa, poderá ter de configurá-lo para alguns usuários, como gradualmente na fase de numa alteração de leitor de PDF que suporta o novo formato. Outro motivo potencial para utilizar esta definição é se precisa adicionar proteção para documentos em PDF assinados. Documentos em PDF assinados podem ser protegidos além com o formato. ppdf porque esta proteção é implementada como um wrapper para o ficheiro. 
 
 Para o scanner do Azure Information Protection utilizar a nova definição, é necessário reiniciar o serviço de scanner. Além disso, o scanner já não irá proteger documentos PDF por predefinição. Se pretender que os documentos PDF a ser protegido pelo leitor quando EnablePDFv2Protection é definido como False, deve [editar o registo](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner).
 

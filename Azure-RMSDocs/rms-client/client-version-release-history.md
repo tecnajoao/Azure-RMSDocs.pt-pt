@@ -4,18 +4,18 @@ description: Veja o que há de novo ou alterado numa versão do cliente do Azure
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/07/2019
+ms.date: 03/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9240e0a8fc8f70fb38d9984ae74ee039d0f52e39
-ms.sourcegitcommit: 872fe78c482e8c2c57c3653919edeba745411cba
+ms.openlocfilehash: 91afeedf07e34f08860f1d596052fdc559c53098
+ms.sourcegitcommit: d8cadf325472e7fc8900905305d7f583a97506b0
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57510059"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57828452"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: Política de histórico e suporte de lançamento de versão
 
@@ -92,7 +92,7 @@ Esta versão inclui a versão 1.0.3592.627 do cliente RMS MSIPC.
 
 - Subetiquetas sejam aplicadas corretamente ao PowerShell e o scanner quando a etiqueta principal está configurada para permissões definidas pelo utilizador.
 
-- O cliente do Azure Information Protection exiba corretamente as etiquetas que foram aplicadas pelo [clientes que suportam a etiquetagem unificada](../configure-policy-migrate-labels.md#clients-that-support-unified-labeling).
+- O cliente do Azure Information Protection exiba corretamente as etiquetas que foram aplicadas pelo [clientes que suportam a etiquetagem unificada](../configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
 
 - Documentos aberto corretamente no Office sem uma mensagem de recuperação após a proteção foi removida pelo Explorador de ficheiros e com o botão direito, PowerShell e a deteção de impressão.
 
@@ -236,21 +236,6 @@ Esta versão inclui a versão 1.0.3592.627 do cliente RMS MSIPC.
 
 - O **enviar comentários** ligação na **ajuda e Feedback** caixa de diálogo é removida. Temporariamente foi substituída pela **comunicar um problema** que, por predefinição, enviado um e-mail à Microsoft. A partir de Dezembro de 2018 ou superior, o **comunicar um problema** opção não é apresentada por predefinição, mas podem ser adicionada com um [definição de cliente avançado](client-admin-guide-customizations.md#add-report-an-issue-for-users) onde pode especificar uma cadeia de caracteres HTTP para a ligação. Por exemplo, uma página da web personalizada para os utilizadores comuniquem problemas, ou um endereço de e-mail que vai para o suporte técnico. 
 
-## <a name="version-12950"></a>Versão 1.29.5.0 
-
-**Lançado**: 06/26/2018
-
-Esta versão inclui a versão 1.0.3403.1224 do cliente RMS MSIPC.
-
-**Correções**:
-
-- Para versões do Outlook 16.0.9324.1000 e posterior (clique-e-use), a barra do Azure Information Protection suporta as opções de exibição de monitor mais recente que anteriormente, poderão resultar na barra de exibição de fora da aplicação do Outlook.
-
-- Marcas visuais que configurou [por tipo de aplicação do Office](../configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook) agora substitua um cabeçalho ou rodapé que estava anteriormente aplicada por uma etiqueta do Azure Information Protection.
-
-- Quando um ficheiro do Excel já tem o nome e a etiqueta aplicar marcações visuais, uma nova folha também tem agora marcas visuais a etiqueta aplicadas.
-
-- Quando utiliza o definição de cliente avançado [Etiquetar um documento do Office usando uma propriedade personalizada existente](client-admin-guide-customizations.md#label-an-office-document-by-using-an-existing-custom-property), a etiquetagem automática não substitui a etiquetagem manual.
 
 ## <a name="next-steps"></a>Passos Seguintes
 

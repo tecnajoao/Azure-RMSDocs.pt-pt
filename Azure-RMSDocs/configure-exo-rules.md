@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: f46e919665d110665ed85b5e2e5c6a979a1958e9
-ms.sourcegitcommit: 1fe9720526a2ff814cd5d353249b16497cfcaadc
+ms.openlocfilehash: 0a09c4c89ffd461cb0c922cb09ee0acd3ed033be
+ms.sourcegitcommit: d8cadf325472e7fc8900905305d7f583a97506b0
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425968"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57829007"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configurar regras de fluxo de correio Exchange Online etiquetas do Azure Information Protection
 
@@ -50,7 +50,7 @@ Para os exemplos seguintes, crie uma nova regra de fluxo de correio, utilize os 
 
 2. Escolha o mosaico **Administrador**.
 
-3. No Centro de administração do Office 365, escolha **do Centro de administração** > **Exchange**.
+3. No Centro de administração do Microsoft 365, escolha **do Centro de administração** > **Exchange**.
 
 4. No Centro de administração do Exchange: **fluxo de correio** > **regras** > **+** > **criar uma nova regra** . 
 

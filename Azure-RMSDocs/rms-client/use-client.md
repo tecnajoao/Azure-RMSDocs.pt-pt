@@ -4,18 +4,18 @@ description: O Microsoft Azure Information Protection fornece uma solução de s
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/12/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
 ms.suite: ems
-ms.openlocfilehash: 9cb472280160919be93745fe7ff50f05e036f301
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: f797ffc63e38c15649e5bf590ad11dd5a009e957
+ms.sourcegitcommit: 3a3f1051c5a58c2bd2f230f1c8ece919df3dc23e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57829098"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221019"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>O lado do cliente do Azure Information Protection
 
@@ -71,7 +71,7 @@ Utilize a tabela seguinte para ajudar a comparar as funcionalidades são suporta
 |Modo apenas de proteção (sem etiquetas):| Sim | Não |
 |Faça o botão não reencaminhar no Outlook:| Sim | Não |
 |Suporte a vários idiomas:| Sim | Não |
-|Suporte para o AD RMS:| Sim | A ação seguinte só é suportada:<br /><br /> -O Visualizador pode abrir documentos protegidos|
+|Suporte para o AD RMS:| Sim | A ação seguinte só é suportada:<br /><br /> -O Visualizador pode abrir documentos protegidos quando implementa o [extensão de dispositivo de móveis de serviços do Rights Management Active Directory](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))|
 
 #### <a name="functional-comparison-for-the-clients"></a>Comparação funcional para os clientes
 
@@ -89,6 +89,8 @@ Quando ambos os clientes suportam a mesma funcionalidade, utilize a tabela segui
 |Pedidos de justificação (se configurada) por ação no Office: | Frequência de: Por ficheiro <br /><br /> Reduzir o nível de sensibilidade <br /><br /> Remover uma etiqueta<br /><br /> Remover a proteção | Frequência de: Por sessão <br /><br /> Reduzir o nível de sensibilidade<br /><br /> Remover uma etiqueta|
 |Remover aplicada ações de etiqueta: | É pedido ao utilizador para confirmar <br /><br />Etiqueta predefinida ou etiqueta automática (se configurada) não é aplicada automaticamente da próxima vez que a aplicação do Office abre o ficheiro.  <br /><br />| Não é pedido ao utilizador para confirmar<br /><br /> Etiqueta predefinida ou etiqueta automática (se configurada) é aplicada automaticamente da próxima vez que a aplicação do Office abre o ficheiro.|
 |Classificação automática e recomendada: | Configurado como [Etiquetar condições](../configure-policy-classification.md) no portal do Azure com tipos de informações internas e condições personalizadas que utilizam frases ou expressões regulares <br /><br />Opções de configuração incluem: <br /><br />-Contagem exclusiva / não exclusiva <br /><br /> -Contagem mínima| Configurado no Centro de conformidade de segurança e com os tipos de informações confidenciais incorporadas e [tipos de informações personalizadas](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)<br /><br />Opções de configuração incluem:  <br /><br />-Apenas a contagem exclusiva <br /><br />-Mínimo e máxima contagem <br /><br />- E e ou de suporte com os tipos de informações <br /><br />-Dicionário palavra-chave<br /><br />-Confiança personalizável proximidade de caracteres e nível|
+
+Para obter uma comparação mais detalhada das diferenças de comportamento para definições de proteção específico, consulte [comparar o comportamento das definições de proteção para uma etiqueta](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label).
 
 #### <a name="features-that-will-not-be-in-the-azure-information-protection-unified-labeling-client"></a>Funcionalidades não estarão disponíveis no cliente de etiquetagem unificado do Azure Information Protection
 

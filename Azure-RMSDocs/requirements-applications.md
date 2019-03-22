@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4ae91e36a4b2406d3dcb5a4ea52f4cac48c37287
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 4561c505be994039a6e95779e47ea1c511e0a0c1
+ms.sourcegitcommit: 3a3f1051c5a58c2bd2f230f1c8ece919df3dc23e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257200"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221070"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Aplicações que suportam a proteção de dados do Azure Rights Management
 
@@ -27,7 +27,7 @@ Utilize as tabelas seguintes para identificar as aplicações e as soluções qu
 
 Para estas aplicações e soluções, o suporte do Rights Management está totalmente integrado através das APIs de Rights Management para suportar restrições de utilização. Estas aplicações e soluções também são conhecidas como "otimizadas por RMS".
 
-Salvo indicação em contrário, as capacidades suportadas aplicam-se ao Azure RMS e ao AD RMS. Além disso, o suporte de AD RMS em iOS, Android, macOS e Windows Phone 8.1 necessita [extensão de dispositivo de móveis de serviços do Rights Management Active Directory](https://technet.microsoft.com/library/dn673574.aspx).
+Salvo indicação em contrário, as capacidades suportadas aplicam-se ao Azure RMS e ao AD RMS. Além disso, o suporte de AD RMS em iOS, Android, macOS e Windows Phone 8.1 necessita [extensão de dispositivo de móveis de serviços do Rights Management Active Directory](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
 ## <a name="rms-enlightened-applications"></a>Aplicações otimizadas por RMS
 

@@ -4,18 +4,18 @@ description: Migre as etiquetas do Azure Information Protection para o Centro de
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/14/2019
+ms.date: 03/20/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: ed3c77df8da01a4b87b30875a315eac5c075b438
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: e0c73a1d1eb1e5f3e438dd5d9d8f486810b3c869
+ms.sourcegitcommit: ffc7b181f27b628d2a2740f83e0874a830c3735c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57829064"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306953"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Como migrar as etiquetas do Azure Information Protection para o Centro de conformidade e segurança do Office 365
 
@@ -61,7 +61,9 @@ Antes de migrar as etiquetas, certifique-se de que está ciente das seguintes al
     
     - Modelos que utilizam uma chave com base na cloud e que fazem parte de uma configuração de etiqueta também são migrados com a etiqueta. Outros modelos de proteção não são migrados. 
     
-    - Se tiver etiquetas que estão configuradas para um modelo predefinido, [converter estes modelos em etiquetas](configure-policy-templates.md#to-convert-templates-to-labels) antes de migrar suas etiquetas. Esta configuração não irá bloquear a migração de etiqueta, mas não é suportada no Centro de conformidade e segurança.
+    - Se tiver etiquetas que estão configuradas para um modelo predefinido, editar estas etiquetas e selecione o **definir permissões** opção para configurar as mesmas definições de proteção que tinha no seu modelo. Etiquetas com modelos predefinidos não irão bloquear a migração de etiqueta, mas esta configuração de etiqueta não é suportada no Centro de conformidade e segurança do.
+        
+        Sugestão: Para ajudar a reconfigurar estas etiquetas, talvez seja útil ter duas janelas do browser: Uma janela na qual seleciona a **Editar modelo** botão para a etiqueta ver as definições de proteção e de outra janela para configurar as definições ao selecionar **definir permissões**.
     
     - Depois de uma etiqueta com as definições de proteção com base na cloud foi migrada, o âmbito resultante do modelo de proteção é o âmbito definido no portal do Azure (ou ao utilizar o módulo do PowerShell do AADRM) e o âmbito definido na segurança & Centro de conformidade. 
 
@@ -88,13 +90,39 @@ Clientes do Azure Information Protection podem utilizar todas as definições de
 |Estado ativado ou desativado<br /><br />Notas: Não sincronizados para o Centro de conformidade e segurança |Não aplicável|O equivalente é se a etiqueta é publicada ou não. |
 |Cor da etiqueta que selecione da lista ou especifique usando código RGB |Sim|Nenhuma opção de configuração para as cores de etiqueta. Em vez disso, pode configurar as cores de etiqueta no portal do Azure.|
 |Proteção baseada na cloud ou um modelo predefinido a utilizar a proteção baseada em HYOK |Não|Nenhuma opção de configuração para modelos predefinidos. Não é recomendável que publicar uma etiqueta com esta configuração.|
-|Proteção baseada na cloud com as permissões definidas pelo utilizador para o Word, Excel e PowerPoint |Não|Nenhuma opção de configuração para permissões definidas pelo utilizador para estas aplicações do Office. Não é recomendável que publicar uma etiqueta com esta configuração.|
-|Proteção baseada em HYOK usando permissões definidas pelo utilizador para o Outlook (não reencaminhar) |Não|Nenhuma opção de configuração para HYOK. Não é recomendável que publicar uma etiqueta com esta configuração.|
+|Proteção baseada na cloud com as permissões definidas pelo utilizador para o Word, Excel e PowerPoint |Não|Nenhuma opção de configuração para permissões definidas pelo utilizador para estas aplicações do Office. Não é recomendável que publicar uma etiqueta com esta configuração. Se o fizer, os resultados de aplicar a etiqueta estão listados na [seguinte tabela](#comparing-the-behavior-of-protection-settings-for-a-label).|
+|Proteção baseada em HYOK usando permissões definidas pelo utilizador para o Outlook (não reencaminhar) |Não|Nenhuma opção de configuração para HYOK. Não é recomendável que publicar uma etiqueta com esta configuração. Se o fizer, os resultados de aplicar a etiqueta estão listados na [seguinte tabela](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |Remover proteção |Não|Nenhuma opção de configuração para remover a proteção. Não é recomendável que publicar uma etiqueta com esta configuração.<br /><br /> Se publicar esta etiqueta, quando aplicado, será possível remover a proteção se estava anteriormente aplicada por uma etiqueta. Se a proteção estava anteriormente aplicada independentemente de uma etiqueta, a proteção é preservada.|
 |Tipo de letra personalizado e a cor do tipo de letra personalizados pelo código RGB para marcas visuais (cabeçalho, rodapé, marca d'água)|Sim|Configuração para marcas visuais está limitada a uma lista de cores e tamanhos de fonte. Embora não pode ver os valores configurados no Centro de conformidade e segurança do, pode publicar esta etiqueta sem alterações. <br /><br />Para alterar estas opções, pode utilizar o portal do Azure. No entanto, para uma administração mais fácil, considere alterar a cor para uma das opções listadas no Centro de conformidade e segurança do.|
 |Variáveis em marcas visuais (cabeçalho, rodapé)|Não|Se publicar esta etiqueta sem alterações, as variáveis são apresentadas como texto em clientes em vez de apresentam os valores dinâmicos. Antes de publicar a etiqueta, edite as cadeias de caracteres para remover as variáveis.|
 |Marcas visuais por aplicação|Não|Se publicar esta etiqueta sem alterações, as variáveis de aplicação são apresentadas como texto em clientes em todas as aplicações em vez de apresentam suas cadeias de caracteres de texto em aplicações escolhidas. Publicar esta etiqueta apenas se é adequado para todas as aplicações e editar as cadeias de caracteres para remover as variáveis de aplicação.|
 |Condições e configurações associadas <br /><br />Notas: Inclui a etiquetagem automática e recomendada e suas descrições|Não aplicável|Reconfigure suas condições utilizando automática etiquetagem como uma configuração separada de configurações de rótulo.|
+
+### <a name="comparing-the-behavior-of-protection-settings-for-a-label"></a>Comparar o comportamento das definições de proteção para uma etiqueta
+
+Utilize a seguinte tabela para identificar a forma como a mesma definição de proteção para uma etiqueta tem um comportamento diferente, dependendo se é utilizado pelo cliente do Azure Information Protection (versões de disponibilidade geral e versão de pré-visualização atual), a pré-visualização atual versão do cliente etiquetagem unificado do Azure Information Protection, ou por aplicações do Office com a etiquetagem incorporada (também conhecido como "nativo Office etiquetagem"). 
+
+Definições de proteção que se comportam da mesma forma, não estão listadas.
+
+|Definição de proteção para uma etiqueta |Cliente do Azure Information Protection|O Azure Information Protection unified cliente etiquetagem| Aplicações do Office com incorporado etiquetagem
+|-------------------|-----------------------------------|-----------------------------------------------------------|---------------
+|Azure (chave da cloud) com permissões definidas pelo utilizador para o Word, Excel, PowerPoint e o Explorador de ficheiros:| Visível no Word, Excel, PowerPoint e o Explorador de ficheiros <br /><br /> Quando a etiqueta é aplicada:<br /><br /> -Os utilizadores que introduzam as permissões personalizadas que, em seguida, são aplicadas como proteção com uma chave com base na cloud| Não é visível |Visível no Word, Excel, PowerPoint e Outlook: <br /><br /> Quando a etiqueta é aplicada:<br /><br /> -Não é pedida aos utilizadores permissões personalizadas e sem proteção é aplicada <br /><br /> -Se a proteção estava anteriormente aplicada independentemente de uma etiqueta, essa proteção é preservada [[1]](#footnote-1)|
+|HYOK (AD RMS) com um modelo:| Visível no Word, Excel, PowerPoint, Outlook e o Explorador de ficheiros<br /><br /> Quando esta etiqueta é aplicada: <br /><br />-A proteção do HYOK é aplicada a documentos e e-mails | Visível no Word, Excel, PowerPoint, Outlook e o Explorador de ficheiros  <br /><br /> Quando esta etiqueta é aplicada: <br /><br />-Sem proteção é aplicada e remover a proteção [[2]](#footnote-2) se estava anteriormente aplicada por uma etiqueta <br /><br />-Se a proteção estava anteriormente aplicada independentemente de uma etiqueta, essa proteção é preservada |Visível no Word, Excel, PowerPoint e Outlook <br /><br /> Quando esta etiqueta é aplicada: <br /><br />-Sem proteção é aplicada e remover a proteção [[2]](#footnote-2) se estava anteriormente aplicada por uma etiqueta <br /><br />-Se a proteção estava anteriormente aplicada independentemente de uma etiqueta, essa proteção é preservada [[1]](#footnote-1) |
+|HYOK (AD RMS) com permissões definidas pelo utilizador para o Word, Excel, PowerPoint e o Explorador de ficheiros:| Visível no Word, Excel, PowerPoint e o Explorador de ficheiros<br /><br /> Quando esta etiqueta é aplicada:<br /><br /> -A proteção do HYOK é aplicada a documentos e e-mails| Visível no Word, Excel e PowerPoint <br /><br /> Quando esta etiqueta é aplicada: <br /><br />-Proteção não é aplicada e remover a proteção [[2]](#footnote-2) se estava anteriormente aplicada por uma etiqueta <br /><br />-Se a proteção estava anteriormente aplicada independentemente de uma etiqueta, essa proteção é preservada|Visível no Word, Excel e PowerPoint <br /><br /> Quando esta etiqueta é aplicada: <br /><br />-Proteção não é aplicada e remover a proteção [[2]](#footnote-2) se estava anteriormente aplicada por uma etiqueta <br /><br />-Se a proteção estava anteriormente aplicada independentemente de uma etiqueta, essa proteção é preservada |
+|HYOK (AD RMS) com permissões definidas pelo utilizador para o Outlook:|Visível no Outlook<br /><br />Quando esta etiqueta é aplicada:<br /><br />-Não utilizar não reencaminhar a proteção do HYOK é aplicada a mensagens de correio eletrónico|Visível no Outlook<br /><br />Quando esta etiqueta é aplicada:<br /><br /> -Proteção não é aplicada e removida [[2]](#footnote-2) se estava anteriormente aplicada por uma etiqueta <br /><br />-Se a proteção estava anteriormente aplicada independentemente de uma etiqueta, essa proteção é preservada|Visível no Outlook<br /><br />Quando esta etiqueta é aplicada:<br /><br />-Proteção não é aplicada e removida [[2]](#footnote-2) se estava anteriormente aplicada por uma etiqueta <br /><br />-Se a proteção estava anteriormente aplicada independentemente de uma etiqueta, essa proteção é preservada [[1]](#footnote-1)|
+
+###### <a name="footnote-1"></a>Nota de rodapé 1
+
+No Outlook para Mac, a proteção é mantida com uma exceção: Quando uma mensagem de e-mail tenha sido protegida com a opção de criptografar apenas, essa proteção é removida.
+
+
+###### <a name="footnote-2"></a>Nota de rodapé 2
+
+É remover a proteção se o utilizador tiver um direito de utilização ou da função que suporta esta ação:
+- O [direito de utilização](configure-usage-rights.md#usage-rights-and-descriptions) exportação ou controlo total.
+- A função de [emissor do Rights Management ou proprietário do Rights Management](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner), ou [Superutilizador](configure-super-users.md).
+
+Se o utilizador não tem uma destas funções ou direitos de utilização, a etiqueta não é aplicada e a proteção original é preservada.
 
 
 ## <a name="to-migrate-azure-information-protection-labels"></a>Para migrar as etiquetas do Azure Information Protection

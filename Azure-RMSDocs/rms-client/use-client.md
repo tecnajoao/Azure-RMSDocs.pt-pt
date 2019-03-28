@@ -4,18 +4,18 @@ description: O Microsoft Azure Information Protection fornece uma solução de s
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/20/2019
+ms.date: 03/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
 ms.suite: ems
-ms.openlocfilehash: f797ffc63e38c15649e5bf590ad11dd5a009e957
-ms.sourcegitcommit: 3a3f1051c5a58c2bd2f230f1c8ece919df3dc23e
+ms.openlocfilehash: b8f19a4953d5cfead99e96386bd65d070ac8ae77
+ms.sourcegitcommit: 0df1cd6000f72ec8cac60a5ace0fa441974464e0
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221019"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58524375"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>O lado do cliente do Azure Information Protection
 
@@ -57,6 +57,7 @@ Utilize a tabela seguinte para ajudar a comparar as funcionalidades são suporta
 |Permissões definidas pelo utilizador:| Sim | Para Outlook única (efetue não reencaminhar) |
 |Permissões personalizadas:| Sim | Apenas o Explorador de ficheiros <br /><br /> Nas aplicações do Office, como alternativa, podem selecionar os utilizadores **informações do ficheiro** > **Proteger documento** > **restringir acesso** |
 |Barra do Information Protection nas aplicações do Office:| Sim | Sim, com limitações:<br /><br /> -Sem título ou a dica de ferramenta personalizável<br /><br /> -Cor de etiqueta não é apresentado para a etiqueta aplicada|
+|As etiquetas, podem aplicar marcas visuais (cabeçalho, rodapé, marca d'água):| Sim | Sim, com limitações:<br /><br /> -Cabeçalhos e rodapés não suporta variáveis para valores dinâmicos <br /><br /> -Sem suporte para Word, Excel, PowerPoint e Outlook têm marcas visuais diferentes|
 |Explorador de ficheiros, faça duplo clique ações:| Sim | Sim, com limitações:<br /><br /> -Não é possível proteger documentos PDF para o formato. ppdf <br /><br />  -Sem suporte para o modo apenas de proteção|
 |Um visualizador para ficheiros protegidos:| Sim | Sim, com limitações:<br /><br /> -Para ficheiros protegidos genericamente (. pfile), ao contrário do Visualizador do cliente do Azure Information Protection, não existe nenhuma capacidade para guardar as alterações para o ficheiro aberto originalmente.|
 |Comandos do PowerShell:| Sim | Sim, com limitações:<br /><br />-Cmdlets incluídos: [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus), [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) <br /><br />-Cmdlets que se ligam diretamente a um serviço de proteção não estão incluídos|
@@ -125,7 +126,7 @@ Embora o cliente de etiquetagem unificado do Azure Information Protection ainda 
 - Proteção única do AD RMS
 
 
-##### <a name="parent-labels-and-their-sublabels"></a>Etiquetas de principal e respetivas subetiquetas 
+#### <a name="parent-labels-and-their-sublabels"></a>Etiquetas de principal e respetivas subetiquetas 
 
 O cliente do Azure Information Protection não suporta as configurações que especifique uma etiqueta principal com subetiquetas. Estas configurações incluem a especificação de uma etiqueta predefinida e uma etiqueta para a classificação recomendada ou automática. Quando uma etiqueta tiver subetiquetas, pode especificar uma das subetiquetas, mas não a etiqueta principal.
 

@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: mbaldwin
-ms.openlocfilehash: b692e78cbebe9b8657b0479a1d343453f5f07348
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 0b1b110fe3b2e96c258c7b94a3d356b9404d6e7e
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333335"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809748"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Início rápido: List sensitivity labels (C#) (Listar etiquetas de confidencialidade [C#])
 
@@ -91,7 +91,7 @@ Por fim, criar e testar a aplicação cliente.
 
 | Resumo | Mensagem de erro | Solução |
 |---------|---------------|----------|
-| Token de acesso incorreto | *Ocorreu uma exceção... é o token de acesso incorreto/expirado? <br> <br>Chamada à API falhou: profile_add_engine_async falhou com o: [classe mip::PolicySyncException] Falha na aquisição de política, o pedido falhou com o código de estado http: 401, x-ms-diagnostics: [2000001; motivo = "submetida com o pedido de token de OAuth não é possível analisar."; error_category = "invalid_token"], correlationId: [35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (processo 29924) foi terminado com o código de 0.<br> <br>Pressione qualquer tecla para fechar esta janela...* | Se seu projeto é compilado com êxito, mas ver um resultado semelhante à esquerda, provavelmente terá um token inválido ou expirou sua `AcquireOAuth2Token()` método. Volte ao [a lógica de aquisição do token de atualização](#update-the-token-acquisition-logic-with-a-valid-access-token) e voltar a gerar a atualização de token, acesso `AcquireOAuth2Token()` novamente e reconstrução/teste novamente. Também pode examinar e verifique se o token e às declarações, utilizar o [jwt.ms](https://jwt.ms/) aplicativo web de página única. |
+| Token de acesso incorreto | *Ocorreu uma exceção... é o token de acesso incorreto/expirado? <br> <br>Chamada à API falhou: profile_add_engine_async falhou com o: [classe mip::PolicySyncException] Falha na aquisição de política, o pedido falhou com o código de estado http: 401, x-ms-diagnostics: [2000001; motivo = "submetida com o pedido de token de OAuth não é possível analisar."; error_category = "invalid_token"], correlationId: [35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (processo 29924) foi terminado com o código de 0.<br> <br>Pressione qualquer tecla para fechar esta janela...* | Se seu projeto é compilado com êxito, mas ver um resultado semelhante à esquerda, provavelmente terá um token inválido ou expirou sua `AcquireOAuth2Token()` método. Volte ao [criar e testar o aplicativo](#build-and-test-the-application) e voltar a gerar a atualização de token, acesso `AcquireOAuth2Token()` novamente e reconstrução/teste novamente. Também pode examinar e verifique se o token e às declarações, utilizar o [jwt.ms](https://jwt.ms/) aplicativo web de página única. |
 | Etiquetas de sensibilidade não estão configuradas | n/d | Se seu projeto é compilado com êxito, mas não tiver nenhuma saída na janela do console, certifique-se de que as etiquetas de sensibilidade da sua organização estão configuradas corretamente. Ver [MIP SDK instalação e configuração](setup-configure-mip.md), em "Definir definições de proteção e de taxonomia de etiquetas" para obter detalhes.  |
 
 ## <a name="next-steps"></a>Próximos Passos

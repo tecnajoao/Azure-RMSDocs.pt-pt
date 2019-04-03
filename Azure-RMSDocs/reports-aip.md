@@ -3,21 +3,20 @@ title: Central de relatórios do Azure Information Protection
 description: Como utilizar a centralização de relatórios para monitorizar a adoção das suas etiquetas do Azure Information Protection e identificar ficheiros que contêm informações confidenciais
 author: cabailey
 ms.author: cabailey
-ms.date: 03/22/2019
+ms.date: 04/02/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: c7f862a7a16579b6d414c79015c42664e4066c29
-ms.sourcegitcommit: cf06c3854e6ee8645c3b71a0257bdb6a1b569843
+ms.openlocfilehash: e24b143c64957fb4336effc4cac6666b374f3a15
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58343048"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809969"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Central de relatórios do Azure Information Protection
 
@@ -112,10 +111,19 @@ Para gerar esses relatórios, os pontos finais de enviar os seguintes tipos de i
 
 Essas informações são armazenadas numa área de trabalho do Log Analytics do Azure que pode ser visualizada independentemente do Azure Information Protection, os utilizadores que têm direitos de acesso a esta área de trabalho e é o proprietário de sua organização. Para obter detalhes, consulte a [as permissões necessárias para análise do Azure Information Protection](#permissions-required-for-azure-information-protection-analytics) secção. Para obter informações sobre a gestão de acesso à área de trabalho, consulte a [gerir o acesso ao Log Analytics área de trabalho com permissões do Azure](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions) seção na documentação do Azure.
 
-> [!NOTE]
-> A área de trabalho do Log Analytics do Azure para o Azure Information Protection inclui uma caixa de verificação para correspondências de conteúdo do documento. Ao selecionar esta caixa de verificação, os dados reais que esteja identificados pelos tipos de informações confidenciais ou de suas condições personalizadas também são recolhidos. Por exemplo, isto pode incluir números de cartão de crédito que forem encontrados, bem como números de previdência social, números de passaporte e números de contas bancárias. Se não pretender recolher estes dados, não selecione esta caixa de verificação.
->
-> Atualmente, esta informação não é apresentada nos relatórios, mas pode ser visualizada e obtida com consultas.
+Para impedir que os clientes do Azure Information Protection enviar estes dados, defina o [definição de política](configure-policy-settings.md) dos **enviar dados de auditoria para o Azure Information Protection do log analytics** para **desligado**:
+
+- Para a maioria dos usuários ao enviar esta não é possível enviar os dados e um subconjunto de utilizadores a auditoria de dados: 
+    - Definir **enviar dados de auditoria para o Azure Information Protection do log analytics** ao **desativar** numa política de âmbito para o subconjunto de utilizadores. Esta configuração é típica para cenários de produção.
+    
+- Para apenas um subconjunto de utilizadores para enviar dados de auditoria: 
+    - Definir **enviar dados de auditoria para o Azure Information Protection do log analytics** ao **desativar** na política global, e **no** numa política de âmbito para o subconjunto de utilizadores. Esta configuração é típica para cenários de teste.
+
+#### <a name="content-matches-for-deeper-analysis"></a>Correspondências de conteúdo para uma análise mais aprofundada 
+
+A área de trabalho do Log Analytics do Azure para o Azure Information Protection inclui uma caixa de verificação também recolher e armazenar os dados que esteja identificados pelos tipos de informações confidenciais ou de suas condições personalizadas. Por exemplo, isto pode incluir números de cartão de crédito que forem encontrados, bem como números de previdência social, números de passaporte e números de contas bancárias. Se não pretender enviar estes dados adicionais, não selecione esta caixa de verificação. Se pretender que a maioria dos usuários para enviar esses dados adicionais e um subconjunto de utilizadores não pode enviá-lo, selecione a caixa de verificação e configure uma [definição de cliente avançado](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) numa política de âmbito para o subconjunto de utilizadores.
+
+Depois de recolher o conteúdo corresponde, são apresentados nos relatórios quando desagregar para ficheiros a partir de registos de atividade, para exibir **detalhes de atividade**. Estas informações também podem ser visualizadas e obtidas com consultas.
 
 ## <a name="prerequisites-for-azure-information-protection-analytics"></a>Pré-requisitos para a análise do Azure Information Protection
 Para ver os relatórios do Azure Information Protection e criar os seus próprios, certifique-se de que os seguintes requisitos são cumpridos.
@@ -135,42 +143,42 @@ Uma vez que esse recurso usa a monitorização do Azure, o controlo de acesso ba
 
 Detalhes:
 
-1. Para aceder ao painel de análise do Azure Information Protection no portal do Azure, tem de ter um dos seguintes [funções de administrador do Azure AD](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
+1. Um dos seguintes [funções de administrador do Azure AD](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) para aceder ao painel de análise do Azure Information Protection:
     
-    - Para criar a sua área de trabalho do Log Analytics ou para criar consultas personalizadas, um dos seguintes:
+    - Para criar a sua área de trabalho do Log Analytics ou para criar consultas personalizadas:
     
         - **Administrador do Information Protection**
         - **Administrador de segurança**
         - **Administrador Global**
     
-    - Para ver os dados após o Log Analytics área de trabalho tiver sido criado, um dos seguintes:
+    - Depois da área de trabalho tiver sido criada, em seguida, pode utilizar a seguinte função com menos permissões para ver os dados recolhidos:
     
         - **Leitor de segurança**
-        - **Administrador do Information Protection**
-        - **Administrador de segurança**
-        - **Administrador Global**
     
     > [!NOTE] 
     > Se o seu inquilino tiver sido migrado para a loja de etiquetagem unificada, sua conta tem de ser um administrador global ou um do listadas funções e permissões para acessar o Centro de conformidade e segurança do Office 365. [Mais informações](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
-2. Para acessar sua área de trabalho do Log Analytics do Azure, tem de ter um dos seguintes procedimentos [funções do Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions) ou padrão [funções do Azure](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments):
+2. Além disso, precisa de um dos seguintes procedimentos [funções do Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#managing-access-to-log-analytics-using-azure-permissions) ou padrão [funções do Azure](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments) para acessar sua área de trabalho do Log Analytics do Azure:
     
-    - Para criar uma área de trabalho do Log Analytics ou para criar consultas personalizadas, um dos seguintes:
+    - Para criar a área de trabalho ou para criar consultas personalizadas, um dos seguintes:
     
         - **Contribuidor do log Analytics**
-        - Função do Azure: **Proprietário** ou **contribuinte**
+        - **Contribuinte**
+        - **Proprietário**
     
-    - Para ver os dados numa área de trabalho do Log Analytics depois da área de trabalho ter sido criada, um dos seguintes:
+    - Depois da área de trabalho tiver sido criada, pode, em seguida, utilizar uma das seguintes funções com menos permissões para ver os dados recolhidos:
     
         - **Leitor do log Analytics**
-        - Função do Azure: **Reader**
+        - **Reader**
 
 #### <a name="minimum-roles-to-view-the-reports"></a>Funções mínimo para visualizar os relatórios
 
-Depois de ter configurado a sua área de trabalho para análise do Azure Information Protection, as funções mínimas necessárias para ver os relatórios são os seguintes elementos:
+Depois de ter configurado a sua área de trabalho para análise do Azure Information Protection, as funções mínimas necessárias para ver os relatórios de análise do Azure Information Protection são os seguintes elementos:
 
 - Função de administrador do Azure AD: **Leitor de segurança**
 - Função do Azure: **Leitor do log Analytics**
+
+No entanto, uma atribuição de função típico para muitas organizações é a função de Azure AD **leitor de segurança** e a função do Azure das **leitor**.
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>Configurar uma área de trabalho do Log Analytics para os relatórios
 
@@ -189,6 +197,9 @@ Depois de ter configurado a sua área de trabalho para análise do Azure Informa
 Se precisar de ajuda com a criação da área de trabalho do Log Analytics, consulte [criar uma área de trabalho do Log Analytics no portal do Azure](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace).
 
 Quando a área de trabalho é configurada, está pronto para ver os relatórios.
+
+> [!NOTE]
+> Há atualmente um problema conhecido mostrando pela primeira vez nos relatórios. Se isto acontecer, na política global, definir o [definição de política](configure-policy-settings.md) dos **enviar dados de auditoria para o Azure Information Protection do log analytics** para **desativar** e guardar a política. Em seguida, altere a mesma definição para **no** e guardar a política. Depois dos clientes tenham [transferido a alteração](configure-policy.md#making-changes-to-the-policy), pode demorar até 30 minutos para seus eventos de auditoria sejam visíveis na sua área de trabalho do Log Analytics.
 
 ## <a name="how-to-view-the-reports"></a>Como ver os relatórios
 
@@ -222,3 +233,5 @@ Os dados com sessão iniciada para o Azure Information Protection são armazenad
 
 ## <a name="next-steps"></a>Passos Seguintes
 Depois de rever as informações nos relatórios, pode optar por efetuar alterações à sua política do Azure Information Protection. Para obter instruções, consulte [configurar a política do Azure Information Protection](configure-policy.md).
+
+Se tiver uma subscrição do Microsoft 365, também pode ver a utilização de etiqueta no Centro de conformidade do Microsoft 365 e do Centro de segurança do Microsoft 365. Para obter mais informações, consulte [ver a utilização de etiqueta com a análise de etiqueta](/Office365/SecurityCompliance/label-analytics).

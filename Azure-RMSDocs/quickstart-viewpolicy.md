@@ -4,16 +4,16 @@ description: Se a sua organização é totalmente nova para o Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 03/29/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 1f8ce30906debdfaa69aa7053b7aaa61b893d1c1
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: 5981fe8d0cd7e7cd1739036ff78739bd64514322
+ms.sourcegitcommit: 8fa7d2e6b3e900fec128af57105995d5fb0cc761
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828843"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58617809"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Início rápido: Introdução ao Azure Information Protection no portal do Azure
 

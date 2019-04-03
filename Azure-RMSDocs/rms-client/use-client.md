@@ -4,18 +4,18 @@ description: O Microsoft Azure Information Protection fornece uma solução de s
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/28/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
 ms.suite: ems
-ms.openlocfilehash: b8f19a4953d5cfead99e96386bd65d070ac8ae77
-ms.sourcegitcommit: 0df1cd6000f72ec8cac60a5ace0fa441974464e0
+ms.openlocfilehash: 876838dbd4e9818ca118f632079c98531ce347a1
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58524375"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809833"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>O lado do cliente do Azure Information Protection
 
@@ -35,7 +35,7 @@ O cliente Rights Management (RMS) é instalado automaticamente com algumas aplic
 
 O **cliente Azure Information Protection** que transfere as etiquetas e definições de política do portal do Azure está em disponibilidade geral e tem uma versão de pré-visualização para testar novas funcionalidades e correções. Para obter mais informações sobre estas versões do cliente, consulte o [cliente Azure Information Protection: Política de histórico e suporte de lançamento de versão](client-version-release-history.md). 
 
-O **do Azure Information Protection unified cliente etiquetagem** transfere etiquetas e as definições de política a partir do Centro de conformidade e segurança do Office 365. Este cliente está atualmente em pré-visualização para fins de teste. Para obter mais informações sobre esta versão do cliente, consulte o [do Azure Information Protection unified cliente etiquetagem: Informações de lançamento de versão](unifiedlabelingclient-version-release-history.md).
+O **do Azure Information Protection unified cliente etiquetagem** transfere etiquetas e as definições de política a partir de centros de administração: A segurança do Office 365 e Centro de conformidade, o Centro de segurança do Microsoft 365 e Centro de conformidade do Microsoft 365. Este cliente está atualmente em pré-visualização para fins de teste. Para obter mais informações sobre esta versão do cliente, consulte o [do Azure Information Protection unified cliente etiquetagem: Informações de lançamento de versão](unifiedlabelingclient-version-release-history.md).
 
 O cliente deve instalar?
 
@@ -83,13 +83,13 @@ Quando ambos os clientes suportam a mesma funcionalidade, utilize a tabela segui
 |Programa de configuração:| Opção para instalar a política de demonstração local | Nenhuma política de demonstração local|
 |Etiqueta de seleção e apresentar quando aplicada nas aplicações do Office:|Partir do **Protect** botão na faixa de opções <br /><br /> A partir da barra de Information Protection (de barra horizontal sob a faixa de opções)|Partir do **sensibilidade** botão na faixa de opções<br /><br /> A partir da barra de Information Protection (de barra horizontal sob a faixa de opções)|
 |Gerir a barra do Information Protection nas aplicações do Office:|Para os utilizadores: <br /><br />-Opção para mostrar ou ocultar a barra do **Protect** botão na faixa de opções<br /><br />-Quando um utilizador seleciona para ocultar a barra, por predefinição, a barra está oculta nessa aplicação, mas continua a apresentar automaticamente nas aplicações recentemente abertas <br /><br /> Para administradores: <br /><br />-Definições de política Mostrar ou ocultar a barra quando uma aplicação automaticamente pela primeira vez é aberto e controlar se a barra automaticamente permanece oculta para aplicações recentemente abertas após um utilizador seleciona para ocultar a barra|Para os utilizadores: <br /><br />-Opção para mostrar ou ocultar a barra do **sensibilidade** botão na faixa de opções<br /><br />-Quando um utilizador seleciona para ocultar a barra, a barra está oculta nessa aplicação e também nas aplicações recentemente abertas <br /><br />Para administradores: <br /><br />-Sem definições de política para gerir a barra|
-|Cor da etiqueta: | Configurar no portal do Azure | Mantidos após a migração de etiqueta para o Office 365 <br /><br /> Novas etiquetas criadas no Centro de conformidade de segurança e não tem uma cor|
+|Cor da etiqueta: | Configurar no portal do Azure | Mantidos após a migração de etiqueta para o Office 365 <br /><br /> Novas etiquetas criadas nos centros de administração não tem uma cor|
 |Atualização da política: | Quando se abre uma aplicação do Office <br /><br /> Quando rato para classificar e proteger um ficheiro ou pasta <br /><br />Quando executa os cmdlets do PowerShell para etiquetagem e proteção<br /><br />A cada 24 horas | Quando se abre uma aplicação do Office <br /><br /> Quando rato para classificar e proteger um ficheiro ou pasta <br /><br />Quando executa os cmdlets do PowerShell para etiquetagem e proteção<br /><br />Cada 4 horas|
 |Formatos com suporte para PDF:| Proteção: <br /><br /> -Standard ISO para a encriptação de PDF (predefinição) <br /><br /> - .ppdf <br /><br /> Consumo: <br /><br /> -Standard ISO para a encriptação de PDF <br /><br />- .ppdf<br /><br />-Proteção de IRM do SharePoint| Proteção: <br /><br /> -Standard ISO para a encriptação de PDF <br /><br /> <br /><br /> Consumo: <br /><br /> -Standard ISO para a encriptação de PDF <br /><br />- .ppdf<br /><br />-Proteção de IRM do SharePoint|
 |Cmdlets suportados:| Todos os cmdlets documentados para [AzureInformatioProtection](/powershell/module/azureinformationprotection) | Set-AIPFileClassification e Set-AIPFileLabel não suportam o *proprietário* parâmetro ou bibliotecas do SharePoint Server <br /><br /> Além disso, há um único comentário de "Nenhuma etiqueta para aplicar" para todos os cenários em que uma etiqueta não é aplicada <br /><br /> Set-AIPFileLabel não suporta o *EnableTracking* parâmetro <br /><br /> Get-AIPFileStatus não retorna as informações de rótulo de outros inquilinos e não apresenta o *RMSIssuedTime* parâmetro<br /><br />Além disso, o *LabelingMethod* parâmetro para Get-AIPFileStatus apresenta **privilegiado**, **padrão**, ou **automática** em vez de **Manual** ou **automática**. Para obter mais informações, consulte a [documentação online](/powershell/module/azureinformationprotection/get-aipfilestatus).|
 |Pedidos de justificação (se configurada) por ação no Office: | Frequência de: Por ficheiro <br /><br /> Reduzir o nível de sensibilidade <br /><br /> Remover uma etiqueta<br /><br /> Remover a proteção | Frequência de: Por sessão <br /><br /> Reduzir o nível de sensibilidade<br /><br /> Remover uma etiqueta|
 |Remover aplicada ações de etiqueta: | É pedido ao utilizador para confirmar <br /><br />Etiqueta predefinida ou etiqueta automática (se configurada) não é aplicada automaticamente da próxima vez que a aplicação do Office abre o ficheiro.  <br /><br />| Não é pedido ao utilizador para confirmar<br /><br /> Etiqueta predefinida ou etiqueta automática (se configurada) é aplicada automaticamente da próxima vez que a aplicação do Office abre o ficheiro.|
-|Classificação automática e recomendada: | Configurado como [Etiquetar condições](../configure-policy-classification.md) no portal do Azure com tipos de informações internas e condições personalizadas que utilizam frases ou expressões regulares <br /><br />Opções de configuração incluem: <br /><br />-Contagem exclusiva / não exclusiva <br /><br /> -Contagem mínima| Configurado no Centro de conformidade de segurança e com os tipos de informações confidenciais incorporadas e [tipos de informações personalizadas](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)<br /><br />Opções de configuração incluem:  <br /><br />-Apenas a contagem exclusiva <br /><br />-Mínimo e máxima contagem <br /><br />- E e ou de suporte com os tipos de informações <br /><br />-Dicionário palavra-chave<br /><br />-Confiança personalizável proximidade de caracteres e nível|
+|Classificação automática e recomendada: | Configurado como [Etiquetar condições](../configure-policy-classification.md) no portal do Azure com tipos de informações internas e condições personalizadas que utilizam frases ou expressões regulares <br /><br />Opções de configuração incluem: <br /><br />-Contagem exclusiva / não exclusiva <br /><br /> -Contagem mínima| Configurado nos centros de administração com tipos de informações confidenciais incorporadas e [tipos de informações personalizadas](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)<br /><br />Opções de configuração incluem:  <br /><br />-Apenas a contagem exclusiva <br /><br />-Mínimo e máxima contagem <br /><br />- E e ou de suporte com os tipos de informações <br /><br />-Dicionário palavra-chave<br /><br />-Confiança personalizável proximidade de caracteres e nível|
 
 Para obter uma comparação mais detalhada das diferenças de comportamento para definições de proteção específico, consulte [comparar o comportamento das definições de proteção para uma etiqueta](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label).
 
@@ -102,6 +102,8 @@ Embora o cliente de etiquetagem unificado do Azure Information Protection ainda 
 - Controlar e revogar a partir de aplicações do Office e o Explorador de ficheiros
 
 - Barra de título e descrição do Information Protection
+
+- Valores dinâmicos em cabeçalhos e rodapés com variáveis e diferentes marcas visuais para Word, Excel, PowerPoint e Outlook
 
 - Suporte offline para ações de proteção no PowerShell e o Explorador de ficheiros
 
@@ -130,7 +132,7 @@ Embora o cliente de etiquetagem unificado do Azure Information Protection ainda 
 
 O cliente do Azure Information Protection não suporta as configurações que especifique uma etiqueta principal com subetiquetas. Estas configurações incluem a especificação de uma etiqueta predefinida e uma etiqueta para a classificação recomendada ou automática. Quando uma etiqueta tiver subetiquetas, pode especificar uma das subetiquetas, mas não a etiqueta principal.
 
-Para paridade, o cliente de etiquetagem unificado do Azure Information Protection também não suporta a aplicar etiquetas de principal que tem subetiquetas, mesmo que pode selecionar estas etiquetas no Centro de conformidade e segurança do Office 365. Neste cenário, o cliente de etiquetagem unificado do Azure Information Protection não será aplicada a etiqueta principal.
+Para paridade, o cliente de etiquetagem unificado do Azure Information Protection também não suporta a aplicar etiquetas de principal que tem subetiquetas, mesmo que pode selecionar estas etiquetas nos centros de administração. Neste cenário, o cliente de etiquetagem unificado do Azure Information Protection não será aplicada a etiqueta principal.
 
 ## <a name="see-also"></a>Consulte também
 Utilize a seguinte documentação quando precisar de mais informações sobre como implementar e utilizar estes clientes:

@@ -1,30 +1,30 @@
 ---
-title: Migrar o Azure Information Protection etiquetas para a segurança do Office 365 e o Centro de conformidade – AIP
-description: Migre as etiquetas do Azure Information Protection para o Centro de conformidade e segurança do Office 365 para o cliente suporta a etiquetagem unificada.
+title: Migrar o Azure Information Protection etiquetas para o Office 365 – AIP
+description: Migre o Azure Information Protection etiquetas para etiquetas de sensibilidade do Office 365 para clientes e serviços que suportam etiquetas unificadas.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/20/2019
+ms.date: 04/03/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: e0c73a1d1eb1e5f3e438dd5d9d8f486810b3c869
-ms.sourcegitcommit: ffc7b181f27b628d2a2740f83e0874a830c3735c
+ms.openlocfilehash: 46ba6b5e1cb9246074b2e5a241f06eef3b0d2501
+ms.sourcegitcommit: cf85764510e9980dfacaaa01bc4da37c4dbf5281
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306953"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58887561"
 ---
-# <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Como migrar as etiquetas do Azure Information Protection para o Centro de conformidade e segurança do Office 365
+# <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Como migrar o Azure Information Protection etiquetas para etiquetas de sensibilidade do Office 365
 
 >*Aplica-se a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
 > Esta funcionalidade está em pré-visualização e migra o seu inquilino para uma nova plataforma. Não é possível inverter a migração. A nova plataforma suporta a etiquetagem unificada, para que as etiquetas que criar e gerir podem ser utilizadas por clientes e serviços que suportam [soluções do Microsoft Information Protection](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection).
 
-Migrar as etiquetas, se pretender conseguir utilizá-los como rótulos de sensibilidade do Office 365 do Centro de conformidade, de segurança do Office 365 e a ser utilizado pelo [os clientes e serviços que suportam a etiquetagem unificada](#clients-and-services-that-support-unified-labeling). Após a migração, o cliente do Azure Information Protection continua transferir as etiquetas com a política do Azure Information Protection a partir do portal do Azure. 
+Migrar as suas etiquetas para poder utilizá-los como etiquetas de sensibilidade do Office 365 por [os clientes e serviços que suportam a etiquetagem unificada](#clients-and-services-that-support-unified-labeling). Gerir e publicar estas etiquetas da segurança do Office 365 e o Centro de conformidade, ou o Centro de segurança do Microsoft 365 e o Centro de conformidade do Microsoft 365. Após a migração, o cliente do Azure Information Protection continua transferir as etiquetas com a política do Azure Information Protection a partir do portal do Azure. 
 
 Antes de ler instruções detalhadas sobre como migrar as suas etiquetas, poderá considerar as seguintes perguntas mais frequentes sobre úteis:
 
@@ -36,75 +36,77 @@ Antes de ler instruções detalhadas sobre como migrar as suas etiquetas, poder�
 
 ### <a name="important-information-about-administrative-roles"></a>Informações importantes sobre as funções administrativas
 
-O [funções do Azure AD](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) dos **administrador de segurança** e **administrador do Information Protection** não são suportados pela plataforma de etiquetagem unificada. Se essas funções administrativas são utilizadas na sua organização, antes de migrar as etiquetas, adicione os utilizadores que têm estas funções para o **administrador de conformidade** ou o **gestão da organização** função grupos para o Centro de conformidade e segurança do Office 365. Como alternativa, pode criar um novo grupo de função para estes utilizadores e adicioná-los **gestão de retenção** ou **configuração de organização** funções a este grupo. Para obter instruções, consulte [conceder acesso de utilizadores para o Centro de conformidade e segurança do Office 365](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center).
+O [funções do Azure AD](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) dos **administrador de segurança** e **administrador do Information Protection** não são suportados pela plataforma de etiquetagem unificada. Se essas funções administrativas são utilizadas na sua organização, antes de migrar as etiquetas, adicione os utilizadores que têm estas funções para o **administrador de conformidade** ou o **gestão da organização** função grupos para a segurança do Office 365 e Centro de conformidade, o Centro de segurança do Microsoft 365 ou o Centro de conformidade do Microsoft 365. Como alternativa, pode criar um novo grupo de função para estes utilizadores e adicioná-los **gestão de retenção** ou **configuração de organização** funções a este grupo. Para obter instruções, consulte [conceder acesso de utilizadores para o Centro de conformidade e segurança do Office 365](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center).
 
-Se não conceder esses usuários acesso para o Centro de conformidade e segurança ao utilizar uma das seguintes configurações, eles perderão o acesso para as etiquetas e políticas no portal do Azure depois das etiquetas são migradas.
+Se não conceder esses usuários acesso para os centros de administração utilizando uma das seguintes configurações, eles perderão o acesso para as etiquetas e políticas no portal do Azure depois das etiquetas são migradas.
 
-Os administradores globais do seu inquilino podem continuar a gerir etiquetas e políticas no tanto o portal do Azure e o Centro de segurança e conformidade, depois das etiquetas são migradas.
+Os administradores globais do seu inquilino podem continuar a gerir etiquetas e políticas no portal do Azure e os centros de administração, depois das etiquetas são migradas.
 
 
 ## <a name="considerations-for-unified-labels"></a>Considerações para procurar etiquetas de unificada
 
 Antes de migrar as etiquetas, certifique-se de que está ciente das seguintes alterações e considerações:
 
-- Nem todos os clientes atualmente suportam etiquetas unificadas. Certifique-se de que tenha [suportado clientes](#clients-and-services-that-support-unified-labeling) e estar preparado para a administração em tanto o portal do Azure (para clientes que não suportam etiquetas unificadas) e o Centro de segurança e conformidade (para o cliente que suportam etiquetas unificadas ).
+- Nem todos os clientes atualmente suportam etiquetas unificadas. Certifique-se de que tenha [suportado clientes](#clients-and-services-that-support-unified-labeling) e estar preparado para administração no portal do Azure (para clientes que não suportam etiquetas unificadas) e os centros de administração (para o cliente que suportam etiquetas unificadas).
 
-- Se estiver no meio de definir e configurar as etiquetas que pretende utilizar, recomendamos que conclua este processo com o portal do Azure e, em seguida, migre as etiquetas. Esta estratégia evita a duplicação de etiquetas durante o processo de migração, que, em seguida, vai ter de ser editado no Centro de conformidade e segurança do.
+- Se estiver no meio de definir e configurar as etiquetas que pretende utilizar, recomendamos que conclua este processo com o portal do Azure e, em seguida, migre as etiquetas. Esta estratégia evita a duplicação de etiquetas durante o processo de migração, que, em seguida, vai ter de ser editado em centros de administração.
 
-- As políticas, incluindo definições de política e quem tem acesso aos mesmos (políticas de âmbito) e todas as definições de cliente avançadas não são migradas. Para que essas alterações não são migradas, terá de configurar as opções relevantes no Centro de conformidade de segurança e, depois das etiquetas são migradas.
+- As políticas, incluindo definições de política e quem tem acesso aos mesmos (políticas de âmbito) e todas as definições de cliente avançadas não são migradas. Para que essas alterações não são migradas, terá de configurar as opções relevantes nos centros de administração, depois das etiquetas são migradas.
     
-    Para uma experiência de usuário mais consistente, recomendamos que publique as etiquetas mesmo no mesmos âmbitos no Centro de conformidade e segurança do.
+    Para uma experiência de usuário mais consistente, recomendamos que publique as etiquetas mesmo no mesmos âmbitos nos centros de administração.
 
-- Nem todas as definições de uma etiqueta migrada são compatíveis com o Centro de conformidade e segurança. Utilize a tabela no [Etiquetar definições que não são suportadas no Centro de conformidade e segurança do](#label-settings-that-are-not-supported-in-the-security--compliance-center) secção para ajudar a identificar estas definições e o método recomendado de ação.
+- Nem todas as definições de uma etiqueta migrada são compatíveis com os centros de administração. Utilize a tabela no [Etiquetar definições que não são suportadas nos centros de administração](#label-settings-that-are-not-supported-in-the-admin-centers) secção para ajudar a identificar estas definições e o método recomendado de ação.
 
 - Modelos de proteção:
     
     - Modelos que utilizam uma chave com base na cloud e que fazem parte de uma configuração de etiqueta também são migrados com a etiqueta. Outros modelos de proteção não são migrados. 
     
-    - Se tiver etiquetas que estão configuradas para um modelo predefinido, editar estas etiquetas e selecione o **definir permissões** opção para configurar as mesmas definições de proteção que tinha no seu modelo. Etiquetas com modelos predefinidos não irão bloquear a migração de etiqueta, mas esta configuração de etiqueta não é suportada no Centro de conformidade e segurança do.
+    - Se tiver etiquetas que estão configuradas para um modelo predefinido, editar estas etiquetas e selecione o **definir permissões** opção para configurar as mesmas definições de proteção que tinha no seu modelo. Etiquetas com modelos predefinidos não irão bloquear a migração de etiqueta, mas esta configuração de etiqueta não é suportada nos centros de administração.
         
         Sugestão: Para ajudar a reconfigurar estas etiquetas, talvez seja útil ter duas janelas do browser: Uma janela na qual seleciona a **Editar modelo** botão para a etiqueta ver as definições de proteção e de outra janela para configurar as definições ao selecionar **definir permissões**.
     
-    - Depois de uma etiqueta com as definições de proteção com base na cloud foi migrada, o âmbito resultante do modelo de proteção é o âmbito definido no portal do Azure (ou ao utilizar o módulo do PowerShell do AADRM) e o âmbito definido na segurança & Centro de conformidade. 
+    - Depois de uma etiqueta com as definições de proteção com base na cloud foi migrada, o âmbito resultante do modelo de proteção é o âmbito definido no portal do Azure (ou ao utilizar o módulo do PowerShell do AADRM) e o âmbito definido nos centros de administração. 
 
 - Quando migra as etiquetas, verá a migração resulta apresentar se uma etiqueta foi **criado**, **atualizado**, ou **renomeado** devido à duplicação:
 
-    - Quando é criada uma etiqueta, em seguida, pode publicá-lo no Centro de segurança e conformidade para disponibilizá-lo a aplicações e serviços.
+    - Quando é criada uma etiqueta, em seguida, pode publicá-lo em um dos centros de administração para disponibilizá-lo a aplicações e serviços.
     
-    - Quando uma etiqueta for renomeada, tem, em seguida, editá-lo, que pode ser feito na segurança e o Centro de conformidade ou o portal do Azure. 
+    - Quando uma etiqueta for renomeada, tem, em seguida, editá-lo, que pode ser feito em um dos centros de administração ou o portal do Azure. 
 
-- Para cada etiqueta, o portal do Azure mostra apenas etiqueta nome a apresentar, que pode editar. O Centro de conformidade e segurança mostra este nome a apresentar para uma etiqueta e o nome de rótulo. O nome de etiqueta é o nome inicial que especificou quando a etiqueta foi criada pela primeira vez e esta propriedade é utilizada pelo serviço de back-end para fins de identificação.
+- Para cada etiqueta, o portal do Azure mostra apenas etiqueta nome a apresentar, que pode editar. Os centros de administração mostram este nome a apresentar para uma etiqueta e o nome de rótulo. O nome de etiqueta é o nome inicial que especificou quando a etiqueta foi criada pela primeira vez e esta propriedade é utilizada pelo serviço de back-end para fins de identificação.
 
-- Quaisquer cadeias de caracteres localizadas para as etiquetas não são migradas. Tem de definir novas cadeias de caracteres localizadas para as etiquetas migradas no Centro de conformidade e segurança do.
+- Quaisquer cadeias de caracteres localizadas para as etiquetas não são migradas. Tem de definir novas cadeias de caracteres localizadas para as etiquetas migradas nos centros de administração.
 
-- Após a migração, ao editar uma etiqueta migrada no portal do Azure, a mesma alteração é refletida automaticamente no Centro de conformidade e segurança do. No entanto, ao editar uma etiqueta migrada no Centro de conformidade e a segurança, terá de voltar para o portal do Azure, **unificada do Azure Information Protection – etiquetagem** painel e selecione **Publish**. Esta ação adicional é necessário para clientes do Azure Information Protection recolher as alterações de etiqueta.
+- Após a migração, ao editar uma etiqueta migrada no portal do Azure, a mesma alteração é refletida automaticamente nos centros de administração. No entanto, ao editar uma etiqueta migrada em um dos centros de administração, terá de voltar para o portal do Azure, **unificada do Azure Information Protection – etiquetagem** painel e selecione **Publish**. Esta ação adicional é necessário para clientes do Azure Information Protection recolher as alterações de etiqueta.
 
-### <a name="label-settings-that-are-not-supported-in-the-security--compliance-center"></a>Definições de etiquetas que não são suportadas no Centro de conformidade e segurança do
+### <a name="label-settings-that-are-not-supported-in-the-admin-centers"></a>Definições de etiquetas que não são suportadas nos centros de administração
 
-Utilize a seguinte tabela para identificar quais as definições de configuração de uma etiqueta migrada não são suportadas pelo centro de conformidade e segurança do. Se tiver etiquetas com estas definições, quando a migração estiver concluída, utilize as orientações de administração na coluna final antes de publicar as etiquetas no Centro de conformidade e a segurança do Office 365.
+Utilize a seguinte tabela para identificar quais as definições de configuração de uma etiqueta migrada não são suportadas pela segurança do Office 365 e Centro de conformidade, o Centro de segurança do Microsoft 365 ou o Centro de conformidade da Microsoft. Se tiver etiquetas com estas definições, quando a migração estiver concluída, utilize as orientações de administração na coluna final antes de publicar as etiquetas em um dos centros de administração.
 
 Clientes do Azure Information Protection podem utilizar todas as definições de etiqueta listadas sem problemas, porque eles continuam a transferir as etiquetas do portal do Azure.
 
-|Configuração de etiqueta|Suportados pelos clientes de etiquetas unificados| Orientações para o Centro de conformidade e segurança|
+|Configuração de etiqueta|Suportados pelos clientes de etiquetas unificados| Documentação de orientação para os centros de administração|
 |-------------------|---------------------------------------------|-------------------------|
-|Estado ativado ou desativado<br /><br />Notas: Não sincronizados para o Centro de conformidade e segurança |Não aplicável|O equivalente é se a etiqueta é publicada ou não. |
+|Estado ativado ou desativado<br /><br />Notas: Não sincronizados para os centros de administração |Não aplicável|O equivalente é se a etiqueta é publicada ou não. |
 |Cor da etiqueta que selecione da lista ou especifique usando código RGB |Sim|Nenhuma opção de configuração para as cores de etiqueta. Em vez disso, pode configurar as cores de etiqueta no portal do Azure.|
 |Proteção baseada na cloud ou um modelo predefinido a utilizar a proteção baseada em HYOK |Não|Nenhuma opção de configuração para modelos predefinidos. Não é recomendável que publicar uma etiqueta com esta configuração.|
 |Proteção baseada na cloud com as permissões definidas pelo utilizador para o Word, Excel e PowerPoint |Não|Nenhuma opção de configuração para permissões definidas pelo utilizador para estas aplicações do Office. Não é recomendável que publicar uma etiqueta com esta configuração. Se o fizer, os resultados de aplicar a etiqueta estão listados na [seguinte tabela](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |Proteção baseada em HYOK usando permissões definidas pelo utilizador para o Outlook (não reencaminhar) |Não|Nenhuma opção de configuração para HYOK. Não é recomendável que publicar uma etiqueta com esta configuração. Se o fizer, os resultados de aplicar a etiqueta estão listados na [seguinte tabela](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |Remover proteção |Não|Nenhuma opção de configuração para remover a proteção. Não é recomendável que publicar uma etiqueta com esta configuração.<br /><br /> Se publicar esta etiqueta, quando aplicado, será possível remover a proteção se estava anteriormente aplicada por uma etiqueta. Se a proteção estava anteriormente aplicada independentemente de uma etiqueta, a proteção é preservada.|
-|Tipo de letra personalizado e a cor do tipo de letra personalizados pelo código RGB para marcas visuais (cabeçalho, rodapé, marca d'água)|Sim|Configuração para marcas visuais está limitada a uma lista de cores e tamanhos de fonte. Embora não pode ver os valores configurados no Centro de conformidade e segurança do, pode publicar esta etiqueta sem alterações. <br /><br />Para alterar estas opções, pode utilizar o portal do Azure. No entanto, para uma administração mais fácil, considere alterar a cor para uma das opções listadas no Centro de conformidade e segurança do.|
+|Tipo de letra personalizado e a cor do tipo de letra personalizados pelo código RGB para marcas visuais (cabeçalho, rodapé, marca d'água)|Sim|Configuração para marcas visuais está limitada a uma lista de cores e tamanhos de fonte. Pode publicar esta etiqueta sem alterações, embora não pode ver os valores configurados nos centros de administração. <br /><br />Para alterar estas opções, pode utilizar o portal do Azure. No entanto, para uma administração mais fácil, considere alterar a cor para uma das opções listadas nos centros de administração.|
 |Variáveis em marcas visuais (cabeçalho, rodapé)|Não|Se publicar esta etiqueta sem alterações, as variáveis são apresentadas como texto em clientes em vez de apresentam os valores dinâmicos. Antes de publicar a etiqueta, edite as cadeias de caracteres para remover as variáveis.|
 |Marcas visuais por aplicação|Não|Se publicar esta etiqueta sem alterações, as variáveis de aplicação são apresentadas como texto em clientes em todas as aplicações em vez de apresentam suas cadeias de caracteres de texto em aplicações escolhidas. Publicar esta etiqueta apenas se é adequado para todas as aplicações e editar as cadeias de caracteres para remover as variáveis de aplicação.|
 |Condições e configurações associadas <br /><br />Notas: Inclui a etiquetagem automática e recomendada e suas descrições|Não aplicável|Reconfigure suas condições utilizando automática etiquetagem como uma configuração separada de configurações de rótulo.|
 
 ### <a name="comparing-the-behavior-of-protection-settings-for-a-label"></a>Comparar o comportamento das definições de proteção para uma etiqueta
 
-Utilize a seguinte tabela para identificar a forma como a mesma definição de proteção para uma etiqueta tem um comportamento diferente, dependendo se é utilizado pelo cliente do Azure Information Protection (versões de disponibilidade geral e versão de pré-visualização atual), a pré-visualização atual versão do cliente etiquetagem unificado do Azure Information Protection, ou por aplicações do Office com a etiquetagem incorporada (também conhecido como "nativo Office etiquetagem"). 
+Utilize a seguinte tabela para identificar como a mesma definição de proteção para uma etiqueta pode ter um comportamento diferente, dependendo se é utilizado pelo cliente do Azure Information Protection (versões de disponibilidade geral e versão de pré-visualização atual), a pré-visualização atual versão do cliente etiquetagem unificado do Azure Information Protection, ou por aplicações do Office com a etiquetagem incorporada (também conhecido como "nativo Office etiquetagem"). 
 
-Definições de proteção que se comportam da mesma forma, não estão listadas.
+Definições de proteção que se comportam da mesma forma, não estão listadas na tabela, com as seguintes exceções:
+- Quando utilizar aplicações do Office com a etiquetagem incorporadas, as etiquetas não estão visíveis no Explorador de ficheiros, a menos que também instala o cliente de etiquetagem unificado do Azure Information Protection.
+- Quando utilizar aplicações do Office com a etiquetagem incorporada, se a proteção estava anteriormente aplicada independentemente de uma etiqueta, essa proteção é preservada [[1]](#footnote-1).
 
-|Definição de proteção para uma etiqueta |Cliente do Azure Information Protection|O Azure Information Protection unified cliente etiquetagem| Aplicações do Office com incorporado etiquetagem
+|Definição de proteção para uma etiqueta |Cliente do Azure Information Protection|O Azure Information Protection unified cliente etiquetagem| Aplicações do Office com a etiquetagem incorporada
 |-------------------|-----------------------------------|-----------------------------------------------------------|---------------
 |Azure (chave da cloud) com permissões definidas pelo utilizador para o Word, Excel, PowerPoint e o Explorador de ficheiros:| Visível no Word, Excel, PowerPoint e o Explorador de ficheiros <br /><br /> Quando a etiqueta é aplicada:<br /><br /> -Os utilizadores que introduzam as permissões personalizadas que, em seguida, são aplicadas como proteção com uma chave com base na cloud| Não é visível |Visível no Word, Excel, PowerPoint e Outlook: <br /><br /> Quando a etiqueta é aplicada:<br /><br /> -Não é pedida aos utilizadores permissões personalizadas e sem proteção é aplicada <br /><br /> -Se a proteção estava anteriormente aplicada independentemente de uma etiqueta, essa proteção é preservada [[1]](#footnote-1)|
 |HYOK (AD RMS) com um modelo:| Visível no Word, Excel, PowerPoint, Outlook e o Explorador de ficheiros<br /><br /> Quando esta etiqueta é aplicada: <br /><br />-A proteção do HYOK é aplicada a documentos e e-mails | Visível no Word, Excel, PowerPoint, Outlook e o Explorador de ficheiros  <br /><br /> Quando esta etiqueta é aplicada: <br /><br />-Sem proteção é aplicada e remover a proteção [[2]](#footnote-2) se estava anteriormente aplicada por uma etiqueta <br /><br />-Se a proteção estava anteriormente aplicada independentemente de uma etiqueta, essa proteção é preservada |Visível no Word, Excel, PowerPoint e Outlook <br /><br /> Quando esta etiqueta é aplicada: <br /><br />-Sem proteção é aplicada e remover a proteção [[2]](#footnote-2) se estava anteriormente aplicada por uma etiqueta <br /><br />-Se a proteção estava anteriormente aplicada independentemente de uma etiqueta, essa proteção é preservada [[1]](#footnote-1) |
@@ -139,14 +141,14 @@ Tem de ser um administrador global para migrar as suas etiquetas.
 
 3. Sobre o **unificada do Azure Information Protection – etiquetagem** painel, selecione **ativar** e siga as instruções online.
 
-Para as etiquetas que migrado com êxito, eles podem agora ser utilizados pelo [os clientes e serviços que suportam a etiquetagem unificada](#clients-and-services-that-support-unified-labeling). No entanto, é necessário publicar primeiro estas etiquetas no Centro de conformidade e segurança.
+Para as etiquetas que migrado com êxito, eles podem agora ser utilizados pelo [os clientes e serviços que suportam a etiquetagem unificada](#clients-and-services-that-support-unified-labeling). No entanto, é necessário publicar primeiro estas etiquetas dos centros de administração: Segurança do Office 365 & o Centro de conformidade, o Centro de segurança do Microsoft 365 ou o Centro de conformidade do Microsoft 365.
 
 > [!IMPORTANT]
 > Se editar as etiquetas fora do portal do Azure, para clientes do Azure Information Protection, regresse a este **unificada do Azure Information Protection – etiquetagem** painel e selecione **Publish**.
 
 ### <a name="clients-and-services-that-support-unified-labeling"></a>Os clientes e serviços que suportam a etiquetagem unificada
 
-Para confirmar se os clientes e serviços que utiliza suportam a etiquetagem unificado, consulte a respetiva documentação para verificar se eles poderão utilizar etiquetas de sensibilidade, que são publicadas a partir do Centro de conformidade e segurança do Office 365. 
+Para confirmar se os clientes e serviços que utiliza suportam a etiquetagem unificado, consulte sua documentação para verificar se podem utilizar etiquetas de sensibilidade, que são publicadas a partir de um dos centros de administração: Segurança do Office 365 & o Centro de conformidade, o Centro de segurança do Microsoft 365 ou o Centro de conformidade do Microsoft 365. 
 
 ##### <a name="clients-that-currently-support-unified-labeling-include"></a>Os clientes que atualmente suportam a etiquetagem unificada incluem:
 
@@ -164,14 +166,14 @@ Para confirmar se os clientes e serviços que utiliza suportam a etiquetagem uni
     
     Este serviço suporta etiquetas antes da migração para o arquivo de etiquetagem unificado e após a migração, usando a seguinte lógica:
     
-    - Se o Centro de conformidade e segurança do Office 365 tem as etiquetas mesmo que os no portal do Azure: Etiquetas unificadas são obtidas a partir do Centro de conformidade e segurança do Office 365. Para selecionar estas etiquetas no Cloud App Security, pelo menos uma etiqueta tem de ser publicada pelo menos um utilizador.
+    - Se no Centro de administração tem as etiquetas mesmo que os no portal do Azure: Etiquetas unificadas são obtidas a partir de centros de administração. Para selecionar estas etiquetas no Cloud App Security, pelo menos uma etiqueta tem de ser publicada pelo menos um utilizador.
     
-    - Se o Centro de conformidade e segurança do Office 365 não tem as etiquetas mesmo que os no portal do Azure: Etiquetas unificadas não são utilizadas a partir do Centro de conformidade e segurança do Office 365 e, em vez disso, as etiquetas são obtidas a partir do portal do Azure.
+    - Se no Centro de administração não tem as etiquetas mesmo que os no portal do Azure: Etiquetas unificadas não são utilizadas a partir de centros de administração e, em vez disso, as etiquetas são obtidas a partir do portal do Azure.
 
 - Serviços de fornecedores de software e desenvolvedores que utilizam o [SDK do Microsoft Information Protection](https://docs.microsoft.com/en-us/information-protection/develop/overview).
 
 ## <a name="next-steps"></a>Passos Seguintes
 
-Para obter mais informações sobre as etiquetas migradas que agora pode ser configurado e publicado no Centro de conformidade e a segurança do Office 365, consulte [descrição geral das etiquetas de sensibilidade](/Office365/SecurityCompliance/sensitivity-labels).
+Para obter mais informações sobre as etiquetas migradas que agora pode ser configurado e publicado em um dos centros de administração, consulte [descrição geral das etiquetas de sensibilidade](/Office365/SecurityCompliance/sensitivity-labels).
 
 Para ler a mensagem de blogue de anúncio: [Anunciando a disponibilidade do unified a etiquetagem de gestão no Centro de conformidade e segurança do](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492).

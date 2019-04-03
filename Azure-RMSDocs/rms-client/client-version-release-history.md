@@ -4,18 +4,18 @@ description: Veja o que há de novo ou alterado numa versão do cliente do Azure
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/19/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 91afeedf07e34f08860f1d596052fdc559c53098
-ms.sourcegitcommit: d8cadf325472e7fc8900905305d7f583a97506b0
+ms.openlocfilehash: d6ffbce2dfba5a2d835808a21857eb396cfc1eb5
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "57828452"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809867"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: Política de histórico e suporte de lançamento de versão
 
@@ -47,7 +47,7 @@ Utilize as seguintes informações para ver o que há de novo ou alterado para u
 Se tiver uma versão 1 do cliente posterior 1.41.51.0, é uma versão de pré-visualização para fins de teste e avaliação.  
 
 > [!TIP]
-> Interessado na avaliação do Azure Information Protection unified cliente etiquetagem porque as etiquetas são publicadas a partir do Centro de conformidade e segurança do Office 365? Consulte [do Azure Information Protection unified cliente etiquetagem: Informações de lançamento de versão](unifiedlabelingclient-version-release-history.md).
+> Interessado na avaliação do Azure Information Protection unified cliente etiquetagem porque as etiquetas são publicadas a partir da segurança do Office 365 & o Centro de conformidade, o Centro de segurança do Microsoft 365 ou o Centro de conformidade do Microsoft 365? Consulte [do Azure Information Protection unified cliente etiquetagem: Informações de lançamento de versão](unifiedlabelingclient-version-release-history.md).
 
 **Lançado**: 03/05/2019
 
@@ -81,6 +81,7 @@ Esta versão inclui a versão 1.0.3592.627 do cliente RMS MSIPC.
 
 - Nova definição de cliente avançado que é aplicável apenas ao configurar a política de configuração para não exibir permissões personalizadas: Quando existe um ficheiro que está protegido com permissões personalizadas, exiba a opção de permissões personalizadas no Explorador de ficheiros para os utilizadores podem ver e alterá-los (se tiverem permissões para alterar as definições de proteção). [Mais informações](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
 
+- Nova definição de cliente avançado para análise do Azure Information Protection para evitar o envio de corresponde ao tipo de informações para um subconjunto de utilizadores quando tiver selecionado a caixa de verificação no portal do Azure para recolher as correspondências de conteúdo. [Mais informações](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
 
 **Correções**:
 

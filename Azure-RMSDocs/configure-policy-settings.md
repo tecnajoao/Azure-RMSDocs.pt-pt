@@ -4,17 +4,17 @@ description: Configurar as definições na política do Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/06/2019
+ms.date: 03/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 5a797fc02894c64d3801492080decf113383cb33
-ms.sourcegitcommit: 503b8330efbecfc4dce204ffe036a7911a35691d
+ms.openlocfilehash: b85cf3fc1a1f78732c928b40cb09b4781dc42168
+ms.sourcegitcommit: 8fa7d2e6b3e900fec128af57105995d5fb0cc761
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379887"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58617827"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Como configurar as definições de política do Azure Information Protection
 
@@ -42,7 +42,11 @@ Configurar estas definições:
         
         Esta definição aplica-se para aplicações do Office e o scanner. Não é aplicável ao Explorador de ficheiros, ou o PowerShell.
     
-   - **Todos os documentos e e-mails devem ter uma etiqueta**: Quando define esta opção como **no**, todos os documentos guardado e e-mails enviados devem ter uma etiqueta aplicada. As etiquetas podem ser atribuídas manualmente por um utilizador, automaticamente como resultado de uma [Condição](configure-policy-classification.md) ou pode ser atribuída por predefinição (definindo opção **Selecionar etiqueta predefinida**).
+    - **Enviar dados de auditoria para análise do Azure Information Protection**: Antes de criar uma área de trabalho do Log Analytics do Azure para [analytics do Azure Information](reports-aip.md), os valores para essa exibição de definição **desativar** e **não configurado**. Quando cria a área de trabalho, os valores de alterar para **Off** e **no**.
+        
+        Quando a definição for **no**, pontos de extremidade que suportam a criação de relatórios central enviam os dados de auditoria para o serviço Azure Information Protection. Para obter mais informações sobre as informações que são enviadas e armazenadas, consulte a [informações recolhidos e enviados para a Microsoft](reports-aip.md#information-collected-and-sent-to-microsoft) secção. Defina esta opção como **desativar** para impedir que esses dados a ser enviados.
+    
+    - **Todos os documentos e e-mails devem ter uma etiqueta**: Quando define esta opção como **no**, todos os documentos guardado e e-mails enviados devem ter uma etiqueta aplicada. As etiquetas podem ser atribuídas manualmente por um utilizador, automaticamente como resultado de uma [Condição](configure-policy-classification.md) ou pode ser atribuída por predefinição (definindo opção **Selecionar etiqueta predefinida**).
         
        Se uma etiqueta não estiver atribuída quando os utilizadores guardar um documento ou enviar um e-mail, é-lhes pedido para selecionar uma etiqueta. Por exemplo:
         

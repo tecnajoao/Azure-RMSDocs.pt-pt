@@ -4,19 +4,19 @@ description: Está confuso com uma palavra, expressão ou acrónimo relacionado 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/02/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5fd820cb189d21d6d4b848547ad4eaafd42d5b96
-ms.sourcegitcommit: 1dec4a5884ee070cd5351ec229575f04f6eef7b8
+ms.openlocfilehash: bd136d42420f42521e9fe058e73b4d643715d254
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57206506"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809935"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologia do Azure Information Protection
 
@@ -36,7 +36,7 @@ Cliente do Azure Information Protection|Lado do cliente do Azure Information Pro
 |Etiqueta do Azure Information Protection|Um item que sempre aplica-se uma classificação a documentos e e-mails de valor e também pode protegê-los. Quando uma etiqueta é aplicada, as informações de etiqueta são armazenadas nos metadados para aplicativos e serviços para ler e, opcionalmente, agir sobre ele.|
 |Política do Azure Information Protection|Configuração para clientes e serviços que utilizam o Azure Information Protection etiquetas e as definições de política definida pelo administrador.|
 |Scanner do Azure Information Protection|Um serviço que é executado no Windows Server e permite-lhe detetar, classificar e proteger os documentos em pastas locais, compartilhamentos de rede e sites do SharePoint Server e bibliotecas.|
-|O Azure Information Protection unified cliente etiquetagem|Atualmente em pré-visualização: O cliente para computadores Windows que permite que os utilizadores, administradores e os serviços utilizar as etiquetas de sensibilidade e definições de política do Centro de conformidade e a segurança do Office 365.|
+|O Azure Information Protection unified cliente etiquetagem|Atualmente em pré-visualização: O cliente para computadores Windows que permite que os utilizadores, administradores e serviços de utilizar as etiquetas de sensibilidade e definições de política de segurança do Office 365 & Centro de conformidade, o Centro de segurança do Microsoft 365 e o Centro de conformidade do Microsoft 365.|
 |Azure RMS|Ver *do Azure Rights Management*.|
 |Visualizador do Azure Information Protection|Uma aplicação que é executado em computadores Windows e dispositivos móveis, para apresentar ficheiros protegidos.|
 |Azure Rights Management|Frequentemente abreviado para *do Azure RMS*.<br /><br />Um serviço do Azure utilizado pelo Azure Information Protection que utiliza encriptação e políticas para o ajudar a proteger documentos, ficheiros e e-mails.  Também conhecido como *serviço Azure Rights Management*. Os nomes anteriores incluem:<br /><br />- *Gestão de direitos do Windows do Azure Active Directory*: Frequentemente abreviado para Windows Azure AD Rights Management Service.<br /><br />- *RMS Online*: O nome originalmente proposto, que por vezes, poderá ver em mensagens de erro e as entradas de ficheiros de registo.|

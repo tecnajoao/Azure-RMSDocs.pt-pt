@@ -4,19 +4,19 @@ description: Conheça e implemente a funcionalidade de superutilizador do servi�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/12/2018
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1590fded6abab3ca2848d9eb216e9f49f35f0cfb
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 4a0583b4cc288385520d2990d6f297a58a81d1cc
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255330"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809732"
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Configurar superutilizadores para o Azure Rights Management e serviços de deteção ou recuperação de dados
 
@@ -85,7 +85,7 @@ Para obter mais informações sobre estes cmdlets, veja [Utilizar o PowerShell c
 
 Apesar de poder utilizar o cmdlet Unprotect-RMSFile para desencriptar conteúdos protegidos no arquivos PST, utilize este cmdlet estrategicamente como parte do seu processo de deteção de dados eletrónicos. Executar Unprotect-RMSFile ficheiros grandes num computador é um com muitos recursos (memória e espaço em disco) e o tamanho de ficheiro máximo suportado para este cmdlet é 5 GB.
 
-O ideal é que usar [deteção de dados Eletrónicos do Office 365](/office365/securitycompliance/ediscovery) para procurar e extrair o anexo protegido nos e-mails e os e-mails protegidos. A capacidade de Superutilizador automaticamente está integrada com o Exchange Online, para que a deteção de dados Eletrónicos no Centro de conformidade de segurança do Office 365 e pode procurar itens encriptados antes da exportação ou e-mail de desencriptação encriptada na exportação.
+O ideal é que usar [deteção de dados Eletrónicos do Office 365](/office365/securitycompliance/ediscovery) para procurar e extrair o anexo protegido nos e-mails e os e-mails protegidos. A capacidade de Superutilizador automaticamente está integrada com o Exchange Online, para que a deteção de dados Eletrónicos no Centro de conformidade de segurança do Office 365 e o Centro de conformidade ou o Microsoft 365 pode procurar itens encriptados antes da exportação ou e-mail de desencriptação encriptada na exportação.
 
 Se não conseguir utilizar a deteção de dados Eletrónicos do Office 365, poderá ter outra solução de deteção de dados Eletrónicos que se integra com o serviço Azure Rights Management da mesma forma compreender os dados. Em alternativa, se a sua solução de deteção de dados Eletrónicos automaticamente não é possível ler e desencriptar o conteúdo protegido, pode continuar a utilizar esta solução num processo de vários passo que permite-lhe executar Unprotect-RMSFile com mais eficiência:
 

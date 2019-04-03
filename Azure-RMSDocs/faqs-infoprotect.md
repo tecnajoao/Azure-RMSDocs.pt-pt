@@ -4,19 +4,19 @@ description: Tem uma pergunta específica sobre classificação e etiquetagem at
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 3bfa333e88df07702aa6e7990c31609985a2b00f
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: 34f64cc28762f8eb08089b188fbb40c7358e4807
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828860"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809986"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Perguntas mais frequentes sobre a classificação e a etiquetagem no Azure Information Protection
 
@@ -49,7 +49,7 @@ Atualmente, existem dois clientes de pré-visualização para Windows:
 
 - O **cliente Azure Information Protection** que transfere etiquetas e as definições de política a partir do portal do Azure. Este cliente tem por base a versão de disponibilidade geral do cliente.
 
-- O **do Azure Information Protection unified cliente etiquetagem** que transfere etiquetas e as definições de política a partir do Centro de conformidade e a segurança do Office 365. Este cliente está em pré-visualização segundo.
+- O **do Azure Information Protection unified cliente etiquetagem** que downloads a etiquetas e as definições de política de um dos centros de administração: A segurança do Office 365 e Centro de conformidade, o Centro de segurança do Microsoft 365 ou o Centro de conformidade do Microsoft 365. Este cliente está em pré-visualização segundo.
 
 Recomendamos que teste com o cliente de etiquetagem unificado do Azure Information Protection se a sua atual conjunto de recursos e funcionalidade de cumprem os requisitos comerciais. Se não, ou se tiver configurado as etiquetas no portal do Azure que ainda não ainda [migrados para a loja de etiquetagem unificada](configure-policy-migrate-labels.md), utilizar o cliente do Azure Information Protection.
 

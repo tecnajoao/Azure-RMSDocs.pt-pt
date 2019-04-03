@@ -4,19 +4,19 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/20/2019
+ms.date: 03/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: de1febc25d5fa5518f7ffca5d51895bebd2cd56b
-ms.sourcegitcommit: 3a3f1051c5a58c2bd2f230f1c8ece919df3dc23e
+ms.openlocfilehash: 6f41e49b2a5183c7c264c5be60fc496f78a6e1dd
+ms.sourcegitcommit: b201730193b4e4e3a3254e7a0f673ddd7d6e3c84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221087"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58640367"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas do cliente do Azure Information Protection
 
@@ -55,6 +55,7 @@ Algumas destas definições requerem a edição do registo e algumas utilizam de
 |LabelbyCustomProperty|[Migrar as etiquetas de Secure Islands e outras soluções de etiquetas](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[Configurar uma etiqueta para aplicar a proteção de S/MIME no Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |LogLevel|[Alterar o nível de registo de local](#change-the-local-logging-level)
+|LogMatchedContent|[Desativar o envio correspondências de tipo de informações para um subconjunto de utilizadores](#disable-sending-information-type-matches-for-a-subset-of-users)|
 |OutlookBlockUntrustedCollaborationLabel|[Implementar as mensagens pop-up no Outlook que avisar, justificar ou bloquear mensagens de e-mail a ser enviadas](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookCollaborationTrustedDomains|[Implementar as mensagens pop-up no Outlook que avisar, justificar ou bloquear mensagens de e-mail a ser enviadas](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookDefaultLabel|[Definir uma etiqueta predefinida diferente para o Outlook](#set-a-different-default-label-for-outlook)|
@@ -755,6 +756,17 @@ Por exemplo, tem uma coluna de SharePoint com o nome **classificação** que tem
 Para um documento do Office com um dos seguintes valores de classificação de etiqueta, defina **SyncPropertyName** ao **classificação**, e **SyncPropertyState** para  **OneWay**. 
 
 Agora, quando um utilizador abre e salva um desses documentos do Office, ele tem o nome **pública**, **gerais**, ou **altamente confidencial \ todos os funcionários** se tiver etiquetas com estes nomes na sua política do Azure Information Protection. Se não tiver etiquetas com esses nomes, o documento permanece sem etiqueta.
+
+## <a name="disable-sending-information-type-matches-for-a-subset-of-users"></a>Desativar o envio correspondências de tipo de informações para um subconjunto de utilizadores
+
+Esta configuração utiliza um [definição de cliente avançado](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure e requer a versão de pré-visualização atual do cliente do Azure Information Protection.
+
+Quando seleciona a caixa de verificação [analytics do Azure Information Protection](../reports-aip.md) que recolhe o conteúdo corresponde para seus tipos de informações confidenciais ou de suas condições personalizadas, por predefinição, estas informações são enviadas por todos os utilizadores. Se tiver alguns utilizadores que não devem enviar estes dados, crie a seguinte definição de cliente avançado um [política de âmbito](../configure-policy-scope.md) para estes utilizadores: 
+
+- Chave: **LogMatchedContent**
+
+- Valor: **Desativar**
+
 
 ## <a name="limit-the-number-of-threads-used-by-the-scanner"></a>Limitar o número de segmentos utilizados pelo leitor
 

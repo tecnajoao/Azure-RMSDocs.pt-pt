@@ -3,7 +3,7 @@ title: Configurar a política do Azure Information Protection – AIP
 description: Para configurar a classificação, a etiquetagem e a proteção, tem de configurar a política do Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-ms.date: 02/15/2019
+ms.date: 04/02/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b12c3451517f3e2832ed36b00d60c401973a0ebb
-ms.sourcegitcommit: 1fe9720526a2ff814cd5d353249b16497cfcaadc
+ms.openlocfilehash: f848aed3bb8bf6d7982a757c182edd19c9fbff73
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425951"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809782"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurar a política do Azure Information Protection
 
@@ -67,7 +67,7 @@ Para iniciar sessão no portal do Azure, configurar e gerir o Azure Information 
   - **Administrador global / administrador de empresa**
     
     > [!NOTE] 
-    > Se o seu inquilino tiver sido migrado para a loja de etiquetagem unificada, para gerir o Azure Information Protection a partir do portal do Azure, a conta tem de ser um administrador global ou um do listadas funções e permissões para aceder a segurança do Office 365 e a conformidade Centro. [Mais informações](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    > Se o seu inquilino tiver sido migrado para a loja de etiquetagem unificada, para gerir o Azure Information Protection a partir do portal do Azure, a conta tem de ser um administrador global ou um do listadas funções e permissões para aceder a segurança do Office 365 e a conformidade Center, o Centro de segurança do Microsoft 365 ou o Centro de conformidade do Microsoft 365. [Mais informações](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Para aceder ao painel de proteção de informações do Azure pela primeira vez
@@ -146,7 +146,7 @@ Utilize as seguintes informações para ajudar a configurar a política do Azure
 
 - [Como configurar etiquetas para diferentes idiomas](configure-policy-languages.md)
 
-- [Como migrar as etiquetas do Azure Information Protection para o Centro de conformidade e segurança do Office 365](configure-policy-migrate-labels.md)
+- [Como migrar as etiquetas do Azure Information Protection para Office 365](configure-policy-migrate-labels.md)
 
 ## <a name="label-information-stored-in-emails-and-documents"></a>Informações de etiqueta armazenadas em e-mails e documentos
 

@@ -12,12 +12,12 @@ ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 2db27a558acd60fc1d3f6a05c1dda90d00baa3bb
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: d9fda9c7477c408e8003f48c85e6d35fec6a1884
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57829081"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809816"
 ---
 # <a name="whats-new-and-release-notes"></a>Novidades e Notas de versão
 
@@ -26,7 +26,7 @@ ms.locfileid: "57829081"
 Este tópico descreve as funcionalidades nesta versão nova do v4.x RMS SDK e alterações importantes.
 
 -   [Novo em Julho de 2017](#new-for-july-2017)
--   [Atualização de Outubro de 2016](#October-2016-update)
+-   [Atualização de Outubro de 2016](#october-2016-update)
 -   [Atualização de Junho de 2016](#june-2016-update)
 -   [Atualização de Dezembro de 2015](#december-2015-update)
 -   [Atualização de Julho de 2015 – adiciona suporte para Linux / desenvolvimento em C++](#july-2015-update---adds-support-for-linux--c-development)

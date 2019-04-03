@@ -4,17 +4,17 @@ description: Condições de uma etiqueta permitem-lhe atribuir automaticamente u
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/14/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: f8545491a527b8e502150cd83802b2868dd3a1da
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: 3cf57d5e958ab535a2e2cd21adc305fe09bb8aec
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57829047"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809765"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Como configurar as condições para classificação automática e recomendada para o Azure Information Protection
 
@@ -99,19 +99,6 @@ Pode alterar este comportamento para que o cliente do Azure Information Protecti
 Quando clica em **guardar**, as suas alterações estão automaticamente disponíveis para utilizadores e serviços. Já não existe uma opção de publicar separado.
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>Tipos de informações confidenciais que requerem uma versão mínima do cliente
-
-Os seguintes tipos de informações confidenciais requerem a versão mínima do 1.37.19.0 para o cliente do Azure Information Protection:
-
-- **Número de telefone celular da UE**
-- **Número de Passport da UE**
-- **Número de licença do controlador da UE**
-- **Número de identificação do National da UE**
-- **Número da Previdência Social (SSN) da UE, ou equivalente ID**
-- **Número de identificação de imposto da UE (TIN)**
-- **Código de identificação de população em tailandês**
-- **Número de identificação nacional turco**
-- **Número de cartão de residência japonês**
-
 
 Os seguintes tipos de informações confidenciais requerem a versão de pré-visualização atual do cliente do Azure Information Protection:
 

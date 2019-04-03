@@ -4,25 +4,25 @@ description: Ver as informações de versão para o Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/28/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 699e2807c700b90b98bbc855dd8792aa607696f3
-ms.sourcegitcommit: 8ba63c0f4cd7d2ad7614af4ea9cfe8aec7fac4c0
+ms.openlocfilehash: 7eb7ffd98651ed35be7ecd8043e49c1d15a65e8e
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56956258"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809714"
 ---
 # <a name="azure-information-protection-unified-labeling-client-version-release-information"></a>O Azure Information Protection unified cliente etiquetagem: Informações de lançamento de versão
 
 >*Aplica-se a: Serviços de gestão de direitos do Active Directory [do Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 com SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 > [!NOTE]
-> Este cliente está em pré-visualização e está sujeitas a alterações. Ele utiliza o armazenamento de etiquetagem unificado e transfere a política com as etiquetas do Centro de conformidade e segurança do Office 365. [Mais informações](/Office365/SecurityCompliance/sensitivity-labels)
+> Este cliente está em pré-visualização e está sujeitas a alterações. Ele utiliza o armazenamento de etiquetagem unificado e transfere a política com as etiquetas dos seguintes centros de administração: A segurança do Office 365 e Centro de conformidade, o Centro de segurança do Microsoft 365 e Centro de conformidade do Microsoft 365. [Mais informações](/Office365/SecurityCompliance/sensitivity-labels)
 
 Pode baixar a versão de pré-visualização mais recente do Azure Information Protection unified etiquetagem cliente do [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=57440).
 
@@ -42,7 +42,7 @@ Esta versão de pré-visualização do Azure Information Protection unified etiq
 
 - Atualizar a partir do cliente do Azure Information Protection.
 
-- Manual, automática e recomendada de etiquetagem: Uso **etiquetagem automática** partir do Centro de conformidade e segurança do Office 365, para configurar a etiquetagem automática e recomendada. Para obter mais informações, consulte [aplique uma etiqueta de sensibilidade para o conteúdo automaticamente](/Office365/SecurityCompliance/apply_sensitivity_label_automatically).
+- Manual, automática e recomendada de etiquetagem: Para obter mais informações sobre como configurar a etiquetagem automática e recomendada para este cliente, consulte [aplique uma etiqueta de sensibilidade para o conteúdo automaticamente](/Office365/SecurityCompliance/apply_sensitivity_label_automatically).
 
 - Explorador de ficheiros, faça duplo clique ações para classificar e proteger ficheiros, remover a proteção e aplicar permissões personalizadas.
 
@@ -63,7 +63,7 @@ Esta versão de pré-visualização do Azure Information Protection unified etiq
     - Pedidos de justificação se os utilizadores diminuir o nível de classificação ou remover uma etiqueta
     - Cores para as etiquetas
 
-- Atualização de política a partir do Centro de conformidade e segurança do:
+- Atualização de política a partir de centros de administração:
     - Sempre que inicia uma aplicação do Office e todas as 4 horas
     - Quando rato para classificar e proteger um ficheiro ou pasta
     - Quando executa os cmdlets do PowerShell para etiquetagem e proteção

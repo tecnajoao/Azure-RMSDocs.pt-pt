@@ -4,19 +4,19 @@ description: Tem uma pergunta específica sobre classificação e etiquetagem at
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/02/2019
+ms.date: 04/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 34f64cc28762f8eb08089b188fbb40c7358e4807
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
+ms.openlocfilehash: 681d40f86598aaa328c41df9ec76b27c1c24d0c1
+ms.sourcegitcommit: 465709879998fcb78cd2a4efda559c43ed661dda
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809986"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233790"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Perguntas mais frequentes sobre a classificação e a etiquetagem no Azure Information Protection
 
@@ -54,12 +54,6 @@ Atualmente, existem dois clientes de pré-visualização para Windows:
 Recomendamos que teste com o cliente de etiquetagem unificado do Azure Information Protection se a sua atual conjunto de recursos e funcionalidade de cumprem os requisitos comerciais. Se não, ou se tiver configurado as etiquetas no portal do Azure que ainda não ainda [migrados para a loja de etiquetagem unificada](configure-policy-migrate-labels.md), utilizar o cliente do Azure Information Protection.
 
 Para obter mais informações, incluindo uma tabela de comparação de funções e funcionalidades, consulte [escolher qual cliente Azure Information Protection para utilizar](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
-
-## <a name="do-i-need-to-be-a-global-admin-to-configure-classification-and-labels"></a>É necessário ser um administrador global para configurar a classificação e etiquetas?
-
-Com a função de administrador do Information Protection recém-lançado, este é agora às suas perguntas na página de FAQ principal: [Precisa de ser um administrador global para configurar o Azure Information Protection, ou posso delegar noutros administradores?](faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-information-protection-or-can-i-delegate-to-other-administrators)
-
-Se selecionar a opção para instalar a política de demonstração quando instalar o [cliente do Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018), não precisa de iniciar sessão no portal para ver e experimentar a funcionalidade de etiquetagem. Localmente a política de demonstração instala uma política predefinida do Azure Information Protection, para que pode tentar Etiquetar documentos e e-mails, mas não é possível alterar ou adicionar novas etiquetas sem iniciar sessão no portal do Azure. 
 
 ## <a name="can-a-file-have-more-than-one-classification"></a>Um ficheiro pode conter mais do que uma classificação?
 

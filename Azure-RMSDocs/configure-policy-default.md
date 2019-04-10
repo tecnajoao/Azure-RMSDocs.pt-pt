@@ -4,16 +4,16 @@ description: Conheça a forma como a política predefinida do Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/06/2018
+ms.date: 04/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: a6fd4b308413fb5bf852a5c063c54b972497289c
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 18654d3867fd456b8b4ed6eb0ebd01d9c86ff13a
+ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253596"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59364594"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Política do Azure Information Protection predefinida
 
@@ -24,6 +24,12 @@ Utilize as seguintes informações para compreender a forma como a política pre
 Quando um administrador ligado pela primeira vez para o serviço Azure Information Protection com o portal do Azure, é criada a política predefinida do Azure Information Protection para esse inquilino. Ocasionalmente, a Microsoft pode efetuar alterações a esta política predefinida mas se já estiver a utilizar o serviço antes da política predefinida ser revista, a versão anterior da política do Azure Information Protection predefinida não é atualizada porque poderá ser necessário configurado e implementado na produção.
 
 Pode referenciar os seguintes valores para voltar a política do Azure Information Protection predefinida ou atualizar a política do Azure Information Protection para os valores mais recentes.
+
+> [!IMPORTANT]
+> A partir de Abril de 2019, há uma alteração gradualmente a implementar a novos clientes em que as etiquetas predefinidas não são automaticamente criadas. Estes inquilinos são automaticamente aprovisionados para a plataforma de etiquetagem unificada, para que não é necessário para migrar as etiquetas após ter configurado-las no portal do Azure.
+> 
+> Para estes inquilinos, caso haja qualquer etiquetas de sensibilidade já criadas na segurança do Office 365 e Centro de conformidade, o Centro de segurança do Microsoft 365 ou o Centro de conformidade do Microsoft 365, pode criar as etiquetas predefinidas da predefinição atual política do Azure Information Protection. Para tal, selecione **gerar etiquetas predefinidas** partir a **etiquetas** painel e adicione as etiquetas para a política global. Para obter instruções detalhadas, consulte a [introdução ao Azure Information Protection no portal do Azure](quickstart-viewpolicy.md) início rápido.
+
 
 ## <a name="current-default-policy"></a>Política predefinida atual
 
@@ -89,20 +95,25 @@ As permissões de proteção correspondem à [modelo predefinido](configure-poli
 
 |Definição|Valor|
 |-------------------------------|---------------------------|
-|Cargo|Sensibilidade|
+|Título|Sensibilidade|
 |Descrição|A etiqueta atual para estes conteúdos. Esta definição identifica o risco para a empresa se estes conteúdos forem partilhados com pessoas não autorizadas dentro ou fora da organização.|
 
 
 ### <a name="settings"></a>Definições
 
+Algumas das configurações foram adicionadas após 31 de Julho de 2017.
+
 |Definição|Valor|
 |-------------------------------|---------------------------|
-|Todos os documentos e e-mails devem ter uma etiqueta (aplicada automaticamente ou pelos utilizadores)|Desativada|
 |Selecione a etiqueta predefinida|Nenhum|
+|Enviar dados de auditoria para análise do Azure Information Protection|Desativado|
+|Todos os documentos e e-mails devem ter uma etiqueta (aplicada automaticamente ou pelos utilizadores)|Desativado|
 |Os utilizadores têm de fornecer uma justificação para poderem definir uma etiqueta de classificação inferior e remover uma etiqueta ou proteção|Desativado|
 |Para mensagens de e-mail com anexos, aplique uma etiqueta que corresponda à classificação mais elevada dos mesmos|Desativado|
+|Apresentar a barra de Information Protection nas aplicações do Office|Desativado|
+|Adicionar o botão não reencaminhar ao Friso do Outlook|Desativado|
+|Disponibilizar a opção de permissões personalizadas para utilizadores|Desativado|
 |Fornecer um URL personalizado para a página Web "Mais informações" do cliente do Azure Information Protection|Em Branco|
-
 
 ## <a name="default-policy-before-july-31-2017"></a>Política predefinida antes de 31 de Julho de 2017
 
@@ -133,7 +144,7 @@ Tenha em atenção que as descrições nesta política se referem aos dados que 
 
 |Definição|Valor|
 |-------------------------------|---------------------------|
-|Cargo|Sensibilidade|
+|Título|Sensibilidade|
 |Descrição|A etiqueta atual para estes conteúdos. Esta definição identifica o risco para a empresa se estes conteúdos forem partilhados com pessoas não autorizadas dentro ou fora da organização.|
 
 
@@ -171,7 +182,7 @@ Tenha em atenção que as descrições nesta política se referem aos dados que 
 
 |Definição|Valor|
 |-------------------------------|---------------------------|
-|Cargo|Sensibilidade|
+|Título|Sensibilidade|
 |Descrição|A confidencialidade das informações consiste em quatro níveis diferente (Público, Interno, Confidencial, Secreto), permitindo que o utilizador identifique o risco de exposição das informações para utilizadores não autorizados dentro ou fora da empresa.|
 
 

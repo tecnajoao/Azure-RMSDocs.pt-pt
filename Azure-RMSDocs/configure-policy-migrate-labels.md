@@ -4,18 +4,18 @@ description: Migre o Azure Information Protection etiquetas para etiquetas de se
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/03/2019
+ms.date: 04/09/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 46ba6b5e1cb9246074b2e5a241f06eef3b0d2501
-ms.sourcegitcommit: cf85764510e9980dfacaaa01bc4da37c4dbf5281
+ms.openlocfilehash: 0cc09e58d49fe9515de0109c726af08e12937dd1
+ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58887561"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59364577"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Como migrar o Azure Information Protection etiquetas para etiquetas de sensibilidade do Office 365
 
@@ -36,9 +36,11 @@ Antes de ler instruções detalhadas sobre como migrar as suas etiquetas, poder�
 
 ### <a name="important-information-about-administrative-roles"></a>Informações importantes sobre as funções administrativas
 
-O [funções do Azure AD](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) dos **administrador de segurança** e **administrador do Information Protection** não são suportados pela plataforma de etiquetagem unificada. Se essas funções administrativas são utilizadas na sua organização, antes de migrar as etiquetas, adicione os utilizadores que têm estas funções para o **administrador de conformidade** ou o **gestão da organização** função grupos para a segurança do Office 365 e Centro de conformidade, o Centro de segurança do Microsoft 365 ou o Centro de conformidade do Microsoft 365. Como alternativa, pode criar um novo grupo de função para estes utilizadores e adicioná-los **gestão de retenção** ou **configuração de organização** funções a este grupo. Para obter instruções, consulte [conceder acesso de utilizadores para o Centro de conformidade e segurança do Office 365](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center).
+O [função do Azure AD](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) dos **administrador do Information Protection** não é suportada pela plataforma de etiquetagem unificada. Se esta função administrativa for utilizada na sua organização, antes de migrar as etiquetas, adicionar os utilizadores que tenham esta função para as funções do Azure AD de **administrador de segurança** ou **administrador de conformidade**. Se precisar de ajuda com este passo, consulte [conceder acesso de utilizadores para o Centro de conformidade e segurança do Office 365](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center). Também pode atribuir estas funções no portal do Azure AD, o Centro de segurança do Microsoft 365 e o Centro de conformidade do Microsoft 365.
 
-Se não conceder esses usuários acesso para os centros de administração utilizando uma das seguintes configurações, eles perderão o acesso para as etiquetas e políticas no portal do Azure depois das etiquetas são migradas.
+Em alternativa ao uso de funções, nos centros de administração, pode criar um novo grupo de função para estes utilizadores e adicionar qualquer um **administrador de etiqueta de sensibilidade** ou **configuração de organização** funções a este grupo.
+
+Se não conceder esses usuários acesso para os centros de administração utilizando uma das seguintes configurações, não poderá configurar o Azure Information Protection no portal do Azure depois das etiquetas são migradas.
 
 Os administradores globais do seu inquilino podem continuar a gerir etiquetas e políticas no portal do Azure e os centros de administração, depois das etiquetas são migradas.
 
@@ -83,6 +85,8 @@ Antes de migrar as etiquetas, certifique-se de que está ciente das seguintes al
 
 Utilize a seguinte tabela para identificar quais as definições de configuração de uma etiqueta migrada não são suportadas pela segurança do Office 365 e Centro de conformidade, o Centro de segurança do Microsoft 365 ou o Centro de conformidade da Microsoft. Se tiver etiquetas com estas definições, quando a migração estiver concluída, utilize as orientações de administração na coluna final antes de publicar as etiquetas em um dos centros de administração.
 
+Se não tiver a certeza de como as etiquetas são configuradas, ver as respetivas definições no portal do Azure. Se precisar de ajuda com este passo, consulte [configurar a política do Azure Information Protection](configure-policy.md).
+
 Clientes do Azure Information Protection podem utilizar todas as definições de etiqueta listadas sem problemas, porque eles continuam a transferir as etiquetas do portal do Azure.
 
 |Configuração de etiqueta|Suportados pelos clientes de etiquetas unificados| Documentação de orientação para os centros de administração|
@@ -100,7 +104,9 @@ Clientes do Azure Information Protection podem utilizar todas as definições de
 
 ### <a name="comparing-the-behavior-of-protection-settings-for-a-label"></a>Comparar o comportamento das definições de proteção para uma etiqueta
 
-Utilize a seguinte tabela para identificar como a mesma definição de proteção para uma etiqueta pode ter um comportamento diferente, dependendo se é utilizado pelo cliente do Azure Information Protection (versões de disponibilidade geral e versão de pré-visualização atual), a pré-visualização atual versão do cliente etiquetagem unificado do Azure Information Protection, ou por aplicações do Office com a etiquetagem incorporada (também conhecido como "nativo Office etiquetagem"). 
+Utilize a seguinte tabela para identificar como a mesma definição de proteção para uma etiqueta pode ter um comportamento diferente, dependendo se é utilizado pelo cliente do Azure Information Protection (versões de disponibilidade geral e versão de pré-visualização atual), a pré-visualização atual versão do cliente etiquetagem unificado do Azure Information Protection, ou por aplicações do Office com a etiquetagem incorporada (também conhecido como "nativo Office etiquetagem").
+
+Se não tiver a certeza de como as suas definições de proteção são configuradas, ver suas configurações no **proteção** painel, no portal do Azure. Se precisar de ajuda com este passo, consulte [para configurar uma etiqueta para as definições de proteção](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
 
 Definições de proteção que se comportam da mesma forma, não estão listadas na tabela, com as seguintes exceções:
 - Quando utilizar aplicações do Office com a etiquetagem incorporadas, as etiquetas não estão visíveis no Explorador de ficheiros, a menos que também instala o cliente de etiquetagem unificado do Azure Information Protection.
@@ -140,6 +146,8 @@ Tem de ser um administrador global para migrar as suas etiquetas.
 2. Do **Manage** opção de menu, selecione **Unified etiquetagem (pré-visualização)**.
 
 3. Sobre o **unificada do Azure Information Protection – etiquetagem** painel, selecione **ativar** e siga as instruções online.
+    
+    Verifique se a opção para ativar não estiver disponível, o **Unified etiquetagem estado**: Se vir **Activated**, o seu inquilino já está a utilizar a loja de etiquetagem unificada e não é necessário para migrar as suas etiquetas.
 
 Para as etiquetas que migrado com êxito, eles podem agora ser utilizados pelo [os clientes e serviços que suportam a etiquetagem unificada](#clients-and-services-that-support-unified-labeling). No entanto, é necessário publicar primeiro estas etiquetas dos centros de administração: Segurança do Office 365 & o Centro de conformidade, o Centro de segurança do Microsoft 365 ou o Centro de conformidade do Microsoft 365.
 

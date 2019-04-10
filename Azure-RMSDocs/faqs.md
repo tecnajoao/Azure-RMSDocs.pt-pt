@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 503615fa6d2bb492fcbaec3271a23a606ceb4127
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
+ms.openlocfilehash: 17e46002486aaca8d09a5a4767a6f976d9acbb82
+ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809952"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59364560"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Perguntas mais frequentes sobre o Azure Information Protection
 
@@ -50,7 +50,7 @@ Para obter mais informações sobre como migrar as suas etiquetas existentes, co
 
 Etiquetas de sensibilidade nos centros de administração (segurança do Office 365 e Centro de conformidade, o Centro de segurança do Microsoft 365 e Centro de conformidade do Microsoft 365) estão disponíveis em geral, mas a opção para migrar as suas etiquetas do Azure Information Protection está ainda em pré-visualização. Quando as etiquetas são migradas para a loja de etiquetagem unificada, podem ser publicados e, em seguida, utilizados pelo [os clientes e serviços que suportam a etiquetagem unificada](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling). Hoje em dia, nem todos os clientes suportam etiquetas unificadas ou estão disponíveis em geral.
 
-Recomendamos que teste primeiro a funcionalidade de pré-visualização com um inquilino de teste e, em seguida, migre o seu inquilino de produção. Além disso:
+Recomendamos que teste primeiro a funcionalidade de pré-visualização com um inquilino de teste e, em seguida, migre o seu inquilino de produção. Adicionalmente:
 
 - **Se estiver familiarizado com o Azure Information Protection:** 
     
@@ -104,7 +104,14 @@ Os administradores globais de um inquilino do Office 365 ou inquilino do Azure A
 
 - **Administrador do Information Protection**: Esta função de administrador do Azure Active Directory permite que um administrador configurar todos os aspetos do Azure Information Protection, mas não a outros serviços. Um administrador com esta função pode ativar e desativar o serviço de proteção do Azure Rights Management, configurar as definições de proteção e as etiquetas e configurar a política do Azure Information Protection. Além disso, um administrador com esta função pode executar todos os cmdlets do PowerShell para o [cliente Azure Information Protection](./rms-client/client-admin-guide-powershell.md) e para o [módulo AADRM](administer-powershell.md). 
     
+    > [!NOTE]
+    > Depois de [migrar o seu inquilino para a loja de etiquetagem unificada](configure-policy-migrate-labels.md), esta função já não é suportada para o portal do Azure.
+    
     Para atribuir um utilizador a esta função administrativa, veja [atribuir um utilizador a funções de administrador no Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
+
+- **Administrador de conformidade**: Este Azure Active Directory função de administrador permite que um administrador configurar todos os aspetos do Azure Information Protection, que inclui ativar e desativar o serviço de proteção do Azure Rights Management, configure as definições de proteção e etiquetas, e Configure a política do Azure Information Protection. Além disso, um administrador com esta função pode executar todos os cmdlets do PowerShell para o [cliente Azure Information Protection](./rms-client/client-admin-guide-powershell.md) e para o [módulo AADRM](administer-powershell.md)....
+    
+    Para atribuir um utilizador a esta função administrativa, veja [atribuir um utilizador a funções de administrador no Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). Para ver quais outras permissões que um utilizador com esta função tem, consulte a [funções disponíveis](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) secção da documentação do Azure Active Directory.
 
 - **Leitor de segurança**: Para [analytics do Azure Information Protection](reports-aip.md) apenas. Este Azure Active Directory função de administrador permite que um administrador ver como as etiquetas estão sendo usadas, monitorizar o acesso dos utilizadores a etiquetados de documentos e e-mails e quaisquer alterações à respetiva classificação e pode identificar documentos que contenham informações confidenciais que devem ser protegidas. Uma vez que esse recurso usa o Log Analytics do Azure, também tem de ter um tipo de suporte [função RBAC](reports-aip.md#permissions-required-for-azure-information-protection-analytics).
 

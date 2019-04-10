@@ -4,19 +4,19 @@ description: Informações sobre a personalização do cliente do Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/29/2019
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6f41e49b2a5183c7c264c5be60fc496f78a6e1dd
-ms.sourcegitcommit: b201730193b4e4e3a3254e7a0f673ddd7d6e3c84
+ms.openlocfilehash: 3cd27fc4a060b6c7328495ad46d53768c28ff223
+ms.sourcegitcommit: ce2078712d111f102a72b3a8697121f1390bdf07
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58640367"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59289473"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guia do administrador: Configurações personalizadas do cliente do Azure Information Protection
 
@@ -54,7 +54,7 @@ Algumas destas definições requerem a edição do registo e algumas utilizam de
 |EnablePDFv2Protection|[Não proteger ficheiros PDF com a norma ISO para a encriptação de PDF](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
 |LabelbyCustomProperty|[Migrar as etiquetas de Secure Islands e outras soluções de etiquetas](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[Configurar uma etiqueta para aplicar a proteção de S/MIME no Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
-|LogLevel|[Alterar o nível de registo de local](#change-the-local-logging-level)
+|Nível de Registo|[Alterar o nível de registo de local](#change-the-local-logging-level)
 |LogMatchedContent|[Desativar o envio correspondências de tipo de informações para um subconjunto de utilizadores](#disable-sending-information-type-matches-for-a-subset-of-users)|
 |OutlookBlockUntrustedCollaborationLabel|[Implementar as mensagens pop-up no Outlook que avisar, justificar ou bloquear mensagens de e-mail a ser enviadas](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookCollaborationTrustedDomains|[Implementar as mensagens pop-up no Outlook que avisar, justificar ou bloquear mensagens de e-mail a ser enviadas](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
@@ -67,6 +67,7 @@ Algumas destas definições requerem a edição do registo e algumas utilizam de
 |PullPolicy|[Suporte para computadores desligados](#support-for-disconnected-computers)
 |RemoveExternalContentMarkingInApp|[Remover os cabeçalhos e rodapés de outras soluções de etiquetas](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Adicionar "Relatar um problema" para os utilizadores](#add-report-an-issue-for-users)|
+|RunAuditInformationTypeDiscovery|[Ativar a análise do Azure Information Protection detetar informações confidenciais em documentos](#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)|
 |RunPolicyInBackground|[Ativar a classificação para executar continuamente em segundo plano](#turn-on-classification-to-run-continuously-in-the-background)|
 |ScannerConcurrencyLevel|[Limitar o número de segmentos utilizados pelo leitor](#limit-the-number-of-threads-used-by-the-scanner)|
 |SyncPropertyName|[Etiqueta de um documento do Office usando uma propriedade personalizada existente](#label-an-office-document-by-using-an-existing-custom-property)|
@@ -96,7 +97,7 @@ Para iniciar sessão como um utilizador diferente:
 
 2. Reinicie as aplicações do Office abertas e inicie sessão com a sua conta de utilizador diferente. Se não vir um pedido na aplicação do Office para iniciar sessão no serviço Azure Information Protection, volte à caixa de diálogo do **Microsoft Azure Information Protection** e clique em **Iniciar sessão** na secção **Estado do cliente** atualizada.
 
-Além disso,
+Além disso:
 
 - Se o cliente do Azure Information Protection é ainda com sessão iniciado com a conta antiga depois de concluir estes passos, elimine todos os cookies do Internet Explorer e, em seguida, repita os passos 1 e 2.
 
@@ -255,7 +256,9 @@ Configure as seguintes cadeias:
 
 - Valor: **Verdadeiro**
 
-Sem esta definição, a primeira subetiqueta que se encontra na etiqueta principal mais alta é aplicada à mensagem de e-mail.
+Sem esta definição, a primeira etiqueta, que se encontra na etiqueta principal com a classificação mais alta é aplicada à mensagem de e-mail. 
+
+Com esta definição, a subetiqueta que está ordenada pela última vez da etiqueta principal com a classificação mais alta é aplicada à mensagem de e-mail. Se precisar reordenar as suas etiquetas para aplicar a etiqueta que pretende para este cenário, consulte [como eliminar ou reordenar uma etiqueta do Azure Information Protection](../configure-policy-delete-reorder.md).
 
 ## <a name="enable-recommended-classification-in-outlook"></a>Ativar a classificação recomendada no Outlook
 
@@ -591,7 +594,7 @@ Neste exemplo:
 A definição de cliente avançado:
 
     
-|Name|Valor|
+|Nome|Valor|
 |---------------------|---------|
 |LabelbyCustomProperty|1ace2cc3-14bc-4142-9125-bf946a70542c, "etiqueta Secure Islands é confidencial", classificação, confidencial|
 
@@ -608,7 +611,7 @@ Neste exemplo:
 A definição de cliente avançado:
 
     
-|Name|Valor|
+|Nome|Valor|
 |---------------------|---------|
 |LabelbyCustomProperty|3e9df74d-3168-48af-8b11-037e3021813f, "etiqueta Secure Islands é sensível a", classificação, com diferenciação de|
 
@@ -626,7 +629,7 @@ Neste exemplo:
 A definição de cliente avançado:
 
     
-|Name|Valor|
+|Nome|Valor|
 |---------------------|---------|
 |LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d, "a etiqueta de Secure Islands contém interno", classificação,. \*Interno.\*|
 
@@ -756,6 +759,28 @@ Por exemplo, tem uma coluna de SharePoint com o nome **classificação** que tem
 Para um documento do Office com um dos seguintes valores de classificação de etiqueta, defina **SyncPropertyName** ao **classificação**, e **SyncPropertyState** para  **OneWay**. 
 
 Agora, quando um utilizador abre e salva um desses documentos do Office, ele tem o nome **pública**, **gerais**, ou **altamente confidencial \ todos os funcionários** se tiver etiquetas com estes nomes na sua política do Azure Information Protection. Se não tiver etiquetas com esses nomes, o documento permanece sem etiqueta.
+
+## <a name="enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents"></a>Ativar a análise do Azure Information Protection detetar informações confidenciais em documentos
+
+Esta configuração utiliza um [definição de cliente avançado](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que tem de configurar no portal do Azure e requer a versão de pré-visualização atual do cliente do Azure Information Protection.
+
+[A análise do Azure Information Protection](../reports-aip.md) pode detetar e comunicar documentos salvos pelos clientes do Azure Information Protection quando esse conteúdo contêm informações confidenciais. Por predefinição, estas informações não são enviadas para a análise do Azure Information Protection.
+
+Para alterar este comportamento para que estas informações são enviadas, introduza as seguintes cadeias:
+
+- Chave: **RunAuditInformationTypeDiscovery**
+
+- Valor: **Verdadeiro**
+
+Se não definir este cliente avançado definir, ainda que os resultados de auditoria são enviados do cliente do Azure Information Protection, mas a informação é limitada a quando um utilizador acedeu conteúdos etiquetados.
+
+Por exemplo:
+
+- Sem esta definição, pode ver que um utilizador acedeu Financial.docx assinalada como **confidencial \ vendas**.
+
+- Com esta definição, pode ver que Financial.docx contém 6 números de cartão de crédito.
+    
+    - Se também de ativar [correspondências de conteúdo para uma análise mais aprofundada](../reports-aip.md#content-matches-for-deeper-analysis), além disso será possível ver quais são esses números de cartão de crédito.
 
 ## <a name="disable-sending-information-type-matches-for-a-subset-of-users"></a>Desativar o envio correspondências de tipo de informações para um subconjunto de utilizadores
 

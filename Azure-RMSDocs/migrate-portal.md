@@ -4,19 +4,19 @@ description: Tarefas de administração em breve no portal do Azure que utilizou
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/07/2018
+ms.date: 04/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: c445b676a6aea817e2aef410886c22d9009519e4
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 818d1f16d28a2d2b1b485aab9ddfdff5b9d814a9
+ms.sourcegitcommit: 465709879998fcb78cd2a4efda559c43ed661dda
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256265"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233756"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Tarefas que costumava realizar com o portal clássico do Azure
 
@@ -56,7 +56,7 @@ Nova funcionalidade no portal do Azure:
 
 - Pode converter modelos em etiquetas, para que gerir um único objeto em vez de gerir um modelo e identificar de forma independente. Para obter instruções, consulte [para converter modelos em etiquetas](configure-policy-templates.md#to-convert-templates-to-labels).
 
-- Suporte para outras funções de administrador: Enquanto tiver de iniciar sessão no portal clássico do Azure como Administrador Global para configurar o Azure Rights Management, pode iniciar sessão no portal do Azure para configurar o Azure Information Protection com uma conta que tenha as seguintes funções administrativas: **Administrador global**, **administrador de segurança**, ou **administrador do Information Protection**. Para obter mais informações sobre cada uma destas funções, consulte a [funções disponíveis](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) secção da documentação do Azure Active Directory.
+- Suporte para outras funções de administrador: Enquanto tiver de iniciar sessão no portal clássico do Azure como Administrador Global para configurar o Azure Rights Management, pode iniciar sessão no portal do Azure para configurar o Azure Information Protection com uma conta que tenha as seguintes funções administrativas: **Administrador global**, **administrador de segurança**, **administrador de conformidade**, ou **administrador do Information Protection**. Para obter mais informações sobre cada uma destas funções, consulte a [funções disponíveis](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) secção da documentação do Azure Active Directory.
 
 Os cmdlets do PowerShell para criar e gerir modelos e para ativar ou desativar o serviço, ser suportados sem alterações.
 

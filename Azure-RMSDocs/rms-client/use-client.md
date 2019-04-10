@@ -4,18 +4,18 @@ description: O Microsoft Azure Information Protection fornece uma solução de s
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/02/2019
+ms.date: 04/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
 ms.suite: ems
-ms.openlocfilehash: 876838dbd4e9818ca118f632079c98531ce347a1
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
+ms.openlocfilehash: 0762edb3e7960c5700ac8a28d7ae1b62455efbe0
+ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809833"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59364611"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>O lado do cliente do Azure Information Protection
 
@@ -62,6 +62,7 @@ Utilize a tabela seguinte para ajudar a comparar as funcionalidades são suporta
 |Um visualizador para ficheiros protegidos:| Sim | Sim, com limitações:<br /><br /> -Para ficheiros protegidos genericamente (. pfile), ao contrário do Visualizador do cliente do Azure Information Protection, não existe nenhuma capacidade para guardar as alterações para o ficheiro aberto originalmente.|
 |Comandos do PowerShell:| Sim | Sim, com limitações:<br /><br />-Cmdlets incluídos: [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus), [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) <br /><br />-Cmdlets que se ligam diretamente a um serviço de proteção não estão incluídos|
 |Suporte offline para ações de proteção:| Sim | Sim, com limitações: <br /><br />-Para comandos de Explorador de ficheiros e o PowerShell, o utilizador tem de estar ligado à Internet para proteger ficheiros. |
+|Suporte para computadores desligados com gestão de ficheiros de política manual:| Sim |Não |
 |Suporte HYOK:| Sim | Não<br /><br /> As etiquetas que migra a partir do portal do Azure e que estão configurados para proteção do HYOK são apresentadas pelo cliente etiquetagem unificado do Azure Information Protection, mas não se aplicam a proteção. |
 |Registo de utilização no Visualizador de eventos:| Sim | Não|
 |Herança de etiqueta de anexos de e-mail:| Sim | Não |
@@ -95,17 +96,13 @@ Para obter uma comparação mais detalhada das diferenças de comportamento para
 
 #### <a name="features-that-will-not-be-in-the-azure-information-protection-unified-labeling-client"></a>Funcionalidades não estarão disponíveis no cliente de etiquetagem unificado do Azure Information Protection
 
-Embora o cliente de etiquetagem unificado do Azure Information Protection ainda está em desenvolvimento, as seguintes funcionalidades e as diferenças de comportamento do cliente do Azure Information Protection não estarão disponíveis em versões futuras para obter as informações do Azure Cliente de etiquetagem unificada de proteção: 
+Embora o cliente de etiquetagem unificado do Azure Information Protection ainda está em desenvolvimento, as seguintes funcionalidades e as diferenças de comportamento do cliente do Azure Information Protection não forem planeadas para estar disponível em versões futuras para o Azure Information Protection unified cliente etiquetagem: 
 
 - Permissões personalizadas nas aplicações do Office: Word, Excel e PowerPoint
 
 - Controlar e revogar a partir de aplicações do Office e o Explorador de ficheiros
 
 - Barra de título e descrição do Information Protection
-
-- Valores dinâmicos em cabeçalhos e rodapés com variáveis e diferentes marcas visuais para Word, Excel, PowerPoint e Outlook
-
-- Suporte offline para ações de proteção no PowerShell e o Explorador de ficheiros
 
 - Modo apenas de proteção (sem etiquetas)
 
@@ -124,8 +121,6 @@ Embora o cliente de etiquetagem unificado do Azure Information Protection ainda 
 - Etiqueta de um documento do Office usando uma propriedade personalizada existente (SyncPropertyName e SyncPropertyState definições de cliente avançadas)
 
 - Separar os cmdlets do PowerShell para ligar a um serviço de Rights Management
-
-- Proteção única do AD RMS
 
 
 #### <a name="parent-labels-and-their-sublabels"></a>Etiquetas de principal e respetivas subetiquetas 

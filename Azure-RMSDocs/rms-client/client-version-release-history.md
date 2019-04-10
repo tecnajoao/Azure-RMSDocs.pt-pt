@@ -4,18 +4,18 @@ description: Veja o que há de novo ou alterado numa versão do cliente do Azure
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/02/2019
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d6ffbce2dfba5a2d835808a21857eb396cfc1eb5
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
+ms.openlocfilehash: 52b72d7d05b405e0d4972dd4c4c1edfee3d9fe3b
+ms.sourcegitcommit: ce2078712d111f102a72b3a8697121f1390bdf07
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809867"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59289507"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Cliente do Azure Information Protection: Política de histórico e suporte de lançamento de versão
 
@@ -81,7 +81,10 @@ Esta versão inclui a versão 1.0.3592.627 do cliente RMS MSIPC.
 
 - Nova definição de cliente avançado que é aplicável apenas ao configurar a política de configuração para não exibir permissões personalizadas: Quando existe um ficheiro que está protegido com permissões personalizadas, exiba a opção de permissões personalizadas no Explorador de ficheiros para os utilizadores podem ver e alterá-los (se tiverem permissões para alterar as definições de proteção). [Mais informações](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
 
-- Nova definição de cliente avançado para análise do Azure Information Protection para evitar o envio de corresponde ao tipo de informações para um subconjunto de utilizadores quando tiver selecionado a caixa de verificação no portal do Azure para recolher as correspondências de conteúdo. [Mais informações](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
+- Duas novas definições avançadas de cliente para a análise do Azure Information Protection, para os seguintes cenários:
+    
+    - Evitar o envio de corresponde ao tipo de informações para um subconjunto de utilizadores quando tiver selecionado a caixa de verificação no portal do Azure para recolher as correspondências de conteúdo. [Mais informações](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
+    - Para o relatório de deteção, apresenta se os ficheiros contêm informações confidenciais. [Mais informações](client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)
 
 **Correções**:
 

@@ -1,24 +1,24 @@
 ---
-title: Gerir dados pessoais para o Azure Information Protection
+title: Gerir dados pessoais no Azure Information Protection
 description: Informações sobre os dados pessoais que são utilizados pelo Azure Information Protection e como pode exibir, exportar e eliminá-lo.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/23/2019
+ms.date: 04/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: aa8b1da968a0821fd889bbed54e6b7698857bcf2
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 33455ec0d6433c52164f27127838917c2850d2f3
+ms.sourcegitcommit: 465709879998fcb78cd2a4efda559c43ed661dda
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259413"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233739"
 ---
-# <a name="manage-personal-data-for-azure-information-protection"></a>Gerir dados pessoais para o Azure Information Protection
+# <a name="manage-personal-data-for-azure-information-protection"></a>Gerir dados pessoais no Azure Information Protection
 
 Ao configurar e utilizar o Azure Information Protection, endereços de e-mail e endereços IP são utilizados e armazenados pelo serviço do Azure Information Protection. Estes dados pessoais podem ser encontrados nos seguintes itens:
 
@@ -211,11 +211,13 @@ Os dados pessoais que ver e especifica no portal do Azure são acessíveis apena
     
 - **Administrador do Information Protection**
 
+- **Administrador de conformidade**
+
 - **Administrador de segurança**
 
-- **Administrador global / administrador de empresa**
+- **Administrador global**
 
-Os dados pessoais que ver e especifica com o módulo do AADRM estão acessíveis apenas para os utilizadores que foram atribuídos a **administrador do Information Protection** função ou **Administrador Global / administrador da empresa** funções do Azure Active Directory ou a função de administrador global para o serviço Azure Rights Management.  
+Os dados pessoais que ver e especifica com o módulo do AADRM estão acessíveis apenas para os utilizadores que foram atribuídos a **administrador do Information Protection**, **administrador de conformidade**, ou **Administrador global** funções do Azure Active Directory ou a função de administrador global para o serviço Azure Rights Management.  
 
 ## <a name="updating-personal-data"></a>A atualizar os dados pessoais
 

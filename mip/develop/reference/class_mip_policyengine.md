@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: ffc2adc3e48de3f7efc7426c1276ccba8f0a70f3
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: ce8ef7df12cdc9823a62234b5dadaaacdb7fed37
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332808"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573790"
 ---
 # <a name="class-mippolicyengine"></a>classe mip::PolicyEngine 
 Essa classe fornece uma interface para todas as funções de motor.
@@ -30,6 +30,9 @@ público std::shared_ptr\<PolicyHandler\> CreatePolicyHandler (bool isAuditDisco
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Regista um evento específico do aplicativo para o pipeline de auditoria.
 public const std::string& GetPolicyDataXml() const  |  Obtém dados de política XML que descreve as definições, etiquetas e regras associadas esta política.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Obtém uma lista de definições personalizadas.
+public const std::string& GetPolicyId() const  |  Obtém o ID de política.
+bool pública HasClassificationRules() const  |  Obtém se a política tem regras de recomendação ou automático.
+público std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  Obtém a hora quando a política pela última vez foi obtida.
   
 ## <a name="members"></a>Membros
   
@@ -77,25 +80,25 @@ Obtenha a etiqueta de sensibilidade predefinido.
 Crie um manipulador de política para executar funções relacionadas com a política no estado de execução de um ficheiro.
 
 Parâmetros:  
-* **A**: booleano representando se a deteção de auditoria está ativada ou não
+* **A**: booleano representando se a deteção de auditoria está ativada ou não.
 
 
 
   
 **Devolve**: Processador de política.
-Aplicação precisa manter o objeto de política de manipulador para o tempo de vida do documento
+Aplicação tem de manter o objeto de política de manipulador para o tempo de vida do documento.
   
 ### <a name="sendapplicationauditevent-function"></a>Função de SendApplicationAuditEvent
 Regista um evento específico do aplicativo para o pipeline de auditoria.
 
 Parâmetros:  
-* **nível**: do nível de registo: Informações/erro/aviso 
+* **nível**: do nível de registo: Informações/erro/aviso. 
 
 
-* **eventType**: uma descrição do tipo de evento 
+* **eventType**: uma descrição do tipo de evento. 
 
 
-* **eventData**: os dados associados ao evento
+* **eventData**: os dados associados ao evento.
 
 
   
@@ -103,10 +106,28 @@ Parâmetros:
 Obtém dados de política XML que descreve as definições, etiquetas e regras associadas esta política.
 
   
-**Devolve**: Dados de política XML
+**Devolve**: Dados de política XML.
   
 ### <a name="getcustomsettings-function"></a>Função de GetCustomSettings
 Obtém uma lista de definições personalizadas.
 
   
-**Devolve**: Um vetor de configurações personalizadas
+**Devolve**: Um vetor de configurações personalizadas.
+  
+### <a name="getpolicyid-function"></a>Função de GetPolicyId
+Obtém o ID de política.
+
+  
+**Devolve**: Uma cadeia de caracteres que representam o ID de política
+  
+### <a name="hasclassificationrules-function"></a>Função de HasClassificationRules
+Obtém se a política tem regras de recomendação ou automático.
+
+  
+**Devolve**: Um booleano que informará se há qualquer automático ou recommandation regras na política
+  
+### <a name="getlastpolicyfetchtime-function"></a>Função de GetLastPolicyFetchTime
+Obtém a hora quando a política pela última vez foi obtida.
+
+  
+**Devolve**: A hora quando a política pela última vez foi obtida

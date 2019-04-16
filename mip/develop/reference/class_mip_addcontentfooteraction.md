@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: dd803c734c099e11b46db1b7d446b03b2eaa8a1e
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 625406d1b2207e4b1f74c77c6813ee3d852f0d37
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332281"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573535"
 ---
 # <a name="class-mipaddcontentfooteraction"></a>classe mip::AddContentFooterAction 
 Uma classe de ação que especifica a adicionar um rodapé de conteúdo ao documento.
@@ -28,7 +28,7 @@ public const std::string& GetFontColor() const  |  Obtenha a cor do tipo de letr
 public ContentMarkAlignment GetAlignment() const  |  Obtenha o alinhamento de rodapé.
 public int GetMargin() const  |  Obtenha a margem de rodapé na parte inferior.
 público GetType() de ActionType const  |  Obter o tipo de [ação](class_mip_action.md).
-  
+
 ## <a name="members"></a>Membros
   
 ### <a name="getuielementname-function"></a>Função de GetUIElementName
@@ -67,14 +67,14 @@ Obtenha o alinhamento de rodapé.
   
 **Devolve**: O enumerador ContentMarkAlignment: ESQUERDA | DIREITA | CENTRO. 
   
-**Consulte também**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
+**Consulte também**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment)
   
 ### <a name="getmargin-function"></a>Função de GetMargin
 Obtenha a margem de rodapé na parte inferior.
 
   
 **Devolve**: As margens na parte inferior do documento (por exemplo, 10 mm).
-  
+
 ### <a name="gettype-function"></a>Função de GetType
 Obter o tipo de [ação](class_mip_action.md).
 

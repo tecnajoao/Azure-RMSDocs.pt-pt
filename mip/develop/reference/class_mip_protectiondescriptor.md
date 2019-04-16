@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 922ff8811e5cb71d6d4d5920dfec80eadbcbc744
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
+ms.openlocfilehash: 6f4bb83950a4745739a1663950a52d05c51f7f4d
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809799"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573297"
 ---
 # <a name="class-mipprotectiondescriptor"></a>classe mip::ProtectionDescriptor 
 Descrição de proteção associada a uma parte do conteúdo.
@@ -26,6 +26,7 @@ public std::string GetName() const  |  Obtém o nome de proteção.
 público Std:: String GetDescription() const  |  Obtém a descrição de proteção.
 public std::string GetTemplateId() const  |  Obtém o ID do modelo de proteção, se aplicável.
 public std::string GetLabelId() const  |  Obtém o ID de etiqueta, caso existam.
+public std::string GetContentId() const  |  Obtém o ID de conteúdo, se aplicável.
 público Std:: vector\<UserRights\> GetUserRights() const  |  Obtém a coleção de mapeamentos de direitos de usuários.
 público Std:: vector\<funções de utilizador\> GetUserRoles() const  |  Obtém a coleção de mapeamentos de funções de utilizadores.
 bool pública DoesContentExpire() const  |  Verifica se o conteúdo tem um prazo de expiração ou não.
@@ -73,6 +74,12 @@ Obtém o ID de etiqueta, caso existam.
   
 **Devolve**: [Etiqueta](class_mip_label.md) esta propriedade só irá ser preenchida no ProtectionDescriptors para preexistente de ID de conteúdo protegido. É um campo preenchido pelo servidor neste momento é consumido conteúdo protegido.
   
+### <a name="getcontentid-function"></a>GetContentId function
+Obtém o ID de conteúdo, se aplicável.
+
+  
+**Devolve**: ID de conteúdo
+  
 ### <a name="getuserrights-function"></a>Função de GetUserRights
 Obtém a coleção de mapeamentos de direitos de usuários.
 
@@ -113,7 +120,7 @@ Obtém o endereço do referenciador de proteção.
 Obtém dados específicos da aplicação que foi encriptados.
 
   
-**Devolve**: Dados de aplicação específicos A [ProtectionHandler](class_mip_protectionhandler.md) pode manter um dicionário de dados específicos da aplicação que foi encriptados pelo serviço de proteção. Estes dados encriptados são independentes dos dados assinados podem ser acedidos através de [ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getsignedappdata-function)
+**Devolve**: Dados de aplicação específicos A [ProtectionHandler](class_mip_protectionhandler.md) pode manter um dicionário de dados específicos da aplicação que foi encriptados pelo serviço de proteção. Estes dados encriptados são independentes dos dados assinados podem ser acedidos através de ProtectionDescriptor::GetSignedAppData.
   
 ### <a name="getsignedappdata-function"></a>Função de GetSignedAppData
 Obtém os dados específicos da aplicação que foi assinados.

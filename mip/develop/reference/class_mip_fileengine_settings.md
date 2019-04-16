@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 2621d4ec6f8aa8bf20c6fa3bb2bc0350d88333f4
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 2481ee7d42f00ce5b33529b15e17b22ba6556b0e
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332604"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574045"
 ---
 # <a name="class-mipfileenginesettings"></a>classe mip::FileEngine::Settings 
   
@@ -32,7 +32,9 @@ public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSett
 public void SetSessionId(const std::string& sessionId)  |  Define o ID de sessão de motor.
 public const std::string& GetSessionId() const  |  Devolver o ID de sessão de motor.
 SetProtectionCloudEndpointBaseUrl void pública (const Std:: String & protectionCloudEndpointBaseUrl)  |  Define a proteção na nuvem base url de ponto final, utilizado para especificar o limite da cloud.
-public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  Obtém o cloudEndpointBaseUrl.
+public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  Obtém o url de base do ponto final de cloud de proteção.
+SetPolicyCloudEndpointBaseUrl void pública (const Std:: String & policyCloudEndpointBaseUrl)  |  Define a política cloud base url de ponto final, utilizado para especificar o limite da cloud.
+public const std::string& GetPolicyCloudEndpointBaseUrl() const  |  Obtém o url de base do ponto final de cloud de política.
 SetProtectionOnlyEngine void pública (const bool protectionOnly)  |  Não define o indicador de motor apenas proteção - nenhuma política/rótulo.
 bool const pública IsProtectionOnlyEngine() const  |  Não devolva o indicador de motor apenas proteção - nenhuma política/rótulo.
 bool pública IsLoadSensitivityTypesEnabled() const  |  Obter o sinalizador que indica se as etiquetas de sensibilidade de carga está habilitado.
@@ -117,10 +119,24 @@ Parâmetros:
 
   
 ### <a name="getprotectioncloudendpointbaseurl-function"></a>GetProtectionCloudEndpointBaseUrl function
-Obtém o cloudEndpointBaseUrl.
+Obtém o url de base do ponto final de cloud de proteção.
 
   
 **Devolve**: Url de base associados com pontos finais de proteção
+  
+### <a name="setpolicycloudendpointbaseurl-function"></a>Função de SetPolicyCloudEndpointBaseUrl
+Define a política cloud base url de ponto final, utilizado para especificar o limite da cloud.
+
+Parâmetros:  
+* **policyCloudEndpointBaseUrl**: Url de base associados com pontos finais de política
+
+
+  
+### <a name="getpolicycloudendpointbaseurl-function"></a>GetPolicyCloudEndpointBaseUrl function
+Obtém o url de base do ponto final de cloud de política.
+
+  
+**Devolve**: Url de base associados com pontos finais de política
   
 ### <a name="setprotectiononlyengine-function"></a>Função de SetProtectionOnlyEngine
 Não define o indicador de motor apenas proteção - nenhuma política/rótulo.

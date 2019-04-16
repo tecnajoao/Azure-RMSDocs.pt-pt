@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 8121763106c9f46022264a7eea3bc16e363e523c
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: f3a8d50d55dc615a7aa81e8686b356bfc2d41654
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330479"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573943"
 ---
 # <a name="class-mipaddwatermarkaction"></a>classe mip::AddWatermarkAction 
 Uma classe de ação que especifica o limite de tamanho de adição.
@@ -27,7 +27,7 @@ public const std::string& GetFontName() const  |  Obtenha o nome de tipo de letr
 public int GetFontSize() const  |  Obter o tamanho da fonte usado para exibir a marca d'água.
 public const std::string& GetFontColor() const  |  Obtenha a cor da fonte usada para exibir a marca d'água.
 público GetType() de ActionType const  |  Obter o tipo de [ação](class_mip_action.md).
-  
+
 ## <a name="members"></a>Membros
   
 ### <a name="getuielementname-function"></a>Função de GetUIElementName
@@ -65,7 +65,7 @@ Obtenha a cor da fonte usada para exibir a marca d'água.
 
   
 **Devolve**: Cor da fonte como uma cadeia de caracteres (por exemplo, "#000000").
-  
+
 ### <a name="gettype-function"></a>Função de GetType
 Obter o tipo de [ação](class_mip_action.md).
 

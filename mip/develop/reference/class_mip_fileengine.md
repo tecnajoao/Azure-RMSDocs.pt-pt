@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: f4b61c9866c22f2f29166e6caa4cbc81287c11ca
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 15ce90a80430f50854580f6c7a2993d92db0a744
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333709"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573994"
 ---
 # <a name="class-mipfileengine"></a>classe mip::FileEngine 
 Essa classe fornece uma interface para todas as funções de motor.
@@ -22,13 +22,17 @@ Essa classe fornece uma interface para todas as funções de motor.
 --------------------------------|---------------------------------------------
 Definições de const públicas & GetSettings() const  |  Devolve as definições de motor.
 público const Std:: vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes() const  |  lista os tipos de sensibilidade associados com o mecanismo da diretiva.
+public const std::shared_ptr\<Label\> GetDefaultSensitivityLabel() const  |  Obtenha a etiqueta de sensibilidade predefinido.
 público const Std:: vector\<std::shared_ptr\<etiqueta\>\>& ListSensitivityLabels()  |  Devolve uma lista de etiquetas de sensibilidade.
 public const std::string& GetMoreInfoUrl() const  |  Forneça um url para buscar mais informações sobre as política/etiquetas.
+public const std::string& GetPolicyId() const  |  Obtém o ID de política.
 bool pública IsLabelingRequired() const  |  Verifica se a política determina que um documento deve ser o nome.
-CreateFileHandlerAsync void pública (Std:: String const & inputFilePath, isAuditDiscoveryEnabled de bool Std:: String & contentIdentifier, const ContentState contentState, const, const std::shared_ptr\<FileHandler::Observer\>& fileHandlerObserver, const std::shared_ptr\<void\>& context, const std::shared_ptr\<FileExecutionState\>& fileExecutionState)  |  Caminho do ficheiro é iniciada a criação de um manipulador de arquivo para determinados.
-CreateFileHandlerAsync void pública (const std::shared_ptr\<Stream\>& inputStream, Std:: String const & inputFilePath, Std:: String const & contentIdentifier, const mip::ContentState contentState, bool isAuditDiscoveryEnabled, const std::shared_ptr\<FileHandler::Observer\>& fileHandlerObserver, const std::shared_ptr\<void\>& context, const std::shared_ptr\< FileExecutionState\>& fileExecutionState)  |  É iniciada a criação de um manipulador de arquivo para determinados ficheiros stream.
+público std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  Obtém a hora quando a política pela última vez foi obtida.
+CreateFileHandlerAsync void pública (Std:: String const & inputFilePath, const std::shared_ptr Std:: String & actualFilePath, bool isAuditDiscoveryEnabled, const\<FileHandler::Observer\>& fileHandlerObserver const std::shared_ptr\<void\>& context, const std::shared_ptr\<FileExecutionState\>& fileExecutionState)  |  Caminho do ficheiro é iniciada a criação de um manipulador de arquivo para determinados.
+CreateFileHandlerAsync void pública (const std::shared_ptr\<Stream\>& inputStream, const std::shared_ptr Std:: String & actualFilePath, bool isAuditDiscoveryEnabled, const\<FileHandler::Observer \>& fileHandlerObserver, const std::shared_ptr\<void\>& context, const std::shared_ptr\<FileExecutionState\>& fileExecutionState)  |  É iniciada a criação de um manipulador de arquivo para determinados ficheiros stream.
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Regista um evento específico do aplicativo para o pipeline de auditoria.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Obtém uma lista de definições personalizadas.
+bool pública HasClassificationRules() const  |  Obtém se a política tem regras de recomendação ou automático.
   
 ## <a name="members"></a>Membros
   
@@ -43,6 +47,12 @@ lista os tipos de sensibilidade associados com o mecanismo da diretiva.
   
 **Consulte também**: [FileEngine::Settings](class_mip_fileengine_settings.md)).
   
+### <a name="getdefaultsensitivitylabel-function"></a>Função de GetDefaultSensitivityLabel
+Obtenha a etiqueta de sensibilidade predefinido.
+
+  
+**Devolve**: Etiqueta de sensibilidade a predefinição se existir, nullptr se não houver nenhum conjunto de etiqueta predefinida.
+  
 ### <a name="listsensitivitylabels-function"></a>Função de ListSensitivityLabels
 Devolve uma lista de etiquetas de sensibilidade.
   
@@ -52,11 +62,23 @@ Forneça um url para buscar mais informações sobre as política/etiquetas.
   
 **Devolve**: Um url no formato de cadeia de caracteres.
   
+### <a name="getpolicyid-function"></a>Função de GetPolicyId
+Obtém o ID de política.
+
+  
+**Devolve**: Uma cadeia de caracteres que representam o ID de política
+  
 ### <a name="islabelingrequired-function"></a>Função de IsLabelingRequired
 Verifica se a política determina que um documento deve ser o nome.
 
   
 **Devolve**: VERDADEIRO se a etiquetagem é obrigatório, caso contrário FALSO.
+  
+### <a name="getlastpolicyfetchtime-function"></a>Função de GetLastPolicyFetchTime
+Obtém a hora quando a política pela última vez foi obtida.
+
+  
+**Devolve**: A hora quando a política pela última vez foi obtida
   
 ### <a name="createfilehandlerasync-function"></a>Função de CreateFileHandlerAsync
 Caminho do ficheiro é iniciada a criação de um manipulador de arquivo para determinados.
@@ -65,10 +87,7 @@ Parâmetros:
 * **inputFilePath**: O ficheiro para o abrir. O caminho tem de incluir o nome de ficheiro e, se um existe, a extensão de nome de ficheiro. 
 
 
-* **contentIdentifier**: um identificador legível por humanos para o conteúdo. exemplo de um arquivo: Exemplo de "C:\mip-sdk-for-cpp\files\audit.docx" [path\filename] para uma mensagem de e-mail: "RE: Auditoria design:user1@contoso.com"[assunto: remetente] 
-
-
-* **contentState**: O estado do conteúdo enquanto a aplicação está a interagir com ele. 
+* **actualFilePath**: O caminho de ficheiro (não temporária) real, será utilizado para auditoria. 
 
 
 * **isAuditDiscoveryEnabled**: que representa se a deteção de auditoria está ativada ou não. 
@@ -88,13 +107,7 @@ Parâmetros:
 * **inputStream**: Um fluxo que contém os dados de ficheiro. 
 
 
-* **inputFilePath**: O caminho para o ficheiro. O caminho tem de incluir o nome de ficheiro e, se um existe, a extensão de nome de ficheiro. 
-
-
-* **contentIdentifier**: um identificador legível por humanos para o conteúdo. exemplo de um arquivo: Exemplo de "C:\mip-sdk-for-cpp\files\audit.docx" [path\filename] para uma mensagem de e-mail: "RE: Auditoria design:user1@contoso.com"[assunto: remetente] 
-
-
-* **contentState**: O estado do conteúdo enquanto a aplicação está a interagir com ele. 
+* **actualFilePath**: O caminho para o ficheiro. O caminho tem de incluir o nome de ficheiro e, se um existe, a extensão de nome de ficheiro. Também irá utilizar para identificar o arquivo de auditoria. 
 
 
 * **isAuditDiscoveryEnabled**: que representa se a deteção de auditoria está ativada ou não. 
@@ -126,3 +139,9 @@ Obtém uma lista de definições personalizadas.
 
   
 **Devolve**: Um vetor de configurações personalizadas
+  
+### <a name="hasclassificationrules-function"></a>Função de HasClassificationRules
+Obtém se a política tem regras de recomendação ou automático.
+
+  
+**Devolve**: Um booleano que informará se há qualquer automático ou recommandation regras na política

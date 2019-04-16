@@ -1,21 +1,21 @@
 ---
-title: classe mip::PolicySyncError
-description: Documenta a classe mip::policysyncerror da Microsoft Information Protection (MIP) SDK.
+title: classe mip::OperationCancelledError
+description: Documenta a classe mip::operationcancellederror da Microsoft Information Protection (MIP) SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: f1a437ad7c94d515c369cd63d17874b3c53400ba
+ms.openlocfilehash: 69dc2c0242f446450e7933ebfdf80bc52035b358
 ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/15/2019
-ms.locfileid: "59573688"
+ms.locfileid: "59574470"
 ---
-# <a name="class-mippolicysyncerror"></a>classe mip::PolicySyncError 
-Falha ao tentar sincronizar dados de política.
+# <a name="class-mipoperationcancellederror"></a>classe mip::OperationCancelledError 
+A operação foi cancelada.
   
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                

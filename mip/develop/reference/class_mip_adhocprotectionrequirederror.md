@@ -1,21 +1,21 @@
 ---
-title: classe mip::PolicySyncError
-description: Documenta a classe mip::policysyncerror da Microsoft Information Protection (MIP) SDK.
+title: classe mip::AdhocProtectionRequiredError
+description: Documenta a classe mip::adhocprotectionrequirederror da Microsoft Information Protection (MIP) SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: f1a437ad7c94d515c369cd63d17874b3c53400ba
+ms.openlocfilehash: a109c9f235e950e428aa000d34af95a337c6eb4d
 ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/15/2019
-ms.locfileid: "59573688"
+ms.locfileid: "59574453"
 ---
-# <a name="class-mippolicysyncerror"></a>classe mip::PolicySyncError 
-Falha ao tentar sincronizar dados de política.
+# <a name="class-mipadhocprotectionrequirederror"></a>classe mip::AdhocProtectionRequiredError 
+Proteção do ad hoc deve ser definida para concluir a ação no ficheiro.
   
 ## <a name="summary"></a>Resumo
  Membros                        | Descrições                                

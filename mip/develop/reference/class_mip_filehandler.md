@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 997b3fbfb7dc302f7a47b5cfb281bdaf37c11295
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: ee0545346eef2c143946496f56af77b7081b1e06
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332689"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574385"
 ---
 # <a name="class-mipfilehandler"></a>classe mip::FileHandler 
 Interface para o ficheiro de todas as funções de manipulação.
@@ -31,7 +31,7 @@ public void RemoveProtection()  |  Remove a proteção do ficheiro. Se o ficheir
 public void CommitAsync(const std::string& outputFilePath, const std::shared_ptr\<void\>& context) | Grava as alterações para o ficheiro especificado pelo \|outputFilePath\ |  parâmetro.
 CommitAsync void pública (const std::shared_ptr\<Stream\>& outputStream, const std::shared_ptr\<void\>& contexto) | Grava as alterações no fluxo especificado pelo \|outputStream\ |  parâmetro.
 public void GetDecryptedTemporaryFileAsync(const std::shared_ptr\<void\>& context)  |  Retorna um caminho para um arquivo temporário (que vai ser eliminado se possível) – que representam o conteúdo desencriptado.
-public void NotifyCommitSuccessful(const std::string& contentIdentifier)  |  Para ser chamado quando as alterações foram confirmadas no disco.
+NotifyCommitSuccessful void pública (const Std:: String & actualFilePath)  |  Para ser chamado quando as alterações foram confirmadas no disco.
 public std::string GetOutputFileName()  |  Calcula o nome de ficheiro de saída e a extensão com base no nome do ficheiro original e as alterações acumuladas.
   
 ## <a name="members"></a>Membros
@@ -84,7 +84,7 @@ Retorna um caminho para um arquivo temporário (que vai ser eliminado se possív
 Para ser chamado quando as alterações foram confirmadas no disco.
 
 Parâmetros:  
-* **contentIdentifier**: exemplo de um arquivo: Exemplo de "C:\mip-sdk-for-cpp\files\audit.docx" [path\filename] para uma mensagem de e-mail: "RE: Auditoria design:user1@contoso.com"[assunto: remetente] 
+* **actualFilePath**: O caminho de arquivo real para o ficheiro de saída 
 
 
 É acionado um evento de auditoria

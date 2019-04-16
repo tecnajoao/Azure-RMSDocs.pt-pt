@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 02ed14c315cfc15e39b030e42db0dd9a1e785249
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 4204bd17abe756c42c672a1cda17706b59600795
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57329578"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573677"
 ---
 # <a name="class-mipfilehandlerobserver"></a>classe mip::FileHandler::Observer 
 [Observador](class_mip_filehandler_observer.md) interface para que os clientes obter notificações de eventos relacionados com o manipulador de arquivo.

@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 2d64d576ead748adff7804e9068aab71fd9672c0
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 1373d9ecc03f69267af631216a04d358e8be7af3
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333029"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574348"
 ---
 # <a name="class-mipservicedisablederror"></a>classe mip::ServiceDisabledError 
 O utilizador não foi possível obter acesso ao conteúdo devido a um serviço que está a ser desabilitado.
@@ -21,13 +21,13 @@ O utilizador não foi possível obter acesso ao conteúdo devido a um serviço q
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
 pública de extensão de GetExtent() const  |  Obtém a extensão para o qual o serviço está desativado.
+Enum extensão  |  Descreve a extensão para o qual o serviço está desativado.
 public char const* what() const  |  Obter a mensagem de erro.
 público std::shared_ptr\<erro\> const clone)  |  Clone o erro.
 público GetErrorType() virtual ErrorType const  |  Obter o tipo de erro.
 público virtual const Std:: String & GetErrorName() const  |  Obtenha o nome do erro.
 public virtual const std::string& GetMessage() const  |  Obter a mensagem de erro.
 public virtual void SetMessage(const std::string& msg)  |  Defina a mensagem de erro.
-Enum extensão  |  Descreve a extensão para o qual o serviço está desativado.
   
 ## <a name="members"></a>Membros
   
@@ -37,6 +37,19 @@ Obtém a extensão para o qual o serviço está desativado.
   
 **Devolve**: Extensão para o qual o serviço está desativado
   
+### <a name="extent-enum"></a>Enumeração de extensão
+
+Descreve a extensão para o qual o serviço está desativado.
+
+ Valores                         | Descrições                                
+--------------------------------|---------------------------------------------
+Utilizador            | O serviço é desativado para o utilizador.
+Dispositivo            | O serviço é desativado para o dispositivo.
+Plataforma            | O serviço é desativado para a plataforma.
+Inquilino            | O serviço é desativado para o inquilino.
+
+
+
 ### <a name="what-function"></a>o que funcionar
 Obter a mensagem de erro.
 
@@ -72,14 +85,3 @@ Defina a mensagem de erro.
 
 Parâmetros:  
 * **msg**: a mensagem de erro.
-
-
-  
-### <a name="extent-enum"></a>Enumeração de extensão
- Valores                         | Descrições                                
---------------------------------|---------------------------------------------
-Utilizador            | O serviço é desativado para o utilizador.
-Dispositivo            | O serviço é desativado para o dispositivo.
-Plataforma            | O serviço é desativado para a plataforma.
-Inquilino            | O serviço é desativado para o inquilino.
-Descreve a extensão para o qual o serviço está desativado.

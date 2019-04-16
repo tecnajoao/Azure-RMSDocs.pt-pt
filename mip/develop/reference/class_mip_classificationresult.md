@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 716bc18031b5b67b080281b76c42df296f3d72fa
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 6a048dd7902e8148e4f32f8cc9e62d63110b2b4a
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332519"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573569"
 ---
 # <a name="class-mipclassificationresult"></a>classe mip::ClassificationResult 
 Classe que contém o resultado de uma chamada de classificação no estado de execução.
@@ -23,6 +23,7 @@ Classe que contém o resultado de uma chamada de classificação no estado de ex
 public std::string GetId() const  |  Obtenha o ID da política de classificação.
 público int GetCount() const  |  Obter a contagem de instâncias.
 público int GetConfidenceLevel() const  |  Obtenha a confiança no resultado.
+public std::string GetSensitiveInformationDetections() const  |  Obtenha as deteções de informações confidenciais.
   
 ## <a name="members"></a>Membros
   
@@ -40,3 +41,9 @@ Obter a contagem de instâncias.
   
 ### <a name="getconfidencelevel-function"></a>Função de GetConfidenceLevel
 Obtenha a confiança no resultado.
+  
+### <a name="getsensitiveinformationdetections-function"></a>Função de GetSensitiveInformationDetections
+Obtenha as deteções de informações confidenciais.
+
+  
+**Devolve**: Cadeia de caracteres do JSON de todas as detecções de informações confidenciais.

@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: bc130d2c6056d971635bcf204243f29b13789466
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 3ffd4b3e86192786309739add907a724acdaffa5
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330842"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574224"
 ---
 # <a name="class-mippolicyenginesettings"></a>classe mip::PolicyEngine::Settings 
 Especifica as definições associadas com uma [PolicyEngine](class_mip_policyengine.md).
@@ -34,6 +34,8 @@ public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSett
 public void SetSessionId(const std::string& sessionId)  |  Defina o ID de sessão utilizado para a telemetria de cliente definida.
 public const std::string& GetSessionId() const  |  Obtenha o ID de sessão, um identificador exclusivo.
 bool pública IsLoadSensitivityTypesEnabled() const  |  Obter o sinalizador que indica se as etiquetas de sensibilidade de carga está habilitado.
+public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Opcionalmente, define o URL base do ponto final de cloud.
+public const std::string& GetCloudEndpointBaseUrl() const  |  Obtém o URL de base da cloud utilizado por todos os pedidos de serviço, se for especificado.
   
 ## <a name="members"></a>Membros
   
@@ -156,3 +158,17 @@ Obter o sinalizador que indica se as etiquetas de sensibilidade de carga está h
 
   
 **Devolve**: VERDADEIRO se estiver ativada outra false.
+  
+### <a name="setcloudendpointbaseurl-function"></a>SetCloudEndpointBaseUrl function
+Opcionalmente, define o URL base do ponto final de cloud.
+
+Parâmetros:  
+* **cloudEndpointBaseUrl**: o URL de base utilizado por todos os pedidos de serviço (por exemplo, "https://dataservice.protection.outlook.com")
+
+
+  
+### <a name="getcloudendpointbaseurl-function"></a>GetCloudEndpointBaseUrl function
+Obtém o URL de base da cloud utilizado por todos os pedidos de serviço, se for especificado.
+
+  
+**Devolve**: URL de base

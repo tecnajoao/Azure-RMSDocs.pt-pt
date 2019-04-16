@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 9e3080e4fcfd8553d04acc1533fc16d8bb1640f3
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 367626955ba1652b20b372efd309d15304e5336f
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330683"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573450"
 ---
 # <a name="class-mipaddcontentheaderaction"></a>class mip::AddContentHeaderAction 
 Uma classe de ação que especifica o cabeçalho de conteúdo a adicionar.
@@ -28,7 +28,7 @@ public const std::string& GetFontColor() const  |  Obtenha a cor do tipo de letr
 public ContentMarkAlignment GetAlignment() const  |  Obtenha o alinhamento do cabeçalho.
 public int GetMargin() const  |  Obter a margem do cabeçalho da parte inferior.
 público GetType() de ActionType const  |  Obter o tipo de [ação](class_mip_action.md).
-  
+
 ## <a name="members"></a>Membros
   
 ### <a name="getuielementname-function"></a>Função de GetUIElementName
@@ -67,14 +67,14 @@ Obtenha o alinhamento do cabeçalho.
   
 **Devolve**: O enumerador ContentMarkAlignment: ESQUERDA | DIREITA | CENTRO. 
   
-**Consulte também**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
+**Consulte também**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment)
   
 ### <a name="getmargin-function"></a>Função de GetMargin
 Obter a margem do cabeçalho da parte inferior.
 
   
 **Devolve**: As margens na parte inferior do documento (por exemplo, 10 mm).
-  
+
 ### <a name="gettype-function"></a>Função de GetType
 Obter o tipo de [ação](class_mip_action.md).
 

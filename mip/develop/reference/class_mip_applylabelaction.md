@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: ad1367480497ede6c8efd33d6ebc60c4c6ca34c5
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 70f226cc112062582b5441f6c3ae7fc3dc7de118
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332236"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59572940"
 ---
 # <a name="class-mipapplylabelaction"></a>classe mip::ApplyLabelAction 
 Aplicar ações de etiqueta requer que o aplicativo de chamada para aplicar uma etiqueta específica.
@@ -23,7 +23,7 @@ Aplicar ações de etiqueta requer que o aplicativo de chamada para aplicar uma 
 public const std::string& GetLabelId() const  |  Obtenha o ID de etiqueta necessário.
 public const std::vector\<std::string\>& GetClassificationIds() const  |  Obter os IDs de classificação que correspondentes e causou esta etiqueta apareça.
 público GetType() de ActionType const  |  Obter o tipo de [ação](class_mip_action.md).
-  
+
 ## <a name="members"></a>Membros
   
 ### <a name="getlabelid-function"></a>Função de GetLabelId
@@ -37,7 +37,7 @@ Obter os IDs de classificação que correspondentes e causou esta etiqueta apare
 
   
 **Devolve**: & Obter uma lista de IDs que causou esta etiqueta apareça de classificação de Const Std:: vector < Std:: String >.
-  
+
 ### <a name="gettype-function"></a>Função de GetType
 Obter o tipo de [ação](class_mip_action.md).
 

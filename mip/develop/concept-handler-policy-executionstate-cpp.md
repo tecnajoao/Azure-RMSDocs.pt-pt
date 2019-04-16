@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 11/01/2018
 ms.author: tommos
-ms.openlocfilehash: 54e5249f7624cbc020451752d39ccb9f0b507f3a
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: dbe6db5fe54f9d26d072d3f6fcad1f2595d61040
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257693"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574159"
 ---
 # <a name="implement-executionstate"></a>Implementar ExecutionState
 
@@ -32,7 +32,7 @@ Passando informações para o SDK de MIP para computar uma ação que deve ser c
 | Membro                                                                           | Devolve                                                                                                              |
 |----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
 | `std::string GetNewLabelId()`                                                      | Devolve o ID de etiqueta a ser aplicado ao objeto.                                                                    |
-| `mip::ContentState GetContentState()`                                              | Devolve o mip::ContentState do objeto.                                                                         |
+| `mip::DataState GetDataState()`                                              | Devolve o mip::DataState do objeto.                                                                         |
 | `std::pair<bool, std::string> IsDowngradeJustified()`                              | Devolve um std::pair expressar se a mudança para versão anterior é justificada e a justificação.                                 |
 | `std::string GetContentIdentifier()`                                               | Devolve o identificador de conteúdo. Deve ser um identificador de legível por humanos, que indica a localização do objeto.   |
 | `mip::ActionSource GetNewLabelActionSource()`                                      | Devolve o mip::ActionSource da etiqueta.                                                                          |
@@ -53,7 +53,7 @@ struct ExecutionStateOptions {
     std::string newLabelId;
     std::string contentIdentifier;
     mip::ActionSource actionSource = mip::ActionSource::MANUAL;
-    mip::ContentState contentState = mip::ContentState::REST;
+    mip::DataState dataState = mip::DataState::USE;
     mip::AssignmentMethod assignmentMethod = mip::AssignmentMethod::STANDARD;
     bool isDowngradeJustified = false;
     std::string downgradeJustification;

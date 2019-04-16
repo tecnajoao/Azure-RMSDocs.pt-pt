@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: bd53a752861cd43b783c8d028d5ae05edaf82f60
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 8dca2231931ab33f243b71850757b2c009c492c9
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332774"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574300"
 ---
 # <a name="class-mipnoauthtokenerror"></a>classe mip::NoAuthTokenError 
 O utilizador não foi possível obter acesso ao conteúdo devido à falta de token de autenticação.
@@ -64,4 +64,3 @@ Defina a mensagem de erro.
 
 Parâmetros:  
 * **msg**: a mensagem de erro.
-

@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: a48f22af3f699412a2976683695467ee7ed71cdb
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: d3105bd9c13e91108c44e847c3eae74f166c5e04
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331193"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573654"
 ---
 # <a name="class-mippolicyprofilesettings"></a>classe mip::PolicyProfile::Settings 
 [As definições](class_mip_policyprofile_settings.md) utilizada pelo [PolicyProfile](class_mip_policyprofile.md) durante sua criação e ao longo de seu ciclo de vida.
@@ -30,6 +30,8 @@ public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  Obtenha o
 public void SetLoggerDelegate(const std::shared_ptr\<LoggerDelegate\>& loggerDelegate)  |  Substitua o agente de log padrão.
 público std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Obtenha o delegado HTTP (se houver) fornecido pela aplicação.
 SetHttpDelegate void pública (const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Substitua a pilha HTTP padrão do cliente.
+público std::shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate() const  |  Obtenha o delegado de TaskDispatcher (se houver) fornecido pela aplicação.
+SetTaskDispatcherDelegate void pública (const std::shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Substitua a tarefa predefinida de assíncronos expedição de manipulação de do cliente.
 public void OptOutTelemetry()  |  Opta ativamente por toda a telemetria de recolha.
 public bool IsTelemetryOptedOut() const  |  Obtém se telemetria recolha deve ser desabilitada ou não.
 SetMinimumLogLevel void pública (LogLevel logLevel)  |  Defina o nível de registo mínimo que irão acionar um evento de log.
@@ -113,6 +115,20 @@ Substitua a pilha HTTP padrão do cliente.
 
 Parâmetros:  
 * **httpDelegate**: Interface de retorno de chamada de HTTP implementada pela aplicação cliente
+
+
+  
+### <a name="gettaskdispatcherdelegate-function"></a>Função de GetTaskDispatcherDelegate
+Obtenha o delegado de TaskDispatcher (se houver) fornecido pela aplicação.
+
+  
+**Devolve**: TaskDispatcher delegado a ser utilizado para executar tarefas assíncronas
+  
+### <a name="settaskdispatcherdelegate-function"></a>Função de SetTaskDispatcherDelegate
+Substitua a tarefa predefinida de assíncronos expedição de manipulação de do cliente.
+
+Parâmetros:  
+* **taskDispatcherDelegate**: Tarefa de expedição de interface de retorno de chamada implementada pela aplicação cliente
 
 
   

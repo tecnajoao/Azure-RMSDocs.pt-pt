@@ -8,12 +8,12 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 50fe4bce04b28440609c558297d8a3e39087e557
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 2ac8c6bbfba6f460ac016a103f32f20856bff2aa
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332842"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573841"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Início rápido: Definir e obter uma etiqueta de sensibilidade (C++)
 
@@ -105,17 +105,16 @@ Adicione lógica para definir e obter uma etiqueta de sensibilidade num ficheiro
 
    ```cpp
    // Set up async FileHandler for input file operations
-   string filePathIn = "<input-file-path>";
-   string contentIdentifier = "<content-identifier>";
+   string inputFilePath = "<input-file-path>";
+   string actualFilePath = "<content-identifier>";
    std::shared_ptr<FileHandler> handler;
    try
    {
         auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
         auto handlerFuture = handlerPromise->get_future();
         engine->CreateFileHandlerAsync(
-             filePathIn, 
-             contentIdentifier,
-             mip::ContentState::REST, 
+             inputFilePath,
+             actualFilePath,                       
              true, 
              std::make_shared<FileHandlerObserver>(), 
              handlerPromise);
@@ -168,15 +167,14 @@ Adicione lógica para definir e obter uma etiqueta de sensibilidade num ficheiro
    system("pause");
 
    // Set up async FileHandler for output file operations
-   contentIdentifier = "<content-identifier>";
+   actualFilePath = "<content-identifier>";
    try
    {
         auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
         auto handlerFuture = handlerPromise->get_future();
         engine->CreateFileHandlerAsync(
-             filePathOut, 
-             contentIdentifier,
-             mip::ContentState::REST,
+             filePathOut,
+             actualFilePath,
              true,
              std::make_shared<FileHandlerObserver>(),
              handlerPromise);
@@ -209,7 +207,7 @@ Adicione lógica para definir e obter uma etiqueta de sensibilidade num ficheiro
 
 4. Substitua os valores de marcador de posição no código-fonte que que acabou de colar na como a seguir, utilizar as constantes de cadeia de caracteres:
 
-   | Marcador de posição | Valor |
+   | Marcador de posição | Value |
    |:----------- |:----- |
    | \<input-file-path\> | O caminho completo para um teste de entrada ficheiro, por exemplo: `"c:\\Test\\Test.docx"`. |
    | \<content-identifier\> | Um identificador legível por humanos para o conteúdo. Por exemplo: <ul><li>para um ficheiro, considere path\filename: `"c:\Test\Test.docx"`</li><li>para uma mensagem de e-mail, considere o assunto: remetente: `"RE: Audit design:user1@contoso.com"`</li></ul> |

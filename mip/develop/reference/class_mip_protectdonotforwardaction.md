@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 89f14d6fd2a14bfefb90d2c61a07c22b9aae062a
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 8dbb541ace63ec34dd9f93cb6b266907abe37800
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330207"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573433"
 ---
 # <a name="class-mipprotectdonotforwardaction"></a>classe mip::ProtectDoNotForwardAction 
 Uma classe de ação que especifica a adicionar não reencaminhar proteção para o documento.
@@ -21,9 +21,10 @@ Uma classe de ação que especifica a adicionar não reencaminhar proteção par
  Membros                        | Descrições                                
 --------------------------------|---------------------------------------------
 público GetType() de ActionType const  |  Obter o tipo de [ação](class_mip_action.md).
-  
+
 ## <a name="members"></a>Membros
-  
+
+
 ### <a name="gettype-function"></a>Função de GetType
 Obter o tipo de [ação](class_mip_action.md).
 
